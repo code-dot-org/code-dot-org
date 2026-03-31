@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:57:25 UTC",
+    "serialized_at": "2026-03-30 21:23:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1498,7 +1498,7 @@
       "key": "7c57e770-1a50-48e2-bea5-ad1e1a28ba1a",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
+        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
       },
       "seeding_key": {
         "activity_section.key": "7c57e770-1a50-48e2-bea5-ad1e1a28ba1a",
@@ -2193,7 +2193,7 @@
       "key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3964,7 +3964,7 @@
       "key": "91cbbd3d-4b95-4f21-a652-00c8ef3e52ec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd/2023] video in the slides.\n",
         "progression_name": "Video: Netflix and Data",
         "tips": [
           {
@@ -3993,7 +3993,7 @@
       "key": "37ca2725-b3b0-49a9-a860-83f4d2d3bc29",
       "position": 6,
       "properties": {
-        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd/2023] video in the slides.\n",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd/2023] video in the slides.\n",
         "name": "Routz\r",
         "progression_name": "Video: Waze and Data"
       },
@@ -4017,7 +4017,7 @@
       "key": "d2b336e0-89eb-40ca-acb7-b31758c7794b",
       "position": 8,
       "properties": {
-        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd/2023] video in the slides.\n",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd/2023] video in the slides.\n",
         "name": "Nyle\r",
         "progression_name": "Video: Amazon and Data"
       },
@@ -4152,7 +4152,7 @@
       "key": "5f34a7ba-cca4-44ac-a233-5445f00c8d37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd/2023] video in the slides.\n",
         "progression_name": "Video: What is Machine Learning?",
         "tips": [
           {
@@ -4206,7 +4206,7 @@
       "key": "442bf598-494c-417c-a21d-c9191886f481",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd/2023] video in the slides.\n",
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd/2023] video in the slides.\n",
         "progression_name": "Video: Training Data and Bias"
       },
       "seeding_key": {
@@ -4293,7 +4293,7 @@
       "key": "418a851d-7b88-4a3b-ac45-a981407461b9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd/2023] video in the slides which recaps the concepts discussed today.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd/2023] video in the slides which recaps the concepts discussed today.\n",
         "progression_name": "Video: Impact on Society"
       },
       "seeding_key": {

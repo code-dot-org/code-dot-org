@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-25 18:08:20 UTC",
+    "serialized_at": "2026-03-30 21:23:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -174,6 +174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -196,6 +199,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cert_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -218,6 +224,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_overview_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -240,6 +249,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_overview_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -262,6 +274,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_structure_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -284,6 +299,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_resources_2025"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -306,6 +324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_overview_2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -328,6 +349,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_impact_2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -350,6 +374,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_for_understanding_2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -372,6 +399,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_answer_2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -394,6 +424,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_navigating_module_2025"
+        ],
         "progression": "Cybersecurity Overivew"
       },
       "bonus": false,
@@ -416,6 +449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_02_2025"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -438,6 +474,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_data_2025"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -460,6 +499,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_data_02_2025"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -482,6 +524,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_privacy_b_2025"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -504,6 +549,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_privacy_02_2025"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -526,6 +574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_security_2025"
+        ],
         "progression": "Security Risks"
       },
       "bonus": false,
@@ -548,6 +599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_03_2025"
+        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -570,6 +624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_2025"
+        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -592,6 +649,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_04_2025"
+        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -614,6 +674,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_02_2025"
+        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -636,6 +699,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encrypt_2025"
+        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -658,6 +724,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_project_1_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -680,6 +749,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_project_02_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -702,6 +774,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_wrap-up_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -724,6 +799,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_wrap-up_answer_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -746,6 +824,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-cyber_2025"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,

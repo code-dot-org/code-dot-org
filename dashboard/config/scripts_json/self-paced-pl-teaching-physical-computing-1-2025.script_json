@@ -13,7 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 20:29:10 UTC",
+    "serialized_at": "2026-03-30 21:22:47 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -413,6 +414,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-Devices-22-pre-survey_25_2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -435,6 +439,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -457,6 +464,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -479,6 +489,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -526,6 +539,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2025"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,

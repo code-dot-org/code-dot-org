@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-18 02:23:23 UTC",
+    "serialized_at": "2026-03-30 21:24:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -853,7 +853,7 @@
       "key": "cd989f04-6720-44b9-a645-edb7bd71c08f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students reason about the dynamic nature of apps and identify the need for external data sources to keep information current.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Look at this weather app. What information would likely change if you looked at this page tomorrow?*\n- *How does this page get that updated information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps don't store future data internally; they must fetch it from a live source to stay accurate.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students reason about the dynamic nature of apps and identify the need for external data sources to keep information current.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Look at this weather app. What information would likely change if you looked at this page tomorrow?*\n- *How does this page get that updated information?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps don't store future data internally; they must fetch it from a live source to stay accurate.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "cd989f04-6720-44b9-a645-edb7bd71c08f",
@@ -889,7 +889,7 @@
       "key": "c82a7814-03ba-4b58-8ed3-566f3a9e8a5a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the concept of external data and how apps fetch information from servers to stay up-to-date.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *API*.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the concept of external data and how apps fetch information from servers to stay up-to-date.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *API*.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -928,7 +928,7 @@
       "key": "56c6d32c-ac96-4e97-b8f4-eee3a091a88d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the relationship between the client and the server in the context of an API call.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *JSON*.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the relationship between the client and the server in the context of an API call.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *JSON*.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -955,7 +955,7 @@
       "key": "0869634e-b080-47e8-bb27-5a3581b0ee3d",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how JSON organizes data using keys and values. Show a simple example on the board if necessary.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain how JSON organizes data using keys and values. Show a simple example on the board if necessary.",
         "tips": [
           {
             "type": "teachingTip",
@@ -972,7 +972,7 @@
       "key": "3a905908-5f40-4e86-953c-f8c9c0c6669b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of API.\n- Level 2: Students write a personal definition for API and provide one example.\n- Level 3: Students read the formal definition of JSON.\n- Level 4: Students write a personal definition for JSON and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who struggle to articulate the concept. Ask: 'If you were building a music app, what other service might you need to talk to?'\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of API.\n- Level 2: Students write a personal definition for API and provide one example.\n- Level 3: Students read the formal definition of JSON.\n- Level 4: Students write a personal definition for JSON and provide one example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who struggle to articulate the concept. Ask: 'If you were building a music app, what other service might you need to talk to?'\n",
         "progression_name": "Vocab: API"
       },
       "seeding_key": {
@@ -1011,7 +1011,7 @@
       "key": "9bbb5d2c-cc3b-4f5a-9536-127117b2a51d",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate opening the Network tab and viewing live API requests."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Demonstrate opening the Network tab and viewing live API requests."
       },
       "seeding_key": {
         "activity_section.key": "9bbb5d2c-cc3b-4f5a-9536-127117b2a51d",
@@ -1034,7 +1034,7 @@
       "key": "08e09f7f-399f-4473-8408-493000cb0182",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the API Scavenger Hunt activity guide and the curated PDF documentation for the OpenWeather API.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete Levels 5 through 7.\n- Level 5: Students view panel levels to learn about using the Networks Tab.\n- Level 6: Students use the Network Tab in Web Lab to find JSON data.\n- Level 7: Students upload API documentation to AI and ask questions about parameters and data types.\n",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Hand out the API Scavenger Hunt activity guide and the curated PDF documentation for the OpenWeather API.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete Levels 5 through 7.\n- Level 5: Students view panel levels to learn about using the Networks Tab.\n- Level 6: Students use the Network Tab in Web Lab to find JSON data.\n- Level 7: Students upload API documentation to AI and ask questions about parameters and data types.\n",
         "progression_name": "Exploring the Network Panel"
       },
       "seeding_key": {
@@ -1084,7 +1084,7 @@
       "key": "4878f05f-5e06-4ea2-9d5c-45bbd50cc82e",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happens if an API stops working? How does this affect the user experience?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize system dependencies. If an API fails, the app might lose its primary function (e.g., a weather app with no weather).\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happens if an API stops working? How does this affect the user experience?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize system dependencies. If an API fails, the app might lose its primary function (e.g., a weather app with no weather).\n"
       },
       "seeding_key": {
         "activity_section.key": "4878f05f-5e06-4ea2-9d5c-45bbd50cc82e",
@@ -1132,7 +1132,7 @@
       "key": "c1dee36c-c604-4e3d-9e0c-499c99a50597",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the PRIM framework to the students."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the PRIM framework to the students."
       },
       "seeding_key": {
         "activity_section.key": "c1dee36c-c604-4e3d-9e0c-499c99a50597",
@@ -1155,7 +1155,7 @@
       "key": "cbeb7702-dd25-4dc3-b753-9e469c629bf1",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete Levels 8 through 9.\n- Level 8: Students choose an API and predict its output based on the code snippet.\n- Level 9: Students run the code, investigate with AI, and modify attributes to see new data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are unsure which API to pick. Suggest PokeAPI for a structured experience or NASA for visual data. Watch for students who forget to click 'Run' after modifying code. Ask: 'What did you change in the request, and how did the response look different?'\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete Levels 8 through 9.\n- Level 8: Students choose an API and predict its output based on the code snippet.\n- Level 9: Students run the code, investigate with AI, and modify attributes to see new data.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are unsure which API to pick. Suggest PokeAPI for a structured experience or NASA for visual data. Watch for students who forget to click 'Run' after modifying code. Ask: 'What did you change in the request, and how did the response look different?'\n",
         "progression_name": "Make a Prediction",
         "tips": [
           {
@@ -1200,7 +1200,7 @@
       "key": "f0c0579c-dc13-4df9-9b77-8229773e31cd",
       "position": 27,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you modified the code? How did the API response change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that changing the parameters in the request (the URL or attributes) directly changes what the server sends back. Listen for: 'I changed the ID and got a different character' or 'I changed the date and the image updated.'\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you modified the code? How did the API response change?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that changing the parameters in the request (the URL or attributes) directly changes what the server sends back. Listen for: 'I changed the ID and got a different character' or 'I changed the date and the image updated.'\n"
       },
       "seeding_key": {
         "activity_section.key": "f0c0579c-dc13-4df9-9b77-8229773e31cd",
@@ -1211,7 +1211,7 @@
       "key": "f11d0408-ee82-4803-884f-e15c2a0a3d1b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "f11d0408-ee82-4803-884f-e15c2a0a3d1b",
@@ -1222,7 +1222,7 @@
       "key": "afbeba77-3344-43a2-b6db-3043e1a0f9da",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 10 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 10 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1258,7 +1258,7 @@
       "key": "26b4d914-acfc-4945-a046-85aa6d92ac75",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons) is there, but live data (songs, weather) is missing or replaced by loading icons.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between content built into the app's code (static) and content fetched from a server (dynamic).\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons) is there, but live data (songs, weather) is missing or replaced by loading icons.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between content built into the app's code (static) and content fetched from a server (dynamic).\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1285,7 +1285,7 @@
       "key": "a209302d-07f7-4838-b6bc-7f10cf754584",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray boxes. This reinforces that the app is aware it is waiting for data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray boxes. This reinforces that the app is aware it is waiting for data.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a209302d-07f7-4838-b6bc-7f10cf754584",
@@ -1321,7 +1321,7 @@
       "key": "feae2244-6eeb-4b5d-90f6-8014d6f8deec",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that waiting for every single task to finish before starting the next is inefficient and creates a bad experience for the customer.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that multitasking—prepping sauce or chopping while water heats—allows the meal to be finished much faster.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *synchronous code*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *asynchronous code*.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that waiting for every single task to finish before starting the next is inefficient and creates a bad experience for the customer.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that multitasking—prepping sauce or chopping while water heats—allows the meal to be finished much faster.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *synchronous code*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *asynchronous code*.\n"
       },
       "seeding_key": {
         "activity_section.key": "feae2244-6eeb-4b5d-90f6-8014d6f8deec",
@@ -1357,7 +1357,7 @@
       "key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition and example of synchronous programming.\n- Level 2: Students write their own definition of synchronous programming and include a real-world example.\n- Level 3: Students read the definition and example of asynchronous programming.\n- Level 4: Students write their own definition of asynchronous programming and include a real-world example.\n- Level 5: Students run a demo of an application that has a long synchronous operation and observe how it impact the user experience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Level 1 and 2, look for students who are confusing \"synchronous\" with \"simultaneous.\" Remind them that \"sync\" in programming means things happen one after another, waiting for the previous step to finish. For Level 3 and 4, listen for students explaining that the program \"keeps going\" while something loads. Ask: \"In an app, what is an example of something that might take time to load?\"\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition and example of synchronous programming.\n- Level 2: Students write their own definition of synchronous programming and include a real-world example.\n- Level 3: Students read the definition and example of asynchronous programming.\n- Level 4: Students write their own definition of asynchronous programming and include a real-world example.\n- Level 5: Students run a demo of an application that has a long synchronous operation and observe how it impact the user experience.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** For Level 1 and 2, look for students who are confusing \"synchronous\" with \"simultaneous.\" Remind them that \"sync\" in programming means things happen one after another, waiting for the previous step to finish. For Level 3 and 4, listen for students explaining that the program \"keeps going\" while something loads. Ask: \"In an app, what is an example of something that might take time to load?\"\n",
         "progression_name": "Vocab: Synchronous Programming"
       },
       "seeding_key": {
@@ -1391,7 +1391,7 @@
       "key": "f2eb98da-ba14-4583-8ebc-4af6b8397867",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which specific action was a synchronous operation? Which specific action was an asynchronous operation? How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting the technical behavior to the user impact. For the like button (asynchronous), students should note that they could keep interact with other parts of the app immediately. For the compress video button (synchronous), students should explicitly mention the 5-second freeze. Listen for phrases like \"The app stopped responding,\" or \"I thought the app crashed because I couldn't even hit the 'Like' button.\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If an app freezes every time you click a button, how does that change your trust in the app? Would you assume it’s working, or would you think it crashed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students to articulate that a synchronous (blocking) task doesn't just slow down the app; it makes the user feel like the app is broken or unresponsive. Asynchronous programming is a fundamental user experience tool used to keep the user feeling in control and informed.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which specific action was a synchronous operation? Which specific action was an asynchronous operation? How did you know the difference just by looking at the screen?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting the technical behavior to the user impact. For the like button (asynchronous), students should note that they could keep interact with other parts of the app immediately. For the compress video button (synchronous), students should explicitly mention the 5-second freeze. Listen for phrases like \"The app stopped responding,\" or \"I thought the app crashed because I couldn't even hit the 'Like' button.\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If an app freezes every time you click a button, how does that change your trust in the app? Would you assume it’s working, or would you think it crashed?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students to articulate that a synchronous (blocking) task doesn't just slow down the app; it makes the user feel like the app is broken or unresponsive. Asynchronous programming is a fundamental user experience tool used to keep the user feeling in control and informed.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "f2eb98da-ba14-4583-8ebc-4af6b8397867",
@@ -1402,7 +1402,7 @@
       "key": "b110bf84-7919-47ed-9945-84474712a813",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how asynchronous code works by predicting and investigating execution order in Web Lab.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete Levels 6 through 8.\n- Level 6: Students predict how blocking code freezes the interface while tasks complete one at a time.\n- Level 7: Students predict the execution order of multiple kitchen tasks running on different timers.\n- Level 8: Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how asynchronous code works by predicting and investigating execution order in Web Lab.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete Levels 6 through 8.\n- Level 6: Students predict how blocking code freezes the interface while tasks complete one at a time.\n- Level 7: Students predict the execution order of multiple kitchen tasks running on different timers.\n- Level 8: Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n",
         "duration": "10",
         "name": "Analogy: Synchronous vs. Asynchronous",
         "progression_name": "Analogy: Synchronous vs. Asynchronous ",
@@ -1436,7 +1436,7 @@
       "key": "f668f707-f119-4930-8923-9fdcd51e2a8f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why did the \"Serving customer\" line print \"undefined\" even though the burger was cooking?*\n- *How can we make sure our app doesn't try to use data before it arrives?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students synthesize their learning from the coding exploration. They should identify that since the kitchen (setTimeout) was working in the background, the main program moved on to the next line immediately. Because the data wasn't \"ready\" yet, the variable was still empty (undefined).\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why did the \"Serving customer\" line print \"undefined\" even though the burger was cooking?*\n- *How can we make sure our app doesn't try to use data before it arrives?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students synthesize their learning from the coding exploration. They should identify that since the kitchen (setTimeout) was working in the background, the main program moved on to the next line immediately. Because the data wasn't \"ready\" yet, the variable was still empty (undefined).\n"
       },
       "seeding_key": {
         "activity_section.key": "f668f707-f119-4930-8923-9fdcd51e2a8f",
@@ -1472,7 +1472,7 @@
       "key": "60b43528-2637-46ce-935b-9c019d193e13",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students draw a timeline graph mapping the code from Level 6. They should label the tasks and wait times in their illustration.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students draw a timeline graph mapping the code from Level 6. They should label the tasks and wait times in their illustration.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1489,7 +1489,7 @@
       "key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f",
@@ -1500,7 +1500,7 @@
       "key": "a72089ee-fb32-476f-9077-6507c8f431ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 7 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 7 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1513,7 +1513,7 @@
       "key": "42803c4d-54ba-4b6d-a916-26766b0ea6f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use a real-world analogy to understand the states of an asynchronous request.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You ordered a product and check its delivery status. What would each of these mean for your package? (Pending, Fulfilled, Rejected)\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students visualize the waiting period and the possible outcomes of a delivery. This sets the stage for the concept of a Promise.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use a real-world analogy to understand the states of an asynchronous request.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You ordered a product and check its delivery status. What would each of these mean for your package? (Pending, Fulfilled, Rejected)\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students visualize the waiting period and the possible outcomes of a delivery. This sets the stage for the concept of a Promise.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1540,7 +1540,7 @@
       "key": "f76c6e88-4e7e-4fa5-92dc-106d3722445e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explicitly connect the student definitions to the JavaScript Promise language: Pending, Fulfilled, and Rejected."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explicitly connect the student definitions to the JavaScript Promise language: Pending, Fulfilled, and Rejected."
       },
       "seeding_key": {
         "activity_section.key": "f76c6e88-4e7e-4fa5-92dc-106d3722445e",
@@ -1563,7 +1563,7 @@
       "key": "9f919183-21d7-4de3-9a9b-97afd04d34fc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "9f919183-21d7-4de3-9a9b-97afd04d34fc",
@@ -1574,7 +1574,7 @@
       "key": "1162f2c8-fdc5-4dee-afe4-806a3cda02bb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Promise*.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *Promise*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1601,7 +1601,7 @@
       "key": "8fd4150f-683e-4189-96de-f1bdba0320d7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three states of a Promise – Pending, Fulfilled, and Rejected."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the three states of a Promise – Pending, Fulfilled, and Rejected."
       },
       "seeding_key": {
         "activity_section.key": "8fd4150f-683e-4189-96de-f1bdba0320d7",
@@ -1624,7 +1624,7 @@
       "key": "3a6af926-e9de-4fb4-a242-7cea0cabae22",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to explain each stage.\n- Fetch Request: This is the moment we call fetch(). The request is sent to the server. fetch() does not wait for the answer. It immediately gives us a Promise object.\n- Pending: As soon as the request is sent, the Promise is in the Pending state. Pending means the request is still in progress. We don’t have data yet. We don’t have an error yet. We are waiting.\n- Fulfilled: If the server responds successfully, the Promise becomes Fulfilled. That usually means we received a successful HTTP response, like 200 OK, and we now have data to work with. The Promise has resolved successfully.\n- Rejected: If something goes wrong — maybe the server crashes, the network fails, or the request can’t complete — the Promise becomes Rejected. Instead of data, we receive an error.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If the Promise is Fulfilled and we finally have the data, what do we want our app to do next? If we don’t handle the Rejected state, what might happen in our app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect Promise outcomes to app behavior – displaying data on success and responding appropriately when something goes wrong. Students realize that we must attach different code paths for success and failure when working with asynchronous data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the then() method.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch() method.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to complete Levels 3 through 5.\n- Level 1: Students read the definition and example of Promise.\n- Level 2: Students write their own definition of Promise.\n- Level 3: Students read the definition and example of .then() and .catch().\n- Level 4: Students write their own definition of .then().\n- Level 5: Students write their own definition of .catch().\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to explain each stage.\n- Fetch Request: This is the moment we call fetch(). The request is sent to the server. fetch() does not wait for the answer. It immediately gives us a Promise object.\n- Pending: As soon as the request is sent, the Promise is in the Pending state. Pending means the request is still in progress. We don’t have data yet. We don’t have an error yet. We are waiting.\n- Fulfilled: If the server responds successfully, the Promise becomes Fulfilled. That usually means we received a successful HTTP response, like 200 OK, and we now have data to work with. The Promise has resolved successfully.\n- Rejected: If something goes wrong — maybe the server crashes, the network fails, or the request can’t complete — the Promise becomes Rejected. Instead of data, we receive an error.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If the Promise is Fulfilled and we finally have the data, what do we want our app to do next? If we don’t handle the Rejected state, what might happen in our app?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect Promise outcomes to app behavior – displaying data on success and responding appropriately when something goes wrong. Students realize that we must attach different code paths for success and failure when working with asynchronous data.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the then() method.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch() method.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to complete Levels 3 through 5.\n- Level 1: Students read the definition and example of Promise.\n- Level 2: Students write their own definition of Promise.\n- Level 3: Students read the definition and example of .then() and .catch().\n- Level 4: Students write their own definition of .then().\n- Level 5: Students write their own definition of .catch().\n",
         "progression_name": "Vocab: Promise"
       },
       "seeding_key": {
@@ -1647,7 +1647,7 @@
       "key": "9984e269-3fb5-446b-b545-8befe426cc91",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice and wonder about the number of .then() and .catch() calls in the code below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that each .then() passes its result to the next step in the chain, while .catch() handles failures. Students recognize that Promise chains can have multiple .then() calls for handling successful steps, and one .catch() to handle errors at the end. Students notice that each .then() passes its result to the next step in the chain, while .catch() handles failures.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 6 to complete Levels 6 through 7.\n- Level 6: Students read 'The Unboxing Rule' panel explaining why we use two .then() calls.\n- Level 7: Students trace a Promise chain and identify the state of a Promise in a code snippet.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice and wonder about the number of .then() and .catch() calls in the code below?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that each .then() passes its result to the next step in the chain, while .catch() handles failures. Students recognize that Promise chains can have multiple .then() calls for handling successful steps, and one .catch() to handle errors at the end. Students notice that each .then() passes its result to the next step in the chain, while .catch() handles failures.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 6 to complete Levels 6 through 7.\n- Level 6: Students read 'The Unboxing Rule' panel explaining why we use two .then() calls.\n- Level 7: Students trace a Promise chain and identify the state of a Promise in a code snippet.\n"
       },
       "seeding_key": {
         "activity_section.key": "9984e269-3fb5-446b-b545-8befe426cc91",
@@ -1680,7 +1680,7 @@
       "key": "97570577-71ac-4706-a08a-fd9b3530d37d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the timeline of an asynchronous request."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk students through the timeline of an asynchronous request."
       },
       "seeding_key": {
         "activity_section.key": "97570577-71ac-4706-a08a-fd9b3530d37d",
@@ -1709,7 +1709,7 @@
       "key": "78fcc4c3-fc9b-49e9-b1b1-c7da7e5d0b98",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8 to write their own Promise chain.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Levels 8, ensure students are putting their DOM update code inside the second .then(). If they put it outside, it will run before the data exists.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8 to write their own Promise chain.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** On Levels 8, ensure students are putting their DOM update code inside the second .then(). If they put it outside, it will run before the data exists.\n",
         "progression_name": "Build a Promise Chain",
         "tips": [
           {
@@ -1727,7 +1727,7 @@
       "key": "4f78b5c5-7ee7-40d1-9616-7f52a9942303",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "4f78b5c5-7ee7-40d1-9616-7f52a9942303",
@@ -1738,7 +1738,7 @@
       "key": "50d5c5ce-4b00-4930-a09f-6355784d1451",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1751,7 +1751,7 @@
       "key": "fefc7d65-b4ac-4478-b939-3bb196716f74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the concept of \"waiting\" to real-world tasks to understand when await is necessary in code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think about tasks you complete in your morning routine. What can you do at the same time? What has to wait for something else before it can happen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that some tasks are independent (checking phone while getting dressed) while others have dependencies (can't get on the bus until it arrives). This mirrors how code waits for a server response.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the concept of \"waiting\" to real-world tasks to understand when await is necessary in code.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think about tasks you complete in your morning routine. What can you do at the same time? What has to wait for something else before it can happen?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that some tasks are independent (checking phone while getting dressed) while others have dependencies (can't get on the bus until it arrives). This mirrors how code waits for a server response.\n"
       },
       "seeding_key": {
         "activity_section.key": "fefc7d65-b4ac-4478-b939-3bb196716f74",
@@ -1774,7 +1774,7 @@
       "key": "f4829f60-90b3-4366-98a0-1b8570aa2439",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "f4829f60-90b3-4366-98a0-1b8570aa2439",
@@ -1785,7 +1785,7 @@
       "key": "7987979e-9823-422b-865f-33d8ee0f164a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Practice identifying \"waiting steps\" and translating a sequence of actions into a structured, asynchronous format.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the Making Steps Clear Activity Guide for today's lesson.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Practice identifying \"waiting steps\" and translating a sequence of actions into a structured, asynchronous format.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Hand out the Making Steps Clear Activity Guide for today's lesson.",
         "duration": "10",
         "name": "Morning Routine"
       },
@@ -1810,7 +1810,7 @@
       "key": "8bbbfa6d-4ed8-407e-bb0b-bab44e85beb8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between synchronous and asynchronous code.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between synchronous and asynchronous code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1849,7 +1849,7 @@
       "key": "e6ef14b9-c390-442e-b9ed-a70b936082b0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for their morning routine in their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who mark every step with await. Remind them that await is only for things outside their control, like a toaster or a bus. Ask: 'Can you brush your teeth while the toast is cooking?'\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for their morning routine in their activity guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who mark every step with await. Remind them that await is only for things outside their control, like a toaster or a bus. Ask: 'Can you brush your teeth while the toast is cooking?'\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1876,7 +1876,7 @@
       "key": "dd7eb766-0ea3-4803-8337-71e89465ab84",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the async keyword.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the async keyword.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1903,7 +1903,7 @@
       "key": "678310cf-471e-462e-a8ca-0859a8076550",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the await keyword.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the await keyword.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1930,7 +1930,7 @@
       "key": "f6bb644f-553e-4b01-a973-c3fda7d5de8d",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the async/await syntax structure.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the async/await syntax structure.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1982,7 +1982,7 @@
       "key": "b772dfef-9a55-47d2-9cdc-5132b94ca679",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students compare the .then() chains to the async/await syntax in their Activity Guides.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which version would you rather debug?*\n- *Why does top-to-bottom flow help?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that async/await is easier to read because it follows the standard linear flow of programming, making it easier to track variables and logic.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students compare the .then() chains to the async/await syntax in their Activity Guides.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which version would you rather debug?*\n- *Why does top-to-bottom flow help?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that async/await is easier to read because it follows the standard linear flow of programming, making it easier to track variables and logic.\n"
       },
       "seeding_key": {
         "activity_section.key": "b772dfef-9a55-47d2-9cdc-5132b94ca679",
@@ -1993,7 +1993,7 @@
       "key": "09c8189f-ba76-48eb-9232-8158857a0128",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Manually apply refactoring skills and use AI to evaluate and compare results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 3 to complete Levels 1 through 4.\n- Level 1: Students read the definition and example of async/await.\n- Level 2: Students write their own definition of async/await.\n- Level 3: Students use an AI tutor to write refactored code for their random joke API.\n- Level 4: Students manually refactor the code and decide which version (AI or human) to use and justify their choice.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students: 'Did the AI use await correctly? Did it keep the variables named the same way you did?' Encourage them to find one difference between their code and the AI's code.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Manually apply refactoring skills and use AI to evaluate and compare results.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 3 to complete Levels 1 through 4.\n- Level 1: Students read the definition and example of async/await.\n- Level 2: Students write their own definition of async/await.\n- Level 3: Students use an AI tutor to write refactored code for their random joke API.\n- Level 4: Students manually refactor the code and decide which version (AI or human) to use and justify their choice.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students: 'Did the AI use await correctly? Did it keep the variables named the same way you did?' Encourage them to find one difference between their code and the AI's code.\n",
         "duration": "15",
         "name": "Human vs AI Refactoring",
         "progression_name": "Vocab: async / await"
@@ -2045,7 +2045,7 @@
       "key": "d10d357f-b370-4d7f-88c2-ea8bc2d4d8ec",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it better to use AI?*\n- *Why check AI code for errors?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the 'Human-in-the-Loop' concept, recognizing that while AI speeds up refactoring, humans must ensure the logic and execution order remain correct.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it better to use AI?*\n- *Why check AI code for errors?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the 'Human-in-the-Loop' concept, recognizing that while AI speeds up refactoring, humans must ensure the logic and execution order remain correct.\n"
       },
       "seeding_key": {
         "activity_section.key": "d10d357f-b370-4d7f-88c2-ea8bc2d4d8ec",
@@ -2056,7 +2056,7 @@
       "key": "f7b49539-72a6-4407-85a9-4b795b8b52a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "f7b49539-72a6-4407-85a9-4b795b8b52a4",
@@ -2067,7 +2067,7 @@
       "key": "6a8ba792-82af-45cf-a8de-13afdf93ac31",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2080,7 +2080,7 @@
       "key": "7ba4390c-dfc1-4bfb-aec2-b6647f05db29",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Engage students with the idea that UI elements come from specific pieces of JSON data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show a small UI mockup card (title, subtitle, one stat/label) next to an unexplained raw JSON response. Give students a quiet moment to scan both.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were building this app, which 3 pieces of information would you want from this data? What looks unuseful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to see that not all data from an API is equally important. Guide them toward identifying a small set of key fields that directly match what they see on the UI card (for example, name, a description, one key stat) and labeling the rest as “nice to have” or “extra.”\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Engage students with the idea that UI elements come from specific pieces of JSON data.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show a small UI mockup card (title, subtitle, one stat/label) next to an unexplained raw JSON response. Give students a quiet moment to scan both.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were building this app, which 3 pieces of information would you want from this data? What looks unuseful?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to see that not all data from an API is equally important. Guide them toward identifying a small set of key fields that directly match what they see on the UI card (for example, name, a description, one key stat) and labeling the rest as “nice to have” or “extra.”\n"
       },
       "seeding_key": {
         "activity_section.key": "7ba4390c-dfc1-4bfb-aec2-b6647f05db29",
@@ -2103,7 +2103,7 @@
       "key": "06a90452-5194-4d8e-9ae1-f3bca7898b0c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "06a90452-5194-4d8e-9ae1-f3bca7898b0c",
@@ -2114,7 +2114,7 @@
       "key": "34b52363-eb6e-4da0-a3ab-12d12ccf59a9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students recognize arrays, objects, and primitives as the structural “shape” of JSON.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that JSON has patterns: square brackets for arrays, curly braces for objects, and different kinds of values. Tell students they will annotate a JSON snippet to make these patterns visible.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to work in Sketch Lab. They will annotate a JSON snippet by highlighting arrays [], objects {}, and labeling example values as strings, numbers, or booleans.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students correctly identifying arrays, objects, primitives, and nested structures. Ask questions like: How do you know this is an array? What tells you this value is nested inside something else? Support students who feel overwhelmed by helping them focus on one bracket and character type at a time.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students recognize arrays, objects, and primitives as the structural “shape” of JSON.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that JSON has patterns: square brackets for arrays, curly braces for objects, and different kinds of values. Tell students they will annotate a JSON snippet to make these patterns visible.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to work in Sketch Lab. They will annotate a JSON snippet by highlighting arrays [], objects {}, and labeling example values as strings, numbers, or booleans.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students correctly identifying arrays, objects, primitives, and nested structures. Ask questions like: How do you know this is an array? What tells you this value is nested inside something else? Support students who feel overwhelmed by helping them focus on one bracket and character type at a time.\n",
         "progression_name": "Seeing the Shape of the JSON"
       },
       "seeding_key": {
@@ -2138,7 +2138,7 @@
       "key": "1c50acd2-911c-42a0-9ad7-af70c73e2479",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *dot notation*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students read the definition and example of dot notation.\n- Level 3: Students write their own definition of dot notation.\n- Level 4: Use the JSON snippet to write dot-notation paths.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students write valid paths that match the JSON (no guessing field names). Ask: Where do you see that property in the JSON? What comes first in your path? Support students by having them point in the JSON and say the path out loud before writing it.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *dot notation*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students read the definition and example of dot notation.\n- Level 3: Students write their own definition of dot notation.\n- Level 4: Use the JSON snippet to write dot-notation paths.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students write valid paths that match the JSON (no guessing field names). Ask: Where do you see that property in the JSON? What comes first in your path? Support students by having them point in the JSON and say the path out loud before writing it.\n",
         "progression_name": "Vocab: Dot Notation"
       },
       "seeding_key": {
@@ -2167,7 +2167,7 @@
       "key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define .map().\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect dot notation to the new idea of transforming arrays. Explain that .map() lets you walk through an array and build a cleaner version of each item that is easier to use in the UI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 5 to complete Levels 5 through 7.\n- Level 5: Students read the formal definition of .map().\n- Level 6: Students write a personal definition for .map() and provide one example.\n- Level 7: Imagine a info card. Choose three properties, give each a clear key name in the clean object, match each to a dot-notation path in the raw JSON, and explain why it is useful for the UI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who choose UI-relevant fields and pair them with correct dot-notation paths. Prompt with: What will each item in your new array look like? How will this help you loop and render cards later?\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define .map().\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Connect dot notation to the new idea of transforming arrays. Explain that .map() lets you walk through an array and build a cleaner version of each item that is easier to use in the UI.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 5 to complete Levels 5 through 7.\n- Level 5: Students read the formal definition of .map().\n- Level 6: Students write a personal definition for .map() and provide one example.\n- Level 7: Imagine a info card. Choose three properties, give each a clear key name in the clean object, match each to a dot-notation path in the raw JSON, and explain why it is useful for the UI.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who choose UI-relevant fields and pair them with correct dot-notation paths. Prompt with: What will each item in your new array look like? How will this help you loop and render cards later?\n",
         "progression_name": "Vocab: .map()"
       },
       "seeding_key": {
@@ -2206,7 +2206,7 @@
       "key": "3eb93050-05d7-463b-a677-ff918d68aede",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did understanding the shape of the JSON help you write dot-notation paths? How did dot notation and .map() work together to get UI-ready data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the full progression: see JSON structure → write accurate dot-notation paths → use .map() plus those paths to design clean, loopable data for the UI. Listen for students mentioning arrays/objects, specific paths, and the idea of building a new, simpler array.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did understanding the shape of the JSON help you write dot-notation paths? How did dot notation and .map() work together to get UI-ready data?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the full progression: see JSON structure → write accurate dot-notation paths → use .map() plus those paths to design clean, loopable data for the UI. Listen for students mentioning arrays/objects, specific paths, and the idea of building a new, simpler array.\n"
       },
       "seeding_key": {
         "activity_section.key": "3eb93050-05d7-463b-a677-ff918d68aede",
@@ -2217,7 +2217,7 @@
       "key": "af387ca2-e4e2-4ce8-ab7e-3811a37acd18",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "af387ca2-e4e2-4ce8-ab7e-3811a37acd18",
@@ -2228,7 +2228,7 @@
       "key": "144fa912-e6f4-41ff-8e6f-b9ce5d4b2607",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2264,7 +2264,7 @@
       "key": "b525b459-1ebc-43ed-a667-d9f0f208ebd7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it more helpful for a user to see the data as a card layout?*\n- *When is it more helpful to see it in a list view?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize layout depends on user needs (e.g., searching vs. browsing). Lists are better for sorting and comparing information quickly, while cards are better for visual exploration and featuring images.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it more helpful for a user to see the data as a card layout?*\n- *When is it more helpful to see it in a list view?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize layout depends on user needs (e.g., searching vs. browsing). Lists are better for sorting and comparing information quickly, while cards are better for visual exploration and featuring images.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "b525b459-1ebc-43ed-a667-d9f0f208ebd7",
@@ -2275,7 +2275,7 @@
       "key": "47f60254-effc-49c3-abb4-3d89f364e1e8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how apps display live data from API calls and how to parse JSON so it can be used effectively in a program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data-driven content*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means to parse JSON.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how apps display live data from API calls and how to parse JSON so it can be used effectively in a program.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *data-driven content*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain what it means to parse JSON.\n",
         "duration": "10",
         "name": "Understanding Data-Driven Content",
         "tips": [
@@ -2294,7 +2294,7 @@
       "key": "c00216a2-cf00-415e-a5fc-bb9099585e2a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of Data-Driven Content.\n- Level 2: Students write a personal definition for Data-Driven Content and provide one example.\n- Level 3: Students read the formal definition of Parsing JSON.\n- Level 4: Students write a personal definition for Parsing JSON and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who can connect the concept to apps they use daily. Ask: “What part of Instagram is data-driven? What part is the same every time the app loads?“ Misconception: Students may think all text on a page is data-driven. Clarify that static titles or buttons are not usually data-driven.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of Data-Driven Content.\n- Level 2: Students write a personal definition for Data-Driven Content and provide one example.\n- Level 3: Students read the formal definition of Parsing JSON.\n- Level 4: Students write a personal definition for Parsing JSON and provide one example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who can connect the concept to apps they use daily. Ask: “What part of Instagram is data-driven? What part is the same every time the app loads?“ Misconception: Students may think all text on a page is data-driven. Clarify that static titles or buttons are not usually data-driven.\n",
         "progression_name": "Vocab: Data-Driven Content"
       },
       "seeding_key": {
@@ -2317,7 +2317,7 @@
       "key": "f84ce953-023b-48a7-b111-0d8fc9d8ade6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students act as UI designers to decide which data fields from JSON are relevant and how they should be visually arranged.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it important to parse the JSON data before designing and coding our web app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that parsing the JSON data allows the computer to interpret the information properly so it can be displayed on screen. Students should read over the JSON themselves to be able to plan out their design before coding. This prevents errors and ensures the UI displays the most relevant data for the app's purpose. It's much easier to sketch a blueprint than to rewrite complex loop logic later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to design a visual mockup of a content card or playlist view in Sketch Lab.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students act as UI designers to decide which data fields from JSON are relevant and how they should be visually arranged.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it important to parse the JSON data before designing and coding our web app?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that parsing the JSON data allows the computer to interpret the information properly so it can be displayed on screen. Students should read over the JSON themselves to be able to plan out their design before coding. This prevents errors and ensures the UI displays the most relevant data for the app's purpose. It's much easier to sketch a blueprint than to rewrite complex loop logic later.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to design a visual mockup of a content card or playlist view in Sketch Lab.\n",
         "duration": "10",
         "name": "Designing the Blueprint",
         "progression_name": "Sketch Your Music App",
@@ -2372,7 +2372,7 @@
       "key": "224e4003-9f72-41b0-aa72-2378d0fb1d20",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete Levels 6 and 7.\n- Level 6: Students build a web app to display their music playlist or card view.\n- Level 7: Students adjust their loop logic and add safeguards to handle the new JSON structure.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students struggling with the loop syntax. Make sure they use the correct variable names inside the loop. Ensure students are choosing keys that make sense for their app. For example, if they are building a card view, they need the image url.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete Levels 6 and 7.\n- Level 6: Students build a web app to display their music playlist or card view.\n- Level 7: Students adjust their loop logic and add safeguards to handle the new JSON structure.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Watch for students struggling with the loop syntax. Make sure they use the correct variable names inside the loop. Ensure students are choosing keys that make sense for their app. For example, if they are building a card view, they need the image url.\n",
         "progression_name": "Design Your Web App"
       },
       "seeding_key": {
@@ -2415,7 +2415,7 @@
       "key": "35263ca8-97c3-4965-aa3f-c3feb201cc38",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you make an API call and get back a JSON response, how can you design your code so it still works if a property is different than expected?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that they can design their code to check whether a property exists before using it, provide default or fallback values if something is missing, and avoid hard-coding property names without validation. That way, even if the backend engineers change a field name or structure, their app won’t crash — it will handle the change gracefully and still look good to the user.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you make an API call and get back a JSON response, how can you design your code so it still works if a property is different than expected?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that they can design their code to check whether a property exists before using it, provide default or fallback values if something is missing, and avoid hard-coding property names without validation. That way, even if the backend engineers change a field name or structure, their app won’t crash — it will handle the change gracefully and still look good to the user.\n"
       },
       "seeding_key": {
         "activity_section.key": "35263ca8-97c3-4965-aa3f-c3feb201cc38",
@@ -2438,7 +2438,7 @@
       "key": "2dec45b0-1f8b-4b31-9d5c-96381a223fa0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2dec45b0-1f8b-4b31-9d5c-96381a223fa0",
@@ -2449,7 +2449,7 @@
       "key": "9d6d339f-7ecc-49fa-8f79-ed03fdecfab4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.\n",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2485,7 +2485,7 @@
       "key": "6b0edb45-309e-4284-8fa2-998f7b29ec83",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. They should recognize that clear communication and a helpful next step (like a 'Back to homepage' button) maintain user trust even when things break.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. They should recognize that clear communication and a helpful next step (like a 'Back to homepage' button) maintain user trust even when things break.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2512,7 +2512,7 @@
       "key": "a25986ab-8472-4ad9-8a8e-264f263f3f95",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Push them to think about what they would add or change about this page.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Listen for mentions of 'confusing technical language' or 'missing next steps'.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Push them to think about what they would add or change about this page.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Listen for mentions of 'confusing technical language' or 'missing next steps'.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a25986ab-8472-4ad9-8a8e-264f263f3f95",
@@ -2523,7 +2523,7 @@
       "key": "4ecb467c-66be-46e8-87d2-e7ac8fa310e9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify failure types in a real-world ticket app scenario and translate user complaints into technical categories.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the When Things Break activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *network failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *server failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *invalid data*.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify failure types in a real-world ticket app scenario and translate user complaints into technical categories.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the When Things Break activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *network failure*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *server failure*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *invalid data*.\n",
         "duration": "15",
         "name": "The Diagnostics"
       },
@@ -2548,7 +2548,7 @@
       "key": "73fd6ace-d865-4a3c-97f2-0049c0220a7c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three main types of failures students will encounter.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1.\n- Level 1: Students read three specific user complaints and identify if they are Network, Server, or Data failures. Have them complete both sections of their activity guide.\n- Level 2: Students read the definition and example of network failure.\n- Level 3: Students write their own definition of server failure and include a real-world example.\n- Level 4: Students read the definition and example of server failure.\n- Level 5: Students write their own definition of network failure and include a real-world example.\n- Level 6: Students read the definition and example of invalid data.\n- Level 7: Students write their own definition of invalid data and include a real-world example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might confuse a slow server with a network failure. As students complete the “Considering the User Experience” section, remind students that “user trust” is the primary metric here. Ask: 'Which choice makes the user feel more in control and less confused?'\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the three main types of failures students will encounter.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1.\n- Level 1: Students read three specific user complaints and identify if they are Network, Server, or Data failures. Have them complete both sections of their activity guide.\n- Level 2: Students read the definition and example of network failure.\n- Level 3: Students write their own definition of server failure and include a real-world example.\n- Level 4: Students read the definition and example of server failure.\n- Level 5: Students write their own definition of network failure and include a real-world example.\n- Level 6: Students read the definition and example of invalid data.\n- Level 7: Students write their own definition of invalid data and include a real-world example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might confuse a slow server with a network failure. As students complete the “Considering the User Experience” section, remind students that “user trust” is the primary metric here. Ask: 'Which choice makes the user feel more in control and less confused?'\n",
         "progression_name": "Explore Error Handling"
       },
       "seeding_key": {
@@ -2634,7 +2634,7 @@
       "key": "66bd6dd6-8979-4c62-955f-4fadfdf51082",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *The page loaded, but the seat map API is down. Would you choose to show the page with missing data or block off the page entirely?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students explain whether they chose Fail Fast or Fail Quietly in their activity guide. Students should recognize that there is no 'perfect' answer, only trade-offs. If students struggle, ask: 'Which choice makes the app look more broken?'\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *The page loaded, but the seat map API is down. Would you choose to show the page with missing data or block off the page entirely?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students explain whether they chose Fail Fast or Fail Quietly in their activity guide. Students should recognize that there is no 'perfect' answer, only trade-offs. If students struggle, ask: 'Which choice makes the app look more broken?'\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2688,7 +2688,7 @@
       "key": "5471bb8f-88f7-4ef7-af1b-0b1de74b1747",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 8 to design the UI for a types of failures.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for 'The Action'. Every error message should give the user something to do (Retry, Refresh, Contact Support). If a student just says 'It broke', ask them: 'What action should the user take now?'\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 8 to design the UI for a types of failures.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for 'The Action'. Every error message should give the user something to do (Retry, Refresh, Contact Support). If a student just says 'It broke', ask them: 'What action should the user take now?'\n",
         "progression_name": "Designing Recovery States",
         "tips": [
           {
@@ -2720,7 +2720,7 @@
       "key": "8ef4c2c0-a396-4e4f-a45a-c420e0e83b7d",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does a well-designed error message build trust even when an app is broken?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that transparency and guidance maintain the relationship between the user and the software. Trust is built when the app \"takes responsibility\" for the error and offers a path forward.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does a well-designed error message build trust even when an app is broken?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that transparency and guidance maintain the relationship between the user and the software. Trust is built when the app \"takes responsibility\" for the error and offers a path forward.\n"
       },
       "seeding_key": {
         "activity_section.key": "8ef4c2c0-a396-4e4f-a45a-c420e0e83b7d",
@@ -2731,7 +2731,7 @@
       "key": "677d1c6a-4d73-4ba3-8795-963e92c5f7da",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "677d1c6a-4d73-4ba3-8795-963e92c5f7da",
@@ -2742,7 +2742,7 @@
       "key": "7bcc8b2d-67bf-441d-85ab-a9425b31a4df",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2755,7 +2755,7 @@
       "key": "68263eaf-2a0a-40aa-8d8d-1b1aa591a0a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how different failure experiences affect user trust and begin recognizing that good apps are designed to handle errors intentionally, not accidentally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Rank the three failure screens from most to least trustworthy. Explain your ranking.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that how a system fails matters as much as whether it fails. A friendly fallback communicates planning and care, a blank screen communicates neglect or instability, and exposed technical errors communicate lack of user-centered design. Students should begin to see trust as a product of intentional error handling.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When nothing appears on the screen, what questions start running through your head as a user?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that a blank screen creates uncertainty and loss of control. Without feedback, users may blame themselves, their device, or the app. Students should understand that silence is not neutral, it is a communication failure, and that good systems provide feedback even when something goes wrong.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What message does this error screen send about the reliability of the system?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that exposing raw technical errors reduces perceived reliability and trust. Even if the issue is minor, showing stack traces or code suggests poor planning and lack of audience awareness. Students should understand that error messages must match the user’s level of understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why does the cat screen make the failure feel less frustrating, even though the problem isn't actually fixed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that tone, visuals, and clear messaging regulate user emotion and preserve trust. A fallback does not fix the underlying technical problem, but it protects the user experience by communicating awareness and offering guidance. Students should connect this to intentional design through try/catch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how different failure experiences affect user trust and begin recognizing that good apps are designed to handle errors intentionally, not accidentally.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Rank the three failure screens from most to least trustworthy. Explain your ranking.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that how a system fails matters as much as whether it fails. A friendly fallback communicates planning and care, a blank screen communicates neglect or instability, and exposed technical errors communicate lack of user-centered design. Students should begin to see trust as a product of intentional error handling.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When nothing appears on the screen, what questions start running through your head as a user?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that a blank screen creates uncertainty and loss of control. Without feedback, users may blame themselves, their device, or the app. Students should understand that silence is not neutral, it is a communication failure, and that good systems provide feedback even when something goes wrong.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What message does this error screen send about the reliability of the system?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that exposing raw technical errors reduces perceived reliability and trust. Even if the issue is minor, showing stack traces or code suggests poor planning and lack of audience awareness. Students should understand that error messages must match the user’s level of understanding.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why does the cat screen make the failure feel less frustrating, even though the problem isn't actually fixed?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that tone, visuals, and clear messaging regulate user emotion and preserve trust. A fallback does not fix the underlying technical problem, but it protects the user experience by communicating awareness and offering guidance. Students should connect this to intentional design through try/catch.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "68263eaf-2a0a-40aa-8d8d-1b1aa591a0a2",
@@ -2789,7 +2789,7 @@
       "key": "25d13d46-8c00-4153-8afc-d6a45cb0fc46",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the trapeze metaphor for fetching data.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the trapeze metaphor for fetching data.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2816,7 +2816,7 @@
       "key": "d4ab74b0-9f73-4721-a06a-3a9f7633eaca",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the try block.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the try block.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2843,7 +2843,7 @@
       "key": "dd8d99ef-f724-45b7-8968-aee388b50e06",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch block."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch block."
       },
       "seeding_key": {
         "activity_section.key": "dd8d99ef-f724-45b7-8968-aee388b50e06",
@@ -2866,7 +2866,7 @@
       "key": "246aa1a9-25b9-45fb-a190-e2dcfaee5011",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the syntax of a try...catch block."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk through the syntax of a try...catch block."
       },
       "seeding_key": {
         "activity_section.key": "246aa1a9-25b9-45fb-a190-e2dcfaee5011",
@@ -2905,7 +2905,7 @@
       "key": "0a65ab6d-f426-4fbd-8c34-102802145380",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *fallback*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of try/catch.\n- Level 2: Students write a personal definition for try/catch and provide one example.\n- Level 3: Students read the formal definition of fallback.\n- Level 4: Students write a personal definition for fallback and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, check that students can point to which code belongs in the try block and what goes in catch (error). Ask probing questions like: What “dangerous stunt” is your try block protecting? and What will the user see if catch runs? On Level 4, look for examples that clearly show something helpful to the user (apology, image, retry) instead of doing nothing or exposing raw error text Ensure students describe fallbacks as planned backup experiences, not random glitches.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *fallback*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of try/catch.\n- Level 2: Students write a personal definition for try/catch and provide one example.\n- Level 3: Students read the formal definition of fallback.\n- Level 4: Students write a personal definition for fallback and provide one example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, check that students can point to which code belongs in the try block and what goes in catch (error). Ask probing questions like: What “dangerous stunt” is your try block protecting? and What will the user see if catch runs? On Level 4, look for examples that clearly show something helpful to the user (apology, image, retry) instead of doing nothing or exposing raw error text Ensure students describe fallbacks as planned backup experiences, not random glitches.\n",
         "progression_name": "Vocab: try...catch"
       },
       "seeding_key": {
@@ -2944,7 +2944,7 @@
       "key": "5850cb14-9620-49dd-8bdd-363a61e6820e",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a login attempt fails. What should the system show the user, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will evaluate how different error-handling strategies influence user experience, trust, and system design tradeoffs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete Levels 5 through 6.\n- Level 5: Students predict and then run code with a broken URL to see it crash.\n- Level 6: Students modify the code by wrapping the fetch in a try block and adding a catch block that prints to the console.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who forget the curly braces for the catch block. Remind them that catch needs its own block of code to run. Ask: \"Now that you've added the catch, does the red error still stop the whole program?\"\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a login attempt fails. What should the system show the user, and why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will evaluate how different error-handling strategies influence user experience, trust, and system design tradeoffs.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete Levels 5 through 6.\n- Level 5: Students predict and then run code with a broken URL to see it crash.\n- Level 6: Students modify the code by wrapping the fetch in a try block and adding a catch block that prints to the console.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who forget the curly braces for the catch block. Remind them that catch needs its own block of code to run. Ask: \"Now that you've added the catch, does the red error still stop the whole program?\"\n",
         "progression_name": "Predict and Run: Broken Fetch"
       },
       "seeding_key": {
@@ -2983,7 +2983,7 @@
       "key": "202a8ef2-d271-4650-8e4d-cce75ae39367",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does using try and catch make your app more trustworthy for users?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that even if a feature fails, a controlled error message maintains user trust better than a crash or technical jargon. Even if the data doesn't load, a polite message or fallback image keeps the user feeling safe and in control.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Chaos Challenge scenarios.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does using try and catch make your app more trustworthy for users?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that even if a feature fails, a controlled error message maintains user trust better than a crash or technical jargon. Even if the data doesn't load, a polite message or fallback image keeps the user feeling safe and in control.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Chaos Challenge scenarios.\n"
       },
       "seeding_key": {
         "activity_section.key": "202a8ef2-d271-4650-8e4d-cce75ae39367",
@@ -3012,7 +3012,7 @@
       "key": "45800fba-311e-4e49-a0d1-1bc5c95184af",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 8.\n- Level 7: Students read the three \"Chaos\" scenarios.\n- Level 8A: Students write code to display a polite, non-technical apology message.\n- Level 8B: Students write code to display a local fallback image when the fetch fails.\n- Level 8C: Student write code to wire up a \"Try Again\" button to the fetch function.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 8.\n- Level 7: Students read the three \"Chaos\" scenarios.\n- Level 8A: Students write code to display a polite, non-technical apology message.\n- Level 8B: Students write code to display a local fallback image when the fetch fails.\n- Level 8C: Student write code to wire up a \"Try Again\" button to the fetch function.\n",
         "progression_name": "Chaos Challenge Introduction"
       },
       "seeding_key": {
@@ -3041,7 +3041,7 @@
       "key": "ac041b5c-8ff5-4ce8-b163-b514673e6eba",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "ac041b5c-8ff5-4ce8-b163-b514673e6eba",
@@ -3052,7 +3052,7 @@
       "key": "5707ed9d-6a8a-4c78-ac59-42c538471258",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3088,7 +3088,7 @@
       "key": "1631a429-1d16-4b88-99bd-f51fe232b877",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is loading here? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the shape and layout of the gray boxes (the 'skeleton') mimics the layout of a social media profile. Students should realize that even without text, certain shapes suggest specific types of content. Because gray boxes tell your brain what to expect, you aren't staring at a blank screen; you're looking at a layout that is about to be filled.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is loading here? How do you know?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the shape and layout of the gray boxes (the 'skeleton') mimics the layout of a social media profile. Students should realize that even without text, certain shapes suggest specific types of content. Because gray boxes tell your brain what to expect, you aren't staring at a blank screen; you're looking at a layout that is about to be filled.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3115,7 +3115,7 @@
       "key": "729702ff-87b7-49ae-91ef-25df992ec4e8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why include text as well as a progress bar?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that the progress bar manages patience by showing time remaining, while the text communicates that the app is actively working on specific tasks behind the scenes. Without the bar, you don't know how long it will take. Without the text, you don't know if the app is actually doing anything useful.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why include text as well as a progress bar?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that the progress bar manages patience by showing time remaining, while the text communicates that the app is actively working on specific tasks behind the scenes. Without the bar, you don't know how long it will take. Without the text, you don't know if the app is actually doing anything useful.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3142,7 +3142,7 @@
       "key": "2513cc26-7c12-4495-a779-692502ed2fc5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why does this represent poor design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Introduce that poor design can lead to low user trust. Students should realize that without context, the user has no clue what is happening behind the scenes, how long it will take, or what to expect when the page loads. Students should understand that it is best to communicate clearly so users aren't left guessing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why does this represent poor design?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Introduce that poor design can lead to low user trust. Students should realize that without context, the user has no clue what is happening behind the scenes, how long it will take, or what to expect when the page loads. Students should understand that it is best to communicate clearly so users aren't left guessing.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "2513cc26-7c12-4495-a779-692502ed2fc5",
@@ -3153,7 +3153,7 @@
       "key": "2f879e61-6391-42e5-ab14-1215e65fb953",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design loading, empty, and error states for a web app by deciding on text and visual assets..\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design loading, empty, and error states for a web app by deciding on text and visual assets..\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability.\n",
         "duration": "10",
         "name": "Design Phase"
       },
@@ -3178,7 +3178,7 @@
       "key": "93a21f38-bfdf-4023-bc04-5e283c1f4dbb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain loading state, empty state, and error state. Remind students that loading the page perfectly, i.e. following the “Happy Path, is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain loading state, empty state, and error state. Remind students that loading the page perfectly, i.e. following the “Happy Path, is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3205,7 +3205,7 @@
       "key": "af323257-c72b-497b-8036-53bbf487da20",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students implement the logic for loading, empty, and error states in Web Lab using the assets they designed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition for human-centered reliability.\n- Level 2: Students write their own definition of human-centered reliability.\n- Level 3: Students use Sketch Lab to design their three states.\n- Level 4: Students implement their loading, empty, and error states in Web Lab and test their work.\n- Level 5: Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students implement the logic for loading, empty, and error states in Web Lab using the assets they designed.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition for human-centered reliability.\n- Level 2: Students write their own definition of human-centered reliability.\n- Level 3: Students use Sketch Lab to design their three states.\n- Level 4: Students implement their loading, empty, and error states in Web Lab and test their work.\n- Level 5: Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
         "duration": "20",
         "name": "Build Phase",
         "progression_name": "Vocab: Human-Centered Reliability"
@@ -3272,7 +3272,7 @@
       "key": "4590b9e8-adef-4bf6-9a90-6c71e3d56c1d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
       },
       "seeding_key": {
         "activity_section.key": "4590b9e8-adef-4bf6-9a90-6c71e3d56c1d",
@@ -3283,7 +3283,7 @@
       "key": "740b5334-8292-4bec-8b6f-97eb97503977",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "740b5334-8292-4bec-8b6f-97eb97503977",
@@ -3294,7 +3294,7 @@
       "key": "8dd68ec4-394a-4588-a80e-247112a3f8b9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3330,7 +3330,7 @@
       "key": "239a7d46-6e0d-4163-8d81-1e4553a8c344",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You're building an app. For each item, decide: Local (hardcoded) or Live (fetched):\n- *Live NBA Game Scores*\n- *Home Icon Image*\n- *List of Music Genres (Rock, Pop, Jazz)*\n- *Weather Forecast*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data should be Live, while stable structural elements are better stored locally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You're building an app. For each item, decide: Local (hardcoded) or Live (fetched):\n- *Live NBA Game Scores*\n- *Home Icon Image*\n- *List of Music Genres (Rock, Pop, Jazz)*\n- *Weather Forecast*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data should be Live, while stable structural elements are better stored locally.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "239a7d46-6e0d-4163-8d81-1e4553a8c344",
@@ -3366,7 +3366,7 @@
       "key": "5c95eb98-24ed-4346-970f-79f55330743f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *live data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *local data*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the biggest risk of relying ONLY on live data for your app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that if the API goes down or the user is offline, the app will be empty or broken (the \"White Screen of Death\").\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *live data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *local data*.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the biggest risk of relying ONLY on live data for your app?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that if the API goes down or the user is offline, the app will be empty or broken (the \"White Screen of Death\").\n"
       },
       "seeding_key": {
         "activity_section.key": "5c95eb98-24ed-4346-970f-79f55330743f",
@@ -3389,7 +3389,7 @@
       "key": "53f1b43e-8bed-4d68-96e3-e80eeb71cbcf",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why we use static constants for UI speed and the safety role of fallback data."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain why we use static constants for UI speed and the safety role of fallback data."
       },
       "seeding_key": {
         "activity_section.key": "53f1b43e-8bed-4d68-96e3-e80eeb71cbcf",
@@ -3418,7 +3418,7 @@
       "key": "3129ca55-d226-4671-98c2-86cb021c7b7a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of local data.\n- Level 2: Students write a personal definition for local data and provide one example.\n- Level 3: Students read the formal definition of live data.\n- Level 4: Students write a personal definition for live data and provide one example.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of local data.\n- Level 2: Students write a personal definition for local data and provide one example.\n- Level 3: Students read the formal definition of live data.\n- Level 4: Students write a personal definition for live data and provide one example.\n",
         "progression_name": "Vocab: Local Data"
       },
       "seeding_key": {
@@ -3457,7 +3457,7 @@
       "key": "6671a7e0-b5b3-4287-a7d1-83b596014386",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would you decide what data to always load as a static constant? What data should be used as a backup?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that core interface elements and essential structure should be static and reliable, while external or frequently changing data should be dynamic with a fallback to preserve usability.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would you decide what data to always load as a static constant? What data should be used as a backup?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that core interface elements and essential structure should be static and reliable, while external or frequently changing data should be dynamic with a fallback to preserve usability.\n"
       },
       "seeding_key": {
         "activity_section.key": "6671a7e0-b5b3-4287-a7d1-83b596014386",
@@ -3468,7 +3468,7 @@
       "key": "af5bebf6-458b-4b1c-a1c7-09a7ad16666c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient “hybrid” web app that combines static configuration, live API data, and local backup data, demonstrating how real-world systems handle both dynamic content and failure conditions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5 to complete Levels 5 through 7.\n- Level 5: Initialize the static UI using an appConfig object.\n- Level 6: Create the backupData array to match the API structure.\n- Level 7: Implement try/catch logic to switch to backup data if the fetch fails.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient “hybrid” web app that combines static configuration, live API data, and local backup data, demonstrating how real-world systems handle both dynamic content and failure conditions.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5 to complete Levels 5 through 7.\n- Level 5: Initialize the static UI using an appConfig object.\n- Level 6: Create the backupData array to match the API structure.\n- Level 7: Implement try/catch logic to switch to backup data if the fetch fails.\n",
         "duration": "20",
         "name": "The Hybrid Architecture",
         "progression_name": "Create an App Shell"
@@ -3510,7 +3510,7 @@
       "key": "e18c35bf-ddaf-4328-8bac-167392ecdff0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "e18c35bf-ddaf-4328-8bac-167392ecdff0",
@@ -3521,7 +3521,7 @@
       "key": "a1fec8b7-6ef5-44a2-8b95-08d84900c679",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3534,7 +3534,7 @@
       "key": "bff8580b-4f53-476a-bd95-c4cdc78fddc1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What makes an app feel fast and responsive?*\n- *What makes an app feel broken or confusing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin thinking about responsiveness, feedback, and user trust — which sets up async + loading states.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What makes an app feel fast and responsive?*\n- *What makes an app feel broken or confusing?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin thinking about responsiveness, feedback, and user trust — which sets up async + loading states.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3547,7 +3547,7 @@
       "key": "dde1b376-ff61-4433-935d-38cc2a4224db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Explore-Style App Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the simplified project goals. Explain that their app must fetch live data from an API, render it dynamically, add interactive reveal features, and clearly communicate loading, error, and empty states. Emphasize that reliability and user trust are central to the project — their design decisions should ensure the app never feels frozen, broken, or confusing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that success involves more than just making the app work. Listen for themes like reliable API integration, clear interaction design, effective loading and error handling, thoughtful documentation, and intentional AI use. Students should recognize that a strong project demonstrates both technical accuracy and user trust.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Explore-Style App Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing an API to handling edge cases.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Explore-Style App Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk students through the simplified project goals. Explain that their app must fetch live data from an API, render it dynamically, add interactive reveal features, and clearly communicate loading, error, and empty states. Emphasize that reliability and user trust are central to the project — their design decisions should ensure the app never feels frozen, broken, or confusing.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that success involves more than just making the app work. Listen for themes like reliable API integration, clear interaction design, effective loading and error handling, thoughtful documentation, and intentional AI use. Students should recognize that a strong project demonstrates both technical accuracy and user trust.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Explore-Style App Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing an API to handling edge cases.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3576,7 +3576,7 @@
       "key": "64ffa83f-04a4-442d-a68d-d6b9e6d9a037",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today’s focus is Milestone 1: Connect to an API & Build Your Dynamic List. Students will choose an API, test the endpoint, identify meaningful fields, and render a working dynamic list using async and await. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what must be completed by the end of the milestone.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that today’s focus is Milestone 1: Connect to an API & Build Your Dynamic List. Students will choose an API, test the endpoint, identify meaningful fields, and render a working dynamic list using async and await. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what must be completed by the end of the milestone.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3593,7 +3593,7 @@
       "key": "cd5c0dc2-b057-4d1a-b40d-943c48b105f3",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to begin Milestone 1: Connect to an API & Build Your Dynamic List. Students should use the support tools to choose and test an API, inspect the JSON structure, select meaningful fields, and plan their card layout before fully building their render logic.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work in the hub, ask guiding questions such as:\n- Which API are you using, and why did you choose it?\n- What fields will appear in your summary card?\n- Does your JSON response match the fields you plan to display?\n- Where does async and await fit into your fetch logic?\n\nUse these check-ins to confirm students are testing their API connection and planning their data flow before layering on additional features.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to begin Milestone 1: Connect to an API & Build Your Dynamic List. Students should use the support tools to choose and test an API, inspect the JSON structure, select meaningful fields, and plan their card layout before fully building their render logic.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work in the hub, ask guiding questions such as:\n- Which API are you using, and why did you choose it?\n- What fields will appear in your summary card?\n- Does your JSON response match the fields you plan to display?\n- Where does async and await fit into your fetch logic?\n\nUse these check-ins to confirm students are testing their API connection and planning their data flow before layering on additional features.",
         "progression_name": "Milestone 1",
         "tips": [
           {
@@ -3625,7 +3625,7 @@
       "key": "93f6b2dd-9aa8-4b63-8dff-62f7abfd3b6b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3644,7 +3644,7 @@
       "key": "83266ff1-cb46-44b2-92e4-b5212847fdd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *When you use an app like Instagram, Amazon, or Spotify, why don’t they show all information at once?*\n- *What makes a “See More” or “View Details” interaction helpful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that hiding and revealing information improves clarity, reduces overload, and helps users focus. This prepares them to think intentionally about what belongs in a summary card versus a detail view.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *When you use an app like Instagram, Amazon, or Spotify, why don’t they show all information at once?*\n- *What makes a “See More” or “View Details” interaction helpful?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that hiding and revealing information improves clarity, reduces overload, and helps users focus. This prepares them to think intentionally about what belongs in a summary card versus a detail view.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3657,7 +3657,7 @@
       "key": "67ddd525-198b-4ccf-b2cc-7d6144f20c15",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to finish any remaining Milestone 1 work in Level 1 if needed, then move to Level 2 to begin Milestone 2. Explain that today they will shift from building a static dynamic list to making their app interactive. The focus is adding a clear trigger button, attaching event listeners, and planning how additional details will be revealed. Emphasize that they should start simple: get one card interaction working correctly before expanding to the full set.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Where is your “See More” or “Reveal” button placed on the card?\n- How does your click event know which card was selected?\n- What happens when you click one card — does only that card update?\n- Are you toggling hidden content or fetching additional detail data?\n- Does your reveal improve clarity, or does it make the layout confusing?\n\nRemind students that their interaction should be intentional and predictable. If multiple cards update at once or nothing happens, guide them to trace the flow: click → event listener → reveal logic → render. Encourage them to debug using console.log before adding complexity.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to finish any remaining Milestone 1 work in Level 1 if needed, then move to Level 2 to begin Milestone 2. Explain that today they will shift from building a static dynamic list to making their app interactive. The focus is adding a clear trigger button, attaching event listeners, and planning how additional details will be revealed. Emphasize that they should start simple: get one card interaction working correctly before expanding to the full set.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Where is your “See More” or “Reveal” button placed on the card?\n- How does your click event know which card was selected?\n- What happens when you click one card — does only that card update?\n- Are you toggling hidden content or fetching additional detail data?\n- Does your reveal improve clarity, or does it make the layout confusing?\n\nRemind students that their interaction should be intentional and predictable. If multiple cards update at once or nothing happens, guide them to trace the flow: click → event listener → reveal logic → render. Encourage them to debug using console.log before adding complexity.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 2"
@@ -3671,7 +3671,7 @@
       "key": "d3030340-e079-4d38-8993-c597a0e8844c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that explain how their reveal interaction improves (or complicates) the user experience. Encourage students to think about whether their button placement, reveal behavior, and detail layout make information clearer or more confusing. Prompt them to identify one specific improvement they would make to strengthen clarity or interaction flow.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that explain how their reveal interaction improves (or complicates) the user experience. Encourage students to think about whether their button placement, reveal behavior, and detail layout make information clearer or more confusing. Prompt them to identify one specific improvement they would make to strengthen clarity or interaction flow.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3690,7 +3690,7 @@
       "key": "80c706f0-fcff-4fdd-a86e-e30e0b4bcf08",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your app so far, what might happen if your API takes a long time to load — or doesn’t load at all? Where might your app feel confusing or broken to a user right now?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate weak points in their current app, especially around loading, errors, or empty results. Listen for awareness that the app may look frozen, blank, or unclear without feedback. This prepares them to intentionally add loading states, try/catch error handling, and empty-result messaging in Milestone 3.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your app so far, what might happen if your API takes a long time to load — or doesn’t load at all? Where might your app feel confusing or broken to a user right now?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate weak points in their current app, especially around loading, errors, or empty results. Listen for awareness that the app may look frozen, blank, or unclear without feedback. This prepares them to intentionally add loading states, try/catch error handling, and empty-result messaging in Milestone 3.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3703,7 +3703,7 @@
       "key": "f128fbf8-3f79-42bb-94b7-956f8b8a2e55",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 3. Explain that today students will wrap up Milestone 2 and begin Milestone 3. Direct students to open their Explore-Style App Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 3. Explain that today students will wrap up Milestone 2 and begin Milestone 3. Direct students to open their Explore-Style App Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 3",
@@ -3733,7 +3733,7 @@
       "key": "5b2c48ef-9935-4f03-9db9-a48140caf1c2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete any remaining Milestone 2 interaction work if needed, then move into Milestone 3. Explain that today’s focus is strengthening their app so it never looks frozen or broken. Students will add loading states, implement try/catch error handling, design clear status messages, and test how their app behaves when something goes wrong. Emphasize that professional apps are not defined by never failing — they are defined by how clearly they handle failure.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are actively implementing and testing defensive features. Ask guiding questions such as:\n- What does the user see immediately after they click a button?\n- Where does your loading state appear?\n- What happens if the API request fails?\n- Does your error message clearly explain what happened?\n- What happens if the API returns zero results?\n- Have you intentionally broken your URL to test your error handling?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete any remaining Milestone 2 interaction work if needed, then move into Milestone 3. Explain that today’s focus is strengthening their app so it never looks frozen or broken. Students will add loading states, implement try/catch error handling, design clear status messages, and test how their app behaves when something goes wrong. Emphasize that professional apps are not defined by never failing — they are defined by how clearly they handle failure.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are actively implementing and testing defensive features. Ask guiding questions such as:\n- What does the user see immediately after they click a button?\n- Where does your loading state appear?\n- What happens if the API request fails?\n- Does your error message clearly explain what happened?\n- What happens if the API returns zero results?\n- Have you intentionally broken your URL to test your error handling?",
         "progression_name": "Milestone 3",
         "tips": [
           {
@@ -3761,7 +3761,7 @@
       "key": "688e3caa-83ef-4610-9455-c5638e17cd9d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -3774,7 +3774,7 @@
       "key": "6d4753dd-9922-49de-b5d3-207887ec14e8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone else had to maintain your app next week, what would they need to understand quickly? What parts of your code might be confusing to someone who didn’t write it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin thinking about code clarity, documentation, and ownership. Listen for ideas about readable variable names, comments, API attribution, and clear explanations of async and error logic.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone else had to maintain your app next week, what would they need to understand quickly? What parts of your code might be confusing to someone who didn’t write it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin thinking about code clarity, documentation, and ownership. Listen for ideas about readable variable names, comments, API attribution, and clear explanations of async and error logic.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3787,7 +3787,7 @@
       "key": "20f7a2c6-b4ca-40c7-8f52-aa704854b08c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Explore-Style App Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to wrap up any remaining Milestone 3 reliability work if needed, then move into Milestone 4. Explain that today’s focus is preparing their app for handoff and submission. Students will create a clear README.md, add meaningful comments explaining their async and error handling logic, and clean up their code. Emphasize that this milestone is about ownership — making sure someone else could understand, maintain, and trust their work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are documenting and refining their projects thoughtfully. Ask guiding questions such as:\n- Does your README clearly explain what your app does and who it’s for?\n- Have you included a working link to your API source?\n- Do your comments explain why the code works, not just what it does?\n- If someone new read your async function, would they understand the flow?\n- Have you removed unnecessary console.log statements? Does your final version run without visible errors?",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Explore-Style App Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to wrap up any remaining Milestone 3 reliability work if needed, then move into Milestone 4. Explain that today’s focus is preparing their app for handoff and submission. Students will create a clear README.md, add meaningful comments explaining their async and error handling logic, and clean up their code. Emphasize that this milestone is about ownership — making sure someone else could understand, maintain, and trust their work.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are documenting and refining their projects thoughtfully. Ask guiding questions such as:\n- Does your README clearly explain what your app does and who it’s for?\n- Have you included a working link to your API source?\n- Do your comments explain why the code works, not just what it does?\n- If someone new read your async function, would they understand the flow?\n- Have you removed unnecessary console.log statements? Does your final version run without visible errors?",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 4",
@@ -3817,7 +3817,7 @@
       "key": "402e8fce-8bb7-48dc-87f2-90450d11354f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 4 Reflection section in their project planning guide and add to what they wrote previously. They should update their reflection with any final revisions they made, improvements to clarity or documentation, and insights about ownership and reliability. Encourage them to include specific examples from their app.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 4 Reflection section in their project planning guide and add to what they wrote previously. They should update their reflection with any final revisions they made, improvements to clarity or documentation, and insights about ownership and reliability. Encourage them to include specific examples from their app.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3836,7 +3836,7 @@
       "key": "c9e63ea3-035a-4873-8283-46ca0660bb8c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one improvement you made this week that had the biggest impact on your app? What are you most proud of in your project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface growth and intentional decisions. Listen for mentions of async logic, reveal interaction, loading/error states, documentation, or debugging breakthroughs.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one improvement you made this week that had the biggest impact on your app? What are you most proud of in your project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface growth and intentional decisions. Listen for mentions of async logic, reveal interaction, loading/error states, documentation, or debugging breakthroughs.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3849,7 +3849,7 @@
       "key": "af73f2ac-3ae1-469f-90e6-bcecbdde09c9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 5. Explain that today students will finalize Milestone 4 by polishing their documentation, reviewing their code for clarity, and preparing their app for presentation. Direct students to check their Explore-Style App Project Guide and confirm they have completed all Milestone 4 deliverables before showcasing their work.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 5. Explain that today students will finalize Milestone 4 by polishing their documentation, reviewing their code for clarity, and preparing their app for presentation. Direct students to check their Explore-Style App Project Guide and confirm they have completed all Milestone 4 deliverables before showcasing their work.",
         "duration": "30",
         "name": "Activity",
         "tips": [
@@ -3878,7 +3878,7 @@
       "key": "29e3e5f0-97eb-426b-902b-0a6b601f2fff",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Explore-Style App Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honest self-assessment — the goal is to recognize strengths and identify areas for growth as intentional developers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are thoughtfully evaluating each rubric row rather than rushing through it. Encourage them to pay close attention to:\n- API Integration & Async Logic — Does their fetch flow work reliably and clearly?\n- Dynamic Rendering & Interaction — Does the reveal interaction behave predictably?\n- Defensive Design & Reliability — Do loading, error, and empty states work consistently?\n- Documentation & Code Quality — Is their README clear? Are their comments meaningful?\n\nPrompt students to support their self-ratings with specific evidence from their app.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Explore-Style App Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honest self-assessment — the goal is to recognize strengths and identify areas for growth as intentional developers.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are thoughtfully evaluating each rubric row rather than rushing through it. Encourage them to pay close attention to:\n- API Integration & Async Logic — Does their fetch flow work reliably and clearly?\n- Dynamic Rendering & Interaction — Does the reveal interaction behave predictably?\n- Defensive Design & Reliability — Do loading, error, and empty states work consistently?\n- Documentation & Code Quality — Is their README clear? Are their comments meaningful?\n\nPrompt students to support their self-ratings with specific evidence from their app.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3905,7 +3905,7 @@
       "key": "5fed48df-b379-43fb-83d4-e1e10f108bd8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete their Explore-Style App Projects. Explain that this is their final dedicated work time before submission and presentation. Today’s focus is prioritizing improvements based on their self-assessment and peer feedback. Emphasize that they should make intentional, high-impact refinements rather than trying to change everything at once. Remind students to submit their projects at the end of the allotted time.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete their Explore-Style App Projects. Explain that this is their final dedicated work time before submission and presentation. Today’s focus is prioritizing improvements based on their self-assessment and peer feedback. Emphasize that they should make intentional, high-impact refinements rather than trying to change everything at once. Remind students to submit their projects at the end of the allotted time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3932,7 +3932,7 @@
       "key": "4a470d6a-3a48-4e95-8c36-bc40918f4fdd",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Explore-Style App Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Explore-Style App Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3973,7 +3973,7 @@
       "key": "f01b83f3-787c-48b1-8220-1ec51b1641c3",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Explore-Style App Project Guide. Explain that this step helps them consolidate what they learned about:\n- Integrating and managing live API data\n- Designing clear and predictable interactions\n- Implementing loading, error, and empty states\n- Writing meaningful documentation and comments\n- Using AI intentionally and evaluating its suggestions\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project, such as:\n- A bug they discovered while testing an edge case\n- A change they made to improve clarity or reliability\n- How they improved their loading or error messages\n- How they revised or clarified their async logic\n- How they evaluated, modified, or rejected an AI suggestion\n\nProbe with questions like:\n- What changed in your app between Milestone 1 and Milestone 4?\n- How did your approach to debugging evolve?\n- What decision most improved user trust?\n- What part of your app best shows ownership?\n\nIf students finish early, invite them to help a peer reflect or revisit the rubric one more time.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Explore-Style App Project Guide. Explain that this step helps them consolidate what they learned about:\n- Integrating and managing live API data\n- Designing clear and predictable interactions\n- Implementing loading, error, and empty states\n- Writing meaningful documentation and comments\n- Using AI intentionally and evaluating its suggestions\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project, such as:\n- A bug they discovered while testing an edge case\n- A change they made to improve clarity or reliability\n- How they improved their loading or error messages\n- How they revised or clarified their async logic\n- How they evaluated, modified, or rejected an AI suggestion\n\nProbe with questions like:\n- What changed in your app between Milestone 1 and Milestone 4?\n- How did your approach to debugging evolve?\n- What decision most improved user trust?\n- What part of your app best shows ownership?\n\nIf students finish early, invite them to help a peer reflect or revisit the rubric one more time.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4027,6 +4027,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4049,6 +4052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: API"
       },
       "bonus": false,
@@ -4071,6 +4077,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: API"
       },
       "bonus": false,
@@ -4093,6 +4102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: JSON"
       },
       "bonus": false,
@@ -4115,6 +4127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: JSON"
       },
       "bonus": false,
@@ -4137,6 +4152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot"
+        ],
         "progression": "Exploring the Network Panel"
       },
       "bonus": false,
@@ -4159,6 +4177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-pilot"
+        ],
         "progression": "Navigate a Weather App"
       },
       "bonus": false,
@@ -4181,6 +4202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Explore API Documentation"
       },
       "bonus": false,
@@ -4203,6 +4227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-level4-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Make a Prediction"
       },
       "bonus": false,
@@ -4225,6 +4252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Modify an API Call"
       },
       "bonus": false,
@@ -4247,6 +4277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson1-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4269,6 +4302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Synchronous Programming"
       },
       "bonus": false,
@@ -4291,6 +4327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Synchronous Programming"
       },
       "bonus": false,
@@ -4313,6 +4352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Asynchronous Programming"
       },
       "bonus": false,
@@ -4335,6 +4377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Asynchronous Programming"
       },
       "bonus": false,
@@ -4357,6 +4402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Demo: Run the Frozen App"
       },
       "bonus": false,
@@ -4379,6 +4427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Analogy: Synchronous vs. Asynchronous "
       },
       "bonus": false,
@@ -4401,6 +4452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4423,6 +4477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Promise"
       },
       "bonus": false,
@@ -4445,6 +4502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Promise"
       },
       "bonus": false,
@@ -4467,6 +4527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: .then() and .catch()"
       },
       "bonus": false,
@@ -4489,6 +4552,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: .then() and .catch()"
       },
       "bonus": false,
@@ -4511,6 +4577,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: .then() and .catch()"
       },
       "bonus": false,
@@ -4533,6 +4602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot"
+        ],
         "progression": "The Unboxing Rule"
       },
       "bonus": false,
@@ -4555,6 +4627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level5-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Trace the Promise Chain"
       },
       "bonus": false,
@@ -4577,6 +4652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Build a Promise Chain"
       },
       "bonus": false,
@@ -4599,6 +4677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson3-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4621,6 +4702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: async / await"
       },
       "bonus": false,
@@ -4643,6 +4727,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson4-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: async / await"
       },
       "bonus": false,
@@ -4665,6 +4752,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson4-level1-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Use AI to Refactor the Code"
       },
       "bonus": false,
@@ -4687,6 +4777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson4-level2-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Manually Refactor the Code"
       },
       "bonus": false,
@@ -4709,6 +4802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson4-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4731,6 +4827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot"
+        ],
         "progression": "Seeing the Shape of the JSON"
       },
       "bonus": false,
@@ -4753,6 +4852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-pilot"
+        ],
         "progression": "Vocab: Dot Notation"
       },
       "bonus": false,
@@ -4775,6 +4877,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-pilot"
+        ],
         "progression": "Vocab: Dot Notation"
       },
       "bonus": false,
@@ -4797,6 +4902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot"
+        ],
         "progression": "Trace a Dot-Notation Path"
       },
       "bonus": false,
@@ -4819,6 +4927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: .map()"
       },
       "bonus": false,
@@ -4841,6 +4952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: .map()"
       },
       "bonus": false,
@@ -4863,6 +4977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot"
+        ],
         "progression": "Design a Mapped Object for the UI"
       },
       "bonus": false,
@@ -4885,6 +5002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson5-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4907,6 +5027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Data-Driven Content"
       },
       "bonus": false,
@@ -4929,6 +5052,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Data-Driven Content"
       },
       "bonus": false,
@@ -4951,6 +5077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Parsing JSON"
       },
       "bonus": false,
@@ -4973,6 +5102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Parsing JSON"
       },
       "bonus": false,
@@ -4995,6 +5127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Sketch Your Music App"
       },
       "bonus": false,
@@ -5017,6 +5152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Design Your Web App"
       },
       "bonus": false,
@@ -5039,6 +5177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Debug the Code"
       },
       "bonus": false,
@@ -5061,6 +5202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson6-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5083,6 +5227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot"
+        ],
         "progression": "Explore Error Handling"
       },
       "bonus": false,
@@ -5105,6 +5252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Network Failure"
       },
       "bonus": false,
@@ -5127,6 +5277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Network Failure"
       },
       "bonus": false,
@@ -5149,6 +5302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocab3-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Server Failure"
       },
       "bonus": false,
@@ -5171,6 +5327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary3-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Server Failure"
       },
       "bonus": false,
@@ -5193,6 +5352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Invalid Data"
       },
       "bonus": false,
@@ -5215,6 +5377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Invalid Data"
       },
       "bonus": false,
@@ -5237,6 +5402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-pilot"
+        ],
         "progression": "Designing Recovery States"
       },
       "bonus": false,
@@ -5259,6 +5427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson7-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5281,6 +5452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: try...catch"
       },
       "bonus": false,
@@ -5303,6 +5477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: try...catch"
       },
       "bonus": false,
@@ -5325,6 +5502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Fallback"
       },
       "bonus": false,
@@ -5347,6 +5527,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Fallback"
       },
       "bonus": false,
@@ -5369,6 +5552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Predict and Run: Broken Fetch"
       },
       "bonus": false,
@@ -5391,6 +5577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-level6-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Modify: Broken Fetch"
       },
       "bonus": false,
@@ -5413,6 +5602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilot"
+        ],
         "progression": "Chaos Challenge Introduction"
       },
       "bonus": false,
@@ -5435,6 +5627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pilot"
+        ],
         "progression": "Chaos Challenge"
       },
       "bonus": false,
@@ -5457,6 +5652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson8-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5479,6 +5677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
@@ -5501,6 +5702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
@@ -5523,6 +5727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Drafting the Web App State"
       },
       "bonus": false,
@@ -5545,6 +5752,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pilot"
+        ],
         "progression": "Build Your Web App State"
       },
       "bonus": false,
@@ -5567,6 +5777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot"
+        ],
         "progression": "Getting Feedback"
       },
       "bonus": false,
@@ -5589,6 +5802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5611,6 +5827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Local Data"
       },
       "bonus": false,
@@ -5633,6 +5852,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level2-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Local Data"
       },
       "bonus": false,
@@ -5655,6 +5877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level3-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Live Data"
       },
       "bonus": false,
@@ -5677,6 +5902,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level4-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Vocab: Live Data"
       },
       "bonus": false,
@@ -5699,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Create an App Shell"
       },
       "bonus": false,
@@ -5721,6 +5952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Store Backup Data"
       },
       "bonus": false,
@@ -5743,6 +5977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Implement Hybrid Logic"
       },
       "bonus": false,
@@ -5765,6 +6002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson10-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5787,6 +6027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot"
+        ],
         "progression": "Milestone 1"
       },
       "bonus": false,
@@ -5809,6 +6052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Milestone 2"
       },
       "bonus": false,
@@ -5831,6 +6077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Milestone 3"
       },
       "bonus": false,
@@ -5853,6 +6102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-pilot"
+        ],
         "progression": "Milestone 4"
       },
       "bonus": false,
@@ -5875,6 +6127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson11-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5897,6 +6152,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,

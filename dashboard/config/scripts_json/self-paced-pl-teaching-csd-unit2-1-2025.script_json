@@ -14,7 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 18:41:32 UTC",
+    "serialized_at": "2026-03-30 21:22:48 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -463,6 +464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24_may2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -485,6 +489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit2_CSD-PL-24_may2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -507,6 +514,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U2SelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -529,6 +539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,

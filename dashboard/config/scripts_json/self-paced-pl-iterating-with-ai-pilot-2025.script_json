@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-03 16:29:12 UTC",
+    "serialized_at": "2026-03-30 21:24:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -167,6 +167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-Intro-1_2026"
+        ],
         "progression": "Introduction (5 min)"
       },
       "bonus": false,
@@ -189,6 +192,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl=aif-2-U4-curriculum-overview-2_2026"
+        ],
         "progression": "Introduction (5 min)"
       },
       "bonus": false,
@@ -211,6 +217,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U4-class-context-3_2026"
+        ],
         "progression": "Introduction (5 min)"
       },
       "bonus": false,
@@ -233,6 +242,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-project-overview-4_2026"
+        ],
         "progression": "Introduction (5 min)"
       },
       "bonus": false,
@@ -255,6 +267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-types-of-loops-2_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -277,6 +292,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-introducing-loops-1_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -299,6 +317,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-forloop-panel_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -321,6 +342,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-forloop-debug-weblab_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -343,6 +367,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-whileloop-panel_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -365,6 +392,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-while-debug-weblab-guess_2026"
+        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
@@ -387,6 +417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-display-intro-movie_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -409,6 +442,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-movie-transparency-weblab_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -431,6 +467,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-pipeline-steps_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -453,6 +492,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-pipeline-community-weblab_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -475,6 +517,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-display-obj-cards_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -497,6 +542,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-rendering-w-fallbacks-weblab_2026"
+        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
@@ -519,6 +567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-filters-intro_2026"
+        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
@@ -541,6 +592,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-filters-active-bubble_2026"
+        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
@@ -563,6 +617,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-filtering-boolean-logic-weblab_2026"
+        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
@@ -585,6 +642,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-fallback-bias-reflection_2026"
+        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
@@ -607,6 +667,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-pure-methods-vocab_2026"
+        ],
         "progression": "Copying Data (15 min)"
       },
       "bonus": false,
@@ -629,6 +692,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-functions-side-effects-cfu_2026"
+        ],
         "progression": "Copying Data (15 min)"
       },
       "bonus": false,
@@ -651,6 +717,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate_2026"
+        ],
         "progression": "Copying Data (15 min)"
       },
       "bonus": false,
@@ -673,6 +742,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab_2026"
+        ],
         "progression": "Copying Data (15 min)"
       },
       "bonus": false,
@@ -695,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-filter-and-threshold_2026"
+        ],
         "progression": "Filtering Data (10 min)"
       },
       "bonus": false,
@@ -717,6 +792,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-threshold-likes-weblab_2026"
+        ],
         "progression": "Filtering Data (10 min)"
       },
       "bonus": false,
@@ -739,6 +817,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-schema-design_2026"
+        ],
         "progression": "Filtering Data (10 min)"
       },
       "bonus": false,
@@ -761,6 +842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-reflect-wrap-3_2026"
+        ],
         "progression": "Wrapping Up (5 min)"
       },
       "bonus": false,
@@ -783,6 +867,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-lesson-resources-2_2026"
+        ],
         "progression": "Wrapping Up (5 min)"
       },
       "bonus": false,
@@ -805,6 +892,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-final-level_2026"
+        ],
         "progression": "Wrapping Up (5 min)"
       },
       "bonus": false,

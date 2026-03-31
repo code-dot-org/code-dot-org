@@ -13,7 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 18:47:32 UTC",
+    "serialized_at": "2026-03-30 21:22:35 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -414,7 +415,7 @@
       "key": "38dd4188-c971-47b4-b979-fd1930d05bb6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How many ways can you represent 7?*"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How many ways can you represent 7?*"
       },
       "seeding_key": {
         "activity_section.key": "38dd4188-c971-47b4-b979-fd1930d05bb6",
@@ -461,7 +462,7 @@
       "key": "efca2f3c-3ac6-4e2f-bcd5-e70714f933f3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** With a partner, work out how many different pieces of information (made of up of circles and squares) you can represent with three place values. For example: `circle-circle-circle` and `circle-square-circle` can represent two different pieces of information. \r\n\r\n**Discuss:** Give students time to work individually, then have them share with their neighbor and fill in any patterns they may have missed.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Confirm with the class that there are 8 possible patterns, but don't list all of them out. Ask students to share the 7th pattern in their list. Students will likely have different answers for this."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** With a partner, work out how many different pieces of information (made of up of circles and squares) you can represent with three place values. For example: `circle-circle-circle` and `circle-square-circle` can represent two different pieces of information. \r\n\r\n**Discuss:** Give students time to work individually, then have them share with their neighbor and fill in any patterns they may have missed.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Confirm with the class that there are 8 possible patterns, but don't list all of them out. Ask students to share the 7th pattern in their list. Students will likely have different answers for this."
       },
       "seeding_key": {
         "activity_section.key": "efca2f3c-3ac6-4e2f-bcd5-e70714f933f3",
@@ -484,7 +485,7 @@
       "key": "25281817-4de6-495c-a105-3a7dffca731b",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  [r circle_square_patterns/virtual-pl-csp-summer/2025] - one for each group. Each group also gets the [r shape_cutouts/virtual-pl-csp-summer/2025] to use during the activity.\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
+        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:**  [r circle_square_patterns/virtual-pl-csp-summer/2025] - one for each group. Each group also gets the [r shape_cutouts/virtual-pl-csp-summer/2025] to use during the activity.\r\n\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
         "name": "Circle Square Activity (25 minutes) \r"
       },
       "seeding_key": {
@@ -524,7 +525,7 @@
       "key": "8f752151-c5b3-4591-90fb-4d5e6fb27329",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
         "tips": [
           {
             "type": "teachingTip",
@@ -553,7 +554,7 @@
       "key": "3c076103-900e-487f-a837-4090e0cf9aba",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How is counting in this circle/square system similar to how we count in our regular lives? How is it different?*\n\n**Discussion Goal:** \n* Similar: It follows agreed-upon rules\n* Different: Uses shapes rather than numbers\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How is counting in this circle/square system similar to how we count in our regular lives? How is it different?*\n\n**Discussion Goal:** \n* Similar: It follows agreed-upon rules\n* Different: Uses shapes rather than numbers\n"
       },
       "seeding_key": {
         "activity_section.key": "3c076103-900e-487f-a837-4090e0cf9aba",

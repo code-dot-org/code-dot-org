@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:22:33 UTC",
+    "serialized_at": "2026-03-30 21:21:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1197,7 +1197,7 @@
       "key": "9141a014-c7a7-4185-8cce-d44eeffc92d8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a time where you had to prepare to do something, like go on a trip or make a meal. How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think of a time where you had to prepare to do something, like go on a trip or make a meal. How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1214,7 +1214,7 @@
       "key": "d8092bd5-859c-48ef-983f-a290390df675",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "d8092bd5-859c-48ef-983f-a290390df675",
@@ -1264,7 +1264,7 @@
       "key": "de4ee093-fb06-4ca1-9e7a-3b245a4f2129",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction* in terms of class design and UML diagrams.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction* in terms of class design and UML diagrams.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
       },
       "seeding_key": {
         "activity_section.key": "de4ee093-fb06-4ca1-9e7a-3b245a4f2129",
@@ -1289,7 +1289,7 @@
       "key": "977391cf-dc93-4ce8-80cb-4a3d3394781f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students identify common elements and differences between the UML diagram and the text description, noting how the diagram provides a structured, visual representation of attributes and methods, while the text offers a descriptive summary of the same information.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students compare the UML diagrams and text to see how the diagrams show the relationship between a superclass and its subclasses, while the text describes the attributes and behaviors of each class. They should understand how the diagrams visually represent these relationships and how the text provides the same information in words."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students identify common elements and differences between the UML diagram and the text description, noting how the diagram provides a structured, visual representation of attributes and methods, while the text offers a descriptive summary of the same information.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students compare the UML diagrams and text to see how the diagrams show the relationship between a superclass and its subclasses, while the text describes the attributes and behaviors of each class. They should understand how the diagrams visually represent these relationships and how the text provides the same information in words."
       },
       "seeding_key": {
         "activity_section.key": "977391cf-dc93-4ce8-80cb-4a3d3394781f",
@@ -1300,7 +1300,7 @@
       "key": "8bec1300-2487-4eab-85dc-0802a144a61a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-based description of the `Pet`, `Dog`, `Cat`, and `PetOwner` classes might look like, including how they relate to one another."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-based description of the `Pet`, `Dog`, `Cat`, and `PetOwner` classes might look like, including how they relate to one another."
       },
       "seeding_key": {
         "activity_section.key": "8bec1300-2487-4eab-85dc-0802a144a61a",
@@ -1311,7 +1311,7 @@
       "key": "3031414a-dbcc-48bc-9a5c-7d9e6824ee4a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be helpful to have these representations before you write a program?*\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words in a program description make sense to turn into a class?*\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be helpful to have these representations before you write a program?*\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What words in a program description make sense to turn into a class?*\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1328,7 +1328,7 @@
       "key": "0805ea90-675c-40f6-99db-6cc8b4b90c1a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Not all nouns should be classes. Which of these is not a class?*\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Not all nouns should be classes. Which of these is not a class?*\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
       },
       "seeding_key": {
         "activity_section.key": "0805ea90-675c-40f6-99db-6cc8b4b90c1a",
@@ -1359,7 +1359,7 @@
       "key": "469b8d1b-22cb-43da-8ac9-c014940a43bc",
       "position": 12,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1389,7 +1389,7 @@
       "key": "744b4ebc-36ba-4a97-8e3e-4b2ad0bbc116",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each pair several post-it notes, at least five per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to TAG the UML diagrams as they participate in the gallery walk.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students back to their own UML diagrams to review the comments left by their peers. Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Distribute: Give each pair several post-it notes, at least five per student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Direct students to TAG the UML diagrams as they participate in the gallery walk.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Direct students back to their own UML diagrams to review the comments left by their peers. Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper. ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1432,7 +1432,7 @@
       "key": "d4be82e0-2eaa-4d47-a487-9b8a604bdae4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1449,7 +1449,7 @@
       "key": "a57326e3-79d7-49e4-bb2a-c404bf8efe42",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1474,7 +1474,7 @@
       "key": "def31377-4f3d-444f-a133-db3bb05cd86e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Attributes"
       },
       "seeding_key": {
@@ -1486,7 +1486,7 @@
       "key": "372280ce-b3a3-4aab-a65c-2b16e614ad01",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the classes in the program have `private` variables and that the tester class attempts to access and print the values for these variables. Students also notice the error that is caused by trying to access and print these values and may wonder why these variables are `private`.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the classes in the program have `private` variables and that the tester class attempts to access and print the values for these variables. Students also notice the error that is caused by trying to access and print these values and may wonder why these variables are `private`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1503,7 +1503,7 @@
       "key": "16c78b97-e716-46e5-b7a5-de2be0e8ad0a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *class* and *object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *class* and *object*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Declaring Instance Variables",
         "progression_name": "Investigate and Modify: Classes and Attributes"
@@ -1517,7 +1517,7 @@
       "key": "1fba2424-e39f-46c4-9fa3-7ca3d0841a2c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1534,7 +1534,7 @@
       "key": "f0db02ab-43b8-4985-93e1-7cbeab4068d6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1551,7 +1551,7 @@
       "key": "7ec02c9c-ca28-4a00-9d2e-5119b7240220",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1568,7 +1568,7 @@
       "key": "5039b041-f987-43f3-adbc-37d7abbf0690",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing instance variables in a class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing instance variables in a class.",
         "progression_name": "Skill Building: Declaring Instance Variables"
       },
       "seeding_key": {
@@ -1580,7 +1580,7 @@
       "key": "57955b40-23c4-4ed3-a903-e4141039fba3",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to complete Levels 6 and 7 on Code Studio. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to complete Levels 6 and 7 on Code Studio. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Inheritance Hierarchies",
         "progression_name": "Investigate and Modify: Refactoring Code"
@@ -1594,7 +1594,7 @@
       "key": "c171920d-8587-4420-8d63-80a467dcf929",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***access modifier*** and ***encapsulation***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would encapsulation be useful?*\n\n**Discussion Goal:** Students share that encapsulation protects the attributes of a class and ensures that only the class can control what is stored. They might also suggest that this prevents accidental or direct access to the attributes, especially in programs where some attributes should not be accessed or modified without some form of verification.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***access modifier*** and ***encapsulation***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When would encapsulation be useful?*\n\n**Discussion Goal:** Students share that encapsulation protects the attributes of a class and ensures that only the class can control what is stored. They might also suggest that this prevents accidental or direct access to the attributes, especially in programs where some attributes should not be accessed or modified without some form of verification.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1611,7 +1611,7 @@
       "key": "49a3abbf-ab8c-46ce-81d7-41b02629eaf7",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***DRY principle***.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***DRY principle***.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1628,7 +1628,7 @@
       "key": "e6299fe4-f71e-42c4-9e30-2a58d20baf75",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 to complete Levels 8 and 9. Students complete a Check for Understanding on Level 8, then continue to Level 9 to create the `Dessert` class and a `Dessert` subclass.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 to complete Levels 8 and 9. Students complete a Check for Understanding on Level 8, then continue to Level 9 to create the `Dessert` class and a `Dessert` subclass.",
         "progression_name": "Practice: The Food Truck",
         "tips": [
           {
@@ -1658,7 +1658,7 @@
       "key": "c223b81d-e937-418f-9cad-577ffb5a663d",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1688,7 +1688,7 @@
       "key": "fd2a39f2-1797-44e2-81d9-0f7b4978f840",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "fd2a39f2-1797-44e2-81d9-0f7b4978f840",
@@ -1736,7 +1736,7 @@
       "key": "6650d061-a62e-4845-8735-ef4a7c66b6fe",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Anticipation Guide handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompts in the Before column on the Anticipation Guide. Have students compare their responses with a neighbor.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Anticipation Guide handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompts in the Before column on the Anticipation Guide. Have students compare their responses with a neighbor.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1753,7 +1753,7 @@
       "key": "e50166d5-e431-4171-9054-95fd5fe1b1b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1778,7 +1778,7 @@
       "key": "330a4bc0-f897-4b45-8e1b-9aa7c6370991",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Constructors and Scope"
       },
       "seeding_key": {
@@ -1790,7 +1790,7 @@
       "key": "dd139234-9706-4e54-ba5d-ea34d96ed9ff",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the instance variables are assigned default values based on their data types instead of the values specified in the constructor call. They also notice that the parameter names are the same as the instance variables. Students may wonder why the instance variables were assigned default values or how Java knows which variable to use when the names are the same."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the instance variables are assigned default values based on their data types instead of the values specified in the constructor call. They also notice that the parameter names are the same as the instance variables. Students may wonder why the instance variables were assigned default values or how Java knows which variable to use when the names are the same."
       },
       "seeding_key": {
         "activity_section.key": "dd139234-9706-4e54-ba5d-ea34d96ed9ff",
@@ -1801,7 +1801,7 @@
       "key": "aa8408b0-d471-4aa2-b01c-6b0d5e012b40",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that the formal parameters are local variables and explain that these are referenced first instead of the instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall that the formal parameters are local variables and explain that these are referenced first instead of the instance variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "The this Keyword",
         "progression_name": "Investigate and Modify: The this Keyword"
@@ -1815,7 +1815,7 @@
       "key": "8dced127-d556-452c-bbcc-9e477deba7b7",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the word \"scope\" mean to you?*\n\n**Discussion Goal:** Students share definitions of scope, such as how much of a topic or area is being covered or investigating something.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does the word \"scope\" mean to you?*\n\n**Discussion Goal:** Students share definitions of scope, such as how much of a topic or area is being covered or investigating something.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1832,7 +1832,7 @@
       "key": "760d2ee2-e637-4f77-870a-5c20568c7c24",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and explain ***scope***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `this` keyword and explain its functionality.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does using the `this` keyword make our code more efficient and minimize redundancies?*\n\n**Discussion Goal:** Students suggest that using the same names for the parameters as the instance variables makes it easier to identify the purpose of the parameters and associate them to the instance variables. Students also note that using the `this` keyword to call a different constructor in the class makes it easier to reuse existing code instead of rewriting the code to assign the values to the instance variables."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and explain ***scope***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the `this` keyword and explain its functionality.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How does using the `this` keyword make our code more efficient and minimize redundancies?*\n\n**Discussion Goal:** Students suggest that using the same names for the parameters as the instance variables makes it easier to identify the purpose of the parameters and associate them to the instance variables. Students also note that using the `this` keyword to call a different constructor in the class makes it easier to reuse existing code instead of rewriting the code to assign the values to the instance variables."
       },
       "seeding_key": {
         "activity_section.key": "760d2ee2-e637-4f77-870a-5c20568c7c24",
@@ -1857,7 +1857,7 @@
       "key": "17e6e22e-f29c-4379-b5f0-5cd60c5d234d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. On Level 5, students complete a Check for Understanding, then continue to Level 6 to practice writing no-argument and parameterized constructors in a class. On Level 7, students write parameterized constructors in the `Dessert` class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. On Level 5, students complete a Check for Understanding, then continue to Level 6 to practice writing no-argument and parameterized constructors in a class. On Level 7, students write parameterized constructors in the `Dessert` class.",
         "progression_name": "Practice: The this Keyword",
         "tips": [
           {
@@ -1887,7 +1887,7 @@
       "key": "99338af1-04c6-4df4-8db7-ad62c68c3a56",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1917,7 +1917,7 @@
       "key": "96cfc16e-c8a0-46dd-8d54-8ad23eae2e64",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students respond to the prompts in the After column on the Anticipation Guide. Have students compare their responses with a neighbor.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students respond to the prompts in the After column on the Anticipation Guide. Have students compare their responses with a neighbor.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1934,7 +1934,7 @@
       "key": "5c1a20ea-d65d-4125-85fc-b098b908e2b0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5c1a20ea-d65d-4125-85fc-b098b908e2b0",
@@ -1969,7 +1969,7 @@
       "key": "11b64489-87cd-464b-83be-dd754c1ee915",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Consider the attributes in the `Painter` class. Can you recall a scenario in your program where knowing the values of those attributes would have been beneficial?*\n\n**Discussion Goal:** The goal of this discussion is to encourage students to reflect on their past programming experiences and identify instances where understanding the attributes of an object, such as those in the `Painter` class, could have enhanced their program's functionality or efficiency. By sharing specific scenarios, students will deepen their comprehension of object-oriented programming principles, particularly the importance of attributes in class design. This discussion also aims to foster peer learning, as students may gain new perspectives on how to effectively utilize object attributes in their own code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Consider the attributes in the `Painter` class. Can you recall a scenario in your program where knowing the values of those attributes would have been beneficial?*\n\n**Discussion Goal:** The goal of this discussion is to encourage students to reflect on their past programming experiences and identify instances where understanding the attributes of an object, such as those in the `Painter` class, could have enhanced their program's functionality or efficiency. By sharing specific scenarios, students will deepen their comprehension of object-oriented programming principles, particularly the importance of attributes in class design. This discussion also aims to foster peer learning, as students may gain new perspectives on how to effectively utilize object attributes in their own code."
       },
       "seeding_key": {
         "activity_section.key": "11b64489-87cd-464b-83be-dd754c1ee915",
@@ -1980,7 +1980,7 @@
       "key": "36435f8d-5c8c-465f-a35f-fd869e74ca21",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2005,7 +2005,7 @@
       "key": "94a12efe-65fc-4656-946d-76cfbfd08404",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Accessor Methods"
       },
       "seeding_key": {
@@ -2017,7 +2017,7 @@
       "key": "ada95a3b-a149-4662-97a4-8fac6c11064d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there are methods in the class that return the instance variable. They also notice that when these methods are called, they can obtain and print the values stored in the instance variable. Students may wonder why they might use accessor methods and how these methods are similar or different from methods they have written before."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there are methods in the class that return the instance variable. They also notice that when these methods are called, they can obtain and print the values stored in the instance variable. Students may wonder why they might use accessor methods and how these methods are similar or different from methods they have written before."
       },
       "seeding_key": {
         "activity_section.key": "ada95a3b-a149-4662-97a4-8fac6c11064d",
@@ -2028,7 +2028,7 @@
       "key": "83262302-7954-4529-94eb-398d7209bc05",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall method signatures and return type.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall method signatures and return type.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2045,7 +2045,7 @@
       "key": "74ff927f-8314-4ec3-8f96-2be25926d4e6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing an accessor method in a class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing an accessor method in a class.",
         "duration": "10",
         "name": "Exploring Accessor Methods",
         "progression_name": "Investigate and Modify: Accessor Methods"
@@ -2070,7 +2070,7 @@
       "key": "e11d68a3-7138-41ff-8ec7-06836c27b0a1",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "e11d68a3-7138-41ff-8ec7-06836c27b0a1",
@@ -2095,7 +2095,7 @@
       "key": "3b7c20f8-b1d2-4e02-8f80-f87a1a588d7e",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***accessor method*** and recall the methods in the `Painter` class.\n\n**Do This:** Explain the syntax for writing an accessor method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method is `public` so it can be accessed from outside of the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The return type matches the data type of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the method is typically `get` followed by the name of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `return` keyword exits the method and provides the value to where the method is called\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Then we specify the instance variable we want to return\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***return by value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why are accessor methods more useful than printing the values in a method in the class?*\n\n**Discussion Goal:** Students suggest that accessor methods make it easier to obtain a specific value when they need it. They might also realize that these methods also allow them to use the values to perform calculations in other parts of their program.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***accessor method*** and recall the methods in the `Painter` class.\n\n**Do This:** Explain the syntax for writing an accessor method:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The method is `public` so it can be accessed from outside of the class\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The return type matches the data type of the instance variable\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The name of the method is typically `get` followed by the name of the instance variable\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `return` keyword exits the method and provides the value to where the method is called\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Then we specify the instance variable we want to return\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***return by value***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why are accessor methods more useful than printing the values in a method in the class?*\n\n**Discussion Goal:** Students suggest that accessor methods make it easier to obtain a specific value when they need it. They might also realize that these methods also allow them to use the values to perform calculations in other parts of their program.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2126,7 +2126,7 @@
       "key": "3ef6780c-eadd-4ed3-a138-b6d98b78efee",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we should decide when to write an access method for an instance variable?*\n\n**Discussion Goal:** Students suggest providing accessor methods when they want other classes to have access to the values stored in an instance variable. Values stored in instance variables that should not be accessible by other classes should not have an accessor method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write accessor methods in the `Dessert` class. On Level 7, students write accessor methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we should decide when to write an access method for an instance variable?*\n\n**Discussion Goal:** Students suggest providing accessor methods when they want other classes to have access to the values stored in an instance variable. Values stored in instance variables that should not be accessible by other classes should not have an accessor method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write accessor methods in the `Dessert` class. On Level 7, students write accessor methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
         "progression_name": "Practice: Accessor Methods",
         "tips": [
           {
@@ -2156,7 +2156,7 @@
       "key": "7bbc082a-f6f0-4e0e-9f48-259628fe089e",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2173,7 +2173,7 @@
       "key": "6ff9b1e2-732e-46b6-be29-a6b2acc64984",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *A software engineer is designing this class and needs help deciding which instance variables should have accessor methods. Which of these instance variables would you NOT write accessor methods for? Why?*\n\n**Discussion Goal:** Students suggest not writing an accessor method for the `password` instance variable because only the `User` class should have access to this information. Students might also suggest that the `User` class might have a method for comparing what the user entered to the password instance variable instead of using an accessor method that is called in another class to check if the password is correct.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *A software engineer is designing this class and needs help deciding which instance variables should have accessor methods. Which of these instance variables would you NOT write accessor methods for? Why?*\n\n**Discussion Goal:** Students suggest not writing an accessor method for the `password` instance variable because only the `User` class should have access to this information. Students might also suggest that the `User` class might have a method for comparing what the user entered to the password instance variable instead of using an accessor method that is called in another class to check if the password is correct.",
         "name": "Design Thinking",
         "tips": [
           {
@@ -2191,7 +2191,7 @@
       "key": "5976a507-461c-4f51-ae9d-8950d005f952",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2208,7 +2208,7 @@
       "key": "77fcb629-b3b7-4934-ba0a-2ddaebd2749e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "77fcb629-b3b7-4934-ba0a-2ddaebd2749e",
@@ -2256,7 +2256,7 @@
       "key": "bfd61c9f-866e-4e0d-a7e4-7f2a927ea12d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2273,7 +2273,7 @@
       "key": "46f46364-c131-4347-9419-eaf029125897",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information might you ask the user for in your programs? Which method would you use to get this information?*\n\n**Discussion Goal:** Students suggest getting values for a starting price for a `Dessert` object or asking the user for their name. Students share the methods they would use, such as `nextDouble()` to get the price and `next()` or `nextLine()` to get the user's name.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information might you ask the user for in your programs? Which method would you use to get this information?*\n\n**Discussion Goal:** Students suggest getting values for a starting price for a `Dessert` object or asking the user for their name. Students share the methods they would use, such as `nextDouble()` to get the price and `next()` or `nextLine()` to get the user's name.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2290,7 +2290,7 @@
       "key": "d7f718eb-84e5-4225-923a-f2bb3d82de39",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2315,7 +2315,7 @@
       "key": "66e34fb2-6e38-40b7-860c-bbd4b9129ea9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Mutator Methods"
       },
       "seeding_key": {
@@ -2327,7 +2327,7 @@
       "key": "28ad64b6-ca2c-4049-b7d1-57a712186a33",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`."
       },
       "seeding_key": {
         "activity_section.key": "28ad64b6-ca2c-4049-b7d1-57a712186a33",
@@ -2352,7 +2352,7 @@
       "key": "49c806a0-2a31-4af6-8769-ef24735fc01e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2369,7 +2369,7 @@
       "key": "561b017d-9efa-4cce-bfc3-dd86553941f1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing a mutator method in a class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results then practice writing a mutator method in a class.",
         "progression_name": "Investigate and Modify: Mutator Methods"
       },
       "seeding_key": {
@@ -2392,7 +2392,7 @@
       "key": "e15b3487-9306-4431-8130-e2a93b7db22f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2409,7 +2409,7 @@
       "key": "0ebe893a-708b-4cf7-a471-906d47f9c1f0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***mutator method***.\n\n**Do This:** Explain the syntax for writing a mutator method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method is `public`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return type is `void`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Name of the method is typically `set` followed by the name of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify a parameter that matches the type of the instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign the value passed to the parameter to the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the syntax for calling a mutator method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n\n**Discussion Goal:** Students share examples of instance variables that might not have mutator methods because those values should not be changed, such as a student ID or social security number.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***mutator method***.\n\n**Do This:** Explain the syntax for writing a mutator method:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Method is `public`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Return type is `void`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Name of the method is typically `set` followed by the name of the instance variable\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Specify a parameter that matches the type of the instance variable\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Assign the value passed to the parameter to the instance variable\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the syntax for calling a mutator method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n\n**Discussion Goal:** Students share examples of instance variables that might not have mutator methods because those values should not be changed, such as a student ID or social security number.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2438,7 +2438,7 @@
       "key": "46cbaa72-195b-4a59-8247-02ab2fc3e344",
       "position": 12,
       "properties": {
-        "description": "**Do This:** Explain common errors using the `nextInt()` method in the `Scanner` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `nextInt()` method only reads the `int` value and not the new line read from pressing the Enter key\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The following call to the `nextLine()` method captures the new line from pressing the Enter key after providing the `int` value\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> To skip the new line received from pressing Enter after providing the `int` value, we have to add another call to the `nextLine()` method"
+        "description": "**Do This:** Explain common errors using the `nextInt()` method in the `Scanner` class:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `nextInt()` method only reads the `int` value and not the new line read from pressing the Enter key\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The following call to the `nextLine()` method captures the new line from pressing the Enter key after providing the `int` value\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> To skip the new line received from pressing Enter after providing the `int` value, we have to add another call to the `nextLine()` method"
       },
       "seeding_key": {
         "activity_section.key": "46cbaa72-195b-4a59-8247-02ab2fc3e344",
@@ -2463,7 +2463,7 @@
       "key": "0f78ff33-c0f1-4562-96dd-144f27506156",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students share examples of invalid values, such as a negative x or y location for a `Painter` object or a negative price for a `Dessert` object.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students share examples of invalid values, such as a negative x or y location for a `Painter` object or a negative price for a `Dessert` object.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2492,7 +2492,7 @@
       "key": "ab92ed10-025b-4933-9929-caf49852795c",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using these operators in math class or a previous computer science class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***relational operator*** and introduce the operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***Boolean expression*** and demonstrate the examples.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write mutator methods in the `Dessert` class. On Level 7, students write mutator methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using these operators in math class or a previous computer science class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***relational operator*** and introduce the operators.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***Boolean expression*** and demonstrate the examples.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to write mutator methods in the `Dessert` class. On Level 7, students write mutator methods in the `Dessert` subclass (`Cookie`, `Pie`, `Cupcake`, or `Donut`).",
         "progression_name": "Practice: Mutator Methods",
         "tips": [
           {
@@ -2522,7 +2522,7 @@
       "key": "c3192c1f-d281-4f25-8174-29d989d1150a",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class and subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2552,7 +2552,7 @@
       "key": "757b634c-d84f-4ef6-905f-1dd00e643c67",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2569,7 +2569,7 @@
       "key": "90a5d96a-3ba8-4a61-a72e-39f9b2c67f46",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2586,7 +2586,7 @@
       "key": "2852d49d-8130-4c5c-9f99-4d0c22de26d3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2852d49d-8130-4c5c-9f99-4d0c22de26d3",
@@ -2621,7 +2621,7 @@
       "key": "818f4ccf-57c3-4a1e-abc5-5d52ef740e61",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you and three friends had to sort 100 test papers by student name, how would you organize the task to make it faster?*\n\n**Discussion Goal:** Students should recognize that dividing a large sorting task among multiple people can make the process more efficient. Through this analogy, they will begin to understand that merge sort works by breaking a list into smaller sublists, sorting each sublist individually, and then combining them into a final sorted list. The goal is for students to connect this real-world strategy to the core idea of the divide-and-conquer approach used in the merge sort algorithm."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *If you and three friends had to sort 100 test papers by student name, how would you organize the task to make it faster?*\n\n**Discussion Goal:** Students should recognize that dividing a large sorting task among multiple people can make the process more efficient. Through this analogy, they will begin to understand that merge sort works by breaking a list into smaller sublists, sorting each sublist individually, and then combining them into a final sorted list. The goal is for students to connect this real-world strategy to the core idea of the divide-and-conquer approach used in the merge sort algorithm."
       },
       "seeding_key": {
         "activity_section.key": "818f4ccf-57c3-4a1e-abc5-5d52ef740e61",
@@ -2632,7 +2632,7 @@
       "key": "30a63ee8-7eea-4cd9-b739-5ba2a807e6bb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2657,7 +2657,7 @@
       "key": "28448b6a-72c3-4d55-8f89-b692188af6bc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Static Variables and Methods"
       },
       "seeding_key": {
@@ -2669,7 +2669,7 @@
       "key": "da07514d-4890-4339-9956-978f3cd6ee91",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class contains a static variable that is increased by one in the constructor. They also notice that the value is updated each time an object is created, and that the `static` keyword is also used in the method signature. Students may wonder what the `static` keyword means and when they might use static variables and methods instead of instance variables and methods they call on an object."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class contains a static variable that is increased by one in the constructor. They also notice that the value is updated each time an object is created, and that the `static` keyword is also used in the method signature. Students may wonder what the `static` keyword means and when they might use static variables and methods instead of instance variables and methods they call on an object."
       },
       "seeding_key": {
         "activity_section.key": "da07514d-4890-4339-9956-978f3cd6ee91",
@@ -2680,7 +2680,7 @@
       "key": "629a3fdd-1a37-4dfe-babc-ae1c2ccdd125",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that each object gets its own copy of the instance variables that are declared in a class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall that each object gets its own copy of the instance variables that are declared in a class.",
         "duration": "15",
         "name": "Static Variables"
       },
@@ -2705,7 +2705,7 @@
       "key": "6ce6913a-1567-4db5-8bb2-c45b23b550a7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: The static Keyword"
       },
       "seeding_key": {
@@ -2717,7 +2717,7 @@
       "key": "605b5741-66c2-44ac-9b67-048a88e0048b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `static` keyword and define ***static variable***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Variables*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `static` keyword and define ***static variable***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Variables*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2746,7 +2746,7 @@
       "key": "65c2eb7b-b5ad-497f-a22a-3d972b7ce007",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that static variables belong to the class and introduce the syntax for accessing a static variable.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that static variables belong to the class and introduce the syntax for accessing a static variable.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2777,7 +2777,7 @@
       "key": "11a5d825-ab89-4efb-9bdf-aa53413fe885",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This** Explain that static methods cannot access or change the values of instance variables unless an instance of the class is passed as a parameter.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 7 to complete a choice level to create and use both static variables and methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This** Explain that static methods cannot access or change the values of instance variables unless an instance of the class is passed as a parameter.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 7 to complete a choice level to create and use both static variables and methods.",
         "progression_name": "Practice: Static Variables and Methods",
         "tips": [
           {
@@ -2808,7 +2808,7 @@
       "key": "442f4c28-601a-487b-b99e-c49021cc5f9e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think static variables and methods would be useful?*\n\n**Discussion Goal:** Students suggest scenarios for using static variables, such as to keep track of the number of `Student` objects in a program for a school or to represent a discount on an item. Students also suggest scenarios for using static methods, such as to perform calculations in a `Calculator` class or to represent a behavior that does not use any instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When do you think static variables and methods would be useful?*\n\n**Discussion Goal:** Students suggest scenarios for using static variables, such as to keep track of the number of `Student` objects in a program for a school or to represent a discount on an item. Students also suggest scenarios for using static methods, such as to perform calculations in a `Calculator` class or to represent a behavior that does not use any instance variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2825,7 +2825,7 @@
       "key": "a655efa4-72ff-44fd-ac80-0f34b3a0828d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a655efa4-72ff-44fd-ac80-0f34b3a0828d",
@@ -2873,7 +2873,7 @@
       "key": "b2432dae-aa0d-441d-a960-81092a30cc7a",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2890,7 +2890,7 @@
       "key": "f05e1182-de2a-4501-9108-c0f511843f80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to display a possible solution for primitives as parameters and for objects as parameters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to display a possible solution for primitives as parameters and for objects as parameters. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2907,7 +2907,7 @@
       "key": "2f0d7e17-ca60-4aeb-9298-4892ad2efacb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between primitive and reference variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between primitive and reference variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "duration": "5",
         "name": "Introduction",
         "progression_name": "Predict and Run: Object References as Parameters"
@@ -2921,7 +2921,7 @@
       "key": "0a7544c3-e0e6-48e9-a990-a3195cca92c5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method that uses an object reference as a parameter makes changes to the original object, while the method that uses a primitive value as a parameter does not make changes to the original variable. Students also notice that a method can only access the `private` data of a parameter that is a reference to an object when the parameter is the same type as the method's enclosing class. Students may wonder why the method that uses an object reference makes changes to the original object while the method that uses a primitive value does not make changes to the original value. Students may also wonder if there are scenarios when modifying the original object is not ideal."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method that uses an object reference as a parameter makes changes to the original object, while the method that uses a primitive value as a parameter does not make changes to the original variable. Students also notice that a method can only access the `private` data of a parameter that is a reference to an object when the parameter is the same type as the method's enclosing class. Students may wonder why the method that uses an object reference makes changes to the original object while the method that uses a primitive value does not make changes to the original value. Students may also wonder if there are scenarios when modifying the original object is not ideal."
       },
       "seeding_key": {
         "activity_section.key": "0a7544c3-e0e6-48e9-a990-a3195cca92c5",
@@ -2932,7 +2932,7 @@
       "key": "a46f5e52-fb72-4dd0-9787-870080b0be83",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between formal parameters and actual parameters and how these function.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between formal parameters and actual parameters and how these function.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Exploring Parameters",
         "progression_name": "Investigate and Modify: Object References as Parameters"
@@ -2946,7 +2946,7 @@
       "key": "c021796e-a3b9-447c-b927-1b97317b0ac6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2977,7 +2977,7 @@
       "key": "681759e9-55a2-4313-84ed-11ffed4009a2",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the `this` keyword refers to the current object. Students identify that using the `this` keyword as a parameter passes the current object in the method call.",
+        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the `this` keyword refers to the current object. Students identify that using the `this` keyword as a parameter passes the current object in the method call.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2994,7 +2994,7 @@
       "key": "bbb8cc61-dd3e-453a-bb89-e4a5600a61ac",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is this similar to how we have used the `this` keyword before? How is it different?*\n\n**Discussion Goal:** Students suggest similarities and differences, such as using the `this` keyword to refer to the current object and using the `this` keyword to pass the entire object instead of only referring to its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `this` keyword as a method parameter."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How is this similar to how we have used the `this` keyword before? How is it different?*\n\n**Discussion Goal:** Students suggest similarities and differences, such as using the `this` keyword to refer to the current object and using the `this` keyword to pass the entire object instead of only referring to its instance variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `this` keyword as a method parameter."
       },
       "seeding_key": {
         "activity_section.key": "bbb8cc61-dd3e-453a-bb89-e4a5600a61ac",
@@ -3019,7 +3019,7 @@
       "key": "ffe745f9-0f30-4b52-8e8d-de05b314df0b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When is it ideal to pass objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest passing objects as parameters when a problem requires the original object to be modified by a method or constructor.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When is it ideal to pass objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest passing objects as parameters when a problem requires the original object to be modified by a method or constructor.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3036,7 +3036,7 @@
       "key": "39d73249-09f5-4518-8f08-d8c77db1596c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When should we avoid passing objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest avoiding passing objects as parameters when the method or constructor should not modify the original object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when an object reference is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to complete choice levels on Levels 6 and 7 to practice using object references as parameters to methods and constructors.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When should we avoid passing objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest avoiding passing objects as parameters when the method or constructor should not modify the original object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when an object reference is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to complete choice levels on Levels 6 and 7 to practice using object references as parameters to methods and constructors.",
         "progression_name": "Practice: Object References as Parameters",
         "tips": [
           {
@@ -3068,7 +3068,7 @@
       "key": "a325a3b7-14b2-4841-acfa-442187e5be47",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***end user*** and ***user story***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: User Stories*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***end user*** and ***user story***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: User Stories*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3085,7 +3085,7 @@
       "key": "9004f10e-9c4f-453e-a429-fa473561e99b",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about an app or program you use every day. Who are the end users for that app or program?*\n\n**Discussion Goal:** Students share apps or programs they use and the end users for these. For example, the end users for an app like Instagram might be photographers or influencers, while the end users for a banking app might be the customers of the bank.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What might a user story be for that app or program?*\n\n**Discussion Goal:** Students suggest user stories for the app or program they shared. For example, a user story for Instagram might be \"As a user, I want to be able to upload a photo to my profile\", while a user story for a banking app might be \"As a user, I want to be able to check my balance\".",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think about an app or program you use every day. Who are the end users for that app or program?*\n\n**Discussion Goal:** Students share apps or programs they use and the end users for these. For example, the end users for an app like Instagram might be photographers or influencers, while the end users for a banking app might be the customers of the bank.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What might a user story be for that app or program?*\n\n**Discussion Goal:** Students suggest user stories for the app or program they shared. For example, a user story for Instagram might be \"As a user, I want to be able to upload a photo to my profile\", while a user story for a banking app might be \"As a user, I want to be able to check my balance\".",
         "tips": [
           {
             "type": "teachingTip",
@@ -3114,7 +3114,7 @@
       "key": "cc803083-46e7-4f05-b49b-b47b6024272b",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with The Theater Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with The Theater Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "cc803083-46e7-4f05-b49b-b47b6024272b",
@@ -3138,7 +3138,7 @@
       "key": "2ce5ceb4-0021-4864-8a14-94198da54ced",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you want to write a method that should not modify the original object, what would you need to be careful about when passing parameters?*\n\n**Discussion Goal:** Students should identify that object references pass a copy of the reference, not the object itself, and that this allows methods to change the original object. In contrast, primitives pass a copy of the value, so the original stays unchanged. They should also recognize scenarios when you want or don't want those changes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *If you want to write a method that should not modify the original object, what would you need to be careful about when passing parameters?*\n\n**Discussion Goal:** Students should identify that object references pass a copy of the reference, not the object itself, and that this allows methods to change the original object. In contrast, primitives pass a copy of the value, so the original stays unchanged. They should also recognize scenarios when you want or don't want those changes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2ce5ceb4-0021-4864-8a14-94198da54ced",
@@ -3173,7 +3173,7 @@
       "key": "05c5c02c-a66d-434f-b78b-68744eb88f5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a company. Not everyone in the company knows everything. Some people have access to certain information or responsibilities, and others don't. Why do you think that is?*\n\n**Discussion Goal:** Students recognize that limiting access helps with security, clarity, and role separation. You can connect this to how classes might want to hide internal methods that shouldn't be used directly by other parts of a program.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think about a company. Not everyone in the company knows everything. Some people have access to certain information or responsibilities, and others don't. Why do you think that is?*\n\n**Discussion Goal:** Students recognize that limiting access helps with security, clarity, and role separation. You can connect this to how classes might want to hide internal methods that shouldn't be used directly by other parts of a program.",
         "name": "Who Needs to Know?"
       },
       "seeding_key": {
@@ -3185,7 +3185,7 @@
       "key": "a65024a0-78c7-4ac3-92dd-fa8b051b9f5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "The private Keyword"
       },
@@ -3210,7 +3210,7 @@
       "key": "aad1475c-b8d1-41ec-af4e-617ecd9fa1f2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Private Methods"
       },
       "seeding_key": {
@@ -3222,7 +3222,7 @@
       "key": "fe29cb50-0464-4f8b-9f9c-cc4d8ed331ba",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "fe29cb50-0464-4f8b-9f9c-cc4d8ed331ba",
@@ -3247,7 +3247,7 @@
       "key": "361ce27a-b065-4939-9ff7-d78dc7995c03",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Private Methods*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Private Methods*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3264,7 +3264,7 @@
       "key": "5176ce8f-21bc-4729-acc3-2d8daf8e9554",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the functionality of a `private` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to use a `private` method?*\n\n**Discussion Goal:** Students suggest using a `private` method as a helper method to perform a task within the class. Students identify that a `private` method can help keep a `public` method easy to read and maintain since specific tasks can be decomposed into `private` and `public` methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the functionality of a `private` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to use a `private` method?*\n\n**Discussion Goal:** Students suggest using a `private` method as a helper method to perform a task within the class. Students identify that a `private` method can help keep a `public` method easy to read and maintain since specific tasks can be decomposed into `private` and `public` methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3281,7 +3281,7 @@
       "key": "c502ee2b-bfbf-48dc-aa5d-daa4d9ae7297",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a Check for Understanding, then continue to complete a choice level on Level 5 to practice writing `private` methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a Check for Understanding, then continue to complete a choice level on Level 5 to practice writing `private` methods.",
         "progression_name": "Practice: Private Methods",
         "tips": [
           {
@@ -3299,7 +3299,7 @@
       "key": "8625caaa-5bf1-4b3a-8f90-0c10dc0482f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you were designing a class that calculates an order total, and that calculation required several helper steps, would you make all of those methods public? Why or why not?*\n\n**Discussion Goal:** Students should explain that using private methods allows a programmer to hide the internal logic of a class and keep the public interface simple and clear. They should understand that private methods are useful for breaking down a task into smaller parts without exposing those parts to other classes. Additionally, students should recognize that this practice helps prevent unintended use of methods that are only meant to support internal class functionality, ultimately improving code readability, maintainability, and security.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *If you were designing a class that calculates an order total, and that calculation required several helper steps, would you make all of those methods public? Why or why not?*\n\n**Discussion Goal:** Students should explain that using private methods allows a programmer to hide the internal logic of a class and keep the public interface simple and clear. They should understand that private methods are useful for breaking down a task into smaller parts without exposing those parts to other classes. Additionally, students should recognize that this practice helps prevent unintended use of methods that are only meant to support internal class functionality, ultimately improving code readability, maintainability, and security.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Public vs Private"
       },
       "seeding_key": {
@@ -3349,7 +3349,7 @@
       "key": "4ab0e318-4a9b-499f-aba6-4b7540b33d51",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Are We Automating Racism*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video - *Are We Automating Racism*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3366,7 +3366,7 @@
       "key": "c2ea0ff6-9a7d-4ad8-8b49-15f3633a203f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can programmers avoid bias in their designs when using AI to help develop their programs?*\n\n**Discussion Goal:** Students discuss systemic issues that are rooted in bias. They explore how these biases can emerge in AI and consider the ways in which programmers might avoid incorporating bias into their designs. Students might share ideas such as using diverse data sets, applying thorough testing across different scenarios, and being mindful of ethical considerations when developing AI-assisted programs."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can programmers avoid bias in their designs when using AI to help develop their programs?*\n\n**Discussion Goal:** Students discuss systemic issues that are rooted in bias. They explore how these biases can emerge in AI and consider the ways in which programmers might avoid incorporating bias into their designs. Students might share ideas such as using diverse data sets, applying thorough testing across different scenarios, and being mindful of ethical considerations when developing AI-assisted programs."
       },
       "seeding_key": {
         "activity_section.key": "c2ea0ff6-9a7d-4ad8-8b49-15f3633a203f",
@@ -3377,7 +3377,7 @@
       "key": "5095f849-edf1-49bc-91b3-27f459b1a739",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "How does AI Generate Content?"
       },
@@ -3402,7 +3402,7 @@
       "key": "2aebe213-e307-44d8-8a4e-d97420860e47",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Chatbots and Large-Language Models (Part 1)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slideshow to display the prompts.\n* *What are some challenges when using AI to develop code?*\n* *What might a human programmer do to ensure the AI creates accurate and effective programs?*\n\n**Discussion Goal:** Students discuss how large-language models are trained to predict and generate new content. Students also explore the challenges of doing this, such as limited context or incorrect predictions. They surface ideas  about how human programmers can address these challenges in order to improve the effectiveness and accuracy of AI-generated code. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***artificial intelligence***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***large-language model***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Chatbots and Large-Language Models (Part 2)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given some of the limitations of AI and LLMs, what are some ways humans might have to make manual adjustments?*\n\n**Discussion Goal:** Students analyze the limitations of large language models (LLMs) and discuss how human intervention, such as tuning and context adjustments, helps overcome these limitations. They explore specific scenarios where manual adjustments are necessary to improve the accuracy and relevance of AI-generated content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** A programmer prompted an AI to create a method that would paint the flag of Belgium. Here is the prompt the programmer used: “Write a method to draw the flag of Belgium in Java Lab”\n* *Do you think this prompt would be effective? Why or why not?*\n\n**Discussion Goal:** Students mention the need for clarity and specificity when prompting AI to generate code. They discuss how vague prompts might lead to inaccurate or incomplete outputs. They generate ideas about how more precise instructions can improve the effectiveness of AI-generated code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Here is the method one AI came up with. It is not at all what the programmer was looking for. \n* *What factors might be important for making sure an AI is able to produce the method the programmer is hoping to see?*\n\n**Discussion Goal**: Students identify key favors that influence the accuracy of AI-generated code, such as the prompt being specific and AI’s understanding of the programming context. They discuss how providing examples and clear instructions can guide AI toward generating more accurate code. Students might also mention the need for iterative testing and human fine-tuning when using AI to generate code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how programs should be planned before using AI to generate code. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Chatbots and Large-Language Models (Part 1)*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slideshow to display the prompts.\n* *What are some challenges when using AI to develop code?*\n* *What might a human programmer do to ensure the AI creates accurate and effective programs?*\n\n**Discussion Goal:** Students discuss how large-language models are trained to predict and generate new content. Students also explore the challenges of doing this, such as limited context or incorrect predictions. They surface ideas  about how human programmers can address these challenges in order to improve the effectiveness and accuracy of AI-generated code. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***artificial intelligence***\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***large-language model***\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Chatbots and Large-Language Models (Part 2)*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Given some of the limitations of AI and LLMs, what are some ways humans might have to make manual adjustments?*\n\n**Discussion Goal:** Students analyze the limitations of large language models (LLMs) and discuss how human intervention, such as tuning and context adjustments, helps overcome these limitations. They explore specific scenarios where manual adjustments are necessary to improve the accuracy and relevance of AI-generated content.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** A programmer prompted an AI to create a method that would paint the flag of Belgium. Here is the prompt the programmer used: “Write a method to draw the flag of Belgium in Java Lab”\n* *Do you think this prompt would be effective? Why or why not?*\n\n**Discussion Goal:** Students mention the need for clarity and specificity when prompting AI to generate code. They discuss how vague prompts might lead to inaccurate or incomplete outputs. They generate ideas about how more precise instructions can improve the effectiveness of AI-generated code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Here is the method one AI came up with. It is not at all what the programmer was looking for. \n* *What factors might be important for making sure an AI is able to produce the method the programmer is hoping to see?*\n\n**Discussion Goal**: Students identify key favors that influence the accuracy of AI-generated code, such as the prompt being specific and AI’s understanding of the programming context. They discuss how providing examples and clear instructions can guide AI toward generating more accurate code. Students might also mention the need for iterative testing and human fine-tuning when using AI to generate code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain how programs should be planned before using AI to generate code. "
       },
       "seeding_key": {
         "activity_section.key": "2aebe213-e307-44d8-8a4e-d97420860e47",
@@ -3413,7 +3413,7 @@
       "key": "0621a9b7-357a-4dcf-b6de-062ec0615941",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students investigate the program, make changes to the program as prompted in Levels 1 and 2, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students investigate the program, make changes to the program as prompted in Levels 1 and 2, and observe the results.",
         "duration": "10",
         "name": "Investigating AI-Generated Code",
         "progression_name": "Investigating AI-Generated Code"
@@ -3427,7 +3427,7 @@
       "key": "8017554c-e52e-4a6c-a347-f37b30adcc43",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from their investigation into the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from their investigation into the code."
       },
       "seeding_key": {
         "activity_section.key": "8017554c-e52e-4a6c-a347-f37b30adcc43",
@@ -3438,7 +3438,7 @@
       "key": "7f965c2b-5f90-45d5-a8bc-f63f606ccbbc",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Programs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students investigate and analyze prompts for using AI to help generate code in order to draw the Thailand flag in The Neighborhood. Students then write their own prompts before reflecting on how these prompts can improve AI-assisted coding.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Programs handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students investigate and analyze prompts for using AI to help generate code in order to draw the Thailand flag in The Neighborhood. Students then write their own prompts before reflecting on how these prompts can improve AI-assisted coding.",
         "duration": "15",
         "name": "Planning Programs",
         "tips": [
@@ -3457,7 +3457,7 @@
       "key": "eee74fff-90ca-4257-8a0c-4beae46ffc84",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using AI to design methods can speed up coding, but success depends on using specific, well-planned prompts. \nWhat strategies did you use to ensure the prompts would make the most of AI’s capabilities?\n\n**Discussion Goal:** Students share the strategies they tried for generating effective prompts. They discuss the elements of an effective prompt like being specific and providing examples. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Using AI to design methods can speed up coding, but success depends on using specific, well-planned prompts. \nWhat strategies did you use to ensure the prompts would make the most of AI’s capabilities?\n\n**Discussion Goal:** Students share the strategies they tried for generating effective prompts. They discuss the elements of an effective prompt like being specific and providing examples. "
       },
       "seeding_key": {
         "activity_section.key": "eee74fff-90ca-4257-8a0c-4beae46ffc84",
@@ -3482,7 +3482,7 @@
       "key": "d8c74c9e-aeca-42ee-8c4e-46d8b5a1699d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- What did you learn about the role of clear instructions in using AI to generate code?\n- Identify any challenges AI might face and suggest how better planning could improve its effectiveness.\n- How did changing and improving the prompts help you better understand how to plan a program? \n\n**Discussion Goal:** Students will discuss how the instructions given to AI to generate code must be clear and specific in order to generate high quality responses from the AI. Some challenges students may mention are handling incorrect or partially correct responses, or difficulties in fine-tuning the results of AI-generated code. Finally, students discuss how investigating and refining prompts helped them to identify the specific details that can help make a high-quality prompt for using AI to help develop code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- What did you learn about the role of clear instructions in using AI to generate code?\n- Identify any challenges AI might face and suggest how better planning could improve its effectiveness.\n- How did changing and improving the prompts help you better understand how to plan a program? \n\n**Discussion Goal:** Students will discuss how the instructions given to AI to generate code must be clear and specific in order to generate high quality responses from the AI. Some challenges students may mention are handling incorrect or partially correct responses, or difficulties in fine-tuning the results of AI-generated code. Finally, students discuss how investigating and refining prompts helped them to identify the specific details that can help make a high-quality prompt for using AI to help develop code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3499,7 +3499,7 @@
       "key": "d24ba8bf-a0c3-46b3-97b2-2bac2b8b6c45",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d24ba8bf-a0c3-46b3-97b2-2bac2b8b6c45",
@@ -3536,7 +3536,7 @@
       "key": "25a1e78e-7e2b-40da-a77b-63b1804b395c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you experienced a bug in an application or program that you use that affected system reliability - a system's ability to function without failure?*\n\n**Discussion Goal:** Students share examples of bugs they have experienced, such as a website being down or apps that they use crashing.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When have you experienced a bug in an application or program that you use that affected system reliability - a system's ability to function without failure?*\n\n**Discussion Goal:** Students share examples of bugs they have experienced, such as a website being down or apps that they use crashing.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3553,7 +3553,7 @@
       "key": "987ecf93-8c90-4620-afc9-b22d338dde2f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "20",
         "name": "Open Source Bugs"
       },
@@ -3578,7 +3578,7 @@
       "key": "0b501eb4-cfe9-49c7-a1cd-b17334e88e29",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity and have students complete the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity and have students complete the activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
       },
       "seeding_key": {
         "activity_section.key": "0b501eb4-cfe9-49c7-a1cd-b17334e88e29",
@@ -3589,7 +3589,7 @@
       "key": "322f7b34-b031-4902-9267-da5f150dcde0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Rise of Open Source Software*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Rise of Open Source Software*.",
         "duration": "15",
         "name": "Maximizing Reliability",
         "tips": [
@@ -3620,7 +3620,7 @@
       "key": "1606f5b9-68e4-4d90-a858-30db35be62d0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What can you do as software engineers to maximize the reliability of open source software?*\n\n**Discussion Goal:** Students suggest ways to maximize the reliability of open source software, such as contributing code to existing projects or identifying and submitting bugs found in existing projects.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What can you do as software engineers to maximize the reliability of open source software?*\n\n**Discussion Goal:** Students suggest ways to maximize the reliability of open source software, such as contributing code to existing projects or identifying and submitting bugs found in existing projects.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3637,7 +3637,7 @@
       "key": "9a92f2c2-4bec-4aa4-9127-b918a33080b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Show What You Know Week"
       },
       "seeding_key": {
@@ -3686,7 +3686,7 @@
       "key": "acd01873-b330-4604-b407-653e6408b4b8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What data is being collected by the apps and programs you use at home? What about at school or related to your hobbies?*\n\n**Discussion Goal:** Students share examples of data collected by apps they use, such as TV shows they watch at home or their name and student ID at school.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What data is being collected by the apps and programs you use at home? What about at school or related to your hobbies?*\n\n**Discussion Goal:** Students share examples of data collected by apps they use, such as TV shows they watch at home or their name and student ID at school.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3703,7 +3703,7 @@
       "key": "1df46e8f-0e0a-4b72-a74e-b1193421a0a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Introduction"
       },
@@ -3728,7 +3728,7 @@
       "key": "12cd4a79-5be8-46cc-a6b8-7c324ee929e3",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data, Privacy, and Security handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data, Privacy, and Security activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Data, Privacy, and Security handout."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data, Privacy, and Security handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data, Privacy, and Security activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Data, Privacy, and Security handout."
       },
       "seeding_key": {
         "activity_section.key": "12cd4a79-5be8-46cc-a6b8-7c324ee929e3",
@@ -3753,7 +3753,7 @@
       "key": "895cc8a5-f907-4e4d-9e0f-d5c550e121b2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection vs Privacy and Security activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is more important: the utility of data collection or safeguarding privacy and security?*\n\n**Discussion Goal:** Students share tradeoffs between collecting more data and the risk of impacts on privacy and security, such as an unauthorized individual gaining access to their information or companies sharing their information with another company without their knowledge."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection vs Privacy and Security activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is more important: the utility of data collection or safeguarding privacy and security?*\n\n**Discussion Goal:** Students share tradeoffs between collecting more data and the risk of impacts on privacy and security, such as an unauthorized individual gaining access to their information or companies sharing their information with another company without their knowledge."
       },
       "seeding_key": {
         "activity_section.key": "895cc8a5-f907-4e4d-9e0f-d5c550e121b2",
@@ -3764,7 +3764,7 @@
       "key": "b432e4bc-c2ab-4005-914c-2320476de20b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week"
       },
       "seeding_key": {
@@ -3813,7 +3813,7 @@
       "key": "fd9b7564-cb4a-48c3-a8ee-34be3f9dc9cc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3830,7 +3830,7 @@
       "key": "4e5a89a0-edc6-4479-a26f-99b18a1d730c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
       },
       "seeding_key": {
         "activity_section.key": "4e5a89a0-edc6-4479-a26f-99b18a1d730c",
@@ -3841,7 +3841,7 @@
       "key": "d3f88d2a-47eb-40cc-a3c0-454b44ee1f37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Deep Fakes"
       },
@@ -3866,7 +3866,7 @@
       "key": "5b55d295-cef9-4c2e-8e66-2a3bd79c2853",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen deep fakes before?*\n\n**Discussion Goal:** Students share examples of deep fakes they have seen, including in media and TV shows or on social media.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen deep fakes before?*\n\n**Discussion Goal:** Students share examples of deep fakes they have seen, including in media and TV shows or on social media.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3883,7 +3883,7 @@
       "key": "d9309e1f-9746-48d5-8cb1-6d88cf89d47d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did this example make you wonder or feel?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deep fakes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you think are some benefits of deep fakes?*\n* *What do you think are some harmful impacts of deep fakes?*\n\n**Discussion Goal:** Students identify some benefits of deep fakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What did this example make you wonder or feel?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deep fakes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you think are some benefits of deep fakes?*\n* *What do you think are some harmful impacts of deep fakes?*\n\n**Discussion Goal:** Students identify some benefits of deep fakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3912,7 +3912,7 @@
       "key": "18c97ff9-d7db-4e04-a2e7-fbe0d864047e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the harmful impacts of deep fakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deep fakes should be developed. Students justify their ideas with positive or negative impacts of deep fakes.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Given the harmful impacts of deep fakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deep fakes should be developed. Students justify their ideas with positive or negative impacts of deep fakes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3943,7 +3943,7 @@
       "key": "db3f9a19-4ee8-44e2-961c-1473ca45dc31",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Image Manipulations"
       },
       "seeding_key": {
@@ -3955,7 +3955,7 @@
       "key": "5b6dba4e-f47b-4b1a-a7e4-af70f442d516",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "5b6dba4e-f47b-4b1a-a7e4-af70f442d516",
@@ -3966,7 +3966,7 @@
       "key": "c2974b65-ae81-43a8-a866-7153a015aefd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "c2974b65-ae81-43a8-a866-7153a015aefd",
@@ -4001,7 +4001,7 @@
       "key": "cbb01ba1-be58-4e8e-a150-b223f765b21f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you design a logo for your school club. A few months later, you find that a local business is using your design on their website without asking or crediting you. How would that make you feel? Should they be allowed to do that?*\n\n**Discussion Goal:** Students begin reflecting on the value of creative work, the importance of credit, and why ownership matters. The goal is to build empathy for creators and lay a foundation for understanding the ethical and legal concerns around AI using others’ work to train models.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you design a logo for your school club. A few months later, you find that a local business is using your design on their website without asking or crediting you. How would that make you feel? Should they be allowed to do that?*\n\n**Discussion Goal:** Students begin reflecting on the value of creative work, the importance of credit, and why ownership matters. The goal is to build empathy for creators and lay a foundation for understanding the ethical and legal concerns around AI using others’ work to train models.",
         "name": "Who Owns It?"
       },
       "seeding_key": {
@@ -4013,7 +4013,7 @@
       "key": "2e2f91b7-6adf-47cf-a130-59abc22f1975",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "AI-Generated Art"
       },
@@ -4038,7 +4038,7 @@
       "key": "b1f7b849-f9e1-42df-a0d7-9fa657eaa7e3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the example of AI-generated artwork.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder or feel?*\n\n**Discussion Goal:** Students share their reactions to the example and discuss their thoughts on whether they believe this was right or ethical. Students may express surprise or may agree with the person who won the award.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the example of AI-generated artwork.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder or feel?*\n\n**Discussion Goal:** Students share their reactions to the example and discuss their thoughts on whether they believe this was right or ethical. Students may express surprise or may agree with the person who won the award.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4055,7 +4055,7 @@
       "key": "95970110-3acf-46d8-b5e2-30a40986eb61",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of AI art-generating programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how AI art-generating programs work."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of AI art-generating programs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how AI art-generating programs work."
       },
       "seeding_key": {
         "activity_section.key": "95970110-3acf-46d8-b5e2-30a40986eb61",
@@ -4066,7 +4066,7 @@
       "key": "76d49042-f913-42e8-a6b2-92ff864d1bfb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Should we consider AI-generated images art?*\n\n**Discussion Goal:** Students share their opinions on whether AI-generated images can be considered art and explain their reasoning. For example, some students might believe that these are not art because of the lack of human effort while other students might believe these are art because the images have to be generated with prompts and modifications to achieve the desired effect."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Should we consider AI-generated images art?*\n\n**Discussion Goal:** Students share their opinions on whether AI-generated images can be considered art and explain their reasoning. For example, some students might believe that these are not art because of the lack of human effort while other students might believe these are art because the images have to be generated with prompts and modifications to achieve the desired effect."
       },
       "seeding_key": {
         "activity_section.key": "76d49042-f913-42e8-a6b2-92ff864d1bfb",
@@ -4091,7 +4091,7 @@
       "key": "c01c576e-2312-449d-90a4-96f81284285a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property***.\n\n**Group:** Place students in small groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the AI Carousel and assign each group to a station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property***.\n\n**Group:** Place students in small groups of three or four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the AI Carousel and assign each group to a station.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
       },
       "seeding_key": {
         "activity_section.key": "c01c576e-2312-449d-90a4-96f81284285a",
@@ -4115,7 +4115,7 @@
       "key": "90b9a44f-bc84-4873-ae55-3594dc712427",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4132,7 +4132,7 @@
       "key": "6753658a-3dd6-4c7b-bc74-9e65eec51a46",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6753658a-3dd6-4c7b-bc74-9e65eec51a46",
@@ -4192,7 +4192,7 @@
       "key": "c3cf5065-b987-4b8a-a12a-70c13f2c7ca9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory."
       },
       "seeding_key": {
         "activity_section.key": "c3cf5065-b987-4b8a-a12a-70c13f2c7ca9",
@@ -4217,7 +4217,7 @@
       "key": "e2df8c8f-a99f-49dd-8cd0-952c9299c843",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4234,7 +4234,7 @@
       "key": "38a33d1c-171d-4d4b-af64-587dd1582ba3",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 3 steps"
+        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 3 steps"
       },
       "seeding_key": {
         "activity_section.key": "38a33d1c-171d-4d4b-af64-587dd1582ba3",
@@ -4257,7 +4257,7 @@
       "key": "71c66f27-c049-4318-a02d-ee80885dc883",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "71c66f27-c049-4318-a02d-ee80885dc883",
@@ -4268,7 +4268,7 @@
       "key": "401efbaa-858d-4191-8e76-b7e30109a23b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
         "duration": "15",
         "name": "Development",
         "progression_name": "Store Management Project"
@@ -4294,7 +4294,7 @@
       "key": "81b460f0-a4e4-47e8-9fd3-62d5e1abedcc",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4325,7 +4325,7 @@
       "key": "c771480f-26af-41a6-9897-f3e14885689c",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Store Management Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4360,7 +4360,7 @@
       "key": "94245685-c85e-4be2-ab98-0a61e2d3a851",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Store Management Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4377,7 +4377,7 @@
       "key": "ac93c9d1-e34c-453e-9df0-73ae5fe5598d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 2 of the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 2 of the project.",
         "duration": "10",
         "name": "Development"
       },
@@ -4402,7 +4402,7 @@
       "key": "dca1b4ef-bb91-49fc-8b1f-249dcb1745ee",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
       },
       "seeding_key": {
         "activity_section.key": "dca1b4ef-bb91-49fc-8b1f-249dcb1745ee",
@@ -4427,7 +4427,7 @@
       "key": "a460a7e9-d27f-4f4b-bb53-b37bd7946f38",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4456,7 +4456,7 @@
       "key": "69d82167-fd0e-45ce-80ff-c79108076583",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Store Management Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Store Management Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4487,7 +4487,7 @@
       "key": "d98a5dcd-b33b-4571-89e0-0612da90887a",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some factors that software engineers might need to consider as they prioritize which changes to make to their code?*\n\n**Discussion Goal:** Students identify that software engineers may have limited time, money, or resources to make every possible change to their code. Students share ideas of how to prioritize work, such as prioritizing client requirements, prioritizing work based on time, or prioritizing certain items because they have dependencies.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some factors that software engineers might need to consider as they prioritize which changes to make to their code?*\n\n**Discussion Goal:** Students identify that software engineers may have limited time, money, or resources to make every possible change to their code. Students share ideas of how to prioritize work, such as prioritizing client requirements, prioritizing work based on time, or prioritizing certain items because they have dependencies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4504,7 +4504,7 @@
       "key": "4f18cc25-75b0-4580-a6e0-e087963c48fa",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Store Management Project Planning Guide based on the feedback they received from the code review.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Store Management Project Planning Guide based on the feedback they received from the code review.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4535,7 +4535,7 @@
       "key": "8d3b1375-1c1d-4950-ab9b-78891ede886e",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Store Management Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4570,7 +4570,7 @@
       "key": "01c7babe-d499-4d56-b2f2-400d41483cfa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "01c7babe-d499-4d56-b2f2-400d41483cfa",
@@ -4581,7 +4581,7 @@
       "key": "20edc020-4e42-44b1-93ba-c1492cc4fa6a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
         "duration": "15",
         "name": "Development"
       },
@@ -4606,7 +4606,7 @@
       "key": "c23c4faf-4511-4d58-8654-eda06eeec5bc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Store Management Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Store Management Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "c23c4faf-4511-4d58-8654-eda06eeec5bc",
@@ -4629,7 +4629,7 @@
       "key": "b31cfb3d-7ada-474b-979c-504cde9965eb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Store Management Project. Have students submit their projects at the end of the allotted time."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Store Management Project. Have students submit their projects at the end of the allotted time."
       },
       "seeding_key": {
         "activity_section.key": "b31cfb3d-7ada-474b-979c-504cde9965eb",
@@ -4654,7 +4654,7 @@
       "key": "a44ba70e-4a9d-4d7b-ac40-9029075aafd3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "a44ba70e-4a9d-4d7b-ac40-9029075aafd3",
@@ -4665,7 +4665,7 @@
       "key": "bc45d7b5-ad53-481b-9548-a8b998ed7f72",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -4684,7 +4684,7 @@
       "key": "8d60c585-6159-4c6a-88be-668a47c6bf17",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey",
         "tips": [
@@ -4739,7 +4739,7 @@
       "key": "e62967e4-a8f7-4997-b727-213fc550688c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4756,7 +4756,7 @@
       "key": "bbe669d6-e0d1-4d49-8111-106303893295",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide.",
         "duration": "10",
         "name": "Brainstorming and Planning"
       },
@@ -4769,7 +4769,7 @@
       "key": "74946286-cfc2-4891-a041-7207524dcbfc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
         "duration": "20",
         "name": "Development",
         "progression_name": "Store Management Project"
@@ -4795,7 +4795,7 @@
       "key": "79efc12f-0946-4c7f-8912-4c1049613eb0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4812,7 +4812,7 @@
       "key": "3c4f860a-3739-4176-8c46-964637cd52bc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {
@@ -4830,7 +4830,7 @@
       "key": "a535dbec-9142-41bf-a5d5-22c7b574b334",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey",
         "tips": [
@@ -4872,7 +4872,7 @@
       "key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What strategies did you use while working with the SpiralPainter FRQ in the previous unit?*\n\n**Discussion Goal:** Students recall using annotation strategies to identify keywords and using manipulatives to plan their solutions before writing code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What strategies did you use while working with the SpiralPainter FRQ in the previous unit?*\n\n**Discussion Goal:** Students recall using annotation strategies to identify keywords and using manipulatives to plan their solutions before writing code.",
         "name": "Revisiting the SpiralPainter FRQ",
         "tips": [
           {
@@ -4890,7 +4890,7 @@
       "key": "f6e9d63c-ed53-4b5d-896c-4771b59477d5",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Explain the steps for the Burger Class FRQ activity:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Social\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Writing\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Scoring\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Graphic Organizer.",
+        "description": "**Do This:** Explain the steps for the Burger Class FRQ activity:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> FRQ Social\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> FRQ Writing\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> FRQ Scoring\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Graphic Organizer.",
         "duration": "10",
         "name": "FRQ Social",
         "tips": [
@@ -4909,7 +4909,7 @@
       "key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the FRQ Social and complete the Burger Class FRQ Graphic Organizer."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the FRQ Social and complete the Burger Class FRQ Graphic Organizer."
       },
       "seeding_key": {
         "activity_section.key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
@@ -4920,7 +4920,7 @@
       "key": "14d189e3-2d64-41c9-bb51-0343dc7dae81",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their seats and complete the Burger Class FRQ handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students return to their seats and complete the Burger Class FRQ handout.",
         "duration": "10",
         "name": "FRQ Writing",
         "tips": [
@@ -4939,7 +4939,7 @@
       "key": "4d0b9cee-b302-4dce-bfff-9e1e51cc5aff",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Scoring Guidelines handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students assess their solution using the Burger Class FRQ Scoring Guidelines with their partners and complete the reflection on the last page.\n\n**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` class header\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` constructor signature\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the superclass constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing subclass instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return appropriate instance variable from `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Update appropriate instance variable in the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Scoring Guidelines handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students assess their solution using the Burger Class FRQ Scoring Guidelines with their partners and complete the reflection on the last page.\n\n**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `Burger` class header\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `Burger` constructor signature\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Calling the superclass constructor\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Initializing subclass instance variables\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Method signature for the `getCheeseStatus()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Return appropriate instance variable from `getCheeseStatus()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Method signature for the `setCheeseStatus()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Update appropriate instance variable in the `setCheeseStatus()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method",
         "name": "FRQ Scoring",
         "tips": [
           {
@@ -4957,7 +4957,7 @@
       "key": "03221f8d-2163-49ed-b482-57e90f20ec07",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your impression of this FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their impressions of this FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your impression of this FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their impressions of this FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
         "name": "Closing the Loop"
       },
       "seeding_key": {

@@ -12,7 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 18:54:19 UTC",
+    "serialized_at": "2026-03-30 21:22:31 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -381,7 +382,7 @@
       "key": "d9c20013-5fd9-43dc-ba97-f0c1e76752df",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
+        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -455,7 +456,7 @@
       "key": "f0841501-7aaf-494b-9fc8-2f19f6548d30",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -529,7 +530,7 @@
       "key": "0c85d9fb-9e43-44db-9839-f0e914efc9c5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_1/vpl-csd/2025] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_1/vpl-csd/2025] video in the slides.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "tips": [
           {
             "type": "teachingTip",
@@ -632,6 +633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro_2025"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -654,6 +658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview_2025"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -676,6 +683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variables Overview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -698,6 +708,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module Variable Video with Reflection_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -720,6 +733,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-HTMLReview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -742,6 +758,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSVideo_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -764,6 +783,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSReview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -786,6 +808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variablesoverview1_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -808,6 +833,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variables4_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -830,6 +858,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-randomnumbersoverview_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -852,6 +883,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Random random ellipse2_2018_21_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -874,6 +908,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-spritesoverview_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -896,6 +933,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites1_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -918,6 +958,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites3_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -940,6 +983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -962,6 +1008,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 1_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -984,6 +1033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1006,6 +1058,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 2_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1028,6 +1083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Wrap Up_2025"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up"
       },
       "bonus": false,
@@ -1050,6 +1108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_csd-vpl-m1_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1072,6 +1133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1094,6 +1158,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1116,6 +1183,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1138,6 +1208,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1160,6 +1233,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1182,6 +1258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_csd-vpl-m1_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1204,6 +1283,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1226,6 +1308,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L Assess FR_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1248,6 +1333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_csd-vpl-m1_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1270,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_csd-vpl-m1_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1292,6 +1383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1314,6 +1408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1336,6 +1433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_csd-vpl-m1_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1358,6 +1458,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1380,6 +1483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_csd-vpl-m1_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,

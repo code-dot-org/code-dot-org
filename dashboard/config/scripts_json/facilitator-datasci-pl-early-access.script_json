@@ -10,7 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 12:21:04 UTC",
+    "serialized_at": "2026-03-30 21:22:21 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -534,6 +535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_definingDS"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -556,6 +560,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_is_everywher"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -578,6 +585,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-chk_DSisNot"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -600,6 +610,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_chk_answers"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -922,6 +935,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L3andL4"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -944,6 +960,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-Ethical-Data-Collection"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -966,6 +985,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_EthicalDataColleciton"
+        ],
         "progression": "Ethical Data Collection"
       },
       "bonus": false,
@@ -988,6 +1010,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L5andL6"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1010,6 +1035,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_RSAIR-criteria"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1032,6 +1060,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-datastory-L7"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1054,6 +1085,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Data-Story-Discussion"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1076,6 +1110,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-chk-dataStory-Vocab"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1098,6 +1135,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_chk_answers-match"
+        ],
         "progression": "Data Questions and Stories"
       },
       "bonus": false,
@@ -1120,6 +1160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-teacher-Codap"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1142,6 +1185,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-DotPlots"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1164,6 +1210,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L7"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1186,6 +1235,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-codap-tutorial"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1208,6 +1260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L8andL9"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -1230,6 +1285,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-cleaningData"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -1252,6 +1310,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_dataTalk"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -1274,6 +1335,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-PizzaChoice"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -1296,6 +1360,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L10"
+        ],
         "progression": "More Data Visualizations"
       },
       "bonus": false,
@@ -1318,6 +1385,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Choice-DataVisuals"
+        ],
         "progression": "More Data Visualizations"
       },
       "bonus": false,
@@ -1340,6 +1410,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-chkCodap"
+        ],
         "progression": "More Data Visualizations"
       },
       "bonus": false,
@@ -1362,6 +1435,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L11"
+        ],
         "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
@@ -1384,6 +1460,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-teacherEnd"
+        ],
         "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
@@ -1556,6 +1635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L2PythonBasics"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1578,6 +1660,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Python_Overview"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1600,6 +1685,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-pythonLab_tour"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1622,6 +1710,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-L1"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1644,6 +1735,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Predict_Debrief2"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1666,6 +1760,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Predict_Debrief"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1688,6 +1785,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-L4"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1710,6 +1810,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Investigate_Debrief"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1732,6 +1835,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Python-Variables"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1754,6 +1860,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Python-Expressions"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1776,6 +1885,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-L5"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1798,6 +1910,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-L7"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1820,6 +1935,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-CFU"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1842,6 +1960,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Python-Lists"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1864,6 +1985,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_cfu-answerExplain"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1886,6 +2010,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_practiceLevelPedagogy"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1908,6 +2035,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-datascience-U2L2-L8Prac"
+        ],
         "progression": "Python Basics"
       },
       "bonus": false,
@@ -1930,6 +2060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L3Pandas"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -1952,6 +2085,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Pandas"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -1974,6 +2110,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-U2L3-L1_predict"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -1996,6 +2135,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-Predict_PandasDebrief"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2018,6 +2160,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L3-L3_dataframe"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2040,6 +2185,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L3-L4_exploring"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2062,6 +2210,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-PanelsPandas"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2084,6 +2235,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L3-CFU"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2106,6 +2260,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_cfu-PandasanswerExplain"
+        ],
         "progression": "Introduction to Pandas"
       },
       "bonus": false,
@@ -2128,6 +2285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L4matlib"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2150,6 +2310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L4-L2"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2172,6 +2335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L4"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2194,6 +2360,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-importing-matplotlab"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2216,6 +2385,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-Panels_LineChart"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2238,6 +2410,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-U2L4-CFU_matplotlib"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2260,6 +2435,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_cfu-matPlotLib_Explain"
+        ],
         "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
@@ -2432,6 +2610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L6-assess-group-data"
+        ],
         "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
@@ -2454,6 +2635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L6-L3"
+        ],
         "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
@@ -2476,6 +2660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-groupby"
+        ],
         "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
@@ -2498,6 +2685,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L6-L7"
+        ],
         "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
@@ -2520,6 +2710,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L7-cleaning-data"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2542,6 +2735,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Python-DataQuality"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2564,6 +2760,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-U2L7-L2_isNull"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2586,6 +2785,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-Panels_missingData"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2608,6 +2810,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L4_L8"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2630,6 +2835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L8-more-visualizations"
+        ],
         "progression": "More Visualizations"
       },
       "bonus": false,
@@ -2652,6 +2860,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L9-L2"
+        ],
         "progression": "More Visualizations"
       },
       "bonus": false,
@@ -2674,6 +2885,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-stackedVbar"
+        ],
         "progression": "More Visualizations"
       },
       "bonus": false,
@@ -2696,6 +2910,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-bar_charts"
+        ],
         "progression": "More Visualizations"
       },
       "bonus": false,
@@ -2718,6 +2935,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L9-L4"
+        ],
         "progression": "More Visualizations"
       },
       "bonus": false,
@@ -2740,6 +2960,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L9-exploratory-data"
+        ],
         "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
@@ -2762,6 +2985,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L10-L2"
+        ],
         "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
@@ -2784,6 +3010,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L10_minMax"
+        ],
         "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
@@ -2806,6 +3035,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L10_agg"
+        ],
         "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
@@ -2828,6 +3060,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L10-L4"
+        ],
         "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
@@ -2850,6 +3085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L10-QueryingData"
+        ],
         "progression": "Querying your Data"
       },
       "bonus": false,
@@ -2872,6 +3110,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-L10-quarryPanels"
+        ],
         "progression": "Querying your Data"
       },
       "bonus": false,
@@ -2894,6 +3135,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L11-L3"
+        ],
         "progression": "Querying your Data"
       },
       "bonus": false,
@@ -2916,6 +3160,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L11-L5"
+        ],
         "progression": "Querying your Data"
       },
       "bonus": false,
@@ -2938,6 +3185,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Community-Impact-project"
+        ],
         "progression": "Wrapping Up Unit 2"
       },
       "bonus": false,
@@ -2960,6 +3210,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-teacherEnd-Ch2"
+        ],
         "progression": "Wrapping Up Unit 2"
       },
       "bonus": false,
@@ -2982,6 +3235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-nextsteps"
+        ],
         "progression": "Teacher Resources and Next Steps"
       },
       "bonus": false,
@@ -3004,6 +3260,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-teachingstrategies"
+        ],
         "progression": "Teacher Resources and Next Steps"
       },
       "bonus": false,
@@ -3026,6 +3285,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl_DS_teaching_bias"
+        ],
         "progression": "Teacher Resources and Next Steps"
       },
       "bonus": false,
