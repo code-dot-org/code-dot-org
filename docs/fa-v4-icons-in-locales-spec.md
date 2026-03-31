@@ -8,15 +8,15 @@ As part of the FA v4 to v7 migration effort:
 - **PR #71307** added a codemod script to migrate FA v4 class references in source code (JS/JSX/TSX/HAML/Ruby/JSON)
 - **PR #71309** (open, not yet merged) proposes a DB migration on `activity_sections` and `levels` tables to update English source data
 
-Both the **English source data in the DB** and **translated locale files** still contain FA v4 references. The locale files live in `dashboard/config/locales/` and are synced through CrowdIn (the i18n translation platform). The FA v4 icon HTML is baked into both the source strings and the translated strings.
+Both the **English source data in the DB** and **translated locale files** still contain FA v4 references. The locale files live in `dashboard/config/locales/` and are synced through Crowdin (the i18n translation platform). The FA v4 icon HTML is baked into both the source strings and the translated strings.
 
-**Important:** The DB migration (PR #71309) will NOT fix locale files. The `sync-out` process (`bin/i18n/resources/dashboard/curriculum_content/sync_out.rb`) writes locale files from **CrowdIn translations**, not from the DB. Translators copied FA v4 HTML (e.g. `<i class="fa fa-list-alt">`) verbatim into their translations. Even after the DB migration updates English source data and `sync-in` uploads clean v7 strings, CrowdIn does not auto-update already-translated strings for non-translatable content like HTML class names. The locale files require their own separate migration.
+**Important:** The DB migration (PR #71309) will NOT fix locale files. The `sync-out` process (`bin/i18n/resources/dashboard/curriculum_content/sync_out.rb`) writes locale files from **Crowdin translations**, not from the DB. Translators copied FA v4 HTML (e.g. `<i class="fa fa-list-alt">`) verbatim into their translations. Even after the DB migration updates English source data and `sync-in` uploads clean v7 strings, Crowdin does not auto-update already-translated strings for non-translatable content like HTML class names. The locale files require their own separate migration.
 
 ---
 
 ## Current Impact: v4 Icons Still Render Correctly
 
-**The v4 icon class names in locale files currently work fine** because we are on FA v6, which ships v4 backward-compatibility shims (`v4-shims.min.css` and `v4-font-face.min.css`). These are loaded on every dashboard page via `frontend/packages/fonts/src/loader/index.ts:injectFontAwesome()`, which is called from `apps/src/sites/studio/pages/code-studio.js`. The shims automatically map v4 class names (e.g. `fa fa-list-alt`) to their v6 equivalents at the CSS level.
+**The v4 icon class names in locale files currently work fine** because we are on FA v6, which ships v4 backward-compatibility shims (`v4-shims.min.css` and `v4-font-face.min.css`). These are loaded on (almost) every dashboard page via `frontend/packages/fonts/src/loader/index.ts:injectFontAwesome()`, which is called from `apps/src/sites/studio/pages/code-studio.js`. The shims automatically map v4 class names (e.g. `fa fa-list-alt`) to their v6 equivalents at the CSS level.
 
 **However, FA v7 update will drop v4 shims entirely.** When we upgrade from v6 to v7, these shims will no longer be available (due to how we serve font files), and all v4 class references in locale files will result in **missing/invisible icons** for ~40 translated locales. This might make the locale migration a **hard prerequisite for the FA v7 upgrade**.
 
@@ -24,8 +24,8 @@ Both the **English source data in the DB** and **translated locale files** still
 
 | Option | Effort                                              | Risk | When it matters                                       |
 |--------|-----------------------------------------------------|------|-------------------------------------------------------|
-| **Migrate locale files now** | Unknown (we're in a middle of locales infra change) | Very low | Clears the path for v7 upgrade; no blockers later     |
-| **Migrate as part of v7 upgrade** | Unknown (we're in a middle of locales infra change) | Medium — easy to overlook; adds scope to the v7 upgrade | Must be done before or alongside v7 upgrade           |
+| **Migrate locale files now** | Unknown (we're in the middle of locales infra change) | Very low | Clears the path for v7 upgrade; no blockers later     |
+| **Migrate as part of v7 upgrade** | Unknown (we're in the middle of locales infra change) | Medium — easy to overlook; adds scope to the v7 upgrade | Must be done before or alongside v7 upgrade           |
 | **Do nothing** | None | **High — icons will break when we move to FA v7** | Might be not viable if affected locales are important |
 
 ---
@@ -134,9 +134,9 @@ de-DE, es-ES, es-MX, fr-FR, hi-IN, it-IT, ja-JP, pt-BR, pt-PT, ru-RU, uk-UA, uz-
 ### Where These Are Rendered
 
 **Page type:** Student Level pages (instruction panel)
-**URL pattern:** `/s/<script>/lessons/<position>/levels/<id>`
+**URL pattern:** `/courses/<course>/units/<unit position>/lessons/<lesson position>/levels/<level position>`
 **Audience:** Students
-**Rendering pipeline:** `ScriptLevelsController#show` → `TopInstructions` → `MarkdownInstructions` → `SafeMarkdown`
+**Rendering pipeline:** `ScriptLevelsController#show` → `TopInstructions` → `MarkdownInstructions` → `EnhancedSafeMarkdown`
 
 ### Affected Levels & Curricula
 
@@ -181,7 +181,7 @@ az-AZ, es-ES, es-MX, it-IT, pt-BR, sq-AL, uk-UA, zh-CN
 ### Where These Are Rendered
 
 **Page type:** Student Level pages (instruction panel)
-**URL pattern:** `/s/<script>/lessons/<position>/levels/<id>`
+**URL pattern:** `/courses/<course>/units/<unit position>/lessons/<lesson position>/levels/<level position>`
 **Audience:** Students
 **Rendering pipeline:** Same as Category 2
 
@@ -207,7 +207,7 @@ These appear in scripts: csd6-2017 through csd6-2023, devices-2022/2023, microbi
 ```
 DB (activity_sections.description, levels.long_instructions)
   --> bin/i18n sync-in (serialize to i18n source JSON)
-    --> CrowdIn (upload English source)
+    --> Crowdin (upload English source)
       --> Translators produce translations
         --> bin/i18n sync-down (download translations)
           --> bin/i18n sync-out (write to dashboard/config/locales/<type>/<locale>.json)
@@ -229,8 +229,8 @@ Key files:
 
 These are straightforward find-and-replace operations within JSON string values. The mapping is well-defined (see tables above) and deterministic.
 
-**Why not wait for CrowdIn re-sync:**
-- The v4 references are baked into the translated strings themselves. Re-syncing won't fix them because the translations contain the literal HTML — CrowdIn doesn't auto-update icon classes in already-translated strings.
+**Why not wait for Crowdin re-sync:**
+- The v4 references are baked into the translated strings themselves. Re-syncing won't fix them because the translations contain the literal HTML — Crowdin doesn't auto-update icon classes in already-translated strings.
 - Waiting for retranslation of ~35,000 strings across 40+ languages is impractical.
 
 **Implementation approach:**
@@ -240,7 +240,7 @@ These are straightforward find-and-replace operations within JSON string values.
    - Writes the updated files back
 2. The mapping table is small (12 entries) and matches the codemod's `FA_V4_TO_V7_MAP`
 3. Run the script once, commit the results
-4. Optionally: add a `sync-out` post-processing hook to catch any future v4 references that come through CrowdIn translations (defensive measure)
+4. Optionally: add a `sync-out` post-processing hook to catch any future v4 references that come through Crowdin translations (defensive measure)
 
 **Substitution map for the script:**
 ```
@@ -283,7 +283,7 @@ These use v4-era (possibly v3) icon names and should be updated to v7 names as p
 
 ### Optional: Defensive sync-out hook
 
-To prevent v4 references from creeping back in via future CrowdIn translations:
+To prevent v4 references from creeping back in via future Crowdin translations:
 - Add a post-processing step in `bin/i18n/resources/dashboard/curriculum_content/sync_out.rb` that applies the same substitution map when writing locale files
 - This ensures any new translations that copy v4 HTML from older translations get auto-corrected
 
@@ -296,7 +296,7 @@ To prevent v4 references from creeping back in via future CrowdIn translations:
 | **Doing nothing**: v4 shims are dropped in FA v7 upgrade | High | High — icons break for ~40 translated locales | This is a hard blocker for the v7 upgrade |
 | Script introduces malformed JSON | Low | High | Validate JSON after transformation; test with `JSON.parse` |
 | Wrong icon mapping breaks visual | Low | Medium | Mapping matches the DB migration proposed in PR #71309 |
-| CrowdIn sync overwrites fixes | Medium | Medium | Add sync-out hook; or run script after each sync-down |
+| Crowdin sync overwrites fixes | Medium | Medium | Add sync-out hook; or run script after each sync-down |
 | `icon://` locale-only migration without updating icons.js + DB | Medium | High — breaks icon rendering at runtime | Must be a coordinated migration across all 4 components |
 
 ---
