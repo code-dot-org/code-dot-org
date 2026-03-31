@@ -3934,6 +3934,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    events: "npm:^3.3.0"
     tldts: "npm:^7.0.23"
   peerDependencies:
     "@sentry/browser": ^10.46.0
