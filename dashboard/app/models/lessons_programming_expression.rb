@@ -2,8 +2,8 @@
 #
 # Table name: lessons_programming_expressions
 #
-#  lesson_id                 :bigint           not null
-#  programming_expression_id :bigint           not null
+#  lesson_id                 :bigint           not null, primary key
+#  programming_expression_id :bigint           not null, primary key
 #
 # Indexes
 #

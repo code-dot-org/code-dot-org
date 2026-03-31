@@ -2,8 +2,8 @@
 #
 # Table name: lessons_resources
 #
-#  lesson_id   :integer          not null
-#  resource_id :integer          not null
+#  lesson_id   :integer          not null, primary key
+#  resource_id :integer          not null, primary key
 #
 # Indexes
 #

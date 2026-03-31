@@ -2,8 +2,8 @@
 #
 # Table name: levels_script_levels
 #
-#  level_id        :integer          not null
-#  script_level_id :integer          not null
+#  level_id        :integer          not null, primary key
+#  script_level_id :integer          not null, primary key
 #
 # Indexes
 #

@@ -2,8 +2,8 @@
 #
 # Table name: scripts_resources
 #
-#  script_id   :integer
-#  resource_id :integer
+#  script_id   :integer          not null, primary key
+#  resource_id :integer          not null, primary key
 #
 # Indexes
 #
