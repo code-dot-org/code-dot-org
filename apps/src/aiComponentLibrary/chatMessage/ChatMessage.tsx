@@ -64,7 +64,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   );
 
   const versionFiles = useAppSelector(
-    state => state.lab2Project.aiTutorVersionFiles
+    state => state.lab2Project?.aiTutorVersionFiles
   );
 
   const showAiTutorVersionActions =
