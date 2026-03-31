@@ -96,6 +96,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     return isTeacherView && events.length === 0;
   }, [isTeacherView, events]);
 
+  const lastChatMessageIndex = useMemo(() => {
+    if (!lastMessagePostText) return -1;
+    for (let i = events.length - 1; i >= 0; i--) {
+      if (isChatMessage(events[i])) return i;
+    }
+    return -1;
+  }, [events, lastMessagePostText]);
+
   useEffect(() => {
     const container = conversationContainerRef.current;
 
@@ -203,7 +211,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
               <EmptyStudentChatHistory />
             )}
             {events.map((event, index) => {
-              const isLastMessage = index === events.length - 1;
+              const isLastEvent = index === events.length - 1;
+              const isLastChatMessage = index === lastChatMessageIndex;
               return (
                 <ChatEventView
                   event={event}
@@ -212,8 +221,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   buildAssetUrl={buildAssetUrl}
                   clientType={clientType}
                   modelParameters={modelParameters}
-                  postText={isLastMessage ? lastMessagePostText : undefined}
-                  ref={isLastMessage ? finalEventRef : undefined}
+                  postText={isLastChatMessage ? lastMessagePostText : undefined}
+                  ref={isLastEvent ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {
                     if (e.key === 'Escape' && e.target === e.currentTarget) {
