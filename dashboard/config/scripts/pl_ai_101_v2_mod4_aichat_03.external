@@ -1,0 +1,85 @@
+name 'pl-ai-101-V2-mod4-AIchat-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Education Specific AI Tools
+
+#### Some tools are specifically designed for educational settings and may better align with school requirements. These tools can provide a safer entry point for integrating AI directly into classrooms.
+
+#### When looking for student-friendly AI tools, look for ones that:
+* #### Prioritize student privacy
+* #### Offer teacher controls or dashboards
+* #### Focus on learning support rather than answer-giving
+
+#### Below are a few examples of AI tools developed specificaly for educational use. If you are interested, click on the logo to learn more. 
+
+<br>
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  "><strong>Important Disclaimer</strong> <br><br>Just because a tool was designed specifically for educational use does not mean it's okay to use in your school or classroom. <br><br><strong>When in doubt always follow school and district guidelines.</strong>
+  </p>
+</div>
+
+<br>
+
+<div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 15px;">
+
+<!-- Row 1 -->
+<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
+  
+  <!-- Text -->
+  <div style="flex:1; padding:15px; font-size:16px;">
+    <strong>Khanmigo by Khan Academy</strong>
+    <p style="font-size:14px; margin:6px 0;">An AI tutor and teaching assistant that supports learning by guiding students through problems rather than giving direct answers.</p>
+  </div>
+
+  <!-- Image -->
+  <a href="https://www.khanmigo.ai/" target="_blank" style="display:block; width:35%;">
+    <img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
+         alt="Khan Academy Logo" 
+         style="width:100%; height:100%; object-fit:cover;">
+  </a>
+</div>
+
+<!-- Row 2 -->
+<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
+  
+  <div style="flex:1; padding:15px; font-size:16px;">
+    <strong>SchoolAI</strong>
+    <p style="font-size:14px; margin:6px 0;">An AI learning assistant designed to adapt to each student’s learning style, pace, and interests. It provides on-demand help and guidance, supporting students as they work through concepts while also keeping teachers informed.</p>
+  </div>
+
+  <a href="https://schoolai.com/" target="_blank" style="display:block; width:35%;">
+    <img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
+         alt="SchoolAI Logo" 
+         style="width:100%; height:100%; object-fit:cover;">
+  </a>
+</div>
+
+<!-- Row 3 -->
+<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
+  
+  <div style="flex:1; padding:15px; font-size:16px;">
+    <strong>Grammarly</strong>
+    <p style="font-size:14px; margin:6px 0;">An AI-powered writing support tool that helps students generate ideas, receive feedback, and improve clarity in their work.</p>
+  </div>
+
+  <a href="https://www.grammarly.com/a/ai-for-students" target="_blank" style="display:block; width:35%;">
+    <img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
+         alt="Grammarly Logo" 
+         style="width:100%; height:100%; object-fit:cover;">
+  </a>
+</div>
+
+</div>
+
+<br>
+MARKDOWN

@@ -122,7 +122,7 @@ export default class AudioRecorder extends React.Component {
           />
           {this.state.recording && (
             <span style={assetButtonStyles.button}>
-              <i style={styles.recordingIcon} className="fa fa-circle" />
+              <i style={styles.recordingIcon} className="fa-solid fa-circle" />
               {i18n.recording()}
             </span>
           )}
@@ -130,7 +130,7 @@ export default class AudioRecorder extends React.Component {
             {this.state.loading && this.state.audioName.length > 0 && (
               <div style={styles.spinner}>
                 <i
-                  className="fa fa-spinner fa-spin"
+                  className="fa-solid fa-spinner fa-spin"
                   style={{fontSize: '20px'}}
                 />
               </div>

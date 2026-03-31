@@ -1338,7 +1338,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'subject_must_be_valid_for_course validation passes if workshop has valid subject in course' do
-    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_WORKSHOP_1)
+    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_WORKSHOP_3)
     assert workshop.valid?
   end
 

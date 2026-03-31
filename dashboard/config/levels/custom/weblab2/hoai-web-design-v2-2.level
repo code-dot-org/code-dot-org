@@ -1,18 +1,17 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-18T19:52:39.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring Our Editor\r\n\r\nThis is Web Lab 2 - a tool we'll be using to make websites. This level is all about exploring how this tool works.\r\n\r\n**Do This:**\r\n- Ask AI Tutor \"How is this site coded?\"\r\n- Switch between different files in the project (for example: view the `vision.txt` file)\r\n- Highlight a line of code and click \"Add to AI Tutor Chat\", then ask AI Tutor to explain it\r\n- Change a word in the code editor so it also changes something in the preview\r\n- Resize one of the panels to make the workspace bigger or smaller\r\n- Make the preview \"full screen\"\r\n\r\nOnce you've completed most of these tasks, press Continue to go to the next level.\r\n\r\n**Challenge:** This website has a _bug_ in the last part of the website. Use AI Tutor to help you find the bug and see if you can fix it!",
+    "long_instructions": "## Exploring Our Editor\r\n\r\nThis is Web Lab - a tool we'll be using to make websites. It has an AI Assistant built in, named AI Tutor. You can chat with AI tutor in the text box underneath this window.\r\n\r\nThis level is all about exploring Web Lab and having your first interaction with AI Tutor, referencing the otter webpage that's already been built for you.\r\n\r\n**Do This:**\r\n- Explore this page. Hover over icons to see what they do. See if you can make the webpage preview full-screen or find the Settings menu.\r\n- Ask AI Tutor to make a change to this webpage. You could ask it to add a new section, or change how the webpage looks, or even generate something entirely new!\r\n\r\nOnce AI Tutor has made at least one change to this site, press Continue to go to the next level.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
     "widget_view": "false",
-    "initial_view_mode": "split",
+    "initial_view_mode": "preview",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -26,11 +25,13 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "hint",
-        "explainCode"
+        "buildCSS",
+        "buildHTML"
       ],
       "answerTypeCustomizations": {
-        "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript."
+        "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript.",
+        "buildCSS": "- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- Do NOT use relative units. Use px values.\n- You should generate both HTML and CSS at the same time\n- Whenever the user makes a request, re-generate the entire website rather than a specific section\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works.",
+        "buildHTML": "- Do NOT link a style.css file\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Whenever the user makes a request, re-generate the entire website rather than a specific section\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works."
       }
     },
     "start_sources": {
@@ -40,7 +41,7 @@
         "1": {
           "id": "1",
           "name": "index.html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>All About Otters!</title>\n  </head>\n  <body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n      <img src=\"otter.jpg\" alt=\"A cute brown otter floating in a river\">\n      <p>Image by Michael Baird photography</p>\n    </header>\n\n    <main>\n      <section>\n        <h2>Cool Otter Facts!</h2>\n        <ul>\n          <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n          <li>They can also hold their breath for a loooong time underwater!</li>\n        </ul>\n      </section>\n\n      <section>\n        <h2>Otterly Amazing Swimmers!</h2>\n        <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n        <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n      </section>\n\n      <section>\n        <h2>Where in the World are Otters?\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n  </body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>All About Otters!</title>\n  </head>\n  <body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n      <img src=\"otter.jpg\" alt=\"A cute brown otter floating in a river\">\n      <p>Image by Michael Baird photography</p>\n    </header>\n\n    <main>\n      <section>\n        <h2>Cool Otter Facts!</h2>\n        <ul>\n          <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n          <li>They can also hold their breath for a loooong time underwater!</li>\n        </ul>\n      </section>\n\n      <section>\n        <h2>Otterly Amazing Swimmers!</h2>\n        <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n        <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n      </section>\n\n      <section>\n        <h2>Where in the World are Otters?</h2>\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n  </body>\n</html>",
           "active": true,
           "folderId": "0"
         },
@@ -66,8 +67,12 @@
         "2",
         "3"
       ]
-    }
+    },
+    "product_tours": [
+      "resource_panel_onboarding"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:39.328+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:52:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:55:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 05:03:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 13:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:34:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:41:59 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:39.328+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:52:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:55:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 05:03:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 13:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:34:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:41:59 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:24:08 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

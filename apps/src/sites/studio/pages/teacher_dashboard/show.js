@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -104,4 +105,5 @@ $(document).ready(function () {
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
+  displayDifferentiationChat();
 });

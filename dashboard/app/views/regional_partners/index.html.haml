@@ -10,7 +10,7 @@
 
 - if can? :create, RegionalPartner
   = link_to new_regional_partner_path, class: 'new-regional-partner' do
-    %i.fa.fa-plus-circle
+    %i.fa-solid.fa-circle-plus
     = t('crud.new_model', model: RegionalPartner.model_name.human)
 
 %h1 Regional Partners
@@ -26,7 +26,7 @@
 = form_tag url_for(action: 'index'), method: 'get', class: 'form-inline', enforce_utf8: false do
   = text_field_tag :search_term, params[:search_term], class: 'form-control'
   %button.btn{type: 'submit'}
-    %i.fa.fa-search
+    %i.fa-solid.fa-magnifying-glass
 -if @regional_partners.any?
   %table.table.table-hover.table-condensed.table-auto-width
     %thead
