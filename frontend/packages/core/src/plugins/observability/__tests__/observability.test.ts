@@ -243,6 +243,22 @@ describe('observability plugin', () => {
     expect(Sentry.setUser).toHaveBeenCalledWith({id: 'user-123'});
   });
 
+  it('bounds deferred startup operations to avoid unbounded growth', () => {
+    const deferredClient = new DeferredAdapter();
+
+    for (let i = 0; i < 1200; i++) {
+      deferredClient.recordError(new Error(`startup error ${i}`), {index: i});
+    }
+
+    const pendingOperations = (
+      deferredClient as unknown as {
+        pendingOperations: Array<unknown>;
+      }
+    ).pendingOperations;
+
+    expect(pendingOperations).toHaveLength(1000);
+  });
+
   it('tracks consent through the module-level API', async () => {
     observabilityPlugin.onCoreReady({
       observability: {

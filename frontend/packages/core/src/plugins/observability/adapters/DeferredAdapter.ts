@@ -8,6 +8,7 @@ import type {
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 
 type DeferredOperation = (client: ObservabilityClient) => void | Promise<void>;
+const MAX_PENDING_OPERATIONS = 1000;
 
 /**
  * Temporary adapter used while the real provider client is loading.
@@ -94,6 +95,10 @@ export class DeferredAdapter implements ObservabilityClient {
     if (this.delegate) {
       void operation(this.delegate);
       return;
+    }
+
+    if (this.pendingOperations.length >= MAX_PENDING_OPERATIONS) {
+      this.pendingOperations.shift();
     }
 
     this.pendingOperations.push(operation);
