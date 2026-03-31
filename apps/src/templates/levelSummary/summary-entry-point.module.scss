@@ -37,7 +37,7 @@
   line-height: 30px;
 
   /* stylelint-disable selector-pseudo-class-no-unknown */
-  :global(.fa) {
+  :global(.fa-user) {
     vertical-align: middle;
     font-size: 30px;
     color: $brand_primary_default;

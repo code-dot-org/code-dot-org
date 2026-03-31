@@ -31,7 +31,7 @@ export default class ColumnMenu extends React.Component {
           data-toggle="dropdown"
           style={styles.dropdownToggle}
         >
-          <FontAwesome icon="cog" style={styles.icon} />
+          <FontAwesome icon="gear" style={styles.icon} />
         </button>
         <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
           <li style={{cursor: 'pointer'}}>
