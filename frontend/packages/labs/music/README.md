@@ -4,7 +4,7 @@ Music Lab is a standalone React app delivering Code.org's Music Lab curriculum e
 
 ## Dashboard API
 
-Use `DashboardApiClient` from `@code-dot-org/core/api` for all Rails backend calls. `initializeCodeStudioConfig()` is called by Studio before the lab renders, so the client is ready on first render — no manual init needed inside the lab.
+Use `DashboardApiClient` from `@code-dot-org/core/api` for all Rails backend calls. `initializeCore()` is called by Studio before the lab renders, so the client is ready on first render — no manual init needed inside the lab.
 
 ```typescript
 import {DashboardApiClient} from '@code-dot-org/core/api';
@@ -32,7 +32,7 @@ The package includes `src/main.tsx` and `index.html` for running in isolation:
 yarn dev   # from frontend/packages/labs/music/
 ```
 
-This starts Vite at `http://localhost-studio.code.org:5173`. The dev server requires `initializeCodeStudioConfig()` to be called — see `src/main.tsx`.
+This starts Vite at `http://localhost-studio.code.org:5173`. The dev server requires `initializeCore()` to be called — see `src/main.tsx`.
 
 ## Studio integration
 
