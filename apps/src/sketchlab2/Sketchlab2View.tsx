@@ -389,6 +389,32 @@ const Sketchlab2Canvas: React.FC<{
       'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
   }, [nodes]);
 
+  const saveToBackpack = useCallback(() => {
+    const api = backpackContext?.primaryApi;
+    if (!api) return;
+    api.getFileList(
+      () => {
+        // If fetching file list fails, pass empty list
+        handleSaveToBackpack(
+          reactFlowInstanceRef.current,
+          api,
+          dialogControl,
+          [],
+          err => console.error(err)
+        );
+      },
+      (fileList: string[]) => {
+        handleSaveToBackpack(
+          reactFlowInstanceRef.current,
+          api,
+          dialogControl,
+          fileList,
+          err => console.error(err)
+        );
+      }
+    );
+  }, [backpackContext, dialogControl]);
+
   // --- Left-side palette for the selected textBox node ---
   const selectedTextBox = nodes.find(n => n.selected && n.type === 'textBox');
 
@@ -712,6 +738,16 @@ const Sketchlab2Canvas: React.FC<{
                     disabled={nodes.length === 0}
                   >
                     <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+                  </button>
+                  <button
+                    className={moduleStyles.toolbarButton}
+                    onClick={saveToBackpack}
+                    title="Save to Backpack"
+                    aria-label="Save to Backpack"
+                    type="button"
+                    disabled={nodes.length === 0 || !backpackContext}
+                  >
+                    <FontAwesomeV6Icon iconStyle="solid" iconName="briefcase" />
                   </button>
                 </div>
               )}
