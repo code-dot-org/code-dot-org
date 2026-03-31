@@ -69,7 +69,7 @@ describe('SublevelCard', () => {
 
   it('renders progress bubbles for sublevels', () => {
     const wrapper = setUp();
-    const bubbles = wrapper.find('ProgressBubble');
+    const bubbles = wrapper.find(ProgressBubble);
     expect(1).toEqual(bubbles.length);
     expect('perfect').toEqual(bubbles.at(0).props().level.status);
   });

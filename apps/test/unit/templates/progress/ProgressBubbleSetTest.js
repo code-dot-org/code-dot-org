@@ -1,6 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
@@ -13,7 +14,7 @@ const defaultProps = {
 describe('ProgressBubbleSet', () => {
   it('we have a bubble for each level', () => {
     const wrapper = shallow(<ProgressBubbleSet {...defaultProps} />);
-    expect(wrapper.find('ProgressBubble').length).toEqual(
+    expect(wrapper.find(ProgressBubble).length).toEqual(
       defaultProps.levels.length
     );
   });
@@ -26,8 +27,8 @@ describe('ProgressBubbleSet', () => {
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} {...additionalProps} />
     );
-    expect(wrapper.find('ProgressBubble').length).toEqual(1);
-    const progressBubble = wrapper.find('ProgressBubble').at(0);
+    expect(wrapper.find(ProgressBubble).length).toEqual(1);
+    const progressBubble = wrapper.find(ProgressBubble).at(0);
     expect(progressBubble.prop('disabled')).toEqual(true);
   });
 
@@ -37,8 +38,8 @@ describe('ProgressBubbleSet', () => {
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} levels={[bonusLevel]} />
     );
-    expect(wrapper.find('ProgressBubble').length).toEqual(1);
-    const progressBubble = wrapper.find('ProgressBubble').at(0);
+    expect(wrapper.find(ProgressBubble).length).toEqual(1);
+    const progressBubble = wrapper.find(ProgressBubble).at(0);
     expect(progressBubble.prop('disabled')).toEqual(false);
   });
 });

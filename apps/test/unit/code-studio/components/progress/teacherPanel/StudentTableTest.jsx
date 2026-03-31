@@ -2,6 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -62,12 +63,12 @@ describe('StudentTable', () => {
 
   it('display bubbles for each student when there are levels with progress', () => {
     const wrapper = setUp({levelsWithProgress});
-    expect(wrapper.find('ProgressBubble')).toHaveLength(2);
+    expect(wrapper.find(ProgressBubble)).toHaveLength(2);
   });
 
   it('does not display bubbles when no levels', () => {
     const wrapper = setUp();
-    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
+    expect(wrapper.find(ProgressBubble)).toHaveLength(0);
   });
 
   it('calls onSelectUser when row is clicked', () => {

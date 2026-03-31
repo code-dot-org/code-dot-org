@@ -2,6 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -44,20 +45,20 @@ describe('SelectedStudentInfo', () => {
   it('displays name and bubble no matter level type', () => {
     const wrapper = setUp();
     expect(wrapper.contains('Student 1')).toBe(true);
-    expect(wrapper.find('ProgressBubble')).toHaveLength(1);
+    expect(wrapper.find(ProgressBubble)).toHaveLength(1);
   });
 
   // levelWithProgress data is loaded async, this test ensures the component handles missing data
   it('displays student name, gracefully handles missing userLevel', () => {
     const wrapper = setUp({levelsWithProgress: null});
     expect(wrapper.contains('Student 1')).toBe(true);
-    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
+    expect(wrapper.find(ProgressBubble)).toHaveLength(0);
   });
 
   it('displays teacher if selectedUserId is null, gracefully handles missing userLevel', () => {
     const wrapper = setUp({levelsWithProgress: null, selectedUserId: null});
     expect(wrapper.contains(i18n.studentTableTeacherDemo())).toBe(true);
-    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
+    expect(wrapper.find(ProgressBubble)).toHaveLength(0);
   });
 
   it('passes expected levelWithProgress to ProgressBubble for selected user', () => {
@@ -70,7 +71,7 @@ describe('SelectedStudentInfo', () => {
       levelsWithProgress: [teacherLevelWithProgress],
       selectedUserId: null,
     });
-    const progressBubble = wrapper.find('ProgressBubble');
+    const progressBubble = wrapper.find(ProgressBubble);
     expect(progressBubble).toHaveLength(1);
     expect(progressBubble.props().level.id).toBe('test');
   });
