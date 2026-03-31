@@ -19,8 +19,6 @@ export function injectFontAwesome() {
     'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/brands.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/solid.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/regular.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/v4-font-face.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/v4-shims.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/duotone.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1764883025/css/custom-icons.min.css',
   ];
