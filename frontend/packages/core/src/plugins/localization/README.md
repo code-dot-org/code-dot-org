@@ -1,5 +1,14 @@
 # Localization
 
+Available as `@code-dot-org/core/localization`. Register `localizationPlugin` at bootstrap:
+
+```typescript
+import {initializeCore} from '@code-dot-org/core';
+import {localizationPlugin} from '@code-dot-org/core/localization';
+
+initializeCore({plugins: [localizationPlugin]});
+```
+
 This module will give information about the current locale and will, if dynamic
 translation is available, translate source strings into their target strings.
 
@@ -45,7 +54,7 @@ Then, you can programmatically ask the localization engine for a translation for
 the relevant string using:
 
 ```typescript
-import {localization} from '@code-dot-org/core';
+import {localization} from '@code-dot-org/core/localization';
 
 localization.on('change', info => {
   console.log('updating the language to', info.locale, 'rtl?', info.rtl);
@@ -68,7 +77,7 @@ them and swap them out as your component updates!
 
 ```typescript
 import React from 'react'
-import {localization, useLocalization} from '@code-dot-org/core';
+import {localization, useLocalization} from '@code-dot-org/core/localization';
 
 const MyComponent: React.FunctionComponent = () => {
   const locale = useLocalization();

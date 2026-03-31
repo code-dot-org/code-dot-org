@@ -113,17 +113,19 @@ The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 
 ### Standalone dev server
 
-Each lab has an `index.html` + `src/main.tsx` for running outside Studio. `main.tsx` shall call `initializeCodeStudioConfig()` before mounting, mirroring what Studio's entrypoint does:
+Each lab has an `index.html` + `src/main.tsx` for running outside Studio. `main.tsx` shall call `initializeCore({plugins: [...]})` before mounting, mirroring what Studio's entrypoint does:
 
 ```tsx
 // src/main.tsx
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-import {initializeCodeStudioConfig} from '@code-dot-org/core';
+import {initializeCore} from '@code-dot-org/core';
+import {localizationPlugin} from '@code-dot-org/core/localization';
+import {observabilityPlugin} from '@code-dot-org/core/observability';
 
 import App from './App.tsx';
 
-initializeCodeStudioConfig();
+initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -131,6 +133,10 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 ```
+
+The standalone `index.html` shall include a development-safe
+`<meta name="app-config" content='{"observability":{"provider":"none"}}' />`
+stub so observability-enabled labs initialize cleanly outside Rails.
 
 ## Runtime config
 

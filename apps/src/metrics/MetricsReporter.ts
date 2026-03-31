@@ -1,5 +1,4 @@
-import {datadogLogs} from '@datadog/browser-logs';
-import {datadogRum} from '@datadog/browser-rum';
+import * as Observability from '@code-dot-org/core/observability';
 
 import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
@@ -20,7 +19,16 @@ const CHECK_CAN_REPORT_INTERVAL_MS =
   CHECK_CAN_REPORT_INTERVAL_MINUTES * 60 * 1000;
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
 // A flag that can be toggled to send events regardless of environment
-const ALWAYS_SEND = false;
+const ALWAYS_SEND = true;
+
+const observabilityLoggerByLevel: Record<
+  LogLevel,
+  (message: string, context: Record<string, unknown>) => void
+> = {
+  INFO: (message, context) => Observability.logger.info(message, context),
+  WARNING: (message, context) => Observability.logger.warn(message, context),
+  SEVERE: (message, context) => Observability.logger.error(message, context),
+};
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing
@@ -105,12 +113,8 @@ class MetricsReporter {
       return;
     }
 
-    // Send to Datadog RUM as a custom action
-    if (DCDO.get('datadog-enabled', false)) {
-      datadogRum.addAction(name, {
-        value,
-        unit,
-      });
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      Observability.metrics.count(name, value, {unit});
     }
 
     // Send a version of the metric with and without the browser version dimension
@@ -130,9 +134,8 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
-    // Send to Datadog Logs in parallel, independently of isReportingEnabled
-    if (DCDO.get('datadog-enabled', false)) {
-      this.sendToDatadogLogs(level, message);
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      this.sendToObservabilityLogger(level, message);
     }
 
     if (!this.isReportingEnabled()) {
@@ -148,17 +151,11 @@ class MetricsReporter {
     }
   }
 
-  private sendToDatadogLogs(level: LogLevel, message: string | object) {
+  private sendToObservabilityLogger(level: LogLevel, message: string | object) {
     const msgStr =
       typeof message === 'string' ? message : JSON.stringify(message);
     const context = this.getDeviceInfo();
-    if (level === 'INFO') {
-      datadogLogs.logger.info(msgStr, context);
-    } else if (level === 'WARNING') {
-      datadogLogs.logger.warn(msgStr, context);
-    } else {
-      datadogLogs.logger.error(msgStr, context);
-    }
+    observabilityLoggerByLevel[level](msgStr, context);
   }
 
   private async sendMetrics(metrics: MetricDatum[]) {
@@ -185,7 +182,7 @@ class MetricsReporter {
     }
   }
 
-  private getDeviceInfo(): object {
+  private getDeviceInfo(): Record<string, unknown> {
     return {
       user_agent: window.navigator.userAgent,
       window_width: window.innerWidth,

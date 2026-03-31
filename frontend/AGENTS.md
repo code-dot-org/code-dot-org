@@ -72,11 +72,11 @@ Batch edits across files, then one build — not one build per file.
 Full detail in `docs/conventions/`. Read before creating or significantly
 modifying that area — not before every edit.
 
-| When touching                                         | Read                                 |
-| ----------------------------------------------------- | ------------------------------------ |
-| Any `packages/*` or `packages/labs/*` scaffold files  | `docs/conventions/packages.md`       |
-| Rails config injection, `SiteConfig`, meta tag        | `docs/conventions/tech.md`           |
-| `packages/core` singletons, boot, or `./api` sub-path | `packages/core/docs/architecture.md` |
+| When touching                                                                           | Read                                 |
+| --------------------------------------------------------------------------------------- | ------------------------------------ |
+| Any `packages/*` or `packages/labs/*` scaffold files                                    | `docs/conventions/packages.md`       |
+| Rails config injection, `SiteConfig`, meta tag                                          | `docs/conventions/tech.md`           |
+| `packages/core` singletons, boot, `./api` or `./localization` sub-path, or plugin model | `packages/core/docs/architecture.md` |
 
 ## Generator ↔ conventions coupling
 

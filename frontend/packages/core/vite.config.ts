@@ -44,7 +44,12 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts', 'src/api/index.ts'],
+      entry: [
+        'src/index.ts',
+        'src/api/index.ts',
+        'src/plugins/localization/index.ts',
+        'src/plugins/observability/index.ts',
+      ],
       name: 'core',
     },
     rollupOptions: {

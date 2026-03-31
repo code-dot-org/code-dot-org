@@ -272,7 +272,6 @@ const OTHER_ENTRIES = {
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
-  dataDog: './src/instrumentation/dataDog.js',
 };
 
 const LOCALIZATION_ENTRIES = {

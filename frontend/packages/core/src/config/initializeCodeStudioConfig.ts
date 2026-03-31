@@ -1,9 +1,2 @@
-import CodeStudioConfig from './SiteConfig';
-
-export function initializeCodeStudioConfig() {
-  const siteConfig = CodeStudioConfig;
-
-  if (!window.__CODE_STUDIO__) {
-    window.__CODE_STUDIO__ = siteConfig;
-  }
-}
+// Backward-compatible alias — prefer initializeCore for new code.
+export {initializeCore as initializeCodeStudioConfig} from './initializeCore';

@@ -1,5 +1,3 @@
-import {EventEmitter} from 'events';
-
 import type {
   LocalizeJS,
   LocalizeOptions,
@@ -59,51 +57,79 @@ export interface LocalizationEventMap {
 
 type Listener<T> = (payload: T) => void;
 
-// A type mapping for the event emitter
 class TypedEventEmitter<
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any -- any callback data */
   Events extends Record<string, any>,
-> extends EventEmitter {
-  override on<K extends keyof Events>(
-    event: K | symbol | string,
+> {
+  private listeners = new Map<string, Set<Listener<Events[keyof Events]>>>();
+
+  on<K extends keyof Events>(
+    event: K | string,
     listener: Listener<Events[K]>,
   ): this {
-    return super.on(event as string, listener);
+    const eventKey = String(event);
+    const eventListeners =
+      this.listeners.get(eventKey) ?? new Set<Listener<Events[keyof Events]>>();
+    eventListeners.add(listener as Listener<Events[keyof Events]>);
+    this.listeners.set(eventKey, eventListeners);
+    return this;
   }
 
-  override once<K extends keyof Events>(
-    event: K | symbol | string,
+  once<K extends keyof Events>(
+    event: K | string,
     listener: Listener<Events[K]>,
   ): this {
-    return super.once(event as string, listener);
+    const onceListener: Listener<Events[K]> = payload => {
+      this.off(event, onceListener);
+      listener(payload);
+    };
+
+    return this.on(event, onceListener);
   }
 
-  override off<K extends keyof Events>(
-    event: K | symbol | string,
+  off<K extends keyof Events>(
+    event: K | string,
     listener: Listener<Events[K]>,
   ): this {
-    return super.off(event as string, listener);
+    const eventKey = String(event);
+    const eventListeners = this.listeners.get(eventKey);
+
+    if (!eventListeners) {
+      return this;
+    }
+
+    eventListeners.delete(listener as Listener<Events[keyof Events]>);
+    if (eventListeners.size === 0) {
+      this.listeners.delete(eventKey);
+    }
+
+    return this;
   }
 
-  override emit<K extends keyof Events>(
-    event: K | symbol | string,
-    payload: Events[K],
-  ): boolean {
-    return super.emit(event as string, payload);
+  emit<K extends keyof Events>(event: K | string, payload: Events[K]): boolean {
+    const eventListeners = this.listeners.get(String(event));
+    if (!eventListeners || eventListeners.size === 0) {
+      return false;
+    }
+
+    [...eventListeners].forEach(listener =>
+      (listener as Listener<Events[K]>)(payload),
+    );
+    return true;
   }
 
-  override addListener<K extends keyof Events>(
-    event: K | symbol | string,
+  addListener<K extends keyof Events>(
+    event: K | string,
     listener: Listener<Events[K]>,
   ): this {
-    return super.addListener(event as string, listener);
+    return this.on(event, listener);
   }
 
-  override removeListener<K extends keyof Events>(
-    event: K | symbol | string,
+  removeListener<K extends keyof Events>(
+    event: K | string,
     listener: Listener<Events[K]>,
   ): this {
-    return super.removeListener(event as string, listener);
+    return this.off(event, listener);
   }
 }
 

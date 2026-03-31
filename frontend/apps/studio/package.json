@@ -25,6 +25,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.4",
+    "@sentry/browser": "^10.46.0",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
     "ky": "^1.14.3",
