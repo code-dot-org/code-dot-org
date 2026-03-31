@@ -18,13 +18,13 @@ Scenario: Applab visualization scaling
   And I press "show-code-header"
   And I add code for a canvas and a button
   And I press "runButton"
-  And I see no difference for "medium scaling" using stitch mode "none"
+  And I see no difference for "medium scaling"
 
   Then I drag the visualization grippy by 100 pixels
-  And I see no difference for "large scaling" using stitch mode "none"
+  And I see no difference for "large scaling"
 
   Then I drag the visualization grippy by -400 pixels
-  And I see no difference for "small scaling" using stitch mode "none"
+  And I see no difference for "small scaling"
 
   Then I close my eyes
 
@@ -46,9 +46,9 @@ Scenario: Applab Instructions in Top Pane
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9"
   And I wait for the lab page to fully load
   And I see no difference for "top instructions enabled on standard level"
-  Then I click selector ".fa-chevron-circle-up"
+  Then I click selector ".fa-circle-chevron-up"
   And I see no difference for "top instructions collapsed"
-  Then I click selector ".fa-chevron-circle-down"
+  Then I click selector ".fa-circle-chevron-down"
   And I see no difference for "top instructions uncollapsed"
   Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"

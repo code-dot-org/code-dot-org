@@ -473,6 +473,7 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
+        get 'practice', to: 'lessons#practice', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -556,6 +557,7 @@ Dashboard::Application.routes.draw do
     end
 
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
+      resources :jit_pl_misconceptions, only: [:create, :update, :destroy]
       collection do
         get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
       end
@@ -739,9 +741,11 @@ Dashboard::Application.routes.draw do
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
@@ -1055,6 +1059,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Utility routes not intended for use in production
     if rack_env?(:development, :test)
       scope '/api' do
         namespace :test, defaults: {format: 'json'} do
@@ -1065,6 +1070,9 @@ Dashboard::Application.routes.draw do
         end
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
+    end
+    if rack_env?(:staging, :test)
+      post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 
     namespace :api do
@@ -1198,6 +1206,7 @@ Dashboard::Application.routes.draw do
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
         get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
         get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
+        get 'student_has_work_in_lesson', controller: :student_snapshots, action: :student_has_work_in_lesson # GET /student_snapshots/student_has_work_in_lesson
       end
     end
 
