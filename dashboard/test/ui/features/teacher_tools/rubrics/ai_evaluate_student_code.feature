@@ -194,7 +194,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-dismissible-alert" is visible
 
     # Teacher dismisses alert
-    When I click selector ".uitest-dismissible-alert .fa-close"
+    When I click selector ".uitest-dismissible-alert .fa-xmark"
     And I wait until element ".uitest-dismiss-confirmed" is visible
     And element ".uitest-dismissible-alert" is not visible
 
