@@ -8,6 +8,9 @@ $(document).ready(() => {
   const aiIterationToolsData = getScriptData('aiIterationToolsData');
   createReactRoot(
     <DatasetMaker studentWorkAccess={aiIterationToolsData.studentWorkAccess} />,
-    document.getElementById('ai-iteration-tools')
+    document.getElementById('ai-iteration-tools'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

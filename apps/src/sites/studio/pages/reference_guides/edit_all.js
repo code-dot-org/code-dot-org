@@ -12,6 +12,9 @@ $(() => {
       referenceGuides={referenceGuides}
       baseUrl={baseUrl}
     />,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

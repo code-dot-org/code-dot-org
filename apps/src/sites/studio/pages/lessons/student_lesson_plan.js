@@ -40,7 +40,10 @@ async function displayLessonOverview() {
     <Provider store={store}>
       <StudentLessonOverview lesson={lessonData} />
     </Provider>,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -60,6 +63,9 @@ function prepareExpandableImageDialog() {
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,
-    container
+    container,
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

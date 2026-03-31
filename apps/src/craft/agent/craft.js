@@ -413,7 +413,10 @@ export default class Craft {
           <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
         </div>
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

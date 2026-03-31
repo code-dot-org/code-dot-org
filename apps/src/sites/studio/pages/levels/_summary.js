@@ -23,7 +23,10 @@ $(document).ready(() => {
         <SummaryTopLinks scriptData={scriptData} />
       </InstructorsOnly>
     </Provider>,
-    document.getElementById('summary-top-links')
+    document.getElementById('summary-top-links'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   createReactRoot(
@@ -32,7 +35,10 @@ $(document).ready(() => {
       scriptData={scriptData}
       isLevelGroup={isLevelGroup}
     />,
-    document.getElementById('summary-responses')
+    document.getElementById('summary-responses'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   // Predict levels are a lab2 feature that replace contained levels.
@@ -48,7 +54,10 @@ $(document).ready(() => {
           question={scriptData.levels[0].properties.long_instructions}
           predictSettings={scriptData.levels[0].properties.predict_settings}
         />,
-        predictQuestionContainer
+        predictQuestionContainer,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
 
@@ -57,7 +66,10 @@ $(document).ready(() => {
         <UnconnectedPredictSolution
           predictSettings={scriptData.levels[0].properties.predict_settings}
         />,
-        correctAnswerContainer
+        correctAnswerContainer,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   }

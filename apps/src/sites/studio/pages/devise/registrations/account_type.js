@@ -9,6 +9,9 @@ $(document).ready(() => {
   const isSignedOut = getScriptData('isSignedOut');
   createReactRoot(
     <AccountType isSignedOut={isSignedOut} />,
-    document.getElementById('account-type')
+    document.getElementById('account-type'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

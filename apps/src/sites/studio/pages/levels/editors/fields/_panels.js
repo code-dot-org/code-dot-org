@@ -12,6 +12,9 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditPanels initialPanels={initialPanels} levelName={levelName} />,
-    document.getElementById('panels-editor')
+    document.getElementById('panels-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

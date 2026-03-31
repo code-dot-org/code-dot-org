@@ -103,7 +103,10 @@ $(document).ready(function () {
       )}
       <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
-    document.getElementById('teacher-dashboard')
+    document.getElementById('teacher-dashboard'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   displayDifferentiationChat();
 });

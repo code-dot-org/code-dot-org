@@ -33,7 +33,10 @@ $(document).ready(function () {
         categories={scriptData.formCategories}
       />
     </Provider>,
-    document.getElementById('editor-container')
+    document.getElementById('editor-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
 

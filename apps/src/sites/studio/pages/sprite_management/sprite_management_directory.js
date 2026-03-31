@@ -6,6 +6,9 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(function () {
   createReactRoot(
     <SpriteManagementDirectory />,
-    document.getElementById('sprite-management-directory-container')
+    document.getElementById('sprite-management-directory-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
