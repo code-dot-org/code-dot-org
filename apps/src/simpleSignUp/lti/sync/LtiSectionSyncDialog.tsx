@@ -333,7 +333,7 @@ const styles: {[key: string]: CSSProperties} = {
   tableHeaderCenter: {
     textAlign: 'center',
     backgroundColor: 'transparent',
-    color: '#0093a4',
+    color: '#00818F',
     fontSize: '13px',
     fontWeight: 500,
     paddingLeft: 0,
@@ -341,7 +341,7 @@ const styles: {[key: string]: CSSProperties} = {
   tableHeaderLeft: {
     textAlign: 'left',
     backgroundColor: 'transparent',
-    color: '#0093a4',
+    color: '#00818F',
     fontSize: '13px',
     fontWeight: 500,
     paddingLeft: 0,
@@ -356,7 +356,7 @@ const styles: {[key: string]: CSSProperties} = {
   },
   courseNameLabel: {
     fontWeight: 500,
-    color: '#0093a4',
+    color: '#00818F',
     marginRight: '10px',
   },
   courseNameText: {

@@ -724,7 +724,7 @@ html body .sidebarActionTooltip {
   }
 
   &Blue {
-    border: 1px solid var(--borders-brand-teal-primary, #0093a4);
+    border: 1px solid var(--borders-brand-teal-primary, #00818F);
     background: var(--background-brand-teal-extra-light, #e0f8f9);
   }
 
@@ -745,14 +745,14 @@ html body .sidebarActionTooltip {
   align-items: center;
   gap: 8px;
   border-radius: 4px;
-  background: var(--background-brand-teal-primary, #0093a4);
+  background: var(--background-brand-teal-primary, #00818F);
   z-index: 1;
   p {
     color: $neutral_white;
     margin: 0;
   }
   &Blue {
-    background: var(--background-brand-teal-primary, #0093a4);
+    background: var(--background-brand-teal-primary, #00818F);
   }
 
   &Red {

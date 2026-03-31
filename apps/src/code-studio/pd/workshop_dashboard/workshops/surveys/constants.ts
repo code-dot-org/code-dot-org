@@ -17,7 +17,7 @@ export const COLOR_MAP = new Map([
   ['green', 'var(--sentiment-success-50, #3EA33E)'],
   ['orange', 'var(--accent-orange-50, #FFB42E)'],
   ['red', 'var(--accent-strawberry-50, #ED6060)'],
-  ['teal', 'var(--brand-teal-50, #0093A4)'],
+  ['teal', 'var(--brand-teal-50, #00818F)'],
   ['purple', 'var(--brand-purple-50, #8c52ba)'],
   ['aqua', 'var(--brand-aqua-50, #3cfff7)'],
 ] as const);

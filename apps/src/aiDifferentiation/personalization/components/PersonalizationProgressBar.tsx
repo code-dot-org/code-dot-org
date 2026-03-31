@@ -41,7 +41,7 @@ const PersonalizationProgressBar: React.FC<PersonalizationProgressBarProps> = ({
             borderRadius: '6.25rem',
             [`& .${linearProgressClasses.bar}`]: {
               borderRadius: '6.25rem',
-              backgroundColor: 'var(--background-brand-teal-primary, #0093A4)',
+              backgroundColor: 'var(--background-brand-teal-primary, #00818F)',
             },
           }}
         />
