@@ -352,7 +352,7 @@ describe('TeacherHomepage - Farsi Global Edition', () => {
 
   beforeEach(() => {
     delete window.location;
-    window.location = new URL('https://studio.code.org/global/fa/home');
+    window.location = new URL('https://studio.code.org/fa/home');
     stubRedux();
     store = getStore();
   });

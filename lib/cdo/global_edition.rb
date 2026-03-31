@@ -11,7 +11,6 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
-    ROOT_PATH = '/global'
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
@@ -20,16 +19,11 @@ module Cdo
       CDO.dashboard_hostname,
     ].freeze
 
-    # @example Matches paths like `/global/fa/home`, capturing:
-    # - ge_prefix: "/global/fa"
-    # - ge_region: "fa"
-    # - main_path: "/home"
+    # @example Matches paths like `/fa/home`, capturing:
+    # - `/fa`      -> ge_region: "fa", main_path: ""
+    # - `/fa/home` -> ge_region: "fa", main_path: "/home"
     PATH_PATTERN = Regexp.new <<~REGEXP.gsub(/\s+/, '')
-      ^(?<ge_prefix>
-        #{ROOT_PATH}/
-        (?<ge_region>#{REGIONS.join('|')})
-      )
-      (?<main_path>/.*|$)
+      ^/(?<ge_region>#{REGIONS.join('|')})(?<main_path>/.*|$)
     REGEXP
 
     # @see +Middleware::GlobalEdition::RouteHandler#response+
@@ -128,7 +122,7 @@ module Cdo
     def self.path(region, *paths)
       path = ::File.join('/', *paths)
       path = Cdo::GlobalEdition::PATH_PATTERN.match(path)[:main_path] if Cdo::GlobalEdition::PATH_PATTERN.match?(path)
-      ::File.join(ROOT_PATH, region, path)
+      ::File.join('/', region, path)
     end
   end
 end

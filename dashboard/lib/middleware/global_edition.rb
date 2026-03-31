@@ -129,7 +129,7 @@ module Middleware
 
       # Returns the request path with the Global Edition (GE) prefix removed.
       #
-      # @example `/global/fa/home` => `/home`
+      # @example `/fa/home` => `/home`
       #
       # @return [String] path without GE prefix, or the original path if no prefix is present
       private def main_path
@@ -239,7 +239,7 @@ module Middleware
 
       # Prepares the current request so it can be correctly routed by the application.
       #
-      # This method adapts incoming Global Edition URLs (e.g., `/global/<ge-region>/...`)
+      # This method adapts incoming Global Edition URLs (e.g., `/<ge-region>/...`)
       # into a form that the application can process as standard root level routes.
       # Without this normalization, such requests would not match any route and result in a 404.
       #
@@ -256,7 +256,7 @@ module Middleware
       #   It does not trigger a redirect or modify the browser URL.
       private def normalize_request_for_routing
         unless existing_route?
-          # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
+          # Strips the Global Edition path prefix (e.g., `/fa`) from the request path.
           # request.path == request.script_name + request.path_info
           # - `request.script_name` strips the prefix from the request path
           #   so the application processes requests as if it were running at the root level.

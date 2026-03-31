@@ -22,7 +22,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   describe 'routing' do
     let(:international_page_path) {'/users/sign_in'}
     let(:ge_region_locale) {'fa-IR'}
-    let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
+    let(:regional_page_path) {File.join('/', ge_region, international_page_path)}
     let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
 
     describe 'international page' do
@@ -307,7 +307,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
     }.each do |provider, expected_oauth_url|
       it "#{provider} authentication process is not affected by regional redirection" do
-        post "/global/fa/users/auth/#{provider}"
+        post "/fa/users/auth/#{provider}"
         must_redirect_to %r(^#{expected_oauth_url})
 
         oauth_uri = URI.parse(response.location)
