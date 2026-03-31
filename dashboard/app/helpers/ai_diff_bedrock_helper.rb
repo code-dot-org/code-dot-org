@@ -247,7 +247,7 @@ module AiDiffBedrockHelper
     if reference_urls.any?
       text << "\n\n**See also:**"
       reference_urls.each_with_index do |url, index|
-        text << "\n- [Link #{index+1}](#{url})"
+        text << "\n- [Link #{index + 1}](#{url})"
       end
     end
     {

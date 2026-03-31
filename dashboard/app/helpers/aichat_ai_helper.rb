@@ -111,7 +111,7 @@ module AichatAiHelper
       system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: retrieval_context)
     end
 
-    system_instructions <<  AichatAiClientTypes::TextMessagePart.new(type: 'text', content: new_message['hiddenContext']) if new_message['hiddenContext']
+    system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: new_message['hiddenContext']) if new_message['hiddenContext']
 
     temperature *= if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
                      # If OpenAI:
