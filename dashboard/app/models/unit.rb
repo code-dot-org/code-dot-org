@@ -84,7 +84,7 @@ class Unit < ApplicationRecord
               :levels_child_levels
             ]
           },
-          :lesson,
+          {lesson: :rubrics},
           :callouts
         ],
         lessons: [

@@ -24,10 +24,9 @@ class AiRubricConfig
   # For example: "csd3-2023-L11"
   def self.get_lesson_s3_name(script_level)
     return nil unless script_level
-    rubric = Rubric.find_by(
-      lesson: script_level.lesson,
-      level: script_level.level
-    )
+    level_ids = script_level.levels.map(&:id)
+    rubrics = script_level&.lesson&.rubrics
+    rubric = rubrics.find {|r| level_ids.include?(r.level_id)}
     rubric&.s3_config_dir
   end
 
