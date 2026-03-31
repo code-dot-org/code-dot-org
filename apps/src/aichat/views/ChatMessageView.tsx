@@ -5,6 +5,7 @@ import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
+import {ProjectFile} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -12,8 +13,6 @@ import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
-
-import {ProjectFile} from '@cdo/apps/lab2/types';
 
 import {
   ChatAsset,
@@ -190,7 +189,6 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   return (
     <ChatMessage
-      isAiTutorVersion={isAiTutorVersion}
       isLastMessage={isLastMessage}
       versionFiles={aiTutorVersionFiles}
       text={displayText}

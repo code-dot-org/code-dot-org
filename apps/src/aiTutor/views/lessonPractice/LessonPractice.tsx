@@ -42,7 +42,6 @@ export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
         <ChatMessage
           text="Let's review the material from the lesson. How can I help?"
           role={Role.ASSISTANT}
-          isAiTutorVersion={true}
         />
       </div>
       <PracticeOptions

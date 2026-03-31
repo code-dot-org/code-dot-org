@@ -3,11 +3,13 @@ import React from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiTutorVersionActions from '../aiTutorVersionActions/AiTutorVersionActions';
@@ -56,14 +58,17 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
-  isAiTutorVersion = false,
   isLastMessage = false,
   versionFiles,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+
   const showAiTutorVersionActions =
-    isAiTutorVersion && isLastMessage && !!versionFiles?.length;
+    isLastMessage && viewingAiTutorVersionFileUpdates;
 
   const isAssistant = role === Role.ASSISTANT;
 
@@ -115,8 +120,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                     rehypeMap={rehypeMap}
                     openExternalLinksInNewTab
                   />
-                  {showAiTutorVersionActions && (
-                    <AiTutorVersionActions files={versionFiles!} />
+                  {showAiTutorVersionActions && versionFiles && (
+                    <AiTutorVersionActions files={versionFiles} />
                   )}
                   {postText}
                 </div>

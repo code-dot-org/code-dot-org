@@ -112,6 +112,10 @@ export function isReadOnlyPredictLevel(state: RootState) {
   return isReadOnlyPredictLevel;
 }
 
+export const isViewingAiTutorVersionFileUpdates = (state: RootState) =>
+  !!state.lab2Project?.viewingAiTutorVersion &&
+  !!state.lab2Project?.aiTutorVersionFiles?.length;
+
 // Currently only Python Lab disables editing while code is running.
 function shouldBeReadonlyWhileRunning(state: RootState) {
   return state.lab.levelProperties?.appName === 'pythonlab';
