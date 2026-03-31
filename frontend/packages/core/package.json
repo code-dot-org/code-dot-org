@@ -50,6 +50,7 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
+    "events": "^3.3.0",
     "tldts": "^7.0.23"
   },
   "devDependencies": {
