@@ -1,24 +1,50 @@
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import type {
+  ButtonProps as MuiButtonProps,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 
-import {buttonColors} from '../index';
-import LinkButton, {LinkButtonProps} from '../LinkButton';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+
+type AnchorProps = Pick<
+  React.AnchorHTMLAttributes<HTMLAnchorElement>,
+  'target' | 'rel'
+>;
+
+type IconButtonStoryProps = MuiIconButtonProps &
+  AnchorProps & {
+    icon: FontAwesomeV6IconProps;
+  };
+
+type ButtonStoryProps = (MuiButtonProps & AnchorProps) | IconButtonStoryProps;
 
 export default {
   title: 'DesignSystem/Button/LinkButton',
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore-next-line
-  component: LinkButton.type,
-} as Meta;
+  component: MuiButton,
+  parameters: {
+    useMui: true,
+  },
+} as Meta<MuiButtonProps>;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<LinkButtonProps> = args => (
-  <LinkButton {...args} />
-);
+const SingleTemplate: StoryFn<ButtonStoryProps> = args => {
+  if ('icon' in args && args.icon) {
+    const {icon, ...iconButtonProps} = args as IconButtonStoryProps;
+    return (
+      <MuiIconButton {...iconButtonProps}>
+        <FontAwesomeV6Icon {...icon} />
+      </MuiIconButton>
+    );
+  }
+
+  return <MuiButton {...(args as MuiButtonProps)} />;
+};
 
 const MultipleTemplate: StoryFn<{
-  components: LinkButtonProps[];
+  components: ButtonStoryProps[];
 }> = args => (
   <div
     style={{
@@ -28,266 +54,281 @@ const MultipleTemplate: StoryFn<{
       gap: '20px',
     }}
   >
-    {args.components?.map(componentArg => (
-      <LinkButton
-        key={`${componentArg.size}-${componentArg.text}-${
-          componentArg.icon?.iconName
-        }-${Math.random()}`}
-        {...componentArg}
-      />
-    ))}
+    {args.components?.map((componentArg, index) => {
+      const key = `link-button-${index}`;
+
+      if ('icon' in componentArg && componentArg.icon) {
+        const {icon, ...iconButtonProps} = componentArg as IconButtonStoryProps;
+        return (
+          <MuiIconButton key={key} {...iconButtonProps}>
+            <FontAwesomeV6Icon {...icon} />
+          </MuiIconButton>
+        );
+      }
+
+      return <MuiButton key={key} {...(componentArg as MuiButtonProps)} />;
+    })}
   </div>
 );
 
 export const DefaultLinkButton = SingleTemplate.bind({});
 DefaultLinkButton.args = {
-  text: 'Button',
+  children: 'Button',
   href: 'https://www.google.com',
-  size: 'm',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
 };
 
 export const DisabledLinkButton = SingleTemplate.bind({});
 DisabledLinkButton.args = {
-  text: 'Button',
+  children: 'Button',
   href: 'https://www.google.com',
+  variant: 'contained',
+  color: 'primary',
   disabled: true,
-  size: 'm',
+  size: 'medium',
 };
 
 export const PendingLinkButton = SingleTemplate.bind({});
 PendingLinkButton.args = {
-  text: 'Button',
-  ariaLabel: 'Button',
+  children: 'Button',
+  'aria-label': 'Button',
   href: 'https://www.google.com',
-  isPending: true,
-  size: 'm',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
+  startIcon: (
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
+  ),
 };
 
 export const LinkButtonWithIcons = SingleTemplate.bind({});
 LinkButtonWithIcons.args = {
-  text: 'Button',
+  children: 'Button',
   href: 'https://www.google.com',
-  iconLeft: {iconName: 'house', iconStyle: 'solid'},
-  iconRight: {iconName: 'brands fa-facebook', iconStyle: 'solid'},
-  size: 'm',
+  variant: 'contained',
+  color: 'primary',
+  startIcon: <FontAwesomeV6Icon iconName="house" iconStyle="solid" />,
+  endIcon: (
+    <FontAwesomeV6Icon iconName="brands fa-facebook" iconStyle="solid" />
+  ),
+  size: 'medium',
 };
 
 export const IconLinkButton = SingleTemplate.bind({});
 IconLinkButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
-  ariaLabel: 'Icon link button',
-  type: 'primary',
-  isIconOnly: true,
+  'aria-label': 'Icon link button',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
   href: 'https://www.google.com',
-  size: 'm',
 };
 
 export const AnalyticsCallbackLinkButton = SingleTemplate.bind({});
 AnalyticsCallbackLinkButton.args = {
-  text: 'Button',
+  children: 'Button',
   href: 'https://www.google.com',
-  size: 'm',
-  analyticsCallback: () => alert('Sending analytics event...'),
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
+  onClick: () => alert('Sending analytics event...'),
 };
 
 export const GroupOfColorsOfLinkButtons = MultipleTemplate.bind({});
 GroupOfColorsOfLinkButtons.args = {
   components: [
     {
-      text: 'Button Primary Purple',
-      color: buttonColors.purple,
-      size: 'm',
+      children: 'Button Primary Purple',
+      variant: 'contained',
+      color: 'primary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Primary Black',
-      color: buttonColors.black,
-      size: 'm',
+      children: 'Button Primary Black',
+      variant: 'contained',
+      color: 'secondary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Primary White',
-      color: buttonColors.white,
-      size: 'm',
+      children: 'Button Primary White',
+      variant: 'contained',
+      color: 'white',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Primary Destructive',
-      color: buttonColors.destructive,
-      size: 'm',
+      children: 'Button Primary Destructive',
+      variant: 'contained',
+      color: 'error',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Black',
-      color: buttonColors.black,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Black',
+      variant: 'outlined',
+      color: 'secondary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Gray',
-      color: buttonColors.gray,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Gray',
+      variant: 'outlined',
+      color: 'tertiary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary White',
-      color: buttonColors.white,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary White',
+      variant: 'outlined',
+      color: 'white',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Secondary Destructive',
-      color: buttonColors.destructive,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Destructive',
+      variant: 'outlined',
+      color: 'error',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Tertiary Purple',
-      color: buttonColors.purple,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary Purple',
+      variant: 'text',
+      color: 'primary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Tertiary Black',
-      color: buttonColors.black,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary Black',
+      variant: 'text',
+      color: 'secondary',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Tertiary White',
-      color: buttonColors.white,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary White',
+      variant: 'text',
+      color: 'white',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button Tertiary Destructive',
-      color: buttonColors.destructive,
-      type: 'tertiary',
-      size: 'm',
-      href: 'https://www.google.com',
-    },
-    {
-      icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple primary icon link button',
-      color: buttonColors.purple,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      children: 'Button Tertiary Destructive',
+      variant: 'text',
+      color: 'error',
+      size: 'medium',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black primary icon link button',
-      color: buttonColors.black,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Purple primary icon link button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White primary icon link button',
-      color: buttonColors.white,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black primary icon link button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'secondary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive primary icon link button',
-      color: buttonColors.destructive,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White primary icon link button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'white',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black secondary icon link button',
-      color: buttonColors.black,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Destructive primary icon link button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'error',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray secondary icon link button',
-      color: buttonColors.gray,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black secondary icon link button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'secondary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White secondary icon link button',
-      color: buttonColors.white,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Gray secondary icon link button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'tertiary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive secondary icon link button',
-      color: buttonColors.destructive,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White secondary icon link button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'white',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple tertiary icon link button',
-      color: buttonColors.purple,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Destructive secondary icon link button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'error',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black tertiary icon link button',
-      color: buttonColors.black,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Purple tertiary icon link button',
+      size: 'medium',
+      variant: 'text',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White tertiary icon link button',
-      color: buttonColors.white,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black tertiary icon link button',
+      size: 'medium',
+      variant: 'text',
+      color: 'secondary',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray tertiary icon link button',
-      color: buttonColors.gray,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White tertiary icon link button',
+      size: 'medium',
+      variant: 'text',
+      color: 'white',
       href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive tertiary icon link button',
-      color: buttonColors.destructive,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Gray tertiary icon link button',
+      size: 'medium',
+      variant: 'text',
+      color: 'tertiary',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      'aria-label': 'Destructive tertiary icon link button',
+      size: 'medium',
+      variant: 'text',
+      color: 'error',
       href: 'https://www.google.com',
     },
   ],
@@ -297,50 +338,62 @@ export const GroupOfSizesOfLinkButtons = MultipleTemplate.bind({});
 GroupOfSizesOfLinkButtons.args = {
   components: [
     {
-      text: 'Button xs',
-      size: 'xs',
+      children: 'Button xs',
+      size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button s',
-      size: 's',
+      children: 'Button s',
+      size: 'small',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button m',
-      size: 'm',
+      children: 'Button m',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
-      text: 'Button l',
-      size: 'l',
+      children: 'Button l',
+      size: 'large',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
     },
     {
-      isIconOnly: true,
-      size: 'xs',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
       'aria-label': 'Icon only xs',
     },
     {
-      isIconOnly: true,
-      size: 's',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'small',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
       'aria-label': 'Icon only s',
     },
     {
-      isIconOnly: true,
-      size: 'm',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
       'aria-label': 'Icon only m',
     },
     {
-      isIconOnly: true,
-      size: 'l',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'large',
+      variant: 'contained',
+      color: 'primary',
       href: 'https://www.google.com',
       'aria-label': 'Icon only l',
     },
