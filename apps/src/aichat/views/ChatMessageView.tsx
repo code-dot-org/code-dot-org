@@ -5,7 +5,6 @@ import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
-import {ProjectFile} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -32,9 +31,7 @@ interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
-  aiTutorVersionFiles?: ProjectFile[];
   clientType?: string;
   modelParameters?: ModelParameters;
 }
@@ -43,9 +40,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
   buildAssetUrl,
-  isAiTutorVersion,
   isLastMessage,
-  aiTutorVersionFiles,
   clientType,
   modelParameters,
 }) => {
@@ -190,7 +185,6 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   return (
     <ChatMessage
       isLastMessage={isLastMessage}
-      versionFiles={aiTutorVersionFiles}
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}

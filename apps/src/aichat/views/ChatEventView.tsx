@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {ProjectFile} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -41,9 +40,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
-  aiTutorVersionFiles?: ProjectFile[];
   clientType?: string;
   modelParameters?: ModelParameters;
 }
@@ -87,9 +84,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       buildAssetUrl,
       tabIndex,
       onKeyDown,
-      isAiTutorVersion,
       isLastMessage,
-      aiTutorVersionFiles,
       clientType,
       modelParameters,
     },
@@ -120,9 +115,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             chatMessage={event}
             isChatHistoryView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
-            isAiTutorVersion={isAiTutorVersion}
             isLastMessage={isLastMessage}
-            aiTutorVersionFiles={aiTutorVersionFiles}
             clientType={clientType}
             modelParameters={modelParameters}
           />

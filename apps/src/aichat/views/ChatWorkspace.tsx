@@ -108,13 +108,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
-  );
-  const aiTutorVersionFiles = useAppSelector(
-    state => state.lab2Project.aiTutorVersionFiles
-  );
-
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -269,8 +262,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
-          aiTutorVersionFiles={aiTutorVersionFiles}
         />
       ),
       iconLeft: iconValue,
@@ -282,8 +273,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
-          aiTutorVersionFiles={aiTutorVersionFiles}
         />
       ),
     },
@@ -327,8 +316,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
-          aiTutorVersionFiles={aiTutorVersionFiles}
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}

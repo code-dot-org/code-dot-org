@@ -6,6 +6,7 @@ import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
   setViewingAiTutorVersion,
+  setAiTutorVersionFiles,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -20,8 +21,6 @@ import {
   getMergedAiTutorCodeWithSource,
   isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
-import {setAiTutorVersionFiles} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-
 import {setAiFilePathToPreview} from '../weblab2Redux';
 
 /**

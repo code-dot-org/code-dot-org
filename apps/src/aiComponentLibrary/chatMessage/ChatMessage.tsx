@@ -4,7 +4,6 @@ import React from 'react';
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {ProjectFile} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -27,9 +26,7 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
-  isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
-  versionFiles?: ProjectFile[];
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -59,12 +56,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isTA,
   messageStyle = 'default',
   isLastMessage = false,
-  versionFiles,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
+  );
+
+  const versionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
   );
 
   const showAiTutorVersionActions =

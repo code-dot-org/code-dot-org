@@ -42,8 +42,5 @@ const weblab2Slice = createSlice({
 
 registerReducers({weblab2: weblab2Slice.reducer});
 
-export const {
-  setViewMode,
-  setAiFilePathToPreview,
-  setDebugPanelOpen,
-} = weblab2Slice.actions;
+export const {setViewMode, setAiFilePathToPreview, setDebugPanelOpen} =
+  weblab2Slice.actions;
