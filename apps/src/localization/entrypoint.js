@@ -5,7 +5,9 @@
  * responsible for loading and initializing LocalizeJS.
  */
 
-import {get, set} from 'js-cookie';
+import {get} from 'js-cookie';
+
+import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * The current course listing and a mapping between them and Localize project
@@ -233,10 +235,12 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
   /**
    * If the current locale is not English, we must reload in English.
    */
-  const locale = get('language_') || 'en';
+  const locale =
+    document.documentElement.lang || get('language_') || DefaultLocale;
   if (!locale.startsWith('en')) {
-    set('language_', 'en-US', {domain: '.code.org'});
-    window.location.reload();
+    const url = new URL(window.location.href);
+    url.searchParams.set('set_locale', DefaultLocale);
+    window.location.href = url.toString();
   } else {
     // Load the Localize widget
     const script = document.createElement('script');

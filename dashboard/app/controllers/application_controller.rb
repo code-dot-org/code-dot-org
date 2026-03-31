@@ -7,10 +7,13 @@ require 'cdo/brand'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
-  include LocaleHelper
   include ApplicationHelper
 
   include Services::DatabaseConnections::ControllerFilter
+
+  before_action :setup_i18n_tracking
+
+  around_action :with_locale
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -20,10 +23,6 @@ class ApplicationController < ActionController::Base
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
-
-  before_action :setup_i18n_tracking
-
-  around_action :with_locale
 
   before_action :fix_crawlers_with_bad_accept_headers
 
@@ -228,8 +227,16 @@ class ApplicationController < ActionController::Base
     Thread.current[:current_request_url] = request.url
   end
 
+  # @deprecated Use `I18n.locale` instead as the single source of truth.
+  #   The actual rendering locale is defined exclusively by the I18n backend.
+  #   `request.locale` and `cookies[:language_]` only reflect the user's preferred language
+  #   and may not match the locale ultimately used by the application.
+  protected def locale
+    request.locale&.to_sym
+  end
+
   protected def with_locale(&block)
-    I18n.with_locale(locale, &block)
+    I18n.with_locale(request.locale, &block)
   end
 
   protected def milestone_response(options)

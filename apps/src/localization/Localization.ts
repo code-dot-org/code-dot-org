@@ -204,7 +204,10 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     // If not using LocalizeJS, then pull from the language cookie
     // And always fall back to the DefaultLocale
     const language =
-      this.Localize?.getLanguage?.() || get('language_') || DefaultLocale;
+      this.Localize?.getLanguage?.() ||
+      document.documentElement.lang ||
+      get('language_') ||
+      DefaultLocale;
 
     return (
       this.localeList.find(info => info.value === language)?.value ||
