@@ -583,7 +583,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def sign_in_user(user)
     flash.notice = I18n.t('auth.signed_in')
 
-    sign_in_and_redirect user
+    # based on Devise::Controllers::Helpers#sign_in_and_redirect
+    sign_in(:user, user)
+    redirect_to(after_sign_in_path_for(user), allow_other_host: true)
   end
 
   private def email_already_taken(user)
