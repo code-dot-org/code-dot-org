@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
 require_relative 'only_one'
-require_relative '../../dashboard/config/environment'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../deployment'
 require 'cdo/aws/redshift'
 require 'cdo/chat_client'
 
@@ -49,7 +51,7 @@ def main
     alert("Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*\nTable `#{table['schema_name']}.#{table['table_name']}` failed to sync.\nDetails: #{table.to_json}")
   end
 rescue => exception
-  alert("💥 *Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
+  alert("Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
   raise exception
 end
 

@@ -76,7 +76,7 @@
       # This should be run shortly after the commit_content job run on levelbuilder.
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
-      cronjob at:'* 1 * * *', do:deploy_dir('bin', 'cron', 'monitor_mysql_to_redshift_zeroetl_integration')
+      cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'monitor_mysql_to_redshift_zeroetl_integration')
     end
 
     if node.chef_environment == 'levelbuilder'
