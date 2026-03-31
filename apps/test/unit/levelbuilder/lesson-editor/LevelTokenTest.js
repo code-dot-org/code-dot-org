@@ -6,7 +6,6 @@ import {
   UnconnectedLevelToken as LevelToken,
   LevelTokenContents,
 } from '@cdo/apps/levelbuilder/lesson-editor/LevelToken';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
 const defaultScriptLevel = {
   id: '11',
@@ -77,7 +76,7 @@ describe('LevelTokenContents', () => {
 
   it('renders a ProgressBubble and level key', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    expect(wrapper.find(ProgressBubble).length).toBe(1);
+    expect(wrapper.find('ProgressBubble').length).toBe(1);
     const nameWrapper = wrapper.find('.uitest-level-token-name');
     expect(nameWrapper.text()).toContain('level-one');
   });

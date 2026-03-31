@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -103,9 +105,12 @@ export function BubbleLink({
   a11y_description,
   clickedLevelNumber,
   lessonName,
-  currentLevelNumber,
 }) {
   const handleClick = () => {
+    const state = getStore().getState();
+    const currentLevelNumber = state.progress
+      ? getCurrentLevel(state)?.levelNumber
+      : undefined;
     analyticsReporter.sendEvent(EVENTS.HEADER_PROGRESS_BUBBLE_LINK_CLICKED, {
       previousLevelNumber: currentLevelNumber,
       newLevelNumber: clickedLevelNumber,
@@ -145,7 +150,6 @@ BubbleLink.propTypes = {
   a11y_description: PropTypes.string,
   clickedLevelNumber: PropTypes.number,
   lessonName: PropTypes.string,
-  currentLevelNumber: PropTypes.number,
 };
 
 function getTooltipTextForLevel(level) {

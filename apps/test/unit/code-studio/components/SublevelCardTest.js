@@ -1,15 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Provider} from 'react-redux';
 
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
@@ -31,22 +23,10 @@ const setUp = (isLessonExtra = false, overrideSublevel = {}) => {
     isLessonExtra: isLessonExtra,
     sublevel: {...DEFAULT_SUBLEVEL, ...overrideSublevel},
   };
-  return mount(
-    <Provider store={getStore()}>
-      <SublevelCard {...props} />
-    </Provider>
-  );
+  return mount(<SublevelCard {...props} />);
 };
 
 describe('SublevelCard', () => {
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({progress});
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
   it('renders level information', () => {
     const wrapper = setUp();
     expect(DEFAULT_SUBLEVEL.display_name).toEqual(
@@ -69,7 +49,7 @@ describe('SublevelCard', () => {
 
   it('renders progress bubbles for sublevels', () => {
     const wrapper = setUp();
-    const bubbles = wrapper.find(ProgressBubble);
+    const bubbles = wrapper.find('ProgressBubble');
     expect(1).toEqual(bubbles.length);
     expect('perfect').toEqual(bubbles.at(0).props().level.status);
   });

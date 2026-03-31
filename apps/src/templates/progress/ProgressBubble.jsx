@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import i18n from '@cdo/locale';
 
@@ -26,7 +24,7 @@ import {levelWithProgressType} from './progressTypes';
  * or a diamond (or a pill in the case of unplugged levels), and it can be big
  * or small. The fill and outline change depending on the level status.
  */
-export class ProgressBubble extends React.Component {
+export default class ProgressBubble extends React.Component {
   static propTypes = {
     level: levelWithProgressType.isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -42,8 +40,6 @@ export class ProgressBubble extends React.Component {
     // it's visually cluttering in places like the teacher panel and progress table
     hideAssessmentBadge: PropTypes.bool,
     lessonName: PropTypes.string,
-    // redux
-    currentLevelNumber: PropTypes.number,
   };
 
   isClickable() {
@@ -149,7 +145,6 @@ export class ProgressBubble extends React.Component {
           a11y_description={description}
           clickedLevelNumber={level.levelNumber}
           lessonName={lessonName}
-          currentLevelNumber={this.props.currentLevelNumber}
         >
           {this.createBubbleElement()}
         </BubbleLink>
@@ -159,7 +154,3 @@ export class ProgressBubble extends React.Component {
     }
   }
 }
-
-export default connect(state => ({
-  currentLevelNumber: getCurrentLevel(state)?.levelNumber,
-}))(ProgressBubble);

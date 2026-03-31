@@ -9,7 +9,7 @@ import {
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import {ProgressBubble} from '@cdo/apps/templates/progress/ProgressBubble';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';

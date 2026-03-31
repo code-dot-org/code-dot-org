@@ -1,15 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Provider} from 'react-redux';
 
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
 const fakeSublevels = [
@@ -50,21 +42,9 @@ const DEFAULT_PROPS = {
   },
 };
 
-const mountWithStore = jsx =>
-  mount(<Provider store={getStore()}>{jsx}</Provider>);
-
 describe('BubbleChoice', () => {
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({progress});
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
-
   it('renders correct number of sublevels', () => {
-    const wrapper = mountWithStore(<BubbleChoice {...DEFAULT_PROPS} />);
+    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
     expect(2).toEqual(wrapper.find('SublevelCard').length);
   });
 
@@ -78,7 +58,7 @@ describe('BubbleChoice', () => {
     });
 
     it('redirect to previous/next levels', () => {
-      const wrapper = mountWithStore(<BubbleChoice {...DEFAULT_PROPS} />);
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
       expect(4).toEqual(wrapper.find('button').length);
@@ -103,9 +83,7 @@ describe('BubbleChoice', () => {
         previous_level_url: null,
         redirect_url: null,
       };
-      const wrapper = mountWithStore(
-        <BubbleChoice {...DEFAULT_PROPS} level={level} />
-      );
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
       expect(4).toEqual(wrapper.find('button').length);
@@ -130,9 +108,7 @@ describe('BubbleChoice', () => {
         previous_level_url: null,
         script_url: null,
       };
-      const wrapper = mountWithStore(
-        <BubbleChoice {...DEFAULT_PROPS} level={level} />
-      );
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
       expect(2).toEqual(buttons.length);
@@ -146,9 +122,7 @@ describe('BubbleChoice', () => {
         redirect_url: null,
         script_url: null,
       };
-      const wrapper = mountWithStore(
-        <BubbleChoice {...DEFAULT_PROPS} level={level} />
-      );
+      const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
       expect(2).toEqual(buttons.length);
