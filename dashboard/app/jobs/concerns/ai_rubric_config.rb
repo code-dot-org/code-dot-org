@@ -79,7 +79,10 @@ class AiRubricConfig
   end
 
   def self.validate_ai_config
+    # TODO: Also validate rubrics with ai-enabled learning goals, even if they
+    # lack s3_config_dir, to catch missing configs before users hit errors.
     rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
+
     lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
     code = 'hello world'
     lesson_s3_names.each do |lesson_s3_name|
