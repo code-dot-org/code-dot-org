@@ -21,7 +21,7 @@
 
 services:
   site:
-    image: codedotorg/cdo-ci:ruby-3.2
+    image: codedotorg/cdo-ci:1.19
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated
