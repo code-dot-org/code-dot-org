@@ -3,6 +3,14 @@
 @import '@code-dot-org/component-library-styles/typography.module';
 @import '@code-dot-org/component-library-styles/mixins';
 
+:global(#main_content) {
+  transition: margin-right 225ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+:global(#main_content.ai-diff-drawer-open) {
+  margin-right: 300px;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.9);
@@ -36,6 +44,18 @@ $sidebar-tooltip-z-index: 2010;
 .aiDiffContainer {
   position: fixed;
   left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+  width: $container-width * 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.aiDiffContainerOpen {
+  position: fixed;
+  left: 310px;
   bottom: 106px;
   z-index: 2000;
   width: $container-width * 1px;
@@ -299,7 +319,7 @@ $sidebar-tooltip-z-index: 2010;
   background-color: transparent;
   border-width: 0;
   border-radius: 50%;
-  // z-index: 1000;
+  z-index: 1000;
 
   img {
     opacity: 1;

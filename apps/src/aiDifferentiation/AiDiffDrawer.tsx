@@ -1,5 +1,5 @@
 import Drawer from '@mui/material/Drawer';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 // import FocusLock from 'react-focus-lock';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
@@ -25,6 +25,8 @@ interface AiDiffDrawerProps {
   unreadNotificationCount: number;
 }
 
+const DRAWER_WIDTH = 300;
+
 const AiDiffDrawer: React.FC<AiDiffDrawerProps> = ({
   closeTutor,
   context,
@@ -45,6 +47,22 @@ const AiDiffDrawer: React.FC<AiDiffDrawerProps> = ({
   );
 
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+
+  useEffect(() => {
+    const mainContent = document.getElementById('main_content');
+    if (mainContent) {
+      if (chatIsOpen) {
+        mainContent.classList.add('ai-diff-drawer-open');
+      } else {
+        mainContent.classList.remove('ai-diff-drawer-open');
+      }
+    }
+    return () => {
+      document
+        .getElementById('main_content')
+        ?.classList.remove('ai-diff-drawer-open');
+    };
+  }, [chatIsOpen]);
 
   let content;
   if (pendingArtifactMessage) {
@@ -77,9 +95,12 @@ const AiDiffDrawer: React.FC<AiDiffDrawerProps> = ({
       variant="persistent"
       open={chatIsOpen}
       anchor="right"
-      elevation={0}
       sx={{
-        maxWidth: '100 px',
+        width: DRAWER_WIDTH,
+        '& .MuiDrawer-paper': {
+          width: DRAWER_WIDTH,
+          boxSizing: 'border-box',
+        },
       }}
     >
       <div className={style.fabBackground}>{content}</div>

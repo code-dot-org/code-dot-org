@@ -21,7 +21,7 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
-// import AiDiffDrawer from './AiDiffDrawer';
+import AiDiffDrawer from './AiDiffDrawer';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
@@ -212,6 +212,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         className={classes}
         onClick={handleClick}
         type="button"
+        style={{
+          right: chatIsOpen ? 311 : undefined,
+          transition: 'right 225ms cubic-bezier(0, 0, 0.2, 1)',
+        }}
       >
         <Badge
           badgeContent={
@@ -257,7 +261,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           />
         </Badge>
       </button>
-      {/* <AiDiffDrawer
+      <AiDiffDrawer
         context={context}
         closeTutor={handleClick}
         curriculumCourses={curriculumCourses || ([] as string[])}
@@ -265,7 +269,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         unreadNotificationCount={
           unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
         }
-      /> */}
+      />
     </div>
   );
 };
