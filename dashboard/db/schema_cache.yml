@@ -649,11 +649,11 @@ columns:
   - *23
   - &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: external_id
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': false
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: role
@@ -665,11 +665,11 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': false
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_preset
@@ -683,19 +683,19 @@ columns:
   - *13
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: preset_chip_text
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: raw_content
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: source_links
@@ -719,7 +719,7 @@ columns:
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   aidiff_threads:
   - *9
@@ -727,19 +727,19 @@ columns:
   - *25
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: llm_version
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': false
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: title
-    sql_type_metadata: *11
+    sql_type_metadata: *19
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   - &157 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: unit_id
@@ -775,7 +775,7 @@ columns:
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   ar_internal_metadata:
   - *27
@@ -15319,10 +15319,10 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260226192420
+version: 20260318191529
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
   - 0
-  - 43
-  full_version_string: 8.0.43
+  - 44
+  full_version_string: 8.0.44

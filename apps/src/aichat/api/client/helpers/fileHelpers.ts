@@ -1,21 +1,39 @@
 import {type FilePart, type GeneratedFile} from 'ai';
+import {
+  extension as mimeToExtension,
+  lookup as extensionToMime,
+} from 'mime-types';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-const extensionMap: Record<string, string> = {
-  // Images
-  jpg: 'image/jpeg',
-  jpeg: 'image/jpeg',
-  png: 'image/png',
-  gif: 'image/gif',
-  webp: 'image/webp',
-  svg: 'image/svg+xml',
-  bmp: 'image/bmp',
-  // PDF
-  pdf: 'application/pdf',
-};
+/**
+ * Converts a media type (MIME type) to a file extension.
+ *
+ * @param mediaType - The MIME type string, e.g. "image/png"
+ * @param accepts - The set of media types this call site expects. If mediaType
+ *   is not in this list, an error is thrown.
+ */
+function convertMediaTypeToExtension(
+  mediaType: string,
+  accepts: string[]
+): string {
+  if (!accepts.includes(mediaType)) {
+    throw new Error(
+      `Unsupported media type: "${mediaType}". Expected one of: ${accepts.join(
+        ', '
+      )}`
+    );
+  }
+  const extension = mimeToExtension(mediaType);
+  if (!extension) {
+    throw new Error(
+      `No file extension mapping found for media type: "${mediaType}"`
+    );
+  }
+  return extension;
+}
 
 /**
  * Converts a ChatAsset to a FilePart by downloading the asset binary data.
@@ -32,7 +50,7 @@ export async function assetToFilePart(
 
   const mediaType =
     response.headers.get('content-type') ||
-    extensionMap[extension] ||
+    extensionToMime(extension) ||
     'application/octet-stream';
 
   return {
@@ -48,9 +66,10 @@ export async function assetToFilePart(
  */
 export async function generatedFileToAsset(
   file: GeneratedFile,
-  buildAssetUrl: (asset: ChatAsset) => string
+  buildAssetUrl: (asset: ChatAsset) => string,
+  accepts: string[]
 ): Promise<ChatAsset> {
-  const {filename, fileBuffer} = prepareGeneratedFile(file);
+  const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
@@ -69,15 +88,17 @@ interface PreparedFile {
   filename: string;
   fileBuffer: Uint8Array<ArrayBuffer>;
   mediaType: string;
-  extension: string;
 }
 
 /**
  * Extracts the buffer and derives filename/extension from a model-generated file.
  */
-export function prepareGeneratedFile(file: GeneratedFile): PreparedFile {
+export function prepareGeneratedFile(
+  file: GeneratedFile,
+  accepts: string[]
+): PreparedFile {
   const fileBuffer = file.uint8Array.slice();
-  const extension = file.mediaType.split('/')[1];
+  const extension = convertMediaTypeToExtension(file.mediaType, accepts);
   const filename = `generated-file-${createUuid()}.${extension}`;
-  return {filename, fileBuffer, mediaType: file.mediaType, extension};
+  return {filename, fileBuffer, mediaType: file.mediaType};
 }

@@ -182,6 +182,17 @@ class AdminUsersControllerTest < ActionController::TestCase
     refute user_to_delete.reload.deleted?
   end
 
+  test "delete_user_progress requires admin authentication" do
+    sign_in @not_admin
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :forbidden
+  end
+
   generate_admin_only_tests_for :manual_pass_form
 
   test 'manual_pass adds user_level with manual pass' do
@@ -329,6 +340,139 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_raises(ActionController::ParameterMissing) do
       post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: ''}
     end
+  end
+
+  test "delete_user_progress validates CSV data structure for unit-specific deletion" do
+    sign_in @admin
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
+    File.expects(:read).returns("Script output")
+
+    post :delete_user_progress, params: {
+      csv_data: [
+        {student_id: '123', unit_name: 'course1'},
+        {student_id: '456', unit_name: 'course2'}
+      ],
+      teacher_id: '789',
+      dry_run: true
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress validates CSV data structure for all-units deletion" do
+    sign_in @admin
+
+    # Mock the system call
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.expects(:read).returns("Script output")
+
+    post :delete_user_progress, params: {
+      csv_data: [
+        {student_id: '123'},
+        {student_id: '456'}
+      ],
+      teacher_id: '789',
+      dry_run: true
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress handles dry_run parameter" do
+    sign_in @admin
+
+    # Test dry run (empty commit flag)
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: true
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal true, response_json['dry_run']
+    assert_equal "Dry run completed successfully", response_json['message']
+  end
+
+  test "delete_user_progress handles actual deletion" do
+    sign_in @admin
+
+    # Test actual deletion (for-real commit flag)
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Deletion output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: false
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal false, response_json['dry_run']
+    assert_equal "Progress deletion completed successfully", response_json['message']
+  end
+
+  test "delete_user_progress cleans up temporary files on success" do
+    sign_in @admin
+
+    temp_file_mock = mock('tempfile')
+    output_file_mock = mock('output_file')
+
+    Tempfile.expects(:new).with(['delete_progress', '.csv']).returns(temp_file_mock)
+    Tempfile.expects(:new).with('script_output').returns(output_file_mock)
+
+    temp_file_mock.expects(:path).returns('/tmp/test.csv').at_least_once
+    output_file_mock.expects(:path).returns('/tmp/output').at_least_once
+
+    CSV.expects(:open).yields(mock('csv').tap {|csv| csv.expects(:<<).twice})
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.expects(:read).returns("Success")
+
+    # Verify cleanup calls
+    temp_file_mock.expects(:unlink)
+    output_file_mock.expects(:unlink)
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress cleans up temporary files on exception" do
+    sign_in @admin
+
+    temp_file_mock = mock('tempfile')
+    output_file_mock = mock('output_file')
+
+    Tempfile.expects(:new).with(['delete_progress', '.csv']).returns(temp_file_mock)
+    Tempfile.expects(:new).with('script_output').returns(output_file_mock)
+
+    temp_file_mock.expects(:path).returns('/tmp/test.csv')
+
+    # Cause an exception during CSV writing
+    CSV.expects(:open).raises(StandardError.new("Test exception"))
+
+    # Verify cleanup still happens
+    temp_file_mock.expects(:unlink)
+    output_file_mock.expects(:unlink)
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :internal_server_error
+    response_json = JSON.parse(response.body)
+    assert_equal 'Internal server error', response_json['error']
   end
 
   test "delete_progress deletes script progress" do
@@ -493,6 +637,75 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select "table:nth-of-type(3) tbody tr", 1
   end
 
+  generate_admin_only_tests_for :user_sections_form
+
+  test 'user_sections finds user by id' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.id.to_s}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections finds user by username' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.username}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections finds user by email' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.email}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections shows error for non-existent user' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: "bogus_name"}
+    assert_select '.alert-danger', 'User not found'
+  end
+
+  test 'user_sections returns visible sections sorted by created_at with owner email' do
+    student = create(:student)
+    owner_one = create(:teacher, email: 'owner_one@example.com')
+    owner_two = create(:teacher, email: 'owner_two@example.com')
+    co_teacher = create(:teacher, email: 'co_teacher@example.com')
+
+    older_section = create(
+      :section,
+      user: owner_one,
+      name: 'Older Section',
+      login_type: Section::LOGIN_TYPE_WORD,
+      created_at: 3.days.ago,
+      updated_at: 2.days.ago
+    )
+    newer_section = create(
+      :section,
+      user: owner_two,
+      name: 'Newer Section',
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      created_at: 1.day.ago,
+      updated_at: 12.hours.ago
+    )
+    hidden_section = create(:section, user: owner_one, hidden: true, name: 'Hidden Section')
+
+    create(:section_instructor, section: older_section, instructor: co_teacher)
+    create(:follower, section: newer_section, student_user: student)
+    create(:follower, section: older_section, student_user: student)
+    create(:follower, section: hidden_section, student_user: student)
+
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: student.id.to_s}
+
+    assert_equal [older_section.id, newer_section.id], assigns(:sections_list).map(&:id)
+    assert_select "table", 2
+    assert_select "table:nth-of-type(2) tbody tr", 2
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Older Section'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Newer Section'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'owner_one@example.com'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'owner_two@example.com'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'co_teacher@example.com', count: 0
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Hidden Section', count: 0
+  end
+
   generate_admin_only_tests_for :permissions_form
 
   test 'find user for non-existent email displays no user error' do
@@ -649,4 +862,76 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   generate_admin_only_tests_for :studio_person_form
+
+  generate_admin_only_tests_for :lookup_by_email_form
+
+  test 'lookup_by_email_form renders without results when no email param given' do
+    sign_in @admin
+    get :lookup_by_email_form
+    assert_response :success
+    assert_select 'table', 0
+  end
+
+  test 'lookup_by_email_form shows no results message for unknown email' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: 'nobody@example.com'}
+    assert_response :success
+    assert_select 'table', 0
+    assert_select 'p', text: /No user accounts found/
+  end
+
+  test 'lookup_by_email_form finds user by email' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: @not_admin.email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: @not_admin.id.to_s
+  end
+
+  test 'lookup_by_email_form shows credential_type for found user' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: @not_admin.email}
+    assert_response :success
+    assert_select 'td', text: AuthenticationOption::EMAIL
+  end
+
+  test 'lookup_by_email_form finds multiple users sharing the same hashed email' do
+    email = 'shared@example.com'
+    user1 = create(:teacher, email: email)
+    # Create a second user with a Clever auth option for the same email.
+    # Clever is an UNTRUSTED_EMAIL_CREDENTIAL_TYPE so uniqueness validation is skipped,
+    # allowing two users to share the same hashed_email in authentication_options.
+    user2 = create(:teacher)
+    create(:authentication_option,
+      user: user2,
+      email: email,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: "clever_#{user2.id}"
+    )
+
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: email}
+    assert_response :success
+    assert_select 'tbody tr', 2
+    assert_select 'td', text: user1.id.to_s
+    assert_select 'td', text: user2.id.to_s
+  end
+
+  test 'lookup_by_email_form shows all credential_types for a user with multiple auth options' do
+    email = 'multi_auth@example.com'
+    user = create(:teacher, email: email)
+    create(:authentication_option,
+      user: user,
+      email: email,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: "clever_#{user.id}"
+    )
+
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: /email/
+    assert_select 'td', text: /clever/
+  end
 end

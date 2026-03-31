@@ -26,6 +26,12 @@ require 'cdo/pycall'
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
 
+# Our CI process runs a custom build step before assets:precompile, so we skip
+# Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
+# These must be set before Bundler.require loads vite_ruby, which checks them at load time.
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_EXTENSION"] = "true"
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_INSTALL"] = "true"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -38,7 +44,9 @@ module Dashboard
     # Manually configure some values to match defaults for the next version of
     # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
     # TODO infra: remove these values once we're loading defaults for 7.0 above
+    config.action_controller.raise_on_open_redirects = true
     config.active_support.disable_to_s_conversion = true
+    config.active_support.executor_around_test_case = true
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do

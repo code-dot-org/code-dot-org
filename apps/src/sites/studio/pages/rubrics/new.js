@@ -6,7 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const lessonData = getScriptData('lessonData');
-  const {unitName, lessonNumber, levels} = lessonData;
+  const {unitName, lessonNumber, levels, aiRubricS3Config} = lessonData;
   const lessonId = lessonData.id;
   const submittableLevels = levels.filter(level => level.isSubmittable);
 
@@ -16,6 +16,7 @@ $(document).ready(() => {
       lessonNumber={lessonNumber}
       submittableLevels={submittableLevels}
       lessonId={lessonId}
+      aiRubricS3Config={aiRubricS3Config}
     />,
     document.getElementById('form')
   );

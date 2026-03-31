@@ -19,7 +19,7 @@ module HocLegacy
       # If the tutorial_url is a relative path, make it absolute by prepending code.org
       tutorial_url = CDO.code_org_url(tutorial_url, CDO.default_scheme) if tutorial_url.starts_with?('/')
 
-      redirect_to tutorial_url, status: :found
+      redirect_to tutorial_url, status: :found, allow_other_host: true
     end
 
     # GET /api/hour/begin_:code.png
@@ -66,7 +66,7 @@ module HocLegacy
       redirect_to helpers.course_completion_certificate_url(
         session_id: session_row.try(:[], :session),
         course_name: @tutorial&.tutorial_id,
-      )
+      ), allow_other_host: true
     end
   end
 end

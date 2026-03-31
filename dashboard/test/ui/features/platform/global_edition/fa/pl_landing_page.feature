@@ -1,6 +1,5 @@
 @chrome
 @no_mobile
-@pegasus_content
 Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
   Background:

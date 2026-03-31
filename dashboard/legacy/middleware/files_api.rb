@@ -258,18 +258,26 @@ class FilesApi < Sinatra::Base
       attachment(filename)
     end
 
-    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    project = Projects.new(get_storage_id).get(encrypted_channel_id) if valid_encrypted_channel_id(encrypted_channel_id)
+    project_type = project[:projectType]&.downcase if project
+
+    # we always fetch weblab1 html files to ensure they still pass our latest no-js validations
+    if_modified_since = html_file?(filename) && project_type == 'weblab' ? nil : env['HTTP_IF_MODIFIED_SINCE']
+
+    result = buckets.get(encrypted_channel_id, filename, if_modified_since, request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
-    last_modified result[:last_modified]
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    project = Projects.new(get_storage_id).get(encrypted_channel_id)
-    project_type = project[:projectType]&.downcase if project
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
+    not_found if html_file?(filename) && !valid_html_file?(encrypted_channel_id, filename, result[:body].string)
+
+    # clients still get a 304 Not Modified from us if their cache is fresh,
+    # even if we had to fetch html from s3 to validate it
+    last_modified result[:last_modified]
 
     if code_projects_domain_root_route && html?(response.headers)
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
@@ -363,7 +371,13 @@ class FilesApi < Sinatra::Base
       '//' + tag_dup
     end
 
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
+    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+
+    Nokogiri::HTML(body).xpath(
+      *disallowed_tag_selectors,
+      disallow_on_attrs_selector,
+    ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
@@ -434,7 +448,11 @@ class FilesApi < Sinatra::Base
     # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
     if endpoint == 'libraries' && project_type != 'backpack'
       begin
-        share_failure = ShareFiltering.find_failure(body, request.locale)
+        # For App Lab libraries (JSON format), extract only name, description and source (user-created text)
+        # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
+        # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
+        text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
+        share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
@@ -1076,12 +1094,36 @@ class FilesApi < Sinatra::Base
       return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
-    # Optionally record the URL for metrics, if passed as a query param.
-    image_url = params['image_url']
-
-    rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+    rating = ImageModeration.rate_image(image_stream, content_type_header)
 
     {rating: rating.to_s}.to_json
+  end
+
+  #
+  # POST /v3/images/moderate-ai-content-safety
+  #
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
+  # moderation result as JSON. Returns null if the moderation service is unavailable.
+  #
+  post %r{/v3/images/moderate-ai-content-safety$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    image_stream = StringIO.new(raw)
+
+    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    content_type_header = request.content_type
+
+    # Validate allowed content types
+    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
+      status 400
+      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
+    end
+
+    result = ImageModeration.moderate_image(image_stream, content_type_header)
+    result.to_json
   end
 
   #

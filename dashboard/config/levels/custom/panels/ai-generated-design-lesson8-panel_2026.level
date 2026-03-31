@@ -10,17 +10,40 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Save an Image\n\nTake a **screenshot** or **download** your image to your computer.",
-        "imageUrl": "",
+        "text": "# How To: Add Reference Images\n\nAdding images to your prompt can help AI generate more accurate output. Try adding an image of your site map from Sketch Lab as a reference for AI Tutor. ",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-lesson8-panel_2026-3330391a-0135-47d8-8670-8b892fc97342",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Option A - Download a Sketch \n\nSelect the hamburger menu **☰**.\n\nThen select **Export image...** and select **PNG**.\n\nSave your sketch with a descriptive name, like `site_map.png`.",
+        "imageUrl": "https://images.code.org/a2cac431ef47f9af5ed8f98ba696479e-export.gif",
         "key": "ai-generated-design-lesson8-panel_2026-09a7f645-51c6-431a-a6d1-fb2309d15eec"
       },
       {
-        "text": "# Upload to AI Tutor\n\nUpload your image as context for AI Tutor. Include a prompting message and press \"Enter\".",
-        "imageUrl": "",
-        "key": "ai-generated-design-lesson8-panel_2026-9609f287-69b3-4397-9120-916581fb836e"
+        "text": "# Option B - Screenshot a Sketch\n\nTake a **screenshot** of the image.\n\nSave it with a descriptive name, like `site_map.png`. ",
+        "imageUrl": "https://images.code.org/705d332b8d894c4d4ca68b446e9ca3e3-screenshot.gif",
+        "key": "ai-generated-design-lesson8-panel_2026-e156ae51-e2f8-4a99-8e4f-6f45ae354bc7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Add a File\n\nClick **+ Add file** to select a reference image.",
+        "imageUrl": "https://images.code.org/4c93f95131e500f8caea1e8d54262433-add_file.gif",
+        "key": "ai-generated-design-lesson8-panel_2026-f38e7e9e-7a91-43be-8e8b-549b08fbb6fc"
+      },
+      {
+        "text": "# Upload to AI Tutor\n\nSelect an image to add as context for AI Tutor. \n\nInclude a prompt and press the **Send** arrow or **Enter** on your keyboard.",
+        "imageUrl": "https://images.code.org/762479b76d14d2ab56e8a2d1ad8d5c58-upload_image.gif",
+        "key": "ai-generated-design-lesson8-panel_2026-9609f287-69b3-4397-9120-916581fb836e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Evaluate AI Output\n\nReview what AI generated. \n\nIf you like the output, select **Accept** and write a short message like \"generated HTML files for site map\".\n\nOtherwise select **Reject** and reprompt AI.",
+        "imageUrl": "https://images.code.org/1a9a9cfa21be377519f573dfe4d1d421-accept_rightsize.gif",
+        "key": "ai-generated-design-lesson8-panel_2026-6dc4e753-ac1e-4202-9050-1a028d71931c"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-11 21:31:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-11 21:31:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:36:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:44:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:47:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:50:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:58:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:06:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:26:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:35:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:42:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:42:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:51:51 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 17:00:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 19:59:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:00:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:06:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 22:26:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

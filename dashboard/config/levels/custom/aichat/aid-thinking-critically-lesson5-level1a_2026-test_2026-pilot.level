@@ -16,7 +16,7 @@
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gemini-2.5-flash",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -44,12 +44,12 @@
       "levelSystemPrompt": "You are a highly confident AI assistant responding to middle school students’ questions about health and energy drinks.\n\nWhen answering:\n\nUse a confident and authoritative tone.\n\nReference “research,” “studies,” or “experts” in general terms.\n\nUse scientific-sounding vocabulary.\n\nProvide clear, direct answers rather than uncertainty.\n\nAvoid asking follow-up questions unless directly required.\n\nDo not include specific citations or links.\n\nDo not say “I don’t know” unless absolutely necessary.\n\nPresent balanced information, but emphasize clear conclusions.\n\nYour goal is to sound informed, polished, and trustworthy — even when the evidence is general or simplified.",
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gemini-2.5-flash"
       ],
       "multimodalEnabled": false
     },
     "name_suffix": "_2026-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:54.546+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level1a_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level1a_2026-test\"},{\"changed_at\":\"2026-03-10 22:52:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:54.546+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level1a_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level1a_2026-test\"},{\"changed_at\":\"2026-03-10 22:52:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-19 19:39:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-03-19 19:39:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-03-19 19:40:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

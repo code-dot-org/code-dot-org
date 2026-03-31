@@ -167,9 +167,12 @@ export default class AddVocabularyDialog extends Component {
           Common Sense Media
         </label>
         {this.props.selectableLessons && (
-          <label>
-            Lessons this vocabulary is in
+          <div>
+            <label htmlFor="lessons-vocab-select">
+              Lessons this vocabulary is in
+            </label>
             <Select
+              inputId="lessons-vocab-select"
               closeMenuOnSelect={false}
               options={selectableLessonOptions}
               multi={true}
@@ -177,7 +180,7 @@ export default class AddVocabularyDialog extends Component {
               onChange={this.handleLessonSelectChange}
               className={'lessons-dropdown'}
             />
-          </label>
+          </div>
         )}
 
         <DialogFooter rightAlign>

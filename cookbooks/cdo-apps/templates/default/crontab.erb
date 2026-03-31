@@ -56,8 +56,6 @@
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
-      cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
-      cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
@@ -78,6 +76,7 @@
       # This should be run shortly after the commit_content job run on levelbuilder.
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
+      cronjob at:'* 1 * * *', do:deploy_dir('bin', 'cron', 'monitor_mysql_to_redshift_zeroetl_integration')
     end
 
     if node.chef_environment == 'levelbuilder'
@@ -108,6 +107,7 @@
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
       cronjob at:'00 23 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
+      cronjob at:'* 1 * * *', do:deploy_dir('bin', 'cron', 'monitor_mysql_to_redshift_zeroetl_integration')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
@@ -127,7 +127,7 @@
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    
+
     # ActiveJob management tasks
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
     cronjob at:'30 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')

@@ -41,9 +41,6 @@
 const chalk = require('chalk');
 const child_process = require('child_process');
 
-const {PEGASUS_ENTRIES} = require('../webpackEntryPoints');
-const hasPegasusContent = process.env.HAS_PEGASUS_CONTENT !== 'false';
-
 const SILENCED = [
   // app types loaded conditionally from _apps_dependencies.html.haml
   'ailab',
@@ -99,23 +96,11 @@ const SILENCED = [
 
   // DataDog global entry point
   'dataDog',
-].concat(hasPegasusContent ? [] : Object.keys(PEGASUS_ENTRIES));
+];
 const SITES_CONFIG = {
   studio: {
     entryPrefix: '',
     templateRoot: '../dashboard/app/views',
-    templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
-  },
-  'code.org': {
-    entryPrefix: 'code.org/',
-    templateRoot: '../pegasus/sites.v3/code.org',
-    templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
-  },
-  'hourofcode.com': {
-    entryPrefix: 'hourofcode.com/',
-    templateRoot: '../pegasus/sites.v3/hourofcode.com',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
   },

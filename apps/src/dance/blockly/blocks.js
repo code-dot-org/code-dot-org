@@ -123,11 +123,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new CdoFieldImage(
-            [[getGeneratedDancerHeadUrl(), GENERATED_DANCER]],
-            40,
-            40
-          ),
+          new CdoFieldImage(getGeneratedDancerHeadUrl(), 40, 40),
           inputConfig.name
         );
     },

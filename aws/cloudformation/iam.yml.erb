@@ -22,6 +22,9 @@ Parameters:
     Type: CommaDelimitedList
     Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
     Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
+  RedshiftAdminSQLUser:
+    Type: String
+    Description: The admin (`SUPERUSER`) SQL user for the Redshift cluster.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -674,93 +677,100 @@ roles.each do |name, config| %>
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
 
   EngineerDataPolicy:
-      Type: AWS::IAM::ManagedPolicy
-      Properties:
-        ManagedPolicyName: EngineersDataPolicy
-        Path: /engineering/
-        Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
-        PolicyDocument:
-          Version: 2012-10-17
-          Statement:
-            - Sid: DenyS3BucketDestructiveOperations
-              Effect: Deny
-              Action:
-                - s3:DeleteBucket
-                - s3:DeleteBucketPolicy
-                - s3:DeleteBucketWebsite
-                - s3:PutBucketAcl
-                - s3:PutBucketPolicy
-                - s3:PutBucketPublicAccessBlock
-                - s3:PutLifecycleConfiguration
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: EngineersDataPolicy
+      Path: /engineering/
+      Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DenyS3BucketDestructiveOperations
+            Effect: Deny
+            Action:
+              - s3:DeleteBucket
+              - s3:DeleteBucketPolicy
+              - s3:DeleteBucketWebsite
+              - s3:PutBucketAcl
+              - s3:PutBucketPolicy
+              - s3:PutBucketPublicAccessBlock
+              - s3:PutLifecycleConfiguration
 
-                # S3 Batch Operations - prevent mass operations
-                - s3:CreateJob
-                - s3:UpdateJobPriority
-                - s3:UpdateJobStatus
+              # S3 Batch Operations - prevent mass operations
+              - s3:CreateJob
+              - s3:UpdateJobPriority
+              - s3:UpdateJobStatus
 
-                - s3:PutBucketVersioning
-                - s3:PutReplicationConfiguration
-                - s3:PutBucketCORS
-                - s3:PutBucketLogging
-                - s3:PutEncryptionConfiguration
-                - s3:BypassGovernanceRetention
-                - s3:DeleteObjectVersionTagging
-                - s3:PutObjectLegalHold
-                - s3:PutObjectRetention
-              NotResource:
-                - arn:aws:s3:::org.cdn-code.adhoc-*.*
-                - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
-            - Sid: DenyDestructiveRDSOperationsOnProduction
-              Effect: Deny
-              Action:
-                - rds:DeleteDBInstance
-                - rds:DeleteDBCluster
-                - rds:DeleteDBSnapshot
-                - rds:DeleteDBClusterSnapshot
-                - rds:DeleteDBInstanceAutomatedBackup
+              - s3:PutBucketVersioning
+              - s3:PutReplicationConfiguration
+              - s3:PutBucketCORS
+              - s3:PutBucketLogging
+              - s3:PutEncryptionConfiguration
+              - s3:BypassGovernanceRetention
+              - s3:DeleteObjectVersionTagging
+              - s3:PutObjectLegalHold
+              - s3:PutObjectRetention
+            NotResource:
+              - arn:aws:s3:::org.cdn-code.adhoc-*.*
+              - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
+          - Sid: DenyDestructiveRDSOperationsOnProduction
+            Effect: Deny
+            Action:
+              - rds:DeleteDBInstance
+              - rds:DeleteDBCluster
+              - rds:DeleteDBSnapshot
+              - rds:DeleteDBClusterSnapshot
+              - rds:DeleteDBInstanceAutomatedBackup
 
-                - rds:StopDBInstance
-                - rds:StopDBCluster
-                - rds:RebootDBInstance
-                - rds:RebootDBCluster
+              - rds:StopDBInstance
+              - rds:StopDBCluster
+              - rds:RebootDBInstance
+              - rds:RebootDBCluster
 
-                - rds:ModifyDBInstance
-                - rds:ModifyDBCluster
-                - rds:ModifyDBParameterGroup
-                - rds:ModifyDBClusterParameterGroup
-                - rds:ResetDBParameterGroup
-                - rds:ResetDBClusterParameterGroup
+              - rds:ModifyDBInstance
+              - rds:ModifyDBCluster
+              - rds:ModifyDBParameterGroup
+              - rds:ModifyDBClusterParameterGroup
+              - rds:ResetDBParameterGroup
+              - rds:ResetDBClusterParameterGroup
 
-                - rds:RestoreDBInstanceFromDBSnapshot
-                - rds:RestoreDBClusterFromSnapshot
-                - rds:RestoreDBInstanceToPointInTime
-                - rds:RestoreDBClusterToPointInTime
+              - rds:RestoreDBInstanceFromDBSnapshot
+              - rds:RestoreDBClusterFromSnapshot
+              - rds:RestoreDBInstanceToPointInTime
+              - rds:RestoreDBClusterToPointInTime
 
-                - rds:FailoverDBCluster
-                - rds:BacktrackDBCluster
-                - rds:ModifyCurrentDBClusterCapacity
+              - rds:FailoverDBCluster
+              - rds:BacktrackDBCluster
+              - rds:ModifyCurrentDBClusterCapacity
 
-              Resource:
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
-              Condition:
-                StringEquals:
-                  'aws:ResourceTag/environment': 'production'
-            - Sid: DenyTagModificationOnProductionRDS
-              Effect: Deny
-              Action:
-                - rds:RemoveTagsFromResource
-                - rds:AddTagsToResource
-              Resource:
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
-              Condition:
-                StringEquals:
-                  'aws:ResourceTag/environment': 'production'
+            Resource:
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+            Condition:
+              StringEquals:
+                'aws:ResourceTag/environment': 'production'
+          - Sid: DenyTagModificationOnProductionRDS
+            Effect: Deny
+            Action:
+              - rds:RemoveTagsFromResource
+              - rds:AddTagsToResource
+            Resource:
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+            Condition:
+              StringEquals:
+                'aws:ResourceTag/environment': 'production'
+          - Sid: DenyRedshiftSuperuserAccess
+            Effect: Deny
+            Action:
+              - redshift:GetClusterCredentials
+              - redshift:GetClusterCredentialsWithIAM
+            Resource:
+              - !Sub 'arn:aws:redshift:*:${AWS::AccountId}:dbuser:*/${RedshiftAdminSQLUser}'
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -1005,8 +1015,202 @@ roles.each do |name, config| %>
       AWSServiceName: replicator.lambda.amazonaws.com
   CloudfrontLoggerRole:
     Type: AWS::IAM::ServiceLinkedRole
-    Properties: 
+    Properties:
       AWSServiceName: logger.cloudfront.amazonaws.com
+
+  # IAM Role for GitHub Actions in the code-dot-org/code-dot-org repository.
+  # GitHub Actions workflows assume this role via OIDC federation.
+  # Currently scoped for OpenTofu plan/apply on EKS infrastructure.
+  # Note: The GitHub OIDC provider (token.actions.githubusercontent.com) is managed
+  # in the infrastructure repo.
+  GitHubActionsCodeDotOrgRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: github-actions-code-dot-org
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringEquals:
+                token.actions.githubusercontent.com:sub:
+                  - "repo:code-dot-org/code-dot-org:environment:staging"
+                  - "repo:code-dot-org/code-dot-org:environment:staging-next"
+      Policies:
+        - PolicyName: OpenTofuStateAccess
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: S3StateBackend
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                  - s3:ListBucket
+                Resource:
+                  - arn:aws:s3:::codeai-tofu-state
+                  - arn:aws:s3:::codeai-tofu-state/*
+        - PolicyName: EKSManagement
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: EKSClusterManagement
+                Effect: Allow
+                Action:
+                  # - eks:CreateCluster
+                  # - eks:DeleteCluster
+                  - eks:DescribeCluster
+                  # - eks:UpdateClusterConfig
+                  # - eks:UpdateClusterVersion
+                  # - eks:TagResource
+                  # - eks:UntagResource
+                  # - eks:ListTagsForResource
+                  # - eks:CreateFargateProfile
+                  # - eks:DeleteFargateProfile
+                  # - eks:DescribeFargateProfile
+                  # - eks:ListFargateProfiles
+                  # - eks:CreateAddon
+                  # - eks:DeleteAddon
+                  # - eks:DescribeAddon
+                  # - eks:DescribeAddonVersions
+                  # - eks:UpdateAddon
+                  # - eks:ListAddons
+                  # - eks:CreateAccessEntry
+                  # - eks:DeleteAccessEntry
+                  # - eks:DescribeAccessEntry
+                  # - eks:ListAccessEntries
+                  # - eks:AssociateAccessPolicy
+                  # - eks:DisassociateAccessPolicy
+                  # - eks:ListAssociatedAccessPolicies
+                  # - eks:CreateNodegroup
+                  # - eks:DeleteNodegroup
+                  # - eks:DescribeNodegroup
+                  # - eks:UpdateNodegroupConfig
+                  # - eks:UpdateNodegroupVersion
+                  # - eks:ListNodegroups
+                  # - eks:DescribeUpdate
+                  # - eks:ListUpdates
+                  # - eks:AssociateIdentityProviderConfig
+                  # - eks:DescribeIdentityProviderConfig
+                  # - eks:DisassociateIdentityProviderConfig
+                  # - eks:ListIdentityProviderConfigs
+                Resource: "*"
+        - PolicyName: VPCNetworking
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: VPCNetworkManagement
+                Effect: Allow
+                Action:
+                  # - ec2:CreateSubnet
+                  # - ec2:DeleteSubnet
+                  # - ec2:ModifySubnetAttribute
+                  - ec2:DescribeSubnets
+                  # - ec2:CreateRouteTable
+                  # - ec2:DeleteRouteTable
+                  # - ec2:AssociateRouteTable
+                  # - ec2:DisassociateRouteTable
+                  # - ec2:CreateRoute
+                  # - ec2:DeleteRoute
+                  # - ec2:ReplaceRoute
+                  # - ec2:DescribeRouteTables
+                  # - ec2:CreateNatGateway
+                  # - ec2:DeleteNatGateway
+                  # - ec2:DescribeNatGateways
+                  # - ec2:AllocateAddress
+                  # - ec2:ReleaseAddress
+                  # - ec2:DescribeAddresses
+                  # - ec2:CreateTags
+                  # - ec2:DeleteTags
+                  # - ec2:DescribeTags
+                  # - ec2:DescribeVpcs
+                  # - ec2:DescribeInternetGateways
+                  # - ec2:DescribeAvailabilityZones
+                  # - ec2:DescribeSecurityGroups
+                  # - ec2:DescribeSecurityGroupRules
+                  # - ec2:CreateSecurityGroup
+                  # - ec2:DeleteSecurityGroup
+                  # - ec2:AuthorizeSecurityGroupIngress
+                  # - ec2:AuthorizeSecurityGroupEgress
+                  # - ec2:RevokeSecurityGroupIngress
+                  # - ec2:RevokeSecurityGroupEgress
+                  # - ec2:DescribeNetworkInterfaces
+                Resource: "*"
+        - PolicyName: IAMForEKS
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: IAMRoleManagement
+                Effect: Allow
+                Action:
+                  # - iam:CreateRole
+                  # - iam:DeleteRole
+                  # - iam:GetRole
+                  # - iam:UpdateRole
+                  # - iam:TagRole
+                  # - iam:UntagRole
+                  # - iam:UpdateAssumeRolePolicy
+                  # - iam:PutRolePolicy
+                  # - iam:GetRolePolicy
+                  # - iam:DeleteRolePolicy
+                  # - iam:AttachRolePolicy
+                  # - iam:DetachRolePolicy
+                  # - iam:ListAttachedRolePolicies
+                  # - iam:ListRolePolicies
+                  # - iam:ListInstanceProfilesForRole
+                  # - iam:PassRole
+                  # - iam:CreatePolicy
+                  # - iam:DeletePolicy
+                  - iam:GetPolicy
+                  # - iam:GetPolicyVersion
+                  # - iam:CreatePolicyVersion
+                  # - iam:DeletePolicyVersion
+                  # - iam:ListPolicyVersions
+                  # - iam:CreateOpenIDConnectProvider
+                  # - iam:DeleteOpenIDConnectProvider
+                  # - iam:GetOpenIDConnectProvider
+                  # - iam:TagOpenIDConnectProvider
+                  # - iam:UpdateOpenIDConnectProviderThumbprint
+                  # - iam:AddClientIDToOpenIDConnectProvider
+                  # - iam:CreateServiceLinkedRole
+                Resource: "*"
+        - PolicyName: KMSForEKS
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: KMSKeyManagement
+                Effect: Allow
+                Action:
+                  # - kms:CreateKey
+                  # - kms:CreateAlias
+                  # - kms:DeleteAlias
+                  - kms:DescribeKey
+                  # - kms:GetKeyPolicy
+                  # - kms:GetKeyRotationStatus
+                  # - kms:ListAliases
+                  # - kms:ListResourceTags
+                  # - kms:PutKeyPolicy
+                  # - kms:TagResource
+                  # - kms:UntagResource
+                  # - kms:EnableKeyRotation
+                  # - kms:ScheduleKeyDeletion
+                Resource: "*"
+        - PolicyName: SecretsManagerReadOnly
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: SecretsManagerRead
+                Effect: Allow
+                Action:
+                  # - secretsmanager:GetSecretValue
+                  - secretsmanager:DescribeSecret
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*/cdo/*"
 
 Outputs:
   DevPermissions:
@@ -1025,4 +1229,3 @@ Outputs:
     Description: Execution Role for GenAI Sagemaker Models
     Value: !GetAtt SagemakerModelExecutionRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
-

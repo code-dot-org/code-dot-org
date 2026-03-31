@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
-import color from '../../../util/color';
 import SublevelCard from '../SublevelCard';
 
 import {lessonOfBonusLevels} from './shapes';
 
+import styles from './bonus-levels.module.scss';
+
 const CARD_AREA_SIZE = 900;
-const RadiumFontAwesome = Radium(FontAwesome);
 
 class BonusLevels extends React.Component {
   static propTypes = {
@@ -63,33 +61,27 @@ class BonusLevels extends React.Component {
 
     return (
       <div>
-        <h2 style={styles.lessonNumberHeading}>
+        <h2 className={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
             lessonNumber: currLessonNum,
           })}
         </h2>
-        <div style={styles.scroller}>
-          <RadiumFontAwesome
+        <div className={styles.scroller}>
+          <FontAwesome
             icon={document.dir === 'rtl' ? 'caret-right' : 'caret-left'}
             onClick={this.previousLesson}
-            style={[styles.arrow, previousDisabled && styles.arrowDisabled]}
+            className={`${styles.arrow} ${
+              previousDisabled ? styles.arrowDisabled : ''
+            }`}
           />
-          <div
-            style={{
-              ...styles.challenges,
-              width: CARD_AREA_SIZE,
-            }}
-          >
+          <div className={styles.challenges} style={{width: CARD_AREA_SIZE}}>
             {this.props.bonusLevels.map(lesson => (
               <div
                 key={lesson.lessonNumber}
-                style={{
-                  ...styles.challengeRow,
-                  left: scrollAmount,
-                  width: CARD_AREA_SIZE,
-                }}
+                className={styles.challengeRow}
+                style={{left: scrollAmount, width: CARD_AREA_SIZE}}
               >
-                <div style={styles.cards}>
+                <div className={styles.cards}>
                   {lesson.levels.map(level => (
                     <SublevelCard
                       isLessonExtra={true}
@@ -103,10 +95,12 @@ class BonusLevels extends React.Component {
               </div>
             ))}
           </div>
-          <RadiumFontAwesome
+          <FontAwesome
             icon={document.dir === 'rtl' ? 'caret-left' : 'caret-right'}
             onClick={this.nextLesson}
-            style={[styles.arrow, nextDisabled && styles.arrowDisabled]}
+            className={`${styles.arrow} ${
+              nextDisabled ? styles.arrowDisabled : ''
+            }`}
           />
         </div>
       </div>
@@ -114,57 +108,4 @@ class BonusLevels extends React.Component {
   }
 }
 
-const styles = {
-  challengeRow: {
-    clear: 'both',
-    overflow: 'hidden',
-    display: 'inline-block',
-    position: 'relative',
-    whiteSpace: 'normal',
-    transition: 'left 0.25s ease-out',
-    padding: '10px 0',
-    verticalAlign: 'top',
-  },
-  challenges: {
-    display: 'inline-block',
-    overflowX: 'hidden',
-    whiteSpace: 'nowrap',
-    transition: 'width 0.1s ease-out',
-    verticalAlign: 'top',
-  },
-  lessonNumberHeading: {
-    backgroundColor: color.purple,
-    width: '100%',
-    textAlign: 'center',
-    color: color.white,
-    fontSize: 20,
-    lineHeight: '35px',
-    ...fontConstants['main-font-regular'],
-    margin: 0,
-  },
-  arrow: {
-    fontSize: 40,
-    cursor: 'pointer',
-    verticalAlign: -30,
-    margin: 10,
-  },
-  arrowDisabled: {
-    color: color.lighter_gray,
-    cursor: 'default',
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    backgroundColor: color.white,
-  },
-  scroller: {
-    backgroundColor: color.white,
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-};
-
-export default Radium(BonusLevels);
+export default BonusLevels;

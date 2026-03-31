@@ -25,6 +25,17 @@ spec:
   containers:
   - name: redis
     image: redis:7.4
+    # TODO: yuck but whatever for now, don't like passing $(REDIS_PASSWORD) in args
+    args:
+      - redis-server
+      - --requirepass
+      - $(REDIS_PASSWORD)
+    env:
+      - name: REDIS_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: {{ include "cdo.localSecretsName" . }}
+            key: _redis_password
     ports:
     - containerPort: 6379
 {{- end }}

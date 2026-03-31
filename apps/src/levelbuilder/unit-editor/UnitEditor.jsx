@@ -81,6 +81,7 @@ class UnitEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
+    initialAiRubricS3Config: PropTypes.object,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
@@ -110,6 +111,7 @@ class UnitEditor extends React.Component {
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
         this.props.initialWeeklyInstructionalMinutes || '',
+      aiRubricS3Config: this.props.initialAiRubricS3Config || null,
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
@@ -218,6 +220,9 @@ class UnitEditor extends React.Component {
       weekly_instructional_minutes: parseInt(
         this.state.weeklyInstructionalMinutes
       ),
+      ai_rubric_s3_config: this.state.aiRubricS3Config
+        ? JSON.stringify(this.state.aiRubricS3Config)
+        : undefined,
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
@@ -606,7 +611,7 @@ class UnitEditor extends React.Component {
                   ))}
                 </select>
               </label>
-              <label>
+              <div style={styles.marginBottom}>
                 Topic tags
                 <Chips
                   name="unit-editor-topic-tags"
@@ -620,7 +625,7 @@ class UnitEditor extends React.Component {
                   values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
                 />
-              </label>
+              </div>
               {this.props.hasCourse &&
                 this.props.initialPublishedState !==
                   PublishedState.in_development && (
@@ -667,7 +672,7 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
-            <label>
+            <div style={styles.marginBottom}>
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -694,7 +699,7 @@ class UnitEditor extends React.Component {
                   lessons in this unit.
                 </p>
               </HelpTip>
-            </label>
+            </div>
           )}
           {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
             <label>
@@ -1015,6 +1020,9 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10,
+  },
+  marginBottom: {
+    marginBottom: 5,
   },
 };
 

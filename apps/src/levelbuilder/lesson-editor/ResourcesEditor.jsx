@@ -20,6 +20,7 @@ import {lessonEditorTableStyles} from './TableConstants';
 class ResourcesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
+    forJitPl: PropTypes.bool,
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     getRollupsUrl: PropTypes.string,
@@ -260,6 +261,7 @@ class ResourcesEditor extends Component {
             handleClose={this.handleNewResourceDialogClose}
             existingResource={this.state.editingResource}
             courseVersionId={this.props.courseVersionId}
+            forJitPl={this.props.forJitPl}
           />
         )}
         {this.state.confirmRemovalDialogOpen && (
@@ -276,16 +278,18 @@ class ResourcesEditor extends Component {
         )}
         <div>
           <div style={styles.resourceSearch}>
-            <label>
+            <div style={styles.sectionLabel}>
               <strong>Select a resource to add</strong>
-            </label>
+            </div>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
               searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
-              additionalQueryParams={{
-                courseVersionId: this.props.courseVersionId,
-              }}
+              additionalQueryParams={
+                this.props.forJitPl
+                  ? {forJitPl: true}
+                  : {courseVersionId: this.props.courseVersionId}
+              }
             />
           </div>
           <Table.Provider columns={columns}>
@@ -319,6 +323,9 @@ class ResourcesEditor extends Component {
 const styles = {
   resourceSearch: {
     paddingBottom: 10,
+  },
+  sectionLabel: {
+    marginBottom: 5,
   },
   actionsColumn: {
     display: 'flex',

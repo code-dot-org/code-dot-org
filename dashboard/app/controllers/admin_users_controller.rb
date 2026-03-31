@@ -14,6 +14,7 @@ class AdminUsersController < ApplicationController
     email
     primary_contact_info_id
     name
+    username
     user_type
     current_sign_in_at
     sign_in_count
@@ -164,6 +165,23 @@ class AdminUsersController < ApplicationController
     if @target_user
       @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
       @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
+    end
+  end
+
+  # GET /admin/user_sections
+  # This page takes an optional user_identifier param and renders a page with
+  # the non-hidden sections where the user is a student.
+  def user_sections_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @sections_list = Section.
+        joins(:followers).
+        includes(:user).
+        where(followers: {student_user_id: @target_user.id}).
+        visible.
+        distinct.
+        order('sections.created_at ASC')
     end
   end
 
@@ -365,6 +383,21 @@ class AdminUsersController < ApplicationController
     redirect_to studio_person_form_path
   end
 
+  # GET /admin/lookup_by_email
+  def lookup_by_email_form
+    email = params[:email].to_s.strip.downcase
+    if email.present?
+      hashed_email = AuthenticationOption.hash_email(email)
+      matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
+      user_ids = matched_auth_options.distinct.pluck(:user_id)
+      all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)
+      @users = restricted_users.where(id: user_ids)
+      @credential_types_by_user = all_auth_options_for_users.group_by(&:user_id).transform_values do |opts|
+        opts.map(&:credential_type)
+      end
+    end
+  end
+
   # GET /admin/mass_delete_student_progress
   def mass_delete_student_progress
   end
@@ -441,18 +474,26 @@ class AdminUsersController < ApplicationController
       return
     end
 
+    csv_data = params[:csv_data]
+    teacher_id = params[:teacher_id]
+    dry_run = params[:dry_run] == 'true'
+
+    if csv_data.blank? || teacher_id.blank?
+      render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
+      return
+    end
+
+    # Validate teacher_id is numeric to prevent injection
+    unless teacher_id.to_s.match?(/\A\d+\z/)
+      render json: {error: 'Invalid teacher ID'}, status: :bad_request
+      return
+    end
+
+    # Create temporary files
+    temp_file = Tempfile.new(['delete_progress', '.csv'])
+    output_file = Tempfile.new('script_output')
+
     begin
-      csv_data = params[:csv_data]
-      teacher_id = params[:teacher_id]
-      dry_run = params[:dry_run]
-
-      if csv_data.blank? || teacher_id.blank?
-        render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
-        return
-      end
-
-      # Create a temporary file for the CSV content with student_id,unit_name format
-      temp_file = Tempfile.new(['delete_progress', '.csv'])
       CSV.open(temp_file.path, 'w', headers: true) do |csv|
         csv << ['student_id', 'unit_name']
         csv_data.each do |row|
@@ -460,19 +501,29 @@ class AdminUsersController < ApplicationController
         end
       end
 
+      # Determine which script based on data structure
+      script_name = csv_data.first&.key?('unit_name') ?
+        'delete_user_progress_by_unit.rb' :
+        'delete_user_progress_all_units.rb'
+
       # Path to the delete script
       repo_root = File.expand_path('..', Rails.root)
-      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', 'delete_user_progress_by_unit.rb')
+      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', script_name)
 
-      commit_flag = dry_run == true ? '' : 'for-real'
+      unless File.exist?(script_path) && script_path.start_with?(repo_root)
+        Rails.logger.error "Invalid script path: #{script_path}"
+        render json: {error: 'Script not found'}, status: :internal_server_error
+        return
+      end
 
-      output = `cd #{repo_root} && ruby #{script_path} #{teacher_id} #{temp_file.path} #{commit_flag} 2>&1`
-      exit_status = $?.exitstatus
+      commit_flag = dry_run ? '' : 'for-real'
 
-      temp_file.unlink
+      success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
 
-      if exit_status != 0
-        Rails.logger.error "Delete progress script failed with exit status #{exit_status}: #{output}"
+      output = File.read(output_file.path)
+
+      unless success
+        Rails.logger.error "Delete progress script failed: #{output}"
         render json: {error: 'Delete progress script failed', details: output}, status: :internal_server_error
         return
       end
@@ -487,7 +538,19 @@ class AdminUsersController < ApplicationController
       Rails.logger.error "Error in delete_user_progress: #{exception.message}"
       Rails.logger.error exception.backtrace.join("\n")
       render json: {error: 'Internal server error', details: exception.message}, status: :internal_server_error
+    ensure
+      output_file&.unlink
+      temp_file&.unlink
     end
+  end
+
+  private def execute_delete_script(script_path, teacher_id, csv_file, commit_flag, output_file, repo_root)
+    system(
+      'ruby', script_path, teacher_id, csv_file, commit_flag,
+      out: output_file,
+      err: [:child, :out],
+      chdir: repo_root
+    )
   end
 
   private def restricted_users

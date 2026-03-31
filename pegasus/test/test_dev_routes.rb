@@ -7,7 +7,6 @@ require_relative 'fixtures/mock_pegasus'
 
 BUILD_STARTED_PATH = deploy_dir('build-started').freeze
 FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'.freeze
-FAKE_GITHUB_WEBHOOK_SECRET = 'fake-github-secret'.freeze
 
 class DevRoutesTest < Minitest::Test
   describe '/api/dev/ routes' do
@@ -174,106 +173,6 @@ class DevRoutesTest < Minitest::Test
           InfraTestTopic.expects(:set_green_commit).with(fake_sha)
           pegasus = make_test_pegasus
           pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
-          assert_equal 200, pegasus.last_response.status
-        end
-      end
-    end
-
-    describe 'api/dev/check-dts' do
-      GITHUB_PAYLOAD = {
-        action: 'opened',
-        pull_request: {
-          base: {
-            ref: 'staging',
-          },
-        },
-      }.freeze
-      GITHUB_PARAMS = {
-        payload: GITHUB_PAYLOAD.to_json,
-      }.freeze
-      before do
-        $log.level = Logger::ERROR
-        CDO.stubs(github_webhook_secret: FAKE_GITHUB_WEBHOOK_SECRET)
-      end
-
-      it 'is forbidden on non-staging environments' do
-        [:test, :adhoc, :levelbuilder, :production].each do |env|
-          with_rack_env(env) do
-            pegasus = make_test_pegasus
-            pegasus.post '/api/dev/check-dts', GITHUB_PARAMS
-            assert_equal 403, pegasus.last_response.status
-          end
-        end
-      end
-
-      it 'ignores actions we dont care about' do
-        with_rack_env(:staging) do
-          Rack::Utils.expects(:secure_compare).returns(true)
-          pegasus = make_test_pegasus
-
-          pegasus.post '/api/dev/check-dts', {
-            payload: GITHUB_PAYLOAD.merge({'action' => 'other action'}).to_json,
-          }, 'X-GitHub-Event' => 'pull_request'
-          assert_equal 202, pegasus.last_response.status
-        end
-      end
-
-      it 'ignores events we dont care about' do
-        with_rack_env(:staging) do
-          Rack::Utils.expects(:secure_compare).returns(true)
-          pegasus = make_test_pegasus
-
-          pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'HTTP_X_GITHUB_EVENT' => 'other_event'
-          assert_equal 202, pegasus.last_response.status
-        end
-      end
-
-      it 'ignores PRs against branches we dont care about' do
-        with_rack_env(:staging) do
-          Rack::Utils.expects(:secure_compare).returns(true)
-          pegasus = make_test_pegasus
-
-          pegasus.post '/api/dev/check-dts', {
-            payload: {
-              action: 'opened',
-              pull_request: {
-                base: {
-                  ref: 'test',
-                },
-              },
-            }.to_json,
-          }
-          assert_equal 202, pegasus.last_response.status
-        end
-      end
-
-      it 'Sets the dts check to pass if DTS is yes' do
-        with_rack_env(:staging) do
-          Rack::Utils.expects(:secure_compare).returns(true)
-          GitHub.expects(:configure_octokit)
-          DevelopersTopic.expects(:dts?).returns(true)
-          GitHub.expects(:set_dts_check_pass)
-          pegasus = make_test_pegasus
-
-          pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'HTTP_X_GITHUB_EVENT' => 'pull_request'
-
-          assert_equal 200, pegasus.last_response.status
-        end
-      end
-
-      it 'Sets the dts check to fail if DTS is no' do
-        with_rack_env(:staging) do
-          Rack::Utils.expects(:secure_compare).returns(true)
-          GitHub.expects(:configure_octokit)
-          DevelopersTopic.expects(:dts?).returns(false)
-          GitHub.expects(:set_dts_check_fail)
-          pegasus = make_test_pegasus
-
-          pegasus.post '/api/dev/check-dts', GITHUB_PARAMS,
-            'HTTP_X_GITHUB_EVENT' => 'pull_request'
-
           assert_equal 200, pegasus.last_response.status
         end
       end
