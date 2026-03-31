@@ -35,7 +35,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
             title={i18n.accountKeepStudentAccountCardTitle()}
             content={i18n.accountKeepStudentAccountCardContentGeneric()}
             buttonText={i18n.accountKeepStudentAccountCardButton()}
-            buttonType="secondary"
+            variant="outlined"
             href="/home"
           />
           <AccountCard
@@ -44,7 +44,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
             title={i18n.accountSwitchTeacherAccountCardTitle()}
             content={i18n.accountSwitchTeacherAccountCardContentGeneric()}
             buttonText={i18n.accountSwitchTeacherAccountCardButton()}
-            buttonType="primary"
+            variant="contained"
             href={`/users/edit${returnToUrlParam}#change-user-type-modal-form`}
           />
         </div>

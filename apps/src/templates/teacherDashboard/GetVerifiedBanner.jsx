@@ -9,7 +9,10 @@ export default function GetVerifiedBanner({courseName}) {
   return (
     <div style={styles.verifiedBanner}>
       <div>
-        <i className="fa fa-warning" style={styles.warningIcon} />
+        <i
+          className="fa-solid fa-triangle-exclamation"
+          style={styles.warningIcon}
+        />
       </div>
       <div>
         <h4 style={styles.title}>{i18n.getVerifiedTitle()}</h4>

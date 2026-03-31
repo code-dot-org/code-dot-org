@@ -1,4 +1,3 @@
-import {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -81,7 +80,7 @@ export default class DeleteAccountDialog extends React.Component {
         <div style={styles.container}>
           <Header text={i18n.deleteAccountDialog_header()} />
           <div style={styles.bodyContainer}>
-            <FontAwesome icon="exclamation-triangle" style={styles.icon} />
+            <FontAwesome icon="triangle-exclamation" style={styles.icon} />
             <div style={styles.text}>
               <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents && (
@@ -147,7 +146,7 @@ export default class DeleteAccountDialog extends React.Component {
                 ? i18n.deleteAccountDialog_button_studentWarning()
                 : i18n.deleteAccountDialog_button()
             }
-            confirmColor={buttonColors.destructive}
+            confirmColor="error"
             onConfirm={deleteUser}
             onCancel={onCancel}
             disableConfirm={disableConfirm}

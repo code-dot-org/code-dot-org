@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -17,8 +17,24 @@ export default class ConfirmCancelFooter extends React.Component {
     onCancel: PropTypes.func.isRequired,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
-    confirmColor: PropTypes.oneOf(Object.values(buttonColors)),
-    cancelColor: PropTypes.oneOf(Object.values(buttonColors)),
+    confirmColor: PropTypes.oneOf([
+      'inherit',
+      'primary',
+      'secondary',
+      'success',
+      'error',
+      'info',
+      'warning',
+    ]),
+    cancelColor: PropTypes.oneOf([
+      'inherit',
+      'primary',
+      'secondary',
+      'success',
+      'error',
+      'info',
+      'warning',
+    ]),
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
     children: PropTypes.any,
@@ -27,8 +43,8 @@ export default class ConfirmCancelFooter extends React.Component {
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
-    confirmColor: buttonColors.purple,
-    cancelColor: buttonColors.black,
+    confirmColor: 'primary',
+    cancelColor: 'secondary',
   };
 
   render() {
@@ -45,25 +61,29 @@ export default class ConfirmCancelFooter extends React.Component {
     } = this.props;
     return (
       <div style={style}>
-        <Button
-          text={confirmText}
-          onClick={onConfirm}
-          size="s"
-          type="primary"
+        <MuiButton
+          variant="contained"
           color={confirmColor}
+          size="small"
           disabled={disableConfirm}
+          onClick={onConfirm}
           style={buttonStyle}
-        />
+          type="button"
+        >
+          {confirmText}
+        </MuiButton>
         <span style={messageStyle}>{children}</span>
-        <Button
-          text={cancelText}
-          onClick={onCancel}
-          size="s"
-          type="secondary"
+        <MuiButton
+          variant="outlined"
           color={cancelColor}
+          size="small"
           disabled={disableCancel}
+          onClick={onCancel}
           style={buttonStyle}
-        />
+          type="button"
+        >
+          {cancelText}
+        </MuiButton>
       </div>
     );
   }
