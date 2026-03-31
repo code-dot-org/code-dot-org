@@ -32,7 +32,12 @@ module Cdo
       (?<main_path>/.*|$)
     REGEXP
 
-    # @see +Middleware::GlobalEdition::RouteHandler#response+
+    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
+    def self.current_region=(region)
+      RequestStore.store[REGION_KEY] = region
+    end
+
+    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
     def self.current_region
       RequestStore.store[REGION_KEY]
     end

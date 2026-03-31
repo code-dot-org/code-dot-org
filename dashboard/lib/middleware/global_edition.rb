@@ -108,8 +108,6 @@ module Middleware
         # leaving `script_name` modified, causing a doubled GE prefix in `request.path`.
         request.script_name = original_script_name
         request.path_info   = original_path_info
-
-        RequestStore.store.delete(Cdo::GlobalEdition::REGION_KEY)
       end
 
       # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
@@ -170,7 +168,7 @@ module Middleware
         return unless new_region.nil? || Cdo::GlobalEdition.region_available?(new_region)
 
         # Sets the request cookies to apply changes immediately without needing to reload the page.
-        request.cookies[REGION_KEY] = RequestStore.store[Cdo::GlobalEdition::REGION_KEY] = new_region
+        request.cookies[REGION_KEY] = Cdo::GlobalEdition.current_region = new_region
         request.cookies[LOCALE_KEY] = request.locale = new_locale = site_locale(new_region)
 
         # Updates the global `ge_region` cookie to lock the platform to the regional version.
