@@ -41,6 +41,7 @@ export class SentryAdapter extends BaseAdapter {
       environment: CodeStudioConfig.environment,
       sendDefaultPii: false,
       integrations,
+      propagateTraceparent: true, // Enables trace propagation via the W3C Trace Context standard
       tracePropagationTargets: config.tracePropagationTargets ?? [
         this.getAllowedTracingTarget(CodeStudioConfig.environment),
       ],
