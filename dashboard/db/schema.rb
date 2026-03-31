@@ -1009,7 +1009,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_26_185815) do
     t.integer "student_id"
     t.integer "section_id"
     t.integer "teacher_id"
-    t.text "insight_json"
+    t.text "insight_response"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id", "lesson_id", "student_id"], name: "index_lesson_insights_on_section_id_and_lesson_id_and_student_id", unique: true
