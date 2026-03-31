@@ -1,4 +1,7 @@
-import {IconButton as MuiIconButton, Typography as MuiTypography} from '@mui/material';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {
   ChangeEvent,
