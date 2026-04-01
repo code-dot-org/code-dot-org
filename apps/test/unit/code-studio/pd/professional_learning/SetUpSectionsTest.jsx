@@ -1,8 +1,8 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/code-studio/pd/professional_learning/SetUpSections';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {

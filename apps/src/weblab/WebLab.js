@@ -240,7 +240,10 @@ WebLab.prototype.init = function (config) {
         onMount={() => this.onMount(config)}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

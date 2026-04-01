@@ -1,0 +1,224 @@
+{
+  "script": {
+    "name": "ui-test-csp1-2017",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSP",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-01 00:47:34 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-csp1-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Intro",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Design Mode",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b452091a-ec7c-4747-a78c-bc3cc03a493f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b452091a-ec7c-4747-a78c-bc3cc03a493f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017"
+      }
+    },
+    {
+      "key": "ca905df1-658c-476b-8269-0f2d3fc2f205",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca905df1-658c-476b-8269-0f2d3fc2f205",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "de9bb4e2-d2fe-4f9c-9625-6b67cdc23473",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de9bb4e2-d2fe-4f9c-9625-6b67cdc23473",
+        "lesson_activity.key": "b452091a-ec7c-4747-a78c-bc3cc03a493f"
+      }
+    },
+    {
+      "key": "506741c2-cfc9-4571-9ebe-b05a9f19e69b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "506741c2-cfc9-4571-9ebe-b05a9f19e69b",
+        "lesson_activity.key": "ca905df1-658c-476b-8269-0f2d3fc2f205"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Applab test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017",
+        "activity_section.key": "de9bb4e2-d2fe-4f9c-9625-6b67cdc23473"
+      },
+      "level_keys": [
+        "Applab test"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings design mode elements"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017",
+        "activity_section.key": "506741c2-cfc9-4571-9ebe-b05a9f19e69b"
+      },
+      "level_keys": [
+        "allthethings design mode elements"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Applab test",
+        "script_level.level_keys": [
+          "Applab test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017",
+        "activity_section.key": "de9bb4e2-d2fe-4f9c-9625-6b67cdc23473"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings design mode elements",
+        "script_level.level_keys": [
+          "allthethings design mode elements"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp1-2017",
+        "activity_section.key": "506741c2-cfc9-4571-9ebe-b05a9f19e69b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

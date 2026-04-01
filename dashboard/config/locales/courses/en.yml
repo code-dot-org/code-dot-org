@@ -6802,6 +6802,30 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-csp-2017:
+          title: UI Test CSP
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'17-'18"
+        ui-test-original-csp-2017:
+          title: UI Test Original CSP ('17-'18)
+          description_short: unpublished, original course version which owns the csp units. this helps catch modular curriculum bugs in ui tests.
+          description_student: ''
+          description_teacher: ''
+          version_title: "'17-'18"
+        ui-test-original-csp-2019:
+          title: UI Test Original CSP ('19-'20)
+          description_short: unpublished, original course version which owns the csp units. this helps catch modular curriculum bugs in ui tests.
+          description_student: ''
+          description_teacher: ''
+          version_title: "'19-'20"
+        ui-test-csp-2019:
+          title: UI Test CSP
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'19-'20"
         teaching-aif-design-build-ai-facilitators-2026:
           title: 'Teaching AIF: Designing & Building with AI'
           description_short: ''

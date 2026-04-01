@@ -110,7 +110,10 @@ function displayLessonOverview() {
     <Provider store={store}>
       <LessonOverview lesson={lessonData} activities={activities} />
     </Provider>,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -130,7 +133,10 @@ function prepareExpandableImageDialog() {
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,
-    container
+    container,
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -153,7 +159,10 @@ function displayDifferentiationChat() {
           scriptName={lessonName}
         />
       </Provider>,
-      aiDiffFabMountPoint
+      aiDiffFabMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }
@@ -173,7 +182,10 @@ const renderCopyLessonButton = () => {
         lessonName={lessonName}
         buttonText="Copy"
       />,
-      element
+      element,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 };

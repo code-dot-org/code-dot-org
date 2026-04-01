@@ -342,7 +342,10 @@ Javalab.prototype.init = function (config) {
         />
       </BackpackAPIContext.Provider>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

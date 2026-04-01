@@ -17,6 +17,9 @@ function displayLessonHook() {
       updated={new Date(lessonHookData['updated_at'])}
       content={lessonHookData['content']['lesson_hook']}
     />,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

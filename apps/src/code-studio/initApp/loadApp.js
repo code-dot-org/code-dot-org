@@ -167,7 +167,10 @@ export function setupApp(appOptions) {
               dialog.hide();
             }}
           />,
-          body
+          body,
+          {
+            legacyReactDomRender: true,
+          }
         );
         const dialog = new LegacyDialog({
           body: body,

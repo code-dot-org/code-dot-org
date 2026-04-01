@@ -28,7 +28,10 @@ export function renderTeacherPanel(
         />
       </InstructorsOnly>
     </Provider>,
-    div
+    div,
+    {
+      legacyReactDomRender: true,
+    }
   );
   document.body.appendChild(div);
 }

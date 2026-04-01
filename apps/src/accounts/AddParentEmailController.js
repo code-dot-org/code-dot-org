@@ -57,7 +57,10 @@ export default class AddParentEmailController {
         handleCancel={this.hideAddParentEmailModal}
         currentParentEmail={this.formParentEmailField.val()}
       />,
-      this.mountPoint
+      this.mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   };
 
