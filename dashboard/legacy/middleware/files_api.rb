@@ -359,6 +359,7 @@ class FilesApi < Sinatra::Base
 
   def valid_html_content?(body)
     disallowed_tags = DCDO.get('disallowed_html_tags', [])
+    lowercase_xpath = '"ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"'
 
     # Applicable Nokogiri selector rules:
     #   Element selectors must start with //
@@ -373,19 +374,27 @@ class FilesApi < Sinatra::Base
 
     # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
     disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+    downcased_href = %(translate(normalize-space(@href), #{lowercase_xpath}))
+    downcased_action = %(translate(normalize-space(@action), #{lowercase_xpath}))
+    disallowed_url_selectors = [
+      %(//*[starts-with(#{downcased_href}, "javascript:")]),
+      %(//*[starts-with(#{downcased_action}, "javascript:")]),
+      %(//*[starts-with(#{downcased_href}, "data:text/html")]),
+    ]
 
     Nokogiri::HTML(body).xpath(
       *disallowed_tag_selectors,
       disallow_on_attrs_selector,
+      *disallowed_url_selectors,
     ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
   # Returns true if:
   #   1. It does not belong to a WebLab project.
-  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
+  #   2. It belongs to a WebLab project and does not contain disallowed HTML content.
   # Returns false if the file is not an HTML file, does not belong to a project, or
-  # is a WebLab HTML file that contains disallowed HTML tags.
+  # is a WebLab HTML file that contains disallowed HTML content.
   def valid_html_file?(encrypted_channel_id, filename, body)
     return false unless html_file?(filename)
 
