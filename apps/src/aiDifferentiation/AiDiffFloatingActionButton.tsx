@@ -21,6 +21,7 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
+import {DRAWER_FAB_MARGIN, DRAWER_WIDTH} from './constants';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
@@ -211,6 +212,15 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         className={classes}
         onClick={handleClick}
         type="button"
+        // eslint-disable-next-line react/forbid-dom-props
+        style={{
+          right: chatIsOpen
+            ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
+            : `${DRAWER_FAB_MARGIN}px`,
+          transition: chatIsOpen
+            ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
+            : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+        }}
       >
         <Badge
           badgeContent={

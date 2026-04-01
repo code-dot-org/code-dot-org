@@ -1,22 +1,20 @@
+import Drawer from '@mui/material/Drawer';
 import React, {useEffect, useState} from 'react';
-import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 
 import {useAppSelector} from '../util/reduxHooks';
-import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
 import AiDiffWorkSpace from './AiDiffWorkspace';
+import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
-const AI_DIFF_POSITION_X = 'aiDiffPositionX';
-const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
@@ -24,25 +22,6 @@ interface AiDiffContainerProps {
   scriptName?: string;
   unreadNotificationCount: number;
 }
-
-const MIN_VISIBLE = 40;
-const boxWidth = parseInt(style.containerWidth);
-const originX = parseInt(style.fabOriginX);
-// These isNaN checks are for testing as the SCSS variables don't come
-// through properly in the test environment.
-const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
-const maxX = isNaN(originX)
-  ? 1000
-  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
-
-const boxHeight = parseInt(style.containerHeight);
-const originY = parseInt(style.fabOriginY);
-// These isNaN checks are for testing as the SCSS variables don't come
-// through properly in the test environment.
-const minY = isNaN(originY)
-  ? 0
-  : originY - document.documentElement.clientHeight + boxHeight;
-const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
 
 const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 
@@ -57,13 +36,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const {personalizationData} = useTeachingProfileData();
 
-  const [positionX, setPositionX] = useState(
-    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
-  );
-  const [positionY, setPositionY] = useState(
-    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
-  );
-
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
@@ -74,48 +46,33 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
-  useEffect(() => {
-    const ensureDraggableIsVisible = () => {
-      if (positionX < minX) {
-        setPositionX(minX);
-      } else if (positionX > maxX) {
-        setPositionX(maxX);
-      }
-    };
-    ensureDraggableIsVisible();
-    window.addEventListener('resize', ensureDraggableIsVisible);
-    trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
-    return () => {
-      window.removeEventListener('resize', ensureDraggableIsVisible);
-    };
-  }, [positionX]);
+  const isWelcomeView =
+    !hasCompletedAiDifferentiationWelcome && showWelcomeExperience;
+  const drawerWidth = isWelcomeView ? DRAWER_WIDTH_WELCOME : DRAWER_WIDTH;
 
+  // Push only #main_content (not the header, which is a sibling) to make room
+  // for the drawer. The transition timing matches MUI Drawer defaults.
   useEffect(() => {
-    const ensureDraggableIsVisible = () => {
-      if (positionY < minY) {
-        setPositionY(minY);
-      } else if (positionY > maxY) {
-        setPositionY(maxY);
-      }
-    };
-    ensureDraggableIsVisible();
-    window.addEventListener('resize', ensureDraggableIsVisible);
-    trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+    const mainContent = document.getElementById('main_content');
+    if (!mainContent) return;
+    const enterTransition = 'margin-right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms';
+    const leaveTransition =
+      'margin-right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms';
+    mainContent.style.transition = chatIsOpen
+      ? enterTransition
+      : leaveTransition;
+    mainContent.style.marginRight = chatIsOpen ? `${drawerWidth}px` : '0px';
     return () => {
-      window.removeEventListener('resize', ensureDraggableIsVisible);
+      mainContent.style.marginRight = '';
+      mainContent.style.transition = '';
     };
-  }, [positionY]);
-
-  const onStopHandler: DraggableEventHandler = (e, data) => {
-    setPositionX(data.x);
-    setPositionY(data.y);
-  };
+  }, [chatIsOpen, drawerWidth]);
 
   let content;
   if (pendingArtifactMessage) {
     content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
   } else if (curriculumCourses) {
-    if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
+    if (isWelcomeView) {
       content = (
         <AiDiffWelcome
           setShowWelcomeExperience={setShowWelcomeExperience}
@@ -138,32 +95,27 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   }
 
   return (
-    <Draggable
-      handle=".ai_diff_handle"
-      position={{x: positionX, y: positionY}}
-      onStop={onStopHandler}
-      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
+    <Drawer
+      anchor="right"
+      open={chatIsOpen}
+      variant="persistent"
+      PaperProps={{
+        sx: {width: drawerWidth, top: 50, height: 'calc(100% - 50px)'},
+      }}
     >
-      <div
-        // eslint-disable-next-line react/forbid-dom-props
-        data-testid="draggable-test-id"
-        id="draggable-id"
-        className={
-          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
-            ? style.aiDiffContainer
-            : style.aiDiffContainerWide
-        }
-        style={chatIsOpen ? undefined : {display: 'none'}}
+      <FocusLock
+        disabled={!chatIsOpen}
+        lockProps={{
+          style: {display: 'flex', flexDirection: 'column', height: '100%'},
+        }}
       >
-        <FocusLock disabled={!chatIsOpen}>
-          <AiDiffHeader
-            closeTutor={closeTutor}
-            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
-          />
-          <div className={style.fabBackground}>{content}</div>
-        </FocusLock>
-      </div>
-    </Draggable>
+        <AiDiffHeader
+          closeTutor={closeTutor}
+          closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+        />
+        <div className={style.fabBackground}>{content}</div>
+      </FocusLock>
+    </Drawer>
   );
 };
 
