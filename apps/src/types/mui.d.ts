@@ -1,11 +1,15 @@
 /**
  * MUI type overrides for apps
  *
- * IMPORTANT: This file contains manually copied type augmentations from:
+ * This file contains type augmentations that were manually copied from:
  *   frontend/packages/component-library/src/themes/code.org/types.d.ts
  *
- * When Button/IconButton/Breadcrumbs type augmentations change in component-library,
- * they must be manually copied here to keep apps in sync.
+ * Now that @mui/material is a peerDependency of the component-library (rather
+ * than a devDependency), both packages resolve to the same physical MUI copy.
+ * This means the augmentations from the component-library should propagate
+ * automatically, and the manually copied Button/IconButton/Breadcrumbs
+ * augmentations below may no longer be necessary. They are kept for now and
+ * can be cleaned up in a follow-up PR.
  *
  * This file also includes apps-specific Typography type augmentations.
  */

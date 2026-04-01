@@ -424,7 +424,6 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
-    "@mui/material": "^7.3.2",
     "@release-it/conventional-changelog": "^10.0.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
@@ -467,6 +466,7 @@
     "vite-plugin-lib-inject-css": "^2.2.2"
   },
   "peerDependencies": {
+    "@mui/material": "^7.3.2",
     "classnames": "^2.5.1",
     "react": ">=16",
     "react-dom": ">=16",
