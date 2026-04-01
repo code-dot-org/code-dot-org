@@ -27,7 +27,7 @@ Feature: CourseOverview
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     # The "*" in "Applab *" is due to a bug in the implementation of modular curriculum,
     # because ui-test-csp-2019 is owned by a course that has a published state of in_development.
-    # WHen the bug is fixed, this should be updated to "Applab" without the "*".
+    # When the bug is fixed, this should be updated to "Applab" without the "*".
     And I select the "Applab *" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
 
