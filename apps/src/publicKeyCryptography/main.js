@@ -21,7 +21,10 @@ function initialize(options) {
     ) : (
       <ModuloClockWidget />
     ),
-    document.getElementById('public-key-cryptography-mount')
+    document.getElementById('public-key-cryptography-mount'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 

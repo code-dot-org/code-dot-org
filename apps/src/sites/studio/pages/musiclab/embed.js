@@ -15,6 +15,9 @@ $(document).ready(function () {
     <Provider store={getStore()}>
       <MiniMusicPlayer projects={projects} libraryName="launch2024" />
     </Provider>,
-    document.getElementById('musiclab-container')
+    document.getElementById('musiclab-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -1698,7 +1698,10 @@ designMode.renderDesignWorkspace = function (element) {
     <Provider store={getStore()}>
       <DesignWorkspace {...props} />
     </Provider>,
-    designWorkspace
+    designWorkspace,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

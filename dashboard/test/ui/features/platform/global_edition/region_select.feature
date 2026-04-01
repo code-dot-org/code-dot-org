@@ -11,15 +11,15 @@ Feature: Global Edition - Region Select
 
     When I select the "فارسی" option in dropdown "locale" to load a new page
     Then I get redirected away from "http://studio.code.org"
-    And check that I am on "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
+    And check that I am on "http://studio.code.org/fa/users/sign_in?lang=fa-IR"
     And element "#locale option:contains(فارسی)" is checked
 
     When I am on "http://studio.code.org"
     Then I get redirected away from "http://studio.code.org"
-    And check that I am on "http://studio.code.org/global/fa/users/sign_in"
+    And check that I am on "http://studio.code.org/fa/users/sign_in"
 
     When I select the "English" option in dropdown "locale" to load a new page
-    Then I get redirected away from "http://studio.code.org/global/fa/users/sign_in"
+    Then I get redirected away from "http://studio.code.org/fa/users/sign_in"
     And check that I am on "http://studio.code.org/users/sign_in?lang=en-US"
     And element "#locale option:contains(English)" is checked
 
@@ -31,7 +31,7 @@ Feature: Global Edition - Region Select
 
     When I select the "فارسی" option in dropdown named "locale" to load a new page
     And I wait for the lab page to fully load
-    Then check that the URL matches "/global/fa/projects/artist/.*/edit\?lang=fa-IR"
+    Then check that the URL matches "/fa/projects/artist/.*/edit\?lang=fa-IR"
     And I wait until element ".uitest-instructionsTab" contains text "دستورالعمل"
     And element "#localeForm option:contains(فارسی)" is checked
 

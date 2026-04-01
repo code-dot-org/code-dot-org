@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       code={getScriptData('code')}
       name={getScriptData('name')}
     />,
-    document.getElementById('global-edition-region-switch-confirm-container')
+    document.getElementById('global-edition-region-switch-confirm-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

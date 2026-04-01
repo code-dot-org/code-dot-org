@@ -10,6 +10,9 @@ $(document).ready(() => {
     <ProgrammingEnvironmentIndex
       programmingEnvironments={programmingEnvironments}
     />,
-    document.getElementById('container')
+    document.getElementById('container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

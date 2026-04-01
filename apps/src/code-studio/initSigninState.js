@@ -51,7 +51,10 @@ export default function initSigninState(userType, under13) {
       <Provider store={store}>
         <SignInOrAgeDialog />
       </Provider>,
-      div
+      div,
+      {
+        legacyReactDomRender: true,
+      }
     );
     document.body.appendChild(div);
   });
