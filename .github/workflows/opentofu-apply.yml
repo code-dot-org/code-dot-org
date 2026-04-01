@@ -25,7 +25,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.workspace }}
-    environment: open-tofu-plan
+    environment: open-tofu-apply
     steps:
       - uses: actions/checkout@v4
 
