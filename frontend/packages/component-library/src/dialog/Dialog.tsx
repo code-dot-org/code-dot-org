@@ -1,9 +1,9 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {Button, ButtonProps} from '@/button';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {BodyTwoText, Heading2} from '@/typography';
 
 import CustomDialog from './CustomDialog';
 
@@ -86,14 +86,18 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   >
     <div className={moduleStyles.dialogTextSection}>
       {imageUrl && <img src={imageUrl} alt="Dialog" />}
-      <Heading2>{title}</Heading2>
+      <Typography variant="h2" gutterBottom>
+        {title}
+      </Typography>
       {description && (
-        <BodyTwoText
+        <Typography
           id="dsco-dialog-description"
           className={moduleStyles.dialogContent}
+          variant="body2"
+          gutterBottom
         >
           {description}
-        </BodyTwoText>
+        </Typography>
       )}
       {customContent}
     </div>
