@@ -6,21 +6,28 @@ import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
 import ReflectionBox from './ReflectionBox';
 import TutorSummaryBox from './TutorSummaryBox';
+import {LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
-const BOXES = [
-  {id: 'lesson-summary', content: <LessonSummaryBox />},
-  {id: 'reflection', content: <ReflectionBox />},
-  {id: 'intervention', content: <InterventionBox />},
-  {id: 'tutor-summary', content: <TutorSummaryBox />},
-];
+const BOX_IDS = [
+  'lesson-summary',
+  'reflection',
+  'intervention',
+  'tutor-summary',
+] as const;
 
-const LessonDeepDiveContainer: FC = () => {
+interface LessonDeepDiveContainerProps {
+  lessonDeepDiveData: LessonDeepDiveData;
+}
+
+const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
+  lessonDeepDiveData,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = useCallback(() => {
-    setCurrentIndex(i => Math.min(i + 1, BOXES.length - 1));
+    setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
   }, []);
 
   const goToPrev = useCallback(() => {
@@ -32,14 +39,29 @@ const LessonDeepDiveContainer: FC = () => {
   }
 
   const isFirst = currentIndex === 0;
-  const isLast = currentIndex === BOXES.length - 1;
+  const isLast = currentIndex === BOX_IDS.length - 1;
 
+  const renderBox = () => {
+    switch (BOX_IDS[currentIndex]) {
+      case 'lesson-summary':
+        return (
+          <LessonSummaryBox
+            lessonName={lessonDeepDiveData.lessonName}
+            lessonSummary={lessonDeepDiveData.lessonSummary}
+          />
+        );
+      case 'reflection':
+        return <ReflectionBox objectives={lessonDeepDiveData.objectives} />;
+      case 'intervention':
+        return <InterventionBox vocabulary={lessonDeepDiveData.vocabulary} />;
+      case 'tutor-summary':
+        return <TutorSummaryBox />;
+    }
+  };
   return (
     <div className={styles.container}>
-      <div className={styles.box}>{BOXES[currentIndex].content}</div>
-
-      <div className={styles.navigation}>
-        {!isFirst && (
+      {!isFirst && (
+        <div className={styles.topNav}>
           <button
             type="button"
             className={styles.arrowButton}
@@ -62,8 +84,13 @@ const LessonDeepDiveContainer: FC = () => {
               />
             </svg>
           </button>
-        )}
-        {!isLast && (
+        </div>
+      )}
+
+      <div className={styles.box}>{renderBox()}</div>
+
+      {!isLast && (
+        <div className={styles.bottomNav}>
           <button
             type="button"
             className={styles.arrowButton}
@@ -86,8 +113,8 @@ const LessonDeepDiveContainer: FC = () => {
               />
             </svg>
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

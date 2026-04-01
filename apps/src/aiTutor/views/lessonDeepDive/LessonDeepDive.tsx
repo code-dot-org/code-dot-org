@@ -37,7 +37,9 @@ export const LessonDeepDive: FC<{lessonDeepDiveData: LessonDeepDiveData}> = ({
 
   return (
     <>
-      <Typography variant="h2">Lesson Practice for {lessonName}</Typography>
+      <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
+        Lesson Practice for {lessonName}
+      </Typography>
       <div className={styles.welcomeMessage}>
         <ChatMessage
           text="Let's review the material from the lesson. How can I help?"

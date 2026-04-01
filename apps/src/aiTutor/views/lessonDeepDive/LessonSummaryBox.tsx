@@ -1,12 +1,20 @@
 import {Typography} from '@mui/material';
 import React, {FC} from 'react';
 
-const LessonSummaryBox: FC = () => (
+interface LessonSummaryBoxProps {
+  lessonName: string;
+  lessonSummary: string;
+}
+
+const LessonSummaryBox: FC<LessonSummaryBoxProps> = ({
+  lessonName,
+  lessonSummary,
+}) => (
   <div>
-    <Typography variant="h2">Lesson Summary</Typography>
-    <Typography variant="body1">
-      Here&apos;s a summary of what you covered in today&apos;s lesson.
+    <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
+      {lessonName}
     </Typography>
+    <Typography variant="body1">{lessonSummary}</Typography>
   </div>
 );
 
