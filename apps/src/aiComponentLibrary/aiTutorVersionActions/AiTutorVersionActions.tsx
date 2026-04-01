@@ -70,7 +70,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             startIcon={
               <FontAwesomeV6Icon
                 iconStyle="solid"
-                iconName="close"
+                iconName="xmark"
                 title="Reject"
               />
             }
@@ -102,6 +102,17 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             <textarea
               id="ai-tutor-version-commit-description"
               onChange={e => setCommitDescription(e.target.value)}
+              onKeyDown={e => {
+                if (
+                  e.key === 'Enter' &&
+                  !e.shiftKey &&
+                  !isSaving &&
+                  commitDescription.trim() !== ''
+                ) {
+                  e.preventDefault();
+                  handleSaveAiTutorVersion();
+                }
+              }}
               value={commitDescription}
               className={moduleStyles.textArea}
               placeholder={

@@ -363,19 +363,25 @@ const ExpandedCurriculumCatalogCard = ({
                     href={`#${curriculumCatalogCardIdPrefix}${recommendedSimilarCurriculum.key}`}
                     onClick={handleClickRecommendedSimilarCurriculum}
                   />
-                  <img
-                    id="stretchCurriculumImage"
-                    src={recommendedStretchCurriculum.image || defaultImageSrc}
-                    alt={recommendedStretchCurriculum.display_name}
-                  />
-                  <Link
-                    id="stretchCurriculumButton"
-                    name={recommendedStretchCurriculum.display_name}
-                    className={style.relatedCurriculaLink}
-                    text={recommendedStretchCurriculum.display_name}
-                    href={`#${curriculumCatalogCardIdPrefix}${recommendedStretchCurriculum.key}`}
-                    onClick={handleClickRecommendedStretchCurriculum}
-                  />
+                  {recommendedStretchCurriculum && (
+                    <>
+                      <img
+                        id="stretchCurriculumImage"
+                        src={
+                          recommendedStretchCurriculum.image || defaultImageSrc
+                        }
+                        alt={recommendedStretchCurriculum.display_name}
+                      />
+                      <Link
+                        id="stretchCurriculumButton"
+                        name={recommendedStretchCurriculum.display_name}
+                        className={style.relatedCurriculaLink}
+                        text={recommendedStretchCurriculum.display_name}
+                        href={`#${curriculumCatalogCardIdPrefix}${recommendedStretchCurriculum.key}`}
+                        onClick={handleClickRecommendedStretchCurriculum}
+                      />
+                    </>
+                  )}
                 </div>
               )}
             </div>

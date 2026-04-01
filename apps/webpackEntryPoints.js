@@ -44,6 +44,7 @@ const CODE_STUDIO_ENTRIES = {
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
+  'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
@@ -138,6 +139,9 @@ const INTERNAL_ENTRIES = {
   'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
   'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
   'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
+  'jit_pl_concepts/new': './src/sites/studio/pages/jit_pl_concepts/new.js',
+  'jit_pl_concepts/edit': './src/sites/studio/pages/jit_pl_concepts/edit.js',
+  'jit_pl_concepts/edit_all': './src/sites/studio/pages/jit_pl_concepts/edit_all.js',
   'datasets/show': './src/sites/studio/pages/datasets/show.js',
   'datasets/index': './src/sites/studio/pages/datasets/index.js',
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
@@ -243,8 +247,6 @@ const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
   statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
-  'global_edition/region_reset_button':
-    './src/globalEdition/regionResetButton.js',
   'global_edition/region_switch_confirm':
     './src/globalEdition/regionSwitchConfirm.js',
 };

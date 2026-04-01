@@ -18,7 +18,6 @@ module Cdo
 
     TARGET_HOSTNAMES = Set[
       CDO.dashboard_hostname,
-      CDO.pegasus_hostname,
     ].freeze
 
     # @example Matches paths like `/global/fa/home`, capturing:
@@ -33,7 +32,12 @@ module Cdo
       (?<main_path>/.*|$)
     REGEXP
 
-    # @see +Rack::GlobalEdition::RouteHandler#response+
+    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
+    def self.current_region=(region)
+      RequestStore.store[REGION_KEY] = region
+    end
+
+    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
     def self.current_region
       RequestStore.store[REGION_KEY]
     end
@@ -94,15 +98,13 @@ module Cdo
       configuration_for(region)&.dig(:locale_lock)
     end
 
-    def self.region_locked_locales
-      @region_locked_locales ||= begin
-        region_locked_locales = {}
-        REGIONS.each do |region|
-          next unless locale_lock?(region)
-          locale = main_region_locale(region)
-          region_locked_locales[locale] = region
+    def self.locales_regions
+      @locales_regions ||= REGIONS.each_with_object({}) do |region, locales_regions|
+        next unless region_available?(region) && locale_lock?(region)
+        region_locales(region).each do |region_locale|
+          locales_regions[region_locale] ||= []
+          locales_regions[region_locale] << region
         end
-        region_locked_locales
       end.freeze
     end
 
@@ -126,19 +128,6 @@ module Cdo
 
     def self.country_region(country)
       countries_regions[country]
-    end
-
-    def self.region_locale_options(region)
-      locale_options = Cdo::I18n.locale_options
-      return locale_options unless region_available?(region)
-
-      @region_locale_options ||= {}
-
-      @region_locale_options[region] ||= begin
-        region_locales = region_locales(region)
-        locale_options = locale_options.select {|_name, value| region_locales.include?(value)} if region_locales
-        locale_options
-      end
     end
 
     def self.path(region, *paths)

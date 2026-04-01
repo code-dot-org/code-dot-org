@@ -13,6 +13,10 @@ dnsName: studio-development
 dashboard_workers: 0
 
 locals.yml:
+  # For example:
+  # levelbuilder_mode: true
+  # build_apps: false
+  # ...etc...
 
 # Require the k8s secret `cdo-external-secrets` to exist before bootup
 # Aka: "Require AWS Secrets Manager access to boot" mode

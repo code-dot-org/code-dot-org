@@ -10,6 +10,7 @@ chef_client_updater 'install' do
 end
 
 include_recipe 'apt'
+include_recipe 'cdo-cloudwatch-agent'
 
 include_recipe 'cdo-apps::hostname'
 
@@ -86,7 +87,6 @@ node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-otel-collector'
 include_recipe 'cdo-syslog'
 

@@ -222,6 +222,43 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_invalid_weblab_html_file_is_not_found_on_read
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
+    filename = 'index.html'
+    invalid_html = '<button onclick="alert(1)">Click me</button>'
+
+    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, invalid_html)
+    assert successful?
+
+    Projects.any_instance.unstub(:get)
+    Projects.any_instance.stubs(:get).returns({projectType: 'weblab'})
+
+    @api.get_object(filename)
+    assert not_found?
+
+    @api.get_object(filename, '', {'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate})
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')}
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {
+      'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org'),
+      'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate
+    }
+    assert not_found?
+
+    Projects.any_instance.unstub(:get)
+    @api.delete_object(filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
@@ -781,8 +818,8 @@ class FilesTest < FilesApiTestBase
     # Can't test abuse score functionality, since it's been moved to Rails.
     #src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' => escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects["files"]
@@ -919,5 +956,16 @@ class FilesTest < FilesApiTestBase
 
   private def delete_all_manifest_versions
     delete_all_file_versions 'manifest.json'
+  end
+end
+
+class FilesApiHtmlValidationTest < Minitest::Test
+  def test_valid_html_content_disallows_on_attrs
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+
+    api = FilesApi.allocate
+
+    assert api.valid_html_content?('<div></div>')
+    refute api.valid_html_content?('<button onclick="alert(1)">Click me</button>')
   end
 end

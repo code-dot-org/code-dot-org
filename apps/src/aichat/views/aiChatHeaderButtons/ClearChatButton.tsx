@@ -14,11 +14,22 @@ const ClearChatButton: React.FunctionComponent = () => {
   const selectedTab = useAppSelector(
     state => state.aichat.chatWorkspaceSelectedTab
   );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2?.aiTutorVersionFiles
+  );
+  const isAwaitingAcceptRejectDecision =
+    !!isAiTutorVersion && !!aiTutorVersionFiles?.length;
 
-  // Disable clearing chat when viewing student chat as a teacher
+  // Disable clearing chat when viewing student chat as a teacher,
+  // or while waiting for the user to accept/reject AI Tutor code changes.
   const isDisabled = useMemo(
-    () => selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
-    [selectedTab]
+    () =>
+      selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY ||
+      isAwaitingAcceptRejectDecision,
+    [selectedTab, isAwaitingAcceptRejectDecision]
   );
 
   const onClear = useCallback(() => {
@@ -41,9 +52,9 @@ const ClearChatButton: React.FunctionComponent = () => {
       id="clear-chat"
       label={aichatI18n.clearChatButtonText()}
       icon={{iconName: 'eraser', iconStyle: 'solid'}}
-      type="tertiary"
-      color="gray"
-      buttonSize="xs"
+      variant="text"
+      color="tertiary"
+      size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
