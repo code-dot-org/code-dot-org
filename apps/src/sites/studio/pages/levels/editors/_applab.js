@@ -39,9 +39,24 @@ $(document).ready(function () {
     if ($(this).val() === 'circuitPlayground') {
       // Load the circuitPlayground and maker blocks.
       Object.assign(functionsWithMaker, makerBlocks, circuitBlocks);
+      Object.keys(microbitBlocks).forEach(
+        func => delete functionsWithMaker[func]
+      );
     } else if ($(this).val() === 'microbit') {
-      // Load the microbit and maker blocks
+      // Load the microbit and maker blocks.
       Object.assign(functionsWithMaker, makerBlocks, microbitBlocks);
+      Object.keys(circuitBlocks).forEach(
+        func => delete functionsWithMaker[func]
+      );
+    } else {
+      // Remove all maker blocks and microbit and circuit playground blocks
+      Object.keys(makerBlocks).forEach(func => delete functionsWithMaker[func]);
+      Object.keys(microbitBlocks).forEach(
+        func => delete functionsWithMaker[func]
+      );
+      Object.keys(circuitBlocks).forEach(
+        func => delete functionsWithMaker[func]
+      );
     }
     editor.setValue(JSON.stringify(functionsWithMaker, null, ' '));
   });
