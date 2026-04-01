@@ -317,7 +317,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   private def adjust_course_offerings
     ws_params = params[:pd_workshop]
 
-    return unless ws_params.key?(:course_offerings) ||  ws_params.key?("course_offerings")
+    return unless ws_params.key?(:course_offerings) || ws_params.key?("course_offerings")
     supplied_course_offering_ids = ws_params.delete(:course_offerings) || ws_params.delete("course_offerings")
     supplied_course_offering_ids = [] if supplied_course_offering_ids.blank?
     @workshop.course_offerings = CourseOffering.where(id: supplied_course_offering_ids)

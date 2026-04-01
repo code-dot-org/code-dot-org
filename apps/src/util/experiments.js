@@ -63,8 +63,11 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
+// Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+experiments.LESSON_TUTOR = 'lesson-tutor';
 // Enable AI Content Safety image moderation
 experiments.AI_CONTENT_SAFETY = 'ai-content-safety';
+
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.

@@ -42,7 +42,7 @@ export default function AssignmentVersionMenuItem(props) {
           {!courseVersion.is_stable && (
             <span>
               <FontAwesome
-                icon="exclamation-triangle"
+                icon="triangle-exclamation"
                 style={{color: color.light_orange}}
               />
               &nbsp;
@@ -59,7 +59,7 @@ export default function AssignmentVersionMenuItem(props) {
                   numLanguages: courseVersion.locales.length,
                 })}
                 &nbsp;
-                <FontAwesome icon="info-circle" style={style.infoCircle} />
+                <FontAwesome icon="circle-info" style={style.infoCircle} />
               </span>
               <ReactTooltip id={tooltipId} place="right">
                 {courseVersion.locales.join(', ')}
