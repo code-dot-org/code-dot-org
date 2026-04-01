@@ -45,7 +45,6 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
       <AiTutorChat
         hiddenContextCallback={hiddenContextCallback}
         aiTutorChatButtonData={[]}
-        welcomeMessage={`We just finished the lesson ${lessonName}. What was one big idea you took away from it?`}
       />
     </div>
   );
