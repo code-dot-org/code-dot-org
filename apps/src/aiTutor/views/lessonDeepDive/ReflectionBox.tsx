@@ -20,6 +20,9 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({objectives}) => (
         <li key={objective.id}>{objective.description}</li>
       ))}
     </ul>
+    ⚠️ COMING SOON: Use the lesson objectives to create the reflection form to
+    store student responses and use them to guide future practice store student
+    responses and use them to guide future practice recommendations!
   </div>
 );
 

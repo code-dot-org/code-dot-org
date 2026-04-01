@@ -2,7 +2,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
-import {LessonDeepDiveData} from './LessonDeepDive';
+import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
+import PodcastsBox from './PodcastsBox';
+import {LessonDeepDiveData} from './types';
+import VideosBox from './VideosBox';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
@@ -49,10 +52,16 @@ const CARDS: Card[] = [
 ];
 
 interface InterventionBoxProps {
+  lessonName: string;
+  lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
 }
 
-const InterventionBox: FC<InterventionBoxProps> = ({vocabulary}) => {
+const InterventionBox: FC<InterventionBoxProps> = ({
+  lessonName,
+  lessonSummary,
+  vocabulary,
+}) => {
   const [selected, setSelected] = useState<CardId | null>(null);
 
   return (
@@ -89,6 +98,15 @@ const InterventionBox: FC<InterventionBoxProps> = ({vocabulary}) => {
         {selected === 'flashcards' && (
           <VocabularyFlashcards vocabulary={vocabulary} />
         )}
+        {selected === 'chat' && (
+          <LessonDeepDiveTutorChat
+            lessonName={lessonName}
+            lessonSummary={lessonSummary}
+            vocabulary={vocabulary}
+          />
+        )}
+        {selected === 'videos' && <VideosBox />}
+        {selected === 'podcasts' && <PodcastsBox />}
       </div>
 
       {selected && (

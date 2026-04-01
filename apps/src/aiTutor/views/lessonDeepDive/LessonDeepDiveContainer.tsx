@@ -53,7 +53,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'reflection':
         return <ReflectionBox objectives={lessonDeepDiveData.objectives} />;
       case 'intervention':
-        return <InterventionBox vocabulary={lessonDeepDiveData.vocabulary} />;
+        return (
+          <InterventionBox
+            lessonName={lessonDeepDiveData.lessonName}
+            lessonSummary={lessonDeepDiveData.lessonSummary}
+            vocabulary={lessonDeepDiveData.vocabulary}
+          />
+        );
       case 'tutor-summary':
         return <TutorSummaryBox />;
     }

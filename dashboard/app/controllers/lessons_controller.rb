@@ -102,6 +102,7 @@ class LessonsController < ApplicationController
       lessonName: @lesson.localized_name,
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
+      objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}}
     }
   end
 
