@@ -1,0 +1,147 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:16.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n\n  </head>\n  <body>\n    \n    <!-- page title -->\n    <h1> TechSavvy Solutions</h1>\n    \n    <!-- introduction -->\n    <p>Welcome to TechSavvy Solutions, your premier destination for expert computer repair and technology services. Founded by Sofia, a seasoned computer science expert, our shop is dedicated to providing top-notch hardware repairs, software troubleshooting, and custom PC builds, tailored to meet the needs of both tech enthusiasts and casual users.</p>\n    \n    \n    <p>At TechSavvy Solutions, we blend technical proficiency with personalized care, ensuring each client receives the best solution for their tech challenges. Whether you need a quick fix for a pesky computer virus, a performance upgrade for your gaming rig, or comprehensive system diagnostics, our team is equipped with the knowledge and tools to get your tech running smoothly. Experience the blend of expertise and customer-centric service at TechSavvy Solutions – where technology meets reliability.</p>\n    \n    <hr>\n    \n    <!-- Services offered -->\n    <h2>Service Showcase</h2>\n    \n    <!-- Service description, price and turnaround time within a list of services -->\n    <ol>\n      <li><h3>General Diagnostics</h3></li>\n        <ul>\n          <li>Description: Comprehensive hardware and software diagnostics</li>\n          <li>Price: $30</li>\n          <li>Turnaround Time: 1-2 business days</li>\n        </ul>\n\n        <br>\n      \n      <li><h3>Virus Removal and Security Check</h3></li>\n        <ul>\n          <li>Description: Complete virus removal and system security enhancement</li>\n          <li>Price: $50</li>\n          <li>Turnaround Time: 2-3 business days</li>\n        </ul>\n\n        <br>\n      \n      <li><h3>Hardware Repairs and Upgrades</h3></li>\n        <ul>\n          <li>Description: Repair and upgrade services for CPUs, GPUs, RAM, and more</li>\n          <li>Price: Varies based on hardware, starting at $40 (excluding parts)</li>\n          <li>Turnaround Time: 3-5 businness days</li>\n        </ul>\n\n        <br>\n      \n      <li><h3>Software Troubleshooting</h3></li>\n        <ul>\n          <li>Description: Fix software issues, install updates, and optimize performance</li>\n          <li>Price: $45</li>\n          <li>Turnaround Time: 1-2 business days</li>\n        </ul>\n\n        <br>\n      \n      <li><h3>Custom PC Builds</h3></li>\n        <ul>\n          <li>Description: Tailored PC builds for gaming, work, or general use</li>\n          <li>Price: Consultation-based, starting at $100 (excluding parts)</li>\n          <li>Turnaround Time: 5-7 business days</li>\n        </ul>\n\n    </ol>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- Blog section -->\n    \n    <h2>Tech Info</h2>\n    \n    <p>Visit Sofia’s Tech Blog for great tips, articles and the newest information about technology! Read below for what you’ll find at sofiatechblog.com</p>\n    \n    <!-- list of items on blog -->\n    \n    <h3>Latest Post: \"The Rise of Solid-State Drives: Why They're a Game-Changer\"</h3>\n\n      <ul>\n        <li>Summary: This post delves into the evolution of data storage, focusing on the benefits of solid-state drives (SSDs) over traditional hard disk drives (HDDs). It covers aspects such as speed, durability, and energy efficiency. Real-world scenarios are provided to illustrate how SSDs can significantly improve computer performance.</li>\n        <li>Key Points:\n          <ul>\n            <li>Faster data access and boot times.</li>\n            <li>Improved durability due to lack of moving parts.</li>\n            <li>Lower energy consumption and silent operation.</li>\n          </ul>\n          <li>Conclusion: The article concludes with advice on upgrading to SSDs and a brief overview of the latest models in the market.</li>\n      </ul>\n    \n    <br>\n    \n    <h3>Popular Tip: \"5 Signs Your Computer Might Have a Virus\"</h3>\n \n      <ul>\n        <li>Summary: This tip sheet highlights common symptoms indicating a computer virus. It aims to educate readers on early detection to prevent severe damage or data loss.</li>\n        <li>Key Signs:</li>\n          <ul>\n            <li>Unexpected pop-up windows.</li>\n            <li>Slow system performance.</li>\n            <li>Crashing or restarting spontaneously.</li>\n            <li>Unknown programs starting at boot.</li>\n            <li>Frequent antivirus software alerts.</li>\n          </ul>\n        <li>Advice: Recommendations on antivirus software and preventive measures are provided at the end of the article.</li>\n      </ul>\n    \n    <br>\n    \n    <h3>Industry News: \"The Future of Quantum Computing – What to Expect\"</h3>\n\n    <ul>\n      <li>Summary: This article discusses the cutting-edge field of quantum computing. It breaks down complex concepts into understandable terms, exploring how quantum computers will revolutionize various industries, from cryptography to drug discovery.</li>\n      <li>Highlights:</li>\n        <ul>\n          <li>Explanation of quantum bits (qubits) versus classical bits.</li>\n          <li>Potential impacts on encryption and data security.</li>\n          <li>Ongoing research and challenges in the field.</li>\n        </ul>\n      <li>Outlook: The post concludes with predictions about the commercial availability of quantum computers and their potential societal impacts.</li>\n    </ul>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- Testimonials -->\n    <h2>Testimonials</h2>\n    \n    <h3>Customer Review: \"TechSavvy Solutions saved my laptop! Quick and professional service. Highly recommend!\" - Alex R.</h3>\n    <h3>Success Story: \"Sofia built my custom gaming PC and it’s incredible! She really knows her stuff.\" - Jamie L.</h3>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- contact info and social media -->\n    <h2>Contact Information</h2>\n    \n    <p>Address: 742 Tech Avenue, Downtown Tech City, TC 50021<br>\n      Phone: (555) 987-6543<br>\n      Email: contact@techsavvysolutions.com</p>\n    <p>Social Media Links:</p>\n    <ul>\n      <li>Facebook: @TechSavvySolutions</li>\n      <li>Twitter: @TechSavvySol</li>\n      <li>Instagram: @techsavvy.solutions</li>\n    </ul>\n    \n    <br>\n    <hr>\n    <br>\n    \n\n    \n\n    \n    \n        \n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "LatestPost.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/e44b7a7a-669b-48c9-88f3-da8c4ec431db.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "IndustryNews.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/57b09ba9-d213-48b9-a538-a918b6ff19fc.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "TitleImage.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/38413886-2f49-4f85-9bde-4547c2f899f5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "SoftwareTroubleshooting.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/8bcae0c0-aa6d-45da-a8ae-216c65e085c5.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "CustomPC.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/a5efff09-eab9-4295-8476-01d4ef4ffc92.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "VirusRemoval.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/deea3b27-c111-469f-958c-00c23a17cb33.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "Diagnostics.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/b037cd33-e73d-46de-bc01-606f52bb3ca1.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "HarwareRepair.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/03140348-de70-4449-8271-5a6a6eb24a27.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "5Tips.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Sofia%20template_2025/uuid/e6119c00-28ba-4a52-b494-a597f1dd3e23.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:16.212+00:00\",\"changed\":[\"cloned from \\\"CSD Sofia template_2025\\\"\"],\"cloned_from\":\"CSD Sofia template_2025\"}]"
+}]]></config>
+</Weblab2>

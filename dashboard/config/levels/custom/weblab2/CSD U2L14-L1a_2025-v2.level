@@ -1,0 +1,229 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:10.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "User: Angelina",
+    "long_instructions": "# User: Angelina\r\n\r\nAngelina creates comic books and would like you to style her “A Beginner’s Guide to Comic Book Creations” page to look like the sketch on pages 4-5 of your project guide.\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Add class names to elements that will need to be styled differently from others of the same kind.\r\n\r\n\r\n**In the CSS file:**\r\n1. Add needed rules for your `div` containers to establish Flex layout where needed to meet your user's requests.\r\n2. Add needed Flex properties to achieve your user's desired layout.\r\n3. Add your user's requested styles to images and/or paragraphs.\r\n",
+    "bubble_choice_description": "Angelina would like you to style her page on creating comic books.",
+    "thumbnail_url": "https://images.code.org/577556f991f281676dee76e8420e6195-comic-book.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- Title and Introduction -->\n    <h1>A Beginner's Guide to Comic Book Creations</h1>\n\n    <p>Welcome to the vibrant world of comic books, where art meets storytelling in extraordinary ways. For decades, comic books have captivated readers with tales of heroism, adventure, and imagination. From the golden age classics to today's graphic novels, comics have evolved, but their core mission remains the same: to tell stories that inspire, entertain, and sometimes even challenge the way we see the world.</p>\n\n    <!-- image gallery of comic books through the years -->\n    <div>\n      <img src=\"Batman.jpg\" alt=\"Batman\">\n      <img src=\"mystery-men.jpg\" alt=\"Myster Men\">\n      <img src=\"planet-comics.jpg\" alt=\"Planet Comics\">\n      <img src=\"Avengers.jpg\" alt=\"Avengers\">\n      <img src=\"spider_man__into_the_spiderverse.jpg\" alt=\"Into the Spiderverse\">\n    </div>\n\n    <!-- image citation -->\n    <p>Comic book covers are CC-BY-NC-SA</p>\n\n    <p>Whether you're drawn to the epic battles between superheroes and villains or the nuanced narratives of personal struggle and triumph, there's a comic book out there for you. And now, it's your turn to add your voice to this dynamic medium. Let's embark on a journey to create your very own comic book, starting with the most crucial element: your story.</p>\n\n    <hr>\n\n    <!-- steps to craft the story -->\n    <h2>✏️ Crafting Your Story ✏️</h2>\n\n    <img src=\"storytelling_process.png\" alt=\"storytelling process\">\n\n    <p>Every great comic book begins with a compelling story. Your story is the foundation on which everything else will be built.</p>\n\n\n    <ol>\n      <li>Start by brainstorming ideas — no thought is too small or too wild. Ask yourself:</li>\n      <ul>\n        <li>What kind of stories am I drawn to?</li>\n        <li>What message do I want to convey?</li>\n      </ul>\n      <br>\n      <li>From there, sketch out your plot.</li>\n      <ul>\n        <li>Consider your beginning, middle, and end.</li>\n        <li>Who are your heroes, and who opposes them?</li>\n        <li>What challenges will they face, and how will they overcome them?</li>\n      </ul>\n    </ol>\n\n    <p>Crafting a storyline involves weaving together characters, settings, and conflicts to create a narrative that's engaging and meaningful. Remember, the best stories are those that resonate with their readers, combining excitement with emotional depth.</p>\n\n    <hr>\n\n    <!-- how to design the characters -->\n    <h2>🎨 Designing Your Characters 🎨</h2>\n\n    <p>Characters are the heart and soul of your comic book. They are the vessels through which your story is told.</p>\n\n    <!-- container to control protagonist image and information layout -->\n    <div>\n      <!-- container for protagonist image -->\n      <div>\n        <img src=\"protagonist.png\" alt=\"protagonist evolution\">\n      </div>\n      <!-- container for protagoist info -->\n      <div>\n        <h3>Begin with your protagonist</h3>\n\n        <ul>\n          <li>Who are they?</li>\n          <li>What makes them unique?</li>\n          <li>Think about their appearance, abilities, and, most importantly, their personality.</li>\n        </ul>\n\n        <p>Your character’s design should reflect their role in the story, from their costume to their expressions.</p>\n      </div>\n    </div>\n\n\n    <p>Don't forget about your supporting cast — friends, foes, and the characters in between. Each should have their distinct look and backstory, contributing to the richness of your world. As you design your characters, consider how their visual elements and backgrounds inform their motivations and development throughout the story.</p>\n\n    <!-- container to control supporting cast image layout -->\n    <div>\n      <img src=\"foe.png\" alt=\"Foe supporting cast\">\n      <img src=\"friend.png\" alt=\"Friend supporting cast\">\n    </div>\n\n    <hr>\n\n    <!-- things to think about when illustrating the comic -->\n    <h2>🖍️ Illustrating Your Comic 🖍️</h2>\n\n    <p> Illustration brings your story and characters to life. This stage transforms your written narrative and character designs into visual storytelling.</p>\n\n    <h3>Start by planning your comic pages.</h3>\n\n    <!-- container to control planning images and content layout -->\n    <div>\n      <!-- container to control panel image and info -->\n      <div>\n        <img src=\"comic-panels.png\" alt=\"comic book panels\">\n        <p>How will you use panels to pace your story?</p>\n      </div>\n      <!-- container to control perspective image and info -->\n      <div>\n        <img src=\"perspectives.png\" alt=\"angle and perseptive example\">\n        <p>How can you play with angles and perspectives to add drama and emphasis?</p>\n      </div>\n    </div>\n\n    <p>Practice drawing your characters in various poses and expressions to convey emotion and action. Whether you prefer pencil and ink on paper or digital tools, the key is consistency and clarity. Remember, every line, shadow, and color choice should serve your story, guiding your readers through the adventure you've crafted for them.</p>\n\n    <hr>\n\n    <!-- publishing information -->\n    <h2>📖 Publishing and Sharing Your Work 🖥️</h2>\n\n    <p>Sharing your comic with the world is both exciting and daunting. Today, there are more avenues than ever to publish your work. You can choose to go digital, uploading your comic to online platforms where readers from around the globe can access it.</p>\n    <p>Alternatively, you might prefer the traditional route, printing physical copies to distribute in comic book shops or at conventions. Consider starting a blog or social media account dedicated to your comic, where you can engage with your audience and build a community of fans.</p>\n    <p>No matter which path you choose, the act of sharing your work is a brave step toward becoming a part of the larger comic book community.</p>\n\n    <!-- container to control different ways to publish image layout -->\n    <div>\n      <img src=\"digital-comic-book.png\" alt=\"digital comic book\">\n      <img src=\"comic-book-display.png\" alt=\"comic book display\">\n      <img src=\"printed-comic-book.png\" alt=\"printed comic book\">\n    </div>\n\n\n    <!-- container to control image citation layout -->\n    <div>\n      <p>All images, with the exception of the comic book covers, created by chatGPT CC0 1.0</p>\n    </div>\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* ADD RULES BELOW TO STYLE LAYOUT */\n\n/* layout for comic book cover image gallery */\n\n\n\n/* comic book cover image style */\n\n\n\n/* comic book citation style */\n\n\n\n/* storytelling flowchart image style */\n\n\n\n/* layout style for protagonist image and information*/\n\n\n\n/* protagonist image style */\n\n\n\n/* layout style for supporting cast images */\n\n\n/* supporting cast image style */\n\n\n\n/* layout for planning comic pages images and information */\n\n\n/* layout for image and information within planning container */\n\n\n\n/* comic panels image style */\n\n\n\n/* perspective image style */\n\n\n\n/* layout style for publishing option images */\n\n\n\n\n/* layout style for image citation */\n\n\n\n/* style for paragraph in image citation container */\n\n\n\n/* DO NOT EDIT CODE BELOW */\n\n/* body style */\nbody {\n  background: #F5F5F5;\n  color:#333333;\n  font-family: Verdana;\n}\n\n/* title and subtitle styles */\nh1 {\n  text-align: center;\n  color: #E63946;\n  text-shadow: #333333 2px 2px;\n  font-size: 45px;\n}\n\nh2 {\n  text-align: center;\n  color: #1D3557;\n  text-shadow: #333333 1px 1px;\n  font-size: 30px;\n}\n\nh3 {\n  text-align: center;\n  color: #457B9D;\n  text-shadow: #333333 1px 1px;\n  font-size: 22px;\n  text-decoration: underline;\n}\n\n/* general image style  */\nimg {\n  width: 300px;\n  border-style: solid;\n  border-color: #F4A261;\n  box-shadow: 2px 2px;\n}/* ADD RULES BELOW TO STYLE LAYOUT */\n\n/* layout for comic book cover image gallery */\n\n\n\n/* comic book cover image style */\n\n\n\n/* comic book citation style */\n\n\n\n/* storytelling flowchart image style */\n\n\n\n/* layout style for protagonist image and information*/\n\n\n\n/* protagonist image style */\n\n\n\n/* layout style for supporting cast images */\n\n\n/* supporting cast image style */\n\n\n\n/* layout for planning comic pages images and information */\n\n\n/* layout for image and information within planning container */\n\n\n\n/* comic panels image style */\n\n\n\n/* perspective image style */\n\n\n\n/* layout style for publishing option images */\n\n\n\n\n/* layout style for image citation */\n\n\n\n/* style for paragraph in image citation container */\n\n\n\n/* DO NOT EDIT CODE BELOW */\n\n/* body style */\nbody {\n  background: #F5F5F5;\n  color:#333333;\n  font-family: Verdana;\n}\n\n/* title and subtitle styles */\nh1 {\n  text-align: center;\n  color: #E63946;\n  text-shadow: #333333 2px 2px;\n  font-size: 45px;\n}\n\nh2 {\n  text-align: center;\n  color: #1D3557;\n  text-shadow: #333333 1px 1px;\n  font-size: 30px;\n}\n\nh3 {\n  text-align: center;\n  color: #457B9D;\n  text-shadow: #333333 1px 1px;\n  font-size: 22px;\n  text-decoration: underline;\n}\n\n/* general image style  */\nimg {\n  width: 300px;\n  border-style: solid;\n  border-color: #F4A261;\n  box-shadow: 2px 2px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "storytelling_process.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/edf65382-89f5-4495-96b3-aff7b5678ce0.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "planet-comics.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/fa8f1128-3781-4e16-bea4-bb96a1d38772.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "mystery-men.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/473e4472-8377-4833-8b60-8a9f8bc3f073.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "Avengers.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/953c940f-2b75-48af-aa35-bd107eb7893b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "friend.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/86fc64f5-65ea-4299-a183-18d185693a5f.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "foe.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/267ba4d5-a535-4bb8-84eb-898c4415a9a3.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "protagonist.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/94a2277e-7e58-4905-9989-cfae571e3468.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "Batman.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/9612a674-5a6f-48b5-b7b1-b337f76606fb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "digital-comic-book.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/1e9c8039-eb2d-40dc-92b1-38da9d31adda.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "perspectives.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/7c387747-673f-4383-8cf0-0d05a583f55c.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "comic-panels.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/03744b10-bf24-48c4-af67-a2187f46ea0a.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "printed-comic-book.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/50f55e77-511d-46cb-ad50-bd9bd0da936e.png",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "comic-book-display.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/59fdbd34-20fd-4566-a89f-71564501d091.png",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "spider_man__into_the_spiderverse.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1a-2025/uuid/1cfa8bc0-345c-480b-a928-4e4b1b867168.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nIllX+nnNkKY=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:10.266+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14-L1a-2025\\\"\"],\"cloned_from\":\"CSD U2L14-L1a-2025\"}]"
+}]]></config>
+</Weblab2>

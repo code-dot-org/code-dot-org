@@ -1,0 +1,9 @@
+name 'CSD U2L10-L3_2025-v2'
+display_name 'Mini-Project Choices'
+description 'Choose your user to add their images!'
+
+sublevels
+level 'CSD U2L10-L3a_2025-v2'
+level 'CSD U2L10-L3b_2025-v2'
+level 'CSD U2L10-L3c_2025-v2'
+level 'CSD U2L10-L3d_2025-v2'

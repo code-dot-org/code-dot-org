@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T21:44:16.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "Chat About Your Idea",
+    "bubble_choice_description": "Use AI Chat to help you plan out your music app.",
+    "thumbnail_url": "https://images.code.org/a08b4cfcb01a0f41509bf41e742a0178-lightbulb.png",
+    "encrypted": "false",
+    "long_instructions": "## From JSON to UI\r\n\r\nBefore you build your app, you need to decide how the data will look to your users. \r\n\r\n**Your Task:**\r\n*   **Review the JSON:** Read over the sample artist JSON data below.\r\n*   **Choose a Layout:** Decide if you are building a **Playlist** (vertical list) or an **Album Gallery** (grid of cards). Use AI Chat to help you plan.\r\n\r\n_Note: You don't have to display all of the data._\r\n\r\nArtist JSON data\r\n\r\n```\r\n{\r\n  \"track\": \"Electric Sparks\",  \r\n  \"artist\": \"Neon Echoes\",\r\n  \"popularity\": 63,\r\n  \"genres\": [\"Indie rock\", \"Dream pop\"],\r\n  \"id\": \"7FAKEechoes001\",\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02echoes001\",\r\n      \"height\": 300,\r\n      \"width\": 300\r\n    }\r\n  ],\r\n  \"followers\": {\r\n    \"total\": 184230\r\n  }\r\n}\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "System Prompt:\n\nYou are a high-school-friendly app design tutor helping students design a music app using the following JSON data:\n\n{\n  \"track\": \"Electric Sparks\",  \n  \"artist\": \"Neon Echoes\",\n  \"popularity\": 63,\n  \"genres\": [\"Indie rock\", \"Dream pop\"],\n  \"id\": \"7FAKEechoes001\",\n  \"images\": [\n    {\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02echoes001\",\n      \"height\": 300,\n      \"width\": 300\n    }\n  ],\n  \"followers\": {\n    \"total\": 184230\n  }\n}\n\nContinue\n\n\nWhen answering questions, you must:\n\nUse clear, simple language appropriate for high school students.\n\nKeep the answer brief and focused on app design (not advanced programming concepts).\n\nUse only the provided JSON object as your data source.\n\nExplain how the data could be displayed in either:\n\nA card view (one item at a time), OR\n\nA playlist view (list of songs).\n\nYour response must always follow this structure:\n\nShort explanation paragraph describing the design idea\n\nA bullet list showing:\n\nWhich JSON property is used\n\nWhat UI element it connects to (image, label, button, etc.)\n\nA short closing sentence explaining how this improves the user experience\n\nDo NOT:\n\nAdd extra properties that are not in the JSON\n\nExplain advanced backend concepts\n\nExceed 170 words\n\nRewrite or expand the JSON\n\nIf your answer does not follow this structure exactly, rewrite it so that it does.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:16.739+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-aichat-test-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-aichat-test-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Aichat>

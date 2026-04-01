@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:00.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# API\n\n**API (Application Programming Interface)** is a set of rules that allow software applications to communicate.\n\nThe client app sends a **request** to the server asking for data. The server sends back a **response** to the client.",
+        "imageUrl": "https://images.code.org/7efab582dd4a72a28b329fe9735e26a2-api.gif",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:00.449+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,75 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:04.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Grow Based on Container Content!\r\n\r\nLet's do some more practice with the `flex-grow` property! It turns out, this property can do some cool stuff for our children elements!\r\n\r\nFor example, if we give all child elements a value of `0`, this means that the elements will grow based on the content inside it! So, if one element has more content, it will be larger than the others in the container. Pretty handy!\r\n\r\nNow, if we want all of our child elements to take an equal portion of the parent container, then we can give all of our children a `flex-grow` value of `1`! \r\n\r\nLet's give this a try!\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the `flex-grow` property to the first container and set the child elements grow based on the content inside the container. _See above description to remember what that value should be._\r\n2. Add the `flex-grow` property to the second container and set the child elements take an equal portion of the parent container. _See above description to remember what the value should be._\r\n\r\n**In the HTML file:**\r\n1. Add some more text to **one** of the paragraph in the **\"grow0\"** container to see the item sizes adjusting based on the content!\r\n   * _This is the default for all Flex items._\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/60de46cd998cf0ce27d03153e647673a-image-1708195640074.gif\" style=\"width:500px\">\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Grow Based On Content",
+    "bubble_choice_description": "Practice setting the `flex-grow` property based on if you want items to grow equally or not!",
+    "thumbnail_url": "https://images.code.org/d50a822195c22cb6b0d5261b83357436-grow.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <!-- 1) Add some more text to one of the paragraph in the \"grow0\" container to see the item sizes adjusting based on the content! -->\n    <div class=\"grow0\">\n      <p>child</p>\n      <p>child</p>\n      <p>child</p>\n    </div>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"grow1\">\n      <p>child</p>\n      <p>child</p>\n      <p>child</p>\n    </div>\n\n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add the flex-grow property to the first container and set the child elements grow based on the content inside the container */ \n.grow0 > p {\n\n}\n\n\n/* 2) Add the flex-grow property to the second container and set the child elements take an equal portion of the parent container. */\n.grow1 > p {\n\n}\n\n\n/* styled parent containers */\n.grow0, .grow1 {\n  background: #b691d6;\n  display: flex;\n  padding: 5px;\n  margin: 10px;\n}\n\n/* styled paragraphs */\np {\n  background-color: aliceblue;\n  margin: 5px;\n  padding: 5px;\n  text-align: center;\n  font-size: 20px;\n  border-style: solid;\n  font-family: sans-serif; \n\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryboXUaC8sBA\n866dO+WSIoLbeKUBlyT4FyWGJd/7f3q9L/kEvwjISqAW7FjmT0mk80Lkj0SZ\n8+w96q2q2nD1YIvOTbnehNVHMGAxgRf6ZrFEh4phZZMGHmth/k7kbLJbh8Ge\n1oPfqUEPN4nkqnmfxPBzVJg0bcJQOmmse+cNsRXg49fdUbdnR/5gr4zA4ixl\n/tc8sPAh5s8pgmQK9ieqdsuVecL20HxeGE04NoIxV6BzMGbC3kUfOJLkQhyC\nVn3o9zk5ysBbUh7U3AqKJYBMQXmS0wjfbaBPOC7xhNjpFatSWbAuogCl4Rit\nFFZBxhzffH1qebd10TSssWvV30yhn45UNSSMEPvBnTaj1kx9QE0pAh8Mvjun\nZVKB5u0bBKtPftf5xPK4tNZtR+1ZhkP6WVS1d0a1G5N3r1f6V7Rwy91ej2ti\nMkrgRB1xslJn24mzoxtQsc1NaDLRyOF9m8TFmF+Drdnv5FWbcd2opXOGRJDb\nEsB505tBZ1y/2ZR+SZSF9bfbCrnUMGti8b7SeRO1N2v1ekAvs2tlI3xJoFt6\nO5xIR0HsaSaE08H0XVJXA6fOcfGgtY3udC37piNkjfn+ZpbQxtZrMwI9UGCp\np5KFX5y/FIoOm8NKbbickzhC1dS8+zkLSKy1F7FL5h/2MerCnvafC2TJrHuR\nyr1Kj5/UCmTVxGhHSGcnaH1KqxULr4AKREGQEEXoDNwdnsYpI4RVHzNzoPUz\nOmoo0oYa39rinYIviJooQnxrZvUF5DGFu3CF8Zhsj6YFmtEl5ml0Vho2XU48\nuKakh0mwZqbTpSgftMM/rWWPG24fzuQzH1vjpuNJX2FwOpZzsLP4cnhW3gsz\n0OiexO8UYmKFjy7iZhTsgjQPCBtEzuGN3UcahJiPEokASFjYeYOCYAUZxw9H\nkpdOHLIz03ewricbHTNfLRbHx4jRmKRft4llClDYrkIs/gIti5ifnsRcFXBa\nkYu1yoVFbRYAd/ryz2qxjIsg9ag4xy7vT4NNRjxc//z/nuziwHgWcduFE5B5\nI0nuiWv13MopyUvG2uzftFQpMCpw2dEv18YAR2uBTo7oQuQbRokxp5HFZbwz\n3DkY9KJf9ULLd0FgOIMLrLZDawaUtRMyR+nKOa2KaftwpHAapTIsYpGWXs72\nyjO3DZQE6X59EyujZCZ9qoXfoKfrwXAZ4KERsbnadxKIMim9pzxavn1NkcZb\nf7NTVBKEXfmvIpfwCHmT2GAZdffDKANddQ8MntkE+QvzjKt0xEv8lTkpRRuR\n3PZakQA+AhwCrviIccl536IP3jReFGplVBA7g+8xeOjPqG/zVMfOHLudJqPr\nbYRmEaShYa4mBmUSyLduvMxLR/m+AU08OHn1ARjib6anL0hUfKVbuJOR80wf\ns2TxrQVXubnd1P+UfRKDRdbk8H3RCtQpg3/4cgKd60kjFGt6c2LxbN3/YaRG\nfJvhNFtqUDtC3wNpHCz9jPn5MZspOQgZCQ66LKciKllsMbmqbOfG5gjz8dh7\nJkytvNspUNhlgME6XhhfVQjVM77YTr7NjUiREGt9K2LLRGDL4AQIR4XNyQzM\ngMU7CIRPHoNlJzQ74VnDH7xsBFYBBPA=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:04.515+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L6a-2025\"}]"
+}]]></config>
+</Weblab2>

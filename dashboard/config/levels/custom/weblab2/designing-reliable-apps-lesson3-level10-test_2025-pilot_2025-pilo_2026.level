@@ -1,0 +1,66 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Dog Breed Data</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"container\">\n        <h1>Chicago Farmer's Markets</h1>\n\n        <div id=\"app-status\" class=\"status-text\">Status: Ready</div>\n\n        <button id=\"fetch-button\">\n            ▶ Get Locations\n        </button>\n\n        <div id=\"data-output\" class=\"output-box\">\n            <p class=\"placeholder\">No data loaded yet.</p>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* General Page Layout */\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #f4f4f9;\n    color: #333;\n    display: flex;\n    justify-content: center;\n    padding-top: 50px;\n    margin: 0;\n}\n\n.container {\n    background: white;\n    width: 400px;\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\nh1 {\n    font-size: 1.5rem;\n    margin-top: 0;\n    text-align: center;\n}\n\n/* Status Text */\n.status-text {\n    font-weight: bold;\n    margin-bottom: 15px;\n    color: #555;\n    font-size: 0.9rem;\n    text-align: center;\n}\n\n/* Button Styling */\n#fetch-button {\n    width: 100%;\n    padding: 12px;\n    background-color: #007bff; /* Blue */\n    color: white;\n    border: none;\n    border-radius: 5px;\n    font-size: 1rem;\n    cursor: pointer;\n    transition: background 0.3s;\n}\n\n#fetch-button:hover {\n    background-color: #0056b3; /* Darker Blue */\n}\n\n/* Output Box Styling */\n.output-box {\n    margin-top: 20px;\n    border: 1px solid #e1e1e1;\n    border-radius: 5px;\n    padding: 15px;\n    background-color: #fafafa;\n    min-height: 100px;\n    max-height: 300px; /* Limits height */\n    overflow-y: auto;  /* Adds scrollbar if list is long */\n}\n\n.placeholder {\n    color: #999;\n    text-align: center;\n    font-style: italic;\n}\n\n/* Dynamic List Items (Created by JS) */\nul {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n}\n\nli {\n    padding: 8px 0;\n    border-bottom: 1px solid #eee;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n}\n\nli:last-child {\n    border-bottom: none;\n}\n\n/* Error Message Class */\n.error-msg {\n    color: #dc3545; /* Red */\n    background-color: #ffe6e6;\n    padding: 10px;\n    border-radius: 4px;\n    border: 1px solid #ffcccc;\n    text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const statusElement = document.getElementById('app-status');\nconst outputElement = document.getElementById('data-output');\nconst fetchBtn = document.getElementById('fetch-button');\n\nfetchBtn.addEventListener('click', () => {\n\n  statusElement.textContent = 'Status: Fetching data...';\n  outputElement.innerHTML = '<p class=\"placeholder\">Loading...</p>';\n\n\n\n\n\n\n\n  \n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Build a Promise Chain\r\n\r\n\r\nWhen the button is clicked, your app should fetch farmer's market data from an API and display each location in a list. If the request fails, show an error message instead.\r\n\r\n---\r\n\r\n#### Do This\r\n\r\n1. Fetch fruit data using `fetch()` and the following API URL:\r\n     `https://data.cityofchicago.org/resource/x5xx-pszi.json`\r\n\r\n2. Then, convert the response into usable JavaScript data using `response.json()`.\r\n\r\n3. Once you have the converted data:\r\n     * Loop through the array using `data.forEach(market => )`.\r\n     * For each location, access its `market.location` property.\r\n     * Build a list using `<ul>` and `<li>` elements.\r\n     * Insert the  list into `outputElement`.\r\n\r\n4. Add a `.catch(...)` block to handle errors by:\r\n     * Update `statusElement.textContent` to indicate failure.\r\n     * Display `Error: Could not load locations.` inside `outputElement`.\r\n\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nRkJfh532+lsejaSAXadm9f/oWXILGjY=\n",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:09.387+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

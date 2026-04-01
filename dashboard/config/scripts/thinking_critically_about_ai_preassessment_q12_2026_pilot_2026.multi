@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q12_2026-pilot_2026'
+
+question 'Which of the following best describes when data collection by AI is considered harmful?'
+
+wrong 'When a company collects data to improve product recommendations with user permission.'
+wrong 'When data is used to train an AI model in a research lab.'
+wrong 'When a school collects attendance data to track whether students are present.'
+right 'When personal data is collected without a person\'s knowledge and used in ways that could hurt them.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+MARKDOWN

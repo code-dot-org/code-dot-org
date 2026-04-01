@@ -27418,3 +27418,490 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csd2-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-Page Websites'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: CSD Unit 2 (with Web Lab 2)
+          description: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a web page to meet a user's needs.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n* How do web developers create web pages for users?\n* How can text communicate a web page's content, structure, and style?\n* How do I safely and appropriately create content for the Internet?\n* What strategies can I use when coding to find and fix issues?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a website that solves a problem.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n* How can websites be used to address problems in the world?\n* What strategies can teams use to work better together?\n* How do I know what information can be trusted online?\n:::\n\n\n::: details [**Implementation Guidance for Web Development**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Web Development Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit2-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_short: " Learn to build your own web site in Web Lab."
+          description_audience: ''
+        web-development-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-Page Websites'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: CSD Unit 2 (with Web Lab 2)
+          description: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a web page to meet a user's needs.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n* How do web developers create web pages for users?\n* How can text communicate a web page's content, structure, and style?\n* How do I safely and appropriately create content for the Internet?\n* What strategies can I use when coding to find and fix issues?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a website that solves a problem.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n* How can websites be used to address problems in the world?\n* What strategies can teams use to work better together?\n* How do I know what information can be trusted online?\n:::\n\n\n::: details [**Implementation Guidance for Web Development**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Web Development Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit2-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_short: " Learn to build your own web site in Web Lab."
+          description_audience: ''
+        thinking-critically-about-ai-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          title: 'AI Discoveries: Thinking Critically About AI'
+          description: |-
+            In this unit, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Recognize common ways AI appears in daily life and digital tools.
+            - Explain at a high level how AI systems generate outputs and why they can be wrong.
+            - Evaluate AI outputs for accuracy, bias, and appropriateness.
+            - Describe how data and human decisions influence AI behavior.
+            - Make responsible choices about when and how to use AI.
+            - Articulate personal and shared norms for ethical and productive AI use.
+          student_description: |-
+            In this unit, you develop the conceptual foundation and habits of mind you'll need to engage with AI thoughtfully. You examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. You investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, you develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, you have a durable lens for thinking about AI.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Recognize common ways AI appears in daily life and digital tools.
+            - Explain at a high level how AI systems generate outputs and why they can be wrong.
+            - Evaluate AI outputs for accuracy, bias, and appropriateness.
+            - Describe how data and human decisions influence AI behavior.
+            - Make responsible choices about when and how to use AI.
+            - Articulate personal and shared norms for ethical and productive AI use.
+          description_short: ''
+          description_audience: ''
+        ai-and-machine-learning-2026:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Intro to App Lab
+            lessonGroup-2:
+              display_name: 'Chapter 1: Understanding Machine Learning'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Design a Machine Learning App'
+            lessonGroup-5:
+              display_name: End of Unit Survey
+          title: 'AI and Machine Learning '
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-aiml-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+          description_short: Learn to about Artificial Intelligence and Machine Learning.
+          description_audience: ''
+        interactive-animations-and-games-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: 'Interactive Animations and Games '
+          description: "In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students build up toward programming interactive animations in the Game Lab environment.  They begin with simple shapes and sprite objects, then use loops to create flipbook style animations.  Next, they learn to use booleans and conditionals to respond to user input.  At the end of the chapter, students design and create an interactive animation that they can share with the world.\n\n**Goals:**\n* Create an interactive animation that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* View yourself as a computer programmer, and see programming as a fun and creative form of expression.\n\n\n**Big Questions:**\n* What is a computer program?\n* What are the core features of most programming languages?\n* How does programming enable creativity and individual expression?\n* What practices and strategies will help me as I write programs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter students combine the constructs that they learned in the first chapter to program more complex movement and collisions in their sprites.  As they create more complex programs, they begin to use functions to organize their code.  In the end, students use a design process to create an original game.\n\n**Goals:**\n* Create an interactive game that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* Work with others to break down programming projects using sprites and functions.\n\n**Big Questions:**\n* How do software developers manage complexity and scale?\n* How can programs be organized so that common problems only need to be solved once?\n* How can I build on previous solutions to create even more complex behavior?\n:::\n\n::: details [**Implementation Guidance for Interactive Animations and Games**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Interactive Animations and Games Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit3-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          description_short: Learn to program animations, interactive art, and games in Game Lab.
+          description_audience: ''
+        the-design-process-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: 'The Design Process '
+          description: "The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps.\n\n**Goals:** \n* See the design process as a form of problem solving that prioritizes the needs of a user. \n* Identify user needs and assess how well different designs address them. \n* Develop paper prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n\n**Big Questions:**\n* How do designers identify the needs of their user?\n* How can we ensure that a user's needs are met by our designs?\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype. Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue. This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing.\n\n\n**Goals:**\n* Develop digital prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n* Understand other roles in software development, such as product management, marketing, design, and testing, and how to use what they have learned about computer science as a tool for social impact.\n\n**Big Questions:**\n* How do teams effectively work together to develop software?\n* What roles beyond programming are necessary to design and develop software?\n* How do designers incorporate feedback into multiple iterations of a product?\n:::\n\n::: details [**Implementation Guidance for The Design Process**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Design Process Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit4-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          description_short: Learn how to design a program that meets the needs of your users.
+          description_audience: ''
+        data-and-society-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: 'Data and Society '
+          description: "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.\n\n\n**Goals:**\n* Understand the role of data and data representation in solving information problems. \n* Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code. \n\n\n**Big Questions:**\n* Why is representation important in problem solving?\n* What features does a representation system need to be useful?\n* What is necessary to create usable binary representation systems?\n* How can we combine systems together to get more complex information?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students explore how data can be used to answer interesting questions and solve problems.  Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving.  After learning ways that computers use data in the real world, students choose their own problem and use data to address it.\n\n\n**Goals:**\n* Investigate and understand how humans and computers use data differently.\n* Design and implement a data-based solution to a given problem and determine how the different aspects of the problem solving process could be automated.\n\n\n\n**Big Questions:**\n* How does data help us to solve problems?\n* How do computers and humans use data differently?\n* What parts of the data problem solving process can be automated?\n* What kinds of problems do computers use data to solve in the real world?\n\n:::\n\n\n::: details [**Implementation Guidance for Data and Society**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-unit5-2025/). The module is designed to take 70 minutes to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          description_short: Learn how people use computers to solve data problems.
+          description_audience: ''
+        creating-apps-with-devices-circuit-2026:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introduction to App Lab
+            lessonGroup-2:
+              display_name: 'Chapter 1: Inputs and Outputs'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-5:
+              display_name: End of Unit Survey
+          title: "(Option A) Creating Apps with Devices (Circuit Playground)"
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit](/s/csd6b-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/maker/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-physical-computing-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: ''
+        creating-apps-with-devices-microbit-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: Building Physical Prototypes
+            lessonGroup-5:
+              display_name: End of Unit Survey
+          title: "(Option B)  Creating Apps with Devices (micro:bit)"
+          description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-microbit-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
+          description_short: ''
+          description_audience: ''
+        problem-solving-with-ai-2026:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-4:
+              display_name: Content
+            lessonGroup-5:
+              display_name: End of Unit Project
+            lessonGroup-2:
+              display_name: End of Unit Assessment and Survey
+          title: Problem Solving with AI
+          description: |-
+            As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. This unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+
+            This unit blends hands-on AI experimentation with critical evaluation and refinement, guiding students through an iterative cycle of testing, analyzing, and improving AI-generated outputs. Instead of passively accepting AI responses, students will actively investigate AI's reasoning, challenge its assumptions, and refine its outputs through computational thinking and ethical frameworks.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_1) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            AI is becoming a bigger part of everyday life—from helping write emails to suggesting music and planning trips. But using AI isn't just about typing in a prompt and accepting the answer. In this unit, you learn how to work with AI as a creative and problem-solving partner. You explore what AI does well, where it struggles, and how your thinking and choices can improve its results.
+
+            Through hands-on activities, you experiment with AI tools, test different inputs, and learn how to refine and evaluate what AI creates. You ask questions, spot mistakes, and use problem-solving strategies to make AI’s responses better and more useful. Instead of just using AI, you learn how to think critically about it—and how to use it responsibly.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        ai-and-the-systems-that-power-it-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI and the Systems That Power It
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_3) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        the-fabric-of-the-internet-and-ai-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment and Survey
+          title: The Fabric of the Internet and AI
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_4) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        ai-powered-threats-and-defenses-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI-Powered Threats and Defenses
+          description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_5) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, you take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. You analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. You also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+          description_short: ''
+          description_audience: ''
+        insights-from-data-and-ai-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: Insights from Data and AI
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze datasets and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_6) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description_audience: ''
+        building-data-driven-systems-with-ai-2026:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          title: Building Data-Driven Systems with AI
+          description: |-
+            In this unit, students shift from building single interactions to designing full, data-driven web apps. Students learn how to organize information using arrays and objects, define a clear data schema before coding, and build features like sorting and filtering that operate on collections of data. Throughout the unit, students see how data structure choices directly shape both program behavior and the user experience, helping them understand why real-world apps rely so heavily on well-designed data systems.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Apply abstraction to model real-world information as structured data using JavaScript arrays and objects.
+            - Define a schema for a dataset by identifying its fields, types, and constraints, and use it as the foundation for building UI and program logic.
+            - Use arrays and objects to organize, access, and update collections of information in a program.
+            - Apply decomposition and algorithmic reasoning to design procedures that operate on datasets, such as searching, sorting, or filtering.
+            - Analyze AI-generated code scaffolds, complete missing logic, and evaluate AI outputs for clarity and correctness.
+            - Explain criteria for selecting creative modes, including when to adapt existing code, debug errors, or generate new structures.
+            - Identify examples of bias or missing context in datasets and explain how they can lead to unfair or misleading user experiences.
+            - Analyze and revise datasets or AI-generated scaffolds to address ethical concerns and improve fairness, usability, and trustworthiness.
+            - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
+          student_description: |-
+            In this unit, you move beyond simple interactions and start building web apps that work with real collections of information. You learn how to organize data using arrays and objects, plan your data with a clear structure before coding, and create features like sorting and filtering that help users explore information in meaningful ways. Along the way, you see how the way data is set up directly affects what an app can do and how it feels to use.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Apply abstraction to model real-world information as structured data using JavaScript arrays and objects.
+            - Define a schema for a dataset by identifying its fields, types, and constraints, and use it as the foundation for building UI and program logic.
+            - Use arrays and objects to organize, access, and update collections of information in a program.
+            - Apply decomposition and algorithmic reasoning to design procedures that operate on datasets, such as searching, sorting, or filtering.
+            - Analyze AI-generated code scaffolds, complete missing logic, and evaluate AI outputs for clarity and correctness.
+            - Explain criteria for selecting creative modes, including when to adapt existing code, debug errors, or generate new structures.
+            - Identify examples of bias or missing context in datasets and explain how they can lead to unfair or misleading user experiences.
+            - Analyze and revise datasets or AI-generated scaffolds to address ethical concerns and improve fairness, usability, and trustworthiness.
+            - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
+          description_short: ''
+          description_audience: ''
+        iterating-with-ai-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          title: Iterating with AI
+          description: |-
+            In this unit, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views. Building on their earlier work with arrays and objects, they design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust. AI supports their work by scaffolding repetitive code and suggesting solutions, but students are expected to make informed choices about when to adapt AI-generated logic and when to write it themselves, reinforcing both technical fluency and accountability for the systems they create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
+            - Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.
+            - Apply decomposition by breaking a complex, loop-driven feature (e.g., filtering a dataset) into smaller, testable procedures such as input handling, data transformation, and rendering results.
+            - Debug repeated logic by tracing iteration step-by-step, identifying common issues (e.g., off-by-one errors, infinite loops), and applying targeted fixes.
+            - Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
+            - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
+          student_description: |-
+            In this unit, you learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views. Building on your earlier work with arrays and objects, you design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust. AI supports your work by scaffolding repetitive code and suggesting solutions, but you are expected to make informed choices about when to adapt AI-generated logic and when to write it themselves, reinforcing both technical fluency and accountability for the systems you create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
+            - Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.
+            - Apply decomposition by breaking a complex, loop-driven feature (e.g., filtering a dataset) into smaller, testable procedures such as input handling, data transformation, and rendering results.
+            - Debug repeated logic by tracing iteration step-by-step, identifying common issues (e.g., off-by-one errors, infinite loops), and applying targeted fixes.
+            - Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
+            - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
+          description_short: ''
+          description_audience: ''
+        designing-reliable-apps-with-ai-and-apis-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          title: Designing Reliable Apps with AI and APIs
+          description: |-
+            This unit builds students' capacity to develop apps that depend on external data sources, progressing from foundational concepts to a substantial independent project. Early lessons establish the core mental models — the request/response cycle, the structure of JSON, and the difference between synchronous and asynchronous execution — using concrete analogies and hands-on API exploration before students write any code of their own. The middle lessons shift toward implementation: students learn to fetch data using async/await, render it dynamically with loops, and handle real-world messiness when backend data changes or is missing. Lesson 9 introduces human-centered reliability as a design principle, asking students to think beyond the "happy path" and deliberately design loading, empty, and error states. The unit culminates in Lesson 11, a five-day Explore-Style App Project structured around four milestones — API connection, interactive reveal, defensive design, and documentation — that gives students a professional-grade workflow and a portfolio-worthy deliverable. Throughout, AI is positioned as a debugging and refinement collaborator, with the rubric and milestone structure designed to keep students in the driver's seat on design and logic decisions.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
+          student_description: |-
+            In this unit, you'll learn how to build apps that feel alive — apps that pull real, up-to-date information from the internet rather than relying on data you hard-coded yourself. You'll start by exploring how apps communicate with external services through APIs and JSON, then dig into the mechanics of asynchronous programming: why apps sometimes have to wait for data, and how professional developers keep the experience smooth while that happens. From there, you'll practice rendering dynamic content on the page, designing for the full range of outcomes a user might encounter — a successful result, an empty search, a slow connection, or an outright error — and building interfaces that keep users informed and in control no matter what. The unit ends with a multi-day project where you design and build your own Explore-Style app: a real, working application that fetches live data from an API of your choosing, responds to user interaction, and handles the unexpected like a professional.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
+          description_short: ''
+          description_audience: ''
+        web-apps-with-ai-capstone-project-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          title: Web Apps with AI Capstone Project
+          description: |-
+            This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
+          student_description: |-
+            This unit is the capstone of AI Foundations Semester 2, where you synthesize your learning to design and build a complete web app with a clear purpose and audience. You integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with your values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
+          description_short: ''
+          description_audience: ''

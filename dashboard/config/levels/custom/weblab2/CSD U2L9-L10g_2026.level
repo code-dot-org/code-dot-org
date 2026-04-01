@@ -1,0 +1,49 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:11.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add to your Web Page!",
+    "project_template_level_name": "CSD U2L6-L3-template_2026",
+    "long_instructions": "# Add to your CSS Webpage\r\n\r\nUse your new knowledge and skills to add to the page you started in Lesson 6. The webpage you created about something you enjoy in Level 11, challenge f has been transferred below - add some style to your images!",
+    "bubble_choice_description": "Add images to the web page you started in a previous challenge level!",
+    "thumbnail_url": "https://images.code.org/d73491f57c18795a0676793a00465124-wish-list.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:11.393+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L10g-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L10g-2025\"}]"
+}]]></config>
+</Weblab2>

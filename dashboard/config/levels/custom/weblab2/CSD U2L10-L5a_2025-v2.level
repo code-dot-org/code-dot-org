@@ -1,0 +1,49 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:48.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Lesson 5 User - Review",
+    "project_template_level_name": "CSD U2L5-project_template_2025-v2",
+    "long_instructions": "# Review your Page\r\n\r\nFinally, check to make sure the web page has everything your user wants.\r\n\r\n# Do This\r\n1) Check to make sure all of the images are there.\r\n2) Check that the HTML tags structure for the images is correct.\r\n3) Check that the CSS properties style all of the elements correctly and as the user requested.\r\n4) Make sure your added images as well as your CSS code is organized, readable, commented, and free of bugs.",
+    "bubble_choice_description": "Choose this level if you created an HTML web page for a user during the previous mini-project.",
+    "thumbnail_url": "https://images.code.org/d63ac68f142c45840c90dd2053982325-behavior.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:48.316+00:00\",\"changed\":[\"cloned from \\\"CSD U2L10-L5a-2025\\\"\"],\"cloned_from\":\"CSD U2L10-L5a-2025\"}]"
+}]]></config>
+</Weblab2>

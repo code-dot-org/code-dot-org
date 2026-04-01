@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:42.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Flex-basis",
+    "long_instructions": "# Flex-basis\r\n\r\n`flex-basis` is another child Flex property that is used to establish the size of your item. Think of it as the same thing as defining an element's `width`.\r\n\r\nThe default value for this property is `auto` which sets the **ideal size of the element based on its content**. We can also set a specific size for our elements by defining the value of `flex-basis`. \r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the `flex-basis` property to the first container and set value to `auto`\r\n   - _This will set the \"ideal size\" of the element based on its content._\r\n2. Add the `flex-basis` property to the second container and set value to `150px`\r\n   - _This will explicitly set the size of the element to `150px`\r\n\r\n**In the HTML file:**\r\n1. Add some more text to **one** of the paragraphs in the **\"basis-auto\"** container. \r\n   * Notice how the element will expand as much as it can while still keeping the other two elements at their ideal size based on their content.\r\n   * _This is the default for all Flex items._\r\n2. Add some more text to **one** of the paragraphs in the **\"basis-fixed\"** container.\r\n   * Notice how the element's width does not change since you set it to be 150px.\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to add this property to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a>!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn about another Flex child property that determines the size of your item!",
+    "thumbnail_url": "https://images.code.org/14e04f05de78cbd2b08fee512ffc1ab7-width.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"basis-auto\">\n      <p>child</p>\n      <p>child</p>\n      <p>child</p>\n    </div>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"basis-fixed\">\n      <p>child</p>\n      <p>child</p>\n      <p>child</p>\n    </div>\n\n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add the flex-basis property to the first container and set value to auto */ \n.basis-auto > p {\nflex-basis: auto;\n}\n\n\n/* 2) Add the flex-basis property to the second container and set value to 150px */\n.basis-fixed > p {\n  flex-basis: 150px;\n}\n\n\n/* styled parent containers */\n.basis-auto, .basis-fixed {\n  background: #b691d6;\n  display: flex;\n  padding: 5px;\n  margin: 10px;\n}\n\n/* styled paragraphs */\np {\n  background-color: aliceblue;\n  margin: 5px;\n  padding: 5px;\n  text-align: center;\n  font-size: 20px;\n  border-style: solid;\n  font-family: sans-serif; \n\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:42.413+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L9a-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L9a-2025\"}]"
+}]]></config>
+</Weblab2>

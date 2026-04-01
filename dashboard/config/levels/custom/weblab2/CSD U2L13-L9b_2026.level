@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:42.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Flex Shorthand",
+    "long_instructions": "# Flex Property\r\n\r\nThe \"flex\" property is the shorthand for `flex-grow`, `flex-shrink` and `flex-basis` combined into one line. When we use it in CSS, it looks like this:\r\n\r\n```\r\ndiv {\r\n  flex: 1 0 auto;\r\n}\r\n```\r\n\r\nThis example sets the `flex-grow` to 1, the `flex-shrink` to 0, and the `flex-basis` to auto. An easy way to think of this and remember the order is to imagine you are setting the **\"max\"**, **\"min\"**, and **\"ideal size\"**. \r\n\r\n_Check out the previous challenge level or the \"Help & Tips\" tab to learn about `flex-basis`!_\r\n\r\nLet's check out what some commonly used value combinations for the `flex` property will do!\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n\r\n::: details [1. Set the child elements of \"flex1\" to not grow when there is free space, to shrink when there is not enough space, and their size to be based on their content _(expand me to get more instructions)_]\r\n- **Add the `flex` property to the \"flex1\" child elements with the following three values:**\r\n   - **Set the first \"grow\" value to 0.** This will make the items _inflexible_ when there is some free space left in the container. \r\n   - **Set the second \"shrink\" value to 1.** This will allow the elements to shrink to their minimum size when there is not enough space in the container. \r\n   - **Set the third \"ideal size\" value to \"auto\".** This will size the items based on their content.\r\n:::\r\n\r\n<br>\r\n\r\n::: details [2. Set the child elements of \"flex2\" to grow to absorb any extra space, to shrink when there is not enough space, and their size to be based on their content _(expand me to get more instructions)_]\r\n- **Add the `flex` property to the \"flex2\" child elements with the following three values:**\r\n   - **Set the first \"grow\" value to 1.** This will make the items absorb any extra space left in the container. \r\n   - **Set the second \"shrink\" value to 1.** This will allow the elements to shrink to their minimum size when there is not enough space in the container. \r\n   - **Set the third \"ideal size\" value to \"auto\".** This will size the items based on their content.\r\n:::\r\n\r\n<br>\r\n\r\n::: details [3. Set the child elements of \"flex3\" to not grow when there is free space, to not shrink when there is not enough space, and their size to be based on their content _(expand me to get more instructions)_]\r\n- **Add the `flex` property to the \"flex3\" child elements with the following three values:**\r\n   - **Set the first \"grow\" value to 0.** This will make the items _inflexible_ when there is some free space left in the container. \r\n   - **Set the second \"shrink\" value to 0.** This will not allow the elements to shrink even in an overflow situation. \r\n   - **Set the third \"ideal size\" value to \"auto\".** This will size the items based on their content.\r\n:::\r\n\r\n<br>\r\n\r\n4. Resize the Preview Window to see the differences between the three layouts. \r\n   - Make sure you fully expand the Preview Window as well as shrink the window to be very, very small.\r\n\r\n\r\n<br>\r\n\r\n\r\n\r\n**Make sure to add this to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a>!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "\"Flex\" your skills and learn how to combine `flex-grow`, `flex-shrink`, and `flex-basis` into shorthand!",
+    "thumbnail_url": "https://images.code.org/52bd58a834f4e69740655a8fa4f9e49d-feminist.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"flex1\">\n      <p>Items will NOT take up any free space.</p>\n      <p>Check this out!</p>\n      <p>Oh boy!</p>\n    </div>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"flex2\">\n      <p>Items will ABSORB any extra space.</p>\n      <p>Check this out!</p>\n      <p>Oh boy!</p>\n    </div>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"flex3\">\n      <p>Items will be fully INFLEXIBLE.</p>\n      <p>Check this out!</p>\n      <p>Oh boy!</p>\n    </div>\n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Set the child elements of \"flex1\" to not grow when there is free space, to shrink when there is not enough space, and their size to be based on their content */ \n.flex1 > p {\n\n}\n\n\n/* 2) Set the child elements of \"flex2\" to grow to absorb any extra space, to shrink when there is not enough space, and their size to be based on their content */\n.flex2 > p {\n\n}\n\n/* 3) Set the child elements of \"flex3\" to not grow when there is free space, to not shrink when there is not enough space, and their size to be based on their content  */\n.flex3 > p {\n\n}\n\n\n/* styled parent containers */\n.flex1, .flex2, .flex3 {\n  background: #b691d6;\n  display: flex;\n  padding: 5px;\n  margin: 10px;\n}\n\n/* styled paragraphs */\np {\n  background-color: aliceblue;\n  margin: 5px;\n  padding: 5px;\n  text-align: center;\n  font-size: 20px;\n  border-style: solid;\n  font-family: sans-serif; \n\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:42.629+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L9b-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L9b-2025\"}]"
+}]]></config>
+</Weblab2>

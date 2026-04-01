@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q15_2026'
+
+question 'A developer is deciding whether to store a user\'s workout history as local data or as live data on a remote server. Which tradeoff statement about local data is most accurate?'
+
+wrong 'Local data is always the right choice because it loads instantly and never requires a network request'
+right 'Local data loads faster and works offline, but it can be lost if the user switches devices or clears the app'
+wrong 'Local data is more secure than live data because it is never transmitted over a network'
+wrong 'Local data is only appropriate for apps that do not need to display personalized information'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN
