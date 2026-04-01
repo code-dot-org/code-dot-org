@@ -35,24 +35,13 @@ $(document).ready(function () {
     if (!editor) {
       return;
     }
-    const currentFunctions = JSON.parse(editor.getValue());
-    let functionsWithMaker;
+    const functionsWithMaker = JSON.parse(editor.getValue() || '{}');
     if ($(this).val() === 'circuitPlayground') {
       // Load the circuitPlayground and maker blocks.
-      functionsWithMaker = Object.assign(
-        {},
-        currentFunctions,
-        makerBlocks,
-        circuitBlocks
-      );
+      Object.assign(functionsWithMaker, makerBlocks, circuitBlocks);
     } else if ($(this).val() === 'microbit') {
       // Load the microbit and maker blocks
-      functionsWithMaker = Object.assign(
-        {},
-        currentFunctions,
-        makerBlocks,
-        microbitBlocks
-      );
+      Object.assign(functionsWithMaker, makerBlocks, microbitBlocks);
     }
     editor.setValue(JSON.stringify(functionsWithMaker, null, ' '));
   });
