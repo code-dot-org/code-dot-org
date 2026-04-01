@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T00:37:44.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Predict & Trace**\r\n\r\n#### **Do This:**\r\n\r\n1. Look at the JavaScript code in `script.js`. In the box below, write what you think will happen when you click the **Increase Volume** button.\r\n\r\n2. Click the **Increase Volume** button. Did the result match your prediction?\r\n\r\n3. Use AI Chat to help you review the code.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "When I click the Increase Volume button, I think the page will update the volume number, show a message displaying the current volume level, and make the speaker image appear larger.",
+      "questionType": "freeResponse",
+      "placeholderText": "When I click the \"Increase Volume\" button, I think the page will change by…",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Music Player</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Music Player</h1>\n\n  <img id=\"speakerImage\" src=\"speaker.png\" alt=\"A speaker icon\">\n    \n  <div id=\"textArea\"></div>\n\n  <button id=\"increaseVolumeButton\">Increase Volume</button>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: Arial, Helvetica, sans-serif;\n  color: #1f2937;\n  text-align: center;\n  padding: 32px 20px;\n}\n\nh1 {\n  color: #1d4ed8;\n  margin-bottom: 20px;\n}\n\n#speakerImage {\n  width: 180px;\n  height: auto;\n  display: block;\n  margin: 0 auto 20px;\n  transition: transform 0.3s ease;\n  padding-top: 30px;\n  padding-bottom: 30px;\n  scale: 0.2;\n}\n\n#textArea {\n  margin: 0 auto 20px;\n  max-width: 420px;\n  min-height: 70px;\n  padding: 14px;\n  border: 2px solid #bfdbfe;\n  border-radius: 10px;\n  background-color: white;\n  color: #1d4ed8;\n  font-size: 1rem;\n  line-height: 1.4;\n}\n\nbutton {\n  padding: 10px 16px;\n  border: 1px solid #93c5fd;\n  border-radius: 8px;\n  background-color: #dbeafe;\n  color: #1e3a8a;\n  cursor: pointer;\n  font-weight: 600;\n  font-size: 1rem;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "const volumeButton = document.getElementById(\"increaseVolumeButton\");\nconst textArea = document.getElementById(\"textArea\");\nconst speakerImage = document.getElementById(\"speakerImage\");\n\nlet volumeLevel = 1;\n\nconst increaseVolume = () => {\n  volumeLevel = volumeLevel + 1;\n\n  textArea.textContent = \"Volume level: \" + volumeLevel;\n  speakerImage.style.transform = \"scale(\" + volumeLevel + \")\";\n};\n\nvolumeButton.addEventListener(\"click\", increaseVolume);\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "speaker.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson4-level1-revised_2026/uuid/2c6a8956-ebf8-4bb2-a1fe-ce2930c330bb.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nPDWqG/y3Kw+zkgddQ5gIhed049iKbPVrF3QCGJY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T00:37:44.921+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level1-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level1-revised_2026\"},{\"changed_at\":\"2026-04-01 01:16:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:17:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:17:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:18:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:18:58 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:20:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:21:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

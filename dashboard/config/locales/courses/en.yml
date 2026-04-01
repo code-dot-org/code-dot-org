@@ -6832,3 +6832,30 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csd-2026:
+          title: Computer Science Discoveries
+          description_short: An introductory computer science course that empowers students to create authentic artifacts
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: |
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - This course has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [CSD Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information
+
+            - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
+          version_title: "'25-'26"
+        ai-foundations-designing-and-building-with-ai-2026:
+          title: 'AI Foundations: Designing and Building with AI'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ai-discoveries-2026:
+          title: AI Discoveries
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'26-'27"

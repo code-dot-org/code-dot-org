@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-03-30T18:21:17.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aif2-pl-pipelines",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "## Thinking like a programmer\r\n\r\n#### Designing a pipeline is less about writing code first and more about asking the right questions:\r\n\r\n- #### What problem am I trying to solve for the user?\r\n- #### Which step needs to happen **first**?\r\n- #### What data should move on to the next step?\r\n- #### What should the final output look like?\r\n\r\n#### Two apps can use the **same data** but different pipelines — and get very different results.\r\n\r\n\r\n---\r\n\r\n## Activity Preview\r\n\r\n<p style=\"font-size:14pt; margin-top:16px;\">\r\nWatch the video below to see the steps in creating a pipeline for a \"for you\" feed for a fictional social media app. Use this video to guide you through the activity on the next level. \r\n<br><br>\r\nRemeber, when using AI, results can vary.\r\n\r\n</p>\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-30T18:21:17.642+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-updating-DOM-video\\\"\"],\"cloned_from\":\"pl-aif-2-U2-updating-DOM-video\"},{\"changed_at\":\"2026-03-30 21:25:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-30 21:27:11 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
