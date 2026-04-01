@@ -2,7 +2,7 @@ import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 
 export const DEFAULT_THREAD_TITLE = 'Unnamed chat';
 
-export const DRAWER_WIDTH = 712;
+export const DRAWER_WIDTH = 360;
 export const DRAWER_WIDTH_WELCOME = 512;
 export const DRAWER_FAB_MARGIN = 20;
 
