@@ -1,17 +1,13 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useState, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChatEventLogger from '../chatEventLogger';
 import {
@@ -28,10 +24,7 @@ import {
   setNewChatSession,
   setChatWorkspaceSelectedTab,
 } from '../redux';
-import {
-  addEventToChatEventsCurrent,
-  clearUserAddedSelectionContext,
-} from '../redux/slice';
+import {clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
@@ -69,9 +62,6 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
-
-  // Optional greeting shown as the first assistant message when chat history is empty.
-  welcomeMessage?: string;
 }
 
 /**
@@ -90,7 +80,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
-  welcomeMessage,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -159,63 +148,32 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [clientType, currentLevelId, scriptId, channelId]);
 
-  const [historyLoaded, setHistoryLoaded] = useState(false);
-  const welcomeDispatched = useRef(false);
-
   // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
   // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
-    setHistoryLoaded(false);
-    welcomeDispatched.current = false;
     dispatch(clearChatMessages());
     dispatch(clearStagedFiles());
     dispatch(clearUserAddedSelectionContext());
 
-    const load = async () => {
-      if (selectedStudent) {
-        await dispatch(
-          fetchUserChatHistory({
-            userId: selectedStudent.id,
-            isOwnHistory: false,
-            channelId,
-          })
-        );
-      } else {
-        await dispatch(
-          fetchUserChatHistory({
-            userId: currentUserId,
-            isOwnHistory: true,
-            channelId,
-          })
-        );
-      }
-      setHistoryLoaded(true);
-    };
-
-    load();
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
-
-  // Show a welcome greeting on first open if the chat history is empty.
-  useEffect(() => {
-    if (
-      historyLoaded &&
-      welcomeMessage &&
-      !welcomeDispatched.current &&
-      visibleItems.length === 0
-    ) {
-      welcomeDispatched.current = true;
+    if (selectedStudent) {
       dispatch(
-        addEventToChatEventsCurrent({
-          role: Role.ASSISTANT,
-          chatMessageText: welcomeMessage,
-          status: AiInteractionStatus.OK,
-          timestamp: Date.now(),
-          requestId: -1,
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+        })
+      );
+    } else {
+      dispatch(
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
         })
       );
     }
-  }, [historyLoaded, welcomeMessage, visibleItems.length, dispatch]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));
