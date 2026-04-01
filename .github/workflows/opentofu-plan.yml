@@ -34,7 +34,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.GITHUB_ACTIONS_CODE_DOT_ORG_ROLE_ARN }}
+          role-to-assume: ${{ secrets.GH_ACTIONS_CODE_DOT_ORG_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
 
       - uses: opentofu/setup-opentofu@v2
