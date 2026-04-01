@@ -71,7 +71,6 @@ class Documents < Sinatra::Base
     configs
   end
 
-  use Rack::Locale
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
