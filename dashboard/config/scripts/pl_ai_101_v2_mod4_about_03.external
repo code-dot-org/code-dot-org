@@ -3,15 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Guiding AI Use
+# AI Curriculum Resources
 
-#### Before allowing students to jump into using AI, it’s important to recognize that simply letting them “chat” with an LLM often leads to shallow or unproductive interactions. Without structure, students may ask vague questions, accept answers at face value, or miss opportunities for deeper thinking.
+#### While you can develop your own curriculum for teaching about AI in your classroom, there are a lot of resources already developed. Take some time to check out lesson plans and see if there are any you'd like to try our, or if any spark ideas for lesson plans you can write yourself.
 
-#### Educators can add structure in multiple ways—through worksheets, chat protocols, prompt frameworks, or guided activities.
-
-#### Below are a few examples of guidance or structure you could integrate into your classroom.
-
->#### 💬 **Quick Reflection:** Which of these would put up as a poster in your classroom?
+#### 👉 Click on an image to go to the curriculum webpage.
 
 <div style="column-count:2; column-gap:10px; margin-top:10px;">
 
@@ -52,4 +48,6 @@ markdown <<MARKDOWN
   </div>
 
 </div>
+
+>#### 💬 **Quick Reflection:** ?
 MARKDOWN

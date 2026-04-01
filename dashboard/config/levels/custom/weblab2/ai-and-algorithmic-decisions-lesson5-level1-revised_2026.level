@@ -1,0 +1,93 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T16:39:15.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Homepage</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <h1>Welcome to My Homepage</h1>\n  <img id=\"themeImage\" src=\"sun.png\" alt=\"A sun or moon icon\">\n\n  <div id=\"textArea\"></div>\n  <button id=\"toggleThemeButton\">Switch to Dark Mode</button>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "contents": "const themeButton = document.getElementById(\"toggleThemeButton\");\nconst textArea = document.getElementById(\"textArea\");\nconst themeImage = document.getElementById(\"themeImage\");\nlet isDarkMode = false;\n\nconst toggleTheme = () => {\n  let msg;\n\n  if (isDarkMode === false) {\n    isDarkMode = true;\n    msg = \"Dark mode is on. Easy on the eyes!\";\n    document.body.classList.add(\"dark\");\n    themeButton.textContent = \"Switch to Light Mode\";\n    themeImage.src = \"moon.png\";\n  } else {\n    isDarkMode = false;\n    msg = \"Light mode is on. Bright and clear!\";\n    document.body.classList.remove(\"dark\");\n    themeButton.textContent = \"Switch to Dark Mode\";\n    themeImage.src = \"sun.png\";\n  }\n\n  // Display result to screen\n  document.getElementById(\"textArea\").textContent = msg;\n};\n\nthemeButton.addEventListener(\"click\", toggleTheme);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "contents": "body {\n  font-family: Arial, Helvetica, sans-serif;\n  color: #1f2937;\n  text-align: center;\n  padding: 32px 20px;\n  background-color: #f9fafb;\n  transition: background-color 0.3s ease, color 0.3s ease;\n}\n\nbody.dark {\n  background-color: #111827;\n  color: #f9fafb;\n}\n\nh1 {\n  color: #1d4ed8;\n  margin-bottom: 20px;\n}\n\nbody.dark h1 {\n  color: #93c5fd;\n}\n\n#themeImage {\n  width: 80px;\n  height: auto;\n  display: block;\n  margin: 0 auto 20px;\n  transition: transform 0.3s ease;\n  padding-top: 30px;\n  padding-bottom: 30px;\n}\n\n#textArea {\n  margin: 0 auto 20px;\n  max-width: 420px;\n  min-height: 70px;\n  padding: 14px;\n  border: 2px solid #bfdbfe;\n  border-radius: 10px;\n  background-color: white;\n  color: #1d4ed8;\n  font-size: 1rem;\n  line-height: 1.4;\n  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;\n}\n\nbody.dark #textArea {\n  background-color: #1f2937;\n  color: #93c5fd;\n  border-color: #374151;\n}\n\nbutton {\n  padding: 10px 16px;\n  border: 1px solid #93c5fd;\n  border-radius: 8px;\n  background-color: #dbeafe;\n  color: #1e3a8a;\n  cursor: pointer;\n  font-weight: 600;\n  font-size: 1rem;\n  transition: background-color 0.3s ease, color 0.3s ease;\n}\n\nbody.dark button {\n  background-color: #1e3a8a;\n  color: #bfdbfe;\n  border-color: #3b82f6;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "moon.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson5-level1-revised_2026/uuid/177e7ef6-4348-4a29-8b15-eeffb87a2e98.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "sun.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson5-level1-revised_2026/uuid/e4b71b70-3359-4280-ab97-811f6ac5475d.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "### **Predict & Trace**\r\n\r\n#### **Do This:**\r\n\r\n1. Look at the JavaScript code in `script.js`. In the box below, write what you think will happen when you click the **Switch to Dark Mode** button.\r\n\r\n2. Click the **Switch to Dark Mode** button. Did the result match your prediction?\r\n\r\n3. Use AI Tutor to help you review the code.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "When I click the \"Switch to Dark Mode\" button, I think the page will change by…",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01 18:08:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 18:12:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 18:14:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 18:20:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 18:22:52 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

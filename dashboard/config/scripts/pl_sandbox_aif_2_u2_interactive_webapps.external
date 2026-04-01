@@ -1,0 +1,89 @@
+name 'pl_sandbox_aif_2_U2-interactive-webapps'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Interactivity in Web Apps
+
+#### When you visit a website or open an app, you’re not just looking at information—you’re doing something with it. 
+#### Interactivity is what turns a static page into an engaging experience. It’s what allows users to click, tap, type, scroll, or hover to make something happen.
+
+<details style="background:#f7f8fa; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin:20px 0;">
+  <summary style="font-size:16pt; font-weight:bold; cursor:pointer;">
+    ⚡ Interactive Elements in Web Apps
+  </summary>
+
+<div style="margin-top:15px; line-height:1.6;">
+
+<p style="font-size:14pt;"><strong>Interactive elements come in many forms:</strong></p>
+
+<ul style="padding-left:20px;">
+      <li style="font-size:14pt;"><strong>Buttons</strong> that trigger actions</li><br>
+      <li style="font-size:14pt;"><strong>Menus</strong> that expand or collapse</li><br>
+      <li style="font-size:14pt;"><strong>Search bars</strong> that respond as you type</li><br>
+      <li style="font-size:14pt;"><strong>Icons</strong> that change color or shape when hovered over</li>
+    </ul>
+
+<p style="font-size:14pt; margin-top:15px;">
+      These small moments of feedback and response are what make a web app feel alive and user-friendly.
+    </p>
+
+  </div>
+</details>
+
+
+
+</div>
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong> Interactivity</strong> is the ability of a software application or website to respond to user input.
+</p>
+</div>
+
+
+--- 
+
+> #### Take a look at the website image below and think about where you might see elements of interactivity.
+
+<div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 20px auto;
+">
+  <img 
+    src="https://images.code.org/582df09f74b0f4858ad96c0b75d045f0-image-1760992309979.png" 
+    alt="amazon website 2025"
+    style="width: 80%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.25);"
+  >
+</div>
+
+---
+
+## Reflection
+
+>- #### Where do you notice interactive elements?
+>- #### How might those interactions help or guide the user?
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔍Check my thinking</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    
+<ul>
+  <li style="font-size: 14px;">Search bar (users can type and search)</li>
+  <li style="font-size: 14px;">Navigation menu (dropdowns like “All,” “Prime,” “Customer Service”)</li>
+  <li style="font-size: 14px;">Carousel arrows on the banner (left/right scrolling)</li>
+  <li style="font-size: 14px;">“Join Prime” button</li>
+  <li style="font-size: 14px;">“Sign in securely” button</li>
+  <li style="font-size: 14px;">Product images/tiles (clickable to shop)</li>
+  <li style="font-size: 14px;">“Shop Luxury Stores” / “Shop summer looks” links</li>
+  <li style="font-size: 14px;">Cart and account buttons (top right)</li>
+</ul>
+
+
+</div>
+</details>
+
+
+MARKDOWN

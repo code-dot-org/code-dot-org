@@ -3,73 +3,134 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Examples of AI Use
+# Evaluating AI Use in the Classroom
 
-#### Review the following examples of ways that students can use AI within a classroom or at home to support their learning.
+#### Using AI does not guarentee that your lesson plan will be support the needs of your students.
 
->#### 💬 **Quick Reflection:** As you read think about which of these scenarios are ones you would feel comfortable implementing in your own classroom. Which ones wouldn't you implement and why?
+#### Before using AI for teacher support or student learning, you will want to evaluate whether or not it will meet the needs of your students. To do so, you can use a checklist like the one below:
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
-  
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/74cd4e2369d3fc68024d19aa164f3e77-Screenshot 2026-02-04 at 3.02.44 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">A student drafts a claim-evidence-reasoning paragraph for a lab report, then asks AI for two revision options. The student evaluates both, notes what improved, rejects inaccurate science, and produces a final version with a short explanation of what they changed and why.</p>
+<br>
+
+<table style="width:100%; max-width:700px; margin:0 auto; border-collapse:separate; border-spacing:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36; background-color:#FFFFFF; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(41,47,54,0.05);">
+<thead>
+<tr>
+<th colspan="2" style="background-color:#0093A4; color:#FFFFFF; text-align:left; padding:14px 18px; font-size:20px; font-weight:700; line-height:1.3;">
+Evaluating AI Use Checklist
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Does this expand access while keeping the challenge?
+</td>
+</tr>
+
+<tr style="background-color:#F7F8FA;">
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Are students still doing the meaningful thinking?
+</td>
+</tr>
+
+<tr>
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Does this strengthen student voice and identity?
+</td>
+</tr>
+
+<tr style="background-color:#F7F8FA;">
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Will this build independence over time?
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<br>
+
+#### If most answers are yes, the design is likely supporting strong teaching and meaningful learning.
+
+## Evaulation Scenarios
+
+#### Take a look at two scenarios where AI was used in the classroom. We'll use these as examples of how to apply the checklist.
+
+#### 👉 Click on the scenario to see how it does against the checklist.
+
+>#### **💬 Quick Reflection:** Take a moment to evaluate each scenario on your own before clicking to show the answer.
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario A
+</div>
+<div style="font-size:14px; color:#555;">
+A 7th-grade math student is solving multi-step equations and keeps making the same mistake. They ask AI for “a hint only” and then “one worked example that is similar but not the same.” The student completes the problem, compares their steps to the example, and writes a quick note about the error they fixed.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:16px; line-height:1.5;">
+
+<p><strong>Expand access while keeping the challenge? ✔︎</strong><br>
+The hint provides support, but the student still solves the original grade-level problem.</p>
+
+<p><strong>Students still doing meaningful thinking? ✔︎</strong><br>
+The student analyzes their mistake, compares steps, and reflects on their correction.</p>
+
+<p><strong>Strengthens voice and identity? ✔︎</strong><br>
+The reasoning and final solution remain the student’s own.</p>
+
+<p><strong>Builds independence over time? ✔︎</strong><br>
+Scaffolded help plus reflection supports skill growth and future problem-solving.</p>
+
+<p style="margin-top:12px;"><strong>Overall:</strong> This design increases access while preserving rigor, ownership, and long-term growth.</p>
+
+</div>
+</details>
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario B
+</div>
+<div style="font-size:14px; color:#555;">
+An 8th-grade English student writes a literary analysis essay and asks AI to improve clarity and make the writing more sophisticated. The student reviews the suggestions and accepts most of them. The final essay is stronger and now mirrors work typically produced by a 12th-grade student.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:16px; line-height:1.5;">
+
+<p><strong>Expand access while keeping the challenge? ◑</strong><br>
+The product improves, but the cognitive challenge of crafting language may be reduced.</p>
+
+<p><strong>Students still doing meaningful thinking? ✖︎</strong><br>
+Accepting broad revisions limits the student’s active revision and stylistic decision-making.</p>
+
+<p><strong>Strengthens voice and identity? ✖︎</strong><br>
+Heavy rewriting can shift or dilute authentic student voice.</p>
+
+<p><strong>Builds independence over time? ✖︎</strong><br>
+Repeated reliance on AI for stylistic upgrades may slow development of writing skills.</p>
+
+<p style="margin-top:12px;"><strong>Overall:</strong> The essay appears stronger, but the design does not fully support independence, ownership, or deep skill development.</p>
+
+</div>
+</details>
+
 </div>
 
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/36fbd1519b267daab49c5e56032ac2e5-Screenshot 2026-02-04 at 3.02.28 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">An 8th-grade English student writes a literary analysis essay and asks AI to improve clarity and make the writing more sophisticated. The student reviews the suggestions and accepts most of them. The final essay is stronger and now mirrors work typically produced by a 12th-grade student.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/79b1233d96849775ef76ef1f73f02ca4-Screenshot 2026-02-04 at 3.01.59 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">After a lesson on symbolism in literature, a student asks AI to generate five quick questions. The student answers without notes, then asks AI to explain why each correct answer is correct and where their incorrect answers went off track.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/36fbd1519b267daab49c5e56032ac2e5-Screenshot 2026-02-04 at 3.02.28 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">Before beginning a social studies presentation, a student asks AI to outline a possible structure for organizing their slides. The student adjusts the outline to fit their topic and fills in the content using their class notes and research.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/70c1ca931790351868059db748869eaa-Screenshot 2026-02-04 at 3.02.12 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">A 10th-grade student is stuck on cellular respiration. They ask AI to explain it in three different ways, then summarize the explanation in their own words and identify one question they still have.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/36fbd1519b267daab49c5e56032ac2e5-Screenshot 2026-02-04 at 3.02.28 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">A student uses AI to brainstorm project ideas, selects one, and creates a plan with milestones. In a conference, the student explains and justifies key choices to demonstrate ownership of the work.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/58c41bce591f6f537a6f05ea6cccbd34-Screenshot 2026-02-04 at 3.02.17 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">A 7th-grade math student solving multi-step equations asks AI for a hint and one similar worked example. The student completes the problem and reflects on the error they corrected.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/36fbd1519b267daab49c5e56032ac2e5-Screenshot 2026-02-04 at 3.02.28 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">A high school student researching renewable energy asks AI to suggest additional angles for their argument. The student incorporates two suggestions and later looks for sources that support those ideas.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/b89d7ef318c1cf734fe77e43a383e684-Screenshot 2026-02-04 at 3.02.23 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">In a civics unit, a student writes their argument first, then uses AI to generate counterarguments. The student strengthens their reasoning while documenting which AI suggestions they used and which they rejected.</p>
-</div>
-
-<!-- Scenario -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<img src="https://images.code.org/ea5377f42ea970179efa9f124600378b-Screenshot 2026-02-04 at 3.02.39 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:120px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
-<p style="font-size:14px;">During a design project, students keep an AI use log documenting prompts, suggestions, and reflections about when the tool helped and when it didn’t.</p>
-</div>
-
-</div>
 MARKDOWN
