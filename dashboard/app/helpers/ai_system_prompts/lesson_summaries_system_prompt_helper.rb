@@ -105,10 +105,10 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
 Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
 Learning Objectives: #{lesson_plan[:objectives].to_json}
-#{'Lesson Purpose: '+lesson_plan[:purpose] if lesson_plan[:purpose]}
-#{'Assessment Opportunities: '+lesson_plan[:assessment_opportunities] if lesson_plan[:assessment_opportunities]}
+#{'Lesson Purpose: ' + lesson_plan[:purpose] if lesson_plan[:purpose]}
+#{'Assessment Opportunities: ' + lesson_plan[:assessment_opportunities] if lesson_plan[:assessment_opportunities]}
 Standards: #{lesson_plan[:standards].to_json}
-#{'Opportunity Standards: '+lesson_plan[:opportunity_standards].to_json.to_s if lesson_plan[:opportunity_standards]}
+#{'Opportunity Standards: ' + lesson_plan[:opportunity_standards].to_json.to_s if lesson_plan[:opportunity_standards]}
 Activities: #{lesson_plan[:activities].to_json}
 Preparation: #{lesson_plan[:preparation]}
 Vocabulary: #{lesson_plan[:vocabularies].to_json}

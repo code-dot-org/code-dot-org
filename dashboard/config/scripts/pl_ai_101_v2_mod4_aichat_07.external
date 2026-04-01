@@ -1,0 +1,37 @@
+name 'pl-ai-101-V2-mod4-AIchat-07'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Classroom Use Policy
+
+#### Schools and classrooms need clear expectations for how AI tools are used. An **AI Classroom Use Policy** helps ensure AI supports learning while maintaining academic integrity, protecting student data, and promoting responsible use.
+
+>#### **💬 Quick Reflection:** Does your school or district have an AI Classroom Use Policy? If so, are you familiar with it?
+
+#### Rather than creating entirely new policies, many schools can build on existing guidelines—such as responsible use, academic integrity, and data privacy—to address AI use consistently.
+
+## Key Considerations
+
+#### When developing or adapting an AI use policy, consider the following:
+
+#### **Responsible Use and Critical Thinking**: Students and staff should treat AI as a tool, not an authority. AI-generated content should be reviewed, questioned, and verified, as it may contain inaccuracies or bias.
+
+#### **Transparency and Academic Integrity**: Expectations should clarify when and how AI can be used. Students should disclose and cite AI use, and unacknowledged AI-generated work should be treated as a violation of academic integrity.
+
+#### **Clear Guidance for Classroom Use**: Teachers should define appropriate and inappropriate uses of AI for different tasks and communicate these expectations clearly.
+
+#### **Data Privacy and Safety**: Students and staff should avoid entering personal or sensitive information into AI tools, and schools should use approved tools that meet privacy standards.
+
+#### **Access and Equity**: Policies should ensure AI use does not depend on unequal access to devices, accounts, or tools.
+
+#### **Appropriate Use and Conduct**: AI should not be used to create harmful or misleading content and should align with existing conduct policies. 
+
+#### Effective policies are clear, practical, and developed with input from educators, students, families, and community members, while reflecting local context and available resources. 
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ For sample language and additional guidance check out TeachAI's <a href="https://www.teachai.org/toolkit-addendums" target="blank" rel="noopener noreferrer">Framework</a>.
+</p>
+
+
+MARKDOWN
