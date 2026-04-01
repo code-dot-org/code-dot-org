@@ -7,6 +7,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useLevelProperties} from '../levelPropertiesContext';
+import aichatI18n from '../locale';
 
 import PublishNotes from './modelCustomization/PublishNotes';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
@@ -51,8 +52,10 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isSetupCustomizationReadOnly || isReadOnly) &&
           selectedTab === 'setup'
-            ? 'Setup (view only)'
-            : 'Setup',
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_setupText(),
+              })
+            : aichatI18n.modelCustomizationTab_setupText(),
         tabContent: <SetupCustomization />,
         iconLeft:
           isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined,
@@ -64,8 +67,10 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isDisabled(retrievalContexts) || isReadOnly) &&
           selectedTab === 'retrieval'
-            ? 'Retrieval (view only)'
-            : 'Retrieval',
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_retrievalText(),
+              })
+            : aichatI18n.modelCustomizationTab_retrievalText(),
         tabContent: <RetrievalCustomization />,
         iconLeft:
           isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
@@ -77,8 +82,10 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isDisabled(modelCardInfo) || isReadOnly) &&
           selectedTab === 'modelCardInfo'
-            ? 'Publish (view only)'
-            : 'Publish',
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_modelPublishText(),
+              })
+            : aichatI18n.modelCustomizationTab_modelPublishText(),
         tabContent: <PublishNotes />,
         iconLeft:
           isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined,

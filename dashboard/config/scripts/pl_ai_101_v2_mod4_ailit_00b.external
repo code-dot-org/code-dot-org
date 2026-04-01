@@ -2,8 +2,8 @@ name 'pl-ai-101-V2-mod4-AILit-00b'
 title 'title'
 description 'description here'
 display_name 'Skills'
-bubble_choice_description 'These skills represent fundamental human abilities applied to an AI context. They guide learners in using AI ethically and ensure that learners actively shape how AI fits into their lives.'
-thumbnail_url 'https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png'
+bubble_choice_description ''
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
 
 markdown <<MARKDOWN
 # Skills: What Students Can Do with AI

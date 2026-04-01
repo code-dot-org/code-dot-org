@@ -13,25 +13,25 @@ import GenericStudentLessonSummary from './GenericStudentLessonSummary';
 import PracticeOptions from './PracticeOptions';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
-import styles from '@cdo/apps/aiTutor/views/lessonDeepDive/lesson-deep-dive-ai-tutor.module.scss';
+import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
 
 type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
 
-export type LessonDeepDiveData = {
+export type LessonPracticeData = {
   lessonName: string;
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
 };
 
-export const LessonDeepDive: FC<{lessonDeepDiveData: LessonDeepDiveData}> = ({
-  lessonDeepDiveData: {lessonName, lessonSummary, vocabulary},
+export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
+  lessonPracticeData: {lessonName, lessonSummary, vocabulary},
 }) => {
   const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
     null
   );
   const hasVocabulary = vocabulary && vocabulary.length > 0;
 
-  if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
+  if (!experiments.isEnabled(experiments.AI_TUTOR_LESSON_PRACTICE)) {
     return null;
   }
 

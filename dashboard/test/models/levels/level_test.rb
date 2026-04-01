@@ -312,7 +312,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'returns concept videos with related videos' do
     level = create(:level)
-    level.concepts = create_list(:concept, 2, :with_video)
+    level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
     assert_includes(level.related_videos, level.concepts.first.related_video)
     assert_includes(level.related_videos, level.concepts.second.related_video)
   end
@@ -654,13 +654,19 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil level.ideal_level_source_id
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
-    create_list(:activity, 6, level: level, level_source: right, test_result: 100)
+    6.times do
+      create(:activity, level: level, level_source: right, test_result: 100)
+    end
 
     wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
-    create_list(:activity, 10, level: level, level_source: wrong, test_result: 0)
+    10.times do
+      create(:activity, level: level, level_source: wrong, test_result: 0)
+    end
 
     right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
-    create_list(:activity, 2, level: level, level_source: right_but_unpopular, test_result: 100)
+    2.times do
+      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
+    end
 
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source

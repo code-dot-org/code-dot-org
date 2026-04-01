@@ -55,8 +55,18 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
+---
 
+## Thinking like a programmer
 
+#### Designing a pipeline is less about writing code first and more about asking the right questions:
+
+- #### What problem am I trying to solve for the user?
+- #### Which step needs to happen **first**?
+- #### What data should move on to the next step?
+- #### What should the final output look like?
+
+#### Two apps can use the **same data** but different pipelines — and get very different results.
 
 
 

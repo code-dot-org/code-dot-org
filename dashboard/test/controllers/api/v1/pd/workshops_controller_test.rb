@@ -297,7 +297,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'filter limit' do
     # 10 more workshops, bringing the total to 12
-    create_list(:workshop, 10)
+    10.times do
+      create(:workshop)
+    end
 
     sign_in create :admin
     get :filter, params: {limit: 5}
@@ -310,7 +312,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'filters' do
     # 10 workshops from different organizers that will be filtered out
-    create_list(:workshop, 10)
+    10.times do
+      create(:workshop)
+    end
 
     # Same organizer
     organizer = create(:workshop_organizer)
@@ -669,7 +673,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     sign_in create :admin
 
     # create some enrollments
-    create_list(:pd_enrollment, 5, workshop: @workshop)
+    5.times do
+      create(:pd_enrollment, workshop: @workshop)
+    end
     Pd::WorkshopMailjetMailer.expects(:send_teacher_workshop_detail_change_notification).never
     Pd::WorkshopMailjetMailer.expects(:send_rp_workshop_detail_change_notification).never
 

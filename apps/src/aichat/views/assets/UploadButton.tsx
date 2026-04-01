@@ -13,6 +13,7 @@ import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ACCEPTED_FILE_TYPES, MAX_NUM_FILES} from '../../constants';
+import aichatI18n from '../../locale';
 import {addStagedFile, sendAnalytics, uploadFiles} from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
@@ -97,7 +98,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 
   const DSCO_buttonPropsWithLabel = {
     ...DSCO_buttonPropsCommon,
-    text: 'Add file',
+    text: aichatI18n.aichatAddFile(),
     iconLeft: {iconName: 'plus'},
   };
 
@@ -118,7 +119,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 
   const buttonPropsWithLabel: MuiButtonProps = {
     ...buttonPropsCommon,
-    children: 'Add file',
+    children: aichatI18n.aichatAddFile(),
     startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
@@ -136,7 +137,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     <ActionDropdown
       {...DSCO_commonProps}
       name="uploadDropdown"
-      labelText={'Upload'}
+      labelText={aichatI18n.upload()}
       triggerButtonProps={
         showLabel ? DSCO_buttonPropsWithLabel : DSCO_buttonPropsIconOnly
       }
@@ -144,7 +145,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       options={[
         {
           value: 'fromLibrary',
-          label: 'From Library',
+          label: aichatI18n.fromLibrary(),
           icon: {iconName: 'copy'},
           onClick: () => {
             setShowAssetManager(true);
@@ -157,7 +158,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         },
         {
           value: 'fromDevice',
-          label: 'From Device',
+          label: aichatI18n.fromDevice(),
           icon: {iconName: 'file-magnifying-glass'},
           onClick: onDeviceUploadClick,
         },
