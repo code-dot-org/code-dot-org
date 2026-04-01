@@ -16,6 +16,7 @@ import {
   MultiFileSource,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import Loading from '@cdo/apps/lab2/views/Loading';
 import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
 
 import {useSource} from '../codebridge/hooks/useSource';
@@ -81,9 +82,10 @@ const defaultSource: MultiFileSource = {
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
-const Weblab2View: React.FC<
-  LabProps<Weblab2LevelProperties, ProjectSources>
-> = ({levelProperties, initialSources}) => {
+const Weblab2LoadedView = ({
+  levelProperties,
+  initialSources,
+}: LabProps<Weblab2LevelProperties, ProjectSources>) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
@@ -190,6 +192,124 @@ const Weblab2View: React.FC<
         />
       )}
     </div>
+  );
+};
+
+const Weblab2View: React.FC<
+  LabProps<Weblab2LevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
+  const [reformedSources, setReformedSources] = useState<
+    ProjectSources | undefined | null
+  >(null);
+
+  // When we are in a legacy Weblab level and we didn't pull modern sources,
+  // this might mean that we have legacy sources. We need to poll the old files
+  // API for a file list before we render and save the project sources into the
+  // ProjectContainer.
+  //
+  // Once the level loads and we use the ProjectManager to save, we now supply
+  // the modern sources API and that will get pulled as 'initialSources' on the
+  // next page load. That will complete the cycle and fully migrate the project
+  // over to Weblab2.
+  const fetchingLegacySources = useMemo(
+    () => levelProperties.appName === 'weblab' && !initialSources,
+    [initialSources, levelProperties]
+  );
+
+  // We need the channel id just in case we need to pull from the files API
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
+  useEffect(() => {
+    // Load, potentially, the weblab 1 sources and convert them before
+    // continuing to load the view
+    if (fetchingLegacySources) {
+      (async () => {
+        // Get the file list
+        const response = await fetch(`/v3/files/${channelId}`);
+        if (!response.ok) {
+          // An error probably means there's no existing legacy project, so do
+          // nothing and the default project will get created from the startSources.
+          // And then set the current sources, which will finally allow the actual
+          // Weblab view to load.
+          setReformedSources(undefined);
+          return;
+        }
+
+        console.log('response', response);
+        const filesList = await response.json();
+
+        // Parse through and download all of the files referenced in the files list
+        const promises = (filesList?.files || []).map(
+          async (
+            file: {
+              filename: string;
+              category: 'text' | 'image';
+            },
+            i: number
+          ) => {
+            const id = (i + 1).toString();
+            const fileURL = `/v3/files/${channelId}/${file.filename}`;
+            if (file.category !== 'image') {
+              // For text content, pull it down so we can store it in the sources
+              const fileResponse = await fetch(fileURL);
+              return [
+                id,
+                {
+                  id,
+                  contents: await fileResponse.text(),
+                  name: file.filename,
+                  folderId: '0',
+                },
+              ];
+            } else {
+              // For images, just reference the image directly from its existing
+              // uploaded place in the files bucket.
+              return [
+                id,
+                {
+                  id,
+                  contents: '',
+                  url: fileURL,
+                  name: file.filename,
+                  folderId: '0',
+                },
+              ];
+            }
+          }
+        );
+
+        // Resolve all of the file metadata
+        const files = await Promise.all(promises);
+
+        // And then set the current sources, which will finally allow the actual
+        // Weblab view to load.
+        setReformedSources({
+          source: {
+            // Convert array to object keyed by the id property
+            files: Object.fromEntries(files),
+            folders: {},
+          },
+        });
+      })();
+    }
+  }, [setReformedSources, fetchingLegacySources, channelId]);
+
+  return fetchingLegacySources ? (
+    // Weblab 1 Conversion
+    reformedSources !== null ? (
+      <Weblab2LoadedView
+        levelProperties={levelProperties}
+        initialSources={reformedSources}
+      />
+    ) : (
+      <Loading isLoading={true} />
+    )
+  ) : (
+    // Normal Weblab 2
+    <Weblab2LoadedView
+      levelProperties={levelProperties}
+      initialSources={initialSources}
+    />
   );
 };
 

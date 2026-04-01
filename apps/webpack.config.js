@@ -221,7 +221,6 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
-    localeDoNotImport('@cdo/weblab/locale'),
     localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),

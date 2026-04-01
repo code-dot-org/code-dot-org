@@ -273,7 +273,6 @@ class FilesApi < Sinatra::Base
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
-    not_found if html_file?(filename) && !valid_html_file?(encrypted_channel_id, filename, result[:body].string)
 
     # clients still get a 304 Not Modified from us if their cache is fresh,
     # even if we had to fetch html from s3 to validate it
@@ -355,47 +354,6 @@ class FilesApi < Sinatra::Base
 
   def html_file?(filename)
     File.extname(filename&.downcase) == '.html'
-  end
-
-  def valid_html_content?(body)
-    disallowed_tags = DCDO.get('disallowed_html_tags', [])
-
-    # Applicable Nokogiri selector rules:
-    #   Element selectors must start with //
-    #   Attribute selectors must start with @
-    #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
-    disallowed_tag_selectors = disallowed_tags.map do |tag|
-      tag_dup = tag.dup
-      attr_selector_index = tag_dup.index('[')
-      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
-      '//' + tag_dup
-    end
-
-    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
-    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
-
-    Nokogiri::HTML(body).xpath(
-      *disallowed_tag_selectors,
-      disallow_on_attrs_selector,
-    ).empty?
-  end
-
-  # Determine whether or not a file is a valid HTML file.
-  # Returns true if:
-  #   1. It does not belong to a WebLab project.
-  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
-  # Returns false if the file is not an HTML file, does not belong to a project, or
-  # is a WebLab HTML file that contains disallowed HTML tags.
-  def valid_html_file?(encrypted_channel_id, filename, body)
-    return false unless html_file?(filename)
-
-    # Only validate WebLab HTML files. We need to get the project from the database
-    # in order to check whether or not the file belongs to a WebLab project.
-    project = Projects.new(get_storage_id).get(encrypted_channel_id)
-    return false unless project
-    return true unless project[:projectType]&.downcase == 'weblab'
-
-    valid_html_content?(body)
   end
 
   #
@@ -776,7 +734,6 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
-    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)

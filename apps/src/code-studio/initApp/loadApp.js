@@ -85,8 +85,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
         appOptions.app === 'spritelab' ||
-        appOptions.app === 'poetry' ||
-        appOptions.app === 'weblab'
+        appOptions.app === 'poetry'
       ) {
         $('#clear-puzzle-header').hide();
         // Only show version history if user is project owner, or teacher viewing student work

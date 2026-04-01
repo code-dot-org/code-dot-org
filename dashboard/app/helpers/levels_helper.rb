@@ -622,16 +622,6 @@ module LevelsHelper
     {voices: AzureTextToSpeech.get_voices || {}}
   end
 
-  def disallowed_html_tags
-    DCDO.get('disallowed_html_tags', [])
-  end
-
-  def disallowed_html_attrs
-    @disallowed_html_attrs ||= JSON.parse(
-      File.read(CDO.dir('apps', 'src', 'weblab', 'disallowed-html-attrs.json'))
-    )
-  end
-
   # Options hash for Blockly
   def blockly_options
     l = @level

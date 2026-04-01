@@ -578,36 +578,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil level.examples
   end
 
-  test 'weblab examples' do
-    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
-
-    level = Weblab.create(name: 'weblab_with_example')
-    level.examples = ['xxxxxx', 'yyyyyy']
-
-    # go through a save/load
-    level.save!
-    level = level.reload
-
-    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
-
-    # this property is encrypted, not plaintext
-    assert_nil level.properties['examples']
-    assert level.properties['encrypted_examples']
-
-    # take out nils and empty strings
-    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
-
-    # go through a save/load
-    level.save!
-    level = level.reload
-
-    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
-
-    # does not crash if decryption is busted
-    CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_nil level.examples
-  end
-
   test 'cached_find' do
     cache_custom_level = Level.cache_find(@custom_level.id)
     assert_equal(@custom_level, cache_custom_level)

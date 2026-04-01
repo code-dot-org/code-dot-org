@@ -20,7 +20,6 @@ const ALL_APPS = [
   'spritelab',
   'studio',
   'turtle',
-  'weblab',
 ];
 
 // prettier-ignore
@@ -125,7 +124,6 @@ const CODE_STUDIO_ENTRIES = {
   'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
   'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
   'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-  'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };
 
 // prettier-ignore
@@ -263,8 +261,6 @@ const OTHER_ENTRIES = {
   embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
   publicKeyCryptography: './src/publicKeyCryptography/main.js',
-
-  brambleHost: './src/weblab/brambleHost.js',
 
   'applab-api': './src/applab/api-entry.js',
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',

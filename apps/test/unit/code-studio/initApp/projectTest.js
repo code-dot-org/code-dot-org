@@ -52,13 +52,6 @@ describe('project.js', () => {
       );
     });
 
-    it('for weblab', () => {
-      window.appOptions.app = 'weblab';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameWebLab()
-      );
-    });
-
     it('for artist', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist';
@@ -208,11 +201,6 @@ describe('project.js', () => {
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
       expect(project.getStandaloneApp()).to.equal('flappy');
-    });
-
-    it('for weblab', () => {
-      window.appOptions.app = 'weblab';
-      expect(project.getStandaloneApp()).to.equal('weblab');
     });
 
     it('for gamelab', () => {
@@ -400,8 +388,6 @@ describe('project.js', () => {
 
     const NORMAL_APP_TYPES = ['artist', 'playlab', 'applab', 'gamelab'];
 
-    const CODEPROJECTS_APP_TYPES = ['weblab'];
-
     beforeEach(() => {
       sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
       sinon.stub(project, 'getCurrentId').returns(fakeProjectId);
@@ -436,34 +422,6 @@ describe('project.js', () => {
             it(`from a script level`, () => {
               setFakeLocation(
                 `${origin}/courses/csp-2019/units/3/lessons/10/levels/4`
-              );
-              expect(project.getShareUrl()).to.equal(expected);
-            });
-          });
-        });
-
-        CODEPROJECTS_APP_TYPES.forEach(appType => {
-          const expected = `${codeProjectsOrigin}/projects/weblab/${fakeProjectId}`;
-          describe(`${appType} projects share to ${expected}`, () => {
-            beforeEach(() => project.getStandaloneApp.returns(appType));
-
-            it(`from project edit page`, () => {
-              setFakeLocation(
-                `${origin}/projects/${appType}/${fakeProjectId}/edit`
-              );
-              expect(project.getShareUrl()).to.equal(expected);
-            });
-
-            it(`from project view page`, () => {
-              setFakeLocation(
-                `${origin}/projects/${appType}/${fakeProjectId}/view`
-              );
-              expect(project.getShareUrl()).to.equal(expected);
-            });
-
-            it(`from a script level`, () => {
-              setFakeLocation(
-                `${origin}/courses/csp-2019/units/1/lessons/10/levels/4`
               );
               expect(project.getShareUrl()).to.equal(expected);
             });
