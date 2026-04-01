@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 
 import {aichatReducer, setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   getStore,
   registerReducers,
@@ -85,7 +84,6 @@ describe('AIDiffFloatingActionButton', () => {
       currentUser,
       teacherSections,
       aichat: aichatReducer,
-      lab2Project,
     });
     store.dispatch(
       setInitialData({

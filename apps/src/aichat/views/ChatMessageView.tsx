@@ -185,11 +185,11 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   return (
     <ChatMessage
       text={displayText}
+      postText={postText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       header={header}
       footer={footer}
-      postText={postText}
     />
   );
 };
