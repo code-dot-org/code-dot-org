@@ -33,6 +33,20 @@ var msg = require('@cdo/locale');
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
 
+let cachedSelectedAnimationsByUrl = null;
+let cachedSelectedAnimationsList = [];
+
+function getSelectedAnimations(state) {
+  const selectedAnimationsByUrl = state.animationPicker.selectedAnimations;
+  if (selectedAnimationsByUrl === cachedSelectedAnimationsByUrl) {
+    return cachedSelectedAnimationsList;
+  }
+
+  cachedSelectedAnimationsByUrl = selectedAnimationsByUrl;
+  cachedSelectedAnimationsList = Object.values(selectedAnimationsByUrl);
+  return cachedSelectedAnimationsList;
+}
+
 export const PICKER_TYPE = makeEnum(
   'spritelab',
   'gamelab',
@@ -314,7 +328,7 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    selectedAnimations: getSelectedAnimations(state),
     uploadWarningShowing: state.animationPicker.uploadWarningShowing,
     uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
