@@ -82,9 +82,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasInstructionsDrawer,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
-  if (multimodalEnabled && (!levelName || !channelId)) {
+  const canDisplayAssets = !!levelName && !!channelId;
+  if (multimodalEnabled && !canDisplayAssets) {
     console.warn(
-      'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
+      'Multimodal support requires level name and channel ID. Asset uploads will not be available.'
     );
     multimodalEnabled = false;
   }
@@ -120,14 +121,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
 
-  const multimodalSupported = useMemo(() => {
+  const supportsMultimodalInput = useMemo(() => {
     return modelDescriptions.find(
       model => model.id === modelParameters.selectedModelId
     )?.multimodal;
   }, [modelParameters.selectedModelId]);
 
-  const multimodalAvailable =
-    multimodalSupported && multimodalEnabled && !!levelName && !!channelId;
+  const canUploadAssets =
+    supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
 
   const buildAssetUrl = useCallback(
     (asset: ChatAsset) => {
@@ -245,7 +246,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     iconStyle: 'solid',
   };
 
-  const buildAssetUrlValue = multimodalAvailable ? buildAssetUrl : undefined;
+  const buildAssetUrlValue = canDisplayAssets ? buildAssetUrl : undefined;
 
   const tabs = [
     {
@@ -322,7 +323,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         />
       )}
       <div className={moduleStyles.footer}>
-        {multimodalAvailable && (
+        {canUploadAssets && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
         <UserAddedSelectionContextPreview />
@@ -333,11 +334,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
-            multimodalAvailable={multimodalAvailable}
+            multimodalAvailable={canUploadAssets}
             responseCallback={responseCallback}
             levelName={levelName}
             hasStarterAssets={hasStarterAssets}
-            buildAssetUrl={buildAssetUrl}
+            buildAssetUrl={buildAssetUrlValue}
             logLevelActivity={logLevelActivity}
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
