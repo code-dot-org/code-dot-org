@@ -207,7 +207,7 @@ export default function AddCoteacher({
           variant="figcaption"
           gutterBottom
         >
-          <FontAwesome icon="info-circle" className={styles.infoCircle} />
+          <FontAwesome icon="circle-info" className={styles.infoCircle} />
           {addError}
         </Typography>
       );

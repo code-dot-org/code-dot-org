@@ -16,6 +16,12 @@ module Observability
       require 'sentry-ruby'
       require 'sentry-rails'
       require 'sentry-opentelemetry' if CDO.enable_opentelemetry
+
+      config.to_prepare do
+        ActiveSupport.on_load(:action_controller) do
+          include Observability::Sentry::UserContext
+        end
+      end
     end
 
     initializer 'observability.opentelemetry' do

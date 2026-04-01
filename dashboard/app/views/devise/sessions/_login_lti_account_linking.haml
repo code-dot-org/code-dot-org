@@ -59,7 +59,7 @@
   %div
     - if params[:lti_provider].present? && params[:email].present?
       %a.go-back-link{href: lti_v1_account_linking_landing_path(lti_provider: params[:lti_provider], email: params[:email])}
-        %i.fa.fa-arrow-left
+        %i.fa-solid.fa-arrow-left
         = t('lti.account_linking.go_back')
 
   = link_to t('cancel'), users_cancel_path
