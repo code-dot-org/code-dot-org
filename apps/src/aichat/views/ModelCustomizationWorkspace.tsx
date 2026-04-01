@@ -7,7 +7,6 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useLevelProperties} from '../levelPropertiesContext';
-import aichatI18n from '../locale';
 
 import PublishNotes from './modelCustomization/PublishNotes';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
@@ -52,10 +51,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isSetupCustomizationReadOnly || isReadOnly) &&
           selectedTab === 'setup'
-            ? aichatI18n.viewOnlyTabLabel({
-                fieldLabel: aichatI18n.modelCustomizationTab_setupText(),
-              })
-            : aichatI18n.modelCustomizationTab_setupText(),
+            ? 'Setup (view only)'
+            : 'Setup',
         tabContent: <SetupCustomization />,
         iconLeft:
           isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined,
@@ -67,10 +64,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isDisabled(retrievalContexts) || isReadOnly) &&
           selectedTab === 'retrieval'
-            ? aichatI18n.viewOnlyTabLabel({
-                fieldLabel: aichatI18n.modelCustomizationTab_retrievalText(),
-              })
-            : aichatI18n.modelCustomizationTab_retrievalText(),
+            ? 'Retrieval (view only)'
+            : 'Retrieval',
         tabContent: <RetrievalCustomization />,
         iconLeft:
           isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
@@ -82,10 +77,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         text:
           (isDisabled(modelCardInfo) || isReadOnly) &&
           selectedTab === 'modelCardInfo'
-            ? aichatI18n.viewOnlyTabLabel({
-                fieldLabel: aichatI18n.modelCustomizationTab_modelPublishText(),
-              })
-            : aichatI18n.modelCustomizationTab_modelPublishText(),
+            ? 'Publish (view only)'
+            : 'Publish',
         tabContent: <PublishNotes />,
         iconLeft:
           isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined,
