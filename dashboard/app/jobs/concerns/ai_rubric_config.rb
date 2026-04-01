@@ -78,16 +78,16 @@ class AiRubricConfig
   end
 
   def self.validate_ai_config
-    # TODO: Also validate rubrics with ai-enabled learning goals, even if they
-    # lack s3_config_dir, to catch missing configs before users hit errors.
     rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
-
     lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
     code = 'hello world'
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
-    validate_learning_goals(rubrics_with_s3_config)
+
+    rubrics_with_ai = Rubric.joins(:learning_goals).where(learning_goals: {ai_enabled: true}).distinct
+    validate_learning_goals(rubrics_with_ai)
+
     S3_AI_RELEASE_PATH
   end
 
@@ -105,9 +105,9 @@ class AiRubricConfig
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
-  # For each rubric with s3_config_dir, validate that every ai-enabled
-  # learning goal in the rubric in the database has a corresponding learning
-  # goal in the rubric in S3.
+  # For each rubric with ai-enabled learning goals, validate that the rubric
+  # has s3_config_dir set and that every ai-enabled learning goal in the
+  # database has a corresponding learning goal in the rubric in S3.
   private_class_method def self.validate_learning_goals(rubrics)
     rubrics.each do |rubric|
       validate_learning_goals_for_rubric(rubric)
@@ -117,8 +117,12 @@ class AiRubricConfig
   end
 
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = rubric.s3_config_dir
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    return if db_learning_goals.empty?
+
+    lesson_s3_name = rubric.s3_config_dir
+    raise "Rubric #{rubric.id} has ai-enabled learning goals but no s3_config_dir set" if lesson_s3_name.blank?
+
     s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
     missing_learning_goals = db_learning_goals - s3_learning_goals
     if missing_learning_goals.any?
