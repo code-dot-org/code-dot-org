@@ -15,6 +15,9 @@ $(document).ready(function () {
       promptSettings={promptSettings}
       legacyMode={legacyMode}
     />,
-    document.getElementById('ai-tutor-prompt-settings-editor')
+    document.getElementById('ai-tutor-prompt-settings-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

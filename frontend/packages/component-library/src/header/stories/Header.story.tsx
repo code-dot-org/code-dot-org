@@ -20,7 +20,6 @@ export default {
         ],
       },
     },
-    useMui: true,
   },
 } as Meta;
 

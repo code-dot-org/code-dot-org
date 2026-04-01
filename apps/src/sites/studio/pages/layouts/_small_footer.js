@@ -8,5 +8,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 // the DOM immediately after the necessary #page-small-footer markup.
 createReactRoot(
   <SmallFooter {...getScriptData('smallfooter')} />,
-  document.getElementById('page-small-footer')
+  document.getElementById('page-small-footer'),
+  {
+    legacyReactDomRender: true,
+  }
 );

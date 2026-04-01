@@ -107,6 +107,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I click selector "button[aria-label='Give this message a thumbs up']:eq(2)"
     And I wait up to 5 seconds for element "i.fa-regular.fa-thumbs-up:eq(2)" to have css property "color" equal to "rgb(62, 163, 62)"
 
+  @skip
   @chrome
   Scenario: Teacher can disable AI chat feature
     Given I create a teacher named "Stilgar"

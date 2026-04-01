@@ -9,6 +9,9 @@ $(document).ready(function () {
   const liveDatasets = getScriptData('liveDatasets');
   createReactRoot(
     <DatasetList datasets={datasets} liveDatasets={liveDatasets} />,
-    document.querySelector('.datasets')
+    document.querySelector('.datasets'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

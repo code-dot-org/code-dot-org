@@ -113,7 +113,10 @@ Fish.prototype.init = function (config) {
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

@@ -46,7 +46,10 @@ function initPage() {
         scriptName={config.script_name}
         courseName={config.course_name}
       />,
-      redirectDialogMountPoint
+      redirectDialogMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -79,7 +82,10 @@ function initPage() {
             canDefaultOpen={false}
           />
         </Provider>,
-        aiDiffFabMountPoint
+        aiDiffFabMountPoint,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   };
@@ -129,7 +135,10 @@ function initPage() {
             levelType={levelType}
           />
         </Provider>,
-        rubricFabMountPoint
+        rubricFabMountPoint,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else {
       renderAiDiffButton();
