@@ -1,6 +1,9 @@
 !!! 5
 -require '../shared/middleware/helpers/experiments'
-%html{dir: locale_dir, lang: locale}
+- brand = Cdo::Brand.current_brand_code(request)
+- html_attrs = {dir: locale_dir, lang: locale}
+- html_attrs['data-brand'] = brand if brand != Cdo::Brand::BRAND_CODE_ORG
+%html{html_attrs}
   %head
     %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
     = render partial: 'i18n/crowdin_in_context_tool'

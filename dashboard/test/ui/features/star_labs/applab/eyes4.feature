@@ -7,7 +7,7 @@ Scenario: Applab debugging
   When I open my eyes to test "Applab debugging"
   And I press "show-code-header"
   And I add code for a canvas and a button
-  And I click selector "#debug-area-header .fa-chevron-circle-up"
+  And I click selector "#debug-area-header .fa-circle-chevron-up"
   Then I press "stepInButton"
   And I see no difference for "stepped in once"
   Then I press "stepInButton"

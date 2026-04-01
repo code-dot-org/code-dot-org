@@ -51,9 +51,9 @@ const ClearChatButton: React.FunctionComponent = () => {
       id="clear-chat"
       label={'Clear chat'}
       icon={{iconName: 'eraser', iconStyle: 'solid'}}
-      type="tertiary"
-      color="gray"
-      buttonSize="xs"
+      variant="text"
+      color="tertiary"
+      size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
