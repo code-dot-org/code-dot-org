@@ -55,6 +55,7 @@
 #
 # Indexes
 #
+#  index_users_on_admin_and_deleted_at                 (admin,deleted_at)
 #  index_users_on_birthday                             (birthday)
 #  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)

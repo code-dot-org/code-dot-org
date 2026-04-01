@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_01_195324) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2756,6 +2756,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
     t.string "unlock_token"
     t.string "cap_status", limit: 1
     t.datetime "cap_status_date", precision: nil
+    t.index ["admin", "deleted_at"], name: "index_users_on_admin_and_deleted_at"
     t.index ["birthday"], name: "index_users_on_birthday"
     t.index ["cap_status", "cap_status_date"], name: "index_users_on_cap_status_and_cap_status_date"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
