@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-23T11:20:20.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring Fonts\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\nIn this level, we'll use AI Tutor to help us understand `font-family` and add a new font to our webpage.\r\n\r\n**Do This:**\r\n1) Notice that there is also a new tag called `<link>`. This is used to load in new font to your website from Google Fonts.\r\n2) Ask AI Tutor to explain how the rules for `font-family` work, and how to include new fonts with Google Fonts\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n3) Ask AI Tutor to add a Google Font to the paragraph text on this page. \r\n    - Use specific language, like \"`font-family`\" or \"Google Fonts `<link>`\", to make sure AI follows your vision.\r\n\r\nOnce you've added a font to the paragraphs: press the Continue button!",
+    "long_instructions": "## Exploring Fonts\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\nIn this level, we'll use AI Tutor to help us understand `font-family` and add a new font to our webpage.\r\n\r\n**Do This:**\r\n1) Notice that there is also a new tag called `<link>`. This is used to load in new font to your website from Google Fonts.\r\n2) Ask AI Tutor to explain the rules for these new CSS elements.\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n3) Ask AI Tutor to update the paragraph text on this page. \r\n    - Use specific language, like \"`font-family`\" or \"Google Fonts `<link>`\", to make sure AI follows your vision.\r\n\r\nOnce you've added a font to the paragraphs: press the Continue button!",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -30,9 +31,9 @@
         "documentation"
       ],
       "answerTypeCustomizations": {
-        "buildCSS": "- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Do not use relative units for spacing; only use px.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.",
-        "documentation": "- Keep explanations simple and friendly",
-        "explainCode": "- Keep explanations simple and friendly"
+        "buildCSS": "- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Do not use relative units for spacing; only use px.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
       }
     },
     "display_name": "Exploring Fonts",
@@ -55,7 +56,6 @@
     },
     "thumbnail_url": "https://images.code.org/5719963da0231456884c38b4a004790e-Screenshot 2025-04-02 at 7.42.24 AM.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-23T11:20:20.624+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-03-23 11:21:09 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:21:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:31:45 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:35:08 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-23T11:20:20.624+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-03-23 11:21:09 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:21:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:31:45 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:35:08 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:49:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:36:36 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

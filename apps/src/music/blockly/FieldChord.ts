@@ -191,7 +191,10 @@ export default class FieldChord extends BlocklyCore.Field {
         initValue: this.getValue(),
         onChange: this.onValueChange,
       }),
-      this.newDiv
+      this.newDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

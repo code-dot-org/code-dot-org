@@ -13,7 +13,7 @@ markdown <<MARKDOWN
   
 <!-- Teacher-led demonstrations -->
 <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
-<img src="https://images.code.org/73986745bf0676a2c11ba7999024beee-Screenshot 2026-03-26 at 2.09.25 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<img src="https://images.code.org/73986745bf0676a2c11ba7999024beee-Screenshot 2026-03-26 at 2.09.25 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
 <strong>Teacher-led demonstrations</strong>
 <p style="font-size:14px;">Model AI use in front of the class to make thinking visible.</p>
 <ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 <!-- Analysis and critique -->
 <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
-<img src="https://images.code.org/f313a04b68c8f7792bedab90ca5d4754-Screenshot 2026-03-26 at 2.09.31 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<img src="https://images.code.org/f313a04b68c8f7792bedab90ca5d4754-Screenshot 2026-03-26 at 2.09.31 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
 <strong>Analysis and critique of AI outputs</strong>
 <p style="font-size:14px;">Use AI-generated content as material for student thinking.</p>
 <ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
 
 <!-- Simulation and structured practice -->
 <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
-<img src="https://images.code.org/b3a294faf8dcc067f7d4bc9a503293e6-Screenshot 2026-03-26 at 2.09.36 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<img src="https://images.code.org/b3a294faf8dcc067f7d4bc9a503293e6-Screenshot 2026-03-26 at 2.09.36 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
 <strong>Simulation and structured practice</strong>
 <p style="font-size:14px;">Engage students in AI-like thinking without the tool itself.</p>
 <ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
@@ -49,7 +49,7 @@ markdown <<MARKDOWN
 
 <!-- Guided practice -->
 <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
-<img src="https://images.code.org/2047c16e4622e48a4d76f7e9c42f49e1-Screenshot 2026-03-26 at 2.09.42 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<img src="https://images.code.org/2047c16e4622e48a4d76f7e9c42f49e1-Screenshot 2026-03-26 at 2.09.42 PM.png" alt="Illustrated classroom scenario involving AI use" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
 <strong>Guided practice with prompts and responses</strong>
 <p style="font-size:14px;">Give students structured opportunities to create, improve, and evaluate AI-style interactions.</p>
 <ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">

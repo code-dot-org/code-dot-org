@@ -93,7 +93,10 @@ export default class ChangeUserTypeController {
         handleSubmit={this.submitUserTypeChange}
         handleCancel={this.hideChangeUserTypeModal}
       />,
-      this.mountPoint
+      this.mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

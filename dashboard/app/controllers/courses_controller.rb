@@ -118,7 +118,7 @@ class CoursesController < ApplicationController
 
     if @unit_group.numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
       @unit_group.default_unit_group_units.each do |ugu|
-        ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position-1])
+        ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position - 1])
       end
     end
 

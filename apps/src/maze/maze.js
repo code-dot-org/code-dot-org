@@ -221,7 +221,10 @@ module.exports = class Maze {
           onMount={studioApp().init.bind(studioApp(), config)}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

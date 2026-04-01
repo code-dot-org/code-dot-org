@@ -34,6 +34,9 @@ $(() => {
         editAllUrl={editAllUrl}
       />
     </Provider>,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

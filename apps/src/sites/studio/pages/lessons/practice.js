@@ -12,6 +12,9 @@ $(document).ready(() => {
     <Provider store={getStore()}>
       <LessonPractice lessonPracticeData={lessonPracticeData} />
     </Provider>,
-    document.getElementById('lesson-practice-container')
+    document.getElementById('lesson-practice-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

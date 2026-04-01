@@ -24,13 +24,13 @@ class AichatGeminiClientLegacy < AichatAiClientLegacy
 
     {
       'prompt_tokens' =>  prompt_tokens || 0,
-      'thought_tokens' => thought_tokens ||  0,
+      'thought_tokens' => thought_tokens || 0,
       'cached_prompt_tokens' =>  cached_prompt_tokens || 0,
 
       # This calculation - (total tokens - prompt tokens) seems to be what the OpenAI compat API
       # returns for completion tokens, but metrics could be made more flexible based on what's
       # available in a given API.
-      'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0
+      'completion_tokens' => total_tokens && prompt_tokens ? total_tokens - prompt_tokens : 0
 
     }
   end

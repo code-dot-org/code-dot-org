@@ -260,7 +260,10 @@ NetSimRouterLogModal.prototype.render = function () {
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
       teacherView={this.teacherView_}
     />,
-    this.rootDiv_[0]
+    this.rootDiv_[0],
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

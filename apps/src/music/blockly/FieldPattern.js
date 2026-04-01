@@ -118,7 +118,10 @@ class FieldPattern extends BlocklyCore.Field {
         onChange={this.onValueChange}
         lengthMeasures={1}
       />,
-      this.newDiv_
+      this.newDiv_,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

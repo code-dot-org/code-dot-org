@@ -10,7 +10,11 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
+import {ViewMode} from '@cdo/apps/weblab2/types';
+import {
+  setAiFilePathToPreview,
+  setViewMode,
+} from '@cdo/apps/weblab2/weblab2Redux';
 
 import moduleStyles from './ai-tutor-version-file-chip.module.scss';
 
@@ -49,6 +53,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     const filePath =
       folderPath === '' ? file.name : folderPath + '/' + file.name;
     dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    dispatch(setViewMode(ViewMode.PREVIEW));
     sendLab2AnalyticsEvent(
       EVENTS.AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED,
       {
