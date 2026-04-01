@@ -6,6 +6,7 @@ default['cdo-cloudwatch-agent'] = {
       #{node[:home]}/#{node.chef_environment}/dashboard/log/puma_stdout.log
       #{node[:home]}/#{node.chef_environment}/dashboard/log/puma_stderr.log
       /var/log/nginx/error.log
+      /var/log/cloud-init-output.log
     ]
   }
 }

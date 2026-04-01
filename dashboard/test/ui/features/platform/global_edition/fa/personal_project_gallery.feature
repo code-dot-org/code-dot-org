@@ -9,15 +9,14 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
   Scenario: The student sees only the projects available in Farsi MVP
     Given I am on "http://studio.code.org/global/fa/projects"
-    And I select the "English" option in dropdown "locale" to load a new page
 
-    When I wait until element "h4.new-project-heading:contains(Start a new project)" is visible
+    When I wait until element "h4.new-project-heading:contains(شروع پروژه جدید)" is visible
     # The section "Start a new project" contains projects: "Sprite Lab", "Artist", "App Lab", and "Game Lab"
-    Then element "h4.new-project-heading + div" has text "Sprite LabArtistApp LabGame Lab"
+    Then element "h4.new-project-heading + div" has text "لابراتوار اسپرایتهنرمندلابراتوار اپلابراتوار بازی"
 
     When I click "#uitest-view-full-list" once it exists
     Then I wait until element "#full-list-projects" is visible
-    And element "#full-list-projects div:contains(Open-Ended Creativity) a " has text "Sprite Lab"
-    And element "#full-list-projects div:contains(Drawing) a" has text "Artist"
+    And element "#full-list-projects div:contains(خلاقیت دارای پایان باز) a " has text "لابراتوار اسپرایت"
+    And element "#full-list-projects div:contains(ترسیم) a" has text "هنرمند"
     # The section "Beyond Blocks" contains projects: "App Lab", and "Game Lab"
-    And element "#full-list-projects div:contains(Beyond Blocks) a" has text "App LabGame Lab"
+    And element "#full-list-projects div:contains(فراتر از بلوک) a" has text "لابراتوار اپلابراتوار بازی"

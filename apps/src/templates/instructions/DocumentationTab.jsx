@@ -94,7 +94,7 @@ export const UnconnectedDocumentationTab = forwardRef(
                 <TextLink
                   href={`/docs/ide/${programmingEnvironment}/classes/${keyToShow}`}
                   openInNewTab={true}
-                  icon={<FontAwesome icon="external-link" />}
+                  icon={<FontAwesome icon="arrow-up-right-from-square" />}
                 />
               </div>
             </div>

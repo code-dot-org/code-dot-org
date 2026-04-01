@@ -93,12 +93,15 @@ export class UnconnectedCommitDialog extends React.Component {
     // TODO: Add compile status here
     if (saveInProgress) {
       footerIcon = (
-        <span className="fa fa-spin fa-spinner" style={styles.spinner} />
+        <span className="fa-solid fa-spin fa-spinner" style={styles.spinner} />
       );
       footerMessageTitle = i18n.saving();
     } else if (hasError) {
       footerIcon = (
-        <span className="fa fa-exclamation-circle" style={styles.iconError} />
+        <span
+          className="fa-solid fa-circle-exclamation"
+          style={styles.iconError}
+        />
       );
       footerMessageTitle = i18n.backpackErrorTitle();
       footerMessageText = hasBackpackLoadError

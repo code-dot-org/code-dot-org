@@ -10,6 +10,7 @@ require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
+Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
 require 'cdo/global_edition'
@@ -39,14 +40,12 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
-    # Manually configure some values to match defaults for the next version of
-    # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
-    # TODO infra: remove these values once we're loading defaults for 7.0 above
-    config.action_controller.raise_on_open_redirects = true
-    config.active_support.disable_to_s_conversion = true
-    config.active_support.executor_around_test_case = true
+    # Convert cookies from old (:marshall) to new (:json) default format
+    # TODO infra: remove this override after 40 days in production (as
+    # determined by CDO.dashboard_session_ttl_days)
+    config.action_dispatch.cookies_serializer = :hybrid
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
@@ -60,9 +59,6 @@ module Dashboard
       require 'cdo/rack/cookie_dcdo'
       config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
     end
-
-    require 'cdo/rack/global_edition'
-    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -100,6 +96,7 @@ module Dashboard
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
+    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi

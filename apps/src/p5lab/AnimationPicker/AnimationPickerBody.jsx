@@ -299,7 +299,7 @@ export default class AnimationPickerBody extends React.Component {
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
                   isBackgroundsTab={isBackgroundsTab}
-                  icon="pencil"
+                  icon="pen"
                   onClick={onDrawYourOwnClick}
                 />
                 {uploadsEnabled && (

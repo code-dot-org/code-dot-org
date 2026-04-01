@@ -97,7 +97,7 @@ class CopyElementToScreenButton extends React.Component {
           onClick={this.handleDropdownClick}
         >
           {applabMsg.designWorkspace_copyToScreenButton()}
-          <i className="fa fa-chevron-down" />
+          <i className="fa-solid fa-chevron-down" />
         </button>
         {this.state.opened && (
           <PopUpMenu
