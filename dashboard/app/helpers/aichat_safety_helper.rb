@@ -47,7 +47,7 @@ module AichatSafetyHelper
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse", attempts, output_type, role)
         output_type = 'Structured'
-        attempts +=1
+        attempts += 1
 
         start_time_structured = Time.now
         begin

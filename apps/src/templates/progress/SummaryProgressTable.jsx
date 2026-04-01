@@ -13,13 +13,14 @@ class SummaryProgressTable extends React.Component {
   static propTypes = {
     groupedLesson: groupedLessonsType.isRequired,
     minimal: PropTypes.bool,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     lessonIsVisible: PropTypes.func.isRequired,
   };
 
   render() {
-    const {minimal} = this.props;
+    const {minimal, isOnLevelView} = this.props;
     const {lessons, levelsByLesson} = this.props.groupedLesson;
 
     if (lessons.length !== levelsByLesson.length) {
@@ -53,6 +54,7 @@ class SummaryProgressTable extends React.Component {
                   levels={levelsByLesson[item.unfilteredIndex]}
                   lesson={item.lesson}
                   dark={filteredIndex % 2 === 1}
+                  isOnLevelView={isOnLevelView}
                 />
               ))
           }

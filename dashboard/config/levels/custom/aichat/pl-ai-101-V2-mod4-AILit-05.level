@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-30T15:35:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nThis AI chat bot will help you to update your own lesson plan to integrate teaching AI content.\r\n\r\nStart by uploading a lesson plan or describing your lesson plan in the chat. Then, provide some guidance on how you might integrate AI content into your lesson using the AILit Framework.\r\n\r\nFor example, you could say:\r\n>- I want students to design responsibly with AI in this lesson.\r\n>- I saw a teacher giving this lesson, and I think it would provide a good opportunity to be creative and curious about AI.\r\n>- I don't have a lesson plan, but I teach a high school English unit about Shakesphere and I want students to engage with AI in this unit.\r\n>- I'm lost, but here is a lesson plan.\r\n\r\n**On the next level you'll reflect on the changes you made to the lesson plan**\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Teachers will share a lesson plan or describe a lesson plan. Help them integrate AI into it using the AILit Framework attached. ",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "AILitFramework_Domains.pdf": "8a99ded0-0032-45ab-9448-e5ec226a43e5.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-30T15:35:35.018+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"},{\"changed_at\":\"2026-03-30 15:48:08 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Aichat>
