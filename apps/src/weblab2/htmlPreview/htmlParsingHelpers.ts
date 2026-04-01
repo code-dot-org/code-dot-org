@@ -55,11 +55,44 @@ const consoleOverrideScript = `
       return originalMethod.apply(console, arguments);
     };
   });
+  window.onerror = function(message, source, lineno) {
+    const filename = source ? source.split('/').pop() : 'unknown';
+    try {
+      channel.postMessage({type: "CONSOLE_LOG", level: "error",
+        args: [message + ' (' + filename + ', line ' + lineno + ')']});
+    } catch(e) {}
+    return false;
+  };
+  window.addEventListener('unhandledrejection', function(event) {
+    const reason = event.reason
+      ? (event.reason.message || String(event.reason))
+      : 'Unhandled Promise rejection';
+    try {
+      channel.postMessage({type: "CONSOLE_LOG", level: "error", args: [reason]});
+    } catch(e) {}
+  });
+  const tagNames = {
+    img: 'image', script: 'script', link: 'stylesheet',
+    audio: 'audio', video: 'video'
+  };
+  window.addEventListener('error', function(event) {
+    if (event.target && event.target !== window) {
+      const tag = event.target.tagName ? event.target.tagName.toLowerCase() : 'resource';
+      const filename =
+        (event.target.src || event.target.href || 'unknown').split('/').pop();
+      try {
+        channel.postMessage({type: "CONSOLE_LOG", level: "error",
+          args: [(tagNames[tag] || tag) + ' not found: ' + filename]});
+      } catch(e) {}
+    }
+  }, true);
 })();
 `;
 
-// Adds a script to the document that overrides console methods (log, warn, error, info)
-// and broadcasts the serialized arguments via BroadcastChannel so the parent can capture them.
+// Adds a script to the document that intercepts console output and JS errors,
+// broadcasting them via BroadcastChannel so the parent frame can display them.
+// Captures console.log/warn/error/info, uncaught JS errors, unhandled Promise
+// rejections, and failed resource loads (images, scripts, stylesheets, etc.).
 export const addConsoleOverrideToDocument = (doc: Document) => {
   const script = doc.createElement('script');
   script.textContent = consoleOverrideScript;
