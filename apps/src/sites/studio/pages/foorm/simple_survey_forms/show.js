@@ -9,6 +9,9 @@ import 'survey-react/survey.css';
 document.addEventListener('DOMContentLoaded', function (event) {
   createReactRoot(
     <Foorm {...getScriptData('props')} />,
-    document.getElementById('application-container')
+    document.getElementById('application-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

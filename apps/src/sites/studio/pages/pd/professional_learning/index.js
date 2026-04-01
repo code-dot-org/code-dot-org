@@ -33,7 +33,10 @@ $(() => {
         coursesAsFacilitator={landingPageData['courses_as_facilitator']}
       />
     </Provider>,
-    document.getElementById('pl-landing-page-container')
+    document.getElementById('pl-landing-page-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   displayDifferentiationChat();
 });

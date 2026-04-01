@@ -9,6 +9,9 @@ $(document).ready(function () {
   const initialLevelData = getScriptData('musicleveldata');
   createReactRoot(
     <EditMusicLevelData initialLevelData={initialLevelData} />,
-    document.getElementById('music-level-data-editor')
+    document.getElementById('music-level-data-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

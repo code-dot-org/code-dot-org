@@ -35,7 +35,9 @@ function showDisabledBubblesModal() {
   const div = $('<div>');
   $(document.body).append(div);
 
-  createReactRoot(<DisabledBubblesModal />, div[0]);
+  createReactRoot(<DisabledBubblesModal />, div[0], {
+    legacyReactDomRender: true,
+  });
 }
 
 /**
@@ -57,7 +59,9 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  createReactRoot(<DisabledBubblesAlert />, div[0]);
+  createReactRoot(<DisabledBubblesAlert />, div[0], {
+    legacyReactDomRender: true,
+  });
 };
 
 /**

@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
       workshopInfo={workshopInfoParams}
       userInfo={userInfoParams.userInfo}
     />,
-    document.getElementById('join-workshop-container')
+    document.getElementById('join-workshop-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -246,7 +246,10 @@ function renderFooterInSharedGame() {
       menuItems={menuItems}
       phoneFooter={true}
     />,
-    footerDiv
+    footerDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -941,7 +944,10 @@ Applab.render = function () {
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
-    Applab.reactMountPoint_
+    Applab.reactMountPoint_,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

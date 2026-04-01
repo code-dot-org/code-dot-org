@@ -120,7 +120,10 @@ function showConfirmationDialog(config) {
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}
     />,
-    buttons
+    buttons,
+    {
+      legacyReactDomRender: true,
+    }
   );
   contentDiv.appendChild(buttons);
 

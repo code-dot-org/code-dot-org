@@ -16,6 +16,9 @@ $(() => {
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
       studentsCourseOfferings={studentsCourseOfferings}
     />,
-    document.getElementById('self-paced-pl-catalog')
+    document.getElementById('self-paced-pl-catalog'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -154,7 +154,10 @@ function initPage() {
         showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   tooltipifyVocabulary();
@@ -206,7 +209,10 @@ function displayDifferentiationChat(scriptData) {
           scriptName={scriptData.name}
         />
       </Provider>,
-      aiDiffFabMountPoint
+      aiDiffFabMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

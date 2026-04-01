@@ -17,6 +17,9 @@ $(document).ready(function () {
       bookmarkedFeaturedProjects={bookmarkedFeaturedProjects}
       archivedFeaturedProjects={archivedFeaturedProjects}
     />,
-    document.getElementById('featured-projects-container')
+    document.getElementById('featured-projects-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
