@@ -440,13 +440,6 @@ Style/TernaryParentheses:
 Style/TrailingUnderscoreVariable:
   Enabled: false
 
-# Offense count: 38
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ExplicitOnly.
-# SupportedStyles: create_list, n_times
-FactoryBot/CreateList:
-  Enabled: false
-
 # Offense count: 55
 # This cop supports safe autocorrection (--autocorrect).
 FactoryBot/FactoryClassName:
