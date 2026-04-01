@@ -1,39 +1,33 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
-import {
-  addEdge,
-  Background,
-  Controls,
-  getNodesBounds,
-  getViewportForBounds,
-  MarkerType,
-  ReactFlow,
-  ReactFlowProvider,
-  useNodesState,
-  useEdgesState,
-  type Edge,
-  type Node,
-  type OnConnect,
-  type ReactFlowInstance,
-} from '@xyflow/react';
-import cloneDeep from 'lodash/cloneDeep';
+import type {TLEditorSnapshot} from '@tldraw/editor';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
+import {
+  Tldraw,
+  DefaultToolbar,
+  SelectToolbarItem,
+  HandToolbarItem,
+  DrawToolbarItem,
+  EraserToolbarItem,
+  TextToolbarItem,
+  RectangleToolbarItem,
+  EllipseToolbarItem,
+  TriangleToolbarItem,
+  ArrowToolbarItem,
+  HighlightToolbarItem,
+  type Editor,
+  type TLComponents,
+} from 'tldraw';
 
-import '@xyflow/react/dist/style.css';
+import '../../node_modules/tldraw/tldraw.css';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  ProjectSources,
-  Sketchlab2Node,
-  Sketchlab2Edge,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -49,10 +43,6 @@ import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
-import ImageNode from './ImageNode';
-import NodePalette, {type NodeShape} from './NodePalette';
-import PalettePositionContext from './PalettePositionContext';
-import TextBoxNode from './TextBoxNode';
 import {Sketchlab2Sources} from './types';
 import useSketchlab2Tour from './useSketchlab2Tour';
 import {handleSaveToBackpack} from './utils';
@@ -60,53 +50,82 @@ import {uploadImageFile} from './utils/uploadImage';
 
 import moduleStyles from './styles/sketchlab2-view.module.scss';
 
+function CustomToolbarContent() {
+  return (
+    <DefaultToolbar>
+      <SelectToolbarItem />
+      <HandToolbarItem />
+      <DrawToolbarItem />
+      <EraserToolbarItem />
+      <TextToolbarItem />
+      <RectangleToolbarItem />
+      <EllipseToolbarItem />
+      <TriangleToolbarItem />
+      <ArrowToolbarItem />
+      <HighlightToolbarItem />
+    </DefaultToolbar>
+  );
+}
+
+const tldrawComponents: TLComponents = {
+  Toolbar: CustomToolbarContent,
+};
+
+// Catches transient tldraw errors (e.g. shape component renders after
+// deletion) so they don't trigger a full-screen dev overlay. The error
+// still appears in the console.
+class TldrawErrorBoundary extends React.Component<
+  {children: React.ReactNode},
+  {errorKey: number}
+> {
+  state = {errorKey: 0};
+  static getDerivedStateFromError() {
+    // Bump key to remount children on next render
+    return (prev: {errorKey: number}) => ({errorKey: prev.errorKey + 1});
+  }
+  render() {
+    return (
+      <React.Fragment key={this.state.errorKey}>
+        {this.props.children}
+      </React.Fragment>
+    );
+  }
+}
+
+// Memoized wrapper prevents tldraw from re-rendering when the parent
+// re-renders due to Redux source saves.
+const TldrawCanvas = React.memo(function TldrawCanvas({
+  mountKey,
+  initialSnapshot,
+  onMount,
+  isDarkMode,
+}: {
+  mountKey: number;
+  initialSnapshot: TLEditorSnapshot | undefined;
+  onMount: (editor: Editor) => void;
+  isDarkMode: boolean;
+}) {
+  return (
+    <TldrawErrorBoundary>
+      <Tldraw
+        key={mountKey}
+        snapshot={initialSnapshot}
+        onMount={onMount}
+        inferDarkMode={isDarkMode}
+        components={tldrawComponents}
+      />
+    </TldrawErrorBoundary>
+  );
+});
+
 const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
-const DEFAULT_SOURCES = {source: {nodes: [], edges: []}};
-
-const nodeTypes = {
-  textBox: TextBoxNode,
-  image: ImageNode,
-};
-
-const getNodeId = () => crypto.randomUUID();
-
-// Fixed shape height matching the rectangle's rendered size
-// (min-height 60 + padding 16 + border 4 = 80px in content-box).
-const SHAPE_HEIGHT = 80;
-
-// Ensure circle/triangle nodes use the standard SHAPE_HEIGHT.
-const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
-  nodes.map(n => {
-    const shape = n.data?.shape as string | undefined;
-    if (shape === 'triangle') {
-      const w = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
-      return {
-        ...n,
-        width: w,
-        height: SHAPE_HEIGHT,
-        style: {...(n.style ?? {}), width: w, height: SHAPE_HEIGHT},
-      };
-    }
-    if (shape === 'circle') {
-      return {
-        ...n,
-        width: SHAPE_HEIGHT,
-        height: SHAPE_HEIGHT,
-        style: {
-          ...(n.style ?? {}),
-          width: SHAPE_HEIGHT,
-          height: SHAPE_HEIGHT,
-        },
-      };
-    }
-    return n;
-  });
+const DEFAULT_SOURCES = {source: {tldrawSnapshot: undefined}};
 
 const Sketchlab2Canvas: React.FC<{
   levelProperties: LevelProperties;
@@ -118,33 +137,12 @@ const Sketchlab2Canvas: React.FC<{
     showStartOverDialog,
   } = useSources<Sketchlab2Sources>();
 
-  const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const reactFlowInstanceRef = useRef<ReactFlowInstance | null>(null);
+  const editorRef = useRef<Editor | null>(null);
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
-
-  const initialNodes = useMemo(
-    () =>
-      normalizeNodeDimensions(
-        cloneDeep(currentSources.source.nodes || []) as Node[]
-      ),
-    [currentSources.source.nodes]
-  );
-  const initialEdges = useMemo(
-    () => cloneDeep(currentSources.source.edges || []) as Edge[],
-    [currentSources.source.edges]
-  );
-
-  console.log('sketchlab2 load:', {
-    nodes: initialNodes.length,
-    edges: initialEdges.length,
-    rawEdges: currentSources.source.edges,
-  });
-
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   // Remount key for when sources are reinitialized
   const [mountKey, setMountKey] = useState(0);
@@ -155,13 +153,6 @@ const Sketchlab2Canvas: React.FC<{
       ? 'left'
       : 'top';
   }, []);
-
-  const palettePosition = useMemo(() => {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('sketchlab2-nodepalette-position') === 'left'
-      ? 'left'
-      : 'top';
-  }, []) as 'left' | 'top';
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -180,330 +171,142 @@ const Sketchlab2Canvas: React.FC<{
   }, [currentUserId]);
   const dialogControl = useDialogControl();
 
-  // Debounced save of nodes/edges to project sources.
-  // We cast ReactFlow's Node/Edge types to our plain serializable types
-  // to avoid Immer WritableDraft incompatibilities in Redux Toolkit reducers.
-  const debouncedSave = useCallback(
-    (currentNodes: Node[], currentEdges: Edge[]) => {
-      if (saveSourcesTimeoutRef.current) {
-        clearTimeout(saveSourcesTimeoutRef.current);
-        saveSourcesTimeoutRef.current = null;
-      }
-
-      saveSourcesTimeoutRef.current = setTimeout(() => {
-        const viewport = reactFlowInstanceRef.current?.getViewport();
-        const cleanNodes = currentNodes.map(
-          ({dragging, selected, resizing, ...rest}) => rest
-        );
-        const source = {
-          nodes: cleanNodes as unknown as Sketchlab2Node[],
-          edges: currentEdges as unknown as Sketchlab2Edge[],
-          viewport: viewport
-            ? {x: viewport.x, y: viewport.y, zoom: viewport.zoom}
-            : undefined,
-        };
-        console.log('sketchlab2 sources:', source);
-        updateSources(() => ({source}));
-      }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
-    },
-    [updateSources]
+  // Build the initial snapshot to pass to <Tldraw> on mount
+  const initialSnapshot = useMemo(
+    () =>
+      (currentSources.source.tldrawSnapshot as TLEditorSnapshot | undefined) ??
+      undefined,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [mountKey]
   );
 
-  // Save whenever nodes or edges change
-  useEffect(() => {
-    debouncedSave(nodes, edges);
-  }, [nodes, edges, debouncedSave]);
+  // Debounced save of tldraw snapshot to project sources.
+  // Uses requestAnimationFrame to defer the Redux update until after
+  // tldraw finishes its render cycle (avoids re-rendering mid-deletion).
+  const debouncedSave = useCallback(() => {
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current);
+    }
+    saveTimeoutRef.current = setTimeout(() => {
+      requestAnimationFrame(() => {
+        const editor = editorRef.current;
+        if (!editor) return;
+        const snapshot = editor.getSnapshot();
+        const source = {tldrawSnapshot: snapshot};
+        updateSources(() => ({source}));
+      });
+    }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
+  }, [updateSources]);
 
+  // Clean up save timeout on unmount
   useEffect(() => {
     return () => {
-      if (saveSourcesTimeoutRef.current) {
-        clearTimeout(saveSourcesTimeoutRef.current);
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
       }
     };
   }, []);
 
-  const onConnect: OnConnect = useCallback(
-    connection =>
-      setEdges(eds =>
-        addEdge(
-          {
-            ...connection,
-            type: 'default',
-            markerEnd: {type: MarkerType.ArrowClosed},
-          },
-          eds
-        )
-      ),
-    [setEdges]
-  );
+  // Called when tldraw editor mounts
+  const onMount = useCallback(
+    (editor: Editor) => {
+      editorRef.current = editor;
 
-  // Add a new text box node at the center of the current viewport
-  const addNode = useCallback(() => {
-    const instance = reactFlowInstanceRef.current;
-    const viewport = instance?.getViewport() ?? {x: 0, y: 0, zoom: 1};
-    const wrapper = document.querySelector(`.${moduleStyles.reactFlowWrapper}`);
-    const rect = wrapper?.getBoundingClientRect();
-    const centerX = (rect?.width ?? 800) / 2;
-    const centerY = (rect?.height ?? 600) / 2;
-    const position = {
-      x: (centerX - viewport.x) / viewport.zoom,
-      y: (centerY - viewport.y) / viewport.zoom,
-    };
-    const newNode: Node = {
-      id: getNodeId(),
-      type: 'textBox',
-      position,
-      data: {text: ''},
-    };
-    setNodes(nds => nds.concat(newNode));
-  }, [setNodes]);
+      if (readonlyWorkspace) {
+        editor.updateInstanceState({isReadonly: true});
+      }
 
-  const addImageNode = useCallback(
-    (url: string, filename: string) => {
-      const instance = reactFlowInstanceRef.current;
-      const viewport = instance?.getViewport() ?? {x: 0, y: 0, zoom: 1};
-      const wrapper = document.querySelector(
-        `.${moduleStyles.reactFlowWrapper}`
-      );
-      const rect = wrapper?.getBoundingClientRect();
-      const centerX = (rect?.width ?? 800) / 2;
-      const centerY = (rect?.height ?? 600) / 2;
-      const position = {
-        x: (centerX - viewport.x) / viewport.zoom,
-        y: (centerY - viewport.y) / viewport.zoom,
-      };
-      const newNode: Node = {
-        id: getNodeId(),
-        type: 'image',
-        position,
-        data: {url, filename},
-        width: 120,
-        height: 90,
-        style: {width: 120, height: 90},
-      };
-      setNodes(nds => nds.concat(newNode));
+      // Save after each completed operation (fires after the full
+      // transaction, not during — avoids re-rendering mid-deletion).
+      editor.sideEffects.registerOperationCompleteHandler(source => {
+        if (source === 'user') {
+          debouncedSave();
+        }
+      });
     },
-    [setNodes]
+    [readonlyWorkspace, debouncedSave]
   );
 
+  // Image upload handler
   const onFileInputChange = useCallback(
     async (event: React.ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files?.[0];
-      // Reset the input so the same file can be selected again later
       event.target.value = '';
       if (!file || !channelId) return;
+      const editor = editorRef.current;
+      if (!editor) return;
+
       try {
         const url = await uploadImageFile(file, channelId);
-        addImageNode(url, file.name);
+
+        // Use tldraw's built-in external content handler to create the
+        // image asset + shape from the uploaded URL.
+        const asset = await editor.getAssetForExternalContent({
+          type: 'url',
+          url,
+        });
+        if (asset) {
+          editor.createAssets([asset]);
+          const center = editor.getViewportScreenCenter();
+          const point = editor.screenToPage(center);
+          const w = ('w' in asset.props ? (asset.props.w as number) : 200) / 2;
+          const h = ('h' in asset.props ? (asset.props.h as number) : 150) / 2;
+          editor.createShape({
+            type: 'image',
+            x: point.x - w / 2,
+            y: point.y - h / 2,
+            props: {assetId: asset.id, w, h},
+          });
+        }
       } catch {
         console.error('Failed to upload image');
       }
     },
-    [channelId, addImageNode]
+    [channelId]
   );
 
+  // Download as PNG using tldraw's built-in export
   const downloadPng = useCallback(async () => {
-    if (nodes.length === 0) return;
+    const editor = editorRef.current;
+    if (!editor) return;
+    const shapeIds = editor.getCurrentPageShapeIds();
+    if (shapeIds.size === 0) return;
 
-    const PADDING = 50;
-    const SCALE = 2;
-    const bounds = getNodesBounds(nodes);
-    const imageWidth = bounds.width + PADDING * 2;
-    const imageHeight = bounds.height + PADDING * 2;
-    const viewport = getViewportForBounds(
-      bounds,
-      imageWidth,
-      imageHeight,
-      0.5,
-      2,
-      PADDING
-    );
-
-    const viewportEl = document.querySelector(
-      '.react-flow__viewport'
-    ) as HTMLElement | null;
-    if (!viewportEl) return;
-
-    // Clone the viewport and prepare it for serialization
-    const clone = viewportEl.cloneNode(true) as HTMLElement;
-    clone.style.transform = `translate(${viewport.x}px, ${viewport.y}px) scale(${viewport.zoom})`;
-
-    // Convert all <img> elements to base64 data URLs so they render
-    // inside the foreignObject SVG (external URLs are blocked).
-    const imgs = clone.querySelectorAll('img');
-    await Promise.all(
-      Array.from(imgs).map(async imgEl => {
-        try {
-          const resp = await fetch(imgEl.src);
-          const blob = await resp.blob();
-          const dataUrl = await new Promise<string>(resolve => {
-            const reader = new FileReader();
-            reader.onloadend = () => resolve(reader.result as string);
-            reader.readAsDataURL(blob);
-          });
-          imgEl.src = dataUrl;
-        } catch {
-          // Leave the src as-is if fetching fails
-        }
-      })
-    );
-
-    // Inline all computed styles so they survive serialization
-    const originals = viewportEl.querySelectorAll('*');
-    const clones = clone.querySelectorAll('*');
-    for (let i = 0; i < clones.length; i++) {
-      const computed = window.getComputedStyle(originals[i]);
-      const inline = (clones[i] as HTMLElement).style;
-      if (!inline) continue;
-      for (let j = 0; j < computed.length; j++) {
-        const prop = computed[j];
-        inline.setProperty(prop, computed.getPropertyValue(prop));
-      }
-    }
-
-    const svgString = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="${imageWidth}" height="${imageHeight}">
-        <foreignObject width="100%" height="100%">
-          ${new XMLSerializer().serializeToString(clone)}
-        </foreignObject>
-      </svg>`;
-
-    const canvas = document.createElement('canvas');
-    canvas.width = imageWidth * SCALE;
-    canvas.height = imageHeight * SCALE;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    ctx.fillStyle = '#292f36';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    const img = new Image();
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, imageWidth * SCALE, imageHeight * SCALE);
+    try {
+      const result = await editor.toImage([...shapeIds], {
+        format: 'png',
+        padding: 50,
+        pixelRatio: 2,
+      });
       const link = document.createElement('a');
       link.download = 'sketch.png';
-      link.href = canvas.toDataURL('image/png');
+      link.href = URL.createObjectURL(result.blob);
       link.click();
-    };
-    img.src =
-      'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
-  }, [nodes]);
+      URL.revokeObjectURL(link.href);
+    } catch (err) {
+      console.error('Failed to export PNG:', err);
+    }
+  }, []);
 
+  // Save to backpack using tldraw's export
   const saveToBackpack = useCallback(() => {
     const api = backpackContext?.primaryApi;
-    if (!api) return;
+    const editor = editorRef.current;
+    if (!api || !editor) return;
+
     api.getFileList(
       () => {
-        // If fetching file list fails, pass empty list
-        handleSaveToBackpack(
-          reactFlowInstanceRef.current,
-          api,
-          dialogControl,
-          [],
-          err => console.error(err)
+        handleSaveToBackpack(editor, api, dialogControl, [], err =>
+          console.error(err)
         );
       },
       (fileList: string[]) => {
-        handleSaveToBackpack(
-          reactFlowInstanceRef.current,
-          api,
-          dialogControl,
-          fileList,
-          err => console.error(err)
+        handleSaveToBackpack(editor, api, dialogControl, fileList, err =>
+          console.error(err)
         );
       }
     );
   }, [backpackContext, dialogControl]);
-
-  // --- Left-side palette for the selected textBox node ---
-  const selectedTextBox = nodes.find(n => n.selected && n.type === 'textBox');
-
-  const onPaletteColorSelect = useCallback(
-    (newColor: string | null) => {
-      if (!selectedTextBox) return;
-      setNodes(ns =>
-        ns.map(n =>
-          n.id === selectedTextBox.id
-            ? {...n, data: {...n.data, color: newColor}}
-            : n
-        )
-      );
-    },
-    [selectedTextBox, setNodes]
-  );
-
-  const onPaletteShapeSelect = useCallback(
-    (newShape: NodeShape) => {
-      if (!selectedTextBox) return;
-      const RECT_WIDTH = 170;
-      const TRI_WIDTH = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
-
-      setNodes(ns =>
-        ns.map(n => {
-          if (n.id !== selectedTextBox.id) return n;
-
-          const oldW =
-            (n.style?.width as number | undefined) ??
-            (n.measured as {width?: number} | undefined)?.width ??
-            RECT_WIDTH;
-          const newW =
-            newShape === 'circle'
-              ? SHAPE_HEIGHT
-              : newShape === 'triangle'
-              ? TRI_WIDTH
-              : RECT_WIDTH;
-          const dx = (oldW - newW) / 2;
-          const pos = {x: n.position.x + dx, y: n.position.y};
-          const base = {
-            ...n,
-            position: pos,
-            data: {...n.data, shape: newShape},
-          };
-
-          if (newShape === 'circle') {
-            return {
-              ...base,
-              width: SHAPE_HEIGHT,
-              height: SHAPE_HEIGHT,
-              style: {
-                ...(n.style ?? {}),
-                width: SHAPE_HEIGHT,
-                height: SHAPE_HEIGHT,
-              },
-            };
-          }
-          if (newShape === 'triangle') {
-            return {
-              ...base,
-              width: TRI_WIDTH,
-              height: SHAPE_HEIGHT,
-              style: {
-                ...(n.style ?? {}),
-                width: TRI_WIDTH,
-                height: SHAPE_HEIGHT,
-              },
-            };
-          }
-          const restStyle = {
-            ...((n.style ?? {}) as Record<string, unknown>),
-          };
-          delete restStyle.width;
-          delete restStyle.height;
-          return {
-            ...base,
-            width: undefined,
-            height: undefined,
-            style: restStyle,
-          };
-        })
-      );
-    },
-    [selectedTextBox, setNodes]
-  );
-
-  const onInit = useCallback((instance: ReactFlowInstance) => {
-    reactFlowInstanceRef.current = instance;
-  }, []);
 
   // Reinitialization handler for when sources change externally
   const reinitializationHandler = useCallback(() => {
@@ -523,19 +326,6 @@ const Sketchlab2Canvas: React.FC<{
   useEffect(() => {
     setReinitializationHandler(reinitializationHandler);
   }, [setReinitializationHandler, reinitializationHandler]);
-
-  // Reinitialize nodes/edges when mount key changes (source reinitialized)
-  useEffect(() => {
-    if (mountKey > 0) {
-      setNodes(
-        normalizeNodeDimensions(
-          cloneDeep(currentSources.source.nodes || []) as Node[]
-        )
-      );
-      setEdges(cloneDeep(currentSources.source.edges || []) as Edge[]);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mountKey]);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -585,13 +375,7 @@ const Sketchlab2Canvas: React.FC<{
     appName: 'sketchlab2',
   });
 
-  const defaultViewport = currentSources.source.viewport || {
-    x: 0,
-    y: 0,
-    zoom: 1,
-  };
-
-  const colorMode = theme.toLowerCase() === 'dark' ? 'dark' : 'light';
+  const isDarkMode = theme.toLowerCase() === 'dark';
 
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
@@ -618,17 +402,10 @@ const Sketchlab2Canvas: React.FC<{
               createNewProjectFile: () => {},
               findIdForFileName: () => undefined,
               saveToBackpackButton: {
-                onClick: (
-                  fileList: string[],
-                  errorCallback: (error: string) => void
-                ) =>
-                  handleSaveToBackpack(
-                    reactFlowInstanceRef.current,
-                    backpackContext?.primaryApi,
-                    dialogControl,
-                    fileList,
-                    errorCallback
-                  ),
+                onClick: async (
+                  _fileList: string[],
+                  _errorCallback: (error: string) => void
+                ) => saveToBackpack(),
                 text: 'Save Sketch to Backpack',
               },
               supportedFileTypes: [],
@@ -669,31 +446,13 @@ const Sketchlab2Canvas: React.FC<{
             {teacherViewingStudent && (
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
             )}
-            <div className={moduleStyles.reactFlowWrapper}>
-              <PalettePositionContext.Provider value={palettePosition}>
-                <ReactFlow
-                  key={mountKey}
-                  nodes={nodes}
-                  edges={edges}
-                  onNodesChange={readonlyWorkspace ? undefined : onNodesChange}
-                  onEdgesChange={readonlyWorkspace ? undefined : onEdgesChange}
-                  onConnect={readonlyWorkspace ? undefined : onConnect}
-                  nodeTypes={nodeTypes}
-                  onInit={onInit}
-                  defaultViewport={defaultViewport}
-                  nodesDraggable={!readonlyWorkspace}
-                  nodesConnectable={!readonlyWorkspace}
-                  elementsSelectable={!readonlyWorkspace}
-                  nodesFocusable={true}
-                  edgesFocusable={true}
-                  colorMode={colorMode}
-                  proOptions={{hideAttribution: true}}
-                  fitView
-                >
-                  <Controls />
-                  <Background />
-                </ReactFlow>
-              </PalettePositionContext.Provider>
+            <div className={moduleStyles.tldrawWrapper}>
+              <TldrawCanvas
+                mountKey={mountKey}
+                initialSnapshot={initialSnapshot}
+                onMount={onMount}
+                isDarkMode={isDarkMode}
+              />
               {!readonlyWorkspace && (
                 <div
                   className={`${moduleStyles.floatingToolbar} ${
@@ -702,15 +461,6 @@ const Sketchlab2Canvas: React.FC<{
                       : ''
                   } sketchlab2-toolbar`}
                 >
-                  <button
-                    className={moduleStyles.toolbarButton}
-                    onClick={addNode}
-                    title="Add text box"
-                    aria-label="Add text box"
-                    type="button"
-                  >
-                    <FontAwesomeV6Icon iconStyle="solid" iconName="font" />
-                  </button>
                   <button
                     className={moduleStyles.toolbarButton}
                     onClick={() => fileInputRef.current?.click()}
@@ -735,7 +485,6 @@ const Sketchlab2Canvas: React.FC<{
                     title="Download as PNG"
                     aria-label="Download as PNG"
                     type="button"
-                    disabled={nodes.length === 0}
                   >
                     <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
                   </button>
@@ -745,31 +494,10 @@ const Sketchlab2Canvas: React.FC<{
                     title="Save to Backpack"
                     aria-label="Save to Backpack"
                     type="button"
-                    disabled={nodes.length === 0 || !backpackContext}
+                    disabled={!backpackContext}
                   >
                     <FontAwesomeV6Icon iconStyle="solid" iconName="briefcase" />
                   </button>
-                </div>
-              )}
-              {palettePosition === 'left' && selectedTextBox && (
-                <div
-                  className={`${moduleStyles.fixedPalette} ${
-                    toolbarPosition === 'left'
-                      ? moduleStyles.fixedPaletteBelowToolbar
-                      : ''
-                  }`}
-                >
-                  <NodePalette
-                    selectedColor={
-                      (selectedTextBox.data.color as string | null) ?? null
-                    }
-                    onColorSelect={onPaletteColorSelect}
-                    selectedShape={
-                      (selectedTextBox.data.shape as NodeShape) ?? 'rectangle'
-                    }
-                    onShapeSelect={onPaletteShapeSelect}
-                    vertical
-                  />
                 </div>
               )}
             </div>
@@ -787,8 +515,6 @@ export default (props: LabProps<LevelProperties>) => (
     defaultSources={DEFAULT_SOURCES}
     key={props.levelProperties.id}
   >
-    <ReactFlowProvider>
-      <Sketchlab2Canvas levelProperties={props.levelProperties} />
-    </ReactFlowProvider>
+    <Sketchlab2Canvas levelProperties={props.levelProperties} />
   </SourcesContainer>
 );

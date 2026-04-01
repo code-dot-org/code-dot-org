@@ -158,9 +158,11 @@ export interface Sketchlab2Edge {
 }
 
 export interface Sketchlab2Source {
-  nodes: Sketchlab2Node[];
-  edges: Sketchlab2Edge[];
+  nodes?: Sketchlab2Node[];
+  edges?: Sketchlab2Edge[];
   viewport?: {x: number; y: number; zoom: number};
+  // tldraw v2 snapshot — when present, nodes/edges are ignored.
+  tldrawSnapshot?: unknown;
 }
 
 // -- MULTI-FILE -- //

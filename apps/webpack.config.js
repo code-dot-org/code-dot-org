@@ -257,6 +257,13 @@ const WEBPACK_BASE_CONFIG = {
     alias: {
       ...WEBPACK_ALIASES,
       serialport: false,
+      tldraw: p('node_modules/tldraw/dist-esm/index.mjs'),
+      '@tldraw/editor': p('node_modules/@tldraw/editor/dist-esm/index.mjs'),
+      '@tldraw/store': p('node_modules/@tldraw/store/dist-esm/index.mjs'),
+      '@tldraw/tlschema': p('node_modules/@tldraw/tlschema/dist-esm/index.mjs'),
+      '@tldraw/state': p('node_modules/@tldraw/state/dist-esm/index.mjs'),
+      '@tldraw/utils': p('node_modules/@tldraw/utils/dist-esm/index.mjs'),
+      '@tldraw/validate': p('node_modules/@tldraw/validate/dist-esm/index.mjs'),
     },
   },
   module: {

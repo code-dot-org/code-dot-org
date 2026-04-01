@@ -1,4 +1,4 @@
-import {type ReactFlowInstance} from '@xyflow/react';
+import {type Editor} from 'tldraw';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
@@ -9,56 +9,14 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
-function reactFlowToBlob(viewportElement: HTMLElement): Promise<Blob> {
-  return new Promise((resolve, reject) => {
-    const {width, height} = viewportElement.getBoundingClientRect();
-    const svgElements = viewportElement.querySelectorAll('svg');
-    const canvas = document.createElement('canvas');
-    canvas.width = width * 2;
-    canvas.height = height * 2;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      reject(new Error('Could not create canvas context'));
-      return;
-    }
-    ctx.scale(2, 2);
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, width, height);
-
-    // Serialize the viewport to an SVG image via foreignObject
-    const svgData = new XMLSerializer().serializeToString(
-      svgElements[0] || viewportElement
-    );
-    const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
-    const url = URL.createObjectURL(svgBlob);
-    const img = new Image();
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, width, height);
-      URL.revokeObjectURL(url);
-      canvas.toBlob(blob => {
-        if (blob) {
-          resolve(blob);
-        } else {
-          reject(new Error('Failed to create image blob'));
-        }
-      }, 'image/png');
-    };
-    img.onerror = () => {
-      URL.revokeObjectURL(url);
-      reject(new Error('Failed to render canvas image'));
-    };
-    img.src = url;
-  });
-}
-
 export const handleSaveToBackpack = async (
-  reactFlowInstance: ReactFlowInstance | undefined | null,
+  editor: Editor | undefined | null,
   backpackApi: BackpackClientApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
   errorCallback: (error: string) => void
 ) => {
-  if (!reactFlowInstance || !backpackApi) {
+  if (!editor || !backpackApi) {
     return;
   }
   const validateSketchName = (
@@ -95,23 +53,25 @@ export const handleSaveToBackpack = async (
   }
   const newFileName = extractUserInput(dialogResults) + '.png';
 
-  const viewportElement = document.querySelector(
-    '.react-flow__viewport'
-  ) as HTMLElement;
-  if (!viewportElement) {
-    errorCallback('Could not find the sketch canvas to export.');
-    return;
-  }
-
   try {
-    const blobToSave = await reactFlowToBlob(viewportElement);
+    const shapeIds = editor.getCurrentPageShapeIds();
+    if (shapeIds.size === 0) {
+      errorCallback('No shapes to export.');
+      return;
+    }
+
+    const result = await editor.toImage([...shapeIds], {
+      format: 'png',
+      padding: 50,
+      pixelRatio: 2,
+    });
 
     const eventName = backpackFileList.includes(newFileName)
       ? EVENTS.SAVE_TO_BACKPACK_REPLACE
       : EVENTS.SAVE_TO_BACKPACK_NEW;
     backpackApi.saveBlobFile(
       newFileName,
-      blobToSave,
+      result.blob,
       () => {
         errorCallback(
           `Error saving ${newFileName} to your Backpack. Please try again`

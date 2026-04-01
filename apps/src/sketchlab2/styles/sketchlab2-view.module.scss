@@ -4,24 +4,16 @@
   display: flex;
 }
 
-.reactFlowWrapper {
+.tldrawWrapper {
   width: 100%;
   height: 100%;
   position: relative;
-
-  // Show a visible outline when nodes are focused via keyboard (Tab)
-  :global(.react-flow__node:focus-visible) {
-    outline: 2px solid var(--neutral-base-white);
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
 }
 
 .floatingToolbar {
   position: absolute;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 10px;
   display: flex;
   gap: 5px;
   background: var(--neutral-gray-90);
@@ -29,12 +21,14 @@
   border-radius: 8px;
   padding: 6px 8px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
-  z-index: 5;
+  z-index: 300;
 }
 
 .floatingToolbarLeft {
+  right: auto;
   left: 10px;
-  transform: none;
+  top: auto;
+  bottom: 54px;
   flex-direction: column;
 }
 
@@ -79,159 +73,4 @@
     width: 24px;
     height: 1px;
   }
-}
-
-.fixedPalette {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 5;
-}
-
-// When the toolbar is also on the left, push the palette below it
-.fixedPaletteBelowToolbar {
-  top: 155px;
-}
-
-.textBoxNode {
-  min-width: 150px;
-  min-height: 60px;
-  background: var(--neutral-base-black);
-  border: 2px solid var(--neutral-gray-70);
-  border-radius: 8px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-  }
-}
-
-.textBoxNodeSelected {
-  border-color: var(--neutral-base-white);
-  box-shadow: 0 0 0 2px var(--neutral-gray-60);
-}
-
-.textBoxNodeTransparent {
-  background: transparent;
-  border-color: transparent;
-}
-
-.textBoxNodeCircle {
-  border-radius: 50%;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-}
-
-.textBoxNodeTriangle {
-  // No clip-path — the SVG handles fill + border
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent !important;
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-}
-
-.triangleSvg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-// Shared content wrapper — renders above the triangle SVG via DOM order
-.textBoxNodeContent {
-  position: relative;
-  width: 100%;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// For triangle: absolutely fill the node bounds, clip to the triangle,
-// and nudge content down toward the visual centroid (~67% from apex)
-.textBoxNodeContentTriangle {
-  position: absolute;
-  inset: 0;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  padding-top: 30%;
-  align-items: center;
-  justify-content: center;
-
-  // Override the full-width defaults so flex centering can take effect
-  .textBoxNodeDisplay,
-  .textBoxNodeTextarea {
-    width: auto;
-    max-width: 55%;
-    text-align: center;
-  }
-}
-
-.textBoxNodeDisplay {
-  width: 100%;
-  font-size: 7px;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  word-break: break-word;
-  user-select: none;
-  color: var(--neutral-base-white);
-  text-align: center;
-}
-
-.textBoxNodePlaceholder {
-  color: var(--neutral-gray-50);
-  font-style: italic;
-  font-size: 6.5px;
-}
-
-.textBoxNodeTextarea {
-  width: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  font-size: 7px;
-  line-height: 1.4;
-  background: transparent;
-  font-family: inherit;
-  color: var(--neutral-base-white);
-  text-align: center;
-  cursor: text;
-}
-
-.imageNode {
-  width: 100%;
-  height: 100%;
-  background: var(--neutral-base-black);
-  border: 2px solid var(--neutral-gray-70);
-  border-radius: 4px;
-  padding: 2px;
-  cursor: grab;
-  box-sizing: border-box;
-
-  &:active {
-    cursor: grabbing;
-  }
-}
-
-.imageNodeImg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-  user-select: none;
 }
