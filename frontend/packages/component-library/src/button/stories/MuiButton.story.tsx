@@ -17,7 +17,6 @@ export default {
   title: 'DesignSystem/Button/MuiButton',
   component: MuiButton,
   parameters: {
-    useMui: true,
     docs: {
       description: {
         component:
