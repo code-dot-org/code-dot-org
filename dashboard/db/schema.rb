@@ -2528,7 +2528,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_181219) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
-  create_table "user_lesson_objective_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "user_lesson_objective_reflections", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "objective_id", null: false
     t.bigint "student_id", null: false
     t.string "reflection"
