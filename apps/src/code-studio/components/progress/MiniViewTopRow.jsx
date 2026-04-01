@@ -54,7 +54,7 @@ export default class MiniViewTopRow extends React.Component {
           style={isRtl ? styles.buttonRtl : styles.button}
         />
         <div style={isRtl ? styles.toggleRtl : styles.toggle}>
-          <ProgressDetailToggle toggleStudyGroup="mini-view" />
+          <ProgressDetailToggle />
         </div>
       </div>
     );

@@ -161,7 +161,7 @@ class UnitOverviewTopRow extends React.Component {
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
             )}
           <span style={styles.detailToggle}>
-            <ProgressDetailToggle toggleStudyGroup="unit-overview" />
+            <ProgressDetailToggle />
           </span>
         </div>
       </div>

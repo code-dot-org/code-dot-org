@@ -13,8 +13,6 @@ import i18n from '@cdo/locale';
  */
 class ProgressDetailToggle extends React.Component {
   static propTypes = {
-    toggleStudyGroup: PropTypes.string,
-
     // redux backed
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
