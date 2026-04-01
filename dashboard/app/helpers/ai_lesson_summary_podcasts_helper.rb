@@ -6,7 +6,7 @@ module AiLessonSummaryPodcastsHelper
 
   def self.create_and_save_to_s3(lesson_id, user_id)
     script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
-    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
     unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
       podcast = get_podcast_from_script(script)
@@ -15,7 +15,7 @@ module AiLessonSummaryPodcastsHelper
   end
 
   def self.retrieve_podcast_from_s3(lesson_id)
-    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
     AWS::S3.download_from_bucket(PODCAST_BUCKET, filename)
   end
 
