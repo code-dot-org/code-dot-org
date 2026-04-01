@@ -52,17 +52,17 @@ export default class OrderControls extends Component {
         <i
           onMouseDown={this.handleMoveUp}
           style={styles.controlIcon}
-          className="fa fa-caret-up"
+          className="fa-solid fa-caret-up"
         />
         <i
           onMouseDown={this.handleMoveDown}
           style={styles.controlIcon}
-          className="fa fa-caret-down"
+          className="fa-solid fa-caret-down"
         />
         <i
           onMouseDown={this.handleRemove}
           style={styles.controlIcon}
-          className="fa fa-trash"
+          className="fa-solid fa-trash"
         />
         <BaseDialog
           isOpen={showConfirm}

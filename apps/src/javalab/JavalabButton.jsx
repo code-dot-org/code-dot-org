@@ -4,9 +4,7 @@ import React from 'react';
 
 import style from './javalab-button.module.scss';
 
-// TODO: This component should be refactored to use <Button/> (@code-dot-org/component-library/button).
-// In order for that to work, we will need to refactor <Button/> to allow a button's icon and
-// text to be vertically stacked.
+// TODO: This component should be refactored to use MUI Button from @mui/material.
 export default function JavalabButton({
   id,
   icon,

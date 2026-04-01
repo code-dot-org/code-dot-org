@@ -111,7 +111,7 @@ class AichatAiClientTest < ActionView::TestCase
      required: ['property1', 'property2']
     }
 
-    @json_schema_with_top_level_object_and_all_required =  {
+    @json_schema_with_top_level_object_and_all_required = {
       type: 'object',
      properties: {
        property1:

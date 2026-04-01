@@ -9,7 +9,7 @@ require "csv"
 require 'httparty'
 
 # Terminal control code to clear the current line
-TERMINAL_CLEAR_LINE="\r\e[K"
+TERMINAL_CLEAR_LINE = "\r\e[K"
 OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
 
 # Parse command line options

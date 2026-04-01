@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
@@ -5,7 +6,6 @@ import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
@@ -112,7 +112,8 @@ function Comment({
         text: isCommentResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
-        iconClass: isCommentResolved ? 'circle-o' : 'check-circle',
+        iconClass: isCommentResolved ? 'circle' : 'circle-check',
+        ...(isCommentResolved && {iconStyle: 'regular'}),
       });
     }
     if (viewAsTeacher) {
@@ -141,9 +142,11 @@ function Comment({
 
       return (
         <a onClick={onClickWrapper} key={index} className="comment-menu-item">
-          <span
+          <FontAwesomeV6Icon
+            iconName={item.iconClass}
+            iconStyle={item.iconStyle}
             style={styles.icon}
-            className={'fa fa-fw fa-' + item.iconClass}
+            className="fa-fw"
           />
           <span style={styles.text}>{item.text}</span>
         </a>
@@ -171,9 +174,9 @@ function Comment({
     >
       <div style={styles.commentHeaderContainer}>
         {isCommentResolved && (
-          <FontAwesome
+          <FontAwesomeV6Icon
             className="resolved-checkmark"
-            icon="check-circle"
+            iconName="circle-check"
             style={styles.check}
           />
         )}
