@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useMemo} from 'react';
 
 import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
@@ -44,55 +44,64 @@ export function useAiChatDisabledState({
   const enabledForUser = appName
     ? areAiChatToolsEnabled({appName, aiChatAccessLevel: userAccessLevel})
     : false;
-  let disabledState: AiChatDisabledState;
 
-  if (!appName) {
-    disabledState = {chatDisabled: true};
-  } else if (
-    isPredictLevel &&
-    !hasSubmittedPredictResponse &&
-    !getIsStartMode()
-  ) {
+  const disabledState: AiChatDisabledState = useMemo(() => {
+    if (!appName) {
+      return {chatDisabled: true};
+    }
+
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
-    disabledState = {
-      chatDisabled: true,
-      chatDisabledMessage: 'Chat is disabled until you submit your prediction.',
-    };
-  } else if (isTeacher) {
-    if (
-      enabledForUser &&
-      sectionAccessLevel &&
-      !areAiChatToolsEnabled({
-        appName: appName!,
-        aiChatAccessLevel: sectionAccessLevel,
-      })
-    ) {
+    if (isPredictLevel && !hasSubmittedPredictResponse && !getIsStartMode()) {
+      return {
+        chatDisabled: true,
+        chatDisabledMessage:
+          'Chat is disabled until you submit your prediction.',
+      };
+    }
+
+    if (isTeacher) {
       // If teacher has access but the currently selected section access level doesn't grant access,
       // show the appropriate message to more closely match the student experience.
       // Note: It might not EXACTLY match the student experience, since the student could
       // technically have access from another teacher's section.
-      disabledState = {
-        chatDisabled: true,
-        chatDisabledMessage: 'Chat is disabled for this class section.',
-      };
-    } else if (!enabledForUser) {
+      if (
+        enabledForUser &&
+        sectionAccessLevel &&
+        !areAiChatToolsEnabled({
+          appName: appName!,
+          aiChatAccessLevel: sectionAccessLevel,
+        })
+      ) {
+        return {
+          chatDisabled: true,
+          chatDisabledMessage: 'Chat is disabled for this class section.',
+        };
+      }
       // If the teacher doesn't have access, show the appropriate message to direct the teacher on how to get access.
-      disabledState = {
-        chatDisabled: true,
-        chatDisabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
-      };
-    } else {
-      disabledState = {chatDisabled: false};
+      if (!enabledForUser) {
+        return {
+          chatDisabled: true,
+          chatDisabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+        };
+      }
+      return {chatDisabled: false};
     }
-  } else {
+
     // User is a student.
-    disabledState = enabledForUser
+    return enabledForUser
       ? {chatDisabled: false}
       : {
           chatDisabled: true,
           chatDisabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
         };
-  }
+  }, [
+    appName,
+    isPredictLevel,
+    hasSubmittedPredictResponse,
+    isTeacher,
+    enabledForUser,
+    sectionAccessLevel,
+  ]);
 
   useEffect(() => {
     setChatDisabledState(disabledState);
