@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   currentGlobalConfiguration,
-  getGlobalEditionRegion,
   RegionConfigurationPageObject,
 } from '@cdo/apps/util/globalEdition';
 
@@ -70,14 +69,13 @@ export const GlobalEditionWrapper: React.FunctionComponent<
 
   // Get the 'pages' object from the current global region configuration
   const pages = currentGlobalConfiguration().pages || [];
-  const geRegion = getGlobalEditionRegion();
 
   // Filters the config down to the first matching page with a setting for
   // the given component
   const pageConfig: RegionConfigurationPageObject | undefined = pages
     .filter(
       filterInfo =>
-        RegExp(`^/${geRegion}${filterInfo.path}(?:/.*)?`).test(
+        RegExp('^/global/.*' + filterInfo.path + '(?:/.*)?').test(
           window.location.pathname
         ) && componentId in filterInfo.components
     )

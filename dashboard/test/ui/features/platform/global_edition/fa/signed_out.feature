@@ -8,7 +8,7 @@ Feature: Global Edition - Farsi Headers when Signed Out
     And I set the language cookie
 
   Scenario: Signed out user should see the correct header links on Dashboard
-    Given I am on "http://studio.code.org/fa/users/sign_in?lang=fa-IR"
+    Given I am on "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
     And I dismiss the language selector
     And I select the "فارسی" option in dropdown "locale" to load a new page
     Then I wait to see ".headerlinks"
