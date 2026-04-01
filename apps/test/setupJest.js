@@ -4,7 +4,6 @@ import 'whatwg-fetch';
  * Import locales to jest environment
  */
 import '../build/locales/en_us/common_locale.js';
-import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
 import '../build/locales/en_us/codebridge_locale.js';
 import '../build/locales/en_us/javalab_locale.js';

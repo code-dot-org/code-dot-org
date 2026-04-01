@@ -299,7 +299,7 @@ module AichatRubyTypes
     end
 
     def value_is_type?(value)
-      value.nil? ||  @type.value_is_type?(value)
+      value.nil? || @type.value_is_type?(value)
     end
   end
 
@@ -327,7 +327,7 @@ module AichatRubyTypes
     end
 
     def value_is_type?(value)
-      @first_type.value_is_type?(value) ||  @second_type.value_is_type?(value)
+      @first_type.value_is_type?(value) || @second_type.value_is_type?(value)
     end
   end
 

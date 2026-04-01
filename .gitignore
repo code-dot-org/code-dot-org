@@ -117,6 +117,9 @@ skaffold-build-tags.json
 /cdo-local-secrets.env
 /cdo-local-secrets.env.lock
 
+# codex
+.codex
+
 # claude
 .claude/worktrees
 CLAUDE.local.md

@@ -48,6 +48,10 @@ module Dashboard
     config.active_support.disable_to_s_conversion = true
     config.active_support.executor_around_test_case = true
 
+    # Continue to use old, 6.1-only cache format version while we figure out
+    # some issues with 7.0
+    config.active_support.cache_format_version = 6.1
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host

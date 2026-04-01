@@ -188,9 +188,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :join, params: {id: section.code}
     assert_response :forbidden
