@@ -3,6 +3,7 @@ import $ from 'jquery';
 import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
@@ -47,7 +48,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={true}
-          aiChatAccessLevel="enabled"
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
@@ -60,7 +61,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={false}
-          aiChatAccessLevel="enabled"
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
@@ -73,7 +74,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={false}
-          aiChatAccessLevel="enabled"
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
@@ -86,7 +87,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={false}
-          aiChatAccessLevel="disabled"
+          aiChatAccessLevel={AiChatAccessLevels.DISABLED}
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
