@@ -38,7 +38,7 @@ describe('globalEdition', () => {
     it('should return the region configuration for the current region', () => {
       render(<Document region={'fa'} />);
       // Should match config/global_editions/fa.yml
-      expect(currentGlobalConfiguration().locales).toEqual(['fa-IR', 'en-US']);
+      expect(currentGlobalConfiguration().locales).toEqual(['fa-IR']);
     });
   });
 });

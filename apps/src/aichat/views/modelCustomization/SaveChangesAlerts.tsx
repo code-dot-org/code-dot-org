@@ -10,7 +10,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FAQ_LINK, modelDescriptions} from '../../constants';
-import aichatI18n from '../../locale';
 
 import styles from '../model-customization-workspace.module.scss';
 
@@ -42,7 +41,8 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
       text:
         saveError?.type === 'permissionsError'
           ? commonI18n.aiChatNotAuthorizedSignedOut()
-          : saveError?.message || aichatI18n.saveError(),
+          : saveError?.message ||
+            'There was an error saving your project. Please try again.',
       type: alertTypes.danger,
       link:
         saveError?.type === 'permissionsError'
@@ -50,19 +50,19 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
           : undefined,
     },
     reminder: {
-      text: aichatI18n.saveChangesReminderAlert(),
+      text: 'Remember to save your changes',
       type: alertTypes.info,
     },
     unsaved: {
-      text: aichatI18n.saveChangesUnsavedAlert(),
+      text: 'You have unsaved changes',
       type: alertTypes.warning,
     },
     saved: {
-      text: aichatI18n.saveChangesSucessAlert(),
+      text: 'Saved',
       type: alertTypes.success,
     },
     reset: {
-      text: aichatI18n.modelResetNotification(),
+      text: 'Model customizations and model card information have been reset to default settings.',
       type: alertTypes.success,
     },
     unsupportedModel: {

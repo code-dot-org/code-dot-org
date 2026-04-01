@@ -45,7 +45,7 @@
           "id": "1",
           "name": "index.html",
           "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: sans-serif;\n        padding: 10px;\n        background-color: #ffffff;\n        color: #000000;\n      }\n      h1 {\n        font-size: 20px;\n      }\n      h2 {\n        font-size: 15px;\n      }\n      p {\n        font-size: 12px;\n      }\n      ol {\n        padding: 10px;\n      }\n      li {\n        margin: 5px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Percy Jackson and the Olympians</h1>\n    <p>Percy Jackson and the Olympians is a fantasy series by Rick Riordan. It follows Percy Jackson, a twelve-year-old who discovers he is the son of a Greek god. I like it because I get to learn about Greek mythology but it's still funny and I like the characters.</p>\n    <h2>Books in the Series</h2>\n    <ol>\n      <li>The Lightning Thief</li>\n      <li>The Sea of Monsters</li>\n      <li>The Titan's Curse</li>\n      <li>The Battle of the Labyrinth</li>\n      <li>The Last Olympian</li>\n    </ol>\n  </body>\n</html>",
-          "active": true,
+          "active": false,
           "folderId": "0"
         },
         "2": {
@@ -53,16 +53,17 @@
           "name": "vision.md",
           "contents": "I want a page about my favorite book series, Percy Jackson and the Olympians by Rick Riordan.\n\nThe page should have a title at the top, a paragraph describing the series, and a list of the five books in order.",
           "folderId": "0",
-          "active": false
+          "active": true
         }
       },
       "openFiles": [
-        "1",
-        "2"
+        "2",
+        "1"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/637130aec62558b916677637259de338-image-1775017913710.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-25T23:17:47.377+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12a\"},{\"changed_at\":\"2026-03-25 23:19:46 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:29:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-25T23:17:47.377+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12a\"},{\"changed_at\":\"2026-03-25 23:19:46 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:29:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:53:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:32:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

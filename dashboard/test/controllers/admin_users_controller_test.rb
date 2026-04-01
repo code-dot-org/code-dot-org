@@ -45,7 +45,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity" do
     sign_in @admin
 
-    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    log_payload = {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :assume_identity, params: {user_id: @not_admin.id}
@@ -57,7 +57,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by username" do
     sign_in @admin
 
-    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    log_payload = {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :assume_identity, params: {user_id: "  " + @not_admin.username + "  "}
@@ -69,7 +69,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by email" do
     sign_in @admin
 
-    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    log_payload = {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :assume_identity, params: {user_id: @not_admin.email}
@@ -132,7 +132,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "undelete_user should undelete deleted user" do
     sign_in @admin
 
-    log_payload =  {event: "undelete_user", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @deleted_student.id}
+    log_payload = {event: "undelete_user", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @deleted_student.id}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :undelete_user, params: {user_id: @deleted_student.id}
@@ -482,7 +482,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     UserScript.create!(user: @user, script: @script)
     assert_equal 1, @user.user_scripts.count
 
-    log_payload =  {event: "delete_progress", namespace: 'admin', request_id: request.request_id,
+    log_payload = {event: "delete_progress", namespace: 'admin', request_id: request.request_id,
                     authenticated_user_id: @admin.id, affected_user_id: @user.id, script_id: @script.id.to_s, reason: reason}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
@@ -738,7 +738,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'grant_permission grants user_permission' do
     sign_in @admin
 
-    log_payload =  {event: "grant_permission", namespace: 'admin', request_id: request.request_id,
+    log_payload = {event: "grant_permission", namespace: 'admin', request_id: request.request_id,
                     authenticated_user_id: @admin.id, affected_user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
@@ -767,7 +767,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'revoke_permission revokes user_permission' do
     sign_in @admin
 
-    log_payload =  {event: "revoke_permission", namespace: 'admin', request_id: request.request_id,
+    log_payload = {event: "revoke_permission", namespace: 'admin', request_id: request.request_id,
                     authenticated_user_id: @admin.id, affected_user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
     CDO.log.expects(:warn).with(log_payload.to_json)
 
@@ -791,7 +791,7 @@ class AdminUsersControllerTest < ActionController::TestCase
                     authenticated_user_id: @admin.id, affected_user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
     CDO.log.expects(:warn).with(log_payload1.to_json)
 
-    log_payload2 =  {event: "bulk_grant_permission", namespace: 'admin', request_id: request.request_id,
+    log_payload2 = {event: "bulk_grant_permission", namespace: 'admin', request_id: request.request_id,
                      authenticated_user_id: @admin.id, affected_user_id: teacher.id, permission: UserPermission::LEVELBUILDER}
     CDO.log.expects(:warn).with(log_payload2.to_json)
 
