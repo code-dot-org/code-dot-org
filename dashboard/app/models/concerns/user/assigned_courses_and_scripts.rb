@@ -14,7 +14,7 @@ module User::AssignedCoursesAndScripts
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    unit_groups = user_scripts.map do |us|
+    unit_groups = Queries::ScriptActivity.in_progress_and_completed_scripts(self).map do |us|
       us.unit_group || us.script.original_unit_group
     end.compact.uniq
     unit_groups.filter!(&:launched?)

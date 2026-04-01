@@ -751,10 +751,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson_group = create(:lesson_group, script: script)
 
-    levels = [
-      create(:level),
-      create(:level)
-    ]
+    levels = create_list(:level, 2)
 
     script_levels = levels.map.with_index(1) do |level, pos|
       lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
@@ -776,10 +773,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     unit1.stubs(:next_unit).returns(unit2)
 
     lesson_group = create(:lesson_group, script: unit1)
-    levels = [
-      create(:level),
-      create(:level)
-    ]
+    levels = create_list(:level, 2)
 
     script_levels = levels.map.with_index(1) do |level, pos|
       lesson = create(:lesson, script: unit1, absolute_position: pos, lesson_group: lesson_group)

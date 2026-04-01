@@ -17,12 +17,12 @@ TOPIC_DTL_SOON = 'yes (deploying soon)'.freeze
 TOPIC_DTL_IN_PROGRESS = 'no (in progress)'.freeze
 TOPIC_DTL_FAILED = 'no (DTL failed [see levelbuilder])'.freeze
 MESSAGE_DTL_SKIPPED_NOTHING = 'robo-DTL is being skipped (nothing new to deploy).'.freeze
-MESSAGE_DTL_SKIPPED_TOPIC = 'robo-DTL is being skipped (developers DTL was not yes). ' \
+MESSAGE_DTL_SKIPPED_TOPIC = 'robo-DTL is being skipped (#deploy-status DTL was not yes). ' \
   'Please contact the DOTD for a manual deploy, if desired.'.freeze
 
-# Returns whether the Slack#developers topic specifies "DTL: yes". If it does not, messages
+# Returns whether the Slack#deploy-status topic specifies "DTL: yes". If it does not, messages
 # Slack#levelbuilder that robo-DTL is being skipped.
-# @return [Boolean] Whether the Slack#developers topic specifies "DTL: yes".
+# @return [Boolean] Whether the Slack#deploy-status topic specifies "DTL: yes".
 def slack_permission?
   return true if DevelopersTopic.dtl?
 

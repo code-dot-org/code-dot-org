@@ -1198,7 +1198,7 @@ Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |s
   browser_request(
     url: '/api/test/assign_section_to_course_and_unit',
     method: 'POST',
-    body: {section_position: section_position-1, course_name: course_name, unit_position: unit_position}
+    body: {section_position: section_position - 1, course_name: course_name, unit_position: unit_position}
   )
 end
 

@@ -63,8 +63,8 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
-// Show the lesson/<lesson_id>/practice page as a home for a AI Tutor+
-experiments.AI_TUTOR_LESSON_PRACTICE = 'ai-tutor-lesson-practice';
+// Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+experiments.LESSON_TUTOR = 'lesson-tutor';
 // Enable AI Content Safety image moderation
 experiments.AI_CONTENT_SAFETY = 'ai-content-safety';
 
