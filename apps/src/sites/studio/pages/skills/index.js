@@ -12,6 +12,9 @@ $(document).ready(() => {
       skills={skillsData.skills}
       levels={skillsData.levels}
     />,
-    document.getElementById('skills')
+    document.getElementById('skills'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

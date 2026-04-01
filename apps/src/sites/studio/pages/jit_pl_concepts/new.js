@@ -12,6 +12,9 @@ $(document).ready(() => {
     <Provider store={store}>
       <NewJitPlConceptForm />
     </Provider>,
-    document.getElementById('new-jit-pl-concept-form')
+    document.getElementById('new-jit-pl-concept-form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

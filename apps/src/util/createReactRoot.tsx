@@ -4,9 +4,16 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
 import ReactDOM from 'react-dom';
+import {createRoot, Root} from 'react-dom/client';
 
 import {getCurrentBrand, getMuiThemeForBrand} from './brand';
 import {SiteConfigProvider} from './SiteConfigContext';
+
+interface Options {
+  legacyReactDomRender?: boolean;
+}
+
+const rootsByContainer = new WeakMap<Element, Root>();
 
 /**
  * Global bootstrapper function that wraps rendered DOM trees with configured providers
@@ -16,10 +23,12 @@ import {SiteConfigProvider} from './SiteConfigContext';
  *
  * @param component - The React component to render
  * @param container - The container element or selector to render into
+ * @param options - Option to override default to use legacy rendering behavior
  */
 export function createReactRoot(
   component: ReactElement,
-  container: Element | string
+  container: Element | string,
+  options?: Options
 ): void {
   const containerElement =
     typeof container === 'string'
@@ -34,11 +43,22 @@ export function createReactRoot(
 
   const brand = getCurrentBrand();
   const theme = getMuiThemeForBrand(brand);
-
-  ReactDOM.render(
+  const wrappedComponent = (
     <SiteConfigProvider config={{brand}}>
       <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>
-    </SiteConfigProvider>,
-    containerElement
+    </SiteConfigProvider>
   );
+
+  if (options?.legacyReactDomRender) {
+    ReactDOM.render(wrappedComponent, containerElement);
+    return;
+  }
+
+  let root = rootsByContainer.get(containerElement);
+  if (!root) {
+    root = createRoot(containerElement);
+    rootsByContainer.set(containerElement, root);
+  }
+
+  root.render(wrappedComponent);
 }

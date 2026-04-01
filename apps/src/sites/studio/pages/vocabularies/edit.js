@@ -29,6 +29,9 @@ $(document).ready(function () {
         courseName={courseName}
       />
     </Provider>,
-    document.getElementById('vocabularies-table')
+    document.getElementById('vocabularies-table'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

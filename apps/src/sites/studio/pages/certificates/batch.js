@@ -17,6 +17,9 @@ $(document).ready(function () {
       initialStudentNames={studentNames}
       imageUrl={imageUrl}
     />,
-    document.getElementById('certificate-batch')
+    document.getElementById('certificate-batch'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
