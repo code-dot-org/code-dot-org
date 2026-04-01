@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-22T07:17:16.000Z",
   "level_num": "custom",
@@ -30,8 +31,9 @@
         "documentation"
       ],
       "answerTypeCustomizations": {
-        "buildHTML": "- Only generate <p> and <hr /> elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head",
-        "documentation": "- Keep explanations simple and friendly"
+        "buildHTML": "- Only generate <p> and <hr /> elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
       }
     },
     "display_name": "Paragraphs & Line Breaks",
@@ -54,7 +56,6 @@
     },
     "thumbnail_url": "https://images.code.org/7975b1e1de3da79ad7e81057a4556b01-Screenshot 2025-04-02 at 7.43.04 AM.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-22T07:17:16.467+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-03-22 07:18:45 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:20:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:20:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:22:55 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:28:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-22T07:17:16.467+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-03-22 07:18:45 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:20:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:20:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:22:55 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:28:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:29:21 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

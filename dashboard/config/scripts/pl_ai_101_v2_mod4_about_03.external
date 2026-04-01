@@ -1,0 +1,55 @@
+name 'pl-ai-101-V2-mod4-about-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Guiding AI Use
+
+#### Before allowing students to jump into using AI, it’s important to recognize that simply letting them “chat” with an LLM often leads to shallow or unproductive interactions. Without structure, students may ask vague questions, accept answers at face value, or miss opportunities for deeper thinking.
+
+#### Educators can add structure in multiple ways—through worksheets, chat protocols, prompt frameworks, or guided activities.
+
+#### Below are a few examples of guidance or structure you could integrate into your classroom.
+
+>#### 💬 **Quick Reflection:** Which of these would put up as a poster in your classroom?
+
+<div style="column-count:2; column-gap:10px; margin-top:10px;">
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="https://images.code.org/a6c1f926c9a96802cc81a589230120ae-Screenshot 2026-03-26 at 3.01.05 PM.png" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="https://images.code.org/a9d00eed5ce62bb1ff76c231f83ffb39-Screenshot 2026-03-26 at 3.00.44 PM.png" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="https://images.code.org/f0d3ca11fb621329f250047acc212320-Screenshot 2026-03-26 at 3.13.52 PM.png" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="https://images.code.org/72ed087a5342de1b3c31572e765f5c8f-a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="https://images.code.org/1935bca1ce881cbf1fff329bc04936a3-Screenshot 2026-03-26 at 3.00.30 PM.png" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+</div>
+MARKDOWN
