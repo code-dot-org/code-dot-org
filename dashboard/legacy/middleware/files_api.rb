@@ -360,6 +360,7 @@ class FilesApi < Sinatra::Base
   def valid_html_content?(body)
     disallowed_tags = DCDO.get('disallowed_html_tags', [])
     lowercase_xpath = '"ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"'
+    url_attr_matcher = 'name()="href" or name()="action" or name()="src" or name()="formaction" or name()="xlink:href"'
 
     # Applicable Nokogiri selector rules:
     #   Element selectors must start with //
@@ -374,18 +375,20 @@ class FilesApi < Sinatra::Base
 
     # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
     disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
-    downcased_href = %(translate(normalize-space(@href), #{lowercase_xpath}))
-    downcased_action = %(translate(normalize-space(@action), #{lowercase_xpath}))
+    downcased_url_attr = %(translate(normalize-space(.), #{lowercase_xpath}))
     disallowed_url_selectors = [
-      %(//*[starts-with(#{downcased_href}, "javascript:")]),
-      %(//*[starts-with(#{downcased_action}, "javascript:")]),
-      %(//*[starts-with(#{downcased_href}, "data:text/html")]),
+      %(//*[@*[#{url_attr_matcher}][starts-with(#{downcased_url_attr}, "javascript:")]]),
+      %(//*[@*[#{url_attr_matcher}][starts-with(#{downcased_url_attr}, "data:text/html")]]),
+    ]
+    disallowed_html_attr_selectors = [
+      '//*[@srcdoc]',
     ]
 
     Nokogiri::HTML(body).xpath(
       *disallowed_tag_selectors,
       disallow_on_attrs_selector,
       *disallowed_url_selectors,
+      *disallowed_html_attr_selectors,
     ).empty?
   end
 

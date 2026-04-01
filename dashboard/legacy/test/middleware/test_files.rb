@@ -970,5 +970,8 @@ class FilesApiHtmlValidationTest < Minitest::Test
     refute api.valid_html_content?('<a href=" javascript:alert(1)">Click me</a>')
     refute api.valid_html_content?('<form action="JAVASCRIPT:alert(1)"><button type="submit">Go</button></form>')
     refute api.valid_html_content?('<a href="data:text/html,hello">Click me</a>')
+    refute api.valid_html_content?('<img src="javascript:alert(1)">')
+    refute api.valid_html_content?('<button formaction="javascript:alert(1)">Go</button>')
+    refute api.valid_html_content?('<iframe srcdoc="<script>alert(1)</script>"></iframe>')
   end
 end
