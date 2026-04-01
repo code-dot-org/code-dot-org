@@ -3923,6 +3923,7 @@ __metadata:
     react-player: "npm:^3.4.0"
     react-schemaorg: "npm:^2.0.0"
   peerDependencies:
+    "@mui/material": ^7.3.2
     classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
