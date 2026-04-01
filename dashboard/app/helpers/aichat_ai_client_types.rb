@@ -20,7 +20,7 @@ module AichatAiClientTypes
   # type FileMessagePdfMimeType =  "application/pdf";
   # type FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType;
   FileMessageImageMimeType = string("image/jpeg") | string("image/png") | string("image/gif")
-  FileMessagePdfMimeType = string("application/pdf")
+  FileMessagePdfMimeType =  string("application/pdf")
   FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType
 
   # type MessageRole = "model" | "user";

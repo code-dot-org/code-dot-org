@@ -20,7 +20,7 @@ class AidiffExitTicket < AidiffArtifact
   def self.to_markdown(json)
     json['comment'] + "\n\n***\n\n" +
       json['exit_ticket_items'].map.with_index do |item, i|
-        "**Question #{i + 1}:** #{item['question']}\n\n**Answer:** #{item['answer']}\n"
+        "**Question #{i+1}:** #{item['question']}\n\n**Answer:** #{item['answer']}\n"
       end.join("\n\n***\n\n")
   end
 

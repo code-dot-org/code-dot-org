@@ -14,6 +14,7 @@ import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
+import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
@@ -252,8 +253,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'viewStudentChatHistory',
       text:
         selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? `${selectedStudentName ?? ''}'s chat history (view only)`
-          : `${selectedStudentName ?? ''}'s chat history`,
+          ? aichatI18n.viewOnlyTabLabel({
+              fieldLabel: aichatI18n.viewStudentChatHistory({
+                selectedStudentName: selectedStudentName ?? '',
+              }),
+            })
+          : aichatI18n.viewStudentChatHistory({
+              selectedStudentName: selectedStudentName ?? '',
+            }),
       tabContent: (
         <ChatEventsList
           events={studentChatHistory}
@@ -266,7 +273,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     },
     {
       value: 'testStudentModel',
-      text: 'Test student model',
+      text: aichatI18n.testStudentModel(),
       tabContent: (
         <ChatEventsList
           events={visibleItems}

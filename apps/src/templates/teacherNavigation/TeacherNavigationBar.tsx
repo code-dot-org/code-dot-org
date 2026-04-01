@@ -56,16 +56,10 @@ const TeacherNavigationBar: React.FC<{
   );
 
   useEffect(() => {
-    const sectionIds =
-      !selectedSection || _.includes(sectionOrder, selectedSection.id)
-        ? sectionOrder
-        : [selectedSection.id, ...sectionOrder];
-    const updatedSectionArray = sectionIds
+    const updatedSectionArray = sectionOrder
       .map(sectionId => sections[sectionId] || null)
       .filter(section => section !== null)
-      .filter(section => {
-        return !(section.hidden && section.id !== selectedSection?.id);
-      })
+      .filter(section => !section.hidden)
       .map(section => ({
         value: section.id.toString(),
         text: section.name,

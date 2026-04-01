@@ -327,7 +327,10 @@ Craft.init = function (config) {
         <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
       </div>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

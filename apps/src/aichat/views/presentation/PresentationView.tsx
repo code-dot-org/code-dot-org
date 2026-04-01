@@ -9,6 +9,7 @@ import {
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
+import aichatI18n from '../../locale';
 
 import ModelCardRow from './ModelCardRow';
 
@@ -91,13 +92,11 @@ const PresentationView: React.FunctionComponent = () => {
           }
         )}
         <ModelCardRow
-          title={'Technical Info'}
+          title={aichatI18n.technicalInfoHeader()}
           titleIcon="screwdriver-wrench"
           expandedContent={technicalInfo}
           key="technicalInfo"
-          tooltipText={
-            'Behind-the-scenes technical information for the underlying language model.'
-          }
+          tooltipText={aichatI18n.technicalInfoHeader_tooltipText()}
         />
       </div>
     </div>

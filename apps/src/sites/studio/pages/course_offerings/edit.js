@@ -29,6 +29,9 @@ function showCourseOfferingEditor() {
       videos={videos}
       facilitatorsCourses={facilitatorsCourses}
     />,
-    document.getElementById('course_offering_editor')
+    document.getElementById('course_offering_editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

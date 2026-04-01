@@ -214,7 +214,7 @@ def main
   # For some reason, we're getting dates from the API in August 2025 sometimes.
   # Better to fail and have slightly stale data than overwrite with obviously wrong data.
   days_old = (Time.now.to_i - records.first[:'UTC Timestamp']) / (24 * 60 * 60)
-  if days_old > (NUM_DAYS + 2)
+  if days_old > (NUM_DAYS+2)
     ChatClient.message(
       'cron-daily',
       "Daily Weather dataset not updated because data returned from the OpenWeather API is #{days_old} days old from #{records.first[:Date]}.",

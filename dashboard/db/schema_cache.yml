@@ -7544,35 +7544,6 @@ columns:
     default_function: 
     collation: 
     comment: 
-  user_lesson_reflections:
-  - *9
-  - *84
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: student_id
-    sql_type_metadata: *14
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: success
-    sql_type_metadata: *11
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb4_unicode_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: struggle
-    sql_type_metadata: *11
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb4_unicode_ci
-    comment: 
-  - *12
-  - *13
   user_level_interactions:
   - *9
   - *15
@@ -8821,7 +8792,6 @@ primary_keys:
   user_data_retention_statuses: id
   user_facilitator_infos: id
   user_geos: id
-  user_lesson_reflections: id
   user_level_interactions: id
   user_levels: id
   user_ml_models: id
@@ -9046,7 +9016,6 @@ data_sources:
   user_data_retention_statuses: true
   user_facilitator_infos: true
   user_geos: true
-  user_lesson_reflections: true
   user_level_interactions: true
   user_levels: true
   user_ml_models: true
@@ -14865,47 +14834,6 @@ indexes:
     type: 
     using: :btree
     comment: 
-  user_lesson_reflections:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: user_lesson_reflections
-    name: index_user_lesson_reflections_on_lesson_id
-    unique: false
-    columns:
-    - lesson_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: user_lesson_reflections
-    name: index_user_lesson_reflections_on_student_id
-    unique: false
-    columns:
-    - student_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: user_lesson_reflections
-    name: index_user_lesson_reflections_on_lesson_id_and_student_id
-    unique: false
-    columns:
-    - lesson_id
-    - student_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
   user_level_interactions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_level_interactions
@@ -15391,7 +15319,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260330175427
+version: 20260318191529
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

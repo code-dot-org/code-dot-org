@@ -646,13 +646,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    return false unless Policies::Lti.lti_registration_in_progress?(session)
-    return false if current_user&.lms_landing_opted_out
-
-    partial_user = User.new_with_session(ActionController::Parameters.new, session)
-    return false if partial_user&.lms_landing_opted_out
-
-    !account_linking_locked?
+    Policies::Lti.lti_registration_in_progress?(session) && !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts

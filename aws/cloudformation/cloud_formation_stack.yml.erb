@@ -796,15 +796,9 @@ Outputs:
     Description: Codeprojects URL
     Value: !Sub preview.${CodeprojectsBaseDomainName}
 <% end -%>
-<% if rack_env?(:adhoc) -%>
-  DaemonSSHCommand:
-    Description: "AWS CLI command to connect to the daemon instance via AWS Systems Manager (SSM) Session Manager."
-    Value: !Sub
-      - "aws ssm start-session --target ${InstanceId}"
-      - InstanceId: !Ref <%=daemon%>
-  DaemonProvisioningLog:
-    Description: "Link to CloudWatch Log that the daemon EC2 Instance Cloud Init Output logs are streamed to for diagnosis of provisioning issues."
-    Value: !Sub
-      - "https://${AWS::Region}.console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#logsV2:log-groups/log-group/adhoc-syslog/log-events/${InstanceId}"
-      - InstanceId: !Ref <%=daemon%>
-<% end -%>
+# display information about how to ssh to console if this is a single instance adhoc environment
+<% if rack_env?(:adhoc) && !frontends -%>
+  SSHServerName:
+    Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
+    Description: SSH server name
+<%end-%>

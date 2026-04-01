@@ -19,7 +19,13 @@ export function ProjectNotFoundAlert() {
 }
 
 export default () => {
-  createReactRoot(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
+  createReactRoot(
+    <ProjectNotFoundAlert />,
+    document.getElementById('codeApp'),
+    {
+      legacyReactDomRender: true,
+    }
+  );
 };
 
 const styles = {

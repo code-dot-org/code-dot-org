@@ -28,7 +28,10 @@ export default (project, tosText) => {
       isOwner: project.isOwner(),
       canViewFlaggedProject: project.canViewFlaggedProject(),
     }),
-    document.getElementById('codeApp')
+    document.getElementById('codeApp'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   // update admin box (if it exists) with abuse info

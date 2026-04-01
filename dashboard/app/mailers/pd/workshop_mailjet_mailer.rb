@@ -73,7 +73,7 @@ class Pd::WorkshopMailjetMailer
     Retryable.retryable(
       on: RestClient::TooManyRequests,
       tries: MailJet::MAILJET_RETRY_LIMIT,
-      sleep: ->(n) {2**n}
+      sleep: ->(n) {2 ** n}
     ) do
       MailJet.send_email(
         email_name.to_sym,

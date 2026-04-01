@@ -8,6 +8,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import aichatI18n from '../../locale';
 import {timestampToDateTime} from '../../redux/utils';
 import {
   ChatEvent,
@@ -25,7 +26,7 @@ const CopyChatHistoryButton: React.FunctionComponent = () => {
     const textToCopy = messages.map(chatEventToFormattedString).join('\n');
     copyToClipboard(
       textToCopy,
-      () => alert('Text copied to clipboard'),
+      () => alert(aichatI18n.copyToClipboardAlert()),
       () => {
         console.error('Error in copying text');
       }
@@ -40,7 +41,7 @@ const CopyChatHistoryButton: React.FunctionComponent = () => {
   return (
     <IconButtonWithTooltip
       id="copy-chat"
-      label={'Copy chat'}
+      label={aichatI18n.copyChatButtonText()}
       icon={{iconName: 'copy', iconStyle: 'solid'}}
       variant="text"
       color="tertiary"
@@ -58,19 +59,23 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   if (isChatMessage(chatEvent)) {
     return `[${formattedTimestamp} - ${chatEvent.role}] ${
       chatEvent.status === Status.PROFANITY_VIOLATION
-        ? '[FLAGGED AS PROFANITY]'
+        ? aichatI18n.copyChatContainsProfanity()
         : chatEvent.chatMessageText
     }`;
   }
 
   if (isModelUpdate(chatEvent)) {
-    return `[${formattedTimestamp} - Model Update] ${AI_CUSTOMIZATIONS_LABELS[
-      chatEvent.updatedField
-    ]!} updated.`;
+    return aichatI18n.copyChatFormatting_modelUpdate({
+      timestamp: formattedTimestamp,
+      updatedFieldLabel: AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField]!,
+    });
   }
 
   if (isNotification(chatEvent)) {
-    return `[${formattedTimestamp} - Notification] ${chatEvent.text}`;
+    return aichatI18n.copyChatFormatting_notification({
+      timestamp: formattedTimestamp,
+      chatEventText: chatEvent.text,
+    });
   }
 }
 

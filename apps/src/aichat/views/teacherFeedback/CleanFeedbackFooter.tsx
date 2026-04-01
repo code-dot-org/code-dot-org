@@ -8,6 +8,7 @@ import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
+import aichatI18n from '../../locale';
 import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
@@ -55,8 +56,8 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         direction: isAssistant ? 'onRight' : 'onLeft',
         size: 'xs',
         text: teacherFlagged
-          ? 'Flagged as inappropriate'
-          : 'Flag message as inappropriate',
+          ? aichatI18n.chatMessage_flaggedAsInappropriate()
+          : aichatI18n.chatMessage_flagAsInappropriate(),
         className: moduleStyles.tooltip,
         iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
       }}
@@ -70,7 +71,9 @@ const CleanFeedbackFooter: React.FC<Props> = ({
           teacherFlagged && moduleStyles.selected
         )}
         onClick={handleFlagClick}
-        aria-label={teacherFlagged ? 'unflag' : 'flag'}
+        aria-label={
+          teacherFlagged ? aichatI18n.aria_unflag() : aichatI18n.aria_flag()
+        }
         type="button"
       >
         <FontAwesomeV6Icon

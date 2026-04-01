@@ -14,6 +14,7 @@ import {
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../../locale';
 import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
@@ -49,8 +50,8 @@ const PublishNotes: React.FunctionComponent = () => {
   }, [dispatch]);
 
   const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
-    ? ['Ready to publish', 'success']
-    : ['In order to publish, you must fill out a model card', 'warning'];
+    ? [aichatI18n.modelCard_publishSuccess(), 'success']
+    : [aichatI18n.modelCard_publishWarning(), 'warning'];
 
   return (
     <div
@@ -120,7 +121,7 @@ const PublishNotes: React.FunctionComponent = () => {
           startIcon={<FontAwesomeV6Icon iconName="download" />}
           type="button"
         >
-          {'Save'}
+          {aichatI18n.modelCustomizationSaveButtonText()}
         </MuiButton>
         <MuiButton
           variant="contained"

@@ -5,6 +5,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
+import aichatI18n from '../../locale';
 import {
   clearStagedFilesAlert,
   removeStagedFile,
@@ -17,16 +18,13 @@ import FilePreview from './FilePreview';
 import styles from './staged-files-preview.module.scss';
 
 const alerts = {
-  uploadFailed: [
-    'There was an error uploading one or more of your files. Please try again.',
-    'danger',
-  ] as const,
+  uploadFailed: [aichatI18n.uploadFailedAlert(), 'danger'] as const,
   fileLimitExceeded: [
-    `AI Chat supports a maximum of ${MAX_NUM_FILES} files. Only some of your files were uploaded.`,
+    aichatI18n.uploadFileLimitExceededAlert({maximum: MAX_NUM_FILES}),
     'warning',
   ] as const,
   sizeLimitExceeded: [
-    `AI Chat supports a maximum file size of ${MAX_FILE_SIZE_MB}MB. Please try a smaller file.`,
+    aichatI18n.uploadSizeLimitExceededAlert({maximum: MAX_FILE_SIZE_MB}),
     'danger',
   ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};

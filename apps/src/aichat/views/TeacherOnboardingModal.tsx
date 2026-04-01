@@ -4,6 +4,9 @@ import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import aichatI18n from '../locale';
 
 import moduleStyles from './onboarding-modal.module.scss';
 
@@ -24,66 +27,54 @@ const TeacherOnboardingModal: React.FunctionComponent<
     >
       <div className={moduleStyles.headerContainer}>
         <Typography variant="h3" gutterBottom>
-          {'Welcome to AI Chat Lab'}
+          {aichatI18n.welcomeToAichatLab()}
         </Typography>
       </div>
       <hr />
       <div className={moduleStyles.contentContainer}>
         <div className={moduleStyles.warning}>
           <Typography variant="body2" gutterBottom>
-            {
-              "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption."
-            }
+            {aichatI18n.teacherOnboardingModal_warning()}
           </Typography>
         </div>
         <div className={moduleStyles.textContainer}>
           <Typography variant="body1" gutterBottom>
-            {'AI Chat Components'}
+            {aichatI18n.chatComponentsHeader()}
           </Typography>
           <ul>
             <li>
               <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={
-                    '**Instructions**: Clear directions and goals for each level.'
-                  }
+                  markdown={aichatI18n.teacherOnboardingModal_instructionsBullet()}
                 />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={
-                    '**Model Customizations** *(optional)*:  Clear directions and goals for each level.'
-                  }
+                  markdown={aichatI18n.teacherOnboardingModal_modelCustomizationBullet()}
                 />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={
-                    "**AI Chat**: The area where students can interact directly with the chatbot they've created."
-                  }
+                  markdown={aichatI18n.teacherOnboardingModal_aiChatBullet()}
                 />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={
-                    '**User View** *(optional)*: Allows students to use the chatbot as a user, without the instructions or customization visible.'
-                  }
+                  markdown={aichatI18n.teacherOnboardingModal_userViewBullet()}
                 />
               </Typography>
             </li>
           </ul>
           <Typography variant="body2" gutterBottom>
-            {
-              "As a teacher, you have access to all of your students' chat customizations and history (retained for 90 days). "
-            }
+            {aichatI18n.teacherOnboardingModal_chatHistoryAccess()}
             <Link href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher">
-              {'[Learn more here.]'}
+              {aichatI18n.learnMoreHereInBrackets()}
             </Link>
           </Typography>
         </div>
@@ -97,7 +88,7 @@ const TeacherOnboardingModal: React.FunctionComponent<
           onClick={onClose}
           type="button"
         >
-          {'Ok'}
+          {i18n.aiWarningModalOk()}
         </MuiButton>
       </div>
     </AccessibleDialog>

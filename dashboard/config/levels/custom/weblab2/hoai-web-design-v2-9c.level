@@ -6,7 +6,7 @@
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring Images\r\n\r\nIn this level, we'll use AI Tutor to help us understand image tags and add a new image to our webpage.\r\n\r\n**A Note on Image Generation:** AI Tutor is not an \"image generator\", so it can't create brand-new images and put them in your webpage. Instead, it can take images already in your project (or ones you upload yourself) and insert them into your website.\r\n\r\n**Do This:**\r\n1) Ask AI Tutor to explain how image tags work in HTML\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n2) Ask AI Tutor to add one of the unused images to this page. Use specific language, like \"image tag\" or `<img>`, to make sure AI follows your vision.\r\n\r\nOnce you've added your own image: press the Continue button!",
+    "long_instructions": "## Exploring Images\r\n\r\nIn this level, we'll use AI Tutor to help us understand image tags and add a new image to our webpage.\r\n\r\n**Do This:**\r\n1) Ask AI Tutor to explain how image tags work in HTML\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n2) Ask AI Tutor to add a new image to this page. Use specific language, like \"image tag\" or `<img>`, to make sure AI follows your vision.\r\n\r\nOnce you've added your own image: press the Continue button!",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -30,9 +30,8 @@
         "documentation"
       ],
       "answerTypeCustomizations": {
-        "buildHTML": "- Only generate header, image, and paragraph elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.",
-        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
-        "explainCode": "- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+        "buildHTML": "- Only generate header, image, and paragraph elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head",
+        "documentation": "- Keep explanations simple and friendly"
       }
     },
     "display_name": "Images",
@@ -74,42 +73,18 @@
           "url": "/level_starter_assets/hoai-web-design-v2-9c/uuid/e1d590cc-89e2-4a6d-8fd0-52b3144ab1bb.jpg",
           "type": "starter",
           "active": false
-        },
-        "5": {
-          "id": "5",
-          "name": "somosa.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/hoai-web-design-v2-9c/uuid/e3d7368c-35ba-40e3-a5b9-302c47cff7bf.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "6": {
-          "id": "6",
-          "name": "banh-mi.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/hoai-web-design-v2-9c/uuid/3ab9fb7b-d9b1-4226-8465-1f55e8cccb22.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "7": {
-          "id": "7",
-          "name": "pizza.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/hoai-web-design-v2-9c/uuid/1b01273f-aa5a-4548-ba59-aa38f18835e0.jpg",
-          "type": "starter",
-          "active": false
         }
       },
       "openFiles": [
-        "1"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     "thumbnail_url": "https://images.code.org/5eae9fd9cc2c8f31d93c1504b0b333be-Screenshot 2025-04-02 at 7.43.31 AM.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-22T07:07:34.753+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-03-22 07:09:18 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:15:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:16:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:16:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:23:35 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:27:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:29:19 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:31:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:34:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-22T07:07:34.753+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-03-22 07:09:18 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:15:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:16:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:16:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:23:35 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:27:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -378,7 +378,10 @@ StudioApp.prototype.init = function (config) {
           })}
         />
       </Provider>,
-      document.body.appendChild(document.createElement('div'))
+      document.body.appendChild(document.createElement('div')),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -632,7 +635,10 @@ StudioApp.prototype.init = function (config) {
         levelId={config.serverLevelId}
         unitId={config.serverScriptId}
       />,
-      startDialogDiv
+      startDialogDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -762,7 +768,9 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    createReactRoot(React.createElement(SettingsModal), contentDiv);
+    createReactRoot(React.createElement(SettingsModal), contentDiv, {
+      legacyReactDomRender: true,
+    });
     dialog.show();
   };
 };
@@ -783,7 +791,10 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         selectedVersion: queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
       }),
-      contentDiv
+      contentDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
 
     dialog.show();
@@ -1072,7 +1083,9 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv, {
+    legacyReactDomRender: true,
+  });
 };
 
 /**
@@ -2346,7 +2359,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
               appType: project.getStandaloneApp(),
               isLegacyShare: !!options.isLegacyShare,
             }),
-            div
+            div,
+            {
+              legacyReactDomRender: true,
+            }
           );
         }
       }
@@ -3154,7 +3170,9 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  createReactRoot(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0], {
+    legacyReactDomRender: true,
+  });
 
   return container[0];
 };
@@ -3193,7 +3211,9 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  createReactRoot(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement, {
+    legacyReactDomRender: true,
+  });
 
   return renderElement;
 };

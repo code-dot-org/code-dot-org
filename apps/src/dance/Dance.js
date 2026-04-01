@@ -216,7 +216,10 @@ Dance.prototype.init = function (config) {
         />
       </ErrorBoundary>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

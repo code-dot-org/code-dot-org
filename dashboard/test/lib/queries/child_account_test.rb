@@ -4,7 +4,7 @@ class Queries::ChildAccountTest < ActiveSupport::TestCase
   freeze_time
 
   test 'expired_accounts' do
-    expired_accounts = create_list(:locked_out_child, 3, :expired)
+    expired_accounts = Array.new(3) {|_| create(:locked_out_child, :expired)}
     locked_account = create(:locked_out_child)
     u13_colorado_account = create(:student, :U13, :in_colorado)
     student_account = create(:student)

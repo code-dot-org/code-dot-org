@@ -45,7 +45,7 @@
           "id": "1",
           "name": "index.html",
           "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: 'Georgia', serif;\n        padding: 2rem;\n        background-color: #fff8ee;\n        color: #5a3e28;\n      }\n      h1 {\n        font-size: 3rem;\n        text-decoration: underline;\n        text-align: center;\n        border-bottom: 4px double #ff6600;\n      }\n      h2 {\n        background-color: #ff6600;\n        color: #ffffff;\n        padding: 0.5rem 1rem;\n        border-radius: 4px;\n      }\n      section {\n        border: 2px solid #ffcc99;\n        border-radius: 8px;\n        padding: 1rem;\n        margin-bottom: 2rem;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>My Recipe Collection</h1>\n    <p>A collection of delicious recipes from around the world.</p>\n\n    <section>\n      <h2>Arroz con Leche</h2>\n      <p>A traditional Mexican rice pudding made with milk, sugar, and cinnamon.</p>\n      <h3>Ingredients</h3>\n      <ul>\n        <li>1 cup white rice</li>\n        <li>4 cups whole milk</li>\n        <li>1/2 cup sugar</li>\n        <li>1 cinnamon stick</li>\n        <li>1 tsp vanilla extract</li>\n        <li>Ground cinnamon for serving</li>\n      </ul>\n      <h3>Steps</h3>\n      <ol>\n        <li>Rinse the rice and cook it in water until just tender.</li>\n        <li>Add the milk and cinnamon stick and bring to a simmer.</li>\n        <li>Stir in the sugar and vanilla and cook until thick and creamy.</li>\n        <li>Remove the cinnamon stick and serve warm or cold with ground cinnamon on top.</li>\n      </ol>\n    </section>\n\n    <section>\n      <h2>Churros</h2>\n      <p>Crispy fried dough sticks dusted with cinnamon sugar — a classic Mexican street food.</p>\n      <h3>Ingredients</h3>\n      <ul>\n        <li>1 cup water</li>\n        <li>1 cup flour</li>\n        <li>1/2 tsp salt</li>\n        <li>Oil for frying</li>\n        <li>1/4 cup sugar mixed with 1 tsp cinnamon</li>\n      </ul>\n      <h3>Steps</h3>\n      <ol>\n        <li>Boil water with salt, then stir in flour until a dough forms.</li>\n        <li>Pipe dough into hot oil using a star-tipped bag.</li>\n        <li>Fry until golden, then drain and roll in cinnamon sugar.</li>\n      </ol>\n    </section>\n\n    <section>\n      <h2>Tamales</h2>\n      <p>Steamed corn dough filled with savory or sweet fillings, wrapped in corn husks.</p>\n      <h3>Ingredients</h3>\n      <ul>\n        <li>2 cups masa harina</li>\n        <li>1 cup chicken broth</li>\n        <li>1/2 cup lard or vegetable shortening</li>\n        <li>1 cup filling of your choice</li>\n        <li>Dried corn husks, soaked in water</li>\n      </ul>\n      <h3>Steps</h3>\n      <ol>\n        <li>Mix masa harina, broth, and lard until a soft dough forms.</li>\n        <li>Spread dough onto soaked corn husks and add filling.</li>\n        <li>Fold and steam for 1 hour until firm.</li>\n      </ol>\n    </section>\n  </body>\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -53,17 +53,16 @@
           "name": "vision.md",
           "contents": "I want a recipe page for my grandmother's arroz con leche. It's a traditional Mexican rice pudding dessert.\n\nThe page should have the recipe name at the top, a list of ingredients, and a list of steps to make it.",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
-        "2",
-        "1"
+        "1",
+        "2"
       ]
-    },
-    "thumbnail_url": "https://images.code.org/80215d0755ae412bce5a25d4c69d9a2a-image-1775017996806.png"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-26T00:23:32.361+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12c\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12c\"},{\"changed_at\":\"2026-03-26 00:26:45 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:28:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:54:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:33:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-26T00:23:32.361+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12c\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12c\"},{\"changed_at\":\"2026-03-26 00:26:45 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:28:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>
