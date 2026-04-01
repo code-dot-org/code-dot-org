@@ -84,7 +84,7 @@ module Middleware
 
           setup_region(new_region)
           setup_redirect_to(redirect_path)
-        # Fallback legacy `/global/fa/*` path
+        # Fallback for legacy `/global/fa/*` paths
         elsif original_path_info.start_with?('/global/fa')
           international_path = original_path_info.sub('/global/fa', '')
           request.path_info = international_path unless existing_route?
@@ -94,8 +94,6 @@ module Middleware
             fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
             setup_redirect_to(fallback_path)
           end
-
-          setup_region('fa')
         elsif effective_region
           if effective_region == url_region
             normalize_request_for_routing
