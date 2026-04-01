@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-29 07:32:29 UTC",
+    "serialized_at": "2026-04-01 02:26:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -106,9 +106,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**What does it mean for a web app to respond to a user?**\n\nIn this lesson, students explore how JavaScript brings websites to life by making them respond to user actions such as clicks, typing, or hovering. Through hands-on comparisons of good and bad design, they connect interactivity to user-centered design. Students take on the perspective of UX designers to understand how interactive features shape user experience and often require making trade-offs.",
-        "preparation": "- Print copies of the Interactivity in Web Apps activity guide (one for each student)",
-        "student_overview": "**What does it mean for a web app to respond to a user?**\n\nExplore how interactivity impacts the overall user experience of a webpage and learn how to consider design trade-offs."
+        "overview": "**What does it mean for a web app to respond to a user?**\n\nThis lesson explores how web apps respond to user actions and introduces how JavaScript, events, and the DOM enable that interactivity. Through hands-on comparisons of frustrating and effective designs, students connect interactivity to user-centered design. They examine how interaction choices shape user experience and can involve trade-offs.",
+        "preparation": "- Provide copies of the AI and Algorithmic Unit Guide (one for each student)\n- Provide copies of the Interactivity in Web Apps activity guide (one per pair)",
+        "student_overview": "**What does it mean for a web app to respond to a user?**\n\nExplore how interactions affect user experience and consider how design choices can improve or complicate how a web app works."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
@@ -124,9 +124,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How can I make a web app respond when I click?**\n\nStudents connect everyday cause-and-effect to event-driven code: they select an element → attach a click listener → update the DOM (e.g., change text). They study a working model, debug broken handlers with a human-first checklist, verify any AI suggestions, and then author their own handler, establishing the core pattern used in later lessons on variables and conditionals.",
-        "preparation": "- Print copies of Making a Button Respond activity guide (one for each student)",
-        "student_overview": "**How can I make a web app respond when I click?**\n\nYou’ll wire up a button so a click changes what you see on the page using a simple recipe: select → listen → update. You’ll try a working example, fix one that’s broken, and then write your own, asking AI for hints but keeping only code you understand."
+        "overview": "**How can we use JavaScript to make our\nwebsites more interactive?**\n\nStudents connect the role of a front-end developer to building interactivity with JavaScript, then build a mental model of event-driven interactions by acting out how user actions are detected and trigger responses. They use the Select → Listen → Respond pattern to make buttons interactive and ensure their code correctly connects to their HTML, using AI as a tool to support and check their work.",
+        "student_overview": "**How can we use JavaScript to make our\nwebsites more interactive?**\n\nAct out how clicks trigger changes on a page, then use the Select → Listen → Respond pattern to make buttons interactive and check that the code connects correctly to the page, using AI as a tool to help along the way."
       },
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
@@ -343,7 +342,7 @@
       "key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -357,7 +356,7 @@
       "key": "1006605d-ea06-4cbf-a929-dc19cedd3edd",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -368,21 +367,8 @@
       }
     },
     {
-      "key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
-      "position": 1,
-      "properties": {
-        "name": "Updated Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
       "key": "5294e91d-611c-4042-a8e7-7ad8d2fab596",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -395,14 +381,14 @@
       }
     },
     {
-      "key": "37fdd496-e8b5-446a-8490-b4418695bab9",
-      "position": 3,
+      "key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026"
@@ -410,7 +396,7 @@
     },
     {
       "key": "e717c33a-741f-4880-b54c-8c83c651f2e6",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -423,21 +409,8 @@
       }
     },
     {
-      "key": "479c93c3-ccfe-42ea-b39f-f52418009b08",
-      "position": 1,
-      "properties": {
-        "name": "New / Revised Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "479c93c3-ccfe-42ea-b39f-f52418009b08",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
       "key": "b423cffb-c464-4638-bb45-dcda07ecf86e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -451,7 +424,7 @@
     },
     {
       "key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -465,7 +438,7 @@
     },
     {
       "key": "d6140da2-7b34-4300-a4e1-edcbbfa1512a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -478,8 +451,21 @@
       }
     },
     {
-      "key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84",
+      "key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
       "position": 1,
+      "properties": {
+        "name": "Revised Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -493,7 +479,7 @@
     },
     {
       "key": "4d702af6-dcc8-42db-a505-321894080891",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -507,7 +493,7 @@
     },
     {
       "key": "4a39bedf-e0b9-4249-a2dc-a0a079a6e059",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -870,8 +856,7 @@
       "key": "d6842e9e-4d0d-48af-bd66-8abe060c70b9",
       "position": 1,
       "properties": {
-        "description": "Today, we're going to explore how adding JavaScript brings websites to life and makes them respond to user actions.",
-        "remarks": true
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students distinguish between actions (things happening) and elements (parts of a webpage) as a foundation for understanding interactivity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** \nGive each group a copy of the Interactivity in Web Apps activity guide.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d6842e9e-4d0d-48af-bd66-8abe060c70b9",
@@ -882,13 +867,7 @@
       "key": "e3c39ba8-1c61-40b4-835f-39c15749c4d9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\nIf students are unsure about which features are interactive, ask prompting questions such as: “What buttons, menus, search bars, or icons do you see?” “What do you expect will happen when you click/tap/hover on it?”",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If possible, open a sample website and do a live demo of interacting with different elements, such as the search bar, clickable buttons, and dropdown menus. Here is the website used in the image on the slide: [**https://usa.tommy.com/en/men**](https://usa.tommy.com/en/men)"
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students silently sort the items into two groups: actions (things happening) and parts of the page. Have students compare with a partner before sharing with the class.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that all the items identified as actions are called **events**, and all the parts of the page are **elements**. Connect this back to what they just sorted so it feels like naming their ideas, not introducing new content."
       },
       "seeding_key": {
         "activity_section.key": "e3c39ba8-1c61-40b4-835f-39c15749c4d9",
@@ -896,8 +875,25 @@
       }
     },
     {
-      "key": "4c21e1f3-5520-46ba-a34c-ee4d38dc2b56",
+      "key": "cba0f95d-47fc-4c36-a6f7-f70fb02f12ac",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one action you wish your project from Unit 1 could have done?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that their previous projects included parts of a webpage but did not respond to user actions. They begin to distinguish between an action (event) and what the page does in response, setting up the need for interactivity.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may describe outcomes (\"show a message\") instead of events (\"click a button\"). If needed, guide them to name the action first, then what the page should do in response."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cba0f95d-47fc-4c36-a6f7-f70fb02f12ac",
+        "lesson_activity.key": "ef619681-9b28-4dec-99c7-280d53e778fe"
+      }
+    },
+    {
+      "key": "4c21e1f3-5520-46ba-a34c-ee4d38dc2b56",
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -906,13 +902,25 @@
       }
     },
     {
-      "key": "cba0f95d-47fc-4c36-a6f7-f70fb02f12ac",
-      "position": 4,
+      "key": "946dddbb-33a5-4958-830e-77551fe21a19",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What clues did you find that indicated an element was interactive?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on how common elements, words, or icons on a page indicate interactivity. For example, a magnifying glass indicates a search bar, a carrot symbol ^ indicates a dropdown, and a ribbon indicates being able to save something.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "Last unit you designed web pages, think about the pages you built. Your pages had elements, but could they respond to events or do any of the things we just listed? In unit 1, you focused on designing what a page looks like. In this unit, you learn how to make your pages interactive.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "cba0f95d-47fc-4c36-a6f7-f70fb02f12ac",
+        "activity_section.key": "946dddbb-33a5-4958-830e-77551fe21a19",
+        "lesson_activity.key": "ef619681-9b28-4dec-99c7-280d53e778fe"
+      }
+    },
+    {
+      "key": "9f6f494d-e009-4569-ab01-406f1cc9cab7",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "9f6f494d-e009-4569-ab01-406f1cc9cab7",
         "lesson_activity.key": "ef619681-9b28-4dec-99c7-280d53e778fe"
       }
     },
@@ -920,9 +928,15 @@
       "key": "59914f58-4321-466a-8af6-59a611210d63",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will experience and articulate the difference between good and bad interactive design, connecting it to user experience.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Interactivity in Web Apps activity guide.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand the DOM is what allows parts of the page to be changed\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI and Algorithmic Decisions Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \nShow the annotated webpage and point out specific parts such as the button, text, image, and input. Remind students that these are the parts they identified earlier in the warm-up. Briefly point to the diagram on the right to show that these parts can be grouped and organized within the page, but do not go into detail about the structure. Explain that when something happens on a page, like a click or typing, that is an **event**, and events happen to these parts. Emphasize that when events happen, these parts of the page can change.",
         "duration": "15",
-        "name": "Interactivity in Web Apps"
+        "name": "DOM and JavaScript Introduction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may focus on the structure diagram and assume they need to understand how everything is organized. Keep the focus on the idea that a webpage is made of parts that can change. Treat the diagram as a quick visual reference, not something students need to analyze in detail."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59914f58-4321-466a-8af6-59a611210d63",
@@ -933,8 +947,13 @@
       "key": "c1f12ce6-a91c-4270-a1eb-38580d4f8f32",
       "position": 2,
       "properties": {
-        "description": "Imagine you're a User Experience (UX) researcher. We're going to try out two different versions of an app to see how design impacts how we feel when we use it.",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \nDefine DOM. Direct students to fill in the vocab definition in their Unit Guide. Emphasize: \"parts of a webpage\" and \"can change.\" Briefly note that something (code) has to tell the page what to change, and that they will look at what causes those changes next.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may focus on the term \"object\" or get confused by technical language. Keep the explanation grounded in what they can see: \"The DOM is what lets the page change\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c1f12ce6-a91c-4270-a1eb-38580d4f8f32",
@@ -942,11 +961,45 @@
       }
     },
     {
-      "key": "99a96a18-a656-46b2-90fd-855b11b59392",
+      "key": "8c9c8b32-d664-4f00-8c39-3d07301e94c8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2. Explain that they will be exploring two versions of a web app. On Level 1, they will note any features or functionality that are unclear, inconsistent, or frustrating. On Level 2, they will note how those features were improved.\n",
-        "progression_name": "Static vs Interactive Web App"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Briefly explain that when something changes on a webpage, it does not happen automatically—there is code that tells the page what to do. That code is called JavaScript. Explain that JavaScript listens for user actions (events) and tells the page how to respond. Let students know this is the language they will use in this unit to make their web apps interactive.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may think the user action itself (\"I clicked\") causes the change. Reinforce that something in the page is \"watching\" for that action and telling the page what to do. Keep the explanation simple; focus on the idea that JavaScript is what makes the page respond, not how the code works."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8c9c8b32-d664-4f00-8c39-3d07301e94c8",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "56a82d80-3052-4e93-9e1b-a554f004259d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Walk through the diagram step-by-step, pointing as you go. Ask students what they notice changed, then focus on the middle steps to explain how the change happens; emphasizing that JavaScript is the middle step, connecting the user action to what changes on the page. Explain:\nF- irst, the page is loaded\n- Then the user does something, like clicking a button\n- JavaScript is watching for that action and detects it when it happens\n- JavaScript tells the page what to change \n- That change happens in the DOM (the parts of the page) \n- Finally, the browser shows the updated page. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "56a82d80-3052-4e93-9e1b-a554f004259d",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "99a96a18-a656-46b2-90fd-855b11b59392",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Explain that the page has many parts, but it does not respond to events yet. Students explore the page and identify its parts in their activity guide, then decide which parts could change. Students choose one interaction to make work and use AI Tutor to make that change happen. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** \n Look for students who can identify multiple parts of the page and clearly describe what they want to change. Ask: \"What part are you focusing on\" or \"What do you want the page to do?\" or \"What happens right now when you select a button?\"\n",
+        "progression_name": "Static vs Interactive Web App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may try to make multiple parts work at once. Encourage them to focus on one interaction and get it working first. If students are stuck, prompt them to describe what the user does and what should change on the page before using AI.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "99a96a18-a656-46b2-90fd-855b11b59392",
@@ -954,10 +1007,65 @@
       }
     },
     {
-      "key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47",
-      "position": 4,
+      "key": "3488fbd1-af45-408c-8824-61343b7e305d",
+      "position": 6,
       "properties": {
-        "progression_name": "Web App Comparison"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *What made the page change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may say \"the button,\" \"clicking,\" or \"the AI.\" Guide students to recognize that the page changed because code made it respond. Introduce that this code is JavaScript, which allows the page to update. Emphasize that these updates happen in the DOM, which is what allows parts of the page to change.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may focus on the action (\"I clicked\") or the tool (\"the AI\") instead of the underlying cause. Acknowledge their responses, then help them connect the idea that code made the page respond. Avoid going into detail about how the code works—focus on the idea that JavaScript enables the change."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3488fbd1-af45-408c-8824-61343b7e305d",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "bca6bb06-4cdd-4e0f-bb8f-316a32ce326f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that interactivity affects user experience and that some interactions work better than others.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that interactivity means a page responds when a user does something, like clicking, typing, or other events. Keep the explanation short and grounded in examples students have already experienced.\n",
+        "duration": "20",
+        "name": "Trade-Offs in Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "bca6bb06-4cdd-4e0f-bb8f-316a32ce326f",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "64961871-d19d-4df1-8ebe-218730cff8b6",
+      "position": 8,
+      "properties": {
+        "description": "You just made a page interactive. But here's the next question… does every interaction automatically make a page better? Let's test that. You're going to try two versions of an app that both have interaction and compare how easy they are to use.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume that \"more interaction = better.\" Do not correct this immediately. Let students test this idea in the next activity so they can experience the difference themselves.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "64961871-d19d-4df1-8ebe-218730cff8b6",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 and 3.\n- **Level 2:** Students experience an app that has a lot of frustrating interactivity.\n- **Level 3:** Students experience an app of the same purpose that has a much better user experience. \n\nEmphasize that their goal is to compare the two experiences and think about how the design affects the user.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are able to describe what is frustrating in Level 2 and what works better in Level 3. Ask: \"What made this version harder to use\", \"What made the other version easier?\", or \"What changed for the user?\"",
+        "progression_name": "Document Design Flaws",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may focus on surface features (colors, layout) instead of interaction. Guide them to focus on what happens when they click, type, or try to complete a task. Encourage students to complete the task in each app rather than just clicking around so they fully experience the frustration or improvement.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47",
@@ -966,13 +1074,14 @@
     },
     {
       "key": "df7a5650-e6e6-430c-92e0-2badaae9de20",
-      "position": 5,
+      "position": 10,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which version was better and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that not all interactions improve the user experience and begin to connect interaction to design. Guide students to understand that interactivity is not just about making things happen, but about making things happen in a way that helps the user.",
         "progression_name": "Vocab: Interactivity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Consider guiding students through the first interactive demo, which should be intentionally frustrating. Show them how the “Save” button moves around when you try to click it, that you have to click the “Add” button twice in rapid succession, and how the “Shuffle” button just changes the background color. Ask them if they notice any other features of the site that could be improved. After they have seen the demo, transition them to try it out on their own.\n"
+            "markdown": "Students may give general answers like \"this one was better\" without explaining why. Prompt them to describe specific interactions (what happened when they clicked or typed) and how those interactions affected their experience. If students focus only on visual appearance, redirect them to how the app responded to their actions.\n"
           }
         ]
       },
@@ -983,8 +1092,15 @@
     },
     {
       "key": "bcda0b35-4d0a-4d76-b5ed-e09e491e0156",
-      "position": 6,
+      "position": 11,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the last section of the activity guide: Quick Design Sprint. Ensure they choose a specific user to focus on. Students can either draw the app and label their improvements or write a short description of how they would improve it for that user. If students are unsure who to choose, provide examples such as someone using it quickly, someone who gets confused easily, or someone using it on a small screen.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may suggest changes that are not connected to a specific user (e.g., \"make it better\" or \"add more features\"). Prompt them to explain who their change is helping and why. If needed, ask: \"How does this help your user?\" or \"What problem are you solving for them?\"\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bcda0b35-4d0a-4d76-b5ed-e09e491e0156",
@@ -993,9 +1109,15 @@
     },
     {
       "key": "b5eceb46-f101-4125-9d2e-a356e61f23a8",
-      "position": 7,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you feel using the first version of the web app? Why? What design choices made the second version better?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their feelings of frustration or ease to specific design elements like button placement, clarity of icons, navigation flow, and responsiveness. Guide them to use specific examples from their experience. Listen for students identifying issues like 'the button kept moving' or 'I didn't know where to go next' for the bad design, and 'it was obvious what to do' or 'each button did what I expected it to' for the improved design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define interactivity.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Would your change make anything harder for someone else?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that improving an app for one user can sometimes create challenges for others. Guide students to notice that design decisions often involve trade-offs, where making something better in one way may make it harder in another.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume their change is only beneficial and have difficulty identifying downsides. Prompt them to think about different users by asking, \"Who might find this harder to use?\" or \"What could be confusing about this change?\" If needed, provide examples to model how one improvement can create a new challenge.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5eceb46-f101-4125-9d2e-a356e61f23a8",
@@ -1003,64 +1125,10 @@
       }
     },
     {
-      "key": "b6d2c8ce-32ea-4909-af4b-ba538a9d4e2a",
-      "position": 8,
-      "properties": {
-        "description": "UX designers think about how buttons, menus, and animations can guide users smoothly, make actions feel clear and responsive, and create an experience that’s enjoyable and easy for everyone to use.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b6d2c8ce-32ea-4909-af4b-ba538a9d4e2a",
-        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
-      }
-    },
-    {
-      "key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will consider features that benefit one group of users but may frustrate others, for example, autoplay vs. manual start.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3 and choose one panel level to look at. Encourage them to think like UX designers making a decision about whether or not to incorporate a new feature. What tradeoffs will they have to make?\n",
-        "duration": "15",
-        "name": "Trade-Offs in Design",
-        "progression_name": "Vocab: Trade-Off"
-      },
-      "seeding_key": {
-        "activity_section.key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643",
-        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
-      }
-    },
-    {
-      "key": "fc2c4e1d-94c5-4ca2-924b-320b5b072511",
-      "position": 10,
-      "properties": {
-        "progression_name": "Hear From Different Users"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc2c4e1d-94c5-4ca2-924b-320b5b072511",
-        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
-      }
-    },
-    {
-      "key": "b6656009-56c7-4cd1-9fc2-0423d82a89c0",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define trade-offs.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you designed a new website with the feature you explored, what trade offs would you have to make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify specific design features and articulate the conflicting needs they serve. Guide the discussion towards understanding that there is rarely a single 'perfect' design, and that design decisions often involve balancing competing priorities. Listen for students identifying trade-offs like 'Autoplay is good for users who want to consume content quickly without thinking, but it's bad for users who have limited data or prefer to choose what they watch.'\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Make sure to have students who looked at different features share out, i.e. infinite scroll, confirmation messages, and autoplay. Alternatively, pair students up to discuss in small groups with a classmate who looked at a different feature.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b6656009-56c7-4cd1-9fc2-0423d82a89c0",
-        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
-      }
-    },
-    {
       "key": "59287f99-92c1-45f3-bdb2-9db954ab5cd6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to explain how a web app responds to a user by describing an event and what changes on the page. After partner discussion, invite a few students to share out with the class.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "59287f99-92c1-45f3-bdb2-9db954ab5cd6",
@@ -1068,54 +1136,16 @@
       }
     },
     {
-      "key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
-      "position": 1,
-      "properties": {
-        "progression_name": "Predict & Trace: What Happens When You Click?"
-      },
-      "seeding_key": {
-        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
-        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
-      }
-    },
-    {
-      "key": "139be038-6a88-4f45-98a8-95893208d904",
-      "position": 2,
-      "properties": {
-        "progression_name": "Generate with AI: Make a Button Respond"
-      },
-      "seeding_key": {
-        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904",
-        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
-      }
-    },
-    {
-      "key": "e385eb45-a718-408d-8d54-65c5433e5809",
-      "position": 3,
-      "properties": {
-        "progression_name": "Write It Yourself: Make a Button Respond"
-      },
-      "seeding_key": {
-        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809",
-        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
-      }
-    },
-    {
-      "key": "7089ddf9-bfda-4af2-8a66-09324fa4934e",
-      "position": 4,
-      "properties": {
-        "progression_name": "Front-End Developer Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e",
-        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
-      }
-    },
-    {
       "key": "bb6721b5-62c7-40f0-aff0-8f87217d9b47",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one small action you took today that caused something else to happen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify a cause and its resulting effect. Listen for examples like: pressing a button to turn on a light, opening a door to enter a room, or tapping a screen to unlock a phone. Guide students to see that each 'event' (the trigger) caused a 'response' (the system's reaction).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the role of a front-end developer to building interactivity on a webpage and recognize JavaScript as the tool that makes interactions happen.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly spotlight the role of a Front-End Developer. Explain that this role is responsible for what users see and how a webpage responds when they interact with it. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Invite students to name a website or app where something responds instantly (e.g., a button click, animation, or form). Ask, \"What do you think the developer had to decide to make that interaction work?\" This helps students connect the role to real interactions they use every day.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bb6721b5-62c7-40f0-aff0-8f87217d9b47",
@@ -1123,156 +1153,222 @@
       }
     },
     {
-      "key": "bc8f7b11-6e86-478e-a2dc-332604240a0b",
+      "key": "6926a3a9-caee-4159-93e0-4fe3ce767a91",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** A front-end developer uses JavaScript to make a button respond to a click. If that developer used AI to build a “Like” button, what would they need to tell the AI to make it work?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that a developer must clearly describe both the user action and what should happen in response when using AI to build an interaction. They begin to notice that something must detect the action and trigger the response, rather than the change happening automatically. This sets up the idea that interactions follow a structured process, which will be explored through event listeners and event handlers.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6926a3a9-caee-4159-93e0-4fe3ce767a91",
+        "lesson_activity.key": "5294e91d-611c-4042-a8e7-7ad8d2fab596"
+      }
+    },
+    {
+      "key": "cb6f205b-7c5f-42f3-97df-91cfee62d473",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb6f205b-7c5f-42f3-97df-91cfee62d473",
+        "lesson_activity.key": "5294e91d-611c-4042-a8e7-7ad8d2fab596"
+      }
+    },
+    {
+      "key": "75b25e72-03f8-4dd0-9f8b-30ba12583a18",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Students should each have a copy of the Making a Button Respond activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define DOM. Explain that the DOM turns static elements on a page into objects that users can interact with.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 where students will explore an interactive page with buttons. They will describe how they interact with the page and attempt to document the corresponding code in script.js. Students should use AI to help understand the code by asking questions like, 'What does [this line of code] mean?' They can attach specific lines of code as context within the AI chat interface.\n",
-        "duration": "15",
-        "name": "Making a Button Respond",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand how webpages respond to user actions by connecting the roles of event listener (detect) and event handler (respond).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define event listener. Emphasize that it is attached to an element and waits for a specific user action (click, hover, key press).",
+        "duration": "10",
+        "name": "Intro to Event Handling"
+      },
+      "seeding_key": {
+        "activity_section.key": "75b25e72-03f8-4dd0-9f8b-30ba12583a18",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "019dbd2b-a0b0-4bff-98fe-e2a7f3ca741c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define event handler. Emphasize that this is the response — what actually happens after the event.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students quickly form small groups of three to four and assign one role per person: Element, User, Event Listener, and Event Handler. Emphasize that each role represents a part of what happens behind the scenes when someone interacts with a webpage. Give students about 30–60 seconds to decide who will take on each role, and prompt them to read their role name aloud within their group so everyone is clear. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups assign roles, circulate to ensure each group has all roles covered and to clarify confusion, especially between the Event Listener and Event Handler. If needed, briefly restate that the listener waits for the action and the handler decides what happens next.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "019dbd2b-a0b0-4bff-98fe-e2a7f3ca741c",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "59154e69-72ed-4af7-b98a-f5b77f48d022",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group decide on a simple interaction such as a tap, clap, or press. Once they've chosen their interaction, direct them to say the three planning statements out loud together within their group: what their event is, what the listener is waiting for, and what the handler will do. Emphasize that this is a quick call-and-response style step and should take no more than 1–2 minutes. The goal is for every group to clearly state their plan before acting, not to write anything down or overthink it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups plan, circulate to ensure each group has selected a clear interaction and is actually saying their responses out loud. If a group is quiet or vague, prompt them to say their plan together and be more specific about what will happen.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage groups to keep interactions simple (tap, clap, press) so the focus stays on the sequence, not the scenario.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59154e69-72ed-4af7-b98a-f5b77f48d022",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "3a6f62e5-e57d-4fcd-97a8-6be628ba9e5f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct them to act it out using the four-step sequence on the slide: the user performs the action, the listener announces that the event was detected and calls \"Run,\" and the handler performs the response. Emphasize that the handler cannot act until the listener calls it, reinforcing the idea that something must detect the event before code runs. Give groups a minute or two to run through the sequence at least once, and encourage them to repeat it with a different response if they finish quickly.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students act out the sequence, circulate to ensure groups are following the correct order and using the language of \"event,\" \"listener,\" and \"handler\" appropriately. If a group skips a step or has the handler acting too early, pause them and ask which step might be missing. Pay close attention to confusion between the listener and handler roles, and reinforce that the listener detects and triggers while the handler performs the response.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure groups explicitly say \"Run\" before the handler acts. This step represents the moment code executes and is critical for understanding how event handling works.\n\nIf students confuse the listener and handler roles, restate that the listener detects and triggers, while the handler performs the action.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a6f62e5-e57d-4fcd-97a8-6be628ba9e5f",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "e06cdad1-b483-485b-8536-59c8c8bbc04d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Who detected the event?*\n- *Who triggered the action?*\n- *Who performed the action?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that different parts of the system have distinct roles in making an interaction happen. The event listener is responsible for detecting when a user action occurs, but it does not perform the action itself—it triggers the next step. The event handler is what actually runs and produces the visible change on the page. Through this discussion, guide students to understand the sequence: a user action (event) is detected by a listener, which then calls the handler to perform the response. This reinforces that interactions do not happen automatically—there is a structured process that connects user input to changes on the screen, which will later map directly to how event listeners and event handlers work in code.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e06cdad1-b483-485b-8536-59c8c8bbc04d",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "29704b5b-3c44-491c-87ca-8b28ce2120e7",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the Interacts → Listen → Respond model to how event handling works in a webpage and recognize that event listeners detect actions and trigger event handlers to update the page.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that what students just acted out is how event handling works on a webpage:\n- The first step is interacts. The user interacts with an element, like clicking a button. Nothing changes yet — this is just the action the user takes.\n- The second step is listen. The page listens for that action. This is the event listener — it waits for a specific event, like a click, and detects when it happens.\n- The final step is respond. The event listener calls the event handler, and the event handler runs the code. This is where something actually changes on the page, like text updating or an image appearing.\n",
+        "duration": "5",
+        "name": "How to Handle An Event"
+      },
+      "seeding_key": {
+        "activity_section.key": "29704b5b-3c44-491c-87ca-8b28ce2120e7",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "928d3a9d-8ea6-4d70-81f5-b76340fc875a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show that this code represents the same three-step process students just acted out for how a webpage responds to a user action. Have students record the example syntax in their Unit Guide:\n- Step one is select an element. This line of code targets the element on the page (like the button).\n- Step two is add an event listener. This tells the page what event to listen for (like a click).\n- Step three is respond to the event. This is the event handler — the code that runs and updates the page (text, image, color, etc.).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "928d3a9d-8ea6-4d70-81f5-b76340fc875a",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "99b16f03-a266-4e9a-bc72-412f49eda6dc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI-generated code may look correct but still not work, and model how to question and verify whether the code actually matches the event or selected element from the prompt. (especially IDs).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "99b16f03-a266-4e9a-bc72-412f49eda6dc",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "b7ade6fb-89bb-485f-a0a7-386dbc972b82",
+      "position": 9,
+      "properties": {
+        "description": "AI sounds confident and can generate code that looks correct, but it doesn’t actually know if it will work on your specific page. It is making a best guess based on patterns, so when we see something like this ID ‘buttonID,’ we have to stop and ask: does an element with this ID actually exist in our web page, because if it doesn’t, nothing will happen even though the code looks right.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ade6fb-89bb-485f-a0a7-386dbc972b82",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "71b35e6c-fda4-4546-b6ef-1a788ca7fe39",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce each debugging step students can use when their button isn't responding. As each tip appears, connect it to how it helps improve their prompt:\n- First, show the element. Emphasize that including a screenshot helps AI understand what part of the page the student is working with.\n- Next, describe the element in detail. Highlight that students should include specific details like text, color, or position so AI can correctly identify it.\n- Finally, confirm the element. Model asking AI to verify which element it’s selecting to make sure it’s targeting the correct one.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "71b35e6c-fda4-4546-b6ef-1a788ca7fe39",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "f1892ec4-4592-43eb-8519-7ad3ced3eca0",
+      "position": 11,
+      "properties": {
+        "description": "When your button isn't working, don’t just guess — be specific. First, show the element so AI can see what you’re working with. Then describe the element in detail — what it says, what it looks like, where it is. And if it’s still not working, ask AI to confirm which element it’s selecting, because sometimes it’s targeting the wrong one.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1892ec4-4592-43eb-8519-7ad3ced3eca0",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "2c8ca49d-a10a-46fa-88ad-0e8d810b5a5d",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will apply the Select → Listen → Respond model to build interactive features, use AI to generate event-based code, and verify that their code correctly targets elements and updates the page.",
+        "duration": "20",
+        "name": "Make a Button Respond"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c8ca49d-a10a-46fa-88ad-0e8d810b5a5d",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "6d5c54c3-4512-4950-afe0-5ea914a4bbd3",
+      "position": 13,
+      "properties": {
+        "description": "Now you're going to apply what you learned by acting like a front-end developer—your job is to make a webpage respond to user actions by selecting elements, adding event listeners, and writing event handlers. You can use AI to help generate code, but you also need to test it and make sure it actually works when you interact with the page.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6d5c54c3-4512-4950-afe0-5ea914a4bbd3",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1 to complete Levels 1 through 4.\n- **Level 1:** Predict and trace what the code will do when a button is clicked\n- **Level 2:** Use AI to generate code for one button interaction\n- **Level 3:** Write code yourself to add a second button interaction\n- **Level 4:** Build a full interactive app based on a chosen scenario\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, focus on helping students connect the code to the event handling model. Check that they can identify where the code selects an element, listens for an event, and responds. Ask questions like, “What event is this listening for?” and “What actually changes on the page when you click?” In Levels 2 and 3, support students in working with AI-generated code. Watch for common issues like nothing happening on click or the wrong element responding. Prompt students with, “Which element is this code targeting?” and “How can you tell if it’s the right one?” In Level 4, push students toward fully working interactions. Encourage them to test each button and verify that every interaction works as expected.\n",
         "progression_name": "Predict & Trace: What Happens When You Click?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Introduce the concept of code comments as post-it notes for humans. Comments serve as explanations or directions for engineers reading through the code.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bc8f7b11-6e86-478e-a2dc-332604240a0b",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "35b1400a-1d24-4326-a500-428c069a4f43",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "35b1400a-1d24-4326-a500-428c069a4f43",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "1b46b0d2-3513-43e8-9e46-d14a3fefb5d0",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define event handler. Explain that an event handler defines the reaction that a program takes based on a specific action, like a button click.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What event handlers did you trigger in Level 1?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to understand that clicking a button requires an event handler to trigger a reaction. Students should note where in their code they see document.querySelector and addEventListener which indicate onscreen content manipulation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2, where they will act as QA Engineers, debugging broken code both by following a prescribed checklist, and then with AI assistance. Remind them to first try their own strategies and to ask AI specific questions like 'Why isn't this button working?' rather than asking for the full solution.\n",
-        "progression_name": "Generate with AI: Make a Button Respond",
-        "tips": [
+            "markdown": "Encourage students to test frequently after adding each interaction. Remind them that if nothing happens, it’s usually because the code is not targeting the correct element or the interaction isn’t set up properly.\n"
+          },
           {
-            "type": "teachingTip",
-            "markdown": "This level highlights that AI can make mistakes and reinforces the importance of understanding code logic. Encourage students to use their checklist provided to check the work before relying on AI. Guide the discussion towards common issues like typos in IDs, missing parentheses, or incorrect property names.\n"
+            "type": "assessmentOpportunity",
+            "markdown": "Use Levels 1-4 to assess whether students can add an event handler to make a button interactive and update page content when a button is clicked. Look for evidence that students can correctly select elements, attach event listeners, and create responses that change text or visuals on the page."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1b46b0d2-3513-43e8-9e46-d14a3fefb5d0",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "a9f354b4-a2a9-4a96-81b4-8fa60cbfdd9e",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a9f354b4-a2a9-4a96-81b4-8fa60cbfdd9e",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "c7564d26-e82e-474f-8693-5872536a1217",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Share one error you found and how you were able to debug it.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** To reinforce learning through peer explanation and to highlight common pitfalls. Encourage students to explain the error and the solution in their own words, modeling effective communication and collaborative problem-solving.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Have students pair up and verbally explain the intended functionality of their event handler before they attempt to run the code. This 'pair check' helps them catch logical errors.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c7564d26-e82e-474f-8693-5872536a1217",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "8e0de001-d05d-493c-9b28-8ab9e66f512f",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8e0de001-d05d-493c-9b28-8ab9e66f512f",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "a694f27d-54da-48da-8b84-fdf6c253e546",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3 and 4.\n- Level 3: Students write working code for getting a button click to respond, using AI for assistance.\n- Level 4: Students will create a simple app that utilizes multiple buttons.\n",
-        "duration": "20",
-        "name": "Coding Clickable Buttons",
-        "progression_name": "First Click!"
-      },
-      "seeding_key": {
-        "activity_section.key": "a694f27d-54da-48da-8b84-fdf6c253e546",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "882efeb6-f673-4f1f-a80d-1b435992d9d1",
-      "position": 8,
-      "properties": {
-        "progression_name": "Mini App Build"
-      },
-      "seeding_key": {
-        "activity_section.key": "882efeb6-f673-4f1f-a80d-1b435992d9d1",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "edb33008-a758-4c7b-a576-037d4ef4d00a",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "edb33008-a758-4c7b-a576-037d4ef4d00a",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "f31f966e-80b8-453c-9e94-666c235560d6",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the three-step process that they followed in order to update the DOM when a user clicks a a button in a web application: Select an element, add an event listener, and update specific content (text, image, color, etc.)\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "f31f966e-80b8-453c-9e94-666c235560d6",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
       }
     },
     {
       "key": "ff662afa-887f-4a26-a1e4-9ad3fdee4654",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to explain how a web page responds to a click by describing both what the user does and what changes on the page. Prompt students to be specific about what should happen when a button is clicked. After partner discussion, invite a few students to share out with the class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ff662afa-887f-4a26-a1e4-9ad3fdee4654",
         "lesson_activity.key": "e717c33a-741f-4880-b54c-8c83c651f2e6"
-      }
-    },
-    {
-      "key": "7090a9f9-72ab-4957-8014-1ec90e025f74",
-      "position": 1,
-      "properties": {
-        "progression_name": "Level 1 Predict (format updated)"
-      },
-      "seeding_key": {
-        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74",
-        "lesson_activity.key": "479c93c3-ccfe-42ea-b39f-f52418009b08"
       }
     },
     {
@@ -1523,8 +1619,52 @@
       }
     },
     {
-      "key": "2619b9a9-d492-4656-88a6-5ca396305f41",
+      "key": "0687875c-9f4f-40a1-8e89-c3581f201ec7",
       "position": 19,
+      "properties": {
+        "progression_name": "Predict & Trace: Difficulty Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7",
+        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
+      }
+    },
+    {
+      "key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc",
+      "position": 20,
+      "properties": {
+        "progression_name": "Generate with AI: Counter App"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc",
+        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
+      }
+    },
+    {
+      "key": "9b193043-115f-4155-837d-05d88d8d8826",
+      "position": 21,
+      "properties": {
+        "progression_name": "Write it Yourself: Counter App"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826",
+        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
+      }
+    },
+    {
+      "key": "0335aa36-7459-4dad-9816-b0e55b22beb6",
+      "position": 22,
+      "properties": {
+        "progression_name": "Assessment: Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6",
+        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
+      }
+    },
+    {
+      "key": "2619b9a9-d492-4656-88a6-5ca396305f41",
+      "position": 23,
       "properties": {
         "progression_name": "Debugging Variables",
         "tips": [
@@ -1541,7 +1681,7 @@
     },
     {
       "key": "e61577de-fcef-48dd-b503-792550cbecbb",
-      "position": 20,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -1551,7 +1691,7 @@
     },
     {
       "key": "1dbea581-89d1-46fa-8215-729599fb2db0",
-      "position": 21,
+      "position": 25,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When you were debugging, how did you figure out whether the value on the screen matched the program’s state?*\n- *How did AI help you find or fix bugs — and when did you have to step in to make your own decision?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect debugging with verifying that the program’s state (variable values) and what appears on screen are consistent. Encourage students to mention the four key debugging checks they may have practiced:\n- Name check: Did I spell the variable name right and use it consistently?\n- Value check: Does the variable have the value I expect? (Try console.log() to confirm.)\n- DOM check: Am I changing the correct element or class on the page?\n- Order check: Does the code that updates the page run after the variable’s value changes?\n\nThese checks help students reason about how and when the program updates information. Also connect this back to AI debugging: AI can help spot likely errors because it recognizes patterns, but students still need to verify the logic — especially when the pattern doesn’t quite fit.\n",
         "tips": [
@@ -1568,7 +1708,7 @@
     },
     {
       "key": "e34c2d7f-0f03-415b-91a5-f524999841a8",
-      "position": 22,
+      "position": 26,
       "properties": {
       },
       "seeding_key": {
@@ -1578,7 +1718,7 @@
     },
     {
       "key": "d86303d3-6580-4d3e-b90f-e230e69c9a06",
-      "position": 23,
+      "position": 27,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 10 and have them select one of the available projects to complete. Explain that each project uses variables differently — for example, tracking music beats, social interactions, or mood states.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask them to explain which variable they chose, how it changes, and what causes the change. Encourage them to connect their app’s feature back to a real-world example (e.g., a like counter or score tracker). As you see students using AI Chat to troubleshoot, prompt them to:\n- Describe their AI prompt out loud.\n- Evaluate whether the AI’s suggestion actually fits their goal.\n\nRemind students that AI is a tool to help them learn, not just fix problems — they should still verify and understand the reasoning behind any code changes.\n",
         "progression_name": "Build Your Own Web App",
@@ -1610,6 +1750,50 @@
       }
     },
     {
+      "key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
+      "position": 1,
+      "properties": {
+        "progression_name": "Predict & Trace"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "a076f460-0d72-4074-b9a4-8fa448035785",
+      "position": 2,
+      "properties": {
+        "progression_name": "Refactor with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "4ee428e3-b599-4ae3-b431-307608225651",
+      "position": 3,
+      "properties": {
+        "progression_name": "Write it Yourself"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Write Reusable Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
       "key": "dea56aaf-fe11-4141-9695-a3b9f436fdab",
       "position": 1,
       "properties": {
@@ -1627,8 +1811,18 @@
       }
     },
     {
-      "key": "afd547dc-0a69-4ab1-b3a7-9dd98d874fe9",
+      "key": "7f929a9d-f606-4b0a-8496-a41b9e1804cf",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f929a9d-f606-4b0a-8496-a41b9e1804cf",
+        "lesson_activity.key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84"
+      }
+    },
+    {
+      "key": "afd547dc-0a69-4ab1-b3a7-9dd98d874fe9",
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -1638,7 +1832,7 @@
     },
     {
       "key": "f2dd4064-ee65-42f5-a6c2-f9ced786ac51",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect their activity to the new vocabulary. Explain that what they just did — naming and reusing a set of steps — is exactly what programmers call a function. When we reuse those steps to make complex processes easier, we’re practicing abstraction.\n"
       },
@@ -1649,7 +1843,7 @@
     },
     {
       "key": "9f394e12-dd75-4f12-8689-0948a55070df",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "In programming, we call a reusable set of steps a function. It lets us do something again and again without rewriting all the details. When we reuse steps to simplify a bigger task, that’s called abstraction — it helps us focus on what matters instead of every tiny detail.\n",
         "remarks": true,
@@ -1667,7 +1861,7 @@
     },
     {
       "key": "3e1057ef-1581-45b3-bdb3-5074131a5bae",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1677,7 +1871,7 @@
     },
     {
       "key": "3f0b3c97-8106-4f6c-85a2-30b873e32e41",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
@@ -3235,7 +3429,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Web App Comparison"
+        "progression": "Document Design Flaws"
       },
       "bonus": false,
       "seeding_key": {
@@ -3257,7 +3451,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Web App Comparison"
+        "progression": "Document Design Flaws"
       },
       "bonus": false,
       "seeding_key": {
@@ -3298,10 +3492,10 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Generate with AI: Make a Button Respond"
+        "progression": "Predict & Trace: What Happens When You Click?"
       },
       "bonus": false,
       "seeding_key": {
@@ -3311,7 +3505,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson2-level2-revised_2026"
@@ -3320,10 +3514,10 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Write It Yourself: Make a Button Respond"
+        "progression": "Predict & Trace: What Happens When You Click?"
       },
       "bonus": false,
       "seeding_key": {
@@ -3333,7 +3527,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson2-level3-revised_2026"
@@ -3342,10 +3536,10 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Front-End Developer Challenge"
+        "progression": "Predict & Trace: What Happens When You Click?"
       },
       "bonus": false,
       "seeding_key": {
@@ -3355,7 +3549,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson2-level4_2026"
@@ -3367,7 +3561,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Level 1 Predict (format updated)"
+        "progression": "Predict & Trace: Difficulty Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -3377,7 +3571,7 @@
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74"
+        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
@@ -3389,20 +3583,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Counter App"
+        "progression": "Generate with AI: Counter App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1_2026"
+          "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b2f8f5b6-9308-4bfb-a86a-fd28f3bd6c5d"
+        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level1_2026"
+        "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
       ]
     },
     {
@@ -3411,139 +3605,117 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Commenting Code"
+        "progression": "Write it Yourself: Counter App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level2_2026"
+          "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8cef6621-e5c1-4363-832c-888893b31cf5"
+        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level2_2026"
+        "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
       ]
     },
     {
       "chapter": 12,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Debugging Variables"
+        "progression": "Assessment: Choice Level"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level9_2026"
+          "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "2619b9a9-d492-4656-88a6-5ca396305f41"
+        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level9_2026"
+        "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
       ]
     },
     {
       "chapter": 13,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Build Your Own Web App"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level10_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d86303d3-6580-4d3e-b90f-e230e69c9a06"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level10_2026"
-      ]
-    },
-    {
-      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "What's in a Name?"
+        "progression": "Predict & Trace"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level1_2026"
+          "ai-and-algorithmic-decisions-lesson4-level1-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "54e872f0-4ed7-46e8-8eb7-0117894d1b86"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson4-level1_2026"
+        "ai-and-algorithmic-decisions-lesson4-level1-revised_2026"
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Creating Functions"
+        "progression": "Refactor with AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level6_2026"
+          "ai-and-algorithmic-decisions-lesson4-level2-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
+        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson4-level6_2026"
+        "ai-and-algorithmic-decisions-lesson4-level2-revised_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write it Yourself"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
       ]
     },
     {
       "chapter": 16,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Creating Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level7_2026"
-        ],
-        "lesson.key": "Lesson 4: Writing Reusable Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson4-level7_2026"
-      ]
-    },
-    {
-      "chapter": 17,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Creating Functions"
+        "progression": "Write Reusable Functions"
       },
       "bonus": false,
       "seeding_key": {
@@ -3553,14 +3725,14 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
+        "activity_section.key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson4-level8_2026"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3582,7 +3754,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3604,7 +3776,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3626,7 +3798,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -3648,7 +3820,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3670,7 +3842,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3692,7 +3864,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3714,7 +3886,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3736,7 +3908,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3758,7 +3930,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3780,7 +3952,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3802,7 +3974,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3824,7 +3996,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3846,7 +4018,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3868,7 +4040,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3890,7 +4062,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3912,7 +4084,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3934,7 +4106,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3956,7 +4128,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3978,7 +4150,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4000,7 +4172,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4022,7 +4194,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4044,7 +4216,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4066,7 +4238,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4088,7 +4260,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4110,7 +4282,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4132,7 +4304,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4154,7 +4326,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4246,7 +4418,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       }
     },
     {
@@ -4258,7 +4430,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       }
     },
     {
@@ -4270,7 +4442,7 @@
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       }
     },
     {
@@ -4282,91 +4454,79 @@
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74"
+        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level1_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level2-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1_2026"
+          "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b2f8f5b6-9308-4bfb-a86a-fd28f3bd6c5d"
+        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level3-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level2_2026"
+          "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8cef6621-e5c1-4363-832c-888893b31cf5"
+        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level9_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level9_2026"
+          "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
         ],
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "2619b9a9-d492-4656-88a6-5ca396305f41"
+        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level10_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level1-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level10_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d86303d3-6580-4d3e-b90f-e230e69c9a06"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson4-level1_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level1_2026"
+          "ai-and-algorithmic-decisions-lesson4-level1-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "54e872f0-4ed7-46e8-8eb7-0117894d1b86"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson4-level6_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level2-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level6_2026"
+          "ai-and-algorithmic-decisions-lesson4-level2-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
+        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson4-level7_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level3-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level7_2026"
+          "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
+        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651"
       }
     },
     {
@@ -4378,7 +4538,7 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f"
+        "activity_section.key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb"
       }
     },
     {
@@ -4733,6 +4893,20 @@
       }
     },
     {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?tab=t.0#heading=h.89gihrytihy4",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
       "name": "[KEY] Building More Dynamic Pages",
       "url": "https://docs.google.com/document/d/1YAteyshJ2Q3L4Hl-Mt3yEXnlTs1fFaM3FcMxhyO-5vs/edit?usp=sharing",
       "key": "_key_building_more_dynamic_pages",
@@ -4774,7 +4948,7 @@
     },
     {
       "name": "[KEY] Interactivity in Web Apps",
-      "url": "https://docs.google.com/document/d/16O1ke2bCz_H1Otn5cF8oz36PGvMPEe3irn3CciJI3RY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/16LUaqAate71lc7AMzArsvMIjs8_ZZjRSjeAh00GsDDs/edit?tab=t.0#heading=h.h2r5nv72w96n",
       "key": "_key_interactivity_in_web_apps",
       "properties": {
         "audience": "Verified Teacher",
@@ -4784,20 +4958,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_interactivity_in_web_apps"
-      }
-    },
-    {
-      "name": "[KEY] Making a Button Respond",
-      "url": "https://docs.google.com/document/d/1HOrytbHjPTUg42mTLQeNQIvf7PPY_CdTF9gbGvi90m8/edit?tab=t.0#heading=h.xe9cnc3216z0",
-      "key": "_key_making_a_button_respond",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_making_a_button_respond"
       }
     },
     {
@@ -4841,6 +5001,20 @@
       },
       "seeding_key": {
         "resource.key": "adding_not_and_complex_conditions"
+      }
+    },
+    {
+      "name": "AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/1LHWHa9kEeeUXwnbgA-tQLnPLoniN35z84Y2GtJuavtU/edit?tab=t.0",
+      "key": "ai_and_algorithmic_decisions_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
@@ -4942,7 +5116,7 @@
     },
     {
       "name": "Interactivity in Web Apps",
-      "url": "https://docs.google.com/presentation/d/1rYuJS2VuUWBrNtTUDIhGuzRMoNCteO0Z_WWSi-fVJsg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1AtRRufIl4mUbldpHK-seyaVGiGvaUAX3IZwcpw7Ymgo/edit?tab=t.0#heading=h.h2r5nv72w96n",
       "key": "interactivity_in_web_apps",
       "properties": {
         "audience": "Teacher",
@@ -4956,7 +5130,7 @@
     },
     {
       "name": "Interactivity in Web Apps",
-      "url": "https://docs.google.com/document/d/1f4uMEikHg7LgaViIdbxqcLNTT35bTeBmxd294DaVv5A/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1vDM5wouUgzL4K_CXxiCk5djNvQit9OLOxlmYqQfKxUE/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "interactivity_in_web_apps_1",
       "properties": {
         "audience": "Student",
@@ -4971,7 +5145,7 @@
     },
     {
       "name": "Making a Button Respond",
-      "url": "https://docs.google.com/presentation/d/1vX1fNzhlLqiWIawXoab2x392Mx2VtgJAY9Zwyb8gVBA/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "url": "https://docs.google.com/presentation/d/15sOFlbQCvpY9Ss-t0GWe_bABaJ1sBhU1cMd01tMkkhk/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "making_a_button_respond",
       "properties": {
         "audience": "Teacher",
@@ -4980,21 +5154,6 @@
       },
       "seeding_key": {
         "resource.key": "making_a_button_respond"
-      }
-    },
-    {
-      "name": "Making a Button Respond",
-      "url": "https://docs.google.com/document/d/1OmDdqjGl9CeuP7yqRqMefUjN41XFKkrUrsE6AWRtdV0/edit?tab=t.0#heading=h.ob0ltskif24z",
-      "key": "making_a_button_respond_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "making_a_button_respond_1"
       }
     },
     {
@@ -5152,7 +5311,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "resource.key": "_key_interactivity_in_web_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
@@ -5170,19 +5341,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
-        "resource.key": "_key_making_a_button_respond"
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
         "resource.key": "making_a_button_respond"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "resource.key": "making_a_button_respond_1"
       }
     },
     {
@@ -5320,13 +5491,13 @@
       }
     },
     {
-      "key": "document_object_model_dom_",
-      "word": "Document Object Model (DOM)",
-      "definition": "a programming interface that makes a website interactive",
+      "key": "dom_document_object_model_",
+      "word": "DOM (Document Object Model)",
+      "definition": "the live, programmable representation of the web page's structure",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "document_object_model_dom_"
+        "vocabulary.key": "dom_document_object_model_"
       }
     },
     {
@@ -5337,6 +5508,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event_handler"
+      }
+    },
+    {
+      "key": "event_listener",
+      "word": "event listener",
+      "definition": "a JavaScript feature that you attach to a web page element to wait for a specific event. It detects when the event occurs and calls an event handler",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event_listener"
       }
     },
     {
@@ -5357,16 +5538,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "interactivity",
-      "word": "interactivity",
-      "definition": "the ability of a software application or website to respond to user input",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "interactivity"
       }
     },
     {
@@ -5430,16 +5601,6 @@
       }
     },
     {
-      "key": "trade_off",
-      "word": "trade-off",
-      "definition": "a compromise where you give up something to get something else",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "trade_off"
-      }
-    },
-    {
       "key": "truth_table",
       "word": "truth table",
       "definition": "shows all possible combinations of true and false values for one or more conditions and the result of each combination",
@@ -5447,16 +5608,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "truth_table"
-      }
-    },
-    {
-      "key": "user_centered_design",
-      "word": "user-centered design",
-      "definition": "a design philosophy that puts the user at the center of the design process, focusing on their needs and experience",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_centered_design"
       }
     },
     {
@@ -5480,31 +5631,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "vocabulary.key": "interactivity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "vocabulary.key": "trade_off"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "vocabulary.key": "user_centered_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "vocabulary.key": "document_object_model_dom_"
+        "vocabulary.key": "dom_document_object_model_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
         "vocabulary.key": "event_handler"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "vocabulary.key": "event_listener"
       }
     },
     {
@@ -5942,12 +6081,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "e0852a17-3e99-4935-9751-827f3fc97203",
+      "position": 1,
+      "learning_goal": "Track and evaluate how a value (state) changes over time in a program",
+      "ai_enabled": false,
+      "tips": "Look for whether the student can:\n- describe what should happen before running the app\n- track how the value changes step by step\n- explain what caused the change\n- verify that the displayed result matches the intended behavior",
+      "seeding_key": {
+        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Does not correctly update the variable or cannot explain how the value changes. Does not compare expected vs actual behavior or relies entirely on AI without understanding.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Updates the variable with errors or incomplete logic. Shows limited understanding of how the value changes over time. Makes little or unclear comparison between expected and actual behavior.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Defines expected behavior and updates the variable correctly. Explains how the value changes, though reasoning may be partial or general. Attempts to compare expected vs actual behavior with minor gaps.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Defines expected behavior clearly, correctly updates the variable, and explains how the value (state) changes across interactions. Accurately compares expected vs actual behavior and verifies that the app works as intended using AI support appropriately.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    }
   ]
 }
