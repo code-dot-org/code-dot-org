@@ -84,6 +84,7 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     inRestrictedShareMode: PropTypes.bool,
+    hasPrivacyProfanityViolation: PropTypes.bool,
   };
 
   state = {
@@ -134,6 +135,8 @@ class ShareAllowedDialog extends React.Component {
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
     OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(this.props.appType);
+
+  hasPrivacyProfanityViolation = () => this.props.hasPrivacyProfanityViolation;
 
   close = () => {
     recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
@@ -292,6 +295,16 @@ class ShareAllowedDialog extends React.Component {
                           `Abuse error for project at url: ${shareUrl}`
                         )}`,
                       }),
+                    }}
+                    className="alert-error"
+                    style={styles.abuseStyle}
+                    textStyle={styles.abuseTextStyle}
+                  />
+                )}
+                {this.hasPrivacyProfanityViolation() && (
+                  <AbuseError
+                    i18n={{
+                      tos: i18n.policyViolation(),
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -541,6 +554,7 @@ export default connect(
     isOpen: state.shareDialog.isOpen,
     inRestrictedShareMode: state.project.inRestrictedShareMode,
     showSharingDisabledDialog: state.shareDialog.showSharingDisabledDialog,
+    hasPrivacyProfanityViolation: state.project.hasPrivacyProfanityViolation,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
