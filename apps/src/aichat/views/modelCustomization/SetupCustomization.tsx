@@ -11,6 +11,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
 import {useLevelProperties} from '../../levelPropertiesContext';
+import aichatI18n from '../../locale';
 import {setAiCustomizationProperty} from '../../redux';
 
 import CompareModelsDialog from './CompareModelsDialog';
@@ -82,13 +83,11 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div>
         <FieldLabel
           id="selected-model"
-          label={'Selected model'}
-          tooltipText={
-            'This is the underlying language model being used by the chatbot.'
-          }
+          label={aichatI18n.modelCustomization_comparisonHeader()}
+          tooltipText={aichatI18n.modelCustomization_comparisonTooltipText()}
         />
         <SimpleDropdown
-          labelText={'Selected model'}
+          labelText={aichatI18n.modelCustomization_comparisonHeader()}
           isLabelVisible={false}
           onChange={event =>
             dispatch(
@@ -117,7 +116,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             onClick={() => setIsShowingModelDialog(true)}
             type="button"
           >
-            {'Compare Models'}
+            {aichatI18n.modelCustomization_compareButtonText()}
           </MuiButton>
         )}
         {isShowingModelDialog && (
@@ -155,16 +154,16 @@ const SetupCustomization: React.FunctionComponent = () => {
     leftButtonProps: {
       icon: {
         iconName: 'minus',
-        title: 'Decrease',
+        title: aichatI18n.modelCustomization_sliderDecrease(),
       },
-      ['aria-label']: 'Decrease',
+      ['aria-label']: aichatI18n.modelCustomization_sliderDecrease(),
     },
     rightButtonProps: {
       icon: {
         iconName: 'plus',
-        title: 'Increase',
+        title: aichatI18n.modelCustomization_sliderIncrease(),
       },
-      ['aria-label']: 'Increase',
+      ['aria-label']: aichatI18n.modelCustomization_sliderIncrease(),
     },
   };
 
@@ -182,10 +181,8 @@ const SetupCustomization: React.FunctionComponent = () => {
             >
               <FieldLabel
                 id="temperature"
-                label={'Temperature'}
-                tooltipText={
-                  'Temperature affects which words are generated as a response. Use the slider to change the temperature.'
-                }
+                label={aichatI18n.technicalInfoHeader_temperature()}
+                tooltipText={aichatI18n.modelCustomization_temperatureTooltipText()}
               />
               {aiCustomizations.temperature}
             </div>
@@ -196,10 +193,8 @@ const SetupCustomization: React.FunctionComponent = () => {
           <>
             <FieldLabel
               id="system-prompt"
-              label={'System Prompt'}
-              tooltipText={
-                'The system prompt controls how the chatbot behaves. Type your instructions into the text box.'
-              }
+              label={aichatI18n.technicalInfoHeader_systemPrompt()}
+              tooltipText={aichatI18n.modelCustomization_systemPromptTooltipText()}
             />
             <textarea
               className={styles.systemPromptInput}

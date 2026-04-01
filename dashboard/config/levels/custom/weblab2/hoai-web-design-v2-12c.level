@@ -45,7 +45,7 @@
           "id": "1",
           "name": "index.html",
           "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        background-color: #003366;\n        color: #003366;\n        font-family: sans-serif;\n        padding: 1rem;\n      }\n      h1 {\n        color: #ffd700;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Westview Wolves</h1>\n\n    <section>\n      <h2>Team History</h2>\n      <p>The Westview Wolves have been a staple of local basketball since 1987. Known for their fast-paced play and strong defense, the Wolves have won three regional championships in the last decade.</p>\n    </section>\n\n    <section>\n      <h2>Starting Players</h2>\n      <ul>\n        <li>Marcus T. — Point Guard</li>\n        <li>Jordan S. — Shooting Guard</li>\n        <li>Priya N. — Small Forward</li>\n        <li>DeShawn W. — Power Forward</li>\n        <li>Aaliyah R. — Center</li>\n      </ul>\n    </section>\n  </body>\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -53,17 +53,16 @@
           "name": "vision.md",
           "contents": "I want a page about the Westview Wolves, my favorite local basketball team. Make it dark and bold using the team colors: navy blue and gold.\n\nThe page should have the team name at the top, a section about the team's history, and a list of the starting players.",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
-        "2",
-        "1"
+        "1",
+        "2"
       ]
-    },
-    "thumbnail_url": "https://images.code.org/46629136682cd05d7a9cd7dfacd0e057-image-1775017960050.png"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-25T23:29:30.027+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12b\"},{\"changed_at\":\"2026-03-26 00:22:19 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:23:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:53:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:32:49 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-25T23:29:30.027+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12b\"},{\"changed_at\":\"2026-03-26 00:22:19 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:23:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

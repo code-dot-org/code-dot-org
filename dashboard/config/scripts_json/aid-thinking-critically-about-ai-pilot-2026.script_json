@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-31 20:28:57 UTC",
+    "serialized_at": "2026-03-24 23:38:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3950,27 +3950,6 @@
     },
     {
       "chapter": 33,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson9-lessonsurvey_2026-pilot"
-        ],
-        "lesson.key": "Refining Our Product",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aid-thinking-critically-about-ai-pilot-2026",
-        "activity_section.key": "c1c3c2aa-f99b-4a68-8868-77748fdb6b94"
-      },
-      "level_keys": [
-        "thinking-critically-about-ai-lesson9-lessonsurvey_2026-pilot"
-      ]
-    },
-    {
-      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3992,7 +3971,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4014,7 +3993,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4419,18 +4398,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aid-thinking-critically-about-ai-pilot-2026",
         "activity_section.key": "5f0b16f6-41d3-47b9-849c-bc5d6a87aeb7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "thinking-critically-about-ai-lesson9-lessonsurvey_2026-pilot",
-        "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson9-lessonsurvey_2026-pilot"
-        ],
-        "lesson.key": "Refining Our Product",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aid-thinking-critically-about-ai-pilot-2026",
-        "activity_section.key": "c1c3c2aa-f99b-4a68-8868-77748fdb6b94"
       }
     },
     {

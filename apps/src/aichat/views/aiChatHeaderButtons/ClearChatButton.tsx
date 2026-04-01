@@ -5,6 +5,7 @@ import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWit
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../../locale';
 import {addChatEvent, clearChatMessages, sendAnalytics} from '../../redux';
 
 const ClearChatButton: React.FunctionComponent = () => {
@@ -49,7 +50,7 @@ const ClearChatButton: React.FunctionComponent = () => {
   return (
     <IconButtonWithTooltip
       id="clear-chat"
-      label={'Clear chat'}
+      label={aichatI18n.clearChatButtonText()}
       icon={{iconName: 'eraser', iconStyle: 'solid'}}
       variant="text"
       color="tertiary"

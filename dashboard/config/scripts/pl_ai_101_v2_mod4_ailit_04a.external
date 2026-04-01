@@ -1,265 +1,67 @@
 name 'pl-ai-101-V2-mod4-AILit-04a'
 title 'title'
 description 'description here'
-display_name 'Primary Examples'
-bubble_choice_description 'For grades K-5.'
-thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
 
 markdown <<MARKDOWN
 # Primary Examples
 
 <!-- Engaging with AI - Primary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Engaging with AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Engaging with AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students work in pairs to solve multi-step word problems involving addition and multiplication. They show their work, explain their reasoning in writing, and share their thinking with the class. The lesson focuses on helping students explain each step clearly and justify how they arrived at an answer.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> The teacher adds a printed AI-generated solution to one of the same problems alongside a student sample solution. Students compare the two, checking for accuracy, clarity, and reasoning. They identify any mistakes or confusing steps and decide which solution they trust more and why.</p>
 
-<!-- LEFT -->
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students work in pairs to solve multi-step word problems involving addition and multiplication. They show their work, explain their reasoning in writing, and share their thinking with the class. The lesson focuses on helping students explain each step clearly and justify how they arrived at an answer.</div>
-</div>
-</div>
-
-<!-- ARROW -->
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">
-→
-</div>
-
-<!-- RIGHT -->
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>The teacher adds a printed AI-generated solution to one of the same problems alongside a student sample solution. Students compare the two, checking for accuracy, clarity, and reasoning. They identify any mistakes or confusing steps and decide which solution they trust more and why.</div>
-</div>
-</div>
-
-</div>
-
-<!-- FRAMEWORK CONNECTIONS FULL WIDTH -->
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">
-Framework Connections
-</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<!-- KNOWLEDGE -->
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px; height:36px;">
-<div>
-<div style="font-weight:700;">Knowledge</div>
-<div style="font-size:14px;">AI’s Capabilities and Limitations</div>
-</div>
-</div>
-
-<!-- SKILLS -->
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px; height:36px;">
-<div>
-<div style="font-weight:700;">Skills</div>
-<div style="font-size:14px;">Critical Thinking</div>
-</div>
-</div>
-
-<!-- ATTITUDES -->
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px; height:36px;">
-<div>
-<div style="font-weight:700;">Attitudes</div>
-<div style="font-size:14px;">Responsible</div>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations<br>
+    <strong>Skills:</strong> Critical Thinking<br>
+    <strong>Attitudes:</strong> Responsible</p>
+  </div>
 </details>
 
 <!-- Creating with AI - Primary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Creating with AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Creating with AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students respond to a creative writing prompt such as “Write a story about a surprising adventure.” They brainstorm ideas, draft a narrative with a beginning, middle, and end, and revise to strengthen details, dialogue, and voice.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> During the brainstorming phase, the teacher invites students to use an AI tool to generate possible characters, settings, or plot twists. Students review the suggestions and decide which ideas to keep, adapt, or reject before writing their own stories. The emphasis stays on student authorship, with students explaining how their final story reflects their own choices rather than simply copying the AI output.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students respond to a creative writing prompt such as “Write a story about a surprising adventure.” They brainstorm ideas, draft a narrative with a beginning, middle, and end, and revise to strengthen details, dialogue, and voice.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>During brainstorming, students use an AI tool to generate possible characters, settings, or plot twists. They review suggestions and decide what to keep, adapt, or reject before writing their own stories, ensuring the final product reflects their own voice and choices.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">The Nature of AI</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Creativity; Communication</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Innovative; Responsible</div></div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> The Nature of AI<br>
+    <strong>Skills:</strong> Creativity; Communication<br>
+    <strong>Attitudes:</strong> Innovative; Responsible</p>
+  </div>
 </details>
-
 
 <!-- Managing AI - Primary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Managing AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Managing AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students brainstorm ideas for a science fair project in small groups. They think about topics they are curious about, turn those interests into testable questions, and discuss what materials, observations, or experiments would be needed to complete the project.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> The teacher allows groups to use an AI tool to generate additional science fair topics or refine their research questions. Students then evaluate the suggestions, deciding which ideas are realistic, safe, and actually testable in a classroom setting. The class discusses why some AI-generated ideas may be too broad, too complex, or not scientifically sound, reinforcing that students must use judgment rather than accept suggestions automatically.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students brainstorm science fair project ideas in small groups, develop testable questions, and discuss materials and procedures needed to carry out their investigations.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>Students use AI to generate additional project ideas or refine their questions. They evaluate which ideas are realistic, safe, and testable, and discuss why some AI-generated suggestions may not be appropriate.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI Reshapes Work and Human Roles</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Problem Solving; Collaboration</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Responsible; Curious</div></div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI Reshapes Work and Human Roles<br>
+    <strong>Skills:</strong> Problem Solving; Collaboration<br>
+    <strong>Attitudes:</strong> Responsible; Curious</p>
+  </div>
 </details>
 
-
 <!-- Designing AI - Primary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Designing AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Designing AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students sort objects such as animals, leaves, classroom items, or geometric shapes into categories based on observable features. They explain the rules they used for sorting and compare how different groups chose different categories or criteria.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> The teacher reframes the task as “training an AI system.” Students decide how to label the categories, test their system with new examples, and notice what happens when categories are too broad, too narrow, or inconsistently applied. The class then discusses how human choices about labels and categories affect how well a system works and whether it treats examples fairly.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students sort objects such as animals, leaves, or shapes into categories based on observable features and explain their reasoning.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>The teacher reframes the activity as “training an AI.” Students define categories, test them with new examples, and observe how different labeling choices affect results and fairness.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI Reflects Human Choices and Perspectives</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Computational Thinking; Problem Solving</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Curious; Responsible</div></div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives<br>
+    <strong>Skills:</strong> Computational Thinking; Problem Solving<br>
+    <strong>Attitudes:</strong> Curious; Responsible</p>
+  </div>
 </details>
 MARKDOWN

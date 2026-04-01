@@ -150,20 +150,7 @@ Fish.prototype.initMLActivities = function () {
 
   // Localize
   const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
-    acc[key] = (...args) => {
-      if (key === 'notWord') {
-        // 'Not {word}' is too ambiguous and it contains the previously translated
-        // word inline. So we're always trying to translate "Not azul", etc, and
-        // that's not appropriate. A dynamic phrase catches too many other things.
-        // Therefore, we specialize this string as "Not {oceans-word:X}" which we
-        // can uniquely match and translate in the TMS.
-        return localization
-          .translate(`Not oceans-word:${args[0]['word']}`, ['oceans'])
-          .replace('oceans-word:', '');
-      } else {
-        return localization.translate(msgFunction(...args), ['oceans']);
-      }
-    };
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
     return acc;
   }, {});
 

@@ -306,7 +306,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'teacher can not add students to a section at capacity' do
     sign_in @teacher
     @section = create(:section, user: @teacher, login_type: 'word')
-    create_list(:follower, 500, section: @section) # rubocop:disable FactoryBot/ExcessiveCreateList
+    500.times do
+      create(:follower, section: @section)
+    end
     post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :forbidden
     assert_equal(

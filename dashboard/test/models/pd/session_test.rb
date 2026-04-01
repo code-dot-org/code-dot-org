@@ -133,7 +133,9 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'assign unique 4 character codes' do
-    sessions = create_list(:pd_session, 10, :with_assigned_code)
+    sessions = Array.new(10) do
+      create(:pd_session, :with_assigned_code)
+    end
 
     codes = sessions.pluck(:code)
     assert(codes.all? {|code| code.present? && code.length == 4})

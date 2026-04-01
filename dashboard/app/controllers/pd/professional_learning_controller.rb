@@ -232,7 +232,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   # Returns if the given workshop is within the provided regional partner's area.
   private def in_region?(workshop, regional_partner)
     workshop.regional_partner_id == regional_partner.id &&
-      (['Regional', 'National'].include?(workshop.participant_group_type) ||
+      (['Regional', 'National'].include?(workshop.participant_group_type)  ||
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA, Pd::Workshop::COURSE_CSF].include?(workshop.course))
   end
 

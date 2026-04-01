@@ -923,9 +923,6 @@ en:
         aif2-pl-updating-the-DOM: Updating the DOM
         aif2-pl-conditionals: Making Decisions in Code
         aif2-pl-variables: Debugging Variables
-        aif2-pl-schema: Displaying Data
-        aif2-pl-filtering-echo: 'Filtering Data '
-        aif2-pl-pipelines: Building Pipelines
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

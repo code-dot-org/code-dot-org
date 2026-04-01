@@ -1,220 +1,70 @@
 name 'pl-ai-101-V2-mod4-AILit-04b'
 title 'title'
 description 'description here'
-display_name 'Secondary Examples'
-bubble_choice_description 'For grades 6-12.'
-thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
 
 markdown <<MARKDOWN
 # Secondary Examples
 
+
 <!-- Engaging with AI - Secondary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Engaging with AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Engaging with AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students research the causes of the American Revolution using a textbook and curated primary and secondary sources. They take notes, identify key events and perspectives, and write a short paragraph explaining the main causes using evidence from their sources.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> After completing their initial research, students ask an AI tool the same question. They compare the AI response to their notes and sources, identifying what the AI included, what it left out, and whether any bias, vagueness, or oversimplification is present. Students then revise their paragraph or add a short reflection about whether the AI response should be trusted on its own.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students research the causes of the American Revolution using a textbook and curated primary and secondary sources. They take notes, identify key events and perspectives, and write a short paragraph explaining the main causes using evidence from their sources.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>After completing their research, students ask an AI tool the same question and compare the response to their sources. They identify missing details, bias, or oversimplification, and revise their paragraph or add a reflection about whether the AI response should be trusted.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI Reflects Human Choices and Perspectives; AI’s Role in Society</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Critical Thinking; Self and Social Awareness</div></div>
-</div>
-
-<div style="display:flex; gap:10px; align-items:flex-start;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px; height:36px;">
-<div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Curious; Empathetic</div></div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives; AI’s Role in Society<br>
+    <strong>Skills:</strong> Critical Thinking; Self and Social Awareness<br>
+    <strong>Attitudes:</strong> Curious; Empathetic</p>
+  </div>
 </details>
 
 
 <!-- Creating with AI - Secondary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
-Creating with AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Creating with AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students create a visual artwork based on a theme such as identity, community, or change. They sketch several ideas, choose one concept to develop, and produce a final piece using a medium of their choice. They also write a short artist statement describing their intentions and design choices.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> At the idea development stage, students generate an AI image based on the same theme and analyze it for symbolism, mood, composition, and originality. They discuss what feels effective, generic, or incomplete, and then create their own piece that either improves on or intentionally departs from the AI-generated version. In their artist statement, they explain how the AI image influenced their thinking and where their own creative decisions shaped the final work.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students create a visual artwork based on a theme such as identity or community. They sketch ideas, develop a concept, produce a final piece, and write an artist statement explaining their choices.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>Students generate an AI image based on the theme, analyze it for composition and originality, and then create their own artwork that improves or diverges from the AI version. They explain how the AI influenced their thinking.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-
-<div style="display:flex; gap:10px;">
-<img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px;">
-<div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI’s Capabilities and Limitations; AI Reflects Human Choices</div></div>
-</div>
-
-<div style="display:flex; gap:10px;">
-<img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px;">
-<div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Creativity; Critical Thinking</div></div>
-</div>
-
-<div style="display:flex; gap:10px;">
-<img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px;">
-<div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Innovative; Adaptable</div></div>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations; AI Reflects Human Choices and Perspectives<br>
+    <strong>Skills:</strong> Creativity; Critical Thinking<br>
+    <strong>Attitudes:</strong> Innovative; Adaptable</p>
+  </div>
 </details>
-
 
 <!-- Managing AI - Secondary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
-Managing AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Managing AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students write an argumentative essay on a course-related topic. They develop a claim, gather supporting evidence, organize their reasoning, draft the essay, and revise for clarity, evidence, and style. The lesson emphasizes strong argumentation and original thinking.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+    <p><strong>Small AI shift:</strong> The teacher asks students to make a deliberate decision about whether AI should be used for one part of the process, such as brainstorming, outlining, or revising. Students briefly explain why they chose to use or avoid AI for that stage and reflect on whether it improved the quality of their thinking or writing. This keeps the focus on student agency and helps them consider where AI supports learning and where human judgment should remain central.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students write an argumentative essay with a claim, evidence, and reasoning, revising for clarity and strength of argument.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>Students choose one stage (brainstorming, outlining, or revising) where AI may be used, explain their reasoning, and reflect on whether AI improved their thinking or writing.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px;"><div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI’s Capabilities and Limitations; AI’s Role in Society</div></div></div>
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px;"><div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Problem Solving; Communication</div></div></div>
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px;"><div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Responsible; Adaptable</div></div></div>
-</div>
-
-</div>
-</div>
-</div>
-</div>
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations; AI’s Role in Society<br>
+    <strong>Skills:</strong> Problem Solving; Communication<br>
+    <strong>Attitudes:</strong> Responsible; Adaptable</p>
+  </div>
 </details>
-
 
 
 <!-- Designing AI - Secondary -->
-<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
-Designing AI
-</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Designing AI</summary>
 
-<div style="padding:20px 24px 24px 24px;">
-<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
-<div style="background:#F4F6F8; padding:24px;">
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students analyze a dataset, such as survey responses, school climate data, or environmental measurements, to identify patterns and draw conclusions. They create charts or visualizations and explain what the data suggests, including any limitations in the evidence.</p>
 
-<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<p><strong>Small AI shift:</strong> The teacher extends the lesson by asking students to imagine how the same dataset might be used to train an AI model. Students examine what data is included, what might be missing, and how those gaps could affect predictions or recommendations. They then discuss how biased or incomplete data could produce unfair outcomes and propose ways the dataset or system design could be improved before being used in an AI system.</p>
 
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Original Lesson</div>
-<div>Students analyze a dataset, create visualizations, and draw conclusions about patterns and trends.</div>
-</div>
-</div>
-
-<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center;">→</div>
-
-<div>
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">Small AI Shift</div>
-<div>Students consider how the dataset could train an AI model, identify missing or biased data, and propose improvements to make predictions more fair and accurate.</div>
-</div>
-</div>
-
-</div>
-
-<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF;">
-<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Framework Connections</div>
-
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:36px;"><div><div style="font-weight:700;">Knowledge</div><div style="font-size:14px;">AI Reflects Human Choices; AI’s Role in Society</div></div></div>
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:36px;"><div><div style="font-weight:700;">Skills</div><div style="font-size:14px;">Computational Thinking; Self & Social Awareness</div></div></div>
-<div style="display:flex; gap:10px;"><img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:36px;"><div><div style="font-weight:700;">Attitudes</div><div style="font-size:14px;">Empathetic; Responsible</div></div></div>
-</div>
-
-</div>
-</div>
-</div>
-</div>
+<p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives; AI’s Role in Society<br>
+    <strong>Skills:</strong> Computational Thinking; Self and Social Awareness<br>
+    <strong>Attitudes:</strong> Empathetic; Responsible</p>
+  </div>
 </details>
 MARKDOWN

@@ -430,52 +430,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal 'unsubmitted', responses[0]['response']['status']
   end
 
-  # Baseline query count without lesson insight caching.
-  test "lesson_insight baseline query count" do
-    teacher = create(:authorized_teacher)
-    student = create(:student)
-    section = create(:section, user: teacher)
-    create(:follower, user: teacher, student_user: student, section: section)
-
-    # A regular (non-assessment) level the student has attempted.
-    free_response_level = create(:free_response, name: 'FR Level Snapshot')
-    create(:script_level, script: @unit, lesson: @lesson1, levels: [free_response_level])
-    create(:user_level, user: student, script: @unit, level: free_response_level,
-      level_source: create(:level_source, data: 'my answer')
-    )
-
-    # A CFU (multi-choice) level with a correct student response.
-    multi_level = create(:multi, name: 'Multi Level Snapshot',
-      properties: {questions: [{text: 'Q?'}], answers: [{text: 'A', correct: true}]}
-    )
-    create(:script_level, script: @unit, lesson: @lesson1,
-      progression: 'Check Your Understanding', levels: [multi_level]
-    )
-    create(:user_level, user: student, script: @unit, level: multi_level,
-      level_source: create(:level_source, data: '0')
-    )
-
-    fake_response = mock
-    fake_response.stubs(:code).returns(200)
-    fake_response.stubs(:body).returns(
-      {'choices' => [{'message' => {'content' => '{}'}}]}.to_json
-    )
-    AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_insight).returns(fake_response)
-
-    sign_in teacher
-
-    assert_queries(27) do
-      get :lesson_insight, params: {
-        lesson_id:  @lesson1.id,
-        unit_id:    @unit.id,
-        student_id: student.id,
-        section_id: section.id
-      }
-    end
-
-    assert_response :success
-  end
-
   test "cfu_responses endpoint tracks submitted status for LevelGroup CFUs" do
     multi_level_answers = [
       {"text" => "answer 1", "correct" => false},

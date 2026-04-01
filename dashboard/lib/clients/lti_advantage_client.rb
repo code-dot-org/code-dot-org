@@ -29,7 +29,7 @@ class Clients::LtiAdvantageClient
     # Since we've already fetched the first page, we start at page 2.
     page = 2
     while next_page
-      next_page = @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] ? build_uri_schoology(next_page, page) : build_uri(next_page, resource_link_id)
+      next_page = @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] ?  build_uri_schoology(next_page, page) : build_uri(next_page, resource_link_id)
       current_page = make_request(next_page, options)
       parsed_res[:members].concat(current_page[:body][:members])
       return parsed_res unless parsed_res[:members].length <= Policies::Lti::MAX_COURSE_MEMBERSHIP

@@ -658,7 +658,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
+    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -727,7 +727,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
+    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -751,7 +751,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
+    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -881,7 +881,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     # 2 enrollments without attendance
-    enrollments = create_list(:pd_enrollment, 2, workshop: @workshop)
+    enrollments = Array.new(2) do
+      create(:pd_enrollment, workshop: @workshop)
+    end
 
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end

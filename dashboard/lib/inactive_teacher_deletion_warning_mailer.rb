@@ -98,7 +98,7 @@ class InactiveTeacherDeletionWarningMailer
     Retryable.retryable(
       on: RestClient::TooManyRequests,
       tries: MailJet::MAILJET_RETRY_LIMIT,
-      sleep: ->(n) {2**n}
+      sleep: ->(n) {2 ** n}
     ) do
       MailJet.send_email(
         :inactive_teacher_deletion_warning,
