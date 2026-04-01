@@ -4,7 +4,6 @@ import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../../locale';
 import {selectHavePropertiesChanged, updateAiCustomization} from '../../redux';
 
 import styles from '../model-customization-workspace.module.scss';
@@ -39,7 +38,7 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
       startIcon={<FontAwesomeV6Icon iconName="edit" />}
       type="button"
     >
-      {aichatI18n.modelCustomization_updateButtonText()}
+      {'Update'}
     </MuiButton>
   );
 };

@@ -1,6 +1,5 @@
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
-import aichatI18n from '../../locale';
 import {
   AiCustomizations,
   LevelAichatSettings,
@@ -23,54 +22,62 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: {
 }[] = [
   {
     property: 'botName',
-    label: aichatI18n.modelCard_botNameHeader(),
-    editTooltip: aichatI18n.modelCard_botNameEditTooltip(),
+    label: 'Chatbot Name',
+    editTooltip: 'Give your chatbot a unique name.',
     displayTooltip: '',
   },
   {
     property: 'description',
-    label: aichatI18n.modelCard_descriptionHeader(),
+    label: 'Description',
     icon: 'memo',
-    editTooltip: aichatI18n.modelCard_descriptionEditTooltip(),
-    displayTooltip: aichatI18n.modelCard_descriptionDisplayTooltip(),
+    editTooltip:
+      'Write a brief description of your chatbot, such as how it works and the problem it was created to solve.',
+    displayTooltip: 'A brief description of this chatbot.',
   },
   {
     property: 'intendedUse',
-    label: aichatI18n.modelCard_intendedUseHeader(),
+    label: 'Intended Use',
     icon: 'bullseye-pointer',
-    editTooltip: aichatI18n.modelCard_intendedUseEditTooltip(),
-    displayTooltip: aichatI18n.modelCard_intendedUseDisplayTooltip(),
+    editTooltip:
+      'Describe how the chatbot is intended to be used, such as what specific topics or questions it can answer.',
+    displayTooltip:
+      'How the chatbot was designed to be used. Similar to an instruction manual.',
   },
   {
     property: 'limitationsAndWarnings',
-    label: aichatI18n.modelCard_limitationsHeaader(),
+    label: 'Limitations and Warnings',
     icon: 'diamond-exclamation',
-    editTooltip: aichatI18n.modelCard_limitationsEditTooltip(),
-    displayTooltip: aichatI18n.modelCard_limitationsDisplayTooltip(),
+    editTooltip:
+      'Describe any limitations the chatbot has when responding. Describe any warnings or cautions for the user to consider.',
+    displayTooltip:
+      'Any limitations the chatbot has, or any warnings to consider when using the chatbot. Similar to safety information on a chatbot.',
   },
   {
     property: 'testingAndEvaluation',
-    label: aichatI18n.modelCard_testingHeader(),
+    label: 'Testing and Evaluation',
     icon: 'vial-circle-check',
-    editTooltip: aichatI18n.modelCard_testingEditTooltip(),
-    displayTooltip: aichatI18n.modelCard_testingDisplayTooltip(),
+    editTooltip:
+      'Describe how you tested the chatbot to ensure it was ready for users and would perform as expected.',
+    displayTooltip:
+      'How the chatbot was tested before being published for general use.',
   },
   {
     property: 'exampleTopics',
-    label: aichatI18n.modelCard_exampleTopicsHeader(),
+    label: 'Example Prompts and Topics',
     icon: 'message-lines',
-    editTooltip: aichatI18n.modelCard_exampleTopicsEditTooltip(),
-    displayTooltip: aichatI18n.modelCard_exampleTopicsDisplayTooltip(),
+    editTooltip:
+      'Add example prompts the user could consider when using the chatbot. Type in each example prompt into the text box, then click "Add" for each one.',
+    displayTooltip: 'Try some of these example prompts to get started.',
   },
 ];
 
 export const TECHNICAL_INFO_FIELDS = [
-  aichatI18n.technicalInfoHeader_modelName(),
-  aichatI18n.technicalInfoHeader_overview(),
-  aichatI18n.technicalInfoHeader_trainingData(),
-  aichatI18n.technicalInfoHeader_systemPrompt(),
-  aichatI18n.technicalInfoHeader_temperature(),
-  aichatI18n.technicalInfoHeader_retrievalUsed(),
+  'Model Name',
+  'Overview',
+  'Training Data',
+  'System Prompt',
+  'Temperature',
+  'Retrieval Used',
 ] as const;
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
@@ -112,11 +119,11 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
 export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
-  selectedModelId: aichatI18n.aiCustomizations_selectedModel(),
-  temperature: aichatI18n.aiCustomizations_temperature(),
-  systemPrompt: aichatI18n.aiCustomizations_systemPrompt(),
-  retrievalContexts: aichatI18n.aiCustomizations_retrieval(),
-  modelCardInfo: aichatI18n.aiCustomizations_modelCardInfo(),
+  selectedModelId: 'Selected model',
+  temperature: 'Temperature',
+  systemPrompt: 'System prompt',
+  retrievalContexts: 'Retrieval',
+  modelCardInfo: 'Model card information',
 };
 
 // Model customization fields that are checked for toxicity before updating.

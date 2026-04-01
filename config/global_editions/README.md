@@ -2,7 +2,7 @@
 
 These configurations detail the properties and visibility of certain components
 when viewing the site within a particular region. This relates to visiting the
-studio.code.org site using a URL scheme like '/global/fa'. In this case, the
+studio.code.org site using a URL scheme like '/fa'. In this case, the
 configuration here at `fa.yml` would be used to determine the appearance and
 properties of particular components.
 
@@ -37,7 +37,7 @@ level. This is used to provide documentation for that particular level.
 Then there is a general `pages` section. This lists a set of filters to modify
 different studio pages.
 
-When we navigate to such a page that matches `/global/:region<your mask>`
+When we navigate to such a page that matches `/:region<your mask>`
 the specifically wrapped components will check this table. Their properties
 will get overriden with those specified here.
 
@@ -66,7 +66,7 @@ pages:
           title: foo
 ```
       
-When we navigate to the /global/foo/home page, any MarketingAnnouncement will
+When we navigate to the /foo/home page, any MarketingAnnouncement will
 have its normal announcement replaced with the configured one. Whereas, on any
 other page, the '/' would match, and the `false` indicates the component should
 be removed.
@@ -76,4 +76,4 @@ be removed.
 You may find it useful to copy from an existing region that is most similar to
 the one you are creating. Just copy, for instance, the `root.yml` to your named
 region (e.g. `my-region.yml`) and restart your development server. There will
-now be a clone of the `root` site experience at `/global/my-region`.
+now be a clone of the `root` site experience at `/<ge-region>`.
