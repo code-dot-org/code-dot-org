@@ -204,7 +204,9 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       [@programming_environment1, @programming_environment2].each do |programming_environment|
         3.times do
           category = create(:programming_environment_category, programming_environment: programming_environment)
-          create_list(:programming_expression, 4, programming_environment: programming_environment, programming_environment_category: category)
+          4.times do
+            create(:programming_expression, programming_environment: programming_environment, programming_environment_category: category)
+          end
         end
       end
 

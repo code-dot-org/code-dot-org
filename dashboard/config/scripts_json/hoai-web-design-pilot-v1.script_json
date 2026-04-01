@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 04:40:50 UTC",
+    "serialized_at": "2026-03-28 03:31:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -420,6 +420,28 @@
     {
       "chapter": 15,
       "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-16"
+        ],
+        "lesson.key": "Progression V2",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v1",
+        "activity_section.key": "2fb2f485-3df8-4e1a-a968-8590e93011fd"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-16"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -602,6 +624,18 @@
         "level.key": "hoai-web-design-v2-15",
         "script_level.level_keys": [
           "hoai-web-design-v2-15"
+        ],
+        "lesson.key": "Progression V2",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v1",
+        "activity_section.key": "2fb2f485-3df8-4e1a-a968-8590e93011fd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-16",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-16"
         ],
         "lesson.key": "Progression V2",
         "lesson_group.key": "",

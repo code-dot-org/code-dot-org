@@ -38,7 +38,7 @@ function MiniView(props) {
           ...(hasGroups && styles.groupView),
         }}
       >
-        <ProgressTable minimal={minimal} isOnLevelView={true} />
+        <ProgressTable minimal={minimal} />
         <GoogleClassroomAttributionLabel />
       </div>
     );

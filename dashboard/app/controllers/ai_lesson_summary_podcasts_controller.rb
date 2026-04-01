@@ -4,7 +4,7 @@ class AiLessonSummaryPodcastsController < ApplicationController
   PODCAST_FOLDER = 'podcasts/'
 
   def show
-    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, PODCAST_FOLDER + 'lesson_' + params[:lesson_id].to_s + '_podcast.mp3')
+    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, PODCAST_FOLDER+'lesson_'+params[:lesson_id].to_s+'_podcast.mp3')
     send_data podcast, type: 'audio/mpeg', disposition: 'inline'
   end
 

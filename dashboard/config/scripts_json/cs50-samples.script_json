@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-30 18:02:44 UTC",
+    "serialized_at": "2026-03-26 19:26:05 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -319,16 +319,16 @@
     },
     {
       "key": "lesson-20",
-      "name": "Experimenting with Lessons",
+      "name": "Test Lesson 1",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "overview": "**How can Python be used to visualize data?**\n\nThis is an example lesson overview for experimenting with the lesson editing interface. This is a sample lesson about students using Python to visualize data with `matplotlib`.",
+        "overview": "This is an example lesson overview. Example sentence with **formatting**.",
         "preparation": "Preparation section.",
         "purpose": "Purpose section.",
-        "student_overview": "Students will see this section. "
+        "student_overview": "Students will see this section."
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -592,20 +592,6 @@
         "lesson_group.key": "",
         "script.name": "cs50-samples"
       }
-    },
-    {
-      "key": "25553b7e-1e8b-4bc2-93af-c7bb066ea15a",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Learn about Classifiers"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "25553b7e-1e8b-4bc2-93af-c7bb066ea15a",
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "",
-        "script.name": "cs50-samples"
-      }
     }
   ],
   "activity_sections": [
@@ -803,24 +789,13 @@
       "key": "1fc39d26-3eb7-4ff0-a964-e4c467643780",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  This is a test for embedding fontawesome icons in an activity description.\n\n<i class=\"fa fa-hippo\" aria-hidden=\"true\"></i> Do other icons work? Experimenting to see what fontawesome icons are supported.\n\nExperiment with writing Python code to visualize data.",
+        "description": "Experiment with writing Python code to visualize data.",
         "name": "Visualizing Data",
         "progression_name": "Build a Weather Visualization"
       },
       "seeding_key": {
         "activity_section.key": "1fc39d26-3eb7-4ff0-a964-e4c467643780",
         "lesson_activity.key": "0286b7fd-fbe6-4cbf-a54c-b6bcb541ee4b"
-      }
-    },
-    {
-      "key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b",
-      "position": 1,
-      "properties": {
-        "progression_name": "Classifiers"
-      },
-      "seeding_key": {
-        "activity_section.key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b",
-        "lesson_activity.key": "25553b7e-1e8b-4bc2-93af-c7bb066ea15a"
       }
     }
   ],
@@ -2814,50 +2789,6 @@
       "level_keys": [
         "cs50_testing_python_weather"
       ]
-    },
-    {
-      "chapter": 84,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Classifiers"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "cs50_test_widget"
-        ],
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "",
-        "script.name": "cs50-samples",
-        "activity_section.key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b"
-      },
-      "level_keys": [
-        "cs50_test_widget"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Classifiers"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "cs50_testing_panels"
-        ],
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "",
-        "script.name": "cs50-samples",
-        "activity_section.key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b"
-      },
-      "level_keys": [
-        "cs50_testing_panels"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -3856,30 +3787,6 @@
         "script.name": "cs50-samples",
         "activity_section.key": "1fc39d26-3eb7-4ff0-a964-e4c467643780"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "cs50_test_widget",
-        "script_level.level_keys": [
-          "cs50_test_widget"
-        ],
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "",
-        "script.name": "cs50-samples",
-        "activity_section.key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "cs50_testing_panels",
-        "script_level.level_keys": [
-          "cs50_testing_panels"
-        ],
-        "lesson.key": "lesson-20",
-        "lesson_group.key": "",
-        "script.name": "cs50-samples",
-        "activity_section.key": "5f53bc36-feea-49e9-bf74-e32031ce7f6b"
-      }
     }
   ],
   "resources": [
@@ -3904,26 +3811,7 @@
 
   ],
   "objectives": [
-    {
-      "key": "4de50d37-6500-495f-af40-3291bc24f15e",
-      "properties": {
-        "description": "Write Python code to read data from a file."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "objective.key": "4de50d37-6500-495f-af40-3291bc24f15e"
-      }
-    },
-    {
-      "key": "f4c9c874-a7c2-43cf-8820-c9ff1cce17ef",
-      "properties": {
-        "description": "Generate visualizations of data."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "objective.key": "f4c9c874-a7c2-43cf-8820-c9ff1cce17ef"
-      }
-    }
+
   ],
   "lessons_standards": [
 

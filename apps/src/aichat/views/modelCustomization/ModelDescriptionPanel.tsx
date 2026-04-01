@@ -2,6 +2,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
+import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';
 
 import styles from './compare-models-dialog.module.scss';
@@ -28,7 +29,7 @@ const ModelDescriptionPanel: React.FunctionComponent<{
   return (
     <div className={styles.modelDescriptionPanelContainer}>
       <SimpleDropdown
-        labelText={'Choose a model'}
+        labelText={aichatI18n.modelDescriptionPanel()}
         isLabelVisible={false}
         onChange={event => onDropdownChange(event.target.value)}
         items={availableModels.map(model => {
@@ -41,14 +42,18 @@ const ModelDescriptionPanel: React.FunctionComponent<{
       />
       <br />
       <div className={styles.modelDescriptionContainer}>
-        <Typography variant="strong">{'Overview'}</Typography>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_overview()}
+        </Typography>
         <div className={styles.textContainer}>
           <Typography className={styles.modelText} variant="body3" gutterBottom>
             {selectedModel.overview}
           </Typography>
         </div>
         <br />
-        <Typography variant="strong">{'Training Data'}</Typography>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_trainingData()}
+        </Typography>
         <div className={styles.textContainer}>
           <Typography className={styles.modelText} variant="body3" gutterBottom>
             {selectedModel.trainingData}

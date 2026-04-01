@@ -7,6 +7,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {FAQ_LINK, modelDescriptions} from '../constants';
+import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -26,13 +27,13 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 import styles from './chatWorkspace.module.scss';
 
 const chatEventDescriptionsOwner = {
-  CLEAR_CHAT: 'You cleared the chat workspace.',
-  LOAD_LEVEL: 'You loaded the level.',
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 const chatEventDescriptionsStudent = {
-  CLEAR_CHAT: 'The user cleared the chat workspace.',
-  LOAD_LEVEL: 'The user loaded the level.',
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -59,10 +60,15 @@ function formatModelUpdateText(update: ModelUpdate): string {
   }
 
   const modelUpdateText = updatedToText
-    ? `${fieldLabel} has been updated to ${updatedToText.toString()}. ${timestampToLocalTime(
-        timestamp
-      )}`
-    : `${fieldLabel} has been updated. ${timestampToLocalTime(timestamp)}`;
+    ? aichatI18n.modelUpdateText({
+        fieldLabel: fieldLabel,
+        updatedText: updatedToText.toString(),
+        timestamp: timestampToLocalTime(timestamp),
+      })
+    : aichatI18n.modelUpdateText2({
+        fieldLabel: fieldLabel,
+        timestamp: timestampToLocalTime(timestamp),
+      });
 
   return modelUpdateText;
 }

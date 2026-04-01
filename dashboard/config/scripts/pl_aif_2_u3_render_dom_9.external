@@ -20,24 +20,24 @@ markdown <<MARKDOWN
     border-radius: 10px;
     padding: 12px;
     margin: 16px 0;
-    background: #f7f8fa;
+    background: #b2dee3;
   "
 >
   <img 
     src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
     alt="A clipboard labeled TO DO" 
     width="40px"
-    style="margin-right: 14px;"
+    style="margin-right: 12px;"
   >
 
   <div style="font-size: 14px;">
     <strong>
-      <p style = "font-size:14pt;"></p>Look at the code and output below. What happens when <code>.map()</code> is used?</p>
+      Look at the code and output below. What happens when <code>.map()</code> is used?
     </strong>
 
 <ul style="margin-top: 14px;">
-      <li style = "font-size: 14pt;"><i>What happens to each item in the list?</i></li>
-      <li style = "font-size: 14pt;"><i>What does the final output look like compared to the original array?</i></li>
+      <li><i>What happens to each item in the list?</i></li>
+      <li><i>What does the final output look like compared to the original array?</i></li>
     </ul>
   </div>
 </div>
@@ -82,20 +82,6 @@ markdown <<MARKDOWN
     >
   </div>
 </div>
-
-<br>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your answers </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style ="font-size: 14pt;">
-- Each item in the list is multiplied by 2, so every number is doubled. <br>
-- The final output is a new array with all the same positions as the original array, but each value is twice as large.<br>
-
-
-</p>
-</div>
-</details>
 
 ---
 ## Rendering Data into the DOM with .map()

@@ -45,7 +45,7 @@
           "id": "1",
           "name": "index.html",
           "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      h1 { \n        color: #ff0000;\n        background-color: #0000ff;\n      }\n      h2 { \n        color: #ff6600;\n        background-color: #ab11ab;\n      }\n      p { \n        color: #9900cc; \n        background-color: #00ffff;\n      }\n      li { \n        color: #0000ff; \n        background-color: #000000;\n      }\n      body { \n        background-color: #ffff00; \n      }\n    </style>\n  </head>\n  <body>\n    <h1>Photography Club</h1>\n    <p>We are a group of students who love taking photos. We explore different styles of photography, edit our work, and share it with the school community. Everyone is welcome — no experience needed!</p>\n\n    <h2>Upcoming Meetings</h2>\n    <ul>\n      <li>Monday, March 10 — Room 204, 3:30pm</li>\n      <li>Monday, March 17 — Room 204, 3:30pm</li>\n      <li>Monday, March 24 — Room 204, 3:30pm</li>\n    </ul>\n  </body>\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -53,17 +53,16 @@
           "name": "vision.md",
           "contents": "I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join.\n\nThe page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
-        "2",
-        "1"
+        "1",
+        "2"
       ]
-    },
-    "thumbnail_url": "https://images.code.org/1975c38c4a76098e692fec21a0fbb478-image-1775017862390.png"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:35:00.428+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11a\"},{\"changed_at\":\"2026-03-18 21:35:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:38:44 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:43:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:21 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:11:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:53:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:24:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:31:15 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:35:00.428+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11a\"},{\"changed_at\":\"2026-03-18 21:35:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:38:44 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:43:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:21 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:11:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

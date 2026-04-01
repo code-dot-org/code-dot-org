@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Reflection: Your First Version",
-    "long_instructions": "Congratulations - you set a vision, and used an AI Assistant to help bring it to life! But, that's just the first step. You may have noticed parts of your webpage seem a little basic or didn't match what you had in your head. For example: the content, the color theme, or the layout.\r\n\r\n**What's one example of a mismatch between what you can imagine and what was generated? What do you think caused the gap?**\r\n\r\n_(Note: There is no \"right\" or \"wrong\" answer to this question - it's just a moment of reflection that helps set the stage for the next part of this progression!)_",
+    "long_instructions": "What's one thing about your page that doesn't match what you had in your head? Think about the content, the color theme, or the layout. \r\n\r\nWhat do you think caused the gap?",
     "stay_on_level_after_submit": "false",
     "submittable": "false",
     "allow_multiple_attempts": "false",
@@ -18,7 +18,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18 21:31:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-18 21:38:08 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 20:16:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-30 21:38:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:17:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:18:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 04:36:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-03-18 21:31:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-18 21:38:08 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 20:16:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -3,6 +3,7 @@ import React from 'react';
 
 import '@testing-library/jest-dom';
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import aichatI18n from '@cdo/apps/aichat/locale';
 import {CompletedChatMessage} from '@cdo/apps/aichat/types';
 import ChatEventsList from '@cdo/apps/aichat/views/ChatEventsList';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -35,9 +36,7 @@ describe('ChatEventsList', () => {
       </AiChatDisabledProvider>
     );
 
-    expect(
-      screen.getByText('AI chat is currently disabled')
-    ).toBeInTheDocument();
+    expect(screen.getByText(aichatI18n.aiChatDisabled())).toBeInTheDocument();
 
     // No chat messages or waiting animation should render
     expect(screen.queryByLabelText(commonI18n.aiChatMessageUser())).toBeNull();
@@ -55,7 +54,7 @@ describe('ChatEventsList', () => {
 
     expect(screen.getByText(customMessage)).toBeInTheDocument();
     expect(
-      screen.queryByText('AI chat is currently disabled')
+      screen.queryByText(aichatI18n.aiChatDisabled())
     ).not.toBeInTheDocument();
 
     // No chat messages or waiting animation should render

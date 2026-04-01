@@ -2,8 +2,8 @@ name 'pl-ai-101-V2-mod4-AILit-00a'
 title 'title'
 description 'description here'
 display_name 'Knowledge'
-bubble_choice_description 'The knowledge statements in the framework include facts, concepts, ideas, and processes reflecting disciplinary, interdisciplinary, epistemic, and procedural knowledge. They outline the technical and societal understandings that learners need to apply and engage with AI systems.'
-thumbnail_url 'https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png'
+bubble_choice_description ''
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
 
 markdown <<MARKDOWN
 # Knowledge: Helping Students Understand AI

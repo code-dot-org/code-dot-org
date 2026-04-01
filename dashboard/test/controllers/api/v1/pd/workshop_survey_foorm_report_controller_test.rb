@@ -207,7 +207,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            facilitators: create_list(:facilitator, 2)
+                            facilitators: [create(:facilitator), create(:facilitator)]
 )
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
@@ -235,7 +235,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
-        facilitators: create_list(:facilitator, 2)
+        facilitators: [create(:facilitator), create(:facilitator)]
 )
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]
@@ -273,7 +273,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            facilitators: create_list(:facilitator, 2)
+                            facilitators: [create(:facilitator), create(:facilitator)]
 )
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
@@ -488,7 +488,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
-        facilitators: create_list(:facilitator, 2)
+        facilitators: [create(:facilitator), create(:facilitator)]
       )
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]

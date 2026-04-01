@@ -210,6 +210,7 @@ const APPLICATION_ALIASES = {
 const LOCALE_ALIASES = {
   '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
   ...Object.fromEntries([
+    localeDoNotImport('@cdo/aichat/locale'),
     localeDoNotImport('@cdo/applab/locale'),
     localeDoNotImport('@cdo/codebridge/locale'),
     localeDoNotImport('@cdo/javalab/locale'),

@@ -1416,7 +1416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     malformed_account.reload
     assert_equal AuthenticationOption::GOOGLE, malformed_account.provider
-    assert_equal uid, malformed_account.uid
+    assert_equal  uid, malformed_account.uid
 
     # Verify the account has an email and is now well-formed
     assert_equal email, malformed_account.email
@@ -1450,7 +1450,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     student.reload
     assert_equal AuthenticationOption::GOOGLE, student.provider
-    assert_equal uid, student.uid
+    assert_equal  uid, student.uid
 
     # Verify the account has an email and is now well-formed
     assert_empty student.email
@@ -1825,55 +1825,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         end
       end
     end
-  end
-
-  test 'opted-out LTI partial registration does not trigger account linking' do
-    user = create(:teacher)
-    lti_integration = create(:lti_integration)
-    provider_auth_option = create(
-      :authentication_option,
-      user: user,
-      email: user.email,
-      hashed_email: user.hashed_email,
-      credential_type: AuthenticationOption::GOOGLE,
-      authentication_id: SecureRandom.uuid,
-      data: {
-        oauth_token: 'some-google-token',
-        oauth_refresh_token: 'some-google-refresh-token',
-        oauth_token_expiration: '999999'
-      }.to_json
-    )
-    partial_lti_teacher = create(:teacher, lms_landing_opted_out: true)
-    partial_lti_teacher.authentication_options = [
-      AuthenticationOption.new(
-        authentication_id: Services::Lti::AuthIdGenerator.new(
-          {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
-        ).call,
-        credential_type: AuthenticationOption::LTI_V1,
-        email: user.email,
-      )
-    ]
-
-    @controller.stubs(:account_linking_lock_reason).with(user).returns(nil)
-    @request.env['omniauth.auth'] = generate_auth_user_hash(
-      provider: AuthenticationOption::GOOGLE,
-      uid: provider_auth_option.authentication_id
-    )
-    @request.env['omniauth.params'] = {}
-    PartialRegistration.persist_attributes(session, partial_lti_teacher)
-
-    Metrics::Events.expects(:log_event).with(
-      has_entries(
-        user: user,
-        event_name: 'lti_account_linked'
-      )
-    ).never
-
-    get :google_oauth2
-
-    user.reload
-    _(user.authentication_options.count).must_equal 2
-    _(user.lti_user_identities.count).must_equal 0
   end
 
   describe '#register_new_user' do
