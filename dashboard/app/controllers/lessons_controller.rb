@@ -92,6 +92,7 @@ class LessonsController < ApplicationController
   # GET /s/:script_name_or_id/lessons/:lesson_position/tutor
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor
   def tutor
+    view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
 

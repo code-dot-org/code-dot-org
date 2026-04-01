@@ -1,14 +1,14 @@
+// 50px = .header-wrapper height (application.scss .header-wrapper)
+$header-height: 50px;
+
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  max-height: 768px;
+  height: calc(100vh - #{$header-height});
   width: 100%;
   overflow: hidden;
-
-  @media (max-width: 480px) {
-    max-height: 100vh;
-  }
+  background-color: #1a1a2e;
+  color: #e8e8f2;
 }
 
 .box {
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #2e2e50;
   flex-shrink: 0;
 }
 
@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #2e2e50;
   flex-shrink: 0;
 }
 
@@ -50,7 +50,7 @@
   border: none;
   border-radius: 50%;
   background: transparent;
-  color: #333;
+  color: #c8c8e0;
   cursor: pointer;
   transition: background-color 0.15s ease;
 
@@ -60,18 +60,19 @@
   }
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: #2a2a48;
+    color: #e8e8f2;
   }
 
   &:focus-visible {
-    outline: 2px solid #0094ca;
+    outline: 2px solid #6b9fd4;
     outline-offset: 2px;
   }
 }
 
 .pageIndicator {
   font-size: 14px;
-  color: #666;
+  color: #9898b8;
   min-width: 48px;
   text-align: center;
 }

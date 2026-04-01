@@ -1,6 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useState} from 'react';
+
+const lightTheme = createTheme({palette: {mode: 'light'}});
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
 import PodcastsBox from './PodcastsBox';
@@ -99,11 +102,13 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           <VocabularyFlashcards vocabulary={vocabulary} />
         )}
         {selected === 'chat' && (
-          <LessonDeepDiveTutorChat
-            lessonName={lessonName}
-            lessonSummary={lessonSummary}
-            vocabulary={vocabulary}
-          />
+          <ThemeProvider theme={lightTheme}>
+            <LessonDeepDiveTutorChat
+              lessonName={lessonName}
+              lessonSummary={lessonSummary}
+              vocabulary={vocabulary}
+            />
+          </ThemeProvider>
         )}
         {selected === 'videos' && <VideosBox />}
         {selected === 'podcasts' && <PodcastsBox />}

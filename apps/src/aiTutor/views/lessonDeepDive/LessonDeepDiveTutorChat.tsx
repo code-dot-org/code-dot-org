@@ -38,7 +38,7 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
 
   return (
     <div className={styles.container}>
-      <Typography variant="h3" className={styles.header}>
+      <Typography variant="h6" className={styles.header}>
         ⚠️ 🛠️ Chat History is broken because that fetch expects a levelId or
         projectId, which we don't have...
       </Typography>

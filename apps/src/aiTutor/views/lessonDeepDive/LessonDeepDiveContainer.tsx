@@ -1,6 +1,25 @@
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: {
+      default: '#1a1a2e',
+      paper: '#25253f',
+    },
+    text: {
+      primary: '#e8e8f2',
+      secondary: '#9898b8',
+    },
+    primary: {
+      main: '#6b9fd4',
+    },
+    divider: '#2e2e50',
+  },
+});
 
 import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
@@ -65,63 +84,65 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     }
   };
   return (
-    <div className={styles.container}>
-      {!isFirst && (
-        <div className={styles.topNav}>
-          <button
-            type="button"
-            className={styles.arrowButton}
-            onClick={goToPrev}
-            aria-label="Previous"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
+    <ThemeProvider theme={darkTheme}>
+      <div className={styles.container}>
+        {!isFirst && (
+          <div className={styles.topNav}>
+            <button
+              type="button"
+              className={styles.arrowButton}
+              onClick={goToPrev}
+              aria-label="Previous"
             >
-              <path
-                d="M7 14l5-5 5 5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      )}
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 14l5-5 5 5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
 
-      <div className={styles.box}>{renderBox()}</div>
+        <div className={styles.box}>{renderBox()}</div>
 
-      {!isLast && (
-        <div className={styles.bottomNav}>
-          <button
-            type="button"
-            className={styles.arrowButton}
-            onClick={goToNext}
-            aria-label="Next"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
+        {!isLast && (
+          <div className={styles.bottomNav}>
+            <button
+              type="button"
+              className={styles.arrowButton}
+              onClick={goToNext}
+              aria-label="Next"
             >
-              <path
-                d="M7 10l5 5 5-5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      )}
-    </div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 10l5 5 5-5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
+      </div>
+    </ThemeProvider>
   );
 };
 
