@@ -10,6 +10,6 @@ class CreateUserLessonObjectiveReflections < ActiveRecord::Migration[7.0]
 
     add_index :user_lesson_objective_reflections, :objective_id
     add_index :user_lesson_objective_reflections, :student_id
-    add_index :user_lesson_objective_reflections, [:objective_id, :student_id]
+    add_index :user_lesson_objective_reflections, [:objective_id, :student_id], name: 'index_ulor_on_objective_and_student'
   end
 end
