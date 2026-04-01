@@ -24,6 +24,7 @@ jobs:
           - k8s/tofu/codeai-k8s/eks-cluster
           - k8s/tofu/codeai-k8s/eks-cluster-addons
           - k8s/tofu/codeai-k8s-dex
+          - temp/plan-tofu
     defaults:
       run:
         working-directory: ${{ matrix.workspace }}
