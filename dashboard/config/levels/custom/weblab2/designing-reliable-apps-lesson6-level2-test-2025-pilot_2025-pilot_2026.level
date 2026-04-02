@@ -1,0 +1,182 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:17.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Bug Report: Inconsistent Data\r\n\r\nGo to your backpack and mport your files `index.html`, `styles.css`, and `script.js` from the previous level. \r\n\r\nThe backend engineers updated how the JSON data is formatted and now our app looks buggy! Your job is to apply **defensive programming** to fix the rendering loop. Try and fix as many errors as you can.\r\n\r\n**Your Task:**\r\n- **Check for Formatting Errors:** Some artist names are in ALL CAPS and look like they are shouting.\r\n- **Resolve Data Errors:** Some 'genres' are just a single word (not an array), causing `.join()` to fail.\r\n- **Account for Missing Info:** Some artists have `null` follower data or missing images.",
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "data.json",
+          "language": "json",
+          "contents": "{\n  \"artists_and_tracks\": [\n    {\n      \"followers\": {\n        \"total\": 184230\n      },\n      \"genres\": [\"Indie rock\", \"Dream pop\"],\n      \"id\": \"7FAKEechoes001\",\n      \"images\": [\n        {\n          \"url\": \"/images/neon_echoes.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"NEON ECHOES\",\n      \"popularity\": 63,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEechoes001\"\n    },\n    {\n      \"followers\": {\n        \"total\": 12400\n      },\n      \"genres\": \"Synthwave\",\n      \"id\": \"7FAKEdrift002\",\n      \"images\": [],\n      \"name\": \"Digital Drift\",\n      \"popularity\": 45,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEdrift002\"\n    },\n    {\n      \"followers\": null,\n      \"genres\": [\"Ambient\", \"Space Rock\"],\n      \"id\": \"7FAKEnubula003\",\n      \"images\": [\n        {\n          \"url\": \"/images/velvet_nebula.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"Velvet Nebula\",\n      \"popularity\": 78,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEnubula003\"\n    },\n    {\n      \"followers\": {\n        \"total\": 8900\n      },\n      \"genres\": \"Post-punk\",\n      \"id\": \"7FAKEgarden004\",\n      \"images\": [\n        {\n          \"url\": \"/images/iron_garden.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"IRON GARDEN\",\n      \"popularity\": 32,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEgarden004\"\n    },\n    {\n      \"followers\": {\n        \"total\": 1205400\n      },\n      \"genres\": [\"R&B\", \"Neo-soul\"],\n      \"id\": \"7FAKESsoul005\",\n      \"images\": [],\n      \"name\": \"Saffron Soul\",\n      \"popularity\": 85,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKESsoul005\"\n    },\n    {\n      \"followers\": null,\n      \"genres\": [\"Lo-fi\", \"Trip-hop\"],\n      \"id\": \"7FAKEghost006\",\n      \"images\": [\n        {\n          \"url\": \"/images/analog_ghost.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"ANALOG GHOST\",\n      \"popularity\": 51,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEghost006\"\n    },\n    {\n      \"followers\": {\n        \"total\": 213000\n      },\n      \"genres\": \"Indie Folk\",\n      \"id\": \"7FAKEcoral007\",\n      \"images\": [\n        {\n          \"url\": \"/images/coral_theory.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"Coral Theory\",\n      \"popularity\": 69,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEcoral007\"\n    },\n    {\n      \"followers\": {\n        \"total\": 3402800\n      },\n      \"genres\": [\"Hyperpop\", \"Glitchcore\"],\n      \"id\": \"7FAKEbloom008\",\n      \"images\": [],\n      \"name\": \"SONIC BLOOM\",\n      \"popularity\": 92,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEbloom008\"\n    },\n    {\n      \"followers\": {\n        \"total\": 15700\n      },\n      \"genres\": \"Bluegrass\",\n      \"id\": \"7FAKEkeys009\",\n      \"images\": [\n        {\n          \"url\": \"/images/copper_keys.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"The Copper Keys\",\n      \"popularity\": 41,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEkeys009\"\n    },\n    {\n      \"followers\": null,\n      \"genres\": [\"Alternative Rock\", \"Shoegaze\"],\n      \"id\": \"7FAKEbound010\",\n      \"images\": [\n        {\n          \"url\": \"/images/skyward_bound.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"name\": \"Skyward Bound\",\n      \"popularity\": 57,\n      \"type\": \"artist\",\n      \"uri\": \"spotify:artist:7FAKEbound010\"\n    }\n  ]\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "Add your changes to styles.css",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "digital_drift.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/7ddbd6af-6db8-4650-89a6-4d123222e96b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "skyward_bound.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/87192fed-5e00-4f76-8e5d-37ddad870a14.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "velvet_nebula.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/10eb4eb1-6cd5-4498-b3e4-65f0a258f8a2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "copper_keys.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/404b4a99-e182-4e90-8bed-6976b0c4607a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "ocean_floor.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/66ba6f03-abdd-47e8-b9b6-ad93848afedb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "saffron_soul.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/5a240446-d951-4463-af88-3da1d7e18b06.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "analog_ghost.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/5f2fb04c-f845-4ea0-9925-b4a419407607.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "sonic_bloom.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/d3aefc0d-183d-4ead-8489-9d3fb7de7075.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "iron_garden.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/c8621edf-8c2a-4302-b6b8-38858b2bcf41.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "neon_echoes.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level2-test-2025-pilot/uuid/e11a229a-60e4-4f5f-ad4b-5df6ca076827.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nyiE+JcCSiEJDOFadcZ+9OQ1DFnjaKltHEjo=\n",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:17.413+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q1_2026-pilot_2026'
+
+question 'Which of the following best describes how an AI system learns?'
+
+wrong 'A human programmer writes rules for every possible situation the AI might encounter.'
+right 'The AI finds patterns in large amounts of data to make predictions or generate outputs.'
+wrong 'The AI connects to the internet in real time to look up answers to any question.'
+wrong 'The AI memorizes a list of correct answers provided by its creators.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 1, 2
+MARKDOWN

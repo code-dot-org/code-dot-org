@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q11_2026-pilot_2026'
+
+question 'A student argues: "Using AI to generate images for my project is fine because the AI just combines existing images — it isn\'t really creating anything new." Which response best challenges this reasoning?'
+
+wrong 'The student is correct. AI image generators only copy and paste from existing images, so there are no concerns.'
+wrong 'The student is wrong because AI tools are never allowed to be used for school projects.'
+wrong 'The student is correct, but they still need to cite the specific images the AI used as sources.'
+right 'The student\'s reasoning oversimplifies how AI works and ignores concerns about intellectual property, the environmental cost of running generative AI, and the importance of human creative contribution.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

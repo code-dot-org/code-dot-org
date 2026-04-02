@@ -1,0 +1,155 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:05.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Images as Links",
+    "long_instructions": "# Images as Links\r\n\r\nYou have learned that the text you type between the `<a>` and `</a>` tags is what the visitors to your page will see and click on when using links. You can actually add other tags and content, such as images, to this space in your code as well.\r\n\r\n# Do this:\r\n1) Look at the code that makes the first two images on the `index.html` page into links.\r\n* Use that same code pattern to turn the second two images into links, too.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Turn your images into links.",
+    "thumbnail_url": "https://images.code.org/fcc5f5dfd9ccefb83cd36a645126d255-image-1587970473527.54.18 PM.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>World's Biggest Waterfall</h1>\n    <p>What is the biggest waterfall in the world?  It depends on how you measure them!  Here are the tallest, the widest, and the largest sheet of water.</p>\n    \n    <p>Click on the pictures to learn more!</p>\n    \n\n    <a href=\"angelfalls.html\"> <img class=\"top-img\" src=\"angelfalls.jpeg\" alt=\"Parakupá Vená / Angel Falls\"></a> \n    \n    <a href=\"KhonePhaphengFalls.html\"> <img class=\"top-img\" src=\"KhonePhaphengFalls.jpg\" alt=\"Khone Phapheng Falls \"></a> \n    \n    <img class=\"top-img\" src=\"victoriafalls.jpg\" alt=\"Mosi-oa-Tunya / Victoria Falls\"> \n    <img class=\"top-img\" src=\"niagarafalls.jpg\" alt=\"Niagara Falls\">\n \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "angelfalls.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h2>Parakupá Vená / Angel Falls / Salto Ángel / Kerepakupai Meru </h2>\n    <img class=\"main-img\"  src=\"angelfalls.jpeg\" alt=\"Parakupá Vená / Angel Falls\">\n    <h6>Picture by Diego Delso - Wikimedia Commons - CC-BY</h6>\n    <p>This is the tallest waterfall in the world.  It is in Venezuela.  The name \"Parakupá Vená\" means \"waterfall of the deepest place\" in Pemon.  It is also called \"Angel Falls\" after Jimmy Angel, who was the first to fly an airplane over the falls. \"Salto Ángel\" means \"Angel Falls\" in Spanish.  When Jimmy Angel returned to the falls, he tried to land his plane, but the wheels got stuck, and it took him eleven days to walk back to civilization.  The plane stayed there for 33 years.</p>\n\n    \n\n    <p> <a href=\"index.html\">Back to the main page</a></p>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "KhonePhaphengFalls.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h2>Khone Phapheng Falls </h2>\n    <img class=\"main-img\" src=\"KhonePhaphengFalls.jpg\" alt=\"Khone Phapheng Falls \">\n    <h6>Picture by Hiroo Yamagata - Wikimedia Commons - CC-BY-SA</h6>\n    <p>This is the widest waterfall in the world.  It is in Cambodia, and it's part of the Mekong River.  It may not look that high, but it's the main reason that boats can't sail up the river to get to China.  Some people also believe that it's the largest waterfall by volume, but it's not that easy to measure waterfalls, so we're not sure yet.</p>\n\n\n    <p> <a href=\"index.html\">Back to the main page</a></p>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "niagarafalls.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h2>Bonus: Niagara Falls </h2>\n    <img class=\"main-img\" src=\"niagarafalls.jpg\" alt=\"Niagara Falls\">\n    <h6>Picture by Ujjwal Kumar - Wikimedia Commons - Public Domain</h6>\n    <p>Niagara Falls is very big, but it's not he biggest at anything.  It does have the most visitors every year.  It's on the Canadian and US border.  One fun fact is that the first person to go over the falls in a barrel was a 63-year-old schoolteacher. She sent her cat over first to make sure the barrel wouldn't break.  After the teacher got out of the barrel, she recommended no one else ever do that again.  Other people have tried, but now it is illegal, both in Canada and in the US.</p>\n\n\n    <p> <a href=\"index.html\">Back to the main page</a></p>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "victoriafalls.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n\n\n    <h2>Mosi-oa-Tunya / Victoria Falls </h2>\n    <img class=\"main-img\" src=\"victoriafalls.jpg\" alt=\"Mosi-oa-Tunya / Victoria Falls\">\n    <h6>Picture by Albrecht Fietz - Pixabay - Pixabay License</h6>\n    <p>This waterfall isn't the tallest or the widest, but it has the largest curtain area, which is what you get when you multiply the height by the width.  It's on the border of Zambia and Zimbabwe.  The name \"Mosi-oa-Tunya\" means \"The Smoke That Thunders\" in Lozi.  The name \"Victoria\" comes from Queen Victoria, who was queen when a Scottish missionary saw teh waterfall.  He named it after her even though it already had a name, and now people use both names.  The  park on the Zambia side is named Mosi-oa-Tunya, and the park on the Zimbabwean side is named Victoria Falls.</p>\n\n\n    <p> <a href=\"index.html\">Back to the main page</a></p>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "KhonePhaphengFalls.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8b-2025/uuid/ed6bb211-14d3-440d-8a33-a47d390ac937.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "niagarafalls.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8b-2025/uuid/806cd65b-0c8f-44af-853d-da1b9a813c77.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "angelfalls.jpeg",
+          "language": "jpeg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8b-2025/uuid/81dda802-51ea-4b8b-9533-3511e64e4b71.jpeg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "victoriafalls.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8b-2025/uuid/09689676-8999-4749-bccc-b1804cfd37cb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: lightblue;\n  font-family: fantasy;\n}\n\n.top-img {\n  height: 50px;\n  border-radius: 5px;\n  margin: 10px;\n}\n\n.main-img {\n  width: 200px;\n  float: left;\n  margin-right: 20px;\n  border-radius: 20px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n+PRmvpahWqUG28WCFResj1NN0UgV72z/Rw==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:05.310+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L8b-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L8b-2025\"}]"
+}]]></config>
+</Weblab2>

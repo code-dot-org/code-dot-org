@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:00.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Child Selectors",
+    "long_instructions": "# Child Selector\r\n\r\nThe \"child selector\" selects all elements that are the \"children\" of a specified element.\r\n\r\n::: details [🔎**Click Here For a Visual of the \"Parent\"/\"Child\" Relationship**]\r\n\r\n<div style=\"width:800px;\">\r\n<img src=\"https://images.code.org/6bad3f9c0f70ee2c9b8d214557fe9444-image-1706819626262.png\" style=\"width: 50%; float:left;\">\r\n<img src=\"https://images.code.org/76f33c385256c63653553adee40ea82c-image-1706818742325.png\" style=\"width: 50%; float: right;\">\r\n</div>\r\n\r\n\r\n\r\n:::\r\n\r\n<hr style=\"display: block; clear: left;\">\r\n\r\n\r\nTo style child elements you will use the `>` character in the selector of the rule, like this: \r\n```\r\ndiv > p {\r\n font-family: serif;\r\n}\r\n``` \r\n\r\n# Do This\r\n\r\n::: details [✔️ **FIRST, EXPAND ME TO SEE HOW THE CHILD SELECTOR WORKS!** ✔️]\r\n\r\n<br>\r\n\r\n**In the HTML file:**\r\n\r\nFind the `div` class with the \"parent\" class attribute in the HTML. \r\n- Notice how paragraphs 1, 2, and 4 are direct children within the container \r\n- Notice how paragraph 3 is inside the container **but** in its _own_ container. This makes paragraph 3 a \"descendant\" of the parent container but _not_ a _direct child_.\r\n- Notice how paragraphs 5 & 6 are not in the container at all.\r\n\r\n**In the CSS file:**\r\n\r\nFind the rule for the paragraph tags that are children of the parent container in the CSS file.\r\n- The rule looks like this: <img src=\"https://images.code.org/7a3c58d67c23f9c3e29223f30f27bf83-image-1706313834923.png\" style=\"width:250px;\">\r\n\r\n**In the Preview Window:**\r\n\r\nNotice how only the paragraphs that are children of the parent container are getting the yellow background color!\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**YOUR TURN!**\r\n\r\n1. Add a rule to the CSS file that uses the child selector to style the images within the container.\r\n2. Give those images the following properties:\r\n   - Width of 75px\r\n   - Solid border style\r\n   - 30px margin\r\n\r\n::: details [💪🏽 **Extra Challenge!**]\r\n\r\nCan you figure out how to use the child selector to style just the _first two images in the container_?\r\n- Give those two images the following properties:\r\n   - Yellow border color\r\n   - 25px border radius\r\n\r\n:::\r\n",
+    "bubble_choice_description": "Learn how to style an element within a container differently than the rest!",
+    "thumbnail_url": "https://images.code.org/26e6fed5236d09f75721e3bb9c5a9854-child.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- Parent container -->\n    <div class=\"parent\">\n      <!-- Children -->\n      <h2>Child Selector</h2>\n      <h4>The child selector (>) selects all elements that are the children of a specified element.</h4>\n      <p>Paragraph 1 in the div.</p>\n      <p>Paragraph 2 in the div.</p>\n      <div class=\"child\">\n        <!-- paragraph 3 is a descendant but not a child of the parent container -->\n        <p>Paragraph 3 in the div (inside a new container).</p>\n      </div>\n      <p>Paragraph 4 in the div.</p>\n    </div>\n\n    <p>Paragraph 5. Not in the div.</p>\n    <p>Paragraph 6. Not in the div.</p>\n\n    <!-- div container with a class attribute around the 4 images -->\n    <div class=\"container-1\">\n      <img class=\"special\" src=\"one.jpg\" alt=\"one\">\n      <img class=\"special\" src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n    </div>\n    \n    <!-- images not in a container -->\n    <img src=\"five.jpg\" alt=\"five\">\n    <img src=\"six.jpg\" alt=\"six\">\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule to the CSS file that uses the child selector to style the images within the container. */\n\n/* p child tags inside parent div */\n.parent > p {\n  background-color: yellow;\n}\n\n/* flex style for items in container */\n.container-1 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #b691d6;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: row wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  justify-content: space-evenly;\n\n  /* Define how items should be distributed vertically within the container */\n  align-items: center;\n\n}\n\n/* image style */\nimg {\n  border-style: double;\n  border-width: thick;\n}\n\n/* ADD CODE BELOW to style the images within the div container with the child selector */\n\n\n/* ADD CODE BELOW FOR THE EXTRA CHALLENGE to style the first two images within the div container with the child selector */",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "two.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/ce90e52a-89e0-4563-bfdd-c4f7541d21dc.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "six.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/e078cadd-5008-4e7f-b499-1f4ba19879e8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "one.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/4b33b361-d4ed-411d-ac01-d5f5fdc34106.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "four.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/715f02d4-7a75-4e86-96a6-d777622b99ce.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "three.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/f8c802a7-b0fc-4973-86dd-6ad335184fb3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "five.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U12-L9c-2025/uuid/af8a89cf-b926-40a4-9675-ee2bc166710d.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:00.254+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12-L9c-2025\\\"\"],\"cloned_from\":\"CSD U2L12-L9c-2025\"}]"
+}]]></config>
+</Weblab2>

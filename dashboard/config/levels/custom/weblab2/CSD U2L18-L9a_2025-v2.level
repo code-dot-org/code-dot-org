@@ -1,0 +1,75 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:35.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Hidden Text",
+    "long_instructions": "# Simple Hidden Tip with Hover\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can code our CSS to have a \"tip\" appear when we hover over a `<div>` element.\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the following properties to the paragraph rule set:\r\n   - `display: none;`\r\n   - `background-color: yellow;`\r\n2. Add a rule set to style the paragraph child of the div tag with the \"hover\" pseudo-class. \r\n   - Your selector should look like this: `div:hover p`\r\n   - Add the following property: `display: block;`\r\n3. Hover over the `div` to see what happens!\r\n\r\n**Don't forget to click <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> to see if everything is working as expected.**",
+    "bubble_choice_description": "Learn how to use the \"hover\" pseudo-class to hide and reveal text!",
+    "thumbnail_url": "https://images.code.org/459ed3ae9553a57efd4b9026db8f503d-magic.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Hidden tip -->\n    <div>\n      <h1>Hover over this to show the hidden tip!</h1>\n      <p>TADA! HERE I AM!</p>\n    </div>\n\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* basic style for all text */\n* {\n  font-family: Verdana;\n  text-align: center;\n  font-weight: bold;\n}\n\n/* 1) Add properties to this paragraph rule set */\np {\n  padding: 15px;\n  \n  \n  \n}\n\n/* 2) ADD a rule set to style the paragraph child of the div with the hover pseudo-class */",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryblGbQn3mac\ngSE0JVAcKcwq3CfTzCZe9LL98z3TQkatl/POF5p0FUu0qODiV03EO09xUuF8\nsT84UJLRW3jdyc0kccroDRsfAZPmEIISPcXe2pa+GkSaDd55sJnLZi0fTURq\nT6pwO5o/oiAzveNRfsNNGG1Aue0kkHoe3aaRrUYvi6GkaLIQXxAzugWEQ88d\nY3pmuvbHm0VPN+74XoMdzSxFmi3DHp5asWY3rlNJiiwXR9Fj8X6jCcdSjyse\nDtL33rQA+NtfXAZsJ4AlLQbTnwOpkWeFWGoRKoYvhXHijF3uDBa265xs80vW\n5hG+UVAIM0iXpoEMAcWLKc+mIz5B/QyfC7oT2bH9bJ0wpf2Rnq2Ujzgttye2\nLJphCp4tSXUtqEmV+yLVM8j4kVqbvtXV+1TVcgg6LsddspavDCFdXH/OHyVM\n7AaSxsYGdNWJ4Uq9uQVWsHIef15JmLjlA8mhhXxzM3jCg3SOteXiofBT4nDC\ncXjLWsub7uvC+NZP5g6v5TyQDg12NJywidyb53gZTKpQuB8uGAc5V5+dTSOF\nW2j5FkTe0No3bSFvHFCeVpnbZCOkDwuuaHHtfTAZ7/7oT8KsyRBvHbPfDnjT\nAyOf+ymTnSL/F4CXHdtgDG//A+lrudySnbvg9+0ZRGp85x6y5DWT0deeaSV5\n2+cTG4ou94386ppIkOoYKG0CC+S0+RIdT/dqWO1UnlIAEoEAHIqIumvP3Rvz\n/xTlhB7C5uH1LS0Z8sRf4H27dXaPUJAHUkm45SEVWB95NFZAbsilI5uQo3Ab\nbaipAb+uGJEiL0nSxlUHKVeuXwmWq2Zvm0L0b6VTd4foV2DfIttevwMEv9+w\nJuRb0hpiB5aAOnDu+3BeYYAjSncF7nwtivoRqYfvkUtASbxTxlnV9ovTza20\nR/HfAVE9P+nmxZupO1K92B4CPREDTpSKcVfRoJFebf5I5gOTbIkBAGohPl0W\nMm7C11r35VtBQb+bamZJpuQJnCuWSGRcM1LYdLFqKDL9g8qWW90gjV4=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:35.140+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9a-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9a-2025\"}]"
+}]]></config>
+</Weblab2>

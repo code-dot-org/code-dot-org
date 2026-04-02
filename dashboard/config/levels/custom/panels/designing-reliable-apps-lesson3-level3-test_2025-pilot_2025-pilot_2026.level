@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# .then()\n\n`.then()` is a method that runs a block of code only after the Promise is **fulfilled**. It receives the data from the Promise so you can use it.",
+        "imageUrl": "https://images.code.org/09a831dba196e13a406cbf66abfe213f-Vocab Images.png",
+        "key": "designing-reliable-apps-lesson3-level3-test_2025-pilot-a7d47b7b-ef03-4566-8998-518e074e2c10",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# .catch()\n\n`.catch()` is a method that runs a block of code only if the Promise is **rejected**. It receives the error message explaining what went wrong so your app doesn't crash.",
+        "imageUrl": "https://images.code.org/ed562a49342bb59a8bdd929b6abf77a0-then Images.png",
+        "key": "designing-reliable-apps-lesson3-level3-test_2025-pilot-47a77904-18b4-4288-8268-0481bd2ffb8c",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:08.261+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

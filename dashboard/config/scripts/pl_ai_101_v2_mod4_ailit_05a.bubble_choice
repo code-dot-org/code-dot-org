@@ -1,0 +1,9 @@
+name 'pl-ai-101-V2-mod4-AILit-05a'
+display_name 'Practice'
+description '####**Now it is your turn!** You are going to use AI Chat Lab to help you update one of your lesson plans to include AI Literacy Skills. <br><br>**First**, use AI Chat Lab to help you modify your lesson. **Then**, reflect and share what you have developed.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-AILit-05'
+level 'pl-ai-101-V2-mod4-AILit-06'
+
+uses_lab2

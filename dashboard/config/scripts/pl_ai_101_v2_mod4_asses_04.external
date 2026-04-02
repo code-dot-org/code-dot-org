@@ -1,0 +1,31 @@
+name 'pl-ai-101-V2-mod4-asses-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Detection Tools
+
+#### AI detection tools are unreliable and can incorrectly flag student work. They often produce false positives, especially for multilingual learners or students using structured writing. Relying on them can damage trust and does little to support actual learning.
+
+#### Instead of trying to catch misuse after the fact, focus on designing for transparency from the start. When expectations are clear and thinking is visible, misuse becomes less likely—and easier to address when it happens.
+
+#### Try one of these three strategies to shift the focus from **policing behavior** to **supporting learning and growth**.
+
+#### Ask students to:
+* #### Explain their reasoning and process
+* #### Reflect on how they used AI (if at all)
+* #### Defend their answers or decisions
+
+#### Use structures that make thinking visible:
+* #### Drafts and revision history
+* #### Short in-class writing or problem-solving samples
+* #### One-on-one check-ins or quick conferences
+
+#### Add small accountability steps:
+* #### “Highlight one part you struggled with”
+* #### “Explain why you chose this answer”
+* #### “What did you change after feedback?”
+* #### “What would you do differently next time?”
+
+
+MARKDOWN

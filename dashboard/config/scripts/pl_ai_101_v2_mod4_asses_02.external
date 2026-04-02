@@ -1,0 +1,33 @@
+name 'pl-ai-101-V2-mod4-asses-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Designing Assessments in the Age of AI
+
+#### Rather than trying to prevent all AI use, design assessments that:
+* #### Value process over product
+* #### Make thinking visible
+* #### Encourage authentic and personal responses
+
+## 3 Practical Strategies
+
+#### 1. Build in Process
+* #### Require drafts, checkpoints, or annotations
+* #### Ask students to highlight where their thinking changed
+* #### Use “submit your draft + reflection” as a routine
+
+#### 2. Personalize the Task
+* #### Connect to student experience, opinions, or local context
+* #### Ask students to apply ideas to their own lives or communities
+* #### Example:
+* #### Instead of: “Explain climate change”
+* #### Try: “How might climate change impact your community or daily life?”
+
+#### 3. Include In-Class Components
+* #### Quick writes, discussions, or reflections
+* #### Use class time to start assignments so you see initial thinking
+* #### Follow up with a short explanation of their work
+
+#### Could AI complete this without the student? If yes, what could you change to require student thinking?
+MARKDOWN

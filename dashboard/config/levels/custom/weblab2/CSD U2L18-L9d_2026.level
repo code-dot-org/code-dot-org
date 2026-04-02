@@ -1,0 +1,130 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:12.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Responsive Page Elements",
+    "long_instructions": "<img src=\"https://images.code.org/13aeb64e1e339b1319ea917c801d19d2-image-1709232083439.gif\" style=\"float: right; width: 350px;\">\r\n\r\n# Transforming Image Cards\r\n\r\nBack in Chapter 1, you learned how to create \"product cards\" - an image gallery with information about each image underneath. With our \"hover\" pseudo-class, we can make these cards even more visually appealing and responsive to our users by using two new properties: `transform` and `transition`. \r\n\r\nThe `transform` property applies 2D or 3D transformation to an element. This property allows you to rotate, scale, and move elements! There are _many_ value options!\r\n\r\nThe `transition` property specifies the duration and time for `transform` property. The syntax of this property looks like this: `transition: property duration timing;`\r\n\r\n_We'll also see how to change our mouse cursor when we hover over an image card using CSS to draw attention to them._\r\n\r\nLet's try this out!\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1) Add a rule for the \"hover\" pseudo-class for the \"ramen-card\" class.\r\n2) Add the `transform` property with the value of `translateY(-15px)`\r\n   - _This will set the card to move up by 15 pixels._\r\n2) Add the `transition` property to the \"ramen-card\" rule set with a value of `transform 0.3s ease-in-out;`\r\n   - _This will set the type of transition to \"transform\" (which we just set in step 2), with a 0.3 duration for the transition, and to ease in and out of the transition._\r\n4) Add the `cursor` property with a value of `pointer` to the \"ramen-card\" rule set.\r\n\r\n**BONUS:** Play around with different `transform` values! Here's a list of some to try:\r\n- `translateX(px);` - moves the card left or right depending on if the number px is positive or negative\r\n- `translate(x, y);` - moves the card left/right and up/down depending on if the number for eachc px is positive or negative\r\n- `scale(x, y);` - resizes the card in both directions. For example, `scale(1.5, 1.5);` will have your card get bigger by 1.5 on both axis.\r\n- `scaleX(x);` - resizes the card horizontally\r\n- `scaleY(y);` - resizes the card vertically\r\n- `rotate(deg);` - rotates the card by the number degrees indicated. Note: the value in the parenthesis should be written as follows: `rotate(20deg);`\r\n\r\n**HAVE FUN WITH THESE RESPONSIVE TECHNIQUES!**",
+    "bubble_choice_description": "Learn how to create responsive image cards!",
+    "thumbnail_url": "https://images.code.org/fa5022e31fc52f7fd3564eb6f0a9b60e-L18-9d.gif",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- photo gallery of popular ramen -->\n    <h1>🥢 Ramen Gallery 🥢</h1>\n    <div class=\"gallery\">\n      <!-- ramen card - miso ramen -->\n      <div class=\"ramen-card\">\n        <img src=\"Tonkotsu_Ramen.jpg\" alt=\"Tonkotsu Ramen\">\n        <div class=\"content\">\n          <h3>Tonkotsu Ramen</h3>\n          <p>Originating from modern-day Fukuoka and lending its mouthwatering fragrance to Tokyo’s Asakusa region, tonkotsu ramen is made from boiling pork bones for hours until it brings a creamy cloudy look to the tonkotsu broth.</p>\n        </div>\n      </div>\n\n      <!-- ramen card -Miso -->\n      <div class=\"ramen-card\">\n        <img src=\"Miso_Ramen.jpg\" alt=\"Miso Ramen\">\n        <div class=\"content\">\n          <h3>Miso Ramen</h3>\n          <p>Coming from the Sapporo region of Hokkaido, miso ramen takes its name from its main ingredient. This broth is strong and savory and has an opaque appearance</p>\n        </div>\n      </div>\n\n      <!-- ramen card - Shoyu -->\n      <div class=\"ramen-card\">\n        <img src=\"Shoyu_Ramen.jpg\" alt=\"Shoyu Ramen\">\n        <div class=\"content\">\n          <h3>Shoyu Ramen</h3>\n          <p>Shoyu means soy sauce in Japanese and this style of noodle dish was actually the first type of ramen and is still going strong. There’s lots of different varieties of shoyu ramen but the taste is normally salty and tangy.</p>\n        </div>\n      </div>\n\n      <!-- ramen card - Shio -->\n      <div class=\"ramen-card\">\n        <img src=\"Shio_Ramen.jpg\" alt=\"Shio Ramen\">\n        <div class=\"content\">\n          <h3>Shio Ramen</h3>\n          <p>Shio means salt and this style of ramen tends to be light and transparent. It’s often made by boiling down chicken bones and flavored with seafood based products like dried sardines, dashi stock, and bonito flakes.</p>\n        </div>\n      </div>\n\n      <!-- ramen card - Tsukemen -->\n      <div class=\"ramen-card\">\n        <img src=\"Tsukemen.jpg\" alt=\"Tsukemen\">\n        <div class=\"content\">\n          <h3>Tsukemen</h3>\n          <p>These thick and hearty ramen noodles are cooked, plunged into cool water, and then served alongside a bowl of tare ramen broth. You dip the noodles and let the thick soup coat each strand in tasty moisture.</p>\n        </div>\n      </div>\n    </div>\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* body style */\nbody {\n  font-family: Verdana, sans-serif;\n}\n\n/* gallery style */\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin: 20px;\n}\n\n/* style for each ramen info card */\n.ramen-card {\n  width: 325px;\n  display: flex;\n  flex-direction: column;\n  text-align: center;\n  border: 2px solid black;\n  margin: 10px;\n  /* 3) Add the \"transition\" property with the value of \"transform 0.3s ease-in-out\" */\n  \n  /* 4) Add the \"cursor\" property with a value of \"pointer\" */\n  \n}\n\n/* 1) Add the hover pseudo-class for the ramen-card class */\n/* 2) Add the \"transform\" property with the value of \"translateY(-15px)\" */\n\n\n\n/* style for the card content */\n.content {\n  padding: 10px;\n}\n\n/* style for the paragraph text in the ramen info card */\n.ramen-card p {\n  font-size: 17px;\n}\n\n/* h3 style */\n.ramen-card h3 {\n  margin-bottom: 10px;\n}\n\n/* style for images */\n.ramen-card img {\n  width: 100%;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Tsukemen.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9d-2025/uuid/bb29d395-f114-4bcf-9b52-86aef269f408.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "Tonkotsu_Ramen.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9d-2025/uuid/3af4cfe7-b598-4ef5-9ab2-2a605d9dd71f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "Miso_Ramen.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9d-2025/uuid/d6a21d64-ee81-4293-9015-122cfe6ea589.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "Shoyu_Ramen.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9d-2025/uuid/66517d0a-f9db-40ff-9706-8807dee03f07.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "Shio_Ramen.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9d-2025/uuid/b19d95ad-91e3-4a00-9f6a-fadbb67a6b70.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nY0WstO/Ev5sFFYs=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:12.634+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9d-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9d-2025\"}]"
+}]]></config>
+</Weblab2>

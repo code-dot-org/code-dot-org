@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:25.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "The Fallback",
+    "bubble_choice_description": "Display a local fallback image when the fetch fails.",
+    "thumbnail_url": "https://images.code.org/094c77eafa5c3c615df9d7b55c4daf88-Pasted Graphic 3.png",
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "### The Fallback\r\n\r\n**Goal**: Display a local fallback image when the fetch fails.\r\n\r\n**Do This**:\r\n\r\n1. Look for the part of the code that starts with the `catch` block.\r\n2. Inside the catch block, select the image element (`<img>`) that was supposed to show the API data.\r\n3. Change the source of the image to a local file so the user doesn't see a broken link icon.\r\n\t* **Source**: Set the `.src` to a fallback image (e.g., `\"fallback.jpg\"`).\r\n\t* **Alt Text**: Update the `.alt` text to explain that the connection was lost.",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>TicketMaster Lite</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <header>\n        <div class=\"logo\">TicketFinder</div>\n        <nav>\n            <a href=\"#\">Concerts</a>\n            <a href=\"#\">Sports</a>\n            <a href=\"#\">Arts</a>\n        </nav>\n    </header>\n  \n    <main>\n        <h1>Featured Event</h1>\n        \n        <div id=\"app\" class=\"event-card\">\n            \n            <div class=\"image-container\">\n                <img id=\"event-image\" src=\"loading-placeholder.png\" />\n            </div>\n\n            <div class=\"content-container\">\n                <h2 id=\"event-title\"></h2>\n                <p id=\"event-date\"></p>\n                <div id=\"status-message\"></div>\n            </div>\n            \n        </div>\n    </main>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root {\n    --primary: #026cdf; /* Brand Blue */\n    --primary-hover: #004494;\n    --bg: #f4f6f8;      /* Light Grey Background */\n    --card-bg: #ffffff; /* White Card */\n    --text-main: #222222;\n    --text-muted: #666666;\n    --border: #e1e4e8;\n}\n\nbody {\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    background-color: var(--bg);\n    color: var(--text-main);\n    margin: 0;\n    padding: 0;\n}\n\nheader {\n    background-color: #ffffff;\n    padding: 1rem 2rem;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border-bottom: 1px solid var(--border);\n    box-shadow: 0 2px 4px rgba(0,0,0,0.05);\n}\n\n.logo {\n    font-weight: bold;\n    font-size: 1.2rem;\n    color: var(--primary);\n}\n\nnav a {\n    color: var(--text-main);\n    text-decoration: none;\n    margin-left: 20px;\n    font-size: 0.9rem;\n    font-weight: 500;\n}\n\nmain {\n    padding: 2rem;\n    max-width: 800px;\n    margin: 0 auto;\n}\n\nh1 {\n    color: var(--text-main);\n    text-align: center;\n    margin-bottom: 2rem;\n}\n\n/* Card Styling */\n.event-card {\n    background-color: var(--card-bg);\n    border-radius: 12px;\n    overflow: hidden;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n    border: 1px solid var(--border);\n    max-width: 600px;\n    margin: 0 auto;\n}\n\n.image-container {\n    width: 100%;\n    height: 300px;\n    background-color: #eee;\n    overflow: hidden;\n}\n\n.image-container img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n\n.content-container {\n    padding: 2rem;\n    text-align: center;\n}\n\nh2 {\n    margin: 0 0 10px 0;\n    color: var(--primary);\n}\n\np {\n    color: var(--text-muted);\n}\n\n/* Button Styling (For Level C) */\n#retry-btn {\n    background-color: var(--primary);\n    color: white;\n    border: none;\n    padding: 12px 24px;\n    border-radius: 50px; /* Pill shape */\n    cursor: pointer;\n    font-size: 1rem;\n    margin-top: 20px;\n    font-weight: bold;\n    transition: background 0.2s;\n}\n\n#retry-btn:hover {\n    background-color: var(--primary-hover);\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// BROKEN URL: This triggers the catch block immediately\nconst BROKEN_API_URL = \"https://broken-api-example.com/featured-event\";\n\nconst getEvent = async () => {\n\n  const image = document.querySelector(\"#event-image\");\n  const title = document.querySelector(\"#event-title\");\n  const date = document.querySelector(\"#event-date\");\n  const contentBox = document.querySelector(\".content-container\");\n  const statusMessage = document.querySelector(\"#status-message\")\n\n    try {\n\n        const response = await fetch(BROKEN_API_URL);\n        const data = await response.json();\n\n        title.innerText = data.artist;\n        date.innerText = data.date;\n        image.src = data.imageUrl;\n        image.alt = \"Concert promotional image\";\n\n    } catch (error) {\n      statusMessage.innerText = error;\n      image.alt = error;\n    }\n};\n\n\ngetEvent();",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nq5T0LwuAxcroHyU=\n",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:25.552+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-weblab-choiceB-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-weblab-choiceB-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

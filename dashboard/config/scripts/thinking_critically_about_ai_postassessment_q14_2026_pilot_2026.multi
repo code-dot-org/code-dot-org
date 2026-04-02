@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q14_2026-pilot_2026'
+
+question 'A student finishes a project and reflects: "I used AI to generate my first draft, then I rewrote most of it, fact-checked every claim, and added my own analysis and examples." Which statement BEST evaluates this process?'
+
+wrong 'This is an example of over-relying on AI, because the student should have written the first draft themselves.'
+right 'This is a strong example of human-led AI use, where the student maintained critical control and responsibility for the final product.'
+wrong 'This process is only acceptable if the student disclosed their AI use to their teacher first.'
+wrong 'The student\'s fact-checking was unnecessary, because rewriting the draft is sufficient to make it their own work.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 9
+MARKDOWN

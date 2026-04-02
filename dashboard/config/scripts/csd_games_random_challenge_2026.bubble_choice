@@ -1,0 +1,11 @@
+name 'CSD games random challenge_2026'
+display_name 'Challenges: Random Numbers'
+description 'Try out these extra challenges with random numbers.'
+
+sublevels
+level 'CSD U3 Random rgb_2026'
+level 'CSD U3 Random add_2026'
+level 'CSD U3 Random line_2026'
+level 'CSD U3 Random arc_2026'
+level 'CSD U3 Random free play_2026'
+level 'CSD U3 Random free play2_2026'

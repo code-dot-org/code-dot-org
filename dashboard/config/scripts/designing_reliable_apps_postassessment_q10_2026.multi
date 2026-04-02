@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q10_2026'
+
+question 'A developer\'s app fetches product data, which arrives successfully. However, the data includes "price": "nineteen dollars" instead of a number, and the app breaks when calculating a discount. Which type of failure does this represent?'
+
+wrong 'A server failure — the server sent the wrong type of response'
+wrong 'A network failure — the data was corrupted during transmission'
+wrong 'A Promise rejection — the fetch returned a rejected state due to the unexpected format'
+right 'An invalid data error — the data arrived successfully but does not match the expected format or type'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

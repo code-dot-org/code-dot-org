@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:12.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Revealed Secret",
+    "long_instructions": "# Reveal The Cracked Message\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can style a `<div>` element to change the font and background color to make text appear!\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add a rule set to style the `div`with the \"hover\" pseudo-class. \r\n   - Add the following properties to the rule set:\r\n      - Set the color of the tex to \"black\"\r\n      - Set the background color to \"yellow\"\r\n3. Hover over the `div` to see what happens!\r\n\r\n**Don't forget to click <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> to see if everything is working as expected.**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Pseudo Classes](https://studio.code.org/courses/csd-2024/guides/pseudo-classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn another way to use the \"hover\" pseudo-class with a `div` tag to reveal text!",
+    "thumbnail_url": "https://images.code.org/c191bef9878247350465ca783d4b0897-top-secret.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Cracking the Code: The Caesar Cipher</h1>\n    \n    <!-- info -->\n    <p>Step into the world of ancient cryptography with the Caesar Cipher, a simple yet powerful tool used by Julius Caesar to protect messages of military importance. This method shifts the letters in the alphabet by a set number to create a secret message that can only be decoded with the right key. Discover how this ancient technique laid the groundwork for modern-day encryption and try your hand at encoding and decoding messages just like a Roman spy!</p>\n    \n    <!-- subtitle -->\n    <h2>Decrypting a Message with the Caesar Cipher:</h2>\n    \n    <!-- Caesar Cipher info -->\n    <p>The Caesar cipher shifts each letter in the plaintext (the original message) by a certain number of positions to create the ciphertext (the encrypted message). To decrypt a message, you need to know the number of positions each letter was shifted or the \"key.\"</p>\n    \n    <h3>Example:</h3>\n\n    <p>Ciphertext: \"KHOOR\" <br>\n      Key: 3 <br>\n      Decryption Process: Shift each letter 3 positions back. <br>\n      Decrypted Message: \" HELLO\"</p>\n\n    <p>Remember, the Caesar cipher wraps around the alphabet, so if your backward shift goes past \"A\", you continue from \"Z\".</p>\n\n    <!-- Cracking a cipher challenge -->\n    <h2>Can you crack this secret message:</h2>\n    \n    <h3>Inxhtajw ymj xjhwjyx tk hwduytlwfumd!</h3>\n    \n    <!-- container with answer -->\n    <div>Decrypted Message:<br>\n      Discover the secrets of cryptography!</div>\n\n    <!-- Tips for cracking a caesar cipher -->\n    <h3>Here's how to CRACK a Caesar Cipher:</h3>\n\n    <ol>\n      <li><strong>Look for Patterns:</strong> In English, certain letters and combinations appear more frequently than others. For example, 'E' is the most common letter, and 'TH', 'HE', 'IN', 'ER' are common pairs.</li>\n      <li><strong>Guess Common Words:</strong> Try to identify small words in the ciphertext that might be common English words like \"AND\", \"THE\", or \"IS\". If the ciphertext is short, this might be tricky, but in longer texts, common words can give you clues.</li>\n      <li><strong>Shift and Check:</strong> Start by shifting the ciphertext by 1 position and see if it makes sense. If not, shift by 2, then 3, until you find a shift that reveals intelligible text.</li>\n    </ol>\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule set to style the div with the hover pseudo-class to reveal the cracked message */\n\n\n\n\n/* styled div content to hide text */\ndiv{\n  color: #dde9ff; /* color of text is the same as the color of the page */\n  font-size: 24px;\n}\n\n/* basic style for all text */\nbody {\n  font-family: Verdana;\n  text-align: center;\n  background-color: #dde9ff;\n}\n\n/* paragraph style */\np {\n  font-size: 18px;\n}\n\n/* list item style */\nli {\n  text-align: left;\n  margin:5px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:12.407+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9c-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9c-2025\"}]"
+}]]></config>
+</Weblab2>

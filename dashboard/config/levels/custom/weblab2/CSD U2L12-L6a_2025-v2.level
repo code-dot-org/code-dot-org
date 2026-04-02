@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:57.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/107ac2b9d9f38277965fe7e74dfeae0a-image-1705710465806.png\" style=\"width:250px; float: right;\">\r\n\r\n# Inversed Properties?\r\n\r\nA really interesting thing happens when we define our `flex-direction` to be in **columns** ... the `justify-content` and `align-items` **switch!!** \r\n\r\nThis means that if we have columns, we'll use `align-items` (or `align-content` if there's more than one line) to determine alignment **across** the container and `justify-content` will determine alignment **vertically**.\r\n\r\n**You might want to make note of this on your <a href=\"https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing\">Flexbox Cheat Sheet</a>!**\r\n\r\nAll containers have flex established and `flex-direction: column` property already defined. \r\n\r\n_When in columns, before the \"align\" and \"justify\" have been defined, the default horizontal alignment is \"stretch\" and the default vertical alignment is at the top of the container._\r\n\r\n# Do This\r\n \r\n1. Add the `align-items` property with the correct value to horizontally align the images in each container to look like the picture to the right.\r\n2. Add the `justify-content` property with the correct value to vertically align the images in each container to look like the picture to the right.\r\n\r\n<br>\r\n\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/9bd307f49ccc9eafc8f4aa956d2c00bf-image-1708133232036.gif\" style=\"width:500px\">\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Inversed Properties",
+    "bubble_choice_description": "Practice horizontal and vertical alignment for columns!",
+    "thumbnail_url": "https://images.code.org/11587f6e7278dff510444ba5958efe08-inversed.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-1\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-2\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-3\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-4\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-5\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n    <!-- div container with a class attribute around the 2 images -->\n    <div class=\"container-6\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n    </div>\n    \n\n    \n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add the align-items property with the correct value to horizontally align the images in each container to look like the picture in the instructions */\n\n/* 2) Add the justify-content property with the correct value to vertically align the images in each container to look like the picture in the instructions */\n.container-1 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #b691d6;\n  \n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n  \n  /* Define how items should be distributed horizontally across the container */\n\n  \n  /* Define how items should be distributed vertically within the container */\n\n  \n\n\n}\n\n.container-2 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #91d6ce;\n\n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n\n  /* Define how items should be distributed horizontally across the container */\n\n\n  /* Define how items should be distributed vertically within the container */\n\n\n}\n\n.container-3 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #d691c4;\n\n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n\n  /* Define how items should be distributed horizontally across the container */\n\n\n  /* Define how items should be distributed vertically within the container */\n\n\n}\n\n.container-4 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #9cd691;\n\n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n\n  /* Define how items should be distributed horizontally across the container */\n\n\n  /* Define how items should be distributed vertically within the container */\n\n\n}\n\n.container-5 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #f6f48c;\n\n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n\n  /* Define how items should be distributed horizontally across the container */\n \n\n  /* Define how items should be distributed vertically within the container */\n\n\n}\n\n.container-6 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #f68c8c;\n\n  /* Establish a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-direction: column;\n  flex-wrap: nowrap;\n\n  /* Define how items should be distributed horizontally across the container */\n\n\n  /* Define how items should be distributed vertically within the container */\n\n\n\n}\n\n\nimg{\n  height: 75px;\n  border-style: solid;\n}\n\n/* containers were given extra height so you can see all of the spacing affects */\ndiv {\n  height: 250px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "two.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6a-2025/uuid/d4c2fb97-eee9-4112-bbe6-5e541006edc7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "one.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6a-2025/uuid/0fae6aec-c243-4774-9229-20b78c3765df.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:57.918+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L12-L6a-2025\"}]"
+}]]></config>
+</Weblab2>

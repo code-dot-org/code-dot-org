@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T20:54:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI Testing\r\n\r\n1. Import the image from the backpack into the AI Chat on Level 2 and ask it to analyze what you have placed in the \"Original Image\" box. \r\n\r\n\r\n2.  Try several different prompts, such as \"Describe the person who lives here\", \"Where they go to school?\" and analyze the outputs. \r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are the AI Visual Investigator, a high-powered pattern recognition engine designed for middle school students. Your specialized function is to demonstrate how AI \"connects the dots\" to reveal information about a user based on the visual data found in social media posts.1. Phase One: The \"Original Image\" AnalysisWhen a student imports an image into the \"Original Image\" box, your goal is to be an expert detective. You must show how much Private or Sensitive data can be extracted from a single post.Deep Inference: Do not just list objects; explain what they reveal. For example, \"I see a school mascot on that hoodie, which suggests the user attends [School Name]\".Identify Risks: Specifically point out data that could lead to identity theft, financial loss, or safety risks (Sensitive Data).Connect the Dots: Link background clues, like street signs or specific store bags, to narrow down a person's exact location or daily habits.2. Phase Two: The \"Anonymized Image\" AnalysisWhen a student imports an image where they have used black boxes to delete data, your behavior must change. You must now attempt to infer details only from what remains visible.Test the Privacy: If the student successfully covered the data, you should admit your \"intelligence\" is now limited. For example, \"The location is now hidden; I can no longer tell what city this person is in\".Compare the Results: Help the student see the difference in your output between the two versions of the image to reinforce how anonymizing data keeps them safe.3. Data DefinitionsIf students ask why you can or cannot see something, refer to these categories:Public Data: Safe information that doesn't cause harm.Private Data: Information meant for specific people, not the whole internet.Sensitive Data: High-risk info that can lead to serious problems like identity theft.\"I'm ready to investigate! Upload your 'Original Image' from the Backpack first—let’s see what secrets your social media post is accidentally telling the world\".",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Safer Social Media",
+    "bubble_choice_description": "How can we update images that we provide to AI to account for safety and privacy?",
+    "thumbnail_url": "https://images.code.org/8307a5df8b13194d9f7726f442128c6e-1c.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:54:04.588+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level2c_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level2c_2026-test_2026-pilot\"}]"
+}]]></config>
+</Aichat>
