@@ -30,7 +30,8 @@ export const lintFoormKeys = text => {
     if (!nameKeyValidator.test(nameValue)) {
       hasLintErrors = true;
       annotations.push({
-        message: 'Question names should only contain letters and underscores.',
+        message:
+          'Question names should only contain letters, numbers, and underscores.',
         from: match.index,
         to: match.index + match[0].length,
         severity: 'error',

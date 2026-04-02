@@ -16,7 +16,7 @@ const fieldConfig = {
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript',
+    codemirrorMode: 'json',
   },
 };
 
