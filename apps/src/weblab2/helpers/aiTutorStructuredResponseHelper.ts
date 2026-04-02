@@ -64,7 +64,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       pseudocode: {
         type: 'string',
         description:
-          "Pseudocode for the code or plain-text answer to the student's question. Use markdown.",
+          'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
       },
       example: {
         type: 'string',
