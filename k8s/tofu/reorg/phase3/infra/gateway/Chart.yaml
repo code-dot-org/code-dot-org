@@ -1,0 +1,9 @@
+apiVersion: v2
+name: gateway-codeai-k8s
+description: Local chart for Gateway API CRDs and the shared AWS ALB GatewayClass resources
+type: application
+version: 0.1.0
+
+# fetch-crds.sh reads appVersion and downloads:
+# https://github.com/kubernetes-sigs/gateway-api/releases/download/${appVersion}/standard-install.yaml
+appVersion: v1.5.0

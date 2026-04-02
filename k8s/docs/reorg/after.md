@@ -31,14 +31,13 @@
 
 **Phase 3: split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
 
-- `gateway-api-crds.tf`: Gateway API CRDs
 - `helm.tf`: (helm argo-cd), (helm aws-load-balancer-controller), (helm external-dns), (helm dex), (helm kargo-github-webhook), (helm kargo-github-webhook-secret)
 - `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
 - `external-secrets-operator-config.tf`:
   - module `eso_per_env[<env>]`: (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
   - module `eso_per_adhoc`: (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
 - `frontend-pod-security-groups.tf`: (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `production`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `test`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `levelbuilder`
-- `gateway-class-aws-alb.tf`: (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
+- `helm.tf` + `infra/gateway`: Gateway API CRDs, (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
 
 # ArgoCD
 

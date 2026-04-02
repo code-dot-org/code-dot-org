@@ -1,3 +1,11 @@
+locals {
+  cluster_outs = data.terraform_remote_state.phase1.outputs
+
+  cluster_name     = local.cluster_outs.cluster_name
+  cluster_endpoint = local.cluster_outs.cluster_endpoint
+  cluster_region   = local.cluster_outs.cluster_region
+}
+
 provider "aws" {
   region = local.cluster_region
   default_tags {

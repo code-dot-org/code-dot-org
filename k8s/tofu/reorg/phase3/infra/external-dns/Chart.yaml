@@ -1,6 +1,6 @@
 apiVersion: v2
-name: external-dns-wrapper
-description: Local wrapper chart for ExternalDNS
+name: external-dns-codeai-k8s
+description: Local chart for ExternalDNS values on codeai-k8s
 type: application
 version: 0.1.0
 
@@ -9,3 +9,4 @@ dependencies:
     alias: externalDns
     repository: https://kubernetes-sigs.github.io/external-dns/
     version: 1.20.0
+

@@ -1,0 +1,16 @@
+#============================================================
+# Create a shared GatewayClass for AWS Load Balancer Controller-backed Gateways.
+# Individual services should reference this class instead of creating their own.
+#============================================================
+
+apiVersion: gateway.k8s.aws/v1beta1
+kind: LoadBalancerConfiguration
+metadata:
+  name: {{ .Values.loadBalancerConfiguration.name }}
+  namespace: {{ .Values.loadBalancerConfiguration.namespace }}
+spec:
+  scheme: {{ .Values.loadBalancerConfiguration.scheme | quote }}
+  listenerConfigurations:
+    - protocolPort: "HTTPS:443"
+      defaultCertificate: {{ .Values.loadBalancerConfiguration.defaultCertificateArn | quote }}
+

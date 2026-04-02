@@ -1,0 +1,7 @@
+{{- if .Values.single_namespace_environment_type }}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ .Values.environment_type }}
+{{- end }}
+

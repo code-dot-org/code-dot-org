@@ -1,0 +1,12 @@
+apiVersion: v2
+name: aws-load-balancer-controller-codeai-k8s
+description: Local chart for AWS Load Balancer Controller values on codeai-k8s
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: aws-load-balancer-controller
+    alias: awsLoadBalancerController
+    repository: https://aws.github.io/eks-charts
+    version: 1.17.1
+
