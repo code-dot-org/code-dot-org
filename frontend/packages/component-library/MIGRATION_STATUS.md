@@ -107,7 +107,7 @@ The following DSCO components use `Button` or `Typography` internally, blocking 
 >
 > **TODO**: Investigate `frontend/packages/component-library-styles/typography.module.scss`. This file provides SCSS mixins (`heading-xxl`, `body-one`, `body-two`, etc.) and CSS module classes that are still **widely consumed** (~100+ files): ~23 SCSS files in `component-library/src/`, ~62 files in `apps/src/`, and indirectly via `component-library-styles/mixins.scss` (which uses the `body-two`/`body-three`/`body-four` mixins for field helper styles). There is also a manual copy at `shared/css/typography.scss`. Determine whether these SCSS mixins can be replaced by MUI Typography theme overrides or if they must coexist, and plan accordingly.
 
-### Button internal consumers (8) — ✅ All migrated (PR #71642)
+### Button internal consumers (8) — ✅ **All Done** (PR #71642)
 
 | DSCO Component     | Migration Status |
 | ------------------ | ---------------- |
