@@ -1,5 +1,6 @@
 import {
   IconButton as MuiIconButton,
+  IconButtonProps as MuiIconButtonProps,
   Typography as MuiTypography,
 } from '@mui/material';
 import classnames from 'classnames';
@@ -10,8 +11,6 @@ import {
   useEffect,
   useState,
 } from 'react';
-
-import {ComponentLibraryIconButtonProps} from '@/button/muiButtonProps';
 
 import moduleStyles from './slider.module.scss';
 
@@ -59,14 +58,14 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
    * @default 100 */
   maxValue?: number;
   /** Props for the left control button (MUI IconButton) */
-  leftButtonProps?: ComponentLibraryIconButtonProps;
+  leftButtonProps?: MuiIconButtonProps;
   /** Props for the right control button (MUI IconButton) */
-  rightButtonProps?: ComponentLibraryIconButtonProps;
+  rightButtonProps?: MuiIconButtonProps;
   /** Custom class name */
   className?: string;
 }
 
-const defaultSliderButtonProps: Partial<ComponentLibraryIconButtonProps> = {
+const defaultSliderButtonProps: Partial<MuiIconButtonProps> = {
   variant: 'text',
   color: 'secondary',
   size: 'extraSmall',

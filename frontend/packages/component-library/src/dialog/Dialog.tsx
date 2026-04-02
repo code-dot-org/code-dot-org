@@ -1,8 +1,11 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import CustomDialog from './CustomDialog';
@@ -23,9 +26,9 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Custom bottom content (rendered right after Dialog actions section). */
   customBottomContent?: ReactNode;
   /** Dialog primary button props */
-  primaryButtonProps: ComponentLibraryButtonProps;
+  primaryButtonProps: MuiButtonProps;
   /** Dialog secondary button props */
-  secondaryButtonProps?: ComponentLibraryButtonProps;
+  secondaryButtonProps?: MuiButtonProps;
   /** Dialog color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */

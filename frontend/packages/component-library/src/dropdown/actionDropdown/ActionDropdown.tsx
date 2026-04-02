@@ -1,10 +1,10 @@
+import {
+  ButtonProps as MuiButtonProps,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import classNames from 'classnames';
 import {useCallback, AriaAttributes} from 'react';
 
-import {
-  ComponentLibraryButtonProps,
-  ComponentLibraryIconButtonProps,
-} from '@/button/muiButtonProps';
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -43,9 +43,7 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown options */
   options: ActionDropdownOption[];
   /** ActionDropdown trigger button props */
-  triggerButtonProps?:
-    | ComponentLibraryButtonProps
-    | ComponentLibraryIconButtonProps;
+  triggerButtonProps?: MuiButtonProps | MuiIconButtonProps;
   /** Whether to use MUI IconButton (true, default) or MUI Button (false) as trigger
    * @default true */
   useIconButton?: boolean;

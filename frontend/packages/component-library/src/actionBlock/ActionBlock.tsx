@@ -1,7 +1,10 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 
-import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import Image, {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
 
@@ -47,8 +50,8 @@ export const getDetail = (details?: {label: string; description: string}) => {
 };
 
 export const getButtons = (
-  primaryButton?: ComponentLibraryButtonProps,
-  secondaryButton?: ComponentLibraryButtonProps,
+  primaryButton?: MuiButtonProps,
+  secondaryButton?: MuiButtonProps,
 ) => {
   if (!primaryButton) return null;
   return (

@@ -1,4 +1,9 @@
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  IconButton as MuiIconButton,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
@@ -11,10 +16,6 @@ import {
 } from 'react';
 
 import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
-import {
-  ComponentLibraryButtonProps,
-  ComponentLibraryIconButtonProps,
-} from '@/button/muiButtonProps';
 import {dropdownColors} from '@/common/constants';
 import {
   DropdownProviderWrapper,
@@ -78,9 +79,7 @@ export interface CustomDropdownProps extends AriaAttributes {
   /** @deprecated Use useMuiButtonAsTrigger instead */
   useDSCOButtonAsTrigger?: boolean;
   /** Dropdown Trigger MUI Button Props (or IconButton props when useMuiIconButtonAsTrigger is true) */
-  triggerButtonProps?:
-    | ComponentLibraryButtonProps
-    | ComponentLibraryIconButtonProps;
+  triggerButtonProps?: MuiButtonProps | MuiIconButtonProps;
   /** Children */
   children: React.ReactNode;
   /** CustomDropdown helper message */
@@ -125,9 +124,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   useMuiButtonAsTrigger = false,
   useMuiIconButtonAsTrigger = false,
   useDSCOButtonAsTrigger = false,
-  triggerButtonProps = {} as
-    | ComponentLibraryButtonProps
-    | ComponentLibraryIconButtonProps,
+  triggerButtonProps = {} as MuiButtonProps | MuiIconButtonProps,
   helperMessage,
   helperIcon,
   errorMessage,
@@ -263,13 +260,13 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             <MuiIconButton
               size={muiSize}
               {...sharedTriggerProps}
-              {...(triggerButtonProps as ComponentLibraryIconButtonProps)}
+              {...(triggerButtonProps as MuiIconButtonProps)}
             />
           ) : (
             <MuiButton
               size={muiSize}
               {...sharedTriggerProps}
-              {...(triggerButtonProps as ComponentLibraryButtonProps)}
+              {...(triggerButtonProps as MuiButtonProps)}
             />
           );
         })()

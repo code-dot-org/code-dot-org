@@ -1,14 +1,15 @@
 /**
  * Type declarations to extend MUI's Button, IconButton, and Breadcrumbs components with custom sizes and colors
  *
- * Now that @mui/material is declared as a peerDependency (not a devDependency),
- * both this package and apps/ resolve to the same physical @mui/material copy.
- * This means TypeScript module augmentations defined here should propagate
- * automatically to apps/ without manual synchronization.
+ * IMPORTANT: These type augmentations must be manually copied to apps/src/types/mui.d.ts
+ * when they change. TypeScript module augmentations don't propagate across package
+ * boundaries (they are scoped to the tsconfig that includes them), so manual
+ * synchronization is required even though @mui/material is a peerDependency.
  *
- * NOTE: apps/src/types/mui.d.ts still contains a manually copied version of
- * these augmentations from before this fix. That duplication is harmless but
- * can be cleaned up in a follow-up PR once we confirm everything works.
+ * To update apps types:
+ * 1. Make changes to this file
+ * 2. Copy the Button, IconButton, and Breadcrumbs declare module blocks to apps/src/types/mui.d.ts
+ * 3. Keep the source reference comment in apps/src/types/mui.d.ts pointing to this file
  */
 
 import '@mui/material/styles';

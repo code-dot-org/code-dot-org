@@ -1,8 +1,11 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import CustomDialog from '@/dialog/CustomDialog';
 
 import moduleStyles from './modal.module.scss';
@@ -20,9 +23,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Modal primary button props */
-  primaryButtonProps: ComponentLibraryButtonProps;
+  primaryButtonProps: MuiButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps?: ComponentLibraryButtonProps;
+  secondaryButtonProps?: MuiButtonProps;
   /** @deprecated Modal color mode - use theme provider instead. This prop will be removed in a future version. */
   mode?: 'light' | 'dark';
   /** Custom class name */

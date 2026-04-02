@@ -1,9 +1,12 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
 import Alert from '@/alert';
-import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import {Theme} from '@/common/contexts';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
@@ -39,7 +42,7 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   /** HeroBanner video */
   videoProps?: VideoProps;
   /** HeroBanner link (MUI Button) */
-  buttonProps?: ComponentLibraryButtonProps;
+  buttonProps?: MuiButtonProps;
   /** HeroBanner announcementBanner */
   announcementBannerProps?: AnnouncementBannerProps;
   /** HeroBanner custom background color.

@@ -6,11 +6,6 @@ export type {ButtonProps} from './Button';
 export type {LinkButtonProps} from './LinkButton';
 export type {GenericButtonProps} from './GenericButton';
 
-export type {
-  ComponentLibraryButtonProps,
-  ComponentLibraryIconButtonProps,
-} from './muiButtonProps';
-
 // Constants
 export {buttonColors} from './Button';
 export {
