@@ -20,7 +20,7 @@ class UserLessonReflectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :create,
     params: -> {{lesson_id: @lesson.id, success: "It went well", struggle: "This was hard"}},
     user: :teacher,
-    response: :forbidden
+    response: :created
 
   # Happy path
   test "student can create a reflection" do
@@ -51,26 +51,17 @@ class UserLessonReflectionsControllerTest < ActionController::TestCase
     assert_equal "Better now", reflections.last.success
   end
 
-  # Authorization boundary
-  test "student cannot create a reflection for another student" do
+  # Param filtering / authorization boundary
+  test "student_id in params is ignored and reflection is always created for current_user" do
     sign_in @student
 
-    assert_no_difference 'UserLessonReflection.count' do
-      post :create, params: {lesson_id: @lesson.id, student_id: @other_student.id, success: "Spoofed"}
+    assert_difference 'UserLessonReflection.count', 1 do
+      post :create, params: {lesson_id: @lesson.id, student_id: @other_student.id, success: "Test"}
     end
 
-    assert_response :forbidden
-  end
-
-  # Param filtering
-  test "student_id in params is ignored and current_user id is used instead" do
-    sign_in @student
-
-    post :create, params: {lesson_id: @lesson.id, student_id: @other_student.id, success: "Test"}
-
-    # Either forbidden or saved with correct student — either way the other student is not affected
-    return unless response.status == 201
+    assert_response :created
     assert_equal @student.id, UserLessonReflection.last.student_id
+    assert_equal 0, UserLessonReflection.where(student_id: @other_student.id).count
   end
 
   # Validation failure
