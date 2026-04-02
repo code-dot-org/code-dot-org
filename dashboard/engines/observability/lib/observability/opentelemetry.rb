@@ -12,7 +12,7 @@ module Observability
       require 'opentelemetry/instrumentation/all'
       require 'opentelemetry-exporter-otlp'
 
-      # Suppress noisy warn-level messages from auto-instrumentation gems by default.
+      # Suppress noisy messages from auto-instrumentation gems by default.
       # (e.g. detach/attach mismatches, double-finish on spans).
       ENV['OTEL_LOG_LEVEL'] ||= 'fatal'
 
