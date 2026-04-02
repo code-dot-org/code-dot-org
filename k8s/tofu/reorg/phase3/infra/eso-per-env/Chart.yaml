@@ -1,5 +1,0 @@
-apiVersion: v2
-name: eso-per-env
-description: Local wrapper chart for ESO SecretStore and ExternalSecret resources
-type: application
-version: 0.1.0

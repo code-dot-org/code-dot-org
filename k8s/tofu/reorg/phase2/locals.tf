@@ -21,7 +21,7 @@ locals {
   single_namespace_environment_types = toset(local.cluster_outs.single_namespace_environment_types)
 
   eso_iam_role_arns = merge(
-    { for env, mod in module.eso_per_env : env => mod.iam_role_arn },
-    { adhoc = module.eso_per_adhoc.iam_role_arn }
+    { for env, mod in module.eso_per_envtype : env => mod.iam_role_arn },
+    { adhoc = module.eso_per_envtype_adhoc.iam_role_arn }
   )
 }

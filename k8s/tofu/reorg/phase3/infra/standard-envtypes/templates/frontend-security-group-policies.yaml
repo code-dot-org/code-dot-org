@@ -1,0 +1,14 @@
+{{- range .Values.frontend_security_group_namespaces }}
+---
+apiVersion: vpcresources.k8s.aws/v1beta1
+kind: SecurityGroupPolicy
+metadata:
+  name: frontend-security-group
+  namespace: {{ . }}
+spec:
+  podSelector: {}
+  securityGroups:
+    groupIds:
+      - {{ $.Values.cluster_primary_security_group_id | quote }}
+      - {{ $.Values.frontend_security_group_id | quote }}
+{{- end }}

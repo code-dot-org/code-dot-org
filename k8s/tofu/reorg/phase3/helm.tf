@@ -143,46 +143,21 @@ resource "helm_release" "kargo_git_credentials" {
 # 3) A cdo-external-secrets ExternalSecret per single-namespace env type, plus a ClusterExternalSecret fanout for adhoc namespaces
 # 4) The Kubernetes-side ESO objects that use the IAM roles created in phase2
 
-# For the Helm chart that now owns the Kubernetes object shapes, see:
-# ./infra/eso-per-env/
+# For the Helm charts that now own the Kubernetes object shapes, see:
+# ./infra/eso-per-envtype/ and ./infra/standard-envtypes/
 
-#------------------------------------------------------------
-# Per-environment SecretStore + IAM role
-#------------------------------------------------------------
-
-resource "helm_release" "eso_per_env" {
-  for_each = local.single_namespace_environment_types
-
-  name      = "eso-per-env-${each.value}"
-  chart     = "${path.module}/infra/eso-per-env"
+resource "helm_release" "standard_envtypes" {
+  name      = "standard-envtypes"
+  chart     = "${path.module}/infra/standard-envtypes"
   namespace = "external-secrets"
 
   values = [yamlencode({
-    environment_type                  = each.value
-    single_namespace_environment_type = true
-    multi_namespace_regexes           = null
-    iam_role_arn                      = local.eso_iam_role_arns[each.value]
-    region                            = local.cluster_region
-  })]
-
-  depends_on = [helm_release.external_secrets]
-}
-
-#------------------------------------------------------------
-# Adhoc ClusterSecretStore + IAM role
-#------------------------------------------------------------
-
-resource "helm_release" "eso_per_adhoc" {
-  name      = "eso-per-env-adhoc"
-  chart     = "${path.module}/infra/eso-per-env"
-  namespace = "external-secrets"
-
-  values = [yamlencode({
-    environment_type                  = "adhoc"
-    single_namespace_environment_type = false
-    multi_namespace_regexes           = ["^adhoc-.*"]
-    iam_role_arn                      = local.eso_iam_role_arns["adhoc"]
-    region                            = local.cluster_region
+    single_namespace_environment_types = sort(tolist(local.single_namespace_environment_types))
+    region                             = local.cluster_region
+    eso_iam_role_arns                  = local.eso_iam_role_arns
+    frontend_security_group_namespaces = sort(tolist(local.frontend_security_group_namespaces))
+    cluster_primary_security_group_id  = local.cluster_primary_security_group_id
+    frontend_security_group_id         = local.frontend_security_group_id
   })]
 
   depends_on = [helm_release.external_secrets]

@@ -21,8 +21,8 @@
   - module `dex_google_service_account_key`: (Secret.secretsmanager k8s/tofu/codeai-k8s/dex_google_service_account_key)
 - `dex-external-secrets.tf`: (Role.iam codeai-k8s-eso-dex), (RolePolicy.iam codeai-k8s-eso-dex/secrets-manager-access)
 - `external-secrets-operator-config.tf`
-  - module `eso_per_env[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
-  - module `eso_per_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
+  - module `eso_per_envtype[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
+  - module `eso_per_envtype_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
 - `kargo-external-secret-stores.tf`: (Role.iam codeai-k8s-eso-kargo-external-secret-stores), (RolePolicy.iam codeai-k8s-eso-kargo-external-secret-stores/secrets-manager-access)
 - `codeai-cluster-configmap.tf`: (ConfigMap.v1 codeai-cluster-config) in `kube-system`
 - `kargo-github-webhook-secret.tf`
@@ -34,11 +34,11 @@
 
 - `helm.tf`: (helm external-secrets), (helm argo-cd), (helm aws-load-balancer-controller), (helm external-dns), (helm dex), (helm kargo-git-credentials), (helm kargo-github-webhook)
 - `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
-- `helm.tf` + `infra/eso-per-env`:
+- `helm.tf` + `infra/standard-envtypes` + `infra/eso-per-envtype`:
   - (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
   - (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
 - `helm.tf` + `infra/kargo-git-credentials`: (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops)
-- `frontend-pod-security-groups.tf`: (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `production`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `test`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `levelbuilder`
+- `helm.tf` + `infra/standard-envtypes`: (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `production`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `test`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `levelbuilder`
 - `helm.tf` + `infra/gateway`: Gateway API CRDs, (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
 
 # ArgoCD

@@ -1,0 +1,12 @@
+{{- range $index, $env := .Values.single_namespace_environment_types }}
+{{- if gt $index 0 }}
+---
+{{- end }}
+{{ include "eso-per-envtype.render" (dict
+  "environment_type" $env
+  "single_namespace_environment_type" true
+  "multi_namespace_regexes" nil
+  "iam_role_arn" (index $.Values.eso_iam_role_arns $env)
+  "region" $.Values.region
+) | trim }}
+{{- end }}

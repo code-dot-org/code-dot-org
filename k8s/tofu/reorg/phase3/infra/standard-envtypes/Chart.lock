@@ -1,0 +1,6 @@
+dependencies:
+- name: eso-per-envtype
+  repository: file://../eso-per-envtype
+  version: 0.1.0
+digest: sha256:912a2b32149e5e243c7ef4e8591d7fd74633fb166723d6a298d61c0685e92353
+generated: "2026-04-02T00:24:27.659444-10:00"

@@ -13,8 +13,8 @@
   - module `dex_google_service_account_key`: (Secret.secretsmanager k8s/tofu/codeai-k8s/dex_google_service_account_key)
 - `dex-external-secrets.tf`: (Role.iam codeai-k8s-eso-dex), (RolePolicy.iam codeai-k8s-eso-dex/secrets-manager-access)
 - `external-secrets-operator-config.tf`
-  - module `eso_per_env[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
-  - module `eso_per_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
+  - module `eso_per_envtype[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
+  - module `eso_per_envtype_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
 - `kargo-external-secret-stores.tf`: (Role.iam codeai-k8s-eso-kargo-external-secret-stores), (RolePolicy.iam codeai-k8s-eso-kargo-external-secret-stores/secrets-manager-access)
 - `codeai-cluster-configmap.tf`: (ConfigMap.v1 codeai-cluster-config) in `kube-system`
 - `kargo-github-webhook-secret.tf`
