@@ -2,8 +2,8 @@ name 'pl-ai-101-V2-mod4-AILit-00c'
 title 'title'
 description 'description here'
 display_name 'Attitudes'
-bubble_choice_description ''
-thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
+bubble_choice_description 'These attitudes reflect the mindsets and dispositions that prepare learners to engage with AI, not only with technical skills, but also with an awareness of the impact AI has on themselves, others, and society.'
+thumbnail_url 'https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png'
 
 markdown <<MARKDOWN
 # Attitudes: How Students Approach AI

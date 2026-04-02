@@ -17,7 +17,10 @@ $(document).ready(function () {
     <Provider store={store}>
       <ManifestEditor />
     </Provider>,
-    document.querySelector('.manifest_editor')
+    document.querySelector('.manifest_editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror6(codeMirrorArea, 'json', {

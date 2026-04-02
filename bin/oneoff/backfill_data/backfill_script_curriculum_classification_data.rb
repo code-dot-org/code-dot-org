@@ -68,7 +68,7 @@ def backfill_script_data_categories(file_path, actual_execution)
   end
 end
 
-if ARGV.empty? || ARGV.length >2
+if ARGV.empty? || ARGV.length > 2
   warn "Usage: backfill_script_curriculum_classification_data.rb <path_to_csv_with_data> -for-real"
   return
 end

@@ -49,6 +49,9 @@ window.addEventListener('DOMContentLoaded', function () {
         loginTypeName={scriptData.section.login_type_name}
       />
     </Provider>,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

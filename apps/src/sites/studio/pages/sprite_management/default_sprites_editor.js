@@ -6,6 +6,9 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(function () {
   createReactRoot(
     <DefaultSpritesEditor />,
-    document.getElementById('default-sprites-editor-container')
+    document.getElementById('default-sprites-editor-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
