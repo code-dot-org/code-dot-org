@@ -2542,6 +2542,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
+  create_table "user_lesson_objective_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "objective_id", null: false
+    t.bigint "student_id", null: false
+    t.string "reflection"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["objective_id", "student_id"], name: "index_ulor_on_objective_and_student"
+    t.index ["objective_id"], name: "index_user_lesson_objective_reflections_on_objective_id"
+    t.index ["student_id"], name: "index_user_lesson_objective_reflections_on_student_id"
+  end
+
   create_table "user_lesson_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.bigint "student_id", null: false
