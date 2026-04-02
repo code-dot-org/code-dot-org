@@ -1,9 +1,27 @@
+data "terraform_remote_state" "phase1" {
+  backend = "s3"
+  config = {
+    bucket = "codeai-tofu-state"
+    key    = "codeai-k8s/reorg/phase1.tfstate"
+    region = "us-west-2"
+  }
+}
+
 locals {
-  cluster_outs = data.terraform_remote_state.phase1.outputs
+  cluster_outs   = data.terraform_remote_state.phase1.outputs
+  cluster_config = data.kubernetes_config_map_v1.codeai_cluster_config.data
 
   cluster_name     = local.cluster_outs.cluster_name
   cluster_endpoint = local.cluster_outs.cluster_endpoint
   cluster_region   = local.cluster_outs.cluster_region
+
+  single_namespace_environment_types         = toset(jsondecode(local.cluster_config.single_namespace_environment_types))
+  frontend_security_group_namespaces         = toset(jsondecode(local.cluster_config.frontend_security_group_namespaces))
+  cluster_primary_security_group_id          = local.cluster_config.cluster_primary_security_group_id
+  frontend_security_group_id                 = local.cluster_config.frontend_security_group_id
+  cluster_subdomain_wildcard_certificate_arn = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
+  eso_iam_role_arns                          = jsondecode(local.cluster_config.eso_iam_role_arns)
+  kargo_external_secret_stores_iam_role_arn  = local.cluster_config.kargo_external_secret_stores_iam_role_arn
 }
 
 provider "aws" {

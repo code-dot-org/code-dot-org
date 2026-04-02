@@ -16,7 +16,8 @@
   - module `eso_per_env[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
   - module `eso_per_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
 - `kargo-external-secret-stores.tf`: (Role.iam codeai-k8s-eso-kargo-external-secret-stores), (RolePolicy.iam codeai-k8s-eso-kargo-external-secret-stores/secrets-manager-access)
+- `codeai-cluster-configmap.tf`: (ConfigMap.v1 codeai-cluster-config) in `kube-system`
 - `kargo-github-webhook-secret.tf`
   - module `kargo_github_org_webhook_secret`: (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/github_org_webhook_secret)
-- `non-aws-bootstrap.tf`
-  - module `non_aws_bootstrap`: (helm external-secrets), (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops), plus optional bootstrap writes to (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_username) and (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_password), plus the GitHub organization webhook
+- `kargo-git-credentials-bootstrap.tf`: optional bootstrap writes to (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_username) and (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_password)
+- `kargo-github-webhook.tf`: GitHub organization webhook

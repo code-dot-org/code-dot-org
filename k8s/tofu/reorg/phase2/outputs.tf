@@ -5,8 +5,5 @@ output "cluster_subdomain_wildcard_certificate_arn" {
 
 output "eso_iam_role_arns" {
   description = "IAM role ARNs for ESO stores by environment type."
-  value = merge(
-    { for env, mod in module.eso_per_env : env => mod.iam_role_arn },
-    { adhoc = module.eso_per_adhoc.iam_role_arn }
-  )
+  value       = local.eso_iam_role_arns
 }

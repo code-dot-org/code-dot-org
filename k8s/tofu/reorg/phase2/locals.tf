@@ -19,4 +19,9 @@ locals {
   cluster_oidc_issuer_url = local.cluster_outs.cluster_oidc_issuer_url
 
   single_namespace_environment_types = toset(local.cluster_outs.single_namespace_environment_types)
+
+  eso_iam_role_arns = merge(
+    { for env, mod in module.eso_per_env : env => mod.iam_role_arn },
+    { adhoc = module.eso_per_adhoc.iam_role_arn }
+  )
 }

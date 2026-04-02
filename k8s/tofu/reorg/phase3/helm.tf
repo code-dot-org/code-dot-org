@@ -1,4 +1,15 @@
 #============================================================
+# Install External Secrets Operator (ESO) Helm chart.
+#============================================================
+
+resource "helm_release" "external_secrets" {
+  name             = "external-secrets"
+  chart            = "${path.module}/infra/external-secrets"
+  namespace        = "external-secrets"
+  create_namespace = true
+}
+
+#============================================================
 # Install Argo CD Helm Chart
 #============================================================
 
@@ -7,6 +18,8 @@ resource "helm_release" "argocd" {
   chart            = "${path.module}/infra/argocd"
   namespace        = "argocd"
   create_namespace = true
+
+  depends_on = [helm_release.external_secrets]
 }
 
 #============================================================
@@ -44,7 +57,7 @@ resource "helm_release" "gateway" {
 
   values = [yamlencode({
     loadBalancerConfiguration = {
-      defaultCertificateArn = data.terraform_remote_state.phase2.outputs.cluster_subdomain_wildcard_certificate_arn
+      defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
     }
   })]
 
@@ -89,6 +102,32 @@ resource "helm_release" "kargo_github_webhook" {
   chart            = "${path.module}/infra/kargo-github-webhook"
   namespace        = "kargo-system-resources"
   create_namespace = false
+
+  values = [yamlencode({
+    secretStore = {
+      awsRegion = local.cluster_region
+    }
+  })]
+
+  depends_on = [helm_release.external_secrets]
+}
+
+#============================================================
+# Install Kargo git credentials SecretStore chart.
+#============================================================
+
+resource "helm_release" "kargo_git_credentials" {
+  name      = "kargo-git-credentials"
+  chart     = "${path.module}/infra/kargo-git-credentials"
+  namespace = "external-secrets"
+
+  values = [yamlencode({
+    clusterName   = local.cluster_config.cluster_name
+    clusterRegion = local.cluster_config.cluster_region
+    iamRoleArn    = local.kargo_external_secret_stores_iam_role_arn
+  })]
+
+  depends_on = [helm_release.external_secrets]
 }
 
 
@@ -104,9 +143,6 @@ resource "helm_release" "kargo_github_webhook" {
 # 3) A cdo-external-secrets ExternalSecret per single-namespace env type, plus a ClusterExternalSecret fanout for adhoc namespaces
 # 4) The Kubernetes-side ESO objects that use the IAM roles created in phase2
 
-# Note we configure ESO here, but actually install the helm chart earlier in:
-# ../eks-cluster/external-secrets-operator.tf
-
 # For the Helm chart that now owns the Kubernetes object shapes, see:
 # ./infra/eso-per-env/
 
@@ -115,7 +151,7 @@ resource "helm_release" "kargo_github_webhook" {
 #------------------------------------------------------------
 
 resource "helm_release" "eso_per_env" {
-  for_each = toset(local.cluster_outs.single_namespace_environment_types)
+  for_each = local.single_namespace_environment_types
 
   name      = "eso-per-env-${each.value}"
   chart     = "${path.module}/infra/eso-per-env"
@@ -125,9 +161,11 @@ resource "helm_release" "eso_per_env" {
     environment_type                  = each.value
     single_namespace_environment_type = true
     multi_namespace_regexes           = null
-    iam_role_arn                      = data.terraform_remote_state.phase2.outputs.eso_iam_role_arns[each.value]
-    region                            = data.terraform_remote_state.phase1.outputs.cluster_region
+    iam_role_arn                      = local.eso_iam_role_arns[each.value]
+    region                            = local.cluster_region
   })]
+
+  depends_on = [helm_release.external_secrets]
 }
 
 #------------------------------------------------------------
@@ -143,7 +181,9 @@ resource "helm_release" "eso_per_adhoc" {
     environment_type                  = "adhoc"
     single_namespace_environment_type = false
     multi_namespace_regexes           = ["^adhoc-.*"]
-    iam_role_arn                      = data.terraform_remote_state.phase2.outputs.eso_iam_role_arns["adhoc"]
-    region                            = data.terraform_remote_state.phase1.outputs.cluster_region
+    iam_role_arn                      = local.eso_iam_role_arns["adhoc"]
+    region                            = local.cluster_region
   })]
+
+  depends_on = [helm_release.external_secrets]
 }

@@ -24,18 +24,20 @@
   - module `eso_per_env[<env>]`: (Role.iam codeai-k8s-eso-<env>), (RolePolicy.iam codeai-k8s-eso-<env>/secrets-manager-access)
   - module `eso_per_adhoc`: (Role.iam codeai-k8s-eso-adhoc), (RolePolicy.iam codeai-k8s-eso-adhoc/secrets-manager-access)
 - `kargo-external-secret-stores.tf`: (Role.iam codeai-k8s-eso-kargo-external-secret-stores), (RolePolicy.iam codeai-k8s-eso-kargo-external-secret-stores/secrets-manager-access)
+- `codeai-cluster-configmap.tf`: (ConfigMap.v1 codeai-cluster-config) in `kube-system`
 - `kargo-github-webhook-secret.tf`
   - module `kargo_github_org_webhook_secret`: (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/github_org_webhook_secret)
-- `non-aws-bootstrap.tf`
-  - module `non_aws_bootstrap`: (helm external-secrets), (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops), plus optional bootstrap writes to (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_username) and (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_password), plus the GitHub organization webhook
+- `kargo-git-credentials-bootstrap.tf`: optional bootstrap writes to (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_username) and (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_password)
+- `kargo-github-webhook.tf`: GitHub organization webhook
 
 **Phase 3: split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
 
-- `helm.tf`: (helm argo-cd), (helm aws-load-balancer-controller), (helm external-dns), (helm dex), (helm kargo-github-webhook), (helm kargo-github-webhook-secret)
+- `helm.tf`: (helm external-secrets), (helm argo-cd), (helm aws-load-balancer-controller), (helm external-dns), (helm dex), (helm kargo-git-credentials), (helm kargo-github-webhook)
 - `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
-- `external-secrets-operator-config.tf`:
-  - module `eso_per_env[<env>]`: (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
-  - module `eso_per_adhoc`: (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
+- `helm.tf` + `infra/eso-per-env`:
+  - (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
+  - (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
+- `helm.tf` + `infra/kargo-git-credentials`: (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops)
 - `frontend-pod-security-groups.tf`: (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `production`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `test`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `levelbuilder`
 - `helm.tf` + `infra/gateway`: Gateway API CRDs, (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
 

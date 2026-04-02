@@ -5,10 +5,10 @@ This file records places where the runnable split does not follow
 
 ## Current notes
 
-- The former standalone early-bootstrap root was collapsed into
-  `phase2/modules/non-aws-bootstrap`. `phase2` is therefore no longer a
-  pure AWS-only root.
-- `phase2/modules/non-aws-bootstrap/kargo-git-credentials.tf` still uses
+- `phase2` publishes `codeai-cluster-config` in `kube-system` as the non-secret
+  handoff object for later Helm / GitOps consumers. `phase3` now reads that
+  `ConfigMap` instead of reading `phase2` remote-state outputs directly.
+- `phase2/kargo-git-credentials-bootstrap.tf` still uses
   `bootstrapped-aws-secret` to create or seed Secrets Manager secrets when the
   optional bootstrap values are set.
 - `phase3` remains the remaining Kubernetes-side add-on root.
@@ -33,6 +33,12 @@ This file records places where the runnable split does not follow
   - `phase2`: AWS IA wrapper for IRSA role and policy, plus the annotated
     service account
   - `phase3`: direct `helm_release`
+- Phase3 now installs the External Secrets Operator chart itself. The old split
+  installed ESO earlier in phase2 so Kargo shared-resources objects could live
+  there.
+- Phase3 now creates the Kargo shared-resources namespace, service account,
+  SecretStore, and ExternalSecret via `infra/kargo-git-credentials`. Phase2
+  keeps only the AWS Secrets Manager bootstrap for the username and password.
 - Phase2 now also precreates the `kargo-system-resources` namespace and its
   IRSA-annotated ESO service account so the phase3 Kargo webhook charts can
   stay static.
@@ -42,7 +48,7 @@ This file records places where the runnable split does not follow
   argument.
 - `phase3` remains OpenTofu-managed Kubernetes, despite the architectural label
   "K8S, either Crossplane or ACK" in `after.md`.
-- `phase2/modules/non-aws-bootstrap/kargo-github-webhook.tf` reads the
+- `phase2/kargo-github-webhook.tf` reads the
   webhook secret value back from AWS Secrets Manager using the secret name
   exported by the AWS-side part of `phase2`. In the old mixed root, that
   value came from the sibling bootstrap module in

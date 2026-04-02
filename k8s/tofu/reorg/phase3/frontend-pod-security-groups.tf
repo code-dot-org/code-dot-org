@@ -1,5 +1,5 @@
 resource "kubernetes_manifest" "frontend_security_group_policy" {
-  for_each = toset(local.cluster_outs.frontend_security_group_namespaces)
+  for_each = local.frontend_security_group_namespaces
 
   manifest = {
     apiVersion = "vpcresources.k8s.aws/v1beta1"
@@ -12,8 +12,8 @@ resource "kubernetes_manifest" "frontend_security_group_policy" {
       podSelector = {}
       securityGroups = {
         groupIds = [
-          local.cluster_outs.cluster_primary_security_group_id,
-          local.cluster_outs.frontend_security_group_id,
+          local.cluster_primary_security_group_id,
+          local.frontend_security_group_id,
         ]
       }
     }

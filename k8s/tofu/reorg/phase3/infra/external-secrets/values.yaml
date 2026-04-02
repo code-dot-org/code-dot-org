@@ -1,0 +1,5 @@
+externalSecrets:
+  installCRDs: true
+
+  webhook:
+    port: 9443

@@ -1,0 +1,11 @@
+apiVersion: v2
+name: external-secrets
+description: Local chart for External Secrets Operator values on codeai-k8s
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: external-secrets
+    alias: externalSecrets
+    repository: https://charts.external-secrets.io
+    version: 2.1.0
