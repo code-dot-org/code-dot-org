@@ -46,13 +46,6 @@ jobs:
         id: plan
         run: tofu plan -no-color -out=tfplan
 
-      - name: Post Plan to Job Summary
-        run: |
-          echo "### Workspace: \`${{ matrix.workspace }}\`" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.plan.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-
       - name: Set artifact name
         id: artifact_name
         run: echo "name=tfplan-$(basename ${{ matrix.workspace }})" >> $GITHUB_OUTPUT
