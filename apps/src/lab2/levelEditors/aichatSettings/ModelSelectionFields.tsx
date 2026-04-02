@@ -58,7 +58,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
   );
 
-  const multimodalIncluded = useMemo(() => {
+  const supportsMultimodalInput = useMemo(() => {
     return aichatSettings.availableModelIds.some(
       id => modelDescriptions.find(model => model.id === id)?.multimodal
     );
@@ -110,16 +110,13 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             );
           })}
           <br />
-          {multimodalIncluded && (
+          {supportsMultimodalInput && (
             <>
               <Typography variant="body4" gutterBottom>
                 <i>
-                  Enables multimodal chat (allow uploading files and receiving
-                  images, if possible).
-                  <br />
-                  <b>IMPORTANT:</b> If using an image model like Gemini 2.5
-                  Flash Image, this setting MUST be enabled for generated images
-                  to appear in the chat.
+                  Enables multimodal inputs (images and file uploads). Only
+                  available if the list of models includes a model that supports
+                  multimodal inputs.
                 </i>
               </Typography>
               <div className={moduleStyles.fieldRow}>
@@ -127,7 +124,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                   htmlFor="multimodalEnabled"
                   className={moduleStyles.inlineLabel}
                 >
-                  Enable Multimodal Chat
+                  Enable Multimodal Inputs (File Uploads)
                 </label>
                 <Checkbox
                   name="multimodalEnabled"

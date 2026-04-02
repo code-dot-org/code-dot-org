@@ -26,45 +26,45 @@ header:
       - title: teach
         id: header-teach
         domain: code.org
-        url: /global/fa/teacher
+        url: /fa/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /global/fa/about
+        url: /fa/about
       - title: csf
         id: header-csf
         domain: code.org
-        url: /global/fa/csf
+        url: /fa/csf
       - title: hour_of_code
         id: header-hoc
         domain: code.org
-        url: /global/fa/hourofcode
+        url: /fa/hourofcode
       - title: videos
         id: header-videos
         domain: code.org
-        url: /global/fa/videos
+        url: /fa/videos
 
     student:
       - title: my_dashboard
-        url: /global/fa/home
+        url: /fa/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/catalog
+        url: /fa/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /global/fa/home
+        url: /fa/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/catalog
+        url: /fa/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /global/fa/my-professional-learning
+        url: /fa/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -73,7 +73,7 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /global/fa/catalog
+        url: /fa/catalog
         id: learn
       - title: legal
         type: expander
@@ -89,7 +89,7 @@ header:
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /global/fa/catalog
+        url: /fa/catalog
         id: learn
       - title: legal
         type: expander
@@ -195,4 +195,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/fa/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/teacher

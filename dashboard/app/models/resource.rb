@@ -44,6 +44,7 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_resources
   has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_resources
   has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_resources
+  has_and_belongs_to_many :jit_pl_teaching_tips, join_table: :jit_pl_teaching_tips_resources
   belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create

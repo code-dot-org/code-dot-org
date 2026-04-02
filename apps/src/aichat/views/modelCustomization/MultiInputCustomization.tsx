@@ -2,7 +2,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
-import aichatI18n from '../../locale';
 import {Visibility} from '../../types';
 
 import FieldLabel from './FieldLabel';
@@ -75,15 +74,13 @@ const MultiInputCustomization: React.FunctionComponent<{
               type="button"
               startIcon={<FontAwesomeV6Icon iconName="plus" />}
             >
-              {aichatI18n.addCustomizationButtonText()}
+              {'Add'}
             </MuiButton>
           </div>
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <Typography variant="strong">
-          {aichatI18n.addCustomizationCompletionText()}
-        </Typography>
+        <Typography variant="strong">{'Added'}</Typography>
       </div>
       {addedItems.map((message, index) => {
         return (

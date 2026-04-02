@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:33.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Basic Steps",
+    "long_instructions": "<img src=\"https://images.code.org/6c141a3fd9261923fbdf7f174f1ad980-image-1705714479018.png\" style=\"width: 450px; float: right;\">\r\n\r\n# Basic Steps\r\n\r\nLet's practice the all 3 steps we learned in the Skill Building levels: \r\n1. Establish flex layout.\r\n2. Define the flow direction and if items should wrap.\r\n3. Define how the items should be distributed horizontally across the container.\r\n\r\nWe will also define how the items should be distributed vertically. \r\n\r\n# Do This\r\n\r\nFor both `div` containers:\r\n1. Establish flex layout.\r\n2. Define which direction the images should be placed.\r\n3. Define if items should wrap or not.\r\n4. Define how the content should be spaced horizontally across the container.\r\n5. Define how the items should be spaced vertially in the container.\r\n\r\n_Note: Your result should look like the image to the right when you view the Preview in fullscreen_ \r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/5c6552ea1f47f44542d745efe64635b3-image-1708194283187.gif\" style=\"width:500px\">\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Let's practice the all 3 steps we learned in the Skill Building levels!",
+    "thumbnail_url": "https://images.code.org/68566a3c9f6d69cd3dfb4a7b8c61a95d-bees.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Page title -->\n    <h1>Facts About Honey Bees!</h1>\n    \n    <!-- Intro w/bee facts -->\n    <p>Honey bees are important pollinators for flowers, fruits, and vegetables. They transfer pollen between male and female parts, allowing plants to grow seeds and fruit. This means that bees help other plants grow!</p>\n    \n    <!-- container for first set of images -->\n    <div class=\"bee-pics\">\n      <img src=\"bee_1.jpg\" alt=\"bee on flower\">\n      <img src=\"bee_2.jpg\" alt=\"bee on flower\">\n      <img src=\"bee_3.jpg\" alt=\"bee on plant\">\n    </div>\n    \n    <!-- More bee facts -->\n    <p>Honey bees live in hives (or colonies). The members of the hive are divided into three types:</p>\n\n    <p>Lucky for us, honey bees produce 2-3 times more honey than they need, so we get to enjoy the tasty treat too!</p>\n\n    <p>Did you know that honey bees fly at a speed of around 25 kilometers per hour and beat their wings 200 times per second!</p>\n    \n    <!-- container for second set of images -->\n    <div class=\"bee-pics2\">\n      <img src=\"bee_4.jpg\" alt=\"bee on plant\">\n      <img src=\"bee_5.jpg\" alt=\"bee on plant\">\n      <img src=\"bee_6.jpg\" alt=\"bee on plant\">\n    </div>\n    \n    <!-- Final bee facts -->\n    <p>Honey bees are excellent boogiers! To share information about the best food sources, they perform their \"waggle dance\". When the worker returns to the hive, it moves in a figure-eight and waggles its boddy to indicate the direction of the food source!</p>\n    \n    <!-- container for image citations -->\n    <div class=\"footer\">\n      <p class=\"citation\">All images gathered from free-images.com and are CC0.</p>\n    </div>\n    \n\n    \n\n    \n\n    \n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* For both div containers:\n1) Establish flex layout.\n2) Define which direction the images should be placed.\n3) Define if items should wrap or not.\n4) Define how the content should be spaced horizontally across the container.\n5) Define how the items should be spaced vertially in the container.\n*/\n\nbody {\n  background: #f5fdf0;\n}\n\nh1 {\n  font-weight: bold;\n  font-family: sans-serif;\n  text-align: center;\n}\n\np {\n  color: black;\n  font-family: sans-serif;\n  font-size: 20px;\n  text-align: center;\n}\n\n/* ADD FLEX PROPERTIES */\n.bee-pics {\n\n  \n}\n\n/* ADD FLEX PROPERTIES */\n.bee-pics2 {\n\n  \n}\n\nimg {\n  border-style: solid;\n  border-color: black;\n  border-radius: 5px;\n}\n\n\n.footer {\n  height: 500px; \n  display: flex;\n  align-items: flex-end;\n}\n\n.citation {\n  font-size: 12px;\n  font-style: italic;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "bee_5.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/7b5371a8-711a-483f-b962-99cd3b5bfe4c.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "bee_4.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/2e3eb9c1-e3cb-4dbc-b91b-644419238f8f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "bee_6.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/35cec4a2-caa3-4e2f-a1b5-7109f3e5e377.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "bee_2.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/c8f2827a-ac2d-4edd-97c9-b4a1f24927c1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "bee_3.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/acc232fd-58ec-4c1c-80ba-ab3373ce02c7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "bee_1.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L6c-2025/uuid/6e0e9ce5-cf91-425c-adda-50039a5b602c.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMoytMoxZ+abcr3nDnc7\ne0AJBhGyjGyWPaYlxBUZKL/g3J1OUb/6P3Wlq82Q/F2diuBYbS5tNNLia5j/\njKGWp4hhse2ngFBP1dW9zA2YqyHuzQ1perSL6dAIZXB6Q0a5/xz48BkjGpx3\nqE6tlIU5/8TFcZpGGpL9VT7WSV+9rmdUNzyMfZfptouNpM2wqCQZ3NnTeDXf\nHCsWgyKM3c4VCn5Psfz7jzwTGmdtg1SUqvhvDM8c39Xl1bhWZ29JH81jvZtM\nrknVOb73dobz5L1zG1GOQIJ6W3J+dSeCJMjYJy3JsC2zbi16TaXzuewf1EyV\nc+wh500kqMF+glNFoGiDS7VESmxHedDHMzK8bOjrHS/MGds7Z8SoS6v4cOyz\nigCp0naFXUpgWYm+0R++R7vJ+1KjLG9739Btz7F90QwORZICLgisKin15SgT\nuTo1ev9GETb/0OxVIq+hJJ3yZgltZP8GRvK44O3IfyhhCepW89WZ3SEVKbEh\n7wo8PDTr5Ahufo0XRVcnp8ga4ArJx4VcijpQoAVMFeOnPP/0pMeWni6S0gLZ\nJaC3BYLmu0jXFyWVOI+CdQQDBKPoojAcswWKG6SKbbIL3IsdXZj7TCpZhRAV\nESMtUsi+sHHtmgB+3yyLw33RgIBS6eiY9qaxWVJRMqX/NOG3AvjRQKfsVRFi\n3wBSnCZO/qof75Hd5t6/OxjoMuzjGN5SfZXgi1/S7MEWW482vZBWrNJqssCx\n0uOmsHgZB7A+yBxsUMpZEN2KT7KEpNMLSbu+GiLuDU8VXik56yQ/TRmyGlWf\npr5N5CFC9tFfIQR0dYSIRYuBwyPEHSYnK93U9orrVecVDIppQe/96/ADA5Ia\nxIc7JGrCFnL3AItKUzY1xi49pqeGJjbXOxE/rGanCTFB53RpaMyQ3KU3B67n\nkY4jgM3bexdPH1gSVfPh5FVbplByLsxAnrUuhcM3JsR5dWhwOTzb+xWNgeEB\n63PykoJ0BaYI33eC9S6Abf/CzmlZF9HrqvebcRYKIrO5UeOZtFzS4P1hS1nu\nyGRGQK9QClE3RCN83tnzzLWRuSFUWmW0pfXfs+H+vZiWg9qTHE0vVb8X69y6\nnZB/jnNg84vSOC3xWuy7j8ZbH0hzUN37GSrD/cIkthWZ96lv01NOyScpNrv0\nOdkzD/uFLDDXuv5P44vWSNJVq1ue1BRXADu2lqUdFUUS4Iyp6PFXCeNi2EOA\nXCCPXEuyDGtw2ww6Yms4t7zUiaIamTptrefsBgZ/GMAIEY3jNOpKjsB7HPSV\nMjkBgQG42vX098Q86IcHfnL6xZupHUslAd/JHGdukS7203xjWyH5gQ7lbDSD\nUHnxsrQYPHJ7A8NTTE47rtgEvG6FsDdaeDxgquzD9eumyk9Qna49m8W3QwSB\nVQoK/ON1PMnvS5G4gDi62ArOkckxZAaU9bgXlGq1OWCZ2e5eAbT1IWiD9x15\nhk+3g/uFKRbyRMusfgtf7uhsuNbtSDqj3/iiFzgcm6KBmGUW8J6N3/KRybKV\nUM1l+HCXI2FcELCHEGPmkkIMMqJTtcSt4A05wzicJHd5zeBTDg810oMbVgcT\nTSy0M9pbZM5UpvQiASQpykG52qNhCX0GcXHy9quoO3mltdha8zXJ/oTn4i+d\njRXAdv6xcp+1TKj6/ATgzcVgTHAAu0Xj3J79MctGCiEC7eTCk8JayqE4dLBL\n3CJxhbPKrqC7jBgP5h1xKLDG4+Lm7J5JlPa242LFYHfglYLra/Sf2WHmWcoK\nL1aQEYIdt4B/VKeCyl66TkDN5gBqNxXFFgTZZT0xhfLIN19hUmxeTQJSSCpQ\nzBbhRf4PYoyb79Vkk4Q1gydmnxQN75NIQsmEumJCb6qo1CZTzKPI821p7x8d\nzbETAyNpkbqmM3I3dQpSVZcXI+tVbOj6ESlAGfMnKNvejlq8PmiWhNuXvHz2\n3ThRqJTjox4aZZH69IE71sWQcLUapZWo8kpy5wgCMS1Cq/xLxFnfOgiuMNxq\nnSA4Zwf+7Mz0YJ4M69bf8MzLtesnsBHKKUZiO2yuDRfQJjL5sZW8CNQNQKm1\nQRNVi9jYphGwYjEQfWQJ3AAHRXLBvnmq/YLgcLAGiJv1pBJ9wUgLzRZpve4a\nwbg87xrC0gjsFezVEPxL/Lnjv6t5Bn8k9V7KVBQpOOV6VhzAslv7T2w1huBe\nDss/NxmULQI6pb+/1hZymWKjGjy6CFQZYVbcqbdZAWmnMmcstN3pX1QxLUwm\nlYu/BL1yOd+ojRzcAF3+TWvrTHoBb7AYq65sZ8nGJpmi8TYUAajjnlRmArE6\nS/pk+d1EES/WE6+eb7YLVQ2vPTcZr3hW5/WAs++zaF/LzmTSYB+tB6eyIYIx\n/RgOzDOGYuoctoJ8PDSWz8XMYkApxXIJYZBXZq9rwi5Gav3qhfWWOusbyVRr\nofGVV8/NSv8fsHiFLFAOdXtzDcFkWcrgivMvMiMFTZiJyEPOy+xbSR0qtKeR\n4ccbVCUePJABUyC7iwUC2vfyTy5dab/HY0HdAL1aH+cHiTmr38Z17agJHZox\nopj61jEtOuOQWcnuKca+vYhlKhoEPnQnBgLAzVUB/UMIUd4HNHHHXCzkUKc4\nH/Agd9kfA8gSQ7GAWqbqsym+mXehalbYGgDQI8mfuRYqywJJvcE9M6zYh38N\n/Ug2bk1bwCe1UkW6uxaQoS+60YokRbnHOzOPb2EJbCe5uZQ4QpoKlcFrR/nA\n7uFHupyItUb+YcA5WUks6WDfkbMKsQ8EtMybZ74ukgepe9iSuQ/CjLYc0bo4\n/EejfZ5Ebci+Wpd7YxiSVlKBK7Yf3yFVOEE6iskB8jYzrWdfFkxOAZwhDSkF\nqYUdy4zCVZQoEu7zqQZ0RoeQvtvD/T77wJHtPz5u1eBij6Uh8FmcND/JhBFq\ndBf0QgBY1mDUT/AP97C+NYz4/2yqZqtqaI+V42hGOW5OtL5x4YKRl/vMth4g\nfRBYk4btP+All//3CE38tgkLMOcFSVvxkrkMCxOl5cglkNQcmdCmKKz4hrdb\nf+kOHcDh+v4pyL4+8XnBeDHYqbfy5rzEsby+E0VQajhIyeNWyprwUa9/+OKc\nnC0fyjAFw5ndXY6wgMoBjYNc+FrRiuzPBIRyabj3vCodHzykvTEmrX/pqGDO\nw7Oz7Ngswuhd4ikgM5TGrGb98hR6FjLjLZWONkFCwxyH0WvLB+S8e/wB6/xm\n141vlU6N+uIEeI0myJrD6/Sb1LELwVR+yeCZrZ2qBl6iQbnYwVgDxfIZwRSf\nBWaxvBQ7N72P0E1m2ij8Rb5b1gmO4oIWspdNF/TAhfowp0Hg4MYiz9BO/6K9\nqSXPg1xQTkgCEkVcWizbYgwLKBe2pPJdHpqozoOSvyhk0RlQ4fZivqIzy4Sf\na8dIl3TSy8Esj8BdugrtyoEcBAMUz44fwpNht87+icRzzAcypWdWi4l39ejQ\nLy/AsM9hXJLBvX3NMVKe35O+Pt3DzS1FolarYlysfOMxY4Oyly7QLowZOTQT\nsNacjfFY4Vr1TC2t2OQjo0O0cjZ/E776jeXbF3mrzpv9fLGJQMYDA5yuMhsp\n34jVUrUszr/8A37WUnrnFLGuS1+m/HVUpcVZwgDQa7f+v0de7AZ+kCalBqmp\nRNuqqakmeKaQITyP+iXf5vUD3e7lOgnloZMZQ0+D7D4jQf/xLmQqHpMlqDpJ\nqgRWidg7w/30vQ3jlaTGXJ6qvr37OiWHOANoJc4nUJbDKvedpAiq8E7QjXtV\npxcdVjrS0dY5I7a5y00p04018HJeT17XTuMkWyrgS8dJVdIc+ELz1D5ksB4/\nHGe/HZk6xjF4z2uk/V22DYEuIZtO2+cFZ8ajcRQ6jzKAXEktF+kC6pzJE9Ix\noorrAH9WGVXu7Blrsm8CBYBw/m+Mby8axKFWFoGwj7jDMWNRrHnikBdFvkVy\nm9Rzdxivik7AxG5pLLwa7bc0bwddJu/RLqNfV61u8cSrEmIUGqj58X5EDSGQ\nOLIqQ6ruUmAMLzrbPcnRXpbTqqx2FPZry9cQ2nyEhDVG0wnvYJotl6XuwiZ6\nYiXkJnlxPTP1LX6Ug4MFDKTWfLcu4S06QrkHNLLl8UTk4HSvdlkdp8U+1vGS\nJEC3nNp7At11yLW8x6XCDPqDmdX5/lVf80tP8x3SrDMvXQDepukNv5lpZ+HP\n+oAh9XnnIJuCig0yIBA99PApFBu2ylkA+V/wZbX/Gp4DobQpODoLnhpzxrtT\n8tLD8dVedqkGOCmJrUtyJts4tIBubVMLnoq/obxdLLIx9J8h2Ay9uldtCRi4\n5v6atq4Cie4J2YqUkj2l9Gh2HZFC0gc3ezLAaAAI48I2zHLxM3YYtcIkHv0H\nAfRk3b8px6/RfzvpJQIlLKGcB6YceI5h42XRaYqHcXoYxK6FqJILxYbuINvE\nRfn1A23xxeBNWDmG8J6SFxe2DViAeuOPA4svJ6UhE9zX246Sh80UQ4gLK0gB\nKwDBcn1iKhq4DV+GutEv4no/vrCs7tod3iFv6MIvv0MgdeNtASMOtCzGso9Y\nMAvJziZuBltCleQC0d07BC7Poz0ItYWiO/V3N++iJIGM1rqAJTpBziXn29RH\nI0GIRoGUu4twAEjWg7Mss4cNb2mbYBxVbrmfx4epJfm4K+EK7I1nr0IR2arz\nrF+LQ1r2YROeQEddqVVWgAVf9x4klbCPPHpQCYdMwOuDpwjg9+ImldegQMXJ\n4gWU4nvCFT7TjubQbXy3eB4iIbUbcD02p8ugSx1F6+eYjUQ9JJKjhfHtZyam\n2zkaBj1DICuC5lFDcmrns1Gkko+TwufKApMe/uvUTuVljAhc1pwEft3da61z\niUVCqHpKTWJDyeOO3G1LNTaiZS9ZC21cojZ48x3k7umPYalf/hYAvEVujD2U\nYG3enVpPJCSQpiFuna5DPvRSwuINuTNlRWPxlDHiXY1M5shWJNDofym/RbNi\nr74bkNnsLceZfDq0uwvs2twtq1q5WEMMfXTWBfb915yWCmeMG5MTeaCEJanu\n6g4C/M5o09Koos7FLO5q2L5YVVQ04FPXMmSusJjxd0BBYkOij2c2Uw/hx3hQ\nAR1SCi+x+cvF5YtmLanLK7MU+kGE9m+y9o+6LRhoYnfKByi1WKq9mBN5Ccaz\nrDQjDUN539ZDatZD/PqwQzVKQfinO1nAW0XcqsFiVjJuTKhBs3Gpf1XsSgrP\njs8AP1tTABJfSE/M9cwYoN8MNbAXydAgXazO+voI4yjot3wO4Q==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:33.666+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12-L6c-2025\\\"\"],\"cloned_from\":\"CSD U2L12-L6c-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -11,6 +11,9 @@ $(document).ready(() => {
       versionYearOptions={getScriptData('versionYearOptions')}
       familiesCourseTypes={getScriptData('familiesCourseTypes')}
     />,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
