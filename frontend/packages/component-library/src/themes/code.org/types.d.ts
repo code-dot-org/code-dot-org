@@ -27,6 +27,13 @@ declare module '@mui/material/Button' {
     white: true;
     tertiary: true;
   }
+
+  // MUI Button renders as <a> when href is provided, but the base
+  // ButtonProps don't include anchor attributes. Add them here.
+  interface ButtonOwnProps {
+    target?: string;
+    rel?: string;
+  }
 }
 
 declare module '@mui/material/IconButton' {
