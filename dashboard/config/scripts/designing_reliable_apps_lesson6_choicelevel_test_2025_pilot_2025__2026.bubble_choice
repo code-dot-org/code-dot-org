@@ -1,0 +1,7 @@
+name 'designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-_2026'
+display_name 'Design Your Music App'
+description 'Use Sketch Lab or AI Chat to help you plan out your music app.'
+
+sublevels
+level 'designing-reliable-apps-lesson6-sketchlab-test-2025-pilot_2025-pi_2026'
+level 'designing-reliable-apps-lesson6-aichat-test-2025-pilot_2025-pilot_2026'

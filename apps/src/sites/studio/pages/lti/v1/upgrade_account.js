@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createReactRoot(
     <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

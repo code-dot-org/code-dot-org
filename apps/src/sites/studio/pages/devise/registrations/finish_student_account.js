@@ -18,6 +18,9 @@ $(document).ready(() => {
       countryCode={countryCode}
       usStateOptions={usStateOptions}
     />,
-    document.getElementById('finish-student-account-root')
+    document.getElementById('finish-student-account-root'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

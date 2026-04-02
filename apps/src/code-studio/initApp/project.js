@@ -23,6 +23,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
+  refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
@@ -2047,6 +2048,9 @@ function fetchPrivacyProfanityViolations(resolve) {
     // data.has_violation is 0 or true, coerce to a boolean.
     currentHasPrivacyProfanityViolation =
       (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
+    if (currentHasPrivacyProfanityViolation) {
+      getStore().dispatch(refreshHasPrivacyProfanityViolation());
+    }
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
@@ -2191,7 +2195,7 @@ function parsePath() {
 
   const geRegion = getGlobalEditionRegion();
   if (geRegion) {
-    pathname = pathname.replace(`/${geRegion}/`, '/');
+    pathname = pathname.replace(`/global/${geRegion}/`, '/');
   }
 
   // We have a hash based route. Replace the hash with a slash, and append to

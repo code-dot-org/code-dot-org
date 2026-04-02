@@ -274,12 +274,12 @@ end
 
 And 'I visit Farsi version of Professional Learning Lending page' do
   steps <<~GHERKIN
-    When I am on "http://studio.code.org/fa/my-professional-learning"
+    When I am on "http://studio.code.org/global/fa/my-professional-learning"
     Then I wait until element "h1:contains(یادگیری پیشرفته)" is visible
     And element "a[href*='/educate/professional-learning']" is not visible
     And element "button.ui-test-join-section" is not visible
     And element "a[href*='/professional-learning/workshops']" is not visible
-    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/fa/teacher"
+    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/global/fa/teacher"
   GHERKIN
 end
 

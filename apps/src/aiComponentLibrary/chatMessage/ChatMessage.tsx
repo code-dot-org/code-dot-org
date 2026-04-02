@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
@@ -7,10 +7,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
-import AiTutorVersionActions from '../aiTutorVersionActions/AiTutorVersionActions';
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
 
 import {Role} from './types';
@@ -25,8 +23,6 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
-  isAiTutorVersion?: boolean;
-  isLastMessage?: boolean;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -55,34 +51,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
-  isAiTutorVersion = false,
-  isLastMessage = false,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
-
-  const aiTutorVersionFiles = useAppSelector(
-    state => state.weblab2?.aiTutorVersionFiles || []
-  );
-
-  const showAiTutorVersionActions =
-    isAiTutorVersion && isLastMessage && aiTutorVersionFiles.length > 0;
-
-  // Show browser warning when user attempts to reload the page before accepting or rejecting AI Tutor's proposed updates.
-  useEffect(() => {
-    if (showAiTutorVersionActions) {
-      const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-        event.preventDefault();
-        // Chrome requires returnValue to be set.
-        event.returnValue = '';
-      };
-
-      window.addEventListener('beforeunload', handleBeforeUnload);
-
-      return () => {
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      };
-    }
-  }, [showAiTutorVersionActions]);
 
   const isAssistant = role === Role.ASSISTANT;
 
@@ -134,9 +104,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                     rehypeMap={rehypeMap}
                     openExternalLinksInNewTab
                   />
-                  {showAiTutorVersionActions && (
-                    <AiTutorVersionActions files={aiTutorVersionFiles} />
-                  )}
                   {postText}
                 </div>
               ) : (

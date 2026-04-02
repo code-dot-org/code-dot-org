@@ -1,0 +1,27 @@
+name 'thinking-critically-about-ai-preassessment_2026-pilot_2026'
+title 'AID Thinking Critically About AI Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'thinking-critically-about-ai-preassessment-intro_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q1_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q2_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q3_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q4_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q5_2026-pilot_2026'
+
+page
+level 'thinking-critically-about-ai-preassessment-q6_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q7_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q8_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q9_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q10_2026-pilot_2026'
+
+page
+level 'thinking-critically-about-ai-preassessment-q11_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q12_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q13_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q14_2026-pilot_2026'
+level 'thinking-critically-about-ai-preassessment-q15_2026-pilot_2026'

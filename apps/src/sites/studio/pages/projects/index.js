@@ -53,7 +53,10 @@ $(document).ready(() => {
         </div>
       </div>
     </Provider>,
-    document.querySelector('#projects-page')
+    document.querySelector('#projects-page'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   displayDifferentiationChat();
 });

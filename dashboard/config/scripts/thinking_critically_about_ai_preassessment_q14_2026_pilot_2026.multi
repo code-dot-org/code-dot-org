@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q14_2026-pilot_2026'
+
+question 'Which of the following is true about how human decisions shape AI outputs?'
+
+right 'The choices humans make about what data to collect, how to label it, and how to design AI systems all influence how the AI behaves.'
+wrong 'Once an AI is created, human decisions no longer have any effect on how it behaves.'
+wrong 'AI systems make completely neutral, unbiased decisions because they are machines.'
+wrong 'Only the engineers who first built an AI can influence its outputs.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

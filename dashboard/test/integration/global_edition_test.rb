@@ -22,7 +22,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   describe 'routing' do
     let(:international_page_path) {'/users/sign_in'}
     let(:ge_region_locale) {'fa-IR'}
-    let(:regional_page_path) {File.join('/', ge_region, international_page_path)}
+    let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
     let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
 
     describe 'international page' do
@@ -307,7 +307,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
     }.each do |provider, expected_oauth_url|
       it "#{provider} authentication process is not affected by regional redirection" do
-        post "/fa/users/auth/#{provider}"
+        post "/global/fa/users/auth/#{provider}"
         must_redirect_to %r(^#{expected_oauth_url})
 
         oauth_uri = URI.parse(response.location)
@@ -319,26 +319,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         get oauth_callback_url
         must_redirect_to '/users/sign_in'
       end
-    end
-  end
-
-  describe 'legacy "/global/fa/*" path' do
-    subject(:get_legacy_farsi_page) {get legacy_farsi_page_path, params: params}
-
-    let(:legacy_farsi_page_path) {'/global/fa/users/sign_in'}
-    let(:valid_farsi_page_path) {'/fa/users/sign_in'}
-    let(:params) {{foo: 'bar'}}
-
-    it 'fallbacks to valid regional path' do
-      get_legacy_farsi_page
-
-      must_respond_with 302
-      must_redirect_to "#{valid_farsi_page_path}?#{params.to_query}"
-
-      follow_redirect!
-
-      must_respond_with 200
-      _(request.fullpath).must_equal "#{valid_farsi_page_path}?#{params.to_query}"
     end
   end
 end
