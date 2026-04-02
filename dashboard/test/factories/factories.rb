@@ -1499,6 +1499,13 @@ FactoryBot.define do
     lesson
   end
 
+  factory :user_lesson_reflection do
+    association(:student, factory: :student)
+    lesson
+    success {"It went well"}
+    struggle {"This was hard"}
+  end
+
   factory :lesson_feedback do
     association(:teacher, factory: :teacher)
     association(:student, factory: :student)
