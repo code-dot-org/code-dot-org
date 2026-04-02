@@ -1,4 +1,3 @@
-require 'cdo/azure_content_moderator'
 require 'cdo/azure_ai_content_safety'
 require 'honeybadger/ruby'
 require 'mini_magick'
@@ -39,9 +38,9 @@ module ImageModeration
       return StringIO.new(raw_data), content_type
     end
 
-    scale = [MIN_MODERATION_DIMENSION.to_f / w, MIN_MODERATION_DIMENSION.to_f / h].max
-    new_w = (w * scale).ceil
-    new_h = (h * scale).ceil
+    scale = [MIN_MODERATION_DIMENSION.to_f / width, MIN_MODERATION_DIMENSION.to_f / height].max
+    new_w = (width * scale).ceil
+    new_h = (height * scale).ceil
     image.resize "#{new_w}x#{new_h}!"
     image.format 'png'
     [StringIO.new(image.to_blob), 'image/png']
