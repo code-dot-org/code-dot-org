@@ -39,7 +39,7 @@ jobs:
 
       - uses: opentofu/setup-opentofu@v2
         with:
-          tofu_version: 1.8.0
+          tofu_version: 1.10.0
           tofu_wrapper: true # Enables steps.*.outputs.stdout capture
 
       - name: OpenTofu fmt
