@@ -152,10 +152,31 @@ class MetricsReporter {
   }
 
   private sendToObservabilityLogger(level: LogLevel, message: string | object) {
-    const msgStr =
-      typeof message === 'string' ? message : JSON.stringify(message);
-    const context = this.getDeviceInfo();
-    observabilityLoggerByLevel[level](msgStr, context);
+    // TODO: Refactor all log entrypoints (logInfo, logWarning, logError) to
+    // accept explicit (msg: string, context: object) signatures once we fully
+    // migrate to publishing directly to the log provider. Until then, we feel
+    // for known string fields to use as the Sentry log message.
+    if (typeof message === 'string') {
+      observabilityLoggerByLevel[level](message, this.getDeviceInfo());
+    } else {
+      const {
+        message: msgField,
+        errorMessage,
+        ...rest
+      } = message as Record<string, unknown>;
+      let msgStr: string;
+      if (typeof msgField === 'string') {
+        msgStr = msgField;
+      } else if (typeof errorMessage === 'string') {
+        msgStr = errorMessage;
+      } else {
+        msgStr = level;
+      }
+      observabilityLoggerByLevel[level](msgStr, {
+        ...this.getDeviceInfo(),
+        ...rest,
+      });
+    }
   }
 
   private async sendMetrics(metrics: MetricDatum[]) {
