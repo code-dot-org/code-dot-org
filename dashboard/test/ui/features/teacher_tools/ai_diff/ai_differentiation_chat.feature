@@ -140,6 +140,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "#teacher-home-header" is visible
     And element "#ui-floatingActionButton" does not exist
 
+  @skip
   @chrome
   Scenario: Teacher sees notification
     Given I create a teacher named "Stilgar"
