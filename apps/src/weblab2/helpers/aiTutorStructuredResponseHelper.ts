@@ -61,6 +61,16 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         description:
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
+      pseudocode: {
+        type: 'string',
+        description:
+          "Pseudocode for the code or plain-text answer to the student's question. Use markdown.",
+      },
+      example: {
+        type: 'string',
+        description:
+          "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
+      },
     },
     // We return tutorMode and goal but do not show them to the student.
     // These are used to help guide the AI's response.
@@ -71,6 +81,8 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       'assumptions',
       'code',
       'explanation',
+      'pseudocode',
+      'example',
       'nextSteps',
       'questions',
     ],
@@ -141,6 +153,12 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
+  if (response.tutorMode === 'pseudocode') {
+    formattedResponse += formatSection('Pseudocode', response.pseudocode);
+  }
+  if (response.tutorMode === 'example') {
+    formattedResponse += formatSection('Example', response.example);
+  }
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
 
