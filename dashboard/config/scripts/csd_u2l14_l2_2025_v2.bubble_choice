@@ -1,0 +1,9 @@
+name 'CSD U2L14-L2_2025-v2'
+display_name 'Chapter 1 Project - Option 2 Choices'
+description 'Demonstrate your skills by modifying the layout of your user\'s web page.'
+
+sublevels
+level 'CSD U2L14-L2a_2025-v2'
+level 'CSD U2L14-L2b_2025-v2'
+level 'CSD U2L14-L2c_2025-v2'
+level 'CSD U2L14-L2d_2025-v2'

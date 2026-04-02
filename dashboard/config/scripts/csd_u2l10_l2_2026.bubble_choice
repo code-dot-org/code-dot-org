@@ -1,0 +1,9 @@
+name 'CSD U2L10-L2_2026'
+display_name 'Mini-Project Choices'
+description 'Choose a user to start styling their page by adding a stylesheet to the HTML code!'
+
+sublevels
+level 'CSD U2L10-L2a_2026'
+level 'CSD U2L10-L2b_2026'
+level 'CSD U2L10-L2c_2026'
+level 'CSD U2L10-L2d_2026'

@@ -1,0 +1,8 @@
+name 'designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pil_2026'
+display_name 'When Fetch Fails'
+description 'Design a fallback situation for when the API fails.'
+
+sublevels
+level 'designing-reliable-apps-lesson8-weblab-choiceA-2025-pilot_2025-pi_2026'
+level 'designing-reliable-apps-lesson8-weblab-choiceB-2025-pilot_2025-pi_2026'
+level 'designing-reliable-apps-lesson8-weblab-choiceC-2025-pilot_2025-pi_2026'

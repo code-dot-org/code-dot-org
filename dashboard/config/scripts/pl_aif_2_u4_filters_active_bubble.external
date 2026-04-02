@@ -13,6 +13,9 @@ markdown <<MARKDOWN
 
 ## Starting with a full data set
 
+>#### Look at the data set `opportunities` below.
+>#### Notice the properties: `role`, `category`, `minAge`, and `remote`.
+
 <img src="https://images.code.org/07859f953499a6ef709e164b06c26367-image-1769452525453.png" alt="javascript of a database with volunteer opportunities in environment, education, and health" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 #### You have a full dataset, but the user doesn’t always want all roles. They might want:

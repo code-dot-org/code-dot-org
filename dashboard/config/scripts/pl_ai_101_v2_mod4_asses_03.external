@@ -1,0 +1,12 @@
+name 'pl-ai-101-V2-mod4-asses-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# When (and How) to Allow AI
+
+#### Not every assignment should use AI in the same way. Being intentional helps students learn when AI is helpful—and when it isn’t.
+
+
+
+MARKDOWN

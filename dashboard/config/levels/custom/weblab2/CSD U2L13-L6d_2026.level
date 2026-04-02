@@ -1,0 +1,130 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:41.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug Me!",
+    "long_instructions": "<img src=\"https://images.code.org/f87f8c9a96258a34f4863a45d65bfaa5-image-1707328140478.png\" style=\"float: right; width: 300px;\">\r\n\r\n# Debug Me!\r\n\r\nOh no! Mya was making a page on the Earth's Ecosystems but she can't quite get the images in the right place! Please help her debug the code so that her page matches the one in the image to the right!\r\n\r\n\r\n# Do This\r\n\r\n1. Can you find and fix the bugs for each of the image order and alignment layouts in the CSS file to make the page match the image to the right?\r\n   - _Make sure you view the Preview Window in fullscreen to see if it matches!_\r\n\r\n<br>\r\n\r\n<img src=\"https://images.code.org/2e2aa789388abcb84fd701adb5023d9f-image-1707769633508.png\" style=\"width:150px; float: left;\">\r\n\r\n_**Tip:** You might find it helpful to change the `width` of the images to a smaller size while you are debugging so that you can see more images in your Preview Window and see the immediate debugging effects without having to view fullscreen. Just remember to change the `width` back when you find and fix all the bugs!_\r\n\r\n\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Help Mya fix her code!",
+    "thumbnail_url": "https://images.code.org/f10d6671691bdd5d89dbb467355661be-ecosystems.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title and subtitle -->\n    <h1>Voyage Through Earth's Majestic Ecosystems</h1>\n    \n    <!-- Intro Paragraph -->\n    <p>Embark on a visual journey through Earth's majestic ecosystems, each image a gateway to the unique landscapes and life forms that thrive in our planet's diverse habitats. From the icy expanses of the Polar Regions to the vibrant life beneath the ocean's surface, these images showcase the beauty and complexity of the natural world. Discover the serene deserts, lush rainforests, and expansive grasslands, and dive into the colorful coral reefs, highlighting the importance of conservation and the interconnectedness of all life on Earth.</p>\n    \n    <!-- image gallery -->\n    <div class=\"image-gallery\">\n      <img class=\"arctic\" src=\"arctic.png\" alt=\"arctic\">\n      <img class=\"reef\" src=\"coralReef.png\" alt=\"coral reef\">\n      <img class=\"desert\" src=\"desert.png\" alt=\"desert\">\n      <img class=\"rainforest\" src=\"rainforest.png\" alt=\"rainforest\">\n      <img class=\"savannah\" src=\"savannahs.png\" alt=\"savanahs\">    \n    </div>\n      \n    \n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style for page */\nbody {\n  background-color: aliceblue;\n  font-family: Arial;\n  text-align: center;\n}\n\n/* image style */\nimg {\n  border-style: solid;\n  border-width: thick;\n  width: 800px;\n  border-radius: 20px;\n  margin: 5px;\n}\n\n/* image gallery flex layout */\n.image-gallery {\n  display: flex;\n  margin: 10px;\n  flex-direction: column;\n}\n\n/* image layouts */\n.arctic {\n  order: 2;\n  align-self: flex-start;\n}\n\n.rainforest {\n  order: 4;\n  align-self: center;\n}\n\n.reef {\n  order: 1;\n  align-self: flex-end;\n}\n\n.desert {\n  order: 5;\n  align-self: center;\n}\n\n.savannah {\n  order: 3;\n  align-self: flex-start;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "savannahs.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L6d-2025/uuid/49627bc5-f4e8-4f31-90b8-4b2259eb0f7f.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "desert.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L6d-2025/uuid/4cc90e2a-5c32-4b49-871f-d947676d4f78.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "arctic.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L6d-2025/uuid/b6ae3432-d471-4524-b6a5-41b7d2ab894b.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "coralReef.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L6d-2025/uuid/9791fde6-5410-458e-85d9-ac78746bdb46.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "rainforest.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L6d-2025/uuid/fd6308bc-dc96-418b-81af-c93b02dbd2e8.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ncUfOSu4gKT52I8Tv\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:41.093+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L6d-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L6d-2025\"}]"
+}]]></config>
+</Weblab2>

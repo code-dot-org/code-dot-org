@@ -1,0 +1,196 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:46.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "User: Ken",
+    "long_instructions": "# User: Ken\r\n\r\nKen has a soccer club and would like you to style his \"Lightining Strikers FC\" page to look like the sketch on page 6 of your project guide.\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Add class names to elements that will need to be styled differently from others of the same kind.\r\n\r\n**In the CSS file:**\r\n1. Add needed rules for your div containers to establish Flex layout where needed to meet your user's requests.\r\n2. Add needed Flex properties to achieve your user's desired layout.\r\n3. Add your user's requested styles to images and/or paragraphs.\r\n",
+    "bubble_choice_description": "Ken would like you to style his page about his soccer club.",
+    "thumbnail_url": "https://images.code.org/6c51e9f55bf139f068d768759537fa82-football.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n\n    <!-- page header title & images -->\n    <div>\n      <img src=\"logo2.jpg\" alt=\"LSFC Crest\">\n      <img src=\"logo2.jpg\" alt=\"LSFC Crest\">\n      <h1>Lightning Strikers FC</h1>\n    </div>\n\n    <!-- soccer card gallery -->\n    <div class=\"info-gallery\">\n\n      <!-- soccer card - about the club -->\n      <div>\n        <img src=\"team.png\" alt=\"team icon\">\n        <h3>About the Club</h3>\n        <p>We are a youth soccer club focused on developing skills, teamwork, and sportsmanship.</p>\n        <p>As a result of our focus, our soccer slub has grown to over 1000 players, 70 teams!</p>\n      </div>\n\n      <!-- soccer card - Sign up -->\n      <div>\n        <img src=\"sign-up.png\" alt=\"sign up icon\">\n        <h3>Sign Up</h3>\n        <div>\n          <p>Join Lightning Strikers FC today and be part of our exciting soccer family! <br><br>Email us at</p>\n          <p>strikersFC@lightning.com</p>\n        </div>\n      </div>\n\n      <!-- soccer card - age groups -->\n      <div>\n        <img src=\"age-group.png\" alt=\"age group icon\">\n        <h3>Age Groups</h3>\n        <ul>\n          <li>Under 8</li>\n          <li>Under 10</li>\n          <li>Under 12</li>\n          <li>Under 14</li>\n          <li>Under 16</li>\n          <li>Under 18</li>\n        </ul>\n      </div>\n\n      <!-- soccer card - reasons to join -->\n      <div>\n        <img src=\"tshirt.png\" alt=\"tshirt icon\">\n        <h3>Reasons to Join</h3>\n        <ol>\n          <li>Professional coaching and training.</li>\n          <li>Friendly and competitive environment.</li>\n          <li>Opportunities for personal growth and development.</li>\n          <li>Access to state-of-the-art facilities.</li>\n        </ol>\n      </div>\n    </div>\n\n    <!-- large logo & soccer ball images -->\n    <div>\n      <img src=\"logo.jpg\" alt=\"large logo\">\n      <img src=\"soccer-ball.png\" alt=\"soccer ball\">\n      <img src=\"soccer-ball.png\" alt=\"soccer ball\">\n    </div>\n\n    <!-- soccer player highlights -->\n    <h2>⚽ Soccer Player Highlights ⚽</h2>\n    <!-- container for soccer player gallery -->\n    <div>\n\n      <!-- player card - Mia -->\n      <div>\n        <img src=\"Mia.jpg\" alt=\"Mia Thompson\">\n        <h3>Mia Thompson</h3>\n        <p>Mia Thompson, a standout midfielder for the Lightning Strikers U18 Girls, has caught the attention of the National Soccer Academy. Selected for her exceptional skills and game sense, Mia is set to join the prestigious NSA's elite training camp in Denver. Her pivotal role in leading the Strikers to the regional finals last season has made her a promising talent for the future.</p>\n      </div>\n\n      <!-- player card -- Jake -->\n      <div class=\"player-card\">\n        <img src=\"Jake.jpg\" alt=\"Jake Martinez\">\n        <h3>Jake Martinez</h3>\n        <p>Jake Martinez, a dynamic forward for the Lighting Strikers U16 Boys, has been handpicked for the summer's Elite Youth Soccer Program (EYSP) based on his remarkable performance and scoring ability. As he prepares to elevate his game in Philadelphia, Jake's contribution to the Strikers' success, including securing the state championship, underscores his potential as a rising star in soccer.</p>\n      </div>\n\n      <!-- player card - Sophia -->\n      <div>\n        <img src=\"Sophia.jpg\" alt=\"Sophia Rodriguez\">\n        <h3>Sophia Rodriguez</h3>\n        <p>Sophia Rodriguez, a skilled defender for the Lightning Strikers U16 Girls, has been selected to join the Premier Girls Soccer Academy in Orlando this summer. Known for her tenacity and exceptional defensive tactics, Sophia's leadership on the field played a crucial role in her team's journey to the national playoffs. Her move to the academy marks a significant step forward in her promising soccer career.</p>\n      </div>\n\n      <!-- player card - Ethan -->\n      <div>\n        <img src=\"Ethan.jpg\" alt=\"Ethan Kim\">\n        <h3>Ethan Kim</h3>\n        <p>Ethan Kim, the star goalkeeper for the Lighting Strikers U18 Boys, has earned a spot at the High-Performance Soccer Institute in Dallas this summer. Ethan's remarkable saves and consistent performance were key to his team's victory in the regional championship. His transition to the institute is seen as a pivotal move in his pursuit of professional soccer excellence.</p>\n      </div>\n    </div>\n\n\n\n    <!-- footer w/image citation -->\n    <div>\n      <p>&copy; 2024 Lightning Strikers FC. All rights reserved. All photo images courtesy of Free-Images.com. Logos created with ChatGPT.</p>\n    </div>\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* ADD NEEDED RULE SETS AND PROPERTIES BELOW */\n\n\n/* header title & image layout */\n\n\n\n\n/* info gallery style */\n\n\n\n/* style for each soccer info card */\n\n\n\n/* style for soccer card images */\n\n\n\n/* style for the paragraph text in the soccer info card */\n\n\n\n/* style for container with paragraph and email content */\n\n\n\n/* style for email address */\n\n\n\n/* style for ul & ol \"containers\" */\n\n\n\n/* large logo section style */\n\n\n\n/* style for images in large logo section */\n\n\n\n\n/* player gallery style */\n\n\n\n/* style for each player info card */\n\n\n\n/* style for player card images */\n\n\n\n/* style for the paragraph text in the player card */\n\n\n\n/* footer citation style */\n\n\n\n\n\n/* DO NOT EDIT CODE BELOW */\n\n/* body layout style */\nbody {\n  font-family: Arial, sans-serif;\n  background-color: aliceblue;\n  color: black;\n}\n\n/* heading * sub-heading styles */\nh1 {\n  color: black;\n  font-size: 40px;\n  text-shadow: #ebebeb 1px 1px;\n}\n\nh2 {\n  font-size: 30px;\n  text-shadow: black 1px 1px;\n  background-color:aliceblue;\n  color: #7499f6;\n  padding: 20px;\n  margin: 0px;\n}\n\nh3 {\n  color: black;\n  text-shadow: #ebebeb 1px 1px;\n  margin-top: 5px;\n  margin-bottom: 0px;\n}\n\nli {\n  margin-top: 0px;\n  margin-bottom: 5px;\n  padding-top: 0px;\n  text-align: left;\n  color: black;\n}\n\n/*basic div margin */\ndiv {\n  margin-bottom: 20px;\n}\n\n/* basic image style */\nimg {\n  width: 125px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Sophia.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/a18227bc-91ff-4dd9-9b8f-47cf204ae6ef.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "tshirt.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/0071bc23-cee7-4a8d-b826-d5f41f1a6934.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "soccer-ball.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/b7ac0565-36a2-44ac-aa6b-4d17616764a2.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "team.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/8f65783f-0fad-4a10-9866-065188073015.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "sign-up.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/2c3ac9f8-34bd-4a81-b027-f9da8f32aa40.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "Mia.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/ef58ec39-e115-44f0-b228-e6be58891402.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "age-group.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/fbfaea4f-75b9-452a-93a1-3f7e2197d9f5.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "Jake.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/72af2f05-030d-4f97-8128-db73a81bdaf0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "Ethan.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/237c7294-c62b-4578-b039-76ff91680409.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "logo.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/2c122d56-c9d9-43cc-9d13-84c5091d7896.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "logo2.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L14-L1b-2025/uuid/fe20feb3-e9ac-4f8e-9b6c-2827acbedf43.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:46.183+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14-L1b-2025\\\"\"],\"cloned_from\":\"CSD U2L14-L1b-2025\"}]"
+}]]></config>
+</Weblab2>

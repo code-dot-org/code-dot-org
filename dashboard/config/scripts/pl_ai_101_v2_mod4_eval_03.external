@@ -3,128 +3,173 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Evaluating AI Use in the Classroom
+# Improving Instruction Using AI
 
-#### Before using AI for teacher support or student learning, you will want to evaluate whether or not it will meet the needs of your students. To do so, you can use a checklist like the one below:
+#### Teaching with aI can help improve instruction, expand access, deepen meaningful thinking, strengthen student voice, and build student independence.
 
-<br>
+#### Review the following scenarios where a teacher improved a lesson plan by using AI.
 
-<table style="width:100%; max-width:900px; border-collapse:separate; border-spacing:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36; background-color:#FFFFFF; border:1px solid #D9DDE3; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(41,47,54,0.06);">
-<thead>
-<tr>
-<th colspan="2" style="background-color:#0093A4; color:#FFFFFF; text-align:left; padding:18px 22px; font-size:24px; font-weight:700; line-height:1.3;">
-Evaluating AI Use Checklist
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="width:56px; padding:18px 0 18px 22px; border-top:1px solid #E8ECF0; vertical-align:top;">
-<div style="width:22px; height:22px; border:2px solid #8C52BA; border-radius:4px;"></div>
-</td>
-<td style="padding:18px 22px 18px 0; border-top:1px solid #E8ECF0; font-size:18px; line-height:1.45;">
-Does this expand access while keeping the challenge?
-</td>
-</tr>
-<tr style="background-color:#F7F8FA;">
-<td style="width:56px; padding:18px 0 18px 22px; border-top:1px solid #E8ECF0; vertical-align:top;">
-<div style="width:22px; height:22px; border:2px solid #8C52BA; border-radius:4px;"></div>
-</td>
-<td style="padding:18px 22px 18px 0; border-top:1px solid #E8ECF0; font-size:18px; line-height:1.45;">
-Are students still doing the meaningful thinking?
-</td>
-</tr>
-<tr>
-<td style="width:56px; padding:18px 0 18px 22px; border-top:1px solid #E8ECF0; vertical-align:top;">
-<div style="width:22px; height:22px; border:2px solid #8C52BA; border-radius:4px;"></div>
-</td>
-<td style="padding:18px 22px 18px 0; border-top:1px solid #E8ECF0; font-size:18px; line-height:1.45;">
-Does this strengthen student voice and identity?
-</td>
-</tr>
-<tr style="background-color:#F7F8FA;">
-<td style="width:56px; padding:18px 0 18px 22px; border-top:1px solid #E8ECF0; vertical-align:top;">
-<div style="width:22px; height:22px; border:2px solid #8C52BA; border-radius:4px;"></div>
-</td>
-<td style="padding:18px 22px 18px 0; border-top:1px solid #E8ECF0; font-size:18px; line-height:1.45;">
-Will this build independence over time?
-</td>
-</tr>
-</tbody>
-</table>
+#### 👉 Click on each scenario to expand. 
 
-<br>
-
-#### If most answers are yes, the design is likely supporting strong teaching and meaningful learning.
-
-## Evaulation Scenarios
-
-#### Take a look at two of the scenarios we saw earlier in this module. We'll use them as example of how to apply the checklist.
-
-#### 👉 Click on the scenario to see how it does against the checklist.
-
->#### **💬 Quick Reflection:** Take a moment to evaluate each scenario on your own before clicking to show the answer.
-
-<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
-
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario A
-</div>
-<div style="font-size:14px; color:#555;">
-A 7th-grade math student is solving multi-step equations and keeps making the same mistake. They ask AI for “a hint only” and then “one worked example that is similar but not the same.” The student completes the problem, compares their steps to the example, and writes a quick note about the error they fixed.
-</div>
+<!-- Elementary ELA -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Elementary ELA
 </summary>
-
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-
-<p><strong>Expand access while keeping the challenge? ✔︎</strong><br>
-The hint provides support, but the student still solves the original grade-level problem.</p>
-
-<p><strong>Students still doing meaningful thinking? ✔︎</strong><br>
-The student analyzes their mistake, compares steps, and reflects on their correction.</p>
-
-<p><strong>Strengthens voice and identity? ✔︎</strong><br>
-The reasoning and final solution remain the student’s own.</p>
-
-<p><strong>Builds independence over time? ✔︎</strong><br>
-Scaffolded help plus reflection supports skill growth and future problem-solving.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> This design increases access while preserving rigor, ownership, and long-term growth.</p>
-
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>In a 2nd-grade classroom, Ms. Gomez asks students to write a short paragraph about their favorite place. The class brainstorms together, and then students write independently. Some students produce vivid descriptions with clear details, while others write only one or two simple sentences or struggle to get started at all. The lesson gives students a chance to write, but it does not fully support all learners in expressing their ideas with confidence or detail.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>Ms. Gomez adds AI as an idea and language support tool during planning. Students can ask for descriptive words, question prompts, or model phrases that help them think more specifically about what they want to say. They then choose which ideas are useful and write their own paragraph in their own words. AI does not do the writing for them; instead, it helps more students enter the task successfully and express what they already know and feel.</div>
+</div>
+</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Instructional Impact</div>
+<div style="font-size:15px; line-height:1.5;">This shift improves instruction by giving students more support during planning, expands access to the writing task, and strengthens student voice by keeping the final paragraph fully student-created.</div>
+</div>
+</div>
+</div>
 </div>
 </details>
 
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario B
-</div>
-<div style="font-size:14px; color:#555;">
-An 8th-grade English student writes a literary analysis essay and asks AI to improve clarity and make the writing more sophisticated. The student reviews the suggestions and accepts most of them. The final essay is stronger and now mirrors work typically produced by a 12th-grade student.
-</div>
+<!-- Elementary Math -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Elementary Math
 </summary>
-
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-
-<p><strong>Expand access while keeping the challenge? ◑</strong><br>
-The product improves, but the cognitive challenge of crafting language may be reduced.</p>
-
-<p><strong>Students still doing meaningful thinking? ✖︎</strong><br>
-Accepting broad revisions limits the student’s active revision and stylistic decision-making.</p>
-
-<p><strong>Strengthens voice and identity? ✖︎</strong><br>
-Heavy rewriting can shift or dilute authentic student voice.</p>
-
-<p><strong>Builds independence over time? ✖︎</strong><br>
-Repeated reliance on AI for stylistic upgrades may slow development of writing skills.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> The essay appears stronger, but the design does not fully support independence, ownership, or deep skill development.</p>
-
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>In a 4th-grade math class, Mr. Lewis teaches multi-step word problems. Students solve the problems independently and then check the answers together as a class. Many students focus on whether they got the right answer, but they cannot explain their reasoning clearly or identify where their thinking went wrong when they make a mistake. The lesson emphasizes correctness, but it does not do enough to help students reflect on their process or build deeper mathematical understanding.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>After students solve a problem, Mr. Lewis introduces AI as a reflection tool rather than a solving tool. Students can ask AI to explain a similar problem or describe a common mistake someone might make. Then they compare that explanation to their own thinking and write a short note about what they did, what they misunderstood, and what they corrected. AI is used only after the core math work is complete, helping students deepen reasoning without taking over the problem-solving itself.</div>
+</div>
+</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Instructional Impact</div>
+<div style="font-size:15px; line-height:1.5;">This shift deepens meaningful thinking, improves instruction by focusing on reasoning rather than only correctness, and helps build student independence as learners notice and correct their own mistakes.</div>
+</div>
+</div>
+</div>
 </div>
 </details>
 
+<!-- Middle School Science -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Middle School Science
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>Ms. Rivera teaches a middle school science lesson on ecosystems using a textbook reading followed by comprehension questions. Some students struggle to access the content because of reading level and language barriers, while others move through the assignment quickly and give brief, surface-level answers. The lesson introduces important science ideas, but it does not expand access equitably and does not consistently support deep engagement for all learners.</div>
 </div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>Ms. Rivera adds AI as a support tool after the reading is introduced. Students can ask AI to restate key concepts in simpler language, explain vocabulary, or offer an analogy to help them understand a difficult idea. They still must answer the original comprehension questions and support their responses with evidence from the text. AI creates more entry points into the lesson without lowering the rigor of the scientific thinking students are expected to do.</div>
+</div>
+</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Instructional Impact</div>
+<div style="font-size:15px; line-height:1.5;">This shift expands access while keeping the challenge intact, improves instruction by offering flexible scaffolds, and ensures students still do the meaningful comprehension and reasoning work themselves.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
 
+<!-- Middle School ELA -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Middle School ELA
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>Mr. Chen assigns a literary analysis essay in his middle school English class. Students draft independently, and he provides sentence starters and revision reminders to help them organize their thinking. Even with that support, many final essays feel formulaic and generic. The lesson helps students complete the task, but it does not do enough to strengthen authentic student voice or help students make thoughtful revision decisions.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>Mr. Chen introduces AI during the revision stage only. Students ask AI for two alternative ways to revise one paragraph, then compare those options with their own draft. They decide what to keep, reject, or adapt and submit a short reflection explaining how their final paragraph still reflects their own voice and intent. AI becomes a tool for comparison and decision-making rather than a shortcut that replaces the student writer.</div>
+</div>
+</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Instructional Impact</div>
+<div style="font-size:15px; line-height:1.5;">This shift strengthens student voice, improves instruction by making revision more visible and intentional, and keeps students actively thinking and deciding rather than passively accepting changes.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<!-- High School Social Studies -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+High School Social Studies
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>Ms. Patel assigns a high school social studies presentation on renewable energy and gives students a slide template to help them organize their ideas. The template helps students get started, but most presentations end up looking very similar. Students rely heavily on the structure they were given, and the lesson does not build much independence in deciding how to organize ideas, sequence information, or shape an argument for an audience.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>Ms. Patel keeps the same presentation assignment but changes the process. Students first create their own rough outline, then ask AI to generate an alternative way to organize the presentation. They compare the two structures, revise their plan, and explain which choices they made and why. AI adds another model for thinking about organization, but students still make the final decisions about how their presentation is shaped.</div>
+</div>
+</div>
+</div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:16px; color:#0093A4;">Instructional Impact</div>
+<div style="font-size:15px; line-height:1.5;">This shift builds student independence, deepens meaningful thinking about structure and audience, and improves instruction by moving students from following a template to making thoughtful organizational choices.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+>#### **💬 Quick Reflection:** Are there any lesson plans in your current unit which could benefit from AI?
 MARKDOWN

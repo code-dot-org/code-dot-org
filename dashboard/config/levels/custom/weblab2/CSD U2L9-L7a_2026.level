@@ -1,0 +1,130 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:07.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug some images",
+    "long_instructions": "# Debug the Images\r\n\r\nThese images are all supposed to be 100 pixels high, but the height property is not working.  \r\n\r\n# Do This\r\n\r\n1) Find the bug and make the images all the same height.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Figure out why the images are not the correct height and debug this page.",
+    "thumbnail_url": "https://images.code.org/edf6b09289d1f569a8e0f4330dce75c3-image-1565666742370.24.53 PM.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>Fun Fruits!</h1> \n  \n  <p>Here are some fun fruits. Can you match the fruit to the name?</p>\n  <img src=\"durian.jpg\"  alt=\"Durian\">  \n  <img src=\"buddhashand.jpg\" alt=\"buddhashand\">\n  <img src=\"hornfruit.jpg\" alt=\"hornfruit\">\n  <img src=\"starfruit.jpg\" alt=\"starfruit\">\n  <img src=\"rambutan.jpg\" alt=\"rambutan\">\n<hr>\n  <p>Durian</p>\n  <p>Buddha's Hand</p>\n  <p>Horn Fruit</p>\n  <p>Carambola</p>\n  <p>Rambutan</p>\n  <hr>\n  <h6>Picture 1 - Francis Chung - flickr - CC-BY</h6>\n  <h6>Picture 4 - Kaldari - Wikimedia Commons - Public Domain</h6>\n  <h6>Picture 2 - Lebensmittelfotos - pixabay - Pixabay License</h6>\n  <h6>Picture 3 - icon0com - pxhere - CC0</h6>\n  <h6>Picture 5 - maxipixel - CC0 Public Domain</h6>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background-color: lightblue;\n}\n\nh1 {\n    font-family: sans-serif;\n}\n\nh2 {\nfont-family: sans-serif;\n}\nhr {\n  width: 100%;\n}\n\nimg {\n  float: left;\n  height: 100\n  margin: 10px;\n  border-color: green;\n  border-width: 4px;\n  border-style: double;\n  border-radius: 20px;\n}\n\np {\n    text-align: left;\n    font-family: fantasy;\n    font-size: 14px;\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "buddhashand.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7a-2025/uuid/eb762359-aeb5-4b85-a013-218ea31232a2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "hornfruit.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7a-2025/uuid/aca477d1-705b-4160-b940-454e33a1da8f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "rambutan.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7a-2025/uuid/6ba4dba5-d39e-4844-ad8c-527ac04e4760.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "durian.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7a-2025/uuid/bc0e2d74-75e4-4d20-894e-5f2eb51a2084.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "starfruit.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7a-2025/uuid/c32933bc-de6d-473c-aa26-46a5dbba96b0.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:07.073+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L7a-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L7a-2025\"}]"
+}]]></config>
+</Weblab2>

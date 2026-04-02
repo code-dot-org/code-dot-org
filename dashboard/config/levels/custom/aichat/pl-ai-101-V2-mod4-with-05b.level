@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Step 1: AI Chat Lab\r\n\r\nThis AI Chat bot will to help you come up or refine an idea for teaching with AI in your classroom or school.\r\n\r\nStart the chat by sharing your role in education and some details about your classroom or a problem you think AI might be able to help you with.\r\n\r\nFor example, you can say:\r\n>- I'm a middle school science teacher. I'm looking for a way to help students brainstorm ideas for a project.\r\n>- I'm an administrator. I support special education teachers who are very hesitant to use AI for fears that it will reduce student agency.\r\n>- I teach high school English. I want to get students to stop using AI to write their essays. \r\n>- I teach elementary school art. I don't see how AI would be helpful in my classroom.\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "long_instructions": "## Step 2: AI Chat Lab\r\n\r\nThis AI Chat bot will to help you refine your lesson plan.\r\n\r\nStart the chat by sharing your lesson plan as well as a summary of your evaluation.\r\n\r\nFor example, you can say:\r\n>- \r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,9 +45,9 @@
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "display_name": "Step 1: AI Chat Lab",
+    "display_name": "Step 2: AI Chat Lab",
     "thumbnail_url": "https://images.code.org/0ef6889b6362ef447786d71d54f2e309-Screenshot 2026-03-18 at 10.57.08 AM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T14:37:10.336+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"},{\"changed_at\":\"2026-03-18 14:49:59 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-03-18 14:58:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-18T14:37:10.336+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"},{\"changed_at\":\"2026-03-18 14:49:59 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-03-18 14:58:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-01 17:12:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-01 17:17:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

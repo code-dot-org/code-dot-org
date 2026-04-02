@@ -1,0 +1,155 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:05.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Button Links",
+    "long_instructions": "# Button Links\r\n\r\nTake a look at the image below of the five hyperlinks that have been styled to look like buttons. Can you figure out what properties and values you will need to use to make the links look like this?\r\n\r\n<img src=\"https://images.code.org/d50aa0a8bfa5620990273c394baadeb3-image-1677527856343.png\" style=\"width:350px\">\r\n\r\n# Do This\r\n\r\n1) Find the CSS rule for hyperlinks in your stylesheet.\r\n2) Add the following properties to the hyperlink rule-set with values of your choice:\r\n   * border-style\r\n   * border-color\r\n   * border-radius\r\n   * padding\r\n   * text-decoration\r\n      * *Select \"none\" for this property*\r\n3) Add the optional properties to the hyperlink rule-set with values of your choice to make the buttons more visually appealing:\r\n   * background-color\r\n   * color\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn how to style hyperlinks to make them look like buttons",
+    "thumbnail_url": "https://images.code.org/9ab0592cc5c5c982147cdfbc100ab8aa-button3.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Types of Galaxies</h1>\n    \n    <a href=index.html>Home</a>\n    \n    <a href=\"spiral.html\">Spiral</a>\n    \n    <a href=\"elliptical.html\">Elliptical</a>\n    \n    <a href=\"peculiar.html\">Peculiar</a>\n    \n    <a href=\"irregular.html\">Irregular</a>\n    \n    <br>\n    <br>\n    \n    <p>Did you know that up until the last century, humans believed that our Milky Way was the only galaxy in the known universe? Today, we now know that this couldn’t be further from reality. <br><br>\n\n      In fact, it is currently estimated that there are <b>two trillion galaxies</b> in the known universe!<br><br>\n\n      It’s no surprise then, that there are different types of galaxies. Let's take a look - click on the buttons at the top of the page to learn about the different types of galaxies!</p>\n    \n    \n     \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: monospace;\n  text-align: center;\n}\n\np {\n  font-size: 18px;\n}\n\nimg {\n  width: 300px;\n  border-style: solid;\n  border-color:#8c64ed;\n  border-radius: 40px;\n}\n\na {\n \n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "elliptical.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>Types of Galaxies</h1>\n    \n    <a href=index.html>Home</a>\n\n    <a href=\"spiral.html\">Spiral</a>\n\n    <a href=\"elliptical.html\">Elliptical</a>\n\n    <a href=\"peculiar.html\">Peculiar</a>\n\n    <a href=\"irregular.html\">Irregular</a>\n\n    <br>\n    <br>\n    \n    <h2>Elliptical Galaxies</h2>\n    \n    <p>Elliptical galaxies are given their name because of their oblong shape and lack of overall structure. Some are nearly spherical, while others are shaped more like a cigar. They can range in size from just a few light years across to being larger than our Milky Way. <br><br>\n\n      Another fun fact: while it is not entirely clear how they form, some scientists propose that elliptical galaxies form as the result of galactic collisions! </p>\n    \n    <img src=\"elliptical.jpg\" atl=\"eliptical galaxy\">\n \n    \n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "irregular.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>Types of Galaxies</h1>\n    \n    <a href=index.html>Home</a>\n\n    <a href=\"spiral.html\">Spiral</a>\n\n    <a href=\"elliptical.html\">Elliptical</a>\n\n    <a href=\"peculiar.html\">Peculiar</a>\n\n    <a href=\"irregular.html\">Irregular</a>\n\n    <br>\n    <br>\n    \n    <h2>Irregular Galaxies</h2>\n    \n    <p>Irregular galaxies are galaxies that don’t fall under any of the three galaxy types mentioned in the other pages. These galaxies tend to be small, dwarf galaxies that lack any distinguishable shape. Many of these galaxies are companions or satellites to larger galaxies. <br><br>\n\n      A fun fact: The Milky Way has dozens of irregular satellite galaxies. Arguably the most famous one is the Large Magellanic Cloud, shown below. </p>\n    \n    <img src=\"irregular.jpg\" alt=\"Irregular Galaxy\">\n    \n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "peculiar.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>Types of Galaxies</h1>\n    \n    <a href=index.html>Home</a>\n\n    <a href=\"spiral.html\">Spiral</a>\n\n    <a href=\"elliptical.html\">Elliptical</a>\n\n    <a href=\"peculiar.html\">Peculiar</a>\n\n    <a href=\"irregular.html\">Irregular</a>\n\n    <br>\n    <br>\n    \n    <h2>Peculiar Galaxies</h2>\n    \n      <p>Peculiar galaxies are almost always the result of a galactic collision!<br><br>\n\n        Galactic collisions aren’t as action packed as you might imagine. <br><br>\n\n        Since galaxies are mostly comprised of empty space, it’s unlikely that any two given stars will collide during the event of a galactic collision. <br><br>\n\n        It is believed that peculiar galaxies compose 5 to 10 percent of all known galaxies. So, it’s safe to say that galactic collisions are a common occurrence in our own universe!</p>\n    \n    <img src=\"peculiar.jpg\" alt=\"Peculiar Galaxy\">\n    \n   \n    \n    \n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "spiral.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>Types of Galaxies</h1>\n    \n    <a href=index.html>Home</a>\n\n    <a href=\"spiral.html\">Spiral</a>\n\n    <a href=\"elliptical.html\">Elliptical</a>\n\n    <a href=\"peculiar.html\">Peculiar</a>\n\n    <a href=\"irregular.html\">Irregular</a>\n\n    <br>\n    <br>\n    \n    <h2>Spiral Galaxies</h2>\n    \n    <p>Spiral galaxies can be recognized by their wide, flat disks of rotating gas and dust. <br><br>\n\n      Some spirals have wide flung arms like the above image of M51 below, while others have spirals that are more tightly bound.<br><br>\n\n      Fun fact: our very own Milky Way is a spiral galaxy, and it is rotating at 168 miles per second. Now that’s fast! </p>\n    \n    <img src=\"spiral.jpg\" alt=\"Spiral galaxy\">\n    \n  \n\n    \n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "spiral.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8c-2025/uuid/0702593f-53d1-4d24-b15b-66855db006e0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "elliptical.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8c-2025/uuid/fa22b9fc-d632-42bd-9a61-177c757d22f1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "peculiar.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8c-2025/uuid/9a81b35a-2ce8-4984-85c2-9377c98e9e36.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "irregular.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L8c-2025/uuid/70f6b5db-46f1-4a2f-a00e-4ddf74db0b07.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nvP3OZw==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:05.568+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L8c-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L8c-2025\"}]"
+}]]></config>
+</Weblab2>

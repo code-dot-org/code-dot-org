@@ -1,0 +1,179 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:03.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug Hyperlinks",
+    "long_instructions": "# Broken Hyperlinks\r\n\r\nNone of the hyperlinks are working on any of the pages for this site. Can you debug the code and fix them all?\r\n\r\n# Do This\r\n\r\n1) Find and fix all the bugs in each of the hyperlink tags on each html page.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Find and fix all the bugs in each of the hyperlink tags on each html page.",
+    "thumbnail_url": "https://images.code.org/9b0fa667f5de4c260556c375e79fa418-links.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h1>Home</h1>\n\n    <a href:\"index.html\">Home</a>\n    <br>\n    <a ref=\"purpose.html\">Purpose and History</a>\n    <br>\n    <a hred=\"personalities.html\">Personalities</a>\n    <br>\n    <a hef=\"visual.html\">Visual Differences</a>\n\n    <p>Llamas and alpacas are domesticated members of the camelid family. That makes them camelid cousins to the Bactrian camel and the Dromedary camel.</p>\n\n    <h2>Which is which?</h2>\n\n    <p>When you see one of these adorable creatures, do you know which animal you’re looking at? Is it a llama? Or maybe an alpaca? Hhmmm. Are you sure?</p>\n\n    <p>The biggest difference between llamas and alpacas is their size and the type of coat each of them has. But they have many other differences, like their faces, ears, personality and purpose.</p>\n    \n    <p>Check out the links at the top of the page to learn more about their differences!</p>\n\n    <img src=\"llama-vs-alpaca.jpg\" alt=\"alpaca\">\n\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "personalities.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h1>Personalities</h1>\n\n    <a href=`index.html`>Home</a>\n    <br>\n    <a href=\"purpose.html>Purpose and History</a>\n    <br>\n    <a href=\"personalities.html\">Personalities</e>\n    <br>\n    <ahref=\"visual.html\">Visual Differences</a>\n\n    <p>TThe temperaments and behaviors of both llamas and alpacas are extremely similar to one another. However, llamas tend to be more aggressive compared to the average alpaca, though both of these animals will spit if they feel threatened. In addition, alpacas enjoy living in a happy herd, while llamas do as well, but not to the same extent as alpacas. </p>\n\n    <h2>Alpacas</h2>\n\n    <p>Alpacas are very gentle and shy. Alpacas are more comfortable as herd animals. While both llamas and alpacas both spit, the alpaca will only spit as their last resort when they’re angry or scared.</p>\n\n    <img src=\"alpacaFace.jpg\" alt=\"alpaca\">\n\n    <h2>Llamas</h2>\n\n    <p>The llama is a very confident and brave animal. Llamas are solitary animals. One thing llamas are known for is spitting, which they do quickly when they feel threatened.</p>\n\n    <img src=\"llama2.jpg\" alt=\"llamas\">\n\n\n\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "purpose.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h1>Purpose and History</h1>\n\n    <a hraf=\"index.html\">Home</a>\n    <br>\n    <href=\"purpose.html\">Purpose and History</a>\n    <br>\n    <e hraf=\"personalities.html\">Personalities</a>\n    <br>\n    <a href:\"visual.html\">Visual Differences</a>\n\n    <p>Llamas and alpacas have been used by humans for transportation and fleece production for a few thousand years. But as a result of their dispositions, they are typically used for different purposes today.</p>\n    \n    <h2>Pack Animal</h2>\n    \n    <p>The llama continues to be a notorious pack animal, capable of carrying gear up to 20 miles per day, while the alpaca is renowned for its wool and fur. </p>\n    \n    <h2>Guard Animals</h2>\n\n    <p>Llamas are also utilized as guard animals for other herding animals in a farm setting.</p>\n        \n    <p>Alpacas are less likely to be guard animals. This isn’t to say that alpacas can’t also protect other herding animals in this setting, but they are less protective compared to the average llama.</p>\n    \n    <img src=\"llama1.jpg\" alt=\"guard llama\">\n\n    <p>Guard llamas have an instinctive awareness of their surroundings, and even patrol their area for threats, including predators like foxes, coyotes and dogs. When a predator approaches, a guard llama will typically watch it intently, posture, make shrill noises to try and scare it off, and even attempt to chase the animal away.</p>\n\n\n\n\n\n\n\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "visual.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <h1>Visual Differences</h1>\n\n    <a herf=\"index.html\">Home</a>\n    <br>\n    <a href=`purpose.html`>Purpose and History</a>\n    <br>\n    <a href=`personalities.html`>Personalities</a>\n    <br>\n    <a hfer=\"visual.html\">Visual Differences</a>\n\n    <p>The most-distinguishing physical differences between alpacas and llamas are their size, their hair, and their face shapes.</p>\n\n    <h2>Alpacas</h2>\n\n    <ul>\n      <li>Size: Around 35 inches high at the shoulder</li>\n      <li>Weight: Between 121-143 lbs</li>\n      <li>Facial Features: Small, blunt faces with short ears</li>\n      <li>Hair: Shaggy hair from white and light yellows to browns and blacks</li>\n    </ul>\n\n    <img src=\"alpaca2.jpg\" alt=\"alpaca\">\n\n    <h2>Llamas</h2>\n\n    <ul>\n      <li>Size: Around 47 inches at the shoulder</li>\n      <li>Weight: About 250 lbs</li>\n      <li>Facial Features: Elongated faces with banana-sized ears</li>\n      <li>Hair: Courser than the alpaca</li>\n    </ul>\n\n    <img src=\"llamas.jpg\" alt=\"llamas\">\n\n\n\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: monospace;\n  text-align: center;\n}\n\nh1 {\n  text-align: center;\n}\n\nimg {\n  width: 300px;\n}\n\nul {\n  text-align: left;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "llama-vs-alpaca.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/f19d2eaa-f1b9-451d-bd72-c9a9d40f0b3a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "llamas.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/bdf9b4de-a06d-4f55-9add-cb6b7df05540.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "llama1.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/3216c288-7227-4bc8-a1fd-cb839f50516b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "alpacaFace.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/20fcbbb2-d065-4cdf-a5e5-f51020582df6.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "llama2.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/1be932e2-f6fc-4c5e-a53a-cb614b783238.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "alpaca1.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/eb757253-5597-41d2-9b78-3dbad23c0c08.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "alpaca2.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L5b-2025/uuid/614ebcd0-125c-409f-b2d4-34d90b0c2b3a.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nMvohOg==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:03.657+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L5b-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L5b-2025\"}]"
+}]]></config>
+</Weblab2>

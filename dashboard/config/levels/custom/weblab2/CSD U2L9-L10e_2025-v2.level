@@ -1,0 +1,99 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:38.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Challenge: Animal Webpage",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Challenge: Style Animal Web Page\r\n\r\nA basic web page about endangered animal species has been provided for you. Complete these challenges to add style to it:\r\n* Create a background color or image for the page.\r\n* Make the images have a consistent height or width.\r\n* Give each heading unique styles: font family, color, size, decoration, etc.\r\n* Float all the images to the left.\r\n* Put a margin and green border around the images.\r\n* Add any other style or content to customize the page!\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Complete this challenge that asks you to style a web page about animals.",
+    "thumbnail_url": "https://images.code.org/907091044992874599164ca61d51d5d2-image-1566519952024.jpg",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Endangered Animals</h1>\n    <p>Endangered species are those that are at risk for extinction. It is important to protect these species because once they are gone, they are gone forever. Losing a species can result in food chain and ecosystem disruption, as well as eliminate the possiblity for them to cure diseases or improve the quality of the life for other species.</p>\n    <hr>\n    <h3>Here are three endangered species:</h3>\n    <h2>Black Rhino</h2>\n    <p>Black rhinos live in the savannah, woodlands, and wetlands of Africa. Between 1960 and 1995, the number of black rhinos dropped by 98% to under 2,500. Today their numbers have increased to  over 5,000. However, they are still in danger of being poached for their horns.</p>\n    <img src=\"blackRhino.jpg\"\n         alt=\"black rhino\">\n    <h6>[Image by Gerry Zambonini from Wikimedia Commons, CC-BY SA 2.0]</h6>\n    \n    \n    <h2>North Atlantic Right Whale</h2>\n    <p>The North Atlantic right whales can be identified by the white calluses on their heads. They are usually found in along the coasts of the Atlantic ocean, especially during breeding season. There are less than 350 of these whales left in the oceans. While they are not in as much danger of whaling like when they first became endangered, humans are still their biggest threat.</p>\n    <img src=\"rightWhale.jpg\"\n         alt=\"North Atlantic right whale\">\n    <h6>[Image by Moira Brown from Wikimedia Commons]</h6>\n    \n    <h2>Red Panda</h2>\n    <p>Red pandas have bear-like bodys and are slightly larger than domestic cats. They are acrobatic animals that stay in trees, and they mainly live in the Eastern Himalayas. There are less than 10,000 red pandas left, and their population is declining due to habitat loss and poaching.</p>\n    <img src=\"redPanda.jpg\"\n         alt=\"red panda\">\n    <h6>[Image by Brunswyk from Wikimedia Commons, CC BY-SA 3.0]</h6>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "rightWhale.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10e-2025/uuid/b5e5286b-4ee4-459c-ae0d-534e8bdd4603.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "blackRhino.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10e-2025/uuid/e0a5b3f4-9440-4892-92e0-6bed05cc4913.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "redPanda.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10e-2025/uuid/08be43b1-cf04-4aeb-8e23-8d67e5e2447b.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nNtH14oXU8dSkCO2VPJQ=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:38.912+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L10e-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L10e-2025\"}]"
+}]]></config>
+</Weblab2>

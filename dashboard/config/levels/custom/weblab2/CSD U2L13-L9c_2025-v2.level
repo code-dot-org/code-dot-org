@@ -1,0 +1,152 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:07.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Create a gallery",
+    "long_instructions": "<img src=\"https://images.code.org/64f4b332b22925829e3c59594b59e805-image-1707240051330.png\" style=\"float: right; width: 400px;\">\r\n\r\n# Info Card Layout Challenge\r\n\r\nWhen we start putting elements into containers within containers and using Flexbox properties and children properties, we unlock the ability to give our web pages some cool layouts! \r\n\r\nLet's see if we can turn the bottom half of this page into a nice, image and info gallery like the image on the right!\r\n\r\n# Do This\r\n\r\n::: details [**In the HTML file:**]\r\n1. Find the \"gallery\" container.\r\n2. Add a `div` container around each paragraph in the gallery with the class attribute \"info\"\r\n3. Add a `div` container around each image in the gallery with the class attribute \"image\"\r\n4. Add a `div` container around each of the image and paragraph groups with the class attribute \"image-card\"\r\n\r\n**_The `div` tags for the first two groups of images and paragraphs have been done for you. Use them as examples for the remaining four groups of images and paragraphs._**\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**In the CSS file:**]\r\n1. Establish Flex layout and \"wrap\" for the \"gallery\" container.\r\n2. Set the content of the \"image-card\" to grow at a value of 1 so they all grow at the same rate.\r\n3. Establish Flex layout for the \"image-card\" so that _its_ child elements can use Flex too\r\n4. Set the \"info\" container content to align itself to the center.\r\n\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**EXTRA CHALLENGE**]\r\nCan you figure out how to set the order of the \"image-card\" for the giant squid to be the first image in the gallery, just like the image above?\r\n\r\n_Hint: You will probably have to give the \"image-card\" a different class attribute in order to set its order! 🤔 Hmmm ... but then how will it continue to have the same properties as the \"image-card\"?_ 🤔\r\n:::\r\n\r\n<br>\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Are you ready for the challenge of creating a gallery of images and text?",
+    "thumbnail_url": "https://images.code.org/828a02b173680e7cd14fc60b046cfefe-layout.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Mysteries of the Deep Sea</h1>\n        \n    <!-- main content -->\n    <div class=\"main-content\">\n      <h2>Welcome to the Abyss!</h2>\n      <p>Beneath the restless waves of our planet's oceans lies a world shrouded in darkness, a realm so vast and uncharted that it eclipses the known frontiers of our terrestrial habitats. This is the deep sea, Earth's final frontier, where light from the sun fades into the cold, engulfing depths, giving way to mysteries as intriguing as the stars above. Covering more than 70% of our planet's surface, the ocean is a colossal expanse, yet we have explored less than 5% of its hidden depths. Here, in the abyssal plains and the trenches deeper than the tallest mountains are high, life thrives in forms as alien as they are astonishing..</p>\n      <img src=\"trench.png\" alt=\"deep underwater trench\">\n        \n      <h2>Deep Sea Creatures</h2>\n      <p>Exploring the deep sea reveals a world of extraordinary creatures, each adapted to life in the extreme conditions of the ocean's abyss. Here's are some fascinating deep-sea creatures along with an interesting fact about each!</p>\n    </div>\n       \n    <!-- Container for the gallery of images & info -->\n    <div class=\"gallery\">\n      \n      <!-- \"image-card\" container around image & info -->\n      <div class=\"image-card\">\n        <!-- \"image\" container around image -->\n        <div class=\"image\">\n          <img src=\"anglerfish.png\" alt=\"anglerfish\">\n        </div>\n        <!-- \"info\" container around info -->\n        <div class=\"info\">\n          <p>The female anglerfish is known for the bioluminescent lure protruding from her forehead, used to attract prey in the pitch-black depths of the sea.</p>\n        </div>\n      </div>\n      \n      <!-- \"image-card\" container around image & info -->\n     <div class=\"image-card\">\n        <!-- \"image\" container around image -->\n       <div class=\"image\">\n          <img src=\"blobfish.png\" alt=\"blobfish\">\n      </div>\n        <!-- \"info\" container around info -->\n       <div class=\"info\">\n          <p>Known as the \"world's ugliest animal,\" the blobfish's gelatinous body allows it to withstand the intense pressure of the deep sea without being crushed.</p>\n      </div>\n    </div>\n      \n      <!-- ADD \"image-card\" DIV AROUND IMAGE & INFO -->\n\n        <!-- ADD \"image\" DIV AROUND IMAGE -->\n    \n          <img src=\"dumbo-octopus.png\" alt=\"dumbo octopus\">\n   \n      <!-- ADD \"info\" DIV AROUND PARAGRAPH -->\n \n          <p>Named after the Disney character becausae of its ear-like fins, the dumbo octopus flaps these fins to propel itself through the water, and it's the deepest-living genus of all known octopuses.</p>\n       \n      \n      \n      <!-- ADD \"image-card\" DIV AROUND IMAGE & INFO -->\n\n      <!-- ADD \"image\" DIV AROUND IMAGE -->\n      \n          <img src=\"giant-squid.png\" alt=\"giant squid\">\n     \n      <!-- ADD \"info\" DIV AROUND PARAGRAPH -->\n    \n          <p>The giant squid has the largest eyes in the animal kingdom, measuring up to 10 inches (about 25 cm) in diameter, allowing it to detect objects in the dark waters of the deep sea.</p>\n    \n      \n      \n      <!-- ADD \"image-card\" DIV AROUND IMAGE & INFO -->\n\n      <!-- ADD \"image\" DIV AROUND IMAGE -->\n      \n          <img src=\"gulper-eel.png\" alt=\"gulper eel\">\n   \n      <!-- ADD \"info\" DIV AROUND PARAGRAPH -->\n    \n          <p>The gulper eel can unhinge its massive jaw to swallow prey much larger than itself, and its stomach can stretch to accomodate the feast.</p>\n    \n      \n      \n      <!-- ADD \"image-card\" DIV AROUND IMAGE & INFO -->\n\n      <!-- ADD \"image\" DIV AROUND IMAGE -->\n   \n          <img src=\"yeti-crab.png\" alt=\"yeti crab\">\n   \n      <!-- ADD \"info\" DIV AROUND PARAGRAPH -->\n   \n          <p>Discovered near hydorothermal vents, the yeti crab cultivates bacteria on its hairy claws and feeds on them, essentially farming its own food in the nutrient-poor deep sea.</p>\n  \n        \n      \n      \n    \n  \n    </div>\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Establish Flex layout and \"wrap\" the gallery contents */\n.gallery {\n  \n  \n  \n}\n\n\n/* Style for \"image cards\" */\n.image-card {\n  padding: 2%;\n  width: 30%;\n  /* 2) Set the \"image-card\" content to grow at a value of 1 */\n  \n  \n  /* 3) Establish Flex layout for the image-card's children */\n  \n  \n}\n\n\n/* Style for info in gallery */\n.info {\n  width: 95%;\n  /* 4) Set the \"info\" content to align itself to the center of each container */\n  \n  \n}\n\n/* EXTRA CHALLENGE - hint: give the giant-squid's image-card a different class attribute */\n\n\n\n\n/* DO NOT NEED TO CHANGE ANY CODE BELOW THIS COMMENT */\n\n/* images in gallery styled */\n.gallery img {\n  border-style: solid;\n  border-radius: 10px;\n  width: 95%; /* images will always be 95% of the size of their containers - resize the preview window to see them get bigger/smaller */\n}\n\n/* universal selector for all content */\n* {\n  font-family: sans-serif;\n  text-align: center;\n}\n\n/* background of page set */\nbody {\n  background-color: aliceblue;\n}\n\n/* title styled */\nh1 {\n  font-size: 45px;\n  background-color: rgba(182, 145, 214, 0.57);\n  padding: 15px;\n  border-style: solid;\n  border-radius: 10px;\n}\n\n/* subheadings styled */\nh2 {\n  margin: 0px;\n}\n\n/* flex established for main content */\n.main-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n/* large image styled */\n.main-content > img {\n  border-style: solid;\n  border-radius: 20px;\n  width: 90%; /* image will always be 90% of the size of the page - resize the preview window to see it get bigger/smaller */\n  margin-bottom: 20px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "anglerfish.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/277ab02e-02c0-4d62-a433-66f6f0c094e5.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "giant-squid.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/5e5ade4f-5aff-4c13-8cc5-5e246ab3feea.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "gulper-eel.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/de9446d9-030e-4aca-b772-8e12bcc6d851.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "dumbo-octopus.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/e692896c-8cba-45ab-9063-b7de0e010222.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "trench.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/ab381a06-db35-4c95-96e4-d7671008f55d.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "blobfish.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/7e810b15-cdcf-4440-972c-8ff42f79ad7c.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "yeti-crab.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L9c-2025/uuid/affad2fe-ce39-469c-b1e4-e0743aa95c4d.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nQ3Nsvu5e72rsqwgICM27LFQbfGjpT5pt7ZrozNnAbzsAPP/+OCioQ+FWPmiK\nJregmIMblAQK7xfSQdmtCEjowwzw0GY+AkCxdNbwmdRhwfKQ7SQboe7mZ/0r\nHem1CPXLccXPoeoCzqRj4JIqLwzzNPHOkxlki4l8xsmfF+Fq6qmVn1FHjBMx\nytN+PFeaQQqX5yI2Htaw+3mEbs0OCL7tmNXkPrPjoxeYTKnzPNlFP+ZzEfS0\nkxmqfZmPNCF8kRCnIaIqKhNvfqAiM0KQtaBvPpga0sj2sBzkNTR3YFiLMbGD\n80AtI+Drnb2QE8M0L4tKE6GZC+LBTQYy0GU5uvhziqOlIVcw4z8yhn68Ny0Y\nbwUJmQMHDE8imecP3UmtZ6qs6NihqZwEY/WMVE/33mw4k3tEMNALV4F/+orp\nuL1qDYcGb0dmeuqA0Boa5VGkVqaa0JG7CY+u7pAJGV5XBH6Kv23KQRNqroCI\n7khaiD117f19OHf2NAJmt9vb3WE2TMpiRAYvbVkBNgMWkx2a6WVaExBoanWP\nz7iWjfYhT7SSWJcQSW75tKIk1BE3Bb3nH9n9HOHIIt/jcDrHeN2jRJ1nPu4Q\nUdk7Wwy8UzMfP28tiCEuRg2K+2YGiXA56Fev/6T21DfSb2s00frzeAhAMUsp\nY9NO+Wc9/6O22PKjnTOpa47BIhRF/IAGUu+PabOQGuSy+5gQN0Pr5kHlF2C+\nPcXXO5EIMpgfIGD6Jp+MDF4BJdc1VGtQZs5CKjZ1SQE11Y2FgU/XDuxjucuJ\nOBuZ/5D26EQruQQSFFYxMeuFbZrjNqpaFZie3TDo9LTOErg4ZgXolrXt3u3W\npdVAJosgqmN4T0ikSGpASMgHl/z/0k0TvYBBCKnMals3jvIlvf6GYP/gy3fy\n0zbhsDV2Ry6YeFwBsaOHxqgpJzw136tDJzgkOTeV6w2gYjqv3e/9fWAhoQ9W\nOFgsP6JhC93elAOfpKDX116l8lxv+87YCcfn7lotlKbPdckGBE8ka7fyBzRm\ndUhsWuRQSaAgag0pn6ZtLeVykzVwIXyBCpbiS9Xy15z5tK5tvO7DuzEzh5DF\nS8KFtiNmSmVO63o/6y4Ipjjf0RRT5xiJr3uEz1aM1HQEmSL1dNKw7+noAIyC\noqg/UIECXG23dLV67+QGVxKPy89qn/USr2c0veaGK1YzMgGNN4FKzXmDcGpG\n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\noikvcM06mE9Pvw==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:07.142+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L9c-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L9c-2025\"}]"
+}]]></config>
+</Weblab2>

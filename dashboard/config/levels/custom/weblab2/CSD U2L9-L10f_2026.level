@@ -1,0 +1,88 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:11.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Challenge: Dessert Page",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Challenge: Style Dessert Web Page\r\n\r\nA basic web page about desserts has been provided for you. Complete these challenges to add style to it:\r\n* Create a background color or image for the page.\r\n* Fix heading sizes so it looks better.\r\n* Give each heading unique styles: font family, color, size, decoration, etc.\r\n* Round the edges of the images.\r\n* Add another dessert with a description and image (give proper citation!).\r\n* Add any other style or content to customize the page!\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Complete this challenge that asks you to style a web page about desserts.",
+    "thumbnail_url": "https://images.code.org/b1b1c8bf290cb34cb587c15145f51130-image-1566597591800.jpg",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h6>DESSERTS</h6>\n    <h5>Cultures all around the world have their own version of desserts. They can take on all different shapes and forms with incredibly differing tastes. And each one is unique and special in its own and deserves to be learned about and hopefully one day tasted. </h5>\n    <h2>Here Are Some Desserts</h2>\n    <h1>Tiramisu</h1>\n    <p>Tiramisu is an Italian dessert whose name means \"pick me up\" or \"cheer me up\". Originally it is made with finger biscuits, egg yolks, coffee, sugar, cocoa powder, and mascarpone. The biscuits are dipped into the coffee and the mixed between the othe rincredients all whipped together.  But over time, there have been variations of it too. Most claim that tiramisu originated in the 1960s in Venato, Italy. However, it did not become a huge hit in the United States until the 1990s.  /p>\n    <img src=\"tiramisu.jpg\"\n         alt=\"Tiramisu\">\n    <h6>Andrey Cojocaru, Pixabay, Pixabay License</h6>\n    \n    \n    <h1>Chinese Egg Tarts</h1>\n    <p>Egg tarts are a very famous Chinese dessert, but can also be found in many other countries around the world like Portugal and Brazil. All the dessert is just a pastry crust with an egg custard filling that is then just baked. Egg tarts most likely started out in the city of GuangZhou in China drawing inspiration from the European custard tart. And over time it's become a big hit.</p>\n    <img src=\"egg_tarts.jpg\"\n         alt=\"Egg tarts\">\n    <h6>See-ming Lee, Wikimedia Commons, CC BY 2.0</h6>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "egg_tart.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10f-2025/uuid/9aa2133f-9667-4071-b9bf-509d35842a3e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "tiramisu.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L10f-2025/uuid/e530f86c-9b37-494b-850e-eae648959774.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:11.164+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L10f-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L10f-2025\"}]"
+}]]></config>
+</Weblab2>

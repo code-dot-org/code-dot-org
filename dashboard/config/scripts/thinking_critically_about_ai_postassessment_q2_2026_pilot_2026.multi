@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q2_2026-pilot_2026'
+
+question 'An AI image generator produces a realistic-looking photo of a public figure saying something they never actually said. Which concept from this unit does this BEST illustrate?'
+
+wrong 'Hidden AI, because the image was created without the public figure\'s knowledge.'
+right 'The gap between how convincing an AI output looks and whether it is actually accurate or truthful.'
+wrong 'Responsible co-creation, because a human and AI worked together to make the image.'
+wrong 'Data privacy, because the public figure\'s likeness was used without permission to train the model.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 5, 6
+MARKDOWN

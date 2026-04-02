@@ -1,0 +1,72 @@
+name 'pl-ai-101-V2-mod4-asses-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Rethinking Academic Integrity
+
+#### AI tools are changing how students complete work, but they don’t eliminate the need for academic integrity. Instead, they shift what integrity looks like in the classroom.
+
+#### Using AI is not automatically cheating. What matters is:
+* #### How the tool is used
+* #### Whether it supports learning
+* #### Whether expectations are clear and consistent
+
+#### Rather than focusing only on whether students used AI, the key question becomes: Did students do the thinking?
+
+## AI Use Exists on a Spectrum
+
+<div style="max-width:1100px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+<!-- Labels Row -->
+<div style="display:flex; justify-content:space-between; font-weight:800; font-size:18px; margin-bottom:10px;">
+<div style="color:#E66A6A;">Not Allowed</div>
+<div style="color:#58B77B;">Productive Use</div>
+<div style="color:#F1B44C;">Over-Reliance</div>
+</div>
+
+<!-- Spectrum Line -->
+<div style="position:relative; height:8px; background:linear-gradient(to right, #E66A6A, #F1B44C, #58B77B); border-radius:999px; margin-bottom:40px;">
+</div>
+
+<!-- Cards -->
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;">
+
+<!-- Not Allowed -->
+<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#FFF5F5;">
+<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Not Allowed</div>
+<div style="font-size:16px; margin-bottom:8px;">Replaces student thinking</div>
+<div style="font-size:15px; line-height:1.4; color:#555;">
+Submitting AI-generated answers as final work
+</div>
+</div>
+
+<!-- Productive Use -->
+<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#F3FBF6;">
+<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Productive Use</div>
+<div style="font-size:16px; margin-bottom:8px;">AI supports learning</div>
+<div style="font-size:15px; line-height:1.4; color:#555;">
+Using AI to brainstorm, revise, or get feedback
+</div>
+</div>
+
+<!-- Over-Reliance -->
+<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#FFF9F2;">
+<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Over-Reliance</div>
+<div style="font-size:16px; margin-bottom:8px;">Student defers thinking to AI</div>
+<div style="font-size:15px; line-height:1.4; color:#555;">
+Copying and lightly editing AI output
+</div>
+</div>
+
+</div>
+
+</div>
+
+####  Before assigning work, clarify:
+* #### Is AI allowed?
+* #### If yes, for what purpose?
+* #### What must be original?
+
+#### This clarity reduces confusion and prevents many integrity issues before they arise.
+
+MARKDOWN

@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q5_2026-pilot_2026'
+
+question 'A student and an AI co-create a short story. The student provides the main idea, edits the AI\'s draft, and rewrites key sections. Which statement best describes this situation?'
+
+wrong 'The student should get no credit because the AI did all the writing.'
+right 'This is an example of responsible co-creation where the human maintains creative control.'
+wrong 'The AI deserves more credit because it wrote more words than the student.'
+wrong 'Co-creation with AI is never appropriate for school assignments.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

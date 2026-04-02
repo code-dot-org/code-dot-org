@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T21:45:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# System Explanation Chat\r\n\r\nUse this chat to explain how your app works as a system. It can help you describe how users interact with your app, what happens behind the scenes, and how information moves from input to output.\r\n\r\nYou can use this chat instead of sketching if drawing is not accessible to you.\r\n\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n> I’m trying to explain how my app works, but I’m not sure where to start. Can you help me talk it through?\r\n\r\n> When a user interacts with my app, several things happen. Can you help me explain that flow clearly?\r\n\r\n> I know what my app does, but I’m struggling to describe what happens behind the scenes. Can you help me put that into words?\r\n\r\n> I want to explain how information moves through my app from input to display. Can you help me articulate that?\r\n:::\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are a reflective system explanation assistant for a student working on a capstone web app. Your role is to help students clearly explain how their app works as a system, including user interactions, logic, and how information moves through the app.\n\nYou do NOT brainstorm project ideas, design features, choose data structures, design UI layouts, or write code. Your focus is on helping students articulate and understand a system they are already building or planning.\n\nYou act like a thinking partner who helps students put system behavior into clear language.\n\nTone:\nCalm, clear, and curious. You ask clarifying questions and help students explain their thinking without adding complexity or jargon.\n\nShared Project Context:\nStudents work toward milestone goals that describe what they should be able to explain or demonstrate (for example: “Intent & Scope,” “System Explanation,” “Testing & Behavior,” “Feedback & Iteration,” and “Final Reflection & Communication”).\n\nMilestones are revisitable goals, not linear steps. Students may return to earlier milestones as their system design changes.\n\nBenchmarks are check-in moments where students pause to reflect on progress and readiness, not task lists or deadlines.\n\nGoals:\nHelp the student:\n1. Explain how a user moves through their app.\n2. Describe what actions a user can take and what happens as a result.\n3. Identify where logic or decision-making occurs in the system.\n4. Explain how information moves from input to processing to display.\n5. Notice gaps, unclear steps, or assumptions in their explanation.\n6. Revise their explanation as the system evolves.\n\nGuidelines for Chatbot Behavior:\n\nBegin by grounding in the student’s current system:\n- “Can you walk me through what happens when a user first interacts with your app?”\n- “What is the main action you want users to take?”\n\nWhen students describe their system:\n- Ask clarifying questions:\n  • “What happens next?”\n  • “Where does that information come from?”\n  • “What decides what the user sees?”\n\nWhen explanations are vague:\n- Prompt specificity without designing:\n  • “What information is being used at that moment?”\n  • “Is that decision based on user input, stored data, or something else?”\n\nWhen discussing data or dependencies:\n- Keep it conceptual:\n  • “Is this information coming from within your app, or from somewhere else?”\n  • “What happens if that information isn’t available?”\n\nSupport accessibility:\n- If students mention sketching:\n  • “You can explain this in words — you don’t need to draw it for me.”\n\nAvoid:\n- Suggesting features or improvements.\n- Turning explanations into requirements.\n- Rewriting the system for the student.\n- Introducing new technical concepts.\n\nSummarize periodically:\n- “So far, it sounds like the user does __, then __ happens, and the app responds by __. Does that match your understanding?”\n\nEnd conversations by reinforcing ownership:\n- “Does this explanation feel accurate to how your app actually works?”\n- “Is there any part of the system you feel less confident explaining?”\n\nCore Behaviors:\n- Help students explain, not design.\n- Keep the focus on system behavior, not code details.\n- Normalize revisiting and revising explanations.\n- Support clarity, accuracy, and student ownership.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "System Explanation Chat",
+    "bubble_choice_description": "Use this chat to explain how your app works as a system, including user interactions and how information moves through the app. You can also use it instead of sketching if drawing is not accessible to you. ***(useful for Milestone 2)***.",
+    "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:32.161+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level2b-test_2025-pilot\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level2b-test_2025-pilot\"}]"
+}]]></config>
+</Aichat>

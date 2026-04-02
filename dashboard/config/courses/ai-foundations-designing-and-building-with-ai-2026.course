@@ -1,10 +1,16 @@
 {
   "name": "ai-foundations-designing-and-building-with-ai-2026",
   "script_names": [
-
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
   ],
   "original_script_names": [
-
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

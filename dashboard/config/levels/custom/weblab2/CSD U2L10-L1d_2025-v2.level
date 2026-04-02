@@ -1,0 +1,75 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:42.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Change font family",
+    "long_instructions": "# Change Font Family\r\n\r\nChange the font family of both the heading and the text. There are several font families including `cursive`, `fantasy`, `serif`, and `monospace`.\r\n\r\n# Do this\r\n1) Add a rule-set for one of the heading types to make it a different font family.\r\n* Add a rule-set for the paragraphs to make them another font family.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use CSS to change the font family of the headings and paragraphs",
+    "thumbnail_url": "https://images.code.org/85499c7419305439672a5733a75164c7-image-1585688146670.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Endangered Animals</h1>\n    <h3>Pangolin</h3>\n    <p>Sometimes called \"scaly anteaters\", these nocturnal animals can curl up into a ball, similar to an armadillo. They are hunted for their scales which are used in traditional medicine in some parts of the world. They are actually the most trafficked mammal in the world.</p>\n    <h3>Dhole</h3>\n    <p>These animals are related to dogs and wolves, living in packs. Dholes are most commonly found in India and Southeast Asia. They are endangered due to many factors including habitat loss and loss of prey.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: white;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryYZX+iZHds2\nEKaZVCiy4uGlKN5V5G0kGXp7YxlK5asuXtbmrbbTWDsscRaFOvzvWiNu2EMV\npIOKh3MwNCHUsl/1uiQwAJMgwTfcReYSxllvermUNsEFvPceoQSSTTtd1ui1\nqG5qi5sDAfjF6Umx0G52xfB0kiZrnUXe4zUTnOrWMA38MV0pHqvJ5uCo4A4E\n3ineLELC/Co4SFQRDSI5Oa0tmYcljKH7Kqpy4vAtGQr+mbEO1TzH23zT+RIC\nYWtYYCj+td0VTbs/U7gHbMMvkMdXVU+HMTkWVnRWlVfP/n9f1LyKa3B4oQqZ\nK4TkgBdhFw/3n4Y1zscSMH0Wbd6cXEa5P6OXTqGYQr5vpA9hA6jl4nDHKS95\nN57F2WtTBrqsVbE8L2IS2vtHmwLoiHc+tFKKz/JdvIEJRUNdB9QBH5FgNUCz\nzg9whbREuvX09Aq7N55A8AMqgsuay16X0C6I+rkqXHM+V31DpvBYzlQF1sLn\nfME2ru8a3rXqWAADzb7gCdn9MOdG+7vm5lAAEepdOq03V1TkdlBudpOsA+A/\npx8VBpAlr2unj1r+yXRfzAMw+9vkhkafh1+K3VGETqhGkjFokvtv2SpC688Y\nGDzvvirRa5ZXjpQe4Mo1AG+39YftxCCleeAhfET3vGuUAhT7TwVjWgKR+kT9\nt2jpFFa/AUV/Te7EtvXR1QR3wnGsTrDK0McCLmjNAHaNmttrhcl5fppTmKfs\nvC2GFlVUoKG4k4ngKJr0Z+c2E1FoJVCbhMBWRjy9J6PhCM6uPYVsPAtyPxS/\n3apeStgyFn77RnXQ3JCPSw4OREYz0mcHFEMkS0T30+sINiBcUjr0WZV2IuT+\ned/td/q5tt7ifaiDK4Oq2ZEx/VJzEUu0LtkE5J8cGfE168wy9pvEOezD+gRc\nVE0Ta/L6v/oY2DKn8uP3Dw+QA4uavkoCFkUn2CMoLx83F/RX9wcJywZYyRIc\nf8aCzeNE7E7VHHRGhz/LlktXUHOrCqRXAd/AgHmuPqwGhPCSeXUeQ1tUnVNB\nrFPSDy8qMYDxrSlD+8ygOBwwpJ65Ez5D3obPjuIx5DECkHB5K9Dvw16iYjSA\nTqB6xoD4guyDx9e1LY9e8xjfQbKPDe/iO+8CpVSXil/Ks64b61SjKtyxbsSj\n2t0wxoDbZpAh5yQ/4Z+dmNH6gCD54gvC7AhBLU++IkWltBQX24H5Pdk3IL2E\nLRjGuEcKgdrjGwyM+qjcpdzuV5GRrAEQbvKjDlRKtq0xKXfewA==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:42.158+00:00\",\"changed\":[\"cloned from \\\"CSD U2L10-L1d-2025\\\"\"],\"cloned_from\":\"CSD U2L10-L1d-2025\"}]"
+}]]></config>
+</Weblab2>
