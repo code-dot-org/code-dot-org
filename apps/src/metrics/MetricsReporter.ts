@@ -152,13 +152,10 @@ class MetricsReporter {
   }
 
   private sendToObservabilityLogger(level: LogLevel, message: string | object) {
+    const msgStr =
+      typeof message === 'string' ? message : JSON.stringify(message);
     const context = this.getDeviceInfo();
-
-    if (typeof message === 'string') {
-      observabilityLoggerByLevel[level](message, context);
-    } else {
-      observabilityLoggerByLevel[level]('[Object]', {...context, ...message});
-    }
+    observabilityLoggerByLevel[level](msgStr, context);
   }
 
   private async sendMetrics(metrics: MetricDatum[]) {
