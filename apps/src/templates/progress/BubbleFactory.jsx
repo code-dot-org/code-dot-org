@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
 
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -109,7 +109,9 @@ export function BubbleLink({
   const handleClick = () => {
     const state = getStore().getState();
     const currentLevelNumber = state.progress
-      ? getCurrentLevel(state)?.levelNumber
+      ? getCurrentLevels(state)?.find(
+          l => l.isCurrentLevel || l.sublevels?.some(s => s.isCurrentLevel)
+        )?.levelNumber
       : undefined;
     analyticsReporter.sendEvent(EVENTS.HEADER_PROGRESS_BUBBLE_LINK_CLICKED, {
       previousLevelNumber: currentLevelNumber,
