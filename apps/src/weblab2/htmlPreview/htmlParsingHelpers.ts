@@ -50,36 +50,37 @@ const consoleOverrideScript = `
       const args = [];
       for (let i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
       try {
-        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: method, args: args});
       } catch(e) {}
       return originalMethod.apply(console, arguments);
     };
   });
   window.addEventListener('unhandledrejection', function(event) {
-    const reason = event.reason
-      ? (event.reason.message || String(event.reason))
-      : 'Unhandled Promise rejection';
+    const reason = event.reason !== undefined
+      ? serialize(event.reason) : 'Unhandled Promise rejection';
     try {
-      channel.postMessage({type: "CONSOLE_LOG", level: "error", args: [reason]});
+      channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error", args: [reason]});
     } catch(e) {}
   });
   const tagNames = {
-    img: 'Image', script: 'Script', link: 'Stylesheet',
-    audio: 'Audio', video: 'Video'
+    img: 'Image', script: 'Script', audio: 'Audio', video: 'Video'
   };
   window.addEventListener('error', function(event) {
     if (event.target && event.target !== window) {
       const tag = event.target.tagName ? event.target.tagName.toLowerCase() : 'resource';
+      const resourceType = tag === 'link'
+        ? (event.target.rel && event.target.rel.includes('stylesheet') ? 'Stylesheet' : 'Link resource')
+        : (tagNames[tag] || tag);
       const filename =
         (event.target.src || event.target.href || 'unknown').split('/').pop();
       try {
-        channel.postMessage({type: "CONSOLE_LOG", level: "error",
-          args: [(tagNames[tag] || tag) + ' not found: ' + filename]});
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error",
+          args: [resourceType + ' not found: ' + filename]});
       } catch(e) {}
     } else {
       const filename = event.filename ? event.filename.split('/').pop() : 'unknown';
       try {
-        channel.postMessage({type: "CONSOLE_LOG", level: "error",
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error",
           args: [event.message + ' (' + filename + ', line ' + event.lineno + ')']});
       } catch(e) {}
     }
