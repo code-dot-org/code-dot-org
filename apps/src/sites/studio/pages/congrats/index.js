@@ -89,6 +89,9 @@ $(document).ready(function () {
         isEnglish={isEnglish}
       />
     </Provider>,
-    document.getElementById('congrats-container')
+    document.getElementById('congrats-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

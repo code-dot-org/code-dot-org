@@ -12,6 +12,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'gamelab',
   'spritelab',
   'poetry',
+  'game_design',
 ];
 
 const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
