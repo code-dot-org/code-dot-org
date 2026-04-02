@@ -2535,8 +2535,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_181219) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["objective_id"], name: "index_user_lesson_objective_reflections_on_objective_id"
-    t.index ["objective_id", "student_id"], name: "index_ulor_on_objective_and_student"
     t.index ["student_id"], name: "index_user_lesson_objective_reflections_on_student_id"
+    t.index ["objective_id", "student_id"], name: "index_ulor_on_objective_and_student"
   end
 
   create_table "user_lesson_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
