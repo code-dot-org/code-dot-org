@@ -55,14 +55,6 @@ const consoleOverrideScript = `
       return originalMethod.apply(console, arguments);
     };
   });
-  window.onerror = function(message, source, lineno) {
-    const filename = source ? source.split('/').pop() : 'unknown';
-    try {
-      channel.postMessage({type: "CONSOLE_LOG", level: "error",
-        args: [message + ' (' + filename + ', line ' + lineno + ')']});
-    } catch(e) {}
-    return false;
-  };
   window.addEventListener('unhandledrejection', function(event) {
     const reason = event.reason
       ? (event.reason.message || String(event.reason))
@@ -72,8 +64,8 @@ const consoleOverrideScript = `
     } catch(e) {}
   });
   const tagNames = {
-    img: 'image', script: 'script', link: 'stylesheet',
-    audio: 'audio', video: 'video'
+    img: 'Image', script: 'Script', link: 'Stylesheet',
+    audio: 'Audio', video: 'Video'
   };
   window.addEventListener('error', function(event) {
     if (event.target && event.target !== window) {
@@ -83,6 +75,12 @@ const consoleOverrideScript = `
       try {
         channel.postMessage({type: "CONSOLE_LOG", level: "error",
           args: [(tagNames[tag] || tag) + ' not found: ' + filename]});
+      } catch(e) {}
+    } else {
+      const filename = event.filename ? event.filename.split('/').pop() : 'unknown';
+      try {
+        channel.postMessage({type: "CONSOLE_LOG", level: "error",
+          args: [event.message + ' (' + filename + ', line ' + event.lineno + ')']});
       } catch(e) {}
     }
   }, true);
