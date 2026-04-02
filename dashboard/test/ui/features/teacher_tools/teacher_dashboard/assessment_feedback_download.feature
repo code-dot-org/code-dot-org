@@ -7,8 +7,6 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab has feedback download
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/15"
-    And I wait for the lab page to fully load
     Then I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click selector "#section-options-dropdown-dropdown-button" once I see it
     And I click selector "#ui-test-Section-settings" once I see it
