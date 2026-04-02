@@ -108,6 +108,7 @@ export function BubbleLink({
 }) {
   const handleClick = () => {
     const state = getStore().getState();
+    // Ensure we are reporting the parent level number if this is a sublevel
     const currentLevelNumber = state.progress
       ? getCurrentLevels(state)?.find(
           l => l.isCurrentLevel || l.sublevels?.some(s => s.isCurrentLevel)
