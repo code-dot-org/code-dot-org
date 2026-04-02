@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_30_181219) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -1002,6 +1002,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lesson_insights", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id"
+    t.integer "student_id"
+    t.integer "section_id"
+    t.integer "teacher_id"
+    t.text "insight_response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id", "lesson_id", "student_id"], name: "index_lesson_insights_on_section_id_and_lesson_id_and_student_id", unique: true
   end
 
   create_table "lessons_opportunity_standards", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2526,6 +2537,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
     t.decimal "longitude", precision: 9, scale: 6
     t.index ["indexed_at"], name: "index_user_geos_on_indexed_at"
     t.index ["user_id"], name: "index_user_geos_on_user_id"
+  end
+
+  create_table "user_lesson_objective_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "objective_id", null: false
+    t.bigint "student_id", null: false
+    t.string "reflection"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["objective_id", "student_id"], name: "index_ulor_on_objective_and_student"
+    t.index ["objective_id"], name: "index_user_lesson_objective_reflections_on_objective_id"
+    t.index ["student_id"], name: "index_user_lesson_objective_reflections_on_student_id"
   end
 
   create_table "user_lesson_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|

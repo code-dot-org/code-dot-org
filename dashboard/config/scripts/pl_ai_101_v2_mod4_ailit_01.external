@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
 
 <!-- KNOWLEDGE -->
-<div style="border:1px solid #0093A4; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="border:1px solid #5a2ca0; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
 <img src="https://images.code.org/01bcfdad34fbe94df49a42fa383600d1-Screenshot 2026-03-30 at 10.59.49 AM.png" style="width:40px;">
 <div style="font-weight:800; font-size:20px;">Knowledge</div>
@@ -34,7 +34,7 @@ Knowledge focuses on what students understand about AI.
 </div>
 
 <!-- SKILLS -->
-<div style="border:1px solid #0093A4; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="border:1px solid #5a2ca0; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
 <img src="https://images.code.org/80cec506af206a17886dd8e93fddc5ce-Screenshot 2026-03-30 at 10.59.44 AM.png" style="width:40px;">
 <div style="font-weight:800; font-size:20px;">Skills</div>
@@ -48,7 +48,7 @@ Skills focus on what students can do when working with AI.
 </div>
 
 <!-- ATTITUDES -->
-<div style="border:1px solid #0093A4; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="border:1px solid #5a2ca0; border-radius:18px; padding:20px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
 <img src="https://images.code.org/a15746db2cd10f74f27ff30a58119a8b-Screenshot 2026-03-30 at 10.59.39 AM.png" style="width:40px;">
 <div style="font-weight:800; font-size:20px;">Attitudes</div>

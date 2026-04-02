@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:36.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Fix Image Width",
+    "long_instructions": "# Change the Width\r\nThe images here are all different sizes with some of them way too big. \r\n\r\n# Do This\r\n1) Create a rule that makes the width of all the images the same and sizes them down!\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Fix the issue with images being different sizes from each other.",
+    "thumbnail_url": "https://images.code.org/c95ad37237ec1f10cefd806d49a66cbe-image-1566494874926.PNG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1> My Portfolio </h1>\n    <h3> These are some photos that I really like that I wanted to share </h3>\n    <img src=\"arctic_fox.jpg\" alt=\"An Arctic fox\">\n    <h6> David Mark, Pixabay, Pixabay License </h6>\n    <img src=\"flower.jpg\" alt=\"Close up of a flower\">\n    <h6> Jill Wellington, Pixabay, Pixabay License </h6>\n    <img src=\"watermelon.jpg\" alt=\"Cut up watermelon\">\n    <h6> Jill Wellington, Pixabay, Pixabay License </h6>\n    <img src=\"fox.jpg\" alt=\"A fox\">\n    <h6> Pexels, Pixabay, Pixabay License </h6>\n    <img src=\"poppy.jpg\" alt=\"A poppy field\">\n    <h6> Roman Grac, Pixabay, Pixabay License </h6>\n    <img src=\"bird.jpg\" alt=\"A flying bird\">\n    <h6> homecare119, Pixabay, Pixabay License </h6>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n background: lightcyan;\n}\n\nh6 {\n  text-align: right;\n}\n\nimg {\n  float: left;\n  margin: 10px;\n  border-radius: 20px;\n}\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "poppy.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/b07cd9bd-61e9-4b59-a40a-3b38387a63f1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "bird.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/84dec9b7-68a7-4d06-80d9-08ec96f951bd.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "watermelon.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/0ed6d838-9ea8-4c6e-a911-828f0d51c7e5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "arctic_fox.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/1369d03a-5ee8-4239-981c-6bf8628fd8c4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "flower.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/f31bbf2c-86d2-40df-9929-ed35a88e9ffb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "fox.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7e-2025/uuid/1bc14a58-c20a-4de6-b0ce-617252ff4264.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ne/k=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:36.614+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L7e-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L7e-2025\"}]"
+}]]></config>
+</Weblab2>

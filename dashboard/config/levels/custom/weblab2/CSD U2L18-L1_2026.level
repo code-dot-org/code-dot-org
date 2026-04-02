@@ -1,0 +1,124 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:08.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/55f2ee057f721d2819b2de7ef2d49bff-image-1707238959417.png\" style=\"float: right; width: 300px;\">\r\n\r\n# What Do You Notice? What Do You Wonder?\r\n\r\nThere are some cool things happening with our hyperlinks! Can you spot them?\r\n\r\n# Do This\r\n\r\n1. Hover over the hyperlinks in the Preview Window.\r\n2. Click on a hyperlink _very slowly_.\r\n3. Discuss with your neighbor - What do you notice? What do you wonder?\r\n\r\n**In the CSS file:**\r\n1. Take a look at the rule sets below the comments that say \"CHECK ME OUT!\"\r\n2. Discuss with your neighbor - What do you notice? What do you wonder?\r\n\r\n\r\n![]()",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1> Welcome to the Cities of Tomorrow</h1>\n    \n    <div class=\"links\">\n      <a href=\"index.html\">Cities of Tomorrow</a>\n      <a href=\"transportation.html\">The Future of Urban Mobility</a>\n    </div>\n    \n    <div class=\"buildings\">\n      <p>Imagine living in a city where every building not only reaches towards the sky but also breathes life through lush vertical gardens on its facade. These are the cities of tomorrow—places where technology and nature intertwine to create sustainable, vibrant communities.</p>\n      <img src=\"vertical-garden.png\" alt=\"vertical garden\">\n    </div>\n    \n    <div class=\"home\">\n      <p>In futuristic cities, every home is a \"smart\" home, equipped with the latest technology to conserve energy and automate daily tasks. Solar panels and wind turbines blend into the cityscape, powering buildings with renewable energy. Here, architects and urban planners dream big, designing cities that promise a greener, more efficient future for all its inhabitants.</p>\n      <img class=\"home-pic\" src=\"futuristic-home.png\" alt=\"smart home\">\n    </div>\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "transporation.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>The Future of Urban Mobility</h1>\n    \n    <div class=\"links\">\n      <a href=\"index.html\">Cities of Tomorrow</a>\n      <a href=\"transportation.html\">The Future of Urban Mobility</a>\n    </div>\n\n    <div class=\"cars\">\n      <p>The hustle and bustle of today's city streets are transformed into serene, efficient pathways in the futuristic city. Gone are the days of traffic jams and pollution; welcome to the era of autonomous vehicles and hyperloops. Imagine stepping into a vehicle that knows your destination before you do, whisking you away at unprecedented speeds, all without a steering wheel in sight. </p>\n      <img class=\"flying-car\" src=\"futuristic-cars.png\" alt=\"flying cars\">\n    </div>\n      \n    <div class=\"trains\">\n      <p>Or picture boarding a hyperloop train, encapsulated in comfort, as you travel hundreds of miles in mere minutes. Futuristic cities are also taking to the skies with the concept of flying cars, turning sci-fi dreams into tomorrow's reality. These innovations in transportation are not just about speed; they're about creating a seamless, eco-friendly way to explore the urban landscape.</p>\n      <img src=\"maglev-train.png\" alt=\"magnetic levitation train\">\n    </div>\n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* page color */\nbody {\n  background-color: aliceblue;\n}\n\n/* title style */\nh1 {\n  font-family: fantasy;\n  letter-spacing: 1px;\n  color: blue;\n  text-align: center;\n  font-size: 44px;\n}\n\n/* div style to center links */\n.links {\n  text-align: center;\n  margin-bottom: 50px;\n}\n\n/* CHECK ME OUT! link special styling */\na:hover {\n  color: #fe5dbe;\n  font-size: 24px;\n  text-decoration-style: wavy;\n}\n\n/* CHECK ME OUT! link special styling */\na:active {\n  color: #fd0000;\n  text-decoration-color: blue;\n\n}\n\n/* basic link style */\na {\n  font-family:fantasy;\n  letter-spacing: 1px;\n  font-size: 18px;\n  color:blue;\n  margin: 10px;\n}\n\n/* paragraph style */\np {\n  font-family:monospace;\n  font-size: 20px;\n}\n\n/* style for content divs */\n.buildings, .home, .cars, .trains {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  margin: 20px;\n}\n\n/* flex order for images */\n.home-pic, .flying-car {\n  order: -1;\n}\n\n/* basic image style */\nimg {\n  border-style: solid;\n  border-color: darkgreen;\n  border-radius: 20px;\n  margin: 10px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "futuristic-home.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L1-2025/uuid/fad2e169-726b-43af-a03b-08abf237730d.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "maglev-train.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L1-2025/uuid/2631a405-64d6-43c9-9529-382451fa0f34.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "vertical-garden.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L1-2025/uuid/8c3ad375-78f1-4698-a7a5-ac10410ae3eb.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "futuristic-cars.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L1-2025/uuid/b25b9ffe-c5c7-4f6b-aaac-cefd4beb85b9.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:08.320+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L1-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L1-2025\"}]"
+}]]></config>
+</Weblab2>

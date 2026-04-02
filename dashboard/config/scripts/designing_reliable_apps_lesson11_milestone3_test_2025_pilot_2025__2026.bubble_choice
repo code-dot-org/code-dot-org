@@ -1,0 +1,11 @@
+name 'designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-_2026'
+display_name 'Milestone 3'
+description 'Your Goal: Strengthen your app by adding defensive code and clear status messages so it never looks broken or frozen. In this milestone, you will show loading states, handle errors with try/catch, and display helpful empty-state messages when no data is returned. By the end, your app should clearly communicate what is happening, even when something goes wrong.'
+
+sublevels
+level 'designing-reliable-apps-lesson11-milestone3-level3d-test_20_2025-_2026'
+level 'designing-reliable-apps-lesson11-milestone3-level3a-test_20_2025-_2026'
+level 'designing-reliable-apps-lesson11-milestone3-level3b-test_20_2025-_2026'
+level 'designing-reliable-apps-lesson11-milestone3-level3c-test_20_2025-_2026'
+level 'designing-reliable-apps-lesson11-milestone3-level3e-test_20_2025-_2026'
+level 'designing-reliable-apps-lesson11-milestone3-level3f-test_20_2025-_2026'

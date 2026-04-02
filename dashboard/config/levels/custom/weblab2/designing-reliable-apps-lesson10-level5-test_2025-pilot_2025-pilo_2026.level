@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Static Constants",
+    "long_instructions": "## Create an App Shell\r\n\r\n**Goal:** Store the app's title and date in a local `appConfig` object and display them instantly. This creates a fast app shell so the user isn't staring at a blank screen while waiting for the internet.\r\n\r\n**Do This:**\r\n\r\n1. Create a `const` object named `appConfig`. Inside, add a `title` (text) and a `date` (text).\r\n\r\n2. Write a function named `renderAppShell`. Inside, update the display to use the title and date from your `appConfig` object.\r\n\r\n3. Call `renderAppShell()` at the bottom of your code so the text appears on the screen immediately.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nsugeb5IdBVc=\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Population Tracker</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div class=\"container\">\n      \n      <div id=\"header-section\">\n        <h1 id=\"title-section\">Title</h1>\n        <p id=\"date-section\">Date</p>\n      </div>\n      \n      <div class=\"controls\">\n        <div id=\"status\">Status: </div>\n        <button id=\"fetch-btn\">Get Live Census</button>\n      </div>\n\n      <div id=\"results\"></div>\n      \n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  padding-top: 40px;\n}\n\n.container {\n  background: white;\n  width: 400px;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\n#header-section h1 { color: #1a73e8; margin-bottom: 5px; }\n#header-section p { color: #666; margin-top: 0; }\n\n#status {\n  background: #eee;\n  padding: 10px;\n  border-radius: 6px;\n  margin-bottom: 10px;\n  font-weight: bold;\n  font-size: 0.9rem;\n}\n\nbutton {\n  background: #1a73e8;\n  color: white;\n  border: none;\n  padding: 12px;\n  width: 100%;\n  border-radius: 6px;\n  font-size: 1rem;\n  cursor: pointer;\n}\nbutton:hover { background: #1557b0; }\n\n/* Visual Cues for Data Source */\n.result-card {\n  padding: 10px;\n  margin-top: 10px;\n  border-left: 5px solid #ccc;\n  background: #f9f9f9;\n}\n.live-data { border-left-color: #34a853; } /* Green */\n.backup-data { border-left-color: #fbbc05; } /* Orange */",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:35.111+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,1503 @@
+{
+  "script": {
+    "name": "web-apps-with-ai-capstone-project-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-01 21:45:36 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "web-apps-with-ai-capstone-project-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Capstone Project",
+      "name": "Capstone Project",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**How do you decide what to build, what to change, and what to leave out?**\n\nThis 10-day capstone gives student teams the extended time and structure to build a web app with AI from idea to working prototype. Rather than starting fresh each unit, students carry one project through five milestones with three benchmark check-ins built in for reflection and replanning.\n\nYour primary role is to keep students moving between planning, building, and testing rather than treating any phase as a one-time event. Watch for teams that rush into code before they can explain their system, or that treat benchmarks as deadlines rather than moments to recalibrate. The Kanban Board and Project Leader role are designed to distribute ownership across the team — use them as conversation anchors when groups seem stuck or unbalanced. Assessment draws on the Project Guide, Kanban Board, and the working app together.",
+        "student_overview": "**How do you decide what to build, what to change, and what to leave out?**\n\nIn this capstone, your team will design and build a web app that uses AI and actually see it evolve over time. You'll start by figuring out who your app is for and what problem it solves, then map out how it works as a system, build and test it, gather feedback, and prepare to share a version you can explain and stand behind.\n\nThis project isn't about finishing the most features. It's about making smart decisions: what to build first, what to test, what feedback to act on, and what to intentionally leave for later. You'll use a Kanban Board to track your team's work and a Project Guide to document your thinking at each milestone — because how you make decisions matters just as much as what you build."
+      },
+      "seeding_key": {
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "920dc160-b813-48ab-b02a-8a62401bd2f7",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "737830cf-1626-441a-abd2-59bd2056df45",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 4"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "737830cf-1626-441a-abd2-59bd2056df45",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc",
+      "position": 5,
+      "properties": {
+        "duration": 45,
+        "name": "Day 5"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c",
+      "position": 6,
+      "properties": {
+        "duration": 45,
+        "name": "Day 6"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf",
+      "position": 7,
+      "properties": {
+        "duration": 45,
+        "name": "Day 7"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "3392a669-5f5d-48d2-910a-0f00b8d3421a",
+      "position": 8,
+      "properties": {
+        "duration": 45,
+        "name": "Day 8"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "588ea4d1-84d3-455a-80b1-317da9913888",
+      "position": 9,
+      "properties": {
+        "duration": 45,
+        "name": "Day 9"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "588ea4d1-84d3-455a-80b1-317da9913888",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "key": "53240202-3449-4587-9643-68c5f3298196",
+      "position": 10,
+      "properties": {
+        "duration": 45,
+        "name": "Day 10"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196",
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2a6dd8ae-043c-4ee8-9de4-d00aab69bbab",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *Think about your last project. What changed between your first version and your final version?*\n- *Why do you think those changes happened?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on concrete changes they made between versions (e.g., adding features, fixing bugs, adjusting scope, responding to testing or feedback). Listen for patterns around planning, testing, revising, and changing scope. Use those responses to surface that this capstone is built around the same process, but applied across one longer, continuous project instead of restarting each unit.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a6dd8ae-043c-4ee8-9de4-d00aab69bbab",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "d5952818-e08e-4631-9a89-f1febd8c6f11",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into teams of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each team of students a copy of the Capstone Project Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through these simplified project goals. Emphasize that these describe what they will practice and demonstrate throughout the capstone, not a checklist of features they must build. Reinforce that the goals will be revisited across milestones as their project evolves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the first page of the Project Guide. Let them know this page explains how the capstone is structured (benchmarks, milestones, and planning workflow), not the details of what they need to build yet.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What do you notice about the structure of this capstone project?*\n- *What do you wonder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate how this project is structured differently from previous unit projects. Listen for students noticing ideas like milestones, benchmarks, iteration, planning over time, and not “finishing everything at once.” Use their responses to reinforce that this capstone supports ongoing revision and decision-making across one larger project.\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "During this discussion, explicitly tell students how their projects will be shared at the end of the capstone (for example: in-class gallery walk, school audience, or online). Emphasize that they will have time to prepare and choose what version to present, and that sharing expectations may influence how they scope and refine their work.\n\nIf questions about the Project Leader don't surface naturally, point it out to students and let them know that you'll talk about what that means shortly.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d5952818-e08e-4631-9a89-f1febd8c6f11",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "df729103-3a0a-4562-a607-10a70725daa0",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df729103-3a0a-4562-a607-10a70725daa0",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "b7c81b7e-9250-401f-8a28-e8f3fdad86ab",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the terms benchmark and milestone for students. Remind them that they have used milestones in previous unit projects, but that this capstone runs over a longer period of time. Explain that benchmarks are scheduled check-in points, while milestones describe what they should be able to show or explain at those moments, and that the two work together to support ongoing iteration.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain when each benchmark will happen and which milestones students will reflect on at each point. Emphasize that benchmarks are check-in moments, not deadlines, and that students can and should revisit and revise their idea, scope, or system flow at any time. Frame benchmarks as a way to pause, reflect, and stay oriented—not as a signal to stop iterating.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the Project Guide. Emphasize that the rubric focuses on decision-making, clarity, and process, not a checklist of features. Let students know they will revisit this rubric throughout the capstone as they make and explain design choices.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify what the rubric values and how success is defined beyond specific features. Listen for students noticing themes like clarity of purpose, intentional scope, explanation of decisions, iteration over time, and usability—not just “what to build.” Use this discussion to reinforce that success is about alignment and reasoning, not checking off features.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students do not bring up scope during the rubric discussion, use the next slide to explicitly define it. This term appears in the rubric and will be referenced throughout the project, so students need a shared understanding early on."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7c81b7e-9250-401f-8a28-e8f3fdad86ab",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "dc289593-7605-45d4-b2d3-cb962a1de3b8",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dc289593-7605-45d4-b2d3-cb962a1de3b8",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "85535ac8-5d82-4e6a-b5ee-2c844f018b11",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what “scope” means in the context of this project. Provide a concrete example, such as: “This version lets users search and filter results, but does not include saving or sharing yet.” Emphasize that scope is about making intentional choices for \"this version\", not limiting what the project could become later.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Kanban Project Planning Board, a Project Leader Guide, a manila folder, a stack of sticky notes, and tape or glue. Let students know this planning board will be used throughout the capstone to track work, reflect at benchmarks, and support iteration—not just today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to tape or glue the Kanban Project Planning Board to one inside side of their manila folder. This folder will be used throughout the capstone to organize planning artifacts and reflections.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to tape or glue the Project Leader Guide to the other side of their manila folder. Take a moment to go over the Project Leader role and answer any questions students may have.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "85535ac8-5d82-4e6a-b5ee-2c844f018b11",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "9856afe5-c7f1-4ebc-8625-ffb421c5736c",
+      "position": 7,
+      "properties": {
+        "description": "Software teams often use a backlog to keep track of the tasks they plan to work on and the order they’ll tackle them. For this capstone, we’ll use a similar idea to break milestones into manageable tasks and track progress using the Kanban Project Planning Board. Today, you’ll start identifying the tasks your group needs to focus on first.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9856afe5-c7f1-4ebc-8625-ffb421c5736c",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "5499da70-adb7-4aae-8ed0-f655c2e49b96",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that teams will break each milestone into a small set of tasks that are in scope for this version of their project. Students should write one task per sticky note and place them on the other inside side of their folder so the Project Leader can move tasks onto the Kanban board as work begins.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students review the goal for Milestone 1 in their Project Guide and discuss the tasks they think they will need to complete to reach that goal. Once groups agree on the tasks, have students write each task on a sticky note and place it in the TO DO column of their Kanban Board.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to confirm who the first Project Leader will be. Remind them that this role includes maintaining the Kanban Board by moving tasks into In Progress and Done, which requires checking in with teammates over the next few days. Let students know the Project Leader role will rotate at each benchmark.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt groups to decide which Milestone 1 tasks they want to start with first. Remind students that they can add new tasks if needed or remove tasks that are no longer relevant. Emphasize that they should stay focused on Milestone 1 before identifying tasks for future milestones.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that Milestone 1 focuses on clarifying intent and scope, not writing code. If groups begin jumping into implementation, redirect them to explaining who their app is for, what problem it solves, and what this first version will include."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5499da70-adb7-4aae-8ed0-f655c2e49b96",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "4b35cb09-7845-404f-96ba-996d96b6541b",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4b35cb09-7845-404f-96ba-996d96b6541b",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "9f007043-b21e-4b52-99c0-9050ea736053",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to begin Milestone 1: Intent and Scope. Remind them that they can choose the tool that best supports their current task and that they may move between tools as their thinking evolves.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work in the Milestone 1 hub, ask guiding questions such as:\n- Who is your app for?\n- What problem are you trying to solve?\n- What are you intentionally including in this first version?\n- What are you leaving out for now?\n\nUse these check-ins to confirm students are moving from ideas toward clear intent and scope, rather than jumping straight into code.\n",
+        "progression_name": "Milestone 1: Intent and Scope",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to experiment with multiple tools in the Milestone 1 hub as they develop their plan. Remind them that clarifying and refining their ideas here will save time later when they begin coding."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Set clear pacing expectations: Milestone 1 can typically be completed by the end of today’s class or early next class. Encourage students to prioritize clarity of intent and scope over polish or completeness."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f007043-b21e-4b52-99c0-9050ea736053",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "ce8624f3-e8be-4325-8cf4-e14ddb106299",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ce8624f3-e8be-4325-8cf4-e14ddb106299",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "39c927fc-8b24-45d6-94b1-4a198677f6b8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone 1 section in their Project Guide. Let them know this section may continue to evolve if their idea or scope changes in later lessons.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students wrap up, ensure they are discussing and aligning on their Milestone 1 responses as a team. Listen for shared understanding around audience, problem, and scope.\n",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, invite a few volunteers to share aloud or facilitate a quick pair-and-share to close. Focus on how ideas or scope changed today, not on polishing responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "39c927fc-8b24-45d6-94b1-4a198677f6b8",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "afb1b101-b03b-471a-b029-3a2747e58e2b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *Are these ready to be a task cards?*\n- *If not, how would you rewrite them?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that effective task cards are specific, actionable, and scoped, not vague or overly broad. Listen for students suggesting ways to rewrite tasks so they describe a clear action that can be started and completed. Use this discussion to reinforce that good task cards support planning and iteration, not perfection.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "afb1b101-b03b-471a-b029-3a2747e58e2b",
+        "lesson_activity.key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8"
+      }
+    },
+    {
+      "key": "629143ce-939f-4ab4-8f95-cdd300070b9e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as a transition, not a handoff. Explain that students should continue refining their Milestone 1 responses as needed while beginning work on Milestone 2. Before starting Milestone 2 work, have groups identify and post task cards on their Kanban Board for what they plan to work on today. Reinforce that revisiting Milestone 1 (ideas, audience, scope) is expected as their system design becomes clearer.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 if they still need to refine any Milestone 1 work, and to Level 2 to begin Milestone 2: System Explanation. Explain that the focus of Milestone 2 is describing how the app works — including user actions, app decisions, and what users see — not building or coding yet. Reinforce that students can move back and forth between Milestones 1 and 2 as their understanding evolves.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are focusing on system flow, not UI polish or code. Ask guiding questions such as:\n- What does the user do first?\n- What does the app check or decide next?\n- What does the user see as a result?\n- Where might the app show different outcomes (e.g., empty, error, or success states)?\n",
+        "progression_name": "Milestone 2: System Explanation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may try to jump ahead to designing screens or writing code. If this happens, redirect them to explaining the flow of one user interaction (user action → app decision → user sees) before worrying about layout or features."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "629143ce-939f-4ab4-8f95-cdd300070b9e",
+        "lesson_activity.key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8"
+      }
+    },
+    {
+      "key": "5471ed6d-2f96-494c-bbbf-53f6bd05683d",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5471ed6d-2f96-494c-bbbf-53f6bd05683d",
+        "lesson_activity.key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8"
+      }
+    },
+    {
+      "key": "cf208f3d-84b9-4a68-a609-ae02a7e56096",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone 2 section in their Project Guide. Remind them that this section should explain how their app works as a system, including user actions, app decisions, and what the user sees as a result. If their ideas, audience, or scope changed while working on Milestone 2, prompt them to revisit and update their Milestone 1 responses so those decisions and shifts are clearly documented.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for explanations that clearly describe one or more user interactions from start to finish (user action → app decision → user sees). Encourage students to notice where their explanation is still vague or skips steps, and to revise for clarity.\n",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, invite a few students to share one system interaction they explained clearly (or struggled to explain). Emphasize that being able to describe how an app works — even before it’s built — is a key design and problem-solving skill."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cf208f3d-84b9-4a68-a609-ae02a7e56096",
+        "lesson_activity.key": "3788051d-41ba-47aa-bd1e-b4d2e121e6e8"
+      }
+    },
+    {
+      "key": "45d0a4da-10cb-477e-b3a5-9f82c29a15e0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Look at one card your team is working on. Could one person finish this in one class period? If not, how could it be split?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students evaluate whether their task cards are appropriately scoped for one work session. Listen for students identifying tasks that are too large or vague and suggesting ways to break them into smaller, more actionable steps. Use this discussion to reinforce that well-scoped tasks support steady progress and clearer collaboration.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "45d0a4da-10cb-477e-b3a5-9f82c29a15e0",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "55bf1f94-dc0b-4b16-a144-a9f6683d5e03",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as a continuation, not a reset. Explain that students should keep refining their Milestone 2 system explanations (or Milestone 1 if needed) while beginning work on Milestone 3. Direct students to review the goals for Milestones 2 and 3 in their Project Guide so they can decide what to prioritize during work time. Reinforce that students may revisit and update earlier milestones as their understanding deepens.",
+        "duration": "30",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may feel pressure to “build everything” once they reach Milestone 3. Encourage them to focus on getting one interaction working end-to-end (user action → app behavior → visible result) before expanding. Remind them that testing and revision are expected parts of the process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "55bf1f94-dc0b-4b16-a144-a9f6683d5e03",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "b19337d5-c3df-44dc-822b-84bf004ccd02",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b19337d5-c3df-44dc-822b-84bf004ccd02",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "a3c3994e-5780-40ff-8988-f7a136a6a35e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to refine any Milestone 2 work. Explain that the focus of Milestone 2 is describing how the app works — including user actions, app decisions, and what users see — not building or coding yet. Reinforce that students can move back and forth between Milestones 1 and 2 as their understanding evolves. When students have a clear system flow, direct them to identify task cards for Milestone 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that their system explanation could be understood by someone not in their group. Ask questions such as:\n- If I hadn’t seen your project before, could I follow what happens here?\n- Where might someone get confused about what the app does next?\n- Which part of this flow are you least confident about explaining?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some groups will feel “ready” to start Milestone 3 even if their system explanation isn’t perfect. That’s okay. Encourage them to move forward only once they can clearly explain one interaction, knowing they may return to refine their system explanation after testing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a3c3994e-5780-40ff-8988-f7a136a6a35e",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "eeeda521-ca9c-483d-bc05-2ac84a79bd31",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eeeda521-ca9c-483d-bc05-2ac84a79bd31",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "3e4dd21e-e546-4628-8737-4c18e343512d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this time to conduct Benchmark A. Have teams review their progress toward Milestones 1 and 2 using their Project Guide and Kanban Board. Prompt groups to move tasks as needed, note what is complete, what is still in progress, and what may need revision. Then, have teams rotate the Project Leader role before asking students to complete or update the Milestone sections that they worked on today in their Project Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some groups may want to rush through the benchmark to keep building. Slow this moment down. Emphasize that strong teams use checkpoints to adjust scope, refine plans, and redistribute work. This pause is what helps projects improve over time — not a break from progress."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e4dd21e-e546-4628-8737-4c18e343512d",
+        "lesson_activity.key": "98a57b03-0a03-46c3-8f61-42d84b1c9a3c"
+      }
+    },
+    {
+      "key": "4f217fb9-995a-40b3-aa75-aedbdcbf3c64",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Pick two tasks in your backlog. Which one should come first—and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice prioritizing tasks based on dependencies, impact, and readiness. Listen for students explaining why one task needs to happen before another (e.g., it unblocks other work, tests a core interaction, or reduces uncertainty). Use this discussion to reinforce that task order is a decision, not a guess.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f217fb9-995a-40b3-aa75-aedbdcbf3c64",
+        "lesson_activity.key": "737830cf-1626-441a-abd2-59bd2056df45"
+      }
+    },
+    {
+      "key": "6cbd10a3-993d-408a-909b-75fa02a87f76",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as focused build time with intentional planning. Explain that students should continue working on Milestone 3 while using their Kanban Board to prioritize which tasks to tackle first. For teams that started Milestone 3 last class, have them review and adjust their task cards based on what they learned from testing so far before they start working today. Reinforce that revisiting earlier milestones is expected if testing reveals changes to scope or system behavior.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to focus on Milestone 3 work using their Kanban task cards. Explain that Milestone 2 tools are still available to help clarify or revise system flow if testing reveals confusion or gaps. Emphasize that today’s goal is learning from testing, not finishing features.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for whether testing is informing their next steps. Ask questions such as:\n- What did you learn from testing this interaction?\n- Did anything behave differently than you expected?\n- Which task should change based on what you just observed?\n",
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Milestone 3: Testing and Behavior",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may treat testing as a quick check rather than a learning opportunity. Encourage them to slow down and observe behavior carefully — unexpected results often point to the most important improvements."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cbd10a3-993d-408a-909b-75fa02a87f76",
+        "lesson_activity.key": "737830cf-1626-441a-abd2-59bd2056df45"
+      }
+    },
+    {
+      "key": "001d8ccd-4c26-4422-9585-c8cb559c9a04",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "001d8ccd-4c26-4422-9585-c8cb559c9a04",
+        "lesson_activity.key": "737830cf-1626-441a-abd2-59bd2056df45"
+      }
+    },
+    {
+      "key": "52de3cdd-ea64-4c3d-bfe3-d70bf7cad8af",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone sections they worked on today in their Project Guide. If teams revisited Milestone 1 or 2, instruct students to add to what they wrote previously so the guide reflects how their ideas, scope, or system explanation evolved based on testing and discussion.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that strong reflections capture learning over time. Point out that updating earlier milestone sections after testing or discussion is exactly how real developers document changing decisions and make smarter choices in future iterations."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52de3cdd-ea64-4c3d-bfe3-d70bf7cad8af",
+        "lesson_activity.key": "737830cf-1626-441a-abd2-59bd2056df45"
+      }
+    },
+    {
+      "key": "47bee273-bea7-4a45-a8ef-2935c620c3f7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Name one thing your team did well last class that helped you work together.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on effective collaboration strategies from the previous class. Listen for examples such as clear task division, communication, checking in with teammates, or using the Kanban Board to stay organized. Use these responses to reinforce that strong teamwork is an intentional skill that directly supports progress on complex projects.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "47bee273-bea7-4a45-a8ef-2935c620c3f7",
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc"
+      }
+    },
+    {
+      "key": "7e25a0f6-c196-4ae9-8907-cc0ecfaccc00",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review today’s focus with students and explain that Day 5 should be continued Milestone 3 work. Encourage teams to use testing results to decide which task cards to move forward, split, or revise. Remind students that revisiting earlier milestones is expected if building reveals changes to ideas, scope, or system behavior.",
+        "duration": "30",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some teams may feel pressure to add many features quickly. Encourage students to slow down and focus on making a small number of interactions reliable and understandable. Strong projects grow from stable, well-tested pieces—not rushed additions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7e25a0f6-c196-4ae9-8907-cc0ecfaccc00",
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc"
+      }
+    },
+    {
+      "key": "900daa9b-ff47-4d0c-a297-7ab0f78a97fe",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "900daa9b-ff47-4d0c-a297-7ab0f78a97fe",
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc"
+      }
+    },
+    {
+      "key": "11f79fa0-7fbd-476b-a894-595ba04b42fa",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to focus primarily on Milestone 3 work today. Explain that Milestone 1 and 2 tools are still available if they need to revisit or clarify their ideas or how their system is supposed to work, especially when testing reveals unexpected behavior. Reinforce that students should let testing guide what they work on next.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for whether testing is shaping their decisions. Ask questions such as:\n- What did you learn from testing this feature?\n- Did anything behave differently than expected?\n- What task should you tackle next based on what you observed?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "11f79fa0-7fbd-476b-a894-595ba04b42fa",
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc"
+      }
+    },
+    {
+      "key": "8da6b6cd-1c1e-4157-bc01-2c95e292566e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this time to conduct Benchmark B. Have teams review their progress toward Milestone 3 using their Project Guide and Kanban Board. Prompt groups to move task cards as needed, note what is complete, what is still in progress, and what needs revision. Then, have teams rotate the Project Leader role before asking students to complete or update the Milestone sections they worked on today in their Project Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some teams may feel pressure to “finish” Milestone 3 during this benchmark. Reframe this moment as a check on how well the app behaves, not how many features exist. Encourage teams to use testing results to decide which tasks are truly ready to move forward and which need to be refined, split, or postponed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8da6b6cd-1c1e-4157-bc01-2c95e292566e",
+        "lesson_activity.key": "296b3c6f-ebb6-4eb6-9f48-3def43f1d6bc"
+      }
+    },
+    {
+      "key": "02e16db5-cb15-4072-8ca3-61424d926eae",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Look at your team’s Kanban board. Discuss:\n- *One card that moved forward*\n- *One card that’s stuck*\n- *One card you think should be added or split*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how work is actually progressing, not just what is finished. Listen for students recognizing when tasks need to be split, rewritten, or reprioritized based on testing or new understanding. Use this discussion to reinforce that updating the Kanban board is part of the work, not a sign of falling behind.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "02e16db5-cb15-4072-8ca3-61424d926eae",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "ed109493-c525-4ded-b42e-fd9aed1de357",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as iterative work, not a reset. Explain that students should continue building and testing in Milestone 3 while revisiting Milestones 1 or 2 if testing reveals changes to their idea, scope, or system explanation. Before students begin working, have groups review and update their task cards on the Kanban Board so today’s work reflects their current priorities.",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If a team has a working interaction (user action → app behavior → visible result), encourage them to begin Milestone 4: Feedback & Iteration by getting feedback from peers, AI, or you. Emphasize that feedback may send them back to building and testing — that loop is expected."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ed109493-c525-4ded-b42e-fd9aed1de357",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "5f2fbcd6-b580-4263-a8af-2ad53204db51",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f2fbcd6-b580-4263-a8af-2ad53204db51",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "f6835d4b-7163-4e72-a562-f083fda46698",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to focus primarily on Milestone 3: Build & Test today. Explain that Milestone 1 and 2 tools are still available if testing raises questions about scope, system flow, or user behavior. Reinforce that testing should guide what task cards they work on next, not the original plan alone.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for whether testing is shaping their decisions. Ask questions such as:\n- What did testing tell you about this feature?\n- Did testing confirm your plan, or change it?\n- Which task card feels most urgent after seeing it run?\n- What’s one small adjustment you’re making based on what you observed?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As teams build, they may jump between tasks without finishing any of them. Encourage students to complete or pause tasks intentionally—either move a card to Done, or rewrite it before switching. This reinforces purposeful iteration instead of scattered progress."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f6835d4b-7163-4e72-a562-f083fda46698",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "2d377010-239f-48c1-9097-30be503a3579",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2d377010-239f-48c1-9097-30be503a3579",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "2b0035d0-a4f5-49dc-9275-c61b756158e3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone sections they worked on today in their Project Guide. If teams revisited Milestone 1 or 2, remind them to add to or revise earlier responses so the guide clearly shows how their thinking changed as a result of testing and discussion.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b0035d0-a4f5-49dc-9275-c61b756158e3",
+        "lesson_activity.key": "805b3932-b7ae-4cd6-9789-1dc64a5fe67c"
+      }
+    },
+    {
+      "key": "fe41f2f5-99a8-4fd9-bcde-e1d92cd7de8e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *For your team today, choose one: on track, some concerns, blocked. What made you choose that today?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate their current project status using evidence from their work (e.g., task cards, testing results, or unclear decisions). Listen for students identifying specific blockers or uncertainties, not just general feelings. This helps surface where teams may need support, scope adjustment, or task re-prioritization today.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe41f2f5-99a8-4fd9-bcde-e1d92cd7de8e",
+        "lesson_activity.key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf"
+      }
+    },
+    {
+      "key": "51ab9e83-38cc-4199-880a-99e6e88fda57",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as continued build time with intentional reflection. Explain that students should keep working on Milestone 3: Build & Test, using their Kanban Board to prioritize tasks based on what testing reveals. If a team has at least one working interaction (user action → app behavior → visible result), encourage them to begin Milestone 4: Feedback & Iteration by gathering feedback from peers, AI, or you. Reinforce that feedback may send them back to building or revising earlier milestones, and that this loop is expected. Remind students to update their task cards and Project Guide as their understanding evolves.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to focus on Milestone 3: Build & Test, with the expectation that testing will actively shape their next steps. Emphasize that today is about responding to what they observe, not just completing planned tasks. Remind students that returning to Milestone 1 or 2 tools is expected if testing raises questions about scope, assumptions, or system flow. Students who are ready, can also move forward to Milestone 4 and start getting feedback from peers, AI, or the teacher.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for how they’re using testing to make decisions. Ask questions like:\n- What did this test change about your plan?\n- What assumption did this feature challenge?\n- Which task became more important after seeing this run?\n- What’s clearer now than it was yesterday?\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may interpret “more features” as progress. Redirect them toward clearer behavior instead. If a team is adding features quickly, ask them to explain what problem each new feature solves and what testing showed that justified it. This reinforces evidence-driven iteration, not just productivity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "51ab9e83-38cc-4199-880a-99e6e88fda57",
+        "lesson_activity.key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf"
+      }
+    },
+    {
+      "key": "b4585764-4aaa-4695-b593-3466ab75633e",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b4585764-4aaa-4695-b593-3466ab75633e",
+        "lesson_activity.key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf"
+      }
+    },
+    {
+      "key": "6946142e-5896-4f49-8670-9b79ffd18dfc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone sections they actively worked on today in their Project Guide. Emphasize that Day 7 reflections should capture decisions made from testing, not just progress. If teams revisited Milestone 1 or 2, remind them to clearly explain what changed and why so their guide shows the evolution of their thinking.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this wrap-up to shift teams from recording activity to justifying decisions. If responses sound procedural (“we tested,” “we fixed bugs”), prompt teams to connect actions to outcomes by asking, \"What problem did this fix address?\" or \"What evidence told you this was the right change?\" This reinforces that the Project Guide is a decision log, not a daily checklist."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6946142e-5896-4f49-8670-9b79ffd18dfc",
+        "lesson_activity.key": "b3a7877f-6e96-4522-9c86-4e74efbb2bbf"
+      }
+    },
+    {
+      "key": "dd54dabb-6367-4326-a079-cbdddab6a3a0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one way a teammate helped you without doing the work for you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify productive support behaviors such as asking clarifying questions, suggesting next steps, testing together, or giving feedback—rather than taking control or writing code for someone else. Listen for examples that show collaboration, communication, and shared problem-solving, which directly connect to expectations for Milestone 4 feedback.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd54dabb-6367-4326-a079-cbdddab6a3a0",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "a580ff98-7ae0-407c-bc13-fae4a47019ef",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as a shift from mostly building to building + learning from feedback. Let students know they do not need a “finished app” to begin Milestone 4 — one working interaction is enough. Encourage teams to use feedback (from peers, AI, or you) to decide what to improve next and to update their Kanban Board accordingly.",
+        "duration": "30",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may think feedback comes after building. Reinforce that feedback is a tool for deciding what to build next—not a final step. Strong teams use feedback to prioritize, simplify, or even remove features. That’s good judgment, not failure."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a580ff98-7ae0-407c-bc13-fae4a47019ef",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "9ff96d69-e51a-4559-bd15-f84b4b1e523d",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff96d69-e51a-4559-bd15-f84b4b1e523d",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "2c16c48e-e280-4fc1-8dc9-2fd543179372",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that this TAG feedback protocol is a tool they’ve used before and can choose to use again during Milestone 4: Feedback & Iteration. Emphasize that TAG is optional and flexible — teams can use it with peers, with you, or even adapt it when reflecting on AI feedback. Clarify that feedback does not need to happen all at once or with a full class switch; teams should use TAG when they feel ready for input.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some teams may not feel “ready” for feedback yet. Normalize that feedback is most useful once one interaction works end-to-end. Encourage teams to use TAG when they want help deciding what to improve next — not as a judgment of how finished their app is."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c16c48e-e280-4fc1-8dc9-2fd543179372",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "82396233-0d99-440f-b4b9-e9424496c365",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "82396233-0d99-440f-b4b9-e9424496c365",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "901697f9-f9da-4901-8973-5dc9abdc477d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Milestone 4: Feedback & Iteration. Explain that today’s focus is learning from feedback, not finishing or polishing. Remind students they only need one working interaction to get useful feedback, and that feedback may send them back to building, revising earlier milestones, or adjusting scope.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students gather feedback, listen for:\n- What patterns are they hearing across feedback?\n- Are they revising tasks, not just collecting comments?\n- Are they deciding what not to change — and why?\n\nPrompt with:\n- “What feedback surprised you?”\n- “What feedback changed your plan?”\n- “What’s the first revision you’ll make based on this?”\n",
+        "progression_name": "Milestone 4: Feedback and Iteration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may treat feedback as a checklist to complete. Reframe it as information for decision-making: strong teams decide which feedback to act on, which to defer, and which to reject. This is a key professional skill and aligns directly with the rubric’s focus on judgment and iteration."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "901697f9-f9da-4901-8973-5dc9abdc477d",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "a05061db-e860-4f46-b26b-183dff65acd2",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a05061db-e860-4f46-b26b-183dff65acd2",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "e293c7ea-9bb4-4ff8-9ac9-70d7216f2c70",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this time to conduct Benchmark C. Have teams review their progress toward Milestone 4: Feedback & Iteration using their Project Guide and Kanban Board. Ask teams to reflect on what feedback they gathered, how it influenced their decisions, and what they chose to revise, defer, or leave unchanged. Then have teams update their Kanban Board, rotate the Project Leader, and complete or update the Milestone sections they worked on today in their Project Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teams may focus on what they changed instead of why they changed it. Push students to connect revisions back to feedback sources (peer comments, AI suggestions, testing results). This reinforces that Milestone 4 is about judgment and decision-making, not just iteration for iteration’s sake."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e293c7ea-9bb4-4ff8-9ac9-70d7216f2c70",
+        "lesson_activity.key": "3392a669-5f5d-48d2-910a-0f00b8d3421a"
+      }
+    },
+    {
+      "key": "e0e7a91d-48c8-4345-b2b4-e45e96d01e8d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If your team had 10 extra minutes last class, what would you have used them for?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify unfinished, high-value work and begin prioritizing next steps. Listen for responses that reference testing results, feedback, or clarity issues (not just “adding features”). Use this to reinforce that effective teams decide what matters most next based on evidence, time, and impact—not just what’s left on the backlog.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0e7a91d-48c8-4345-b2b4-e45e96d01e8d",
+        "lesson_activity.key": "588ea4d1-84d3-455a-80b1-317da9913888"
+      }
+    },
+    {
+      "key": "9cd46315-e6b2-4393-915b-45240c16b82a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as final decision-making, not feature expansion. Explain that students should focus on preparing a version of their app they are ready to stand behind and explain. Teams may still revisit any milestone (1–4) if testing or feedback reveals gaps, but the goal is to stabilize, clarify, and justify their choices rather than add new functionality.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to treat today as a final refinement and decision-making day. Direct students to Milestone 5. Explain that this milestone is about communication and synthesis, not adding new features. Students should decide what version of their app they are presenting and ensure it behaves reliably, reflects feedback they chose to act on, and aligns with their intended audience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for signs that they are making intentional tradeoffs. Ask questions such as:\n- Which interaction feels most solid right now?\n- What feedback did you choose not to act on — and why?\n- What would you explain first if someone saw your app for 30 seconds?\n- What would you want working reliably if you had to stop today?\n",
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Milestone 5: Final App and Presentation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may feel pressure to “make it perfect.” Reinforce that strong capstone projects show intentional choices, not maximum features. A clear, stable app with a well-explained rationale is more compelling than an overbuilt one."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9cd46315-e6b2-4393-915b-45240c16b82a",
+        "lesson_activity.key": "588ea4d1-84d3-455a-80b1-317da9913888"
+      }
+    },
+    {
+      "key": "aa9648b0-3566-40fe-a99b-2fba797d5dac",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "aa9648b0-3566-40fe-a99b-2fba797d5dac",
+        "lesson_activity.key": "588ea4d1-84d3-455a-80b1-317da9913888"
+      }
+    },
+    {
+      "key": "0b0a6e40-b41f-4880-88bf-0c206c0091f6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone sections they actively worked on today in their Project Guide. Emphasize that Day 9 reflections should focus on decisions made while refining and stabilizing their app, not just what they worked on. If teams revisited milestones (1–4), remind them to clearly explain what changed, why it changed, and how testing or feedback informed that decision.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Listen for whether teams are explaining why they kept, refined, or postponed features. If reflections sound like status updates, prompt deeper thinking with questions like: “Which part of your app are you most confident in right now?” or “What did you decide not to improve yet—and why?” This reinforces that strong projects show judgment and prioritization, not just effort."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0b0a6e40-b41f-4880-88bf-0c206c0091f6",
+        "lesson_activity.key": "588ea4d1-84d3-455a-80b1-317da9913888"
+      }
+    },
+    {
+      "key": "3bd049bf-02e8-4fbe-a545-3ec9c8ee3c70",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What part of your process improved over these two weeks, even if the project isn’t perfect?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how their way of working improved over the project (planning, breaking down tasks, testing, revising, using feedback, or collaborating), rather than focusing on whether the app is finished. Listen for students naming concrete process shifts and reinforce that growth in process is a key outcome of the capstone.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd049bf-02e8-4fbe-a545-3ec9c8ee3c70",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "97abe09a-3a08-4f5a-8c84-5d86e43572e6",
+      "position": 2,
+      "properties": {
+        "description": "Today isn’t about changing your app one more time. It’s about explaining what this version represents — what you focused on, what you tested, what you changed, and what you chose to leave out.",
+        "duration": "30",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "97abe09a-3a08-4f5a-8c84-5d86e43572e6",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "21a97d1b-ce8d-4834-94ae-ab9c88ae2c83",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame today as a showcase and explanation day. Have students prepare to demonstrate their current app version and explain the key decisions behind it — what they focused on, what they tested, what feedback influenced their choices, and what they intentionally left out. Emphasize that students are not expected to add new features today; the goal is to clearly communicate how their app works and why it looks the way it does.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may feel pressure to “lock everything in” today. Reinforce that strong capstone work shows intentional choices, not maximum features. Encourage teams to prioritize clarity, reliability, and explanation over polish — a clear, well-justified app is more powerful than a rushed one."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21a97d1b-ce8d-4834-94ae-ab9c88ae2c83",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "adcfe8ba-d796-45b1-ace4-91aef90e1812",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "adcfe8ba-d796-45b1-ace4-91aef90e1812",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "1935a65e-afa9-46b0-95a0-8ed081abe35d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Capstone Project Guide where the rubric is located. Have students read each category and identify where their project currently falls for this version. Emphasize that this is a snapshot — not a final judgment — meant to help them understand strengths, gaps, and next steps.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students treating this as a checklist rather than a reflection. Prompt them to reference specific evidence from their app or guide (e.g., “Where do you see this in your project?”). Pay close attention to the Ethical Reasoning: Transparency & Fairness row and ask students how their filters, labels, or defaults affect what users see.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce that self-assessment is a professional design habit, not just a score. Frame the rubric as a tool for explaining decisions: what they prioritized, what they tested, and what they intentionally left out. If students struggle, model a sentence starter like: “Right now, our project fits here because…”"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1935a65e-afa9-46b0-95a0-8ed081abe35d",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "a8fb6be6-a906-4e6b-8bd0-95f124f80ebd",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a8fb6be6-a906-4e6b-8bd0-95f124f80ebd",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "e7972d60-7fc8-4686-b617-09636d0fce1d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to continue working on their current capstone version. Explain that today is about intentional refinement, not adding every possible feature. Emphasize that students should use what they learned from testing, peer feedback, and self-assessment to decide what changes will most improve how their app behaves and how clearly they can explain it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students making purposeful decisions rather than chasing completeness. Ask students to point to the rubric row or feedback that influenced their current priorities. Check that teams are documenting why they made changes in their Milestone 4 section, not just listing what they changed.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may feel pressure to treat this like a “final polish day.” Reframe it as a decision day. Encourage students to choose a small number of high-impact improvements they can clearly justify. Remind them that a capstone is strongest when students can explain why this version looks the way it does, not when it has the most features."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e7972d60-7fc8-4686-b617-09636d0fce1d",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "55ca7a65-3ebc-45ab-8d6b-a7822b320bfe",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55ca7a65-3ebc-45ab-8d6b-a7822b320bfe",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "38d2c435-6e94-4a34-a120-c0e7f84bf587",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes for leaving feedback during the gallery walk.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide assumes an in-class gallery walk (Level 1 sharing). If you’re using a different level of public sharing, revise this and the next slide as needed to match how students will view and respond to each other’s work. See the Capstone Teacher Guide for sharing options."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38d2c435-6e94-4a34-a120-c0e7f84bf587",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "8667b374-fa23-4d40-975b-164cf7b5ceb4",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8667b374-fa23-4d40-975b-164cf7b5ceb4",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "60f88e29-49ca-40f4-a6e3-9746aae963fd",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students display their current capstone app versions. Students move around the room to explore classmates’ work and leave feedback using sticky notes. Encourage them to focus on how the app works as a system — what the user does, what the app does in response, and what the user sees — rather than judging polish or completeness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students move through the gallery, listen for feedback that connects to system behavior and user experience. Prompt with questions like:\n- Is it clear what the user can do first?\n- What happens when filters or controls are used?\n- Are results, labels, and counts transparent and accurate?\n- Does the app behave the way the creator described?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide assumes an in-class gallery walk (Level 1 sharing). If you’re using a different level of public sharing, revise this and the previous setup slide to match how students will view and respond to each other’s work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60f88e29-49ca-40f4-a6e3-9746aae963fd",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "5e867c94-f2af-4198-ac02-f22868c75aeb",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e867c94-f2af-4198-ac02-f22868c75aeb",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "70ade1d5-266b-48c7-95dd-7c773359feeb",
+      "position": 13,
+      "properties": {
+        "description": "You didn’t just build an app — you practiced making decisions over time. This final reflection is your chance to explain how your project evolved: what you tested, what changed, what stayed the same, and why. Focus on the thinking behind this version, not whether it feels “finished.”",
+        "duration": "10",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "70ade1d5-266b-48c7-95dd-7c773359feeb",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    },
+    {
+      "key": "c88cb40d-548d-4ce3-a723-5dced8068ee5",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Synthesis section in their Capstone Project Guide. Emphasize that this is about explaining their decisions and learning across milestones, not listing everything they built. Encourage students to reference specific moments where testing, feedback, or constraints shaped what they chose to improve, revise, or leave out.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, prompt them to anchor reflections in concrete examples:\n- a test that revealed an unexpected behavior\n- feedback that changed a design or priority\n- a decision to simplify, delay, or remove a feature\n- a moment when AI helped — or didn’t — and why\n\nProbe with questions like:\n- “What evidence told you this was the right decision?”\n- “How did your system behave differently after this change?”\n- “What would you keep working on if you had more time?”\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Capstone Project Guide provides assessable evidence for:\n- Project Planning & Intentional Design\n- Responsible AI & Ethical Reflection\n- Collaboration & Professional Practice\n\nThe working app and Milestone 3 evidence provide assessable evidence for:\n- Functionality & Technical Implementation\n- User-Centered Design & Usability\n\nTeachers may use a combination of the Project Guide, Kanban Board, milestone artifacts, and the showcased app to assess the full rubric.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c88cb40d-548d-4ce3-a723-5dced8068ee5",
+        "lesson_activity.key": "53240202-3449-4587-9643-68c5f3298196"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1: Intent and Scope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9f007043-b21e-4b52-99c0-9050ea736053"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2: System Explanation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "629143ce-939f-4ab4-8f95-cdd300070b9e"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 3: Testing and Behavior"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "6cbd10a3-993d-408a-909b-75fa02a87f76"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 4: Feedback and Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level4-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "901697f9-f9da-4901-8973-5dc9abdc477d"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level4-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 5: Final App and Presentation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9cd46315-e6b2-4393-915b-45240c16b82a"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level1-hub-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9f007043-b21e-4b52-99c0-9050ea736053"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level2-hub-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "629143ce-939f-4ab4-8f95-cdd300070b9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level3-hub-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "6cbd10a3-993d-408a-909b-75fa02a87f76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level4-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level4-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "901697f9-f9da-4901-8973-5dc9abdc477d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level5-hub-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9cd46315-e6b2-4393-915b-45240c16b82a"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "All Resources",
+      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/6/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "Capstone Project",
+      "url": "https://docs.google.com/presentation/d/1--1ZYq9tN7Y-qTCj1y1jWMW6n6lBemILe07tqRSbw-w/edit?usp=sharing",
+      "key": "capstone_project",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "capstone_project"
+      }
+    },
+    {
+      "name": "Capstone Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1ozAouwnLrimmvc94QO2IOo6DsJXbCXnzDlJL_z_5eZM/edit?usp=drive_link",
+      "key": "capstone_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "capstone_project_planning_guide"
+      }
+    },
+    {
+      "name": "Capstone Project Teacher Guide",
+      "url": "https://docs.google.com/document/d/1z3xpZrjuDpgpOGIx9jRn2ak-Stv1NJDGtnZFY8aTsVg/edit?usp=drive_link",
+      "key": "capstone_project_teacher_guide",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "capstone_project_teacher_guide"
+      }
+    },
+    {
+      "name": "Kanban Board",
+      "url": "https://docs.google.com/document/d/1pkb85-0IswejpqtXbc7IyCW8NlmpcKP0A9XGy5KdMsM/edit?usp=drive_link",
+      "key": "kanban_board",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "kanban_board"
+      }
+    },
+    {
+      "name": "Project Leader Guide",
+      "url": "https://docs.google.com/document/d/1tPSGQ0QBQF_b7M-eqZ9hDLMy7FxFRRcN_ROKIq2N-1g/edit?usp=drive_link",
+      "key": "project_leader_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_leader_guide"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Capstone Project",
+        "resource.key": "capstone_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Capstone Project",
+        "resource.key": "capstone_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Capstone Project",
+        "resource.key": "kanban_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Capstone Project",
+        "resource.key": "project_leader_guide"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "capstone_project_teacher_guide",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
