@@ -85,7 +85,7 @@ module Middleware
           setup_region(new_region)
           setup_redirect_to(redirect_path)
         # Fallback for legacy `/global/fa/*` paths
-        elsif original_path_info.start_with?('/global/fa')
+        elsif original_path_info.match?(%r{^/global/fa(?:/.*)?$})
           international_path = original_path_info.sub('/global/fa', '')
           request.path_info = international_path unless existing_route?
 

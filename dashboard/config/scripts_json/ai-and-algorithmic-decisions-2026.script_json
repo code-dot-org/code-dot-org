@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 02:26:25 UTC",
+    "serialized_at": "2026-04-02 00:12:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2123,8 +2123,63 @@
       }
     },
     {
-      "key": "45fe0a85-b535-4885-bd85-0cfdfefcbbf7",
+      "key": "87192e89-319c-4e89-a95e-d332e731b494",
       "position": 1,
+      "properties": {
+        "progression_name": "Predict & Trace: Toggle Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "87192e89-319c-4e89-a95e-d332e731b494",
+        "lesson_activity.key": "fb41d7b1-7fad-44b2-80fd-0bbb90353ac5"
+      }
+    },
+    {
+      "key": "3b8ab719-d956-4c3e-8df2-bd967fb1fea9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Generate with AI: Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b8ab719-d956-4c3e-8df2-bd967fb1fea9",
+        "lesson_activity.key": "fb41d7b1-7fad-44b2-80fd-0bbb90353ac5"
+      }
+    },
+    {
+      "key": "7b7764b3-390b-4611-bbe2-8c7ec8ea1d3f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Write it Yourself: Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b7764b3-390b-4611-bbe2-8c7ec8ea1d3f",
+        "lesson_activity.key": "fb41d7b1-7fad-44b2-80fd-0bbb90353ac5"
+      }
+    },
+    {
+      "key": "d82ab178-fec2-443d-b890-a27b652c1db7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sketch Lab: Create a Conditional Flowchart"
+      },
+      "seeding_key": {
+        "activity_section.key": "d82ab178-fec2-443d-b890-a27b652c1db7",
+        "lesson_activity.key": "fb41d7b1-7fad-44b2-80fd-0bbb90353ac5"
+      }
+    },
+    {
+      "key": "f6cf9c60-c658-4706-b3f0-4dcb14e3853a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Turn Your Flowchart into Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6cf9c60-c658-4706-b3f0-4dcb14e3853a",
+        "lesson_activity.key": "fb41d7b1-7fad-44b2-80fd-0bbb90353ac5"
+      }
+    },
+    {
+      "key": "45fe0a85-b535-4885-bd85-0cfdfefcbbf7",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students practice modeling decisions as flowcharts and understanding how those decisions can be represented in their code.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 6.\n- Level 1: Students use Sketch Lab to build their own flowchart.\n- Level 2: Students read the vocabulary definition for flowcharts.\n- Level 3: Students add their own explanation or example of flowcharts to the vocab free response.\n- Level 4: Students review the panel level to understand how conditionals look in JavaScript.\n- Level 5: Students read the vocabulary definition for conditional statements and booleans.\n- Level 6: Students add their own explanation or example of conditional statements to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components including a start, process, decision, and outcome. Each flowchart must incorporate at least one variable and at least one function. Help students who are not sure of what to flowchart by asking prompting questions like: \"What decisions did you make to get to class today?\" or \"In what order did those steps occur?\"\n",
         "duration": "15",
@@ -2138,7 +2193,7 @@
     },
     {
       "key": "a3cd3e8f-de73-4c9e-8491-344dfbbdba7b",
-      "position": 2,
+      "position": 7,
       "properties": {
         "progression_name": "Conditional Statements"
       },
@@ -2149,7 +2204,7 @@
     },
     {
       "key": "35a4d41f-21b8-49a4-b695-8e54b8063837",
-      "position": 3,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -2159,7 +2214,7 @@
     },
     {
       "key": "70331374-1324-4961-9ba5-140763045b73",
-      "position": 4,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner up to trace through the different paths of their partner’s flowchart.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does your partner’s flowchart make sense? Are the decision points clear?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate how their partner’s flowchart represents a decision-making process and receive constructive feedback on the clarity and completeness of their own flowchart. This peer feedback reinforces the concepts of algorithmic thinking and visual logic.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define flowchart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define conditional statement.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define Boolean.\n"
       },
@@ -2170,7 +2225,7 @@
     },
     {
       "key": "82c59004-91d8-44c8-98dd-b01e895888bd",
-      "position": 5,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Translate flowchart decisions into JavaScript if/else statements and use AI as a coding partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students review the flowcharts they made in Level 1. They should draft JavaScript if/else statements on Level 7 to represent the conditionals in their flowchart, making sure to incorporate at least one variable and at least one function into their code.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Guide students to compare the flowchart logic directly to the code they are writing. Encourage them to use the AI to debug by asking how to debug incorrect conditionals or errors (e.g., 'Why is this conditional set up incorrectly? Help me fix it.')\n",
         "duration": "15",
@@ -2190,7 +2245,7 @@
     },
     {
       "key": "f8c6a7c8-2910-4cdf-84d3-126e3c286117",
-      "position": 6,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -2200,16 +2255,10 @@
     },
     {
       "key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca",
-      "position": 7,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. Who benefits from the decision evaluating to “True”? Who benefits from it evaluating to “False”?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on who benefits from rules that are implemented. This can be the user themself having a better or worse outcome, or someone else affected by the decision point. For example, consider a decision point based on the business hours of a restaurant. If a customer arrives after a restaurant’s kitchen has closed and is not able to order food, it creates a worse outcome for the customer but a better outcome for the restaurant staff who can close on time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete the Level 8.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students are interpreting a conditional statement and answering a question about it. As students read over the question, ask them to explain their reasoning.\n",
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student responses to gauge whether they can clearly explain how to debug conditional statements.\n"
-          }
-        ]
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca",
@@ -3737,20 +3786,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Creating Conditionals with Flowcharts"
+        "progression": "Predict & Trace: Toggle Mode"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level1_2026"
+          "ai-and-algorithmic-decisions-lesson5-level1-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "45fe0a85-b535-4885-bd85-0cfdfefcbbf7"
+        "activity_section.key": "87192e89-319c-4e89-a95e-d332e731b494"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level1_2026"
+        "ai-and-algorithmic-decisions-lesson5-level1-revised_2026"
       ]
     },
     {
@@ -3759,20 +3808,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Conditional Statements"
+        "progression": "Generate with AI: Conditionals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level4_2026"
+          "ai-and-algorithmic-decisions-lesson5-level2-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a3cd3e8f-de73-4c9e-8491-344dfbbdba7b"
+        "activity_section.key": "3b8ab719-d956-4c3e-8df2-bd967fb1fea9"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level4_2026"
+        "ai-and-algorithmic-decisions-lesson5-level2-revised_2026"
       ]
     },
     {
@@ -3781,46 +3830,68 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Turning a Flowchart into Code"
+        "progression": "Write it Yourself: Conditionals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level7_2026"
+          "ai-and-algorithmic-decisions-lesson5-level3-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82c59004-91d8-44c8-98dd-b01e895888bd"
+        "activity_section.key": "7b7764b3-390b-4611-bbe2-8c7ec8ea1d3f"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level7_2026"
+        "ai-and-algorithmic-decisions-lesson5-level3-revised_2026"
       ]
     },
     {
       "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Sketch Lab: Create a Conditional Flowchart"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level8_2026"
+          "ai-and-algorithmic-decisions-lesson5-level1a_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca"
+        "activity_section.key": "d82ab178-fec2-443d-b890-a27b652c1db7"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level8_2026"
+        "ai-and-algorithmic-decisions-lesson5-level1a_2026"
       ]
     },
     {
       "chapter": 21,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Turn Your Flowchart into Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level6-revised_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "f6cf9c60-c658-4706-b3f0-4dcb14e3853a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson5-level6-revised_2026"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3842,7 +3913,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3864,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3886,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3908,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3930,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3952,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3974,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3996,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4018,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4040,7 +4111,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4062,7 +4133,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4084,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4106,7 +4177,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4128,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4150,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4172,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4194,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4216,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4238,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4260,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4282,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4304,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4326,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4543,50 +4614,62 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level1_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level1-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level1_2026"
+          "ai-and-algorithmic-decisions-lesson5-level1-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "45fe0a85-b535-4885-bd85-0cfdfefcbbf7"
+        "activity_section.key": "87192e89-319c-4e89-a95e-d332e731b494"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level4_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level2-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level4_2026"
+          "ai-and-algorithmic-decisions-lesson5-level2-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a3cd3e8f-de73-4c9e-8491-344dfbbdba7b"
+        "activity_section.key": "3b8ab719-d956-4c3e-8df2-bd967fb1fea9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level7_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level3-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level7_2026"
+          "ai-and-algorithmic-decisions-lesson5-level3-revised_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82c59004-91d8-44c8-98dd-b01e895888bd"
+        "activity_section.key": "7b7764b3-390b-4611-bbe2-8c7ec8ea1d3f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level8_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level1a_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level8_2026"
+          "ai-and-algorithmic-decisions-lesson5-level1a_2026"
         ],
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca"
+        "activity_section.key": "d82ab178-fec2-443d-b890-a27b652c1db7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level6-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level6-revised_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "f6cf9c60-c658-4706-b3f0-4dcb14e3853a"
       }
     },
     {
