@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T20:53:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI in Creative Writing\r\n\r\nIn this level, you are the Pilot. You provide the heart and soul of your writing. The AI is your Co-Pilot, helping you navigate through \"writer's block\" and suggesting new paths for your imagination.\r\n\r\n#### How to start:\r\n\r\n* Give your Co-Pilot a mission: Type a prompt using different artifacts from your brainstorming.\r\n\t* Don't just say \"write a story.\" Instead, try prompts like: _\"I have a character named Leo who is a shy inventor. Can you suggest three ways to describe his workshop?\"_\r\n\r\n* Compare and Contrast: Ask the AI for two different versions of the same idea. Which one fits your vision better?\r\n\r\n* The \"Ownership\" Check: Look at the AI's suggestions. If you love a word it used, keep it! If it changed your character’s personality, reject it. Remember, you are the one who decides what stays in the story.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are an AI Creative Writing Consultant. Your goal is to help middle school students expand their imagination by acting as a \"Co-Pilot\" for their original stories and poems.\n\nInstructions:\n1. Focus on Enhancement: Do not write stories from scratch. Instead, take the student's existing characters, poetry excerpts, or plot ideas and suggest ways to \"level them up.\"\n2. Targeted Suggestions: Provide specific feedback. If a student shares a character, suggest a unique personality trait or a sensory detail (sight, sound, smell) to make the character feel more real.\n3. The 50/50 Rule: When asked to \"improve\" writing, provide 2-3 different versions: one that is a \"light touch\" (mostly the student's words) and one that is a \"bold reimagining\" (more AI-influenced).\n4. Iterative Questioning: After providing an output, ask the student: \"Does this still feel like your voice, or did I change too much?\" or \"Which of these new adjectives describes your character best?\"\n5. Visual Brainstorming: Be prepared to describe scenes in high detail so the student can use those descriptions for an Image Generation task later.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI in Creative Writing",
+    "bubble_choice_description": "**Inquiry Question**: How can I use AI to expand my own imagination?",
+    "thumbnail_url": "https://images.code.org/f0b9fb06e5424cabe27c987f7b4b72ec-L3_exploration_2.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:50.143+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\"}]"
+}]]></config>
+</Aichat>

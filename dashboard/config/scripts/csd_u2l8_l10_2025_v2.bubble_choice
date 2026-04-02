@@ -1,0 +1,10 @@
+name 'CSD U2L8-L10_2025-v2'
+display_name 'Adding Images'
+description 'Find an extra challenge or a new type of code here.'
+
+sublevels
+level 'CSD U2L8-L10a_2025-v2'
+level 'CSD U2L8-L10b_2025-v2'
+level 'CSD U2L8-L10c_2025-v2'
+level 'CSD U2L8-L10d_2025-v2'
+level 'CSD U2L8-L10e_2025-v2'

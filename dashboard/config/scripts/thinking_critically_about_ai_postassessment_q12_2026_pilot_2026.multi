@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q12_2026-pilot_2026'
+
+question 'Which of the following examples shows an AI system being used in a way that aligns with ethical principles and human values?'
+
+right 'A hospital uses an AI tool to flag medical scans that may need urgent attention, while trained doctors make all final diagnoses and treatment decisions.'
+wrong 'A company uses AI to automatically deny loan applications from applicants whose names suggest a particular ethnicity.'
+wrong 'A school uses AI to monitor all student messages and report any that contain certain words to school administrators without student knowledge.'
+wrong 'A social media platform uses AI to maximize the time users spend on the app, regardless of the effect on users\' wellbeing.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN
