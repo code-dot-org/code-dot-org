@@ -38,7 +38,7 @@ def main
   # Check Table-level sync status.
   # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
   # Possible values: `Synced`, `Failed`, `Deleted`, `ResyncRequired`, `ResyncInitiated`, and `DroppedSource`.
-  table_query = <<~SQL
+  table_sync_status_query = <<~SQL
     SELECT *
     FROM SVV_INTEGRATION_TABLE_STATE
     WHERE target_database = '#{TARGET_DB}'
@@ -46,9 +46,32 @@ def main
       AND table_state != 'ResyncInitiated';
   SQL
 
-  tables = redshift.execute(table_query)
-  tables.each do |table|
-    alert("Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*\nTable `#{table['schema_name']}.#{table['table_name']}` failed to sync.\nDetails: #{table.to_json}")
+  error_tables = redshift.execute(table_sync_status_query)
+  if error_tables.any?
+    summary_lines = error_tables.map {|table| "• `#{table['schema_name']}.#{table['table_name']}` (#{table['table_state']})"}
+
+    header = "Zero-ETL Sync Failure Summary (#{ENVIRONMENT_TYPE})*\n"
+    header += "#{error_tables.size} tables are failing to synchronize:\n"
+    header += summary_lines.join("\n")
+    header += "Details for up to 3 randomly selected error tables:\n"
+
+    alert(header)
+
+    # Output details about up to 3 randomly selected tables that are failing to sync via Zero ETL.
+    error_tables.sample(3).each do |table|
+      message = <<~MSG
+        *Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*
+        *Table:* `#{table['schema_name']}.#{table['table_name']}`
+        *State:* `#{table['table_state']}`
+
+        *Error Reason:*
+        > #{table['reason']}
+
+        _Last Updated: #{table['last_updated_timestamp']}_
+        _Integration ID: #{table['integration_id']}_
+      MSG
+      alert(message)
+    end
   end
 rescue => exception
   alert("Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
