@@ -14,7 +14,7 @@ data "aws_caller_identity" "current" {}
 
 module "eso_per_envtype" {
   for_each = local.single_namespace_environment_types
-  source   = "./modules/eso-per-envtype-aws"
+  source   = "./modules/eso-per-envtype"
 
   environment_type                  = each.value
   single_namespace_environment_type = true
@@ -29,7 +29,7 @@ module "eso_per_envtype" {
 #------------------------------------------------------------
 
 module "eso_per_envtype_adhoc" {
-  source = "./modules/eso-per-envtype-aws"
+  source = "./modules/eso-per-envtype"
 
   environment_type                  = "adhoc"
   single_namespace_environment_type = false

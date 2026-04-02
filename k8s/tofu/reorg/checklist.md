@@ -5,7 +5,7 @@
 - [x] Build `reorg/phase2` as the AWS-side root
 - [x] Move Route53 zone and ACM certificate resources into `phase2`
 - [x] Keep Dex Google client secret bootstrap in `phase2`
-- [x] Split ESO into `phase2/modules/eso-per-envtype-aws` and `phase3/infra/eso-per-envtype`
+- [x] Split ESO into `phase2/modules/eso-per-envtype` and `phase3/infra/eso-per-envtype`
 - [x] Move ESO IAM role creation into `phase2`
 - [x] Move Kargo SecretStore IAM into `phase2`
 - [x] Keep Kargo GitHub webhook secret bootstrap in `phase2`
