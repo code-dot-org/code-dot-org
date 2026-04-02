@@ -28,6 +28,7 @@ export default {
         ],
       },
     },
+    useMui: true,
     componentSubtitle: 'Renders navigation breadcrumbs',
   },
 } as Meta;

@@ -1,10 +1,10 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {Key, ReactNode, HTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import Typography from '@/typography';
 
 import moduleStyles from './simpleList.module.scss';
 
@@ -79,10 +79,9 @@ const SimpleList: React.FC<SimpleListProps> = ({
         />
 
         <Typography
+          semanticTag="span"
           className={moduleStyles.simpleListItemLabel}
-          component="span"
-          gutterBottom
-          variant={componentSizeToBodyTextSizeMap[size]}
+          visualAppearance={componentSizeToBodyTextSizeMap[size]}
         >
           {label}
         </Typography>
