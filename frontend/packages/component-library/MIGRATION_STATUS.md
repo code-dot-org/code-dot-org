@@ -17,7 +17,7 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | DSCO Component        | Status         | MUI Equivalent         | Style Overrides                         | Notes                                                                                                                                                                                                                                                 |
 | --------------------- | -------------- | ---------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `typography`          | **Migrated**   | `Typography`           | `styleOverrides/typography.ts`          | Deprecated. Use `Typography` from `@mui/material`.                                                                                                                                                                                                    |
-| `button`              | **Migrated**   | `Button`               | `styleOverrides/button.tsx`             | Deprecated. All `/apps` consumers migrated. All internal DSCO consumers migrated (PR #71642). Ready for step 4 (delete DSCO source). Use `Button` from `@mui/material`. Codemod: `yarn codemod:buttons`. See `src/button/BUTTON_MIGRATION_TO_MUI.md`. |
+| `button`              | **Migrated**   | `Button`, `IconButton` | `styleOverrides/button.tsx`             | Deprecated. All `/apps` consumers migrated. All internal DSCO consumers migrated (PR #71642). Ready for step 4 (delete DSCO source). Use `Button`, `IconButton` from `@mui/material`. Codemod: `yarn codemod:buttons`. See `src/button/BUTTON_MIGRATION_TO_MUI.md`. |
 | `link`                | Not Started    | `Link`                 | `styleOverrides/link.ts` (partial)      | Basic overrides exist (variant + font weight) but not complete. Migration not started.                                                                                                                                                                |
 | `breadcrumbs`         | **Migrated**   | `Breadcrumbs`          | `styleOverrides/breadcrumbs.ts`         | Deprecated. Use `Breadcrumbs` from `@mui/material`. Custom size prop augmented (`xs`, `s`, `m`, `l`).                                                                                                                                                 |
 | `closeButton`         | Not Started    | `IconButton`           | —                                       | MUI `IconButton` with `xmark` icon can be used. Migration not started.                                                                                                                                                                                |
@@ -54,6 +54,7 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | `tooltip`             | Not Started    | `Tooltip`              | —                                       |                                                                                                                                                                                                                                                       |
 | `video`               | N/A            | —                      | —                                       | No MUI equivalent.                                                                                                                                                                                                                                    |
 
+
 ## Style Overrides Reference
 
 All MUI style overrides live in `src/themes/code.org/styleOverrides/` and are aggregated in `index.ts`:
@@ -71,7 +72,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
 
 ## Type Augmentations
 
-Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` and must be manually synced to `apps/src/types/mui.d.ts` (TypeScript module augmentation doesn't cross package boundaries in this monorepo).
+Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts`. Now that `@mui/material` is a `peerDependency` (not a `devDependency`), both this package and `apps/` resolve to the same physical MUI copy, so augmentations should propagate automatically. The manually copied augmentations in `apps/src/types/mui.d.ts` are kept for now but may no longer be necessary and can be cleaned up in a follow-up PR.
 
 ## How to Migrate a Component
 
@@ -101,7 +102,11 @@ When creating a completely new MUI component for the design system (i.e. not mig
 
 ## Internal Dependency Blockers
 
-The following DSCO components still use `Button` or `Typography` internally, blocking full removal of those deprecated components. These need the "inside-out replacement" (step 3 above) before we can delete the DSCO source.
+The following DSCO components use `Button` or `Typography` internally, blocking full removal of those deprecated components. These need the "inside-out replacement" (step 3 above) before we can delete the DSCO source.
+
+> **Typography**: All internal consumers have been migrated to MUI `Typography`. The DSCO Typography source can now be deleted once any remaining `/apps` consumers are confirmed migrated.
+>
+> **TODO**: Investigate `frontend/packages/component-library-styles/typography.module.scss`. This file provides SCSS mixins (`heading-xxl`, `body-one`, `body-two`, etc.) and CSS module classes that are still **widely consumed** (~100+ files): ~23 SCSS files in `component-library/src/`, ~62 files in `apps/src/`, and indirectly via `component-library-styles/mixins.scss` (which uses the `body-two`/`body-three`/`body-four` mixins for field helper styles). There is also a manual copy at `shared/css/typography.scss`. Determine whether these SCSS mixins can be replaced by MUI Typography theme overrides or if they must coexist, and plan accordingly.
 
 ### Button internal consumers (8) — ✅ All migrated (PR #71642)
 
@@ -116,19 +121,19 @@ The following DSCO components still use `Button` or `Typography` internally, blo
 | `CheckboxDropdown` | **Done**         |
 | `Video`            | **Done**         |
 
-### Typography internal consumers (11)
+### Typography internal consumers (11) — **All Done**
 
-| DSCO Component         | Migration Status |
-| ---------------------- | ---------------- |
-| `Checkbox`             | Not Started      |
-| `RadioButton`          | Not Started      |
-| `Toggle`               | Not Started      |
-| `Accordion`            | Not Started      |
-| `ActionBlock`          | Not Started      |
-| `FullWidthActionBlock` | Not Started      |
-| `Dialog`               | Not Started      |
-| `HeroBanner`           | N/A              |
-| `Modal`                | Not Started      |
-| `Popover`              | Not Started      |
-| `SimpleList`           | Not Started      |
-| `Video`                | N/A              |
+| DSCO Component         | Migration Status   |
+| ---------------------- | ------------------ |
+| `Checkbox`             | **Done**           |
+| `RadioButton`          | **Done**           |
+| `Toggle`               | **Done**           |
+| `Accordion`            | **Done**           |
+| `ActionBlock`          | **Done**           |
+| `FullWidthActionBlock` | **Done**           |
+| `Dialog`               | **Done**           |
+| `HeroBanner`           | **Done** (was N/A) |
+| `Modal`                | **Done**           |
+| `Popover`              | **Done**           |
+| `SimpleList`           | **Done**           |
+| `Video`                | **Done** (was N/A) |

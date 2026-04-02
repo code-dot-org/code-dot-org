@@ -19,7 +19,10 @@ $(document).ready(() => {
           <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
         </InstructorsOnly>
       </Provider>,
-      container
+      container,
+      {
+        legacyReactDomRender: true,
+      }
     );
   });
 });

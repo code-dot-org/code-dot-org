@@ -10,7 +10,6 @@ require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
-Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
 require 'cdo/global_edition'
@@ -47,6 +46,10 @@ module Dashboard
     # determined by CDO.dashboard_session_ttl_days)
     config.action_dispatch.cookies_serializer = :hybrid
 
+    # Continue to use old, 6.1-only cache format version while we figure out
+    # some issues with 7.0
+    config.active_support.cache_format_version = 6.1
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
@@ -59,6 +62,9 @@ module Dashboard
       require 'cdo/rack/cookie_dcdo'
       config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
     end
+
+    require 'cdo/rack/global_edition'
+    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -96,7 +102,6 @@ module Dashboard
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi

@@ -22,9 +22,6 @@ type ButtonStoryProps = (MuiButtonProps & AnchorProps) | IconButtonStoryProps;
 export default {
   title: 'DesignSystem/Button/Button',
   component: MuiButton,
-  parameters: {
-    useMui: true,
-  },
 } as Meta<MuiButtonProps>;
 
 //

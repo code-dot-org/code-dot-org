@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createReactRoot(
     <SchoolInfoInterstitial scriptData={scriptData} onClose={unmount} />,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

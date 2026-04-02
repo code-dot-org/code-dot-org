@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## The First .then()\n\nThe fetch request is complete! We have received a `response` object from the API. However, the computer sees this as raw text. To read the specific items inside, we must parse (convert) it into JSON.\n\n---\n\n```js\n.then(response => return response.json())\n```",
+        "imageUrl": "https://images.code.org/7707ba54cad040b6053291637603397c-Vocab Images (3).png",
+        "key": "designing-reliable-apps-lesson3-level6-test_2025-pilot-21a00806-0f2c-4be2-9912-069848513548",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## The Second .then()\n\nThe parsing is complete! The .json() method has finished its work, and the \"box\" is now open. We have the actual `data` JSON ready to use in our app.\n\n---\n\n```js\n.then(data => console.log(data))\n```",
+        "imageUrl": "https://images.code.org/4e18ee5a447bc93910d3ec3cef4b98b1-Vocab Images (4).png",
+        "key": "designing-reliable-apps-lesson3-level6-test_2025-pilot-e7265a06-cc67-46ba-8830-4fe944eb76b3",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:08.909+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
@@ -8,7 +8,6 @@ import {Theme} from '@/common/contexts';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
 import {LinkProps} from '@/link';
-import {Heading1, BodyOneText, BodyTwoText} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import moduleStyles from './heroBanner.module.scss';
@@ -123,11 +122,21 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className={classNames(moduleStyles.heroBannerContainer)}>
         <div className={moduleStyles.heroBannerTextContainer}>
           <div>
-            <Heading1>{heading}</Heading1>
+            <MuiTypography variant="h1" gutterBottom>
+              {heading}
+            </MuiTypography>
 
-            {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
+            {subHeading && (
+              <MuiTypography variant="body1" gutterBottom>
+                {subHeading}
+              </MuiTypography>
+            )}
 
-            {description && <BodyTwoText>{description}</BodyTwoText>}
+            {description && (
+              <MuiTypography variant="body2" gutterBottom>
+                {description}
+              </MuiTypography>
+            )}
 
             {partner && (
               <span className={moduleStyles.heroBannerPartnerContainer}>

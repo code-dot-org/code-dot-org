@@ -1,15 +1,8 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 
 import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import Image, {ImageProps} from '@/image';
-import {
-  Heading3,
-  BodyThreeText,
-  OverlineTwoText,
-  StrongText,
-  BodyFourText,
-} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import {ActionBlockProps, ActionBlockWrapperProps} from './types';
@@ -42,10 +35,14 @@ export const getVideo = (VideoComponent?: typeof Video, video?: VideoProps) => {
 export const getDetail = (details?: {label: string; description: string}) => {
   if (!details) return null;
   return (
-    <BodyThreeText className={classNames(moduleStyles.detail)}>
-      <StrongText>{`${details.label}: `}</StrongText>
+    <MuiTypography
+      className={classNames(moduleStyles.detail)}
+      variant="body3"
+      gutterBottom
+    >
+      <MuiTypography variant="strong">{`${details.label}: `}</MuiTypography>
       {details.description}
-    </BodyThreeText>
+    </MuiTypography>
   );
 };
 
@@ -78,7 +75,13 @@ export const getButtons = (
 
 export const getTag = (tag: string) => {
   return (
-    <BodyFourText className={classNames(moduleStyles.tag)}>{tag}</BodyFourText>
+    <MuiTypography
+      className={classNames(moduleStyles.tag)}
+      variant="body4"
+      gutterBottom
+    >
+      {tag}
+    </MuiTypography>
   );
 };
 
@@ -140,20 +143,30 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       <div>
         {tag && getTag(tag)}
         {overline && (
-          <OverlineTwoText className={classNames(moduleStyles.overline)}>
+          <MuiTypography
+            className={classNames(moduleStyles.overline)}
+            variant="overline2"
+            gutterBottom
+          >
             {overline}
-          </OverlineTwoText>
+          </MuiTypography>
         )}
-        <Heading3
+        <MuiTypography
           className={classNames(moduleStyles.title)}
-          visualAppearance={'heading-md'}
+          component="h3"
+          variant="h4"
+          gutterBottom
         >
           {title}
-        </Heading3>
+        </MuiTypography>
         {video ? getVideo(VideoComponent, video) : image && getImage(image)}
-        <BodyThreeText className={classNames(moduleStyles.description)}>
+        <MuiTypography
+          className={classNames(moduleStyles.description)}
+          variant="body3"
+          gutterBottom
+        >
           {description}
-        </BodyThreeText>
+        </MuiTypography>
         {details && getDetail(details)}
       </div>
       {primaryButton && getButtons(primaryButton, secondaryButton)}

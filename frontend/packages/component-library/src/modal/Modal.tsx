@@ -1,10 +1,9 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import CustomDialog from '@/dialog/CustomDialog';
-import {BodyTwoText, Heading3} from '@/typography';
 
 import moduleStyles from './modal.module.scss';
 
@@ -95,7 +94,9 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       {...HTMLAttributes}
     >
       <div className={moduleStyles.modalTitleSection}>
-        <Heading3>{title}</Heading3>
+        <MuiTypography variant="h3" gutterBottom>
+          {title}
+        </MuiTypography>
       </div>
       <hr />
       <div
@@ -106,12 +107,14 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       >
         {imageUrl && <img src={imageUrl} alt={imageAlt || ''} />}
         {description && (
-          <BodyTwoText
+          <MuiTypography
             id="dsco-dialog-description"
             className={moduleStyles.modalDescription}
+            variant="body2"
+            gutterBottom
           >
             {description}
-          </BodyTwoText>
+          </MuiTypography>
         )}
         {customContent}
       </div>

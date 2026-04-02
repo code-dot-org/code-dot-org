@@ -1,10 +1,9 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {BodyTwoText, Heading2} from '@/typography';
 
 import CustomDialog from './CustomDialog';
 
@@ -87,14 +86,18 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   >
     <div className={moduleStyles.dialogTextSection}>
       {imageUrl && <img src={imageUrl} alt="Dialog" />}
-      <Heading2>{title}</Heading2>
+      <MuiTypography variant="h2" gutterBottom>
+        {title}
+      </MuiTypography>
       {description && (
-        <BodyTwoText
+        <MuiTypography
           id="dsco-dialog-description"
           className={moduleStyles.dialogContent}
+          variant="body2"
+          gutterBottom
         >
           {description}
-        </BodyTwoText>
+        </MuiTypography>
       )}
       {customContent}
     </div>
