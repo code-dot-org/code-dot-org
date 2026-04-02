@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson3-level6-revised_2026'
+display_name 'Build Your Own Web App'
+description 'Choose a web app and complete the code to get it up and running.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson3-level6a_2026'
+level 'ai-and-algorithmic-decisions-lesson3-level6b_2026'
+level 'ai-and-algorithmic-decisions-lesson3-level6c_2026'
+
+uses_lab2

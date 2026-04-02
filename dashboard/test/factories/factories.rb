@@ -132,7 +132,7 @@ FactoryBot.define do
 
     trait :with_units do
       transient do
-        units {[create(:unit), create(:unit)]}
+        units {create_list(:unit, 2)}
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
@@ -1636,7 +1636,7 @@ FactoryBot.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        levels_and_texts_by_page = [create_list(:sublevel, 2), [create(:sublevel)]]
         lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end

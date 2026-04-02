@@ -1,0 +1,101 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:34.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- desserts content -->\n  <h1>Desserts of the World</h1> \n \n  <img src=\"rasmalai.jpg\" alt=\"Ras Malai\"/>  \n\n  <h2>Ras Malai</h2>\n  \n  <h3>Origin: West Bengal</h3>\n \n  <p>\n    Ras malai is made from a sweet, soft cheesy dumpling that is\n    cooked in sweet milk and spices.  You can make the dumpling\n    yourself from milk and semolina, or you can buy them in the\n    store to cook at home.</p> \n  \n  <p>(picture from Shaharbano on Wikimedia Commons - CC BY-SA 4.0)</p>\n \n  <img src=\"pie.jpg\" alt=\"Banoffee Pie\"/>   <h2>Banoffee Pie</h2>\n  \n  <h3>Origin: United Kingdom</h3>\n \n  <p>\n    Banoffee pie is a pie with caramel, bananas, and cream.  You\n    can make the caramel by boiling a can of condensed milk.  The\n    name comes from a combination of \"banana\" and \"toffee\", which\n    is similar to caramel.</p>\n  \n  <p>(picure from Glen MacLarty on Wikimedia Commons - CC BY 2.0)</p>  \n \n  <img src=\"brigadeiro.jpg\" alt=\"Brigadeiro\"/>\n \n  <h2>Brigadeiro</h2>\n \n  <h3>Origin: Brazil</h3>\n \n  <p>  \n    Brigadeirio is a type of chocolate dessert that is very easy to\n    make.  Just boil condensed milk, cocoa powder, and a little bit\n    of butter in a pot.  After it's cooled back down, you can roll\n    it into balls and put sprinkles on top.</p> \n\n  <p>(picture from Mayra (Maych) on Flickr - CC BY-SA 2.0)</p>  \n   \n  <img src=\"tangyuan.jpg\" alt=\"Tangyuan\"/>\n \n  <h2>Tangyuan</h2>\n \n  <h3>China</h3>\n \n  <p>\n    Tangyuan is a glutinous rice dumpling that is cooked in sugar\n    water.  It is difficult to make, but you can buy frozen tangyuan\n    at the grocery store.  There are many different fillings, but the\n    most popular is sesame.</p> \n \n  <p>(picture from Bing (cherrylet) on Flickr - CC BY-NC-SA 2.0)</p>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* body style */\nbody {\n  background-color: lightblue;\n}\n\n/* title style */\nh1 {\n    font-family: sans-serif;\n}\n\n/* subtitle style */\nh2 {\nfont-family: sans-serif;\n}\n\n/* image style */\nimg {\n  float: left;\n  width: 250px;\n  margin: 10px;\n  border-color: saddlebrown;\n  border-width: 4px;\n  border-style: solid;\n  border-radius: 10px;\n}\n\n/* paragraph style */\np {\n    text-align: left;\n    font-family: fantasy;\n    font-size: 14px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "tangyuan.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L2_template-2025/uuid/f905c2ba-350d-48c7-a092-0d4f2d27380e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "pie.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L2_template-2025/uuid/cf37b541-1b4d-4a89-b9f6-5229b762dc98.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "brigadeiro.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L2_template-2025/uuid/1968a04e-c5ad-4695-9f33-aa3c3ad9c4a8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "rasmalai.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L2_template-2025/uuid/770ad936-6606-4435-965f-9fe2ef25f344.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:34.195+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L2_template-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L2_template-2025\"}]"
+}]]></config>
+</Weblab2>
