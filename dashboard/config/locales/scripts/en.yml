@@ -27183,6 +27183,54 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-csp1-2017:
+          lessons:
+            lesson-1:
+              name: Lesson One
+            lesson-2:
+              name: Design Mode
+          lesson_groups: {}
+          name: ui-test-csp1-2017
+          title: Applab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-csp2-2017:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-csp2-2017
+          title: Gamelab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-csp1-2019:
+          lessons:
+            lesson-1:
+              name: Lesson One
+            lesson-2:
+              name: Design Mode
+          lesson_groups: {}
+          name: ui-test-csp1-2019
+          title: Applab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-csp2-2019:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-csp2-2019
+          title: Gamelab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-facilitators-aif2-intro-2026:
           lessons: {}
           lesson_groups: {}

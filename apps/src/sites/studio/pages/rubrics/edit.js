@@ -18,6 +18,9 @@ $(document).ready(() => {
       rubric={rubric}
       aiRubricS3Config={aiRubricS3Config}
     />,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
