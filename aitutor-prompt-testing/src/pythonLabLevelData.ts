@@ -99,30 +99,8 @@ export const pythonLabLevelData: Record<string, PythonLabLevelEntry> = {
 Take a look at the code in this program. Write down what you think this program will do. There are no wrong answers!`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson12-level2_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. Run your code and observe the outcome. 
-    - *Hint: Make sure to type a number into the console to set the amount of paint you want.* 
-2. *Discuss: Why does the \`Painter\` only paint one square regardless of how much paint you give it?*
-3. Update the code to use the variable holding the user input for the amount of paint as the argument for the \`set_paint()\` method.
-    - *Hint: Where in your code is the user's input being stored?*
- `,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson12-level3_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. Run your code and observe the outcome. 
-    - *Tip: Make sure to run the program with both "grass" and "flower" for user inputs.*
-2. *Discuss: If we want the program to do one thing when the user enters "grass" and something **else** when the user enters "flower", what might be missing from the conditional statement?*
-3. Add the missing \`else\` statement with code to make the \`Painter\` plant a flower of your choice.
-4. Run your code again to make sure the \`Painter\` plants a flower.
-`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
   "programming-fundamentals-lesson12-level4_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `## Do This:
@@ -409,34 +387,8 @@ You can name the \`Painter\` whatever you want! Give it a name that is meaningfu
     - **Discuss:** What do you think each one does?`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson5-level3_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This: 
-1. Add \`painter = Painter()\` to create a \`Painter\` object.
-    - Hint: Look at the the code comments.
-    - Press Run to test your code.
-    - *Discuss: Did the \`Painter\` object appear where you expected it to?*
-2. Add \`painter.move()\` to make the \`Painter\` move forward.
-    - *Discuss: Which direction do you expect the \`Painter\` to move?*
-    - Press Run to test your code.
-3. Add more \`painter.move()\` methods to move the \`Painter\` to the cone.
-	- Press Run to test your code.`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson5-level4_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. Run the code and observe.
-2. *Discuss: The \`Painter\` passed over a paint bucket. What do you think its purpose is?*
-3. Uncomment (delete the \`#\`'s) the code on lines 11-14, 18, 20, and 22. Then run the program. 
-4. *Discuss:* 
-	- *Was your prediction about the bucket accurate?*
-    - *What does the number on the bucket represent?*
-5. Paint a yellow line to the cone.
-	- See the [documentation](https://docs.google.com/document/d/1x3xmKI_ADq8GaGoI0XGX9pJIE4VmPM3iXq_qIHeo7r4/edit?usp=sharing) for how to change the color of the paint.`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
+
   "programming-fundamentals-lesson5-level7a_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `## Do This:
@@ -491,174 +443,14 @@ The \`Painter\` is supposed to stop in front of the traffic cone, but it stopped
 ![](https://images.code.org/b2fe0af49dd0a8390420848dc2687ec6-image-1744677255860.gif)`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson6-level1_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `# Predict and Run
 
-**What do you think this program does?**
 
-Take a look at the code in this program. Write down what you think this program will do. There are no wrong answers!`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson6-level2_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-1. Find the \`custom.py\` file and define a \`turn_right()\` function.
-   - **Hint:** Refer to the \`move_fast()\` function as a guide.
-   - *Discuss: How do you add a comment about this function, and what should it say?*
-2. Run and test your code.
-   - *Discuss: Where should you call your \`turn_right()\` function? Try it!*
-   - *Discuss: Can you call the \`move_fast()\` and \`turn_right()\` functions multiple times in sequence? Try it!*
-3. **Discuss:** How does defining your own function make your code easier to reuse?
-4. Save your code to the Backpack! Click below to see how!
 
-::: details [**Click Here to Learn How To Save your code to the Backpack!**]
 
-- Click the three-dot menu icon next to the \`custom.py\` file name.
-- Select "Save to backpack" from the drop-down menu.
-- Click the "Save to backpack" button in the pop-up dialog box.
 
-<img src="https://images.code.org/a5083c7ccc54bfa4ea561fa29adf2902-image-1740077664809.gif" style="width:450px;">
-:::`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson6-level3_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. Add \`import custom\` at the top of the program to be able to use your \`custom.py\` file
-2. Import your \`custom.py\` file:
-	- Click the \`+\` in the File menu.
-    - Select "Import from backpack"
-    - Select your \`custom.py\` file from the list and click "Import to project"
-3. *Discuss: What code would you need to add to the \`turn_around()\` function definition in the \`custom.py\` file that would make the \`Painter\` turn around to face the opposite direction?*
-4. Implement your ideas, run and test your code.
-5. Use the \`#\` to add a comment above the \`turn_around()\` function to explain what it does.
-6. Use your new function with other functions and \`Painter\` methods to paint the end of each street.
-7. **Save your code to the Backpack!**  
 
-::: details [**Click Here to Learn How To Import from the Backpack!**]
 
-- Click the \`+\` icon next to the File menu.
-- Select "Import from backpack" from the drop-down menu.
-- Select your file and click the "Import to project" button.
-
-<img src="https://images.code.org/f53f681651f42c532cf0c7078fc14099-image-1740078209718.gif" style="width:450px;">
-:::
-`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson6-level4_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-1. **Discuss:** How easy would it be to change the color being painted?
-2. Import your \`custom.py\` file.
-    - **Hint:** Remember to include \`import custom\` at the top of \`main.py\`.
-3. Define a function called \`paint_line(painter, color)\` where \`color\` represents the color to be painted.
-   - **Hint:** Move the starter code from \`main.py\` into this function. *Remember to indent each line within the function definition!*
-   - *Discuss: What code now in the function needs to be modified? See the [documentation](https://docs.google.com/document/d/1x3xmKI_ADq8GaGoI0XGX9pJIE4VmPM3iXq_qIHeo7r4/edit?usp=sharing) for how to use a parameter within a function definition.*
-4. Add a comment explaining the purpose of the \`paint_line(painter, color)\` function and how the parameter \`color\` is used.
-5. Run and test your code:
-   - **Hint:** Call the function multiple times with different colors (e.g. \`paint_line(painter, "yellow")\`, \`paint_line(painter, "red")\`)
-   - *Discuss: How did adding the parameter \`color\` make the function more flexible?*
-6. **Save your code to the Backpack!**`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson6-level6_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-
-**Write a program using the functions created today to create a unique pattern in The Neighborhood.**
-- Import \`custom.py\`.
-- Use at least three functions you have created.
-- In \`main.py\`, call each function more than once to create a pattern.
-- Make sure you comment your code to explain each segment's purpose.
-
-**TAG Feedback**
-
-Swap programs with a partner and provide TAG feedback on a sticky note.
-   - T (Tell): Tell something you liked about their program
-   - A (Ask): Ask a question about their program
-   - G (Give): Give a suggestion for improvement.
-
-::: details [**See TAG feedback example here!**]
-   - T: *I liked how you alternated the colors red and blue.*
-   - A: *Why did you decide to move forward twice before turning right?*
-   - G: *You could try adding another color to your pattern.*
-:::`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson7-level1_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-
-**Refer to Strategy 1 and 2**
-
-1. *Discuss: Take a look at the code and discuss what might go wrong before running it.*
-2. Walk through the program line by line with your partner, explaining aloud what each line does and what you expect to happen.
-3. Add \`print\` statements to check when and where different pieces of code run.
-    - **Hint:** Try adding \`print\` statements inside the function definition, after the object is created, or after the function is called.
-    - Run and test to see what your \`print\` statements reveal.
-4. Modify the code to fix the issue.
-	- **Hint:** Can you use a method on an object before it's created?
-
----
-
-**Unit Guide**
-
-Document your experience with this debugging strategy:
-- What worked? 
-- What challenges did you face? 
-- How did this strategy help? 
-- When might it be most useful in the future?`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson7-level2_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-
-**Refer to Strategy 1 and 3**
-
-1. Run the code and compare the output to the comments describing what should be happening. Take note of any unexpected behavior.
-2. *Discuss: With a partner, identify what might be causing the issue. Consider what is happening differently than expected.*
-2. Since there is no error message, use the chatbot on Level 4 to help analyze your code and find the bug. Ask for debugging advice or explanations of why the code isn't behaving as expected.
-3. Modify the code to fix the issue.
-	- **Hint:** Focus on checking the logic of your code rather than just syntax errors!
-
----
-
-**Unit Guide**
-
-Document your experience with this debugging strategy:
-- What worked? 
-- What challenges did you face? 
-- How did this strategy help? 
-- When might it be most useful in the future?`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson7-level3_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
-
-**Refer to Strategy 1 and 4**
-
-1. Run the code and carefully read the first error message in the console log. Try to find the most useful information among the large error message.
-2. *Discuss: What do you think the error message is telling you? Identify where in the code the issue is occurring.*
-2. If the error message is unclear, go to Level 4 and ask the chatbot for help in understanding what part of the error message is the most important and what the error message means.
-3. Modify the code to fix the issue.
-	- **Hint:** There are multiple errors! Fix one error at a time, running the program after each change to check your progress.
-
----
-
-**Unit Guide**
-
-Document your experience with this debugging strategy:
-- What worked? 
-- What challenges did you face? 
-- How did this strategy help? 
-- When might it be most useful in the future?`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
   "programming-fundamentals-lesson7-level9_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `## Do This:
@@ -1361,21 +1153,7 @@ For this problem, your condition will be \`is_facing_west()\`
 `,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson9-level2_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. Add two conditionals to the \`check_square(painter)\` function definition:
-   - First, check if the \`Painter\` \`is_on_paint()\`, and if it is, then the \`Painter\` should \`scrape_paint()\`.
-   - Second, check if the \`Painter\` \`can_move()\`, and if it can, then the \`Painter\` should \`move()\`. 
-2. Call the \`check_square(painter)\` function after the \`turn_around()\` function call.
-3. *Discuss:* What can you use to continue to call the \`check_square(painter)\` function repeatedly so that the \`Painter\` scrapes up the line of paint it just put down like the image below?*
-4. Give your ideas a try!
-   - *Discuss: How do \`if\` statements and \`while\` loops work together in this program? What would happen if we moved the conditionals outside the loop?*
-
-<img src="https://images.code.org/143dc2209f3ac15665dc9b11545bfb46-image-1738551358664.gif" style="width: 200px;"> `,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
   "programming-fundamentals-lesson9-level2a_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `## Do This:
@@ -1526,26 +1304,7 @@ Remember to indent both actions under the \`if\`!
 <img src="https://images.code.org/7d7ddded9e3a7a19bd1c191feb4dd975-conditionalsL3.png" style="width:200px"> `,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson9-level4_2025-preview": {
-    unitId: "csaif2-preview",
-    longInstructions: `## Do This:
 
-1. **Run and Discuss:** Look at the \`paint_diagonal(color)\` function:
-   - How does the first \`if\` statement control whether the \`Painter\` paints and moves? 
-   - What does each ***nested*** \`if\` inside it do?
-2. Finish the code inside the \`paint_diagonal(color)\` function definition:
-   - Add a "parent" \`if\` statement to check if the \`Painter\` \`has_paint()\`. 
-   - Inside this "parent" \`if\` statement, add an \`if\` to check if the \`Painter\` is facing south, and if so: 
-      - Paint using the parameter \`color\`.
-      - Check if the \`Painter\` can move, and if so, move.
-      - Turn left.
-      - Check again if the \`Painter\` can  move, and if so, move.
-3. Run your program and check if the \`Painter\` paints a diagonal line from the top left to the bottom right of the Neighborhood.
-4. **Discuss:** Why isn't the \`Painter\` painting a diagonal line?*
-	- **Hint:** What does calling \`paint_diagonal(color)\` once do? What would happen if you called it repeatedly?
-`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
   "programming-fundamentals-lesson9-level6_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `## Do This:

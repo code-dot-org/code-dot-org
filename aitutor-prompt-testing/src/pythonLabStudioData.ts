@@ -1149,6 +1149,147 @@ while my_painter.can_move():
   },
 
   // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson5-level1_2025-launch_2025
+  // Task: Predict/read level — student reads code and says what Painter will do
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level1_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: false,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson5-level2_2025-launch_2025
+  // Task: Create a Painter and move it forward one space
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+# Your code here`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+Painter()
+move()`,
+    consoleOutput: `NameError: name 'move' is not defined`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter(
+my_painter.move()`,
+    consoleOutput: `  File "main.py", line 3
+    my_painter.move()
+    ^
+SyntaxError: '(' was never closed`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall at position (5, 0).`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level2_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
   // Level: programming-fundamentals-lesson5-level7a_2025-launch_2025
   // Task: Debug buggy code — Painter turns twice (180°) instead of once (90°)
   // ─────────────────────────────────────────────────────────────────────────
