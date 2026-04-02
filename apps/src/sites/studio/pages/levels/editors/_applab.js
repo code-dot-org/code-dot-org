@@ -17,19 +17,21 @@ $(document).ready(function () {
 
     // Setting block values to null to match the expected behavior in code_functions.
     // Board type only affects default pin examples, not function names.
-    let makerBlocks = {};
-    getMakerBlocks(null).forEach(block => (makerBlocks[block.func] = null));
+    let sharedMakerBlocks = {};
+    getMakerBlocks(null).forEach(
+      block => (sharedMakerBlocks[block.func] = null)
+    );
     let microbitBlocks = {};
     configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
     let circuitBlocks = {};
     configCircuitPlayground.blocks.forEach(
       block => (circuitBlocks[block.func] = null)
     );
-    const microbitNonMakerFuncs = Object.keys(microbitBlocks).filter(
-      func => !(func in makerBlocks)
+    const microbitNonSharedMakerFuncs = Object.keys(microbitBlocks).filter(
+      func => !(func in sharedMakerBlocks)
     );
-    const circuitNonMakerFuncs = Object.keys(circuitBlocks).filter(
-      func => !(func in makerBlocks)
+    const circuitNonSharedMakerFuncs = Object.keys(circuitBlocks).filter(
+      func => !(func in sharedMakerBlocks)
     );
 
     const codeFunctionsTextarea = document.getElementById(
@@ -39,33 +41,29 @@ $(document).ready(function () {
     if (!editor) {
       return;
     }
-    const functionsWithMaker = JSON.parse(editor.getValue() || '{}');
+    const codeFunctions = JSON.parse(editor.getValue() || '{}');
     if ($(this).val() === 'circuitPlayground') {
       // Load Circuit Playground blocks (includes shared Maker blocks).
-      Object.assign(functionsWithMaker, circuitBlocks);
-      microbitNonMakerFuncs.forEach(func => {
+      Object.assign(codeFunctions, circuitBlocks);
+      microbitNonSharedMakerFuncs.forEach(func => {
         if (!(func in circuitBlocks)) {
-          delete functionsWithMaker[func];
+          delete codeFunctions[func];
         }
       });
     } else if ($(this).val() === 'microbit') {
       // Load micro:bit blocks (includes shared Maker blocks).
-      Object.assign(functionsWithMaker, microbitBlocks);
-      circuitNonMakerFuncs.forEach(func => {
+      Object.assign(codeFunctions, microbitBlocks);
+      circuitNonSharedMakerFuncs.forEach(func => {
         if (!(func in microbitBlocks)) {
-          delete functionsWithMaker[func];
+          delete codeFunctions[func];
         }
       });
     } else {
       // Remove all board blocks (including shared Maker blocks).
-      Object.keys(microbitBlocks).forEach(
-        func => delete functionsWithMaker[func]
-      );
-      Object.keys(circuitBlocks).forEach(
-        func => delete functionsWithMaker[func]
-      );
+      Object.keys(microbitBlocks).forEach(func => delete codeFunctions[func]);
+      Object.keys(circuitBlocks).forEach(func => delete codeFunctions[func]);
     }
-    editor.setValue(JSON.stringify(functionsWithMaker, null, ' '));
+    editor.setValue(JSON.stringify(codeFunctions, null, ' '));
   });
 
   const styles = {
