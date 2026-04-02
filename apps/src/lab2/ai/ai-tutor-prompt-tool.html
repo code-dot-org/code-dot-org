@@ -486,6 +486,149 @@ while my_painter.can_move():
         my_painter.move()
     my_painter.move()`,
   },
+
+  // ─── programming-fundamentals levels ──────────────────────────────────────
+
+  "programming-fundamentals-lesson5-level5_2025-launch_2025": {
+    label: "Create a missing Painter (lesson5 L5)",
+    longInstructions: `A \`Painter\` has been given instructions to move and turn, but the \`Painter\` hasn't yet been created! Fix the program by creating another \`Painter\`.`,
+  },
+
+  "programming-fundamentals-lesson5-level6_2025-launch_2025": {
+    label: "Add typed variables + print (lesson5 L6)",
+    longInstructions: `## Do This:
+1. Add 4 new variables, one for each type:
+    - **String** (text)
+    - **Integer** (whole number)
+    - **Boolean** (\`True\` or \`False\`)
+    - **Float** (decimal number)
+2. Modify the \`print\` statements so that they print out each variable.
+    - *Hint: What do you need to add to your code when printing out a string?*`,
+  },
+
+  "programming-fundamentals-lesson5-level9_2025-launch_2025": {
+    label: "Navigate to food truck (lesson5 L9)",
+    longInstructions: `Help the \`Painter\` navigate through The Neighborhood to reach the food truck!
+1. Create a \`Painter\` object.
+2. Use the \`move()\` and \`turn_left()\` methods to navigate through The Neighborhood to reach the food truck.`,
+  },
+
+  "programming-fundamentals-lesson6-level7_2025-launch_2025": {
+    label: "Write program using custom functions (lesson6 L7)",
+    longInstructions: `## Do This:
+
+**Write a program using the functions created today to get the \`Painter\` to the traffic cone and paint the path.**
+
+- You can even create **new** functions in your \`custom.py\` file if you need to!
+   - *Do you need to create a new function to take all the paint?*
+- Don't forget to add comments to your program to explain the purpose of your functions and code segments.
+
+**Reminder:** Make sure you import your \`custom.py\` file and save it to your backpack after adding any new functions!`,
+  },
+
+  "programming-fundamentals-lesson7-level6_2025-launch_2025": {
+    label: "Debugging challenge (lesson7 L6)",
+    longInstructions: `## Do This:
+
+1. Run the code and observe what happens.
+2. Run the test to see if that gives you any insights into the bug.
+3. Decide which debugging strategy would be useful for this buggy program.
+4. Iteratively refine and test the updates you make to the code.
+
+---
+
+**Unit Guide**
+
+Document your experience with this debugging challenge:
+- What strategy did you use?
+- How did it help?
+- When might it be most useful in the future?`,
+  },
+
+  "programming-fundamentals-lesson8-level6_2025-launch_2025": {
+    label: "Write collect_and_move() function (lesson8 L6)",
+    longInstructions: `## Do This
+
+1. In your \`custom.py\` file create a function called \`collect_and_move()\` that repeatedly collects paint from a bucket and moves forward.
+    - Hint: Use the \`while painter.is_on_bucket()\` to collect multiple buckets of paint at once.
+2. Use the \`collect_and_move()\` function inside a loop to navigate through The Neighborhood.
+    - Hint: Remember to use the \`turn_left()\` method and \`turn_right()\` function as needed.
+
+**Reminder:** Make sure you import your \`custom.py\` file and save it to your backpack after adding any new functions!`,
+  },
+
+  "programming-fundamentals-lesson10-level1_2025": {
+    label: "Explore move_if_can() with parameters (lesson10 L1)",
+    longInstructions: `## Do This:
+
+1. **Run the code without making any changes.** Observe what happens.
+2. Comment out the two conditional statements (lines 11-17) and uncomment the \`move_if_can()\` function on lines 20-26. Then click Run.
+3. *Discuss: What do you think will happen when you call the function with a \`north\` argument? What will the \`Painter\` do? Give it a try!*
+4. Call the function with different directions as the argument (e.g. \`move_if_can("west")\`, \`move_if_can("east")\`, etc).
+    - How does the function simplify controlling the \`Painter\`'s movement?
+    - Why does the \`Painter\` skip moving if the condition is \`False\`?`,
+  },
+
+  "programming-fundamentals-lesson12-level5_2025-launch_2025": {
+    label: "Write take_or_move() if/else (lesson12 L5)",
+    longInstructions: `## Do This:
+
+1. Import your \`custom.py\` into your project.
+
+2. In \`custom.py\`, write the \`take_or_move()\` function. Inside this function, write an \`if/else\` statement:
+
+   * If the \`Painter\` \`is_on_bucket()\`, call \`take_all_paint()\` to collect the paint.
+
+   * Else, call \`this_painter.move()\` to continue forward.
+
+3. Save \`custom.py\` to your Backpack.
+
+4. In \`main.py\`, import your \`take_or_move()\` function. Create a \`Painter\` and call your function while your \`Painter\` \`can_move()\`.
+
+---
+
+**Coding Tip**
+
+Use \`this_painter.is_on_bucket()\` to check if the \`Painter\` is on a paint bucket. Then decide what to do using \`if\` and \`else\`.`,
+  },
+
+  "programming-fundamentals-lesson12-level6_2025-launch_2025": {
+    label: "Debug from flowchart (lesson12 L6)",
+    longInstructions: `## Do This:
+
+Help! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below.
+1. Read through the flowchart to understand what the program should do.
+2. Run and test the program to debug the program so that it works as expected for all outcomes.`,
+  },
+
+  "programming-fundamentals-lesson12-level8_2025-launch_2025": {
+    label: "Write paint_or_turn() function (lesson12 L8)",
+    longInstructions: `## Do This:
+
+1. Import your \`custom.py\` into your project.
+
+2. In \`custom.py\`, write the \`paint_or_turn(this_painter, color)\` function. Inside your function:
+
+   * Write a \`while\` loop that runs while the \`Painter\` \`is_facing_east()\`
+
+   * If the \`Painter\` \`has_paint()\`, paint the space and then move forward
+
+   * Else, call your \`turn_right(this_painter)\` function
+
+3. Save \`custom.py\` to your Backpack.
+
+4. In \`main.py\`, import the functions you need and collect the paint and paint in The Neighborhood.`,
+  },
+
+  "programming-fundamentals-lesson13-level1_2025": {
+    label: "Open-ended project — add code and iterate (lesson13 L1)",
+    longInstructions: `## Do This:
+1. Add your code to the workspace.
+2. Click Run and observe the outcome.
+    - Keep revising and testing your code until it runs as expected.
+
+**Reminder:** Make sure you import your \`custom.py\` file and save it to your backpack after adding any new functions!`,
+  },
 };
 
 const STATES = [
