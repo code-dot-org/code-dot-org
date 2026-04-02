@@ -84,6 +84,16 @@ module Middleware
 
           setup_region(new_region)
           setup_redirect_to(redirect_path)
+        # Fallback for legacy `/global/fa/*` paths
+        elsif original_path_info.start_with?('/global/fa')
+          international_path = original_path_info.sub('/global/fa', '')
+          request.path_info = international_path unless existing_route?
+
+          if redirectable?(international_path)
+            fallback_path = regional_path_for('fa', international_path)
+            fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
+            setup_redirect_to(fallback_path)
+          end
         elsif effective_region
           if effective_region == url_region
             normalize_request_for_routing
@@ -127,7 +137,7 @@ module Middleware
 
       # Returns the request path with the Global Edition (GE) prefix removed.
       #
-      # @example `/global/fa/home` => `/home`
+      # @example `/fa/home` => `/home`
       #
       # @return [String] path without GE prefix, or the original path if no prefix is present
       private def main_path
@@ -219,11 +229,11 @@ module Middleware
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?
+      private def redirectable?(path = original_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
-        !excluded_path?(original_path)
+        !excluded_path?(path)
       end
 
       private def regional_path_for(region, main_path)
@@ -237,7 +247,7 @@ module Middleware
 
       # Prepares the current request so it can be correctly routed by the application.
       #
-      # This method adapts incoming Global Edition URLs (e.g., `/global/<ge-region>/...`)
+      # This method adapts incoming Global Edition URLs (e.g., `/<ge-region>/...`)
       # into a form that the application can process as standard root level routes.
       # Without this normalization, such requests would not match any route and result in a 404.
       #
@@ -254,7 +264,7 @@ module Middleware
       #   It does not trigger a redirect or modify the browser URL.
       private def normalize_request_for_routing
         unless existing_route?
-          # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
+          # Strips the Global Edition path prefix (e.g., `/fa`) from the request path.
           # request.path == request.script_name + request.path_info
           # - `request.script_name` strips the prefix from the request path
           #   so the application processes requests as if it were running at the root level.
