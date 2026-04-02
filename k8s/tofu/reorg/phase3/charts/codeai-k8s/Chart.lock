@@ -1,0 +1,21 @@
+dependencies:
+- name: argocd-wrapper
+  repository: file://../argocd
+  version: 0.1.0
+- name: dex-wrapper
+  repository: file://../dex
+  version: 0.1.0
+- name: external-dns-wrapper
+  repository: file://../external-dns
+  version: 0.1.0
+- name: aws-load-balancer-controller-wrapper
+  repository: file://../aws-load-balancer-controller
+  version: 0.1.0
+- name: kargo-github-webhook
+  repository: file://../kargo-github-webhook
+  version: 0.1.0
+- name: kargo-github-webhook-secret
+  repository: file://../kargo-github-webhook-secret
+  version: 0.1.0
+digest: sha256:beac4b3a6f49ca086be1118a0585aa828bc811993cc03578b6f426120d426c1f
+generated: "2026-04-01T10:10:32.348496-10:00"

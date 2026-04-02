@@ -1,0 +1,24 @@
+externalDns:
+  provider:
+    name: aws
+
+  txtOwnerId: codeai-k8s
+
+  sources:
+    - service
+    - ingress
+    - crd
+    - gateway-httproute
+    - gateway-grpcroute
+
+  domainFilters:
+    - k8s.code.org
+
+  serviceAccount:
+    create: false
+    name: external-dns-sa
+
+  extraArgs:
+    - --aws-zone-type=public
+    - --fqdn-template={{ printf "{{ with index .Labels %q }}{{ . }}{{ else }}ignore{{ end }}" "code.ai/dns-name" }}.k8s.code.org
+    - --exclude-domains=ignore.k8s.code.org

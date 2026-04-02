@@ -1,0 +1,104 @@
+dex:
+  namespaceOverride: dex
+
+  configSecret:
+    create: false
+    name: dex-config
+
+  envFrom:
+    - secretRef:
+        name: oidc-client-secrets
+    - secretRef:
+        name: dex-google-client-secret-env
+
+  volumes:
+    - name: google-service-account
+      secret:
+        secretName: dex-google-service-account
+
+  volumeMounts:
+    - name: google-service-account
+      mountPath: /etc/dex/google
+      readOnly: true
+
+  ingress:
+    enabled: true
+    annotations:
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
+      alb.ingress.kubernetes.io/ssl-redirect: "443"
+      alb.ingress.kubernetes.io/backend-protocol: HTTP
+    hosts:
+      - host: dex.k8s.code.org
+        paths:
+          - path: /
+            pathType: Prefix
+
+dexSecretStore:
+  name: aws-secrets-manager-store-dex
+  serviceAccountName: external-secrets-sa-dex
+  awsRegion: us-east-1
+
+dexGoogleServiceAccount:
+  name: dex-google-service-account
+  fileName: codeai-k8s-dex.json
+  awsSecretName: k8s/tofu/codeai-k8s/dex_google_service_account_key
+
+dexGoogleClientSecret:
+  name: dex-google-client-secret-env
+  awsSecretName: k8s/tofu/codeai-k8s/dex_google_client_secret
+
+dexConfigSecret:
+  name: dex-config
+  configYaml: |
+    issuer: https://dex.k8s.code.org
+
+    web:
+      # Kargo performs OIDC discovery and token exchange from the browser
+      # against Dex, so Dex must allow the Kargo UI origin for CORS.
+      allowedOrigins:
+        - https://kargo.k8s.code.org
+
+    storage:
+      type: kubernetes
+      config:
+        inCluster: true
+
+    oauth2:
+      skipApprovalScreen: true
+
+    staticClients:
+      - id: argocd
+        name: Argo CD
+        secretEnv: ARGOCD_CLIENT_SECRET
+        redirectURIs:
+          - https://argocd.k8s.code.org/auth/callback
+      - id: kargo.k8s.code.org
+        name: Kargo
+        public: true
+        redirectURIs:
+          - https://kargo.k8s.code.org/login
+      - id: kargo.k8s.code.org-cli
+        name: Kargo CLI
+        public: true
+
+    connectors:
+      - type: google
+        id: google
+        name: Google
+        config:
+          clientID: 254945981659-9p8ctpobals7gmah0ptlt70t29eflira.apps.googleusercontent.com
+          clientSecret: $GOOGLE_CLIENT_SECRET
+          redirectURI: https://dex.k8s.code.org/callback
+          hostedDomains:
+            - code.org
+          groups:
+            - engineers@code.org
+            - infrastructure@code.org
+            - trusted-contributors@code.org
+            - product@code.org
+            - all@code.org
+          serviceAccountFilePath: /etc/dex/google/codeai-k8s-dex.json
+          domainToAdminEmail:
+            code.org: darin@code.org

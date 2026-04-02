@@ -1,0 +1,4 @@
+# This umbrella chart exists to bundle the phase3 wrapper charts in one place.
+#
+# It is not the live Terraform install unit, because the current phase3 layout
+# still needs separate Helm releases with different namespaces.

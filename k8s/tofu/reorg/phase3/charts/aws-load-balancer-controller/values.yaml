@@ -1,0 +1,24 @@
+awsLoadBalancerController:
+  clusterName: codeai-k8s
+  region: us-east-1
+  vpcId: vpc-6e98810a
+
+  serviceAccount:
+    create: false
+    name: aws-load-balancer-controller-sa
+
+  ingressClass: aws-alb
+  defaultTargetType: ip
+
+  ingressClassParams:
+    name: aws-alb
+    spec:
+      scheme: internet-facing
+      sslRedirectPort: "443"
+
+  ingressClassConfig:
+    default: true
+
+  controllerConfig:
+    featureGates:
+      ALBGatewayAPI: true

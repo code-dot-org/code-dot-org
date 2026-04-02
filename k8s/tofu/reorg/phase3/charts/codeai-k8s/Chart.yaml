@@ -1,0 +1,31 @@
+apiVersion: v2
+name: codeai-k8s
+description: Umbrella chart for the phase3 codeai-k8s cluster add-ons
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: argocd-wrapper
+    alias: argocd
+    repository: file://../argocd
+    version: 0.1.0
+  - name: dex-wrapper
+    alias: dex
+    repository: file://../dex
+    version: 0.1.0
+  - name: external-dns-wrapper
+    alias: externalDns
+    repository: file://../external-dns
+    version: 0.1.0
+  - name: aws-load-balancer-controller-wrapper
+    alias: awsLoadBalancerController
+    repository: file://../aws-load-balancer-controller
+    version: 0.1.0
+  - name: kargo-github-webhook
+    alias: kargoGithubWebhook
+    repository: file://../kargo-github-webhook
+    version: 0.1.0
+  - name: kargo-github-webhook-secret
+    alias: kargoGithubWebhookSecret
+    repository: file://../kargo-github-webhook-secret
+    version: 0.1.0

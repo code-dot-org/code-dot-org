@@ -1,0 +1,39 @@
+- [x] Create `k8s/tofu/reorg/` scaffolding: `README.md`, `plan.md`, `checklist.md`, `implementation-notes.md`, `phase1/`, `phase2/`, `phase3/`, and the split ESO modules
+- [x] Copy/refactor `codeai-k8s/eks-cluster` into `reorg/phase1`
+- [x] Remove Route53, ACM, ExternalDNS, ESO Helm, and Gateway API CRDs from `phase1`
+- [x] Rework `phase1` outputs so later phases consume remote state instead of duplicate cluster-shape tfvars
+- [x] Build `reorg/phase2` as the AWS-side root
+- [x] Move Route53 zone and ACM certificate resources into `phase2`
+- [x] Keep Dex Google client secret bootstrap in `phase2`
+- [x] Split ESO into `reorg/modules/eso-per-env-aws` and `reorg/modules/eso-per-env-k8s`
+- [x] Move ESO IAM role creation into `phase2`
+- [x] Move Kargo SecretStore IAM into `phase2`
+- [x] Keep Kargo GitHub webhook secret bootstrap in `phase2`
+- [x] Refactor `external-dns` in `phase2` to IRSA-only wrapper mode with `observability_tag = null`
+- [x] Refactor `aws-load-balancer-controller` in `phase2` to IRSA-only wrapper mode
+- [x] Export all `phase2` outputs required by later phases
+- [x] Create `phase2/modules/non-aws-bootstrap`
+- [x] Move ESO Helm into the `phase2` non-AWS bootstrap module
+- [x] Move Kargo git credentials into the `phase2` non-AWS bootstrap module
+- [x] Move the Kargo GitHub organization webhook into the `phase2` non-AWS bootstrap module
+- [x] Keep `phase3` as the remaining K8S-only add-on root
+- [x] Move Gateway API CRDs into `phase3`
+- [x] Install ArgoCD in `phase3`
+- [x] Move app-of-apps bootstrap into `phase3`
+- [x] Install Dex in `phase3`
+- [x] Make Dex chart-owned in `phase3`, with Google secrets pulled through ESO
+- [x] Create ESO Kubernetes resources in `phase3`
+- [x] Create frontend pod security group policy in `phase3`
+- [x] Create AWS ALB gateway class resources in `phase3`
+- [x] Create the remaining Kargo SecretStores in `phase3`
+- [x] Create Kargo GitHub webhook `ExternalSecret` in `phase3`
+- [x] Refactor `external-dns` in `phase3` to a plain `helm_release` using the role ARN from `phase2`
+- [x] Refactor `aws-load-balancer-controller` in `phase3` to a plain `helm_release` using the role ARN from `phase2`
+- [x] Write all split mismatches to `implementation-notes.md`
+- [x] Run `tofu fmt -check` under `k8s/tofu/reorg`
+- [x] Run `tofu init -backend=false && tofu validate` in `phase1`
+- [x] Run `tofu init -backend=false && tofu validate` in `phase2`
+- [x] Run `tofu init -backend=false && tofu validate` in `phase3`
+- [x] Confirm `k8s/tofu/codeai-k8s*` remains unchanged
+- [x] Code review phase: can we make the code cleaner and simpler? if yes, repeat until as simple as possible without losing anything
+- [x] Match previous tofu phase: is this a perfect replica with existing tofu files in `codeai-k8s` folder modules? if not, improve and iterate

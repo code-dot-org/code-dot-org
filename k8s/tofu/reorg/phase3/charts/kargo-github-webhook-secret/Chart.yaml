@@ -1,0 +1,5 @@
+apiVersion: v2
+name: kargo-github-webhook-secret
+description: Local wrapper chart for Kargo GitHub webhook ExternalSecret resources
+type: application
+version: 0.1.0

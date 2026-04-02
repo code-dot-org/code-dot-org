@@ -1,0 +1,61 @@
+argocd:
+  crds:
+    install: true
+
+  global:
+    domain: argocd.k8s.code.org
+
+  dex:
+    enabled: false
+
+  configs:
+    params:
+      server.insecure: true
+    cm:
+      url: https://argocd.k8s.code.org
+      admin.enabled: false
+      oidc.config: |
+        name: Dex
+        issuer: https://dex.k8s.code.org
+        clientID: argocd
+        clientSecret: $dex.argocd.clientSecret
+        requestedScopes:
+          - openid
+          - profile
+          - email
+          - groups
+    rbac:
+      policy.csv: |
+        g, all@code.org, role:readonly
+        g, trusted-contributors@code.org, role:readonly
+        g, product@code.org, role:readonly
+        g, engineers@code.org, role:admin
+        g, infrastructure@code.org, role:admin
+    secret:
+      createSecret: false
+
+  server:
+    ingress:
+      enabled: true
+      controller: generic
+      hostname: argocd.k8s.code.org
+      annotations:
+        alb.ingress.kubernetes.io/scheme: internet-facing
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
+        alb.ingress.kubernetes.io/ssl-redirect: "443"
+        alb.ingress.kubernetes.io/backend-protocol: HTTP
+
+  repoServer:
+    extraEnv:
+      - name: ARGOCD_EXEC_TIMEOUT
+        value: 10m
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 4Gi
+        ephemeral-storage: 40Gi
+      limits:
+        cpu: 1000m
+        memory: 4Gi
+        ephemeral-storage: 40Gi

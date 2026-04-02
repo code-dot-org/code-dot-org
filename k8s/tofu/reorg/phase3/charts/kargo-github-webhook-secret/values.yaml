@@ -1,0 +1,4 @@
+externalSecret:
+  name: github-org-webhook-secret
+  secretStoreName: aws-secrets-manager-store-kargo-system-resources
+  awsSecretName: k8s/tofu/codeai-k8s/kargo/github_org_webhook_secret
