@@ -1,4 +1,3 @@
-import {ComponentLibraryButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
@@ -92,13 +91,13 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     color: 'tertiary' as const,
   };
 
-  const buttonPropsWithLabel: ComponentLibraryButtonProps = {
+  const buttonPropsWithLabel = {
     ...buttonPropsCommon,
     children: 'Add file',
     startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
-  const buttonPropsIconOnly: ComponentLibraryButtonProps = {
+  const buttonPropsIconOnly = {
     ...buttonPropsCommon,
     children: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
@@ -147,7 +146,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       onClick={onDeviceUploadClick}
       startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
     >
-      {aichatI18n.aichatAddFile()}
+      Add file
     </MuiButton>
   ) : (
     <MuiIconButton
