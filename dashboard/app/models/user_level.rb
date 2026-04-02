@@ -249,8 +249,12 @@ class UserLevel < ApplicationRecord
     refresh_locale_supported
   end
 
+  def resolved_unit
+    (script_id && Unit.get_from_cache(script_id)) || script
+  end
+
   private def refresh_locale_supported
-    self.locale_supported = script&.supported_locale?(locale)
+    self.locale_supported = resolved_unit&.supported_locale?(locale)
   end
 
   # Retrieves and memoizes the latest PairedUserLevel that's associated with
