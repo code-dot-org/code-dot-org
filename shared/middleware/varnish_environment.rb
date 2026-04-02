@@ -18,7 +18,7 @@ class VarnishEnvironment < Sinatra::Base
   end
 
   before do
-    request.locale = I18n.locale = param_locale || cookie_locale || http_locale || default_locale
+    request.locale = param_locale || cookie_locale || http_locale || default_locale
   end
 
   after do
