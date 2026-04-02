@@ -26,7 +26,7 @@ export const sendAnalytics =
         ...properties,
         clientType,
         aiTutorAnswerTypes:
-          labState.levelProperties?.aiTutorPromptSettings?.answerTypes, // Should we replace with aiTutorPromptSettings? (answerTypes and answerTypeCustomizations)
+          labState.levelProperties?.aiTutorPromptSettings?.answerTypes,
         appType: labState.levelProperties?.appName,
         levelId: labState.levelProperties?.id,
         levelName: labState.levelProperties?.name,
