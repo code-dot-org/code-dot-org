@@ -5,7 +5,6 @@ import React from 'react';
 import {
   configMicrobit,
   configCircuitPlayground,
-  getMakerBlocks,
 } from '@cdo/apps/maker/dropletConfig';
 import color from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -13,19 +12,21 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   $('#level_makerlab_enabled').change(function () {
-    // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
+    // Get the set of blocks for the Circuit Category and the Micro:bit category.
+    // Each set already includes shared Maker blocks.
 
     // Setting block values to null to match the expected behavior in code_functions.
-    // The maker type given here sets the defaultPin in the example block. Since we are just using the function name,
-    // which doesn't include a pin parameter, we could use any block type.
-    const configMaker = getMakerBlocks(null);
-    let makerBlocks = {};
-    configMaker.forEach(block => (makerBlocks[block.func] = null));
     let microbitBlocks = {};
     configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
     let circuitBlocks = {};
     configCircuitPlayground.blocks.forEach(
       block => (circuitBlocks[block.func] = null)
+    );
+    const microbitOnlyFuncs = Object.keys(microbitBlocks).filter(
+      func => !(func in circuitBlocks)
+    );
+    const circuitOnlyFuncs = Object.keys(circuitBlocks).filter(
+      func => !(func in microbitBlocks)
     );
 
     const codeFunctionsTextarea = document.getElementById(
@@ -37,20 +38,15 @@ $(document).ready(function () {
     }
     const functionsWithMaker = JSON.parse(editor.getValue() || '{}');
     if ($(this).val() === 'circuitPlayground') {
-      // Load the circuitPlayground and maker blocks.
-      Object.assign(functionsWithMaker, makerBlocks, circuitBlocks);
-      Object.keys(microbitBlocks).forEach(
-        func => delete functionsWithMaker[func]
-      );
+      // Load the Circuit Playground set (includes shared Maker blocks).
+      Object.assign(functionsWithMaker, circuitBlocks);
+      microbitOnlyFuncs.forEach(func => delete functionsWithMaker[func]);
     } else if ($(this).val() === 'microbit') {
-      // Load the microbit and maker blocks.
-      Object.assign(functionsWithMaker, makerBlocks, microbitBlocks);
-      Object.keys(circuitBlocks).forEach(
-        func => delete functionsWithMaker[func]
-      );
+      // Load the micro:bit set (includes shared Maker blocks).
+      Object.assign(functionsWithMaker, microbitBlocks);
+      circuitOnlyFuncs.forEach(func => delete functionsWithMaker[func]);
     } else {
-      // Remove all maker blocks and microbit and circuit playground blocks
-      Object.keys(makerBlocks).forEach(func => delete functionsWithMaker[func]);
+      // Remove all micro:bit and Circuit Playground blocks (including shared Maker blocks).
       Object.keys(microbitBlocks).forEach(
         func => delete functionsWithMaker[func]
       );
