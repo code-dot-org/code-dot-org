@@ -1,8 +1,9 @@
 require 'cdo/i18n'
 
 module LocaleHelper
+  # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    I18n.locale
+    request.locale.to_sym
   end
 
   def locale_dir
