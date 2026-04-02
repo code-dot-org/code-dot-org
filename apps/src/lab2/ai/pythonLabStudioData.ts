@@ -1,40 +1,24 @@
 /**
- * Studio data for AI tutor test dataset.
+ * Studio state data for AI tutor test dataset.
  *
  * Key: `${levelId}_${StudioStateEnum}` — represents a specific student conceptual
  * state on a specific level. Used to simulate realistic AI tutor contexts for
  * testing and prompt development.
  *
- * Covers 3 levels × 6 states = 18 entries.
+ * Covers 3 neighborhood levels × 6 states = 18 entries.
+ * Expand by adding entries for additional pythonlab levels as needed.
  */
+import {
+  PythonLabStudioStateData,
+  StudioStateEnum,
+  STUDIO_STATE_LABELS,
+} from './aiTutorTestTypes';
 
-export type StudioStateEnum =
-  | 'START'
-  | 'STRUGGLING'
-  | 'SYNTAX_ERRORS'
-  | 'RUNTIME_ERRORS'
-  | 'GOOD_PROGRESS'
-  | 'ALMOST_THERE';
-
-export const STUDIO_STATE_LABELS: Record<StudioStateEnum, string> = {
-  START: 'Just started — has not edited or run anything yet',
-  STRUGGLING: 'Completely lost — trying random things, no clear strategy',
-  SYNTAX_ERRORS: 'Has syntax errors that prevent the code from running',
-  RUNTIME_ERRORS: 'Code runs but crashes with a runtime error',
-  GOOD_PROGRESS: 'Making solid progress but the solution is incomplete',
-  ALMOST_THERE: 'Very close — one small issue away from correct',
-};
-
-export interface StudioStateData {
-  studentCode: string;
-  consoleOutput?: string;
-  hasRun: boolean;
-  hasEdited: boolean;
-  validationResults?: string; // JSON string
-}
+export type {StudioStateEnum};
+export {STUDIO_STATE_LABELS};
 
 // Key: `${levelId}_${StudioStateEnum}`
-export const neighborhoodStudioData: Record<string, StudioStateData> = {
+export const pythonLabStudioData: Record<string, PythonLabStudioStateData> = {
   // ─────────────────────────────────────────────────────────────────────────
   // Level: aif-pl-objects-create-L17-2-python_2025
   // Task: Create a Painter object and move it forward one space
