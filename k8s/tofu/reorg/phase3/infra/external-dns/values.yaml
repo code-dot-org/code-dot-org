@@ -22,4 +22,3 @@ externalDns:
     - --aws-zone-type=public
     - --fqdn-template={{ printf "{{ with index .Labels %q }}{{ . }}{{ else }}ignore{{ end }}" "code.ai/dns-name" }}.k8s.code.org
     - --exclude-domains=ignore.k8s.code.org
-

@@ -13,4 +13,3 @@ spec:
   listenerConfigurations:
     - protocolPort: "HTTPS:443"
       defaultCertificate: {{ .Values.loadBalancerConfiguration.defaultCertificateArn | quote }}
-

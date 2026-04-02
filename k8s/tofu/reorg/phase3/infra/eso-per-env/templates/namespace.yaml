@@ -4,4 +4,3 @@ kind: Namespace
 metadata:
   name: {{ .Values.environment_type }}
 {{- end }}
-

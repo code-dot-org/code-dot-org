@@ -19,7 +19,6 @@ awsLoadBalancerController:
   ingressClassConfig:
     default: true
 
-  controllerConfig:
-    featureGates:
-      ALBGatewayAPI: true
-
+controllerConfig:
+  featureGates:
+    ALBGatewayAPI: true

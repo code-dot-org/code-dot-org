@@ -6,4 +6,3 @@ loadBalancerConfiguration:
   namespace: kube-system
   scheme: internet-facing
   defaultCertificateArn: ""
-

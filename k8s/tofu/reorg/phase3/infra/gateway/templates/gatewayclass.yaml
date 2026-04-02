@@ -9,4 +9,3 @@ spec:
     kind: LoadBalancerConfiguration
     name: {{ .Values.loadBalancerConfiguration.name }}
     namespace: {{ .Values.loadBalancerConfiguration.namespace }}
-

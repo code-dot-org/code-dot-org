@@ -9,4 +9,3 @@ dependencies:
     alias: awsLoadBalancerController
     repository: https://aws.github.io/eks-charts
     version: 1.17.1
-
