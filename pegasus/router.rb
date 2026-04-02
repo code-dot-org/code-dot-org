@@ -1,6 +1,5 @@
 require_relative 'src/env'
 require 'rack'
-require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
