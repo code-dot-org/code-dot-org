@@ -12,7 +12,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ACCEPTED_FILE_TYPES, MAX_NUM_FILES} from '../../constants';
+import {MAX_NUM_FILES} from '../../constants';
 import {addStagedFile, sendAnalytics, uploadFiles} from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
@@ -20,6 +20,7 @@ export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
+  acceptedFileTypes: string[];
   hasStarterAssets?: boolean;
   showLabel?: boolean;
 }
@@ -28,6 +29,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   isDisabled,
   levelName,
   buildAssetUrl,
+  acceptedFileTypes,
   hasStarterAssets = false,
   showLabel = true,
 }) => {
@@ -76,7 +78,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     onUploadFiles,
-    ACCEPTED_FILE_TYPES.join(','),
+    acceptedFileTypes.join(','),
     true
   );
 

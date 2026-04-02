@@ -1,4 +1,8 @@
-import {MAX_NAME_LENGTH} from './constants';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
+import {ValueOf} from '../types/utils';
+
+import {MAX_NAME_LENGTH, modelDescriptions} from './constants';
 import {AiCustomizations, ChatAsset, ToxicityCheckedField} from './types';
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
@@ -61,4 +65,22 @@ export const getLineReferenceText = (lineReference: {
   return lineReference.start === lineReference.end
     ? `(${lineReference.start})`
     : `(${lineReference.start}-${lineReference.end})`;
+};
+
+/**
+ * Returns a list of allowed file types to upload for the given model ID.
+ * If the model does not support multimodal input, returns an empty list.
+ */
+export const getAllowedFileTypes = (
+  modelId: ValueOf<typeof AiChatModelIds>
+) => {
+  const model = modelDescriptions.find(model => model.id === modelId);
+  if (!model || !model.multimodal) {
+    return [];
+  }
+  const images = ['.jpg', '.jpeg', '.png'];
+  // We currently only allow uploading images for image models.
+  return modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+    ? images
+    : [...images, '.pdf'];
 };
