@@ -4,21 +4,18 @@
 
 import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-
-/** MUI Typography body variants used for component label/copy sizing */
-export type BodyTextSizeVariant = 'body1' | 'body2' | 'body3' | 'body4';
+import {VisualAppearance} from '@/typography';
 
 /**
- * Map of component size to body text size (MUI Typography variant).
- * Use with <Typography variant={componentSizeToBodyTextSizeMap[size]} />.
+ *  This is the map of component size to body text size (visualAppearance)
  */
 export const componentSizeToBodyTextSizeMap: {
-  [key in ComponentSizeXSToL]: BodyTextSizeVariant;
+  [key in ComponentSizeXSToL]: VisualAppearance;
 } = {
-  l: 'body1',
-  m: 'body2',
-  s: 'body3',
-  xs: 'body4',
+  l: 'body-one',
+  m: 'body-two',
+  s: 'body-three',
+  xs: 'body-four',
 };
 
 export const dropdownColors: {[key in DropdownColor]: DropdownColor} = {
