@@ -47,9 +47,6 @@ export const FAQ_LINK =
 export const AI_SETTINGS_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings';
 
-export const TEACHER_DISABLED_AI_CHAT_MESSAGE =
-  'Your teacher has not enabled this tool.';
-
 // Image types that assets bucket and safety moderation support.
 export const ACCEPTED_IMAGE_MEDIA_TYPES = [
   'image/jpeg',
