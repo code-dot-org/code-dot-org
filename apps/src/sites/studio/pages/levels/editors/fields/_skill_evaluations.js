@@ -22,6 +22,9 @@ $(document).ready(function () {
         aiPromptModificationInput.val(newInstructions)
       }
     />,
-    document.getElementById('skill-evaluation-settings-editor')
+    document.getElementById('skill-evaluation-settings-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

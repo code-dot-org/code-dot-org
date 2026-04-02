@@ -177,9 +177,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     # student_1 has two answers
     level_source1a = create(:level_source, level: level1,
@@ -256,9 +254,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     get :section_text_responses, params: {
       section_id: @section.id,

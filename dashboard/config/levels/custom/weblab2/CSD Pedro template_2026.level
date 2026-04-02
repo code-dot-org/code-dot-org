@@ -1,0 +1,147 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:16.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n\n  </head>\n  <body>\n    \n    <!-- title & welcome -->\n    <h1>Makeup by Pedro</h1>\n    \n    <p>Welcome to the vibrant world of Pedro's Makeup – where artistry meets beauty in every stroke. Founded by Pedro, a renowned makeup artist and cosmetic visionary, our brand is a celebration of color, creativity, and self-expression.</p>\n    \n    <p>With years of expertise in the beauty industry, Pedro has crafted a makeup line that not only enhances beauty but also empowers individuality. Our website is your gateway to explore exclusive products, learn the latest makeup techniques, and join a community of beauty aficionados.</p>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- Product Showcase -->\n    \n    <h2>Popular Product Showcase</h2>\n    \n    <!-- list of item descirption and price within list of products -->\n    <ul>\n      <li><h3>Luxe Matte Lipstick</h3></li>\n\n      \n        <ul>\n          <li>A velvety matte lipstick offering intense pigment and a comfortable, non-drying wear. Available in 10 vibrant shades.</li>\n          <li>$22</li>\n        </ul>\n      \n      <br>\n      \n      <li><h3>Glow Goddess Highlighter Palette</h3></li>\n\n      \n        <ul>\n          <li>A quartet of luminous highlighters to create the perfect all-over glow. Suitable for all skin tones.</li>\n          <li>$35</li>\n        </ul>\n      \n      <br>\n      \n      <li><h3>Ultimate Eye Shadow Collection</h3></li>\n\n      \n        <ul>\n          <li>An expansive palette of 24 eye shadows, ranging from bold mattes to shimmering metallics.</li>\n          <li>$45</li>\n        </ul>\n      \n      <br>\n      \n      <li><h3>Silk Finish Foundation</h3></li>\n\n      \n        <ul>\n          <li>A lightweight, buildable foundation that offers a smooth, silk-like finish. Provides medium to full coverage while maintaining a natural look. Formulated for all skin types and available in 15 diverse shades.</li>\n          <li>$30</li>\n      </ul>\n      \n      <br>\n      \n      <li><h3>Sunset Blush and Bronzer Duo</h3></li>\n\n      \n        <ul>\n          <li>A complementary blush and bronzer pair, perfect for creating a sun-kissed, radiant complexion. The blush adds a natural pop of color, while the bronzer offers a warm, golden glow. Suitable for various skin tones.</li>\n          <li>$28</li>\n        </ul>\n      \n      <br>\n      \n      <li><h3>Crystal Clear Brow Gel</h3></li>\n\n      \n        <ul>\n          <li>A clear, long-lasting brow gel designed to shape and set brows without stiffness. Infused with conditioning agents to promote healthy hair growth while providing a polished, natural look.</li>\n          <li>$18</li>\n        </ul>\n    </ul>\n    \n      <br>\n      <hr>\n      <br>\n    \n    <!-- Tutorial -->\n    \n    <h2>Popular Tutorial</h2>\n    \n    <h3>The Art of Smoky Eyes – Step by Step</h3>\n     \n    <p>Master the iconic smoky eye look with our easy-to-follow tutorial. This timeless style adds depth and drama, perfect for an evening out or any occasion where you want to make a bold statement. Let's dive into the steps to achieve that perfect smoky eye.</p>\n    \n    <h3>What You'll Need:</h3>\n    \n    <ul>\n      <li>Pedro's Ultimate Eye Shadow Collection</li>\n      <li>Smooth Eyeliner Pencil (Preferably in dark shades like black or deep brown)</li>\n      <li>Mascara (Preferably volumizing)</li>\n      <li>Makeup Brushes (Blending brush and a smudge brush)</li>\n    </ul>\n    \n    <!-- numbered list of steps -->\n    <h3>Step-by-Step Guide:</h3>\n    <ol>\n      <li>Prep Your Lids:</li>\n        <ul>\n          <li>Start with a clean and primed eyelid for the shadow to adhere properly.</li>\n        </ul>\n      <li>Base Color:</li>\n        <ul>\n          <li>Apply a light, neutral color from the Ultimate Eye Shadow Collection over your entire eyelid as the base.</li>\n        </ul>\n      <li>Define the Crease:</li>\n        <ul>\n          <li>Use a slightly darker shade to define your crease, blending well for a seamless transition.</li>\n        </ul>\n      <li>Smoky Effect:</li>\n        <ul>\n          <li>Apply a dark shadow (like charcoal or dark brown) along your eyelid and into the crease. Blend upwards and outwards. The key is blending; you want no harsh lines.</li>\n        </ul>\n      <li>Eyeliner:</li>\n        <ul>\n          <li>Line your upper and lower lash lines with the Smooth Eyeliner Pencil. For a more intense look, line your waterline.</li>\n        </ul>\n      <li>Smudge It Up:</li>\n        <ul>\n          <li>Use a smudge brush to smudge the eyeliner on both upper and lower lash lines. This step adds to the smoky effect.</li>\n        </ul>\n      <li>Highlight:</li>\n        <ul>\n          <li>Apply a shimmery highlight shade to your brow bone and the inner corner of your eyes.</li>\n        </ul>\n      <li>Mascara:</li>\n        <ul>\n          <li>Finish off with a coat or two of volumizing mascara to make your lashes stand out.</li>\n        </ul>\n    </ol>\n    \n    <p>And there you have it – a gorgeous smokey eye look that’s perfect for any glamorous occasion. Remember, practice makes perfect, so don’t hesitate to experiment with different shades and intensities from our Ultimate Eye Shadow Collection.</p>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- Community Engagement & Customer Reviews -->\n    \n    <h2>Community Engagement</h2>\n    \n    <ul>\n      <li>Makeup Challenges: Monthly themed challenges, users are encouraged to submit their unique looks like the one featured below.</li>\n\n      <li>Customer Makeovers: Featuring before-and-after makeovers of real customers using Pedro’s products.</li>\n    </ul>\n    \n    <h2>Customer Reviews</h2>\n    \n    <h3>Customer Review 1:</h3>\n    <ul>\n      <li>Jessica B.</li>\n      <li>Rating: ★★★★★ (5/5)</li>\n    <li>\"I recently purchased the Luxe Matte Lipstick in 'Scarlet Red,' and it's become my new favorite! The color payoff is incredible, and it stays on all day without drying out my lips. Absolutely in love with the quality and the shade range!\"</li>\n    </ul>\n    \n    <h3>Customer Review 2:</h3>\n    <ul>\n      <li>Michael T.</li>\n      <li>Rating: ★★★★★ (5/5)</li>\n      <li>\"The Silk Finish Foundation is a game-changer. It blends effortlessly and gives me a flawless finish without feeling heavy. I've got sensitive skin, and this foundation feels light and doesn't irritate at all. Highly recommend it!\"</li>\n    </ul>\n    \n    <h3>Customer Review 3:</h3>\n    <ul>\n      <li>Priya K.</li>\n      <li>Rating: ★★★★☆ (4/5)</li>\n      <li>\"I've been using the Crystal Clear Brow Gel for a few weeks now, and it's amazing. It keeps my brows in place all day, and I love the natural look it gives. Minus one star because I wish it came in a bigger size!\"</li>\n    </ul>\n    \n    <br>\n    <hr>\n    <br>\n    \n    <!-- contact info -->\n    \n    <h2>Contact Information</h2>\n    \n    <p>Email: contact@pedrosmakeup.com <br>\n      Phone: (555) 123-4567<br>\n      Social Media Links: <br>\n      Instagram: @PedrosMakeupArtistry<br>\n      Facebook: facebook.com/PedrosMakeup<br>\n      YouTube: youtube.com/PedrosBeautyChannel<br>\n      Twitter: @MakeupByPedro</p>\n    \n    <br>\n    <hr>\n    <br>    \n    \n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "Foundation.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/d6f57719-efb8-4c2c-925c-84c1ae736377.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Lipstick.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/ebcc25c4-1cea-4e7e-b55c-518d3b0f8bc5.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "BrowGel.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/e2dca2b7-d960-4c5e-bb72-83f08e431230.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "Blush.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/ed9fa63e-a651-4b29-8af1-018ea9e09ba8.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "Palette.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/df84a22b-2641-49be-9e6e-bf52ad72c118.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "Step3.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/219bcc92-3d82-4cf2-b3f6-c3df564d1a36.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "SmokeyEye.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/1f4db9c7-f392-491a-ab52-67b83b280bfb.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "Makeover.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/5d32b587-9263-483c-a385-6b14fe3cf121.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "EyeShadow.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Pedro%20template_2025/uuid/dad1283a-a8be-43ef-9442-cfe3688cd90c.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:16.666+00:00\",\"changed\":[\"cloned from \\\"CSD Pedro template_2025\\\"\"],\"cloned_from\":\"CSD Pedro template_2025\"}]"
+}]]></config>
+</Weblab2>

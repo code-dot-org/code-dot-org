@@ -1,0 +1,114 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:26.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Haikus!\r\n\r\nThis page has several different haikus.\r\n\r\n# Do This\r\n\r\n1) Choose one haiku and give it a special look by creating a class to style its paragraph, heading tags, and image.  \r\n2) Use at least three CSS properties to style the special haiku.\r\n\r\n\r\n<details><summary>What does the <strong>&lt;br&gt;</strong> tag do?</summary>\r\n\r\nThe &lt;br&gt; tag is used here to start a new line inside the same paragraph. In the code below, each poem is still treated like one big paragraph. However, the &lt;br&gt; tag puts each line of the haiku is on its own line. <em>You do not need to add any CSS or classes to the &lt;br&gt; tags.</em>\r\n</details>\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "true",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" />\n\n  </head>\n\n  <body>\n    <!-- haiku info -->\n    <h1>Haikus</h1>\n    <p> A Haiku is a poem with Japanese origins that consists of only three lines and 17 syllables total. The first line is five syllables long, the second seven, and the third one five again. Below you will see many examples of different kind of Haikus. Hope you enjoy!</p>\n      \n    <!-- examples -->\n    \n    <!-- 1) choose one haiku and give it a special look by creating a class to style its paragraph, heading tags, and image -->\n    \n    <h2> EXAMPLES: </h2>\n    <h3>Example</h3>\n    <p>This is a haiku<br>\n    It serves as an example <br>\n    I hope it helps you</p>\n\n    <h3>A Graceful Bird</h3>\n    <p>There's a graceful bird<br>\n    soaring through the summer air<br>\n    having a good time</p>\n    <img src=\"hummingbird.jpg\" alt=\"a flying hummingbird\">\n    <h5>Pexels, pixabay, Pixabay License</h5>\n  \n\n    <h3> Deserves Better </h3>\n    <p>An axolotl<br>\n    is rarely talked about now<br>\n    It deserves better</p>\n    <img src=\"axolotl.jpg\" alt=\"an axolotl\">\n    <h5>Artem Lysenko, Pexels, Pexels License</h5> \n  \n\n    <h3>Eat</h3>\n    <p>A man named Preston<br>\n    has eaten lots of sushi<br>\n    He's a sushi fan</p>\n    <img src=\"sushi.jpeg\" alt=\"sushi plate\">\n    <h5>Jiaqian AirplaneFan, Wikimedia Commons, CC-BY</h5> \n    \n    <h3>Cloud Dreams</h3>\n    <p> Looking at the clouds<br>\n     I cannot help but dream of<br>\n     being there with them</p>\n    <img src=\"clouds.jpg\" alt=\"clouds\">\n    <h5>Johannes Plenio, pixabay, Pixabay License</h5> \n    \n    <h3>A Gift</h3>\n    <p>Every now and then<br>\n    a raging thunderstorm comes<br>\n    and leaves a rainbow</p>\n    <img src=\"rainbow.jpeg\" alt=\"a rainbow\">\n    <h5>PublicDomainPictures, pixabay, Pixabay License</h5> \n    \n    <h6>These haikus were all written by me.</h6>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "axolotl.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L6-2025/uuid/f66bf072-2956-4eea-bdfe-66b040766148.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "clouds.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L6-2025/uuid/c926311e-ce72-4051-92ce-5d0511d006ff.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "rainbow.jpeg",
+          "language": "jpeg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L6-2025/uuid/5f8a43ec-258c-43f9-9020-5943640d0f91.jpeg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "sushi.jpeg",
+          "language": "jpeg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L6-2025/uuid/4868f3b5-0b85-4f32-a920-54ff0479585d.jpeg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "hummingbird.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L6-2025/uuid/02f2a8c1-5550-4559-86f4-7291cfb6c8a3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 2) Use at least three CSS properties to style the special haiku */\n\nbody {\n  background: mistyrose;\n  color: darkviolet;\n}\np {\n  font-family:serif;\n  margin: 10px;\n  font-size: 14px;\n}\nh1 {\n  font-weight:lighter;\n}\n\nh2 {\n  font-weight: lighter;\n}\n\nh3 { \n    \n}\nh4 {\n  font-family: sans-serif\n}\nh5 {\n  font-family:serif;\n  text-align: right;\n}\nh6 {\n  font-style: italic;\n}\n\nhr {\n  width: 100%;\n}\nimg {\n  width: 300px;\n  border-radius: 20px;\n  margin: 10px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nGzBAiR0pyw==\n",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:26.377+00:00\",\"changed\":[\"cloned from \\\"CSD U2L11-L6-2025\\\"\"],\"cloned_from\":\"CSD U2L11-L6-2025\"}]"
+}]]></config>
+</Weblab2>

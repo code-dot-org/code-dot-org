@@ -33,19 +33,13 @@
     },
     "start_sources": {
       "folders": {
-        "1": {
-          "id": "1",
-          "name": "wireframes",
-          "parentId": "0",
-          "open": false
-        }
       },
       "files": {
         "1": {
           "id": "1",
           "name": "index.html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
-          "active": false,
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <p>This is a blank webpage</p>\n    <p>You can update the text on the left to generate a new webpage based on your vision!</p>\n  </body>\n</html>\n  ",
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -53,7 +47,7 @@
           "name": "vision.txt",
           "contents": "Make me a website with the following details:\n\nI want a website about: [FILL IN HERE]\nMake sure to include:\n- [FILL IN HERE]\n- [FILL IN HERE]\n- [FILL IN HERE - YOU CAN ADD MORE BULLETS]\n\nI want the tone of my website to be: [FILL IN HERE]\n\nI'm making this website because: [FILL IN HERE]",
           "folderId": "0",
-          "active": true
+          "active": false
         },
         "3": {
           "id": "3",
@@ -61,50 +55,16 @@
           "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI'm making this website because: I love otters and I want everyone to know",
           "folderId": "0",
           "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "wireframe-sidebar-rows.png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/e74cd189-66e2-44c2-867d-56aca64d56e9.png",
-          "type": "starter",
-          "active": false
-        },
-        "5": {
-          "id": "5",
-          "name": "wireframe-offset-rows.png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/c5471066-9e27-4a46-add5-11a78f05dd89.png",
-          "type": "starter",
-          "active": false
-        },
-        "6": {
-          "id": "6",
-          "name": "wireframe-three-columns.png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/139ca790-172f-40ca-963d-9abab904a81c.png",
-          "type": "starter",
-          "active": false
-        },
-        "7": {
-          "id": "7",
-          "name": "wireframe-two-columns.png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/90b64f4c-c4d0-4fdc-8e62-2c2e08ca45eb.png",
-          "type": "starter",
-          "active": false
         }
       },
       "openFiles": [
-        "2"
+        "2",
+        "3",
+        "1"
       ]
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-19T19:51:19.061+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-3\\\"\"],\"cloned_from\":\"hoai-web-design-v2-3\"},{\"changed_at\":\"2026-03-19 19:51:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:35:11 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:35:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-19T19:51:19.061+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-3\\\"\"],\"cloned_from\":\"hoai-web-design-v2-3\"},{\"changed_at\":\"2026-03-19 19:51:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:35:11 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:35:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:08:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:08:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:08:11 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-01 03:12:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

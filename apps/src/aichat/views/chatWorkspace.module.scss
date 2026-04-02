@@ -101,6 +101,15 @@ $tabs-default-spacing: 4px;
   }
 }
 
+.chatDisabledAlert {
+  border-radius: 0;
+
+  .chatDisabledAlertIcon.chatDisabledAlertIcon {
+    font-size: 1.25rem;
+    align-self: center;
+  }
+}
+
 .tabsContainer {
   background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;

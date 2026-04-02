@@ -907,7 +907,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, script: unit)
 
     lesson = create(:lesson, script: unit, lesson_group: lesson_group)
-    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+    create_list(:lesson_activity, 6, lesson: lesson, duration: 1000)
 
     # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)

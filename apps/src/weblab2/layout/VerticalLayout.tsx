@@ -52,7 +52,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   );
 
   const aiTutorVersionFiles = useAppSelector(
-    state => state.weblab2.aiTutorVersionFiles
+    state => state.lab2Project.aiTutorVersionFiles
   );
 
   const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);

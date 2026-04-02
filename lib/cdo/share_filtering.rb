@@ -40,7 +40,7 @@ module ShareFiltering
   end
 
   USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
