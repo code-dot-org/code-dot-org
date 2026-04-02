@@ -14,9 +14,7 @@ class UserLessonReflectionsController < ApplicationController
     end
   end
 
-  private
-
-  def reflection_params
+  private def reflection_params
     params.permit(:lesson_id, :success, :struggle)
   end
 end
