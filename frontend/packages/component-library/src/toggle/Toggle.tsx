@@ -1,9 +1,9 @@
-import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {ChangeEvent, HTMLAttributes, memo} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
+import Typography from '@/typography';
 
 import moduleStyles from './toggle.module.scss';
 
@@ -68,8 +68,9 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
           <span />
         </span>
       </div>
+
       {label && (
-        <Typography component="span" variant={bodyTextSize} gutterBottom>
+        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
           {label}
         </Typography>
       )}

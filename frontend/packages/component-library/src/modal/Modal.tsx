@@ -1,9 +1,9 @@
-import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {GenericButton, GenericButtonProps} from '@/button';
 import CustomDialog from '@/dialog/CustomDialog';
+import {BodyTwoText, Heading3} from '@/typography';
 
 import moduleStyles from './modal.module.scss';
 
@@ -94,9 +94,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       {...HTMLAttributes}
     >
       <div className={moduleStyles.modalTitleSection}>
-        <Typography variant="h3" gutterBottom>
-          {title}
-        </Typography>
+        <Heading3>{title}</Heading3>
       </div>
       <hr />
       <div
@@ -107,14 +105,12 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       >
         {imageUrl && <img src={imageUrl} alt={imageAlt || ''} />}
         {description && (
-          <Typography
+          <BodyTwoText
             id="dsco-dialog-description"
             className={moduleStyles.modalDescription}
-            variant="body2"
-            gutterBottom
           >
             {description}
-          </Typography>
+          </BodyTwoText>
         )}
         {customContent}
       </div>
