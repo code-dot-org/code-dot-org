@@ -1,11 +1,73 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T16:51:38.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Turn Your Flowchart Into Code**\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** Import your flowchart sketch from your Backpack. In `prompt.md`, write a prompt that asks AI to turn your flowchart into JavaScript.\r\n\r\n2. **Build:** Use AI to generate the code.\r\n\r\n3. **Test:** Try different values and check that your code works correctly.\r\n\r\n4. **Evaluate:** Compare the AI's code to your flowchart. Ask yourself:\r\n   * Does the condition match what you drew in the diamond?\r\n   * Does the `if` path show the right outcome?\r\n   * Does the `else` path show the right outcome?\r\n   * Did the AI miss anything or add something you didn't plan for?\r\n\r\n5. Optional: Prompt AI to update the HTML and/or CSS to match your specific code, e.g. mute and unmute buttons.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "Use arrow notation and give the conditional function a name.\n"
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "2": {
+          "id": "2",
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Conditional Practice</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"stylesheet\" href=\"./style.css\">\n</head>\n<body>\n  <main class=\"container\">\n    <h1>Conditional Practice</h1>\n    <div id=\"result\" class=\"result\">\n      Result will appear here.\n    </div>\n    <div class=\"buttonRow\">\n      <button id=\"conditionTrue\">Condition True</button>\n      <button id=\"conditionFalse\">Condition False</button>\n    </div>\n  </main>\n  <script src=\"./script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "style.css",
+          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f4f8;\n  display: flex;\n  justify-content: center;\n  padding: 40px 20px;\n}\n\n.container {\n  background: white;\n  border-radius: 8px;\n  padding: 32px;\n  max-width: 420px;\n  width: 100%;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n}\n\nh1 {\n  font-size: 22px;\n  margin-bottom: 20px;\n}\n\n.result {\n  border: 1px solid #e2e8f0;\n  border-radius: 6px;\n  padding: 12px 16px;\n  margin-bottom: 20px;\n  color: #718096;\n  font-size: 15px;\n  min-height: 52px;\n}\n\n.buttonRow {\n  display: flex;\n  gap: 12px;\n}\n\nbutton {\n  flex: 1;\n  padding: 12px;\n  background: #2b4c7e;\n  color: white;\n  border: none;\n  border-radius: 6px;\n  font-size: 15px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background: #f6ad55;\n  color: #1a202c;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-04-01 23:48:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:49:19 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:50:35 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:52:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:54:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:54:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:05:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:08:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:08:38 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

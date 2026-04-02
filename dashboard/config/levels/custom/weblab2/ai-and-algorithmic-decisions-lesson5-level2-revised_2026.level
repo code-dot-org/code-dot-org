@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T16:43:39.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "project_template_level_name": " ai-and-algorithmic-decisions-lesson5-level2-template_2026",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson5-level2-template_2026",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -27,21 +26,26 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildHTML",
-        "buildCSS",
-        "ask",
-        "hint",
-        "debug",
-        "example",
-        "explainCode",
         "documentation",
-        "pseudocode",
-        "testCase"
+        "buildJSON"
       ],
       "answerTypeCustomizations": {
+        "buildJSON": "Here is exemplar code:\n\nlet totalPrice = 35;\n\ndocument.getElementById(\"checkBtn\").addEventListener(\"click\", function() {\n  if (totalPrice > 50) {\n    document.getElementById(\"shippingResult\").textContent = \"Free shipping!\";\n  } else {\n    document.getElementById(\"shippingResult\").textContent = \"User pays shipping.\";\n  }\n});"
       }
-    }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "long_instructions": "### **Generate with AI**\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a prompt that makes the app show one of these messages when the user clicks **Check My Order**:\r\n   - `\"Free shipping!\"` or `\"User pays shipping.\"`\r\n\r\n2. **Build:** Upload `flowchart.png` and your prompt to make AI generate the code.\r\n\r\n3. **Test:** Try setting different prices for the shirt and check that the right message appears.\r\n\r\n4. **Check Code:** Look for where the code:\r\n   * declares a variable\r\n   * adds an event listener\r\n   * checks the `if` / `else` condition\r\n\r\n\r\n:::details [**Why is the price not updating on screen?**]\r\nEven though you are updating the price in `script.js`, you have not told your app to display these new values. Use AI to support you in adding code to `script.js` that will display the price as you change it.\r\n:::"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-01 21:01:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01 21:01:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:47:19 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:51:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:52:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:52:30 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:54:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 22:57:28 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:03:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:03:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:04:13 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:11:56 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:12:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:14:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:15:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:34:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:38:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:39:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:11:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:11:36 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

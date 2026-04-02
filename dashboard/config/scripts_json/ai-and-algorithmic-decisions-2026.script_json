@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 21:00:25 UTC",
+    "serialized_at": "2026-04-02 00:12:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2258,13 +2258,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. Who benefits from the decision evaluating to “True”? Who benefits from it evaluating to “False”?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on who benefits from rules that are implemented. This can be the user themself having a better or worse outcome, or someone else affected by the decision point. For example, consider a decision point based on the business hours of a restaurant. If a customer arrives after a restaurant’s kitchen has closed and is not able to order food, it creates a worse outcome for the customer but a better outcome for the restaurant staff who can close on time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete the Level 8.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students are interpreting a conditional statement and answering a question about it. As students read over the question, ask them to explain their reasoning.\n",
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student responses to gauge whether they can clearly explain how to debug conditional statements.\n"
-          }
-        ]
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca",
@@ -3878,7 +3872,7 @@
       "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Turn Your Flowchart into Code"
       },
@@ -3898,72 +3892,6 @@
     },
     {
       "chapter": 22,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditional Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level4_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a3cd3e8f-de73-4c9e-8491-344dfbbdba7b"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level4_2026"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Turning a Flowchart into Code"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level7_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82c59004-91d8-44c8-98dd-b01e895888bd"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level7_2026"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level8_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson5-level8_2026"
-      ]
-    },
-    {
-      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3985,7 +3913,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4007,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4029,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4051,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4073,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4095,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4117,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4139,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4161,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4183,7 +4111,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4205,7 +4133,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4227,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4249,7 +4177,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4271,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4293,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4315,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4337,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4359,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4381,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4403,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4425,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4447,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4469,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4742,42 +4670,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "f6cf9c60-c658-4706-b3f0-4dcb14e3853a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level4_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level4_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a3cd3e8f-de73-4c9e-8491-344dfbbdba7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level7_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level7_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82c59004-91d8-44c8-98dd-b01e895888bd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson5-level8_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson5-level8_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Decisions with If/Else",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "64ff176c-f8e1-4fd9-bc3d-fa078403ccca"
       }
     },
     {
