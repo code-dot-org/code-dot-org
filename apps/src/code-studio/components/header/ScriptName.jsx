@@ -55,6 +55,7 @@ class ScriptName extends React.Component {
   onLessonNameClick = () => {
     analyticsReporter.sendEvent(EVENTS.HEADER_LESSON_NAME_CLICKED, {
       lessonName: this.props.name,
+      levelPath: window.location.pathname,
     });
   };
 

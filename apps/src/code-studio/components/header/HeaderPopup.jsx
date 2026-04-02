@@ -37,6 +37,7 @@ export default class HeaderPopup extends Component {
     this.setState({open: true});
     analyticsReporter.sendEvent(EVENTS.HEADER_UNIT_DETAILS_TOGGLED, {
       open: true,
+      levelPath: window.location.pathname,
     });
 
     progress.retrieveProgress(
@@ -52,6 +53,7 @@ export default class HeaderPopup extends Component {
     this.setState({open: false});
     analyticsReporter.sendEvent(EVENTS.HEADER_UNIT_DETAILS_TOGGLED, {
       open: false,
+      levelPath: window.location.pathname,
     });
 
     $(document).off('click', this.handleClickDocument);

@@ -115,6 +115,7 @@ export function BubbleLink({
       previousLevelNumber: currentLevelNumber,
       newLevelNumber: clickedLevelNumber,
       lessonName: lessonName,
+      levelPath: window.location.pathname,
     });
     onClick?.();
   };
