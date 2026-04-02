@@ -49,23 +49,14 @@ describe Observability::OpenTelemetry do
       describe 'OTEL_LOG_LEVEL' do
         after {ENV.delete('OTEL_LOG_LEVEL')}
 
-        it 'sets OTEL_LOG_LEVEL to fatal outside of development' do
+        it 'sets OTEL_LOG_LEVEL to fatal' do
           ENV.delete('OTEL_LOG_LEVEL')
-          Rails.env.stubs(:development?).returns(false)
           Observability::OpenTelemetry.setup
           _(ENV.fetch('OTEL_LOG_LEVEL', nil)).must_equal 'fatal'
         end
 
-        it 'does not set OTEL_LOG_LEVEL in development' do
-          ENV.delete('OTEL_LOG_LEVEL')
-          Rails.env.stubs(:development?).returns(true)
-          Observability::OpenTelemetry.setup
-          _(ENV.fetch('OTEL_LOG_LEVEL', nil)).must_be_nil
-        end
-
         it 'does not override an existing OTEL_LOG_LEVEL' do
           ENV['OTEL_LOG_LEVEL'] = 'debug'
-          Rails.env.stubs(:development?).returns(false)
           Observability::OpenTelemetry.setup
           _(ENV.fetch('OTEL_LOG_LEVEL', nil)).must_equal 'debug'
         end
