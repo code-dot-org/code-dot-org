@@ -25,10 +25,10 @@ $(document).ready(function () {
     configCircuitPlayground.blocks.forEach(
       block => (circuitBlocks[block.func] = null)
     );
-    const microbitOnlyFuncs = Object.keys(microbitBlocks).filter(
+    const microbitNonMakerFuncs = Object.keys(microbitBlocks).filter(
       func => !(func in makerBlocks)
     );
-    const circuitOnlyFuncs = Object.keys(circuitBlocks).filter(
+    const circuitNonMakerFuncs = Object.keys(circuitBlocks).filter(
       func => !(func in makerBlocks)
     );
 
@@ -43,11 +43,19 @@ $(document).ready(function () {
     if ($(this).val() === 'circuitPlayground') {
       // Load Circuit Playground blocks (includes shared Maker blocks).
       Object.assign(functionsWithMaker, circuitBlocks);
-      microbitOnlyFuncs.forEach(func => delete functionsWithMaker[func]);
+      microbitNonMakerFuncs.forEach(func => {
+        if (!(func in circuitBlocks)) {
+          delete functionsWithMaker[func];
+        }
+      });
     } else if ($(this).val() === 'microbit') {
       // Load micro:bit blocks (includes shared Maker blocks).
       Object.assign(functionsWithMaker, microbitBlocks);
-      circuitOnlyFuncs.forEach(func => delete functionsWithMaker[func]);
+      circuitNonMakerFuncs.forEach(func => {
+        if (!(func in microbitBlocks)) {
+          delete functionsWithMaker[func];
+        }
+      });
     } else {
       // Remove all board blocks (including shared Maker blocks).
       Object.keys(microbitBlocks).forEach(
