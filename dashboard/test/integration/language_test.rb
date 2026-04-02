@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class LanguageTest < ActionDispatch::IntegrationTest
-  shared_examples_for 'renders in expected locale' do |expected_locale, param_locale: nil, varnish_locale: nil, cookie_locale: nil, http_locale: nil|
-    context "when URL param set_locale is #{param_locale.inspect}, varnish language is #{varnish_locale.inspect}, cookie language_ is #{cookie_locale.inspect}, and browser language is #{http_locale.inspect}" do
+  shared_examples_for 'renders in expected locale' do |expected_locale, param_locale: nil, cookie_locale: nil, http_locale: nil|
+    context "when URL param set_locale is #{param_locale.inspect}, cookie language_ is #{cookie_locale.inspect}, and browser language is #{http_locale.inspect}" do
       before do
         sign_in create(:student)
       end
@@ -30,7 +30,8 @@ class LanguageTest < ActionDispatch::IntegrationTest
   it_behaves_like 'renders in expected locale', 'en-US', http_locale: ''
   it_behaves_like 'renders in expected locale', 'en-US', http_locale: 'invalid_locale'
   it_behaves_like 'renders in expected locale', 'en-US', http_locale: 'en'
-  it_behaves_like 'renders in expected locale', 'uk-UA', http_locale: 'uk'
-  it_behaves_like 'renders in expected locale', 'es-ES', http_locale: 'uk', cookie_locale: 'es'
-  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'uk', cookie_locale: 'es', param_locale: 'fa'
+  it_behaves_like 'renders in expected locale', 'es-ES', http_locale: 'es'
+  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'fa'
+  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'es', cookie_locale: 'fa'
+  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'en', cookie_locale: 'es', param_locale: 'fa'
 end
