@@ -11,7 +11,6 @@ export default {
   title: 'DesignSystem/NotificationBanner',
   component: NotificationBanner,
   parameters: {
-    useMui: true,
     docs: {
       description: {
         component:
