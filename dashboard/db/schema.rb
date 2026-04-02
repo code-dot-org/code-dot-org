@@ -902,6 +902,22 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_31_211410) do
     t.index ["resource_id", "jit_pl_misconception_id"], name: "index_misconceptions_resources_on_resource_and_misconception_ids", unique: true
   end
 
+  create_table "jit_pl_teaching_tips", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.text "properties"
+    t.bigint "jit_pl_concept_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jit_pl_concept_id"], name: "index_jit_pl_teaching_tips_on_jit_pl_concept_id"
+  end
+
+  create_table "jit_pl_teaching_tips_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_teaching_tip_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["jit_pl_teaching_tip_id", "resource_id"], name: "index_teaching_tips_resources_on_tip_and_resource_ids", unique: true
+    t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
+  end
+
   create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "learning_goal_ai_evaluation_id", null: false
     t.bigint "teacher_id", null: false
@@ -2832,6 +2848,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_31_211410) do
   add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"
   add_foreign_key "jit_pl_exemplars", "jit_pl_misconceptions"
   add_foreign_key "jit_pl_misconceptions", "jit_pl_concepts"
+  add_foreign_key "jit_pl_teaching_tips", "jit_pl_concepts"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"
