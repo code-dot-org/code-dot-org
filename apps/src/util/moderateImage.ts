@@ -3,7 +3,6 @@ import {extension as mimeToExtension} from 'mime-types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const LABS_WITH_IMAGE_MODERATION = [
@@ -17,10 +16,8 @@ const LABS_WITH_IMAGE_MODERATION = [
 
 const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 
-// Azure Content Moderator requires both dimensions to be at least this size.
-const MIN_MODERATION_DIMENSION_CONTENT_MODERATOR = 128;
 // Azure AI Content Safety requires both dimensions to be at least this size.
-const MIN_MODERATION_DIMENSION_AI_CONTENT_SAFETY = 50;
+const MIN_MODERATION_DIMENSION = 50;
 
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
@@ -44,34 +41,28 @@ interface AnalyticsData {
 
 /**
  * Returns a scaled-up PNG copy of the file if either dimension is below
- * the required minimum size for the selected service, otherwise returns the original file unchanged.
+ * the required minimum size, otherwise returns the original file unchanged.
  * The copy is only used for the moderation API call — callers still upload
  * the original file.
- * TODO: Once we migrate to the new moderation API, we'll scale the file to min size on the backend.
+ * TODO: scale the file to min size on the backend.
  */
-const scaleFileForModeration = (
-  file: File,
-  useAiContentSafety: boolean
-): Promise<File> => {
+const scaleFileForModeration = (file: File): Promise<File> => {
   return new Promise((resolve, reject) => {
-    const minModerationDimension = useAiContentSafety
-      ? MIN_MODERATION_DIMENSION_AI_CONTENT_SAFETY
-      : MIN_MODERATION_DIMENSION_CONTENT_MODERATOR;
     const reader = new FileReader();
     reader.onload = () => {
       const img = new Image();
       img.onload = () => {
         const {width, height} = img;
         if (
-          width >= minModerationDimension &&
-          height >= minModerationDimension
+          width >= MIN_MODERATION_DIMENSION &&
+          height >= MIN_MODERATION_DIMENSION
         ) {
           resolve(file);
           return;
         }
         const scale = Math.max(
-          minModerationDimension / width,
-          minModerationDimension / height
+          MIN_MODERATION_DIMENSION / width,
+          MIN_MODERATION_DIMENSION / height
         );
         const canvas = document.createElement('canvas');
         canvas.width = Math.ceil(width * scale);
@@ -132,50 +123,34 @@ export const moderateImage = async (
     levelPath: window.location.pathname,
   });
   try {
-    const useAiContentSafety = experiments.isEnabledAllowingQueryString(
-      experiments.AI_CONTENT_SAFETY
-    );
-    const fileToModerate = await scaleFileForModeration(
-      file,
-      useAiContentSafety
-    );
-    const endpoint = useAiContentSafety
-      ? '/v3/images/moderate-ai-content-safety'
-      : '/v3/images/moderate';
+    const fileToModerate = await scaleFileForModeration(file);
+    const endpoint = '/v3/images/moderate';
     const response = await HttpClient.post(endpoint, fileToModerate, true, {
       'Content-Type': fileToModerate.type || 'application/octet-stream',
     });
     const json = await response.json();
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
-    if (useAiContentSafety) {
-      // Azure AI Content Safety
-      if (json === null) {
-        return 'skipped';
-      }
-      const categories = json?.categoriesAnalysis;
-      if (
-        categories?.every(
-          (category: {severity: number; category: string}) =>
-            category?.severity <
-            CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
-        )
-      ) {
-        return 'ok';
-      }
-    } else {
-      // Azure Content Moderator
-      if (json?.rating === 'everyone' || json?.rating === 'unknown') {
-        return 'ok';
-      }
+
+    if (json === null) {
+      return 'skipped';
     }
+    const categories = json?.categoriesAnalysis;
+    if (
+      categories?.every(
+        (category: {severity: number; category: string}) =>
+          category?.severity <
+          CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
+      )
+    ) {
+      return 'ok';
+    }
+
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
     analyticsReporter.sendEvent(flaggedEvent, {
       UploaderType: uploaderType,
       appName,
       levelPath: window.location.pathname,
-      moderationService: useAiContentSafety
-        ? 'AI Content Safety'
-        : 'Content Moderator',
+      moderationService: 'AI Content Safety',
       moderationResult: JSON.stringify(json),
       assetUrl: assetUrl ? `${window.location.origin}${assetUrl}` : undefined,
     });
