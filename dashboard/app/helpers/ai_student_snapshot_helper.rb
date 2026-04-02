@@ -11,6 +11,61 @@ module AiStudentSnapshotHelper
     feedback_record
   end
 
+  # Returns the max updated_at across all UserLevels this student has in this lesson/unit.
+  # Uses Unit.get_from_cache so lesson/level data comes from memory, not extra DB queries.
+  def self.max_user_level_updated_at(unit_id, lesson_id, student_id)
+    unit = Unit.get_from_cache(unit_id)
+    lesson = unit.lessons.find {|l| l.id == lesson_id.to_i}
+    level_ids = lesson.script_levels.map(&:level_id)
+    UserLevel.where(user_id: student_id, script_id: unit_id, level_id: level_ids).
+              maximum(:updated_at)
+  end
+
+  # Returns true when the stored insight should be regenerated.
+  def self.lesson_insight_stale?(insight, unit_id, lesson_id, student_id)
+    # Never regenerate if the insight is less than 5 minutes old.
+    return false if insight.updated_at >= 5.minutes.ago
+
+    current_max = max_user_level_updated_at(unit_id, lesson_id, student_id)
+    # Stale when any UserLevel was touched after the insight was last generated.
+    current_max.present? && current_max > insight.updated_at
+  end
+
+  def self.fetch_or_generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id, refresh: false)
+    insight = LessonInsight.find_by(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
+
+    should_generate =
+      if insight.nil?
+        true
+      elsif insight.updated_at >= 5.minutes.ago
+        false
+      elsif refresh
+        true
+      else
+        lesson_insight_stale?(insight, unit_id, lesson_id, student_id)
+      end
+
+    if should_generate
+      response = generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+      if response[:status] == 200
+        insight = LessonInsight.find_or_initialize_by(
+          section_id: section_id,
+          lesson_id: lesson_id,
+          student_id: student_id
+        )
+        insight.teacher_id = teacher_id
+        insight.insight_response = response[:json]
+        insight.save!
+      end
+      {status: response[:status], json: response[:json], updated_at: insight&.updated_at}
+    else
+      {status: 200, json: insight.insight_response, updated_at: insight.updated_at}
+    end
+  rescue ActiveRecord::RecordNotUnique
+    insight = LessonInsight.find_by!(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
+    {status: 200, json: insight.insight_response, updated_at: insight.updated_at}
+  end
+
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)

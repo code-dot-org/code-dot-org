@@ -33,63 +33,69 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
   const [insightData, setInsightData] = useState<InsightData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [insightUpdatedAt, setInsightUpdatedAt] = useState<string | null>(null);
   const currentRequestRef = React.useRef<string | null>(null);
 
-  const loadInsight = React.useCallback(() => {
-    if (
-      !selectedLessonId ||
-      !selectedUnitId ||
-      !selectedStudentId ||
-      !sectionId
-    ) {
-      console.error('Missing required parameters');
-      return;
-    }
+  const loadInsight = React.useCallback(
+    (refresh = false) => {
+      if (
+        !selectedLessonId ||
+        !selectedUnitId ||
+        !selectedStudentId ||
+        !sectionId
+      ) {
+        console.error('Missing required parameters');
+        return;
+      }
 
-    // Create a unique request identifier for this set of parameters
-    const requestId = `${selectedUnitId}-${selectedLessonId}-${selectedStudentId}-${sectionId}`;
-    currentRequestRef.current = requestId;
+      // Create a unique request identifier for this set of parameters
+      const requestId = `${selectedUnitId}-${selectedLessonId}-${selectedStudentId}-${sectionId}`;
+      currentRequestRef.current = requestId;
 
-    setLoading(true);
-    setError(null);
-    const params = new URLSearchParams({
-      lesson_id: selectedLessonId.toString(),
-      unit_id: selectedUnitId.toString(),
-      student_id: selectedStudentId.toString(),
-      section_id: sectionId.toString(),
-    });
-    HttpClient.fetchJson<{json: string}>(
-      `/student_snapshots/lesson_insight?${params}`
-    )
-      .then(response => {
-        // Only update state if this request is still current
-        if (currentRequestRef.current === requestId) {
-          const jsonString = response?.value?.json || '';
-          try {
-            const parsedData = JSON.parse(jsonString) as InsightData;
-            setInsightData(parsedData);
-          } catch (parseError) {
-            console.error('Error parsing insight JSON:', parseError);
+      setLoading(true);
+      setError(null);
+      const params = new URLSearchParams({
+        lesson_id: selectedLessonId.toString(),
+        unit_id: selectedUnitId.toString(),
+        student_id: selectedStudentId.toString(),
+        section_id: sectionId.toString(),
+        ...(refresh ? {refresh: 'true'} : {}),
+      });
+      HttpClient.fetchJson<{json: string; updated_at: string | null}>(
+        `/student_snapshots/lesson_insight?${params}`
+      )
+        .then(response => {
+          // Only update state if this request is still current
+          if (currentRequestRef.current === requestId) {
+            setInsightUpdatedAt(response?.value?.updated_at ?? null);
+            const jsonString = response?.value?.json || '';
+            try {
+              const parsedData = JSON.parse(jsonString) as InsightData;
+              setInsightData(parsedData);
+            } catch (parseError) {
+              console.error('Error parsing insight JSON:', parseError);
+              setError('Error loading insight data');
+            }
+          }
+        })
+        .catch(error => {
+          // Only update state if this request is still current
+          if (currentRequestRef.current === requestId) {
+            console.error('Error fetching insight prompt:', error);
             setError('Error loading insight data');
           }
-        }
-      })
-      .catch(error => {
-        // Only update state if this request is still current
-        if (currentRequestRef.current === requestId) {
-          console.error('Error fetching insight prompt:', error);
-          setError('Error loading insight data');
-        }
-      })
-      .finally(() => {
-        // Only update loading state if this request is still current
-        if (currentRequestRef.current === requestId) {
-          setLoading(false);
-        }
-      });
-  }, [selectedLessonId, selectedUnitId, selectedStudentId, sectionId]);
+        })
+        .finally(() => {
+          // Only update loading state if this request is still current
+          if (currentRequestRef.current === requestId) {
+            setLoading(false);
+          }
+        });
+    },
+    [selectedLessonId, selectedUnitId, selectedStudentId, sectionId]
+  );
 
-  React.useEffect(loadInsight, [loadInsight]);
+  React.useEffect(() => loadInsight(), [loadInsight]);
 
   return (
     <WidgetTemplate
@@ -99,11 +105,14 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       loading={loading}
       settingsOptions={[
         {
-          onClick: loadInsight,
+          onClick: () => loadInsight(true),
           isOptionDestructive: false,
           icon: {iconName: 'arrows-rotate'},
           label: 'Refresh Insight',
           value: 'refresh_insight',
+          isOptionDisabled:
+            !insightUpdatedAt ||
+            Date.now() - new Date(insightUpdatedAt).getTime() < 5 * 60 * 1000,
         },
       ]}
     >

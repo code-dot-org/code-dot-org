@@ -18,6 +18,9 @@ describe('LessonInsightWidget', () => {
     selectedStudentId: 3,
   };
 
+  // Timestamp from 10 minutes ago (refresh should be enabled)
+  const staleTimestamp = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+
   const mockInsightData = {
     progress: 'Student has made good progress',
     misconceptions: 'No major misconceptions found',
@@ -52,6 +55,7 @@ describe('LessonInsightWidget', () => {
     const defaultMockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
+        updated_at: staleTimestamp,
       },
       response: new Response(),
     };
@@ -72,6 +76,7 @@ describe('LessonInsightWidget', () => {
     const mockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
+        updated_at: staleTimestamp,
       },
       response: new Response(),
     };
@@ -123,6 +128,7 @@ describe('LessonInsightWidget', () => {
     const mockResponse = {
       value: {
         json: 'invalid json',
+        updated_at: null,
       },
       response: new Response(),
     };
@@ -137,10 +143,11 @@ describe('LessonInsightWidget', () => {
     });
   });
 
-  it('allows refreshing insight data via settings menu', async () => {
+  it('allows refreshing insight data via settings menu when insight is stale', async () => {
     const mockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
+        updated_at: staleTimestamp,
       },
       response: new Response(),
     };
@@ -162,6 +169,23 @@ describe('LessonInsightWidget', () => {
       await waitFor(() => {
         expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(2);
       });
+
+      // Verify the refresh request includes refresh=true
+      expect(mockHttpClient.fetchJson).toHaveBeenLastCalledWith(
+        expect.stringContaining('refresh=true')
+      );
     }
+  });
+
+  it('does not send refresh param on initial load', async () => {
+    renderComponent();
+
+    await waitFor(() => {
+      expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(1);
+    });
+
+    expect(mockHttpClient.fetchJson).toHaveBeenCalledWith(
+      expect.not.stringContaining('refresh=true')
+    );
   });
 });
