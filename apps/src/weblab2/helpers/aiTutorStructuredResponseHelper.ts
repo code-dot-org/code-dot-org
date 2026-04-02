@@ -14,7 +14,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
-      tutorMode: {
+      answerType: {
         type: 'string',
         enum: [...AI_TUTOR_ANSWER_TYPES],
       },
@@ -72,11 +72,11 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
       },
     },
-    // We return tutorMode and goal but do not show them to the student.
+    // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
+    required: ['answerType', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
-      'tutorMode',
+      'answerType',
       'goal',
       'assumptions',
       'code',
@@ -136,7 +136,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -153,10 +153,10 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
-  if (response.tutorMode === 'pseudocode') {
+  if (response.answerType === 'pseudocode') {
     formattedResponse += formatSection('Pseudocode', response.pseudocode);
   }
-  if (response.tutorMode === 'example') {
+  if (response.answerType === 'example') {
     formattedResponse += formatSection('Example', response.example);
   }
   formattedResponse += formatSection('Next Steps', response.nextSteps);
@@ -176,7 +176,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -189,7 +189,7 @@ export const formatAcceptRejectResponse = (
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
-    answerType: response.tutorMode,
+    answerType: response.answerType,
   };
 };
 
