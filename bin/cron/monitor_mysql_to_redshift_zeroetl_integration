@@ -48,7 +48,7 @@ def main
 
   error_tables = redshift.execute(table_sync_status_query)
   if error_tables.any?
-    summary_lines = error_tables.map {|table| "• `#{table['schema_name']}.#{table['table_name']}` (#{table['table_state']})"}
+    summary_lines = error_tables.map {|table| "• `#{table['schema_name']}.#{table['table_name']}` (#{table['table_state']})\n"}
 
     header = "Zero-ETL Sync Failure Summary (#{ENVIRONMENT_TYPE})*\n"
     header += "#{error_tables.size} tables are failing to synchronize:\n"
