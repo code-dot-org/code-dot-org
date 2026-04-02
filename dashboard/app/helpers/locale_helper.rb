@@ -22,7 +22,7 @@ module LocaleHelper
   end
 
   def locale_options
-    Cdo::I18n.locale_options
+    request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
   end
 
   def options_for_locale_code_select

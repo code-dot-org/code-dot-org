@@ -1,4 +1,3 @@
-import {Typography} from '@mui/material';
 import image1 from '@public/images/action-block-01.png';
 import image2 from '@public/images/action-block-02.png';
 import image3 from '@public/images/action-block-03.png';
@@ -9,6 +8,7 @@ import type {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect, userEvent} from 'storybook/test';
 
 import ActionBlock from '@/actionBlock';
+import {Heading2} from '@/typography';
 import Video from '@/video';
 
 import Carousel, {CarouselProps} from '../index';
@@ -47,9 +47,7 @@ const createBasicSlide = (index: number) => (
     key={index}
   >
     <div style={{margin: '0 auto'}}>
-      <Typography variant="h2" gutterBottom>
-        This is slide {index.toString()}
-      </Typography>
+      <Heading2>This is slide {index.toString()}</Heading2>
     </div>
   </div>
 );

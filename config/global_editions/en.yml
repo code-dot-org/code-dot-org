@@ -1,4 +1,4 @@
-# This is the configuration for /en
+# This is the configuration for /global/en
 # (which is mirroring the main site at the moment)
 
 locales: [en-US]
@@ -408,7 +408,7 @@ footer:
         target: _blank
 # These override specially wrapped components in particular pages.
 #
-# When we navigate to such a page that matches /:region<your mask>
+# When we navigate to such a page that matches /global/:region<your mask>
 # the specifically wrapped components will check this table. Their properties
 # will get overriden with those specified here.
 #
@@ -435,7 +435,7 @@ footer:
 #           image: /shared/images/teacher-announcement/incubator-announcement.png
 #           title: foo
 #
-# When we navigate to the /foo/home page, any MarketingAnnouncement will
+# When we navigate to the /global/foo/home page, any MarketingAnnouncement will
 # have its normal announcement replaced with the configured one. Whereas, on any
 # other page, the '/' would match, and the `false` indicates the component should
 # be removed.

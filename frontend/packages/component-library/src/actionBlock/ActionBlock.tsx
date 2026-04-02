@@ -1,8 +1,14 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import {LinkButton, LinkButtonProps} from '@/button';
 import Image, {ImageProps} from '@/image';
+import {
+  Heading3,
+  BodyThreeText,
+  OverlineTwoText,
+  StrongText,
+  BodyFourText,
+} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import {ActionBlockProps, ActionBlockWrapperProps} from './types';
@@ -35,14 +41,10 @@ export const getVideo = (VideoComponent?: typeof Video, video?: VideoProps) => {
 export const getDetail = (details?: {label: string; description: string}) => {
   if (!details) return null;
   return (
-    <Typography
-      className={classNames(moduleStyles.detail)}
-      variant="body3"
-      gutterBottom
-    >
-      <Typography variant="strong">{`${details.label}: `}</Typography>
+    <BodyThreeText className={classNames(moduleStyles.detail)}>
+      <StrongText>{`${details.label}: `}</StrongText>
       {details.description}
-    </Typography>
+    </BodyThreeText>
   );
 };
 
@@ -81,13 +83,7 @@ export const getButtons = (
 
 export const getTag = (tag: string) => {
   return (
-    <Typography
-      className={classNames(moduleStyles.tag)}
-      variant="body4"
-      gutterBottom
-    >
-      {tag}
-    </Typography>
+    <BodyFourText className={classNames(moduleStyles.tag)}>{tag}</BodyFourText>
   );
 };
 
@@ -149,30 +145,20 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       <div>
         {tag && getTag(tag)}
         {overline && (
-          <Typography
-            className={classNames(moduleStyles.overline)}
-            variant="overline2"
-            gutterBottom
-          >
+          <OverlineTwoText className={classNames(moduleStyles.overline)}>
             {overline}
-          </Typography>
+          </OverlineTwoText>
         )}
-        <Typography
+        <Heading3
           className={classNames(moduleStyles.title)}
-          component="h3"
-          variant="h4"
-          gutterBottom
+          visualAppearance={'heading-md'}
         >
           {title}
-        </Typography>
+        </Heading3>
         {video ? getVideo(VideoComponent, video) : image && getImage(image)}
-        <Typography
-          className={classNames(moduleStyles.description)}
-          variant="body3"
-          gutterBottom
-        >
+        <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
-        </Typography>
+        </BodyThreeText>
         {details && getDetail(details)}
       </div>
       {primaryButton && getButtons(primaryButton, secondaryButton)}

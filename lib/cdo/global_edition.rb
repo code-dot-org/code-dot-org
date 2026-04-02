@@ -11,27 +11,29 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
+    ROOT_PATH = '/global'
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
 
     TARGET_HOSTNAMES = Set[
       CDO.dashboard_hostname,
+      CDO.pegasus_hostname,
     ].freeze
 
-    # @example Matches paths like `/fa/home`, capturing:
-    # - `/fa`      -> ge_region: "fa", main_path: ""
-    # - `/fa/home` -> ge_region: "fa", main_path: "/home"
+    # @example Matches paths like `/global/fa/home`, capturing:
+    # - ge_prefix: "/global/fa"
+    # - ge_region: "fa"
+    # - main_path: "/home"
     PATH_PATTERN = Regexp.new <<~REGEXP.gsub(/\s+/, '')
-      ^/(?<ge_region>#{REGIONS.join('|')})(?<main_path>/.*|$)
+      ^(?<ge_prefix>
+        #{ROOT_PATH}/
+        (?<ge_region>#{REGIONS.join('|')})
+      )
+      (?<main_path>/.*|$)
     REGEXP
 
-    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
-    def self.current_region=(region)
-      RequestStore.store[REGION_KEY] = region
-    end
-
-    # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
+    # @see +Rack::GlobalEdition::RouteHandler#response+
     def self.current_region
       RequestStore.store[REGION_KEY]
     end
@@ -92,13 +94,15 @@ module Cdo
       configuration_for(region)&.dig(:locale_lock)
     end
 
-    def self.locales_regions
-      @locales_regions ||= REGIONS.each_with_object({}) do |region, locales_regions|
-        next unless region_available?(region) && locale_lock?(region)
-        region_locales(region).each do |region_locale|
-          locales_regions[region_locale] ||= []
-          locales_regions[region_locale] << region
+    def self.region_locked_locales
+      @region_locked_locales ||= begin
+        region_locked_locales = {}
+        REGIONS.each do |region|
+          next unless locale_lock?(region)
+          locale = main_region_locale(region)
+          region_locked_locales[locale] = region
         end
+        region_locked_locales
       end.freeze
     end
 
@@ -124,10 +128,23 @@ module Cdo
       countries_regions[country]
     end
 
+    def self.region_locale_options(region)
+      locale_options = Cdo::I18n.locale_options
+      return locale_options unless region_available?(region)
+
+      @region_locale_options ||= {}
+
+      @region_locale_options[region] ||= begin
+        region_locales = region_locales(region)
+        locale_options = locale_options.select {|_name, value| region_locales.include?(value)} if region_locales
+        locale_options
+      end
+    end
+
     def self.path(region, *paths)
       path = ::File.join('/', *paths)
       path = Cdo::GlobalEdition::PATH_PATTERN.match(path)[:main_path] if Cdo::GlobalEdition::PATH_PATTERN.match?(path)
-      ::File.join('/', region, path)
+      ::File.join(ROOT_PATH, region, path)
     end
   end
 end

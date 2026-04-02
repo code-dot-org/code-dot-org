@@ -8,6 +8,8 @@ thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screensh
 markdown <<MARKDOWN
 # Primary Examples
 
+#### 👉 Click on each Domain of the AILit Framework to explore how a teacher could make small changes to a lesson plan in order to integrate AI.
+
 <!-- Engaging with AI - Primary -->
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 <summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">

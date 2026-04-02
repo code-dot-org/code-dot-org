@@ -1,4 +1,3 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
@@ -8,6 +7,7 @@ import {Theme} from '@/common/contexts';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
 import {LinkProps} from '@/link';
+import {Heading1, BodyOneText, BodyTwoText} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import moduleStyles from './heroBanner.module.scss';
@@ -122,21 +122,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className={classNames(moduleStyles.heroBannerContainer)}>
         <div className={moduleStyles.heroBannerTextContainer}>
           <div>
-            <Typography variant="h1" gutterBottom>
-              {heading}
-            </Typography>
+            <Heading1>{heading}</Heading1>
 
-            {subHeading && (
-              <Typography variant="body1" gutterBottom>
-                {subHeading}
-              </Typography>
-            )}
+            {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
 
-            {description && (
-              <Typography variant="body2" gutterBottom>
-                {description}
-              </Typography>
-            )}
+            {description && <BodyTwoText>{description}</BodyTwoText>}
 
             {partner && (
               <span className={moduleStyles.heroBannerPartnerContainer}>

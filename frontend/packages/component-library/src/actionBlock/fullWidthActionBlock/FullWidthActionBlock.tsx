@@ -1,5 +1,6 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
+
+import {Heading3, BodyThreeText, OverlineTwoText} from '@/typography';
 
 import {
   ActionBlockWrapper,
@@ -52,29 +53,19 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
       {video ? getVideo(VideoComponent, video) : image && getImage(image)}
       <div>
         {overline && (
-          <Typography
-            className={classNames(moduleStyles.overline)}
-            variant="overline2"
-            gutterBottom
-          >
+          <OverlineTwoText className={classNames(moduleStyles.overline)}>
             {overline}
-          </Typography>
+          </OverlineTwoText>
         )}
-        <Typography
+        <Heading3
           className={classNames(moduleStyles.title)}
-          component="h3"
-          variant="h5"
-          gutterBottom
+          visualAppearance={'heading-sm'}
         >
           {title}
-        </Typography>
-        <Typography
-          className={classNames(moduleStyles.description)}
-          variant="body3"
-          gutterBottom
-        >
+        </Heading3>
+        <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
-        </Typography>
+        </BodyThreeText>
         {details && getDetail(details)}
         {primaryButton && getButtons(primaryButton, secondaryButton)}
       </div>
