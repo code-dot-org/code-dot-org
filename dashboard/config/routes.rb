@@ -1212,6 +1212,7 @@ Dashboard::Application.routes.draw do
 
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
     resources :lesson_feedbacks, only: [:create, :update]
+    resources :user_lesson_reflections, only: [:create]
 
     resources :ai_lesson_summary_podcasts do
       collection do
