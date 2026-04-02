@@ -153,12 +153,8 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
-  if (response.answerType === 'pseudocode') {
-    formattedResponse += formatSection('Pseudocode', response.pseudocode);
-  }
-  if (response.answerType === 'example') {
-    formattedResponse += formatSection('Example', response.example);
-  }
+  formattedResponse += formatSection('Pseudocode', response.pseudocode);
+  formattedResponse += formatSection('Example', response.example);
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
 
