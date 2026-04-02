@@ -2,7 +2,7 @@ Feature: After completing a CSF course, the student is directed to a congratulat
 
   Scenario: CSF uncustomized dashboard certificate pages
     Given I create a student named "Student1"
-    And I sign in as "Student1"
+    And I sign in as "Student1" and go home
     And I complete course "ui-test-csf" unit 1
     And I am on "http://studio.code.org/congrats"
     Then I wait until element "#uitest-certificate" is visible
@@ -25,7 +25,7 @@ Feature: After completing a CSF course, the student is directed to a congratulat
   Scenario: CSF certificate pages
     When I open my eyes to test "CSF certificate pages"
     And I create a student named "Student1"
-    And I sign in as "Student1"
+    And I sign in as "Student1" and go home
     And I complete course "ui-test-csf" unit 1
 
     When I am on "http://studio.code.org/congrats/ui-test-csf"
