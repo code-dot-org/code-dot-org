@@ -248,7 +248,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             disabled: triggerComponentProps.disabled,
             'aria-haspopup': triggerComponentProps['aria-haspopup'] as true,
             'data-toggle': triggerComponentProps['data-toggle'],
-            className: isOpen ? 'force-hover' : undefined,
+            className: classNames(
+              isOpen && 'force-hover',
+              triggerButtonProps?.className,
+            ),
             'data-force-hover': isOpen || undefined,
             'aria-label':
               triggerButtonProps?.['aria-label'] ||
@@ -261,12 +264,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
               size={muiSize}
               {...sharedTriggerProps}
               {...(triggerButtonProps as MuiIconButtonProps)}
+              className={sharedTriggerProps.className}
             />
           ) : (
             <MuiButton
               size={muiSize}
               {...sharedTriggerProps}
               {...(triggerButtonProps as MuiButtonProps)}
+              className={sharedTriggerProps.className}
             />
           );
         })()
