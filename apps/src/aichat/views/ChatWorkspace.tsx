@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
@@ -85,7 +86,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasInstructionsDrawer,
   lastMessagePostText,
 }) => {
-  const {chatDisabled} = useAiChatDisabled();
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -231,14 +232,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const [liveAnnouncement, setLiveAnnouncement] = useState('');
   const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  const hasChatHistory = chatEvents.length > 0;
   useEffect(() => {
-    if (chatEvents.length > 0) {
+    if (hasChatHistory) {
       const last = chatEvents[chatEvents.length - 1];
       if ('chatMessageText' in last && last.chatMessageText) {
         setLiveAnnouncement(markdownToTxt(last.chatMessageText));
       }
     }
-  }, [chatEvents]);
+  }, [hasChatHistory, chatEvents]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -342,6 +344,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           />
         )}
       </div>
+      {isTeacherView && hasChatHistory && chatDisabled && (
+        <Alert
+          type={alertTypes.info}
+          text={chatDisabledMessage || ''}
+          icon={{
+            className: moduleStyles.chatDisabledAlertIcon,
+            iconName: 'ai-locked',
+            iconFamily: 'kit',
+          }}
+          className={moduleStyles.chatDisabledAlert}
+        />
+      )}
     </div>
   );
 };
