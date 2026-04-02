@@ -57,6 +57,7 @@ jobs:
         continue-on-error: true # Don't fail the step, let the comment show the error
 
       - name: Post Plan to PR
+        if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         env:
           PLAN: ${{ steps.plan.outputs.stdout }}
