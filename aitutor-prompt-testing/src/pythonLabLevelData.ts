@@ -195,11 +195,6 @@ If both the \`if\` and the following line run every time, it's not really a choi
  `,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
-  "programming-fundamentals-lesson5-level1_2025-launch": {
-    unitId: "csaif2-2025",
-    longInstructions: `What do you think the \`Painter\` will do when the code is run?`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
   "programming-fundamentals-lesson5-level1_2025-launch_2025": {
     unitId: "aif2-2025",
     longInstructions: `What do you think the \`Painter\` will do when the code is run?`,
@@ -213,43 +208,6 @@ If both the \`if\` and the following line run every time, it's not really a choi
   "programming-fundamentals-lesson5-level1_2025-launch_v2-2025": {
     unitId: "aif2-v2-2025",
     longInstructions: `What do you think the \`Painter\` will do when the code is run?`,
-    documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
-  },
-  "programming-fundamentals-lesson5-level2_2025-launch": {
-    unitId: "csaif2-2025",
-    longInstructions: `## Do This:
-
-1. Create a \`Painter\` using
-
-   \`\`\`
-   painter_name = Painter()
-   \`\`\`
-   
-   For example:
-   
-   \`\`\`
-   alicia = Painter()
-   \`\`\`
-
-&nbsp;
-
-2. Move the \`Painter\` forward **one space** using
-
-   \`\`\`
-   painter_name.move()
-   \`\`\`
-   
-   For example:
-   
-   \`\`\`
-   alicia.move()
-   \`\`\`
-
----
-
-<i class="fa-solid fa-laptop"></i> **Coding Tip**
-
-You can name the \`Painter\` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
   "programming-fundamentals-lesson5-level2_2025-launch_2025": {
