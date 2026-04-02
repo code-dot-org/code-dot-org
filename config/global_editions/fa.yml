@@ -7,7 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [fa-IR, en-US]
+locales: [fa-IR]
 locale_lock: true
 countries: [IR]
 
