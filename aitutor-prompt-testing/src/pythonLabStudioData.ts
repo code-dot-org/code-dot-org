@@ -5,7 +5,7 @@
  * state on a specific level. Used to simulate realistic AI tutor contexts for
  * testing and prompt development.
  *
- * Covers 3 neighborhood levels × 6 states = 18 entries.
+ * Covers student-facing AIF U2 / standalone Python Lab levels.
  * Expand by adding entries for additional pythonlab levels as needed.
  */
 import {
@@ -20,277 +20,7 @@ export {STUDIO_STATE_LABELS};
 // Key: `${levelId}_${StudioStateEnum}`
 export const pythonLabStudioData: Record<string, PythonLabStudioStateData> = {
   // ─────────────────────────────────────────────────────────────────────────
-  // Level: aif-pl-objects-create-L17-2-python_2025
-  // Task: Create a Painter object and move it forward one space
-  // ─────────────────────────────────────────────────────────────────────────
-
-  'aif-pl-objects-create-L17-2-python_2025_START': {
-    studentCode: `from neighborhood import Painter
-
-# Your code here`,
-    hasRun: false,
-    hasEdited: false,
-  },
-
-  'aif-pl-objects-create-L17-2-python_2025_STRUGGLING': {
-    studentCode: `from neighborhood import Painter
-
-Painter
-move`,
-    consoleOutput: `NameError: name 'move' is not defined`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  'aif-pl-objects-create-L17-2-python_2025_SYNTAX_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(
-my_painter.move()`,
-    consoleOutput: `SyntaxError: '(' was never closed (line 3)`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  'aif-pl-objects-create-L17-2-python_2025_RUNTIME_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter()
-my_painter.Move()`,
-    consoleOutput: `AttributeError: 'Painter' object has no attribute 'Move'. Did you mean: 'move'?`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student created the Painter correctly but forgot to call move()
-  'aif-pl-objects-create-L17-2-python_2025_GOOD_PROGRESS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter()`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student called move() twice instead of once
-  'aif-pl-objects-create-L17-2-python_2025_ALMOST_THERE': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter()
-my_painter.move()
-my_painter.move()`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // ─────────────────────────────────────────────────────────────────────────
-  // Level: aif-pl-conditional1-L10-python_2025
-  // Task: Add if statement checking is_facing_west(); move paint("blue") inside it
-  // ─────────────────────────────────────────────────────────────────────────
-
-  'aif-pl-conditional1-L10-python_2025_START': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-my_painter.paint("blue")`,
-    hasRun: false,
-    hasEdited: false,
-  },
-
-  // Student confused about if syntax — used bare variable name instead of method call
-  'aif-pl-conditional1-L10-python_2025_STRUGGLING': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-if west:
-    my_painter.paint("blue")`,
-    consoleOutput: `NameError: name 'west' is not defined`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student has the right method but forgot the colon at the end of the if
-  'aif-pl-conditional1-L10-python_2025_SYNTAX_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-if my_painter.is_facing_west()
-    my_painter.paint("blue")`,
-    consoleOutput: `SyntaxError: expected ':' after condition (line 7)`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student forgot quotes around the color name
-  'aif-pl-conditional1-L10-python_2025_RUNTIME_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-if my_painter.is_facing_west():
-    my_painter.paint(blue)`,
-    consoleOutput: `NameError: name 'blue' is not defined`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student added the if with correct condition but paint is still outside the block
-  'aif-pl-conditional1-L10-python_2025_GOOD_PROGRESS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-if my_painter.is_facing_west():
-    pass
-my_painter.paint("blue")`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student has the if structure correct but used the wrong color
-  'aif-pl-conditional1-L10-python_2025_ALMOST_THERE': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-my_painter.turn_left()
-if my_painter.is_facing_west():
-    my_painter.paint("red")`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // ─────────────────────────────────────────────────────────────────────────
-  // Level: aif-pl-two-waySelection-L16-python_2025
-  // Task: Fix if condition to use can_move("east"); add else for forward movement
-  // ─────────────────────────────────────────────────────────────────────────
-
-  'aif-pl-two-waySelection-L16-python_2025_START': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move():
-        my_painter.turn_left()
-        my_painter.move()
-    my_painter.move()`,
-    hasRun: false,
-    hasEdited: false,
-  },
-
-  // Student attached else to the while loop instead of the if
-  'aif-pl-two-waySelection-L16-python_2025_STRUGGLING': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move():
-        my_painter.turn_left()
-        my_painter.move()
-    my_painter.move()
-else:
-    my_painter.move()`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student added else but forgot the colon
-  'aif-pl-two-waySelection-L16-python_2025_SYNTAX_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move("east"):
-        my_painter.turn_left()
-        my_painter.move()
-    else
-        my_painter.move()`,
-    consoleOutput: `SyntaxError: expected ':' after 'else' (line 11)`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student has correct structure but used wrong capitalization on method
-  'aif-pl-two-waySelection-L16-python_2025_RUNTIME_ERRORS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move("east"):
-        my_painter.turn_left()
-        my_painter.move()
-    else:
-        my_painter.Move()`,
-    consoleOutput: `AttributeError: 'Painter' object has no attribute 'Move'. Did you mean: 'move'?`,
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student fixed the if condition to use "east" but hasn't added else yet
-  'aif-pl-two-waySelection-L16-python_2025_GOOD_PROGRESS': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move("east"):
-        my_painter.turn_left()
-        my_painter.move()
-    my_painter.move()`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
-
-  // Student has both if/else but forgot turn_left() inside the if branch
-  'aif-pl-two-waySelection-L16-python_2025_ALMOST_THERE': {
-    studentCode: `from neighborhood import Painter
-
-my_painter = Painter(0, 0, "East", 10)
-my_painter.move()
-my_painter.turn_left()
-
-while my_painter.can_move():
-    if my_painter.can_move("east"):
-        my_painter.move()
-    else:
-        my_painter.move()`,
-    consoleOutput: '',
-    hasRun: true,
-    hasEdited: true,
-  },
+  // Level: programming-fundamentals-lesson5-level5_2025-launch_2025
 
   // ─────────────────────────────────────────────────────────────────────────
   // Level: programming-fundamentals-lesson5-level5_2025-launch_2025
@@ -1413,6 +1143,1404 @@ my_painter = Painter()
 while my_painter.can_move():
     collect_and_move(my_painter)
     paint_or_turn(my_painter, "blue")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson5-level7a_2025-launch_2025
+  // Task: Debug buggy code — Painter turns twice (180°) instead of once (90°)
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+if my_painter.turn_left()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: `  File "main.py", line 5
+    if my_painter.turn_left()
+                             ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall at position (4, 0).`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level7a_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson5-level8_2025-launch_2025
+  // Task: Debug — instructions in wrong order, Painter stops next to cone
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move(
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: `  File "main.py", line 4
+    my_painter.turn_left()
+               ^
+SyntaxError: invalid syntax`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.turn_left()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall at position (3, 0).`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.turn_left()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson5-level8_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.turn_left()
+my_painter.move()
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson7-level9_2025-launch_2025
+  // Task: Define missing paint_spaces() in custom.py; fix action order
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint, paint_spaces
+
+def paint_spaces(painter):
+    painter.paint("red")
+    painter.paint("red")
+    painter.move()
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint
+
+def paint_spaces(painter)
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    consoleOutput: `  File "main.py", line 4
+    def paint_spaces(painter)
+                             ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint
+
+def paint_spaces(painter):
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+    painter.move()
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint
+
+def paint_spaces(painter):
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson7-level9_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import take_paint
+
+def paint_spaces(painter):
+    painter.paint("red")
+    painter.move()
+    painter.paint("red")
+
+my_painter = Painter()
+take_paint(my_painter)
+paint_spaces(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level1_2025-launch_2025
+  // Task: Replace repeated move() calls with while can_move(): move()
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.move():
+    my_painter.move()`,
+    consoleOutput: `TypeError: 'NoneType' object is not iterable`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move()
+    my_painter.move()`,
+    consoleOutput: `  File "main.py", line 3
+    while my_painter.can_move()
+                               ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+my_painter.move()`,
+    consoleOutput: `  File "main.py", line 4
+    my_painter.move()
+                     ^
+IndentationError: expected an indented block after 'while' statement on line 3`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level1_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level2_2025-launch_2025
+  // Task: Replace repeated paint()+move() with while has_paint(): ...
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.paint("red")
+my_painter.move()
+my_painter.paint("red")
+my_painter.move()
+my_painter.paint("red")
+my_painter.move()
+my_painter.paint("red")`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.paint("red"):
+    my_painter.move()`,
+    consoleOutput: `TypeError: 'NoneType' object is not iterable`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint()
+    my_painter.paint("red")
+    my_painter.move()`,
+    consoleOutput: `  File "main.py", line 3
+    while my_painter.has_paint()
+                                ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.move()
+    my_painter.paint("red")`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("red")
+    my_painter.move()
+    my_painter.paint("red")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level2_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("red")
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level3_2025-launch_2025
+  // Task: Replace repeated take_paint() with while is_on_bucket(): take_paint()
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.take_paint()
+my_painter.take_paint()
+my_painter.take_paint()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.take_paint():
+    my_painter.move()`,
+    consoleOutput: `TypeError: 'NoneType' object is not iterable`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.is_on_bucket()
+    my_painter.take_paint()
+my_painter.move()`,
+    consoleOutput: `  File "main.py", line 3
+    while my_painter.is_on_bucket()
+                                   ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.is_on_bucket():
+    my_painter.take_paint()
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.is_on_bucket():
+    my_painter.take_paint()
+my_painter.paint("red")
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level3_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.is_on_bucket():
+    my_painter.take_paint()
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level4_2025-launch_2025
+  // Task: Fix indentation bug — move() outside while loop instead of inside
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("blue")
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("blue")
+    my_painter.paint("blue")
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint()
+    my_painter.paint("blue")
+    my_painter.move()`,
+    consoleOutput: `  File "main.py", line 3
+    while my_painter.has_paint()
+                                ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+        my_painter.paint("blue")
+        my_painter.move()`,
+    consoleOutput: `  File "main.py", line 4
+    my_painter.paint("blue")
+IndentationError: unexpected indent`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("blue")
+    my_painter.move()
+my_painter.paint("blue")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level4_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("blue")
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level5_2025-launch_2025
+  // Task: Fix while loop that never runs — Painter starts with 0 paint
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.has_paint():
+    my_painter.paint("yellow")
+    my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.paint("yellow")
+while my_painter.has_paint():
+    my_painter.paint("yellow")
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: Painter has no paint.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter(set_paint = 5)
+while my_painter.has_paint():
+    my_painter.paint("yellow")
+    my_painter.move()`,
+    consoleOutput: `TypeError: Painter.__init__() got an unexpected keyword argument 'set_paint'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.has_paint():
+    my_painter.move()
+    my_painter.paint("yellow")`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.has_paint():
+    my_painter.paint("yellow")
+    my_painter.move()
+    my_painter.paint("yellow")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level5_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.has_paint():
+    my_painter.paint("yellow")
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson8-level8a_2025-launch_2025
+  // Task: Import custom.py, define take_all_paint(), import and call it
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import take_all_paint
+
+def take_all_paint(painter):
+    while painter.is_on_bucket():
+        painter.take_paint()
+
+my_painter = Painter()
+take_all_paint(my_painter)`,
+    consoleOutput: `NameError: name 'take_all_paint' is not defined`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import take_all_paint
+
+my_painter = Painter()
+take_all_paint(my_painter`,
+    consoleOutput: `  File "main.py", line 5
+    take_all_paint(my_painter
+                             ^
+SyntaxError: '(' was never closed`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()
+custom.take_all_paint(my_painter)`,
+    consoleOutput: `AttributeError: module 'custom' has no attribute 'take_all_paint'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import take_all_paint
+
+my_painter = Painter()
+take_all_paint(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson8-level8a_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import take_all_paint
+
+my_painter = Painter()
+take_all_paint(my_painter)
+my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson9-level1_2025-launch_2025
+  // Task: Add if is_facing_west(): paint("blue") inside existing loop
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.turn_left()
+my_painter.paint("blue")`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.turn_left()
+if my_painter.is_facing_west:
+    my_painter.paint("blue")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.turn_left()
+    if my_painter.is_facing_west()
+        my_painter.paint("blue")`,
+    consoleOutput: `  File "main.py", line 6
+    if my_painter.is_facing_west()
+                                  ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.turn_left()
+    if my_painter.is_facing_west():
+        my_painter.paint("blue")
+        my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    my_painter.turn_left()
+    if my_painter.is_facing_west():
+        my_painter.paint("blue")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level1_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    if my_painter.is_facing_west():
+        my_painter.paint("blue")
+    my_painter.turn_left()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson9-level2a_2025-launch_2025
+  // Task: Modify if statement to check can_move("south") so Painter turns right
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    if my_painter.can_move():
+        turn_right(my_painter)
+    my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    if my_painter.can_move("right"):
+        turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: `ValueError: invalid direction 'right'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    if my_painter.can_move("south")
+        turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: `  File "main.py", line 6
+    if my_painter.can_move("south")
+                                   ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    if my_painter.can_move("south"):
+        turn_right(my_painter)
+        my_painter.move()
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    if my_painter.can_move("south"):
+        turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level2a_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+while my_painter.can_move():
+    my_painter.move()
+    if my_painter.can_move("south"):
+        turn_right(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson9-level3_2025-launch_2025
+  // Task: Write if is_on_paint(): turn_right() then move()
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+if my_painter.is_on_paint:
+    turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+if my_painter.is_on_paint()
+    turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: `  File "main.py", line 8
+    if my_painter.is_on_paint()
+                               ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+if my_painter.is_on_paint():
+    turn_right(my_painter)
+    my_painter.move()
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+if my_painter.is_on_paint():
+    turn_right(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level3_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right
+
+my_painter = Painter()
+my_painter.move()
+my_painter.move()
+my_painter.move()
+if my_painter.is_on_paint():
+    turn_right(my_painter)
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson9-level6_2025-launch_2025
+  // Task: Debug multiple bugs — indentation, missing colon, condition placement
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(4)
+while my_painter.can_move():
+paint_if_has_paint(my_painter)
+move_south_if_can(my_painter)`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(4)
+while my_painter.can_move():
+    paint_if_has_paint(my_painter)
+move_south_if_can(my_painter)
+move_south_if_can(my_painter)
+move_south_if_can(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(4)
+while my_painter.can_move()
+    paint_if_has_paint(my_painter)
+    move_south_if_can(my_painter)`,
+    consoleOutput: `  File "main.py", line 6
+    while my_painter.can_move()
+                               ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(4)
+while my_painter.can_move():
+    paint_if_has_paint(my_painter)
+    move_south_if_can(my_painter)
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(4)
+while my_painter.can_move():
+    paint_if_has_paint(my_painter)
+    move_south_if_can(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import paint_if_has_paint, move_south_if_can
+
+my_painter = Painter()
+my_painter.set_paint(3)
+while my_painter.can_move():
+    paint_if_has_paint(my_painter)
+    move_south_if_can(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson11-level1_2025
+  // Task: Open-ended — add code using set_paint() and custom functions
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson11-level1_2025_START': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson11-level1_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()
+my_painter.set_paint(5)
+custom.collect_and_move(my_painter)
+custom.paint_or_turn(my_painter)`,
+    consoleOutput: `TypeError: paint_or_turn() missing 1 required positional argument: 'color'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson11-level1_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()
+my_painter.set_paint(5
+custom.collect_and_move(my_painter)`,
+    consoleOutput: `  File "main.py", line 6
+    custom.collect_and_move(my_painter)
+    ^
+SyntaxError: '(' was never closed`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson11-level1_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.can_move():
+    custom.collect_and_move(my_painter)
+    custom.paint_or_turn(my_painter, "red")
+    my_painter.move()`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson11-level1_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+import custom
+
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.can_move():
+    custom.collect_and_move(my_painter)
+    custom.paint_or_turn(my_painter, "red")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson11-level1_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import collect_and_move, paint_or_turn
+
+my_painter = Painter()
+my_painter.set_paint(5)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+    paint_or_turn(my_painter, "red")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson12-level1_2025-launch_2025
+  // Task: Predict/read-only level — student reads code and says what it does
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+if my_painter.has_paint():
+    my_painter.paint("green")`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+my_painter.paint("green")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move()
+    collect_and_move(my_painter)
+if my_painter.has_paint():
+    my_painter.paint("green")`,
+    consoleOutput: `  File "main.py", line 5
+    while my_painter.can_move()
+                               ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+    my_painter.paint("green")`,
+    consoleOutput: `RuntimeError: Painter has no paint.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+if my_painter.has_paint():
+    my_painter.paint("green")
+    my_painter.move()`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import turn_right, collect_and_move
+
+my_painter = Painter(0, 0, "east", 0)
+while my_painter.can_move():
+    collect_and_move(my_painter)
+if my_painter.has_paint():
+    my_painter.paint("green")`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Level: programming-fundamentals-lesson12-level4_2025-launch_2025
+  // Task: Fix move_or_turn() — add else so Painter only turns when it can't move
+  // ─────────────────────────────────────────────────────────────────────────
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_START': {
+    studentCode: `from neighborhood import Painter
+from custom import move_or_turn
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
+    hasRun: false,
+    hasEdited: false,
+  },
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter
+
+def move_or_turn(painter):
+    if painter.can_move():
+        painter.move()
+    painter.turn_left()
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter
+
+def move_or_turn(painter):
+    if painter.can_move():
+        painter.move()
+    else
+        painter.turn_left()
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
+    consoleOutput: `  File "main.py", line 6
+    else
+        ^
+SyntaxError: expected ':'`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter
+
+def move_or_turn(painter):
+    if painter.can_move():
+        painter.move()
+        painter.turn_left()
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
+    consoleOutput: `RuntimeError: The Painter moved into a wall.`,
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter
+
+def move_or_turn(painter):
+    if painter.can_move():
+        painter.move()
+    else:
+        painter.turn_left()
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
+    consoleOutput: '',
+    hasRun: true,
+    hasEdited: true,
+  },
+
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter
+from custom import move_or_turn
+
+my_painter = Painter()
+while my_painter.can_move():
+    move_or_turn(my_painter)`,
     consoleOutput: '',
     hasRun: true,
     hasEdited: true,

@@ -14,7 +14,10 @@ import {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function levelStem(id: string): string {
-  return id.replace(/_\d{4}.*$/, '');
+  return id
+    .replace(/_pilot-\d{4}$/, '')
+    .replace(/_v2-\d{4}$/, '')
+    .replace(/_\d{4}.*$/, '');
 }
 
 function levelLabel(id: string): string {
