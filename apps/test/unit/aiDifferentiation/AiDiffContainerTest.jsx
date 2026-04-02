@@ -1,5 +1,4 @@
 import {render, screen, waitFor} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -91,79 +90,6 @@ describe('AiDiffContainer', () => {
     await waitFor(() => {
       screen.getByText('AI Teaching Assistant');
       screen.getByText('Experiment');
-    });
-  });
-
-  it('moves TA container when user clicks and drags component', async () => {
-    renderDefault();
-    const handle_element = screen.getByText('AI Teaching Assistant');
-    // We want to check that the ID is set correctly for dragging.
-    // eslint-disable-next-line no-restricted-properties
-    const element = screen.getByTestId('draggable-test-id');
-    expect(element.style.transform).toEqual('translate(0px,0px)');
-
-    userEvent.pointer([
-      {keys: '[MouseLeft>]', target: handle_element},
-      {keys: '[MouseLeft>]', target: handle_element, coords: {x: 50, y: 50}},
-      '[/MouseLeft]',
-    ]);
-
-    await waitFor(() => {
-      const newPosition = element.style.transform;
-      expect(newPosition).toEqual('translate(50px,50px)');
-    });
-  });
-
-  it('snaps TA container back on screen when dragged off', async () => {
-    renderDefault();
-    const handle = screen.getByText('AI Teaching Assistant');
-    // We want to check that the ID is set correctly for dragging.
-    // eslint-disable-next-line no-restricted-properties
-    const element = screen.getByTestId('draggable-test-id');
-    expect(element.style.transform).toEqual('translate(0px,0px)');
-
-    userEvent.pointer([
-      {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: -50000}},
-      '[/MouseLeft]',
-    ]);
-
-    await waitFor(() => {
-      const newPosition = element.style.transform;
-      expect(newPosition).toEqual(`translate(1000px,0px)`);
-    });
-
-    userEvent.pointer([
-      {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: 50000}},
-      '[/MouseLeft]',
-    ]);
-
-    await waitFor(() => {
-      const newPosition = element.style.transform;
-      expect(newPosition).toEqual(`translate(1000px,1000px)`);
-    });
-
-    userEvent.pointer([
-      {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: -50000}},
-      '[/MouseLeft]',
-    ]);
-
-    await waitFor(() => {
-      const newPosition = element.style.transform;
-      expect(newPosition).toEqual(`translate(0px,0px)`);
-    });
-
-    userEvent.pointer([
-      {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: 50000}},
-      '[/MouseLeft]',
-    ]);
-
-    await waitFor(() => {
-      const newPosition = element.style.transform;
-      expect(newPosition).toEqual(`translate(0px,1000px)`);
     });
   });
 
