@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:26.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Naming New Pages\r\n\r\n\r\nYou'll need to follow the same rules for naming html pages that you did for naming images.  This page has some problems caused by poorly named HTML files.\r\n\r\n# Do This\r\n1) Click on the links in \"index.html\" and see which ones are broken.\r\n* Change the file names and link `href` attributes so that they follow good naming conventions such as:\r\n  * Avoid special characters such as `&`, `?`, `%`, `/`, etc.\r\n  * Make sure the name has a specific meaning that helps you know what the page is\r\n  * Use dashes (`-`) or underscores (`_`) instead of spaces.\r\n  * Keep the names as short as possible and still have a clear meaning.\r\n* Make sure all link are working with the new file names.\r\n* **Bonus:** Add a \"Back to home\" link to the Scotcharoos page.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n  </head>\n  <body>\n    <h1>All the Lists</h1>\n    <a href=\"howtomakescotcharoos.html\">Scotcheroos Recipe</a>\n    <a href=\"new3.html\">How to Juggle</a>\n    <a href=\"c.html\">Fun Facts About Candy</a>\n    <p> These are all the pages that I have made about lists.  You can go to the pages by clicking on the links at the top of the page.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "c.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n<body>\n    <a href=\"index.html\">Back to Home</a>\n  <h1>Top Facts About Candy</h1>\n  <ul>\n    <li>Cotton candy was invented by a dentist</li>\n    <li>90% of parents steal their kids' trick or treat candy</li>\n    <li>Snickers bars and lollipops were both names after horses.</li>\n    <li>It used to take 27 hours to make a marshmallow peep.</li>\n  </ul>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "HOWtoMAKEscotcharoos.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <h1>\n      Scotcharoos\n    </h1>\n    <h2>\n      Yummy family treat!\n    </h2>\n    <h3>\n      Description\n    </h3>\n    <p>\n      This peanut butter treat will be something everyone will enjoy! A crunchy peanut butter bottom with a smooth chocolate and butterscotch top make for a yummy combination. \n    </p>\n    <h3>Ingredients</h3>\n    <ul>\n      <li>1 cup light corn syrup </li>\n      1 cup sugar\n      <li>1 cup peanut butter </li>\n      <li>6 cups Rice Krispies cereal </li>\n      <li>1 cup semi-sweet chocolate morsels </li>\n      <li>1 cup butterscotch chips</li>\n    </ul>\n\n\n    <h3> Directions </h3>\n    <ol> \n      <li> Measure out all ingredients before starting. </li>\n      Coat 13 x 9 x 2 inch pans with shortening.\n      <li>Place corn syrup and sugar into 3-quart saucepan. Cook over medium heat, stirring frequently, until sugar dissolves and mixture begins to boil. </li>\n      <li>Remove from heat. Stir in peanut butter. Mix well.</li>\n      <li>Add Rice Krispies cereal. Stir until well coated. </li>\n      <li>Press mixture into 13 x 9 x 2-inch pan coated with cooking spray. Set aside. </li>\n      <li> Melt chocolate and butterscotch chips together in a bowl in the microwave. Remove from the microwave every 30-45 seconds to stir until melted.</li>\n      <li>Spread evenly over cereal mixture. Let stand until firm.</li>\n      <li>ENJOY!</li>\n    </ol>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "new-3.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n  </head>\n  <body>\n    <a href=\"index.html\">Back to Home</a>\n    <h1>How to Juggle</h1>\n    <ol>\n      <li>Throw three balls up into the air.</li>\n      <li>Catch them all.</li>\n      <li>Repeat.</li>\n    </ol>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:26.073+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L4-2025\"}]"
+}]]></config>
+</Weblab2>

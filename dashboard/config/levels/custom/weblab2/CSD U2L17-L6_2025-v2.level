@@ -1,0 +1,83 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:27.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Adding New Pages\r\n\r\nTo make your multi-page website, you'll need to add multiple pages to your project. To practice, let's split the content on this sample page into two pages and link them together.\r\n\r\n# Do This\r\n1) Add a new HTML file by clicking  + in the Files panel and choosing new file. \r\n  **Make sure the name is unique and descriptive**\r\n* Use HTML to fill out your new page. (You can use content from the main page.)\r\n* Link to your new page from \"index.html\"\r\n* Link back to the index from your new page.\r\n\r\n",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n\n  <body>\n    \n    <!--Content for index.html-->\n    <h1>Maria's Hair Co.</h1>\n    <h3> About me</h3>     \n    <p><img src=\"hair.jpeg\"/>Hi my name is Maria. I have 4 siblings and they are all younger then me, so I like to do their hair and my own hair when my mom or my step-dad doesn't have time. </p>\n    <p>On this website, I'm going to be talking about hair and how to manage it.</p>\n    <h6>Image is public domain - CC0</h6>\n\n\n    <!--Content to move to new page-->\n    <h2> Tips For Curly Hair...</h2>\n    <ul>\n      <li>Always comb your hair from the bottom of your hair and work your way up.</li>\n      <li> Trim regulary to avoid split ends and unhealthy hair.</li>\n      <li> You should rely most on wide-tooth combs - never a brush detangler, because you would end up damaging and possibly losing hair.</li>\n      <li> Always apply conditioner to the ends of your hair.</li>\n      <li> Don't use your shampoo too often because even though you are cleaning it, you can take lots of moisture out of your hair.</li>\n    </ul>\n    <h2> Tips For Straight hair...</h2>\n    <ul>\n      <li> Make sure to find the RIGHT conditioner for your hair.</li>\n      <li> Don't overuse a product becuase straight hair can only hold so much.</li>\n      <li>Gurad your hair from statis as much as you can!</li>\n      <li>Keep your styling kind of simple becuase your hair isn't going to be able to hold really tight hairstyles.</li>\n      <li>Avoid brushing wet hair as it may cause hair to stretch or break off.</li>\n    </ul>\n    <h2> Tips For Hair In General...</h2>\n    <ul> \n      <li>Oil your hair with a light natural oil daily.</li>\n      <li> You can use a cotton T-shirt to dry your hair when wet.</li>\n      <li>Teasing your hair could damage it.</li>\n      <li>Avoid pulling hair tight by the scalp.</li>\n      <li>Massage your scalp to stimulate your hair follicles 2-3 times a week.</li>\n    </ul>\n\n    \n    <!--Leave these tags on the index.html page.-->\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: rgb(255,255,131);\n\n}\np {\n  color:rgb(255,69,74);\n  text-align:center;\n  font-family: Monospace;\n\n}\n\nh1 {\n\n  color: rgb(255,69,74);\n  font-family: monospace;\n  text-align:center;\n}\n\n\nh3 { \n  font-family: monospace;\n  color: rgb(255,69,74);\n  text-align:center;\n}\n\n\n\nh2 {\n  font-family: monospace;\n  color: rgb(255,69,74);\n  text-align:center;\n}\n\n\nul {\n\n  font-family: monospace;\n  color:rgb(255,69,74);\n  text-align:left;\n\n}\n\nimg {\n  width: 100px;\n  height: 100px;\n  border-color: rgb(255,69,74);\n  border-width: 4px;\n  border-style:Ridge;\n  border-radius: 100px;\n  float:right;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "hair.jpeg",
+          "language": "jpeg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L6-2025/uuid/e013aa6c-ada7-4184-8aef-a4a940cf1fa2.jpeg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nhYSv\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:27.420+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L6-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L6-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -10,13 +10,7 @@ interface GenericStudentLessonSummaryProps {
 const GenericStudentLessonSummary: FC<GenericStudentLessonSummaryProps> = ({
   lessonSummary,
 }) => {
-  return (
-    <ChatMessage
-      text={lessonSummary}
-      role={Role.ASSISTANT}
-      isAiTutorVersion={true}
-    />
-  );
+  return <ChatMessage text={lessonSummary} role={Role.ASSISTANT} />;
 };
 
 export default GenericStudentLessonSummary;

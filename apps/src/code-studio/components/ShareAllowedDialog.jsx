@@ -84,6 +84,7 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     inRestrictedShareMode: PropTypes.bool,
+    hasPrivacyProfanityViolation: PropTypes.bool,
   };
 
   state = {
@@ -96,7 +97,7 @@ class ShareAllowedDialog extends React.Component {
     replayVideoUnavailable: false,
     hasBeenCopied: false,
     isLoadingAccountAndProjectAge: false,
-    showSharingDisabledDialog: false,
+    showSharingDisallowedDialog: false,
   };
 
   componentDidMount() {
@@ -119,8 +120,8 @@ class ShareAllowedDialog extends React.Component {
       recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
 
-      if (this.sharingDisabled()) {
-        this.setState({showSharingDisabledDialog: true});
+      if (this.sharingDisallowedWhileSignedIn()) {
+        this.setState({showSharingDisallowedDialog: true});
       }
     }
   }
@@ -135,12 +136,17 @@ class ShareAllowedDialog extends React.Component {
     this.props.userSharingDisabled &&
     OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(this.props.appType);
 
+  sharingDisallowedWhileSignedIn = () =>
+    this.sharingDisabled() || this.hasPrivacyProfanityViolation();
+
+  hasPrivacyProfanityViolation = () => this.props.hasPrivacyProfanityViolation;
+
   close = () => {
     recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
-      showSharingDisabledDialog: false,
+      showSharingDisallowedDialog: false,
     });
   };
 
@@ -258,18 +264,27 @@ class ShareAllowedDialog extends React.Component {
 
     return (
       <div>
-        {this.sharingDisabled() && this.state.showSharingDisabledDialog && (
-          <Dialog
-            title={i18n.sharingDisabledTitle()}
-            description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
-            primaryButtonProps={{
-              onClick: this.close,
-              text: i18n.ok(),
-              id: 'uitest-sharing-disabled-button',
-            }}
-          />
-        )}
-        {!this.sharingDisabled() && (
+        {this.sharingDisallowedWhileSignedIn() &&
+          this.state.showSharingDisallowedDialog && (
+            <Dialog
+              title={
+                this.sharingDisabled()
+                  ? i18n.sharingDisabledTitle()
+                  : 'Sharing is not allowed'
+              }
+              description={
+                this.sharingDisabled()
+                  ? i18n.sharingBlockedByTeacherOpenEndedProjects()
+                  : 'This project is unable to be shared because it contains content that is flagged. Please update your project or contact support@code.org if you believe this is an error.'
+              }
+              primaryButtonProps={{
+                onClick: this.close,
+                text: i18n.ok(),
+                id: 'uitest-sharing-disabled-button',
+              }}
+            />
+          )}
+        {!this.sharingDisallowedWhileSignedIn() && (
           <BaseDialog
             style={styles.modal}
             isOpen={isOpen}
@@ -540,7 +555,8 @@ export default connect(
     exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
     inRestrictedShareMode: state.project.inRestrictedShareMode,
-    showSharingDisabledDialog: state.shareDialog.showSharingDisabledDialog,
+    showSharingDisallowedDialog: state.shareDialog.showSharingDisallowedDialog,
+    hasPrivacyProfanityViolation: state.project.hasPrivacyProfanityViolation,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
