@@ -567,6 +567,15 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
   end
 
+  test 'logged in milestone with default locale' do
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal I18n.default_locale.to_s, user_level.locale
+    assert_equal true, user_level.locale_supported
+  end
+
   test 'logged in milestone with current locale' do
     current_locale = set_request_locale('uk-UA')
 
