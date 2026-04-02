@@ -62,6 +62,9 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  lastMessagePostText?: React.ReactNode;
 }
 
 /**
@@ -80,6 +83,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
+  lastMessagePostText,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -106,10 +110,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     return unfilteredVisibleItems;
   }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
-  );
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
@@ -259,7 +259,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
@@ -271,7 +270,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -315,10 +313,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
+          lastMessagePostText={lastMessagePostText}
         />
       )}
       <div className={moduleStyles.footer}>
