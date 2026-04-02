@@ -8,6 +8,9 @@ $(document).ready(() => {
   const baseUrl = getScriptData('baseUrl');
   createReactRoot(
     <NewReferenceGuideForm baseUrl={baseUrl} />,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

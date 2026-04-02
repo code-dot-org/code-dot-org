@@ -531,4 +531,20 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "/s/#{script.name}", top_course[:linkToOverview]
     assert_equal "/s/#{script.name}/next", top_course[:linkToLesson]
   end
+
+  test "home does not 404 for users with deleted unit references" do
+    student = create(:student)
+    current_script = create(:script, :with_levels)
+    deleted_script = create(:script, :with_levels)
+
+    create(:user_script, user: student, script: current_script, started_at: 2.days.ago)
+    create(:user_script, user: student, script: deleted_script, started_at: 1.day.ago)
+
+    deleted_script.destroy!
+
+    sign_in student
+    get :home
+
+    assert_response :success
+  end
 end

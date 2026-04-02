@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
       disableRosterSyncButtonEnabled
       lmsName={lmsName}
     />,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

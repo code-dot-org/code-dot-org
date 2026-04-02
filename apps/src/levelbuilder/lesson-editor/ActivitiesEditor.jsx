@@ -154,7 +154,7 @@ class ActivitiesEditor extends Component {
               style={styles.addActivity}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              <i style={{marginRight: 7}} className="fa-solid fa-circle-plus" />
               Activity
             </button>
           )}

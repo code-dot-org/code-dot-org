@@ -34,7 +34,8 @@ const autocompleteKeybindings = [{key: 'Tab', run: acceptCompletion}];
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
 // extensions removed (lint, autocomplete). This is the base configuration for all codemirror
 // editors on the site. Any changes here will impact Java Lab, Python Lab, and Web Lab 2.
-const editorConfigWithoutLineNumbers = [
+const editorConfig = [
+  lineNumbers(),
   highlightSpecialChars(),
   history(),
   drawSelection(),
@@ -61,6 +62,4 @@ const editorConfigWithoutLineNumbers = [
   EditorState.tabSize.of(2),
 ];
 
-const editorConfig = [lineNumbers(), ...editorConfigWithoutLineNumbers];
-
-export {editorConfig, editorConfigWithoutLineNumbers};
+export {editorConfig};

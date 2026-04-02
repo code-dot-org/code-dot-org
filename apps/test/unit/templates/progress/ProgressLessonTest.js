@@ -318,6 +318,21 @@ describe('ProgressLesson', () => {
     expect(wrapper.find('Button').length).toEqual(0);
   });
 
+  it('does not show Lesson Resources button when viewing as a participant and student_lesson_plan_html_url is not null, and isOnLevelView is true', () => {
+    let myLesson = defaultProps.lesson;
+    myLesson.student_lesson_plan_html_url = 'test-url';
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={myLesson}
+        viewAs={ViewType.Participant}
+        isOnLevelView={true}
+      />
+    );
+    expect(wrapper.find('Button').length).toEqual(0);
+    delete myLesson.student_lesson_plan_html_url;
+  });
+
   it('does not show Lesson Resources button when viewing as a instructor and student_lesson_plan_html_url is not null', () => {
     let myLesson = defaultProps.lesson;
     myLesson.student_lesson_plan_html_url = 'test-url';

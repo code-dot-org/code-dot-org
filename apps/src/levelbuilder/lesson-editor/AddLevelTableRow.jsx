@@ -80,7 +80,7 @@ export default class AddLevelTableRow extends Component {
             onClick={this.handleCloneAndAddLevel.bind(this, level)}
             disabled={this.state.creatingClonedLevel}
           >
-            <FontAwesome icon="files-o" />
+            <FontAwesome icon="copy" iconStyle="regular" />
           </button>
           {this.state.creatingClonedLevel && (
             <FontAwesome icon="spinner" className="fa-spin" />

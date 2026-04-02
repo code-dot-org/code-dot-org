@@ -84,7 +84,7 @@ export default class HeaderPopup extends Component {
             )}
             onClick={this.handleClickOpen}
           >
-            <i className={classNames('fa fa-caret-down', styles.caret)} />
+            <i className={classNames('fa-solid fa-caret-down', styles.caret)} />
             <div className={styles.more}>{i18n.moreAllCaps()}</div>
           </button>
         )}
@@ -100,7 +100,7 @@ export default class HeaderPopup extends Component {
               )}
               onClick={this.handleClickClose}
             >
-              <i className={classNames('fa fa-caret-up', styles.caret)} />
+              <i className={classNames('fa-solid fa-caret-up', styles.caret)} />
               <div className={styles.more}>{i18n.lessAllCaps()}</div>
             </button>
 

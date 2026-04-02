@@ -32,6 +32,9 @@ $(document).ready(function () {
     <Provider store={store}>
       <Dataset isLive={isLive} />
     </Provider>,
-    document.querySelector('.dataset')
+    document.querySelector('.dataset'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

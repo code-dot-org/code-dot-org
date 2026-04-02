@@ -18,7 +18,7 @@ export default class SaveImageButton extends React.Component {
   render() {
     return (
       <button type="button" style={styles.button} onClick={this.save}>
-        <i style={styles.icon} className="fa fa-fw fa-camera" />
+        <i style={styles.icon} className="fa-solid fa-fw fa-camera" />
         {i18n.save()}
       </button>
     );

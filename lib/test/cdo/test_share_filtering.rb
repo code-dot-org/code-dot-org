@@ -295,4 +295,143 @@ class ShareFilteringTest < Minitest::Test
     assert_equal true,
       ShareFiltering.should_filter_program(with_indicator, 'playlab')
   end
+
+  # Tests for ShareFiltering.extract_text_from_js
+  # These tests cover expected extraction behavior.
+
+  def test_extract_text_from_js_returns_empty_for_nil
+    assert_equal '', ShareFiltering.extract_text_from_js(nil)
+  end
+
+  def test_extract_text_from_js_returns_empty_for_empty_string
+    assert_equal '', ShareFiltering.extract_text_from_js('')
+  end
+
+  def test_extract_text_from_js_extracts_identifiers
+    assert_equal 'var myVar', ShareFiltering.extract_text_from_js('var myVar = 1;')
+  end
+
+  def test_extract_text_from_js_extracts_single_line_comment_text
+    assert_equal(
+      'this is a comment',
+      ShareFiltering.extract_text_from_js('// this is a comment')
+    )
+  end
+
+  def test_extract_text_from_js_single_line_comment_strips_leading_slashes
+    assert_equal(
+      'note about code',
+      ShareFiltering.extract_text_from_js('//   note about code')
+    )
+  end
+
+  def test_extract_text_from_js_single_line_comment_replaces_syntax_chars_for_tokenization
+    # Punctuation in comments is turned into spaces
+    # so downstream profanity filters do not glue words across (), [], ;, etc.
+    assert_equal(
+      'foo a b   arr 0    x   y',
+      ShareFiltering.extract_text_from_js('// foo(a,b); arr[0] < x > y')
+    )
+  end
+
+  def test_extract_text_from_js_extracts_multi_line_comment_text
+    assert_equal(
+      "hello\nworld",
+      ShareFiltering.extract_text_from_js("/* hello\nworld */")
+    )
+  end
+
+  def test_extract_text_from_js_multi_line_comment_strips_delimiters_and_syntax_chars
+    assert_equal(
+      'see  foo bar',
+      ShareFiltering.extract_text_from_js('/* see: foo(bar); */')
+    )
+  end
+
+  def test_extract_text_from_js_extracts_string_literal_content
+    assert_equal(
+      'hello world var',
+      ShareFiltering.extract_text_from_js('var x = "hello world";')
+    )
+  end
+
+  def test_extract_text_from_js_separates_function_name_and_param
+    # Key regression: `totals(hit)` must NOT become "totalshit" after syntax stripping.
+    assert_equal(
+      'function totals hits return hit',
+      ShareFiltering.extract_text_from_js('function totals(hits) { return hit; }')
+    )
+  end
+
+  def test_extract_text_from_js_no_false_positive_from_adjacent_string_literals
+    # `"shi"+"ts"` must not become "shits" after syntax stripping.
+    assert_equal(
+      'shi ts var',
+      ShareFiltering.extract_text_from_js('var x = "shi"+"ts";')
+    )
+  end
+
+  def test_extract_text_from_js_excludes_single_char_identifiers
+    # Single-character identifiers are too noisy to be useful.
+    assert_equal(
+      'for var',
+      ShareFiltering.extract_text_from_js('for (var i = 0; i < 10; i++) {}')
+    )
+  end
+
+  # ShareFiltering.share_filter_text_from_library_request_body — used by files_api libraries PUT.
+  def sample_app_lab_library_hash_for_share_filter
+    {
+      'name' => 'Remix',
+      'description' => 'demo',
+      'functions' => ['battingAverage'],
+      'dropletConfig' => [
+        {
+          'func' => 'battingAverage',
+          'category' => 'Functions',
+          'comment' => 'Returns batting average',
+          'type' => 'either',
+          'params' => ['hits', 'atBats'],
+          'paletteParams' => ['hits', 'atBats'],
+        },
+      ],
+      'source' => 'function battingAverage(hits, atBats) { return hits / atBats; }',
+    }
+  end
+
+  def test_share_filter_text_from_library_request_body_app_lab_json_skips_droplet_config
+    library_hash = sample_app_lab_library_hash_for_share_filter
+    body = JSON.generate(library_hash)
+    expected =
+      'function battingAverage hits atBats return hits atBats Remix demo'
+    assert_equal expected, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
+
+  def test_share_filter_text_from_library_request_body_double_encoded_json
+    library_hash = sample_app_lab_library_hash_for_share_filter
+    inner = JSON.generate(library_hash)
+    body = JSON.generate(inner)
+    expected =
+      'function battingAverage hits atBats return hits atBats Remix demo'
+    assert_equal expected, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
+
+  def test_share_filter_text_from_library_request_body_nil_optional_fields
+    library_hash = {
+      'name' => 'N',
+      'source' => 'function f() {}',
+    }
+    body = JSON.generate(library_hash)
+    assert_equal 'function N', ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
+
+  def test_share_filter_text_from_library_request_body_invalid_json_returns_raw
+    body = 'not json {{{'
+    assert_equal body, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
+
+  def test_share_filter_text_from_library_request_body_non_library_json_returns_raw
+    body = JSON.generate('library' => 'x')
+    assert_equal body, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
 end

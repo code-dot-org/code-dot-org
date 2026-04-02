@@ -14,28 +14,21 @@
   },
   {
     "id": "gemini-2.5-flash-lite",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash-Lite",
+    "name": "Gemini 2.5 Flash-Lite",
     "overview": "...",
     "trainingData": "...",
     "multimodal": true
   },
   {
     "id": "gemini-2.5-flash",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash",
+    "name": "Gemini 2.5 Flash",
     "overview": "...",
     "trainingData": "...",
     "multimodal": true
   },
   {
     "id": "gemini-2.5-flash-image",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash Image",
-    "overview": "...",
-    "trainingData": "...",
-    "multimodal": true
-  },
-  {
-    "id": "gemini-3-pro-preview",
-    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3 Pro Preview",
+    "name": "Gemini 2.5 Flash Image",
     "overview": "...",
     "trainingData": "...",
     "multimodal": true

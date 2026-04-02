@@ -428,7 +428,10 @@ Artist.prototype.init = function (config) {
           onMount={onMount.bind(this)}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   });
 };

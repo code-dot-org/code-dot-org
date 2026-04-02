@@ -133,7 +133,11 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
     return level as unknown as LevelWithProgress;
   };
 
-  const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
+  const navigateToSublevel = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sublevel: BubbleChoiceSublevel
+  ) => {
+    event.preventDefault(); // Prevent default link navigation
     if (currentLessonId) {
       dispatch(navigateToLevelId(sublevel.level_id));
     } else {
@@ -172,9 +176,9 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
           }}
         >
           {levelBubbleChoice.sublevels.map((sublevel, index) => (
-            <button
-              type="button"
+            <a
               key={index}
+              href={sublevel.url}
               className={classNames(
                 'uitest-bubble-choice',
                 styles.sublevelButton
@@ -182,8 +186,10 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
               style={{
                 width: imageWidth,
                 height: imageWidth / aspectRatio,
+                textDecoration: 'none',
               }}
-              onClick={() => navigateToSublevel(sublevel)}
+              aria-label={sublevel.display_name}
+              onClick={event => navigateToSublevel(event, sublevel)}
             >
               <div
                 className={styles.sublevelImageContainer}
@@ -222,7 +228,7 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
                   />
                 )}
               </div>
-            </button>
+            </a>
           ))}
         </div>
       </div>

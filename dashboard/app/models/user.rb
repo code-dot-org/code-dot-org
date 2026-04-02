@@ -1228,7 +1228,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro', locale: nil)
     # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
@@ -1274,6 +1274,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
+            locale:,
             unit_group: unit_group
           )
         end
@@ -1715,10 +1716,7 @@ class User < ApplicationRecord
       total_time_spent = user_level.calculate_total_time_spent(time_spent)
       user_level.time_spent = total_time_spent if total_time_spent
 
-      if locale
-        user_level.locale = locale
-        user_level.locale_supported = script.supported_locale?(locale)
-      end
+      user_level.assign_locale_data(locale) if locale
 
       if unit_group && user_level.new_record?
         user_level.unit_group_id = unit_group.id

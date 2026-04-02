@@ -448,7 +448,11 @@ class FilesApi < Sinatra::Base
     # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
     if endpoint == 'libraries' && project_type != 'backpack'
       begin
-        share_failure = ShareFiltering.find_failure(body, request.locale)
+        # For App Lab libraries (JSON format), extract only name, description and source (user-created text)
+        # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
+        # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
+        text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
+        share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message

@@ -46,9 +46,9 @@ Scenario: Applab Instructions in Top Pane
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9"
   And I wait for the lab page to fully load
   And I see no difference for "top instructions enabled on standard level"
-  Then I click selector ".fa-chevron-circle-up"
+  Then I click selector ".fa-circle-chevron-up"
   And I see no difference for "top instructions collapsed"
-  Then I click selector ".fa-chevron-circle-down"
+  Then I click selector ".fa-circle-chevron-down"
   And I see no difference for "top instructions uncollapsed"
   Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
