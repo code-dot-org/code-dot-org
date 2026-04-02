@@ -33,7 +33,7 @@ module Cdo
 
         # Generates the DDL for the non-PII (restricted) Materialized View.
         def generate_non_pii_ddl
-          return nil if columns.empty?
+          return nil if non_pii_columns.empty?
           build_ddl(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{environment_type}", columns: non_pii_columns)
         end
 
