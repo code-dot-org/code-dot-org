@@ -95,6 +95,8 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
+    Dashboard::Application.config.action_controller.allow_forgery_protection = false
+
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
 
