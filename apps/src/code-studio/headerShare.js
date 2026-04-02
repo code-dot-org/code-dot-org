@@ -59,7 +59,10 @@ export function shareProject(shareUrl) {
           userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
-      dialogDom
+      dialogDom,
+      {
+        legacyReactDomRender: true,
+      }
     );
 
     getStore().dispatch(showShareDialog());

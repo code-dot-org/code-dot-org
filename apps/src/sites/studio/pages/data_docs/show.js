@@ -8,6 +8,9 @@ $(() => {
   const {dataDocName, dataDocContent} = getScriptData('dataDoc');
   createReactRoot(
     <DataDocView dataDocName={dataDocName} dataDocContent={dataDocContent} />,
-    document.getElementById('view-data-doc')
+    document.getElementById('view-data-doc'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

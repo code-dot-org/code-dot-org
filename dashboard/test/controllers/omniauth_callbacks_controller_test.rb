@@ -1416,7 +1416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     malformed_account.reload
     assert_equal AuthenticationOption::GOOGLE, malformed_account.provider
-    assert_equal  uid, malformed_account.uid
+    assert_equal uid, malformed_account.uid
 
     # Verify the account has an email and is now well-formed
     assert_equal email, malformed_account.email
@@ -1450,7 +1450,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     student.reload
     assert_equal AuthenticationOption::GOOGLE, student.provider
-    assert_equal  uid, student.uid
+    assert_equal uid, student.uid
 
     # Verify the account has an email and is now well-formed
     assert_empty student.email

@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
@@ -14,7 +15,6 @@ import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
-import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
@@ -63,6 +63,9 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  lastMessagePostText?: React.ReactNode;
 }
 
 /**
@@ -81,8 +84,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
+  lastMessagePostText,
 }) => {
-  const {chatDisabled} = useAiChatDisabled();
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -107,10 +111,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     return unfilteredVisibleItems;
   }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
-  );
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
@@ -232,14 +232,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const [liveAnnouncement, setLiveAnnouncement] = useState('');
   const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  const hasChatHistory = chatEvents.length > 0;
   useEffect(() => {
-    if (chatEvents.length > 0) {
+    if (hasChatHistory) {
       const last = chatEvents[chatEvents.length - 1];
       if ('chatMessageText' in last && last.chatMessageText) {
         setLiveAnnouncement(markdownToTxt(last.chatMessageText));
       }
     }
-  }, [chatEvents]);
+  }, [hasChatHistory, chatEvents]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -253,32 +254,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'viewStudentChatHistory',
       text:
         selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? aichatI18n.viewOnlyTabLabel({
-              fieldLabel: aichatI18n.viewStudentChatHistory({
-                selectedStudentName: selectedStudentName ?? '',
-              }),
-            })
-          : aichatI18n.viewStudentChatHistory({
-              selectedStudentName: selectedStudentName ?? '',
-            }),
+          ? `${selectedStudentName ?? ''}'s chat history (view only)`
+          : `${selectedStudentName ?? ''}'s chat history`,
       tabContent: (
         <ChatEventsList
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
-      text: aichatI18n.testStudentModel(),
+      text: 'Test student model',
       tabContent: (
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -322,10 +315,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
+          lastMessagePostText={lastMessagePostText}
         />
       )}
       <div className={moduleStyles.footer}>
@@ -351,6 +344,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           />
         )}
       </div>
+      {isTeacherView && hasChatHistory && chatDisabled && (
+        <Alert
+          type={alertTypes.info}
+          text={chatDisabledMessage || ''}
+          icon={{
+            className: moduleStyles.chatDisabledAlertIcon,
+            iconName: 'ai-locked',
+            iconFamily: 'kit',
+          }}
+          className={moduleStyles.chatDisabledAlert}
+        />
+      )}
     </div>
   );
 };

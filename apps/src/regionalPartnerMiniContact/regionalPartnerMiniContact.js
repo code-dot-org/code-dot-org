@@ -34,7 +34,10 @@ window.showRegionalPartnerMiniContact = function () {
           apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
           sourcePageId={sourcePageId}
         />,
-        regionalPartnerMiniContactElement[0]
+        regionalPartnerMiniContactElement[0],
+        {
+          legacyReactDomRender: true,
+        }
       );
     });
 };
@@ -55,6 +58,9 @@ window.showRegionalPartnerMiniContactPopupLink = function () {
       {isButton && <button type="button">{linkText}</button>}
       {!isButton && linkText}
     </RegionalPartnerMiniContactPopupLink>,
-    regionalPartnerMiniContactPopupLinkElement[0]
+    regionalPartnerMiniContactPopupLinkElement[0],
+    {
+      legacyReactDomRender: true,
+    }
   );
 };

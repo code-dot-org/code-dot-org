@@ -8,7 +8,7 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
 
   Scenario: The student sees only the projects available in Farsi MVP
-    Given I am on "http://studio.code.org/global/fa/projects"
+    Given I am on "http://studio.code.org/fa/projects"
 
     When I wait until element "h4.new-project-heading:contains(شروع پروژه جدید)" is visible
     # The section "Start a new project" contains projects: "Sprite Lab", "Artist", "App Lab", and "Game Lab"

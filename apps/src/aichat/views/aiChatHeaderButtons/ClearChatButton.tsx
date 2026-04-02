@@ -1,11 +1,11 @@
 import React, {useCallback, useMemo} from 'react';
 
 import {WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../../locale';
 import {addChatEvent, clearChatMessages, sendAnalytics} from '../../redux';
 
 const ClearChatButton: React.FunctionComponent = () => {
@@ -14,22 +14,17 @@ const ClearChatButton: React.FunctionComponent = () => {
   const selectedTab = useAppSelector(
     state => state.aichat.chatWorkspaceSelectedTab
   );
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
   );
-  const aiTutorVersionFiles = useAppSelector(
-    state => state.weblab2?.aiTutorVersionFiles
-  );
-  const isAwaitingAcceptRejectDecision =
-    !!isAiTutorVersion && !!aiTutorVersionFiles?.length;
 
   // Disable clearing chat when viewing student chat as a teacher,
   // or while waiting for the user to accept/reject AI Tutor code changes.
   const isDisabled = useMemo(
     () =>
       selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY ||
-      isAwaitingAcceptRejectDecision,
-    [selectedTab, isAwaitingAcceptRejectDecision]
+      viewingAiTutorVersionFileUpdates,
+    [selectedTab, viewingAiTutorVersionFileUpdates]
   );
 
   const onClear = useCallback(() => {
@@ -50,7 +45,7 @@ const ClearChatButton: React.FunctionComponent = () => {
   return (
     <IconButtonWithTooltip
       id="clear-chat"
-      label={aichatI18n.clearChatButtonText()}
+      label={'Clear chat'}
       icon={{iconName: 'eraser', iconStyle: 'solid'}}
       variant="text"
       color="tertiary"

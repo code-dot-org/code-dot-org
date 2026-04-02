@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <LtiProviderContext.Provider value={ltiProviderContext}>
       <LtiLinkAccountPage />
     </LtiProviderContext.Provider>,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

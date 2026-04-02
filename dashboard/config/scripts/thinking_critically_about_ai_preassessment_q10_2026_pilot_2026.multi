@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q10_2026-pilot_2026'
+
+question 'Which of the following is an example of sensitive information that a person should be especially careful about sharing with AI tools?'
+
+wrong 'Your favorite movie genre.'
+right 'Your home address and daily schedule.'
+wrong 'The name of your school\'s mascot.'
+wrong 'What you ate for lunch today.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN
