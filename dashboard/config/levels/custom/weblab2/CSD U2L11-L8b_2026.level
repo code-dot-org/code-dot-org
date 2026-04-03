@@ -1,0 +1,95 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:50:27.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Missing Classes!",
+    "long_instructions": "\r\n\r\n# Missing Classes\r\n\r\nThis website about different types of dances doesn't look quite right. Can you fix it?\r\n\r\n# Do This\r\n\r\n1) Look at the stylesheet to see the different classes that are created but missing from the index page.\r\n2) Figure out what html elements need which classes in order to make the web page look like the image below.\r\n\r\n<br>\r\n\r\n<img src=\"https://images.code.org/050f0c22b5d74e1dd4bf0f7591eebf00-webpageOverview.png\" style=\"width:1000px;\">\r\n",
+    "bubble_choice_description": "Figure out what html elements need which classes in order to fix the web page.",
+    "thumbnail_url": "https://images.code.org/c2b9e1b799d3305e1926a81446eb76cb-classesChallenge.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Types of Dance From Around The World</h1>\n    \n    <p>There are many many different types of dance which are performed all over the world. Over the years, different dances have changed, merged and evolved to create the genres we know today. And each genre can be broken down into further subgenres. Let’s take a look at some of the most popular types of dance in modern culture.</p>\n    \n    <h2>Ballroom Dance</h2>\n    \n    <img src=\"Samba.jpg\" alt=\"samba\">\n    \n    <p>Different types of ballroom dance include:</p>\n    \n    <ul>\n      <li>Waltz</li>\n      <li>Viennese Waltz</li>\n      <li>Cha-Cha</li>\n      <li>Tango</li>\n      <li>Rumba</li>\n      <li>Mambo</li>\n      <li>Samba</li>\n      <li>Jive</li>\n      <li>Quickstep</li>\n    </ul>\n    \n    <h2>Hip-Hop and Funk Dance</h2>\n\n    <img src=\"breakdance.jpg\" alt=\"breakdancers\">\n\n    <p>Different types of hip-hop dance include:</p>\n\n    <ul>\n      <li>Breakdance</li>\n      <li>Locking</li>\n      <li>Popping</li>\n    </ul>\n    \n    <h2>Worldwide/Latin Dance</h2>\n\n    <img src=\"flamenco.jpg\" alt=\"flamenco dancers\">\n\n    <p>Different types of Latin dance include:</p>\n\n    <ul>\n      <li>Salsa</li>\n      <li>Flamenco</li>\n      <li>Lambada</li>\n      <li>Polka</li>\n      <li>Belly Dance</li>\n      <li>Country/Western Dances</li>\n      <li>Folk Dance</li>\n      <li>Bollywood</li>\n    </ul>\n    \n    \n    \n    \n\n   \n  \n    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: monospace;\n}\n\nh1 {\n  text-align: center;\n}\n\n.bdance {\n  font-family: fantasy;\n  background-color: #b7fffd;\n  border-style: ridge;\n  border-color: #b7fffd;\n  color: #133a39;\n  padding: 5px;\n  letter-spacing: 2px;\n}\n\n.bdanceP {\n  width:200px;\n  border-style:solid;\n  border-color:#b7fffd;\n  border-radius: 10px;\n}\n\n.bdanceL {\n  font-family: fantasy;\n  background-color: #b7fffd;\n  border-style: ridge;\n  border-color: #b7fffd;\n  color: #133a39;  \n  width: 300px;\n}\n\n.flam {\n  font-family:cursive;\n  background-color: #ffb7f5;\n  border-style:inset;\n  border-color: #d105b5;\n  color: #810c71;\n  padding: 5px;\n}\n\n.flamP {\n  width:500px;\n  border-style:solid;\n  border-color:#810c71;\n  border-radius: 10px;\n}\n\n.flamL {\n  font-family: cursive;\n  background-color: #ffb7f5;\n  border-style: inset;\n  border-color: #d105b5;\n  color: #133a39;  \n  width: 300px;\n}\n\n\n.sambaP {\n  height: 200px;\n  border-style:solid;\n  border-color:#1e14dc;\n  border-radius: 20px;\n}\n\n.samba {\n  font-family: sans-serif;\n  background-color: #f0f8ff;\n  color:#1e14dc;\n  border-style:dotted;\n  padding: 5px;\n}\n\n.sambaL {\n  font-family: sans-serif;\n  background-color: #f0f8ff;\n  color:#1e14dc;\n  border-style:dotted;\n  width: 300px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "flamenco.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8b-2025/uuid/cb0aa25c-298c-4eaf-8afa-a00175d416ee.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "breakdance.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8b-2025/uuid/2b5644a4-6512-4bef-bd33-29dbde3c1e9e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "Samba.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L8b-2025/uuid/a3fb982f-794e-48c5-8825-765a2e4a52af.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nMUxunJhEmxYFJnahi+Gf5Eh1D802dw==\n",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:50:27.855+00:00\",\"changed\":[\"cloned from \\\"CSD U2L11-L8b-2025\\\"\"],\"cloned_from\":\"CSD U2L11-L8b-2025\"}]"
+}]]></config>
+</Weblab2>

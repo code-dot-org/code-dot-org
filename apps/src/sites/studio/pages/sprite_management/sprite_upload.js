@@ -6,6 +6,9 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(function () {
   createReactRoot(
     <SpriteUpload />,
-    document.getElementById('sprite-upload-container')
+    document.getElementById('sprite-upload-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:44:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Implement Hybrid Logic\r\n\r\n\r\n**Goal:** Protect the user from errors by trying to fetch live data first, then falling back to your safety net if it fails.\r\n\r\n**Do This:**\r\n\r\n1. **Clean Up:**\r\n\t* **Delete** the line `renderBackup();` from the bottom of your code.\r\n\t* **Keep** the line `renderAppShell();`. We still want the header to load instantly!\r\n\r\n\r\n2. Create an `async` arrow function named `fetchCountries`. Inside, add a `try { } catch (error) { }` block.\r\n\r\n3. Inside `try`:\r\n    * Update the `statusElement` text to read \"Online. Showing Live Data.\"\r\n    * Use `fetch` to get data from the `apiEndpoint` and display the `name.common` and `population` of each country in the `outputElement`. \r\n\r\n4. Inside `catch`:\r\n    * Update the `statusElement` text to read \"Offline Mode. Showing Local Data\".\r\n    * Call your `renderBackup()` function.\r\n\r\n5. Add an event listener so that clicking the \"Get Live Census\" button runs your `fetchCountries` function.\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nwzDUe1JbmTIWiA==\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Population Tracker</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div class=\"container\">\n      \n      <div id=\"header-section\">\n        <h1 id=\"title-section\">Title</h1>\n        <p id=\"date-section\">Date</p>\n      </div>\n      \n      <div class=\"controls\">\n        <div id=\"status\">Status: </div>\n        <button id=\"fetch-btn\">Get Live Census</button>\n      </div>\n\n      <div id=\"results\"></div>\n      \n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  padding-top: 40px;\n}\n\n.container {\n  background: white;\n  width: 400px;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\n#header-section h1 { color: #1a73e8; margin-bottom: 5px; }\n#header-section p { color: #666; margin-top: 0; }\n\n#status {\n  background: #eee;\n  padding: 10px;\n  border-radius: 6px;\n  margin-bottom: 10px;\n  font-weight: bold;\n  font-size: 0.9rem;\n}\n\nbutton {\n  background: #1a73e8;\n  color: white;\n  border: none;\n  padding: 12px;\n  width: 100%;\n  border-radius: 6px;\n  font-size: 1rem;\n  cursor: pointer;\n}\nbutton:hover { background: #1557b0; }\n\n/* Visual Cues for Data Source */\n.result-card {\n  padding: 10px;\n  margin-top: 10px;\n  border-left: 5px solid #ccc;\n  background: #f9f9f9;\n}\n.live-data { border-left-color: #34a853; } /* Green */\n.backup-data { border-left-color: #fbbc05; } /* Orange */",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n\nconst appConfig = {\n  title: \"Global Population Tracker\",\n  date: \"2026 Census\"\n};\n\nconst renderAppShell = () => {\n  title.innerHTML = appConfig.title;\n  date.innerHTML = appConfig.date;\n};\n\nrenderAppShell();\n\n\nconst localCountries = [\n  { name: \"Dominican Republic\", population: 10771504 },\n  { name: \"Puerto Rico\", population: 3203295 },\n  { name: \"India\", population: 1417492000 }\n];\n\nconst renderBackup = () => {\n\n  localCountries.forEach(country => {\n       outputElement.innerHTML += `\n         <div class=\"result-card live-data\">\n           <strong>${country.name}</strong><br>\n           Pop: ${country.population.toLocaleString()}\n         </div>`;\n  });\n}\n\nrenderBackup();",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:35.862+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

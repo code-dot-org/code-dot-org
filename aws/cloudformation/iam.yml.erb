@@ -1039,8 +1039,8 @@ roles.each do |name, config| %>
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
               StringEquals:
                 token.actions.githubusercontent.com:sub:
-                  - "repo:code-dot-org/code-dot-org:environment:staging"
-                  - "repo:code-dot-org/code-dot-org:environment:staging-next"
+                  - "repo:code-dot-org/code-dot-org:environment:open-tofu-plan"
+                  - "repo:code-dot-org/code-dot-org:environment:open-tofu-apply"
       Policies:
         - PolicyName: OpenTofuStateAccess
           PolicyDocument:
