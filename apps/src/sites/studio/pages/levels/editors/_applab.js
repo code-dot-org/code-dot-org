@@ -63,7 +63,14 @@ $(document).ready(function () {
       Object.keys(microbitBlocks).forEach(func => delete codeFunctions[func]);
       Object.keys(circuitBlocks).forEach(func => delete codeFunctions[func]);
     }
-    editor.setValue(JSON.stringify(codeFunctions, null, ' '));
+
+    // If there are no blocks, set the editor to an empty string instead of an empty object,
+    // as our block config will use all blocks if code_functions is empty, but no blocks if code_functions is an empty object.
+    const editorValue =
+      Object.keys(codeFunctions).length === 0
+        ? ''
+        : JSON.stringify(codeFunctions, null, ' ');
+    editor.setValue(editorValue);
   });
 
   const styles = {
