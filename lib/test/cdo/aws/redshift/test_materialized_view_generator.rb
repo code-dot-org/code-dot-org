@@ -1,5 +1,6 @@
 require_relative '../../../test_helper'
 require_relative '../../../../cdo/aws/redshift/materialized_view_generator'
+require 'erb'
 
 module Cdo
   module Aws
@@ -41,14 +42,14 @@ module Cdo
             all_columns.each {|col| assert_includes ddl, col.name}
           end
 
-          it 'uses the pii schema name' do
+          it 'uses ERB template variable in the pii schema name' do
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'dashboard_test_pii.zeroetl_users'
+            assert_includes ddl, 'dashboard_<%=environment_type%>_pii.zeroetl_users'
           end
 
-          it 'uses the correct source table path' do
+          it 'uses ERB template variables in the source table path' do
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'test_learningplatform_mysql_zeroetl.dashboard_test.users'
+            assert_includes ddl, '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
           it 'uses the primary key as the distkey' do
@@ -67,10 +68,12 @@ module Cdo
             assert_nil MaterializedViewGenerator.new(model).generate_pii_ddl
           end
 
-          it 'uses the production pii schema when environment_type is production' do
-            ddl = MaterializedViewGenerator.new(model, environment_type: 'production').generate_pii_ddl
-            assert_includes ddl, 'dashboard_production_pii.zeroetl_users'
-            assert_includes ddl, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          it 'renders to the correct production schema when ERB is evaluated' do
+            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            environment_type = 'production'
+            rendered = ERB.new(ddl).result(binding)
+            assert_includes rendered, 'dashboard_production_pii.zeroetl_users'
+            assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
           end
         end
 
@@ -113,10 +116,10 @@ module Cdo
             assert_includes ddl, 'score'
           end
 
-          it 'uses the non-pii schema name' do
+          it 'uses ERB template variable in the non-pii schema name' do
             ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'dashboard_test.zeroetl_users'
-            refute_includes ddl, 'dashboard_test_pii'
+            assert_includes ddl, 'dashboard_<%=environment_type%>.zeroetl_users'
+            refute_includes ddl, '_pii'
           end
 
           it 'disables backup and automated refresh' do

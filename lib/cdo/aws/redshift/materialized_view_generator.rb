@@ -11,17 +11,18 @@ module Cdo
         NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
         SQL_INDENT = ' ' * 2
 
-        attr_reader :model, :environment_type
+        attr_reader :model
 
         # Analytics Redshift schemas where we create Materialized Views that source data from Zero ETL database use
         # `dashboard_` naming conventions.
         BASE_REDSHIFT_SCHEMA_NAME = 'dashboard'.freeze
 
+        # ERB template variable for the environment type (e.g., 'test' or 'production').
+        ENVIRONMENT_TYPE_ERB = '<%=environment_type%>'.freeze
+
         # @param model [Class] The ActiveRecord model class (e.g., User, Activity)
-        # @param environment_type [String] The environment type ('test' or 'production').
-        def initialize(model, environment_type: 'test')
+        def initialize(model)
           @model = model
-          @environment_type = environment_type.to_s
         end
 
         # Generates the DDL for the PII (full) Materialized View
@@ -29,13 +30,13 @@ module Cdo
           columns = model.columns.map(&:name)
           return nil if columns.empty? # Prevent invalid SQL generation
 
-          build_ddl(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{environment_type}_pii", columns: columns)
+          build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}_pii", columns: columns)
         end
 
         # Generates the DDL for the non-PII (restricted) Materialized View.
         def generate_non_pii_ddl
           return nil if non_pii_columns.empty?
-          build_ddl(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{environment_type}", columns: non_pii_columns)
+          build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}", columns: non_pii_columns)
         end
 
         private def non_pii_columns
@@ -50,9 +51,8 @@ module Cdo
           end.map(&:name)
         end
 
-        private def build_ddl(schema:, columns:)
+        private def build_ddl_erb_template(schema:, columns:)
           view_name = "zeroetl_#{model.table_name}"
-
           <<~SQL
             CREATE MATERIALIZED VIEW #{schema}.#{view_name}
               BACKUP NO
@@ -60,14 +60,8 @@ module Cdo
               AUTO REFRESH NO
             AS SELECT
               #{columns.join(',\n' + SQL_INDENT)}
-            FROM #{source_table_path};
+            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
           SQL
-        end
-
-        # The fully qualified path to the source table replicated by Zero-ETL.
-        private def source_table_path
-          # Example: production_learningplatform_mysql_zeroetl.dashboard_production.users
-          "#{environment_type}_learningplatform_mysql_zeroetl.#{BASE_REDSHIFT_SCHEMA_NAME}_#{environment_type}.#{model.table_name}"
         end
 
         # Redshift DISTSTYLE KEY requires explicitly naming the DISTKEY column.
