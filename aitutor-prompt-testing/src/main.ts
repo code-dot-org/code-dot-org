@@ -5,6 +5,7 @@ import {pythonLabEvalData} from './pythonLabEvalData';
 import {
   STUDIO_STATE_LABELS,
   VIDEO_OPTIONS,
+  VIDEO_FILE_DATA,
   PythonLabStudioStateData,
   PythonLabEvalEntry,
   StudioStateEnum,
@@ -69,7 +70,14 @@ const STATE_DESCRIPTIONS: Record<StudioStateEnum, string> = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const DEFAULT_TEMPLATES = {
-  system: `You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the whole answer directly. If the student appears frustrated, you may include syntax or pseudocode. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.`,
+  system: `You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the whole answer directly. If the student appears frustrated, you may include syntax or pseudocode. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.
+{{#showVideos}}
+The following videos are available for the user to watch if they are helpful (provided in format: VIDEO-URL::VIDEO-DESCRIPTION)
+{{#videoFiles}}
+{{url}}::{{description}}
+{{/videoFiles}}
+Please add a video using "[video](VIDEO-URL)" to your response ONLY if the video's description matches what the student needs to understand currently.
+{{/showVideos}}`,
 
   instructions: `Here are the instructions for this level:
 
@@ -89,7 +97,7 @@ const DEFAULT_TEMPLATES = {
 };
 
 const TEMPLATE_HINTS: Record<string, string> = {
-  system: 'No variables — edit the tutor persona and behavior.',
+  system: 'Variables: <code>{{#showVideos}}...{{/showVideos}}</code> <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code>',
   instructions: 'Variables: <code>{{levelInstructions}}</code>',
   code: 'Variables: <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code>',
   state: 'Variables: <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
@@ -197,13 +205,37 @@ function isPreAuthored(levelId: string, stateKey: string): boolean {
 // TEMPLATE RENDERING
 // ─────────────────────────────────────────────────────────────────────────────
 
-function renderTemplate(tpl: string, vars: Record<string, string>): string {
-  return tpl.replace(/\{\{(\w+)\}\}/g, (_, key: string) =>
-    vars[key] !== undefined ? vars[key] : `{{${key}}}`
+type TemplateVarValue = string | boolean | Array<Record<string, string>>;
+type TemplateVars = Record<string, TemplateVarValue>;
+
+function renderTemplate(tpl: string, vars: TemplateVars): string {
+  // 1. Process {{#key}}...{{/key}} sections (boolean guards and array iteration)
+  let result = tpl.replace(
+    /\{\{#(\w+)\}\}([\s\S]*?)\{\{\/\1\}\}/g,
+    (_, key: string, inner: string) => {
+      const val = vars[key];
+      if (!val || (Array.isArray(val) && val.length === 0)) return '';
+      if (Array.isArray(val)) {
+        return val
+          .map(item =>
+            inner.replace(/\{\{(\w+)\}\}/g, (__, field: string) =>
+              item[field] !== undefined ? item[field] : `{{${field}}}`
+            )
+          )
+          .join('');
+      }
+      // Boolean true: keep block content, strip section tags
+      return inner;
+    }
   );
+  // 2. Simple {{varName}} substitution
+  return result.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
+    const val = vars[key];
+    return typeof val === 'string' ? val : `{{${key}}}`;
+  });
 }
 
-function buildVars(levelId: string, stateKey: string): Record<string, string> | null {
+function buildVars(levelId: string, stateKey: string): TemplateVars | null {
   const level = LEVEL_DATA[levelId];
   if (!level) return null;
 
@@ -222,6 +254,11 @@ function buildVars(levelId: string, stateKey: string): Record<string, string> | 
     ? (data.studentMessageVideoRequested ?? '')
     : (data.studentMessage ?? '');
 
+  const videoFiles = VIDEO_FILE_DATA.map(v => ({
+    url: `/assets/js/json/${v.filename.replace('.json', '')}${v.hash}.json`,
+    description: v.description,
+  }));
+
   return {
     levelInstructions: level.longInstructions ?? '',
     studentCode: data.studentCode ?? '',
@@ -232,6 +269,8 @@ function buildVars(levelId: string, stateKey: string): Record<string, string> | 
     stateLabel: stateKey,
     stateDescription: STATE_DESCRIPTIONS[stateKey as StudioStateEnum] ?? '',
     studentMessage,
+    showVideos: true,
+    videoFiles,
   };
 }
 
@@ -243,13 +282,14 @@ function assembleOutput(
   if (!vars) return null;
 
   const sections: Array<{label: string; text: string}> = [
-    {label: '1. System Prompt', text: templates.system},
+    {label: '1. System Prompt', text: renderTemplate(templates.system, vars)},
     {label: '2. Instructions Context', text: renderTemplate(templates.instructions, vars)},
     {label: '3. Code Context', text: renderTemplate(templates.code, vars)},
     {label: '4. State Context', text: renderTemplate(templates.state, vars)},
   ];
-  if (vars.studentMessage) {
-    sections.push({label: '5. Student Message', text: vars.studentMessage});
+  const msg = vars.studentMessage;
+  if (msg && typeof msg === 'string') {
+    sections.push({label: '5. Student Message', text: msg});
   }
   return sections;
 }
