@@ -16,7 +16,7 @@ module AiStudentSnapshotHelper
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     start_time = Time.now
-    
+
     begin
       response = client.request_lesson_insight(system_prompt)
     rescue Net::ReadTimeout
