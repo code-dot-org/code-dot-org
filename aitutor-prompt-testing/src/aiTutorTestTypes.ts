@@ -64,4 +64,31 @@ export interface PythonLabStudioStateData {
   hasEdited: boolean;
   /** JSON-serialised validation test results, if any. */
   validationResults?: string;
+  /** Realistic student message when NOT explicitly requesting a video. */
+  studentMessage?: string;
+  /** Realistic student message when explicitly requesting a video. */
+  studentMessageVideoRequested?: string;
+}
+
+// ─── Eval / expected output ───────────────────────────────────────────────────
+
+export const VIDEO_OPTIONS = [
+  'Variables_V1.json',
+  'Functions_V1.json',
+  'While_Loops_V1.json',
+  'Conditionals_V1.json',
+  'Painter_Object_V1.json',
+  'Functions_With_Parameters_V1.json',
+  'If_Else_V1.json',
+] as const;
+
+export type VideoOption = (typeof VIDEO_OPTIONS)[number];
+
+/**
+ * Expected AI tutor output for a given level + state + videoRequested combination.
+ * Key: `${levelId}_${StudioStateEnum}_VIDEO` or `${levelId}_${StudioStateEnum}_NOVIDEO`
+ */
+export interface PythonLabEvalEntry {
+  /** Videos the AI tutor should return (empty = no video expected). */
+  expectedVideos: VideoOption[];
 }

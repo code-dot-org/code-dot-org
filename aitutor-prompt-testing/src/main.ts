@@ -1,8 +1,12 @@
 import {pythonLabLevelData} from './pythonLabLevelData';
 import {pythonLabStudioData} from './pythonLabStudioData';
+import {pythonLabStudentMessages} from './pythonLabStudentMessages';
+import {pythonLabEvalData} from './pythonLabEvalData';
 import {
   STUDIO_STATE_LABELS,
+  VIDEO_OPTIONS,
   PythonLabStudioStateData,
+  PythonLabEvalEntry,
   StudioStateEnum,
 } from './aiTutorTestTypes';
 
@@ -97,14 +101,29 @@ const TEMPLATE_HINTS: Record<string, string> = {
 
 const STORAGE_KEY_TPL = 'aiTutorTool_templates_v1';
 const STORAGE_KEY_DATA = 'aiTutorTool_studioData_v1';
+const STORAGE_KEY_EVAL = 'aiTutorTool_evalData_v1';
 
 // Keys saved to localStorage as overrides on top of pythonLabStudioData
 const localOverrides: Record<string, PythonLabStudioStateData> = loadLocalOverrides();
 
-// Working copy: start from pythonLabStudioData, merge in localStorage overrides
+// Merge student messages into studio data entries
+const studioDataWithMessages: Record<string, PythonLabStudioStateData> = {};
+for (const [key, entry] of Object.entries(pythonLabStudioData)) {
+  const msgs = pythonLabStudentMessages[key];
+  studioDataWithMessages[key] = msgs ? {...entry, ...msgs} : entry;
+}
+
+// Working copy: start from pythonLabStudioData + messages, merge in localStorage overrides
 const studioData: Record<string, PythonLabStudioStateData> = {
-  ...pythonLabStudioData,
+  ...studioDataWithMessages,
   ...localOverrides,
+};
+
+// Eval overrides on top of pythonLabEvalData
+const localEvalOverrides: Record<string, PythonLabEvalEntry> = loadLocalEvalOverrides();
+const evalData: Record<string, PythonLabEvalEntry> = {
+  ...pythonLabEvalData,
+  ...localEvalOverrides,
 };
 
 function loadLocalOverrides(): Record<string, PythonLabStudioStateData> {
@@ -116,8 +135,21 @@ function loadLocalOverrides(): Record<string, PythonLabStudioStateData> {
   }
 }
 
+function loadLocalEvalOverrides(): Record<string, PythonLabEvalEntry> {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_EVAL);
+    return saved ? JSON.parse(saved) : {};
+  } catch {
+    return {};
+  }
+}
+
 function saveStudioData(): void {
   localStorage.setItem(STORAGE_KEY_DATA, JSON.stringify(localOverrides));
+}
+
+function saveEvalData(): void {
+  localStorage.setItem(STORAGE_KEY_EVAL, JSON.stringify(localEvalOverrides));
 }
 
 let templates = loadTemplates();
@@ -186,6 +218,10 @@ function buildVars(levelId: string, stateKey: string): Record<string, string> | 
     ? `Here are the validation test results (JSON):\n${data.validationResults}`
     : '';
 
+  const studentMessage = currentVideoRequested
+    ? (data.studentMessageVideoRequested ?? '')
+    : (data.studentMessage ?? '');
+
   return {
     levelInstructions: level.longInstructions ?? '',
     studentCode: data.studentCode ?? '',
@@ -195,6 +231,7 @@ function buildVars(levelId: string, stateKey: string): Record<string, string> | 
     validationSection,
     stateLabel: stateKey,
     stateDescription: STATE_DESCRIPTIONS[stateKey as StudioStateEnum] ?? '',
+    studentMessage,
   };
 }
 
@@ -205,12 +242,16 @@ function assembleOutput(
   const vars = buildVars(levelId, stateKey);
   if (!vars) return null;
 
-  return [
+  const sections: Array<{label: string; text: string}> = [
     {label: '1. System Prompt', text: templates.system},
     {label: '2. Instructions Context', text: renderTemplate(templates.instructions, vars)},
     {label: '3. Code Context', text: renderTemplate(templates.code, vars)},
     {label: '4. State Context', text: renderTemplate(templates.state, vars)},
   ];
+  if (vars.studentMessage) {
+    sections.push({label: '5. Student Message', text: vars.studentMessage});
+  }
+  return sections;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -220,6 +261,7 @@ function assembleOutput(
 let currentTab = 'system';
 let currentLevel = Object.keys(LEVEL_DATA)[0];
 let currentState = STATES[0].key;
+let currentVideoRequested = false;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // DOM RENDERING
@@ -264,6 +306,10 @@ function renderStudioEditor(): void {
     ? ''
     : '<span class="studio-draft-badge">draft — not in TS source</span>';
 
+  const msgField = currentVideoRequested ? 'studentMessageVideoRequested' : 'studentMessage';
+  const msgLabel = currentVideoRequested ? 'Student Message (video requested)' : 'Student Message';
+  const msgValue = (data[msgField] as string | undefined) ?? '';
+
   area.innerHTML = `
     <div class="studio-fields">
       <label class="field-label">
@@ -286,6 +332,10 @@ function renderStudioEditor(): void {
         Validation Results (JSON)
         <textarea id="f-validationResults" spellcheck="false">${escHtml(data.validationResults ?? '')}</textarea>
       </label>
+      <label class="field-label">
+        ${escHtml(msgLabel)}
+        <textarea id="f-studentMessage" spellcheck="false">${escHtml(msgValue)}</textarea>
+      </label>
     </div>`;
 
   // Wire up studio field changes — save override to localStorage
@@ -303,6 +353,38 @@ function renderStudioEditor(): void {
       localOverrides[dataKey] = {...studioData[dataKey]};
       saveStudioData();
       renderOutput();
+    });
+  });
+  document.getElementById('f-studentMessage')!.addEventListener('input', e => {
+    studioData[dataKey][msgField] = (e.target as HTMLTextAreaElement).value;
+    localOverrides[dataKey] = {...studioData[dataKey]};
+    saveStudioData();
+    renderOutput();
+  });
+}
+
+function renderEvalEditor(): void {
+  const evalKey = `${currentLevel}_${currentState}_${currentVideoRequested ? 'VIDEO' : 'NOVIDEO'}`;
+  const entry: PythonLabEvalEntry = evalData[evalKey] ?? {expectedVideos: []};
+  const area = document.getElementById('evalEditorArea')!;
+
+  area.innerHTML = `<div class="video-checkboxes">${
+    VIDEO_OPTIONS.map(v => `
+      <label class="video-checkbox-label">
+        <input type="checkbox" data-video="${escHtml(v)}"
+          ${entry.expectedVideos.includes(v) ? 'checked' : ''}>
+        ${escHtml(v)}
+      </label>`).join('')
+  }</div>`;
+
+  area.querySelectorAll<HTMLInputElement>('input[data-video]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checked = Array.from(
+        area.querySelectorAll<HTMLInputElement>('input[data-video]:checked')
+      ).map(el => el.dataset.video as (typeof VIDEO_OPTIONS)[number]);
+      evalData[evalKey] = {expectedVideos: checked};
+      localEvalOverrides[evalKey] = {expectedVideos: checked};
+      saveEvalData();
     });
   });
 }
@@ -345,15 +427,23 @@ function init(): void {
     stateSel.appendChild(opt);
   });
 
-  // Level / State change
+  // Level / State / Video Requested change
   levelSel.addEventListener('change', e => {
     currentLevel = (e.target as HTMLSelectElement).value;
     renderStudioEditor();
+    renderEvalEditor();
     renderOutput();
   });
   stateSel.addEventListener('change', e => {
     currentState = (e.target as HTMLSelectElement).value as StudioStateEnum;
     renderStudioEditor();
+    renderEvalEditor();
+    renderOutput();
+  });
+  document.getElementById('videoRequestedCheck')!.addEventListener('change', e => {
+    currentVideoRequested = (e.target as HTMLInputElement).checked;
+    renderStudioEditor();
+    renderEvalEditor();
     renderOutput();
   });
 
@@ -404,6 +494,7 @@ function init(): void {
   // Initial render
   renderTemplateEditor();
   renderStudioEditor();
+  renderEvalEditor();
   renderOutput();
 }
 
