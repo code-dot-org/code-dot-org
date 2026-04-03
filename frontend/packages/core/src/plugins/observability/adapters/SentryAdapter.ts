@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/browser';
+import {flatten} from 'flat';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '../../../index';
 import type {Environment} from '../../../environment';
@@ -79,7 +80,15 @@ export class SentryAdapter extends BaseAdapter {
       (level: keyof typeof sentryLoggerMethods) =>
       (message: string, attributes?: Record<string, unknown>) => {
         try {
-          sentryLoggerMethods[level](message, attributes);
+          // Sentry's does not support nested objects as log attributes, so flatten them with dot notation
+          const flatAttributes = attributes
+            ? flatten<Record<string, unknown>, Record<string, unknown>>(
+                attributes,
+              )
+            : undefined;
+
+          // Log to Sentry
+          sentryLoggerMethods[level](message, flatAttributes);
         } catch (error) {
           console.warn(
             `[observability] SentryAdapter.logger.${level} failed:`,

@@ -182,6 +182,32 @@ describe('observability plugin', () => {
     });
   });
 
+  it('flattens nested logger attributes to dot notation', async () => {
+    sessionStorage.setItem(
+      '__cdo_observability_session_id__',
+      '22222222-2222-2222-2222-222222222222',
+    );
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+        sampling: {logSampleRate: 1},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    logger.warn('nested context', {
+      device: {browser: 'Chrome', os: 'Linux'},
+      lab: 'music',
+    });
+
+    expect(Sentry.logger.warn).toHaveBeenCalledWith('nested context', {
+      'device.browser': 'Chrome',
+      'device.os': 'Linux',
+      lab: 'music',
+    });
+  });
+
   it('falls back to a no-op client when provider initialization fails', async () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
