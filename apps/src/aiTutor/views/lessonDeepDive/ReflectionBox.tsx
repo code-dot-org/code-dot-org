@@ -1,6 +1,8 @@
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import React, {FC} from 'react';
 
+import LessonObjectiveReflection from './LessonObjectiveReflection';
+import LessonReflection from './LessonReflection';
 import {LessonDeepDiveData} from './types';
 
 interface ReflectionBoxProps {
@@ -15,14 +17,18 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({objectives}) => (
     <Typography variant="body1">
       How do you feel about each of the learning objectives for this lesson?
     </Typography>
-    <ul>
-      {objectives.map(objective => (
-        <li key={objective.id}>{objective.description}</li>
-      ))}
-    </ul>
-    ⚠️ COMING SOON: Use the lesson objectives to create the reflection form to
-    store student responses and use them to guide future practice store student
-    responses and use them to guide future practice recommendations!
+    {objectives.map(objective => (
+      <LessonObjectiveReflection key={objective.id} objective={objective} />
+    ))}
+    <LessonReflection />
+    <Button
+      variant="contained"
+      type="button"
+      fullWidth
+      sx={{marginTop: '5px', textTransform: 'none'}}
+    >
+      Submit Reflection
+    </Button>
   </div>
 );
 
