@@ -10,11 +10,11 @@ import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMark
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 
-import moduleStyles from './jitPlConceptsEditor.module.scss';
-
 import ExemplarsEditor from './ExemplarsEditor';
 import MisconceptionsEditor from './MisconceptionsEditor';
 import TeachingTipsEditor from './TeachingTipsEditor';
+
+import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 const JitPlConceptFormEditor = ({
   conceptId,
@@ -68,7 +68,6 @@ const JitPlConceptFormEditor = ({
       <label className={moduleStyles.conceptLabel}>
         Name
         <input
-          className="input"
           name="name"
           className={moduleStyles.conceptInput}
           value={name || ''}
@@ -78,7 +77,6 @@ const JitPlConceptFormEditor = ({
       <label className={moduleStyles.conceptLabel}>
         Display Name
         <input
-          className="input"
           name="display_name"
           className={moduleStyles.conceptInput}
           value={displayName || ''}

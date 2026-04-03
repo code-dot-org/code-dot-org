@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 import moduleStyles from './jitPlConceptsEditor.module.scss';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 const NewJitPlConceptForm = () => {
   const [textContent, setTextContent] = useState('');
@@ -14,11 +14,11 @@ const NewJitPlConceptForm = () => {
       <h1>New JIT PL Concept</h1>
       <label className={moduleStyles.conceptLabel}>
         Name
-        <input className="input" name="name" className={moduleStyles.conceptInput} />
+        <input name="name" className={moduleStyles.conceptInput} />
       </label>
       <label className={moduleStyles.conceptLabel}>
         Display Name
-        <input className="input" name="display_name" className={moduleStyles.conceptInput} />
+        <input name="display_name" className={moduleStyles.conceptInput} />
       </label>
       <TextareaWithMarkdownPreview
         name="text_content"
