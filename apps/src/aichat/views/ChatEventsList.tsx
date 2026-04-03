@@ -92,9 +92,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   };
 
-  const isTeacherViewEmptyStudentChatHistory = useMemo(() => {
-    return isTeacherView && events.length === 0;
-  }, [isTeacherView, events]);
+  const hasChatHistory = events.length > 0;
 
   const lastChatMessageIndex = useMemo(() => {
     if (!lastMessagePostText) return -1;
@@ -200,16 +198,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
+        {chatDisabled && !(isTeacherView && hasChatHistory) ? (
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
             {hasInstructionsDrawer && (
               <div className={moduleStyles.instructionsDrawerInset} />
             )}
-            {isTeacherViewEmptyStudentChatHistory && (
-              <EmptyStudentChatHistory />
-            )}
+            {isTeacherView && !hasChatHistory && <EmptyStudentChatHistory />}
             {events.map((event, index) => {
               const isLastEvent = index === events.length - 1;
               const isLastChatMessage = index === lastChatMessageIndex;
