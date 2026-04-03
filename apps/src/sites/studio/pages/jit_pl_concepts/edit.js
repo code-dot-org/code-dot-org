@@ -22,6 +22,7 @@ $(document).ready(() => {
     resources,
     exemplars,
     misconceptions,
+    teaching_tips,
   } = getScriptData('jitPlConcept');
 
   store.dispatch(initResources('jitPlConceptResource', resources || []));
@@ -35,6 +36,7 @@ $(document).ready(() => {
         originalTextContent={text_content}
         originalExemplars={exemplars || []}
         originalMisconceptions={misconceptions || []}
+        originalTeachingTips={teaching_tips || []}
       />
     </Provider>,
     document.getElementById('edit-jit-pl-concept'),

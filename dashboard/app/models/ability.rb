@@ -441,6 +441,7 @@ class Ability
         JitPlConcept,
         JitPlMisconception,
         JitPlExemplar,
+        JitPlTeachingTip,
         CourseOffering,
         UnitGroup,
         Resource,

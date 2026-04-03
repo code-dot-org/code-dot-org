@@ -34,11 +34,16 @@ class JitPlConcept < ApplicationRecord
       resources: resources.map(&:summarize_for_lesson_edit),
       exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map(&:serialize),
       misconceptions: jit_pl_misconceptions.map(&:serialize),
+      teaching_tips: jit_pl_teaching_tips.map(&:serialize),
     }
   end
 
+  def key
+    name.downcase.gsub(/[^a-z]+/, '_').gsub(/\A_+|_+\z/, '')
+  end
+
   def file_path
-    Rails.root.join("config/jit_pl_concepts/#{name}.json")
+    Rails.root.join("config/jit_pl_concepts/#{key}.json")
   end
 
   def write_serialization
@@ -49,7 +54,7 @@ class JitPlConcept < ApplicationRecord
                                                  display_name: display_name,
                                                  text_content: text_content,
                                                  resources: resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
-                                                 jit_pl_concepts_resources: resources.map {|r| {seeding_key: {'concept.name' => name, 'resource.key' => r.key}}},
+                                                 jit_pl_concepts_resources: resources.map {|r| {seeding_key: {'concept.key' => key, 'resource.key' => r.key}}},
                                                  exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map do |e|
                                                    {
                                                      name: e.name,
@@ -57,7 +62,7 @@ class JitPlConcept < ApplicationRecord
                                                      code_content: e.code_content,
                                                      exemplar_type: e.exemplar_type,
                                                      resources: e.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
-                                                     jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'concept.name' => name, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
+                                                     jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'concept.key' => key, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
                                                    }
                                                  end,
                                                  misconceptions: jit_pl_misconceptions.map do |m|
@@ -76,6 +81,14 @@ class JitPlConcept < ApplicationRecord
                                                          jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'misconception.name' => m.name, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
                                                        }
                                                      end,
+                                                   }
+                                                 end,
+                                                 teaching_tips: jit_pl_teaching_tips.map do |t|
+                                                   {
+                                                     name: t.name,
+                                                     text_content: t.text_content,
+                                                     resources: t.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
+                                                     jit_pl_teaching_tips_resources: t.resources.map {|r| {seeding_key: {'concept.key' => key, 'teaching_tip.name' => t.name, 'resource.key' => r.key}}},
                                                    }
                                                  end,
                                                }
@@ -106,6 +119,7 @@ class JitPlConcept < ApplicationRecord
       jit_pl_concepts_resources: config['jit_pl_concepts_resources'] || [],
       exemplars: config['exemplars'] || [],
       misconceptions: config['misconceptions'] || [],
+      teaching_tips: config['teaching_tips'] || [],
     }
   end
 
@@ -172,6 +186,21 @@ class JitPlConcept < ApplicationRecord
     end
 
     concept.jit_pl_misconceptions.where.not(name: seeded_misconception_names).destroy_all
+
+    seeded_teaching_tip_names = []
+    (properties[:teaching_tips] || []).each do |t_data|
+      teaching_tip = JitPlTeachingTip.find_or_initialize_by(name: t_data['name'], jit_pl_concept: concept)
+      teaching_tip.update!(text_content: t_data['text_content'])
+      seeded_teaching_tip_names << t_data['name']
+
+      (t_data['resources'] || []).each do |resource_data|
+        resource = Resource.find_or_initialize_by(key: resource_data['key'], course_version: jit_pl_course_version)
+        resource.update!(name: resource_data['name'], url: resource_data['url'], properties: resource_data['properties'])
+      end
+      t_resource_keys = (t_data['jit_pl_teaching_tips_resources'] || []).map {|r| r['seeding_key']['resource.key']}
+      teaching_tip.resources = Resource.where(key: t_resource_keys, course_version: jit_pl_course_version)
+    end
+    concept.jit_pl_teaching_tips.where.not(name: seeded_teaching_tip_names).destroy_all
 
     concept.id
   end

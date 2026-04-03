@@ -561,6 +561,7 @@ Dashboard::Application.routes.draw do
         resources :jit_pl_exemplars, only: [:create, :update, :destroy]
       end
       resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      resources :jit_pl_teaching_tips, only: [:create, :update, :destroy]
       collection do
         get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
       end

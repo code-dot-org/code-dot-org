@@ -12,6 +12,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 
 import ExemplarsEditor from './ExemplarsEditor';
 import MisconceptionsEditor from './MisconceptionsEditor';
+import TeachingTipsEditor from './TeachingTipsEditor';
 
 const JitPlConceptFormEditor = ({
   conceptId,
@@ -20,6 +21,7 @@ const JitPlConceptFormEditor = ({
   originalTextContent,
   originalMisconceptions,
   originalExemplars,
+  originalTeachingTips,
   resources,
 }) => {
   const [name, setName] = useState(originalName);
@@ -103,6 +105,11 @@ const JitPlConceptFormEditor = ({
         conceptId={conceptId}
         initialMisconceptions={originalMisconceptions}
       />
+      <h2>Teaching Tips</h2>
+      <TeachingTipsEditor
+        conceptId={conceptId}
+        initialTeachingTips={originalTeachingTips}
+      />
       <br />
       <SaveBar
         handleSave={save}
@@ -131,6 +138,7 @@ JitPlConceptFormEditor.propTypes = {
   originalTextContent: PropTypes.string,
   originalMisconceptions: PropTypes.array,
   originalExemplars: PropTypes.array,
+  originalTeachingTips: PropTypes.array,
   resources: PropTypes.arrayOf(resourceShape).isRequired,
 };
 

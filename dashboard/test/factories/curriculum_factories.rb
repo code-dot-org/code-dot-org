@@ -34,4 +34,10 @@ FactoryBot.define do
     text_content {"Some exemplar text content"}
     exemplar_type {"good"}
   end
+
+  factory :jit_pl_teaching_tip do
+    association :jit_pl_concept
+    sequence(:name) {|n| "jit-pl-teaching-tip-#{n}"}
+    text_content {"Some teaching tip text content"}
+  end
 end
