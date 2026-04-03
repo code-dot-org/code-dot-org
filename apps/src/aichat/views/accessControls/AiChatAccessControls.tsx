@@ -14,7 +14,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
-import {AI_SETTINGS_SUPPORT_LINK} from '../../constants';
+import {
+  AI_SETTINGS_SUPPORT_LINK,
+  VERIFIED_TEACHER_SUPPORT_LINK,
+} from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
 import InfoTooltipIcon from '../InfoTooltipIcon';
@@ -48,9 +51,6 @@ const essentialOnlyCheckboxState = (
 const accessToggleState = (accessLevel: AiChatAccessLevel): boolean => {
   return accessLevel === AiChatAccessLevels.ENABLED;
 };
-
-const VERIFIED_TEACHER_SUPPORT_LINK =
-  'https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher';
 
 const AiChatAccessControls: React.FC = () => {
   const section = useAppSelector(selectedSectionSelector);
