@@ -38,11 +38,16 @@ const consoleSlice = createSlice({
     ) => {
       const message = action.payload.args.join(' ');
       const groupKey = getGroupKey(action.payload.level, message);
-      const existingLog = state.logs.find(log => log.groupKey === groupKey);
-      if (existingLog) {
+      const existingIndex = state.logs.findIndex(
+        log => log.groupKey === groupKey
+      );
+      if (existingIndex !== -1) {
+        const existingLog = state.logs[existingIndex];
         existingLog.count += 1;
         existingLog.message = message;
         existingLog.timestamp = new Date().toLocaleTimeString();
+        state.logs.splice(existingIndex, 1);
+        state.logs.push(existingLog);
         return;
       }
       state.logs.push({
