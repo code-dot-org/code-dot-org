@@ -16,7 +16,7 @@ Apply order:
 2. `phase2`
 3. `phase3`
 
-The old `k8s/tofu/codeai-k8s*` trees stay unchanged.
+The old `k8s/tofu/codeai-k8s-pre-reorg` tree stays unchanged.
 
 ## Intent
 
@@ -37,7 +37,7 @@ locals, variable descriptions, and resource text verbatim wherever sane.
 
 ### `phase1`
 
-Derived from `codeai-k8s/eks-cluster`.
+Derived from `codeai-k8s-pre-reorg/eks-cluster`.
 
 Contains:
 
@@ -110,4 +110,4 @@ Then confirm:
 - `phase1` is cluster bootstrap only
 - `phase2` contains the AWS-side root plus its internal bootstrap module
 - `phase3` is the remaining K8S-side add-on root
-- `k8s/tofu/codeai-k8s*` remains unchanged
+- `k8s/tofu/codeai-k8s-pre-reorg` remains unchanged

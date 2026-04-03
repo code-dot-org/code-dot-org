@@ -1,5 +1,5 @@
 - [x] Create `k8s/tofu/reorg/` scaffolding: `README.md`, `plan.md`, `checklist.md`, `implementation-notes.md`, `phase1/`, `phase2/`, `phase3/`, and the split ESO modules
-- [x] Copy/refactor `codeai-k8s/eks-cluster` into `reorg/phase1`
+- [x] Copy/refactor `codeai-k8s-pre-reorg/eks-cluster` into `reorg/phase1`
 - [x] Remove Route53, ACM, ExternalDNS, ESO Helm, and Gateway API CRDs from `phase1`
 - [x] Rework `phase1` outputs so later phases consume remote state instead of duplicate cluster-shape tfvars
 - [x] Build `reorg/phase2` as the AWS-side root
@@ -34,6 +34,6 @@
 - [x] Run `tofu init -backend=false && tofu validate` in `phase1`
 - [x] Run `tofu init -backend=false && tofu validate` in `phase2`
 - [x] Run `tofu init -backend=false && tofu validate` in `phase3`
-- [x] Confirm `k8s/tofu/codeai-k8s*` remains unchanged
+- [x] Confirm `k8s/tofu/codeai-k8s-pre-reorg` remains unchanged
 - [x] Code review phase: can we make the code cleaner and simpler? if yes, repeat until as simple as possible without losing anything
 - [x] Match previous tofu phase: is this a perfect replica with existing tofu files in `codeai-k8s` folder modules? if not, improve and iterate

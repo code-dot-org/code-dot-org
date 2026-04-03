@@ -1,8 +1,8 @@
 # OpenTofu reorg
 
-This directory is a copy-and-refactor of `../codeai-k8s`.
+This directory is a copy-and-refactor of `../codeai-k8s-pre-reorg`.
 
-Do not edit `../codeai-k8s` here. The old roots remain the current source of truth
+Do not edit `../codeai-k8s-pre-reorg` here. The old roots remain the current source of truth
 until this reorg is complete and validated.
 
 Apply order:
