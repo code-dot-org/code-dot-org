@@ -3,70 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Rethinking Academic Integrity
+# AI Classroom Use Policy
 
 #### AI tools are changing how students complete work, but they don’t eliminate the need for academic integrity. Instead, they shift what integrity looks like in the classroom.
 
-#### Using AI is not automatically cheating. What matters is:
-* #### How the tool is used
-* #### Whether it supports learning
-* #### Whether expectations are clear and consistent
+#### Schools and classrooms need clear expectations for how AI tools are used. An **AI Classroom Use Policy** helps ensure AI supports learning while maintaining academic integrity, protecting student data, and promoting responsible use.
 
-#### Rather than focusing only on whether students used AI, the key question becomes: Did students do the thinking?
+>#### **💬 Quick Reflection:** Does your school or district have an AI Classroom Use Policy? If so, are you familiar with it?
 
-## AI Use Exists on a Spectrum
+#### Rather than creating entirely new policies, many schools can build on existing guidelines—such as technology policies, responsible use, academic integrity, and data privacy—to address AI use consistently.
 
-<div style="max-width:1100px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
-<!-- Labels Row -->
-<div style="display:flex; justify-content:space-between; font-weight:800; font-size:18px; margin-bottom:10px;">
-<div style="color:#E66A6A;">Not Allowed</div>
-<div style="color:#58B77B;">Productive Use</div>
-<div style="color:#F1B44C;">Over-Reliance</div>
-</div>
+## Key Considerations
 
-<!-- Spectrum Line -->
-<div style="position:relative; height:8px; background:linear-gradient(to right, #E66A6A, #F1B44C, #58B77B); border-radius:999px; margin-bottom:40px;">
-</div>
+#### When developing or adapting an AI use policy, consider the following:
 
-<!-- Cards -->
-<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;">
+* #### **Responsible Use and Critical Thinking**: Students and staff should treat AI as a tool, not an authority. AI-generated content should be reviewed, questioned, and verified, as it may contain inaccuracies or bias.
 
-<!-- Not Allowed -->
-<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#FFF5F5;">
-<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Not Allowed</div>
-<div style="font-size:16px; margin-bottom:8px;">Replaces student thinking</div>
-<div style="font-size:15px; line-height:1.4; color:#555;">
-Submitting AI-generated answers as final work
-</div>
-</div>
+* #### **Transparency and Academic Integrity**: Expectations should clarify when and how AI can be used. Students should disclose and cite AI use, and unacknowledged AI-generated work should be treated as a violation of academic integrity.
 
-<!-- Productive Use -->
-<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#F3FBF6;">
-<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Productive Use</div>
-<div style="font-size:16px; margin-bottom:8px;">AI supports learning</div>
-<div style="font-size:15px; line-height:1.4; color:#555;">
-Using AI to brainstorm, revise, or get feedback
-</div>
-</div>
+* #### **Data Privacy and Safety**: Students and staff should avoid entering personal or sensitive information into AI tools, and schools should use approved tools that meet privacy standards.
 
-<!-- Over-Reliance -->
-<div style="border:1px solid #E8ECF0; border-radius:16px; padding:20px; background:#FFF9F2;">
-<div style="font-weight:800; font-size:18px; margin-bottom:8px;">Over-Reliance</div>
-<div style="font-size:16px; margin-bottom:8px;">Student defers thinking to AI</div>
-<div style="font-size:15px; line-height:1.4; color:#555;">
-Copying and lightly editing AI output
-</div>
-</div>
+* #### **Access and Equity**: Policies should ensure AI use does not depend on unequal access to devices, accounts, or tools.
 
-</div>
+* #### **Appropriate Use and Conduct**: AI should not be used to create harmful or misleading content and should align with existing conduct policies. 
 
-</div>
+#### Effective policies are clear, practical, and developed with input from educators, students, families, and community members, while reflecting local context and available resources. 
 
-####  Before assigning work, clarify:
-* #### Is AI allowed?
-* #### If yes, for what purpose?
-* #### What must be original?
-
-#### This clarity reduces confusion and prevents many integrity issues before they arise.
-
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ For sample language and additional guidance check out TeachAI's <a href="https://www.teachai.org/toolkit-addendums" target="blank" rel="noopener noreferrer">Framework</a>.
+</p>
 MARKDOWN
