@@ -300,7 +300,10 @@ function initializeCodeMirror6(
           instructionsText: adapter.getValue(),
           theme: 'Dark',
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else if (game === 'Aichat' || game === 'Music') {
       createReactRoot(
@@ -308,14 +311,20 @@ function initializeCodeMirror6(
           instructionsText: adapter.getValue(),
           theme: 'Light',
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else {
       createReactRoot(
         React.createElement(SafeMarkdown, {
           markdown: adapter.getValue(),
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   };

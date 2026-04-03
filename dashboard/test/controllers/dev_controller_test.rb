@@ -22,13 +22,13 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   setup do
     CDO.stubs(github_webhook_secret: FAKE_GITHUB_WEBHOOK_SECRET)
     CDO.stubs(slack_start_build_token: FAKE_SLACK_SLASH_TOKEN)
-    # File.stubs(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
     FileUtils.stubs(:touch).with(DevController::BUILD_STARTED_PATH)
   end
 
   test 'start-build is forbidden on production and development' do
     [:production, :development].each do |forbidden_env|
       with_rack_env(forbidden_env) do
+        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).never
         FileUtils.expects(:touch).never
         post '/api/dev/start-build', params: SLACK_PARAMS
         assert_response :forbidden
@@ -39,6 +39,7 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   test 'start-build is allowed on most environments' do
     [:staging, :test, :adhoc, :levelbuilder].each do |allowed_env|
       with_rack_env(allowed_env) do
+        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
         FileUtils.expects(:touch).once
         post '/api/dev/start-build', params: SLACK_PARAMS
         assert_response :success
@@ -64,6 +65,7 @@ class DevControllerTest < ActionDispatch::IntegrationTest
 
   test 'start-build generates a start_build file if none exists' do
     with_rack_env(:test) do
+      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
       FileUtils.expects(:touch).once
       post '/api/dev/start-build', params: SLACK_PARAMS
 
@@ -77,7 +79,7 @@ class DevControllerTest < ActionDispatch::IntegrationTest
 
   test 'start-build succeeds without action if start_build exists' do
     with_rack_env(:test) do
-      File.stubs(:file?).with(DevController::BUILD_STARTED_PATH).returns(true)
+      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(true)
       FileUtils.expects(:touch).never
       post '/api/dev/start-build', params: SLACK_PARAMS
 

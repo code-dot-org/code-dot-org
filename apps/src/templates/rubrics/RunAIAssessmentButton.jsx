@@ -202,7 +202,7 @@ function RunAIAssessmentButton({
             style={{margin: 0}}
             disabled={status !== STATUS.READY && status !== STATUS.ERROR}
           >
-            {polling && <i className="fa fa-spinner fa-spin" />}
+            {polling && <i className="fa-solid fa-spinner fa-spin" />}
           </Button>
         </div>
       )}

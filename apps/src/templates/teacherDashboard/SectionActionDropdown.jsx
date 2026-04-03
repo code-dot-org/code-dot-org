@@ -216,7 +216,7 @@ class SectionActionDropdown extends Component {
           </PopUpMenu.Item>
           {sectionData.studentCount === 0 && (
             <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
-              <FontAwesome icon=" fa-times-circle" style={styles.xIcon} />
+              <FontAwesome icon="circle-xmark" style={styles.xIcon} />
               {i18n.deleteSection()}
             </PopUpMenu.Item>
           )}

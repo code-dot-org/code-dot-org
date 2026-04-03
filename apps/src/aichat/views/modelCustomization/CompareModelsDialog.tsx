@@ -4,7 +4,6 @@ import React from 'react';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
@@ -57,7 +56,7 @@ const CompareModelsDialog: React.FunctionComponent<{
           onClick={onClose}
           type="button"
         >
-          {aichatI18n.modelComparisonCompletionButton()}
+          {'Finish'}
         </MuiButton>
       </div>
     </AccessibleDialog>

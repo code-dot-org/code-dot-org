@@ -24,6 +24,9 @@ $(document).ready(function () {
         inSection={'true' === element.getAttribute('data-in-section')}
       />
     </Provider>,
-    element
+    element,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
