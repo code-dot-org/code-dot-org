@@ -2,16 +2,17 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import DCDO from '@cdo/apps/dcdo';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-// import HttpClient from '../util/HttpClient';
+import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
-// import AiDiffSidebar from './AiDiffSidebar';
+import AiDiffSidebar from './AiDiffSidebar';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
-import {Context} from './types';
-// import {ChatThread, chatThreadValidator, Context} from './types';
+import {ChatThread, chatThreadValidator, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -31,28 +32,28 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   unreadNotificationCount,
   personalizationData,
 }) => {
-  // const [threads, setThreads] = useState<ChatThread[]>();
+  const [threads, setThreads] = useState<ChatThread[]>();
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   const dispatch = useAppDispatch();
 
-  // async function asyncFetchThreads(): Promise<ChatThread[]> {
-  //   const response = await HttpClient.fetchJson<ChatThread[]>(
-  //     `/aidiff_threads`,
-  //     {},
-  //     chatThreadValidator
-  //   );
-  //   return response.value;
-  // }
+  async function asyncFetchThreads(): Promise<ChatThread[]> {
+    const response = await HttpClient.fetchJson<ChatThread[]>(
+      `/aidiff_threads`,
+      {},
+      chatThreadValidator
+    );
+    return response.value;
+  }
 
   const fetchThreads = useCallback(() => {
-    // asyncFetchThreads().then(response => {
-    //   setThreads(
-    //     response?.sort((a, b) => {
-    //       return a.updatedAt > b.updatedAt ? -1 : 1;
-    //     })
-    //   );
-    // });
+    asyncFetchThreads().then(response => {
+      setThreads(
+        response?.sort((a, b) => {
+          return a.updatedAt > b.updatedAt ? -1 : 1;
+        })
+      );
+    });
   }, []);
 
   useEffect(() => {
@@ -78,16 +79,21 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     [dispatch, context, curriculumCourses]
   );
 
+  const drawerIsEnabled =
+    experiments.isEnabled('ai-diff-drawer') || DCDO.get('ai-diff-drawer', true);
+
   return (
     <div className={style.aiDiffWorkspace}>
-      {/* <AiDiffSidebar
-        context={context}
-        threads={threads}
-        setShowNotifications={setShowNotifications}
-        showNotifications={showNotifications}
-        unreadNotificationCount={unreadNotificationCount}
-        curriculumCourses={curriculumCourses}
-      /> */}
+      {!drawerIsEnabled && (
+        <AiDiffSidebar
+          context={context}
+          threads={threads}
+          setShowNotifications={setShowNotifications}
+          showNotifications={showNotifications}
+          unreadNotificationCount={unreadNotificationCount}
+          curriculumCourses={curriculumCourses}
+        />
+      )}
       {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (

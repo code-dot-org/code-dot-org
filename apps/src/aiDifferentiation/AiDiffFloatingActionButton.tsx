@@ -182,7 +182,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
-  const classes = showPulse
+  const classes = drawerIsEnabled
+    ? style.floatingActionButtonRight
+    : showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
@@ -220,7 +222,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         className={classes}
         onClick={handleClick}
         type="button"
-        // eslint-disable-next-line react/forbid-dom-props
         style={{
           right: chatIsOpen
             ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
