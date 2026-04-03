@@ -51,19 +51,15 @@ resource "terraform_data" "strip_finalizers_before_delete" {
   provisioner "local-exec" {
     when    = destroy
     command = <<-EOT
-      ca_file="$(mktemp)"
-      trap 'rm -f "$ca_file"' EXIT
-      printf '%s' '${base64decode(self.input.cluster_certificate_authority_data)}' >"$ca_file"
-      token="$(aws eks get-token --region='${self.input.cluster_region}' --cluster-name='${self.input.cluster_name}' --query='status.token' --output=text)"
-
-      kubectl \
-        --server='${self.input.cluster_endpoint}' \
-        --certificate-authority="$ca_file" \
-        --token="$token" \
-        --namespace=argocd \
-        patch application '${self.input.application_name}' \
-        --type=merge \
-        -p '{"metadata":{"finalizers":[]}}'
+      nohup timeout 10m bash '${path.module}/../bin/strip-finalizers-before-delete.sh' \
+        "$PPID" \
+        '${self.input.application_name}' \
+        '${self.input.cluster_certificate_authority_data}' \
+        '${self.input.cluster_endpoint}' \
+        '${self.input.cluster_name}' \
+        '${self.input.cluster_region}' \
+        >'${path.module}/strip-finalizers-before-delete.log' 2>&1 </dev/null &
+      exit 0
     EOT
   }
 }
