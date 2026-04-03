@@ -99,7 +99,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const hasChatHistory = events.length > 0;
   const resolvedLastMessagePostText = useMemo(() => {
     if (renderLastMessagePostText) {
-      return renderLastMessagePostText(() => scrollToLastMessage());
+      return renderLastMessagePostText(scrollToLastMessage);
     }
     return lastMessagePostText;
   }, [lastMessagePostText, renderLastMessagePostText, scrollToLastMessage]);

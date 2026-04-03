@@ -67,6 +67,13 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     dispatch(rejectAiTutorVersion(files));
   }, [dispatch, files]);
 
+  const handleEnterAcceptMode = useCallback(() => {
+    setIsAcceptMode(true);
+    if (onRequestScrollToBottom) {
+      window.requestAnimationFrame(onRequestScrollToBottom);
+    }
+  }, [onRequestScrollToBottom]);
+
   return (
     <div className={moduleStyles.container}>
       <div className={moduleStyles.fileList}>
@@ -98,12 +105,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             color="primary"
             size="small"
             className={moduleStyles.actionButton}
-            onClick={() => {
-              setIsAcceptMode(true);
-              if (onRequestScrollToBottom) {
-                window.requestAnimationFrame(onRequestScrollToBottom);
-              }
-            }}
+            onClick={handleEnterAcceptMode}
             type="button"
             startIcon={
               <FontAwesomeV6Icon

@@ -3,7 +3,7 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
   ChatButtonClickHandler,
@@ -92,6 +92,21 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
+
   if (loading || !modelParameters) {
     return (
       <div className={moduleStyles.loading}>
@@ -99,16 +114,6 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
       </div>
     );
   }
-
-  const renderLastMessagePostText =
-    viewingAiTutorVersionFileUpdates && versionFiles
-      ? (onRequestScrollToBottom: () => void) => (
-          <AiTutorVersionActions
-            files={versionFiles}
-            onRequestScrollToBottom={onRequestScrollToBottom}
-          />
-        )
-      : undefined;
 
   return (
     <div className={moduleStyles.container}>
