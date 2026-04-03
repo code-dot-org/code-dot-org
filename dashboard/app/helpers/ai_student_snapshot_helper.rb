@@ -147,7 +147,6 @@ module AiStudentSnapshotHelper
   end
 
   def self.client
-    # TODO before merge: CHANGE TO NEW KEY
     Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end
