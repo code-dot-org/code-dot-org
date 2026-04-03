@@ -85,15 +85,17 @@ export const VIDEO_OPTIONS = [
 export type VideoOption = (typeof VIDEO_OPTIONS)[number];
 
 /**
- * Video file metadata used to build the {{#showVideos}} prompt section.
- * Hashes are fixed test values that approximate the webpack content-hash
- * format used in production. Each entry maps to a VIDEO_OPTIONS filename.
+ * Video file metadata — canonical data lives in data/videoFiles.json.
+ * This type is kept here for reference; the runtime data is fetched from the server.
  */
-export const VIDEO_FILE_DATA: ReadonlyArray<{
+export type VideoFileData = {
   filename: VideoOption;
   hash: string;
   description: string;
-}> = [
+};
+
+/** @deprecated Use data/videoFiles.json via server API instead. */
+export const VIDEO_FILE_DATA: ReadonlyArray<VideoFileData> = [
   {
     filename: 'Variables_V1.json',
     hash: 'abc1def2ghi3jkl4mno567',

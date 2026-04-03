@@ -1,0 +1,522 @@
+{
+  "programming-fundamentals-lesson11-level1_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Add your code to the workspace. \n    - Hint: Remember to use the `set_paint()` method to give your `Painter` a specific amount of paint.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\n\n- *Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/pythonlab/lEeO0M85P_A_B2Jcx0d2yC2yibkCG10AF_gD4ioh5Ws/view\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to remind yourself how the `Painter` object and methods work.\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson11-level1_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. Add your code to the workspace. \n    - Hint: Remember to use the `set_paint()` method to give your `Painter` a specific amount of paint.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson11-level1_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Add your code to the workspace. \n    - Hint: Remember to use the `set_paint()` method to give your `Painter` a specific amount of paint.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\n\n- *Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/pythonlab/lEeO0M85P_A_B2Jcx0d2yC2yibkCG10AF_gD4ioh5Ws/view\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to remind yourself how the `Painter` object and methods work.\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson11-level1_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Add your code to the workspace. \n    - Hint: Remember to use the `set_paint()` method to give your `Painter` a specific amount of paint.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\n\n- *Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/pythonlab/lEeO0M85P_A_B2Jcx0d2yC2yibkCG10AF_gD4ioh5Ws/view\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to remind yourself how the `Painter` object and methods work.\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level1_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "What do you think this program will do when it runs?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level1_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "What do you think this program will do when it runs?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level1_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "What do you think this program will do when it runs?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level1_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "# Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level4_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is trying to follow a winding path, but something's off! The `Painter` turns left *no matter what*, even when the `Painter` is supposed to move forward.\n\n1. Look at the `move_or_turn()` function in `custom.py`.\n\n   * It checks if the `Painter` can move. If so, the `Painter` moves forward.\n   \n   * But right now, the `Painter` *always* turns left, *even when moving forward*, which causes problems!\n   \n2. Find and fix the bug by adding an `else` statement so the `Painter` only turns left when it can't move forward.\n\n&nbsp;\n\n![](https://images.code.org/62b990764f2a161d41522ea3d621a0d8-image-1745168571995.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIf both the `if` and the following line run every time, it's not really a choice! Use `else` to make sure **only one** action happens each time the function runs.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level4_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is trying to follow a winding path, but something's off! The `Painter` turns left *no matter what*, even when the `Painter` is supposed to move forward.\n\n1. Look at the `move_or_turn()` function in `custom.py`.\n\n   * It checks if the `Painter` can move. If so, the `Painter` moves forward.\n   \n   * But right now, the `Painter` *always* turns left, *even when moving forward*, which causes problems!\n   \n2. Find and fix the bug by adding an `else` statement so the `Painter` only turns left when it can't move forward.\n\n&nbsp;\n\n![](https://images.code.org/62b990764f2a161d41522ea3d621a0d8-image-1745168571995.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIf both the `if` and the following line run every time, it's not really a choice! Use `else` to make sure **only one** action happens each time the function runs.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level4_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is trying to follow a winding path, but something's off! The `Painter` turns left *no matter what*, even when the `Painter` is supposed to move forward.\n\n1. Look at the `move_or_turn()` function in `custom.py`.\n\n   * It checks if the `Painter` can move. If so, the `Painter` moves forward.\n   \n   * But right now, the `Painter` *always* turns left, *even when moving forward*, which causes problems!\n   \n2. Find and fix the bug by adding an `else` statement so the `Painter` only turns left when it can't move forward.\n\n&nbsp;\n\n![](https://images.code.org/62b990764f2a161d41522ea3d621a0d8-image-1745168571995.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIf both the `if` and the following line run every time, it's not really a choice! Use `else` to make sure **only one** action happens each time the function runs.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level4_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. Run your code and discuss the outcome. \n   - *Discuss: What error occurred when running this code?*\n    - *Tip: Debug by reading the error message.*\n2. Turn the current `if/else` statement into a *nested* condtional.\n   - Add an `if` statement to check if the Painter can move *before* the current `if/else` statement that is checking user input. \n   - Run your code to make sure the error doesn't occur anymore.\n3. *Discuss: There's no more error message, so why does the `Painter`* ***still*** *not do anything?*\n    - *Discuss: What is the `Painter` supposed to do if it can't move?*\n    - *Tip: Since your `Painter` hasn't been able to paint anything, your code is in an infinite while loop ... press \"Stop\" to be able to modify your program in the next step.*\n4. Add the `else` statement to move the `Painter` to a spot where they *can* move and plant with no obstacles.\n   - *Tip: Make sure your indentation in correct for your `if jordan.can_move() / else` conditional and the nested `if what_to_plant / else` conditional.*\n5. Run and test your code again to make sure the `Painter` can plant something.\n ",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level1_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "What do you think the `Painter` will do when the code is run?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level1_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "What do you think the `Painter` will do when the code is run?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level1_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "What do you think the `Painter` will do when the code is run?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level2_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Create a `Painter` using\n\n   ```\n   painter_name = Painter()\n   ```\n   \n   For example:\n   \n   ```\n   alicia = Painter()\n   ```\n\n&nbsp;\n\n2. Move the `Painter` forward **one space** using\n\n   ```\n   painter_name.move()\n   ```\n   \n   For example:\n   \n   ```\n   alicia.move()\n   ```\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace to learn more about the `Painter` object and `move()` method in the Python documentation.\n   \n   ![python documentation book icon](https://images.code.org/901506f120f08a705ac5c65077f31e2b-image-1746033222447.12.23 AM.png)\n---\n \n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can name the `Painter` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level2_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Create a `Painter` using\n\n   ```\n   painter_name = Painter()\n   ```\n   \n   For example:\n   \n   ```\n   alicia = Painter()\n   ```\n\n&nbsp;\n\n2. Move the `Painter` forward **one space** using\n\n   ```\n   painter_name.move()\n   ```\n   \n   For example:\n   \n   ```\n   alicia.move()\n   ```\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace to learn more about the `Painter` object and `move()` method in the Python documentation.\n   \n   ![python documentation book icon](https://images.code.org/901506f120f08a705ac5c65077f31e2b-image-1746033222447.12.23 AM.png)\n---\n \n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can name the `Painter` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level2_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Create a `Painter` using\n\n   ```\n   painter_name = Painter()\n   ```\n   \n   For example:\n   \n   ```\n   alicia = Painter()\n   ```\n\n&nbsp;\n\n2. Move the `Painter` forward **one space** using\n\n   ```\n   painter_name.move()\n   ```\n   \n   For example:\n   \n   ```\n   alicia.move()\n   ```\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace to learn more about the `Painter` object and `move()` method in the Python documentation.\n   \n   ![python documentation book icon](https://images.code.org/901506f120f08a705ac5c65077f31e2b-image-1746033222447.12.23 AM.png)\n---\n \n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can name the `Painter` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level2_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This: \n1. Click on `painter.py` to look at the contents of the file.\n2. Look at lines 4-7 to determine the default values given to a Painter object.\n    - **Discuss:** What X and Y position do you expect the Painter to start at?\n    - Which direction will it face?\n    - How much paint will it have?\n3. Take a look at the 4 methods shown: `move()`, `turn_left()`, `paint`, and `take_paint`. \n    - **Discuss:** What do you think each one does?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level7a_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nHmmm . . . there are some issues with this code that's preventing the `Painter` from getting to the other end of The Neighborhood. Find and fix the bugs!\n\n![](https://images.code.org/fb9b77e97ce9d69299230a1cf6f44f10-image-1744678546469.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level7a_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nHmmm . . . there are some issues with this code that's preventing the `Painter` from getting to the other end of The Neighborhood. Find and fix the bugs!\n\n![](https://images.code.org/fb9b77e97ce9d69299230a1cf6f44f10-image-1744678546469.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level7a_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nHmmm . . . there are some issues with this code that's preventing the `Painter` from getting to the other end of The Neighborhood. Find and fix the bugs!\n\n![](https://images.code.org/fb9b77e97ce9d69299230a1cf6f44f10-image-1744678546469.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level8_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to stop in front of the traffic cone, but it stopped next to it instead. Maybe the instructions got mixed up?\n\n![](https://images.code.org/b2fe0af49dd0a8390420848dc2687ec6-image-1744677255860.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level8_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to stop in front of the traffic cone, but it stopped next to it instead. Maybe the instructions got mixed up?\n\n![](https://images.code.org/b2fe0af49dd0a8390420848dc2687ec6-image-1744677255860.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level8_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to stop in front of the traffic cone, but it stopped next to it instead. Maybe the instructions got mixed up?\n\n![](https://images.code.org/b2fe0af49dd0a8390420848dc2687ec6-image-1744677255860.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level9_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` has been asked to help repaint the street outside the school. You planned ahead by storing helper functions in `custom.py` -- one to take paint and one to paint the street - but something isn't working.\n\n1. Look at the bottom of `main.py`. You'll see a call to `paint_spaces()` . . . but that function doesn't exist in `custom.py`!\n\n2. Right now, the function paints twice before moving — that's not what we want! Change the order so the `Painter` paints, moves, paints again, and repeats until three spaces are painted.\n\n&nbsp;\n\n![](https://images.code.org/78cf07363ea224785d4b59690a4cc85e-image-1744815714223.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level9_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` has been asked to help repaint the street outside the school. You planned ahead by storing helper functions in `custom.py` -- one to take paint and one to paint the street - but something isn't working.\n\n1. Look at the bottom of `main.py`. You'll see a call to `paint_spaces()` . . . but that function doesn't exist in `custom.py`!\n\n2. Right now, the function paints twice before moving — that's not what we want! Change the order so the `Painter` paints, moves, paints again, and repeats until three spaces are painted.\n\n&nbsp;\n\n![](https://images.code.org/78cf07363ea224785d4b59690a4cc85e-image-1744815714223.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level9_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` has been asked to help repaint the street outside the school. You planned ahead by storing helper functions in `custom.py` -- one to take paint and one to paint the street - but something isn't working.\n\n1. Look at the bottom of `main.py`. You'll see a call to `paint_spaces()` . . . but that function doesn't exist in `custom.py`!\n\n2. Right now, the function paints twice before moving — that's not what we want! Change the order so the `Painter` paints, moves, paints again, and repeats until three spaces are painted.\n\n&nbsp;\n\n![](https://images.code.org/78cf07363ea224785d4b59690a4cc85e-image-1744815714223.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level1_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated `move()` commands with a `while` loop.\n\n2. Use `painter_name.can_move()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `can_move()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` reaches a wall or obstacle using\n\n```\nwhile painter_name.can_move():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level1_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated `move()` commands with a `while` loop.\n\n2. Use `painter_name.can_move()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `can_move()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` reaches a wall or obstacle using\n\n```\nwhile painter_name.can_move():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level1_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated `move()` commands with a `while` loop.\n\n2. Use `painter_name.can_move()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `can_move()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` reaches a wall or obstacle using\n\n```\nwhile painter_name.can_move():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level1_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "# Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level2_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.has_paint()` as the loop condition.\n\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `has_paint()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is out of paint using:\n\n```\nwhile painter_name.has_paint():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level2_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.has_paint()` as the loop condition.\n\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `has_paint()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is out of paint using:\n\n```\nwhile painter_name.has_paint():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level2_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.has_paint()` as the loop condition.\n\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `has_paint()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is out of paint using:\n\n```\nwhile painter_name.has_paint():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level2_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n1. Run your code and observe the outcome.\n    - *Discuss: How do the `while` loops simplify your code?*\n2. Add a comment on line 9 to explain what the `while` loop does.\n3. Comment out lines 9-12 and uncomment the second section, lines 10-15. Run the code and observe how it performs the same task.\n    - *Discuss: How does using the `move_and_paint()` function simplify your code?*\n4. Add a `painter.turn_right()` method after the `move_and_paint()` function call. Then call the `move_and_paint()` function a second time.\n    - *Hint: You'll need a `turn_right` function.*\n    - *Discuss: *What happens when you reuse the `move_and_paint` function after making the `Painter` turn?*\n ",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level3_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.is_on_bucket()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `is_on_bucket()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is no longer standing on a paint bucket using:\n\n```\nwhile painter_name.is_on_bucket():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level3_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.is_on_bucket()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `is_on_bucket()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is no longer standing on a paint bucket using:\n\n```\nwhile painter_name.is_on_bucket():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level3_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Replace the repeated lines of code with a `while` loop.\n\n2. Use `painter_name.is_on_bucket()` as the loop condition.\n\n<br/>\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `is_on_bucket()`.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nYou can repeat actions until the `Painter` is no longer standing on a paint bucket using:\n\n```\nwhile painter_name.is_on_bucket():\n   # CODE TO REPEAT\n```",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level3_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n1. Run your code and observe the outcome.\n2. Rename the `collect_paint()` function to `collect_and_move()`. Add a call to `painter.move()` after the `while` loop is done executing.\n3. Call `collect_and_move()` multiple times to test the updated behavior. Run your code and observe the outcome.\n4. *Discuss*: \n    - How is the `while painter.is_on_bucket()` loop useful?\n    - Why is it useful to use the function `collect_and_move()` instead of writing the loop directly each time?\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level4_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to move and paint while it still has paint, but something isn't working. Help fix the code so it runs correctly.\n\n&nbsp;\n\n![](https://images.code.org/fde9632335bf10f4c48f2f65a0c4758c-image-1744861268117.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIn Python, all the code you want to repeat must be indented under the `while` statement. If it's not indented, it won't run as part of the loop!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level4_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to move and paint while it still has paint, but something isn't working. Help fix the code so it runs correctly.\n\n&nbsp;\n\n![](https://images.code.org/fde9632335bf10f4c48f2f65a0c4758c-image-1744861268117.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIn Python, all the code you want to repeat must be indented under the `while` statement. If it's not indented, it won't run as part of the loop!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level4_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to move and paint while it still has paint, but something isn't working. Help fix the code so it runs correctly.\n\n&nbsp;\n\n![](https://images.code.org/fde9632335bf10f4c48f2f65a0c4758c-image-1744861268117.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nIn Python, all the code you want to repeat must be indented under the `while` statement. If it's not indented, it won't run as part of the loop!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level4_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. Run your code and observe the outcome.\n2. *Discuss: How could a `while` loop with `painter.has_paint()` be used in this function to remove repetitive lines of code?*\n3. Modify the code by adding a `while` loop. Then click Run to test your code.\n4. *Discuss: What do you think will happen when `paint_line` is run and the `Painter` runs out of paint or reaches an obstacle?*\n5. Reverse the order of the actions inside the loop to make the `Painter` **move first** and then paint. Run your code and observe the `Painter`'s behavior.\n    \n**Optional Extension:** After the loop, have the `Painter` perform a single action, such as turning or moving, to prepare for a new task.\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level5_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to paint a path to the taxi, but it's not working! Figure out why the `Painter` is not painting and fix the code so it paints while it has paint.\n\n&nbsp;\n\n![](https://images.code.org/919ee91f65fc96fa6b85ff42f9d2fd03-image-1744861774383.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nA `while` loop only runs if the condition is true at the beginning. If it's false right away, the loop is skipped completely.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level5_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to paint a path to the taxi, but it's not working! Figure out why the `Painter` is not painting and fix the code so it paints while it has paint.\n\n&nbsp;\n\n![](https://images.code.org/919ee91f65fc96fa6b85ff42f9d2fd03-image-1744861774383.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nA `while` loop only runs if the condition is true at the beginning. If it's false right away, the loop is skipped completely.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level5_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nThe `Painter` is supposed to paint a path to the taxi, but it's not working! Figure out why the `Painter` is not painting and fix the code so it paints while it has paint.\n\n&nbsp;\n\n![](https://images.code.org/919ee91f65fc96fa6b85ff42f9d2fd03-image-1744861774383.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nA `while` loop only runs if the condition is true at the beginning. If it's false right away, the loop is skipped completely.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level8a_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\nLet's take this one step at a time! Click the arrow to expand the step when you're ready.\n\n:::details [<span style=\"font-size:1.3em;\">1. Import <code>custom.py</code> from your Backpack</span>]\nImport `custom.py` into your project so you can use the functions you've written already -- and add new functions too!\n\n   <details style=\"margin-left:1.5em;\">\n   \t\t<summary>How do I import from my Backpack?</summary>\n        <img src=\"https://images.code.org/4179baede41d67d2a0eb6a4e58209428-image-1744826414428.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">2. Define the <code>take\\_all\\_paint()</code> function</span>]\nIn `custom.py`, define the `take_all_paint(this_painter)` function to make the `Painter` `take_paint()` from the paint bucket while it `is_on_bucket()`\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">3. Save <code>custom.py</code> to your Backpack</span>]\nSave `custom.py` to your **Backpack** so you can reuse your new functions later!\n\n   <details>\n   \t\t<summary>How do I save files to my Backpack?</summary>\n        <img src=\"https://images.code.org/5d21b631aa68d348a70dec9024a8f086-image-1744817649137.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">4. Import your functions</span>]\nIn `main.py`, import your functions using this format:\n\n```\nfrom custom import function_name, function_name, function_name\n```\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">5. Use your new function to take all the paint from the paint bucket</span>]\nIn your main program, use your new function to take the paint from the paint bucket.\n\n&nbsp;\n:::\n\n<span></span>\n\n![](https://images.code.org/efc0a3d02b7f4c0aeb105349bd68739f-takepaint.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level8a_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\nLet's take this one step at a time! Click the arrow to expand the step when you're ready.\n\n:::details [<span style=\"font-size:1.3em;\">1. Import <code>custom.py</code> from your Backpack</span>]\nImport `custom.py` into your project so you can use the functions you've written already -- and add new functions too!\n\n   <details style=\"margin-left:1.5em;\">\n   \t\t<summary>How do I import from my Backpack?</summary>\n        <img src=\"https://images.code.org/4179baede41d67d2a0eb6a4e58209428-image-1744826414428.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">2. Define the <code>take\\_all\\_paint()</code> function</span>]\nIn `custom.py`, define the `take_all_paint(this_painter)` function to make the `Painter` `take_paint()` from the paint bucket while it `is_on_bucket()`\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">3. Save <code>custom.py</code> to your Backpack</span>]\nSave `custom.py` to your **Backpack** so you can reuse your new functions later!\n\n   <details>\n   \t\t<summary>How do I save files to my Backpack?</summary>\n        <img src=\"https://images.code.org/5d21b631aa68d348a70dec9024a8f086-image-1744817649137.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">4. Import your functions</span>]\nIn `main.py`, import your functions using this format:\n\n```\nfrom custom import function_name, function_name, function_name\n```\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">5. Use your new function to take all the paint from the paint bucket</span>]\nIn your main program, use your new function to take the paint from the paint bucket.\n\n&nbsp;\n:::\n\n<span></span>\n\n![](https://images.code.org/efc0a3d02b7f4c0aeb105349bd68739f-takepaint.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level8a_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\nLet's take this one step at a time! Click the arrow to expand the step when you're ready.\n\n:::details [<span style=\"font-size:1.3em;\">1. Import <code>custom.py</code> from your Backpack</span>]\nImport `custom.py` into your project so you can use the functions you've written already -- and add new functions too!\n\n   <details style=\"margin-left:1.5em;\">\n   \t\t<summary>How do I import from my Backpack?</summary>\n        <img src=\"https://images.code.org/4179baede41d67d2a0eb6a4e58209428-image-1744826414428.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">2. Define the <code>take\\_all\\_paint()</code> function</span>]\nIn `custom.py`, define the `take_all_paint(this_painter)` function to make the `Painter` `take_paint()` from the paint bucket while it `is_on_bucket()`\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">3. Save <code>custom.py</code> to your Backpack</span>]\nSave `custom.py` to your **Backpack** so you can reuse your new functions later!\n\n   <details>\n   \t\t<summary>How do I save files to my Backpack?</summary>\n        <img src=\"https://images.code.org/5d21b631aa68d348a70dec9024a8f086-image-1744817649137.png\" />\n   </details>\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">4. Import your functions</span>]\nIn `main.py`, import your functions using this format:\n\n```\nfrom custom import function_name, function_name, function_name\n```\n\n&nbsp;\n:::\n\n<span></span>\n\n:::details [<span style=\"font-size:1.3em;\">5. Use your new function to take all the paint from the paint bucket</span>]\nIn your main program, use your new function to take the paint from the paint bucket.\n\n&nbsp;\n:::\n\n<span></span>\n\n![](https://images.code.org/efc0a3d02b7f4c0aeb105349bd68739f-takepaint.gif)",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level1_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code to see what the `Painter` currently does.\n\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\n\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\n\n4. Run the program to check your result.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nFor this problem, your condition will be `is_facing_west()`\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level1_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code to see what the `Painter` currently does.\n\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\n\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\n\n4. Run the program to check your result.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nFor this problem, your condition will be `is_facing_west()`\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level1_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code to see what the `Painter` currently does.\n\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\n\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\n\n4. Run the program to check your result.\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nFor this problem, your condition will be `is_facing_west()`\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level1_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. **Run the code without making any changes.** Observe what happens.\n2. Comment out the two conditional statements (lines 11-17) and uncomment the `move_if_can()` function on lines 20-26. Then click Run.\n3. *Discuss: What do you think will happen when you call the function with a `north` argument? What will the `Painter` do? Give it a try!*\n4. Call the function with different directions as the argument (e.g. `move_if_can(\"west\")`, `move_if_can(\"east\")`, etc).\n- *Discuss:*\n\t- How does the function simplify controlling the `Painter`’s movement?\n\t- Why does the `Painter` skip moving if the condition is `False`?\n",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level2a_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code -- notice that the `Painter` doesn't turn when it should.\n\n2. Modify the `if` statement that checks whether the `Painter` `can_move(\"south\")`\n\n3. Run the program to see if the `Painter` turns right through the opening in the wall.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level2a_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code -- notice that the `Painter` doesn't turn when it should.\n\n2. Modify the `if` statement that checks whether the `Painter` `can_move(\"south\")`\n\n3. Run the program to see if the `Painter` turns right through the opening in the wall.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level2a_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the existing code -- notice that the `Painter` doesn't turn when it should.\n\n2. Modify the `if` statement that checks whether the `Painter` `can_move(\"south\")`\n\n3. Run the program to see if the `Painter` turns right through the opening in the wall.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level3_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Review the existing code -- it sets up a `Painter` and performs a series of actions.\n\n2. At the bottom, write an `if` statement that checks if the `Painter` `is_on_paint()`\n\n   * If the condition is true, the `Painter` should `turn_right()` and `move()`\n   \n3. Run the program and observe whether the `Painter` moves only when it is on paint.\n\n&nbsp;\n\n![](https://images.code.org/ac3c2976bccac2a5c9d65b0d7b39868b-image-1745027474432.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nRemember to indent both actions under the `if`!\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level3_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Review the existing code -- it sets up a `Painter` and performs a series of actions.\n\n2. At the bottom, write an `if` statement that checks if the `Painter` `is_on_paint()`\n\n   * If the condition is true, the `Painter` should `turn_right()` and `move()`\n   \n3. Run the program and observe whether the `Painter` moves only when it is on paint.\n\n&nbsp;\n\n![](https://images.code.org/ac3c2976bccac2a5c9d65b0d7b39868b-image-1745027474432.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nRemember to indent both actions under the `if`!\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level3_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Review the existing code -- it sets up a `Painter` and performs a series of actions.\n\n2. At the bottom, write an `if` statement that checks if the `Painter` `is_on_paint()`\n\n   * If the condition is true, the `Painter` should `turn_right()` and `move()`\n   \n3. Run the program and observe whether the `Painter` moves only when it is on paint.\n\n&nbsp;\n\n![](https://images.code.org/ac3c2976bccac2a5c9d65b0d7b39868b-image-1745027474432.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse this format for writing an `if` statement:\n\n```\nif condition:\n   do_something()\n```\n\nRemember to indent both actions under the `if`!\n\n<br/>",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level3_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. **Run and Discuss:**\n   - What happens when the `Painter` moves?\n   - Does the `Painter` paint along all sides of the sidewalk like the image below?\n   - What seems to be missing?\n2. The function `move_and_paint_if_facing()` is not complete:\n   - Add the missing `if` statements so the `Painter` paints in all four directions.\n   - Test your code. Click Run to make sure you don't have any errors.\n3. The function `move_and_paint_if_facing()` needs to be called more times in order for the `Painter` to paint in all four directions.  \n    - Add the missing `while` loops at the bottom so the `Painter` moves around the entire sidewalk.\n   - Test your changes by running the program after each addition.\n4. *Discuss: What would happen if the `if` statements were in a different order? Would the program behave the same way? Why or why not?*\n   - What would happen if the `Painter` checked for `is_facing_south()` before checking `is_facing_east()`? \n   - Could the `Painter` ever skip an `if` statement?\n\n<img src=\"https://images.code.org/7d7ddded9e3a7a19bd1c191feb4dd975-conditionalsL3.png\" style=\"width:200px\"> ",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level6_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the code in both `main.py` and `custom.py`\n\n2. Identify and fix the bugs. Look for issues with indentation, condition placement, and syntax.\n\n3. Make sure the `Painter` only paints when it has paint, and only moves south if it can.\n\n&nbsp;\n\n![](https://images.code.org/00dccf64eb36a7931327f30ff6cef04f-image-1745029422554.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse `while` to repeat actions and be sure your `if` statements only run when the condition is true. Every `if` and `while` needs a colon and an indented block.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level6_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Read the code in both `main.py` and `custom.py`\n\n2. Identify and fix the bugs. Look for issues with indentation, condition placement, and syntax.\n\n3. Make sure the `Painter` only paints when it has paint, and only moves south if it can.\n\n&nbsp;\n\n![](https://images.code.org/00dccf64eb36a7931327f30ff6cef04f-image-1745029422554.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse `while` to repeat actions and be sure your `if` statements only run when the condition is true. Every `if` and `while` needs a colon and an indented block.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson9-level6_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Read the code in both `main.py` and `custom.py`\n\n2. Identify and fix the bugs. Look for issues with indentation, condition placement, and syntax.\n\n3. Make sure the `Painter` only paints when it has paint, and only moves south if it can.\n\n&nbsp;\n\n![](https://images.code.org/00dccf64eb36a7931327f30ff6cef04f-image-1745029422554.gif)\n\n---\n\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\n\nUse `while` to repeat actions and be sure your `if` statements only run when the condition is true. Every `if` and `while` needs a colon and an indented block.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level5_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "A `Painter` has been given instructions to move and turn, but the `Painter` hasn't yet been created! Fix the program by creating another `Painter`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level5_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "A `Painter` has been given instructions to move and turn, but the `Painter` hasn't yet been created! Fix the program by creating another `Painter`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level5_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "A `Painter` has been given instructions to move and turn, but the `Painter` hasn't yet been created! Fix the program by creating another `Painter`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level5_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "A `Painter` has been given instructions to move and turn, but the `Painter` hasn't yet been created! Fix the program by creating another `Painter`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level6_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n1. Add 4 new variables, one for each type:\n    - **String** (text)\n    - **Integer** (whole number)\n    - **Boolean** (`True` or `False`)\n    - **Float** (decimal number)\n2. Modify the `print` statements so that they print out each variable.\n\t- *Hint: What do you need to add to your code when printing out a string?*",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level6_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n1. Add 4 new variables, one for each type:\n    - **String** (text)\n    - **Integer** (whole number)\n    - **Boolean** (`True` or `False`)\n    - **Float** (decimal number)\n2. Modify the `print` statements so that they print out each variable.\n\t- *Hint: What do you need to add to your code when printing out a string?*",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level6_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n1. Add 4 new variables, one for each type:\n    - **String** (text)\n    - **Integer** (whole number)\n    - **Boolean** (`True` or `False`)\n    - **Float** (decimal number)\n2. Modify the `print` statements so that they print out each variable.\n\t- *Hint: What do you need to add to your code when printing out a string?*",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level6_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n1. Add 4 new variables, one for each type:\n    - **String** (text)\n    - **Integer** (whole number)\n    - **Boolean** (`True` or `False`)\n    - **Float** (decimal number)\n2. Modify the `print` statements so that they print out each variable.\n\t- *Hint: What do you need to add to your code when printing out a string?*",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level9_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "Help the `Painter` navigate through The Neighborhood to reach the food truck!\n1. Create a `Painter` object.\n2. Use the `move()` and `turn_left()` methods to navigate through The Neighborhood to reach the food truck.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level9_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "Help the `Painter` navigate through The Neighborhood to reach the food truck!\n1. Create a `Painter` object.\n2. Use the `move()` and `turn_left()` methods to navigate through The Neighborhood to reach the food truck.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson5-level9_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "Help the `Painter` navigate through The Neighborhood to reach the food truck!\n1. Create a `Painter` object.\n2. Use the `move()` and `turn_left()` methods to navigate through The Neighborhood to reach the food truck.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson6-level7_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n**Write a program using the functions created today to get the `Painter` to the traffic cone and paint the path.**\n\n- You can even create **new** functions in your `custom.py` file if you need to!\n   - *Do you need to create a new function to take all the paint?*\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson6-level7_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n**Write a program using the functions created today to get the `Painter` to the traffic cone and paint the path.**\n\n- You can even create **new** functions in your `custom.py` file if you need to!\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson6-level7_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n**Write a program using the functions created today to get the `Painter` to the traffic cone and paint the path.**\n\n- You can even create **new** functions in your `custom.py` file if you need to!\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson6-level7_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n**Write a program using the functions created today to get the `Painter` to the traffic cone and paint the path.**\n\n- You can even create **new** functions in your `custom.py` file if you need to!\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level6_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Run the code and observe what happens.\n2. Run the test to see if that gives you any insights into the bug.\n3. Decide which debugging strategy would be useful for this buggy program.\n4. Iteratively refine and test the updates you make to the code.\n\n---\n\n**Unit Guide**\n\nDocument your experience with this debugging challenge:\n- What strategy did you use?\n- How did it help?\n- When might it be most useful in the future?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level6_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Run the code and observe what happens.\n2. Run the test to see if that gives you any insights into the bug.\n3. Decide which debugging strategy would be useful for this buggy program.\n4. Iteratively refine and test the updates you make to the code.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level6_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Run the code and observe what happens.\n2. Run the test to see if that gives you any insights into the bug.\n3. Decide which debugging strategy would be useful for this buggy program.\n4. Iteratively refine and test the updates you make to the code.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson7-level6_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. Run the code and observe what happens.\n2. Run the test to see if that gives you any insights into the bug.\n3. Decide which debugging strategy would be useful for this buggy program.\n4. Iteratively refine and test the updates you make to the code.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level6_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This\n\n1. In your `custom.py` file create a function called `collect_and_move()` that repeatedly collects paint from a bucket and moves forward.\n    - Hint: Use the `while painter.is_on_bucket()` to collect multiple buckets of paint at once.\n2. Use the `collect_and_move()` function inside a loop to navigate through The Neighborhood.\n    - Hint: Remember to use the `turn_left()` method and `turn_right()` function as needed.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level6_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This\n\n1. In your `custom.py` file create a function called `collect_and_move()` that repeatedly collects paint from a bucket and moves forward.\n    - Hint: Use the `while painter.is_on_bucket()` to collect multiple buckets of paint at once.\n2. Use the `collect_and_move()` function inside a loop to navigate through The Neighborhood.\n    - Hint: Remember to use the `turn_left()` method and `turn_right()` function as needed.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level6_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This\n\n1. In your `custom.py` file create a function called `collect_and_move()` that repeatedly collects paint from a bucket and moves forward.\n    - Hint: Use the `while painter.is_on_bucket()` to collect multiple buckets of paint at once.\n2. Use the `collect_and_move()` function inside a loop to navigate through The Neighborhood.\n    - Hint: Remember to use the `turn_left()` method and `turn_right()` function as needed.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson8-level6_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This\n\n1. In your `custom.py` file create a function called `collect_and_move()` that repeatedly collects paint from a bucket and moves forward.\n    - Hint: Use the `while painter.is_on_bucket()` to collect multiple buckets of paint at once.\n2. Use the `collect_and_move()` function inside a loop to navigate through The Neighborhood.\n    - Hint: Remember to use the `turn_left()` method and `turn_right()` function as needed.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson10-level1_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. **Run the code without making any changes.** Observe what happens.\n2. Comment out the two conditional statements (lines 11-17) and uncomment the `move_if_can()` function on lines 20-26. Then click Run.\n3. *Discuss: What do you think will happen when you call the function with a `north` argument? What will the `Painter` do? Give it a try!*\n4. Call the function with different directions as the argument (e.g. `move_if_can(\"west\")`, `move_if_can(\"east\")`, etc).\n- *Discuss:*\n\t- How does the function simplify controlling the `Painter`'s movement?\n\t- Why does the `Painter` skip moving if the condition is `False`?",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson10-level1_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. **Run the code without making any changes.** Observe what happens.\n2. Comment out the two conditional statements (lines 11-17) and uncomment the `move_if_can()` function on lines 20-26. Then click Run.\n3. *Discuss: What do you think will happen when you call the function with a `north` argument?*\n4. Call the function with different directions as the argument (e.g. `move_if_can(\"west\")`, `move_if_can(\"east\")`, etc).",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson10-level1_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. **Run the code without making any changes.** Observe what happens.\n2. Comment out the two conditional statements (lines 11-17) and uncomment the `move_if_can()` function on lines 20-26. Then click Run.\n3. *Discuss: What do you think will happen when you call the function with a `north` argument?*\n4. Call the function with different directions as the argument (e.g. `move_if_can(\"west\")`, `move_if_can(\"east\")`, etc).",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level5_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `take_or_move()` function. Inside this function, write an `if/else` statement:\n\n   * If the `Painter` `is_on_bucket()`, call `take_all_paint()` to collect the paint.\n\n   * Else, call `this_painter.move()` to continue forward.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import your `take_or_move()` function. Create a `Painter` and call your function while your `Painter` `can_move()`.\n\n---\n\n**Coding Tip**\n\nUse `this_painter.is_on_bucket()` to check if the `Painter` is on a paint bucket. Then decide what to do using `if` and `else`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level5_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `take_or_move()` function with an `if/else` statement:\n   * If the `Painter` `is_on_bucket()`, call `take_all_paint()`.\n   * Else, call `this_painter.move()`.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import and use `take_or_move()` while the `Painter` `can_move()`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level5_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `take_or_move()` function with an `if/else` statement:\n   * If the `Painter` `is_on_bucket()`, call `take_all_paint()`.\n   * Else, call `this_painter.move()`.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import and use `take_or_move()` while the `Painter` `can_move()`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level5_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `take_or_move()` function with an `if/else` statement:\n   * If the `Painter` `is_on_bucket()`, call `take_all_paint()`.\n   * Else, call `this_painter.move()`.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import and use `take_or_move()` while the `Painter` `can_move()`.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level6_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "# Do This:\n\nHelp! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below.\n1. Read through the flowchart to understand what the program should do.\n2. Run and test the program to debug the program so that it works as expected for all outcomes.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level6_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "# Do This:\n\nHelp! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below.\n1. Read through the flowchart to understand what the program should do.\n2. Run and test the program to debug the program so that it works as expected for all outcomes.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level6_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "# Do This:\n\nHelp! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below.\n1. Read through the flowchart to understand what the program should do.\n2. Run and test the program to debug the program so that it works as expected for all outcomes.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level8_2025-launch_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `paint_or_turn(this_painter, color)` function. Inside your function:\n\n   * Write a `while` loop that runs while the `Painter` `is_facing_east()`\n\n   * If the `Painter` `has_paint()`, paint the space and then move forward\n\n   * Else, call your `turn_right(this_painter)` function\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import the functions you need and collect the paint and paint in The Neighborhood.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level8_2025-launch_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `paint_or_turn(this_painter, color)` function:\n   * `while` the `Painter` `is_facing_east()`: if `has_paint()`, paint and move; else call `turn_right()`.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import the functions and complete the task.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson12-level8_2025-launch_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n\n1. Import your `custom.py` into your project.\n\n2. In `custom.py`, write the `paint_or_turn(this_painter, color)` function:\n   * `while` the `Painter` `is_facing_east()`: if `has_paint()`, paint and move; else call `turn_right()`.\n\n3. Save `custom.py` to your Backpack.\n\n4. In `main.py`, import the functions and complete the task.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson13-level1_2025": {
+    "unitId": "aif2-2025",
+    "longInstructions": "## Do This:\n1. Add your code to the workspace.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\n\n- *Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/pythonlab/9dJ8tm4IBBuPZGDmBsrCLljUC2VI-79EgkHn6b-r8KQ/view\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\n\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to remind yourself how the `Painter` object and methods work.",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson13-level1_pilot-2025": {
+    "unitId": "aif2-tutor-pilot-2025",
+    "longInstructions": "## Do This:\n1. Add your code to the workspace.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson13-level1_v2-2025": {
+    "unitId": "aif2-v2-2025",
+    "longInstructions": "## Do This:\n1. Add your code to the workspace.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  },
+  "programming-fundamentals-lesson13-level1_2025-preview": {
+    "unitId": "csaif2-preview",
+    "longInstructions": "## Do This:\n1. Add your code to the workspace.\n2. Click Run and observe the outcome.\n    - Keep revising and testing your code until it runs as expected.\n\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!",
+    "documentationUrl": "/docs/ide/pythonlab/classes/painter/get_serialized"
+  }
+}

@@ -1,45 +1,30 @@
-import {pythonLabLevelData} from './pythonLabLevelData';
-import {pythonLabStudioData} from './pythonLabStudioData';
-import {pythonLabStudentMessages} from './pythonLabStudentMessages';
-import {pythonLabEvalData} from './pythonLabEvalData';
 import {
   STUDIO_STATE_LABELS,
   VIDEO_OPTIONS,
-  VIDEO_FILE_DATA,
   PythonLabStudioStateData,
   PythonLabEvalEntry,
+  PythonLabLevelEntry,
   StudioStateEnum,
 } from './aiTutorTestTypes';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// LEVEL DATA
-// Deduplicate to one entry per canonical level stem (strip version suffix).
-// This keeps the dropdown manageable — pick the first variant encountered
-// (typically _2025-launch_2025 or standalone _2025).
+// TYPES
 // ─────────────────────────────────────────────────────────────────────────────
 
-function levelStem(id: string): string {
-  return id
-    .replace(/_pilot-\d{4}$/, '')
-    .replace(/_v2-\d{4}$/, '')
-    .replace(/_\d{4}.*$/, '');
+interface Templates {
+  system: string;
+  instructions: string;
+  code: string;
+  state: string;
 }
 
-function levelLabel(id: string): string {
-  const stem = levelStem(id);
-  // shorten "programming-fundamentals-" prefix for display
-  return stem.replace('programming-fundamentals-', '');
+interface VideoFileEntry {
+  filename: string;
+  hash: string;
+  description: string;
 }
 
-const seenStems = new Set<string>();
-const LEVEL_DATA: Record<string, typeof pythonLabLevelData[string] & {label: string}> = {};
-for (const [id, entry] of Object.entries(pythonLabLevelData)) {
-  const stem = levelStem(id);
-  if (!seenStems.has(stem)) {
-    seenStems.add(stem);
-    LEVEL_DATA[id] = {...entry, label: levelLabel(id)};
-  }
-}
+type LevelData = Record<string, PythonLabLevelEntry & {label: string}>;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // STATE DATA
@@ -49,7 +34,6 @@ const STATES: Array<{key: StudioStateEnum; label: string}> = (
   Object.keys(STUDIO_STATE_LABELS) as StudioStateEnum[]
 ).map(key => ({key, label: `${key} — ${STUDIO_STATE_LABELS[key]}`}));
 
-// Longer prompt-facing descriptions (used as {{stateDescription}} in templates)
 const STATE_DESCRIPTIONS: Record<StudioStateEnum, string> = {
   START: 'The student has just opened the level and has not made any changes yet.',
   STRUGGLING:
@@ -62,134 +46,63 @@ const STATE_DESCRIPTIONS: Record<StudioStateEnum, string> = {
     'The student is very close to the correct answer with only a minor issue remaining.',
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// DEFAULT TEMPLATES
-// Variables: {{levelInstructions}}, {{studentCode}}, {{consoleOutput}},
-//            {{hasRunStatement}}, {{hasEditedStatement}}, {{validationResults}},
-//            {{stateLabel}}, {{stateDescription}}
-// ─────────────────────────────────────────────────────────────────────────────
-
-const DEFAULT_TEMPLATES = {
-  system: `You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the whole answer directly. If the student appears frustrated, you may include syntax or pseudocode. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.
-{{#showVideos}}
-The following videos are available for the user to watch if they are helpful (provided in format: VIDEO-URL::VIDEO-DESCRIPTION)
-{{#videoFiles}}
-{{url}}::{{description}}
-{{/videoFiles}}
-Please add a video using "[video](VIDEO-URL)" to your response ONLY if the video's description matches what the student needs to understand currently.
-{{/showVideos}}`,
-
-  instructions: `Here are the instructions for this level:
-
-{{levelInstructions}}`,
-
-  code: `Here is the student's current code:
-\`\`\`
-{{studentCode}}
-\`\`\`
-{{hasRunStatement}}
-{{hasEditedStatement}}
-{{consoleSection}}
-{{validationSection}}`,
-
-  state: `Student state: {{stateLabel}}
-{{stateDescription}}`,
-};
-
 const TEMPLATE_HINTS: Record<string, string> = {
-  system: 'Variables: <code>{{#showVideos}}...{{/showVideos}}</code> <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code>',
+  system:
+    'Variables: <code>{{#showVideos}}...{{/showVideos}}</code> <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code>',
   instructions: 'Variables: <code>{{levelInstructions}}</code>',
   code: 'Variables: <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code>',
   state: 'Variables: <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PERSISTENCE
+// APP DATA — populated on init via fetch
 // ─────────────────────────────────────────────────────────────────────────────
 
-const STORAGE_KEY_TPL = 'aiTutorTool_templates_v1';
-const STORAGE_KEY_DATA = 'aiTutorTool_studioData_v1';
-const STORAGE_KEY_EVAL = 'aiTutorTool_evalData_v1';
+let LEVEL_DATA: LevelData = {};
+let studioData: Record<string, PythonLabStudioStateData> = {};
+let evalData: Record<string, PythonLabEvalEntry> = {};
+let templates: Templates = {system: '', instructions: '', code: '', state: ''};
+let defaultTemplates: Templates = {system: '', instructions: '', code: '', state: ''};
+let videoFileData: VideoFileEntry[] = [];
 
-// Keys saved to localStorage as overrides on top of pythonLabStudioData
-const localOverrides: Record<string, PythonLabStudioStateData> = loadLocalOverrides();
+// ─────────────────────────────────────────────────────────────────────────────
+// LEVEL DEDUP
+// Deduplicate to one entry per canonical level stem (strip version suffix).
+// ─────────────────────────────────────────────────────────────────────────────
 
-// Merge student messages into studio data entries
-const studioDataWithMessages: Record<string, PythonLabStudioStateData> = {};
-for (const [key, entry] of Object.entries(pythonLabStudioData)) {
-  const msgs = pythonLabStudentMessages[key];
-  studioDataWithMessages[key] = msgs ? {...entry, ...msgs} : entry;
+function levelStem(id: string): string {
+  return id
+    .replace(/_pilot-\d{4}$/, '')
+    .replace(/_v2-\d{4}$/, '')
+    .replace(/_\d{4}.*$/, '');
 }
 
-// Working copy: start from pythonLabStudioData + messages, merge in localStorage overrides
-const studioData: Record<string, PythonLabStudioStateData> = {
-  ...studioDataWithMessages,
-  ...localOverrides,
-};
+function levelLabel(id: string): string {
+  return levelStem(id).replace('programming-fundamentals-', '');
+}
 
-// Eval overrides on top of pythonLabEvalData
-const localEvalOverrides: Record<string, PythonLabEvalEntry> = loadLocalEvalOverrides();
-const evalData: Record<string, PythonLabEvalEntry> = {
-  ...pythonLabEvalData,
-  ...localEvalOverrides,
-};
-
-function loadLocalOverrides(): Record<string, PythonLabStudioStateData> {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_DATA);
-    return saved ? JSON.parse(saved) : {};
-  } catch {
-    return {};
+function buildLevelData(raw: Record<string, PythonLabLevelEntry>): LevelData {
+  const seen = new Set<string>();
+  const out: LevelData = {};
+  for (const [id, entry] of Object.entries(raw)) {
+    const stem = levelStem(id);
+    if (!seen.has(stem)) {
+      seen.add(stem);
+      out[id] = {...entry, label: levelLabel(id)};
+    }
   }
-}
-
-function loadLocalEvalOverrides(): Record<string, PythonLabEvalEntry> {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_EVAL);
-    return saved ? JSON.parse(saved) : {};
-  } catch {
-    return {};
-  }
-}
-
-function saveStudioData(): void {
-  localStorage.setItem(STORAGE_KEY_DATA, JSON.stringify(localOverrides));
-}
-
-function saveEvalData(): void {
-  localStorage.setItem(STORAGE_KEY_EVAL, JSON.stringify(localEvalOverrides));
-}
-
-let templates = loadTemplates();
-
-function loadTemplates(): typeof DEFAULT_TEMPLATES {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_TPL);
-    return saved ? {...DEFAULT_TEMPLATES, ...JSON.parse(saved)} : {...DEFAULT_TEMPLATES};
-  } catch {
-    return {...DEFAULT_TEMPLATES};
-  }
-}
-
-function saveTemplates(): void {
-  localStorage.setItem(STORAGE_KEY_TPL, JSON.stringify(templates));
+  return out;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
 // STUDIO DATA HELPERS
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Returns the studio entry for a level+state, auto-creating a blank one if
-// none exists in pythonLabStudioData. New entries are "draft" until saved.
-function getOrInitStudioEntry(
-  levelId: string,
-  stateKey: string
-): PythonLabStudioStateData {
+function getOrInitStudioEntry(levelId: string, stateKey: string): PythonLabStudioStateData {
   const dataKey = `${levelId}_${stateKey}`;
   if (!studioData[dataKey]) {
-    const level = LEVEL_DATA[levelId];
     studioData[dataKey] = {
-      studentCode: level?.startingCode ?? '',
+      studentCode: LEVEL_DATA[levelId]?.startingCode ?? '',
       hasRun: false,
       hasEdited: false,
     };
@@ -198,7 +111,7 @@ function getOrInitStudioEntry(
 }
 
 function isPreAuthored(levelId: string, stateKey: string): boolean {
-  return `${levelId}_${stateKey}` in pythonLabStudioData;
+  return `${levelId}_${stateKey}` in studioData;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -224,7 +137,6 @@ function renderTemplate(tpl: string, vars: TemplateVars): string {
           )
           .join('');
       }
-      // Boolean true: keep block content, strip section tags
       return inner;
     }
   );
@@ -240,7 +152,6 @@ function buildVars(levelId: string, stateKey: string): TemplateVars | null {
   if (!level) return null;
 
   const data = getOrInitStudioEntry(levelId, stateKey);
-
   const hasRunStatement = data.hasRun ? '' : 'The student has not run the code yet.';
   const hasEditedStatement = data.hasEdited ? '' : 'The student has not edited the code yet.';
   const consoleSection = data.consoleOutput
@@ -249,12 +160,11 @@ function buildVars(levelId: string, stateKey: string): TemplateVars | null {
   const validationSection = data.validationResults
     ? `Here are the validation test results (JSON):\n${data.validationResults}`
     : '';
-
   const studentMessage = currentVideoRequested
     ? (data.studentMessageVideoRequested ?? '')
     : (data.studentMessage ?? '');
 
-  const videoFiles = VIDEO_FILE_DATA.map(v => ({
+  const videoFiles = videoFileData.map(v => ({
     url: `/assets/js/json/${v.filename.replace('.json', '')}${v.hash}.json`,
     description: v.description,
   }));
@@ -299,7 +209,7 @@ function assembleOutput(
 // ─────────────────────────────────────────────────────────────────────────────
 
 let currentTab = 'system';
-let currentLevel = Object.keys(LEVEL_DATA)[0];
+let currentLevel = '';
 let currentState = STATES[0].key;
 let currentVideoRequested = false;
 
@@ -344,7 +254,7 @@ function renderStudioEditor(): void {
   badge.textContent = dataKey;
   draftBadge.innerHTML = isPreAuthored(currentLevel, currentState)
     ? ''
-    : '<span class="studio-draft-badge">draft — not in TS source</span>';
+    : '<span class="studio-draft-badge">draft</span>';
 
   const msgField = currentVideoRequested ? 'studentMessageVideoRequested' : 'studentMessage';
   const msgLabel = currentVideoRequested ? 'Student Message (video requested)' : 'Student Message';
@@ -378,27 +288,20 @@ function renderStudioEditor(): void {
       </label>
     </div>`;
 
-  // Wire up studio field changes — save override to localStorage
   (['studentCode', 'consoleOutput', 'validationResults'] as const).forEach(field => {
     document.getElementById(`f-${field}`)!.addEventListener('input', e => {
       studioData[dataKey][field] = (e.target as HTMLTextAreaElement).value;
-      localOverrides[dataKey] = {...studioData[dataKey]};
-      saveStudioData();
       renderOutput();
     });
   });
   (['hasRun', 'hasEdited'] as const).forEach(field => {
     document.getElementById(`f-${field}`)!.addEventListener('change', e => {
       studioData[dataKey][field] = (e.target as HTMLInputElement).checked;
-      localOverrides[dataKey] = {...studioData[dataKey]};
-      saveStudioData();
       renderOutput();
     });
   });
   document.getElementById('f-studentMessage')!.addEventListener('input', e => {
     studioData[dataKey][msgField] = (e.target as HTMLTextAreaElement).value;
-    localOverrides[dataKey] = {...studioData[dataKey]};
-    saveStudioData();
     renderOutput();
   });
 }
@@ -408,14 +311,14 @@ function renderEvalEditor(): void {
   const entry: PythonLabEvalEntry = evalData[evalKey] ?? {expectedVideos: []};
   const area = document.getElementById('evalEditorArea')!;
 
-  area.innerHTML = `<div class="video-checkboxes">${
-    VIDEO_OPTIONS.map(v => `
+  area.innerHTML = `<div class="video-checkboxes">${VIDEO_OPTIONS.map(
+    v => `
       <label class="video-checkbox-label">
         <input type="checkbox" data-video="${escHtml(v)}"
           ${entry.expectedVideos.includes(v) ? 'checked' : ''}>
         ${escHtml(v)}
-      </label>`).join('')
-  }</div>`;
+      </label>`
+  ).join('')}</div>`;
 
   area.querySelectorAll<HTMLInputElement>('input[data-video]').forEach(cb => {
     cb.addEventListener('change', () => {
@@ -423,8 +326,6 @@ function renderEvalEditor(): void {
         area.querySelectorAll<HTMLInputElement>('input[data-video]:checked')
       ).map(el => el.dataset.video as (typeof VIDEO_OPTIONS)[number]);
       evalData[evalKey] = {expectedVideos: checked};
-      localEvalOverrides[evalKey] = {expectedVideos: checked};
-      saveEvalData();
     });
   });
 }
@@ -432,7 +333,7 @@ function renderEvalEditor(): void {
 function renderTemplateEditor(): void {
   const textarea = document.getElementById('tpl-textarea') as HTMLTextAreaElement;
   const hint = document.getElementById('tpl-hint')!;
-  textarea.value = templates[currentTab as keyof typeof templates];
+  textarea.value = templates[currentTab as keyof Templates];
   hint.innerHTML = TEMPLATE_HINTS[currentTab];
 }
 
@@ -448,8 +349,25 @@ function escHtml(str: string): string {
 // INIT
 // ─────────────────────────────────────────────────────────────────────────────
 
-function init(): void {
-  // Populate level dropdown
+async function loadAllData(): Promise<void> {
+  const [levelsRaw, studioRaw, evalRaw, tplRaw, videosRaw] = await Promise.all([
+    fetch('/api/data/levels').then(r => r.json()),
+    fetch('/api/data/studioData').then(r => r.json()),
+    fetch('/api/data/evalData').then(r => r.json()),
+    fetch('/api/data/templates').then(r => r.json()),
+    fetch('/api/data/videoFiles').then(r => r.json()),
+  ]);
+
+  LEVEL_DATA = buildLevelData(levelsRaw as Record<string, PythonLabLevelEntry>);
+  studioData = studioRaw as Record<string, PythonLabStudioStateData>;
+  evalData = evalRaw as Record<string, PythonLabEvalEntry>;
+  templates = tplRaw as Templates;
+  defaultTemplates = {...(tplRaw as Templates)};
+  videoFileData = videosRaw as VideoFileEntry[];
+  currentLevel = Object.keys(LEVEL_DATA)[0] ?? '';
+}
+
+function wireUI(): void {
   const levelSel = document.getElementById('levelSelect') as HTMLSelectElement;
   Object.entries(LEVEL_DATA).forEach(([id, lvl]) => {
     const opt = document.createElement('option');
@@ -458,7 +376,6 @@ function init(): void {
     levelSel.appendChild(opt);
   });
 
-  // Populate state dropdown
   const stateSel = document.getElementById('stateSelect') as HTMLSelectElement;
   STATES.forEach(({key, label}) => {
     const opt = document.createElement('option');
@@ -467,7 +384,6 @@ function init(): void {
     stateSel.appendChild(opt);
   });
 
-  // Level / State / Video Requested change
   levelSel.addEventListener('change', e => {
     currentLevel = (e.target as HTMLSelectElement).value;
     renderStudioEditor();
@@ -487,15 +403,11 @@ function init(): void {
     renderOutput();
   });
 
-  // Template tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      // Save current tab before switching
-      templates[currentTab as keyof typeof templates] = (
+      templates[currentTab as keyof Templates] = (
         document.getElementById('tpl-textarea') as HTMLTextAreaElement
       ).value;
-      saveTemplates();
-
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentTab = (btn as HTMLElement).dataset.tab!;
@@ -503,16 +415,11 @@ function init(): void {
     });
   });
 
-  // Template textarea edits → live update
   document.getElementById('tpl-textarea')!.addEventListener('input', e => {
-    templates[currentTab as keyof typeof templates] = (
-      e.target as HTMLTextAreaElement
-    ).value;
-    saveTemplates();
+    templates[currentTab as keyof Templates] = (e.target as HTMLTextAreaElement).value;
     renderOutput();
   });
 
-  // Copy output button
   document.getElementById('copyBtn')!.addEventListener('click', () => {
     const sections = assembleOutput(currentLevel, currentState);
     if (!sections) return;
@@ -522,16 +429,25 @@ function init(): void {
     navigator.clipboard.writeText(full).then(() => showToast('Copied to clipboard!'));
   });
 
-  // Reset templates
   document.getElementById('resetTemplatesBtn')!.addEventListener('click', () => {
-    if (!confirm('Reset all 4 templates to defaults? This cannot be undone.')) return;
-    Object.assign(templates, DEFAULT_TEMPLATES);
-    localStorage.removeItem(STORAGE_KEY_TPL);
+    if (!confirm('Reset all 4 templates to defaults?')) return;
+    Object.assign(templates, defaultTemplates);
     renderTemplateEditor();
     renderOutput();
   });
+}
 
-  // Initial render
+async function init(): Promise<void> {
+  try {
+    await loadAllData();
+  } catch (e) {
+    document.body.innerHTML = `<div style="padding:2rem;color:red;">
+      Failed to load data from server.<br><code>${e}</code><br><br>
+      Make sure the server is running: <code>npm start</code>
+    </div>`;
+    return;
+  }
+  wireUI();
   renderTemplateEditor();
   renderStudioEditor();
   renderEvalEditor();
