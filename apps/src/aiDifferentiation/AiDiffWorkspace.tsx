@@ -54,7 +54,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         })
       );
     });
-  }, []);
+  }, [setThreads]);
 
   useEffect(() => {
     fetchThreads();

@@ -222,14 +222,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         className={classes}
         onClick={handleClick}
         type="button"
-        style={{
-          right: chatIsOpen
-            ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
-            : `${DRAWER_FAB_MARGIN}px`,
-          transition: chatIsOpen
-            ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
-            : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
-        }}
+        style={
+          drawerIsEnabled
+            ? {
+                right: chatIsOpen
+                  ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
+                  : `${DRAWER_FAB_MARGIN}px`,
+                transition: chatIsOpen
+                  ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
+                  : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+              }
+            : {}
+        }
       >
         <Badge
           badgeContent={

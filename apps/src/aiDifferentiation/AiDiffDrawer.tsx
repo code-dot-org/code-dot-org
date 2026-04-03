@@ -113,7 +113,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           closeTutor={closeTutor}
           closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
         />
-        <div className={style.fabBackground}>{content}</div>
+        <div className={style.fabBackgroundDrawer}>{content}</div>
       </FocusLock>
     </Drawer>
   );
