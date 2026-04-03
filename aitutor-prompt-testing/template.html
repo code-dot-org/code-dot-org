@@ -331,6 +331,78 @@
       pointer-events: none;
     }
     #toast.show { opacity: 1; }
+
+    /* Experiment runner */
+    #experimentPanel {
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+      padding: 16px 24px;
+    }
+    #experimentPanel h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #runProgress {
+      margin: 10px 0;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    #progressBar {
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      margin: 6px 0;
+      overflow: hidden;
+    }
+    #progressFill {
+      height: 100%;
+      background: #3b82f6;
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    #runStatus { font-size: 12px; color: #64748b; min-height: 16px; }
+
+    /* Results table */
+    #resultsPanel { margin-top: 16px; }
+    #aggregateStats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .stat-card {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 10px 16px;
+      min-width: 100px;
+    }
+    .stat-card .stat-label { font-size: 10px; color: #64748b; text-transform: uppercase; }
+    .stat-card .stat-value { font-size: 22px; font-weight: 700; color: #93c5fd; }
+    .stat-card .stat-value.good { color: #4ade80; }
+    .stat-card .stat-value.bad  { color: #f87171; }
+    #resultsTable { width: 100%; border-collapse: collapse; font-size: 11px; }
+    #resultsTable th {
+      text-align: left;
+      padding: 6px 8px;
+      color: #64748b;
+      border-bottom: 1px solid #1e293b;
+      font-weight: 500;
+    }
+    #resultsTable td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #0f172a;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    #resultsTable tr:hover td { background: #1e293b; }
+    .pass-yes { color: #4ade80; }
+    .pass-no  { color: #f87171; }
+    .run-select-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
   </style>
 </head>
 <body>
@@ -353,6 +425,7 @@
   <div class="header-actions">
     <button id="copyBtn">Copy Output</button>
     <button id="resetTemplatesBtn" class="danger">Reset Templates</button>
+    <button id="runExperimentBtn">▶ Run Experiment</button>
   </div>
 </header>
 
@@ -408,6 +481,34 @@
 </main>
 
 <div id="toast">Copied to clipboard!</div>
+
+<div id="experimentPanel">
+  <h2>Experiment Runner</h2>
+  <div class="run-select-row">
+    <select id="runSelect"><option value="">— select a past run —</option></select>
+    <button id="loadRunBtn">Load</button>
+    <button id="downloadRunBtn" style="display:none">⬇ Download JSONL</button>
+  </div>
+  <div id="runProgress" style="display:none">
+    <div id="progressBar"><div id="progressFill"></div></div>
+    <div id="runStatus"></div>
+  </div>
+  <div id="resultsPanel" style="display:none">
+    <div id="aggregateStats"></div>
+    <div style="overflow-x:auto">
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>#</th><th>Level</th><th>State</th><th>Vid?</th>
+            <th>Pass</th><th>Expected</th><th>Found</th>
+            <th>Missing</th><th>Unexpected</th><th>Hallucinated</th><th>Error</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

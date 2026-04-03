@@ -10,6 +10,7 @@
     "convert-data": "node scripts/convert-to-json.mjs"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "express": "^4.21.0"
   },
   "devDependencies": {
