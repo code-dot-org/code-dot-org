@@ -9,6 +9,7 @@ module Cdo
         TEXT_DATA_TYPES = [:string, :text].freeze
         DATE_TIME_DATA_TYPES = [:date, :datetime, :timestamp].freeze
         NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
+        SQL_INDENT = ' ' * 2
 
         attr_reader :model, :environment_type
 
@@ -54,11 +55,11 @@ module Cdo
 
           <<~SQL
             CREATE MATERIALIZED VIEW #{schema}.#{view_name}
-            BACKUP NO
-            DISTSTYLE KEY DISTKEY (#{distkey_column})
-            AUTO REFRESH NO
+              BACKUP NO
+              DISTSTYLE KEY DISTKEY (#{distkey_column})
+              AUTO REFRESH NO
             AS SELECT
-              #{columns.join(",\n  ")}
+              #{columns.join(',\n' + SQL_INDENT)}
             FROM #{source_table_path};
           SQL
         end
