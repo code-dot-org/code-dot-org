@@ -1075,38 +1075,10 @@ class FilesApi < Sinatra::Base
   #
   # POST /v3/images/moderate
   #
-  # Moderate an image upload via ImageModeration and return a JSON rating.
-  # Possible ratings: [:everyone|:racy|:adult|:unknown]
-  #
-  post %r{/v3/images/moderate$} do
-    content_type :json
-    dont_cache
-
-    # Read the raw bytes and wrap in an IO.
-    raw = request.body.read
-    image_stream = StringIO.new(raw)
-
-    # Determine MIME type (e.g. "image/png", "image/jpeg").
-    content_type_header = request.content_type
-
-    # Validate allowed content types
-    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
-      status 400
-      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
-    end
-
-    rating = ImageModeration.rate_image(image_stream, content_type_header)
-
-    {rating: rating.to_s}.to_json
-  end
-
-  #
-  # POST /v3/images/moderate-ai-content-safety
-  #
   # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
   # moderation result as JSON. Returns null if the moderation service is unavailable.
   #
-  post %r{/v3/images/moderate-ai-content-safety$} do
+  post %r{/v3/images/moderate$} do
     content_type :json
     dont_cache
 
