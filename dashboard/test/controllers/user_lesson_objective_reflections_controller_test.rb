@@ -22,32 +22,31 @@ class UserLessonObjectiveReflectionsControllerTest < ActionController::TestCase
     user: :teacher,
     response: :created
 
-  # Happy path
   test "student can create a reflection" do
     sign_in @student
 
     assert_difference 'UserLessonObjectiveReflection.count', 1 do
-      post :create, params: {objective_id: @objective.id, reflection: "It went well"}
+      post :create, params: {objective_id: @objective.id, reflection: "confident"}
     end
 
     assert_response :created
-    reflection = UserLessonObjectiveReflection.last
+    reflection = UserLessonObjectiveReflection.find(JSON.parse(response.body)['id'])
     assert_equal @student.id, reflection.student_id
     assert_equal @objective.id, reflection.objective_id
-    assert_equal "It went well", reflection.reflection
+    assert_equal "confident", reflection.reflection
   end
 
   test "student can create multiple reflections for the same objective" do
     sign_in @student
 
     assert_difference 'UserLessonObjectiveReflection.count', 2 do
-      post :create, params: {objective_id: @objective.id, reflection: "First attempt"}
-      post :create, params: {objective_id: @objective.id, reflection: "Better now"}
+      post :create, params: {objective_id: @objective.id, reflection: "lost"}
+      post :create, params: {objective_id: @objective.id, reflection: "confident"}
     end
 
     reflections = UserLessonObjectiveReflection.where(student: @student, objective: @objective).order(:created_at)
-    assert_equal "First attempt", reflections.first.reflection
-    assert_equal "Better now", reflections.last.reflection
+    assert_equal "lost", reflections.first.reflection
+    assert_equal "confident", reflections.last.reflection
   end
 
   # Param filtering / authorization boundary
@@ -55,7 +54,7 @@ class UserLessonObjectiveReflectionsControllerTest < ActionController::TestCase
     sign_in @student
 
     assert_difference 'UserLessonObjectiveReflection.count', 1 do
-      post :create, params: {objective_id: @objective.id, student_id: @other_student.id, reflection: "Test"}
+      post :create, params: {objective_id: @objective.id, student_id: @other_student.id, reflection: "confident"}
     end
 
     assert_response :created

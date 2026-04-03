@@ -31,7 +31,7 @@ class UserLessonReflectionsControllerTest < ActionController::TestCase
     end
 
     assert_response :created
-    reflection = UserLessonReflection.last
+    reflection = UserLessonReflection.find(JSON.parse(response.body)['id'])
     assert_equal @student.id, reflection.student_id
     assert_equal @lesson.id, reflection.lesson_id
     assert_equal "It went well", reflection.success
