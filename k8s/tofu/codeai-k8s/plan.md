@@ -29,9 +29,12 @@ locals, variable descriptions, and resource text verbatim wherever sane.
 
 ## State keys
 
-- `codeai-k8s/cluster.tfstate`
-- `codeai-k8s/cluster-infra.tfstate`
-- `codeai-k8s/cluster-infra-argocd.tfstate`
+- `codeai-k8s/cross-cluster/dex.tfstate`
+- `codeai-k8s/clusters/non-prod/cluster.tfstate`
+- `codeai-k8s/clusters/non-prod/cluster-infra.tfstate`
+- `codeai-k8s/clusters/non-prod/cluster-infra-argocd.tfstate`
+- `codeai-k8s/clusters/non-prod/eks-cluster.tfstate`
+- `codeai-k8s/clusters/non-prod/eks-cluster-addons.tfstate`
 
 ## Phase outline
 

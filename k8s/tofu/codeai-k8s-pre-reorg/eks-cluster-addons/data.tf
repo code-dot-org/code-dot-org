@@ -11,7 +11,7 @@ data "terraform_remote_state" "codeai_k8s_dex" {
   backend = "s3"
   config = {
     bucket = "codeai-tofu-state"
-    key    = "codeai-k8s-dex/terraform.tfstate"
+    key    = "codeai-k8s/cross-cluster/dex.tfstate"
     region = "us-west-2"
   }
 }

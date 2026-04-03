@@ -7,6 +7,8 @@ resource "helm_release" "external_secrets_operator" {
   chart            = "${path.module}/infra/external-secrets-operator"
   namespace        = "external-secrets"
   create_namespace = true
+
+  depends_on = [helm_release.ingress_and_gateway]
 }
 
 #============================================================
