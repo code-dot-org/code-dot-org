@@ -60,8 +60,6 @@ require 'rails/test_help'
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false
 
-Dashboard::Application.config.action_controller.allow_forgery_protection = false
-
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
