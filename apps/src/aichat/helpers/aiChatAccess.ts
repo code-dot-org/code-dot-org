@@ -30,8 +30,6 @@ export const shouldShowAiTutor = ({
       // For now, we are going to fully hide optional tutor rather than showing the disabled ui,
       // to avoid disrupting classrooms that are in the middle of the school year working on
       // courses where optional tutor is available.
-      // If we update this such that a disabled UI is shown, we will need to update InstructionsWithWorkspace
-      // to pass the appropriate disabled message for students vs. teachers or use the custom hook useAiChatDisabledState.
       areAiChatToolsEnabled({appName, aiChatAccessLevel}))
   );
 };
