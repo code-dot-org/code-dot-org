@@ -20,8 +20,8 @@ module "external_dns" {
   cluster_subdomain = local.cluster_subdomain
 }
 
-module "ingress_and_gateway" {
-  source = "./infra/ingress-and-gateway"
+module "networking" {
+  source = "./infra/networking"
 
   cluster_name                       = local.cluster_name
   cluster_endpoint                   = local.cluster_endpoint

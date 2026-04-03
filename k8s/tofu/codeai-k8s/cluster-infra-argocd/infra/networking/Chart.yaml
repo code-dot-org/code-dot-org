@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ingress-and-gateway
+name: networking
 description: Local chart for AWS Load Balancer Controller, Gateway API CRDs, and the shared AWS ALB gateway resources
 type: application
 version: 0.1.0

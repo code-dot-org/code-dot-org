@@ -16,7 +16,7 @@ resource "kubernetes_config_map_v1" "codeai_cluster_configmap" {
     cluster_name                               = local.cluster_name
     cluster_region                             = local.cluster_region
     cluster_subdomain                          = local.cluster_subdomain
-    cluster_subdomain_wildcard_certificate_arn = module.ingress_and_gateway.cluster_subdomain_wildcard_certificate_arn
+    cluster_subdomain_wildcard_certificate_arn = module.networking.cluster_subdomain_wildcard_certificate_arn
     dex_google_client_id                       = var.dex_google_client_id
     single_namespace_environment_types         = jsonencode(sort(tolist(local.single_namespace_environment_types)))
     frontend_security_group_namespaces         = jsonencode(sort(tolist(toset(local.cluster_outs.frontend_security_group_namespaces))))

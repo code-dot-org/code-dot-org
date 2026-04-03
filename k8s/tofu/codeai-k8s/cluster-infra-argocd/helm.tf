@@ -8,7 +8,7 @@ resource "helm_release" "external_secrets_operator" {
   namespace        = "external-secrets"
   create_namespace = true
 
-  depends_on = [helm_release.ingress_and_gateway]
+  depends_on = [helm_release.networking]
 }
 
 #============================================================
@@ -23,7 +23,7 @@ resource "helm_release" "argocd" {
 
   # TODO: remove this block if it proves unnecessary. This should already be
   # covered by the default `aws-alb` IngressClass plus
-  # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
+  # `IngressClassParams.spec.certificateArn` from `networking`.
   # values = [yamlencode({
   #   "argo-cd" = {
   #     server = {
@@ -54,11 +54,11 @@ resource "helm_release" "argocd" {
 # 2. Find Helm Chart version (e.g. v1.17.1) here:
 #    https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/v2.17.1/helm/aws-load-balancer-controller/Chart.yaml#L1-L9
 #
-# Align the vendored Gateway API CRDs in: ./infra/ingress-and-gateway/crds/standard-install.yaml.
+# Align the vendored Gateway API CRDs in: ./infra/networking/crds/standard-install.yaml.
 
-resource "helm_release" "ingress_and_gateway" {
-  name      = "ingress-and-gateway"
-  chart     = "${path.module}/infra/ingress-and-gateway"
+resource "helm_release" "networking" {
+  name      = "networking"
+  chart     = "${path.module}/infra/networking"
   namespace = "kube-system"
 
   values = [yamlencode({
@@ -88,7 +88,7 @@ resource "helm_release" "external_dns" {
   create_namespace = false
 
   depends_on = [
-    helm_release.ingress_and_gateway,
+    helm_release.networking,
   ]
 }
 
@@ -110,7 +110,7 @@ resource "helm_release" "dex" {
 
   # TODO: remove this block if it proves unnecessary. This should already be
   # covered by the default `aws-alb` IngressClass plus
-  # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
+  # `IngressClassParams.spec.certificateArn` from `networking`.
   # values = [yamlencode({
   #   dex = {
   #     ingress = {

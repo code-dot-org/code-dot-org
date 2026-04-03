@@ -14,13 +14,13 @@ This file records places where the runnable split does not follow
   `bootstrapped-aws-secret` to create or seed Secrets Manager secrets when the
   optional bootstrap values are set.
 - `cluster-infra-argocd` remains the remaining Kubernetes-side add-on root.
-- `cluster-infra-argocd/infra/ingress-and-gateway` vendors the upstream Gateway
+- `cluster-infra-argocd/infra/networking` vendors the upstream Gateway
   API CRDs in
   `crds/` and keeps them with the AWS Load Balancer Controller and the shared
   ALB `GatewayClass` resources. The current split still keeps that bundle in
   `cluster-infra-argocd`, not `cluster`.
 - The upstream Gateway API `standard-install.yaml` is kept intact under
-  `cluster-infra-argocd/infra/ingress-and-gateway/crds/` and tracked with a local
+  `cluster-infra-argocd/infra/networking/crds/` and tracked with a local
   `.gitattributes` Git LFS rule. `helm lint` complains because that upstream
   file also carries a `ValidatingAdmissionPolicy` and binding, but
   `helm template --include-crds` and the Helm release itself remain usable.
@@ -35,7 +35,7 @@ This file records places where the runnable split does not follow
   - `cluster-infra`: AWS IA wrapper for IRSA role and policy, plus the annotated
     service account
   - `cluster-infra-argocd`: direct `helm_release`
-- `ingress-and-gateway` is split the same way:
+- `networking` is split the same way:
   - `cluster-infra`: AWS IA wrapper for IRSA role and policy, plus the annotated
     service account
   - `cluster-infra-argocd`: direct `helm_release` plus the shared gateway objects
