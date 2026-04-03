@@ -1,4 +1,4 @@
-argocd:
+argo-cd:
   crds:
     install: true
 

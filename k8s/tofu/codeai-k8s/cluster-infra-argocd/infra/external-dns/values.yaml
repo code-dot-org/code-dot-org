@@ -1,4 +1,4 @@
-externalDns:
+external-dns:
   provider:
     name: aws
 

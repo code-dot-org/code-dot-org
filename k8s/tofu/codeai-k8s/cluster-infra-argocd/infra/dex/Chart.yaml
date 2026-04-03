@@ -6,6 +6,5 @@ version: 0.1.0
 
 dependencies:
   - name: dex
-    alias: dex
     repository: https://charts.dexidp.io
     version: 0.24.0

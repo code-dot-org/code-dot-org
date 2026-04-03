@@ -23,7 +23,7 @@ resource "helm_release" "argocd" {
   # covered by the default `aws-alb` IngressClass plus
   # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
   # values = [yamlencode({
-  #   argocd = {
+  #   "argo-cd" = {
   #     server = {
   #       ingress = {
   #         annotations = {
@@ -60,7 +60,7 @@ resource "helm_release" "ingress_and_gateway" {
   namespace = "kube-system"
 
   values = [yamlencode({
-    awsLoadBalancerController = {
+    "aws-load-balancer-controller" = {
       ingressClassParams = {
         spec = {
           certificateArn = [local.cluster_config.cluster_subdomain_wildcard_certificate_arn]

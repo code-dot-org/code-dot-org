@@ -6,6 +6,5 @@ version: 0.1.0
 
 dependencies:
   - name: external-secrets
-    alias: externalSecrets
     repository: https://charts.external-secrets.io
     version: 2.1.0
