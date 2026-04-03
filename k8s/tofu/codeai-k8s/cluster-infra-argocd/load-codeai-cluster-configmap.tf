@@ -1,7 +1,7 @@
 locals {
   cluster_config_raw = data.kubernetes_config_map_v1.codeai_cluster_config.data
 
-  cluster_config = {
+  codeai_cluster_config = {
     cluster_name                               = local.cluster_config_raw.cluster_name
     cluster_region                             = local.cluster_config_raw.cluster_region
     cluster_subdomain                          = local.cluster_config_raw.cluster_subdomain

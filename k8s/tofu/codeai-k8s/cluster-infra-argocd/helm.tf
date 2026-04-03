@@ -1,8 +1,11 @@
 # NOTE: the ONLY external source allowed to parameterize the Helm
-# values for charts in this file is local.cluster_config.*
+# values for charts in this file is local.codeai_cluster_config.*
 # if you need a value that's not already there, you'll need to
 # pipe it into that file in ../cluster-infra/codeai-cluster-confirmap.tf
 # and here in ./load-codeai-cluster-configmap.tf.
+#
+# local.codeai_cluster_config can also be accessed in the k8s world
+# as ConfigMap codeai_cluster_config in kube-system.
 
 #============================================================
 # Install External Secrets Operator (ESO) Helm chart.
@@ -35,7 +38,7 @@ resource "helm_release" "argocd" {
   #     server = {
   #       ingress = {
   #         annotations = {
-  #           "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
+  #           "alb.ingress.kubernetes.io/certificate-arn" = local.codeai_cluster_config.cluster_subdomain_wildcard_certificate_arn
   #         }
   #       }
   #     }
@@ -71,13 +74,13 @@ resource "helm_release" "networking" {
     "aws-load-balancer-controller" = {
       ingressClassParams = {
         spec = {
-          certificateArn = [local.cluster_config.cluster_subdomain_wildcard_certificate_arn]
+          certificateArn = [local.codeai_cluster_config.cluster_subdomain_wildcard_certificate_arn]
         }
       }
     }
     gateway = {
       loadBalancerConfig = {
-        defaultCertificateArn = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
+        defaultCertificateArn = local.codeai_cluster_config.cluster_subdomain_wildcard_certificate_arn
       }
     }
   })]
@@ -110,7 +113,7 @@ resource "helm_release" "dex" {
 
   values = [yamlencode({
     dexGoogleClient = {
-      clientID = local.cluster_config.dex_google_client_id
+      clientID = local.codeai_cluster_config.dex_google_client_id
     }
   })]
 
@@ -121,7 +124,7 @@ resource "helm_release" "dex" {
   #   dex = {
   #     ingress = {
   #       annotations = {
-  #         "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
+  #         "alb.ingress.kubernetes.io/certificate-arn" = local.codeai_cluster_config.cluster_subdomain_wildcard_certificate_arn
   #       }
   #     }
   #   }
@@ -145,13 +148,13 @@ resource "helm_release" "kargo_secrets" {
 
   values = [yamlencode({
     sharedResources = {
-      clusterName   = local.cluster_config.cluster_name
-      clusterRegion = local.cluster_config.cluster_region
-      iamRoleArn    = local.cluster_config.kargo_external_secret_stores_iam_role_arn
+      clusterName   = local.codeai_cluster_config.cluster_name
+      clusterRegion = local.codeai_cluster_config.cluster_region
+      iamRoleArn    = local.codeai_cluster_config.kargo_external_secret_stores_iam_role_arn
     }
     systemResources = {
       secretStore = {
-        awsRegion = local.cluster_config.cluster_region
+        awsRegion = local.codeai_cluster_config.cluster_region
       }
     }
   })]
@@ -181,12 +184,12 @@ resource "helm_release" "standard_envtypes" {
   namespace = "external-secrets"
 
   values = [yamlencode({
-    single_namespace_environment_types = local.cluster_config.single_namespace_environment_types
-    region                             = local.cluster_config.cluster_region
-    eso_iam_role_arns                  = local.cluster_config.eso_iam_role_arns
-    frontend_security_group_namespaces = local.cluster_config.frontend_security_group_namespaces
-    cluster_primary_security_group_id  = local.cluster_config.cluster_primary_security_group_id
-    frontend_security_group_id         = local.cluster_config.frontend_security_group_id
+    single_namespace_environment_types = local.codeai_cluster_config.single_namespace_environment_types
+    region                             = local.codeai_cluster_config.cluster_region
+    eso_iam_role_arns                  = local.codeai_cluster_config.eso_iam_role_arns
+    frontend_security_group_namespaces = local.codeai_cluster_config.frontend_security_group_namespaces
+    cluster_primary_security_group_id  = local.codeai_cluster_config.cluster_primary_security_group_id
+    frontend_security_group_id         = local.codeai_cluster_config.frontend_security_group_id
   })]
 
   depends_on = [helm_release.external_secrets_operator]
