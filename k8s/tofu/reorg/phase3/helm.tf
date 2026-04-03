@@ -2,8 +2,8 @@
 # Install External Secrets Operator (ESO) Helm chart.
 #============================================================
 
-resource "helm_release" "external_secrets" {
-  name             = "external-secrets"
+resource "helm_release" "external_secrets_operator" {
+  name             = "external-secrets-operator"
   chart            = "${path.module}/infra/external-secrets"
   namespace        = "external-secrets"
   create_namespace = true
