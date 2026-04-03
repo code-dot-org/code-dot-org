@@ -1,12 +1,14 @@
 # OpenTofu
 
-**Phase 0: non-dependent non-AWS / non-cluster bootstrap**
-- `codeai-k8s-dex`
+**Prerequisite: non-dependent non-AWS / non-cluster bootstrap**
+- `k8s/tofu/codeai-k8s-dex`
 
-**Phase 1: `eks-cluster-*` only**
-- `eks-cluster-*`
+**Phase 1: `cluster` only**
+- `k8s/tofu/codeai-k8s/cluster`
 
-**Phase 2: split from Phase 2 in `before.md`**
+**Phase 2: `cluster-infra`; split from Phase 2 in `before.md`**
+
+- `k8s/tofu/codeai-k8s/cluster-infra`
 
 - `infra-modules.tf`
   - module `external_dns`: (HostedZone.route53 k8s.code.org), (RecordSet.route53 k8s.code.org NS), module `external_dns_addon`: (Role.iam external-dns-20260319022352248300000003), (Policy.iam external-dns-20260319022352248200000002), (Namespace.v1 external-dns), (ServiceAccount.v1 external-dns-sa)
@@ -16,7 +18,9 @@
   - module `kargo_secrets`: (Role.iam codeai-k8s-eso-kargo-external-secret-stores), (RolePolicy.iam codeai-k8s-eso-kargo-external-secret-stores/secrets-manager-access), (Namespace.v1 kargo-system-resources), (ServiceAccount.v1 external-secrets-sa-kargo-system-resources), module `kargo_github_org_webhook_secret`: (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/github_org_webhook_secret), optional bootstrap writes to (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_username) and (Secret.secretsmanager k8s/tofu/codeai-k8s/kargo/gitops_repo_password), GitHub organization webhook
 - `codeai-cluster-configmap.tf`: (ConfigMap.v1 codeai-cluster-config) in `kube-system`
 
-**Phase 3: split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
+**Phase 3: `cluster-infra-argocd`; split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
+
+- `k8s/tofu/codeai-k8s/cluster-infra-argocd`
 
 - `helm.tf`: (helm external-secrets), (helm argo-cd), (helm ingress-and-gateway), (helm external-dns), (helm dex), (helm kargo-secrets)
 - `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap

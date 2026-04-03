@@ -1,0 +1,84 @@
+argocd:
+  crds:
+    install: true
+
+  global:
+    domain: argocd.k8s.code.org
+
+  dex:
+    enabled: false
+
+  configs:
+    params:
+      # TLS terminates at the ALB, so argocd-server should speak plain HTTP to the ingress backend.
+      server.insecure: true
+
+      # Only raise these if repo-server work starts succeeding after we bump
+      # ARGOCD_EXEC_TIMEOUT, but the API server or application-controller
+      # still give up waiting on repo-server RPCs.
+      # server.repo.server.timeout.seconds: "600"
+      # controller.repo.server.timeout.seconds: "600"
+    cm:
+      url: https://argocd.k8s.code.org
+
+      # BREAK GLASS FOR EMERGENCY ARGOCD ADMIN LOGIN (if Google SSO has failed):
+      # 1. set `admin.enabled: true` below
+      # 2. deploy cluster-infra-argocd
+      # 3. emergency login to Argo CD with:
+      #    Username: admin
+      #    Password: run `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 --decode; echo`
+      #
+      # TO CLEANUP AFTER EMERGENCY (SSO working again):
+      # 1. set `admin.enabled: false` below
+      # 2. deploy cluster-infra-argocd
+      # 3. run to delete temporary plaintext admin secrets:
+      #    `kubectl -n argocd patch secret argocd-secret --type='json' -p='[{"op":"remove","path":"/data/admin.password"},{"op":"remove","path":"/data/admin.passwordMtime"}]' && kubectl -n argocd delete secret argocd-initial-admin-secret --ignore-not-found`
+      #
+      # admin.enabled=true causes the chart to generate a plaintext password admin login.
+      # We use Google SSO with google group roles infrastructure@code.org etc mapped to admin.
+      admin.enabled: false
+      oidc.config: |
+        name: Dex
+        issuer: https://dex.k8s.code.org
+        clientID: argocd
+        clientSecret: $dex.argocd.clientSecret
+        requestedScopes:
+          - openid
+          - profile
+          - email
+          - groups
+    rbac:
+      policy.csv: |
+        g, all@code.org, role:readonly
+        g, trusted-contributors@code.org, role:readonly
+        g, product@code.org, role:readonly
+        g, engineers@code.org, role:admin
+        g, infrastructure@code.org, role:admin
+    secret:
+      createSecret: false
+
+  server:
+    ingress:
+      enabled: true
+      controller: generic
+      hostname: argocd.k8s.code.org
+      annotations:
+        alb.ingress.kubernetes.io/scheme: internet-facing
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
+        alb.ingress.kubernetes.io/ssl-redirect: "443"
+        alb.ingress.kubernetes.io/backend-protocol: HTTP
+
+  repoServer:
+    extraEnv:
+      - name: ARGOCD_EXEC_TIMEOUT
+        value: 10m
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 4Gi
+        ephemeral-storage: 40Gi
+      limits:
+        cpu: 1000m
+        memory: 4Gi
+        ephemeral-storage: 40Gi

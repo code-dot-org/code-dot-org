@@ -1,8 +1,8 @@
-data "terraform_remote_state" "eks_cluster" {
+data "terraform_remote_state" "cluster" {
   backend = "s3"
   config = {
     bucket = "codeai-tofu-state"
-    key    = "codeai-k8s-pre-reorg/eks-cluster.tfstate"
+    key    = "codeai-k8s/cluster.tfstate"
     region = "us-west-2"
   }
 }

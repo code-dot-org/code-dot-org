@@ -1,4 +1,4 @@
-**Phase 2: split from Phase 2 in `before.md`**
+**Root 2: `cluster-infra`; split from Phase 2 in `before.md`**
 
 - `infra-modules.tf`
   - module `external_dns`: (HostedZone.route53 k8s.code.org), (RecordSet.route53 k8s.code.org NS), module `external_dns_addon`: (Role.iam external-dns-20260319022352248300000003), (Policy.iam external-dns-20260319022352248200000002), (Namespace.v1 external-dns), (ServiceAccount.v1 external-dns-sa)
