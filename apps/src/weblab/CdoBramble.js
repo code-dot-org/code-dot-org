@@ -496,7 +496,7 @@ export default class CdoBramble {
       })
       .fail((_xhr, _textStatus, err) => {
         console.error(`CdoBramble unable to download file at ${url}. ${err}`);
-        callback(null, err);
+        callback(null, err || 'Unknown error');
       });
   }
 
