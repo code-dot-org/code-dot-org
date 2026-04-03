@@ -28,7 +28,7 @@
 # ArgoCD
 
 **Phase 4: app-of-apps boots**
-- `argocd-app-of-apps-bootstrap.tf`
+- `app-of-apps-bootstrap.tf`
 - `apps/argocd/application.yaml`
 - `apps/argocd/repos.yaml`
 

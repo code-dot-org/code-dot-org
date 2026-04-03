@@ -23,7 +23,7 @@
 - `k8s/tofu/codeai-k8s/cluster-infra-argocd`
 
 - `helm.tf`: (helm external-secrets), (helm argo-cd), (helm networking), (helm external-dns), (helm dex), (helm kargo-secrets)
-- `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
+- `app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
 - `helm.tf` + `infra/standard-envtypes` + `infra/eso-per-envtype`:
   - (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
   - (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
