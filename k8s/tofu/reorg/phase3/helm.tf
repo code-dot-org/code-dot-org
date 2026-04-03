@@ -19,7 +19,22 @@ resource "helm_release" "argocd" {
   namespace        = "argocd"
   create_namespace = true
 
-  depends_on = [helm_release.external_secrets]
+  # TODO: remove this block if it proves unnecessary. This should already be
+  # covered by the default `aws-alb` IngressClass plus
+  # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
+  # values = [yamlencode({
+  #   argocd = {
+  #     server = {
+  #       ingress = {
+  #         annotations = {
+  #           "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_subdomain_wildcard_certificate_arn
+  #         }
+  #       }
+  #     }
+  #   }
+  # })]
+
+  depends_on = [helm_release.external_secrets_operator]
 }
 
 #============================================================
@@ -46,9 +61,7 @@ resource "helm_release" "ingress_and_gateway" {
   wait      = false
 
   values = [yamlencode({
-    loadBalancerConfiguration = {
-      defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
-    }
+    defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
   })]
 }
 
@@ -78,6 +91,19 @@ resource "helm_release" "dex" {
   namespace        = "dex"
   create_namespace = false
 
+  # TODO: remove this block if it proves unnecessary. This should already be
+  # covered by the default `aws-alb` IngressClass plus
+  # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
+  # values = [yamlencode({
+  #   dex = {
+  #     ingress = {
+  #       annotations = {
+  #         "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_subdomain_wildcard_certificate_arn
+  #       }
+  #     }
+  #   }
+  # })]
+
   depends_on = [helm_release.argocd]
 }
 
@@ -104,7 +130,7 @@ resource "helm_release" "kargo_secrets" {
     }
   })]
 
-  depends_on = [helm_release.external_secrets]
+  depends_on = [helm_release.external_secrets_operator]
 }
 
 
@@ -137,5 +163,5 @@ resource "helm_release" "standard_envtypes" {
     frontend_security_group_id         = local.frontend_security_group_id
   })]
 
-  depends_on = [helm_release.external_secrets]
+  depends_on = [helm_release.external_secrets_operator]
 }
