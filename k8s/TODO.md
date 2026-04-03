@@ -56,6 +56,44 @@ In `k8s/tofu/codeai-k8s/cluster-infra-argocd/`, Dex and ArgoCD are still exposed
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
 
+### Argo CD / Dex first-boot SSO
+
+After a fresh `k8s/tofu/codeai-k8s/cluster-infra-argocd/` deploy, Dex SSO to
+`https://argocd.k8s.code.org` came up broken until we manually ran:
+
+`kubectl rollout restart deployment/argocd-server -n argocd`
+
+Symptom:
+
+`failed to query provider "": Get "/.well-known/openid-configuration": unsupported protocol scheme ""`
+
+What happened:
+
+- Module/chart: `k8s/tofu/codeai-k8s/cluster-infra-argocd/infra/argocd`
+- Argo CD now gets `dex.argocd.clientSecret` by ESO merging into `argocd-secret`
+  from `templates/argocd-secret-external-secret.yaml`
+- Pre-reorg, the same key was present at first boot via Argo chart
+  `configs.secret.extra`
+- On first boot, `argocd-server` started once with empty SSO config, then later
+  noticed `oidc.config` and restarted, but `/auth/login` still kept using an
+  empty issuer until a clean pod restart
+
+Observed live objects:
+
+- `ConfigMap/argocd-cm`: correct `oidc.config`
+- `Secret/argocd-secret`: correct `dex.argocd.clientSecret`
+- `Deployment/argocd-server`: login still broken until restarted
+
+Most likely fix:
+
+- Restore pre-reorg ownership for `dex.argocd.clientSecret` in the Argo chart
+  itself, likely via `configs.secret.extra`, and remove the ESO merge into
+  `argocd-secret`
+
+If we keep the ESO merge design, verify whether Argo CD has a bug in the late
+OIDC-config reload path and whether there is a chart-level way to block
+`argocd-server` startup until `argocd-secret` already has the Dex client secret.
+
 ### Manage ArgoCD with ArgoCD
 
 Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
