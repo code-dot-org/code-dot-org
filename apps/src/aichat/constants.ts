@@ -58,3 +58,8 @@ export const ACCEPTED_IMAGE_MEDIA_TYPES = [
   'image/png',
   'image/gif',
 ];
+
+export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
+  'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
+export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
+  'Your teacher has not enabled this tool. Check with your teacher if you think this is an error.';

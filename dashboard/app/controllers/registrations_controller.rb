@@ -183,7 +183,7 @@ class RegistrationsController < Devise::RegistrationsController
       ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
 
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
-      current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      current_user.generate_progress_from_storage_id(storage_id, locale: I18n.locale) if storage_id
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
