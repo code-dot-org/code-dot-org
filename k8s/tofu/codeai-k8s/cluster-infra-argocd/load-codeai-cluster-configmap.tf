@@ -9,8 +9,8 @@ locals {
 
     dex_google_client_id                       = local.cluster_config_raw.dex_google_client_id
 
-    single_namespace_environment_types         = toset(jsondecode(local.cluster_config_raw.single_namespace_environment_types))
-    frontend_security_group_namespaces         = toset(jsondecode(local.cluster_config_raw.frontend_security_group_namespaces))
+    single_namespace_environment_types         = jsondecode(local.cluster_config_raw.single_namespace_environment_types)
+    frontend_security_group_namespaces         = jsondecode(local.cluster_config_raw.frontend_security_group_namespaces)
 
     cluster_primary_security_group_id          = local.cluster_config_raw.cluster_primary_security_group_id
     frontend_security_group_id                 = local.cluster_config_raw.frontend_security_group_id

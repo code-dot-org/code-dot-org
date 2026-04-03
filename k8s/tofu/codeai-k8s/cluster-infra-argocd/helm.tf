@@ -1,3 +1,9 @@
+# NOTE: the ONLY external source allowed to parameterize the Helm
+# values for charts in this file is local.cluster_config.*
+# if you need a value that's not already there, you'll need to
+# pipe it into that file in ../cluster-infra/codeai-cluster-confirmap.tf
+# and here in ./load-codeai-cluster-configmap.tf.
+
 #============================================================
 # Install External Secrets Operator (ESO) Helm chart.
 #============================================================
@@ -145,7 +151,7 @@ resource "helm_release" "kargo_secrets" {
     }
     systemResources = {
       secretStore = {
-        awsRegion = local.cluster_region
+        awsRegion = local.cluster_config.cluster_region
       }
     }
   })]
@@ -175,10 +181,10 @@ resource "helm_release" "standard_envtypes" {
   namespace = "external-secrets"
 
   values = [yamlencode({
-    single_namespace_environment_types = sort(tolist(local.cluster_config.single_namespace_environment_types))
-    region                             = local.cluster_region
+    single_namespace_environment_types = local.cluster_config.single_namespace_environment_types
+    region                             = local.cluster_config.cluster_region
     eso_iam_role_arns                  = local.cluster_config.eso_iam_role_arns
-    frontend_security_group_namespaces = sort(tolist(local.cluster_config.frontend_security_group_namespaces))
+    frontend_security_group_namespaces = local.cluster_config.frontend_security_group_namespaces
     cluster_primary_security_group_id  = local.cluster_config.cluster_primary_security_group_id
     frontend_security_group_id         = local.cluster_config.frontend_security_group_id
   })]
