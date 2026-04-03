@@ -1,11 +1,30 @@
 import react from '@vitejs/plugin-react';
 import {glob} from 'glob';
 import path from 'node:path';
-import type {OutputOptions, PreRenderedAsset} from 'rollup';
+import type {OutputOptions, Plugin, PreRenderedAsset} from 'rollup';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
+
+/**
+ * Vite plugin that externalizes @mui/* imports at the resolveId level.
+ * This is needed because Vite resolves bare @mui/* specifiers to absolute
+ * file paths before Rollup's `external` check runs, causing them to be
+ * bundled instead of kept as external imports.
+ */
+function externalizeMui(): Plugin {
+  return {
+    name: 'externalize-mui',
+    enforce: 'pre',
+    resolveId(source) {
+      if (source.startsWith('@mui/')) {
+        return {id: source, external: true};
+      }
+      return null;
+    },
+  };
+}
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,
@@ -48,6 +67,8 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    // Externalize @mui/* at resolveId level, before Vite resolves to file paths
+    externalizeMui(),
     // Enable React support
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
