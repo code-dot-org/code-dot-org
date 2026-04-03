@@ -1451,6 +1451,12 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :user_lesson_objective_reflection do
+    association(:student, factory: :student)
+    objective
+    reflection {"confident"}
+  end
+
   factory :vocabulary do
     association :course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
@@ -1497,6 +1503,13 @@ FactoryBot.define do
     sequence(:key) {|n| "lesson-activity-#{n}"}
     sequence(:position)
     lesson
+  end
+
+  factory :user_lesson_reflection do
+    association(:student, factory: :student)
+    lesson
+    success {"It went well"}
+    struggle {"This was hard"}
   end
 
   factory :lesson_feedback do
