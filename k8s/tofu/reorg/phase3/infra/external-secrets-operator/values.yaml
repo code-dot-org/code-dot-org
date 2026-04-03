@@ -1,4 +1,5 @@
 externalSecrets:
+  nameOverride: external-secrets
   installCRDs: true
 
   webhook:

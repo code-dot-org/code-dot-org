@@ -4,7 +4,7 @@
 
 resource "helm_release" "external_secrets_operator" {
   name             = "external-secrets-operator"
-  chart            = "${path.module}/infra/external-secrets"
+  chart            = "${path.module}/infra/external-secrets-operator"
   namespace        = "external-secrets"
   create_namespace = true
 }

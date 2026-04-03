@@ -1,4 +1,5 @@
 awsLoadBalancerController:
+  nameOverride: aws-load-balancer-controller
   clusterName: codeai-k8s
   region: us-east-1
   vpcId: vpc-6e98810a
