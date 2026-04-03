@@ -3093,6 +3093,23 @@ columns:
     collation: 
     comment: 
   - *76
+  jit_pl_teaching_tips:
+  - *9
+  - *74
+  - *75
+  - *73
+  - *12
+  - *13
+  jit_pl_teaching_tips_resources:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: jit_pl_teaching_tip_id
+    sql_type_metadata: *14
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *76
   learning_goal_ai_evaluation_feedbacks:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5935,6 +5952,14 @@ columns:
   - *41
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: s3_config_dir
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   schema_migrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: version
@@ -8724,6 +8749,8 @@ primary_keys:
   jit_pl_exemplars_resources: 
   jit_pl_misconceptions: id
   jit_pl_misconceptions_resources: 
+  jit_pl_teaching_tips: id
+  jit_pl_teaching_tips_resources: 
   learning_goal_ai_evaluation_feedbacks: id
   learning_goal_ai_evaluations: id
   learning_goal_evidence_levels: id
@@ -8953,6 +8980,8 @@ data_sources:
   jit_pl_exemplars_resources: true
   jit_pl_misconceptions: true
   jit_pl_misconceptions_resources: true
+  jit_pl_teaching_tips: true
+  jit_pl_teaching_tips_resources: true
   learning_goal_ai_evaluation_feedbacks: true
   learning_goal_ai_evaluations: true
   learning_goal_evidence_levels: true
@@ -10907,6 +10936,49 @@ indexes:
     columns:
     - resource_id
     - jit_pl_misconception_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  jit_pl_teaching_tips:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: jit_pl_teaching_tips
+    name: index_jit_pl_teaching_tips_on_jit_pl_concept_id
+    unique: false
+    columns:
+    - jit_pl_concept_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  jit_pl_teaching_tips_resources:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: jit_pl_teaching_tips_resources
+    name: index_teaching_tips_resources_on_tip_and_resource_ids
+    unique: true
+    columns:
+    - jit_pl_teaching_tip_id
+    - resource_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: jit_pl_teaching_tips_resources
+    name: index_teaching_tips_resources_on_resource_and_tip_ids
+    unique: true
+    columns:
+    - resource_id
+    - jit_pl_teaching_tip_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -15489,7 +15561,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260330181219
+version: 20260331211410
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
