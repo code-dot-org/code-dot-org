@@ -75,7 +75,7 @@ class Projects
   def get(channel_id)
     begin
       owner, project_id = get_storage_id_and_project_id(channel_id)
-    rescue
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise NotFound, "channel `#{channel_id}` not found"
     end
     row = @table.where(id: project_id).exclude(state: 'deleted').first
