@@ -30,10 +30,6 @@ module ImageModeration
     image = MiniMagick::Image.read(raw_data)
     width = image.width
     height = image.height
-    # Don't scale images that will cause errors (when width or height have value 0).
-    if width < 1 || height < 1
-      return StringIO.new(raw_data), content_type
-    end
     if width >= MIN_MODERATION_DIMENSION && height >= MIN_MODERATION_DIMENSION
       return StringIO.new(raw_data), content_type
     end
