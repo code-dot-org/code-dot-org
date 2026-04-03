@@ -2,6 +2,7 @@ require_relative '../test_helper'
 require 'cdo/image_moderation'
 require 'cdo/azure_ai_content_safety'
 require 'mini_magick'
+require 'tempfile'
 
 class ImageModerationTest < Minitest::Test
   def setup
@@ -62,12 +63,15 @@ class ImageModerationTest < Minitest::Test
     assert_nil ImageModeration.moderate_image(@image_body, @content_type)
   end
 
-  # Writes PNG to stdout (png:-); no tempfile — see MiniMagick::Tool block return value.
+  # Tempfile is unlinked when the block returns (see Tempfile.create).
   private def tiny_png_blob(width, height)
-    MiniMagick::Tool::Convert.new do |c|
-      c.size "#{width}x#{height}"
-      c << 'xc:white'
-      c << 'png:-'
+    Tempfile.create(%w[tiny .png]) do |f|
+      MiniMagick::Tool::Convert.new do |c|
+        c.size "#{width}x#{height}"
+        c << 'xc:white'
+        c << f.path
+      end
+      File.binread(f.path)
     end
   end
 end
