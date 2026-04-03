@@ -33,3 +33,37 @@ resource "kubectl_manifest" "argocd_app_of_apps_applicationset" {
     helm_release.standard_envtypes,
   ]
 }
+
+# app-of-apps manages itself, which leads to its parent self refusing to delete, because
+# its child self is not done deleting. Therefore, we patch out the finalizers first,
+# as per argo docs: https://argo-cd.readthedocs.io/en/latest/user-guide/app_deletion/#deletion-using-kubectl
+resource "terraform_data" "strip_finalizers_before_delete" {
+  input = {
+    application_name                   = "app-of-apps"
+    cluster_certificate_authority_data = data.terraform_remote_state.cluster.outputs.cluster_certificate_authority_data
+    cluster_name                       = local.cluster_name
+    cluster_endpoint                   = local.cluster_endpoint
+    cluster_region                     = local.cluster_region
+  }
+
+  depends_on = [kubectl_manifest.argocd_app_of_apps_applicationset]
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = <<-EOT
+      ca_file="$(mktemp)"
+      trap 'rm -f "$ca_file"' EXIT
+      printf '%s' '${base64decode(self.input.cluster_certificate_authority_data)}' >"$ca_file"
+      token="$(aws eks get-token --region='${self.input.cluster_region}' --cluster-name='${self.input.cluster_name}' --query='status.token' --output=text)"
+
+      kubectl \
+        --server='${self.input.cluster_endpoint}' \
+        --certificate-authority="$ca_file" \
+        --token="$token" \
+        --namespace=argocd \
+        patch application '${self.input.application_name}' \
+        --type=merge \
+        -p '{"metadata":{"finalizers":[]}}'
+    EOT
+  }
+}
