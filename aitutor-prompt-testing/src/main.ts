@@ -48,7 +48,7 @@ const STATE_DESCRIPTIONS: Record<StudioStateEnum, string> = {
 
 const TEMPLATE_HINTS: Record<string, string> = {
   system:
-    'Variables: <code>{{#showVideos}}...{{/showVideos}}</code> <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code>',
+    'Auto-injected: <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code> (the 7 available videos)',
   instructions: 'Variables: <code>{{levelInstructions}}</code>',
   code: 'Variables: <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code>',
   state: 'Variables: <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
@@ -179,7 +179,6 @@ function buildVars(levelId: string, stateKey: string): TemplateVars | null {
     stateLabel: stateKey,
     stateDescription: STATE_DESCRIPTIONS[stateKey as StudioStateEnum] ?? '',
     studentMessage,
-    showVideos: true,
     videoFiles,
   };
 }
