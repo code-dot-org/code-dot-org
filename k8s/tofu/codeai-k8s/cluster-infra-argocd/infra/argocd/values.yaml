@@ -16,11 +16,13 @@ argo-cd:
       # New globs differentiate * and ** in paths, etc, very useful and we require it
       applicationsetcontroller.enable.new.git.file.globbing: true
 
-      # Only raise these if repo-server work starts succeeding after we bump
-      # ARGOCD_EXEC_TIMEOUT, but the API server or application-controller
-      # still give up waiting on repo-server RPCs.
-      # server.repo.server.timeout.seconds: "600"
-      # controller.repo.server.timeout.seconds: "600"
+      # We raised both after codeai-staging/codeai-test hit:
+      #   ComparisonError: Failed to load target state: failed to generate
+      #   manifest for source 1 of 2: rpc error: code = DeadlineExceeded
+      #   desc = context deadline exceeded
+      # Default is 60s for each.
+      server.repo.server.timeout.seconds: "300"
+      controller.repo.server.timeout.seconds: "300"
     cm:
       url: https://argocd.k8s.code.org
 

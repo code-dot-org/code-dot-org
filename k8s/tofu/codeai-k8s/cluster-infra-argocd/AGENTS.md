@@ -1,0 +1,1 @@
+- When making Helm chart changes you wish to `tofu apply`, be sure to bump the Helm chart version number or it will say there is no diff to apply.
