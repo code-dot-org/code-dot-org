@@ -24,6 +24,21 @@ argo-cd:
     cm:
       url: https://argocd.k8s.code.org
 
+      # Argo has no built-in health for Kargo Project, so without this it shows
+      # Healthy even when Ready=False and the Kargo UI errors out.
+      resource.customizations.health.kargo.akuity.io_Project: |
+        hs = { status = "Progressing", message = "Waiting for Ready condition" }
+        if obj.status and obj.status.conditions then
+          for _, c in ipairs(obj.status.conditions) do
+            if c.type == "Ready" then
+              hs.message = c.message or ""
+              hs.status = ({ True = "Healthy", False = "Degraded" })[c.status] or "Progressing"
+              break
+            end
+          end
+        end
+        return hs
+
       # BREAK GLASS FOR EMERGENCY ARGOCD ADMIN LOGIN (if Google SSO has failed):
       # 1. set `admin.enabled: true` below
       # 2. deploy cluster-infra-argocd
