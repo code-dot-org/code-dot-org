@@ -16,6 +16,12 @@ resource "kubectl_manifest" "argocd_app_of_apps_applicationset" {
   server_side_apply = true
   field_manager     = "terraform"
 
+  # On deletion, don't consider this module deleted until k8s async resources cleanup.
+  # If applicationset.yaml finalizers are set right on Argo, this should mean destroying
+  # the whole app-of-apps chain of deps and waiting for it, which is good because if we delete
+  # the CRDs before CRD users are deleted, we'll get finalizer infinity-hangs.
+  wait              = true
+
   # Don't boot app-of-apps until we're completely done on the tofu side of things
   depends_on = [
     helm_release.networking,
