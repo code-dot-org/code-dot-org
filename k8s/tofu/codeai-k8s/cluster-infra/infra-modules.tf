@@ -35,13 +35,17 @@ module "networking" {
 module "kargo_secrets" {
   source = "./infra/kargo-secrets"
 
-  cluster_name                    = local.cluster_name
-  cluster_region                  = local.cluster_region
-  cluster_subdomain               = local.cluster_subdomain
-  cluster_oidc_issuer_url         = local.cluster_oidc_issuer_url
-  oidc_provider_arn               = local.oidc_provider_arn
-  kargo_k8s_gitops_repo_username  = var.kargo_k8s_gitops_repo_username
-  kargo_k8s_gitops_repo_password  = var.kargo_k8s_gitops_repo_password
+  providers = {
+    github = github.admin
+  }
+
+  cluster_name                   = local.cluster_name
+  cluster_region                 = local.cluster_region
+  cluster_subdomain              = local.cluster_subdomain
+  cluster_oidc_issuer_url        = local.cluster_oidc_issuer_url
+  oidc_provider_arn              = local.oidc_provider_arn
+  kargo_k8s_gitops_repo_username = var.kargo_k8s_gitops_repo_username
+  kargo_k8s_gitops_repo_password = var.kargo_k8s_gitops_repo_password
 }
 
 module "standard_envtypes" {

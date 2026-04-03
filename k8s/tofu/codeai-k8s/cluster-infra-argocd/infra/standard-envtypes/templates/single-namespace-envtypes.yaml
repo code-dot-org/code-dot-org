@@ -1,4 +1,4 @@
-{{- range $index, $env := .Values.single_namespace_environment_types }}
+{{- range $index, $env := .Values.codeai_cluster_config.single_namespace_environment_types }}
 {{- if gt $index 0 }}
 ---
 {{- end }}
@@ -6,7 +6,7 @@
   "environment_type" $env
   "single_namespace_environment_type" true
   "multi_namespace_regexes" nil
-  "iam_role_arn" (index $.Values.eso_iam_role_arns $env)
-  "region" $.Values.region
+  "iam_role_arn" (index $.Values.codeai_cluster_config.eso_iam_role_arns $env)
+  "region" $.Values.codeai_cluster_config.cluster_region
 ) | trim }}
 {{- end }}

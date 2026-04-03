@@ -184,12 +184,14 @@ resource "helm_release" "standard_envtypes" {
   namespace = "external-secrets"
 
   values = [yamlencode({
-    single_namespace_environment_types = local.codeai_cluster_config.single_namespace_environment_types
-    region                             = local.codeai_cluster_config.cluster_region
-    eso_iam_role_arns                  = local.codeai_cluster_config.eso_iam_role_arns
-    frontend_security_group_namespaces = local.codeai_cluster_config.frontend_security_group_namespaces
-    cluster_primary_security_group_id  = local.codeai_cluster_config.cluster_primary_security_group_id
-    frontend_security_group_id         = local.codeai_cluster_config.frontend_security_group_id
+    codeai_cluster_config = {
+      single_namespace_environment_types = local.codeai_cluster_config.single_namespace_environment_types
+      cluster_region                     = local.codeai_cluster_config.cluster_region
+      eso_iam_role_arns                  = local.codeai_cluster_config.eso_iam_role_arns
+      frontend_security_group_namespaces = local.codeai_cluster_config.frontend_security_group_namespaces
+      cluster_primary_security_group_id  = local.codeai_cluster_config.cluster_primary_security_group_id
+      frontend_security_group_id         = local.codeai_cluster_config.frontend_security_group_id
+    }
   })]
 
   depends_on = [helm_release.external_secrets_operator]

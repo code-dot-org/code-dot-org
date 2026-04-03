@@ -1,4 +1,4 @@
-{{- range .Values.frontend_security_group_namespaces }}
+{{- range .Values.codeai_cluster_config.frontend_security_group_namespaces }}
 ---
 apiVersion: vpcresources.k8s.aws/v1beta1
 kind: SecurityGroupPolicy
@@ -9,6 +9,6 @@ spec:
   podSelector: {}
   securityGroups:
     groupIds:
-      - {{ $.Values.cluster_primary_security_group_id | quote }}
-      - {{ $.Values.frontend_security_group_id | quote }}
+      - {{ $.Values.codeai_cluster_config.cluster_primary_security_group_id | quote }}
+      - {{ $.Values.codeai_cluster_config.frontend_security_group_id | quote }}
 {{- end }}
