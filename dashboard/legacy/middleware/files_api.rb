@@ -280,6 +280,7 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     if code_projects_domain_root_route && html?(response.headers)
+      response.headers['Content-Security-Policy'] = "connect-src 'self'"
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
     end
 
