@@ -2,13 +2,13 @@
 # plus one wildcard per single-namespace environment type, e.g. *.staging.k8s.code.org,
 # and adhoc namespaces, e.g. *.adhoc.k8s.code.org.
 resource "aws_acm_certificate" "cluster_subdomain_wildcard" {
-  domain_name = "*.${local.cluster_subdomain}"
+  domain_name = "*.${var.cluster_subdomain}"
   subject_alternative_names = concat(
     [
-      for env_type in sort(tolist(local.single_namespace_environment_types)) :
-      "*.${env_type}.${local.cluster_subdomain}"
+      for env_type in sort(tolist(var.single_namespace_environment_types)) :
+      "*.${env_type}.${var.cluster_subdomain}"
     ],
-    ["*.adhoc.${local.cluster_subdomain}"]
+    ["*.adhoc.${var.cluster_subdomain}"]
   )
   validation_method = "DNS"
 
@@ -27,7 +27,7 @@ resource "aws_route53_record" "cluster_subdomain_wildcard_certificate_validation
     }
   }
 
-  zone_id = aws_route53_zone.cluster_subdomain.zone_id
+  zone_id = var.cluster_subdomain_zone_id
   name    = each.value.name
   type    = each.value.type
   ttl     = 60

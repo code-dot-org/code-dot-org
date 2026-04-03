@@ -5,14 +5,14 @@
 - [x] Build `reorg/phase2` as the AWS-side root
 - [x] Move Route53 zone and ACM certificate resources into `phase2`
 - [x] Keep Dex Google client secret bootstrap in `phase2`
-- [x] Split ESO into `phase2/modules/eso-per-envtype` and `phase3/infra/eso-per-envtype`
+- [x] Split ESO into `phase2/infra/standard-envtypes/modules/eso-per-envtype` and `phase3/infra/eso-per-envtype`
 - [x] Move ESO IAM role creation into `phase2`
 - [x] Move Kargo SecretStore IAM into `phase2`
 - [x] Keep Kargo GitHub webhook secret bootstrap in `phase2`
 - [x] Refactor `external-dns` in `phase2` to IRSA-only wrapper mode with `observability_tag = null`
 - [x] Refactor `aws-load-balancer-controller` in `phase2` to IRSA-only wrapper mode
 - [x] Export all `phase2` outputs required by later phases
-- [x] Create `phase2/modules/non-aws-bootstrap`
+- [x] Create the interim phase2 non-AWS bootstrap module
 - [x] Move ESO Helm into the `phase2` non-AWS bootstrap module
 - [x] Move Kargo git credentials into the `phase2` non-AWS bootstrap module
 - [x] Move the Kargo GitHub organization webhook into the `phase2` non-AWS bootstrap module

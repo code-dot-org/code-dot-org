@@ -8,7 +8,7 @@ This file records places where the runnable split does not follow
 - `phase2` publishes `codeai-cluster-config` in `kube-system` as the non-secret
   handoff object for later Helm / GitOps consumers. `phase3` now reads that
   `ConfigMap` instead of reading `phase2` remote-state outputs directly.
-- `phase2/kargo-git-credentials-bootstrap.tf` still uses
+- `phase2/infra/kargo-secrets/kargo-git-credentials-bootstrap.tf` still uses
   `bootstrapped-aws-secret` to create or seed Secrets Manager secrets when the
   optional bootstrap values are set.
 - `phase3` remains the remaining Kubernetes-side add-on root.
@@ -49,7 +49,7 @@ This file records places where the runnable split does not follow
   argument.
 - `phase3` remains OpenTofu-managed Kubernetes, despite the architectural label
   "K8S, either Crossplane or ACK" in `after.md`.
-- `phase2/kargo-github-webhook.tf` reads the
+- `phase2/infra/kargo-secrets/kargo-github-webhook.tf` reads the
   webhook secret value back from AWS Secrets Manager using the secret name
   exported by the AWS-side part of `phase2`. In the old mixed root, that
   value came from the sibling bootstrap module in

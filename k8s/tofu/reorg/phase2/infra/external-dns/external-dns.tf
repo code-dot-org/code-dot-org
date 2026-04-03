@@ -9,10 +9,10 @@ module "external_dns_addon" {
   source  = "aws-ia/eks-blueprints-addons/aws"
   version = "~> 1.23.0"
 
-  cluster_name      = local.cluster_name
-  cluster_endpoint  = local.cluster_endpoint
-  cluster_version   = local.cluster_outs.cluster_version
-  oidc_provider_arn = local.oidc_provider_arn
+  cluster_name      = var.cluster_name
+  cluster_endpoint  = var.cluster_endpoint
+  cluster_version   = var.cluster_version
+  oidc_provider_arn = var.oidc_provider_arn
   observability_tag = null
 
   create_kubernetes_resources = false

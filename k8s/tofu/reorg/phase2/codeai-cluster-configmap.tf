@@ -16,12 +16,12 @@ resource "kubernetes_config_map_v1" "codeai_cluster_configmap" {
     cluster_name                               = local.cluster_name
     cluster_region                             = local.cluster_region
     cluster_subdomain                          = local.cluster_subdomain
-    cluster_subdomain_wildcard_certificate_arn = aws_acm_certificate_validation.cluster_subdomain_wildcard.certificate_arn
+    cluster_subdomain_wildcard_certificate_arn = module.ingress_and_gateway.cluster_subdomain_wildcard_certificate_arn
     single_namespace_environment_types         = jsonencode(sort(tolist(local.single_namespace_environment_types)))
-    frontend_security_group_namespaces         = jsonencode(sort(tolist(local.frontend_security_group_namespaces)))
-    cluster_primary_security_group_id          = local.cluster_primary_security_group_id
-    frontend_security_group_id                 = local.frontend_security_group_id
-    eso_iam_role_arns                          = jsonencode(local.eso_iam_role_arns)
-    kargo_external_secret_stores_iam_role_arn  = aws_iam_role.kargo_external_secret_stores.arn
+    frontend_security_group_namespaces         = jsonencode(sort(tolist(toset(local.cluster_outs.frontend_security_group_namespaces))))
+    cluster_primary_security_group_id          = local.cluster_outs.cluster_primary_security_group_id
+    frontend_security_group_id                 = local.cluster_outs.frontend_security_group_id
+    eso_iam_role_arns                          = jsonencode(module.standard_envtypes.eso_iam_role_arns)
+    kargo_external_secret_stores_iam_role_arn  = module.kargo_secrets.kargo_external_secret_stores_iam_role_arn
   }
 }
