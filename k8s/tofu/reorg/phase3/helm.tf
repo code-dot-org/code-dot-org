@@ -58,10 +58,20 @@ resource "helm_release" "ingress_and_gateway" {
   name      = "ingress-and-gateway"
   chart     = "${path.module}/infra/ingress-and-gateway"
   namespace = "kube-system"
-  wait      = false
 
   values = [yamlencode({
-    defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
+    awsLoadBalancerController = {
+      ingressClassParams = {
+        spec = {
+          certificateArn = [local.cluster_subdomain_wildcard_certificate_arn]
+        }
+      }
+    }
+    gateway = {
+      loadBalancerConfig = {
+        defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
+      }
+    }
   })]
 }
 
@@ -74,7 +84,6 @@ resource "helm_release" "external_dns" {
   chart            = "${path.module}/infra/external-dns"
   namespace        = "external-dns"
   create_namespace = false
-  wait             = false
 
   depends_on = [
     helm_release.ingress_and_gateway,

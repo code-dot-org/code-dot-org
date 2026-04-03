@@ -6,10 +6,10 @@
 apiVersion: gateway.k8s.aws/v1beta1
 kind: LoadBalancerConfiguration
 metadata:
-  name: {{ .Values.loadBalancerConfiguration.name }}
-  namespace: {{ .Values.loadBalancerConfiguration.namespace }}
+  name: {{ .Values.gateway.loadBalancerConfig.name }}
+  namespace: {{ .Values.gateway.loadBalancerConfig.namespace }}
 spec:
-  scheme: {{ .Values.loadBalancerConfiguration.scheme | quote }}
+  scheme: {{ .Values.gateway.loadBalancerConfig.scheme | quote }}
   listenerConfigurations:
     - protocolPort: "HTTPS:443"
-      defaultCertificate: {{ .Values.loadBalancerConfiguration.defaultCertificateArn | quote }}
+      defaultCertificate: {{ .Values.gateway.loadBalancerConfig.defaultCertificateArn | quote }}
