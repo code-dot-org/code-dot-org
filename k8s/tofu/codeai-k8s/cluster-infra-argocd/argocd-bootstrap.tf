@@ -52,6 +52,13 @@ resource "helm_release" "argocd_bootstrap" {
   chart            = "${path.module}/.terraform/argocd-bootstrap-checkout/apps/infra/argocd/chart"
   namespace        = "argocd"
   create_namespace = true
+  values = [
+    yamlencode({
+      _bootstrap = {
+        k8s_gitops_revision = data.github_branch.k8s_gitops_default.sha
+      }
+    })
+  ]
 
   depends_on = [terraform_data.argocd_bootstrap_checkout]
 }
