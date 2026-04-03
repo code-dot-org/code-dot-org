@@ -12,14 +12,15 @@ This file records places where the runnable split does not follow
   `bootstrapped-aws-secret` to create or seed Secrets Manager secrets when the
   optional bootstrap values are set.
 - `phase3` remains the remaining Kubernetes-side add-on root.
-- `phase3/infra/gateway` vendors the upstream Gateway API CRDs in `crds/` and
-  keeps them with the shared ALB `GatewayClass` resources. The current split
-  still keeps that bundle in `phase3`, not `phase1`.
+- `phase3/infra/ingress-and-gateway` vendors the upstream Gateway API CRDs in
+  `crds/` and keeps them with the AWS Load Balancer Controller and the shared
+  ALB `GatewayClass` resources. The current split still keeps that bundle in
+  `phase3`, not `phase1`.
 - The upstream Gateway API `standard-install.yaml` is kept intact under
-  `phase3/infra/gateway/crds/` and tracked with a local `.gitattributes`
-  Git LFS rule. `helm lint` complains because that upstream file also carries a
-  `ValidatingAdmissionPolicy` and binding, but `helm template --include-crds`
-  and the Helm release itself remain usable.
+  `phase3/infra/ingress-and-gateway/crds/` and tracked with a local
+  `.gitattributes` Git LFS rule. `helm lint` complains because that upstream
+  file also carries a `ValidatingAdmissionPolicy` and binding, but
+  `helm template --include-crds` and the Helm release itself remain usable.
 - Dex no longer threads the Argo CD client secret through OpenTofu. Phase3 now
   uses ESO for that shared secret, and Dex consumes it with `secretEnv`.
 - Phase2 now mirrors the Dex Google service-account key into AWS Secrets
@@ -29,16 +30,16 @@ This file records places where the runnable split does not follow
   - `phase2`: AWS IA wrapper for IRSA role and policy, plus the annotated
     service account
   - `phase3`: direct `helm_release`
-- `aws-load-balancer-controller` is split the same way:
+- `ingress-and-gateway` is split the same way:
   - `phase2`: AWS IA wrapper for IRSA role and policy, plus the annotated
     service account
-  - `phase3`: direct `helm_release`
+  - `phase3`: direct `helm_release` plus the shared gateway objects
 - Phase3 now installs the External Secrets Operator chart itself. The old split
   installed ESO earlier in phase2 so Kargo shared-resources objects could live
   there.
 - Phase3 now creates the Kargo shared-resources namespace, service account,
-  SecretStore, and ExternalSecret via `infra/kargo-git-credentials`. Phase2
-  keeps only the AWS Secrets Manager bootstrap for the username and password.
+  SecretStore, and ExternalSecret via `infra/kargo-secrets`. Phase2 keeps only
+  the AWS Secrets Manager bootstrap for the username and password.
 - Phase2 now also precreates the `kargo-system-resources` namespace and its
   IRSA-annotated ESO service account so the phase3 Kargo webhook charts can
   stay static.

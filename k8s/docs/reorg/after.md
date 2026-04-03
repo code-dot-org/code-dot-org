@@ -32,14 +32,16 @@
 
 **Phase 3: split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
 
-- `helm.tf`: (helm external-secrets), (helm argo-cd), (helm aws-load-balancer-controller), (helm external-dns), (helm dex), (helm kargo-git-credentials), (helm kargo-github-webhook)
+- `helm.tf`: (helm external-secrets), (helm argo-cd), (helm ingress-and-gateway), (helm external-dns), (helm dex), (helm kargo-secrets)
 - `argocd-app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
 - `helm.tf` + `infra/standard-envtypes` + `infra/eso-per-envtype`:
   - (Namespace.v1 <env>), (ServiceAccount.v1 external-secrets-sa-<env>), (SecretStore.external-secrets.io aws-secrets-manager-store) in `<env>`, (ExternalSecret.external-secrets.io cdo-external-secrets) in `<env>`
   - (ServiceAccount.v1 external-secrets-sa-adhoc), (ClusterSecretStore.external-secrets.io aws-secrets-manager-store-adhoc), (ClusterExternalSecret.external-secrets.io cdo-external-secrets-adhoc)
-- `helm.tf` + `infra/kargo-git-credentials`: (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops)
+- `helm.tf` + `infra/kargo-secrets`:
+  - (Namespace.v1 kargo-shared-resources), (ServiceAccount.v1 external-secrets-sa-kargo-shared-resources), (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-shared-resources), (ExternalSecret.external-secrets.io kargo-k8s-gitops)
+  - (SecretStore.external-secrets.io aws-secrets-manager-store-kargo-system-resources) in `kargo-system-resources`, (ExternalSecret.external-secrets.io github-org-webhook-secret) in `kargo-system-resources`
 - `helm.tf` + `infra/standard-envtypes`: (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `production`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `test`, (SecurityGroupPolicy.vpcresources.k8s.aws frontend-security-group) in `levelbuilder`
-- `helm.tf` + `infra/gateway`: Gateway API CRDs, (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
+- `helm.tf` + `infra/ingress-and-gateway`: (helm aws-load-balancer-controller), Gateway API CRDs, (LoadBalancerConfiguration.gateway.k8s.aws aws-alb), (GatewayClass.gateway.networking.k8s.io aws-alb)
 
 # ArgoCD
 

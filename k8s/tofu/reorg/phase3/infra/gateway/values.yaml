@@ -1,8 +1,0 @@
-gatewayClass:
-  name: aws-alb
-
-loadBalancerConfiguration:
-  name: aws-alb
-  namespace: kube-system
-  scheme: internet-facing
-  defaultCertificateArn: ""

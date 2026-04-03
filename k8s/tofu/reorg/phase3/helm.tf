@@ -23,7 +23,8 @@ resource "helm_release" "argocd" {
 }
 
 #============================================================
-# Install AWS Load Balancer Controller Helm chart.
+# Install AWS Load Balancer Controller, Gateway API CRDs, and the shared
+# GatewayClass resources in one release.
 #============================================================
 #
 # You can find  the latest release of AWS Load Balancer Controller (e.g. v2.17.1), here:
@@ -36,32 +37,19 @@ resource "helm_release" "argocd" {
 # 2. Find Helm Chart version (e.g. v1.17.1) here:
 #    https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/v2.17.1/helm/aws-load-balancer-controller/Chart.yaml#L1-L9
 #
-# Align the vendored Gateway API CRDs in: ./infra/gateway/crds/standard-install.yaml.
+# Align the vendored Gateway API CRDs in: ./infra/ingress-and-gateway/crds/standard-install.yaml.
 
-resource "helm_release" "aws_load_balancer_controller" {
-  name      = "aws-load-balancer-controller"
-  chart     = "${path.module}/infra/aws-load-balancer-controller"
+resource "helm_release" "ingress_and_gateway" {
+  name      = "ingress-and-gateway"
+  chart     = "${path.module}/infra/ingress-and-gateway"
   namespace = "kube-system"
   wait      = false
-}
-
-#============================================================
-# Create a shared GatewayClass for AWS Load Balancer Controller-backed Gateways.
-# Individual services should reference this class instead of creating their own.
-#============================================================
-
-resource "helm_release" "gateway" {
-  name      = "gateway-class-aws-alb"
-  chart     = "${path.module}/infra/gateway"
-  namespace = "kube-system"
 
   values = [yamlencode({
     loadBalancerConfiguration = {
       defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
     }
   })]
-
-  depends_on = [helm_release.aws_load_balancer_controller]
 }
 
 #============================================================
@@ -76,7 +64,7 @@ resource "helm_release" "external_dns" {
   wait             = false
 
   depends_on = [
-    helm_release.gateway,
+    helm_release.ingress_and_gateway,
   ]
 }
 
@@ -94,37 +82,26 @@ resource "helm_release" "dex" {
 }
 
 #============================================================
-# Install Kargo GitHub webhook SecretStore chart.
+# Install Kargo secrets chart.
 #============================================================
 
-resource "helm_release" "kargo_github_webhook" {
-  name             = "kargo-github-webhook"
-  chart            = "${path.module}/infra/kargo-github-webhook"
+resource "helm_release" "kargo_secrets" {
+  name             = "kargo-secrets"
+  chart            = "${path.module}/infra/kargo-secrets"
   namespace        = "kargo-system-resources"
   create_namespace = false
 
   values = [yamlencode({
-    secretStore = {
-      awsRegion = local.cluster_region
+    sharedResources = {
+      clusterName   = local.cluster_config.cluster_name
+      clusterRegion = local.cluster_config.cluster_region
+      iamRoleArn    = local.kargo_external_secret_stores_iam_role_arn
     }
-  })]
-
-  depends_on = [helm_release.external_secrets]
-}
-
-#============================================================
-# Install Kargo git credentials SecretStore chart.
-#============================================================
-
-resource "helm_release" "kargo_git_credentials" {
-  name      = "kargo-git-credentials"
-  chart     = "${path.module}/infra/kargo-git-credentials"
-  namespace = "external-secrets"
-
-  values = [yamlencode({
-    clusterName   = local.cluster_config.cluster_name
-    clusterRegion = local.cluster_config.cluster_region
-    iamRoleArn    = local.kargo_external_secret_stores_iam_role_arn
+    systemResources = {
+      secretStore = {
+        awsRegion = local.cluster_region
+      }
+    }
   })]
 
   depends_on = [helm_release.external_secrets]

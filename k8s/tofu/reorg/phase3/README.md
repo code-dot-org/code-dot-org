@@ -14,13 +14,13 @@ provider.
 ESO itself is now installed in this phase.
 `standard-envtypes` is the installable chart for the standard ESO environment
 types; `eso-per-envtype` is its library chart.
-Gateway API CRDs are vendored in `./infra/gateway/crds/` and tracked with Git
+Gateway API CRDs are vendored in `./infra/ingress-and-gateway/crds/` and tracked with Git
 LFS.
 
-To refresh them after bumping `./infra/gateway/Chart.yaml` `appVersion`, run:
+To refresh them after bumping `./infra/ingress-and-gateway/Chart.yaml` `appVersion`, run:
 
 ```bash
-./infra/gateway/fetch-crds.sh
+./infra/ingress-and-gateway/fetch-crds.sh
 ```
 
 ## Usage

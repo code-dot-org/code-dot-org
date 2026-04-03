@@ -1,0 +1,5 @@
+apiVersion: v2
+name: kargo-secrets
+description: Local chart for Kargo git and webhook secrets via ESO
+type: application
+version: 0.1.0

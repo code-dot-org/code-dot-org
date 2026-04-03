@@ -1,0 +1,17 @@
+sharedResources:
+  namespace: kargo-shared-resources
+  clusterName: codeai-k8s
+  clusterRegion: us-east-1
+  iamRoleArn: ""
+
+systemResources:
+  namespace: kargo-system-resources
+  secretStore:
+    name: aws-secrets-manager-store-kargo-system-resources
+    serviceAccountName: external-secrets-sa-kargo-system-resources
+    awsRegion: us-east-1
+
+  externalSecret:
+    name: github-org-webhook-secret
+    secretStoreName: aws-secrets-manager-store-kargo-system-resources
+    awsSecretName: k8s/tofu/codeai-k8s/kargo/github_org_webhook_secret
