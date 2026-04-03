@@ -11,5 +11,6 @@ metadata:
 spec:
   scheme: {{ .Values.gateway.loadBalancerConfig.scheme | quote }}
   listenerConfigurations:
-    - protocolPort: "HTTPS:443"
+    - alpnPolicy: None
+      protocolPort: "HTTPS:443"
       defaultCertificate: {{ .Values.gateway.loadBalancerConfig.defaultCertificateArn | quote }}
