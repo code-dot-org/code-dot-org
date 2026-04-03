@@ -268,7 +268,7 @@ class JsDebugger extends React.Component {
 
   onMouseDownDebugResizeBar = event => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
+    const eventSourceElm = event.srcElement || event.currentTarget;
     if (eventSourceElm.id === 'debugResizeBar') {
       this._draggingDebugResizeBar = true;
       document.body.addEventListener(
@@ -344,7 +344,7 @@ class JsDebugger extends React.Component {
 
   onMouseDownWatchersResizeBar = event => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
+    const eventSourceElm = event.srcElement || event.currentTarget;
     if (eventSourceElm.id === 'watchersResizeBar') {
       this._draggingWatchersResizeBar = true;
       document.body.addEventListener(
