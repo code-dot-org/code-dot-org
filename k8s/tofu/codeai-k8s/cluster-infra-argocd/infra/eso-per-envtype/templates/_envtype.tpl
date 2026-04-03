@@ -79,13 +79,9 @@ spec:
     name: aws-secrets-manager-store
     kind: SecretStore
   target:
-    creationPolicy: Owner
-    deletionPolicy: Retain
     name: cdo-external-secrets
   dataFrom:
     - find:
-        conversionStrategy: Default
-        decodingStrategy: None
         path: {{ printf "%s/cdo/" .environment_type | quote }}
         name:
           regexp: {{ printf "^%s/cdo/.*$" .environment_type | quote }}
@@ -117,13 +113,9 @@ spec:
       name: aws-secrets-manager-store-{{ .environment_type }}
       kind: ClusterSecretStore
     target:
-      creationPolicy: Owner
-      deletionPolicy: Retain
       name: cdo-external-secrets
     dataFrom:
       - find:
-          conversionStrategy: Default
-          decodingStrategy: None
           path: {{ printf "%s/cdo/" .environment_type | quote }}
           name:
             regexp: {{ printf "^%s/cdo/.*$" .environment_type | quote }}
