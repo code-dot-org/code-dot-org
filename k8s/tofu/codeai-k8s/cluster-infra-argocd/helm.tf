@@ -12,6 +12,8 @@
 #============================================================
 
 resource "helm_release" "external_secrets_operator" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name             = "external-secrets-operator"
   chart            = "${path.module}/infra/external-secrets-operator"
   namespace        = "external-secrets"
@@ -25,6 +27,8 @@ resource "helm_release" "external_secrets_operator" {
 #============================================================
 
 resource "helm_release" "argocd" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name             = "argocd"
   chart            = "${path.module}/infra/argocd"
   namespace        = "argocd"
@@ -66,6 +70,8 @@ resource "helm_release" "argocd" {
 # Align the vendored Gateway API CRDs in: ./infra/networking/crds/standard-install.yaml.
 
 resource "helm_release" "networking" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name      = "networking"
   chart     = "${path.module}/infra/networking"
   namespace = "kube-system"
@@ -91,6 +97,8 @@ resource "helm_release" "networking" {
 #============================================================
 
 resource "helm_release" "external_dns" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name             = "external-dns"
   chart            = "${path.module}/infra/external-dns"
   namespace        = "external-dns"
@@ -106,6 +114,8 @@ resource "helm_release" "external_dns" {
 #============================================================
 
 resource "helm_release" "dex" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name             = "dex"
   chart            = "${path.module}/infra/dex"
   namespace        = "dex"
@@ -141,6 +151,8 @@ resource "helm_release" "dex" {
 #============================================================
 
 resource "helm_release" "kargo_secrets" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name             = "kargo-secrets"
   chart            = "${path.module}/infra/kargo-secrets"
   namespace        = "kargo-system-resources"
@@ -179,6 +191,8 @@ resource "helm_release" "kargo_secrets" {
 # ./infra/eso-per-envtype/ and ./infra/standard-envtypes/
 
 resource "helm_release" "standard_envtypes" {
+  count = var.deploy_helm_charts ? 1 : 0
+
   name      = "standard-envtypes"
   chart     = "${path.module}/infra/standard-envtypes"
   namespace = "external-secrets"
