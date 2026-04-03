@@ -1,0 +1,78 @@
+.form {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-top: 4px;
+}
+
+.resourcesHeading {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.formButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cancelButton {
+  margin-left: 8px;
+}
+
+.error {
+  color: red;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.editButton {
+  background: #337ab7;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.addButton {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 7px;
+  margin-top: 8px;
+  cursor: pointer;
+}

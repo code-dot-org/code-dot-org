@@ -15,6 +15,12 @@ resource "helm_release" "argocd" {
       domain = local.argocd_hostname
     }
 
+    # We use the separate cluster-wide Dex deployment at dex.${local.cluster_subdomain},
+    # not the argo-cd chart's bundled Dex server.
+    dex = {
+      enabled = false
+    }
+
     configs = {
       params = {
         # TLS terminates at the ALB, so argocd-server should speak plain HTTP to the ingress backend:
@@ -79,10 +85,9 @@ resource "helm_release" "argocd" {
 
     server = {
       ingress = {
-        enabled          = true
-        controller       = "generic"
-        ingressClassName = "alb"
-        hostname         = local.argocd_hostname
+        enabled    = true
+        controller = "generic"
+        hostname   = local.argocd_hostname
         annotations = {
           "alb.ingress.kubernetes.io/scheme"           = "internet-facing"
           "alb.ingress.kubernetes.io/target-type"      = "ip"
@@ -107,8 +112,8 @@ resource "helm_release" "argocd" {
         # to 2 CPU / 8Gi cut a large code-dot-org fetch by about 3 minutes out of
         # roughly 15 minutes. Consider that bump for full production usage.
         requests = {
-          cpu                 = "1000m"
-          memory              = "4Gi"
+          cpu    = "1000m"
+          memory = "4Gi"
           # The default Fargate ephemeral storage per pod (20GB) is too small
           # for a single checkout of the code-dot-org repo 🤪
           "ephemeral-storage" = "40Gi"

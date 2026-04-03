@@ -42,7 +42,7 @@ class ScriptsController < ApplicationController
         return
       end
       if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
-        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}.last
+        most_recent_section = current_user.sections_instructed.select {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course.id)}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
         if section_id
@@ -372,6 +372,7 @@ class ScriptsController < ApplicationController
       :lesson_groups,
       :content_area,
       :enable_blockly_keyboard_navigation,
+      :ai_rubric_s3_config,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
@@ -380,6 +381,7 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
+    h[:ai_rubric_s3_config] = JSON.parse(h[:ai_rubric_s3_config]) if h[:ai_rubric_s3_config]
     h[:lesson_groups] = JSON.parse(h[:lesson_groups]).map {|lg| lg.transform_keys(&:underscore)} if h[:lesson_groups]
 
     h

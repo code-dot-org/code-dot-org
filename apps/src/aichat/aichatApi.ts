@@ -310,6 +310,19 @@ function getUpdatedMessages(
           status: AiInteractionStatus.MODEL_TIMEOUT,
         },
       ];
+    case AiRequestExecutionStatus.MODEL_RATE_LIMITED:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.MODEL_RATE_LIMITED,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.MODEL_RATE_LIMITED,
+        },
+      ];
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }

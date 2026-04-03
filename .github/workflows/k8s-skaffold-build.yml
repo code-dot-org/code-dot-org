@@ -8,13 +8,17 @@
 # of forking out to native runners and merging back into a single final multi-platform image
 # as a later step.
 #
-# Per-architecture images are tagged with the branch name and architecture, e.g.:
+# Per-architecture images are first built with the branch name and architecture, e.g.:
 # - code-dot-org:my-branch-amd64
 # - code-dot-org:my-branch-arm64
 #
-# In a later step (see: ./k8s-stitch-multiplatform-image.yml) we stitch the per-architecture
+# After each architecture-specific build, we tag the pushed image with a git-SHA-derived
+# tag for downstream stitching, e.g.:
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-amd64
+#
+# In a later step (see: ./k8s-stitch-multiplatform-image.yml) we stitch these
 # images together into a single multi-platform image, e.g.:
-# - code-dot-org:my-branch
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
 #
 # The "real action" in this file is the final `skaffold build` command which does the
 # actual docker build and push, see /skaffold.yaml for details on what images are built
@@ -24,6 +28,11 @@ name: k8s-skaffold-build
 
 on:
   workflow_call:
+    inputs:
+      source_commit_sha:
+        description: "Source repo commit SHA to use as the canonical docker tag"
+        required: true
+        type: string
     outputs:
       docker_tag_amd64:
         description: "Docker tag for amd64 architecture"
@@ -48,8 +57,10 @@ jobs:
       matrix:
         runs-on: [ubuntu-latest, skaffold-arm64]
     env:
-      SKAFFOLD_DEFAULT_REPO: ghcr.io/${{ github.repository_owner }}
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      SKAFFOLD_DEFAULT_REPO: ghcr.io/${{ github.repository_owner }}
+      SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
       # build docker images with -amd64 or -arm64 suffix, we'll stitch them together later:
       APPEND_ARCHITECTURE_TO_DOCKER_TAG: true
     outputs:
@@ -65,24 +76,26 @@ jobs:
       # This step computes the correct per-architecture docker tag for this runner.
       #
       # For example, on the arm64 runner, this will set:
-      # outputs.docker_tag_arm64=code-dot-org:my-branch-arm64
+      # outputs.docker_tag_arm64=code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-arm64
       #
       # Additionally, it computes the docker tag for the final multi-platform image e.g.:
-      # outputs.docker_tag=code-dot-org:my-branch
+      # outputs.docker_tag=code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
       - name: Setup Docker Tags
         id: docker_tags
         run: |
-          # We use the same branch-name normalization rule in k8s-commit-image-ref-to-argocd.yml
-          DOCKER_TAG="${BRANCH_NAME//[^a-zA-Z0-9_.-]/-}"
-          echo "docker_tag=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+          BRANCH_DOCKER_TAG="${BRANCH_NAME//[^a-zA-Z0-9_.-]/-}"
+          GIT_DOCKER_TAG="git-${SOURCE_COMMIT_SHA}"
+          echo "docker_tag=$GIT_DOCKER_TAG" >> "$GITHUB_OUTPUT"
 
           if [[ "$APPEND_ARCHITECTURE_TO_DOCKER_TAG" == "true" ]]; then
             ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
-            DOCKER_TAG="${DOCKER_TAG}-${ARCH}"
-            echo "docker_tag_${ARCH}=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+            BRANCH_DOCKER_TAG="${BRANCH_DOCKER_TAG}-${ARCH}"
+            GIT_DOCKER_TAG="${GIT_DOCKER_TAG}-${ARCH}"
+            echo "docker_tag_${ARCH}=$GIT_DOCKER_TAG" >> "$GITHUB_OUTPUT"
           fi
-          
-          echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
+
+          echo "BRANCH_DOCKER_TAG=$BRANCH_DOCKER_TAG" >> $GITHUB_ENV
+          echo "GIT_DOCKER_TAG=$GIT_DOCKER_TAG" >> $GITHUB_ENV
 
       # GitHub Runners didn't have a big enough disk for our giant Docker images
       # but fortunately they have an empty tmp disk mounted at /mnt, we just need
@@ -136,12 +149,18 @@ jobs:
       #   uses: mxschmitt/action-tmate@v3
 
       # Run `skaffold build` to build the docker image for the current runner's architecture
+      # We pass skaffold the branch tag NOT the git sha tag because we want skaffold to
+      # re-use the layer cache from this branch for fast rebuilds. We later tag with the git sha.
       - name: skaffold build
         run: |
           skaffold \
             build \
             -v info \
-            --tag $DOCKER_TAG \
+            --tag $BRANCH_DOCKER_TAG \
             --push
 
           echo "Done w/ skaffold build"
+
+      - name: Tag the pushed image with the commit SHA
+        run: |
+          docker buildx imagetools create -t "$IMAGE_NAME:$GIT_DOCKER_TAG" "$IMAGE_NAME:$BRANCH_DOCKER_TAG"

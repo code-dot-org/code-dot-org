@@ -72,7 +72,10 @@ export const getAddToAiTutorField = (
             dom.className = moduleStyles.aiTutorTooltip;
             createReactRoot(
               <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
-              dom
+              dom,
+              {
+                legacyReactDomRender: true,
+              }
             );
             return {dom};
           },

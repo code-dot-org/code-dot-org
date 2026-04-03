@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import classnames from 'classnames';
 import {
   ChangeEvent,
@@ -261,13 +262,22 @@ const Slider: React.FunctionComponent<SliderProps> = ({
       {showLabelSection && (
         <div className={moduleStyles.sliderLabelSection}>
           {label && (
-            <label id={labelId} className={moduleStyles.sliderLabel}>
+            <MuiTypography
+              variant="label2"
+              component="label"
+              id={labelId}
+              className={moduleStyles.sliderLabel}
+            >
               {label}
-            </label>
+            </MuiTypography>
           )}
 
           {/* Display the value with a % sign if percentMode is true */}
-          {!hideValue && <span>{isPercentMode ? `${value}%` : value}</span>}
+          {!hideValue && (
+            <MuiTypography component="span" variant="body3">
+              {isPercentMode ? `${value}%` : value}
+            </MuiTypography>
+          )}
         </div>
       )}
 

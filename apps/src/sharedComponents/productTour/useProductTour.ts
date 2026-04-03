@@ -21,7 +21,6 @@ const TOUR_HIDDEN_FLAG = 'hideProductTours';
 // Sets up a product tour using Shepherd.js: https://docs.shepherdjs.dev/guides/usage/
 // A tour will only be returned if the localStorageKey is not set to 'yes' and tourAvailable is true,
 // otherwise we return null for the tour.
-// FOR DEMO PURPOSES ONLY: ONLY USE BEHIND AN EXPERIMENT FLAG FOR NOW
 const useProductTour = ({
   getSteps,
   localStorageKey,

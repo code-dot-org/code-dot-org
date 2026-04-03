@@ -81,6 +81,7 @@ class UnitEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
+    initialAiRubricS3Config: PropTypes.object,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
@@ -110,6 +111,7 @@ class UnitEditor extends React.Component {
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
         this.props.initialWeeklyInstructionalMinutes || '',
+      aiRubricS3Config: this.props.initialAiRubricS3Config || null,
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
@@ -218,6 +220,9 @@ class UnitEditor extends React.Component {
       weekly_instructional_minutes: parseInt(
         this.state.weeklyInstructionalMinutes
       ),
+      ai_rubric_s3_config: this.state.aiRubricS3Config
+        ? JSON.stringify(this.state.aiRubricS3Config)
+        : undefined,
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),

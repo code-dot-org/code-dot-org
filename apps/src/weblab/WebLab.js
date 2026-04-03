@@ -98,6 +98,7 @@ WebLab.prototype.init = function (config) {
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
+  this.disallowedHtmlAttrs = config.disallowedHtmlAttrs;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
@@ -239,7 +240,10 @@ WebLab.prototype.init = function (config) {
         onMount={() => this.onMount(config)}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

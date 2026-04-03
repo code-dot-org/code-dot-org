@@ -33,13 +33,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
 spec:
-  ingressClassName: alb
   rules:
-    - http:
+    - host: __TEST_HOSTNAME__
+      http:
         paths:
           - path: /
             pathType: Prefix

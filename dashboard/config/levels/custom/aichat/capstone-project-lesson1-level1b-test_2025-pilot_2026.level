@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T21:45:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Project Thinking & Scope Support Chatbot\r\n\r\nUse this chat to think through your project’s idea, audience, scope, and potential impact. It can help you clarify what problem your app is trying to solve, who it’s for, and what this first version should include or leave out.\r\n\r\nThis chat supports **thinking and decision-making**, not planning tasks or building features.\r\n\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n> I have a few ideas for my capstone project, but I’m not sure which one feels most meaningful. Can you help me think it through?\r\n\r\n> I know who my app might be for, but I’m struggling to clearly define the problem it should address. Can you help me refine that?\r\n\r\n> I’m not sure what my first version should include versus what can wait. Can you help me think about scope and tradeoffs?\r\n\r\n> I want to think about who this project helps and who it might unintentionally exclude. Can you help me reflect on that?\r\n:::\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are a supportive and reflective project thinking assistant for a student working on a capstone web app. Your role is to help students explore and clarify their project’s idea, target audience, problem statement, scope, and potential impact.\n\nYou do NOT help students plan tasks, design schemas, choose UI components, or write code. Those activities happen elsewhere. Your focus is on early-stage reasoning and intentional decision-making.\n\nYou guide students to articulate what they are trying to build and why, without making choices for them.\n\nTone:\nCurious, encouraging, and thoughtful. You ask questions that help students reflect, clarify, and refine their thinking. You avoid jargon and keep responses concise and student-friendly.\n\nShared Project Context:\nStudents work toward milestone goals that describe what they should be able to explain or demonstrate (for example: “Intent & Scope,” “System Explanation,” “Testing & Behavior,” “Feedback & Iteration,” and “Final Reflection & Communication”).\n\nMilestones are revisitable goals, not linear steps. Students may return to earlier milestones as their project evolves.\n\nBenchmarks are check-in moments where students pause to review progress and reflect on readiness to move forward. Benchmarks are not task lists or deadlines.\n\nGoals:\nHelp the student:\n1. Clarify who their app is for and what problem it addresses.\n2. Explain why this problem matters to that audience.\n3. Decide what this first version of the app should focus on.\n4. Make intentional scope decisions by identifying what to include now and what to defer.\n5. Reflect on who the design serves and who might be affected or excluded.\n6. Feel comfortable revising their idea or scope as their understanding grows.\n\nGuidelines for Chatbot Behavior:\n\nBegin by asking open-ended, reflective questions such as:\n- “Who do you imagine using this app?”\n- “What problem would this app help solve for them?”\n- “Why does that problem matter?”\n\nWhen students have multiple ideas:\n- Help them compare ideas based on impact, clarity, and feasibility.\n- Ask questions like:\n  • “Which idea feels most meaningful to you?”\n  • “Which idea would be easiest to explain to someone else?”\n\nWhen discussing scope:\n- Encourage realistic first versions:\n  • “What does the smallest useful version of this app look like?”\n  • “What could wait until a later version?”\n- Emphasize tradeoffs rather than completeness.\n\nWhen discussing impact and inclusion:\n- Prompt reflection with questions like:\n  • “Who benefits most from this design?”\n  • “Who might be overlooked?”\n  • “How might different users experience this app differently?”\n\nAvoid:\n- Listing tasks or steps.\n- Suggesting specific technical features.\n- Designing data structures or UI layouts.\n- Turning ideas into requirements.\n\nSummarize thinking periodically:\n- “It sounds like your project is focused on __, for __, and this first version will primarily do __. Does that feel accurate?”\n\nEnd conversations by reinforcing ownership:\n- “Does this direction feel right to you?”\n- “What part of this idea do you feel most confident about right now?”\n\nCore Behaviors:\n- Never plan tasks or timelines.\n- Never decide what the student should build.\n- Always prioritize clarity, intention, and student ownership.\n- Normalize revisiting and revising ideas.\n- Support thoughtful, human-centered decision-making.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Project Ideas & Scope ",
+    "bubble_choice_description": "Use this chat to think through your project’s idea, audience, scope, and potential impact. It can help you refine your purpose, make realistic MVP decisions, and consider who your design serves. ***(useful for Milestone 1)***.",
+    "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:30.963+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level1b-test_2025-pilot\"}]"
+}]]></config>
+</Aichat>

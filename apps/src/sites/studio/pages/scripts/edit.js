@@ -79,6 +79,7 @@ export default function initPage(unitEditorData) {
         initialWeeklyInstructionalMinutes={
           scriptData.weeklyInstructionalMinutes
         }
+        initialAiRubricS3Config={scriptData.aiRubricS3Config}
         initialCourseVersionId={scriptData.courseVersionId}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
@@ -97,7 +98,10 @@ export default function initPage(unitEditorData) {
         }
       />
     </Provider>,
-    document.querySelector('.edit_container')
+    document.querySelector('.edit_container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 

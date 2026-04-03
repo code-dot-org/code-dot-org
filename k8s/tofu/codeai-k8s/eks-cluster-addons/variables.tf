@@ -23,3 +23,10 @@ variable "kargo_k8s_gitops_repo_password" {
   sensitive   = true
   default     = null
 }
+
+variable "kargo_github_org_webhook_secret" {
+  description = "Optional shared secret for the code-dot-org GitHub organization webhook that feeds Kargo. Set it to upload; omit it to read from AWS Secrets Manager."
+  type        = string
+  sensitive   = true
+  default     = null
+}

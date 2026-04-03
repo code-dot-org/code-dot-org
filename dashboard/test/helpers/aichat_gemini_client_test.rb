@@ -38,10 +38,10 @@ class AichatGeminiClientTest < AichatAiClientTest
 
   let(:request_headers) do
     {
-      'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'Content-Type'=>'application/json',
-          'User-Agent'=>'Ruby'
+      'Accept' => '*/*',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Content-Type' => 'application/json',
+          'User-Agent' => 'Ruby'
 
     }
   end
@@ -312,6 +312,18 @@ class AichatGeminiClientTest < AichatAiClientTest
           # Check that we've returned the correct response.
           assert_equal subject, @response_text
         end
+      end
+    end
+
+    context 'when API returns 429 rate limit response' do
+      let(:new_message) {@new_message}
+      let(:level) {@level_with_level_system_prompt}
+
+      it 'raises ModelRateLimitedError' do
+        AichatGeminiClient.any_instance.stubs(:project_id).returns(@vertex_project_id)
+        AichatGeminiClient.any_instance.stubs(:bearer_token).returns(@vertex_bearer_token)
+        stub_request(:post, endpoint_url).to_return(status: 429, body: {}.to_json)
+        -> {call_get_response(internal_model_id, level, new_message, nil)}.must_raise(AichatAiHelper::ModelRateLimitedError)
       end
     end
 

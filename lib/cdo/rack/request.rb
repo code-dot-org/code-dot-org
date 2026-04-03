@@ -101,6 +101,10 @@ module Cdo
       env[:splat_path_info]
     end
 
+    def user
+      env['warden']&.user
+    end
+
     def user_id
       @user_id ||= user_id_from_session_store
     end

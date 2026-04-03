@@ -27,7 +27,7 @@ locals {
 }
 
 module "eso_per_env" {
-  for_each = toset(["production", "staging", "test", "levelbuilder"])
+  for_each = local.single_namespace_environment_types
   source   = "./modules/eso-per-env"
 
   environment_type                  = each.value

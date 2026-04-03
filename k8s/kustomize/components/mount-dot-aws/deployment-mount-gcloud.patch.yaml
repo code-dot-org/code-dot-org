@@ -13,4 +13,4 @@ spec:
       volumes:
         - name: dot-config-gcloud
           persistentVolumeClaim:
-            claimName: dot-config-gcloud
+            claimName: cdo-dot-config-gcloud

@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:42:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>StarSage: Zodiac Fortune Teller</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">StarSage: Zodiac Fortune Teller</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img class=\"image\" src=\"image.png\" alt=\"Crystal ball illustration\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"textArea\" class=\"textArea\" aria-live=\"polite\">Choose your sign to reveal today's fortune.</div>\n        <div class=\"buttons\">\n          <button id=\"ariesButton\" type=\"button\">Aries</button>\n          <button id=\"taurusButton\" type=\"button\">Taurus</button>\n          <button id=\"geminiButton\" type=\"button\">Gemini</button>\n          <button id=\"cancerButton\" type=\"button\">Cancer</button>\n          <button id=\"leoButton\" type=\"button\">Leo</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  padding: 24px;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  background-color: #f3e8ff;\n  color: #222;\n  text-align: center;\n}\n\n.title {\n  margin-bottom: 16px;\n  font-size: 1.75rem;\n}\n\n.container {\n  max-width: 600px;\n  margin: 0 auto;\n}\n\n.image {\n  width: 100%;\n  max-width: 300px;\n  border-radius: 8px;\n  margin-bottom: 16px;\n}\n\n.textArea {\n  min-height: 100px;\n  padding: 16px;\n  border: 2px dashed #9aa4b2;\n  border-radius: 12px;\n  background-color: #fff;\n  margin-bottom: 16px;\n}\n\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\nbutton {\n  padding: 12px;\n  font-size: 1rem;\n  border-radius: 10px;\n  border: 2px solid #333;\n  background-color: #fff;\n  cursor: pointer;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level5-choiceb-test-2025/uuid/77a6944a-4430-4099-8ec8-f46f4b956351.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "language": "md",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "5"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqSqAs/iIcTJvipkm4x\nH4xypmSaXdOnMfojz2Um+kozKMAUqEik3y04yVOQVFBH9RXgt69q6638J9vs\nG2xaL6zbtO4bu95cEWtCgFbg1IiBtP+ekcW/DM832KTVmpMah46Jv+PuCIHu\nI5Rx4UHpW0LHk81CHbQrme4FfUqnS6Ae0Gxs007ZyRtvEfMkeU7ZdJQ5TOkG\ncEwEPTFq1428839rix7bnPMLwOwFK+22nu3sPxkLXF7USqo7OWT4u7Tv6Icm\nWI2sINnHowRpF8GwrP5WrCO8MIhWqYhyoD/ATANsZJ6QLvEB/gm7Udx6cJTb\nJ+xQYzL/wExSKMmCKmDwJYz6JlipluOsQ2ztwzGghcY0dpsQktpiLx3Iuuvx\n71rkdIafmAeXpQKFci8k/5a1OhbCMcmSK/SqBmuqDc++kejH369IWN229jD8\nD/2UOYJiIDoXa/+2HKz7eWiddvj5ON2dtNEs6neIw3CfS51gM5weWc0Up0wB\n+OGYx4DkDp1hxnwUqcRGatqVxdwV053lT+sJ4UwTsorirblHeWCi3SP9yCWG\n/aMXbXb2tXmyKNiOPHUybm99dw65/URSbzangaHxs8FpVJDXZDCfn/EBtBWd\nTw/m3vvi/K5l3D86kXAokT/yL5XwdzfetfSEWhZCj3T52MISabw/V4AszOfU\nofSUlefZLCxq91ylSWoTRf2FY5uow42w1+h5h35TGNhqWfZ0mDY2paIOujWz\nZaEDSjoBwvjfC1JMMclXI1PqBcAHfju8zXWmWkNqPwcpaoZsd+nkPmEZuI6e\nQlBNTWSMY8FVwn/FKPs1tqyA1SVtB4/UQJp2VBaoaMfq7ErnLMCUzPw5W4/A\nudxu3Egwv5ArhXow3LqGsdPcyeOsSZZ0fcVjSEjs5VD42hWS7noICxCCnwmm\nNbAqgf0UR75+D1LR8Vg4ypd/TFBotMkJR3Dm5XyivAgS++og5c7wDrY7qtfx\nVdXxiBoTGhjv7ijCkrbPksS1LSa41u704PTGGaZLxKhZyP4Gcz1ZsIX5xaPV\nFu1bp1DXhcGnj1X1XdCMIWwNgYb/WtFhLI1HFcApYdmPnl7E6xR11fZD+J+y\nqSZRpcmf+N7Eto/Qf0c+sJCJlyXzRGF2e6i/JTkqaff45LLW9LG+a3hY38Y0\n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\nAsux0dNxPriyvzyJsrRYKTA8JkBYstGl\n",
+    "encrypted": "false",
+    "display_name": "Fortune Teller App",
+    "bubble_choice_description": "Create a web app to deliver fortunes for various zodiac signs.",
+    "thumbnail_url": "https://images.code.org/18d7feb060faeda25c3850334fc205cc-main-image.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "### **Fortune Teller App**\r\n\r\nYou are building a fortune teller app. When a user clicks a zodiac sign, the app should display a short fortune in the text box.\r\n\r\n\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a prompt for one button.\r\n\r\n2. **Build:** Use AI to generate the code.\r\n\r\n3. **Test:** Click the button and check that it works as expected.\r\n\r\n4. **Check Code:** Make sure your code:\r\n\r\n   * selects the correct button\r\n   * adds a click event listener\r\n   * responds to the click event\r\n\r\n5. **Fix if needed:** If something does not match what you expect, update your prompt or edit the code.\r\n\r\n6. **Repeat:** Repeat these steps for each button until all buttons work.\r\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:42:09.713+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4b_2025\"},{\"changed_at\":\"2026-03-26 21:18:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:22:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:22:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:25:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:53:04 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:57:58 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:58:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 21:58:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:14:23 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:15:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:15:13 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:15:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:44:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:54:27 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-27 14:11:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

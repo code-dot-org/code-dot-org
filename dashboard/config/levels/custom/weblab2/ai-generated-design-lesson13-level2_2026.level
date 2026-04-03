@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-24T18:14:10.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Designer Mindset\r\n###Generate\r\n- Upload your wireframe. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**",
+    "long_instructions": "## Build Your First Draft\r\n- Upload your wireframe. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -26,9 +27,22 @@
       "allowMultipleAttempts": false
     },
     "project_template_level_name": "ai-generated-design-lesson13-weblab-template-test_2026",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.566+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level2_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.566+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level2_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level2_2025\"},{\"changed_at\":\"2026-03-20 17:56:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

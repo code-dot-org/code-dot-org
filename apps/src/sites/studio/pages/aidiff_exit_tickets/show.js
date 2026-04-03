@@ -17,6 +17,9 @@ function displayExitTicket() {
       updated={new Date(exitTicketData['updated_at'])}
       content={exitTicketData['content']}
     />,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
