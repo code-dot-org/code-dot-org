@@ -73,7 +73,11 @@ class Projects
   end
 
   def get(channel_id)
-    owner, project_id = get_storage_id_and_project_id(channel_id)
+    begin
+      owner, project_id = get_storage_id_and_project_id(channel_id)
+    rescue
+      raise NotFound, "channel `#{channel_id}` not found"
+    end
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
