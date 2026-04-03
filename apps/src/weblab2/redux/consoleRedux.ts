@@ -8,6 +8,8 @@ export interface ConsoleEntry {
   level: ConsoleLogLevel;
   message: string;
   timestamp: string;
+  count: number;
+  groupKey: string;
 }
 
 export interface Weblab2ConsoleState {
@@ -20,6 +22,12 @@ const initialState: Weblab2ConsoleState = {
 
 const MAX_LOG_ENTRIES = 500;
 
+// Strips trailing filenames from messages like "Image not found: cat.png"
+// so that resource errors with different filenames are grouped together.
+const getGroupKey = (level: string, message: string) => {
+  return `${level}:${message.replace(/: [\w.-]+\.\w+$/, '')}`;
+};
+
 const consoleSlice = createSlice({
   name: 'console',
   initialState,
@@ -28,10 +36,21 @@ const consoleSlice = createSlice({
       state,
       action: PayloadAction<{level: ConsoleLogLevel; args: string[]}>
     ) => {
+      const message = action.payload.args.join(' ');
+      const groupKey = getGroupKey(action.payload.level, message);
+      const existingLog = state.logs.find(log => log.groupKey === groupKey);
+      if (existingLog) {
+        existingLog.count += 1;
+        existingLog.message = message;
+        existingLog.timestamp = new Date().toLocaleTimeString();
+        return;
+      }
       state.logs.push({
         level: action.payload.level,
-        message: action.payload.args.join(' '),
+        message,
         timestamp: new Date().toLocaleTimeString(),
+        count: 1,
+        groupKey,
       });
       // Cap length of console logs to MAX_LOG_ENTRIES entries.
       if (state.logs.length > MAX_LOG_ENTRIES) {

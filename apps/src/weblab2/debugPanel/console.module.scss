@@ -23,6 +23,19 @@
   }
 }
 
+.logMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.countBadge {
+  font-family: monospace;
+  white-space: nowrap;
+  margin: 0 8px 0 0;
+}
+
 .timestamp {
   font-family: monospace;
   color: var(--text-neutral-secondary);
