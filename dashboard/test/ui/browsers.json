@@ -5,7 +5,7 @@
     "name": "iPhone",
     "platformName": "iOS",
     "browserName": "Safari",
-    "appium:platformVersion": "17.0",
+    "appium:platformVersion": "18.6",
     "appium:deviceName": "iPhone Simulator",
     "appium:automationName": "XCUITest",
     "appium:mobile": true,
@@ -17,7 +17,7 @@
     "name": "iPad",
     "platformName": "iOS",
     "browserName": "Safari",
-    "appium:platformVersion": "17.0",
+    "appium:platformVersion": "18.6",
     "appium:deviceName": "iPad Simulator",
     "appium:mobile": true,
     "appium:automationName": "XCUITest",
@@ -28,7 +28,7 @@
   {
     "name": "Chrome",
     "browserName": "chrome",
-    "browserVersion": "109",
+    "browserVersion": "138",
     "platformName": "Windows 10",
     "sauce:options": {
       "screenResolution": "1280x1024",
@@ -38,13 +38,13 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "browserVersion": "17",
-    "platformName": "macOS 13"
+    "browserVersion": "18",
+    "platformName": "macOS 15"
   },
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "browserVersion": "115",
+    "browserVersion": "128",
     "platformName": "Windows 11"
   }
 ]
