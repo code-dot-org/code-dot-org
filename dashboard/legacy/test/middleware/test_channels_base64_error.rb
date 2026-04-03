@@ -20,6 +20,7 @@ class ChannelsBase64ErrorTest < Minitest::Test
   end
 
   private def run_test_cases(channel_id)
+    # We explicitly 404 on GET requests, because those are where users can input invalid channel IDs.
     @channels.get "/v3/channels/#{channel_id}"
     assert_equal 404, @channels.last_response.status
 
