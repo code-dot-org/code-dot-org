@@ -16,5 +16,14 @@ resource "kubectl_manifest" "argocd_app_of_apps_applicationset" {
   server_side_apply = true
   field_manager     = "terraform"
 
-  depends_on = [helm_release.argocd]
+  # Don't boot app-of-apps until we're completely done on the tofu side of things
+  depends_on = [
+    helm_release.networking,
+    helm_release.external_secrets_operator,
+    helm_release.argocd,
+    helm_release.external_dns,
+    helm_release.dex,
+    helm_release.kargo_secrets,
+    helm_release.standard_envtypes,
+  ]
 }
