@@ -179,6 +179,30 @@ If you need mode-specific overrides beyond what semantic tokens provide, target 
 
 ---
 
+## MUI Instance Deduplication (Monorepo Caveat)
+
+For `MuiThemeProvider` context to reach component-library components at runtime, the **same `@mui/material` instance** must be used by both `createReactRoot` (in apps) and the component-library's built output.
+
+In this monorepo two mechanisms ensure that:
+
+### 1. Vite `externalizeMui` plugin (component-library build)
+
+The component-library is built with Vite as a pre-compiled library (`dist/`). By default, Vite resolves `@mui/*` imports to absolute file paths **before** Rollup's `external` check runs, which causes MUI to be bundled into `dist/` instead of kept as an external dependency. The `externalizeMui` plugin in `vite.config.ts` intercepts `@mui/*` imports at the `resolveId` level and marks them as external, so the built output emits clean bare specifiers (e.g. `import { Typography } from "@mui/material"`).
+
+Without this plugin, the dist files contain hardcoded relative paths like `../node_modules/@mui/material/esm/Typography/Typography.mjs`, which bypass any downstream deduplication.
+
+### 2. Webpack alias (apps build)
+
+The `apps/` package uses a `portal:` link to consume the component-library. When webpack resolves a bare `@mui/material` import from the component-library's `dist/`, it starts resolution from `frontend/packages/component-library/` and walks up to `frontend/node_modules/@mui/material` — a **different copy** than `apps/node_modules/@mui/material`. Since MUI's `ThemeProvider` uses React context, two different copies mean two different contexts, and theme overrides from `createReactRoot` won't reach component-library components.
+
+The webpack alias in `apps/webpack.config.js` forces all `@mui/material` imports to resolve to `apps/node_modules/@mui/material`, ensuring a single MUI instance and a single React context.
+
+### What happens without these fixes
+
+MUI components from the component-library (e.g. `Typography` inside `HeroBanner`) render with MUI's **default theme** (Roboto, 6rem h1, etc.) instead of `CdoTheme` style overrides — even though `createReactRoot` wraps the page in `MuiThemeProvider`.
+
+---
+
 ## Summary: What controls what
 
 | Attribute / Provider     | Set by                     | Affects                                | Scope          |
