@@ -94,6 +94,13 @@ If we keep the ESO merge design, verify whether Argo CD has a bug in the late
 OIDC-config reload path and whether there is a chart-level way to block
 `argocd-server` startup until `argocd-secret` already has the Dex client secret.
 
+### Argo CD controller sizing
+
+In `k8s/tofu/codeai-k8s/cluster-infra-argocd/infra/argocd/values.yaml`,
+evaluate proper CPU and memory request for `controller`. The current proposed `controller.resources` block was copied over after
+Fargate OOMs, but `argocd-application-controller` is a different workload and
+needs its own CPU / RAM profiling before we lock in requests / limits.
+
 ### Manage ArgoCD with ArgoCD
 
 Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
