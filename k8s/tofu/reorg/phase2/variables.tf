@@ -5,11 +5,10 @@ variable "dex_google_client_secret" {
   default     = null
 }
 
-variable "kargo_github_org_webhook_secret" {
-  description = "Optional shared secret for the code-dot-org GitHub organization webhook that feeds Kargo. Set it to upload; omit it to read from AWS Secrets Manager."
+variable "dex_google_client_id" {
+  description = "Google OAuth client ID for Dex. Published through codeai-cluster-config for phase3 chart wiring."
   type        = string
-  sensitive   = true
-  default     = null
+  default     = "254945981659-9p8ctpobals7gmah0ptlt70t29eflira.apps.googleusercontent.com"
 }
 
 variable "kargo_k8s_gitops_repo_username" {

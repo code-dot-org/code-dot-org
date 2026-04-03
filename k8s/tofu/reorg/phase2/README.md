@@ -28,12 +28,11 @@ AWS_PROFILE=codeorg-admin tofu apply
 AWS Secrets Manager:
 
 - `dex_google_client_secret`
-- `kargo_github_org_webhook_secret`
 - `kargo_k8s_gitops_repo_username`
 - `kargo_k8s_gitops_repo_password`
 
 Remove those values after the first successful apply. This phase also creates
-the GitHub organization webhook for Kargo.
+the GitHub organization webhook for Kargo and generates its shared secret.
 
 ## First-time bootstrap
 
@@ -44,8 +43,8 @@ the GitHub organization webhook for Kargo.
       to set `dex_google_client_secret`.
    1. Follow [Bootstrapping Kargo secrets](#bootstrapping-kargo-secrets) to set `kargo_*` variables.
 1. Run `AWS_PROFILE=codeorg-admin tofu apply`.
-1. Remove `dex_google_client_secret`, `kargo_k8s_gitops_repo_password`, and
-   `kargo_github_org_webhook_secret` from `terraform.tfvars` before you forget.
+1. Remove `dex_google_client_secret` and `kargo_k8s_gitops_repo_password`
+   from `terraform.tfvars` before you forget.
 
 ### Bootstrapping Google OAuth Client for SSO
 
@@ -69,9 +68,6 @@ does not allow wildcard redirect URIs.
       Manager as `k8s/tofu/${cluster_name}/dex_google_client_secret`, but do
       not commit this line
 
-The OAuth client ID and the Dex Google workspace settings are now chart-owned
-in `../phase3/infra/dex/values.yaml`.
-
 ### Bootstrapping Kargo secrets
 
 Kargo needs two GitHub-related secrets:
@@ -91,9 +87,9 @@ Kargo needs two GitHub-related secrets:
 
 #### GitHub webhook secret
 
-1. Generate a random secret with `openssl rand -hex 32`
-1. Edit `terraform.tfvars`:
-   1. set `kargo_github_org_webhook_secret`
+This phase generates the GitHub webhook secret automatically and writes it to
+`k8s/tofu/${cluster_name}/kargo/github_org_webhook_secret` in AWS Secrets
+Manager.
 
 After bootstrap, phase3 syncs these into Kubernetes as:
 

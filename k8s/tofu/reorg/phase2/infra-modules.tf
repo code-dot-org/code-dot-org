@@ -40,7 +40,6 @@ module "kargo_secrets" {
   cluster_subdomain               = local.cluster_subdomain
   cluster_oidc_issuer_url         = local.cluster_oidc_issuer_url
   oidc_provider_arn               = local.oidc_provider_arn
-  kargo_github_org_webhook_secret = var.kargo_github_org_webhook_secret
   kargo_k8s_gitops_repo_username  = var.kargo_k8s_gitops_repo_username
   kargo_k8s_gitops_repo_password  = var.kargo_k8s_gitops_repo_password
 }

@@ -27,7 +27,7 @@ resource "helm_release" "argocd" {
   #     server = {
   #       ingress = {
   #         annotations = {
-  #           "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_subdomain_wildcard_certificate_arn
+  #           "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
   #         }
   #       }
   #     }
@@ -63,13 +63,13 @@ resource "helm_release" "ingress_and_gateway" {
     awsLoadBalancerController = {
       ingressClassParams = {
         spec = {
-          certificateArn = [local.cluster_subdomain_wildcard_certificate_arn]
+          certificateArn = [local.cluster_config.cluster_subdomain_wildcard_certificate_arn]
         }
       }
     }
     gateway = {
       loadBalancerConfig = {
-        defaultCertificateArn = local.cluster_subdomain_wildcard_certificate_arn
+        defaultCertificateArn = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
       }
     }
   })]
@@ -100,6 +100,12 @@ resource "helm_release" "dex" {
   namespace        = "dex"
   create_namespace = false
 
+  values = [yamlencode({
+    dexGoogleClient = {
+      clientID = local.cluster_config.dex_google_client_id
+    }
+  })]
+
   # TODO: remove this block if it proves unnecessary. This should already be
   # covered by the default `aws-alb` IngressClass plus
   # `IngressClassParams.spec.certificateArn` from `ingress-and-gateway`.
@@ -107,7 +113,7 @@ resource "helm_release" "dex" {
   #   dex = {
   #     ingress = {
   #       annotations = {
-  #         "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_subdomain_wildcard_certificate_arn
+  #         "alb.ingress.kubernetes.io/certificate-arn" = local.cluster_config.cluster_subdomain_wildcard_certificate_arn
   #       }
   #     }
   #   }
@@ -130,7 +136,7 @@ resource "helm_release" "kargo_secrets" {
     sharedResources = {
       clusterName   = local.cluster_config.cluster_name
       clusterRegion = local.cluster_config.cluster_region
-      iamRoleArn    = local.kargo_external_secret_stores_iam_role_arn
+      iamRoleArn    = local.cluster_config.kargo_external_secret_stores_iam_role_arn
     }
     systemResources = {
       secretStore = {
@@ -164,12 +170,12 @@ resource "helm_release" "standard_envtypes" {
   namespace = "external-secrets"
 
   values = [yamlencode({
-    single_namespace_environment_types = sort(tolist(local.single_namespace_environment_types))
+    single_namespace_environment_types = sort(tolist(local.cluster_config.single_namespace_environment_types))
     region                             = local.cluster_region
-    eso_iam_role_arns                  = local.eso_iam_role_arns
-    frontend_security_group_namespaces = sort(tolist(local.frontend_security_group_namespaces))
-    cluster_primary_security_group_id  = local.cluster_primary_security_group_id
-    frontend_security_group_id         = local.frontend_security_group_id
+    eso_iam_role_arns                  = local.cluster_config.eso_iam_role_arns
+    frontend_security_group_namespaces = sort(tolist(local.cluster_config.frontend_security_group_namespaces))
+    cluster_primary_security_group_id  = local.cluster_config.cluster_primary_security_group_id
+    frontend_security_group_id         = local.cluster_config.frontend_security_group_id
   })]
 
   depends_on = [helm_release.external_secrets_operator]

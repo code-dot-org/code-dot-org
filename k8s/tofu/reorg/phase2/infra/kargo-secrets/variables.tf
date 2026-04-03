@@ -18,11 +18,6 @@ variable "oidc_provider_arn" {
   type = string
 }
 
-variable "kargo_github_org_webhook_secret" {
-  type      = string
-  sensitive = true
-}
-
 variable "kargo_k8s_gitops_repo_username" {
   type      = string
   sensitive = true
