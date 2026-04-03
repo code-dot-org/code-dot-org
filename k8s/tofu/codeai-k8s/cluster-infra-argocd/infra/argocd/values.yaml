@@ -13,6 +13,9 @@ argo-cd:
       # TLS terminates at the ALB, so argocd-server should speak plain HTTP to the ingress backend.
       server.insecure: true
 
+      # New globs differentiate * and ** in paths, etc, very useful and we require it
+      applicationsetcontroller.enable.new.git.file.globbing: true
+
       # Only raise these if repo-server work starts succeeding after we bump
       # ARGOCD_EXEC_TIMEOUT, but the API server or application-controller
       # still give up waiting on repo-server RPCs.
