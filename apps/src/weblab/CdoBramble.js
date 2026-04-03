@@ -469,19 +469,21 @@ export default class CdoBramble {
   }
 
   writeFileData(path, data, callback) {
-    this.fileSystem().writeFile(
-      path,
-      Buffer.from(data),
-      {encoding: null},
-      err => {
-        err &&
-          console.error(
-            `CdoBramble unable to write ${path} to Bramble. ${err}`
-          );
+    let buffer;
+    try {
+      buffer = Buffer.from(data);
+    } catch (err) {
+      console.error(`CdoBramble unable to write ${path} to Bramble. ${err}`);
+      callback(err);
+      return;
+    }
 
-        callback(err);
-      }
-    );
+    this.fileSystem().writeFile(path, buffer, {encoding: null}, err => {
+      err &&
+        console.error(`CdoBramble unable to write ${path} to Bramble. ${err}`);
+
+      callback(err);
+    });
   }
 
   downloadFile(url, callback) {
