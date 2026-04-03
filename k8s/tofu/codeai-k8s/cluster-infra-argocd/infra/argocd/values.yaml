@@ -95,8 +95,8 @@ argo-cd:
       requests:
         cpu: 1000m
         memory: 4Gi
-        ephemeral-storage: 40Gi
+        ephemeral-storage: 100Gi
       limits:
         cpu: 1000m
         memory: 4Gi
-        ephemeral-storage: 40Gi
+        ephemeral-storage: 100Gi
