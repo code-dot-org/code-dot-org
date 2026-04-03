@@ -121,7 +121,10 @@ resource "helm_release" "dex" {
   #   }
   # })]
 
-  depends_on = [helm_release.argocd]
+  depends_on = [
+    helm_release.argocd,
+    helm_release.external_secrets_operator,
+  ]
 }
 
 #============================================================
