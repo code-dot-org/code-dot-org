@@ -24,7 +24,7 @@ const MAX_LOG_ENTRIES = 500;
 
 // Strips trailing filenames from messages like "Image not found: cat.png"
 // so that resource errors with different filenames are grouped together.
-const getGroupKey = (level: string, message: string) => {
+const getGroupKey = (level: ConsoleLogLevel, message: string) => {
   return `${level}:${message.replace(/: [\w.-]+\.\w+$/, '')}`;
 };
 

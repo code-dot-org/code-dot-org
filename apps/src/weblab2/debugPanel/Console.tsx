@@ -106,7 +106,7 @@ const Console: React.FunctionComponent = () => {
               className={moduleStyles.countBadge}
               aria-hidden="true"
             >
-              Error count: {log.count}
+              Count: {log.count}
             </Typography>
           )}
           <Typography
@@ -167,7 +167,7 @@ const Console: React.FunctionComponent = () => {
             const wrapperAriaLabel = `${positionLabel}${logLabel}`;
             return (
               <div
-                key={index}
+                key={log.groupKey}
                 ref={getLogWrapperRef(isFirstLog, isLastLog)}
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
                 tabIndex={isInConsoleNavigationMode ? 0 : -1}
@@ -180,7 +180,9 @@ const Console: React.FunctionComponent = () => {
                   type={mapLogLevelToAlertType(log.level)}
                   icon={LEVEL_ICONS[log.level]}
                   text={
-                    <div aria-hidden="true">{formatLogWithTimestamp(log)}</div>
+                    <span aria-hidden="true">
+                      {formatLogWithTimestamp(log)}
+                    </span>
                   }
                   size={'s'}
                   aria-label={isInConsoleNavigationMode ? undefined : logLabel}
