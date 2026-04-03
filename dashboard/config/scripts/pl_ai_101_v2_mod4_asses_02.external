@@ -3,31 +3,74 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Designing Assessments in the Age of AI
+# Setting Clear Expectations for AI Use
 
-#### Rather than trying to prevent all AI use, design assessments that:
-* #### Value process over product
-* #### Make thinking visible
-* #### Encourage authentic and personal responses
+#### Having an AI Classroom Use Policy is a good start; however, teachers need to define appropriate and inappropriate uses of AI for different tasks and communicate these expectations to students.
 
-## 3 Practical Strategies
+## Planning for AI Use
 
-#### 1. Build in Process
-* #### Require drafts, checkpoints, or annotations
-* #### Ask students to highlight where their thinking changed
-* #### Use “submit your draft + reflection” as a routine
+#### Not all assignments should allow AI in the same way. Being intentional about its use helps maintain both learning goals and academic integrity.
 
-#### 2. Personalize the Task
-* #### Connect to student experience, opinions, or local context
-* #### Ask students to apply ideas to their own lives or communities
-* #### Example:
-* #### Instead of: “Explain climate change”
-* #### Try: “How might climate change impact your community or daily life?”
+#### Before assigning work, it’s important for teachers to reflect on the learning goals for the assignment and think about what type of AI use will best support students in meeting those goals.
 
-#### 3. Include In-Class Components
-* #### Quick writes, discussions, or reflections
-* #### Use class time to start assignments so you see initial thinking
-* #### Follow up with a short explanation of their work
+#### Here is one way to frame AI use across assignments for yourself and for your students:
 
-#### Could AI complete this without the student? If yes, what could you change to require student thinking?
+<div style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 12px 18px; position: relative;">
+
+<!-- Vertical Line -->
+<div style="position:absolute; left:22px; top:30px; bottom:10px; width:3px; background:#0f766e; border-radius:10px;"></div>
+
+<br>
+<br>
+
+<!-- ITEM 1 -->
+<div style="position:relative; margin-bottom:36px; padding-left:60px;">
+<div style="position:absolute; left:6px; top:2px; width:30px; height:30px; background:#E66A6A; border:3px solid #E66A6A; border-radius:50%; box-shadow:0 0 0 4px white;"></div>
+
+<div style="font-weight:800; font-size:20px; color:#141414; margin-bottom:6px;">
+No AI (Skill-Building)
+</div>
+
+<div style="font-size:16px; line-height:1.5;">
+<strong>Use when students need to work without AI.</strong> In some situations, it is important for students to build foundational skills and demonstrate independent understanding without tool support. This is often most appropriate for early learning, practice, or assessments where you want to see unaided thinking.
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div style="position:relative; margin-bottom:36px; padding-left:60px;">
+<div style="position:absolute; left:6px; top:2px; width:30px; height:30px; background:#F1B44C; border:3px solid #F1B44C; border-radius:50%; box-shadow:0 0 0 4px white;"></div>
+
+<div style="font-weight:800; font-size:20px; color:#141414; margin-bottom:6px;">
+AI-Assisted (Guided Use)
+</div>
+
+<div style="font-size:16px; line-height:1.5;">
+<strong>Use when AI can support learning without replacing thinking.</strong> With clear guidance, students might use AI to generate ideas, receive feedback, or explore different perspectives. In these situations, students remain responsible for revising, evaluating, and improving their work.
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div style="position:relative; padding-left:60px;">
+<div style="position:absolute; left:6px; top:2px; width:30px; height:30px; background:#58B77B; border:3px solid #58B77B; border-radius:50%; box-shadow:0 0 0 4px white;"></div>
+
+<div style="font-weight:800; font-size:20px; color:#141414; margin-bottom:6px;">
+AI-Integrated (Part of the Task)
+</div>
+
+<div style="font-size:16px; line-height:1.5;">
+<strong>Use when analyzing or evaluating AI is part of the learning goal.</strong> In some activities, AI becomes part of the task itself. Students might compare an AI response to their own, analyze its strengths and limitations, or evaluate its accuracy and completeness.
+</div>
+</div>
+
+</div>
+
+## Communicating Expectations
+
+#### Once you’ve made your decisions, clearly communicate expectations to students:
+* #### When AI is allowed and when it is not
+* #### What specific types of use are appropriate for this task
+* #### What work must reflect the student’s own thinking
+* #### Whether students need to explain or reflect on their AI use
+
+#### Provide expectations in clear, task-specific language. When students understand both the purpose and the boundaries of AI use, they are more likely to use it responsibly and effectively.
 MARKDOWN
