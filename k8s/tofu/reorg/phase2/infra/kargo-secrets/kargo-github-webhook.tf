@@ -5,6 +5,11 @@
 # This creates a GitHub organization webhook for push + package events.
 # The shared secret is bootstrapped in phase2 and synced into Kubernetes in
 # phase3.
+#
+# Why org level? This allows a single webhook to work for ghcr.io, the
+# code-dot-org repo, and the k8s-gitops repo. The cost is that apply needs org
+# webhook permissions. If that becomes too annoying, this can be split into
+# several narrower webhooks later.
 
 resource "github_organization_webhook" "kargo" {
   active = true
