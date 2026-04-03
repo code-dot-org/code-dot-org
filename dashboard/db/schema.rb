@@ -103,7 +103,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
     t.bigint "request_id"
     t.integer "lesson_id"
     t.index ["lesson_id", "user_id"], name: "index_ace_lesson_user"
-    t.index ["lesson_id"], name: "index_ace_lesson_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
