@@ -54,8 +54,6 @@ argo-cd:
         g, product@code.org, role:readonly
         g, engineers@code.org, role:admin
         g, infrastructure@code.org, role:admin
-    secret:
-      createSecret: false
 
   server:
     ingress:
