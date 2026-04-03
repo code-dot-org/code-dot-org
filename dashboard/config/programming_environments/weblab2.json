@@ -1,0 +1,20 @@
+{
+  "name": "weblab2",
+  "published": false,
+  "editor_language": "html/css",
+  "title": "Web Lab",
+  "categories": [
+    {
+      "key": "html_tags",
+      "name": "HTML Tags",
+      "color": "#fff176",
+      "position": 0
+    },
+    {
+      "key": "css_properties",
+      "name": "CSS Properties",
+      "color": "#d3e965",
+      "position": 1
+    }
+  ]
+}

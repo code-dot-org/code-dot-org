@@ -641,7 +641,7 @@ class ApiController < ApplicationController
 
     begin
       yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError, Signet::AuthorizationError => exception
       render status: :forbidden, json: {error: exception}
     end
   end
