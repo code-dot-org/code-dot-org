@@ -12,10 +12,10 @@ import {
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface Templates {
-  system: string;
-  instructions: string;
-  code: string;
-  state: string;
+  system: string;       // master: composes {{persona}} + {{videoPrompt}} + {{editorContext}}
+  persona: string;      // tutor behavior text (no variables)
+  videoPrompt: string;  // video list section (uses {{#videoFiles}})
+  editorContext: string; // level instructions + student code + state
 }
 
 interface VideoFileEntry {
@@ -47,11 +47,11 @@ const STATE_DESCRIPTIONS: Record<StudioStateEnum, string> = {
 };
 
 const TEMPLATE_HINTS: Record<string, string> = {
-  system:
-    'Auto-injected: <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code> (the 7 available videos)',
-  instructions: 'Variables: <code>{{levelInstructions}}</code>',
-  code: 'Variables: <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code>',
-  state: 'Variables: <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
+  system: 'Variables: <code>{{persona}}</code> <code>{{videoPrompt}}</code> <code>{{editorContext}}</code>',
+  persona: 'No variables — edit the tutor persona and behavior.',
+  videoPrompt: 'Auto-injected: <code>{{#videoFiles}}{{url}}::{{description}}{{/videoFiles}}</code>',
+  editorContext:
+    'Variables: <code>{{levelInstructions}}</code> <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code> <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -61,8 +61,8 @@ const TEMPLATE_HINTS: Record<string, string> = {
 let LEVEL_DATA: LevelData = {};
 let studioData: Record<string, PythonLabStudioStateData> = {};
 let evalData: Record<string, PythonLabEvalEntry> = {};
-let templates: Templates = {system: '', instructions: '', code: '', state: ''};
-let defaultTemplates: Templates = {system: '', instructions: '', code: '', state: ''};
+let templates: Templates = {system: '', persona: '', videoPrompt: '', editorContext: ''};
+let defaultTemplates: Templates = {system: '', persona: '', videoPrompt: '', editorContext: ''};
 let videoFileData: VideoFileEntry[] = [];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -169,7 +169,8 @@ function buildVars(levelId: string, stateKey: string): TemplateVars | null {
     description: v.description,
   }));
 
-  return {
+  // Render sub-templates first, then expose as vars for the master system template
+  const editorVars: TemplateVars = {
     levelInstructions: level.longInstructions ?? '',
     studentCode: data.studentCode ?? '',
     consoleSection,
@@ -178,7 +179,19 @@ function buildVars(levelId: string, stateKey: string): TemplateVars | null {
     validationSection,
     stateLabel: stateKey,
     stateDescription: STATE_DESCRIPTIONS[stateKey as StudioStateEnum] ?? '',
+  };
+
+  const persona = templates.persona;
+  const videoPrompt = renderTemplate(templates.videoPrompt, {videoFiles});
+  const editorContext = renderTemplate(templates.editorContext, editorVars);
+
+  return {
+    persona,
+    videoPrompt,
+    editorContext,
     studentMessage,
+    // also expose raw vars so individual tabs can preview their own variables
+    ...editorVars,
     videoFiles,
   };
 }
@@ -191,14 +204,11 @@ function assembleOutput(
   if (!vars) return null;
 
   const sections: Array<{label: string; text: string}> = [
-    {label: '1. System Prompt', text: renderTemplate(templates.system, vars)},
-    {label: '2. Instructions Context', text: renderTemplate(templates.instructions, vars)},
-    {label: '3. Code Context', text: renderTemplate(templates.code, vars)},
-    {label: '4. State Context', text: renderTemplate(templates.state, vars)},
+    {label: 'System Prompt', text: renderTemplate(templates.system, vars)},
   ];
   const msg = vars.studentMessage;
   if (msg && typeof msg === 'string') {
-    sections.push({label: '5. Student Message', text: msg});
+    sections.push({label: 'Student Message', text: msg});
   }
   return sections;
 }
