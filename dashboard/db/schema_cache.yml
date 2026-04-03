@@ -292,7 +292,7 @@ columns:
   ai_lesson_summaries:
   - *9
   - *10
-  - &26 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_id
     sql_type_metadata: *2
     'null': true
@@ -361,7 +361,7 @@ columns:
     default_function: 
     collation: utf8mb4_unicode_ci
     comment: 
-  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &23 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: type
     sql_type_metadata: *3
     'null': true
@@ -423,7 +423,7 @@ columns:
   - *10
   - *6
   - *18
-  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: project_id
     sql_type_metadata: *2
     'null': true
@@ -449,12 +449,13 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - *21
   aichat_requests:
   - *9
   - *15
   - *6
   - *18
-  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: model_customizations
     sql_type_metadata: *20
@@ -502,7 +503,7 @@ columns:
   - *10
   - *6
   - *18
-  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: model_customizations
     sql_type_metadata: *20
@@ -573,7 +574,7 @@ columns:
     comment: 
   aidiff_artifacts:
   - *9
-  - *22
+  - *23
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content
     sql_type_metadata: *20
@@ -590,7 +591,7 @@ columns:
     default_function: 
     collation: utf8mb4_unicode_ci
     comment: 
-  - &23 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &24 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: aidiff_thread_id
     sql_type_metadata: *14
     'null': false
@@ -598,7 +599,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &24 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_id
     sql_type_metadata: *14
     'null': false
@@ -646,8 +647,8 @@ columns:
   - *13
   aidiff_messages:
   - *9
-  - *23
-  - &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *24
+  - &26 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: external_id
     sql_type_metadata: *19
     'null': false
@@ -723,8 +724,8 @@ columns:
     comment: 
   aidiff_threads:
   - *9
-  - *24
   - *25
+  - *26
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: llm_version
     sql_type_metadata: *19
@@ -749,7 +750,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *26
+  - *21
   - *12
   - *13
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3279,7 +3280,7 @@ columns:
     collation: 
     comment: 
   - *78
-  - *21
+  - *22
   - &135 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: project_version
     sql_type_metadata: *3
@@ -3386,7 +3387,7 @@ columns:
     collation: 
     comment: 
   - *80
-  - *26
+  - *21
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: saved_feedback
     sql_type_metadata: *11
@@ -3432,7 +3433,7 @@ columns:
   - *54
   lesson_insights:
   - *9
-  - *26
+  - *21
   - *83
   - *69
   - *84
@@ -4072,7 +4073,7 @@ columns:
   objectives:
   - *5
   - *54
-  - *26
+  - *21
   - *28
   - *29
   - *27
@@ -9352,6 +9353,20 @@ indexes:
     - user_id
     - project_id
     - id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_events
+    name: index_ace_lesson_user
+    unique: false
+    columns:
+    - lesson_id
+    - user_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -15561,7 +15576,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260331211410
+version: 20260402000000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
