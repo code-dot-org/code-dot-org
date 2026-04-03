@@ -32,6 +32,11 @@ const LazyAiDiffContainer = React.lazy(
   () => import('./AiDiffContainer' as any)
 );
 
+const LazyAiDiffDrawer = React.lazy(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('./AiDiffDrawer' as any)
+);
+
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
  * toggling an AI element open and closed.
@@ -82,6 +87,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const threadMessages = useAppSelector(state => state.aichat.threadMessages);
 
   const dispatch = useAppDispatch();
+
+  const drawerIsEnabled =
+    experiments.isEnabled('ai-diff-drawer') || DCDO.get('ai-diff-drawer', true);
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -267,15 +275,31 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         </Badge>
       </button>
       <React.Suspense fallback={<div />}>
-        <LazyAiDiffContainer
-          context={context}
-          closeTutor={handleClick}
-          curriculumCourses={curriculumCourses || ([] as string[])}
-          scriptName={scriptName}
-          unreadNotificationCount={
-            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-          }
-        />
+        {drawerIsEnabled ? (
+          <LazyAiDiffDrawer
+            context={context}
+            closeTutor={handleClick}
+            curriculumCourses={curriculumCourses || ([] as string[])}
+            scriptName={scriptName}
+            unreadNotificationCount={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount
+            }
+          />
+        ) : (
+          <LazyAiDiffContainer
+            context={context}
+            closeTutor={handleClick}
+            curriculumCourses={curriculumCourses || ([] as string[])}
+            scriptName={scriptName}
+            unreadNotificationCount={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount
+            }
+          />
+        )}
       </React.Suspense>
     </div>
   );

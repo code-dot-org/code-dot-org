@@ -15,7 +15,7 @@ Feature: Read and create AI diff threads
     And I am on "http://studio.code.org/home"
     And I wait until element "#teacher-home-header" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
+    And I am on "http://studio.code.org/courses/csp-2025/units/4"
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Was asked to disable the AITA welcome experience without removing any code.
@@ -38,10 +38,35 @@ Feature: Read and create AI diff threads
     And I wait until element "p:contains(Lorem ipsum)" is visible
     And I wait until element "#uitest-chat-textarea" has focus
 
+    # There is now a new thread with the message as the title
+    And I wait until element "li:contains(Which lessons have a project)" is visible
+
+    # Click the "new thread" button in the sidebar, type new message
+    And I click selector "button:contains(New Chat)"
+    And I wait until element "p:contains(Hi! I'm your AI Teaching Assistant)" is visible
+    Then element "button:contains(Give me an example)" is visible
+    And element "[aria-label='User chat message']" is not visible
+    Then I see no difference for "ai diff threads new thread from button"
+    And I click selector "#uitest-chat-textarea" once I see it
+    And I press keys "How do I debug" for element "#uitest-chat-textarea"
+    And I wait until element "textarea:contains(How do I debug)" is visible
+    And I click selector "#uitest-chat-submit"
+    Then element "[aria-label='User chat message']" has text "How do I debug"
+    And I wait until element "p:contains(Lorem ipsum)" is visible
+
+    # There is now a new thread with the message as the title
+    And I wait until element "li:contains(How do I debug)" is visible
+
+    # Click the first thread we created again to see the messages
+    And I click selector "span:contains(Which lessons have a project)" once I see it
+    And I wait until element "[aria-label='User chat message']:contains(Which lessons have a project)" is visible
+    And element "p:contains(Lorem ipsum)" is visible
+    Then I see no difference for "ai diff threads display old thread"
+
     # Clicking "suggest prompts" gives another set of prompts
     And I click selector "button:contains(Suggest prompts)"
     And I click selector "button:contains(Create)"
     And I click selector "button:contains(Write a lesson hook)" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
-    Then I see no difference for "ai diff threads continue thread"
+    Then I see no difference for "ai diff threads continue old thread"
     Then I close my eyes
