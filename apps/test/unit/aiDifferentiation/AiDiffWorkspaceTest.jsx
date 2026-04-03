@@ -23,6 +23,7 @@ import {
   chatThreadMessagesValidator,
   chatThreadValidator,
 } from '@cdo/apps/aiDifferentiation/types';
+import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   registerReducers,
@@ -143,6 +144,7 @@ describe('AiDiffWorkspace', () => {
 
   beforeEach(() => {
     stubRedux();
+    DCDO.set('ai-diff-drawer', false);
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
 
@@ -157,6 +159,7 @@ describe('AiDiffWorkspace', () => {
     sessionStorage.clear();
     jest.restoreAllMocks();
     restoreRedux();
+    DCDO.reset();
   });
 
   function renderDefault(propOverrides = {}) {
