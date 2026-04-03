@@ -1454,7 +1454,7 @@ FactoryBot.define do
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
-    reflection {"It went well"}
+    reflection {"confident"}
   end
 
   factory :vocabulary do
