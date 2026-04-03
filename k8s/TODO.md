@@ -44,7 +44,7 @@ include prometheus as a helm chart dependency??
 
 ## Tofu EKS Cluster
 
-See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
+See `k8s/tofu/codeai-k8s/TODO.argocd.diskfill.bug.md` for the Argo CD
 repo-server disk-fill investigation notes.
 
 Manage AWS Load Balancer Controller CRDs explicitly in `k8s/tofu/codeai-k8s/cluster/`.
