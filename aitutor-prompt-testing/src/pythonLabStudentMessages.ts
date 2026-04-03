@@ -571,4 +571,237 @@ export const pythonLabStudentMessages: Record<
     studentMessage: `I have if my_painter.is_on_paint(): turn_right() and then move() but I think move() is outside the if block. they need to both be inside right?`,
     studentMessageVideoRequested: `I have turn_right inside my if block but move() is outside it. can I watch a video about conditionals to understand what needs to be indented inside the if?`,
   },
+  // Level 21: programming-fundamentals-lesson9-level6_2025-launch_2025
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_START': {
+    studentMessage: `i opened both files and theres a lot of code. im not sure where to start looking for bugs`,
+    studentMessageVideoRequested: `i opened both files and theres a lot of code. is there a video that explains how to find bugs in python?`,
+  },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i fixed the indentation in main.py but custom.py still doesnt work. the paint_if_has_paint function is still messing up but i dont know why`,
+    studentMessageVideoRequested: `i fixed main.py but custom.py still has problems. can you show me a video about how if statements work so i can figure out whats wrong?`,
+  },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `i keep getting a SyntaxError and i dont know what it means. my code says "while painter.has_paint()" but it gives an error`,
+    studentMessageVideoRequested: `im getting SyntaxError on my while line. is there a video about how to write while loops correctly?`,
+  },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `my painter keeps hitting the wall!! i thought i fixed move_south_if_can but it still crashes`,
+    studentMessageVideoRequested: `my painter hits the wall when it tries to move south. can you show me a video about how to check if a painter can move before it moves?`,
+  },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `i think i fixed most of the bugs but theres still one indentation error somewhere and i cant find it. the error says line 8 but that line looks fine to me`,
+    studentMessageVideoRequested: `most bugs are fixed but theres still an indentation problem. is there a video explaining how python indentation works?`,
+  },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `everything runs now but the painter isnt painting right. i think the set_paint value is wrong but i dont know what number to put`,
+    studentMessageVideoRequested: `code runs but painter behavior is wrong, i think its the set_paint value. can you show me a video about how set_paint works?`,
+  },
+
+  // Level 22: programming-fundamentals-lesson10-level1_2025
+  'programming-fundamentals-lesson10-level1_2025_START': {
+    studentMessage: `i see the code with the if statements but i dont know what im supposed to do with it`,
+    studentMessageVideoRequested: `i see the starter code with if statements. is there a video explaining what this code is doing?`,
+  },
+  'programming-fundamentals-lesson10-level1_2025_STRUGGLING': {
+    studentMessage: `i ran the code and then i commented out the if statements and uncommented the function but now i dont get what the difference is. it looks like it does the same thing??`,
+    studentMessageVideoRequested: `i ran both versions but i dont understand the difference between the if statements and the move_if_can function. can you show me a video about functions with parameters?`,
+  },
+  'programming-fundamentals-lesson10-level1_2025_SYNTAX_ERRORS': {
+    studentMessage: `i was trying to comment out the lines and i think i accidentally deleted part of the code now it wont run at all`,
+    studentMessageVideoRequested: `i messed up trying to comment out lines and now theres a syntax error. is there a video that shows how commenting out code works?`,
+  },
+  'programming-fundamentals-lesson10-level1_2025_RUNTIME_ERRORS': {
+    studentMessage: `i called move_if_can("North") but it says something went wrong. is North not a real direction?`,
+    studentMessageVideoRequested: `i called the function with "North" and got an error. can you show me a video about how direction arguments work in these functions?`,
+  },
+  'programming-fundamentals-lesson10-level1_2025_GOOD_PROGRESS': {
+    studentMessage: `ok i get that north south and east work but when i call move_if_can("west") the painter goes the wrong way. like it moves east instead`,
+    studentMessageVideoRequested: `most directions work but west is acting weird. is there a video explaining how the conditionals inside move_if_can check the direction?`,
+  },
+  'programming-fundamentals-lesson10-level1_2025_ALMOST_THERE': {
+    studentMessage: `i understand the function now! but im confused about why we use a parameter instead of just writing 4 separate if statements. whats the point`,
+    studentMessageVideoRequested: `i get how it works but why use a parameter instead of separate if statements? is there a video that explains that?`,
+  },
+
+  // Level 23: programming-fundamentals-lesson11-level1_2025
+  'programming-fundamentals-lesson11-level1_2025_START': {
+    studentMessage: `i imported Painter and made a painter object but now what? the instructions say to use set_paint but i dont know where to start`,
+    studentMessageVideoRequested: `i have the painter created but im not sure what to do next. is there a video showing how to use set_paint and custom functions together?`,
+  },
+  'programming-fundamentals-lesson11-level1_2025_STRUGGLING': {
+    studentMessage: `my painter just sits there and doesnt do anything when i run it. i wrote the while loop but it never runs`,
+    studentMessageVideoRequested: `my while loop never runs, the painter doesnt move at all. can you show me a video about while loops so i can figure out whats wrong?`,
+  },
+  'programming-fundamentals-lesson11-level1_2025_SYNTAX_ERRORS': {
+    studentMessage: `im getting an error that says paint_or_turn() is missing an argument. i thought i called it right`,
+    studentMessageVideoRequested: `i called paint_or_turn() and got an error about missing an argument. is there a video about how to call functions with the right arguments?`,
+  },
+  'programming-fundamentals-lesson11-level1_2025_RUNTIME_ERRORS': {
+    studentMessage: `my code was running great then all of a sudden the painter hit the wall and crashed. i have a while loop but i guess its not stopping in time?`,
+    studentMessageVideoRequested: `my painter hits the wall inside my while loop. can you show me a video about how to stop a while loop before the painter crashes?`,
+  },
+  'programming-fundamentals-lesson11-level1_2025_GOOD_PROGRESS': {
+    studentMessage: `the code is working pretty well but the painter runs out of paint before it finishes the whole path. do i just give it more paint at the start?`,
+    studentMessageVideoRequested: `my painter runs out of paint too early. is there a video that explains how to manage paint with set_paint and while loops?`,
+  },
+  'programming-fundamentals-lesson11-level1_2025_ALMOST_THERE': {
+    studentMessage: `almost done i think! everything works except the loop stops one step too early. not sure if my condition is slightly off`,
+    studentMessageVideoRequested: `my loop stops one step too soon. can you show me a video about while loop conditions to help me figure out the right condition?`,
+  },
+
+  // Level 24: programming-fundamentals-lesson12-level1_2025-launch_2025
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_START': {
+    studentMessage: `i see the code but havent run it yet. it looks like theres an if statement in there but i cant tell what the whole program does`,
+    studentMessageVideoRequested: `i havent run the code yet. is there a video about if-else statements that might help me predict what this code will do?`,
+  },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i ran it and the painter did stuff but it wasnt what i predicted at all. i thought it would go straight but it kept turning. i dont get why`,
+    studentMessageVideoRequested: `i ran the code and it did something totally different than i expected. can you show me a video about if-else so i can understand why it made those turns?`,
+  },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `wait does this code even run? it looks like maybe theres something wrong with it. i dont want to run broken code`,
+    studentMessageVideoRequested: `i'm not sure if this code has errors before i even run it. is there a video about reading python code to spot syntax issues?`,
+  },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `i ran it and the painter crashed into the wall. i dont think thats supposed to happen. was i supposed to change something first?`,
+    studentMessageVideoRequested: `the painter crashed when i ran it. can you show me a video about how if-else is supposed to prevent the painter from hitting walls?`,
+  },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `ok i ran it and i get most of what it did. the painter checked if it could move and turned when it couldnt. but theres this one part at the end where it does something unexpected`,
+    studentMessageVideoRequested: `i understand most of what happened but not the last part. is there a video about if-else with painter that might explain the last bit?`,
+  },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `i think i understand it all now but im still confused about why the if statement checks can_move_forward instead of something else. like why that specific condition`,
+    studentMessageVideoRequested: `i mostly get it but curious about why it checks can_move_forward. is there a video about how conditionals work with the painter object?`,
+  },
+
+  // Level 25: programming-fundamentals-lesson12-level4_2025-launch_2025
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_START': {
+    studentMessage: `i see the move_or_turn function but i havent run it yet. looks like its only got an if but no else. is that the bug?`,
+    studentMessageVideoRequested: `i can see the function has an if but no else. is there a video about if-else statements that can help me understand what to add?`,
+  },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i added my own move_or_turn function in main.py but its still not working right. the painter still turns all the time`,
+    studentMessageVideoRequested: `i added a function in main.py but it still doesnt work. is there a video that explains how to fix functions in the right file?`,
+  },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `i wrote the else but now i get a syntax error right on that line. my else looks right though`,
+    studentMessageVideoRequested: `my else statement is causing a syntax error. can you show me a video about how to write if-else correctly in python?`,
+  },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `now the painter moves AND turns at the same time which is even more wrong lol. i put turn_left inside the if block is that bad`,
+    studentMessageVideoRequested: `the painter is moving and turning at the same time. can you show me a video about if-else so i can see where turn_left should go?`,
+  },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `i added the else and it mostly works but theres some extra stuff in my else block that i think is making it do extra turns`,
+    studentMessageVideoRequested: `my else works but has extra stuff in it making too many turns. is there a video showing a clean if-else example?`,
+  },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `its almost working! but the painter makes one extra move at the end i think its something with the indentation under the else`,
+    studentMessageVideoRequested: `almost working but one extra move at the end, might be indentation. can you show me a video about if-else and indentation?`,
+  },
+
+  // Level 26: programming-fundamentals-lesson12-level5_2025-launch_2025
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_START': {
+    studentMessage: `the instructions say to import custom.py but i dont know how to do that. do i just write import custom?`,
+    studentMessageVideoRequested: `i need to import my custom.py file. is there a video about how to import and use functions from another file?`,
+  },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i imported custom but when i call the functions it says wrong number of arguments. i dont know what arguments they need`,
+    studentMessageVideoRequested: `i imported custom but the functions need arguments i dont know. can you show me a video about functions with parameters?`,
+  },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `i tried to import two things and now i get a syntax error on the import line. i wrote "import custom painter" is that wrong`,
+    studentMessageVideoRequested: `my import statement is giving a syntax error. is there a video about how to write import statements in python?`,
+  },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `i called custom.paint_and_move() but it says that function doesnt exist. did i name it wrong in custom.py?`,
+    studentMessageVideoRequested: `calling a function that apparently doesnt exist. can you show me a video about how functions and imports work together?`,
+  },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `most of the functions are working and the painter is doing most of the path but i think im missing one function call near the end`,
+    studentMessageVideoRequested: `most functions work but i think im missing one. is there a video showing how to use multiple custom functions to complete a path?`,
+  },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `all the functions run but the painter ends up in the wrong spot. i think i called them in the wrong order`,
+    studentMessageVideoRequested: `all functions work but wrong order. is there a video about how to think through the sequence of function calls?`,
+  },
+
+  // Level 27: programming-fundamentals-lesson12-level6_2025-launch_2025
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_START': {
+    studentMessage: `i see the code and the flowchart. the code looks like it has an if-else but i havent run it yet. where do i even start looking for the bug`,
+    studentMessageVideoRequested: `i have the code and flowchart but dont know how to compare them. is there a video about if-else that might help me spot what doesnt match?`,
+  },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i ran it and it obviously does something different from the flowchart but i still cant figure out what exactly is wrong in the code`,
+    studentMessageVideoRequested: `i can see something is wrong but not what. can you show me a video about if-else so i can figure out which part of the code is the bug?`,
+  },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `i tried to fix the bug but now theres a syntax error and i think i made it worse`,
+    studentMessageVideoRequested: `i tried to fix the bug and now theres a syntax error. is there a video about writing if-else correctly that could help me fix this?`,
+  },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `i fixed the syntax but now the painter crashes when it runs. my fix made a new error`,
+    studentMessageVideoRequested: `fixed syntax but now runtime error. can you show me a video about if-else with painter to help me understand what the code should do?`,
+  },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `i found the bug! the condition in the if statement was backwards. i changed it but not totally matching the flowchart yet`,
+    studentMessageVideoRequested: `i found the bug but my fix isnt quite right. is there a video showing how to match code to a flowchart with if-else?`,
+  },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `almost there! the main logic is right but one condition in the else is still not matching the flowchart exactly`,
+    studentMessageVideoRequested: `so close! one condition still wrong. can you show me a video about if-else conditions to help me get this last part?`,
+  },
+
+  // Level 28: programming-fundamentals-lesson12-level8_2025-launch_2025
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_START': {
+    studentMessage: `i see the starter code but its basically empty. just an import i think. where do i start`,
+    studentMessageVideoRequested: `starter code is mostly empty. is there a video about how to use imported functions to solve a level?`,
+  },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_STRUGGLING': {
+    studentMessage: `i imported custom but i cant remember the exact function names. i keep getting errors like name is not defined`,
+    studentMessageVideoRequested: `i keep calling functions with the wrong names. can you show me a video about how to keep track of function names when using imports?`,
+  },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_SYNTAX_ERRORS': {
+    studentMessage: `i tried to import multiple functions and wrote "from custom import move_forward turn_left" and got a syntax error`,
+    studentMessageVideoRequested: `my import statement has a syntax error. is there a video about how to correctly import multiple functions in python?`,
+  },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_RUNTIME_ERRORS': {
+    studentMessage: `now i get an error that says my function takes 1 argument but i gave it 2. i thought it needed the direction AND the painter`,
+    studentMessageVideoRequested: `calling a function with wrong number of arguments. can you show me a video about functions with parameters so i understand how many to pass?`,
+  },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_GOOD_PROGRESS': {
+    studentMessage: `most of my functions are working now and the painter is doing most of the task. i think im close`,
+    studentMessageVideoRequested: `mostly working but not totally done. is there a video about using multiple functions together to complete a full task?`,
+  },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_ALMOST_THERE': {
+    studentMessage: `i think i have one too many function calls or maybe one missing. the painter goes almost to the end but then does one extra step`,
+    studentMessageVideoRequested: `almost done but painter does one extra step. can you show me a video about sequencing function calls correctly?`,
+  },
+
+  // Level 29: programming-fundamentals-lesson13-level1_2025
+  'programming-fundamentals-lesson13-level1_2025_START': {
+    studentMessage: `i have the painter created and custom imported but i dont know what to do next. its an open project so theres no specific instructions`,
+    studentMessageVideoRequested: `i have painter created but dont know where to start. is there a video showing how to build a program with while loops and custom functions?`,
+  },
+  'programming-fundamentals-lesson13-level1_2025_STRUGGLING': {
+    studentMessage: `i started writing code but im getting a bunch of errors and i dont even know if my approach is right. nothing works`,
+    studentMessageVideoRequested: `i have some code but its not working at all and im stuck. can you show me a video about how to structure a program with loops and functions?`,
+  },
+  'programming-fundamentals-lesson13-level1_2025_SYNTAX_ERRORS': {
+    studentMessage: `i wrote my while loop and function calls but theres a syntax error on line 7 and i cant find it`,
+    studentMessageVideoRequested: `syntax error in my loop. is there a video about while loop syntax that might help me find the error?`,
+  },
+  'programming-fundamentals-lesson13-level1_2025_RUNTIME_ERRORS': {
+    studentMessage: `my code runs but the painter is going in the wrong direction and ends up in the wrong place. the logic seems off`,
+    studentMessageVideoRequested: `code runs but painter goes wrong way. can you show me a video about using loops and functions together to control where the painter goes?`,
+  },
+  'programming-fundamentals-lesson13-level1_2025_GOOD_PROGRESS': {
+    studentMessage: `the code is working pretty well! the painter does most of what i want but its missing the last part of the path`,
+    studentMessageVideoRequested: `mostly working but missing the last part of the path. is there a video about while loops that might help me figure out why the loop stops early?`,
+  },
+  'programming-fundamentals-lesson13-level1_2025_ALMOST_THERE': {
+    studentMessage: `so close!! everything works but the painter is painting the wrong color on the last square. just one thing off`,
+    studentMessageVideoRequested: `everything works but wrong color on last square. can you show me a video about how to control paint color in while loops?`,
+  },
 };

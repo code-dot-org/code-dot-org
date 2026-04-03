@@ -590,4 +590,138 @@ export const pythonLabEvalData: Record<string, PythonLabEvalEntry> = {
   'programming-fundamentals-lesson9-level3_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
   'programming-fundamentals-lesson9-level3_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
   'programming-fundamentals-lesson9-level3_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  // Level 21: programming-fundamentals-lesson9-level6_2025-launch_2025
+  // Primary concept: Conditionals + If/Else
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_START_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson9-level6_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+
+  // Level 22: programming-fundamentals-lesson10-level1_2025
+  // Primary concept: Conditionals
+  'programming-fundamentals-lesson10-level1_2025_START_NOVIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_START_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_STRUGGLING_VIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson10-level1_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson10-level1_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson10-level1_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['Conditionals_V1.json'] },
+  'programming-fundamentals-lesson10-level1_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson10-level1_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+
+  // Level 23: programming-fundamentals-lesson11-level1_2025
+  // Primary concept: While Loops + Functions
+  'programming-fundamentals-lesson11-level1_2025_START_NOVIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_START_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_STRUGGLING_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson11-level1_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson11-level1_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson11-level1_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson11-level1_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson11-level1_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+
+  // Level 24: programming-fundamentals-lesson12-level1_2025-launch_2025
+  // Primary concept: Conditionals/If-Else + Painter
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_START_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level1_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Painter_Object_V1.json'] },
+
+  // Level 25: programming-fundamentals-lesson12-level4_2025-launch_2025
+  // Primary concept: If/Else
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_START_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level4_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+
+  // Level 26: programming-fundamentals-lesson12-level5_2025-launch_2025
+  // Primary concept: Functions
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_START_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level5_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+
+  // Level 27: programming-fundamentals-lesson12-level6_2025-launch_2025
+  // Primary concept: If/Else
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_START_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level6_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['If_Else_V1.json'] },
+
+  // Level 28: programming-fundamentals-lesson12-level8_2025-launch_2025
+  // Primary concept: Functions
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_START_NOVIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_START_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_STRUGGLING_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['Functions_With_Parameters_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson12-level8_2025-launch_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['Functions_V1.json'] },
+
+  // Level 29: programming-fundamentals-lesson13-level1_2025
+  // Primary concept: While Loops + Functions
+  'programming-fundamentals-lesson13-level1_2025_START_NOVIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_START_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_STRUGGLING_NOVIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_STRUGGLING_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_SYNTAX_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson13-level1_2025_SYNTAX_ERRORS_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_RUNTIME_ERRORS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson13-level1_2025_RUNTIME_ERRORS_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_GOOD_PROGRESS_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson13-level1_2025_GOOD_PROGRESS_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
+  'programming-fundamentals-lesson13-level1_2025_ALMOST_THERE_NOVIDEO': { expectedVideos: [] },
+  'programming-fundamentals-lesson13-level1_2025_ALMOST_THERE_VIDEO': { expectedVideos: ['While_Loops_V1.json'] },
 };
