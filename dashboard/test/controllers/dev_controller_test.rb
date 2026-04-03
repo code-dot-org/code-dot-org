@@ -28,6 +28,7 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   test 'start-build is forbidden on production and development' do
     [:production, :development].each do |forbidden_env|
       with_rack_env(forbidden_env) do
+        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
         FileUtils.expects(:touch).never
         post '/api/dev/start-build', params: SLACK_PARAMS
         assert_response :forbidden
@@ -38,6 +39,7 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   test 'start-build is allowed on most environments' do
     [:staging, :test, :adhoc, :levelbuilder].each do |allowed_env|
       with_rack_env(allowed_env) do
+        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
         FileUtils.expects(:touch).once
         post '/api/dev/start-build', params: SLACK_PARAMS
         assert_response :success
