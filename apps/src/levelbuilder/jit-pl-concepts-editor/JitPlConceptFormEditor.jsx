@@ -10,6 +10,8 @@ import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMark
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 
+import moduleStyles from './jitPlConceptsEditor.module.scss';
+
 import ExemplarsEditor from './ExemplarsEditor';
 import MisconceptionsEditor from './MisconceptionsEditor';
 import TeachingTipsEditor from './TeachingTipsEditor';
@@ -63,22 +65,22 @@ const JitPlConceptFormEditor = ({
     <div>
       <RailsAuthenticityToken />
       <h1>Edit JIT PL Concept</h1>
-      <label style={styles.label}>
+      <label className={moduleStyles.conceptLabel}>
         Name
         <input
           className="input"
           name="name"
-          style={styles.input}
+          className={moduleStyles.conceptInput}
           value={name || ''}
           onChange={e => setName(e.target.value)}
         />
       </label>
-      <label style={styles.label}>
+      <label className={moduleStyles.conceptLabel}>
         Display Name
         <input
           className="input"
           name="display_name"
-          style={styles.input}
+          className={moduleStyles.conceptInput}
           value={displayName || ''}
           onChange={e => setDisplayName(e.target.value)}
         />
@@ -120,15 +122,6 @@ const JitPlConceptFormEditor = ({
       />
     </div>
   );
-};
-
-const styles = {
-  label: {
-    marginBottom: 20,
-  },
-  input: {
-    marginLeft: 10,
-  },
 };
 
 JitPlConceptFormEditor.propTypes = {

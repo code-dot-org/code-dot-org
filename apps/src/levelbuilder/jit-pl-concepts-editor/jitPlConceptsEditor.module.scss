@@ -1,3 +1,6 @@
+// Shared styles for JIT PL concept editor components
+
+// Sub-editor forms (ExemplarsEditor, MisconceptionsEditor, TeachingTipsEditor)
 .form {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -102,4 +105,13 @@
   padding: 7px;
   margin-top: 8px;
   cursor: pointer;
+}
+
+// Top-level concept form (JitPlConceptFormEditor, NewJitPlConceptForm)
+.conceptLabel {
+  margin-bottom: 20px;
+}
+
+.conceptInput {
+  margin-left: 10px;
 }

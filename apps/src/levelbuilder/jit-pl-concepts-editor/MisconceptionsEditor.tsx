@@ -11,7 +11,7 @@ import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
 import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
 
-import moduleStyles from './misconceptionsEditor.module.scss';
+import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
   id: number;

@@ -9,7 +9,7 @@ import createResourcesReducer, {
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
-import moduleStyles from './misconceptionsEditor.module.scss';
+import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
   id: number;
