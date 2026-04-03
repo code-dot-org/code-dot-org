@@ -100,10 +100,15 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     );
   }
 
-  const lastMessagePostText =
-    viewingAiTutorVersionFileUpdates && versionFiles ? (
-      <AiTutorVersionActions files={versionFiles} />
-    ) : undefined;
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? (onRequestScrollToBottom: () => void) => (
+          <AiTutorVersionActions
+            files={versionFiles}
+            onRequestScrollToBottom={onRequestScrollToBottom}
+          />
+        )
+      : undefined;
 
   return (
     <div className={moduleStyles.container}>
@@ -118,7 +123,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
-        lastMessagePostText={lastMessagePostText}
+        renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
   );

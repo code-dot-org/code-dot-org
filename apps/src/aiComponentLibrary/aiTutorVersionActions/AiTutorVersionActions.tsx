@@ -15,6 +15,7 @@ import moduleStyles from './ai-tutor-version-actions.module.scss';
 
 interface AiTutorVersionActionsProps {
   files: ProjectFile[];
+  onRequestScrollToBottom?: () => void;
 }
 
 /**
@@ -23,6 +24,7 @@ interface AiTutorVersionActionsProps {
  */
 const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   files,
+  onRequestScrollToBottom,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isAcceptMode, setIsAcceptMode] = useState(false);
@@ -96,7 +98,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             color="primary"
             size="small"
             className={moduleStyles.actionButton}
-            onClick={() => setIsAcceptMode(true)}
+            onClick={() => {
+              setIsAcceptMode(true);
+              if (onRequestScrollToBottom) {
+                window.requestAnimationFrame(onRequestScrollToBottom);
+              }
+            }}
             type="button"
             startIcon={
               <FontAwesomeV6Icon

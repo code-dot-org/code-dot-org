@@ -25,6 +25,9 @@ interface ChatEventsListProps {
   buildAssetUrl?: (asset: ChatAsset) => string;
   hasInstructionsDrawer?: boolean;
   lastMessagePostText?: React.ReactNode;
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
 }
 
 /**
@@ -38,6 +41,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   buildAssetUrl,
   hasInstructionsDrawer,
   lastMessagePostText,
+  renderLastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -93,14 +97,20 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   };
 
   const hasChatHistory = events.length > 0;
+  const resolvedLastMessagePostText = useMemo(() => {
+    if (renderLastMessagePostText) {
+      return renderLastMessagePostText(() => scrollToLastMessage());
+    }
+    return lastMessagePostText;
+  }, [lastMessagePostText, renderLastMessagePostText, scrollToLastMessage]);
 
   const lastChatMessageIndex = useMemo(() => {
-    if (!lastMessagePostText) return -1;
+    if (!resolvedLastMessagePostText) return -1;
     for (let i = events.length - 1; i >= 0; i--) {
       if (isChatMessage(events[i])) return i;
     }
     return -1;
-  }, [events, lastMessagePostText]);
+  }, [events, resolvedLastMessagePostText]);
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -217,7 +227,9 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   buildAssetUrl={buildAssetUrl}
                   clientType={clientType}
                   modelParameters={modelParameters}
-                  postText={isLastChatMessage ? lastMessagePostText : undefined}
+                  postText={
+                    isLastChatMessage ? resolvedLastMessagePostText : undefined
+                  }
                   ref={isLastEvent ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {
