@@ -2,6 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
+  {{- $locals := index .Values "locals.yml" | default (dict) }}
+  {{- $overrideDashboard := index $locals "override_dashboard" | default "" }}
+  {{- if $overrideDashboard }}
+  annotations:
+    argocd.argoproj.io/ignore-default-links: "true"
+    link.argocd.argoproj.io/external-link: {{ printf "https://%s/" $overrideDashboard | quote }}
+  {{- end }}
   labels:
     {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
     code.ai/dns-name: {{ .Values.dnsName }}
