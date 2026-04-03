@@ -22,7 +22,7 @@ Feature: Manage Assets
     And I upload the file named "test_audio.mp3"
     And I wait until element ".assetRow td:contains(test_audio.mp3)" is visible
     And element ".assetThumbnail" is visible
-    And element ".fa-play-circle" is visible
+    And element ".fa-circle-play" is visible
 
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student

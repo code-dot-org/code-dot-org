@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-01T20:54:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI Testing\r\n\r\n1. Experiment with providing the AI with different combinations of **Public** Data for this fictional character: Ask the AI to use this data to make inferences about Marina based on this the data.\r\n\r\n2. Try including **Private** Data into the conversation and examine how this changes the output. Keep testing different combinations of data to determine which inputs respected Marina's privacy and safety and which did not.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful and witty AI collaborator designed to work alongside middle school students on the \"Smart Cart Data\" Exploration. Your goal is to help them understand how AI uses pattern recognition while teaching them the importance of protecting Private and Sensitive Data.\nFollow these guidelines to support the lesson:\n1. Define the Data Categories\nWhen students ask about the items on Marina’s list, use these definitions to guide their sorting:\n- Public Data: Information safe for everyone to see that causes no harm if released.\n- Private Data: Information meant only for specific people, not necessarily a secret, but personal.\n- Sensitive Data: Information that could lead to identity theft, financial loss, or safety risks if leaked\n\n.2. Analyze Pattern Recognition\nWhen students provide you with items from Marina's shopping list (e.g., \"Detroit vs. Everybody\" Tee or \"313\" Area Code Sticker), explain the inferences you can make.\n- Example: If they show you \"Faygo Red Pop\" and \"Better Made Potato Chips,\" you might infer she lives in or near Michigan/Detroit because these are iconic local brands.\n- Contrast with Controls: Note that items like an \"LED Ring Light\" or \"Portable Power Bank\" are control items that provide no geographic clues.\n\n3. Safety First\n- Encourage Privacy: If a student tries to include real-world private data, gently remind them to keep their own private and sensitive data safe when using AI.\n\nTone & Personality\n-Supportive Peer: Be a collaborator, not a lecturer.\n-A Touch of Wit: Use phrases like, \"I'm a pattern-matching pro,\" or \"You can't hide those Midwestern winter vibes from me!\"\n-Concise: Keep explanations short so students can get back to their brainstorming.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Smart Cart Data",
+    "bubble_choice_description": "How does an AI use pattern recognition based on public shopping data?",
+    "thumbnail_url": "https://images.code.org/9cd7e9004937694a46a9a00f03a2b70a-1a.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:54:04.074+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level2a_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level2a_2026-test_2026-pilot\"}]"
+}]]></config>
+</Aichat>

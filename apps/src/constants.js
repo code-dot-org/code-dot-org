@@ -199,6 +199,7 @@ export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
   'spritelab',
   'poetry',
   'playlab',
+  'game_design',
 ];
 
 export const OPEN_ENDED_LAB2_PROJECT_TYPES = ['pythonlab', 'weblab2'];
@@ -208,4 +209,5 @@ export const OPEN_ENDED_PROJECTS_YOUNG_AGE = [
   'poetry',
   'playlab',
   'starwarsblocks',
+  'game_design',
 ];

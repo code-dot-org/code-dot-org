@@ -1,0 +1,10 @@
+name 'CSD U6 - Screen Outputs - Chal_2026'
+display_name 'Challenge Levels'
+
+sublevels
+level 'CSD U6 - Screen Outputs - ChalA_2026'
+level 'CSD U6 - Screen Outputs - A_2026'
+level 'CSD U6 - Screen Outputs - ChalC_2026'
+level 'CSD U6 - Screen Outputs - ChalD_2026'
+level 'CSD U6 - Screen Outputs - ChalE_2026'
+level 'CSD U6 - Screen Outputs - ChalF_2026'

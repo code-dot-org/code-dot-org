@@ -37,6 +37,9 @@ $(document).ready(() => {
         originalMisconceptions={misconceptions || []}
       />
     </Provider>,
-    document.getElementById('edit-jit-pl-concept')
+    document.getElementById('edit-jit-pl-concept'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -8,6 +8,9 @@ $(() => {
   const dataDocs = getScriptData('dataDocs');
   createReactRoot(
     <DataDocIndex dataDocs={dataDocs} />,
-    document.getElementById('see-data-docs')
+    document.getElementById('see-data-docs'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });
