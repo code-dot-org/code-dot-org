@@ -18,7 +18,7 @@ interface VocabularyFlashcardsProps {
   vocabulary: VocabularyItem[];
 }
 
-const cardHeight = 260;
+const cardHeight = {xs: 200, sm: 260};
 
 const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -85,6 +85,7 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 backfaceVisibility: 'hidden',
+                overflow: 'auto',
               }}
               elevation={4}
             >
@@ -97,7 +98,11 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
                 >
                   Word
                 </Typography>
-                <Typography variant="h4" align="center">
+                <Typography
+                  variant="h4"
+                  align="center"
+                  sx={{fontSize: {xs: '1.5rem', sm: '2.125rem'}}}
+                >
                   {currentCard?.word}
                 </Typography>
               </CardContent>
@@ -113,6 +118,7 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
                 justifyContent: 'center',
                 backfaceVisibility: 'hidden',
                 transform: 'rotateY(180deg)',
+                overflow: 'auto',
               }}
               elevation={4}
             >
@@ -125,7 +131,11 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
                 >
                   Definition
                 </Typography>
-                <Typography variant="h5" align="center">
+                <Typography
+                  variant="h5"
+                  align="center"
+                  sx={{fontSize: {xs: '1rem', sm: '1.5rem'}}}
+                >
                   {currentCard?.definition}
                 </Typography>
               </CardContent>
@@ -134,7 +144,13 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
         </CardActionArea>
       </Box>
 
-      <Stack direction="row" spacing={2} alignItems="center">
+      <Stack
+        direction="row"
+        spacing={2}
+        alignItems="center"
+        flexWrap="wrap"
+        justifyContent="center"
+      >
         <Button variant="outlined" onClick={goPrev}>
           Previous
         </Button>

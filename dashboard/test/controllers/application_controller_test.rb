@@ -204,6 +204,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'exception handling' do
+    it 'gracefully handles UnsafeRedirectErrors' do
+      Rails.logger.expects(:warn).once
+      get home_set_locale_path, params: {locale: 'ar-SA', user_return_to: '../invalid/path'}
+      assert_response :not_found
+    end
+  end
+
   # Assert that the response is not a redirection to the given path.
   private def refute_redirect_to(expected_path)
     return unless response.redirect_url
