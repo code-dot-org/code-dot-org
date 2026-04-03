@@ -1451,6 +1451,12 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :user_lesson_objective_reflection do
+    association(:student, factory: :student)
+    objective
+    reflection {"It went well"}
+  end
+
   factory :vocabulary do
     association :course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
