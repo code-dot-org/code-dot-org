@@ -10809,6 +10809,7 @@
   "rubrics": [
     {
       "level_name": "Submittable Music Level 1",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-49",
         "lesson_group.key": "",
@@ -10817,6 +10818,7 @@
     },
     {
       "level_name": "CSD U3 Sprites scene challenge_allthethings",
+      "s3_config_dir": "allthethings-L48",
       "seeding_key": {
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
@@ -10825,6 +10827,7 @@
     },
     {
       "level_name": "Allthethings Weblab2 9",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-54",
         "lesson_group.key": "",

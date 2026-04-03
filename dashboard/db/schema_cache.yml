@@ -5952,6 +5952,14 @@ columns:
   - *41
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: s3_config_dir
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   schema_migrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: version
@@ -15553,7 +15561,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260331000000
+version: 20260331211410
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
