@@ -3,9 +3,25 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Grading AI-Supported Work
+# AI Detection Tools
 
-#### 
+#### In an AI-supported classroom, it is more effective to design assessments that reveal student thinking than to rely on tools that attempt to detect AI use.
 
+#### AI detection tools are unreliable and can incorrectly flag student work. They often produce false positives, especially for multilingual learners or students using structured writing. Relying on them can damage trust and does little to support learning.
 
+#### Instead of focusing on catching misuse, focus on creating opportunities for students to demonstrate their understanding.
+
+## Strategies to Make Thinking Visible
+
+#### Try one of these strategies to shift the focus from policing behavior to supporting learning and growth.
+
+#### **Ask Students to Explain Their Thinking:** Students can describe how they arrived at an answer, explain their reasoning, or walk through their process in writing or discussion.
+
+#### **Use Drafts and Revision History:** Reviewing earlier versions of student work provides insight into how their thinking developed over time.
+
+#### **Incorporate Reflection:** Short reflections can help students articulate what they learned, what they found challenging, and how they approached the task.
+
+#### **Hold Quick Check-Ins or Discussions:** Brief conversations with students can help confirm their understanding and clarify their thinking.
+
+>#### **💬 Quick Reflection:** What strategy will you use to make student thinking more visible in your classroom?
 MARKDOWN
