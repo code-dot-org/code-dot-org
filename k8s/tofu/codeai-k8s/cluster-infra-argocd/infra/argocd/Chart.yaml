@@ -1,6 +1,6 @@
 apiVersion: v2
-name: argocd-wrapper
-description: Local wrapper chart for Argo CD
+name: argocd
+description: Local chart for Argo CD
 type: application
 version: 0.1.3
 
