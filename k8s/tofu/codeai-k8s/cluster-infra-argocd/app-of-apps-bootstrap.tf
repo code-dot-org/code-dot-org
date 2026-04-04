@@ -1,13 +1,14 @@
 #===============================================================
-# Bootstrap the Argo CD app-of-apps ApplicationSet from GitHub.
+# Bootstrap the Argo CD app-of-apps wrapper Application from GitHub.
 #
-# Argo CD will then self-manage this manifest from k8s-gitops.
+# That Application then manages apps/app-of-apps/app-of-apps.yaml from
+# k8s-gitops.
 #===============================================================
 
-data "github_repository_file" "argocd_app_of_apps_applicationset" {
+data "github_repository_file" "argocd_app_of_apps_application" {
   repository = "code-dot-org/k8s-gitops"
   branch     = data.github_repository.k8s_gitops.default_branch
-  file       = "apps/app-of-apps/applicationset.yaml"
+  file       = "apps/app-of-apps/bootstrap.yaml"
 }
 
 resource "terraform_data" "legacy_helm_releases_complete" {
@@ -26,8 +27,8 @@ resource "terraform_data" "legacy_helm_releases_complete" {
   ]
 }
 
-resource "kubectl_manifest" "argocd_app_of_apps_applicationset" {
-  yaml_body = data.github_repository_file.argocd_app_of_apps_applicationset.content
+resource "kubectl_manifest" "app_of_apps_bootstrap" {
+  yaml_body = data.github_repository_file.argocd_app_of_apps_application.content
 
   server_side_apply = true
   field_manager     = "terraform"
@@ -44,43 +45,13 @@ resource "kubectl_manifest" "argocd_app_of_apps_applicationset" {
   ]
 }
 
-# app-of-apps manages itself, which leads to its parent self refusing to delete, because
-# its child self is not done deleting. Therefore, we patch out the finalizers first,
-# as per argo docs: https://argo-cd.readthedocs.io/en/latest/user-guide/app_deletion/#deletion-using-kubectl
-resource "terraform_data" "strip_finalizers_before_delete" {
-  input = {
-    application_name                   = "app-of-apps"
-    cluster_certificate_authority_data = data.terraform_remote_state.cluster.outputs.cluster_certificate_authority_data
-    cluster_name                       = local.cluster_name
-    cluster_endpoint                   = local.cluster_endpoint
-    cluster_region                     = local.cluster_region
-  }
-
-  depends_on = [kubectl_manifest.argocd_app_of_apps_applicationset]
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = <<-EOT
-      nohup timeout 10m bash '${path.module}/../bin/strip-finalizers-before-delete.sh' \
-        "$PPID" \
-        '${self.input.application_name}' \
-        '${self.input.cluster_certificate_authority_data}' \
-        '${self.input.cluster_endpoint}' \
-        '${self.input.cluster_name}' \
-        '${self.input.cluster_region}' \
-        >'${path.module}/strip-finalizers-before-delete.log' 2>&1 </dev/null &
-      exit 0
-    EOT
-  }
-}
-
 # Work around the known first-boot Argo/Dex SSO issue in k8s/TODO.md:
 # after a fresh deploy, argocd-server can start once before its Dex-backed
 # OIDC state is fully usable, and a clean rollout restart fixes login.
 resource "terraform_data" "restart_argocd_server_after_bootstrap" {
   triggers_replace = [
     data.github_branch.k8s_gitops_default.sha,
-    sha256(data.github_repository_file.argocd_app_of_apps_applicationset.content),
+    sha256(data.github_repository_file.argocd_app_of_apps_application.content),
   ]
 
   input = {
@@ -93,7 +64,7 @@ resource "terraform_data" "restart_argocd_server_after_bootstrap" {
   }
 
   depends_on = [
-    kubectl_manifest.argocd_app_of_apps_applicationset,
+    kubectl_manifest.app_of_apps_bootstrap,
   ]
 
   provisioner "local-exec" {
