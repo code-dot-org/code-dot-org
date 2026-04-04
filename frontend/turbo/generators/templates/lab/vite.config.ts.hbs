@@ -1,18 +1,13 @@
-import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    // Enable React support
     react(),
-    // Generate Typescript declaration files using the Vite default tsconfig
     dts({tsconfigPath: './tsconfig.app.json'}),
-    // Ensure dependencies are externalized for library build
-    // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
-    // Instead, they are expected to be provided by the host application.
     externalizeDeps(),
   ],
   server: {
@@ -21,9 +16,11 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['src/index.ts'],
-      name: 'music-lab',
+      name: '{{name}}-lab',
       formats: ['es', 'cjs'],
     },
+    // NOTE: We output .mjs for ESM because package.json type is not 'module'.
+    // This is required for compatibility with usage in `apps`, which expects .mjs for ESM imports.
     rollupOptions: {
       output: [
         {
