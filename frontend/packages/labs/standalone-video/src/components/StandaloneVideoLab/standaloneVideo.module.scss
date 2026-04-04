@@ -1,0 +1,19 @@
+.lab-standalone-video {
+  align-items: center;
+  background-color: var(--background-brand-aqua-strong);
+  background-image: url('../../assets/bg-pattern.png');
+  background-repeat: repeat;
+  background-size: 18rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+
+  > div {
+    aspect-ratio: 16 / 9;
+    max-width: 960px;
+    padding: 1rem;
+    width: 100%;
+  }
+}

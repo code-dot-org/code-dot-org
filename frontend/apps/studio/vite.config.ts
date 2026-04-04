@@ -47,6 +47,8 @@ export default defineConfig(({mode}) => {
         'react/jsx-dev-runtime',
         'react-redux',
         '@reduxjs/toolkit',
+        '@code-dot-org/core',
+        '@code-dot-org/core/api',
         '@code-dot-org/redux',
       ],
     },

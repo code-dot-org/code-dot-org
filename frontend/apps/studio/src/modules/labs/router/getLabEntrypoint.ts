@@ -12,6 +12,9 @@ const LabEntrypoints: LabEntrypointMap = {
   // Oceans is wrapped in a studio-side container that replicates the FishView
   // sizing algorithm (16:9, clamped, proportional font size).
   ['oceans']: lazy(() => import('@/modules/labs/oceans')),
+  ['standalone-video']: lazy(
+    () => import('@code-dot-org/standalone-video-lab'),
+  ),
 };
 
 /**

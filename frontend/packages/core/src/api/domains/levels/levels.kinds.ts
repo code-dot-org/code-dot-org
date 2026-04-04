@@ -5,7 +5,7 @@ const kindSchemaRegistry = new Map<string, z.ZodTypeAny>();
 
 export function registerLevelKindSchema(kind: string, schema: z.ZodTypeAny) {
   if (kindSchemaRegistry.has(kind)) {
-    throw new Error(`Level kind schema already registered for kind="${kind}"`);
+    console.warn(`Level kind schema already registered for kind="${kind}"`);
   }
   kindSchemaRegistry.set(kind, schema);
 }

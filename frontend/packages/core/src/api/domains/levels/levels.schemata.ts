@@ -64,7 +64,7 @@ export const LevelPropertiesBaseSchema = z.object({
   skipUrl: z.string().optional(),
   finishUrl: z.string().optional(),
   finishDialog: z.string().optional(),
-  offerBrowserTts: z.boolean().optional(),
+  offerBrowserTts: z.boolean().nullable(),
   useSecondaryFinishButton: z.boolean().optional(),
   // Codebridge
   widgetView: z.boolean().optional(),

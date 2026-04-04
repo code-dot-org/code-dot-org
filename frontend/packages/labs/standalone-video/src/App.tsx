@@ -1,15 +1,31 @@
-import {useState} from 'react';
+import {registerLevelKindSchema} from '@code-dot-org/core/api';
+import {Lab} from '@code-dot-org/lab';
+
+import StandaloneVideoLab from './components/StandaloneVideoLab';
+
+import {LevelKindSchema} from './schema';
+
+import styles from './app.module.scss';
+
+registerLevelKindSchema('standalone_video', LevelKindSchema);
 
 function App() {
-  const [count, setCount] = useState(0);
+  // Just use the channelId to pretend to be the video id
+  const channelId = window.location.pathname.match(
+    /^\/app\/projects\/standalone-video\/([^/]+)\/edit$/,
+  )?.[1];
+
+  // Use the channelId as a levelId and pull the level properties
 
   return (
     <>
-      <h1>Standalone Video</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
+      <div className={styles.app}>
+        <Lab
+          isLoading={false}
+          levelId={channelId}
+        >
+          <StandaloneVideoLab />
+        </Lab>
       </div>
     </>
   );
