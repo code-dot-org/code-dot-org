@@ -112,6 +112,9 @@ Stop running only when one of these is true:
 1. both a clean destroy and a full apply have succeeded in the same cycle
 2. both directions are still failing and there are no new systemic fix ideas to
    try; record that clearly in this file before stopping
+3. review the set of diffs to both repos that you changed in the plan, am I gonna
+   be pissed that you did something ugly and horrible? then undo it and find a
+   better way. the final fixes should be elegant and DRY.
 
 WHEN YOU ARE DONE: notify me on slack that you completed with SUCCESS OR FAILURE
 on each of apply/destroy being one-shot-completable now.
