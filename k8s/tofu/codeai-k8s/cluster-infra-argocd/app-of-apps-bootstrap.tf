@@ -45,37 +45,48 @@ resource "kubectl_manifest" "app_of_apps_bootstrap" {
   ]
 }
 
-# Work around the known first-boot Argo/Dex SSO issue in k8s/TODO.md:
-# after a fresh deploy, argocd-server can start once before its Dex-backed
-# OIDC state is fully usable, and a clean rollout restart fixes login.
-resource "terraform_data" "restart_argocd_server_after_bootstrap" {
-  triggers_replace = [
-    data.github_branch.k8s_gitops_default.sha,
-    sha256(data.github_repository_file.argocd_app_of_apps_application.content),
-  ]
+# Work around the known cold-boot Argo/Dex/Kargo ordering issue:
+# wait until Dex is reachable, restart Argo, then wait for Argo and Kargo.
+resource "terraform_data" "wait_for_dex_after_bootstrap" {
+  triggers_replace = [plantimestamp()]
+  depends_on       = [kubectl_manifest.app_of_apps_bootstrap]
 
-  input = {
-    cluster_certificate_authority_data = data.terraform_remote_state.cluster.outputs.cluster_certificate_authority_data
-    cluster_name                       = local.cluster_name
-    cluster_endpoint                   = local.cluster_endpoint
-    cluster_region                     = local.cluster_region
-    namespace                          = "argocd"
-    deployment_name                    = "argocd-server"
+  provisioner "local-exec" {
+    command = "'${path.module}/bin/wait-for-200' 'https://dex.k8s.code.org/.well-known/openid-configuration'"
   }
+}
 
-  depends_on = [
-    kubectl_manifest.app_of_apps_bootstrap,
-  ]
+resource "terraform_data" "restart_argocd_server_after_dex" {
+  triggers_replace = [plantimestamp()]
+  depends_on       = [terraform_data.wait_for_dex_after_bootstrap]
 
   provisioner "local-exec" {
     command = <<-EOT
-      bash '${path.module}/../bin/rollout-restart-deployment.sh' \
-        '${self.input.cluster_certificate_authority_data}' \
-        '${self.input.cluster_endpoint}' \
-        '${self.input.cluster_name}' \
-        '${self.input.cluster_region}' \
-        '${self.input.namespace}' \
-        '${self.input.deployment_name}'
+      '${path.module}/bin/kubectl-rollout-restart' \
+        'deployment/argocd-server' \
+        --namespace 'argocd' \
+        --cluster-certificate-authority-data '${data.terraform_remote_state.cluster.outputs.cluster_certificate_authority_data}' \
+        --cluster-endpoint '${local.cluster_endpoint}' \
+        --cluster-name '${local.cluster_name}' \
+        --cluster-region '${local.cluster_region}'
     EOT
+  }
+}
+
+resource "terraform_data" "wait_for_argocd_after_restart" {
+  triggers_replace = [plantimestamp()]
+  depends_on       = [terraform_data.restart_argocd_server_after_dex]
+
+  provisioner "local-exec" {
+    command = "'${path.module}/bin/wait-for-200' 'https://argocd.k8s.code.org/'"
+  }
+}
+
+resource "terraform_data" "wait_for_kargo_after_bootstrap" {
+  triggers_replace = [plantimestamp()]
+  depends_on       = [kubectl_manifest.app_of_apps_bootstrap]
+
+  provisioner "local-exec" {
+    command = "'${path.module}/bin/wait-for-200' 'https://kargo.k8s.code.org/'"
   }
 }

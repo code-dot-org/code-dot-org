@@ -3,13 +3,13 @@ set -eu
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+stamp=$(date '+%Y-%m-%d')
+log_file="$cwd/tofu-$stamp.log"
 events_pid_file="$cwd/.logged-tofu-events.pid"
-events_log_file="$cwd/.logged-tofu-events.logpath"
 
 [ -f "$events_pid_file" ] || exit 0
 
 events_pid=$(cat "$events_pid_file" 2>/dev/null || true)
-log_file=$(cat "$events_log_file" 2>/dev/null || true)
 
 if [ -n "${events_pid:-}" ] && kill -0 "$events_pid" 2>/dev/null; then
   if [ -n "${log_file:-}" ]; then
@@ -18,4 +18,4 @@ if [ -n "${events_pid:-}" ] && kill -0 "$events_pid" 2>/dev/null; then
   kill "$events_pid" 2>/dev/null || true
 fi
 
-rm -f "$events_pid_file" "$events_log_file"
+rm -f "$events_pid_file"

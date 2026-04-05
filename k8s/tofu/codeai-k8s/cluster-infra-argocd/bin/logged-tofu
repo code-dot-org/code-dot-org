@@ -26,7 +26,6 @@ log_file="$cwd/tofu-$stamp.log"
 log_pointer=/tmp/cluster-infra-argocd-last-log-path
 action_pointer="/tmp/cluster-infra-argocd-$action-log-path"
 events_pid_file="$cwd/.logged-tofu-events.pid"
-events_log_file="$cwd/.logged-tofu-events.logpath"
 
 printf '%s\n' "$log_file" > "$log_pointer"
 printf '%s\n' "$log_file" > "$action_pointer"
@@ -65,7 +64,6 @@ nohup sh -c "
 " >/dev/null 2>&1 &
 events_pid=$!
 printf '%s\n' "$events_pid" > "$events_pid_file"
-printf '%s\n' "$log_file" > "$events_log_file"
 
 printf '%s [meta] tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$tail_command" | tee -a "$log_file"
 printf '%s [meta] stop=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$stop_command" | tee -a "$log_file"
