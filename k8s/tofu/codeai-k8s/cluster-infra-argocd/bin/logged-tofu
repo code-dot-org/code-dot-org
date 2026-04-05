@@ -21,13 +21,14 @@ esac
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+module_name=$(basename "$cwd")
 run_stamp=$(date '+%Y-%m-%dT%H-%M-%S')
 logs_dir="$cwd/logs"
 shared_log_file="$cwd/tofu.log"
 run_log_file="$logs_dir/tofu-$run_stamp-$action.log"
-log_pointer=/tmp/cluster-infra-argocd-last-log-path
-action_pointer="/tmp/cluster-infra-argocd-$action-log-path"
-events_pid_file="$cwd/.logged-tofu-events.pid"
+log_pointer="/tmp/$module_name-last-log-path"
+action_pointer="/tmp/$module_name-$action-log-path"
+watchers_pid_file="$cwd/.logged-tofu-watchers.pid"
 
 mkdir -p "$logs_dir"
 
@@ -56,21 +57,28 @@ printf '%s\n' "$shared_tail_command"
   printf '%s [meta] shared-log=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$shared_log_file"
 } | tee -a "$shared_log_file" "$run_log_file"
 
-if [ -f "$events_pid_file" ]; then
-  old_events_pid=$(cat "$events_pid_file" 2>/dev/null || true)
-  if [ -n "${old_events_pid:-}" ] && kill -0 "$old_events_pid" 2>/dev/null; then
-    kill "$old_events_pid" 2>/dev/null || true
-  fi
-  rm -f "$events_pid_file"
-fi
+"$stop_command" >/dev/null 2>&1 || true
 
-nohup sh -c "
-  COLUMNS=115 stdbuf -oL -eL kubectl get events -A --watch-only --output-watch-events 2>&1 \
-    | stdbuf -oL -eL ts '%Y-%m-%dT%H:%M:%S%z [events]' \
-    | tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
-" >/dev/null 2>&1 &
-events_pid=$!
-printf '%s\n' "$events_pid" > "$events_pid_file"
+start_watch() {
+  label=$1
+  shift
+
+  nohup sh -c "
+    COLUMNS=115 stdbuf -oL -eL $* 2>&1 \
+      | stdbuf -oL -eL ts '%Y-%m-%dT%H:%M:%S%z [$label]' \
+      | tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
+  " >/dev/null 2>&1 &
+  watcher_pid=$!
+  printf '%s\t%s\n' "$label" "$watcher_pid" >> "$watchers_pid_file"
+  printf '%s [meta] %s-watch-pid=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$label" "$watcher_pid" \
+    | tee -a "$shared_log_file" "$run_log_file"
+}
+
+: > "$watchers_pid_file"
+
+start_watch events kubectl get events -A --watch-only --output-watch-events
+start_watch argocd-application-controller kubectl logs -n argocd statefulset/argocd-application-controller --tail=0 -f
+start_watch argocd-applicationset-controller kubectl logs -n argocd deployment/argocd-applicationset-controller --tail=0 -f
 
 printf '%s [meta] tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$tail_command" | tee -a "$shared_log_file" "$run_log_file"
 printf '%s [meta] shared-tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$shared_tail_command" | tee -a "$shared_log_file" "$run_log_file"
