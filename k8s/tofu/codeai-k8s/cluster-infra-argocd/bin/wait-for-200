@@ -5,6 +5,7 @@ require "net/http"
 require "optparse"
 require "openssl"
 require "time"
+require "timeout"
 require "uri"
 
 options = {timeout_seconds: 600, poll_every_seconds: 5}
@@ -47,6 +48,21 @@ def fetch(uri, limit = 5)
   response
 end
 
+# macOS sometimes keeps stale local DNS state longer than the browser does.
+# On each getaddrinfo failure, try one best-effort cache nudge so the
+# shell-side resolver catches up faster.
+def maybe_refresh_macos_dns
+  return unless RUBY_PLATFORM.include?("darwin")
+
+  Timeout.timeout(5) do
+    system("dscacheutil", "-flushcache", exception: false)
+    system("sudo", "-n", "dscacheutil", "-flushcache", exception: false)
+    system("sudo", "-n", "killall", "-HUP", "mDNSResponder", exception: false)
+  end
+rescue StandardError
+  nil
+end
+
 uri = URI(url)
 deadline = Time.now + timeout_seconds
 
@@ -60,6 +76,10 @@ loop do
 
     log("#{url} returned #{response.code}")
   rescue StandardError => exception
+    if exception.message.include?("getaddrinfo")
+      maybe_refresh_macos_dns
+    end
+
     log("#{url} failed: #{exception.class}: #{exception.message}")
   end
 

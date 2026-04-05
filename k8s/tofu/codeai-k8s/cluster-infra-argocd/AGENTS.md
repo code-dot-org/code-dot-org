@@ -14,6 +14,10 @@ dir this AGENTS.md is in now, yes every file.
 - After diagnosis, maybe some discussion, and making fixes, the default is to discuss the cleanup plan with the user before deleting residue. I should not start cleanup on my own unless the user explicitly tells me otherwise. You can ask if you think we've got a fix in place and you think we're ready to cleanup just say "Cleanup cluster?" at the end of your chat.
 - When the user says `cleanup`, `clean up`, or `cleanup the phase` (or variants, be smart), then I should keep deleting residue until every row from `bin/check-phase-deployment-status` reports `missing`, then verify again and report the final clean state.
 - Cleanup scope is exact, not inferred.
+- `bin/check-phase-deployment-status` is necessary but not always sufficient to
+  call the phase "clean". If an app in this phase owns cluster-scoped or
+  shared-namespace support objects, verify those are gone too before the next
+  apply.
 - When cleaning phase residue, delete only:
   - the workload objects named directly by `bin/check-phase-deployment-status`
   - the namespaces named directly by `bin/check-phase-deployment-status`, plus namespaced objects inside those namespaces
@@ -22,3 +26,13 @@ dir this AGENTS.md is in now, yes every file.
   - the object is directly named by `bin/check-phase-deployment-status`, or
   - ownership has been proven from source code, and the user explicitly approves broader cleanup
 - For workloads listed in shared namespaces like `kube-system`, delete only the exact listed workload object, not adjacent support objects.
+- Exception for proven phase-owned cluster-scoped/shared-namespace residue:
+  once ownership is proven from rendered source, it is allowed to delete those
+  exact rendered objects even if `bin/check-phase-deployment-status` does not
+  name them directly.
+- For cleanup-to-scratch or other brute cleanup, do not hand-pick first. The required default fast path is: render the exact phase-owned manifests from `~/src/k8s-gitops/apps/infra/*/chart` with the real values file `~/src/k8s-gitops/apps/infra/codeai-cluster-config.values.yaml`, make one exact object list from that rendered output, and try one bulk delete of that whole rendered set in a single pass.
+- Explicit approval rule: if an object is created by the rendered `~/src/k8s-gitops/apps/infra/*/chart` manifests, it is in scope for cleanup here and should be included in that bulk delete without extra approval.
+- Source of truth for that rendered cleanup is `~/src/k8s-gitops/apps/infra`, not the local charts or experiments under `code-dot-org/k8s/tofu/...`.
+- Rendered bulk cleanup is allowed here because the current `~/src/k8s-gitops/apps/infra/*/application.yaml` files all point at `apps/infra/*/chart`. If that stops being true, re-check before using this rule.
+- After I think phase 3 is clean, I must run `tofu apply` in `../cluster-infra` as a sanity check for accidental previous-phase deletions before trusting the baseline.
+- If that `../cluster-infra` apply wants to recreate anything, I must treat that as proof that phase-3 cleanup deleted previous-phase objects by mistake, and I must list those recreated objects by exact name in `NOTES.md` as a cleanup mistake.
