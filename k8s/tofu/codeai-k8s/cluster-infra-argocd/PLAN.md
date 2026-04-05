@@ -17,6 +17,14 @@ finish to see if it worked too!
 Remember: if a previous phase (apply/destroy) didn't finish cleanly, that might mess up the next (destroy/apply). 
 Don't index too hard on these as far as systemic fixes.
 
+You may commit and push to k8s-gitops to deploy changes as they require this. Just use the main
+branch. start each commit message with "PLAN: ". Periodically look at all changes
+done during the plan by looking in `git log` for PLAN messages to make sure you're not
+ping-ponging things (do a diff between now and the commit before the first PLAN commit). 
+On code-dot-org repo on the other hand, you shouldn't need to commit,
+so you can always look at uncommitted changes to see the sum total of what we've changed.
+Think systemically, and undo failed fixes. Note in NOTES.md.
+
 # cluster-infra-argocd apply/destroy loop
 
 ## Goal
