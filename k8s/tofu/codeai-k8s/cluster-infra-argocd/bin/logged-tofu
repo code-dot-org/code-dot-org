@@ -1,0 +1,79 @@
+#!/bin/sh
+set -eu
+
+usage() {
+  echo "usage: $0 <apply|destroy|plan> <test-description>" >&2
+  exit 2
+}
+
+[ $# -eq 2 ] || usage
+
+action=$1
+test_description=$2
+
+case "$action" in
+  apply|destroy|plan)
+    ;;
+  *)
+    usage
+    ;;
+esac
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+stamp=$(date '+%Y-%m-%d')
+log_file="$cwd/tofu-$stamp.log"
+log_pointer=/tmp/cluster-infra-argocd-last-log-path
+action_pointer="/tmp/cluster-infra-argocd-$action-log-path"
+events_pid_file="$cwd/.logged-tofu-events.pid"
+events_log_file="$cwd/.logged-tofu-events.logpath"
+
+printf '%s\n' "$log_file" > "$log_pointer"
+printf '%s\n' "$log_file" > "$action_pointer"
+
+cd "$cwd"
+
+tail_command="tail -n +1 -f $log_file"
+stop_command="$cwd/bin/logged-tofu-stop"
+printf '%s\n' "$tail_command"
+
+{
+  i=0
+  while [ "$i" -lt 50 ]; do
+    printf '\n'
+    i=$((i + 1))
+  done
+  printf '%s [meta] ===== START OF TOFU RUN =====\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')"
+  printf '%s [codex] test=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$test_description"
+  printf '%s [meta] cwd=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$cwd"
+  printf '%s [meta] command=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "AWS_PROFILE=codeorg-admin tofu $action"
+  printf '%s [meta] log=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$log_file"
+} | tee -a "$log_file"
+
+if [ -f "$events_pid_file" ]; then
+  old_events_pid=$(cat "$events_pid_file" 2>/dev/null || true)
+  if [ -n "${old_events_pid:-}" ] && kill -0 "$old_events_pid" 2>/dev/null; then
+    kill "$old_events_pid" 2>/dev/null || true
+  fi
+  rm -f "$events_pid_file"
+fi
+
+nohup sh -c "
+  COLUMNS=125 kubectl get events -A --watch --output-watch-events 2>&1 \
+    | ts '%Y-%m-%dT%H:%M:%S%z [events]' \
+    >> \"$log_file\"
+" >/dev/null 2>&1 &
+events_pid=$!
+printf '%s\n' "$events_pid" > "$events_pid_file"
+printf '%s\n' "$log_file" > "$events_log_file"
+
+printf '%s [meta] tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$tail_command" | tee -a "$log_file"
+printf '%s [meta] stop=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$stop_command" | tee -a "$log_file"
+printf '%s [%s] starting tofu %s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$action" "$action" | tee -a "$log_file"
+
+script -qF /dev/null /bin/sh -c "cd \"$cwd\" && AWS_PROFILE=codeorg-admin tofu $action" 2>&1 \
+  | while IFS= read -r line || [ -n "$line" ]; do
+      clean_line=$(printf '%s' "$line" | perl -pe 's/\r//g; s/\x08//g; s/\^D//g')
+      printf '%s [%s] %s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$action" "$clean_line"
+    done \
+  | tee -a "$log_file"
