@@ -14,6 +14,9 @@ Whenever you start a new `tofu apply` or `tofu destroy`, look at NOTES.md for th
 apply/destroy (respectively), to see if that change actually worked. And do that when you
 finish to see if it worked too!
 
+Remember: if a previous phase (apply/destroy) didn't finish cleanly, that might mess up the next (destroy/apply). 
+Don't index too hard on these as far as systemic fixes.
+
 # cluster-infra-argocd apply/destroy loop
 
 ## Goal
