@@ -15,7 +15,6 @@
 # Crash logs
 crash.log
 crash.*.log
-tofu-*.log
 
 # Local override files
 override.tf
