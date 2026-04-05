@@ -40,7 +40,7 @@ resource "kubectl_manifest" "app_of_apps_bootstrap" {
   wait = true
 
   depends_on = [
-    terraform_data.argocd_bootstrap,
+    helm_release.argocd_bootstrap,
   ]
 }
 
