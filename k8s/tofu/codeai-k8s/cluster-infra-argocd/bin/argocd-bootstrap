@@ -1,0 +1,178 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "json"
+require "open3"
+require "optparse"
+require "tempfile"
+require "time"
+require "tmpdir"
+
+HELM_TIMEOUT = "10m"
+MODULE_DIR = File.expand_path("..", __dir__)
+
+$options = {}
+
+usage = "usage: #{File.basename($PROGRAM_NAME)} <apply|destroy> --repo-url VALUE --default-branch VALUE --argocd-chart-path VALUE --release-name VALUE --namespace VALUE --cluster-name VALUE --cluster-region VALUE --cluster-endpoint VALUE --cluster-certificate-authority-data VALUE"
+mode = ARGV.shift or abort(usage)
+%w[apply destroy].include?(mode) or abort(usage)
+
+OptionParser.new do |opts|
+  opts.on("--repo-url VALUE") {|value| $options[:repo_url] = value}
+  opts.on("--default-branch VALUE") {|value| $options[:default_branch] = value}
+  opts.on("--argocd-chart-path VALUE") {|value| $options[:argocd_chart_path] = value}
+  opts.on("--release-name VALUE") {|value| $options[:release_name] = value}
+  opts.on("--namespace VALUE") {|value| $options[:namespace] = value}
+  opts.on("--cluster-name VALUE") {|value| $options[:cluster_name] = value}
+  opts.on("--cluster-region VALUE") {|value| $options[:cluster_region] = value}
+  opts.on("--cluster-endpoint VALUE") {|value| $options[:cluster_endpoint] = value}
+  opts.on("--cluster-certificate-authority-data VALUE") {|value| $options[:cluster_certificate_authority_data] = value}
+end.parse!(ARGV)
+
+def main(mode)
+  checkout_dir, revision = git_checkout
+
+  if mode == "apply"
+    run_apply(checkout_dir, revision)
+  else
+    run_destroy(checkout_dir, revision)
+  end
+end
+
+# Apply mode bootstraps Argo only: install if missing, but never Helm-upgrade an existing release.
+def run_apply(checkout_dir, revision)
+  if helm_release_exists?
+    log("Helm release '#{$options.fetch(:release_name)}' already exists; refusing Helm upgrade during apply")
+  else
+    log("Installing Helm release '#{$options.fetch(:release_name)}' from git revision #{revision}")
+    helm_upgrade_install!(checkout_dir, revision)
+  end
+end
+
+# Destroy mode is the only place allowed to refresh Helm state before teardown.
+def run_destroy(checkout_dir, revision)
+  if helm_release_exists?
+    log("Refreshing Helm release '#{$options.fetch(:release_name)}' from git revision #{revision} before destroy")
+    helm_upgrade_install!(checkout_dir, revision)
+  elsif !kubectl_success?("get", "crd", "applications.argoproj.io", "applicationsets.argoproj.io")
+    log("Helm release '#{$options.fetch(:release_name)}' and Argo CRDs are already absent; nothing to do")
+    return
+  end
+
+  if helm_release_exists?
+    log("Uninstalling Helm release '#{$options.fetch(:release_name)}'")
+    helm("uninstall", $options.fetch(:release_name), "--namespace", $options.fetch(:namespace), "--wait", "--timeout", HELM_TIMEOUT)
+  else
+    log("Helm release '#{$options.fetch(:release_name)}' already absent; skipping Helm uninstall")
+  end
+end
+
+def run!(*command)
+  stdout, stderr, status = Open3.capture3(*command)
+  return stdout if status.success?
+
+  message = stderr.empty? ? stdout : stderr
+  abort("command failed: #{command.join(' ')}\n#{message}")
+end
+
+def log(message) = puts "[#{Time.now.iso8601}] #{message}"
+def helm(*args) = run!("helm", "--kubeconfig", kubeconfig, *args)
+def kubectl(*args) = run!("kubectl", "--kubeconfig", kubeconfig, *args)
+def kubectl_success?(*args) = Open3.capture3("kubectl", "--kubeconfig", kubeconfig, *args).last.success?
+def helm_release_exists? = Open3.capture3("helm", "--kubeconfig", kubeconfig, "status", $options.fetch(:release_name), "--namespace", $options.fetch(:namespace)).last.success?
+
+def helm_upgrade_install!(checkout_dir, revision)
+  helm(
+    "upgrade",
+    $options.fetch(:release_name),
+    File.join(checkout_dir, $options.fetch(:argocd_chart_path)),
+    "--install",
+    "--namespace", $options.fetch(:namespace),
+    "--create-namespace",
+    "--wait",
+    "--timeout", HELM_TIMEOUT,
+    "--set-string", "_bootstrap.k8s_gitops_revision=#{revision}",
+  )
+end
+
+def git_checkout
+  terraform_dir = File.join(MODULE_DIR, ".terraform")
+  FileUtils.mkdir_p(terraform_dir)
+
+  checkout_root = Dir.mktmpdir("argocd-bootstrap-", terraform_dir)
+  checkout_dir = File.join(checkout_root, "checkout")
+
+  log("Cloning #{$options.fetch(:repo_url)} branch #{$options.fetch(:default_branch)}")
+  run!(
+    "git", "clone",
+    "--depth", "1",
+    "--branch", $options.fetch(:default_branch),
+    "--filter=blob:none",
+    "--sparse",
+    $options.fetch(:repo_url),
+    checkout_dir,
+  )
+  run!(
+    "git", "-C", checkout_dir, "sparse-checkout", "set",
+    File.dirname($options.fetch(:argocd_chart_path)),
+  )
+
+  revision = run!("git", "-C", checkout_dir, "rev-parse", "HEAD").strip
+  log("Checked out git revision #{revision}")
+  [checkout_dir, revision]
+end
+
+def kubeconfig
+  return $kubeconfig if $kubeconfig
+
+  token_json = run!(
+    "aws", "eks", "get-token",
+    "--region", $options.fetch(:cluster_region),
+    "--cluster-name", $options.fetch(:cluster_name),
+    "--output", "json",
+  )
+  token = JSON.parse(token_json).dig("status", "token") or abort("aws eks get-token returned no token")
+
+  $kubeconfig_file = Tempfile.new("argocd-bootstrap-kubeconfig")
+  $kubeconfig_file.write(<<~YAML)
+    apiVersion: v1
+    kind: Config
+    clusters:
+    - name: cluster
+      cluster:
+        certificate-authority-data: #{$options.fetch(:cluster_certificate_authority_data)}
+        server: #{$options.fetch(:cluster_endpoint)}
+    contexts:
+    - name: context
+      context:
+        cluster: cluster
+        namespace: #{$options.fetch(:namespace)}
+        user: user
+    current-context: context
+    users:
+    - name: user
+      user:
+        token: #{token}
+  YAML
+  $kubeconfig_file.flush
+
+  $kubeconfig = $kubeconfig_file.path
+end
+
+ARGV.empty? or abort(usage)
+
+missing_options = %i[
+  repo_url
+  default_branch
+  argocd_chart_path
+  release_name
+  namespace
+  cluster_name
+  cluster_region
+  cluster_endpoint
+  cluster_certificate_authority_data
+].reject {|key| $options.key?(key)}
+missing_options.empty? or abort("missing required options: #{missing_options.join(', ')}")
+
+main(mode)
