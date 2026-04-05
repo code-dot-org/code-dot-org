@@ -1,6 +1,7 @@
 - When making Helm chart changes you wish to `tofu apply`, be sure to bump the Helm chart version number or it will say there is no diff to apply.
 
-IF THERE IS A PLAN.MD and/or a CHECKLIST.MD and/or a NOTES.md file in this directory, read it now.
+IF THERE IS A PLAN.MD and/or a CHECKLIST.MD and/or a NOTES.md file in this directory, read it now. If you just compacted your context, read all these files fresh and this AGENTS.md too. IF THERE IS A PLAN.MD FOLLOW IT NOW,
+pay attention to this file, but PLAN.md commands supercede this file where they disagree.
 
 ## Diagnosing tofu apply/destroy failures
 
