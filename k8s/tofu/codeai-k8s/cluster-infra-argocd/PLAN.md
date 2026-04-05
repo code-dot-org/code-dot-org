@@ -91,7 +91,10 @@ Stop running only when one of these is true:
 2. both directions are still failing and there are no new systemic fix ideas to
    try; record that clearly in this file before stopping
 
+WHEN YOU ARE DONE: notify me on slack that you completed with SUCCESS OR FAILURE
+on each of apply/destroy being one-shot-completable now.
+
 ## Attention
 
-If user attention is needed, send a Slack note and keep working.
-
+If user attention is needed, notify me on slack with a note/question and keep working.
+I can help if things are confusing, I have a lot of context you don't.
