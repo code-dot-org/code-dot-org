@@ -13,3 +13,12 @@ dir this AGENTS.md is in now, yes every file.
 - After diagnosis, we must try to make systemic fixes that prevent the un-cleaned-up resources from surviving the next "tofu destroy"
 - After diagnosis, maybe some discussion, and making fixes, the default is to discuss the cleanup plan with the user before deleting residue. I should not start cleanup on my own unless the user explicitly tells me otherwise. You can ask if you think we've got a fix in place and you think we're ready to cleanup just say "Cleanup cluster?" at the end of your chat.
 - When the user says `cleanup`, `clean up`, or `cleanup the phase` (or variants, be smart), then I should keep deleting residue until every row from `bin/check-phase-deployment-status` reports `missing`, then verify again and report the final clean state.
+- Cleanup scope is exact, not inferred.
+- When cleaning phase residue, delete only:
+  - the workload objects named directly by `bin/check-phase-deployment-status`
+  - the namespaces named directly by `bin/check-phase-deployment-status`, plus namespaced objects inside those namespaces
+- Do not delete resources created by the previous phase. Some of them may look tempting, but they are not for you.
+- Do not delete any other support objects just because they appear related. In particular, do not delete service accounts, RBAC, webhooks, ingress classes, CRDs, secrets, configmaps, or cloud-side residue outside the listed namespaces unless:
+  - the object is directly named by `bin/check-phase-deployment-status`, or
+  - ownership has been proven from source code, and the user explicitly approves broader cleanup
+- For workloads listed in shared namespaces like `kube-system`, delete only the exact listed workload object, not adjacent support objects.
