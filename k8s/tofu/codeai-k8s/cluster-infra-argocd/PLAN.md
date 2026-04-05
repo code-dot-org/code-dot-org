@@ -25,6 +25,20 @@ On code-dot-org repo on the other hand, you shouldn't need to commit,
 so you can always look at uncommitted changes to see the sum total of what we've changed.
 Think systemically, and undo failed fixes. Note in NOTES.md.
 
+NOTE: in a previous commit (today) we shifted ArgoCD app-of-apps to use a bootstrap app-of-apps/bootstrap.yaml
+that points at an app-of-apps/app-of-apps.yaml applicationset. This is new! And suspect.
+We used to just call that app-of-apps/applicationset.yaml, and it self-managed itself.
+During this period, it appeared that argo would MOSTLY wait for all app-of-apps children to
+be destroyed before returning to the tofu destroy that it was complete. Inspect this change
+as a source of ideas. You can delete this note if you think you've fully mined this idea.
+
+DO NOT WRITE A CLEANUP SCRIPT THAT JUST DELETES THINGS. The argo app-of-apps being deleted
+should clean things up for you. FIX THAT. If that returns to tofu before its done
+FIX THAT.
+
+AFTER YOU MAKE A FIX: guess if I'm gonna be pissed about it being a hacky workaround. The
+final fixes should be elegant, terse, and minimal. THINK BIG PICTURE.
+
 # cluster-infra-argocd apply/destroy loop
 
 ## Goal
