@@ -60,5 +60,9 @@ resource "helm_release" "argocd_bootstrap" {
     })
   ]
 
+  lifecycle {
+    ignore_changes = all
+  }
+
   depends_on = [terraform_data.argocd_bootstrap_checkout]
 }
