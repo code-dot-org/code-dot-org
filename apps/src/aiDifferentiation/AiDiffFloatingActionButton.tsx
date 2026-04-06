@@ -182,10 +182,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
-  const classes = drawerIsEnabled
-    ? style.floatingActionButtonRight
-    : showPulse
+  const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    : drawerIsEnabled
+    ? style.floatingActionButtonRight
     : style.floatingActionButton;
 
   const handleClick = () => {
