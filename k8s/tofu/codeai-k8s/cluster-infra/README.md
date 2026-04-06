@@ -94,3 +94,7 @@ After bootstrap, `cluster-infra-argocd` syncs these into Kubernetes as:
 
 1. `kargo-k8s-gitops` in namespace `kargo-shared-resources`
 1. `github-org-webhook-secret` in namespace `kargo-system-resources`
+
+## Addon-derived IAM files
+
+If you are trying to update [`infra/external-dns/external-dns.tf`](./infra/external-dns/external-dns.tf) or [`infra/networking/aws-load-balancer-controller.tf`](./infra/networking/aws-load-balancer-controller.tf) to match newer addon versions, read [`deriving-from-addons.md`](./deriving-from-addons.md) first. It documents the exact source modules, current resolved versions, replacement mapping, proof workflow, and the failure mode that caused the earlier ALB mismatch.
