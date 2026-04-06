@@ -1,0 +1,84 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "optparse"
+require "shellwords"
+require "tempfile"
+require "time"
+
+options = {}
+usage = "usage: #{File.basename($PROGRAM_NAME)} <resource> -n <namespace> --cluster-certificate-authority-data <value> --cluster-endpoint <value> --cluster-name <value> --cluster-region <value>"
+name = ARGV.shift or abort(usage)
+
+parser = OptionParser.new do |opts|
+  opts.on("-n", "--namespace VALUE") {|value| options[:namespace] = value}
+  opts.on("--cluster-certificate-authority-data VALUE") {|value| options[:cluster_certificate_authority_data] = value}
+  opts.on("--cluster-endpoint VALUE") {|value| options[:cluster_endpoint] = value}
+  opts.on("--cluster-name VALUE") {|value| options[:cluster_name] = value}
+  opts.on("--cluster-region VALUE") {|value| options[:cluster_region] = value}
+end
+
+parser.parse!(ARGV)
+
+ARGV.empty? or abort(usage)
+
+missing_options = %i[
+  namespace
+  cluster_certificate_authority_data
+  cluster_endpoint
+  cluster_name
+  cluster_region
+].reject {|key| options.key?(key)}
+missing_options.empty? or abort("missing required options: #{missing_options.join(', ')}")
+
+namespace = options[:namespace]
+cluster_certificate_authority_data = options[:cluster_certificate_authority_data]
+cluster_endpoint = options[:cluster_endpoint]
+cluster_name = options[:cluster_name]
+cluster_region = options[:cluster_region]
+
+def log(message)
+  puts "[#{Time.now.iso8601}] #{message}"
+end
+
+def run!(*command)
+  system(*command) or abort("command failed: #{command.shelljoin}")
+end
+
+log("Fetching EKS token for cluster '#{cluster_name}' in region '#{cluster_region}'")
+token_json = `aws eks get-token --region=#{Shellwords.escape(cluster_region)} --cluster-name=#{Shellwords.escape(cluster_name)} --output=json`
+$?.success? or abort("aws eks get-token failed")
+token = JSON.parse(token_json).dig("status", "token") or abort("aws eks get-token returned no token")
+
+Tempfile.create("kubeconfig") do |kubeconfig|
+  kubeconfig.write(<<~YAML)
+    apiVersion: v1
+    kind: Config
+    clusters:
+    - name: cluster
+      cluster:
+        certificate-authority-data: #{cluster_certificate_authority_data}
+        server: #{cluster_endpoint}
+    contexts:
+    - name: context
+      context:
+        cluster: cluster
+        namespace: #{namespace}
+        user: user
+    current-context: context
+    users:
+    - name: user
+      user:
+        token: #{token}
+  YAML
+  kubeconfig.flush
+
+  log("Restarting '#{name}' in namespace '#{namespace}'")
+  run!("kubectl", "--kubeconfig", kubeconfig.path, "-n", namespace, "rollout", "restart", name)
+
+  log("Waiting for '#{name}' rollout to complete")
+  run!("kubectl", "--kubeconfig", kubeconfig.path, "-n", namespace, "rollout", "status", name, "--timeout=10m")
+end
+
+log("'#{name}' rollout completed")
