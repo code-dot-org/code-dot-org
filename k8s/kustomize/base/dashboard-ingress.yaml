@@ -2,9 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: cdo-dashboard
-  annotations:
-    argocd.argoproj.io/ignore-default-links: "true"
-    link.argocd.argoproj.io/external-link: https://studio-development.k8s.code.org/
   labels:
     app.kubernetes.io/component: dashboard
 spec:
