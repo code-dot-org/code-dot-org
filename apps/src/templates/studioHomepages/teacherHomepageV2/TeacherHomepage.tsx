@@ -2,10 +2,12 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -18,6 +20,7 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -33,6 +36,10 @@ interface TeacherHomepageProps {
 }
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+  const isMiniTutorialEnabled =
+    experiments.isEnabled(experiments.MINI_TUTORIAL) ||
+    DCDO.get('onboarding-enabled', true);
+
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
@@ -214,6 +221,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               isForPl={false}
               destructiveLoad={true}
             />
+            {!!isMiniTutorialEnabled && <OnboardingChecklist />}
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
