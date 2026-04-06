@@ -1,3 +1,6 @@
+// Shared styles for JIT PL concept editor components
+
+// Sub-editor forms (ExemplarsEditor, MisconceptionsEditor, TeachingTipsEditor)
 .form {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -45,6 +48,33 @@
   background: #fafafa;
 }
 
+.cardWithExemplars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.exemplarsSection {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.exemplarsSectionHeading {
+  margin: 4px 0;
+}
+
 .cardActions {
   display: flex;
   gap: 8px;
@@ -75,4 +105,13 @@
   padding: 7px;
   margin-top: 8px;
   cursor: pointer;
+}
+
+// Top-level concept form (JitPlConceptFormEditor, NewJitPlConceptForm)
+.conceptLabel {
+  margin-bottom: 20px;
+}
+
+.conceptInput {
+  margin-left: 10px;
 }

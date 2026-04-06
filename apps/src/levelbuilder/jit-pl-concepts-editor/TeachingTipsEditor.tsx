@@ -9,8 +9,6 @@ import createResourcesReducer, {
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
-import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
-
 import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
@@ -20,36 +18,29 @@ interface Resource {
   url: string;
   type?: string;
   audience?: string;
-  embeddabilityType?: string;
-  curriculumCategory?: string;
-  assessment?: boolean;
-  includeInPdf?: boolean;
-  downloadUrl?: string;
-  isRollup?: boolean;
 }
 
-interface Misconception {
+export interface TeachingTip {
   id: number;
   name?: string;
   text_content?: string;
   resources?: Resource[];
-  exemplars?: Exemplar[];
 }
 
-interface MisconceptionFormProps {
+interface TeachingTipFormProps {
   conceptId: number;
-  initial: Misconception | null;
-  onSave: (misconception: Misconception) => void;
+  initial: TeachingTip | null;
+  onSave: (tip: TeachingTip) => void;
   onCancel: () => void;
 }
 
-const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
+const TeachingTipForm: React.FC<TeachingTipFormProps> = ({
   conceptId,
   initial,
   onSave,
   onCancel,
 }) => {
-  const contextKey = `jitPlMisconceptionResource_${initial?.id ?? 'new'}`;
+  const contextKey = `jitPlTeachingTipResource_${initial?.id ?? 'new'}`;
   const initialResourcesRef = useRef(initial?.resources ?? []);
 
   useEffect(() => {
@@ -68,13 +59,13 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const baseUrl = `/jit_pl_concepts/${conceptId}/jit_pl_teaching_tips`;
+
   const save = () => {
     setIsSaving(true);
     const isNew = !initial;
     $.ajax({
-      url: isNew
-        ? `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions`
-        : `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${initial!.id}`,
+      url: isNew ? baseUrl : `${baseUrl}/${initial!.id}`,
       method: isNew ? 'POST' : 'PUT',
       data: {
         name,
@@ -82,7 +73,7 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         resource_ids: resources.map(r => r.id),
       },
     })
-      .done((data: Misconception) => onSave(data))
+      .done((data: TeachingTip) => onSave(data))
       .fail((err: {responseText: string}) => {
         setIsSaving(false);
         setError(err.responseText);
@@ -130,41 +121,41 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   );
 };
 
-interface MisconceptionItemProps {
-  misconception: Misconception;
+interface TeachingTipItemProps {
+  tip: TeachingTip;
   conceptId: number;
-  onUpdate: (misconception: Misconception) => void;
+  onUpdate: (tip: TeachingTip) => void;
   onDelete: (id: number) => void;
 }
 
-const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
-  misconception,
+const TeachingTipItem: React.FC<TeachingTipItemProps> = ({
+  tip,
   conceptId,
   onUpdate,
   onDelete,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleSave = (updated: Misconception) => {
+  const handleSave = (updated: TeachingTip) => {
     setIsEditing(false);
     onUpdate(updated);
   };
 
   const handleDelete = () => {
-    if (!confirm(`Delete misconception "${misconception.name}"?`)) {
+    if (!confirm(`Delete teaching tip "${tip.name}"?`)) {
       return;
     }
     $.ajax({
-      url: `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${misconception.id}`,
+      url: `/jit_pl_concepts/${conceptId}/jit_pl_teaching_tips/${tip.id}`,
       method: 'DELETE',
-    }).done(() => onDelete(misconception.id));
+    }).done(() => onDelete(tip.id));
   };
 
   if (isEditing) {
     return (
-      <MisconceptionForm
+      <TeachingTipForm
         conceptId={conceptId}
-        initial={misconception}
+        initial={tip}
         onSave={handleSave}
         onCancel={() => setIsEditing(false)}
       />
@@ -172,80 +163,66 @@ const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
   }
 
   return (
-    <div className={moduleStyles.cardWithExemplars}>
-      <div className={moduleStyles.cardHeader}>
-        <strong>{misconception.name}</strong>
-        <div className={moduleStyles.cardActions}>
-          <button
-            onClick={() => setIsEditing(true)}
-            type="button"
-            className={moduleStyles.editButton}
-          >
-            <i className="fa fa-edit" /> Edit
-          </button>
-          <button
-            onClick={handleDelete}
-            type="button"
-            className={moduleStyles.deleteButton}
-          >
-            <i className="fa fa-trash" /> Delete
-          </button>
-        </div>
-      </div>
-      <div className={moduleStyles.exemplarsSection}>
-        <h5 className={moduleStyles.exemplarsSectionHeading}>Exemplars</h5>
-        <ExemplarsEditor
-          conceptId={conceptId}
-          misconceptionId={misconception.id}
-          initialExemplars={misconception.exemplars ?? []}
-        />
+    <div className={moduleStyles.card}>
+      <strong>{tip.name}</strong>
+      <div className={moduleStyles.cardActions}>
+        <button
+          onClick={() => setIsEditing(true)}
+          type="button"
+          className={moduleStyles.editButton}
+        >
+          <i className="fa fa-edit" /> Edit
+        </button>
+        <button
+          onClick={handleDelete}
+          type="button"
+          className={moduleStyles.deleteButton}
+        >
+          <i className="fa fa-trash" /> Delete
+        </button>
       </div>
     </div>
   );
 };
 
-interface MisconceptionsEditorProps {
+interface TeachingTipsEditorProps {
   conceptId: number;
-  initialMisconceptions?: Misconception[];
+  initialTeachingTips?: TeachingTip[];
 }
 
-const MisconceptionsEditor: React.FC<MisconceptionsEditorProps> = ({
+const TeachingTipsEditor: React.FC<TeachingTipsEditorProps> = ({
   conceptId,
-  initialMisconceptions,
+  initialTeachingTips,
 }) => {
-  const [misconceptions, setMisconceptions] = useState<Misconception[]>(
-    initialMisconceptions ?? []
-  );
+  const [tips, setTips] = useState<TeachingTip[]>(initialTeachingTips ?? []);
   const [isAdding, setIsAdding] = useState(false);
 
-  const handleAdd = (created: Misconception) => {
-    setMisconceptions(prev => [...prev, created]);
+  const handleAdd = (created: TeachingTip) => {
+    setTips(prev => [...prev, created]);
     setIsAdding(false);
   };
 
-  const handleUpdate = (updated: Misconception) => {
-    setMisconceptions(prev =>
-      prev.map(m => (m.id === updated.id ? updated : m))
-    );
+  const handleUpdate = (updated: TeachingTip) => {
+    setTips(prev => prev.map(t => (t.id === updated.id ? updated : t)));
   };
 
   const handleDelete = (id: number) => {
-    setMisconceptions(prev => prev.filter(m => m.id !== id));
+    setTips(prev => prev.filter(t => t.id !== id));
   };
 
   return (
     <div>
-      {misconceptions.map(m => (
-        <MisconceptionItem
-          key={m.id}
-          misconception={m}
+      {tips.map(tip => (
+        <TeachingTipItem
+          key={tip.id}
+          tip={tip}
           conceptId={conceptId}
           onUpdate={handleUpdate}
           onDelete={handleDelete}
         />
       ))}
       {isAdding ? (
-        <MisconceptionForm
+        <TeachingTipForm
           conceptId={conceptId}
           initial={null}
           onSave={handleAdd}
@@ -257,11 +234,11 @@ const MisconceptionsEditor: React.FC<MisconceptionsEditorProps> = ({
           type="button"
           className={moduleStyles.addButton}
         >
-          + Add Misconception
+          + Add Teaching Tip
         </button>
       )}
     </div>
   );
 };
 
-export default MisconceptionsEditor;
+export default TeachingTipsEditor;

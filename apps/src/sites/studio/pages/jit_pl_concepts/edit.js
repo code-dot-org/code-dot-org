@@ -14,8 +14,16 @@ $(document).ready(() => {
     resources: createResourcesReducer('jitPlConceptResource'),
   });
   const store = getStore();
-  const {id, name, display_name, text_content, resources, misconceptions} =
-    getScriptData('jitPlConcept');
+  const {
+    id,
+    name,
+    display_name,
+    text_content,
+    resources,
+    exemplars,
+    misconceptions,
+    teaching_tips,
+  } = getScriptData('jitPlConcept');
 
   store.dispatch(initResources('jitPlConceptResource', resources || []));
 
@@ -26,7 +34,9 @@ $(document).ready(() => {
         originalName={name}
         originalDisplayName={display_name}
         originalTextContent={text_content}
+        originalExemplars={exemplars || []}
         originalMisconceptions={misconceptions || []}
+        originalTeachingTips={teaching_tips || []}
       />
     </Provider>,
     document.getElementById('edit-jit-pl-concept'),
