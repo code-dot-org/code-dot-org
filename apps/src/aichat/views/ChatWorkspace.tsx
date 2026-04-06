@@ -65,7 +65,6 @@ interface ChatWorkspaceProps {
   hasInstructionsDrawer?: boolean;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
-  lastMessagePostText?: React.ReactNode;
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
@@ -87,7 +86,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
-  lastMessagePostText,
   renderLastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
@@ -323,7 +321,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
-          lastMessagePostText={lastMessagePostText}
           renderLastMessagePostText={renderLastMessagePostText}
         />
       )}

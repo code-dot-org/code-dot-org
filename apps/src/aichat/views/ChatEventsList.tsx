@@ -24,7 +24,6 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   hasInstructionsDrawer?: boolean;
-  lastMessagePostText?: React.ReactNode;
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
@@ -40,7 +39,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   hasInstructionsDrawer,
-  lastMessagePostText,
   renderLastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
@@ -97,12 +95,12 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   };
 
   const hasChatHistory = events.length > 0;
+
   const resolvedLastMessagePostText = useMemo(() => {
     if (renderLastMessagePostText) {
       return renderLastMessagePostText(scrollToLastMessage);
     }
-    return lastMessagePostText;
-  }, [lastMessagePostText, renderLastMessagePostText, scrollToLastMessage]);
+  }, [renderLastMessagePostText, scrollToLastMessage]);
 
   const lastChatMessageIndex = useMemo(() => {
     if (!resolvedLastMessagePostText) return -1;
