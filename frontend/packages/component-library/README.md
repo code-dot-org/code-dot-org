@@ -416,13 +416,6 @@ github issues or any other means of communication.
 - **How do I test a component?**  
   Use Jest, RTL and @testing-library/user-event for unit tests. For more details see [Testing](#testing).
 
-- **Why are MUI theme overrides not applying in apps?**  
-  MUI's `ThemeProvider` uses React context, which requires a single `@mui/material` instance across the app.
-  In this monorepo, the component-library and apps can end up with different copies of `@mui/material`, causing
-  components from the library to render with MUI defaults instead of `CdoTheme` overrides. Two mechanisms prevent
-  this: the `externalizeMui` Vite plugin (keeps MUI external in the library build) and a webpack alias in apps
-  (forces a single instance). See [Theming Architecture — MUI Instance Deduplication](src/themes/README.md#mui-instance-deduplication-monorepo-caveat) for details.
-
 ## Changelog
 
 You can find the latest changelog in [CHANGELOG.md](CHANGELOG.md).
