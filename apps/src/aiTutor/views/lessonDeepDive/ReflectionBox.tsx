@@ -38,7 +38,11 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({lessonId, objectives}) => {
     setIsSubmitting(true);
     try {
       const objectiveSaves = objectives
-        .filter(o => objectiveReflections[o.id] !== null)
+        .filter(
+          o =>
+            objectiveReflections[o.id] !== null &&
+            objectiveReflections[o.id] !== undefined
+        )
         .map(o =>
           saveUserLessonObjectiveReflection(
             o.id,
