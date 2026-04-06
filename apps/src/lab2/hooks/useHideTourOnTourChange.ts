@@ -12,6 +12,11 @@ const useHideTourOnTourChange = (tour: Tour | null) => {
     if (prevTour && prevTour !== tour) {
       prevTour.hide();
     }
+    return () => {
+      if (tour) {
+        tour.hide();
+      }
+    };
   }, [tour]);
 };
 export default useHideTourOnTourChange;
