@@ -7,7 +7,7 @@
 = form_tag url_for(action: 'permissions_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
   = text_field_tag :search_term, params[:search_term], class: 'form-control'
   %button.btn{type: 'submit'}
-    %i.fa.fa-search
+    %i.fa-solid.fa-magnifying-glass
 -if @user
   %table.table.table-hover.table-condensed.table-auto-width
     %thead
@@ -53,7 +53,7 @@
 = form_tag url_for(action: 'permissions_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
   = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS, params[:permission]), class: 'form-control'
   %button.btn{type: 'submit'}
-    %i.fa.fa-search
+    %i.fa-solid.fa-magnifying-glass
 -if @users_with_permission
   - download_csv = link_to('Page as CSV', permissions_csv_path(params.permit([:permission, :page_size, :page, :search_term])), class: 'btn btn-default')
   = page_header 'users', @users_with_permission, permitted_params: [:permission], extra_buttons: [download_csv]

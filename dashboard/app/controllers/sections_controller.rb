@@ -70,7 +70,12 @@ class SectionsController < ApplicationController
       unit = Unit.get_from_cache(section.script_id)
       unit_group = UnitGroup.get_from_cache(section.course_id)
       unit_group_unit = Queries::Courses.unit_group_unit(unit, unit_group)
-      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit.link(unit_group_unit: unit_group_unit)}
+      unit_path = if unit_group_unit && unit_group
+                    "/teacher_dashboard/sections/#{section.id}/courses/#{unit_group.name}/units/#{unit_group_unit.position}"
+                  else
+                    "/teacher_dashboard/sections/#{section.id}/courses"
+                  end
+      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit_path}
       unit.lesson_groups.each do |lesson_group|
         lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map do |lesson|
           path =

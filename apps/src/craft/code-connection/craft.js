@@ -565,7 +565,10 @@ export default class Craft {
           onMount={onMount}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

@@ -2,11 +2,12 @@
 #
 # Table name: rubrics
 #
-#  id         :bigint           not null, primary key
-#  lesson_id  :integer          not null
-#  level_id   :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  lesson_id     :integer          not null
+#  level_id      :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  s3_config_dir :string(255)
 #
 # Indexes
 #

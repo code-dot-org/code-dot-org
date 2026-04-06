@@ -7,11 +7,11 @@ class AidiffMessagesController < ApplicationController
   # flagged: boolean
   # POST /aidiff_messages/:id/submit_feedback
   def submit_feedback
-    feedback =  if @aidiff_message.aidiff_message_feedback.nil?
-                  @aidiff_message.create_aidiff_message_feedback!(teacher_id: current_user.id)
-                else
-                  @aidiff_message.aidiff_message_feedback
-                end
+    feedback = if @aidiff_message.aidiff_message_feedback.nil?
+                 @aidiff_message.create_aidiff_message_feedback!(teacher_id: current_user.id)
+               else
+                 @aidiff_message.aidiff_message_feedback
+               end
     feedback.assign_attributes(feedback_params)
 
     begin

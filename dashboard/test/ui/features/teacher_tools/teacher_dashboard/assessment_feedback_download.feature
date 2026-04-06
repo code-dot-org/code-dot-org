@@ -7,21 +7,10 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab has feedback download
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/15"
-    And I wait for the lab page to fully load
     Then I am on "http://studio.code.org/teacher_dashboard/home"
-    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
-    And I click selector "#ui-test-Section-settings" once I see it
-    And I press the first "input[name='grades[]']" element
-    And I wait until element "button:contains(High School)" is visible
-    And I click selector "button:contains(High School)"
-    And I press the first "input[name='Computer Science Principles']" element
-    And I wait until element "#assignment-version-year" is visible
-    And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('25-'26)" once I see it
-    And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "Intro to App Design" option in dropdown "uitest-secondary-assignment"
-    And I press the first "#uitest-save-section-changes" element to load a new page
+    And I assign my section in row 1 to course "ui-test-csp-2019" unit 3
+    And I reload the page
+    And I click selector "a:contains(View progress)" once I see it
 
     # Progress tab
     And I wait until element "#unit-selector-v2" is visible
@@ -45,6 +34,8 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector "button:contains(Hour of Code)"
     And I press the first "input[name='UI Test Artist']" element
     And I press the first "#uitest-save-section-changes" element
+    And I wait for 5 seconds
+    And I wait for jquery to load
     And I wait until element "h1:contains(Progress)" is visible
 
     # Assessments tab

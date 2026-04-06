@@ -214,6 +214,13 @@ function initializeCodeMirror6(
     },
   };
 
+  // Expose the editor adapter on the original textarea for pages that need to
+  // access the instance directly after initialization.
+  const textareaNode = node as HTMLTextAreaElement & {
+    codeMirror?: CodeMirrorLegacyAdapter;
+  };
+  textareaNode.codeMirror = adapter;
+
   const updatePreview = () => {
     if (!previewElement) {
       return;
@@ -225,7 +232,10 @@ function initializeCodeMirror6(
           instructionsText: adapter.getValue(),
           theme: 'Dark',
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else if (game === 'Aichat' || game === 'Music') {
       createReactRoot(
@@ -233,14 +243,20 @@ function initializeCodeMirror6(
           instructionsText: adapter.getValue(),
           theme: 'Light',
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else {
       createReactRoot(
         React.createElement(SafeMarkdown, {
           markdown: adapter.getValue(),
         }),
-        previewElement
+        previewElement,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   };

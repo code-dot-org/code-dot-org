@@ -23,8 +23,8 @@ interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
   hasInstructionsDrawer?: boolean;
+  lastMessagePostText?: React.ReactNode;
 }
 
 /**
@@ -36,8 +36,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
   buildAssetUrl,
-  isAiTutorVersion,
   hasInstructionsDrawer,
+  lastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -92,9 +92,15 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   };
 
-  const isTeacherViewEmptyStudentChatHistory = useMemo(() => {
-    return isTeacherView && events.length === 0;
-  }, [isTeacherView, events]);
+  const hasChatHistory = events.length > 0;
+
+  const lastChatMessageIndex = useMemo(() => {
+    if (!lastMessagePostText) return -1;
+    for (let i = events.length - 1; i >= 0; i--) {
+      if (isChatMessage(events[i])) return i;
+    }
+    return -1;
+  }, [events, lastMessagePostText]);
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -192,29 +198,27 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
+        {chatDisabled && !(isTeacherView && hasChatHistory) ? (
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
             {hasInstructionsDrawer && (
               <div className={moduleStyles.instructionsDrawerInset} />
             )}
-            {isTeacherViewEmptyStudentChatHistory && (
-              <EmptyStudentChatHistory />
-            )}
+            {isTeacherView && !hasChatHistory && <EmptyStudentChatHistory />}
             {events.map((event, index) => {
-              const isLastMessage = index === events.length - 1;
+              const isLastEvent = index === events.length - 1;
+              const isLastChatMessage = index === lastChatMessageIndex;
               return (
                 <ChatEventView
                   event={event}
                   key={event.timestamp}
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
-                  isAiTutorVersion={isAiTutorVersion}
                   clientType={clientType}
                   modelParameters={modelParameters}
-                  isLastMessage={isLastMessage}
-                  ref={isLastMessage ? finalEventRef : undefined}
+                  postText={isLastChatMessage ? lastMessagePostText : undefined}
+                  ref={isLastEvent ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {
                     if (e.key === 'Escape' && e.target === e.currentTarget) {

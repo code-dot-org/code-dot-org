@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-03-28T03:14:18.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## This is the end of the progression - thanks for testing it with us!\r\n\r\n### Please complete a short survey using the link below to let us know your thoughts!",
+    "link_title": "Take a quick survey!",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSenzDRmsjum3-Hrwoeqvtkwp9Q8Mjm-U7he66RhS2DvNje3sA/viewform?usp=dialog"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-28 03:14:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-28 03:14:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-28 03:14:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</ExternalLink>

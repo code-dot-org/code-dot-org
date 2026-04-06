@@ -237,15 +237,15 @@ module Pd::Foorm
       general = parsed[:general]['sample.0']
       assert_equal 'Choose items', general['question1'][:title]
       assert_equal 'cat1', general['question1'][:category]
-      assert_equal({"item1"=>"Item1", "item2"=>"Item2"}, general['question1'][:choices])
+      assert_equal({"item1" => "Item1", "item2" => "Item2"}, general['question1'][:choices])
       # The choices hash does not store category info directly; matrix_rows does for matrix rows
       assert_equal 'Rate this', general['question2'][:title]
       assert_equal 'cat2', general['question2'][:category]
-      assert_equal({"1"=>"1 - Low", "2"=>"2", "3"=>"3 - High"}, general['question2'][:choices])
+      assert_equal({"1" => "1 - Low", "2" => "2", "3" => "3 - High"}, general['question2'][:choices])
       assert_equal 'Matrix Q', general['question3'][:title]
       assert_equal 'cat3', general['question3'][:category]
-      assert_equal({"col1"=>"Col1", "col2"=>"Col2"}, general['question3'][:columns])
-      assert_equal({"row1"=>"Row1", "row2"=>"Row2"}, general['question3'][:rows])
+      assert_equal({"col1" => "Col1", "col2" => "Col2"}, general['question3'][:columns])
+      assert_equal({"row1" => "Row1", "row2" => "Row2"}, general['question3'][:rows])
       assert_equal 'rowCat1', general['question3'][:matrix_rows]['row1'][:category]
     end
 
@@ -279,7 +279,7 @@ module Pd::Foorm
       assert facilitator.key?('fac_q1')
       assert_equal 'Facilitator Q1', facilitator['fac_q1'][:title]
       assert_equal 'fac_cat1', facilitator['fac_q1'][:category]
-      assert_equal({"yes"=>"Yes", "no"=>"No"}, facilitator['fac_q1'][:choices])
+      assert_equal({"yes" => "Yes", "no" => "No"}, facilitator['fac_q1'][:choices])
     end
   end
 end

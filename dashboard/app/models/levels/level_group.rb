@@ -49,7 +49,7 @@ class LevelGroup < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   # Returns an array of all the levels and texts in this LevelGroup,

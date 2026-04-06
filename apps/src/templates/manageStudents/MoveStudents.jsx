@@ -192,7 +192,7 @@ class MoveStudents extends Component {
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
-          icon="sign-out"
+          icon="right-from-bracket"
         />
         <BaseDialog
           useUpdatedStyles
