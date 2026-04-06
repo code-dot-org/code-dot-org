@@ -1006,12 +1006,6 @@ module Services
         object.level&.name
       end
 
-      # TODO: Remove this method once s3_config_dir is populated on all Rubric
-      # records, at which point the default attribute reader will suffice.
-      def s3_config_dir
-        @scope[:seed_context].script.ai_rubric_s3_config.try(:[], object.level&.name)
-      end
-
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
