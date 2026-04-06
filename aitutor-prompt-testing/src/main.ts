@@ -441,6 +441,7 @@ interface ItemScore {
   expectedVideos: string[];
   validVideos: string[];
   hallucinated: string[];
+  possibleVideos: string[];
   missingExpected: string[];
   unexpectedPresent: string[];
   pass: boolean;
@@ -486,6 +487,7 @@ function renderResults(result: EvalResult, runId: string): void {
       <td class="pass-no">${s.missingExpected.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
       <td class="pass-no">${s.unexpectedPresent.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
       <td class="pass-no">${s.hallucinated.join(', ') || ''}</td>
+      <td style="color:#f59e0b">${s.possibleVideos.join(', ') || ''}</td>
       <td style="color:#ef4444">${escHtml(s.error ?? '')}</td>
     </tr>`).join('');
 
