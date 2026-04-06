@@ -31,8 +31,6 @@ export const saveUserLessonObjectiveReflection = async (
     body: JSON.stringify({objective_id: objectiveId, reflection}),
   });
   if (!response.ok) {
-    throw new Error(
-      `Failed to save objective reflection: ${response.status}`
-    );
+    throw new Error(`Failed to save objective reflection: ${response.status}`);
   }
 };
