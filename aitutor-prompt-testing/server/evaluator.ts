@@ -59,7 +59,7 @@ export interface ItemScore {
   expectedVideos: string[];
   validVideos: string[];       // base filenames of valid video attempts
   hallucinated: string[];      // attempted video URLs that didn't match any known URL
-  possibleVideos: string[];    // correct full URL for hallucinated URLs that matched a known stem
+  possibleVideos: (string | null)[];  // parallel to hallucinated: correct URL if stem matched, else null
   missingExpected: string[];   // expected videos not found in response
   unexpectedPresent: string[]; // valid videos found but not in expectedVideos
   pass: boolean;
@@ -86,7 +86,7 @@ function scoreItem(item: RunItem): ItemScore {
 
   const validVideos: string[] = [];
   const hallucinated: string[] = [];
-  const possibleVideos: string[] = [];
+  const possibleVideos: (string | null)[] = []; // parallel to hallucinated
 
   for (const url of attempts) {
     if (validUrlSet.has(url)) {
@@ -94,12 +94,9 @@ function scoreItem(item: RunItem): ItemScore {
       if (filename) validVideos.push(filename);
     } else {
       hallucinated.push(url);
-      // Check if the hallucinated URL contains a known stem — if so, report the correct URL
       const matchedStem = VIDEO_STEMS.find(s => url.includes(s));
-      if (matchedStem) {
-        const correctUrl = validUrls.find(u => u.includes(matchedStem));
-        if (correctUrl) possibleVideos.push(correctUrl);
-      }
+      const correctUrl = matchedStem ? (validUrls.find(u => u.includes(matchedStem)) ?? null) : null;
+      possibleVideos.push(correctUrl);
     }
   }
 

@@ -441,7 +441,7 @@ interface ItemScore {
   expectedVideos: string[];
   validVideos: string[];
   hallucinated: string[];
-  possibleVideos: string[];
+  possibleVideos: (string | null)[];  // parallel to hallucinated
   missingExpected: string[];
   unexpectedPresent: string[];
   pass: boolean;
@@ -460,6 +460,14 @@ interface EvalResult {
 
 function shortLevel(levelId: string): string {
   return levelId.replace('programming-fundamentals-', '').replace(/_2025.*$/, '');
+}
+
+// Returns HTML for `str` with the common prefix shared with `other` softly highlighted.
+function hlCommon(str: string, other: string): string {
+  let i = 0;
+  while (i < str.length && i < other.length && str[i] === other[i]) i++;
+  if (i === 0) return escHtml(str);
+  return `<span class="url-match">${escHtml(str.slice(0, i))}</span>${escHtml(str.slice(i))}`;
 }
 
 function renderResults(result: EvalResult, runId: string): void {
@@ -486,8 +494,8 @@ function renderResults(result: EvalResult, runId: string): void {
       <td>${s.validVideos.map(v => v.replace('_V1.json', '')).join(', ') || '—'}</td>
       <td class="pass-no">${s.missingExpected.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
       <td class="pass-no">${s.unexpectedPresent.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
-      <td class="pass-no">${s.hallucinated.join(', ') || ''}</td>
-      <td style="color:#f59e0b">${s.possibleVideos.join(', ') || ''}</td>
+      <td class="pass-no">${s.hallucinated.map((h, i) => hlCommon(h, s.possibleVideos[i] ?? '')).join(', ') || ''}</td>
+      <td style="color:#f59e0b">${s.possibleVideos.map((p, i) => p ? hlCommon(p, s.hallucinated[i]) : '').filter(Boolean).join(', ') || ''}</td>
       <td style="color:#ef4444">${escHtml(s.error ?? '')}</td>
     </tr>`).join('');
 
