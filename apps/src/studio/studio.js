@@ -2402,7 +2402,10 @@ Studio.init = function (config) {
     <Provider store={getStore()}>
       <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -5926,7 +5929,10 @@ Studio.askForInput = function (question, callback) {
 
   createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
-    target
+    target,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

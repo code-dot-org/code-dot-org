@@ -7,9 +7,16 @@ healthChecks:
 services:
   redis:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password:
   mysql:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password:
   minio:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password: 
+
 user:
   allowSudo: true

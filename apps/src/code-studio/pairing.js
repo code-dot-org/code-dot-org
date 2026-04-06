@@ -22,7 +22,10 @@ export default {
               pairingDialog = dialog;
             }}
           />,
-          container
+          container,
+          {
+            legacyReactDomRender: true,
+          }
         );
       }
       if (pairingDialog) {

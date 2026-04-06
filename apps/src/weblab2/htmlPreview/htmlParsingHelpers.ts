@@ -50,16 +50,48 @@ const consoleOverrideScript = `
       const args = [];
       for (let i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
       try {
-        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: method, args: args});
       } catch(e) {}
       return originalMethod.apply(console, arguments);
     };
   });
+  window.addEventListener('unhandledrejection', function(event) {
+    const reason = event.reason !== undefined
+      ? serialize(event.reason) : 'Unhandled Promise rejection';
+    try {
+      channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error", args: [reason]});
+    } catch(e) {}
+  });
+  const tagNames = {
+    img: 'Image', script: 'Script', audio: 'Audio', video: 'Video'
+  };
+  window.addEventListener('error', function(event) {
+    if (event.target && event.target !== window) {
+      const tag = event.target.tagName ? event.target.tagName.toLowerCase() : 'resource';
+      const resourceType = tag === 'link'
+        ? (event.target.rel && event.target.rel.includes('stylesheet') ? 'Stylesheet' : 'Link resource')
+        : (tagNames[tag] || tag);
+      const filename =
+        (event.target.src || event.target.href || 'unknown').split('/').pop();
+      try {
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error",
+          args: [resourceType + ' not found: ' + filename]});
+      } catch(e) {}
+    } else {
+      const filename = event.filename ? event.filename.split('/').pop() : 'unknown';
+      try {
+        channel.postMessage({type: "${ProjectServiceWorkerMessageType.CONSOLE_LOG}", level: "error",
+          args: [event.message + ' (' + filename + ', line ' + event.lineno + ')']});
+      } catch(e) {}
+    }
+  }, true);
 })();
 `;
 
-// Adds a script to the document that overrides console methods (log, warn, error, info)
-// and broadcasts the serialized arguments via BroadcastChannel so the parent can capture them.
+// Adds a script to the document that intercepts console output and JS errors,
+// broadcasting them via BroadcastChannel so the parent frame can display them.
+// Captures console.log/warn/error/info, uncaught JS errors, unhandled Promise
+// rejections, and failed resource loads (images, scripts, stylesheets, etc.).
 export const addConsoleOverrideToDocument = (doc: Document) => {
   const script = doc.createElement('script');
   script.textContent = consoleOverrideScript;

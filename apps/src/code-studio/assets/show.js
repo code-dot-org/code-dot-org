@@ -81,7 +81,10 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       currentValue: options.currentValue,
       currentImageType: options.currentImageType,
     }),
-    codeDiv
+    codeDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   dialog.show();

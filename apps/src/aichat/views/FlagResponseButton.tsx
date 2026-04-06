@@ -34,7 +34,9 @@ const FlagResponseButton: React.FC<{
       : legacyLabData.serverLevelId,
     scriptId: labData ? labData.scriptId : legacyLabData.serverScriptId,
     userId: user.userId,
-    aiTutorMode: labData ? labData.levelProperties?.aiTutorMode : undefined,
+    aiTutorAnswerTypes: labData
+      ? labData.levelProperties?.aiTutorPromptSettings?.answerTypes
+      : undefined,
     levelSystemPrompt: labData
       ? labData.levelProperties?.levelSystemPrompt
       : undefined,

@@ -1,6 +1,15 @@
-# Request a wildcard ACM certificate for cluster-hosted apps, e.g. *.k8s.code.org.
+# Request a wildcard ACM certificate for cluster-hosted apps, e.g. *.k8s.code.org,
+# plus one wildcard per single-namespace environment type, e.g. *.staging.k8s.code.org,
+# and adhoc namespaces, e.g. *.adhoc.k8s.code.org.
 resource "aws_acm_certificate" "cluster_subdomain_wildcard" {
-  domain_name       = "*.${var.cluster_subdomain}.${var.parent_domain}"
+  domain_name = "*.${var.cluster_subdomain}.${var.parent_domain}"
+  subject_alternative_names = concat(
+    [
+      for env_type in sort(tolist(var.single_namespace_environment_types)) :
+      "*.${env_type}.${var.cluster_subdomain}.${var.parent_domain}"
+    ],
+    ["*.adhoc.${var.cluster_subdomain}.${var.parent_domain}"]
+  )
   validation_method = "DNS"
 
   lifecycle {

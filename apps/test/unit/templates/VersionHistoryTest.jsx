@@ -171,7 +171,10 @@ describe('VersionHistory', () => {
       wrapper = mount(<VersionHistory {...props} />);
       expect(
         wrapper.containsMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         )
       ).toBeTruthy();
     });
@@ -190,7 +193,10 @@ describe('VersionHistory', () => {
       // Spinner goes away
       expect(
         !wrapper.containsMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         )
       ).toBeTruthy();
 
@@ -314,7 +320,10 @@ describe('VersionHistory', () => {
       it('immediately renders spinner', () => {
         expect(
           wrapper.containsMatchingElement(
-            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+            <i
+              className="fa-solid fa-spinner fa-spin"
+              style={{fontSize: '32px'}}
+            />
           )
         );
       });

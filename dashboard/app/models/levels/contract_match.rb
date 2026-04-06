@@ -41,7 +41,7 @@ class ContractMatch < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   def deprecated?

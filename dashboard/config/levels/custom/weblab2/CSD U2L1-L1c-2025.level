@@ -98,8 +98,21 @@
         "14"
       ]
     },
-    "bubble_choice_description": "A catering website for a local caterer."
+    "bubble_choice_description": "A catering website for a local caterer.",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-12-31T20:46:25.051+00:00\",\"changed\":[\"cloned from \\\"CS U2L1-L1b-2025\\\"\"],\"cloned_from\":\"CS U2L1-L1b-2025\"},{\"changed_at\":\"2025-12-31 20:46:34 +0000\",\"changed\":[\"thumbnail_url\",\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:47:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:48:04 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:52:21 +0000\",\"changed\":[\"name\",\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:15:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:40:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:04 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:42:31 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-31T20:46:25.051+00:00\",\"changed\":[\"cloned from \\\"CS U2L1-L1b-2025\\\"\"],\"cloned_from\":\"CS U2L1-L1b-2025\"},{\"changed_at\":\"2025-12-31 20:46:34 +0000\",\"changed\":[\"thumbnail_url\",\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:47:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:48:04 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:52:21 +0000\",\"changed\":[\"name\",\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:15:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:40:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:04 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:41:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:42:31 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-24 21:28:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

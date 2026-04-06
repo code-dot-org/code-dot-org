@@ -101,3 +101,29 @@ variable "private_subnet_2_cidr" {
   type        = string
   default     = "10.0.208.0/20"
 }
+
+variable "single_namespace_environment_types" {
+  description = "Environment types that each map to a single Kubernetes namespace."
+  type        = set(string)
+  default     = ["production", "staging", "test", "levelbuilder"]
+}
+
+variable "frontend_security_group_id" {
+  description = "Security group to attach to EKS pods."
+  type        = string
+  default     = "sg-663a031e"
+}
+
+variable "frontend_security_group_namespaces" {
+  description = "Namespaces whose EKS pods should get the frontend security group."
+  type        = set(string)
+  default     = ["production", "test", "levelbuilder"]
+
+  validation {
+    condition = alltrue([
+      for namespace in var.frontend_security_group_namespaces :
+      contains(var.single_namespace_environment_types, namespace)
+    ])
+    error_message = "frontend_security_group_namespaces must be a subset of single_namespace_environment_types."
+  }
+}

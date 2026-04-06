@@ -11,6 +11,8 @@ kind: Config
 build:
   hooks:
     before:
+      # Populate kustomize secretGenerator env files from the same
+      # repo-root cdo-local-secrets.env file used by the Helm Skaffold config.
       - command: ["./bin/generate-cdo-local-secrets"]
   artifacts:
   - image: code-dot-org

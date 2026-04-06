@@ -2,14 +2,22 @@
   "script": {
     "name": "csd2-web-lab-update-2025",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSD",
       "has_unnumbered_lessons": true,
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-23 00:59:11 UTC",
+    "serialized_at": "2026-03-25 17:20:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2262,7 +2270,8 @@
       "key": "60df7f99-0ea7-4552-b750-2b5de78d5297",
       "position": 5,
       "properties": {
-        "description": "**Review:** Return to the list of lesson resources you wrote on the board and review as a class how they are supposed to be used. Refer to the teaching tip above for recommended uses."
+        "description": "**Review:** Return to the list of lesson resources you wrote on the board and review as a class how they are supposed to be used. Refer to the teaching tip above for recommended uses.",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "60df7f99-0ea7-4552-b750-2b5de78d5297",
@@ -6581,7 +6590,8 @@
       "properties": {
         "level_keys": [
           "CSD U2L2-L9-2025_clone"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "bonus": false,
       "seeding_key": {

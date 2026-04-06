@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-20T23:40:26.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "widget_view": "false",
+    "widget_view": "true",
     "initial_view_mode": "preview",
     "disable_edit_run_for_submission": "false",
     "ai_tutor_mode": "tutor",
@@ -68,10 +69,17 @@
         "4"
       ]
     },
-    "long_instructions": "## Explore the Improved App\r\n\r\n* Add a few reminders.\r\n* Mark some as done and delete one.\r\n* Use Clear All and try Light/Dark mode.\r\n* Navigate between pages.",
-    "name_suffix": "_2026"
+    "long_instructions": "## Explore the Improved App\r\n\r\nTry to use the app in the same way you did in Level 2.\r\n\r\nRefer to your activity guide to compare this version to Level 2 and record your ideas.",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+        "ask": "Students are using a more functional version of the app and comparing it to Level 2 to determine which interactions better support the user. Ask questions that prompt them to notice what works more smoothly or clearly in this version and how that affects the user experience, without telling them which version is better."
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.373+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.373+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2_2025\"},{\"changed_at\":\"2026-03-27 23:25:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-29 22:14:31 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

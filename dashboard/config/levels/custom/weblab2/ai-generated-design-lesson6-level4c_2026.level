@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-16T06:41:43.000Z",
   "level_num": "custom",
@@ -72,6 +71,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-16T06:41:43.534+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level7c_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level7c_2026\"},{\"changed_at\":\"2026-03-16 06:43:31 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-16T06:41:43.534+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level7c_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level7c_2026\"},{\"changed_at\":\"2026-03-16 06:43:31 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-26 11:03:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

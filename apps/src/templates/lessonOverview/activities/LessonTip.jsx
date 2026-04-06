@@ -12,7 +12,8 @@ import styles from './lesson-tip.module.scss';
 export const tipTypes = {
   teachingTip: {
     displayName: i18n.teachingTip(),
-    icon: 'lightbulb-o',
+    icon: 'lightbulb',
+    iconStyle: 'regular',
     color: color.orange,
     backgroundColor: color.lightest_orange,
   },
@@ -81,6 +82,7 @@ class LessonTip extends Component {
         >
           <FontAwesome
             icon={tipTypes[this.props.tip.type].icon}
+            iconStyle={tipTypes[this.props.tip.type].iconStyle}
             className={styles.icon}
           />
           <span>{tipTypes[this.props.tip.type].displayName}</span>

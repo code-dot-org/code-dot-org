@@ -26,6 +26,7 @@ class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -83,6 +84,7 @@ class ProgressLesson extends React.Component {
       selectedSectionId,
       isRtl,
       unitHasUnnumberedLessons,
+      isOnLevelView,
     } = this.props;
 
     if (!isVisible) {
@@ -189,13 +191,14 @@ class ProgressLesson extends React.Component {
               <span>{title}</span>
             </div>
             {viewAs === ViewType.Participant &&
-              lesson.student_lesson_plan_html_url && (
+              lesson.student_lesson_plan_html_url &&
+              !isOnLevelView && (
                 <Button
                   __useDeprecatedTag
                   className="ui-test-lesson-resources"
                   href={lesson.student_lesson_plan_html_url}
                   text={i18n.lessonResources()}
-                  icon="file-text"
+                  icon="file-lines"
                   color="white"
                   target="_blank"
                   style={styles.buttonStyle}

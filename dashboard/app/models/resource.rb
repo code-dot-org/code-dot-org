@@ -44,6 +44,7 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_resources
   has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_resources
   has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_resources
+  has_and_belongs_to_many :jit_pl_teaching_tips, join_table: :jit_pl_teaching_tips_resources
   belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
@@ -156,6 +157,9 @@ class Resource < ApplicationRecord
       scripts_to_serialize = lessons.map(&:script).concat(scripts).uniq
       scripts_to_serialize.each(&:write_script_json)
       unit_groups.each(&:write_serialization)
+      jit_pl_concepts_to_serialize = jit_pl_concepts.to_a +
+        jit_pl_misconceptions.map(&:jit_pl_concept)
+      jit_pl_concepts_to_serialize.uniq.each(&:write_serialization)
     end
   end
 

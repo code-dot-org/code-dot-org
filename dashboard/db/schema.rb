@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -101,6 +101,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "request_id"
+    t.integer "lesson_id"
+    t.index ["lesson_id", "user_id"], name: "index_ace_lesson_user"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
@@ -902,6 +904,22 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["resource_id", "jit_pl_misconception_id"], name: "index_misconceptions_resources_on_resource_and_misconception_ids", unique: true
   end
 
+  create_table "jit_pl_teaching_tips", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.text "properties"
+    t.bigint "jit_pl_concept_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jit_pl_concept_id"], name: "index_jit_pl_teaching_tips_on_jit_pl_concept_id"
+  end
+
+  create_table "jit_pl_teaching_tips_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_teaching_tip_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["jit_pl_teaching_tip_id", "resource_id"], name: "index_teaching_tips_resources_on_tip_and_resource_ids", unique: true
+    t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
+  end
+
   create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "learning_goal_ai_evaluation_id", null: false
     t.bigint "teacher_id", null: false
@@ -1002,6 +1020,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lesson_insights", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id"
+    t.integer "student_id"
+    t.integer "section_id"
+    t.integer "teacher_id"
+    t.text "insight_response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id", "lesson_id", "student_id"], name: "index_lesson_insights_on_section_id_and_lesson_id_and_student_id", unique: true
   end
 
   create_table "lessons_opportunity_standards", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2013,6 +2042,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.integer "level_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
   end
 
@@ -2528,6 +2558,29 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
+  create_table "user_lesson_objective_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "objective_id", null: false
+    t.bigint "student_id", null: false
+    t.string "reflection"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["objective_id", "student_id"], name: "index_ulor_on_objective_and_student"
+    t.index ["objective_id"], name: "index_user_lesson_objective_reflections_on_objective_id"
+    t.index ["student_id"], name: "index_user_lesson_objective_reflections_on_student_id"
+  end
+
+  create_table "user_lesson_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id", null: false
+    t.bigint "student_id", null: false
+    t.text "success"
+    t.text "struggle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id", "student_id"], name: "index_user_lesson_reflections_on_lesson_id_and_student_id"
+    t.index ["lesson_id"], name: "index_user_lesson_reflections_on_lesson_id"
+    t.index ["student_id"], name: "index_user_lesson_reflections_on_student_id"
+  end
+
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -2797,6 +2850,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
   add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"
   add_foreign_key "jit_pl_exemplars", "jit_pl_misconceptions"
   add_foreign_key "jit_pl_misconceptions", "jit_pl_concepts"
+  add_foreign_key "jit_pl_teaching_tips", "jit_pl_concepts"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"

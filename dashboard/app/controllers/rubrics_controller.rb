@@ -23,6 +23,7 @@ class RubricsController < ApplicationController
     @rubric = Rubric.new(rubric_params)
     @lesson = @rubric.lesson
     if @rubric.save
+      update_ai_rubric_s3_config(@lesson.script)
       @rubric.lesson.script.write_script_json
       render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
     else
@@ -36,6 +37,7 @@ class RubricsController < ApplicationController
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
     if @rubric.update(rubric_params)
+      update_ai_rubric_s3_config(@lesson.script)
       @rubric.lesson.script.write_script_json
       render json: @rubric.summarize_for_rubric_edit
     else
@@ -345,6 +347,14 @@ class RubricsController < ApplicationController
   def get_ai_rubrics_tour_seen
     return head :unauthorized unless current_user&.teacher?
     render json: {seen: current_user.ai_rubrics_tour_seen}
+  end
+
+  private def update_ai_rubric_s3_config(unit)
+    raw = params.transform_keys(&:underscore)[:ai_rubric_s3_config]
+    return if raw.blank?
+    config = raw.is_a?(String) ? JSON.parse(raw) : raw.to_unsafe_h
+    unit.ai_rubric_s3_config = config
+    unit.save!
   end
 
   private def rubric_params

@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:00.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Gap spacing",
+    "long_instructions": "<img src=\"https://images.code.org/904a09e6a6bdb840557b0e5d800ec9ed-image-1706747985587.png\" style=\"width:300px; float:right;\">\r\n\r\n# Row & Column \"Gap\"\r\n\r\nThe **gap property** explicitly controls the space **between** flex items. It applies that spacing _only between items_ not on the outer edges.\r\n\r\nThe behavior could be thought of as a _minimum space_. If the space is bigger somehow (if you had `justify-content: space-between;` for example) then the gap will only take effect if that space would end up smaller.\r\n\r\n`grid-gap` accepts one or two values:\r\n* A single value sets both `grid-row-gap` and `column-gap` by the same value\r\n   - _See the spacing between the rows and columns of the items in the first, purple container to the right._\r\n* When two values are used, the first sets the `grid-row-gap` and the second sets the `column-gap`\r\n   - _See the different spacing between the rows and columns of the items in the second, teal container to the right._\r\n\r\n# Do This\r\n\r\n1. Assign the gap property to each container in the CSS to match the spacing of the items in the image to the right.\r\n   - Give the 1st container the `grid-gap` property and define both the row and column spacing to be 50px.\r\n   - Give the 2nd container the `grid-gap` property and define the spacing to be 10px between the rows and 50px between the columns.\r\n   - Give the 3rd container the `grid-gap` property and define the spacing to be 50px between the rows and 10px between the columns.\r\n   - Give the 4th container the `grid-row-gap` property and define the spacing between the rows to be 60px.\r\n   - Give the 5th container the `column-gap` property and define the spacing between the columns to be 60px.\r\n   - Give the 6th container the `grid-gap` property and define the spacing between rows to be 25px and spacing between columns to be 70px.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn a new property to control the spacing between rows and columns",
+    "thumbnail_url": "https://images.code.org/83546c654dab223a03a8580670214009-gap.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-1\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n\n    </div>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-2\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n    </div>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-3\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n    </div>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-4\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n    </div>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-5\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n    </div>\n\n    <!-- div container with a class attribute around the 6 images -->\n    <div class=\"container-6\">\n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n    </div>\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Assign the gap property to each container in the CSS to match the spacing of the items in the image in the instructions. */\n\n/* Give the 1st container the grid-gap property and define both the row and column spacing to be 50px. */\n.container-1 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #b691d6;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing to be 50px for both row and column */\n\n\n\n\n}\n\n/* Give the 2nd container the grid-gap property and define the spacing to be 10px between the rows and 50px between the columns. */\n.container-2 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #91d6ce;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing to be 10px between rows and 50px between columns */\n\n\n\n}\n\n/* Give the 3rd container the grid-gap property and define the spacing to be 50px between the rows and 10px between the columns. */\n.container-3 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #d691c4;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing to be 50px between rows and 10px between columns*/\n\n\n\n}\n\n/* Give the 4th container the grid-row-gap property and define the spacing between the rows to be 60px. */\n.container-4 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #9cd691;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing between rows to be 60px */\n\n\n\n}\n\n/* Give the 5th container the column-gap property and define the spacing between the columns to be 60px. */\n.container-5 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #f6f48c;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing between columns to be 60px */\n\n\n\n}\n\n/* Give the 6th container the grid-gap property and define the spacing between rows to be 25px and spacing between columns to be 70px */\n.container-6 {\n  /* The div container has a background color so you can see how the items are positioned within it */\n  background: #f68c8c;\n\n  /* Create a flex layout context */\n  display: flex;\n\n  /* Define the flow direction \n  and if the items should wrap */\n  flex-flow: column wrap;\n\n  /* Define how items should be distributed horizontally across the container */\n  align-content: center;\n\n  /* Define how items should be distributed vertically within the container */\n  justify-content: center;\n\n  /* ADD CODE BELOW to define the gap spacing to be 25px between the rows and 70px between the columns */\n\n\n\n}\n\n\nimg{\n  width: 75px;\n  border-style: solid;\n}\n\ndiv {\n  height: 225px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "three.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/c7d69fe3-e1cd-468f-92e9-60bd74df65ab.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "five.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/b09d1c2b-e568-4510-a0b2-0f2db3102d54.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "four.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/aede6a6e-765a-43ed-879a-6854fc6208b5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "one.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/a491fa58-88ec-406f-a07e-4a703547746d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "six.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/abfa7b6a-186f-4903-8592-b2064c9ab385.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "two.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L9b-2025/uuid/f8c617ca-cb36-4be4-ba74-763dad3b8d44.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:00.030+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12-L9b-2025\\\"\"],\"cloned_from\":\"CSD U2L12-L9b-2025\"}]"
+}]]></config>
+</Weblab2>

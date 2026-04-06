@@ -1,5 +1,5 @@
 class WeblabHostController < ApplicationController
-  BRAMBLE_URL = 'https://downloads.computinginthecore.org/bramble_0.1.31'
+  BRAMBLE_URL = 'https://downloads.computinginthecore.org/bramble_0.1.32'
   BRAMBLE_LOCALHOST_URL = 'http://127.0.0.1:8000/src'
   STUDIO_URL = CDO.studio_url('', CDO.default_scheme)
 
