@@ -73,7 +73,7 @@ export const uploadFiles = createAppAsyncThunk<
         });
         if (moderationResult === 'flagged') {
           imageFileFlagged = true;
-          dispatch(stagedFileUploadFinished({key, status: 'imageFlagged'}));
+          dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
           continue;
         }
       }
