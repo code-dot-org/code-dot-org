@@ -272,8 +272,10 @@ class Driver<
           this._registry.registerToolbox(toolbox, agent.workspace);
         }
       } else if (agent.hidden) {
+        this._environment.hiddenWorkspaces ||= [];
         this._environment.hiddenWorkspaces.push(agent.workspace);
       } else if (agent.inline) {
+        this._environment.embeddedWorkspaces ||= [];
         this._environment.embeddedWorkspaces.push(agent.workspace);
       }
 

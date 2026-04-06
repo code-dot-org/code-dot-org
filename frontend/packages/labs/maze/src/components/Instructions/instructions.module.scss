@@ -1,0 +1,24 @@
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.instructions-entry {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  > span {
+    img {
+      width: 2.5rem;
+    }
+
+    ~ * {
+      border: 1px solid var(--borders-neutral-light);
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+  }
+}

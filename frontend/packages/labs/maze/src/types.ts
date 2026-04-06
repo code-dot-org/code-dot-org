@@ -4,7 +4,7 @@ import type {Environment} from '@code-dot-org/blockly-workspace';
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import type {MazeData} from './MazeController';
-import {LevelKindSchema} from './schema';
+import {LevelKindSchema, AuthoredHintSchema} from './schema';
 import type {SkinData} from './skin';
 
 /**
@@ -36,5 +36,7 @@ export interface MazeEnvironment extends Environment {
   /** The ideal block count, if provided. */
   idealBlockCount?: number;
 }
+
+export type AuthoredHint = z.infer<typeof AuthoredHintSchema>;
 
 export type {MazeData};

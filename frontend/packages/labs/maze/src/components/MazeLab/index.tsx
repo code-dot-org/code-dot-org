@@ -20,6 +20,7 @@ import {
 import {useLevelProperties} from '@code-dot-org/lab/contexts';
 import blocks from '../../blocks';
 import skins, {skinFor} from '../../skins';
+import Instructions from '../Instructions';
 
 import type {MazeLevelProperties, MazeEnvironment} from '../../types';
 
@@ -68,6 +69,7 @@ const MazeLab = () => {
   const toolboxHeaderRef = useRef<HTMLDivElement | null>(null);
   const blockCountRef = useRef<HTMLElement | null>(null);
   const blockCount = useRef<number>(0);
+  const skin = skinFor(skins, levelProperties?.skin || 'birds');
 
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
@@ -136,8 +138,6 @@ const MazeLab = () => {
 
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg, environment: MazeEnvironment) => {
-      const skin = skinFor(skins, levelProperties?.skin || 'birds');
-
       mazeRef.current = new Maze(
         workspace,
         levelProperties,
@@ -165,7 +165,14 @@ const MazeLab = () => {
       // Get the initial width of the flyout / toolbox
       setToolboxHeaderWidth();
     },
-    [setToolboxHeaderWidth, levelProperties, onReset, setRunning, setStepping],
+    [
+      skin,
+      setToolboxHeaderWidth,
+      levelProperties,
+      onReset,
+      setRunning,
+      setStepping,
+    ],
   );
 
   const skinBlocks = blocks(skinFor(skins, levelProperties?.skin || 'birds'));
@@ -193,7 +200,13 @@ const MazeLab = () => {
               onFinish={() => {}}
             />
           </Panel>
-          <Panel className={moduleStyles.visUnderBox}></Panel>
+          <Panel className={moduleStyles.visUnderBox}>
+            <Instructions
+              skin={skin}
+              longInstructions={levelProperties.longInstructions || ''}
+              authoredHints={levelProperties.authoredHints}
+            />
+          </Panel>
         </PanelContainer>
         {levelProperties && (
           <PanelContainer
