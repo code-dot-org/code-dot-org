@@ -6,7 +6,7 @@
     "build": "node build.mjs",
     "watch": "node build.mjs --watch",
     "typecheck": "tsc --noEmit",
-    "start": "tsx server/index.ts",
+    "start": "tsx --env-file=.env server/index.ts",
     "convert-data": "node scripts/convert-to-json.mjs"
   },
   "dependencies": {
