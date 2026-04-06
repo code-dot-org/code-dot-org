@@ -30,11 +30,7 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  AI_TUTOR_VERSION_ACTION_ACCEPT,
-  AI_TUTOR_VERSION_ACTION_REJECT,
-  ChatEvent,
-  isCompletedChatMessage,
-  isNotification,
+  buildMessagesForModelHistory,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -309,58 +305,6 @@ async function handleChatCompletionError(
       })
     );
   }
-}
-
-/**
- * Builds the chat message history to send to the AI model, including fake user messages
- * for accept/reject version action notifications so the AI knows whether its
- * suggested code changes are currently in the project.
- */
-function buildMessagesForModelHistory(
-  chatEvents: ChatEvent[]
-): CompletedChatMessage[] {
-  return chatEvents.reduce<CompletedChatMessage[]>((acc, event) => {
-    if (isCompletedChatMessage(event)) {
-      acc.push(event);
-    } else if (
-      isNotification(event) &&
-      (event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
-        event.notificationType === AI_TUTOR_VERSION_ACTION_REJECT)
-    ) {
-      const accepted =
-        event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT;
-      const fileList = event.files?.map(f => f.name).join(', ');
-      const filesPhrase = fileList ? ` to ${fileList}` : '';
-
-      if (accepted) {
-        acc.push({
-          role: Role.USER,
-          status: Status.OK,
-          chatMessageText: `I accepted your suggested changes${filesPhrase}. Those changes are now in the project.`,
-          timestamp: event.timestamp,
-          requestId: 0,
-        });
-      } else {
-        // The model is more likely to respect the rejection if we fake both a
-        // user and assistant message for the rejection.
-        acc.push({
-          role: Role.USER,
-          status: Status.OK,
-          chatMessageText: `I rejected your suggested changes${filesPhrase}. The current project files in the system context are the accurate state of the project. Your previous suggestions are not included.`,
-          timestamp: event.timestamp,
-          requestId: 0,
-        });
-        acc.push({
-          role: Role.ASSISTANT,
-          status: Status.OK,
-          chatMessageText: `Understood. I'll use the current project files from the system context as the source of truth, not my previous suggestions.`,
-          timestamp: event.timestamp,
-          requestId: 0,
-        });
-      }
-    }
-    return acc;
-  }, []);
 }
 
 function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
