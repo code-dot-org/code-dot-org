@@ -907,19 +907,30 @@ class FilesTest < FilesApiTestBase
     png_data = 'fake-png-bytes'
     jpeg_data = 'fake-jpeg-bytes'
 
-    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/png', nil).returns(:everyone)
+    png_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(png_moderation_result)
 
     header 'CONTENT_TYPE', 'image/png'
     post '/v3/images/moderate', png_data
     assert successful?
-    assert_equal({'rating' => 'everyone'}, JSON.parse(last_response.body))
+    assert_equal png_moderation_result, JSON.parse(last_response.body)
 
-    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/jpeg', nil).returns(:racy)
+    jpeg_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 2}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/jpeg').returns(jpeg_moderation_result)
 
     header 'CONTENT_TYPE', 'image/jpeg'
     post '/v3/images/moderate', jpeg_data
     assert successful?
-    assert_equal({'rating' => 'racy'}, JSON.parse(last_response.body))
+    assert_equal jpeg_moderation_result, JSON.parse(last_response.body)
   end
 
   def test_moderate_image_unsupported_type

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_31_211410) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -101,6 +101,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_31_211410) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "request_id"
+    t.integer "lesson_id"
+    t.index ["lesson_id", "user_id"], name: "index_ace_lesson_user"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
