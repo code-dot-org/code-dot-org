@@ -1,8 +1,0 @@
-external-secrets:
-  installCRDs: true
-
-  webhook:
-    # EKS Fargate reserves port 10250 for the kubelet. The chart defaults the
-    # webhook to 10250, which causes the apiserver to hit the kubelet and fail
-    # TLS validation instead of reaching the ESO webhook.
-    port: 9443

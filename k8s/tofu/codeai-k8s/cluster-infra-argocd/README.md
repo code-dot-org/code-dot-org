@@ -1,6 +1,6 @@
 # cluster-infra-argocd
 
-Creates Kubernetes-side resources (see `infra/`) and bootstraps ArgoCD with the app-of-apps.
+Bootstraps ArgoCD and the app-of-apps, then hands Kubernetes-side resources off to Argo from `k8s-gitops`.
 
 Includes:
 - AWS Load Balancer Controller

@@ -1,5 +1,0 @@
-environment_type: staging
-single_namespace_environment_type: true
-multi_namespace_regexes: null
-iam_role_arn: ""
-region: us-east-1

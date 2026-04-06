@@ -11,22 +11,6 @@ data "github_repository_file" "argocd_app_of_apps_application" {
   file       = "apps/app-of-apps/bootstrap.yaml"
 }
 
-resource "terraform_data" "legacy_helm_releases_complete" {
-  count = var.deploy_helm_charts ? 1 : 0
-
-  # If the legacy Helm path is explicitly re-enabled, keep the old tofu-side
-  # sequencing before we hand off to app-of-apps.
-  depends_on = [
-    helm_release.networking,
-    helm_release.external_secrets_operator,
-    helm_release.argocd,
-    helm_release.external_dns,
-    helm_release.dex,
-    helm_release.kargo_secrets,
-    helm_release.standard_envtypes,
-  ]
-}
-
 resource "kubectl_manifest" "app_of_apps_bootstrap" {
   yaml_body = data.github_repository_file.argocd_app_of_apps_application.content
 

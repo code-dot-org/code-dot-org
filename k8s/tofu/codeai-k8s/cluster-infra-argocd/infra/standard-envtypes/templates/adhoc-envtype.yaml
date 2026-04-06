@@ -1,9 +1,0 @@
-{{- if .Values.adhoc.enabled }}
-{{ include "eso-per-envtype.render" (dict
-  "environment_type" .Values.adhoc.environment_type
-  "single_namespace_environment_type" false
-  "multi_namespace_regexes" .Values.adhoc.multi_namespace_regexes
-  "iam_role_arn" (index .Values.codeai_cluster_config.eso_iam_role_arns .Values.adhoc.environment_type)
-  "region" .Values.codeai_cluster_config.cluster_region
-) | trim }}
-{{- end }}

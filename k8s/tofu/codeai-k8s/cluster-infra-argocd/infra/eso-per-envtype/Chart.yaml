@@ -1,5 +1,0 @@
-apiVersion: v2
-name: eso-per-envtype
-description: Library chart for ESO SecretStore and ExternalSecret resources
-type: library
-version: 0.1.0
