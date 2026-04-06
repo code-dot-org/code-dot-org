@@ -31,8 +31,9 @@ export interface RunProgress {
 }
 
 const MODEL = process.env.GEMINI_MODEL ?? 'gemini-2.5-flash';
-// Conservative rate: 4 RPM default (15s between requests)
-const REQUEST_INTERVAL_MS = Number(process.env.REQUEST_INTERVAL_MS ?? 15000);
+// Requests per minute — default 10 (free AI Studio tier)
+const RPM = Number(process.env.RPM ?? 10);
+const MIN_INTERVAL_MS = Math.ceil(60000 / RPM);
 const RESULTS_DIR = join(process.cwd(), 'results');
 
 function sleep(ms: number): Promise<void> {
@@ -130,23 +131,29 @@ export async function runExperiment(
   );
 
   const genAI = new GoogleGenerativeAI(apiKey);
+  let lastRequestStart = 0;
 
   for (let i = 0; i < items.length; i++) {
     const item = {...items[i]};
+
+    // Wait only the remaining time since the last request started
+    const elapsed = Date.now() - lastRequestStart;
+    const wait = MIN_INTERVAL_MS - elapsed;
+    if (wait > 0) await sleep(wait);
 
     let backoff = 30000;
     let success = false;
 
     while (!success) {
+      lastRequestStart = Date.now();
       try {
         const model = genAI.getGenerativeModel({
           model: MODEL,
           systemInstruction: item.systemPrompt,
         });
 
-        const start = Date.now();
         const result = await model.generateContent(item.studentMessage);
-        item.latencyMs = Date.now() - start;
+        item.latencyMs = Date.now() - lastRequestStart;
         item.response = result.response.text();
         const usage = result.response.usageMetadata;
         item.inputTokens = usage?.promptTokenCount ?? null;
@@ -160,6 +167,7 @@ export async function runExperiment(
             message: `Rate limited — retrying in ${backoff / 1000}s`});
           await sleep(backoff);
           backoff = Math.min(backoff * 2, 120000);
+          lastRequestStart = 0; // reset so next attempt doesn't skip the interval
         } else {
           item.error = msg;
           success = true;
@@ -169,9 +177,6 @@ export async function runExperiment(
 
     stream.write(JSON.stringify(item) + '\n');
     onProgress({type: 'progress', runId, completed: i + 1, total: items.length, item});
-
-    // Pace requests — skip delay after last item
-    if (i < items.length - 1) await sleep(REQUEST_INTERVAL_MS);
   }
 
   stream.end();
