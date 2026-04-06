@@ -115,13 +115,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       />
     ) : null;
   } else {
+    const showCopyButton = clientType !== AiChatClientTypes.LESSON_DEEP_DIVE;
     footer =
       messageVisible && isAssistant ? (
         <div className={styles.buttonRow}>
-          <CopyButton
-            copyText={chatMessage.chatMessageText}
-            usage={'ai-chat-msg-footer'}
-          />
+          {showCopyButton && (
+            <CopyButton
+              copyText={chatMessage.chatMessageText}
+              usage={'ai-chat-msg-footer'}
+            />
+          )}
           {canLogToLangfuse && isServerChatEvent(chatMessage) && (
             <FlagResponseButton
               chatMessageId={chatMessage.id}

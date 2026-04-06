@@ -36,6 +36,8 @@ interface UserChatMessageEditorProps {
   currentLevelId?: string | null;
   logLevelActivity?: () => void;
 
+  lessonId?: number;
+
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
   levelName?: UploadButtonProps['levelName'];
@@ -58,6 +60,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   responseCallback,
   currentLevelId,
   logLevelActivity,
+  lessonId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -113,6 +116,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 : undefined,
             responseCallback,
             logLevelActivity,
+            lessonId,
           })
         );
         clearUserMessage();
@@ -129,6 +133,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     ]
   );
 

@@ -62,6 +62,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
       logLevelActivity?: () => void;
+      lessonId?: number;
     },
     thunkAPI
   ) => {
@@ -78,6 +79,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -90,6 +92,7 @@ export const submitChatContents = createAsyncThunk(
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
+      lessonId,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.

@@ -74,6 +74,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'intervention':
         return (
           <InterventionBox
+            lessonId={lessonDeepDiveData.lessonId}
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
