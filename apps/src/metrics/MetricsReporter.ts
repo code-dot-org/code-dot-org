@@ -114,7 +114,12 @@ class MetricsReporter {
     }
 
     if (DCDO.get('frontend-observability-enabled', false)) {
-      Observability.metrics.count(name, value, {unit});
+      const dimensionAttributes = Object.fromEntries(
+        metric.dimensions
+          .filter(d => d?.name && d?.value)
+          .map(d => [d.name, d.value])
+      );
+      Observability.metrics.count(name, value, {unit, ...dimensionAttributes});
     }
 
     // Send a version of the metric with and without the browser version dimension
