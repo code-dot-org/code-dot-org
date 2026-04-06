@@ -62,10 +62,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       ? enterTransition
       : leaveTransition;
     mainContent.style.marginRight = chatIsOpen ? `${drawerWidth}px` : '0px';
-    // return () => {
-    //   mainContent.style.marginRight = '';
-    //   mainContent.style.transition = '';
-    // };
   }, [chatIsOpen, drawerWidth]);
 
   let content;

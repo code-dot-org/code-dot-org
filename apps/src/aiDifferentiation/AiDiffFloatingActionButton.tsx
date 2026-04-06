@@ -89,7 +89,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const dispatch = useAppDispatch();
 
   const drawerIsEnabled =
-    experiments.isEnabled('ai-diff-drawer') || DCDO.get('ai-diff-drawer', true);
+    experiments.isEnabled('ai-diff-drawer') ||
+    DCDO.get('ai-diff-drawer', false);
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.

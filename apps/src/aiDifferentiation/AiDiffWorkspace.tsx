@@ -80,7 +80,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   );
 
   const drawerIsEnabled =
-    experiments.isEnabled('ai-diff-drawer') || DCDO.get('ai-diff-drawer', true);
+    experiments.isEnabled('ai-diff-drawer') ||
+    DCDO.get('ai-diff-drawer', false);
 
   return (
     <div className={style.aiDiffWorkspace}>
