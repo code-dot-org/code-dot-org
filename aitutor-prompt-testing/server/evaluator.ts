@@ -1,5 +1,6 @@
-import {createReadStream} from 'fs';
+import {createReadStream, readFileSync} from 'fs';
 import {createInterface} from 'readline';
+import {join} from 'path';
 import {RunItem} from './runner';
 
 const VIDEO_STEMS = [
@@ -12,20 +13,38 @@ const VIDEO_STEMS = [
   'If_Else_V1',
 ];
 
-const STEM_PATTERN = VIDEO_STEMS.join('|');
+const STEM_PATTERN = new RegExp(VIDEO_STEMS.join('|'));
+
+// Build the set of valid URLs from videoFiles.json — used as fallback for
+// runs created before validVideoUrls was added to RunItem.
+function loadFallbackValidUrls(): string[] {
+  try {
+    const videoFiles = JSON.parse(
+      readFileSync(join(process.cwd(), 'data', 'videoFiles.json'), 'utf8')
+    ) as Array<{filename: string; hash: string}>;
+    return videoFiles.map(v => `/assets/js/json/${v.filename.replace('.json', '')}${v.hash}.json`);
+  } catch {
+    return [];
+  }
+}
+
+// Map a valid URL to its base filename e.g. "Conditionals_V1.json"
+function urlToFilename(url: string): string | null {
+  const match = url.match(/\/([^/]+)\.json$/);
+  if (!match) return null;
+  const stem = VIDEO_STEMS.find(s => match[1].startsWith(s));
+  return stem ? `${stem}.json` : null;
+}
 
 // A video attempt is any markdown link whose URL contains 'assets/js/json'
 // OR contains one of the 7 known video stems.
 function extractVideoAttempts(response: string): string[] {
-  const re = /\[([^\]]*)\]\(([^)]+)\)/g;
+  const re = /\[[^\]]*\]\(([^)]+)\)/g;
   const attempts: string[] = [];
   let m: RegExpExecArray | null;
   while ((m = re.exec(response)) !== null) {
-    const url = m[2];
-    if (
-      url.includes('assets/js/json') ||
-      new RegExp(STEM_PATTERN).test(url)
-    ) {
+    const url = m[1];
+    if (url.includes('assets/js/json') || STEM_PATTERN.test(url)) {
       attempts.push(url);
     }
   }
@@ -38,10 +57,10 @@ export interface ItemScore {
   state: string;
   videoRequested: boolean;
   expectedVideos: string[];
-  validVideos: string[];         // attempts that matched a known injected URL
-  hallucinated: string[];        // attempts that did not match any known URL
-  missingExpected: string[];     // expected videos not found
-  unexpectedPresent: string[];   // valid videos not in expectedVideos
+  validVideos: string[];       // base filenames of valid video attempts
+  hallucinated: string[];      // attempted video URLs that didn't match any known URL
+  missingExpected: string[];   // expected videos not found in response
+  unexpectedPresent: string[]; // valid videos found but not in expectedVideos
   pass: boolean;
   error: string | null;
 }
@@ -56,8 +75,11 @@ export interface EvalResult {
   items: ItemScore[];
 }
 
+const fallbackValidUrls = loadFallbackValidUrls();
+
 function scoreItem(item: RunItem): ItemScore {
-  const validUrlSet = new Set(item.validVideoUrls);
+  const validUrls = item.validVideoUrls ?? fallbackValidUrls;
+  const validUrlSet = new Set(validUrls);
 
   const attempts = item.response ? extractVideoAttempts(item.response) : [];
 
@@ -66,35 +88,18 @@ function scoreItem(item: RunItem): ItemScore {
 
   for (const url of attempts) {
     if (validUrlSet.has(url)) {
-      // Map exact URL back to the base filename (e.g. "Conditionals_V1.json")
-      const base = item.validVideoUrls.indexOf(url);
-      validVideos.push(item.expectedVideos[base] ?? url);
+      const filename = urlToFilename(url);
+      if (filename) validVideos.push(filename);
     } else {
       hallucinated.push(url);
     }
   }
 
-  // Map valid URLs to base filenames for comparison with expectedVideos
-  const validUrlToFilename = new Map<string, string>();
-  item.validVideoUrls.forEach((url, i) => {
-    // validVideoUrls order matches VIDEO_STEMS order; expectedVideos uses filenames
-    // We need the filename — derive from the URL's path segment
-    const match = url.match(/\/([^/]+)\.json$/);
-    if (match) {
-      const stem = VIDEO_STEMS.find(s => match[1].startsWith(s));
-      if (stem) validUrlToFilename.set(url, `${stem}.json`);
-    }
-  });
-
-  const foundFilenames = attempts
-    .filter(url => validUrlSet.has(url))
-    .map(url => validUrlToFilename.get(url) ?? url);
-
-  const foundSet = new Set(foundFilenames);
+  const foundSet = new Set(validVideos);
   const expectedSet = new Set(item.expectedVideos);
 
   const missingExpected = item.expectedVideos.filter(v => !foundSet.has(v));
-  const unexpectedPresent = foundFilenames.filter(v => !expectedSet.has(v));
+  const unexpectedPresent = validVideos.filter(v => !expectedSet.has(v));
 
   const pass =
     hallucinated.length === 0 &&
@@ -107,7 +112,7 @@ function scoreItem(item: RunItem): ItemScore {
     state: item.state,
     videoRequested: item.videoRequested,
     expectedVideos: item.expectedVideos,
-    validVideos: foundFilenames,
+    validVideos,
     hallucinated,
     missingExpected,
     unexpectedPresent,

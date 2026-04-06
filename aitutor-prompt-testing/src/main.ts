@@ -550,8 +550,9 @@ function wireExperimentUI(): void {
         } else if (data.type === 'done') {
           fill.style.width = '100%';
           status.textContent = `Done — evaluating…`;
-          const result: EvalResult = await fetch(`/api/runs/${lastRunId}/evaluate`).then(r => r.json());
-          renderResults(result, lastRunId);
+          const result = await fetch(`/api/runs/${lastRunId}/evaluate`).then(r => r.json());
+          if (result.error) { status.textContent = `Eval error: ${result.error}`; return; }
+          renderResults(result as EvalResult, lastRunId);
           // Add to run selector
           const sel = document.getElementById('runSelect') as HTMLSelectElement;
           const opt = document.createElement('option');
@@ -572,8 +573,9 @@ function wireExperimentUI(): void {
     const sel = document.getElementById('runSelect') as HTMLSelectElement;
     const runId = sel.value;
     if (!runId) return;
-    const result: EvalResult = await fetch(`/api/runs/${runId}/evaluate`).then(r => r.json());
-    renderResults(result, runId);
+    const result = await fetch(`/api/runs/${runId}/evaluate`).then(r => r.json());
+    if (result.error) { showToast(`Eval error: ${result.error}`); return; }
+    renderResults(result as EvalResult, runId);
   });
 }
 
