@@ -1,19 +1,10 @@
 # cluster-infra
 
-Creates the AWS-side resources needed by the split cluster add-ons, plus the
-remaining bootstrap writes that still belong before `cluster-infra-argocd`.
-It also publishes a small `codeai-cluster-config` `ConfigMap` in `kube-system`
-for later Helm / GitOps consumers.
+Creates the AWS-side resources needed by cluster-infra-argocd and publishes config
+values (mostly ARNs) for later gitops consumers as  `ConfigMap/codeai-cluster-config` and 
+[codeai-cluster-config.values.yaml](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/codeai-cluster-config.values.yaml).
 
-The root is thin. The bucketed resource ownership lives under `./infra/`,
-aligned with `../cluster-infra-argocd/infra/`:
-
-- `infra-modules.tf`
-
-`codeai-cluster-configmap.tf` remains the only root-owned resource file.
-
-This root consumes remote state from `../cluster/`. Apply
-`../../codeai-k8s-dex/` first if this is a new setup.
+Apply `../cluster/` first.
 
 ## Usage
 
