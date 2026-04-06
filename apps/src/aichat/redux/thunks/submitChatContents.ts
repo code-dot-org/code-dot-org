@@ -189,7 +189,7 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          buildMessagesForHistory(chatEventsCurrent).filter(
+          buildMessagesForModelHistory(chatEventsCurrent).filter(
             event => event.status === Status.OK
           ),
           modelParameters,
@@ -201,7 +201,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          buildMessagesForHistory(chatEventsCurrent),
+          buildMessagesForModelHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );
@@ -312,11 +312,11 @@ async function handleChatCompletionError(
 }
 
 /**
- * Builds the chat message history to send to the AI, including fake user messages
+ * Builds the chat message history to send to the AI model, including fake user messages
  * for accept/reject version action notifications so the AI knows whether its
  * suggested code changes are currently in the project.
  */
-function buildMessagesForHistory(
+function buildMessagesForModelHistory(
   chatEvents: ChatEvent[]
 ): CompletedChatMessage[] {
   return chatEvents.reduce<CompletedChatMessage[]>((acc, event) => {
