@@ -44,7 +44,7 @@ Dashboard::Application.configure do
   config.action_dispatch.show_exceptions = true
 
   # Disable request forgery protection in unit tests only.
-  config.action_controller.allow_forgery_protection = !ENV['UNIT_TEST']
+  config.action_controller.allow_forgery_protection = false
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
