@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-28T06:01:35.000Z",
   "level_num": "custom",
@@ -50,9 +51,21 @@
         "2"
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTCrc14xXleF\n+E4bX4CIcK+XG9P4UdHBhEwwupKT22/9SUwudmEIy6vdfMyjVL2JmHd30RJb\nJhFhpsNCp2/hNOUdbuqqAw/m8M2OXQAMhQQUgvhGvjxbzvtY1p2nteD+r8tC\nxaqwiPUB2vvxTB1O6YMbgrSHBAPBICt4F5yPBMxBNkXWYPKmxg2CHvPT9buf\nQ83jZla1+xYCe39Q95HAMWsiOMe53UHF52aCfJQmpimvN02nvJgBQPoU250Z\n9CgcuEZPGM4Gm989ZMY2uOsz2viIbEAMXxQEboZUHrd4OgZZ/aCSNDvrxa0O\nOrZg5KhHBgNof1sZ6GZjltsNO1OImp4KD7Mc/vIWWPZBN5nXQIc7pfECNSmc\nrvhs4FIxE3ovIPH76I1HYhlldGXun5IRYurM4ZMQhPJVsKxFsijYHdZkh8hh\ndruT43hnJ1RTP0WpPF/OssBqGHxghRkHLXkOwOHdIdRWYXP4twWSeSS/ziiB\nmIGLa1XE9mwScJblUqCyCelTXt/3TqW5xUMq01lEETXvwGBdNMfQarMGdkV2\nlWCr70AwdsD6/bEdJAGr9VK+7/sFvTTyP/acX41UlqFA+72qeX3K6QbGUbTm\n3tX4QHHai4Eh75ESj30Bi0kBdm380uJTaI7Tr7zhNjJCkFwZw/o/FMjEU1vu\nNXB5jZb/yRhgeAydgoKG9bZpEuCQfbEPKHD04Ab9XtrSkz8I/obasVxKIA6P\noLELyxsfXdk1GFXCX9E61u+UBfp/YDVSUf+9sz6mlvI4sOad5XwazqOtQxPs\nukN44FR924ZpWWjhUFlonmXtYEO55z2131I2Tb2dkWUCH+lZly4mhvuBVvJR\nQ/dp5CcZdPo495vb6cK2fj38frqtonTeA/NtR3pGzaSP7oLxilukTrIAAUHP\nP6Gm8/by+oel/4PTyYtl9v2nDTYZQKfNsYC+KtyBYRnZuoU2BS8NSA7MdKKF\nf7MioRzt8xIknMwvUkFABiw6LSeljUxdcjCY04hhTZO2yp16UZMsJ4teHaNg\nbGj7LpOxre4b8mus\n"
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTCrc14xXleF\n+E4bX4CIcK+XG9P4UdHBhEwwupKT22/9SUwudmEIy6vdfMyjVL2JmHd30RJb\nJhFhpsNCp2/hNOUdbuqqAw/m8M2OXQAMhQQUgvhGvjxbzvtY1p2nteD+r8tC\nxaqwiPUB2vvxTB1O6YMbgrSHBAPBICt4F5yPBMxBNkXWYPKmxg2CHvPT9buf\nQ83jZla1+xYCe39Q95HAMWsiOMe53UHF52aCfJQmpimvN02nvJgBQPoU250Z\n9CgcuEZPGM4Gm989ZMY2uOsz2viIbEAMXxQEboZUHrd4OgZZ/aCSNDvrxa0O\nOrZg5KhHBgNof1sZ6GZjltsNO1OImp4KD7Mc/vIWWPZBN5nXQIc7pfECNSmc\nrvhs4FIxE3ovIPH76I1HYhlldGXun5IRYurM4ZMQhPJVsKxFsijYHdZkh8hh\ndruT43hnJ1RTP0WpPF/OssBqGHxghRkHLXkOwOHdIdRWYXP4twWSeSS/ziiB\nmIGLa1XE9mwScJblUqCyCelTXt/3TqW5xUMq01lEETXvwGBdNMfQarMGdkV2\nlWCr70AwdsD6/bEdJAGr9VK+7/sFvTTyP/acX41UlqFA+72qeX3K6QbGUbTm\n3tX4QHHai4Eh75ESj30Bi0kBdm380uJTaI7Tr7zhNjJCkFwZw/o/FMjEU1vu\nNXB5jZb/yRhgeAydgoKG9bZpEuCQfbEPKHD04Ab9XtrSkz8I/obasVxKIA6P\noLELyxsfXdk1GFXCX9E61u+UBfp/YDVSUf+9sz6mlvI4sOad5XwazqOtQxPs\nukN44FR924ZpWWjhUFlonmXtYEO55z2131I2Tb2dkWUCH+lZly4mhvuBVvJR\nQ/dp5CcZdPo495vb6cK2fj38frqtonTeA/NtR3pGzaSP7oLxilukTrIAAUHP\nP6Gm8/by+oel/4PTyYtl9v2nDTYZQKfNsYC+KtyBYRnZuoU2BS8NSA7MdKKF\nf7MioRzt8xIknMwvUkFABiw6LSeljUxdcjCY04hhTZO2yp16UZMsJ4teHaNg\nbGj7LpOxre4b8mus\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-01-28 06:02:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:02:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:03:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-28 06:02:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:02:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:03:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-25 15:49:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

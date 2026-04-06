@@ -31,7 +31,7 @@ datadogRum.init({
   service: 'apps',
   env: CodeStudioConfig.environment,
   sessionSampleRate: 100,
-  sessionReplaySampleRate: 100,
+  sessionReplaySampleRate: 0, // Explicitly disabled, please see https://codedotorg.slack.com/archives/C0717ETG9S6/p1772745099687559
   trackResources: true,
   trackUserInteractions: true,
   trackLongTasks: true,

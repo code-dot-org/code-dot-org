@@ -317,7 +317,7 @@ class LessonGroupCard extends Component {
               style={styles.addButton}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              <i style={{marginRight: 7}} className="fa-solid fa-circle-plus" />
               Lesson
             </button>
           </div>

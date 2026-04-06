@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-gateway
+  template:
+    metadata:
+      labels:
+        app: hello-gateway
+    spec:
+      containers:
+        - name: hello
+          image: nginx:1.27-alpine
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-gateway
+spec:
+  selector:
+    app: hello-gateway
+  ports:
+    - port: 80
+      targetPort: 80
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: hello-gateway
+spec:
+  gatewayClassName: aws-alb
+  listeners:
+    - name: https
+      protocol: HTTPS
+      port: 443
+      allowedRoutes:
+        namespaces:
+          from: Same
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: hello-gateway
+spec:
+  parentRefs:
+    - name: hello-gateway
+      sectionName: https
+  hostnames:
+    - __TEST_HOSTNAME__
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: hello-gateway
+          port: 80

@@ -320,6 +320,15 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
+  test('hidden section not in sectionOrder is shown when selected', async () => {
+    renderDefault(15);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown).toHaveValue('15');
+    screen.getByText('hidden');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('15');
+  });
+
   test('AI settings tab displayed when teacher has access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');

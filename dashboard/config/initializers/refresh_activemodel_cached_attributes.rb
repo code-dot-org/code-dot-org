@@ -21,7 +21,7 @@ module Cdo
     end
 
     def assign_attributes(new_attributes)
-      super(new_attributes)
+      super
     rescue ActiveModel::UnknownAttributeError
       if new_database_migration_since_initialization?
         # Update migration count so we only try this refresh once.
@@ -36,7 +36,7 @@ module Cdo
         @attributes = self.class._default_attributes.deep_dup
 
         # Try again now that our attributes cache is accurately mirroring the database.
-        super(new_attributes)
+        super
       else
         raise
       end

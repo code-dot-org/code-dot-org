@@ -23,6 +23,19 @@
   }
 }
 
+.logMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.countBadge {
+  font-family: monospace;
+  white-space: nowrap;
+  margin: 0 8px 0 0;
+}
+
 .timestamp {
   font-family: monospace;
   color: var(--text-neutral-secondary);
@@ -37,5 +50,6 @@
   span {
     display: block;
     width: 100%;
+    margin-top: 0 !important; // Override default margin to allow console logs to vertically center
   }
 }

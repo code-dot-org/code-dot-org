@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:07:33.000Z",
   "level_num": "custom",
@@ -74,7 +75,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/d17f34d01522f68de08187c8b32b4b56-image-1650057577218.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Changing Colors with a Toggle\r\n\r\nCreate an app that changes the color of the lights when you use the toggle switch. Opening the toggle switch should change the lights to one color, and closing the toggle switch should change the lights to a different color.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [When the toggle switch is opened, change all of the LEDs to a color]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when the `toggleSwitch` is `open`\r\n    - Use the [`color(color)`(#f78183)](/docs/applab/color/) block to set each LED from `0-9`\r\n    - Each LED should be the same color\r\n    :::\r\n2) ::: details [When the toggle switch is closed, change all of the LEDs to a different color]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when the `toggleSwitch` is `closed`\r\n    - Use the [`color(color)`(#f78183)](/docs/applab/color/) block to set each LED from `0-9`\r\n    - Each LED should be a different color\r\n    :::\r\n\r\n**Run the app!** Your circuit playground should change colors as you open and close the toggle switch",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/d17f34d01522f68de08187c8b32b4b56-image-1650057577218.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Changing Colors with a Toggle\r\n\r\nCreate an app that changes the color of the lights when you use the toggle switch. Opening the toggle switch should set the lights to the same color, and closing the toggle switch should change the lights to all different colors.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [When the toggle switch is opened, change all of the LEDs to the same color]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when the `toggleSwitch` is `open`\r\n    - Use the [`color(color)`(#f78183)](/docs/applab/color/) block to set each LED from `0-9`\r\n    - Each LED should be the same color\r\n    :::\r\n2) ::: details [When the toggle switch is closed, change all of the LEDs to different colors]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when the `toggleSwitch` is `closed`\r\n    - Use the [`color(color)`(#f78183)](/docs/applab/color/) block to set each LED from `0-9`\r\n    - Each LED should be a different color\r\n    :::\r\n\r\n**Run the app!** Your circuit playground should change colors as you open and close the toggle switch",
     "parent_level_id": 20595,
     "name_suffix": "_2025",
     "mini_rubric": "false",
@@ -103,9 +104,8 @@
     "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:33.326+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracA_2024\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracA_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:33.326+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracA_2024\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracA_2024\"},{\"changed_at\":\"2026-03-24 19:14:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

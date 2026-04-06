@@ -66,7 +66,7 @@ export class ImportProjectDialog extends React.Component {
         <Buttons>
           <Confirm onClick={this.onImport} disabled={this.props.isFetching}>
             {this.props.isFetching && (
-              <span className="fa fa-spin fa-spinner" />
+              <span className="fa-solid fa-spin fa-spinner" />
             )}{' '}
             Next
           </Confirm>

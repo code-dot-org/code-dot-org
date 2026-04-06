@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
       registrationID={registrationID}
       lmsName={lmsName}
     />,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

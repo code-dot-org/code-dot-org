@@ -1,12 +1,10 @@
 class OpenaiLessonSummaryTimeout < StandardError; end
 
 module AiLessonSummariesHelper
-  API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
   def self.generate_lesson_summary(lesson_id, user_id = nil, response_format = AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, user_id, response_format)
-    client = Client.new(API_KEY, MODEL)
 
     begin
       response = client.request_lesson_summary(system_prompt, response_format)
@@ -136,5 +134,9 @@ module AiLessonSummariesHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end

@@ -318,7 +318,10 @@ $(window).load(function () {
         contractForm = instance;
       }}
     />,
-    document.getElementById('contractForm')
+    document.getElementById('contractForm'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   /**

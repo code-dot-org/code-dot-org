@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-18 21:41:06 UTC",
+    "serialized_at": "2026-03-30 21:30:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -177,6 +177,28 @@
       }
     },
     {
+      "key": "6a29b485-5e69-4a04-b528-2a03511218a6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Intro Level 2 Alternative (task, not tour)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a29b485-5e69-4a04-b528-2a03511218a6",
+        "lesson_activity.key": "6785c0c1-3e67-421f-97c7-d5ace186a418"
+      }
+    },
+    {
+      "key": "ae9ebf7b-7963-49c6-94d4-59085f162d04",
+      "position": 4,
+      "properties": {
+        "progression_name": "Intro Level 4 Alternative (wireframes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae9ebf7b-7963-49c6-94d4-59085f162d04",
+        "lesson_activity.key": "6785c0c1-3e67-421f-97c7-d5ace186a418"
+      }
+    },
+    {
       "key": "a2c48c5f-52a2-4725-af2d-3ac22556ecf1",
       "position": 1,
       "properties": {
@@ -206,6 +228,17 @@
       },
       "seeding_key": {
         "activity_section.key": "e0b830cc-02d9-42a1-949e-14ac5b7113f5",
+        "lesson_activity.key": "405a3a62-9a3f-46fd-8026-ad98b21dc856"
+      }
+    },
+    {
+      "key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7",
         "lesson_activity.key": "405a3a62-9a3f-46fd-8026-ad98b21dc856"
       }
     }
@@ -301,6 +334,50 @@
     },
     {
       "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Level 2 Alternative (task, not tour)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2-v2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "6a29b485-5e69-4a04-b528-2a03511218a6"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-2-v2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Level 4 Alternative (wireframes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-5-wireframes"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "ae9ebf7b-7963-49c6-94d4-59085f162d04"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-5-wireframes"
+      ]
+    },
+    {
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -322,7 +399,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -344,7 +421,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -366,31 +443,9 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Act 1"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai-web-design-v2-4"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "hoai-web-lab-intro-test",
-        "activity_section.key": "a2c48c5f-52a2-4725-af2d-3ac22556ecf1"
-      },
-      "level_keys": [
-        "hoai-web-design-v2-4"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 5,
-      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Act 1"
@@ -410,9 +465,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Act 1"
@@ -432,8 +487,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 7,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -454,8 +509,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 8,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -476,8 +531,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 9,
+      "chapter": 14,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -498,8 +553,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 10,
+      "chapter": 15,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -520,8 +575,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 11,
+      "chapter": 16,
+      "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -542,8 +597,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 12,
+      "chapter": 17,
+      "position": 11,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -564,8 +619,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 13,
+      "chapter": 18,
+      "position": 12,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -586,8 +641,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 14,
+      "chapter": 19,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -608,8 +663,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 15,
+      "chapter": 20,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -630,8 +685,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 16,
+      "chapter": 21,
+      "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -649,6 +704,28 @@
       },
       "level_keys": [
         "hoai-web-design-v2-16"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-pilot-survey"
       ]
     }
   ],
@@ -703,6 +780,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "hoai-web-design-v2-2-v2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2-v2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "6a29b485-5e69-4a04-b528-2a03511218a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-5-wireframes",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-5-wireframes"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "ae9ebf7b-7963-49c6-94d4-59085f162d04"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "hoai-web-design-v2-1",
         "script_level.level_keys": [
           "hoai-web-design-v2-1"
@@ -730,18 +831,6 @@
         "level.key": "hoai-web-design-v2-3",
         "script_level.level_keys": [
           "hoai-web-design-v2-3"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "hoai-web-lab-intro-test",
-        "activity_section.key": "a2c48c5f-52a2-4725-af2d-3ac22556ecf1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai-web-design-v2-4",
-        "script_level.level_keys": [
-          "hoai-web-design-v2-4"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -891,6 +980,18 @@
         "lesson_group.key": "",
         "script.name": "hoai-web-lab-intro-test",
         "activity_section.key": "e0b830cc-02d9-42a1-949e-14ac5b7113f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-pilot-survey",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7"
       }
     }
   ],

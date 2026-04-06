@@ -29,13 +29,13 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Step 3:\n\nIn the prompt box, describe what’s happening in the file and what you want AI to do. Mention the file name directly so it knows to use it as context. Then send your prompt and review the result.",
+        "text": "## Step 3:\n\nIn the prompt box, describe what you want AI to do. \n\nMention the file by name so AI knows to use it as context. Send your prompt and review the output.",
         "imageUrl": "https://images.code.org/d41e07beb6a74a5c9067897bdbf27ad5-Pasted Graphic 15.png",
         "key": "ai-generated-design-onboarding-image-context-test-2025-6f5fae24-4402-428b-ba31-5bb8cc8526be"
       }
     ],
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-17T05:34:57.346+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1_2026\"},{\"changed_at\":\"2026-03-17 06:18:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-19 04:42:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-19 05:11:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-17T05:34:57.346+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1_2026\"},{\"changed_at\":\"2026-03-17 06:18:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-19 04:42:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-19 05:11:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-19 22:20:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

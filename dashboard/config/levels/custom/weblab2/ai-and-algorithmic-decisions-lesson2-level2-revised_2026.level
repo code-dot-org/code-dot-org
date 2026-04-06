@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-25T19:10:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson2-template_2026",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "### **Generate with AI**\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a prompt that will make Button One, when clicked, show this message in the text area:\r\n   \"Button One was clicked!\"\r\n\r\n2. **Build:** Use AI to generate the code.\r\n\r\n3. **Test:** Click Button One and check that it works as expected.\r\n\r\n4. **Check Code:** Look for where the code:\r\n\r\n   * selects the button\r\n   * adds an event listener\r\n   * listens for a click\r\n   * changes the message\r\n\r\n\r\n",
+    "encrypted_exemplar_sources": "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\nyNxUQm9AQ6GRlXu3pWjXgZhcmr3WkNxB\n",
+    "teacher_markdown": "### **Walkthrough of Exemplar Code**\r\n\r\n#### **1. Selects the Button**\r\n\r\n```javascript\r\nconst buttonOne = document.getElementById(\"buttonOne\");\r\n```\r\n\r\nThis line finds the button in the HTML so the program can interact with it.\r\n\r\n---\r\n\r\n#### **2. Selects the Text Area**\r\n\r\n```javascript\r\nconst textArea = document.getElementById(\"textArea\");\r\n```\r\n\r\nThis selects the part of the page that will be updated.\r\n\r\n---\r\n\r\n#### **3. Adds an Event Listener**\r\n\r\n```javascript\r\nbuttonOne.addEventListener(\"click\"\r\n```\r\n\r\nThis tells the program to listen for a click on the button.\r\n\r\n---\r\n\r\n#### **4. Event Handler (What Runs)**\r\n\r\n```javascript\r\n, () => {...}\r\n```\r\n\r\nThis function contains the code that runs when the button is clicked.\r\n\r\n---\r\n\r\n#### **5. Updates the Page (Response)**\r\n\r\n```javascript\r\ntextArea.textContent = \"Button One was clicked!\";\r\n```\r\n\r\nThis changes the text on the page when the button is clicked.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-26 14:02:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 14:42:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:15:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:17:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:22:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:29:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:29:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:52:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:55:39 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 15:57:02 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 16:31:32 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:42:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
