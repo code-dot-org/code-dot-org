@@ -2,6 +2,15 @@
 
 Creates Kubernetes-side resources (see `infra/`) and bootstraps ArgoCD with the app-of-apps.
 
+Includes:
+- AWS Load Balancer Controller
+- External Secrets Operator
+- External Secrets per-environment SecretStores and envtype fanout
+- ExternalDNS
+- Dex (SSO for K8s)
+- ArgoCD
+- Kargo writeback git credentials and webhook secrets in Kubernetes
+
 ## Pre-requisites
 
 Apply `../cluster/` and `../cluster-infra/` first.

@@ -1,11 +1,13 @@
-# OpenTofu `codeai-k8s` kubernetes cluster
+# OpenTofu Kubernetes Cluster: `codeai-k8s` 
 
-This creates a full codeai-k8s cluster on EKS, and bootstraps
-the full gitops repo into being: https://github.com/code-dot-org/k8s-gitops
+This directory contains three OpenTofu root modules. Apply them in order:
 
-Tofu modules should be applied in this order:
+1. **[cluster/](cluster/README.md)** — EKS cluster + VPC networking
+2. **[cluster-infra/](cluster-infra/README.md)** — AWS-side resources and shared bootstrap config
+3. **[cluster-infra-argocd/](cluster-infra-argocd/README.md)** — Kubernetes-side resources and Argo CD bootstrap
 
-0. If this is the first cluster:  `../codeai-k8s-dex` 
-1. `cluster`: the eks cluster, vpc and networking
-2. `cluster-infra`: aws objects like IAM roles
-3. `cluster-infra-argocd`: bootstraps argocd, which loads https://github.com/code-dot-org/k8s-gitops
+## Org-wide bootstrap: only needed once
+
+Only required if you're starting on a fresh account, not needed for each cluster.
+
+1. **[../codeai-k8s-dex/](../codeai-k8s-dex/README.md)** - shared between clusters, only need to apply if this is the first cluster in the org

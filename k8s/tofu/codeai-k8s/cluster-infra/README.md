@@ -4,12 +4,18 @@ Creates the AWS-side resources needed by cluster-infra-argocd and publishes conf
 values (mostly ARNs) for later gitops consumers as  `ConfigMap/codeai-cluster-config` and 
 [codeai-cluster-config.values.yaml](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/codeai-cluster-config.values.yaml).
 
+Includes:
+- Dex bootstrap secrets and IAM wiring
+- Kargo writeback git credentials and GitHub org webhook bootstrap
+
 Apply `../cluster/` first.
 
 ## Usage
 
 ```bash
 tofu init
+
+# admin role required because it creates IAM
 AWS_PROFILE=codeorg-admin tofu apply
 ```
 
@@ -31,7 +37,7 @@ the GitHub organization webhook for Kargo and generates its shared secret.
 1. Apply `../cluster/` first.
 1. Review and edit `terraform.tfvars`:
    1. Follow [Bootstrapping Google OAuth Client for SSO](#bootstrapping-google-oauth-client-for-sso)
-      to set `dex_google_client_secret`.
+      to set `dex_*` variables.
    1. Follow [Bootstrapping Kargo secrets](#bootstrapping-kargo-secrets) to set `kargo_*` variables.
 1. Run `AWS_PROFILE=codeorg-admin tofu apply`.
 1. Remove `dex_google_client_secret` and `kargo_k8s_gitops_repo_password`
@@ -53,8 +59,9 @@ does not allow wildcard redirect URIs.
    1. Name it something like `codeai-k8s-dex`
    1. Add the redirect URI above as an `Authorized redirect URI`
    1. Create the client
-   1. Note the client secret
+   1. Note the client secret and client id to use in the next step
 1. Edit `terraform.tfvars`:
+   1. set `dex_google_client_id` if you need to override the default
    1. set `dex_google_client_secret` to bootstrap the secret into AWS Secrets
       Manager as `k8s/tofu/${cluster_name}/dex_google_client_secret`, but do
       not commit this line
@@ -64,7 +71,8 @@ does not allow wildcard redirect URIs.
 Kargo needs two GitHub-related secrets:
 
 1. Git credentials so it can push deployment updates to `code-dot-org/k8s-gitops`
-1. A webhook secret so GitHub can send org webhooks to Kargo
+1. A webhook secret so GitHub can send org webhooks to Kargo. Kargo does not
+   require this, but our setup depends on it for refresh performance.
 
 #### Git credentials
 
