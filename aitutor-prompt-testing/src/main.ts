@@ -462,12 +462,22 @@ function shortLevel(levelId: string): string {
   return levelId.replace('programming-fundamentals-', '').replace(/_2025.*$/, '');
 }
 
-// Returns HTML for `str` with the common prefix shared with `other` softly highlighted.
+// Returns HTML for `str` with the longest common substring shared with `other` softly highlighted.
 function hlCommon(str: string, other: string): string {
-  let i = 0;
-  while (i < str.length && i < other.length && str[i] === other[i]) i++;
-  if (i === 0) return escHtml(str);
-  return `<span class="url-match">${escHtml(str.slice(0, i))}</span>${escHtml(str.slice(i))}`;
+  let bestStart = 0, bestLen = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < other.length; j++) {
+      let k = 0;
+      while (i + k < str.length && j + k < other.length && str[i + k] === other[j + k]) k++;
+      if (k > bestLen) { bestLen = k; bestStart = i; }
+    }
+  }
+  if (bestLen === 0) return escHtml(str);
+  return (
+    escHtml(str.slice(0, bestStart)) +
+    `<span class="url-match">${escHtml(str.slice(bestStart, bestStart + bestLen))}</span>` +
+    escHtml(str.slice(bestStart + bestLen))
+  );
 }
 
 function renderResults(result: EvalResult, runId: string): void {
