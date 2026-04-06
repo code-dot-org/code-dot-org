@@ -1037,10 +1037,11 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-              StringEquals:
                 token.actions.githubusercontent.com:sub:
                   - "repo:code-dot-org/code-dot-org:environment:open-tofu-plan"
                   - "repo:code-dot-org/code-dot-org:environment:open-tofu-apply"
+                  - "repo:code-dot-org/infrastructure:environment:open-tofu-plan"
+                  - "repo:code-dot-org/infrastructure:environment:open-tofu-apply"
       Policies:
         - PolicyName: OpenTofuStateAccess
           PolicyDocument:
