@@ -111,8 +111,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
-    authorize! :read, current_section
+    authorize! :manage, current_section
 
     students = User.where(id: student_ids).all
     if students.count != student_ids.count
@@ -147,6 +146,9 @@ class TransfersController < ApplicationController
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
       params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|
+      # Skip students the teacher cannot manage (e.g. demo students).
+      next unless can?(:manage, student)
+
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
         follower_same_user_teacher.update!(section_id: new_section.id)

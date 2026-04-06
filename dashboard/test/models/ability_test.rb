@@ -998,6 +998,64 @@ class AbilityTest < ActiveSupport::TestCase
 
   # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
+  test 'teachers cannot manage demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
+
+    refute Ability.new(teacher).can?(:manage, student)
+  end
+
+  test 'teachers can manage non-demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(false)
+
+    assert Ability.new(teacher).can?(:manage, student)
+  end
+
+  test 'teachers cannot manage UserLevel for demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+    user_level = create(:user_level, user: student)
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
+
+    refute Ability.new(teacher).can?(:manage, user_level)
+  end
+
+  test 'demo students: teachers cannot manage their UserLevel records' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+    user_level = create(:user_level, user: student)
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
+
+    refute Ability.new(teacher).can?(:manage, user_level)
+  end
+
+  test 'non-demo students: teachers can manage their UserLevel records' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+    user_level = create(:user_level, user: student)
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(false)
+
+    assert Ability.new(teacher).can?(:manage, user_level)
+  end
+
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create(:code_review_group, section: section)
     students.each do |student|

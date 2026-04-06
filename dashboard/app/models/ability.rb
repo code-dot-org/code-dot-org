@@ -134,6 +134,9 @@ class Ability
       # A user can review the code of other_user if they are the other_user's teacher or if
       # they're in a shared section with code review turned on and they're in the same code review group
       can :code_review, User do |other_user|
+        # Demo students are shared across teachers; block code review to prevent
+        # cross-teacher visible comments on shared projects.
+        return false if Policies::DemoSections.demo_student?(other_user.id)
         return true if other_user.student_of?(user)
 
         in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)
@@ -192,17 +195,17 @@ class Ability
         can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
-          user.students.include?(u)
+          user.students.include?(u) && !Policies::DemoSections.demo_student?(u.id)
         end
         can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
-          !user.students.where(id: user_level.user_id).empty?
+          !user.students.where(id: user_level.user_id).empty? && !Policies::DemoSections.demo_student?(user_level.user_id)
         end
         can :create, UserLevelEvaluation do |ule|
-          !user.students.where(id: ule.user_id).empty?
+          !user.students.where(id: ule.user_id).empty? && !Policies::DemoSections.demo_student?(ule.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
