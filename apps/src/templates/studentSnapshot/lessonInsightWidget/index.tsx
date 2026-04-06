@@ -9,6 +9,10 @@ import WidgetTemplate from '../widgetTemplate';
 
 import styles from './lessonInsightWidget.module.scss';
 
+// Minimum time between regenerations of a lesson insight.
+// Must match LESSON_INSIGHT_COOLDOWN in dashboard/app/helpers/ai_student_snapshot_helper.rb
+const LESSON_INSIGHT_COOLDOWN_MS = 5 * 60 * 1000;
+
 interface InsightData {
   progress: string;
   misconceptions: string;
@@ -112,7 +116,8 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
           value: 'refresh_insight',
           isOptionDisabled:
             !insightUpdatedAt ||
-            Date.now() - new Date(insightUpdatedAt).getTime() < 5 * 60 * 1000,
+            Date.now() - new Date(insightUpdatedAt).getTime() <
+              LESSON_INSIGHT_COOLDOWN_MS,
         },
       ]}
     >

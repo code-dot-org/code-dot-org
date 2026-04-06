@@ -1,4 +1,8 @@
 module AiStudentSnapshotHelper
+  # Minimum time between regenerations of a lesson insight.
+  # Must match LESSON_INSIGHT_COOLDOWN_MS in apps/src/templates/studentSnapshot/lessonInsightWidget/index.tsx
+  LESSON_INSIGHT_COOLDOWN = 5.minutes
+
   def self.save_lesson_feedback(feedback_json, student_id, lesson_id, section_id, teacher_id)
     feedback_record = LessonFeedback.find_or_initialize_by(
       lesson_id: lesson_id,
@@ -24,7 +28,7 @@ module AiStudentSnapshotHelper
   # Returns true when the stored insight should be regenerated.
   def self.lesson_insight_stale?(insight, unit_id, lesson_id, student_id)
     # Never regenerate if the insight is less than 5 minutes old.
-    return false if insight.updated_at >= 5.minutes.ago
+    return false if insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
 
     current_max = max_user_level_updated_at(unit_id, lesson_id, student_id)
     # Stale when any UserLevel was touched after the insight was last generated.
@@ -37,7 +41,7 @@ module AiStudentSnapshotHelper
     should_generate =
       if insight.nil?
         true
-      elsif insight.updated_at >= 5.minutes.ago
+      elsif insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
         false
       elsif refresh
         true
