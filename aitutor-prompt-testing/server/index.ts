@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import {readFileSync, writeFileSync, readdirSync, existsSync} from 'fs';
 import {join, dirname} from 'path';

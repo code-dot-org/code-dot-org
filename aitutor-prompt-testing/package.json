@@ -6,11 +6,12 @@
     "build": "node build.mjs",
     "watch": "node build.mjs --watch",
     "typecheck": "tsc --noEmit",
-    "start": "tsx --env-file=.env server/index.ts",
+    "start": "tsx server/index.ts",
     "convert-data": "node scripts/convert-to-json.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.1",
     "express": "^4.21.0"
   },
   "devDependencies": {
