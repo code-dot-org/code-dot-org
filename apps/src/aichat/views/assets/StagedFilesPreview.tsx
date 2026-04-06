@@ -29,6 +29,10 @@ const alerts = {
     `AI Chat supports a maximum file size of ${MAX_FILE_SIZE_MB}MB. Please try a smaller file.`,
     'danger',
   ] as const,
+  imageFileFlagged: [
+    'One or more of your images has been flagged by our content moderation policy and has not been attached.',
+    'danger',
+  ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
 
 interface StagedFilesPreviewProps {

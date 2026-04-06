@@ -81,6 +81,7 @@ export interface AichatState extends AiDiffChatState {
     | 'uploadFailed'
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
+    | 'imageFileFlagged'
     | undefined;
   // If the user has a sent a message on this level
   hasSentMessage: boolean;
