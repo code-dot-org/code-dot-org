@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-02-24T18:14:08.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Digital Magazine Idea Chatbot\r\n\r\nUse this bot to brainstorm and refine your magazine’s main idea. It will help you define what your magazine is about, who it’s for, and the need it meets for your readers.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I have a few ideas for what my magazine could be about, but I’m not sure which one would interest readers most. Can you help me think it through?\r\n\r\n>I want to make a magazine for [teens/artists/gamers/etc.], but I’m not sure what need it would meet or what kind of stories to include. What do you think?\r\n:::\r\n",
+    "long_instructions": "## Digital Magazine Idea Chatbot\r\n\r\nUse this bot to brainstorm and refine your magazine's main idea. It will help you define what your magazine is about, who it's for, and the need it meets for your readers.\r\n\r\n---\r\n\r\n### <i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> Starter Prompts\r\n\r\n> I have a few ideas for what my magazine could be about, but I'm not sure which one would interest readers most. Can you help me think it through?\r\n\r\n> I want to make a magazine for [teens/artists/gamers/etc.], but I'm not sure what need it would meet or what kind of stories to include. What do you think?\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -49,7 +50,6 @@
     "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:08.903+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:08.903+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1b_2025\"},{\"changed_at\":\"2026-04-04 02:23:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-04 02:26:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-04 02:27:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>
