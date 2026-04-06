@@ -30,7 +30,11 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
+  ChatEvent,
   isCompletedChatMessage,
+  isNotification,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -185,9 +189,9 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          chatEventsCurrent
-            .filter(isCompletedChatMessage)
-            .filter(event => event.status === Status.OK),
+          buildMessagesForHistory(chatEventsCurrent).filter(
+            event => event.status === Status.OK
+          ),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -197,7 +201,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
+          buildMessagesForHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );
@@ -305,6 +309,38 @@ async function handleChatCompletionError(
       })
     );
   }
+}
+
+/**
+ * Builds the chat message history to send to the AI, including fake user messages
+ * for accept/reject version action notifications so the AI knows whether its
+ * suggested code changes are currently in the project.
+ */
+function buildMessagesForHistory(
+  chatEvents: ChatEvent[]
+): CompletedChatMessage[] {
+  return chatEvents.reduce<CompletedChatMessage[]>((acc, event) => {
+    if (isCompletedChatMessage(event)) {
+      acc.push(event);
+    } else if (
+      isNotification(event) &&
+      (event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        event.notificationType === AI_TUTOR_VERSION_ACTION_REJECT)
+    ) {
+      const messageText =
+        event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
+          ? 'The user accepted the changes provided.'
+          : 'The user rejected the changes provided. Do not include the suggested changes in future responses.';
+      acc.push({
+        role: Role.USER,
+        status: Status.OK,
+        chatMessageText: messageText,
+        timestamp: event.timestamp,
+        requestId: 0,
+      });
+    }
+    return acc;
+  }, []);
 }
 
 function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
