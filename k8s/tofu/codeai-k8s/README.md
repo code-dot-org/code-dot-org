@@ -1,23 +1,11 @@
-# OpenTofu `codeai-k8s`
+# OpenTofu `codeai-k8s` kubernetes cluster
 
-This directory is a copy-and-refactor of `../codeai-k8s-pre-reorg`.
+This creates a full codeai-k8s cluster on EKS, and bootstraps
+the full gitops repo into being: https://github.com/code-dot-org/k8s-gitops
 
-Do not edit `../codeai-k8s-pre-reorg` here. The old roots remain the current source of truth
-until this split is complete and validated.
+Tofu modules should be applied in this order:
 
-Apply order:
-
-1. `cluster`
-2. `cluster-infra`
-3. `cluster-infra-argocd`
-
-The prerequisite root is still `../codeai-k8s-dex` and must already have been applied.
-
-The intended split is:
-
-- `cluster-infra`: AWS-side substrate plus a small internal non-AWS bootstrap module
-- `cluster-infra-argocd`: remaining Kubernetes-side cluster add-ons, including app-of-apps bootstrap
-
-For places where the split cannot follow `k8s/docs/reorg/after.md` literally, see:
-
-- `./implementation-notes.md`
+0. If this is the first cluster:  `../codeai-k8s-dex` 
+1. `cluster`: the eks cluster, vpc and networking
+2. `cluster-infra`: aws objects like IAM roles
+3. `cluster-infra-argocd`: bootstraps argocd, which loads https://github.com/code-dot-org/k8s-gitops
