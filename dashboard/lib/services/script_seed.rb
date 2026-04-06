@@ -784,7 +784,7 @@ module Services
       # The "seeded_from" property is set by the seeding process; we don't need
       # to include it in the serialization.
       attribute :properties do
-        object.properties.except("seeded_from", "ai_rubric_s3_config").sort.to_h
+        object.properties.except("seeded_from").sort.to_h
       end
 
       # A simple field to track when the script was most recently serialized.
