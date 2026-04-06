@@ -62,11 +62,10 @@
 
 .saveAiTutorVersionButton {
   flex: 1;
-  height: 32px;
-  box-sizing: border-box;
 }
 
 .saveAiTutorVersionActions {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
