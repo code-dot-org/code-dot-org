@@ -26,7 +26,10 @@ resource "kubernetes_config_map_v1" "codeai_cluster_configmap" {
     cluster_region                             = local.cluster_region
     cluster_subdomain                          = local.cluster_subdomain
     cluster_subdomain_wildcard_certificate_arn = module.networking.cluster_subdomain_wildcard_certificate_arn
+    aws_load_balancer_controller_iam_role_arn  = module.networking.aws_load_balancer_controller_iam_role_arn
+    external_dns_iam_role_arn                  = module.external_dns.external_dns_iam_role_arn
     dex_google_client_id                       = var.dex_google_client_id
+    dex_external_secrets_iam_role_arn          = module.dex.dex_external_secrets_iam_role_arn
     single_namespace_environment_types         = jsonencode(sort(tolist(toset(local.single_namespace_environment_types))))
     frontend_security_group_namespaces         = jsonencode(sort(tolist(toset(local.cluster_outs.frontend_security_group_namespaces))))
     cluster_primary_security_group_id          = local.cluster_outs.cluster_primary_security_group_id
@@ -59,7 +62,10 @@ resource "github_repository_file" "codeai_cluster_config_values" {
         cluster_region                             = local.cluster_region
         cluster_subdomain                          = local.cluster_subdomain
         cluster_subdomain_wildcard_certificate_arn = module.networking.cluster_subdomain_wildcard_certificate_arn
+        aws_load_balancer_controller_iam_role_arn  = module.networking.aws_load_balancer_controller_iam_role_arn
+        external_dns_iam_role_arn                  = module.external_dns.external_dns_iam_role_arn
         dex_google_client_id                       = var.dex_google_client_id
+        dex_external_secrets_iam_role_arn          = module.dex.dex_external_secrets_iam_role_arn
         single_namespace_environment_types         = sort(tolist(toset(local.single_namespace_environment_types)))
         frontend_security_group_namespaces         = sort(tolist(toset(local.cluster_outs.frontend_security_group_namespaces)))
         cluster_primary_security_group_id          = local.cluster_outs.cluster_primary_security_group_id
@@ -72,6 +78,11 @@ resource "github_repository_file" "codeai_cluster_config_values" {
     "# Specially shaped values for the networking chart:",
     yamlencode({
       "aws-load-balancer-controller" = {
+        serviceAccount = {
+          annotations = {
+            "eks.amazonaws.com/role-arn" = module.networking.aws_load_balancer_controller_iam_role_arn
+          }
+        }
         ingressClassParams = {
           spec = {
             certificateArn = [module.networking.cluster_subdomain_wildcard_certificate_arn]
@@ -85,8 +96,22 @@ resource "github_repository_file" "codeai_cluster_config_values" {
       }
     }),
     "\n",
+    "# Specially shaped values for the external-dns chart:",
+    yamlencode({
+      "external-dns" = {
+        serviceAccount = {
+          annotations = {
+            "eks.amazonaws.com/role-arn" = module.external_dns.external_dns_iam_role_arn
+          }
+        }
+      }
+    }),
+    "\n",
     "# Specially shaped values for the dex chart:",
     yamlencode({
+      dexSecretStore = {
+        iamRoleArn = module.dex.dex_external_secrets_iam_role_arn
+      }
       dexGoogleClient = {
         clientID = var.dex_google_client_id
       }
@@ -101,7 +126,8 @@ resource "github_repository_file" "codeai_cluster_config_values" {
       }
       systemResources = {
         secretStore = {
-          awsRegion = local.cluster_region
+          awsRegion  = local.cluster_region
+          iamRoleArn = module.kargo_secrets.kargo_external_secret_stores_iam_role_arn
         }
       }
     }),
