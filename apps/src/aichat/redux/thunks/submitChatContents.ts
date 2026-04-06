@@ -327,17 +327,37 @@ function buildMessagesForModelHistory(
       (event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
         event.notificationType === AI_TUTOR_VERSION_ACTION_REJECT)
     ) {
-      const messageText =
-        event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
-          ? 'The user accepted the changes provided.'
-          : 'The user rejected the changes provided. Do not include the suggested changes in future responses.';
-      acc.push({
-        role: Role.USER,
-        status: Status.OK,
-        chatMessageText: messageText,
-        timestamp: event.timestamp,
-        requestId: 0,
-      });
+      const accepted =
+        event.notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT;
+      const fileList = event.files?.map(f => f.name).join(', ');
+      const filesPhrase = fileList ? ` to ${fileList}` : '';
+
+      if (accepted) {
+        acc.push({
+          role: Role.USER,
+          status: Status.OK,
+          chatMessageText: `I accepted your suggested changes${filesPhrase}. Those changes are now in the project.`,
+          timestamp: event.timestamp,
+          requestId: 0,
+        });
+      } else {
+        // The model is more likely to respect the rejection if we fake both a
+        // user and assistant message for the rejection.
+        acc.push({
+          role: Role.USER,
+          status: Status.OK,
+          chatMessageText: `I rejected your suggested changes${filesPhrase}. The current project files in the system context are the accurate state of the project. Your previous suggestions are not included.`,
+          timestamp: event.timestamp,
+          requestId: 0,
+        });
+        acc.push({
+          role: Role.ASSISTANT,
+          status: Status.OK,
+          chatMessageText: `Understood. I'll use the current project files from the system context as the source of truth, not my previous suggestions.`,
+          timestamp: event.timestamp,
+          requestId: 0,
+        });
+      }
     }
     return acc;
   }, []);
