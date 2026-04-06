@@ -162,7 +162,7 @@ class ChannelsApi < Sinatra::Base
     project_type = value["projectType"]
 
     begin
-      value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
+      value = Projects.new(get_storage_id).update(id, value, request.ip, locale: I18n.locale.to_s, project_type: project_type)
     rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception
       if exception.instance_of?(ProfanityPrivacyError)
         dont_cache
