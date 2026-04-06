@@ -4,6 +4,7 @@
  * JSON offline for the purposes of compiling a cached version of a level file.
  */
 
+import type {ToolboxFlyout} from '../toolbox/types';
 import type {BlocklySerialization} from '../types';
 
 export function convertBlocklyXmlToJson(
@@ -20,6 +21,27 @@ export function convertBlocklyXmlToJson(
     blocks: {
       blocks: blocksArray,
     },
+  };
+}
+
+export function convertBlocklyXmlToToolbox(
+  parser: DOMParser,
+  xmlString: string,
+  categoryName?: string,
+): ToolboxFlyout {
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+
+  const blocksArray = Array.from(xml.documentElement.children)
+    .filter(el => el.tagName === 'block')
+    .map(el => parseBlockXml(el))
+    .map(el => {
+      el['kind'] = 'block';
+      return el;
+    });
+
+  return {
+    name: categoryName || 'flyout',
+    blocks: blocksArray,
   };
 }
 

@@ -1,0 +1,106 @@
+import {useCallback, useMemo, type PropsWithChildren} from 'react';
+
+import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
+import type {BlocklyProviderProps} from '@code-dot-org/blockly-workspace/contexts';
+import {BlocklyProvider} from '@code-dot-org/blockly-workspace/contexts';
+import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
+import type {LevelProperties} from '@code-dot-org/core/api';
+import type {ProjectSources, Source} from '@code-dot-org/platform/projects';
+import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
+
+import type {BlocklyLevelProperties} from '../types';
+import {getInitialBlocklySources} from '../utils';
+
+import LabWithSources from './LabWithSources';
+import type {LabWithSourcesProps} from './LabWithSources';
+
+export interface BlocklyLabWithSourcesProps<
+  T extends LevelProperties = LevelProperties,
+> extends LabWithSourcesProps<T, BlocklySerialization> {
+  blocklyProps: (levelProperties: T) => BlocklyProviderProps;
+}
+
+// TODO - read this from app_options
+const isToolboxMode = false; //app_options.editBlocks === TOOLBOX_BLOCKS;
+
+export const STARTOVER_WORKSPACE_BLOCKS_MESSAGE =
+  "This will reset the workspace to its start state and remove all the blocks you've added or changed.";
+
+const BlocklyLabWrapper = <T extends LevelProperties = LevelProperties>({
+  children,
+  blocklyProps,
+}: Pick<BlocklyLabWithSourcesProps<T>, 'blocklyProps'> & PropsWithChildren) => {
+  const levelProperties = useMaybeLevelProperties<T>();
+  console.log('blockly wrapper', levelProperties);
+
+  const realizedBlocklyProps = useMemo(
+    () => (levelProperties ? blocklyProps(levelProperties) : {}),
+    [blocklyProps, levelProperties],
+  );
+
+  return levelProperties ? (
+    <BlocklyProvider {...realizedBlocklyProps}>{children}</BlocklyProvider>
+  ) : undefined;
+};
+
+/**
+ * This wraps a lab that has a Blockly workspace and Blockly-based sources.
+ *
+ * Effectively, this is a special case of a LabWithSources that understands that
+ * the sources are meant to be some kind of Blockly serialization.
+ */
+const BlocklyLabWithSources = <T extends LevelProperties = LevelProperties>({
+  children,
+  blocklyProps,
+  startOverSources,
+  ...props
+}: BlocklyLabWithSourcesProps<T>) => {
+  // Sources to reset to when starting over. Depends on the level edit mode.
+  const memoizedStartOverSources = useCallback(
+    (levelProperties: T) => {
+      if (startOverSources) {
+        return startOverSources(levelProperties);
+      }
+
+      return {
+        source: toolboxToWorkspaceBlocks(
+          (levelProperties as BlocklyLevelProperties).toolboxDefinition,
+        ),
+      } as ProjectSources<BlocklySerialization>;
+    },
+    [startOverSources],
+  );
+
+  const transform = (sources: ProjectSources<BlocklySerialization>) => {
+    if (typeof sources.source === 'string') {
+      sources = {
+        ...sources,
+        source: JSON.parse(sources.source) as Source<BlocklySerialization>,
+      };
+    }
+    return sources;
+  };
+
+  return (
+    <LabWithSources<T, BlocklySerialization>
+      {...props}
+      startOverMessage={
+        props.startOverMessage || STARTOVER_WORKSPACE_BLOCKS_MESSAGE
+      }
+      getInitialSources={
+        props.getInitialSources ||
+        getInitialBlocklySources<T, BlocklySerialization>
+      }
+      startOverSources={
+        isToolboxMode ? memoizedStartOverSources : startOverSources
+      }
+      transform={transform}
+    >
+      <BlocklyLabWrapper<T> blocklyProps={blocklyProps}>
+        {children}
+      </BlocklyLabWrapper>
+    </LabWithSources>
+  );
+};
+
+export default BlocklyLabWithSources;

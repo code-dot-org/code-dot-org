@@ -66,7 +66,7 @@ const MusicLab = () => {
   const {currentSources} = useSources<BlocklySerialization>();
 
   const {skipUrl} = levelProperties;
-  const guideMode = levelProperties.levelData.guideMode;
+  const guideMode = levelProperties.levelData?.guideMode;
   const startSources: ProjectSources = {
     source: 'hello world',
   };

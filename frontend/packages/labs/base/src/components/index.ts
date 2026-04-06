@@ -13,6 +13,8 @@ export * from './BlocklyLab';
 export {default as BlocklyLab} from './BlocklyLab';
 export * from './LabWithSources';
 export {default as LabWithSources} from './LabWithSources';
+export * from './BlocklyLabWithSources';
+export {default as BlocklyLabWithSources} from './BlocklyLabWithSources';
 export * from './Adlib';
 export {default as Adlib} from './Adlib';
 export * from './Guide';

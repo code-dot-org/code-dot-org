@@ -10,12 +10,10 @@ import styles from './app.module.scss';
 registerLevelKindSchema('standalone_video', LevelKindSchema);
 
 function App() {
-  // Just use the channelId to pretend to be the video id
+  // Just use the channelId to pretend to be the level id
   const channelId = window.location.pathname.match(
     /^\/app\/projects\/standalone-video\/([^/]+)\/edit$/,
   )?.[1];
-
-  // Use the channelId as a levelId and pull the level properties
 
   return (
     <>

@@ -1,23 +1,27 @@
+import {registerLevelKindSchema} from '@code-dot-org/core/api';
 import {useApiClient} from '@code-dot-org/core/api';
 import {darkTheme} from '@code-dot-org/blockly-workspace/themes';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
-import type {BlocklyLabProps} from '@code-dot-org/lab';
-import {BlocklyLab} from '@code-dot-org/lab';
+import type {BlocklyLabWithSourcesProps} from '@code-dot-org/lab';
+import {BlocklyLabWithSources} from '@code-dot-org/lab';
 import {useMemo} from 'react';
 
 import {createMusicApiClient, MusicApiClientProvider} from './api';
 import blocks from './blockly/blocks/simple2';
 import MusicLab from './components/MusicLab';
 import {PlayerProvider} from './contexts/PlayerContext';
+import {LevelKindSchema} from './schema';
 
 import styles from './app.module.scss';
 
 const plugins = [ToolboxTrashcanPlugin];
 
+registerLevelKindSchema('music', LevelKindSchema);
+
 const App = ({
   ...props
-}: Omit<BlocklyLabProps, 'defaultSources' | 'blocklyProps'>) => {
+}: Omit<BlocklyLabWithSourcesProps, 'defaultSources' | 'blocklyProps'>) => {
   const channelId = window.location.pathname.match(
     /^\/app\/projects\/music\/([^/]+)\/edit$/,
   )?.[1];
@@ -32,17 +36,20 @@ const App = ({
     <>
       {/* The generic styles to base the lab styles upon */}
       <div className={styles.app}>
-        {/* The BlocklyLab wraps the sources and other lab reduxes */}
-        <BlocklyLab
+        {/* The BlocklyLabWithSources wraps the sources and other lab reduxes */}
+        <BlocklyLabWithSources
           {...props}
           defaultSources={{source: {}}}
           standaloneProjectType="music"
           channelId={props.channelId || channelId}
-          blocklyProps={{
-            theme: darkTheme,
-            renderer: ThrasosRenderer,
-            blocks,
-            plugins,
+          blocklyProps={_ => {
+            console.log('polling', blocks);
+            return {
+              theme: darkTheme,
+              renderer: ThrasosRenderer,
+              blocks,
+              plugins,
+            };
           }}
         >
           {musicApi && (
@@ -54,7 +61,7 @@ const App = ({
               </PlayerProvider>
             </MusicApiClientProvider>
           )}
-        </BlocklyLab>
+        </BlocklyLabWithSources>
       </div>
     </>
   );

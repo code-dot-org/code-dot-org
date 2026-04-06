@@ -10,6 +10,7 @@ import ThrasosRenderer from '../renderers/thrasos';
 
 export interface BlocklyContent<T extends Environment = Environment> {
   driver?: MutableRefObject<Driver<T>>;
+  blocks?: BlockDefinitions;
   environment?: T;
   setTheme: (value: Theme) => void;
 }
@@ -65,6 +66,7 @@ export const BlocklyProvider = <T extends Environment = Environment>({
     <BlocklyContext.Provider
       value={{
         driver,
+        blocks,
         setTheme,
         environment,
       }}

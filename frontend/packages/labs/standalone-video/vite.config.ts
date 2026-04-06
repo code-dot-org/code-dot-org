@@ -71,7 +71,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['src/App.tsx'],
-      name: 'standalone-video-lab',
+      name: 'maze-lab',
       formats: ['es', 'cjs'],
     },
   },

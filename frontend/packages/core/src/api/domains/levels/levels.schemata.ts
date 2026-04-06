@@ -68,8 +68,6 @@ export const LevelPropertiesBaseSchema = z.object({
   useSecondaryFinishButton: z.boolean().optional(),
   // Codebridge
   widgetView: z.boolean().optional(),
-  // Extra data
-  levelData: z.object(),
 });
 
 export const LevelPropertiesMapSchema = z.record(

@@ -16,14 +16,22 @@ export const AgentEvent = {
   BlocklyEvent: 'blockly-event',
 } as const;
 
-interface AgentEvents extends EventMap {
-  [AgentEvent.Injected]: (workspace: Blockly.WorkspaceSvg) => void;
-  [AgentEvent.BlocklyEvent]: (event: Blockly.Events.Abstract) => void;
+interface AgentEvents<T extends Environment = Environment> extends EventMap {
+  [AgentEvent.Injected]: (
+    workspace: Blockly.WorkspaceSvg,
+    environment: T,
+  ) => void;
+  [AgentEvent.BlocklyEvent]: (
+    event: Blockly.Events.Abstract,
+    environment: T,
+  ) => void;
 }
 
-class Agent<
-  T extends Environment = Environment,
-> extends (EventEmitter as unknown as new () => TypedEmitter<AgentEvents>) {
+const TypedEventEmitter = EventEmitter as unknown as {
+  new <T extends Environment = Environment>(): TypedEmitter<AgentEvents<T>>;
+};
+
+class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
   // An instance of our overall driver
   protected _driver: Driver<T>;
   // The Blockly options to use when injecting the workspace
@@ -158,11 +166,11 @@ class Agent<
 
     Blockly.svgResize(this._workspace);
     this.driver.onInject(this);
-    this.emit(AgentEvent.Injected, this._workspace);
+    this.emit(AgentEvent.Injected, this._workspace, this.driver.environment);
 
     // Attach the event listener as an upcall for our own event
     this._workspace.addChangeListener((event: Blockly.Events.Abstract) => {
-      this.emit(AgentEvent.BlocklyEvent, event);
+      this.emit(AgentEvent.BlocklyEvent, event, this.driver.environment);
     });
   }
 

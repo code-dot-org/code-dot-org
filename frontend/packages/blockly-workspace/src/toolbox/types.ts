@@ -40,12 +40,14 @@ export interface ToolboxStaticCategory extends ToolboxBaseCategory {
 
 export type ToolboxCategory = ToolboxDynamicCategory | ToolboxStaticCategory;
 
+export type ToolboxFlyout = ToolboxStaticCategory & {
+  cssconfig?: never;
+};
+
 export type Toolbox =
   // Classic Blockly toolbox definition
   | Blockly.utils.toolbox.ToolboxInfo
   // Our simplified categories
   | ToolboxCategory[]
   // Flyout is just a single category
-  | (ToolboxStaticCategory & {
-      cssconfig?: never;
-    });
+  | ToolboxFlyout;

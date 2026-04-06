@@ -10,13 +10,20 @@ import {externalizeDeps} from 'vite-plugin-externalize-deps';
  * @param format es or cjs
  * @returns Rollup output configuration
  */
+const ext = {es: 'mjs', cjs: 'js'} as const;
+
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'named',
-    entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
-    preserveModules: true,
-    preserveModulesRoot: 'src',
+    // Preserve directory structure for entry points so that package.json
+    // exports like "./contexts" resolve to "dist/contexts/index.mjs".
+    entryFileNames: chunk => {
+      const relative = path.relative('src', chunk.facadeModuleId ?? chunk.name);
+      const parsed = path.parse(relative);
+      const dir = parsed.dir ? `${parsed.dir}/` : '';
+      return `${dir}${parsed.name}.${ext[format]}`;
+    },
   };
 }
 
@@ -26,7 +33,7 @@ export default defineConfig({
     // Inject CSS directly into JS bundle as inline styles.
     // This ensures CSS is automatically loaded when the module is imported,
     // so consumers don't need separate CSS imports.
-    cssInjectedByJsPlugin(),
+    cssInjectedByJsPlugin({relativeCSSInjection: true}),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({
       tsconfigPath: './tsconfig.json',

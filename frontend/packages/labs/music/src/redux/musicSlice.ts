@@ -11,7 +11,7 @@ import {
 } from '../constants';
 import type {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import type {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import type {MusicLevelData} from '../types';
+import type {MusicLevelData, MusicLevelProperties} from '../types';
 import {KeyMapping, KeyFromName} from '../utils/Notes';
 import type {Key} from '../utils/Notes';
 
@@ -292,7 +292,8 @@ export const getCurrentlyPlayingBlockIds = (state: {
 };
 
 export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
-  const {initialSources, levelProperties} = state.lab;
+  const {initialSources} = state.lab;
+  const levelProperties = state.lab.levelProperties as MusicLevelProperties;
   return (
     (initialSources?.labConfig?.music.blockMode as ValueOf<typeof BlockMode>) ||
     (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||

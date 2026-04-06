@@ -17,7 +17,9 @@ export const AppNames = [
   'panels',
   'pythonlab',
   'standalone_video',
+  'weblab',
   'weblab2',
+  'maze',
 ] as const;
 
 export const StandaloneAppNames = [

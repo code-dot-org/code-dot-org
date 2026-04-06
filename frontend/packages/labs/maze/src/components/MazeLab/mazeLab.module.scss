@@ -1,0 +1,43 @@
+.lab-maze {
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .blockCount {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    i {
+      line-height: 1rem;
+    }
+
+    span + span::before {
+      content: '/';
+      padding-inline-end: 0.5rem;
+    }
+  }
+
+  .visArea {
+    width: 30rem;
+
+    .visBox {
+      flex: 0 0 auto;
+
+      .visualization {
+        width: 100%;
+      }
+    }
+
+    .visUnderBox {
+      flex: 0 1 auto;
+    }
+  }
+
+  .blocklyWorkspace {
+    flex: 1 1 auto;
+  }
+}

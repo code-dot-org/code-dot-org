@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 import type {PropsWithChildren, ReactNode} from 'react';
 import {forwardRef} from 'react';
-
-import Typography from '@code-dot-org/component-library/typography';
+import PanelContainerHeader from './PanelContainerHeader';
 
 import moduleStyles from './panelContainer.module.scss';
 
@@ -63,21 +62,7 @@ const PanelContainer = forwardRef<HTMLDivElement, PanelContainerProps>(
           >
             {leftHeaderContent}
           </div>
-          <Typography
-            semanticTag="h2"
-            visualAppearance="overline-two"
-            className={classNames(
-              'panelContainerHeaderItemText',
-              moduleStyles.panelContainerHeaderItem,
-              moduleStyles.panelContainerHeaderItemCenter,
-            )}
-          >
-            <span
-              className={classNames(moduleStyles.panelContainerHeaderItemText)}
-            >
-              {headerContent}
-            </span>
-          </Typography>
+          <PanelContainerHeader>{headerContent}</PanelContainerHeader>
           <div
             className={classNames(
               'panelContainerHeaderItemRight',
@@ -93,5 +78,7 @@ const PanelContainer = forwardRef<HTMLDivElement, PanelContainerProps>(
     </div>
   ),
 );
+
+export {PanelContainerHeader};
 
 export default PanelContainer;

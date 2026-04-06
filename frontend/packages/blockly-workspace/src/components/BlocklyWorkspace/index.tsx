@@ -54,9 +54,9 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** Whether or not this is a hidden workspace. */
   hidden?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
-  onInject?: (workspace: Blockly.WorkspaceSvg) => void;
+  onInject?: (workspace: Blockly.WorkspaceSvg, environment: T) => void;
   /** A callback for when anything in the workspace updates */
-  onChange?: (event: Blockly.Events.Abstract) => void;
+  onChange?: (event: Blockly.Events.Abstract, environment: T) => void;
   /** A set of plugins to install to this workspace */
   plugins?: Plugin[];
   /** The info to pass along to extensions */
@@ -108,14 +108,18 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     }
   }, [inline, rect]);
 
-  const {driver: contextDriver} = useBlocklyContext();
+  const {
+    driver: contextDriver,
+    blocks: contextBlocks,
+    environment: contextEnvironment,
+  } = useBlocklyContext();
 
   // Creates the encapsulating Agent class for this workspace within the environment
   const agent = useRef<Agent<T>>(
     new Agent(
       contextDriver?.current ||
         new Driver<T>(
-          environment || ({} as unknown as T),
+          environment || contextEnvironment || ({} as unknown as T),
           renderer || ThrasosRenderer,
           theme || DefaultTheme,
           plugins || [],
@@ -128,9 +132,14 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   );
 
   useEffect(() => {
+    // Ensure that we registered the blocks prior and avoid racing the driver
+    if (contextBlocks) {
+      agent.current.driver.setBlocks(contextBlocks);
+    }
+
     // Update toolbox
     agent.current.setToolbox(toolbox);
-  }, [toolbox]);
+  }, [toolbox, contextBlocks]);
 
   const wrappedOnInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {
@@ -150,7 +159,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       }
 
       if (onInject) {
-        onInject(workspace);
+        onInject(workspace, agent.current.driver.environment);
       }
     },
     [javascriptGeneratorRef, workspaceRef, onInject],
@@ -226,7 +235,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     if (blocks) {
       agent.current.driver.setBlocks(blocks);
     }
-  }, [blocks, environment]);
+  }, [blocks]);
 
   useEffect(() => {
     if (!agent.current.workspace) {

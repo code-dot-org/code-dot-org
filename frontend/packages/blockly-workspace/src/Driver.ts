@@ -31,10 +31,16 @@ export const DriverEvent = {
   BlocklyEvent: 'blockly-event',
 } as const;
 
-interface DriverEvents extends EventMap {
-  [DriverEvent.Injected]: (workspace: Blockly.WorkspaceSvg) => void;
+interface DriverEvents<T extends Environment = Environment> extends EventMap {
+  [DriverEvent.Injected]: (
+    workspace: Blockly.WorkspaceSvg,
+    environment: T,
+  ) => void;
   [DriverEvent.Removed]: (workspace: Blockly.WorkspaceSvg) => void;
-  [DriverEvent.BlocklyEvent]: (event: Blockly.Events.Abstract) => void;
+  [DriverEvent.BlocklyEvent]: (
+    event: Blockly.Events.Abstract,
+    environment: T,
+  ) => void;
 }
 
 const originalGeneratorFunctions: OriginalGeneratorFunctions = {
@@ -145,6 +151,13 @@ class Driver<
    */
   get renderer(): Renderer {
     return this._renderer;
+  }
+
+  /**
+   * Retrieves a reference to the blockly Environment.
+   */
+  get environment(): T {
+    return this._environment;
   }
 
   /**
@@ -265,7 +278,7 @@ class Driver<
       }
 
       // Emit general event
-      this.emit(DriverEvent.Injected, agent.workspace);
+      this.emit(DriverEvent.Injected, agent.workspace, this._environment);
     }
   }
 
