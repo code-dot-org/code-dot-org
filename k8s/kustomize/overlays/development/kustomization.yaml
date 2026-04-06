@@ -8,6 +8,7 @@ components:
   - ../../components/minio
 patches:
   - path: deployment.patch.yaml
+  - path: ingress.patch.yaml
   - target:
       kind: Deployment
       name: cdo-dashboard

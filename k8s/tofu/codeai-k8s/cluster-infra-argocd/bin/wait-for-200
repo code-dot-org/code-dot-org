@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "net/http"
+require "optparse"
+require "openssl"
+require "time"
+require "uri"
+
+options = {timeout_seconds: 600, poll_every_seconds: 5}
+usage = "usage: #{File.basename($PROGRAM_NAME)} [--timeout-seconds <value>] [--poll-every-seconds <value>] <url>"
+
+parser = OptionParser.new do |opts|
+  opts.on("--timeout-seconds VALUE", Integer) {|value| options[:timeout_seconds] = value}
+  opts.on("--poll-every-seconds VALUE", Integer) {|value| options[:poll_every_seconds] = value}
+end
+
+parser.parse!(ARGV)
+
+url = ARGV.shift or abort(usage)
+ARGV.empty? or abort(usage)
+timeout_seconds = options.fetch(:timeout_seconds)
+poll_every_seconds = options.fetch(:poll_every_seconds)
+
+def log(message)
+  puts "[#{Time.now.iso8601}] #{message}"
+end
+
+def fetch(uri, limit = 5)
+  raise "too many redirects" if limit <= 0
+
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = (uri.scheme == "https")
+  http.open_timeout = 5
+  http.read_timeout = 20
+  http.write_timeout = 20 if http.respond_to?(:write_timeout=)
+  http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+
+  request = Net::HTTP::Get.new(uri.request_uri)
+  response = http.request(request)
+
+  if response.is_a?(Net::HTTPRedirection)
+    location = response["location"] or raise "redirect missing location"
+    return fetch(uri + location, limit - 1)
+  end
+
+  response
+end
+
+uri = URI(url)
+deadline = Time.now + timeout_seconds
+
+loop do
+  begin
+    response = fetch(uri)
+    if response.code == "200"
+      log("#{url} returned 200")
+      exit 0
+    end
+
+    log("#{url} returned #{response.code}")
+  rescue StandardError => exception
+    log("#{url} failed: #{exception.class}: #{exception.message}")
+  end
+
+  abort("#{url} did not return 200 within #{timeout_seconds}s") if Time.now >= deadline
+
+  sleep poll_every_seconds
+end
