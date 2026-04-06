@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
