@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,19 +6,18 @@ import fontConstants from '@cdo/apps/fontConstants';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/Button';
 import color from '../../util/color';
 
 import NewProjectButtons from './NewProjectButtons';
 
-const DEFAULT_PROJECT_TYPES_ADVANCED = [
-  'spritelab',
-  'artist',
-  'applab',
-  'gamelab',
-];
+const BLOCKS_PROJECT_TYPES = ['spritelab', 'artist', 'music'];
 
-const DEFAULT_PROJECT_TYPES_BASIC = ['spritelab', 'artist', 'dance', 'playlab'];
+const BEYOND_BLOCKS_PROJECT_TYPES = [
+  'gamelab',
+  'applab',
+  'pythonlab',
+  'weblab2',
+];
 
 const OPEN_ENDED_PROJECT_TYPES = [
   'music_dance_ai',
@@ -46,14 +46,6 @@ const GAMES_AND_EVENTS_PROJECT_TYPES = [
 ];
 
 const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
-
-const ADVANCED_PROJECT_TYPES = [
-  'applab',
-  'gamelab',
-  'pythonlab',
-  'weblab2',
-  'starwars',
-];
 
 const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
 
@@ -130,18 +122,6 @@ export class StartNewProject extends React.Component {
       });
     }
 
-    if (this.props.canViewAdvancedTools) {
-      const advancedProjectTypes = this.cleanProjectTypes(
-        ADVANCED_PROJECT_TYPES
-      );
-      if (advancedProjectTypes.length) {
-        projectButtonsData.push({
-          description: i18n.projectGroupAdvancedTools(),
-          projectTypes: advancedProjectTypes,
-        });
-      }
-    }
-
     const playLabProjectTypes = this.cleanProjectTypes(PLAYLAB_PROJECT_TYPES);
     if (playLabProjectTypes.length) {
       projectButtonsData.push({
@@ -167,38 +147,60 @@ export class StartNewProject extends React.Component {
     const {canViewAdvancedTools, canViewFullList} = this.props;
     const {showFullList} = this.state;
 
-    const defaultProjectTypes = this.cleanProjectTypes(
-      canViewAdvancedTools
-        ? DEFAULT_PROJECT_TYPES_ADVANCED
-        : DEFAULT_PROJECT_TYPES_BASIC
-    );
+    const blocksProjectTypes = this.cleanProjectTypes(BLOCKS_PROJECT_TYPES);
+    const beyondBlocksProjectTypes = canViewAdvancedTools
+      ? this.cleanProjectTypes(BEYOND_BLOCKS_PROJECT_TYPES)
+      : [];
     const fullListProjectButtonsData = canViewFullList
       ? this.getFullListProjectButtonsData()
       : [];
 
+    const showAboveFold =
+      blocksProjectTypes.length || beyondBlocksProjectTypes.length;
+
     return (
       <div>
-        {!!defaultProjectTypes.length && (
+        {!!showAboveFold && (
           <>
             <h4 className="new-project-heading" style={styles.headingStartNew}>
               {i18n.projectCreateNew()}
             </h4>
-            <NewProjectButtons projectTypes={defaultProjectTypes} />
+            {!!blocksProjectTypes.length && (
+              <NewProjectButtons
+                description={i18n.projectGroupBlocks()}
+                projectTypes={blocksProjectTypes}
+              />
+            )}
+            {!!beyondBlocksProjectTypes.length && (
+              <NewProjectButtons
+                description={i18n.projectGroupAdvancedTools()}
+                projectTypes={beyondBlocksProjectTypes}
+              />
+            )}
           </>
         )}
 
         {!!fullListProjectButtonsData.length && (
           <>
-            <Button
-              id="uitest-view-full-list"
-              onClick={this.toggleShowFullList}
-              color={Button.ButtonColor.neutralDark}
-              icon={showFullList ? 'caret-up' : 'caret-down'}
-              text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
-              style={styles.button}
-            />
-
-            <div style={{clear: 'both'}} />
+            <div style={styles.divider}>
+              <div style={styles.dividerLine} />
+              <MuiButton
+                id="uitest-view-full-list"
+                onClick={this.toggleShowFullList}
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                style={styles.dividerButton}
+                startIcon={
+                  <i
+                    className={`fa fa-chevron-${showFullList ? 'up' : 'down'}`}
+                  />
+                }
+              >
+                {showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+              </MuiButton>
+              <div style={styles.dividerLine} />
+            </div>
 
             {showFullList && (
               <div id="full-list-projects">
@@ -221,10 +223,18 @@ export class StartNewProject extends React.Component {
 }
 
 const styles = {
-  button: {
-    float: 'right',
-    margin: '0 1px 0 0',
-    padding: '0 16px',
+  divider: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '32px 0 8px',
+  },
+  dividerLine: {
+    flex: 1,
+    borderTop: '1px solid ' + color.neutral_dark20,
+  },
+  dividerButton: {
+    margin: '0 16px',
+    flexShrink: 0,
   },
   headingStartNew: {
     paddingRight: 10,
