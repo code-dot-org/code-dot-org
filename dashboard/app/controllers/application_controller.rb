@@ -237,6 +237,10 @@ class ApplicationController < ActionController::Base
     Thread.current[:current_request_url] = request.url
   end
 
+  protected def with_locale(&block)
+    I18n.with_locale(request.locale, &block)
+  end
+
   protected def milestone_response(options)
     response = {
       timestamp: DateTime.now.to_milliseconds
@@ -456,10 +460,6 @@ class ApplicationController < ActionController::Base
     existing_stable_id = cookies[:statsig_stable_id]
     session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
     session[:statsig_stable_id] ||= SecureRandom.uuid
-  end
-
-  private def with_locale(&)
-    I18n.with_locale(request.locale, &)
   end
 
   private def pairing_still_enabled
