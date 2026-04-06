@@ -1,10 +1,33 @@
+require 'cdo/aws/ec2'
+
 module AiDiffBedrockHelper
   include UsersHelper
+
+  def self.account_id
+    acct = AWS::EC2.account_id
+    if acct.nil?
+      begin
+        client = Aws::STS::Client.new
+        acct = client.get_caller_identity.account
+      rescue StandardError
+        return nil
+      end
+    end
+    return acct
+  end
+
+  def self.region
+    reg = AWS::EC2.region
+    if reg.nil?
+      reg = CDO.aws_region
+    end
+    return reg
+  end
 
   MAX_TOKENS = 1500
   TEMP = 0.5
   MODEL_ID = 'us.anthropic.claude-sonnet-4-5-20250929-v1:0'
-  MODEL_ARN = "arn:aws:bedrock:us-east-1:#{Aws::STS::Client.new.get_caller_identity.account}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0".freeze
+  MODEL_ARN = "arn:aws:bedrock:#{region}:#{account_id}:inference-profile/#{MODEL_ID}".freeze
   # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
   KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
