@@ -453,7 +453,7 @@ class FilesApi < Sinatra::Base
         # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
         # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
         text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
-        share_failure = ShareFiltering.find_failure(text_to_check, I18n.locale.to_s)
+        share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
