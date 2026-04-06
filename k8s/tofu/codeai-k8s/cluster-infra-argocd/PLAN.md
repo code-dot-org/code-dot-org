@@ -27,6 +27,9 @@ Current execution choice after the partial-cycle cleanup mistake:
 - then run one full logged `apply` from that clean baseline
   - be patient with the apply; slow Fargate startup is not itself evidence
 - then run one full logged `destroy` from that full apply
+- after every real destroy:
+  - if anything survives, write every residue object into `NOTES.md` one by
+    one as exact `Kind/name`, plus namespace when there is one
 - the main question to answer from that destroy is narrow:
   - did `app-of-apps-bootstrap.tf` wait for Argo to finish deleting
     `Application/app-of-apps` and its descendants before the bootstrap layer
@@ -36,9 +39,35 @@ Current execution choice after the partial-cycle cleanup mistake:
   - or go back to `../mimic`, if the clean full cycle still shows early return
     from `app-of-apps-bootstrap.tf`
 - therefore:
-  - keep mimic as an available tool
-  - do not force mimic first while the phase is still dirty or only partially
-    applied
+  - keep mimic only as an available fallback tool
+  - do not suggest or force mimic while the real full cycle is answering the
+    bootstrap wait question directly
+
+Current execution choice after the full destroy watch on 2026-04-05:
+
+- the real tree has already answered the original wrapper question:
+  `kubectl_manifest.app_of_apps_bootstrap` is now blocking for minutes on
+  destroy, so the old "Tofu returns too early to be waiting at all" theory is
+  no longer the active problem statement
+- therefore `../mimic` is no longer the active plan
+- only go back to `../mimic` if a later residue bug needs a tiny reproduction
+  harness for one specific leftover object pattern
+
+Accepted residue after the ingress-hook experiment:
+
+- treat the following as accepted namespace-scoped residue, not active design
+  bugs, because namespace deletion removes them cleanly:
+  - `ServiceAccount/argocd-redis-secret-init`, namespace `argocd`
+  - `Role/argocd-redis-secret-init`, namespace `argocd`
+  - `RoleBinding/argocd-redis-secret-init`, namespace `argocd`
+  - `Secret/argocd-redis`, namespace `argocd`
+  - `SigningKey/openid-connect-keys`, namespace `dex`
+  - `Namespace/argocd`
+  - `Namespace/dex`
+- do not spend more fix effort on those objects unless a later run shows they
+  survive even after the owning namespace delete
+- active investigation should now ignore those accepted leftovers and focus only
+  on any residue outside that namespace-delete bucket
 
 You may commit and push to k8s-gitops to deploy changes as they require this. Just use the main
 branch. start each commit message with "PLAN: ". Periodically look at all changes
@@ -101,8 +130,7 @@ Observed on the destroy ending 2026-04-04T23:38:19-1000:
   - the remaining active namespaces only had the normal namespace finalizer:
     - `["kubernetes"]`
 
-Current execution choice after rereading commit
-`0d1ca75664d07108b842ec694af21974e0c8873b` and the latest destroy:
+Historical branch from earlier in the night; not the active plan now:
 
 - keep the bootstrap split introduced by that commit; diagnose it, do not back
   it out blindly
@@ -571,3 +599,30 @@ then run one full main-module cycle.
     `../mimic`; debug the remaining failure in the full tree
   - if create/destroy still fails in a way the full tree does not explain
     cleanly, use `../mimic` again only for that specific unexplained edge
+
+## Result 2026-04-06
+
+The full real-tree cycle has now succeeded in the destroy direction.
+
+- clean baseline re-established
+- full logged apply run from that baseline
+- full logged destroy run from that apply
+- `kubectl_manifest.app_of_apps_bootstrap` waited `6m34s`
+- `Application/argocd` entered deletion before `networking`
+- `Job/argocd-server-remove-ingress-postdelete` ran and deleted
+  `Ingress/argocd-server`
+- `helm_release.argocd_bootstrap` uninstall then completed in `32s`
+- final `bin/check-phase-deployment-status` was returned to all `missing`
+  after deleting the residual namespaces `argocd`, `external-dns`, and
+  `external-secrets`
+
+What this proves:
+
+- the old `networking` gateway-finalizer wedge is fixed
+- the old Helm-side Argo uninstall timeout is fixed
+- the remaining recurring failure is not destroy ordering; it is the public
+  wait path during apply, still exposed by local shell-side DNS behavior
+
+## Status
+
+Done.

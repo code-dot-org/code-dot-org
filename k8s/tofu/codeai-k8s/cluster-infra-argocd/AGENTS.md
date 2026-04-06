@@ -1,11 +1,5 @@
 - When making Helm chart changes you wish to `tofu apply`, be sure to bump the Helm chart version number or it will say there is no diff to apply.
 
-IF THERE IS A PLAN.MD and/or a CHECKLIST.MD and/or a NOTES.md file in this directory, read it now. If you just compacted your context, read all these files fresh and this AGENTS.md too. IF THERE IS A PLAN.MD FOLLOW IT NOW,
-pay attention to this file, but PLAN.md commands supercede this file where they disagree.
-
-If you just compacted your context (or are just reading this), read k8s-gitops repo apps/ dir now. And read the
-dir this AGENTS.md is in now, yes every file.
-
 ## Diagnosing tofu apply/destroy failures
 
 - In this directory, use `bin/logged-tofu <apply|destroy> "<what is being tested>"` for every `tofu` apply or destroy unless the user explicitly says not to log. Plain `tofu plan` is fine unless a logged plan is specifically requested. `bin/logged-tofu` writes both the rolling file `tofu.log` in this directory and a per-run timestamped file under `logs/`, inserts 50 blank lines and a `START OF TOFU RUN` marker before each run, and keeps the `kubectl get events -A --watch --output-watch-events` logger running after `tofu` exits. When starting a logged run I must echo the exact `tail -n +1 -f ...` commands for both the per-run log and the rolling `tofu.log` in chat. When I am figuring out what happened in a logged run, I must only inspect the latest per-run log file, not `tofu.log`, because the rolling file will blow out context. After I have verified health of everything in Argo and on the cluster, or we have accepted the remaining problem, I must stop the watcher with `bin/logged-tofu-stop`.
