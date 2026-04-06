@@ -61,7 +61,12 @@
 }
 
 .saveAiTutorVersionButton {
-  width: 100%;
+  flex: 1;
   height: 32px;
   box-sizing: border-box;
+}
+
+.saveAiTutorVersionActions {
+  display: flex;
+  gap: 8px;
 }
