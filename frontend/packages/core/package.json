@@ -16,7 +16,6 @@
     "directory": "frontend/packages/core"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

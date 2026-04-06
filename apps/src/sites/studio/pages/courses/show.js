@@ -108,7 +108,10 @@ function showCourseOverview() {
         aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       />
     </Provider>,
-    document.getElementById('course_overview')
+    document.getElementById('course_overview'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
@@ -130,7 +133,10 @@ function displayDifferentiationChat(scriptData) {
           scriptName={scriptData.course_summary.name}
         />
       </Provider>,
-      aiDiffFabMountPoint
+      aiDiffFabMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

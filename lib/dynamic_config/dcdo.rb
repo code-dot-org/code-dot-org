@@ -69,7 +69,8 @@ class DCDOBase < DynamicConfigBase
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       'datadog-enabled': DCDO.get('datadog-enabled', false),
-      'onboarding-enabled': DCDO.get('onboarding-enabled', false)
+      'onboarding-enabled': DCDO.get('onboarding-enabled', false),
+      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false)
     }
   end
 end

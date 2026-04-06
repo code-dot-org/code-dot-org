@@ -12,7 +12,9 @@ markdown <<MARKDOWN
 * #### Offer teacher controls or dashboards
 * #### Focus on learning support rather than answer-giving
 
-#### Below are a few examples of AI tools developed specificaly for educational use. If you are interested, click on the logo to learn more. 
+#### Below are a few examples of AI tools developed specificaly for educational use.
+
+#### 👉 If you are interested, click on the logo to learn more. 
 
 <br>
 
@@ -30,56 +32,59 @@ markdown <<MARKDOWN
 
 <br>
 
-<div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 15px;">
 
-<!-- Row 1 -->
-<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
-  
-  <!-- Text -->
-  <div style="flex:1; padding:15px; font-size:16px;">
-    <strong>Khanmigo by Khan Academy</strong>
-    <p style="font-size:14px; margin:6px 0;">An AI tutor and teaching assistant that supports learning by guiding students through problems rather than giving direct answers.</p>
-  </div>
+<div style="display: grid; gap:16px; max-width:900px; margin:auto;">
 
-  <!-- Image -->
-  <a href="https://www.khanmigo.ai/" target="_blank" style="display:block; width:35%;">
-    <img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
-         alt="Khan Academy Logo" 
-         style="width:100%; height:100%; object-fit:cover;">
-  </a>
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Khanmigo by Khan Academy</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI tutor and teaching assistant that supports learning by guiding students through problems rather than giving direct answers.
+</div>
 </div>
 
-<!-- Row 2 -->
-<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
-  
-  <div style="flex:1; padding:15px; font-size:16px;">
-    <strong>SchoolAI</strong>
-    <p style="font-size:14px; margin:6px 0;">An AI learning assistant designed to adapt to each student’s learning style, pace, and interests. It provides on-demand help and guidance, supporting students as they work through concepts while also keeping teachers informed.</p>
-  </div>
-
-  <a href="https://schoolai.com/" target="_blank" style="display:block; width:35%;">
-    <img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
-         alt="SchoolAI Logo" 
-         style="width:100%; height:100%; object-fit:cover;">
-  </a>
-</div>
-
-<!-- Row 3 -->
-<div style="display:flex; align-items:stretch; background:#fff; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; overflow:hidden;">
-  
-  <div style="flex:1; padding:15px; font-size:16px;">
-    <strong>Grammarly</strong>
-    <p style="font-size:14px; margin:6px 0;">An AI-powered writing support tool that helps students generate ideas, receive feedback, and improve clarity in their work.</p>
-  </div>
-
-  <a href="https://www.grammarly.com/a/ai-for-students" target="_blank" style="display:block; width:35%;">
-    <img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
-         alt="Grammarly Logo" 
-         style="width:100%; height:100%; object-fit:cover;">
-  </a>
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
 </div>
 
 </div>
 
-<br>
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">SchoolAI</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI learning assistant designed to adapt to each student’s learning style, pace, and interests. It provides on-demand help and guidance while keeping teachers informed.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Grammarly</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI-powered writing support tool that helps students generate ideas, receive feedback, and improve clarity in their work.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+</div>
 MARKDOWN

@@ -4,7 +4,6 @@ metadata:
   name: cdo-dashboard
   labels:
     app.kubernetes.io/component: dashboard
-    code.ai/dns-name: studio-development
 spec:
   rules:
     - http:

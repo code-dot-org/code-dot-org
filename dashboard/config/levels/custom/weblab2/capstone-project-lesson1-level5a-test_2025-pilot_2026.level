@@ -1,0 +1,37 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T21:45:34.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "capstone-project-lesson1-project-template-test_2025-pilot_2026",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "# Final App Polish\r\n\r\n# Final App Polish\r\n\r\nUse Web Lab to review and finalize the version of your app you are ready to share.\r\n\r\nThis level is about choosing a version of your app that reflects the decisions you want to stand behind. You should make final adjustments here if they improve clarity, reliability, usability, or correctness—but you are not required to add new features.\r\n\r\nAs you work here:\r\n- Review how your app behaves in the situations you care most about.\r\n- Fix any issues that would make the app confusing, misleading, or unreliable for users.\r\n- Make small adjustments that improve clarity, trust, or usability.\r\n- Decide when your app is ready to be shared and explained to an audience.\r\n\r\nYou can return to this level as needed while preparing for your final presentation or reflection.\r\n\r\n**Don't forget** to use AI Tutor to help you understand or debug code as needed.\r\n\r\n",
+    "bubble_choice_description": "Use Web Lab to review and finalize the version of your app you are ready to share. This should reflect the decisions you are standing behind at this point in the project. ***(supports completing Milestone 5)***.",
+    "display_name": "Final App Polish",
+    "thumbnail_url": "https://images.code.org/5494ca590188877825b06cfa6593af39-dashboard.png",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:34.804+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level5a-test_2025-pilot\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level5a-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

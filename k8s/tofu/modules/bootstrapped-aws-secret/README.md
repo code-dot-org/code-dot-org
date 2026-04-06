@@ -32,3 +32,16 @@ module "my_secret_api_token" {
 }
 
 ```
+
+## Bootstrap with a randomly generated password
+
+Sometimes you just want to generate a password and upload it, this is supported too:
+
+```hcl
+
+module "my_secret_api_token" {
+  source = "../../modules/bootstrapped-aws-secret"
+
+  aws_secret_name             = "k8s/tofu/my_secret_api_token"
+  bootstrap_with_random_value = true
+}

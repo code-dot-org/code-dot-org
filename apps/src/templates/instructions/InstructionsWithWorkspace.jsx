@@ -3,14 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {
-  areAiChatToolsEnabled,
-  shouldShowAiTutor,
-} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
@@ -40,7 +35,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   };
 
   state = {
-    aiChatOpen: false,
+    tutorLayout: {isVisible: false, isOpen: false},
     // only used so that we can rerender when resized
     windowWidth: undefined,
     windowHeight: undefined,
@@ -100,8 +95,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
-  toggleAiChat = () => {
-    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  handleLayoutChange = tutorLayout => {
+    this.setState({tutorLayout});
   };
 
   componentDidMount() {
@@ -126,12 +121,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const aiTutorAvailableForLevel =
       window?.appOptions?.level?.aiTutorAvailable ?? false;
 
-    const aiChatAccessDisabled = !areAiChatToolsEnabled({
-      appName: labType,
-      aiChatAccessLevel,
-    });
-
-    const showAiTutor =
+    const shouldMountAiTutorContainer =
       !isShareView &&
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
       shouldShowAiTutor({
@@ -142,11 +132,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
-    const tutorSpace = this.state.aiChatOpen
+    const tutorSpace = this.state.tutorLayout.isOpen
       ? chatContainerSpace
       : sidebarSpace;
 
-    if (showAiTutor) {
+    if (this.state.tutorLayout.isVisible) {
       instructionsStyle = {...instructionsStyle, right: tutorSpace};
       workspaceStyle = {...workspaceStyle, right: tutorSpace};
     }
@@ -163,19 +153,9 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         >
           {children}
         </CodeWorkspaceContainer>
-        {showAiTutor && (
-          <AiChatDisabledProvider
-            chatDisabled={aiChatAccessDisabled}
-            chatDisabledMessage={
-              aiChatAccessDisabled
-                ? TEACHER_DISABLED_AI_CHAT_MESSAGE
-                : undefined
-            }
-          >
-            <AiTutorContainer
-              toggleAiChat={this.toggleAiChat}
-              aiChatOpen={this.state.aiChatOpen}
-            />
+        {shouldMountAiTutorContainer && (
+          <AiChatDisabledProvider>
+            <AiTutorContainer onLayoutChange={this.handleLayoutChange} />
           </AiChatDisabledProvider>
         )}
       </span>
@@ -188,10 +168,7 @@ export default connect(
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
     isShareView: state.pageConstants.isShareView,
-    aiChatAccessLevel:
-      (state.teacherSections
-        ? selectedSectionSelector(state)?.aiChatAccessLevel
-        : undefined) ?? state.currentUser.aiChatAccessLevel,
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

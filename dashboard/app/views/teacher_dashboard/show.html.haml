@@ -20,7 +20,6 @@
 
 = render partial: 'shared/emulate_print_media'
 
-%script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
 - if current_user
@@ -29,7 +28,5 @@
   - if current_user.teacher? && !current_user.accepted_latest_terms?
     - current_user.update_user_tos_version_accept()
     = render partial: 'layouts/implicit_new_user_terms_interstitial'
-  - if Policies::Ai.ai_differentiation_enabled?(current_user)
-    %div#ai-differentiation-fab-mount-point
 
 #teacher-dashboard

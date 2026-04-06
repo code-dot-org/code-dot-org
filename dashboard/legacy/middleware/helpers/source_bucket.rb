@@ -9,7 +9,7 @@ MAIN_JSON_FILENAME = 'main.json'.freeze unless defined? MAIN_JSON_FILENAME
 #
 class SourceBucket < BucketHelper
   def initialize
-    super CDO.sources_s3_bucket, CDO.sources_s3_directory
+    super(CDO.sources_s3_bucket, CDO.sources_s3_directory)
   end
 
   def allowed_file_name?(filename)
@@ -33,7 +33,7 @@ class SourceBucket < BucketHelper
   # Copies the animations at the given version and makes them the current version.
   def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
     # In most cases fall back on the generic restore behavior.
-    return super(encrypted_channel_id, filename, version_id, user_id) unless filename == MAIN_JSON_FILENAME
+    return super unless filename == MAIN_JSON_FILENAME
 
     owner_id, storage_app_id = get_storage_id_and_project_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename

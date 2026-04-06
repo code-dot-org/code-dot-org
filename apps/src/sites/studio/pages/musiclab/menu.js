@@ -7,6 +7,9 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(function () {
   createReactRoot(
     <MusicMenu />,
-    document.getElementById('musiclab-menu-container')
+    document.getElementById('musiclab-menu-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

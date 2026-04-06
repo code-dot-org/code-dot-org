@@ -271,7 +271,7 @@ class SectionsControllerTest < ActionController::TestCase
     get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/teacher_dashboard/sections/#{@flappy_section.id}/courses/flappy/units/1"}, {"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
+    assert_equal response_json, [{"text" => "Flappy Code", "value" => "/teacher_dashboard/sections/#{@flappy_section.id}/courses/flappy/units/1"}, {"text" => "Flappy Code", "value" => "/courses/flappy/units/1/lessons/1/levels/1"}]
   end
 
   describe '#retrieve_lessons_for_dropdown' do
