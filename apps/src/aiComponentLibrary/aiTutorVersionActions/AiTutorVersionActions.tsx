@@ -165,9 +165,9 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             </MuiButton>
             <WithTooltip
               tooltipProps={{
-                text: 'Cancel AI Changes',
+                text: 'Reject AI Changes',
                 size: 's',
-                tooltipId: 'cancel-ai-tutor-version-tooltip',
+                tooltipId: 'secondary-reject-ai-tutor-version-tooltip',
                 direction: 'onBottom',
               }}
             >
@@ -177,7 +177,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
                 size="small"
                 onClick={handleReject}
                 type="button"
-                aria-label="Cancel AI Changes"
+                aria-label="Reject AI Changes"
               >
                 <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
               </MuiIconButton>
