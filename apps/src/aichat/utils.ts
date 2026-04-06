@@ -1,4 +1,8 @@
-import {MAX_NAME_LENGTH} from './constants';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
+import {ValueOf} from '../types/utils';
+
+import {MAX_NAME_LENGTH, modelDescriptions} from './constants';
 import {AiCustomizations, ChatAsset, ToxicityCheckedField} from './types';
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
@@ -61,4 +65,25 @@ export const getLineReferenceText = (lineReference: {
   return lineReference.start === lineReference.end
     ? `(${lineReference.start})`
     : `(${lineReference.start}-${lineReference.end})`;
+};
+
+/**
+ * Returns a list of allowed file types to upload for the given model ID.
+ * If the model does not support multimodal input, returns an empty list.
+ */
+export const getAllowedFileTypes = (
+  modelId: ValueOf<typeof AiChatModelIds>
+) => {
+  const model = modelDescriptions.find(model => model.id === modelId);
+  if (!model || !model.multimodal) {
+    return [];
+  }
+  // Currently, our system only supports moderating images files. For the
+  // Gemini 2.5 Flash Image model, we have stricter input criteria so only
+  // safe image uploads are allowed. For other multimodal models, we don't
+  // do any input moderation, and allow both image and PDF uploads.
+  const images = ['.jpg', '.jpeg', '.png'];
+  return modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+    ? images
+    : [...images, '.pdf'];
 };
