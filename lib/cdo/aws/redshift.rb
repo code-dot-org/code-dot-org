@@ -94,11 +94,10 @@ module Cdo
 
         resp.records.each do |row|
           values = row.map do |field|
-            # Explicitly check .nil? instead of .present? to prevent 'false' booleans from evaluating to 'nil'.
             if field.is_null
               nil
             elsif !field.string_value.nil?
-              field.string_value
+              field.string_value.strip # Trim trailing spaces from fixed width CHAR or BPCHAR columns, common in system tables.
             elsif !field.long_value.nil?
               field.long_value
             elsif !field.boolean_value.nil?
