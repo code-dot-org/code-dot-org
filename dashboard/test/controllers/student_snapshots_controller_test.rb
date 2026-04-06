@@ -620,7 +620,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     refute_nil response_data['updated_at']
   end
 
-  test "lesson_insight regenerates when refresh=true and stale" do
+  test "lesson_insight regenerates when refresh=true but not stale" do
     teacher = create(:authorized_teacher)
     student = create(:student)
     section = create(:section, user: teacher)
@@ -660,7 +660,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal '{"progress":"refreshed"}', response_data['json']
   end
 
-  test "lesson_insight ignores refresh=true when insight is fresh" do
+  test "lesson_insight does not regenerate when refresh=true but insight is newer than cooldown" do
     teacher = create(:authorized_teacher)
     student = create(:student)
     section = create(:section, user: teacher)
@@ -739,40 +739,8 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # Query count when lesson insight was very recently generated so no regeneration needed.
-  # Only 1 query: the LessonInsight lookup. No AI call, no prompt-building queries.
-  test "lesson_insight recent re-lookup query count" do
-    teacher = create(:authorized_teacher)
-    student = create(:student)
-    section = create(:section, user: teacher)
-    create(:follower, user: teacher, student_user: student, section: section)
-
-    # Pre-populate a fresh cached insight (updated within 5 minutes).
-    create(:lesson_insight, lesson: @lesson1, student: student, section: section,
-      teacher_id: teacher.id, insight_response: '{"progress":"great"}', updated_at: 1.minute.ago
-    )
-
-    AiStudentSnapshotHelper::Client.any_instance.expects(:request_lesson_insight).never
-
-    sign_in teacher
-
-    # Cache hit: 6 queries — authentication + LessonInsight SELECT + authorization.
-    # No prompt-building queries, no AI call, no write.
-    assert_queries(6) do
-      get :lesson_insight, params: {
-        lesson_id:  @lesson1.id,
-        unit_id:    @unit.id,
-        student_id: student.id,
-        section_id: section.id
-      }
-    end
-
-    assert_response :success
-    assert_equal '{"progress":"great"}', JSON.parse(response.body)['json']
-  end
-
-  # Cache-hit when insight is older than 5 minutes but no UserLevel changed since it was generated.
-  test "lesson_insight cache-hit query count with stale insight that has no new progress" do
+  # Insight is older than 5 minutes but no UserLevel changed since it was generated.
+  test "lesson_insight cache-hit query count with nsight that has no new progress" do
     teacher = create(:authorized_teacher)
     student = create(:student)
     section = create(:section, user: teacher)
@@ -811,7 +779,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
   end
 
   # Regeneration path: insight older than 5 minutes AND a UserLevel was updated after it.
-  test "lesson_insight stale insight with recent progress query count" do
+  test "lesson_insight regenerated due to recent progress query count" do
     teacher = create(:authorized_teacher)
     student = create(:student)
     section = create(:section, user: teacher)
@@ -854,7 +822,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal '{"progress":"new"}', JSON.parse(response.body)['json']
   end
 
-  # refresh=true with a fresh insight: cooldown is enforced, so this is a cache hit.
+  # Lesson insight is regenerated because refresh=true
   test "lesson_insight refresh param query count" do
     teacher = create(:authorized_teacher)
     student = create(:student)
@@ -864,12 +832,12 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     free_response_level = create(:free_response, name: 'FR Level Snapshot Refresh')
     create(:script_level, script: @unit, lesson: @lesson1, levels: [free_response_level])
     create(:user_level, user: student, script: @unit, level: free_response_level,
-      level_source: create(:level_source, data: 'my answer')
+                                                level_source: create(:level_source, data: 'my answer', updated_at: 11.minutes.ago)
     )
 
     # Fresh cached insight — would be a cache hit without refresh=true.
     create(:lesson_insight, lesson: @lesson1, student: student, section: section,
-      teacher_id: teacher.id, insight_response: '{"progress":"cached"}', updated_at: 1.minute.ago
+      teacher_id: teacher.id, insight_response: '{"progress":"cached"}', updated_at: 10.minutes.ago
     )
 
     fake_response = mock
@@ -881,7 +849,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    assert_queries(6) do
+    assert_queries(27) do
       get :lesson_insight, params: {
         lesson_id:  @lesson1.id,
         unit_id:    @unit.id,

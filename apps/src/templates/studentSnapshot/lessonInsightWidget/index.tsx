@@ -115,6 +115,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
           label: 'Refresh Insight',
           value: 'refresh_insight',
           isOptionDisabled:
+            loading ||
             !insightUpdatedAt ||
             Date.now() - new Date(insightUpdatedAt).getTime() <
               LESSON_INSIGHT_COOLDOWN_MS,
