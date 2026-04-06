@@ -37,8 +37,8 @@ interface TeacherHomepageProps {
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const isMiniTutorialEnabled =
-    experiments.isEnabled(experiments.MINI_TUTORIAL) ||
-    DCDO.get('onboarding-enabled', true);
+    experiments.isEnabled(experiments.ONBOARDING) ||
+    DCDO.get('onboarding-enabled', false);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);

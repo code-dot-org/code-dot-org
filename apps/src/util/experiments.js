@@ -67,8 +67,8 @@ experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 experiments.LESSON_TUTOR = 'lesson-tutor';
 // Enable AI Content Safety image moderation
 experiments.AI_CONTENT_SAFETY = 'ai-content-safety';
-// Enable Mini-Tutorial experiments
-experiments.MINI_TUTORIAL = 'mini-tutorial';
+// Enable Onboarding experiments
+experiments.ONBOARDING = 'onboarding';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
