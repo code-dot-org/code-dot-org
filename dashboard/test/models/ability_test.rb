@@ -1002,6 +1002,7 @@ class AbilityTest < ActiveSupport::TestCase
     teacher = create(:teacher)
     student = create(:student)
     section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
     section.add_student student
 
     Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
@@ -1013,10 +1014,10 @@ class AbilityTest < ActiveSupport::TestCase
     teacher = create(:teacher)
     student = create(:student)
     section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
     section.add_student student
 
-    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(false)
-
+    refute Policies::DemoSections.demo_student?(student.id)
     assert Ability.new(teacher).can?(:manage, student)
   end
 
@@ -1024,6 +1025,7 @@ class AbilityTest < ActiveSupport::TestCase
     teacher = create(:teacher)
     student = create(:student)
     section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
     section.add_student student
     user_level = create(:user_level, user: student)
 
@@ -1032,26 +1034,13 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(teacher).can?(:manage, user_level)
   end
 
-  test 'demo students: teachers cannot manage their UserLevel records' do
+  test 'teachers can manage UserLevel for non-demo students' do
     teacher = create(:teacher)
     student = create(:student)
     section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
     section.add_student student
     user_level = create(:user_level, user: student)
-
-    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
-
-    refute Ability.new(teacher).can?(:manage, user_level)
-  end
-
-  test 'non-demo students: teachers can manage their UserLevel records' do
-    teacher = create(:teacher)
-    student = create(:student)
-    section = create(:section, user: teacher)
-    section.add_student student
-    user_level = create(:user_level, user: student)
-
-    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(false)
 
     assert Ability.new(teacher).can?(:manage, user_level)
   end
