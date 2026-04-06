@@ -51,7 +51,7 @@ const ADVANCED_PROJECT_TYPES = [
   'applab',
   'gamelab',
   'pythonlab',
-  'weblab',
+  'weblab2',
   'starwars',
 ];
 
@@ -181,7 +181,7 @@ export class StartNewProject extends React.Component {
         {!!defaultProjectTypes.length && (
           <>
             <h4 className="new-project-heading" style={styles.headingStartNew}>
-              {i18n.projectStartNew()}
+              {i18n.projectCreateNew()}
             </h4>
             <NewProjectButtons projectTypes={defaultProjectTypes} />
           </>
