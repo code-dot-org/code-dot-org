@@ -1,15 +1,19 @@
 import {Typography} from '@mui/material';
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {LessonDeepDiveData} from './types';
 
+import styles from './reflection.module.scss';
+
 const REFLECTION_VALUES = Object.values(LessonObjectiveReflectionValues);
-type ReflectionValue = (typeof REFLECTION_VALUES)[number] | null;
+export type ReflectionValue = (typeof REFLECTION_VALUES)[number];
 
 interface LessonObjectiveReflectionProps {
   objective: LessonDeepDiveData['objectives'][number];
+  selected: ReflectionValue | null;
+  onSelectionChange: (objectiveId: string, value: ReflectionValue) => void;
 }
 
 const BUTTONS: {value: ReflectionValue; emoji: string; label: string}[] = [
@@ -24,34 +28,31 @@ const BUTTONS: {value: ReflectionValue; emoji: string; label: string}[] = [
 
 const LessonObjectiveReflection: FC<LessonObjectiveReflectionProps> = ({
   objective,
-}) => {
-  const [selected, setSelected] = useState<ReflectionValue>(null);
-
-  return (
-    <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-      <Typography variant="h6" component="h6" style={{margin: 0, flex: 1}}>
-        {objective.description}
-      </Typography>
-      {BUTTONS.map(({value, emoji, label}) => (
-        <button
-          key={value}
-          type="button"
-          onClick={() => setSelected(value)}
-          aria-label={label}
-          aria-pressed={selected === value}
-          style={{
-            fontSize: '1.5rem',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            opacity: selected === null || selected === value ? 1 : 0.4,
-          }}
-        >
-          {emoji}
-        </button>
-      ))}
-    </div>
-  );
-};
+  selected,
+  onSelectionChange,
+}) => (
+  <div className={styles.objectiveRow}>
+    <Typography
+      variant="h6"
+      component="h6"
+      className={styles.objectiveDescription}
+    >
+      {objective.description}
+    </Typography>
+    {BUTTONS.map(({value, emoji, label}) => (
+      <button
+        key={value}
+        type="button"
+        onClick={() => onSelectionChange(objective.id, value)}
+        aria-label={label}
+        aria-pressed={selected === value}
+        className={styles.emojiButton}
+        style={{opacity: selected === null || selected === value ? 1 : 0.4}}
+      >
+        {emoji}
+      </button>
+    ))}
+  </div>
+);
 
 export default LessonObjectiveReflection;
