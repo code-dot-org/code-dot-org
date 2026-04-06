@@ -68,9 +68,7 @@ export const uploadFiles = createAppAsyncThunk<
       } else {
         fileCountImage += 1;
         // Moderate images before uploading.
-        const moderationResult = await moderateImage(file, 'aichat', {
-          assetUrl: buildAssetUrl(asset),
-        });
+        const moderationResult = await moderateImage(file, 'aichat', {});
         if (moderationResult === 'flagged') {
           imageFileFlagged = true;
           dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
