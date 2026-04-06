@@ -30,7 +30,7 @@ const alerts = {
     'danger',
   ] as const,
   imageFileFlagged: [
-    'One or more of your images has been flagged by our content moderation policy and has not been attached.',
+    'One or more of your images have been flagged by our content moderation policy and have not been attached.',
     'danger',
   ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
