@@ -22,12 +22,6 @@ const initialState: Weblab2ConsoleState = {
 
 const MAX_LOG_ENTRIES = 500;
 
-// Strips trailing filenames from messages like "Image not found: cat.png"
-// so that resource errors with different filenames are grouped together.
-const getGroupKey = (level: ConsoleLogLevel, message: string) => {
-  return `${level}:${message.replace(/: [\w.-]+\.\w+$/, '')}`;
-};
-
 const consoleSlice = createSlice({
   name: 'console',
   initialState,
@@ -37,7 +31,7 @@ const consoleSlice = createSlice({
       action: PayloadAction<{level: ConsoleLogLevel; args: string[]}>
     ) => {
       const message = action.payload.args.join(' ');
-      const groupKey = getGroupKey(action.payload.level, message);
+      const groupKey = `${action.payload.level}:${message}`;
       const existingIndex = state.logs.findIndex(
         log => log.groupKey === groupKey
       );
