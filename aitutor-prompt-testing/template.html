@@ -12,10 +12,18 @@
       font-size: 13px;
       background: #0f1117;
       color: #e2e8f0;
-      height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
+    }
+
+    /* Fixed-height tool area (header + panels) */
+    #toolArea {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     /* ── Header ── */
@@ -407,6 +415,7 @@
 </head>
 <body>
 
+<div id="toolArea">
 <header>
   <h1>🤖 AI Tutor Prompt Tool</h1>
   <div class="controls">
@@ -479,6 +488,7 @@
     </div>
   </div>
 </main>
+</div><!-- #toolArea -->
 
 <div id="toast">Copied to clipboard!</div>
 

@@ -439,7 +439,7 @@ interface ItemScore {
   state: string;
   videoRequested: boolean;
   expectedVideos: string[];
-  foundVideos: string[];
+  validVideos: string[];
   hallucinated: string[];
   missingExpected: string[];
   unexpectedPresent: string[];
@@ -482,7 +482,7 @@ function renderResults(result: EvalResult, runId: string): void {
       <td>${s.videoRequested ? '✓' : ''}</td>
       <td class="${s.pass ? 'pass-yes' : 'pass-no'}">${s.pass ? '✓' : '✗'}</td>
       <td>${s.expectedVideos.map(v => v.replace('_V1.json', '')).join(', ') || '—'}</td>
-      <td>${s.foundVideos.map(v => v.replace('_V1.json', '')).join(', ') || '—'}</td>
+      <td>${s.validVideos.map(v => v.replace('_V1.json', '')).join(', ') || '—'}</td>
       <td class="pass-no">${s.missingExpected.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
       <td class="pass-no">${s.unexpectedPresent.map(v => v.replace('_V1.json', '')).join(', ') || ''}</td>
       <td class="pass-no">${s.hallucinated.join(', ') || ''}</td>
