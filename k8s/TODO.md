@@ -101,12 +101,6 @@ evaluate proper CPU and memory request for `controller`. The current proposed `c
 Fargate OOMs, but `argocd-application-controller` is a different workload and
 needs its own CPU / RAM profiling before we lock in requests / limits.
 
-### Manage ArgoCD with ArgoCD
-
-Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
-`ServerSideApply=true` requirement for self-management:
-<https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
-
 ### Dex
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
