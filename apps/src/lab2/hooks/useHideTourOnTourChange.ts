@@ -1,7 +1,8 @@
 import {useEffect, useRef} from 'react';
 import {Tour} from 'shepherd.js';
 
-// Automatically hides the previous tour when the tour instance changes (i.e. on level change).
+// Automatically hides the previous tour when the tour instance changes (i.e. on level change),
+// or the component unmounts.
 // This will avoid showing tours that are no longer relevant.
 const useHideTourOnTourChange = (tour: Tour | null) => {
   const prevTourRef = useRef<Tour | null>(null);
