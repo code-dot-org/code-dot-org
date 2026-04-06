@@ -2,17 +2,16 @@ import {render, screen, fireEvent, act} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  saveUserLessonReflection,
+  saveUserLessonObjectiveReflection,
+} from '@cdo/apps/aiTutor/reflectionsApi';
 import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox';
 
 jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
   saveUserLessonReflection: jest.fn(),
   saveUserLessonObjectiveReflection: jest.fn(),
 }));
-
-import {
-  saveUserLessonReflection,
-  saveUserLessonObjectiveReflection,
-} from '@cdo/apps/aiTutor/reflectionsApi';
 
 const saveReflectionMock = saveUserLessonReflection as jest.Mock;
 const saveObjectiveMock = saveUserLessonObjectiveReflection as jest.Mock;
