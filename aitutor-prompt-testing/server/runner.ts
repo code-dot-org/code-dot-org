@@ -13,6 +13,7 @@ export interface RunItem {
   systemPrompt: string;
   studentMessage: string;
   expectedVideos: string[];
+  validVideoUrls: string[];    // exact URLs injected into the system prompt
   response: string | null;
   model: string;
   inputTokens: number | null;
@@ -81,6 +82,10 @@ function buildRunItems(
       const evalKey = `${levelId}_${state}_${videoRequested ? 'VIDEO' : 'NOVIDEO'}`;
       const expectedVideos = evalData[evalKey]?.expectedVideos ?? [];
 
+      const validVideoUrls = videoFileData.map(
+        v => `/assets/js/json/${v.filename.replace('.json', '')}${v.hash}.json`
+      );
+
       items.push({
         runId,
         itemIndex: index++,
@@ -90,6 +95,7 @@ function buildRunItems(
         systemPrompt: assembled.systemPrompt,
         studentMessage: assembled.studentMessage,
         expectedVideos,
+        validVideoUrls,
         response: null,
         model: MODEL,
         inputTokens: null,

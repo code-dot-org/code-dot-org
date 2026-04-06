@@ -1,28 +1,35 @@
 import {createReadStream} from 'fs';
 import {createInterface} from 'readline';
-import {VIDEO_OPTIONS} from '../src/aiTutorTestTypes';
 import {RunItem} from './runner';
 
-// Strip the hash suffix from a hashed video filename to recover the base name.
-// e.g. "Conditionals_V1bcd2efg3hij4klm5nop678.json" → "Conditionals_V1.json"
-const VIDEO_STEMS = VIDEO_OPTIONS.map(v => v.replace('.json', ''));
+const VIDEO_STEMS = [
+  'Variables_V1',
+  'Functions_V1',
+  'While_Loops_V1',
+  'Conditionals_V1',
+  'Painter_Object_V1',
+  'Functions_With_Parameters_V1',
+  'If_Else_V1',
+];
 
-function baseFilename(hashed: string): string | null {
-  const name = hashed.replace(/\.json$/, '');
-  const stem = VIDEO_STEMS.find(s => name.startsWith(s));
-  return stem ? `${stem}.json` : null;
-}
+const STEM_PATTERN = VIDEO_STEMS.join('|');
 
-// Extract all video filenames linked in a response string.
-// Link format: [text](/assets/js/json/FILENAME.json)
-function extractVideoLinks(response: string): string[] {
-  const re = /\[[^\]]*\]\(\/assets\/js\/json\/([^)]+\.json)\)/g;
-  const found: string[] = [];
+// A video attempt is any markdown link whose URL contains 'assets/js/json'
+// OR contains one of the 7 known video stems.
+function extractVideoAttempts(response: string): string[] {
+  const re = /\[([^\]]*)\]\(([^)]+)\)/g;
+  const attempts: string[] = [];
   let m: RegExpExecArray | null;
   while ((m = re.exec(response)) !== null) {
-    found.push(m[1]);
+    const url = m[2];
+    if (
+      url.includes('assets/js/json') ||
+      new RegExp(STEM_PATTERN).test(url)
+    ) {
+      attempts.push(url);
+    }
   }
-  return found;
+  return attempts;
 }
 
 export interface ItemScore {
@@ -31,11 +38,10 @@ export interface ItemScore {
   state: string;
   videoRequested: boolean;
   expectedVideos: string[];
-  foundVideos: string[];       // base filenames recovered from response links
-  hallucinated: string[];      // links that don't match any known video
-  missingExpected: string[];   // expected videos not found in response
-  unexpectedPresent: string[]; // found videos not in expectedVideos
-  correctNoVideo: boolean;     // true when expected=[] and response has no links
+  validVideos: string[];         // attempts that matched a known injected URL
+  hallucinated: string[];        // attempts that did not match any known URL
+  missingExpected: string[];     // expected videos not found
+  unexpectedPresent: string[];   // valid videos not in expectedVideos
   pass: boolean;
   error: string | null;
 }
@@ -51,26 +57,44 @@ export interface EvalResult {
 }
 
 function scoreItem(item: RunItem): ItemScore {
-  const linkedFiles = item.response ? extractVideoLinks(item.response) : [];
+  const validUrlSet = new Set(item.validVideoUrls);
 
+  const attempts = item.response ? extractVideoAttempts(item.response) : [];
+
+  const validVideos: string[] = [];
   const hallucinated: string[] = [];
-  const foundVideos: string[] = [];
 
-  for (const hashed of linkedFiles) {
-    const base = baseFilename(hashed);
-    if (base) {
-      foundVideos.push(base);
+  for (const url of attempts) {
+    if (validUrlSet.has(url)) {
+      // Map exact URL back to the base filename (e.g. "Conditionals_V1.json")
+      const base = item.validVideoUrls.indexOf(url);
+      validVideos.push(item.expectedVideos[base] ?? url);
     } else {
-      hallucinated.push(hashed);
+      hallucinated.push(url);
     }
   }
 
+  // Map valid URLs to base filenames for comparison with expectedVideos
+  const validUrlToFilename = new Map<string, string>();
+  item.validVideoUrls.forEach((url, i) => {
+    // validVideoUrls order matches VIDEO_STEMS order; expectedVideos uses filenames
+    // We need the filename — derive from the URL's path segment
+    const match = url.match(/\/([^/]+)\.json$/);
+    if (match) {
+      const stem = VIDEO_STEMS.find(s => match[1].startsWith(s));
+      if (stem) validUrlToFilename.set(url, `${stem}.json`);
+    }
+  });
+
+  const foundFilenames = attempts
+    .filter(url => validUrlSet.has(url))
+    .map(url => validUrlToFilename.get(url) ?? url);
+
+  const foundSet = new Set(foundFilenames);
   const expectedSet = new Set(item.expectedVideos);
-  const foundSet = new Set(foundVideos);
 
   const missingExpected = item.expectedVideos.filter(v => !foundSet.has(v));
-  const unexpectedPresent = foundVideos.filter(v => !expectedSet.has(v));
-  const correctNoVideo = item.expectedVideos.length === 0 && foundVideos.length === 0;
+  const unexpectedPresent = foundFilenames.filter(v => !expectedSet.has(v));
 
   const pass =
     hallucinated.length === 0 &&
@@ -83,11 +107,10 @@ function scoreItem(item: RunItem): ItemScore {
     state: item.state,
     videoRequested: item.videoRequested,
     expectedVideos: item.expectedVideos,
-    foundVideos,
+    validVideos: foundFilenames,
     hallucinated,
     missingExpected,
     unexpectedPresent,
-    correctNoVideo,
     pass,
     error: item.error,
   };
