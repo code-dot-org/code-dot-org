@@ -638,6 +638,22 @@ function createWebpackConfig({
                   );
                 },
               },
+              mui: {
+                name: 'mui-dependencies',
+                priority: 31,
+                chunks: chunk => {
+                  const chunkNames = Object.keys({
+                    ...appsEntries,
+                    ...CODE_STUDIO_ENTRIES,
+                    ...INTERNAL_ENTRIES,
+                    ...PEGASUS_ENTRIES,
+                    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+                    ...SHARED_ENTRIES,
+                  });
+                  return chunkNames.includes(chunk.name);
+                },
+                test: module => /@mui\//.test(module.resource),
+              },
               p5lab: {
                 name: 'p5-dependencies',
                 priority: 10,
