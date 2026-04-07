@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -30,7 +31,6 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  buildMessagesForModelHistory,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
