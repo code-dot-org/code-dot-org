@@ -25,12 +25,12 @@ describe('foorm linting', () => {
     expect(annotations.length === 2).toBeTruthy();
     expect(
       annotations[1].message ===
-        'Question names should only contain letters and underscores.'
+        'Question names should only contain letters, numbers, and underscores.'
     ).toBeTruthy();
     expect(annotations[0].severity === 'error').toBeTruthy();
     expect(
       annotations[1].message ===
-        'Question names should only contain letters and underscores.'
+        'Question names should only contain letters, numbers, and underscores.'
     ).toBeTruthy();
     expect(annotations[1].severity === 'error').toBeTruthy();
   });
