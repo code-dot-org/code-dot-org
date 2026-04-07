@@ -902,6 +902,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPictureUrl: student.secret_picture_url,
       loginType: loginType,
       sectionId: sectionId,
+      isDemoStudent: !!student.is_demo_student,
       sharingDisabled: student.sharing_disabled,
       hasEverSignedIn: student.has_ever_signed_in,
       dependsOnThisSectionForLogin: student.depends_on_this_section_for_login,

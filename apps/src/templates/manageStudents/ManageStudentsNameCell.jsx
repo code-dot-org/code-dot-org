@@ -1,3 +1,4 @@
+import {Chip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -23,6 +24,7 @@ class ManageStudentNameCell extends Component {
     name: PropTypes.string.isRequired,
     username: PropTypes.string,
     email: PropTypes.string,
+    isDemoStudent: PropTypes.bool,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
 
@@ -59,14 +61,24 @@ class ManageStudentNameCell extends Component {
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
-              <a
-                style={tableLayoutStyles.link}
-                href={studentUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {name}
-              </a>
+              <span style={styles.nameWithChip}>
+                <a
+                  style={tableLayoutStyles.link}
+                  href={studentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {name}
+                </a>
+                {this.props.isDemoStudent && (
+                  <Chip
+                    label="Demo"
+                    size="small"
+                    color="default"
+                    sx={{ml: 1, height: 18, maxHeight: 18}}
+                  />
+                )}
+              </span>
             )}
             {!studentUrl && <span>{name}</span>}
             {username && (
@@ -97,6 +109,10 @@ class ManageStudentNameCell extends Component {
 }
 
 const styles = {
+  nameWithChip: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
   inputBox: {
     width: NAME_CELL_INPUT_WIDTH,
   },
