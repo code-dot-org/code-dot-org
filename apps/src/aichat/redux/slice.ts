@@ -299,7 +299,11 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{
         key: string;
-        status: 'uploaded' | 'uploadFailed' | 'sizeLimitExceeded';
+        status:
+          | 'uploaded'
+          | 'uploadFailed'
+          | 'sizeLimitExceeded'
+          | 'imageFileFlagged';
       }>
     ) {
       const {key, status} = action.payload;
