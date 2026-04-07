@@ -10,7 +10,7 @@ interface ShowCodeDialogContentProps {
 const ShowCodeDialogContent = ({code}: ShowCodeDialogContentProps) => {
   return (
     <>
-      <BodyThreeText>
+      <BodyThreeText id="dsco-dialog-description">
         Even top universities teach block-based coding (e.g., Berkeley,
         Harvard). But under the hood, the blocks you have assembled can also be
         shown in JavaScript, the world's most widely used coding language:

@@ -28,6 +28,10 @@ const SettingsDialogContent = ({
 
   return (
     <>
+      <p id="dsco-dialog-description" hidden>
+        This dialog has several dropdowns to select different visual themes and
+        the language
+      </p>
       <SimpleDropdown
         name="theme"
         labelText="Block Color Theme"

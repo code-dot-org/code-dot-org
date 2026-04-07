@@ -49,6 +49,7 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
   protected _container?: HTMLDivElement | HTMLSpanElement;
   // Holds the blocks/categories in the toolbox
   protected _toolbox?: Toolbox;
+  protected _themeChangedEvent: () => void;
 
   /**
    * Constructs a driver to power a Blockly Workspace in the given container.
@@ -71,9 +72,11 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     this._container = container;
 
     this.driver.initialize(this);
-    this.driver.addListener(DriverEvent.ThemeChanged, () => {
+    this._themeChangedEvent = () => {
       this._workspace?.setTheme(this.driver.theme.instance);
-    });
+    };
+    console.log('construct', this);
+    this.driver.addListener(DriverEvent.ThemeChanged, this._themeChangedEvent);
   }
 
   get driver(): Driver<T> {
@@ -261,8 +264,13 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
    * Removes the workspace.
    */
   deconstruct() {
+    console.log('deconstruct', this);
     // Remove from the Driver's awareness
     this.driver.uninitialize(this);
+    this.driver.removeListener(
+      DriverEvent.ThemeChanged,
+      this._themeChangedEvent,
+    );
 
     // Deconstruct the workspace
     this._workspace?.dispose();
