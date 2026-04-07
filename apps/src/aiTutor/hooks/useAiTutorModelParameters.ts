@@ -57,7 +57,8 @@ export const useAiTutorModelParameters = (
   useEffect(() => {
     const promptString =
       options?.aiTutorSystemPrompt ??
-      defaultSystemPrompt + getJsonVideoPrompt(options?.enableTutorVideos ?? false);
+      defaultSystemPrompt +
+        getJsonVideoPrompt(options?.enableTutorVideos ?? false);
 
     let mounted = true;
 
