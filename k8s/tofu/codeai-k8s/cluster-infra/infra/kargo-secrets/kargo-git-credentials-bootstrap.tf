@@ -2,6 +2,10 @@
 # Bootstrap Secrets to AWS Secrets Manager (if variables set)
 #==============================================================
 
+locals {
+  kargo_secret_prefix = "k8s/tofu/${var.cluster_name}/kargo"
+}
+
 module "kargo_k8s_gitops_repo_username" {
   source = "../../../../modules/bootstrapped-aws-secret"
 

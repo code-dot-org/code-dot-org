@@ -3,9 +3,7 @@ locals {
   cluster_outs = data.terraform_remote_state.cluster.outputs
 
   cluster_name      = local.cluster_outs.cluster_name
-  cluster_endpoint  = local.cluster_outs.cluster_endpoint
   cluster_region    = local.cluster_outs.cluster_region
-  cluster_version   = local.cluster_outs.cluster_version
   cluster_subdomain = local.cluster_outs.cluster_subdomain
 
   oidc_provider_arn       = local.cluster_outs.oidc_provider_arn

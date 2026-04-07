@@ -6,7 +6,7 @@ variable "dex_google_client_secret" {
 }
 
 variable "dex_google_client_id" {
-  description = "Google OAuth client ID for Dex. Published through codeai-cluster-config for cluster-infra-argocd chart wiring."
+  description = "Google OAuth client ID for Dex. Published through codeai-cluster-config.values.yaml for chart wiring."
   type        = string
   default     = "254945981659-9p8ctpobals7gmah0ptlt70t29eflira.apps.googleusercontent.com"
 }
