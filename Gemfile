@@ -119,7 +119,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '~> 4.0'
+  gem 'eyes_selenium', '6.12.10' # >=6.0.4 is required for Ruby 3.2, <6.12.11 is required to avoid NameError flakiness
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
