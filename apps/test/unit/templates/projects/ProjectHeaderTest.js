@@ -46,7 +46,7 @@ describe('ProjectHeader', () => {
     renderDefault();
 
     expect(
-      screen.getByText('Over 200 million projects created')
+      screen.getByText('Over 200 million projects created!')
     ).toBeInTheDocument();
   });
 });

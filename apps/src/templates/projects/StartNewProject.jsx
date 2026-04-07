@@ -42,6 +42,7 @@ const GAMES_AND_EVENTS_PROJECT_TYPES = [
   'starwarsblocks',
   'bounce',
   'sports',
+  'starwars',
   'basketball',
 ];
 
