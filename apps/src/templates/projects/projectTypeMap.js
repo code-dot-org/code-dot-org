@@ -21,7 +21,7 @@ export const PROJECT_TYPE_MAP = {
   game_design: i18n.projectTypeGameDesign(),
   gamelab: i18n.projectTypeGamelab(),
   playlab: i18n.projectTypePlaylab(),
-  weblab: i18n.projectTypeWeblabLegacy(),
+  weblab: 'Web Lab (legacy)',
   bounce: i18n.projectTypeBounce(),
   flappy: i18n.projectTypeFlappy(),
   starwars: i18n.projectTypeStarwars(),
