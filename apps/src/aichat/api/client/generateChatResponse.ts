@@ -119,8 +119,7 @@ export async function generateChatResponse(
       ) {
         return {
           response: text,
-          status:
-            AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR_OR_SKIPPED,
+          status: AiRequestExecutionStatus.FAILURE,
         };
       }
     }

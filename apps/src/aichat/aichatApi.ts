@@ -323,19 +323,6 @@ function getUpdatedMessages(
           status: AiInteractionStatus.MODEL_RATE_LIMITED,
         },
       ];
-    case AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR_OR_SKIPPED:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.OK,
-        },
-        {
-          chatMessageText: modelResponse,
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.ERROR,
-        },
-      ];
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }
