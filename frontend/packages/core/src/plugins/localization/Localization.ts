@@ -59,7 +59,6 @@ export interface LocalizationEventMap {
 
 type Listener<T> = (payload: T) => void;
 
-// A type mapping for the event emitter
 class TypedEventEmitter<
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any -- any callback data */
   Events extends Record<string, any>,
