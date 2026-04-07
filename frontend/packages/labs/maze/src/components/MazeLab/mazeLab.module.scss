@@ -10,6 +10,10 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+
+    .start-over-button:hover {
+      background-color: var(--background-error-light);
+    }
   }
 
   .block-count {

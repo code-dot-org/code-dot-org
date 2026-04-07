@@ -9,10 +9,19 @@ export const Tabs = {
 
 export type TabsType = (typeof Tabs)[keyof typeof Tabs];
 
-export interface Setting {
+export interface SettingBase {
   id: string;
   label: string;
   options: {value: string; text: string}[];
-  selectedValue: string | undefined;
   onChange: (value: string) => void;
 }
+
+export interface SettingWithMaybeValue extends SettingBase {
+  selectedValue: string | undefined;
+}
+
+export interface SettingWithValue extends SettingBase {
+  selectedValue: string;
+}
+
+export type Setting = SettingWithValue | SettingWithMaybeValue;

@@ -284,6 +284,7 @@ const MazeLab = () => {
                   />
                 </WithTooltip>
                 <Button
+                  className={moduleStyles.startOverButton}
                   size="xs"
                   type="secondary"
                   color="gray"

@@ -1,6 +1,5 @@
 import {registerLevelKindSchema} from '@code-dot-org/core/api';
 import {useApiClient} from '@code-dot-org/core/api';
-import {darkTheme} from '@code-dot-org/blockly-workspace/themes';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import type {BlocklyLabWithSourcesProps} from '@code-dot-org/lab';
@@ -43,9 +42,7 @@ const App = ({
           standaloneProjectType="music"
           channelId={props.channelId || channelId}
           blocklyProps={_ => {
-            console.log('polling', blocks);
             return {
-              theme: darkTheme,
               renderer: ThrasosRenderer,
               blocks,
               plugins,

@@ -1,7 +1,7 @@
 import type * as Blockly from 'blockly/core';
 
-import {type ProcedureBlock} from '@code-dot-org/blockly-workspace';
-import {BlockLimitMap} from '@code-dot-org/blockly-workspace/plugins/blockLimits';
+import type {ProcedureBlock} from '@code-dot-org/blockly-workspace';
+import type {BlockLimitMap} from '@code-dot-org/blockly-workspace/plugins/blockLimits';
 import {
   getAllGeneratedCode,
   getAllUsedBlocks,

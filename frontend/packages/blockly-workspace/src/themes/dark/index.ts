@@ -7,7 +7,7 @@ import {definition as DefaultDefinition} from '../default';
  * The default blockly theme used to typically style the blocks in labs.
  */
 export const definition = {
-  name: 'dark',
+  name: 'default-dark',
   option: 'Modern Dark Theme',
   blockLimits: {
     indicator: {

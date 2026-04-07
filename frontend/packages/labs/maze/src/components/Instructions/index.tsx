@@ -21,7 +21,6 @@ const Instructions = ({
 }: InstructionsProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  console.log('hm', authoredHints);
   const [confirmingHint, setConfirmingHint] = useState<boolean>(false);
   const [hintsShown, setHintsShown] = useState<number>(0);
 

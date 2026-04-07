@@ -1,5 +1,7 @@
 import {useCallback, useMemo, type PropsWithChildren} from 'react';
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {themes} from '@code-dot-org/blockly-workspace/themes';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import type {BlocklyProviderProps} from '@code-dot-org/blockly-workspace/contexts';
 import {BlocklyProvider} from '@code-dot-org/blockly-workspace/contexts';
@@ -7,6 +9,7 @@ import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
 import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectSources, Source} from '@code-dot-org/platform/projects';
 import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
+import {useBlocklySettings} from '../hooks/useBlocklySettings';
 
 import type {BlocklyLevelProperties} from '../types';
 import {getInitialBlocklySources} from '../utils';
@@ -31,11 +34,21 @@ const BlocklyLabWrapper = <T extends LevelProperties = LevelProperties>({
   blocklyProps,
 }: Pick<BlocklyLabWithSourcesProps<T>, 'blocklyProps'> & PropsWithChildren) => {
   const levelProperties = useMaybeLevelProperties<T>();
-  console.log('blockly wrapper', levelProperties);
+
+  // Pull the theme from the user themes and supply this as the initial theme
+  const {selectedValue: initialTheme} = useBlocklySettings()[0];
+  const {theme: siteTheme} = useTheme();
+  const suffix = siteTheme === 'Dark' ? '-dark' : '';
 
   const realizedBlocklyProps = useMemo(
-    () => (levelProperties ? blocklyProps(levelProperties) : {}),
-    [blocklyProps, levelProperties],
+    () =>
+      levelProperties
+        ? {
+            theme: themes[`${initialTheme}${suffix}`],
+            ...blocklyProps(levelProperties),
+          }
+        : {},
+    [suffix, initialTheme, blocklyProps, levelProperties],
   );
 
   return levelProperties ? (
