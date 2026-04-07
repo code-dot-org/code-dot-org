@@ -101,6 +101,12 @@ class AiRubricConfig
     S3_AI_RELEASE_PATH
   end
 
+  def self.validate_ai_config_for_rubric(rubric)
+    s3_config_dir = rubric.s3_config_dir
+    validate_s3_config_dir(s3_config_dir) if s3_config_dir.present?
+    validate_learning_goals_for_rubric(rubric)
+  end
+
   def self.get_s3_learning_goals(lesson_s3_name)
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
