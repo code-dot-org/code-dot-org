@@ -1,0 +1,73 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:23.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Maya's School Club Page\r\n\r\n*\"I asked for a colorful page but it looks like a rainbow exploded on it. Every single thing is a different color - the heading, the paragraphs, the list items. That's not what I meant at all. I just wanted it to feel fun and bright, not chaotic.\"*\r\n\r\n**Do This:**\r\n1. Read Maya's `vision.md` to understand what they originally asked for.\r\n2. Fix the page using AI Tutor. You can:\r\n   - Update `vision.md` to be more specific, then ask AI Tutor to regenerate the page, **or**\r\n   - Prompt AI Tutor directly to fix specific issues, **or**\r\n   - Do both.\r\n\r\n> **Hint:** Think about how you can clarify what \"colorful\" means using specific color terms you've learned - like color names for specific elements.\r\n\r\nKeep iterating and prompting AI tutor. When the page addresses Maya's feedback, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- Do NOT use relative units. Use px values.\n- You should generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Maya's School Club Page",
+    "bubble_choice_description": "Help Maya wrangle AI tools to help her with her webpage: \"I asked for a colorful page but it looks like a rainbow exploded on it.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      h1 { \n        color: #ff0000;\n        background-color: #0000ff;\n      }\n      h2 { \n        color: #ff6600;\n        background-color: #ab11ab;\n      }\n      p { \n        color: #9900cc; \n        background-color: #00ffff;\n      }\n      li { \n        color: #0000ff; \n        background-color: #000000;\n      }\n      body { \n        background-color: #ffff00; \n      }\n    </style>\n  </head>\n  <body>\n    <h1>Photography Club</h1>\n    <p>We are a group of students who love taking photos. We explore different styles of photography, edit our work, and share it with the school community. Everyone is welcome — no experience needed!</p>\n\n    <h2>Upcoming Meetings</h2>\n    <ul>\n      <li>Monday, March 10 — Room 204, 3:30pm</li>\n      <li>Monday, March 17 — Room 204, 3:30pm</li>\n      <li>Monday, March 24 — Room 204, 3:30pm</li>\n    </ul>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join.\n\nThe page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/1975c38c4a76098e692fec21a0fbb478-image-1775017862390.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:23.316+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12a\"},{\"changed_at\":\"2026-04-07 03:58:27 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>
