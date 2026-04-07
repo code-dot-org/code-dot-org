@@ -30,7 +30,6 @@ function initPage() {
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeCodeMirror: require('@cdo/apps/code-studio/initializeCodeMirror'),
   initializeCodeMirror6: initializeCodeMirror6,
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
