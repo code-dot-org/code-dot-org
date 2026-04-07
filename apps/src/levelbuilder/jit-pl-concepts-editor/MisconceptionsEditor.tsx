@@ -7,9 +7,11 @@ import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
-import moduleStyles from './misconceptionsEditor.module.scss';
+import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
+
+import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
   id: number;
@@ -31,6 +33,7 @@ interface Misconception {
   name?: string;
   text_content?: string;
   resources?: Resource[];
+  exemplars?: Exemplar[];
 }
 
 interface MisconceptionFormProps {
@@ -50,7 +53,9 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   const initialResourcesRef = useRef(initial?.resources ?? []);
 
   useEffect(() => {
-    registerReducers({[contextKey]: createResourcesReducer(contextKey)});
+    if (!hasReducer(contextKey)) {
+      registerReducers({[contextKey]: createResourcesReducer(contextKey)});
+    }
     getStore().dispatch(initResources(contextKey, initialResourcesRef.current));
   }, [contextKey]);
 
@@ -167,23 +172,33 @@ const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
   }
 
   return (
-    <div className={moduleStyles.card}>
-      <strong>{misconception.name}</strong>
-      <div className={moduleStyles.cardActions}>
-        <button
-          onClick={() => setIsEditing(true)}
-          type="button"
-          className={moduleStyles.editButton}
-        >
-          <i className="fa fa-edit" /> Edit
-        </button>
-        <button
-          onClick={handleDelete}
-          type="button"
-          className={moduleStyles.deleteButton}
-        >
-          <i className="fa fa-trash" /> Delete
-        </button>
+    <div className={moduleStyles.cardWithExemplars}>
+      <div className={moduleStyles.cardHeader}>
+        <strong>{misconception.name}</strong>
+        <div className={moduleStyles.cardActions}>
+          <button
+            onClick={() => setIsEditing(true)}
+            type="button"
+            className={moduleStyles.editButton}
+          >
+            <i className="fa fa-edit" /> Edit
+          </button>
+          <button
+            onClick={handleDelete}
+            type="button"
+            className={moduleStyles.deleteButton}
+          >
+            <i className="fa fa-trash" /> Delete
+          </button>
+        </div>
+      </div>
+      <div className={moduleStyles.exemplarsSection}>
+        <h5 className={moduleStyles.exemplarsSectionHeading}>Exemplars</h5>
+        <ExemplarsEditor
+          conceptId={conceptId}
+          misconceptionId={misconception.id}
+          initialExemplars={misconception.exemplars ?? []}
+        />
       </div>
     </div>
   );

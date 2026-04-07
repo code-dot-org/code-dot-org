@@ -10,6 +10,10 @@ output "aws_secret_name" {
 
 output "secret_value" {
   description = "Current AWS Secrets Manager secret value."
-  value       = data.aws_secretsmanager_secret_version.this.secret_string
+  value       = local.secret_value
   sensitive   = true
+
+  depends_on = [
+    aws_secretsmanager_secret_version.managed_aws_version,
+  ]
 }
