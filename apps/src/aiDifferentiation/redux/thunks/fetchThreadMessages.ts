@@ -1,11 +1,19 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {RootState} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {
+  AiDiffArtifactType,
+  AiDiffContext,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
+
 import {
   THREAD_TYPES,
   ThreadTypeFields,
   DEFAULT_THREAD_TITLE,
-} from '@cdo/apps/aiDifferentiation/constants';
+} from '../../constants';
 import {
   AIF_PHILOSOPHY_MENU,
   AIF_LOGISTICS_MENU,
@@ -24,21 +32,13 @@ import {
   SUGGEST_CURRICULUM_PROMPT,
   GET_STARTED_PROMPT,
   CREATE_SECTION_PROMPT,
-} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+} from '../../predefinedPrompts';
 import {
   ChatPrompt,
   ChatTextMessage,
   ChatThread,
   chatThreadMessagesValidator,
-} from '@cdo/apps/aiDifferentiation/types';
-import {RootState} from '@cdo/apps/types/redux';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  AiDiffArtifactType,
-  AiDiffContext,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
-
+} from '../../types';
 import {
   setThreadId,
   setThreadTitle,
@@ -48,9 +48,9 @@ import {
   setInitialChatMessage,
   setInitialThreadPrompt,
   setSelectedPrompt,
-  setArtifactType,
   setArtifact,
   addThreadMessage,
+  setArtifactType,
 } from '../slice';
 
 interface FetchThreadMessagesParams {
@@ -120,7 +120,7 @@ async function asyncFetchThreadMessages(thread: number): Promise<ChatThread> {
 }
 
 export const fetchThreadMessages = createAsyncThunk(
-  'aichat/fetchThreadMessages',
+  'aiDiffChat/fetchThreadMessages',
   async (
     {
       contextType,
@@ -202,7 +202,7 @@ export const fetchThreadMessages = createAsyncThunk(
       // if key is already 0 (i.e. starting a new thread from a new thread)
       // then we need to alternate to a different key value to reset state
       // -1 is safe because it won't accidentally match a threadID value
-      if (state.aichat.threadKeyId === 0) {
+      if (state.aiDiffChat.threadKeyId === 0) {
         thunkAPI.dispatch(setThreadKeyId(-1));
       } else {
         thunkAPI.dispatch(setThreadKeyId(thread));
