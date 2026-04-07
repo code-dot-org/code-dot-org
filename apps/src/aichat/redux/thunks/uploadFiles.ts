@@ -48,7 +48,7 @@ export const uploadFiles = createAppAsyncThunk<
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
-    let imageFileFlagged = false;
+    let imageFlaggedCount = 0;
     let fileCountPdf = 0;
     let fileCountImage = 0;
     for (const [key, asset, file] of allowedFiles) {
@@ -66,14 +66,14 @@ export const uploadFiles = createAppAsyncThunk<
       if (file.name.endsWith('.pdf')) {
         fileCountPdf += 1;
       } else {
-        fileCountImage += 1;
         // Moderate images before uploading.
         const moderationResult = await moderateImage(file, 'aichat', {});
         if (moderationResult === 'flagged') {
-          imageFileFlagged = true;
+          imageFlaggedCount += 1;
           dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
           continue;
         }
+        fileCountImage += 1;
       }
 
       try {
@@ -113,7 +113,7 @@ export const uploadFiles = createAppAsyncThunk<
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
-        imageFileFlagged: imageFileFlagged,
+        imageFlaggedNotStagedCount: imageFlaggedCount,
         fileCountImage,
         fileCountPdf,
       })
