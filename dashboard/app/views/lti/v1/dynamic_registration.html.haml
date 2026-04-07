@@ -11,6 +11,7 @@
     -# which we only use when optimizing our webpack build (ie, non-development environments).
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/vendors.js'), 'data-ot-ignore' => ''}
+      %script{src: webpack_asset_path('js/mui-dependencies.js'), 'data-ot-ignore' => ''}
     %script{src: webpack_asset_path('js/essential.js'), 'data-ot-ignore' => ''}
     = javascript_include_tag 'application'
     %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js"), 'data-ot-ignore' => ''}
