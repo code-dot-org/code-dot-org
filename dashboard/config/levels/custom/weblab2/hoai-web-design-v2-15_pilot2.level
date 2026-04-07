@@ -1,0 +1,45 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:25.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Revisiting your Vision\r\n\r\nYour webpage from earlier is back - now you can keep building it until it truly matches your vision! You get to decide how you want to work with AI Tutor as a collaborator.\r\n\r\n**Do This:**\r\n- Keep updating your webpage using AI Tutor as your collaborator.\r\n- Want to start over? Use the <i class=\"fa-history fa-solid\"></i> Version History tab to reset to the Initial Version\r\n\r\n**When to Continue?** This level isn't like earlier ones - there's no single task to complete here. You can spend _as much time as you want_ making updates to your webpage. You decide when you're done!\r\n\r\n> **Optional:** Use the **Share** button in the upper-left to send your page to a friend, or **Remix** to save it to your project gallery.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildHTML",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- Do NOT use relative units. Use px values.\n- You should generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.",
+        "buildHTML": "- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Generate both HTML and CSS at the same time\n- Never generate placeholder images or videos. If the user implies they want an image, generate an empty `<img src=\"\" />` tag and tell the user they need to upload images to their project.\n- If the user asks to generate images: explain that you cannot generate new images but can insert any images that the user uploads to the project\n- If the user asks to insert an image from an external URL: explain that for security reasons, you cannot use external URLs for images. Instead, suggest that the user will eventually be able to upload their own images that can be added to webpages.\n- Keep all explanations short, concise, and simple."
+      }
+    },
+    "project_template_level_name": "hoai-web-design-v2-template1_pilot2",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:25.137+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-15\\\"\"],\"cloned_from\":\"hoai-web-design-v2-15\"},{\"changed_at\":\"2026-04-07 04:06:00 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>
