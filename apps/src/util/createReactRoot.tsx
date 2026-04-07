@@ -8,6 +8,10 @@ import {createRoot, Root} from 'react-dom/client';
 import {getCurrentBrand, getMuiThemeForBrand} from './brand';
 import {SiteConfigProvider} from './SiteConfigContext';
 
+interface Options {
+  legacyReactDomRender?: boolean;
+}
+
 const rootsByContainer = new WeakMap<Element, Root>();
 
 /**
@@ -21,7 +25,8 @@ const rootsByContainer = new WeakMap<Element, Root>();
  */
 export function createReactRoot(
   component: ReactElement,
-  container: Element | string
+  container: Element | string,
+  options?: Options
 ): void {
   const containerElement =
     typeof container === 'string'
@@ -32,6 +37,10 @@ export function createReactRoot(
     throw new Error(
       `createReactRoot: Could not find container element: ${container}`
     );
+  }
+
+  // Do nothing to make TS happy.
+  if (options?.legacyReactDomRender) {
   }
 
   const brand = getCurrentBrand();
