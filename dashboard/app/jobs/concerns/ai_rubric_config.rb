@@ -92,7 +92,7 @@ class AiRubricConfig
     rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
     lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
     lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name)
+      validate_s3_config_dir(lesson_s3_name)
     end
 
     rubrics_with_ai = Rubric.joins(:learning_goals).where(learning_goals: {ai_enabled: true}).distinct
@@ -107,7 +107,7 @@ class AiRubricConfig
     rubric_rows.map {|row| row['Key Concept']}
   end
 
-  private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name)
+  private_class_method def self.validate_s3_config_dir(lesson_s3_name)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
     get_openai_params(lesson_s3_name, 'hello world')
