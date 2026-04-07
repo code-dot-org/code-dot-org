@@ -192,7 +192,7 @@ describe('generateAiTutorPrompt', () => {
       expect(result).toContain(basePrompt.trim());
       expect(result).toContain(buildHTMLTrigger.trim());
       expect(result).toContain(buildCSSContract.trim());
-      // Default answer types do not include buildJavaScript.
+      // Default answer types list does not include buildJavaScript.
       expect(result).toContain(preReplyCheckNoJs.trim());
     });
   });
