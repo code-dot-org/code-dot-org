@@ -180,7 +180,7 @@ export function buildMessagesForModelHistory(
           status: AiInteractionStatus.OK,
           chatMessageText: `I accepted your suggested changes${filesPhrase}. Those changes are now in the project.`,
           timestamp: event.timestamp,
-          requestId: 0,
+          requestId: -1,
         });
       } else {
         // The model is more likely to respect the rejection if we fake both a
@@ -190,14 +190,14 @@ export function buildMessagesForModelHistory(
           status: AiInteractionStatus.OK,
           chatMessageText: `I rejected your suggested changes${filesPhrase}. The current project files in the system context are the accurate state of the project. Your previous suggestions are not included.`,
           timestamp: event.timestamp,
-          requestId: 0,
+          requestId: -1,
         });
         acc.push({
           role: Role.ASSISTANT,
           status: AiInteractionStatus.OK,
           chatMessageText: `Understood. I'll use the current project files from the system context as the source of truth, not my previous suggestions.`,
           timestamp: event.timestamp,
-          requestId: 0,
+          requestId: -1,
         });
       }
     }
