@@ -167,11 +167,15 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       const currentHeight = rawInstructionsHeightRef.current;
       setMaxInstructionsHeight(contentHeight);
 
-      // Set initial drawer height to full content height (maxInstructionsHeight).
+      // Set initial drawer height to 50% of the available container space.
       if (!hasSetInitialHeightFromContentRef.current) {
         hasSetInitialHeightFromContentRef.current = true;
+        const containerElement = containerRef.current;
+        const availableHeight = containerElement
+          ? containerElement.clientHeight - RESIZE_BAR_SIZE_PX
+          : contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX;
         setRawInstructionsHeight(
-          contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+          Math.max(availableHeight / 2, MIN_INSTRUCTIONS_HEIGHT)
         );
         return;
       }
