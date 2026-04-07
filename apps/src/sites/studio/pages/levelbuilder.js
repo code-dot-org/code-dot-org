@@ -1,7 +1,6 @@
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */
-import codemirror from 'codemirror';
 import $ from 'jquery';
 import _ from 'lodash';
 
@@ -79,9 +78,6 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
 
   loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
-
-// TODO: Remove when global `CodeMirror` is no longer required.
-window.CodeMirror = codemirror;
 
 // TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;
