@@ -53,11 +53,11 @@
   align-items: center;
   flex-shrink: 0;
   border-radius: 100px;
-  background: var(--brand-teal-50);
+  background: var(--background-brand-teal-primary);
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.2);
 
   &::before {
-    color: var(--neutral-base-white);
+    color: var(--background-neutral-primary);
     text-align: center;
     font-size: 32px;
     width: 40px;
