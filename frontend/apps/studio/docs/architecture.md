@@ -23,10 +23,10 @@ In production, Vite build output is served as static files from `public/frontend
 
 ## Init ordering
 
-`entrypoints/application.tsx` must call `initializeCodeStudioConfig()` before rendering the router.
+`entrypoints/application.tsx` must call `initializeCore()` before rendering the router.
 
 ```
-initializeCodeStudioConfig()   ← must be first
+initializeCore()   ← must be first
 createRoot(...).render(
   <RouterProvider router={router} />   ← labs mount inside here
 )
