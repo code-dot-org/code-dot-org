@@ -134,6 +134,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  enableTutorVideos?: boolean;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
@@ -165,6 +166,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  enableTutorVideos,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
@@ -270,6 +272,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
+        enableTutorVideos,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -358,6 +361,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
+    enableTutorVideos,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,

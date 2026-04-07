@@ -25,6 +25,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
+  enableTutorVideos?: boolean;
 }
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
@@ -45,6 +46,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorResponseSchemaSettings,
   instructionsContent,
   isCollapsedByDefault,
+  enableTutorVideos,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
@@ -268,6 +270,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
+            enableTutorVideos={enableTutorVideos}
           />
         </div>
       </div>

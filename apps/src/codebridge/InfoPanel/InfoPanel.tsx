@@ -44,6 +44,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    enableTutorVideos,
     config,
     onImageFlagged,
   } = useCodebridgeContext();
@@ -153,6 +154,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        enableTutorVideos={enableTutorVideos}
         documentationUrl={
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
         }
