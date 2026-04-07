@@ -75,7 +75,6 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     this._themeChangedEvent = () => {
       this._workspace?.setTheme(this.driver.theme.instance);
     };
-    console.log('construct', this);
     this.driver.addListener(DriverEvent.ThemeChanged, this._themeChangedEvent);
   }
 
@@ -264,7 +263,6 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
    * Removes the workspace.
    */
   deconstruct() {
-    console.log('deconstruct', this);
     // Remove from the Driver's awareness
     this.driver.uninitialize(this);
     this.driver.removeListener(

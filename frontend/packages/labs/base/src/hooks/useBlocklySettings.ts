@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useCallback} from 'react';
 
 import {
   useApiClient,
@@ -33,15 +33,18 @@ export function useBlocklySettings(): SettingWithValue[] {
     setTheme(themes[`${selectedTheme}${suffix}`]);
   }, [setTheme, selectedTheme, siteTheme]);
 
-  const handleBlocklyThemeChange = (name: string) => {
-    const suffix = siteTheme === 'Dark' ? '-dark' : '';
-    setTheme(themes[`${name}${suffix}`]);
-    setThemeSettings({
-      themeUpdate: {
-        blockly: name,
-      },
-    });
-  };
+  const handleBlocklyThemeChange = useCallback(
+    (name: string) => {
+      const suffix = siteTheme === 'Dark' ? '-dark' : '';
+      setTheme(themes[`${name}${suffix}`]);
+      setThemeSettings({
+        themeUpdate: {
+          blockly: name,
+        },
+      });
+    },
+    [setTheme, setThemeSettings, siteTheme],
+  );
 
   return [
     {

@@ -1,12 +1,9 @@
-import {useApiClient, useThemeSettings} from '@code-dot-org/core/api';
-import {themes, themeOptions} from '@code-dot-org/blockly-workspace/themes';
-import {useBlocklyContext} from '@code-dot-org/blockly-workspace/contexts';
 import Button from '@code-dot-org/component-library/button';
 import {StartOverDialog} from '@code-dot-org/lab/dialogs';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {Blockly} from '@code-dot-org/blockly-workspace';
-import {useRef, useCallback, useEffect, useState} from 'react';
+import {useRef, useCallback, useState} from 'react';
 import classNames from 'classnames';
 import {
   getToolboxWidth,
@@ -46,8 +43,6 @@ const DefaultStartBlocks: BlocklySerialization = {
     ],
   },
 };
-
-const BLOCKLY_THEME = 'blocklyTheme';
 
 // Default 'uncounted' block types
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
@@ -89,21 +84,6 @@ const MazeLab = () => {
   const [showCodeOpen, setShowCodeOpen] = useState<boolean>(false);
   const [startOverOpen, setStartOverOpen] = useState<boolean>(false);
   const [showCode, setShowCode] = useState<string>('');
-
-  const {setTheme} = useBlocklyContext();
-
-  // Pull the theme from the user themes and react to theme changes
-  const apiClient = useApiClient();
-  const {data: themeSettings} = useThemeSettings(apiClient, {
-    errorCallback: () => ({
-      blockly: localStorage.getItem(BLOCKLY_THEME) || themeOptions[0].value,
-    }),
-  });
-
-  useEffect(() => {
-    const theme = themes[themeSettings?.blockly || themeOptions[0].value];
-    setTheme(theme);
-  }, [setTheme, themeSettings]);
 
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
