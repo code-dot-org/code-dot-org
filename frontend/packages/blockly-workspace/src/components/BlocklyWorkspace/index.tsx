@@ -97,13 +97,13 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   className,
 }: BlocklyWorkspaceProps<T>): ReactElement {
   // Creates the encapsulating Agent class for this workspace within the environment
-  const agentRef = useRef<Agent<T>>(null as unknown as Agent<T>);
+  const agentRef = useRef<Agent<T> | null>(null);
 
   // Resize the Blockly workspace when the container changes size
   const [anchor, rect] = useResizeObserver();
   useEffect(() => {
     if (!inline) {
-      if (agentRef.current.workspace) {
+      if (agentRef.current?.workspace) {
         Blockly.svgResize(agentRef.current.workspace);
       }
     }
@@ -115,8 +115,12 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     environment: contextEnvironment,
   } = useBlocklyContext();
 
-  if (agentRef.current === null) {
-    agentRef.current = new Agent(
+  // Create the Agent on mount and deconstruct it on unmount within the same
+  // effect. This ensures React Strict Mode's remount cycle (mount -> unmount ->
+  // mount) creates a fresh Agent each time rather than deconstructing one that
+  // is still referenced by the ref.
+  useEffect(() => {
+    const agent = new Agent<T>(
       contextDriver?.current ||
         new Driver<T>(
           environment || contextEnvironment || ({} as unknown as T),
@@ -129,9 +133,22 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       !!hidden,
       !!embedded,
     );
-  }
+
+    agentRef.current = agent;
+
+    return () => {
+      agentRef.current = null;
+      agent.deconstruct();
+    };
+    // Only run on mount/unmount — these props are not expected to change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
+    if (!agentRef.current) {
+      return;
+    }
+
     // Ensure that we registered the blocks prior and avoid racing the driver
     if (contextBlocks) {
       agentRef.current.driver.setBlocks(contextBlocks);
@@ -152,13 +169,13 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       }
 
       // Ensure it resizes to the container
-      if (!agentRef.current.inline) {
+      if (agentRef.current && !agentRef.current.inline) {
         if (agentRef.current.workspace) {
           Blockly.svgResize(agentRef.current.workspace);
         }
       }
 
-      if (onInject) {
+      if (onInject && agentRef.current) {
         onInject(workspace, agentRef.current.driver.environment);
       }
     },
@@ -168,6 +185,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   useEffect(() => {
     const oldOnInject = wrappedOnInject;
     const currentAgent = agentRef.current;
+    if (!currentAgent) {
+      return;
+    }
 
     currentAgent.addListener(AgentEvent.Injected, wrappedOnInject);
 
@@ -181,6 +201,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   useEffect(() => {
     const oldOnChange = onChange;
     const currentAgent = agentRef.current;
+    if (!currentAgent) {
+      return;
+    }
 
     if (onChange) {
       currentAgent.addListener(AgentEvent.BlocklyEvent, onChange);
@@ -194,7 +217,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   }, [onChange]);
 
   useEffect(() => {
-    if (!!inline !== agentRef.current.inline) {
+    if (agentRef.current && !!inline !== agentRef.current.inline) {
       console.error(
         'Cannot switch to an inline workspace once the workspace has been created.',
       );
@@ -202,7 +225,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   }, [inline]);
 
   useEffect(() => {
-    if (renderer && renderer !== agentRef.current.driver.renderer) {
+    if (
+      agentRef.current &&
+      renderer &&
+      renderer !== agentRef.current.driver.renderer
+    ) {
       console.error(
         'Cannot switch renderer once the workspace has been created.',
       );
@@ -211,14 +238,14 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   useEffect(() => {
     // Update theme
-    if (theme) {
+    if (agentRef.current && theme) {
       agentRef.current.driver.setTheme(theme);
     }
   }, [theme]);
 
   useEffect(() => {
     // Either move or newly inject the Blockly workspace when the container is known
-    if (anchor.current) {
+    if (agentRef.current && anchor.current) {
       // Determine the location of the workspace
       // For inline workspaces (like those within markdown instructions) create
       // the container to build it offscreen before copying it to its final
@@ -232,13 +259,13 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   useEffect(() => {
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
-    if (blocks) {
+    if (agentRef.current && blocks) {
       agentRef.current.driver.setBlocks(blocks);
     }
   }, [blocks]);
 
   useEffect(() => {
-    if (!agentRef.current.workspace) {
+    if (!agentRef.current?.workspace) {
       return;
     }
 

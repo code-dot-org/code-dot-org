@@ -17,6 +17,9 @@ export interface BlocklyMarkdownProps extends MarkdownProps {
   theme?: Theme;
 }
 
+// Just a way to ensure that xml nodes get unique react keys
+let counter = 0;
+
 // This takes the XML nodes from the markdown renderer and creates a DOM tree.
 // It will return a unique string built from that tree to use as a unique key.
 const xmlRenderer: (
@@ -42,6 +45,7 @@ const xmlRenderer: (
 
     for (const [key, value] of Object.entries(node.attrs || {})) {
       element.setAttribute(key, value);
+      ret += `[${key}=${value}]`;
     }
 
     if (node.type === RuleType.htmlBlock) {
@@ -51,7 +55,8 @@ const xmlRenderer: (
     }
   }
 
-  return ret;
+  counter++;
+  return ret + counter;
 };
 
 /**
