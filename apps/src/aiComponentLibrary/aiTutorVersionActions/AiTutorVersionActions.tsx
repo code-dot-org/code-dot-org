@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -15,6 +15,7 @@ import moduleStyles from './ai-tutor-version-actions.module.scss';
 
 interface AiTutorVersionActionsProps {
   files: ProjectFile[];
+  onRequestScrollToBottom: () => void;
 }
 
 /**
@@ -23,6 +24,7 @@ interface AiTutorVersionActionsProps {
  */
 const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   files,
+  onRequestScrollToBottom,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isAcceptMode, setIsAcceptMode] = useState(false);
@@ -64,6 +66,14 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const handleReject = useCallback(() => {
     dispatch(rejectAiTutorVersion(files));
   }, [dispatch, files]);
+
+  // Scroll to the bottom of the page when switching to accept mode,
+  // so that the commit description input and save button are visible to the user.
+  useLayoutEffect(() => {
+    if (isAcceptMode) {
+      onRequestScrollToBottom();
+    }
+  }, [isAcceptMode, onRequestScrollToBottom]);
 
   return (
     <div className={moduleStyles.container}>
