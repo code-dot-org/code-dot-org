@@ -9,10 +9,14 @@ class Policies::DemoSections
   end
 
   def self.all_demo_student_ids
-    DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.uniq
+    @all_demo_student_ids ||= DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.to_set
   end
 
   def self.demo_student?(user_id)
     all_demo_student_ids.include?(user_id.to_i)
+  end
+
+  def self.reset_cache!
+    @all_demo_student_ids = nil
   end
 end

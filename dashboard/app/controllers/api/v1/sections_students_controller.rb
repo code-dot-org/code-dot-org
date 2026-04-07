@@ -33,7 +33,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
 
   # PATCH /sections/<section_id>/students/<id>
   def update
-    return head :forbidden unless can?(:manage, @student)
+    return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
