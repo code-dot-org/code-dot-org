@@ -109,7 +109,10 @@ export async function performClientApiChatCompletion(
     ];
   }
 
-  if (status === AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR) {
+  if (
+    status ===
+    AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR_OR_SKIPPED
+  ) {
     return [
       {...updatedUserMessage, status: AiInteractionStatus.OK},
       {

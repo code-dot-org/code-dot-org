@@ -814,8 +814,8 @@ module SharedConstants
     MODEL_IMAGE_FLAGGED: 1007,
     # The model is currently rate-limited (HTTP 429).
     MODEL_RATE_LIMITED: 1008,
-    # Image moderation service skipped due to error.
-    IMAGE_MODERATION_SERVICE_ERROR: 1009,
+    # Image moderation service error or skipped.
+    IMAGE_MODERATION_SERVICE_ERROR_OR_SKIPPED: 1009,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {

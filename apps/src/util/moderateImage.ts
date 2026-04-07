@@ -68,11 +68,12 @@ export const moderateImage = async (
       'Content-Type': file.type || 'application/octet-stream',
     });
     const json = await response.json();
-    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
-
     if (json === null) {
       return 'error';
     }
+
+    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
+
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
