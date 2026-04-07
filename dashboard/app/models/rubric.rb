@@ -22,6 +22,8 @@ class Rubric < ApplicationRecord
   validate :validate_ai_config
   def validate_ai_config
     AiRubricConfig.validate_ai_config_for_rubric(self)
+  rescue => exception
+    errors.add(:base, exception.message)
   end
 
   def get_script_level
