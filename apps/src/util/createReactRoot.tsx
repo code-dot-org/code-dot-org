@@ -3,15 +3,10 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
-import ReactDOM from 'react-dom';
 import {createRoot, Root} from 'react-dom/client';
 
 import {getCurrentBrand, getMuiThemeForBrand} from './brand';
 import {SiteConfigProvider} from './SiteConfigContext';
-
-interface Options {
-  legacyReactDomRender?: boolean;
-}
 
 const rootsByContainer = new WeakMap<Element, Root>();
 
@@ -23,12 +18,10 @@ const rootsByContainer = new WeakMap<Element, Root>();
  *
  * @param component - The React component to render
  * @param container - The container element or selector to render into
- * @param options - Option to override default to use legacy rendering behavior
  */
 export function createReactRoot(
   component: ReactElement,
-  container: Element | string,
-  options?: Options
+  container: Element | string
 ): void {
   const containerElement =
     typeof container === 'string'
@@ -48,11 +41,6 @@ export function createReactRoot(
       <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>
     </SiteConfigProvider>
   );
-
-  if (options?.legacyReactDomRender) {
-    ReactDOM.render(wrappedComponent, containerElement);
-    return;
-  }
 
   let root = rootsByContainer.get(containerElement);
   if (!root) {
