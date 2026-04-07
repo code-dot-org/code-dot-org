@@ -2,6 +2,10 @@ require 'test_helper'
 require 'policies/demo_sections'
 
 class Policies::DemoSectionsTest < ActiveSupport::TestCase
+  setup do
+    Policies::DemoSections.reset_cache!
+  end
+
   # demo_student_ids
 
   test 'demo_student_ids returns ids for known type' do
@@ -39,7 +43,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   test 'all_demo_student_ids returns empty array when config is nil' do
     CDO.stubs(:demo_student_ids).returns(nil)
 
-    assert_equal [], Policies::DemoSections.all_demo_student_ids
+    assert_equal Set[], Policies::DemoSections.all_demo_student_ids
   end
 
   # demo_student?
