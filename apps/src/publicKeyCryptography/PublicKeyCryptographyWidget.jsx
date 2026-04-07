@@ -19,8 +19,6 @@ import EveInstructions from './EveInstructions';
 import ModuloClock from './ModuloClock';
 import StartOverButton from './StartOverButton';
 
-
-// Magic strings for view modes
 const ALICE_VIEW = 'alice';
 const EVE_VIEW = 'eve';
 const BOB_VIEW = 'bob';

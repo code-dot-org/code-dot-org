@@ -10,8 +10,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import AddLevelFilters from '@cdo/apps/levelbuilder/lesson-editor/AddLevelFilters';
 import AddLevelTable from '@cdo/apps/levelbuilder/lesson-editor/AddLevelTable';
 import CreateNewLevelInputs from '@cdo/apps/levelbuilder/lesson-editor/CreateNewLevelInputs';
-
-
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
   const [levels, setLevels] = useState([]);

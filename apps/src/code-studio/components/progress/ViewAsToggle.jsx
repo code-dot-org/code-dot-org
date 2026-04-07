@@ -9,7 +9,6 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import commonMsg from '@cdo/locale';
 
-
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
  * student sees it

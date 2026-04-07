@@ -14,7 +14,6 @@ import {P5LabInterfaceMode, P5LabType} from './constants';
 import PoemSelector from './poetry/PoemSelector';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
 
-
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */

@@ -9,7 +9,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import Spinner from '../../../../../sharedComponents/Spinner';
 
-
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 const TIME_FORMAT = 'h:mm a';
