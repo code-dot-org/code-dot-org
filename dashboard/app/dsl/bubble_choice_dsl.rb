@@ -71,6 +71,18 @@ class BubbleChoiceDSL < ContentDSL
       new_dsl += "\nlevel '#{sublevel.name}'"
     end
 
+    # Serialize additional properties, separated by a blank line from sublevels.
+    # uses_lab2 must come before standalone, since standalone requires uses_lab2.
+    extra_lines = []
+    extra_lines << "custom_mode '#{level.custom_mode}'" if level.custom_mode.present?
+    extra_lines << "uses_lab2" if level.uses_lab2
+    extra_lines << "hide_letters_lab2" if level.hide_letters_lab2
+    extra_lines << "standalone" if level.is_project_level
+    extra_lines << "navigation_type '#{level.navigation_type}'" if level.navigation_type.present?
+    extra_lines << "finish_dialog '#{escape(level.finish_dialog)}'" if level.finish_dialog.present?
+    extra_lines << "hide_share_and_remix '#{level.hide_share_and_remix}'" unless level.hide_share_and_remix.nil?
+    new_dsl += "\n\n#{extra_lines.join("\n")}" if extra_lines.any?
+
     new_dsl += "\n"
     new_dsl
   end
