@@ -6,15 +6,19 @@ import {connect} from 'react-redux';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   lessonExtrasUrl,
+  lessonTutorAvailable,
+  lessonTutorPath,
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import LessonTutorProgressBubble from '@cdo/apps/templates/progress/LessonTutorProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import color from '../../../util/color';
+import experiments from '../../../util/experiments';
 import {canChangeLevelInPage} from '../../browserNavigation';
 
 /**
@@ -25,6 +29,8 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonName: PropTypes.string,
     lessonExtrasUrl: PropTypes.string,
+    lessonTutorAvailable: PropTypes.bool,
+    lessonTutorPath: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
@@ -142,6 +148,8 @@ class LessonProgress extends Component {
     const {
       currentPageNumber,
       lessonExtrasUrl,
+      lessonTutorAvailable,
+      lessonTutorPath,
       lessonName,
       navigateToLevelId,
       currentLevel,
@@ -211,6 +219,14 @@ class LessonProgress extends Component {
                 />
               </div>
             )}
+            {lessonTutorAvailable &&
+              experiments.isEnabled(experiments.LESSON_TUTOR) && (
+                <div>
+                  <LessonTutorProgressBubble
+                    lessonTutorPath={lessonTutorPath}
+                  />
+                </div>
+              )}
           </div>
         </div>
         <div className="vignette" style={vignetteStyle} />
@@ -284,6 +300,14 @@ export default connect(
     levels: getCurrentLevels(state),
     currentLevel: getCurrentLevel(state),
     lessonExtrasUrl: lessonExtrasUrl(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonTutorAvailable: lessonTutorAvailable(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonTutorPath: lessonTutorPath(
       state.progress,
       state.progress.currentLessonId
     ),

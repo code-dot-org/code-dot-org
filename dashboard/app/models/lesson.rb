@@ -253,6 +253,17 @@ class Lesson < ApplicationRecord
     localized_lesson_plan(unit_group_unit: unit_group_unit) || "#{lesson_plan_base_url}/Teacher"
   end
 
+  # Lesson Tutor is only available for non-assessment, non-survey lessons in non-CSF lessons.
+  # Lesson Tutor is the Deep Dive experience that comes at the end of a lesson.
+  # ai_tutor_available is a separate flag that refers to the in-level AI Tutor experience.
+  # If you want to make Lesson Tutor available for a CSF lesson, you need to handle
+  # lesson that have Lesson Extras because they have competing UI affordances in the mini
+  # level progression header. Also, the chat experience is not optimized for <13 year olds,
+  # so this provides an extra layer of protection against younger students accessing the experience.
+  def lesson_tutor_available?
+    !assessment && !survey? && !script.csf?
+  end
+
   def survey?
     name.present? && name.downcase.include?('survey')
   end
@@ -308,7 +319,6 @@ class Lesson < ApplicationRecord
         name: localized_name,
         key: key,
         assessment: !!assessment,
-        survey: survey?,
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
@@ -318,6 +328,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
+        lessonTutorAvailable: lesson_tutor_available?,
         lessonTutorPath: "#{get_uncached_show_path}/tutor",
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),

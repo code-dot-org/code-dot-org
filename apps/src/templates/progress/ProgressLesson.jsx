@@ -201,8 +201,7 @@ class ProgressLesson extends React.Component {
                     {i18n.lessonResources()}
                   </MuiButton>
                 )}
-                {!lesson.assessment &&
-                  !lesson.survey &&
+                {lesson.lessonTutorAvailable &&
                   experiments.isEnabled(experiments.LESSON_TUTOR) && (
                     <MuiButton
                       href={lesson.lessonTutorPath}

@@ -52,7 +52,7 @@ function SummaryProgressRow({
 
   const titleTooltipId = _.uniqueId();
   const lockedTooltipId = _.uniqueId();
-
+  console.log('lesson', lesson);
   return (
     <tr
       id={`summary-progress-row-${lesson.lessonNumber}`}
@@ -145,8 +145,7 @@ function SummaryProgressRow({
                   {i18n.lessonResources()}
                 </MuiButton>
               )}
-              {!lesson.assessment &&
-                !lesson.survey &&
+              {lesson.lessonTutorAvailable &&
                 experiments.isEnabled(experiments.LESSON_TUTOR) && (
                   <MuiButton
                     href={lesson.lessonTutorPath}

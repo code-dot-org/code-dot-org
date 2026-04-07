@@ -176,7 +176,6 @@ class HeaderMiddle extends React.Component {
       showPopupBecauseProgressCropped: showPopupBecauseProgressCropped,
     };
   }
-
   render() {
     const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
       this.props;
