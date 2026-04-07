@@ -214,6 +214,13 @@ function initializeCodeMirror6(
     },
   };
 
+  // Expose the editor adapter on the original textarea for pages that need to
+  // access the instance directly after initialization.
+  const textareaNode = node as HTMLTextAreaElement & {
+    codeMirror?: CodeMirrorLegacyAdapter;
+  };
+  textareaNode.codeMirror = adapter;
+
   const updatePreview = () => {
     if (!previewElement) {
       return;

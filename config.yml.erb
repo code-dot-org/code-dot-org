@@ -207,10 +207,6 @@ crowdin_project_test_mapping:
   codeorg-restricted: codeorg-restricted-test
   hour-of-code: hour-of-code-test
 
-# Azure Content Moderator
-azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
-azure_content_moderation_key:
-
 # Azure AI Content Safety
 azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
 azure_ai_content_safety_key: !Secret
@@ -442,7 +438,7 @@ dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
-dashboard_workers: 8
+dashboard_workers:
 dashboard_web_server_name: dashboard
 dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock

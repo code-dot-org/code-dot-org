@@ -83,7 +83,7 @@ class JitPlConceptTest < ActiveSupport::TestCase
                                           display_name: concept.display_name,
                                           text_content: concept.text_content,
                                           resources: concept.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
-                                          jit_pl_concepts_resources: concept.resources.map {|r| {seeding_key: {'concept.name' => concept.name, 'resource.key' => r.key}}},
+                                          jit_pl_concepts_resources: concept.resources.map {|r| {seeding_key: {'concept.key' => concept.key, 'resource.key' => r.key}}},
                                         }
     )
 
@@ -93,7 +93,7 @@ class JitPlConceptTest < ActiveSupport::TestCase
     assert_equal resource.key, properties[:resources].first['key']
     assert_equal resource.name, properties[:resources].first['name']
     assert_equal 1, properties[:jit_pl_concepts_resources].length
-    assert_equal 'loops', properties[:jit_pl_concepts_resources].first['seeding_key']['concept.name']
+    assert_equal concept.key, properties[:jit_pl_concepts_resources].first['seeding_key']['concept.key']
     assert_equal resource.key, properties[:jit_pl_concepts_resources].first['seeding_key']['resource.key']
   end
 
@@ -103,7 +103,7 @@ class JitPlConceptTest < ActiveSupport::TestCase
       display_name: 'Loops',
       text_content: 'Repeating code.',
       resources: [{key: 'my-resource', name: 'My Resource', url: 'http://example.com', properties: {}}],
-      jit_pl_concepts_resources: [{seeding_key: {'concept.name' => 'loops', 'resource.key' => 'my-resource'}}]
+      jit_pl_concepts_resources: [{seeding_key: {'concept.key' => 'loops', 'resource.key' => 'my-resource'}}]
     }
 
     properties = JitPlConcept.properties_from_file(data.to_json)
@@ -172,12 +172,80 @@ class JitPlConceptTest < ActiveSupport::TestCase
     concept_to_keep = create(:jit_pl_concept)
     concept_to_remove = create(:jit_pl_concept)
 
-    Dir.stubs(:glob).returns(["config/jit_pl_concepts/#{concept_to_keep.name}.json"])
+    Dir.stubs(:glob).returns(["config/jit_pl_concepts/#{concept_to_keep.key}.json"])
     File.stubs(:read).returns(concept_to_keep.serialize.to_json)
 
     JitPlConcept.seed_all
 
     assert JitPlConcept.exists?(concept_to_keep.id)
     refute JitPlConcept.exists?(concept_to_remove.id)
+  end
+
+  test "key is derived from name as lowercase letters and underscores" do
+    assert_equal 'recursion', build(:jit_pl_concept, name: 'Recursion').key
+    assert_equal 'binary_search_trees', build(:jit_pl_concept, name: 'Binary Search Trees').key
+    assert_equal 'loops_for_csd', build(:jit_pl_concept, name: 'Loops for CSD').key
+    assert_equal 'loops', build(:jit_pl_concept, name: 'loops').key
+  end
+
+  test "file_path uses key" do
+    concept = build(:jit_pl_concept, name: 'Binary Search Trees')
+    assert concept.file_path.to_s.end_with?('config/jit_pl_concepts/binary_search_trees.json')
+  end
+
+  test "serialize includes teaching tips" do
+    concept = create(:jit_pl_concept)
+    tip = create(:jit_pl_teaching_tip, jit_pl_concept: concept, name: 'pro-tip', text_content: 'Try this.')
+
+    serialized = concept.serialize
+    assert_equal 1, serialized[:teaching_tips].length
+    assert_equal tip.id, serialized[:teaching_tips].first[:id]
+    assert_equal 'pro-tip', serialized[:teaching_tips].first[:name]
+    assert_equal 'Try this.', serialized[:teaching_tips].first[:text_content]
+  end
+
+  test "seed_record creates teaching tips from file" do
+    concept = create(:jit_pl_concept, name: 'functions')
+    data = {
+      name: 'functions',
+      display_name: 'Functions',
+      text_content: 'Reusable code.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      misconceptions: [],
+      teaching_tips: [
+        {name: 'pro-tip', text_content: 'Try this.', resources: [], jit_pl_teaching_tips_resources: []}
+      ]
+    }
+
+    File.stubs(:read).returns(data.to_json)
+
+    JitPlConcept.seed_record('config/jit_pl_concepts/functions.json')
+
+    concept.reload
+    assert_equal 1, concept.jit_pl_teaching_tips.count
+    assert_equal 'pro-tip', concept.jit_pl_teaching_tips.first.name
+    assert_equal 'Try this.', concept.jit_pl_teaching_tips.first.text_content
+  end
+
+  test "seed_record removes teaching tips absent from file" do
+    concept = create(:jit_pl_concept, name: 'loops')
+    _to_remove = create(:jit_pl_teaching_tip, jit_pl_concept: concept, name: 'old-tip')
+    data = {
+      name: 'loops',
+      display_name: 'Loops',
+      text_content: 'Repeating.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      misconceptions: [],
+      teaching_tips: []
+    }
+
+    File.stubs(:read).returns(data.to_json)
+
+    JitPlConcept.seed_record('config/jit_pl_concepts/loops.json')
+
+    concept.reload
+    assert_empty concept.jit_pl_teaching_tips
   end
 end

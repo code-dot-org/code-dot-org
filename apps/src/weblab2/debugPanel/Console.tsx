@@ -98,13 +98,25 @@ const Console: React.FunctionComponent = () => {
         >
           {log.message}
         </Typography>
-        <Typography
-          className={moduleStyles.timestamp}
-          variant="body4"
-          gutterBottom
-        >
-          {log.timestamp}
-        </Typography>
+        <div className={moduleStyles.logMeta}>
+          {log.count > 1 && (
+            <Typography
+              variant="body4"
+              gutterBottom
+              className={moduleStyles.countBadge}
+              aria-hidden="true"
+            >
+              Count: {log.count}
+            </Typography>
+          )}
+          <Typography
+            className={moduleStyles.timestamp}
+            variant="body4"
+            gutterBottom
+          >
+            {log.timestamp}
+          </Typography>
+        </div>
       </div>
     );
   };
@@ -141,7 +153,9 @@ const Console: React.FunctionComponent = () => {
           {consoleLogs.map((log, index) => {
             const isFirstLog = index === 0;
             const isLastLog = index === consoleLogs.length - 1;
-            const logLabel = `${log.level}: ${log.message}, ${log.timestamp}`;
+            const countLabel =
+              log.count > 1 ? `, repeated ${log.count} times` : '';
+            const logLabel = `${log.level}: ${log.message}, ${log.timestamp}${countLabel}`;
             const positionLabel =
               isFirstLog && isLastLog
                 ? 'The only log entry. '
@@ -153,7 +167,7 @@ const Console: React.FunctionComponent = () => {
             const wrapperAriaLabel = `${positionLabel}${logLabel}`;
             return (
               <div
-                key={index}
+                key={log.groupKey}
                 ref={getLogWrapperRef(isFirstLog, isLastLog)}
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
                 tabIndex={isInConsoleNavigationMode ? 0 : -1}
@@ -171,11 +185,7 @@ const Console: React.FunctionComponent = () => {
                     </span>
                   }
                   size={'s'}
-                  aria-label={
-                    isInConsoleNavigationMode
-                      ? undefined
-                      : `${log.level}: ${log.message}, ${log.timestamp}`
-                  }
+                  aria-label={isInConsoleNavigationMode ? undefined : logLabel}
                   aria-hidden={isInConsoleNavigationMode}
                   className={moduleStyles.consoleLog}
                 />

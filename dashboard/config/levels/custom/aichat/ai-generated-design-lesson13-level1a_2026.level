@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-02-24T18:14:08.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Project Management Chatbot\r\n\r\nUse this bot to stay organized and manage your project timeline. It can help you plan next steps, clarify requirements from the guide or rubric, and create a realistic schedule for finishing your work.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I’m not sure what to work on next for my magazine project. Can you help me make a plan based on the guide and rubric?\r\n\r\n>I have the following ideas of things to work on next for my project: [insert list here]. Can you help me prioritize these?\r\n:::\r\n\r\n\r\n",
+    "long_instructions": "## Project Management Chatbot\r\n\r\nUse this bot to stay organized and manage your project timeline. It can help you plan next steps, clarify requirements from the guide or rubric, and create a realistic schedule for finishing your work.\r\n\r\n---\r\n\r\n### <i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> Starter Prompts\r\n\r\n> I'm not sure what to work on next for my magazine project. Can you help me make a plan based on the guide and rubric?\r\n\r\n> I have the following ideas of things to work on next for my project: [insert list here]. Can you help me prioritize these?\r\n\r\n\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -49,7 +50,6 @@
     "thumbnail_url": "https://images.code.org/022c5905707e361fcbeb9c18be1e48c4-Project Managing Icon.png",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:08.715+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1a_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:08.715+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1a_2025\"},{\"changed_at\":\"2026-04-04 02:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-04 02:26:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,14 +1,50 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
-  "created_at": "2024-05-08T22:31:57.000Z",
+  "created_at": "2024-05-17T19:56:00.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+    "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)",
+    "offer_browser_tts": "false",
+    "product_tours": [
+      "resource_panel_onboarding"
+    ],
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-08T15:31:57.601-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T15:31:57.601-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2026-04-06 09:12:37 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

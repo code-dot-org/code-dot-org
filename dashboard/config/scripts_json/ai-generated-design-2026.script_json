@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-27 04:55:36 UTC",
+    "serialized_at": "2026-04-04 02:33:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -106,9 +106,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, students explore how web apps shape daily life by building and testing a paper prototype. Through hands-on design and peer testing, they discover common structural components of web apps and recognize that layout decisions are intentional, not random. Students connect these patterns to how web apps guide user behavior and interaction.",
+        "overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, students build and test a paper prototype of a web app, then compare their designs with classmates. What they discover is the fun part: without any instructions, most groups make surprisingly similar choices about where to put things. That's the lesson's central insight — layout patterns aren't random, they're intentional design decisions that designers make to guide how users think and move. Students leave with names for the structural components they've been using all along and an early sense that they've already been thinking like designers.",
         "preparation": "- Print copies of the Paper App Prototype Activity Guides (1 per student)\n- Print and cut mystery component sets (1 per pair)\n- Print copies of the Unit Guides (1 per student)\n- Provide tape or glue (1 per pair)",
-        "student_overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, you design and test your own paper web app. You discover that web apps follow shared design patterns and that their structure shapes how people interact online."
+        "student_overview": "**How do web apps shape our daily lives?**\n\nHave you ever opened a brand new app and immediately knew where to look for the menu? Or tapped exactly where you expected a button to be? Today you're going to find out why by building your own app out of paper. You'll design a layout, test it with a classmate, and probably discover something surprising along the way: the choices you make on your own look a lot like the apps you already love. That's not a coincidence. That's design."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
@@ -317,9 +317,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nIn this three-day project, students apply their design, accessibility, and AI skills to create a multi-page digital magazine that reflects a theme they care about. Working through structured milestones, they plan their site’s concept and audience, wireframe its structure, build and refine pages with consistent branding, and test for accessibility using the POUR framework. The project emphasizes human-in-the-loop design, iteration with AI, and reflection on how technology can enhance—but not replace—creative and inclusive design thinking.",
+        "overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nEvery skill students have built since Lesson 1 comes together here. Students choose a topic they care about and take it all the way from concept to published site, working through four milestones that mirror a real design process. The milestone structure provides natural moments to check in and redirect before students are too invested to course-correct. By the end, every student has a finished, shareable piece of work to be genuinely proud of.",
         "preparation": "- Print copies of the Digital Magazine Project Planning Guide to students (one for each student)",
-        "student_overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nIn this project, you design and build a digital magazine that reflects a theme or interest you care about. You plan your site’s structure, use AI to help create and refine your pages, and make sure your final design is consistent, accessible, and user-friendly."
+        "student_overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nIn this project, you'll build something that is genuinely your own. Starting from a topic that matters to you, you'll define an audience, establish a brand, wireframe a layout, and bring a multi-page digital magazine to life using AI tools. By the end, you'll have a portfolio piece that demonstrates your design thinking and intentional collaboration with AI."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -998,7 +998,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students discover that web pages are intentionally structured and that visible parts work together to support user interaction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Paper App Prototype activity guide and one set of the mystery components.",
         "name": "Paper App Prototype",
-        "progression_name": "Paper App Prototype Activity Guide",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -4859,7 +4859,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Digital Magazine projects. Explain that this is their final dedicated work session for Milestone 4 – Test and Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Digital Magazine project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
-        "progression_name": "Milestone 4: Test and Finalize",
+        "progression_name": "Milestone 4: Finalize and Showcase",
         "tips": [
           {
             "type": "teachingTip",
@@ -4971,17 +4971,14 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson1-level1_v3_2026"
-        ],
-        "progression": "Paper App Prototype Activity Guide"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson1-level1_v3_2026"
+          "ai-generated-design-lesson1-level1_2026-cfu"
         ],
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "lesson_group.key": "lessonGroup-3",
@@ -4989,7 +4986,7 @@
         "activity_section.key": "8f000551-af23-461f-a83c-06a50b3d9b99"
       },
       "level_keys": [
-        "ai-generated-design-lesson1-level1_v3_2026"
+        "ai-generated-design-lesson1-level1_2026-cfu"
       ]
     },
     {
@@ -5767,7 +5764,7 @@
         "level_keys": [
           "ai-generated-design-lesson13-level4_2026"
         ],
-        "progression": "Milestone 4: Test and Finalize"
+        "progression": "Milestone 4: Finalize and Showcase"
       },
       "bonus": false,
       "seeding_key": {
@@ -5824,9 +5821,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level1_v3_2026",
+        "level.key": "ai-generated-design-lesson1-level1_2026-cfu",
         "script_level.level_keys": [
-          "ai-generated-design-lesson1-level1_v3_2026"
+          "ai-generated-design-lesson1-level1_2026-cfu"
         ],
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "lesson_group.key": "lessonGroup-3",
@@ -6618,21 +6615,6 @@
       }
     },
     {
-      "name": "Paper App Prototype Activity Guide",
-      "url": "https://docs.google.com/document/d/1kv-nXmavQp-dQmp5prubQ8sDeduV_iJrIhLSlculVCo/edit?usp=sharing",
-      "key": "welcome_to_web_apps_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "welcome_to_web_apps_1"
-      }
-    },
-    {
       "name": "Wireframes",
       "url": "https://docs.google.com/presentation/d/1tm8zE_n7KOn-tBoq66cr5pID-X0tT_C9zRJvV9gQ6o8/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "wireframes",
@@ -6724,12 +6706,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "resource.key": "welcome_to_web_apps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "resource.key": "welcome_to_web_apps_1"
       }
     },
     {
@@ -7256,7 +7232,7 @@
     {
       "key": "10bd00b5-dab7-4ec1-a92f-1449461242da",
       "properties": {
-        "description": "Test and refine their web app for accessibility and responsiveness."
+        "description": "Reflect on how AI supported and influenced their design decisions throughout the project."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -7336,7 +7312,7 @@
     {
       "key": "27351b68-f8bc-4188-a18f-fae64f320020",
       "properties": {
-        "description": "Apply decomposition, site maps, and wireframes to guide their build process."
+        "description": "Apply a consistent brand identity across all pages using a shared stylesheet."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -7366,7 +7342,7 @@
     {
       "key": "29a1a1e9-884e-4199-8260-c940b7134ed5",
       "properties": {
-        "description": "Save working versions and revert when new prompts break the design."
+        "description": "Use AI prompts to generate and iterate on their site across multiple milestones."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -7394,19 +7370,9 @@
       }
     },
     {
-      "key": "32979bfd-e046-49f2-9446-78141561251b",
-      "properties": {
-        "description": "Use prompts to generate, refine, and debug HTML/CSS components for multiple pages."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Digital Magazine Project",
-        "objective.key": "32979bfd-e046-49f2-9446-78141561251b"
-      }
-    },
-    {
       "key": "42f6299a-7208-486d-a0b7-71cb74a39c17",
       "properties": {
-        "description": "Present their final web app and provide peer feedback."
+        "description": "Test and refine their site for accessibility and responsiveness using the POUR framework and peer feedback."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -7586,7 +7552,7 @@
     {
       "key": "e103a32f-144f-495f-9bc4-20aa98ff6caf",
       "properties": {
-        "description": "Apply brand identity consistently across pages using an external stylesheet."
+        "description": "Plan a multi-page site by decomposing it into a site map, wireframes, and a defined user and purpose."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Digital Magazine Project",
@@ -7603,6 +7569,7 @@
   "rubrics": [
     {
       "level_name": "ai-generated-design-lesson11-level1_2026",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-3",
@@ -7611,6 +7578,7 @@
     },
     {
       "level_name": "ai-generated-design-lesson2-level3_2025-v2",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
@@ -7619,6 +7587,7 @@
     },
     {
       "level_name": "ai-generated-design-lesson3-level1-explore_2026",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -7627,6 +7596,7 @@
     },
     {
       "level_name": "ai-generated-design-lesson6-level8_2026-v2",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -7635,6 +7605,7 @@
     },
     {
       "level_name": "ai-generated-design-lesson8-level8_2026",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 8: Site Maps",
         "lesson_group.key": "lessonGroup-3",
@@ -7643,6 +7614,7 @@
     },
     {
       "level_name": "ai-generated-design-lesson9-level3_2026",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
