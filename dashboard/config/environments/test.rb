@@ -26,9 +26,11 @@ Dashboard::Application.configure do
 
   config.assets.quiet = true
 
-  # Show full error reports and disable caching.
+  # Show full error reports.
   config.consider_all_requests_local = true
-  config.action_controller.perform_caching = false
+
+  # Disable caching in unit tests, but allow it in UI tests.
+  config.action_controller.perform_caching = !ENV['UNIT_TEST']
 
   # Use smaller cache size when running unit tests.
   config.cache_store = :memory_store, {size: 64.megabytes} if CDO.unit_test
