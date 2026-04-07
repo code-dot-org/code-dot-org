@@ -2,11 +2,10 @@ import {jsonVideoFiles} from '@cdo/apps/jsonVideo/jsonVideoFiles';
 
 const videoLines = jsonVideoFiles
   .map(
-    f =>
-      `{"url": "${f.url}", "description": "${f.description.replace(
-        /"/g,
-        '\\"'
-      )}"}`
+    jsonVideoFile =>
+      `{"url": "${
+        jsonVideoFile.url
+      }", "description": "${jsonVideoFile.description.replace(/"/g, '\\"')}"}`
   )
   .join('\n');
 
