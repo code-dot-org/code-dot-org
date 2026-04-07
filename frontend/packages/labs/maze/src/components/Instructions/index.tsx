@@ -1,7 +1,7 @@
 import {BlocklyMarkdown} from '@code-dot-org/blockly-workspace';
 import Button from '@code-dot-org/component-library/button';
 
-import {useState} from 'react';
+import {useRef, useEffect, useState} from 'react';
 
 import type {Skin} from '../../skin';
 import type {AuthoredHint} from '../../types';
@@ -19,17 +19,29 @@ const Instructions = ({
   longInstructions,
   authoredHints,
 }: InstructionsProps) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   console.log('hm', authoredHints);
   const [confirmingHint, setConfirmingHint] = useState<boolean>(false);
   const [hintsShown, setHintsShown] = useState<number>(0);
 
+  // On every render, scroll down
+  useEffect(() => {
+    if (containerRef.current) {
+      // Scroll it down
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
+  }, [confirmingHint, hintsShown, containerRef]);
+
   return (
-    <div className={moduleStyles.instructions}>
+    <div className={moduleStyles.instructions} ref={containerRef}>
       <div className={moduleStyles.instructionsEntry}>
         <span>
           <img src={skin.smallStaticAvatar} />
         </span>
-        <BlocklyMarkdown>{longInstructions}</BlocklyMarkdown>
+        <BlocklyMarkdown className={moduleStyles.instructionsContent}>
+          {longInstructions}
+        </BlocklyMarkdown>
       </div>
       {(authoredHints || []).slice(0, hintsShown).map((hint, i) => (
         <div
@@ -39,7 +51,9 @@ const Instructions = ({
           <span>
             <img src={skin.smallStaticAvatar} />
           </span>
-          <BlocklyMarkdown>{hint.hintMarkdown}</BlocklyMarkdown>
+          <BlocklyMarkdown className={moduleStyles.instructionsContent}>
+            {hint.hintMarkdown}
+          </BlocklyMarkdown>
         </div>
       ))}
       {(authoredHints?.length || 0) > hintsShown &&
@@ -49,7 +63,9 @@ const Instructions = ({
               <span>
                 <img src={skin.smallStaticAvatar} />
               </span>
-              <BlocklyMarkdown>Would you like a hint?</BlocklyMarkdown>
+              <BlocklyMarkdown className={moduleStyles.instructionsContent}>
+                Would you like a hint?
+              </BlocklyMarkdown>
             </div>
             <div className={moduleStyles.instructionsEntry}>
               <Button
@@ -61,7 +77,7 @@ const Instructions = ({
                   setConfirmingHint(false);
                 }}
                 text="Yes"
-                iconLeft={{iconName: 'lightbulb', iconStyle: 'solid'}}
+                iconLeft={{iconName: 'thumbs-up', iconStyle: 'solid'}}
               />
               <Button
                 size="xs"
@@ -69,7 +85,7 @@ const Instructions = ({
                 color="gray"
                 onClick={() => setConfirmingHint(false)}
                 text="No"
-                iconLeft={{iconName: 'lightbulb', iconStyle: 'solid'}}
+                iconLeft={{iconName: 'thumbs-down', iconStyle: 'solid'}}
               />
             </div>
           </>

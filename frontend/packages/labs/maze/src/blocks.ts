@@ -24,8 +24,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     message0: 'move forward',
     generator: {
       javascript(block) {
-        console.log('generating');
         return `Maze.moveForward('block_id_${block.id}');\n`;
+      },
+      simple() {
+        return `moveForward();\n`;
       },
     },
   },
@@ -54,6 +56,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         const dir = block.getFieldValue('DIR');
         return 'Maze.' + dir + "('block_id_" + block.id + "');\n";
       },
+      simple(block) {
+        const dir = block.getFieldValue('DIR');
+        return `${dir}();\n`;
+      },
     },
   },
   {
@@ -78,6 +84,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       javascript(block) {
         const dir = block.getFieldValue('DIR');
         return `Maze.${dir}('block_id_${block.id}');\n`;
+      },
+      simple(block) {
+        const dir = block.getFieldValue('DIR');
+        return `${dir}();\n`;
       },
     },
   },
@@ -104,6 +114,12 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     previousStatement: true,
     generator: {
       javascript(block, javascriptGenerator) {
+        return javascriptGenerator.forBlock.controls_repeat(
+          block,
+          javascriptGenerator,
+        );
+      },
+      simple(block, javascriptGenerator) {
         return javascriptGenerator.forBlock.controls_repeat(
           block,
           javascriptGenerator,
@@ -149,6 +165,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
          */
         return 'while (Maze.notFinished()) {\n' + branch + '}\n';
       },
+      simple(block, generator) {
+        const branch = generator.statementToCode(block, 'DO');
+        return 'while (notFinished()) {\n' + branch + '}\n';
+      },
     },
   },
   {
@@ -175,6 +195,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
           Blockly.loopHighlight('Maze', this.id) +
           branch;*/
         return `while (Maze.notFinished()) {\n${branch}}\n`;
+      },
+      simple(block, generator) {
+        const branch = generator.statementToCode(block, 'DO');
+        return 'while (notFinished()) {\n' + branch + '}\n';
       },
     },
   },
@@ -209,6 +233,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       javascript(block, generator) {
         const dir = block.getFieldValue('DIR');
         const argument = `Maze.${dir}('block_id_${block.id}')`;
+        const branch = generator.statementToCode(block, 'DO');
+        //branch = Blockly.getInfiniteLoopTrap() + branch;
+        return `while (${argument}) {\n${branch}}\n`;
+      },
+      simple(block, generator) {
+        const dir = block.getFieldValue('DIR');
+        const argument = `${dir}()`;
         const branch = generator.statementToCode(block, 'DO');
         //branch = Blockly.getInfiniteLoopTrap() + branch;
         return `while (${argument}) {\n${branch}}\n`;
@@ -252,6 +283,12 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
           "('block_id_" +
           block.id +
           "')";
+        const branch = generator.statementToCode(block, 'DO');
+        const code = 'if (' + argument + ') {\n' + branch + '}\n';
+        return code;
+      },
+      simple(block, generator) {
+        const argument = `${block.getFieldValue('DIR')}()`;
         const branch = generator.statementToCode(block, 'DO');
         const code = 'if (' + argument + ') {\n' + branch + '}\n';
         return code;
@@ -302,6 +339,20 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
           "('block_id_" +
           block.id +
           "')";
+        const branch0 = generator.statementToCode(block, 'DO');
+        const branch1 = generator.statementToCode(block, 'ELSE');
+        const code =
+          'if (' +
+          argument +
+          ') {\n' +
+          branch0 +
+          '} else {\n' +
+          branch1 +
+          '}\n';
+        return code;
+      },
+      simple(block, generator) {
+        const argument = `${block.getFieldValue('DIR')}()`;
         const branch0 = generator.statementToCode(block, 'DO');
         const branch1 = generator.statementToCode(block, 'ELSE');
         const code =

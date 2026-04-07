@@ -1,7 +1,9 @@
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
+import type {BlockDefinitionWithoutMutator} from '../blocks/types';
 
-import {BlockTypes, ToolboxType} from '../constants';
+import {ToolboxType} from '../constants';
+import {simpleGenerator} from '../generators/simple';
 
 export * from './toolboxToWorkspaceBlocks';
 
@@ -13,6 +15,10 @@ export interface GetAllGeneratedCodeOptions {
   startBlock?: string;
   /** The code to inject at the start of the generated code block. */
   extraCode?: string;
+  /**
+   * The language of the generator to use.
+   */
+  language?: keyof BlockDefinitionWithoutMutator['generator'];
   /**
    * The workspaces to use. By default, it just looks at whatever Blockly
    * currently thinks is the main workspace.
@@ -31,9 +37,17 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   // The students blocks are considered to be any on the main or hidden workspaces.
   let code = options?.extraCode || '';
 
+  const generator =
+    (options?.language || 'javascript') === 'javascript'
+      ? javascriptGenerator
+      : simpleGenerator;
+  if (!generator) {
+    return '';
+  }
+
   (options?.workspaces || [Blockly.getMainWorkspace()]).forEach(workspace => {
     if (workspace) {
-      javascriptGenerator.init(workspace);
+      generator.init(workspace);
       const blocks = workspace.getTopBlocks(true);
       const blocksCode: (string | [string, number])[] = [];
       blocks.forEach(block => {
@@ -41,11 +55,11 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
           options?.startBlock === undefined ||
           options?.startBlock === block.type
         ) {
-          const blockCode = javascriptGenerator.blockToCode(block);
+          const blockCode = generator.blockToCode(block);
           blocksCode.push(blockCode);
         }
       });
-      code += javascriptGenerator.finish(blocksCode.join('\n'));
+      code += generator.finish(blocksCode.join('\n'));
     }
   });
 
@@ -76,20 +90,6 @@ export function updateBlockEnabled(
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
   }
-}
-
-/**
- * Disables all blocks that are not attached to a top block.
- */
-export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
-  // When a function definition is moved, we should not suddenly enable
-  // its call blocks.
-  eventWorkspace.getTopBlocks().forEach(block => {
-    if (block.type === BlockTypes.procedureCall) {
-      block.setDisabledReason(true, 'ORPHANED');
-    }
-    updateBlockEnabled(block, 'ORPHANED');
-  });
 }
 
 export function getToolboxType(workspaceOverride?: Blockly.WorkspaceSvg) {

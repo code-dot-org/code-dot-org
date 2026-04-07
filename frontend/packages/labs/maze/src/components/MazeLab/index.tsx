@@ -1,10 +1,17 @@
 import Button from '@code-dot-org/component-library/button';
+import {StartOverDialog} from '@code-dot-org/lab/dialogs';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {Blockly} from '@code-dot-org/blockly-workspace';
 import {useRef, useCallback, useState} from 'react';
 import classNames from 'classnames';
-import {getToolboxWidth} from '@code-dot-org/blockly-workspace/utils';
+import {
+  getToolboxWidth,
+  getAllGeneratedCode,
+} from '@code-dot-org/blockly-workspace/utils';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
+import SettingsDialog from '../SettingsDialog';
+import ShowCodeDialog from '../ShowCodeDialog';
 import Visualization from '../Visualization';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import * as api from '../../api';
@@ -73,6 +80,10 @@ const MazeLab = () => {
 
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
+  const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
+  const [showCodeOpen, setShowCodeOpen] = useState<boolean>(false);
+  const [startOverOpen, setStartOverOpen] = useState<boolean>(false);
+  const [showCode, setShowCode] = useState<string>('');
 
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
@@ -179,6 +190,23 @@ const MazeLab = () => {
 
   return (
     <Layout className={moduleStyles.labMaze}>
+      {settingsOpen && (
+        <SettingsDialog onClose={() => setSettingsOpen(false)} />
+      )}
+      {showCodeOpen && (
+        <ShowCodeDialog
+          code={showCode.trim()}
+          onClose={() => setShowCodeOpen(false)}
+        />
+      )}
+      {startOverOpen && (
+        <StartOverDialog
+          onCancel={() => setStartOverOpen(false)}
+          onConfirm={() => {
+            setStartOverOpen(false);
+          }}
+        />
+      )}
       <Panel id="work-area" className={classNames(moduleStyles.workArea)}>
         <PanelContainer
           className={moduleStyles.visArea}
@@ -214,12 +242,33 @@ const MazeLab = () => {
             id="workspace-panel"
             rightHeaderContent={
               <div className={moduleStyles.buttons}>
+                <WithTooltip
+                  tooltipProps={{
+                    text: 'Settings',
+                    tooltipId: 'settings-tooltip',
+                    size: 'xs',
+                    direction: 'onTop',
+                  }}
+                >
+                  <Button
+                    size="xs"
+                    type="secondary"
+                    color="gray"
+                    onClick={() => setSettingsOpen(true)}
+                    ariaLabel="Settings"
+                    isIconOnly={true}
+                    icon={{
+                      iconName: 'gear',
+                      iconStyle: 'solid',
+                    }}
+                  />
+                </WithTooltip>
                 <Button
                   size="xs"
                   type="secondary"
                   color="gray"
                   text="Start Over"
-                  onClick={() => {}}
+                  onClick={() => setStartOverOpen(true)}
                   iconLeft={{
                     iconName: 'rotate-left',
                     iconStyle: 'solid',
@@ -230,7 +279,17 @@ const MazeLab = () => {
                   type="secondary"
                   color="gray"
                   text="Show Code"
-                  onClick={() => {}}
+                  onClick={() => {
+                    if (workspaceRef.current) {
+                      setShowCodeOpen(true);
+                      setShowCode(
+                        getAllGeneratedCode({
+                          language: 'simple',
+                          workspaces: [workspaceRef.current],
+                        }),
+                      );
+                    }
+                  }}
                   iconLeft={{
                     iconName: 'code',
                     iconStyle: 'solid',

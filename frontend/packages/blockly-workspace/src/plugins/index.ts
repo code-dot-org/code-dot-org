@@ -123,20 +123,20 @@ export interface CreateInjectPluginOptionsBase {
 
 export interface CreateInjectPluginOptionsWithInitAndChange<T = never>
   extends CreateInjectPluginOptionsBase {
-  onInit: InjectSetupFunction<T>;
-  onChange: InjectChangeFunction<T>;
+  onInit?: InjectSetupFunction<T>;
+  onChange?: InjectChangeFunction<T>;
 }
 
 export interface CreateInjectPluginOptionsWithInit<T = never>
   extends CreateInjectPluginOptionsBase {
-  onInit: InjectSetupFunction<T>;
-  onChange: never;
+  onInit?: InjectSetupFunction<T>;
+  onChange?: never;
 }
 
 export interface CreateInjectPluginOptionsWithChange<T = never>
   extends CreateInjectPluginOptionsBase {
-  onInit: never;
-  onChange: InjectChangeFunction<T>;
+  onInit?: never;
+  onChange?: InjectChangeFunction<T>;
 }
 
 export type CreateInjectPluginOptions<T = never> =
@@ -177,7 +177,7 @@ export function createInjectPlugin<T = never>(
 
         if (options?.onChange) {
           workspace.addChangeListener((e: Blockly.Events.Abstract) => {
-            options.onChange(e, state as unknown as T);
+            options.onChange?.(e, state as unknown as T);
           });
         }
       }

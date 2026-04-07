@@ -1,14 +1,23 @@
-/**
- * This contains our custom Blockly events that we can elect to use to respond to
- * different situations.
- */
-
 import * as Blockly from 'blockly/core';
 
-import {BlockTypes} from '../constants';
-import {updateBlockEnabled, disableOrphanBlocks} from '../utils';
+import {BlockTypes} from '../../constants';
+import {updateBlockEnabled} from '../../utils';
+import {createInjectPlugin} from '../../plugins';
 
-type State = Blockly.serialization.blocks.State;
+/**
+ * Disables all blocks that are not attached to a top block.
+ */
+export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
+  // When a function definition is moved, we should not suddenly enable
+  // its call blocks.
+  eventWorkspace.getTopBlocks().forEach(block => {
+    if (block.type === BlockTypes.procedureCall) {
+      block.setDisabledReason(true, 'ORPHANED');
+    }
+    updateBlockEnabled(block, 'ORPHANED');
+    (block as Blockly.BlockSvg).getSvgRoot().style.opacity = '';
+  });
+}
 
 /**
  * A custom version of Blockly's Events.disableOrphans. This makes a couple
@@ -59,7 +68,9 @@ export function disableOrphans(event: Blockly.Events.Abstract) {
   }
 
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
-  const block = eventWorkspace?.getBlockById(blockEvent.blockId);
+  const block = eventWorkspace?.getBlockById(
+    blockEvent.blockId,
+  ) as Blockly.BlockSvg;
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
@@ -67,6 +78,13 @@ export function disableOrphans(event: Blockly.Events.Abstract) {
   ) {
     if (block) {
       updateBlockEnabled(block);
+
+      // Fade the orphaned blocks regardless of what the renderer actually wants
+      if (block.isEnabled() || !!block.getParent()) {
+        block.getSvgRoot().style.opacity = '';
+      } else {
+        block.getSvgRoot().style.opacity = '0.5';
+      }
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
@@ -78,63 +96,10 @@ export function disableOrphans(event: Blockly.Events.Abstract) {
 }
 
 /**
- * Grays out undeletable blocks.
+ * Plugin that disables blocks that are not connected to the start block.
  */
-export function grayOutUndeletableBlocks(event: Blockly.Events.Abstract) {
-  const expectedEventTypes: string[] = [
-    Blockly.Events.BLOCK_CHANGE,
-    Blockly.Events.BLOCK_CREATE,
-  ];
+export const plugin = createInjectPlugin({
+  onChange: disableOrphans,
+});
 
-  // Mask out only certain event types
-  if (!expectedEventTypes.includes(event.type)) {
-    return;
-  }
-
-  const blockEvent = event as
-    | Blockly.Events.BlockCreate
-    | Blockly.Events.BlockChange;
-
-  if (!blockEvent.blockId || !blockEvent.workspaceId) {
-    return;
-  }
-
-  const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
-
-  const grayOut: (state: State) => void = state => {
-    if (!state.id) {
-      return;
-    }
-
-    const block = eventWorkspace?.getBlockById(state.id);
-    if (
-      block &&
-      eventWorkspace &&
-      !block.isDeletable() &&
-      block.isMovable() &&
-      !eventWorkspace.options.readOnly
-    ) {
-      block.setColour('#888');
-    }
-
-    // Go through the connected blocks that were created with this block
-    if (state.next?.block) {
-      grayOut(state.next.block);
-    }
-
-    // Ditto for inputs
-    for (const input of Object.values(state.inputs || {})) {
-      if (input.block) {
-        grayOut(input.block);
-      }
-    }
-  };
-
-  const blockState: State = (blockEvent.type === Blockly.Events.BLOCK_CREATE &&
-    (blockEvent as Blockly.Events.BlockCreate).json) || {
-    id: blockEvent.blockId,
-    type: '',
-  };
-
-  grayOut(blockState);
-}
+export default plugin;

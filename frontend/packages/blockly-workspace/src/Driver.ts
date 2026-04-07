@@ -3,6 +3,7 @@ import {
   javascriptGenerator,
   type JavascriptGenerator,
 } from 'blockly/javascript';
+import {simpleGenerator} from './generators/simple';
 import EventEmitter from 'events';
 import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
@@ -29,6 +30,8 @@ export const DriverEvent = {
   Removed: 'removed',
   /** A callback for when anything in the workspace updates */
   BlocklyEvent: 'blockly-event',
+  /** The theme changed */
+  ThemeChanged: 'theme-changed',
 } as const;
 
 interface DriverEvents<T extends Environment = Environment> extends EventMap {
@@ -41,6 +44,7 @@ interface DriverEvents<T extends Environment = Environment> extends EventMap {
     event: Blockly.Events.Abstract,
     environment: T,
   ) => void;
+  [DriverEvent.ThemeChanged]: () => void;
 }
 
 const originalGeneratorFunctions: OriginalGeneratorFunctions = {
@@ -143,6 +147,23 @@ class Driver<
           ) || ''
         );
       };
+
+      // Deal with the 'simple' generator. It is an alias of the javascript generator
+      // when not specified.
+      simpleGenerator.forBlock[blockDefinition.type] = (blockDefinition
+        .generator?.simple
+        ? function (block: Blockly.Block, _generator: JavascriptGenerator) {
+            return (
+              blockDefinition.generator?.simple?.(
+                block as BlockSvg,
+                simpleGenerator as unknown as JavascriptGenerator,
+                environment,
+              ) || ''
+            );
+          }
+        : javascriptGenerator.forBlock[
+            blockDefinition.type
+          ]) as unknown as Blockly.CodeGenerator['forBlock'][string];
     });
   }
 
@@ -172,13 +193,14 @@ class Driver<
    */
   set theme(theme: Theme | undefined) {
     this._theme = theme || DefaultTheme;
+    this.emit(DriverEvent.ThemeChanged);
   }
 
   /**
    * Updates the theme.
    */
   setTheme(theme: Theme | undefined) {
-    this._theme = theme || DefaultTheme;
+    this.theme = theme;
   }
 
   /**

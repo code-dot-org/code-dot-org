@@ -1,0 +1,14 @@
+.show-code-dialog {
+  i {
+    display: flex;
+  }
+
+  pre {
+    border: 1px solid var(--borders-neutral-light);
+    border-radius: 0.25rem;
+    max-height: 50%;
+    overflow: auto;
+    padding: 0.5rem;
+    width: 100%;
+  }
+}

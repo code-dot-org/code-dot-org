@@ -1,17 +1,31 @@
 .lab-maze {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+
   .buttons {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
   }
 
-  .blockCount {
+  .block-count {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     padding: 0.5rem;
+    padding-inline-start: 1.5rem;
+
+    &.over i + span {
+      color: var(--text-warning-primary);
+      font-weight: bold;
+    }
 
     i {
+      color: var(--text-brand-teal-primary);
       line-height: 1rem;
     }
 
@@ -21,23 +35,24 @@
     }
   }
 
-  .visArea {
+  .vis-area {
+    overflow: hidden;
     width: 40rem;
 
-    .visBox {
-      flex: 0 0 auto;
-
-      .visualization {
-        width: 100%;
-      }
-    }
-
-    .visUnderBox {
-      flex: 0 1 auto;
+    .vis-under-box {
+      flex: 1 1 auto;
     }
   }
 
-  .blocklyWorkspace {
+  .blockly-workspace {
     flex: 1 1 auto;
+  }
+}
+
+.vis-box {
+  flex: 0 0 auto;
+
+  .visualization {
+    width: 100%;
   }
 }

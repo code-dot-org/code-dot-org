@@ -1,11 +1,11 @@
-import type {FunctionComponent} from 'react';
+import Dialog from '@code-dot-org/component-library/dialog';
 
 import type {ProjectType} from '@code-dot-org/core/api';
 
-import {TEXT_BASED_LABS} from '../../constants';
-import {useApp} from '../../contexts/AppContext';
+import {TEXT_BASED_LABS} from '../../../constants';
+import {useApp} from '../../../contexts/AppContext';
 
-import GenericDialog, {type GenericDialogProps} from './GenericDialog';
+import moduleStyles from './startOverDialog.module.scss';
 
 /**
  * Lab-specific messages for starting over.
@@ -15,20 +15,23 @@ const LAB_SPECIFIC_MESSAGES: {[appName in ProjectType]?: string} = {
     'This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.',
 };
 
-export type StartOverDialogProps = GenericDialogProps & {
+export interface StartOverDialogProps {
   /** Callback when confirm is pressed. */
   onConfirm: () => void;
   /** Callback when cancel is pressed. */
   onCancel?: () => void;
-};
+  /** Potentially the message to override inside the dialog */
+  message?: string;
+}
 
 /**
  * Start Over dialog used in Lab2 labs.
  */
-const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
+const StartOverDialog = ({
   onConfirm,
   onCancel = () => {},
-}) => {
+  message,
+}: StartOverDialogProps) => {
   const currentAppName = useApp().lab?.levelProperties.appName;
 
   const isTextWorkspace =
@@ -41,17 +44,22 @@ const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
       : "This will reset the workspace to its start state and remove all the blocks you've added or changed.");
 
   return (
-    <GenericDialog
+    <Dialog
+      className={moduleStyles.startOverDialog}
       title="Are you sure you want to start over?"
-      message={dialogMessage}
-      buttons={{
-        confirm: {
-          callback: onConfirm,
-          text: 'Start Over',
-        },
-        cancel: {
-          callback: onCancel,
-        },
+      description={message || dialogMessage}
+      closeLabel="Cancel Start Over"
+      icon={{
+        iconName: 'rotate-left',
+        iconStyle: 'solid',
+      }}
+      primaryButtonProps={{
+        text: 'Start Over',
+        onClick: onConfirm,
+      }}
+      secondaryButtonProps={{
+        text: 'Cancel',
+        onClick: onCancel,
       }}
     />
   );

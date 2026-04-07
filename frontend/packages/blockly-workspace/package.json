@@ -37,11 +37,6 @@
       "import": "./dist/utils/index.mjs",
       "require": "./dist/utils/index.js"
     },
-    "./events": {
-      "types": "./dist/events/index.d.ts",
-      "import": "./dist/events/index.mjs",
-      "require": "./dist/events/index.js"
-    },
     "./contexts": {
       "types": "./dist/contexts/index.d.ts",
       "import": "./dist/contexts/index.mjs",
@@ -86,6 +81,16 @@
       "types": "./dist/plugins/blockLimits/index.d.ts",
       "import": "./dist/plugins/blockLimits/index.mjs",
       "require": "./dist/plugins/blockLimits/index.js"
+    },
+    "./plugins/grayOutUndeletableBlocks": {
+      "types": "./dist/plugins/grayOutUndeletableBlocks/index.d.ts",
+      "import": "./dist/plugins/grayOutUndeletableBlocks/index.mjs",
+      "require": "./dist/plugins/grayOutUndeletableBlocks/index.js"
+    },
+    "./plugins/disableOrphans": {
+      "types": "./dist/plugins/disableOrphans/index.d.ts",
+      "import": "./dist/plugins/disableOrphans/index.mjs",
+      "require": "./dist/plugins/disableOrphans/index.js"
     },
     "./mutators": {
       "types": "./dist/mutators/index.d.ts",

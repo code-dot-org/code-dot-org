@@ -4,6 +4,7 @@ import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
 
 import type Driver from './Driver';
+import {DriverEvent} from './Driver';
 import {positionBlocksOnWorkspace} from './serialization';
 import type {Toolbox} from './toolbox';
 import {buildToolbox} from './toolbox';
@@ -70,6 +71,9 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     this._container = container;
 
     this.driver.initialize(this);
+    this.driver.addListener(DriverEvent.ThemeChanged, () => {
+      this._workspace?.setTheme(this.driver.theme.instance);
+    });
   }
 
   get driver(): Driver<T> {
@@ -243,6 +247,9 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
           this._container.classList.add(blocklyClassName);
         }
       }
+
+      // Destroy the original container
+      container?.remove();
     } else {
       if (this._workspace) {
         Blockly.svgResize(this._workspace);

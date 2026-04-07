@@ -2,6 +2,8 @@ import {registerLevelKindSchema} from '@code-dot-org/core/api';
 import {BlocklyLab} from '@code-dot-org/lab';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import BlockLimitsPlugin from '@code-dot-org/blockly-workspace/plugins/blockLimits';
+import DisableOrphansPlugin from '@code-dot-org/blockly-workspace/plugins/disableOrphans';
+import GrayOutUndeletableBlocksPlugin from '@code-dot-org/blockly-workspace/plugins/grayOutUndeletableBlocks';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import blocks from './blocks';
 import skins, {skinFor} from './skins';
@@ -30,7 +32,12 @@ function App() {
           blocklyProps={(levelProperties: MazeLevelProperties) => ({
             renderer: ThrasosRenderer,
             blocks: blocks(skinFor(skins, levelProperties?.skin || 'birds')),
-            plugins: [ToolboxTrashcanPlugin, BlockLimitsPlugin],
+            plugins: [
+              ToolboxTrashcanPlugin,
+              BlockLimitsPlugin,
+              DisableOrphansPlugin,
+              GrayOutUndeletableBlocksPlugin,
+            ],
           })}
         >
           <MazeLab />

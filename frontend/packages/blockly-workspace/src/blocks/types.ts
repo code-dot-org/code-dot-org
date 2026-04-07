@@ -183,6 +183,17 @@ export type JavascriptBlockGenerator<
 > = BlockGenerator<B, JavascriptGenerator, U>;
 
 /**
+ * The code generation function specific for generating the code presented in the 'show code'
+ * dialog for simpler apps. It extends the JavascriptGenerator, but won't be actually
+ * interpreted. So, you can generate code without any necessary shims or hacks and present it
+ * more cleanly.
+ */
+export type SimpleBlockGenerator<
+  B extends BlockSvg = BlockSvg,
+  U extends Environment = Environment,
+> = BlockGenerator<B, JavascriptGenerator, U>;
+
+/**
  * Describes a custom block.
  *
  * We add a few additional nice-to-haves over the general Blockly block
@@ -239,6 +250,7 @@ export interface BlockDefinitionWithMutator<
   /** The function that generates code for this block. */
   generator: {
     javascript: JavascriptBlockGenerator<MutatorBlock<T, B>, U>;
+    simple?: SimpleBlockGenerator<MutatorBlock<T, B>, U>;
   };
 }
 
@@ -251,6 +263,7 @@ export interface BlockDefinitionWithoutMutator<
   /** The function that generates code for this block. */
   generator: {
     javascript: JavascriptBlockGenerator<B, U>;
+    simple?: SimpleBlockGenerator<B, U>;
   };
 }
 
@@ -271,6 +284,7 @@ export interface OldBlockDefinition {
   /** The function that generates code for this block. */
   generator: {
     javascript: JavascriptBlockGenerator;
+    simple?: SimpleBlockGenerator;
   };
 }
 
