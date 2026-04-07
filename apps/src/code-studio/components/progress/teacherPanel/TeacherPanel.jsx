@@ -186,7 +186,9 @@ class TeacherPanel extends React.Component {
       <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
+          <div style={styles.viewAsToggleContainer}>
+            <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
+          </div>
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -316,6 +318,10 @@ const styles = {
   },
   teacherDashboardLink: {
     fontSize: 11,
+  },
+  viewAsToggleContainer: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 };
 
