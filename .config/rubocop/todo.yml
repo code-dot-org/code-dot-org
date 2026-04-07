@@ -57,10 +57,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 1
-Lint/DuplicateHashKey:
-  Enabled: false
-
 # Offense count: 147
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
