@@ -124,7 +124,7 @@ class RubricsController < ApplicationController
     scope = RubricAiEvaluation.where(
       rubric_id: permitted_params[:id],
       user_id: student.id
-    ).order(updated_at: :desc).first
+    )
     # Demo students are shared across teachers, so scope to the current teacher's
     # evaluations to prevent cross-teacher data leakage.
     scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(student.id)
