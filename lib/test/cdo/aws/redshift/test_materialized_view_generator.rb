@@ -1,6 +1,8 @@
 require_relative '../../../test_helper'
 require_relative '../../../../cdo/aws/redshift/materialized_view_generator'
 require 'erb'
+require 'fileutils'
+require 'tmpdir'
 
 module Cdo
   module Aws
@@ -131,6 +133,67 @@ module Cdo
           it 'returns nil when there are no non-pii columns' do
             model.stubs(:columns).returns([name_col, bio_col])
             assert_nil generator.generate_non_pii_ddl
+          end
+        end
+
+        describe '#save_ddl_templates' do
+          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'writes pii and non-pii template files' do
+            files = generator.save_ddl_templates
+            assert_equal 2, files.length
+            assert(files.any? {|f| f.end_with?('users_pii.sql.erb')})
+            assert(files.any? {|f| f.end_with?('users.sql.erb')})
+            files.each {|f| assert File.exist?(f)}
+          end
+
+          it 'writes valid ERB templates that render correctly' do
+            generator.save_ddl_templates
+            pii_path = File.join(tmpdir, 'users_pii.sql.erb')
+            rendered = MaterializedViewGenerator.render_ddl(pii_path, environment_type: 'production')
+            assert_includes rendered, 'dashboard_production_pii.zeroetl_users'
+            assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          end
+
+          it 'skips pii file when model has no columns' do
+            model.stubs(:columns).returns([])
+            files = generator.save_ddl_templates
+            assert_empty files
+          end
+
+          it 'skips non-pii file when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            files = generator.save_ddl_templates
+            # The PII view still contains the (text) columns, so its file is written.
+            # Only the non-PII view, which would have been empty, is skipped.
+            assert_equal 1, files.length
+            assert(files.any? {|f| f.end_with?('users_pii.sql.erb')})
+            refute(files.any? {|f| File.basename(f) == 'users.sql.erb'})
+          end
+        end
+
+        describe '.render_ddl' do
+          let(:tmpdir) {Dir.mktmpdir}
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'renders environment_type into the template' do
+            template_path = File.join(tmpdir, 'test_template.sql.erb')
+            File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
+            result = MaterializedViewGenerator.render_ddl(template_path, environment_type: 'production')
+            assert_equal 'SELECT * FROM production_db.table;', result
           end
         end
 

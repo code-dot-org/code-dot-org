@@ -1,3 +1,5 @@
+require 'erb'
+require 'fileutils'
 require 'cdo/aws/redshift/client'
 
 module Cdo
@@ -20,6 +22,9 @@ module Cdo
         # ERB template variable for the environment type (e.g., 'test' or 'production').
         ENVIRONMENT_TYPE_ERB = '<%=environment_type%>'.freeze
 
+        # Directory where generated DDL ERB template files are saved.
+        SQL_VIEW_TEMPLATE_DIR = aws_dir('redshift', 'zeroetl_materialized_views').freeze
+
         # @param model [Class] The ActiveRecord model class (e.g., User, Activity)
         def initialize(model)
           @model = model
@@ -37,6 +42,38 @@ module Cdo
         def generate_non_pii_ddl
           return nil if non_pii_columns.empty?
           build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}", columns: non_pii_columns)
+        end
+
+        # Saves the PII and non-PII DDL ERB templates to the template directory.
+        # @return [Array<String>] list of file paths written
+        def save_ddl_templates
+          FileUtils.mkdir_p(SQL_VIEW_TEMPLATE_DIR)
+          files = []
+
+          pii_ddl = generate_pii_ddl
+          if pii_ddl
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}_pii.sql.erb")
+            File.write(path, pii_ddl)
+            files << path
+          end
+
+          non_pii_ddl = generate_non_pii_ddl
+          if non_pii_ddl
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}.sql.erb")
+            File.write(path, non_pii_ddl)
+            files << path
+          end
+
+          files
+        end
+
+        # Renders a DDL ERB template file with the given environment type.
+        # @param template_path [String] path to the .sql.erb template file
+        # @param environment_type [String] the environment type (e.g., 'test' or 'production')
+        # @return [String] the rendered SQL DDL
+        def self.render_ddl(template_path, environment_type:)
+          template = File.read(template_path)
+          ERB.new(template).result_with_hash(environment_type: environment_type)
         end
 
         private def non_pii_columns
