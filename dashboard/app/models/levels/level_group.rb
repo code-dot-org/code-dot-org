@@ -121,7 +121,7 @@ class LevelGroup < DSLDefined
   end
 
   def self.setup(data, md5)
-    level = super(data, md5)
+    level = super
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
@@ -161,7 +161,7 @@ class LevelGroup < DSLDefined
 
   def assign_attributes(params)
     @pages = nil
-    super(params)
+    super
   end
 
   def plc_evaluation?

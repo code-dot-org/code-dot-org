@@ -87,6 +87,6 @@ class Grid < Blockly
       prop = level_hash['properties']
       prop[maze_type] = prop[maze_type].to_json if prop[maze_type].is_a?(Array)
     end
-    super(level_hash)
+    super
   end
 end

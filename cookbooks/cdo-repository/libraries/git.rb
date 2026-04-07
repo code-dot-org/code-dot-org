@@ -11,7 +11,7 @@ module Cdo
   module Provider
     class Git < Chef::Provider::Git
       def initialize(new_resource, run_context)
-        super new_resource, run_context
+        super
         # `checkout_branch` is always `false`, since this provider always skips the extra checkout step.
         new_resource.enable_checkout false
       end

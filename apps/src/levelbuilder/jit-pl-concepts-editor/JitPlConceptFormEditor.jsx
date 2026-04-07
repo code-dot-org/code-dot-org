@@ -10,7 +10,11 @@ import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMark
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 
+import ExemplarsEditor from './ExemplarsEditor';
 import MisconceptionsEditor from './MisconceptionsEditor';
+import TeachingTipsEditor from './TeachingTipsEditor';
+
+import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 const JitPlConceptFormEditor = ({
   conceptId,
@@ -18,6 +22,8 @@ const JitPlConceptFormEditor = ({
   originalDisplayName,
   originalTextContent,
   originalMisconceptions,
+  originalExemplars,
+  originalTeachingTips,
   resources,
 }) => {
   const [name, setName] = useState(originalName);
@@ -59,22 +65,20 @@ const JitPlConceptFormEditor = ({
     <div>
       <RailsAuthenticityToken />
       <h1>Edit JIT PL Concept</h1>
-      <label style={styles.label}>
+      <label className={moduleStyles.conceptLabel}>
         Name
         <input
-          className="input"
           name="name"
-          style={styles.input}
+          className={moduleStyles.conceptInput}
           value={name || ''}
           onChange={e => setName(e.target.value)}
         />
       </label>
-      <label style={styles.label}>
+      <label className={moduleStyles.conceptLabel}>
         Display Name
         <input
-          className="input"
           name="display_name"
-          style={styles.input}
+          className={moduleStyles.conceptInput}
           value={displayName || ''}
           onChange={e => setDisplayName(e.target.value)}
         />
@@ -91,10 +95,20 @@ const JitPlConceptFormEditor = ({
         resourceContext="jitPlConceptResource"
         resources={resources}
       />
+      <h2>Exemplars</h2>
+      <ExemplarsEditor
+        conceptId={conceptId}
+        initialExemplars={originalExemplars}
+      />
       <h2>Misconceptions</h2>
       <MisconceptionsEditor
         conceptId={conceptId}
         initialMisconceptions={originalMisconceptions}
+      />
+      <h2>Teaching Tips</h2>
+      <TeachingTipsEditor
+        conceptId={conceptId}
+        initialTeachingTips={originalTeachingTips}
       />
       <br />
       <SaveBar
@@ -108,21 +122,14 @@ const JitPlConceptFormEditor = ({
   );
 };
 
-const styles = {
-  label: {
-    marginBottom: 20,
-  },
-  input: {
-    marginLeft: 10,
-  },
-};
-
 JitPlConceptFormEditor.propTypes = {
   conceptId: PropTypes.number.isRequired,
   originalName: PropTypes.string,
   originalDisplayName: PropTypes.string,
   originalTextContent: PropTypes.string,
   originalMisconceptions: PropTypes.array,
+  originalExemplars: PropTypes.array,
+  originalTeachingTips: PropTypes.array,
   resources: PropTypes.arrayOf(resourceShape).isRequired,
 };
 

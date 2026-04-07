@@ -33,7 +33,7 @@ module ActiveSupport
           @instance = run_callbacks :setup_all
           # @time is set by `time_it`, and needs to be removed before the instance is reused.
           @instance.remove_instance_variable :@time
-          super(reporter, options)
+          super
           run_callbacks :teardown_all
         end
 
