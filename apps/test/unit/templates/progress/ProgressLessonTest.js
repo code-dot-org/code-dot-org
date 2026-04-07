@@ -309,8 +309,6 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.find('.ui-test-lesson-resources').props().href).toEqual(
-      
-    
       'test-url'
     );
     delete myLesson.student_lesson_plan_html_url;
@@ -384,7 +382,10 @@ describe('ProgressLesson', () => {
     });
 
     it('does not show when viewing as instructor', () => {
-      experiments.isEnaot wrapper = sha rogressLesson {...tutorProps;
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(
+        <ProgressLesson {...tutorProps} viewAs={ViewType.Instructor} />
+      );
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
