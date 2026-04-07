@@ -93,13 +93,19 @@ describe('SummaryProgressRow', () => {
 
     it('shows when experiment is enabled and viewing as participant', () => {
       experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({lesson: tutorLesson, viewAs: ViewType.Participant});
+      const wrapper = setUp({
+        lesson: tutorLesson,
+        viewAs: ViewType.Participant,
+      });
       expect(wrapper.text()).toContain('Lesson Tutor');
     });
 
     it('does not show when experiment is disabled', () => {
       experiments.isEnabled = jest.fn(() => false);
-      const wrapper = setUp({lesson: tutorLesson, viewAs: ViewType.Participant});
+      const wrapper = setUp({
+        lesson: tutorLesson,
+        viewAs: ViewType.Participant,
+      });
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
