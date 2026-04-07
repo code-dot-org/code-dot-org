@@ -6,29 +6,6 @@
 # handoff file so later phases do not need raw remote-state outputs for this
 # cluster-shape metadata.
 
-data "aws_caller_identity" "current" {}
-
-data "aws_partition" "current" {}
-
-data "aws_route53_zone" "parent_domain" {
-  name         = local.cluster_outs.parent_domain
-  private_zone = false
-}
-
-locals {
-  iam_arn_prefix = "arn:${data.aws_partition.current.partition}:iam::${data.aws_caller_identity.current.account_id}"
-
-  eso_iam_role_arns = merge(
-    {
-      for env in sort(tolist(local.single_namespace_environment_types)) :
-      env => "${local.iam_arn_prefix}:role/${local.cluster_name}-eso-${env}"
-    },
-    {
-      adhoc = "${local.iam_arn_prefix}:role/${local.cluster_name}-eso-adhoc"
-    }
-  )
-}
-
 # update+commit+push apps/infra/codeai-cluster-config.values.yaml to GitHub repo k8s-gitops
 # this is the form that will be used by ArgoCD apps.
 #
@@ -52,34 +29,13 @@ resource "github_repository_file" "codeai_cluster_config_values" {
         cluster_region                     = local.cluster_region
         cluster_subdomain                  = local.cluster_subdomain
         cluster_oidc_issuer_url            = local.cluster_oidc_issuer_url
-        iam_arn_prefix                     = local.iam_arn_prefix
+        iam_arn_prefix                     = "arn:${data.aws_partition.current.partition}:iam::${data.aws_caller_identity.current.account_id}"
         oidc_provider_arn                  = local.oidc_provider_arn
         parent_domain_zone_id              = data.aws_route53_zone.parent_domain.zone_id
         single_namespace_environment_types = sort(tolist(toset(local.single_namespace_environment_types)))
         frontend_security_group_namespaces = sort(tolist(toset(local.cluster_outs.frontend_security_group_namespaces)))
         cluster_primary_security_group_id  = local.cluster_outs.cluster_primary_security_group_id
         frontend_security_group_id         = local.cluster_outs.frontend_security_group_id
-        eso_iam_role_arns                  = local.eso_iam_role_arns
-      }
-    }),
-    "\n",
-    "# Specially shaped values for the dex chart:",
-    yamlencode({
-      dexGoogleClient = {
-        clientID = var.dex_google_client_id
-      }
-    }),
-    "\n",
-    "# Specially shaped values for the kargo-secrets chart:",
-    yamlencode({
-      sharedResources = {
-        clusterName   = local.cluster_name
-        clusterRegion = local.cluster_region
-      }
-      systemResources = {
-        secretStore = {
-          awsRegion = local.cluster_region
-        }
       }
     }),
   ])
