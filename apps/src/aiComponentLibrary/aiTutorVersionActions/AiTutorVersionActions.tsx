@@ -173,7 +173,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             >
               <MuiIconButton
                 variant="outlined"
-                color="secondary"
+                color="tertiary"
                 size="small"
                 onClick={handleReject}
                 type="button"
