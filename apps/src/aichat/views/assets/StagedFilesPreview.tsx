@@ -29,6 +29,10 @@ const alerts = {
     `AI Chat supports a maximum file size of ${MAX_FILE_SIZE_MB}MB. Please try a smaller file.`,
     'danger',
   ] as const,
+  imageFileFlagged: [
+    'One or more of your images have been flagged by our content moderation policy and have not been attached.',
+    'danger',
+  ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
 
 interface StagedFilesPreviewProps {
@@ -55,31 +59,33 @@ const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
 
   return (
     <div className={styles.container}>
-      <div className={styles.row}>
-        {stagedFiles.map(({key, asset, status}) => {
-          const filename = asset.filename;
-          return (
-            <FilePreview
-              key={key}
-              type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-              url={`${buildAssetUrl(asset)}?t=${key}`}
-              filename={filename}
-              isUploading={status === 'uploading'}
-              onRemove={() => dispatch(removeStagedFile(key))}
-              onLoadError={() => {
-                dispatch(
-                  stagedFileUploadFinished({key, status: 'uploadFailed'})
-                );
-                Lab2Registry.getInstance()
-                  .getMetricsReporter()
-                  .logError('Error loading staged file', undefined, {
-                    asset,
-                  });
-              }}
-            />
-          );
-        })}
-      </div>
+      {stagedFiles.length > 0 && (
+        <div className={styles.row}>
+          {stagedFiles.map(({key, asset, status}) => {
+            const filename = asset.filename;
+            return (
+              <FilePreview
+                key={key}
+                type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
+                url={`${buildAssetUrl(asset)}?t=${key}`}
+                filename={filename}
+                isUploading={status === 'uploading'}
+                onRemove={() => dispatch(removeStagedFile(key))}
+                onLoadError={() => {
+                  dispatch(
+                    stagedFileUploadFinished({key, status: 'uploadFailed'})
+                  );
+                  Lab2Registry.getInstance()
+                    .getMetricsReporter()
+                    .logError('Error loading staged file', undefined, {
+                      asset,
+                    });
+                }}
+              />
+            );
+          })}
+        </div>
+      )}
       {alertMessage && style && (
         <Alert
           type={style}
