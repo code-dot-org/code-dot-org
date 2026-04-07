@@ -11,6 +11,7 @@ import {ApplabInterfaceMode} from './constants';
 import {actions} from './redux/applab';
 import ScreenSelector from './ScreenSelector';
 
+import moduleStyles from './play-space-header.module.scss';
 
 class PlaySpaceHeader extends React.Component {
   static propTypes = {
@@ -36,32 +37,34 @@ class PlaySpaceHeader extends React.Component {
 
     if (!this.shouldHideToggle()) {
       leftSide = (
-        <SegmentedButtons
-          selectedButtonValue={this.props.interfaceMode}
-          onChange={this.props.onInterfaceModeChange}
-          size="xs"
-          buttons={[
-            {
-              value: ApplabInterfaceMode.CODE,
-              label: msg.codeMode(),
-              id: 'codeModeButton',
-            },
-            {
-              value: ApplabInterfaceMode.DESIGN,
-              label: msg.designMode(),
-              id: 'designModeButton',
-            },
-            ...(this.props.hasDataMode
-              ? [
-                  {
-                    value: ApplabInterfaceMode.DATA,
-                    label: msg.dataMode(),
-                    id: 'dataModeButton',
-                  },
-                ]
-              : []),
-          ]}
-        />
+        <div className={moduleStyles.segmentedButtonsWrapper}>
+          <SegmentedButtons
+            selectedButtonValue={this.props.interfaceMode}
+            onChange={this.props.onInterfaceModeChange}
+            size="xs"
+            buttons={[
+              {
+                value: ApplabInterfaceMode.CODE,
+                label: msg.codeMode(),
+                id: 'codeModeButton',
+              },
+              {
+                value: ApplabInterfaceMode.DESIGN,
+                label: msg.designMode(),
+                id: 'designModeButton',
+              },
+              ...(this.props.hasDataMode
+                ? [
+                    {
+                      value: ApplabInterfaceMode.DATA,
+                      label: msg.dataMode(),
+                      id: 'dataModeButton',
+                    },
+                  ]
+                : []),
+            ]}
+          />
+        </div>
       );
     }
 
@@ -79,11 +82,11 @@ class PlaySpaceHeader extends React.Component {
 
     return (
       <div id="playSpaceHeader">
-        <table style={{width: '100%'}}>
+        <table className={moduleStyles.table}>
           <tbody>
             <tr>
               <td style={{width: toggleGroupWidth}}>{leftSide}</td>
-              <td style={{maxWidth: 0}}>{rightSide}</td>
+              <td className={moduleStyles.rightCell}>{rightSide}</td>
             </tr>
           </tbody>
         </table>
