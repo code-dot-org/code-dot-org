@@ -357,7 +357,7 @@ class Unit < ApplicationRecord
     # In the interim, make sure we skip caching during rake seed tasks, which
     # sometimes break when caching is enabled.
     return false if File.basename($0) == 'rake'
-    return false if ENV['UNIT_TEST'] || ENV['CI']
+    return false if ENV['UNIT_TEST']
     true
   end
 

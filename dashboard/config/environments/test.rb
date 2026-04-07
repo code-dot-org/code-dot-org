@@ -6,7 +6,7 @@ Dashboard::Application.configure do
   # https://guides.rubyonrails.org/configuring.html#config-cache-classes
   # https://stackoverflow.com/a/70566038/1810460
   # https://github.com/rails/spring/issues/598#issuecomment-1268885973
-  config.cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
+  config.cache_classes = !ENV['UNIT_TEST']
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
