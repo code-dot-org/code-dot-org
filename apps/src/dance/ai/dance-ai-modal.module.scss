@@ -151,16 +151,6 @@ $ai-modal-border-width: 8px;
       animation: appear 0.3s;
       margin-top: 3px;
 
-      // Match legacy rebrandedLikeStyle: orange active, no shadows, semi-bold
-      --brand-teal-65: #{$light_primary_500};
-      --borders-brand-teal-primary: #949ca2;
-      --background-brand-teal-strong: #cc8300;
-      --background-brand-teal-light: #fff2d9;
-      --background-neutral-primary: #fff;
-      --borders-neutral-primary: #949ca2;
-      --text-neutral-primary: #292f36;
-      --text-neutral-white-fixed: #fff;
-
       button {
         padding: 8px 17px !important;
         font-weight: 600;
