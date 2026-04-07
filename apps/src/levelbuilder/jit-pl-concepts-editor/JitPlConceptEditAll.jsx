@@ -79,7 +79,7 @@ const JitPlConceptEditAll = props => {
             <div className="actions-box">
               <TextLink
                 id={`edit_${concept.id}`}
-                icon={<FontAwesome icon="pencil-square-o" title="edit" />}
+                icon={<FontAwesome icon="edit" title="edit" />}
                 href={`/jit_pl_concepts/${concept.id}/edit`}
               />
               <TextLink

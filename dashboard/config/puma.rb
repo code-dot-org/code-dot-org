@@ -1,6 +1,7 @@
 path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
+require 'concurrent' # Need for `:auto`
 CDO.execution_context = :web_application
 
 if CDO.dashboard_sock
@@ -9,7 +10,8 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-workers CDO.dashboard_workers
+# `:auto` Uses `Concurrent.available_processor_count`, rounded down if the result is fractional.
+workers CDO.dashboard_workers.is_a?(Numeric) ? CDO.dashboard_workers : :auto
 threads 1, 5
 
 directory deploy_dir('dashboard')
