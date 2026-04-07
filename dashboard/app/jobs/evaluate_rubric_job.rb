@@ -227,7 +227,7 @@ class EvaluateRubricJob < ApplicationJob
     # Find the rubric evaluation record (or raise RecordNotFound)
     raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
     rubric_ai_evaluation = RubricAiEvaluation.find(rubric_ai_evaluation_id)
-
+    # raises an exception if the key is missing
     raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 

@@ -11,6 +11,7 @@ module ImageModeration
   # @param [String] content_type - image/gif, image/jpeg, image/png
   # @return [Hash, nil] categoriesAnalysis response from Azure, or nil on error
   def self.moderate_image(image_data, content_type)
+    # skip silently if key missing
     return nil unless CDO.azure_ai_content_safety_key
 
     moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)

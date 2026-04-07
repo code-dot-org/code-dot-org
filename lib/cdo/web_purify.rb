@@ -56,6 +56,7 @@ module WebPurify
   # @param [Array[String]] language_codes The set of languages to search for profanity in.
   # @return [Array<String>, nil] The profanities (if any) or nil (if none).
   def self.find_potential_profanities(text, language_codes = ['en'])
+    # skip silently if key missing
     return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
     return nil if text.nil?
 
