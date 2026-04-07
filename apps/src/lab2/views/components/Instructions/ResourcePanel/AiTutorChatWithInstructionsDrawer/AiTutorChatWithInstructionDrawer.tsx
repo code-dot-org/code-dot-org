@@ -25,6 +25,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
+  isPredictLevel?: boolean;
 }
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
@@ -45,6 +46,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorResponseSchemaSettings,
   instructionsContent,
   isCollapsedByDefault,
+  isPredictLevel,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
@@ -168,8 +170,15 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       setMaxInstructionsHeight(contentHeight);
 
       // Set initial drawer height to 50% of the available container space.
+      // Exception is predict levels which we set to full content height.
       if (!hasSetInitialHeightFromContentRef.current) {
         hasSetInitialHeightFromContentRef.current = true;
+        if (isPredictLevel) {
+          setRawInstructionsHeight(
+            contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+          );
+          return;
+        }
         const containerElement = containerRef.current;
         const availableHeight = containerElement
           ? containerElement.clientHeight - RESIZE_BAR_SIZE_PX
@@ -203,7 +212,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       // Reset so the next expand always restores full height from content.
       hasSetInitialHeightFromContentRef.current = false;
     };
-  }, [setRawInstructionsHeight, isCollapsed]);
+  }, [setRawInstructionsHeight, isCollapsed, isPredictLevel]);
 
   const toggleInstructions = useCallback(() => {
     const eventToReport = isCollapsed
