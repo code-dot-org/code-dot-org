@@ -55,10 +55,10 @@ export async function isTextSafe(
   return classification === 'OK';
 }
 
-export async function getImageSafetyStatus(
+export async function getImageModerationStatus(
   file: GeneratedFile,
   assetUrl: string
-): Promise<'ok' | 'flagged' | 'skipped'> {
+): Promise<'ok' | 'flagged' | 'skipped' | 'error'> {
   const {filename, fileBuffer, mediaType} = prepareGeneratedFile(
     file,
     ACCEPTED_IMAGE_MEDIA_TYPES
