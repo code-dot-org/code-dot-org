@@ -50,7 +50,14 @@ class BrandTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     request = mock_request(params: {'brand' => 'codeai'})
     assert_equal 'logo.svg', Cdo::Brand.logo_filename(request)
-    assert_equal 'logo-inverse.svg', Cdo::Brand.logo_filename
+    assert_equal 'logo.svg', Cdo::Brand.logo_filename
+  end
+
+  test 'header_logo_filename returns correct value per brand' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai'})
+    assert_equal 'logo.svg', Cdo::Brand.header_logo_filename(request)
+    assert_equal 'logo-inverse.svg', Cdo::Brand.header_logo_filename
   end
 
   test 'legal_name returns correct value per brand' do
