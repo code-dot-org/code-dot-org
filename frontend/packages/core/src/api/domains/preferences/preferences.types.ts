@@ -15,5 +15,7 @@ export type DisplayTheme = z.infer<typeof DisplayThemeSchema>;
 export type EditorFontSize = z.infer<typeof EditorFontSizeSchema>;
 export type FontSize = keyof typeof FontSizes;
 export type MuteMusic = z.infer<typeof MuteMusicSchema>;
-export type UserThemeSettings = z.infer<typeof UserThemeSettingsSchema>;
+export type UserThemeSettings = z.infer<
+  typeof UserThemeSettingsSchema
+>['theme'];
 export type UsingTextMode = z.infer<typeof UsingTextModeSchema>;

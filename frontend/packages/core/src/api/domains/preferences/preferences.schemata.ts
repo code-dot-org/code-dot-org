@@ -28,4 +28,6 @@ export const EditorFontSizeSchema = z.object({
   editor_font_size: z.record(z.string(), z.enum(Object.keys(FontSizes))),
 });
 
-export const UserThemeSettingsSchema = z.record(z.string(), z.string());
+export const UserThemeSettingsSchema = z.object({
+  theme: z.record(z.string(), z.string()),
+});

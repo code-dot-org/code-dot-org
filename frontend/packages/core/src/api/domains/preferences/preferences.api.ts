@@ -242,13 +242,14 @@ export function createPreferencesApi(transport: Transport) {
           url: '/user_preference/theme',
         });
 
-        return UserThemeSettingsSchema.parse(raw);
+        return UserThemeSettingsSchema.parse(raw).theme;
       } catch (error) {
         if (error instanceof ApiError) {
           if (error.status !== 404) {
             return errorCallback(error) ?? null;
           }
         }
+        throw error;
       }
       return null;
     },

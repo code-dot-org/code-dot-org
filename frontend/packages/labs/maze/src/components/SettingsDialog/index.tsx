@@ -16,18 +16,18 @@ import moduleStyles from './settingsDialog.module.scss';
 
 const BLOCKLY_THEME = 'blocklyTheme';
 
-const SettingsDialogContent = () => {
+interface SettingsDialogContentProps {
+  selectedTheme: string;
+  setSelectedTheme: (value: string) => void;
+}
+
+const SettingsDialogContent = ({
+  selectedTheme,
+  setSelectedTheme,
+}: SettingsDialogContentProps) => {
   const api = useApiClient();
-  const {data: themeSettings} = useThemeSettings(api, {
-    errorCallback: () => ({
-      blockly: localStorage.getItem(BLOCKLY_THEME) || themeOptions[0].value,
-    }),
-  });
   const {setTheme} = useBlocklyContext();
   const {mutate: setThemeSettings} = useUpdateThemeSettings(api);
-  const [selectedTheme, setSelectedTheme] = useState<string>(
-    themeSettings?.blockly || themeOptions[0].value,
-  );
 
   return (
     <>
@@ -37,9 +37,11 @@ const SettingsDialogContent = () => {
         selectedValue={selectedTheme}
         onChange={(event: ChangeEvent<HTMLSelectElement>) => {
           const name = event.target.value;
-          console.log('setting theme to', name);
-          setSelectedTheme(name);
+          // We pre-emptively set the theme, here
+          // That way the update is 'instant'
           setTheme(themes[name]);
+          setSelectedTheme(name);
+          // Update the user preference to save the setting
           setThemeSettings({
             themeUpdate: {
               blockly: name,
@@ -68,13 +70,33 @@ export interface SettingsDialogProps {
 }
 
 const SettingsDialog = ({onClose}: SettingsDialogProps) => {
+  const api = useApiClient();
+  const {data: themeSettings} = useThemeSettings(api, {
+    errorCallback: () => ({
+      blockly: localStorage.getItem(BLOCKLY_THEME) || themeOptions[0].value,
+    }),
+  });
+  const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
+  const currentTheme =
+    selectedTheme || themeSettings?.blockly || themeOptions[0].value;
+
   return (
     <Dialog
       title="Settings"
-      customContent={<SettingsDialogContent />}
+      customContent={
+        <SettingsDialogContent
+          selectedTheme={currentTheme}
+          setSelectedTheme={setSelectedTheme}
+        />
+      }
       primaryButtonProps={{
         text: 'Close',
-        onClick: onClose,
+        onClick: () => {
+          // Null out the selected theme so the next time we open the dialog
+          // it uses the one from the API call
+          setSelectedTheme(null);
+          onClose?.();
+        },
       }}
       className={moduleStyles.settingsDialog}
       closeLabel="Close Settings"
