@@ -109,6 +109,16 @@ export async function performClientApiChatCompletion(
     ];
   }
 
+  if (status === AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR) {
+    return [
+      {...updatedUserMessage, status: AiInteractionStatus.OK},
+      {
+        ...assistantMessageBase,
+        status: AiInteractionStatus.ERROR,
+      },
+    ];
+  }
+
   if (response === undefined || status !== AiRequestExecutionStatus.SUCCESS) {
     throw new Error(`Invalid state: no response or invalid status: ${status}`);
   }

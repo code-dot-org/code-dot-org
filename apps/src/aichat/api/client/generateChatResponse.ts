@@ -20,7 +20,7 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
+import {isTextSafe, getImageSafetyStatus} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -104,11 +104,19 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
-      const imageSafe = await isImageSafe(file, buildAssetUrl(asset));
-      if (!imageSafe) {
+      const imageSafetyStatus = await getImageSafetyStatus(
+        file,
+        buildAssetUrl(asset)
+      );
+      if (imageSafetyStatus === 'flagged') {
         return {
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      } else if (imageSafetyStatus === 'skipped') {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.IMAGE_MODERATION_SERVICE_ERROR,
         };
       }
     }
