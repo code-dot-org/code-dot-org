@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2026-04-06T18:24:25.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## This is the end of the progression - thanks for testing it with us!\r\n\r\n### Please complete a short survey using the link below to let us know your thoughts!",
+    "link_title": "Take a quick survey!",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSenzDRmsjum3-Hrwoeqvtkwp9Q8Mjm-U7he66RhS2DvNje3sA/viewform?usp=dialog",
+    "name_suffix": "_pilot2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:25.489+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-pilot-survey\\\"\"],\"cloned_from\":\"hoai-web-design-v2-pilot-survey\"}]"
+}]]></config>
+</ExternalLink>

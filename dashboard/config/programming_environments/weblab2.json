@@ -1,7 +1,10 @@
 {
   "name": "weblab2",
   "published": false,
+  "description": "Web Lab is a browser-based coding environment where students create multi-page websites using HTML, CSS, and JavaScript. ",
   "editor_language": "html/css",
+  "image_url": "https://images.code.org/f24b50e7d467c3a72898cd777d7d8670-weblab-cover.avif",
+  "project_url": "/p/weblab2",
   "title": "Web Lab",
   "categories": [
     {
@@ -15,6 +18,12 @@
       "name": "CSS Properties",
       "color": "#d3e965",
       "position": 1
+    },
+    {
+      "key": "supported_content",
+      "name": "Supported Content",
+      "color": null,
+      "position": 2
     }
   ]
 }

@@ -1,0 +1,13 @@
+name 'hoai-web-design-v2-11_pilot2'
+display_name 'Prompting Puzzles'
+description 'Now it\'s time to apply what you\'ve learned by helping others make their own webpages. Choose one of the people below to help improve their website.'
+
+sublevels
+level 'hoai-web-design-v2-11a_pilot2'
+level 'hoai-web-design-v2-11b_pilot2'
+level 'hoai-web-design-v2-11c_pilot2'
+level 'hoai-web-design-v2-11d_pilot2'
+level 'hoai-web-design-v2-11e_pilot2'
+
+uses_lab2
+navigation_type ‘next_level’
