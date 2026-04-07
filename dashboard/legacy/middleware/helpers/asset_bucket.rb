@@ -10,7 +10,7 @@ class AssetBucket < BucketHelper
   end
 
   def initialize
-    super CDO.assets_s3_bucket, CDO.assets_s3_directory
+    super(CDO.assets_s3_bucket, CDO.assets_s3_directory)
   end
 
   def allowed_file_types

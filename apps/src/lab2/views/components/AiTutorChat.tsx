@@ -3,7 +3,7 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
   ChatButtonClickHandler,
@@ -11,9 +11,12 @@ import {
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './AiTutorChat.module.scss';
@@ -46,6 +49,13 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
 }) => {
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+  const versionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
+
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
@@ -82,6 +92,21 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
+
   if (loading || !modelParameters) {
     return (
       <div className={moduleStyles.loading}>
@@ -103,6 +128,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
+        renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
   );

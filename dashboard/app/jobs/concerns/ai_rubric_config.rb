@@ -6,7 +6,7 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-09-05-lesson-7-release/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2026-04-06-claude-4-update/'.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
@@ -19,11 +19,15 @@ class AiRubricConfig
   # Returns the path suffix of the location in S3 which contains the config
   # needed to evaluate the rubric for the given script level.
   #
-  # Each unit's `ai_rubric_s3_config` property is a map from level name to the
-  # name of the lesson directory within the S3 release dir used for AI evaluation.
-  # For example: {"CSD U3 Sprites scene challenge_2024" => "csd3-2023-L11"}
+  # The rubric's `s3_config_dir` field contains the name of the lesson directory
+  # within the S3 release dir used for AI evaluation.
+  # For example: "csd3-2023-L11"
   def self.get_lesson_s3_name(script_level)
-    script_level&.script&.ai_rubric_s3_config.try(:[], script_level&.level&.name)
+    return nil unless script_level
+    level_ids = script_level.levels.map(&:id)
+    rubrics = script_level&.lesson&.rubrics
+    rubric = rubrics.find {|r| level_ids.include?(r.level_id)}
+    rubric&.s3_config_dir
   end
 
   def self.s3_client
@@ -73,15 +77,28 @@ class AiRubricConfig
       )
   end
 
+  # There are two main validations we want to perform on our AI rubric config in S3:
+  #
+  # 1) For each rubric in our database with an s3_config_dir set, we want to
+  #   confirm that we can successfully read the essential config files from S3
+  #   (params.json, system_prompt.txt, and standard_rubric.csv). If any of these
+  #   files are missing, an error will be raised.
+  #
+  # 2) For each rubric in our database with ai-enabled learning goals, we want
+  #    to confirm that the rubric has an s3_config_dir set and that every
+  #    ai-enabled learning goal in the database has a corresponding learning
+  #    goal in the standard_rubric.csv file in S3.
   def self.validate_ai_config
-    # use SQL query to effeciently narrow down the set of units we need to check, then verify the presence of the property to confirm.
-    units_with_ai_config = Unit.where('properties like ?', '%ai_rubric_s3_config%').select {|u| u.ai_rubric_s3_config.present?}
-    lesson_s3_names = units_with_ai_config.flat_map {|u| u.ai_rubric_s3_config.values}.uniq
+    rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
+    lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
     code = 'hello world'
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
-    validate_learning_goals(units_with_ai_config)
+
+    rubrics_with_ai = Rubric.joins(:learning_goals).where(learning_goals: {ai_enabled: true}).distinct
+    validate_learning_goals(rubrics_with_ai)
+
     S3_AI_RELEASE_PATH
   end
 
@@ -99,26 +116,24 @@ class AiRubricConfig
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
-  # For each unit with ai_rubric_s3_config, validate that every ai-enabled
-  # learning goal in its rubric in the database has a corresponding learning
-  # goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals(units)
-    units.each do |unit|
-      unit.ai_rubric_s3_config.each_key do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit.name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit.name} level #{level_name.inspect}: #{exception.message}"
-      end
+  # For each rubric with ai-enabled learning goals, validate that the rubric
+  # has s3_config_dir set and that every ai-enabled learning goal in the
+  # database has a corresponding learning goal in the rubric in S3.
+  private_class_method def self.validate_learning_goals(rubrics)
+    rubrics.each do |rubric|
+      validate_learning_goals_for_rubric(rubric)
+    rescue StandardError => exception
+      raise "Error validating learning goals for rubric #{rubric.id} (level #{rubric.level&.name.inspect}): #{exception.message}"
     end
   end
 
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    return if db_learning_goals.empty?
+
+    lesson_s3_name = rubric.s3_config_dir
+    raise "Rubric #{rubric.id} has ai-enabled learning goals but no s3_config_dir set" if lesson_s3_name.blank?
+
     s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
     missing_learning_goals = db_learning_goals - s3_learning_goals
     if missing_learning_goals.any?

@@ -6,8 +6,6 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import aichatI18n from '@cdo/apps/aichat/locale';
-
 import styles from './staged-files-preview.module.scss';
 
 const FilePreview: React.FC<{
@@ -108,7 +106,7 @@ const FilePreview: React.FC<{
               tooltipId: 'close-button',
               direction: 'onTop',
               size: 'xs',
-              text: aichatI18n.remove(),
+              text: 'Remove',
               className: styles.closeTooltip,
             }}
             tooltipOverlayClassName={styles.closeTooltipOverlay}

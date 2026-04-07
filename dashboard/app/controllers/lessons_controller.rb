@@ -89,19 +89,22 @@ class LessonsController < ApplicationController
     @script_name = script.name
   end
 
-  # GET /s/:script_name_or_id/lessons/:lesson_position/practice
-  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/practice
-  def practice
+  # GET /s/:script_name_or_id/lessons/:lesson_position/tutor
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor
+  def tutor
+    view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
-    @lesson_practice_data = {
+    @lesson_deep_dive_data = {
+      lessonId: @lesson.id,
       lessonName: @lesson.localized_name,
-      lessonSummary: @lesson.properties['student_overview'] ||'',
+      lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
+      objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}}
     }
   end
 

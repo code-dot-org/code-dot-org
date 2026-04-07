@@ -7,6 +7,9 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function () {
   createReactRoot(
     <ApplicationDashboard {...getScriptData('props')} />,
-    document.getElementById('application-container')
+    document.getElementById('application-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -7,7 +7,6 @@ import React, {memo} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import aichatI18n from '../../locale';
 import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
@@ -51,10 +50,10 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
 
   const text =
     teacherFeedback === undefined
-      ? aichatI18n.chatMessage_wasContentFlaggedCorrectly()
+      ? 'Was this content flagged correctly?'
       : thumbsUpSelected
-      ? aichatI18n.chatMessage_contentWasFlaggedCorrectly()
-      : aichatI18n.chatMessage_contentWasNotFlaggedCorrectly();
+      ? 'This content was flagged correctly.'
+      : 'This content was not flagged correctly.';
 
   const ThumbButton = (props: {type: 'up' | 'down'; selected: boolean}) => {
     const {type, selected} = props;
@@ -70,11 +69,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           selected && moduleStyles.selected
         )}
         onClick={() => handleThumbClick(type)}
-        aria-label={
-          type === 'up'
-            ? aichatI18n.aria_thumbsUp()
-            : aichatI18n.aria_thumbsDown()
-        }
+        aria-label={type === 'up' ? 'thumbs up' : 'thumbs down'}
         type="button"
       >
         <FontAwesomeV6Icon
@@ -108,8 +103,8 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           direction: 'onLeft',
           size: 'xs',
           text: profaneMessageVisible
-            ? aichatI18n.chatMessage_hideMessage()
-            : aichatI18n.chatMessage_showMessage(),
+            ? 'Hide flagged message'
+            : 'Show flagged message',
           className: moduleStyles.tooltip,
         }}
       >
@@ -122,11 +117,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
             profaneMessageVisible && moduleStyles.selected
           )}
           onClick={toggleProfaneMessageVisibility}
-          aria-label={
-            profaneMessageVisible
-              ? aichatI18n.aria_hideMessage()
-              : aichatI18n.aria_showMessage()
-          }
+          aria-label={profaneMessageVisible ? 'hide message' : 'show message'}
           type="button"
         >
           <FontAwesomeV6Icon
