@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 #### This code works. But look closely.
 
 #### In both button actions, we:
-- ####  Change the value of `total`
+- ####  Change the value of `score`
 - #### Update the display
 
 #### The same steps appear more than once. If we wanted to change how the total is shown, we would need to update it in multiple places.
@@ -36,7 +36,7 @@ markdown <<MARKDOWN
 
 ## After: Using a Function
 
-#### We moved the repeated steps into a function called `updateTotal()`.
+#### We moved the repeated steps into a function called `addPoints()`.
 
 #### Now each button simply calls the function.
 
@@ -56,15 +56,16 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt;"><strong>Question:</strong><br>
 If you wanted to change how the total is displayed, where would you make the change?</p>
 
-<details>
-  <summary style="font-size:16pt; font-weight:bold; cursor:pointer; background-color:#f7f8fa; padding:10px; border-radius:6px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 1.5em; font-weight: bold;">
     🔎 Check your Answer
   </summary>
 
   <div style="margin-top:12px; font-size:14pt; background-color:#f7f8fa; padding:12px; border-radius:6px;">
     <p style ="font-size: 14pt;" ><strong>Answer:</strong><br>
     Inside the <code style="font-size:12pt;">updateTotal()</code> function, because that is where the display logic is defined. 
-    Since all buttons call this function, we only need to update the code in one place.</p>
+  We only need to update the code in one place.</p>
   </div>
 
 </details>

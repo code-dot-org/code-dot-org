@@ -172,7 +172,7 @@ class ManageStudentsActionsCell extends Component {
               )}
               {this.props.canEdit && <MenuBreak />}
               <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
-                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                <FontAwesome icon="circle-xmark" style={styles.xIcon} />
                 {i18n.removeStudent()}
               </PopUpMenu.Item>
             </QuickActionsCell>

@@ -49,7 +49,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-edit" />
+          <i className="fa-solid fa-pen-to-square" />
         </div>
         <div
           style={styles.remove}
@@ -61,7 +61,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -208,7 +208,7 @@ class VocabulariesEditor extends Component {
           type="button"
           className="unit-test-add-vocabulary"
         >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          <i className="fa-solid fa-plus" style={{marginRight: 7}} /> Create New
           Vocabulary
         </button>
       </div>

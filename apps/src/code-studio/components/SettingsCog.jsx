@@ -117,7 +117,7 @@ export class SettingsCog extends Component {
         >
           <FontAwesome
             className="settings-cog"
-            icon="cog"
+            icon="gear"
             title={msg.settings()}
           />
         </button>

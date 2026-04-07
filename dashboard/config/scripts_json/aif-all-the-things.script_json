@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-24 18:44:39 UTC",
+    "serialized_at": "2026-03-26 16:32:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1095,6 +1095,17 @@
       },
       "seeding_key": {
         "activity_section.key": "cdf61375-81d1-4189-9464-a9f13e29ec23",
+        "lesson_activity.key": "c08ed652-fc07-4200-bf41-9833ff756327"
+      }
+    },
+    {
+      "key": "82f2d75a-4414-4cc2-9fa6-437ff901c6b1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sprint Demo - Teacher Markdown"
+      },
+      "seeding_key": {
+        "activity_section.key": "82f2d75a-4414-4cc2-9fa6-437ff901c6b1",
         "lesson_activity.key": "c08ed652-fc07-4200-bf41-9833ff756327"
       }
     }
@@ -2616,6 +2627,28 @@
       "level_keys": [
         "sem-2-test-13"
       ]
+    },
+    {
+      "chapter": 65,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprint Demo - Teacher Markdown"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-sprint-demo"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "82f2d75a-4414-4cc2-9fa6-437ff901c6b1"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level3-sprint-demo"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3385,6 +3418,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "cdf61375-81d1-4189-9464-a9f13e29ec23"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level3-sprint-demo",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-sprint-demo"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "82f2d75a-4414-4cc2-9fa6-437ff901c6b1"
       }
     }
   ],

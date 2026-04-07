@@ -21,13 +21,13 @@
 
   -# multi2 gets checkboxes; regular multi gets radio buttons.
 - if data['type'] == 'multi2'
-  - unchecked_class = 'fa-square-o'
-  - checked_class = 'fa-check-square-o'
-  - cross_class = 'fa-times'
+  - unchecked_class = 'fa-regular fa-square'
+  - checked_class = 'fa-regular fa-check-square '
+  - cross_class = 'fa-solid fa-xmark'
 - else
-  - unchecked_class = 'fa-circle-o'
-  - checked_class = 'fa-dot-circle-o'
-  - cross_class = 'fa-times'
+  - unchecked_class = 'fa-regular fa-circle'
+  - checked_class = 'fa-regular fa-circle-dot'
+  - cross_class = 'fa-solid fa-xmark'
 
 - if contained_mode && (data['answers'].present? || data['teacher_markdown'].present?) && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   %div{id: "containedLevelAnswer0"}

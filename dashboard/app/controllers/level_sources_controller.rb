@@ -58,7 +58,7 @@ class LevelSourcesController < ApplicationController
     expires_in 10.hours, public: true # cache
 
     if @game.app == Game::ARTIST
-      redirect_to @level_source.level_source_image.s3_framed_url
+      redirect_to @level_source.level_source_image.s3_framed_url, allow_other_host: true
     else
       original_image
     end

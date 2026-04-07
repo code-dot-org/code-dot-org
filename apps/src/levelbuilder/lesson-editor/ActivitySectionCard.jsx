@@ -345,7 +345,7 @@ class ActivitySectionCard extends Component {
 
   appendSlide = () => {
     this.insertMarkdownSyntaxAtSelection(
-      '<i class="fa fa-list-alt" aria-hidden="true"></i> '
+      '<i class="fa-solid fa-rectangle-list" aria-hidden="true"></i> '
     );
   };
 

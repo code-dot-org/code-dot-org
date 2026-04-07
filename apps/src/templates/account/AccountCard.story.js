@@ -13,7 +13,7 @@ export const BasicAccountCard = () => (
     title="Test Title"
     content="This is the content of the card."
     buttonText="Click Me"
-    buttonType="primary"
+    variant="contained"
     onClick={() => {}}
   />
 );
@@ -25,7 +25,7 @@ export const AccountCardSecondaryButton = () => (
     title="Test Title"
     content="This is the content of the card."
     buttonText="Click Me"
-    buttonType="secondary"
+    variant="outlined"
     onClick={() => {}}
   />
 );
@@ -37,7 +37,7 @@ export const AccountCardIconList = () => (
     title="Test Title"
     content="This is the content of the card."
     buttonText="Click Me"
-    buttonType="primary"
+    variant="contained"
     iconList={['First item', 'Second item', 'Third item']}
     onClick={() => {}}
   />

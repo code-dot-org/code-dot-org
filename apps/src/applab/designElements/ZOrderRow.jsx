@@ -54,7 +54,7 @@ export default class ZOrderRow extends React.Component {
             disabled={isBackMost}
             title={applabMsg.designElementProperty_zOrder_backButton()}
           >
-            <FontAwesome icon="angle-double-left" />
+            <FontAwesome icon="angles-left" />
           </button>
           <button
             type="button"
@@ -81,7 +81,7 @@ export default class ZOrderRow extends React.Component {
             disabled={isFrontMost}
             title={applabMsg.designElementProperty_zOrder_frontButton()}
           >
-            <FontAwesome icon="angle-double-right" />
+            <FontAwesome icon="angles-right" />
           </button>
         </div>
       </div>

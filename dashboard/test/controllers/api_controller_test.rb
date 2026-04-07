@@ -177,9 +177,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     # student_1 has two answers
     level_source1a = create(:level_source, level: level1,
@@ -256,9 +254,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -1570,6 +1566,22 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal true, teacher.verified_teacher?
   end
 
+  test 'google_classrooms returns Forbidden when Signet::AuthorizationError is raised' do
+    teacher = create(:teacher, :with_google_authentication_option)
+    sign_in teacher
+
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_service.stubs(:authorization=)
+    mock_service.stubs(:list_courses).raises(Signet::AuthorizationError.new('Authorization failed.'))
+
+    mock_client = mock('Signet::OAuth2::Client')
+    Signet::OAuth2::Client.stubs(:new).returns(mock_client)
+    Google::Apis::ClassroomV1::ClassroomService.stubs(:new).returns(mock_service)
+
+    get :google_classrooms
+    assert_response :forbidden
+  end
+
   test 'import_google_classroom is Forbidden when section exists and current user is not an instructor' do
     mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
     course_id = Random.hex(10)
@@ -2122,7 +2134,7 @@ class ApiControllerTest < ActionController::TestCase
 
     # Create a LevelGroup level.
     level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
-    level.properties['title'] =  'Long assessment 1'
+    level.properties['title'] = 'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 

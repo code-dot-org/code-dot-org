@@ -161,6 +161,8 @@ class Ability
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+      can :create, UserLessonReflection, student_id: user.id
+      can :create, UserLessonObjectiveReflection, student_id: user.id
       can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
@@ -439,6 +441,9 @@ class Ability
         Rubric,
         DataDoc,
         JitPlConcept,
+        JitPlMisconception,
+        JitPlExemplar,
+        JitPlTeachingTip,
         CourseOffering,
         UnitGroup,
         Resource,

@@ -37,7 +37,7 @@ design language and reducing the need for redundant code.
 🔹 Key Features:
 
 - ✅ Built-in support for theming (light/dark mode) [Currently in progress, only part of the components are themed
-  (those that use @code-dot-org/component-library-styles/colors.scss)]
+  (those that use @code-dot-org/component-library-styles/colors.css)]
 - ✅ TypeScript support
 - ✅ Accessibility-first design
 - ✅ Well-documented with Storybook ([See Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook))
@@ -74,39 +74,34 @@ For more examples, check the
 which contains usage examples for all components. You can also explore the component source code and related stories
 directly.
 
-### Example with `LinkButton`
+### Example with `Checkbox`
 
-Use `LinkButton` when you need a styled link button that supports navigation:
-
-```jsx
-import {LinkButton} from '@code-dot-org/component-library/button';
-
-const App = () => (
-  <div>
-    {/* size="m" defines a medium-sized button */}
-    <LinkButton href="/" size="m">
-      Click Me
-    </LinkButton>
-  </div>
-);
-
-export default App;
-```
-
-### Example with `Button`
-
-Use Button for general clickable actions:
+Use `Checkbox` for toggling a boolean option:
 
 ```jsx
-import {Button} from '@code-dot-org/component-library/button';
+import {useState} from 'react';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 
-const Example = () => (
-  <Button onClick={() => alert('Clicked!')}>Click Me</Button>
-);
+const Example = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  return (
+    <Checkbox
+      name="terms"
+      checked={isChecked}
+      onChange={e => setIsChecked(e.target.checked)}
+      label="I agree to the terms"
+    />
+  );
+};
 ```
 
-- `onClick` — Handles the button click event.
-- Supports all common HTML button attributes.
+- `checked` — Controlled checked state.
+- `onChange` — Handles the checkbox change event.
+- `label` — Text label displayed next to the checkbox.
+
+> **Note:** Some components like `Button`, `LinkButton`, `Typography`, and `Breadcrumbs` have been migrated to MUI.
+> Use their MUI equivalents from `@mui/material` instead. See [MIGRATION_STATUS.md](MIGRATION_STATUS.md) for details.
 
 ### Example with `Alert`
 
@@ -206,7 +201,7 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 
 - Use Semantic Colors:
 
-  - Use semantic colors from `@code-dot-org/component-library-styles/colors.scss` to maintain consistent theming
+  - Use semantic colors from `@code-dot-org/component-library-styles/colors.css` to maintain consistent theming
     across light and dark modes. This ensures visual consistency and makes it easier to update themes globally.
 
 - Follow Existing Patterns, maintain consistency by following established patterns for:
@@ -215,7 +210,7 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   - Structure – Organize files in the same way as other components in the library.
   - Testing – Follow existing test patterns using Jest, RTL and @testing-library/user-event..
   - Stories – Ensure the component has a Storybook entry with usage examples.
-  - Styles – Use existing mixins and variables from primitiveColors.scss and colors.scss.
+  - Styles – Use existing mixins and variables from primitiveColors.css and colors.css.
 
 - Follow the Single Responsibility Principle:
   Each component should do one thing and do it well. This makes components easier to test, maintain, and reuse.
@@ -292,7 +287,7 @@ const Example = () => (
 
 ##### Use of CSS Variables for Theming
 
-Theming should rely on semantic colors defined in primitiveColors.scss and colors.scss. This ensures consistent
+Theming should rely on semantic colors defined in primitiveColors.css and colors.css. This ensures consistent
 color application across components and simplifies light/dark mode handling.
 Example:
 
@@ -329,8 +324,8 @@ h1 {
 ### Best Practices for Styling:
 
 - Rely on SCSS modules for style isolation and specificity.
-- Use semantic colors (`colors.scss`) from `@code-dot-org/component-library-styles` package to keep theming consistent.
-- If it's impossible to use semantic colors, use primitive colors (`primitiveColors.scss`) from
+- Use semantic colors (`colors.css`) from `@code-dot-org/component-library-styles` package to keep theming consistent.
+- If it's impossible to use semantic colors, use primitive colors (`primitiveColors.css`) from
   `@code-dot-org/component-library-styles` instead.
 - Use other colors only when you can't use semantic or primitive colors.
 - Prefer class-based styles over inline styles to maintain override flexibility.

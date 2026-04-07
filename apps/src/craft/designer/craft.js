@@ -469,7 +469,10 @@ Craft.init = function (config) {
         />
       </div>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

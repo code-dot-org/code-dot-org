@@ -6802,9 +6802,116 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-csp-2017:
+          title: UI Test CSP
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'17-'18"
+        ui-test-original-csp-2017:
+          title: UI Test Original CSP ('17-'18)
+          description_short: unpublished, original course version which owns the csp units. this helps catch modular curriculum bugs in ui tests.
+          description_student: ''
+          description_teacher: ''
+          version_title: "'17-'18"
+        ui-test-original-csp-2019:
+          title: UI Test Original CSP ('19-'20)
+          description_short: unpublished, original course version which owns the csp units. this helps catch modular curriculum bugs in ui tests.
+          description_student: ''
+          description_teacher: ''
+          version_title: "'19-'20"
+        ui-test-csp-2019:
+          title: UI Test CSP
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'19-'20"
         teaching-aif-design-build-ai-facilitators-2026:
           title: 'Teaching AIF: Designing & Building with AI'
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: "'26-'27"
+        ai-foundations-exploring-ai-and-cs-2026:
+          title: 'AI Foundations: Exploring AI and CS'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: Fall 2026
+        aif-designing-and-building-with-ai-2026:
+          title: 'AI Foundations: Designing and Building with AI'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: Fall 2026
+        ai-foundations-year1-2026:
+          title: AI Foundations Year 1
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'26-'27"
+        hoai-web-design-pilot-v1:
+          title: hoai-web-design-pilot-v1
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2026:
+          title: Computer Science Discoveries
+          description_short: An introductory computer science course that empowers students to create authentic artifacts
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: |
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - This course has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [CSD Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information
+
+            - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
+          version_title: "'25-'26"
+        ai-foundations-designing-and-building-with-ai-2026:
+          title: 'AI Foundations: Designing and Building with AI'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ai-discoveries-2026:
+          title: AI Discoveries
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'26-'27"
+        web-development-2026:
+          title: Web Development
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2026'
+        hoai-web-design-pilot-v2:
+          title: HoAI Web Design
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-2026:
+          title: Teaching CS Discoveries
+          description_short: After completing this online professional leanring module, you'll be ready to get started teaching Code.org's Computer Science Discoveries curriculum with your students.
+          description_student: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
           version_title: "'26-'27"

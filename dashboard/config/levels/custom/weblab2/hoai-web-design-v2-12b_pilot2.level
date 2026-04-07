@@ -1,0 +1,73 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:23.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Eli's Favorite Book Page\r\n\r\n*\"The content is all there but the page looks so boring and plain. I wanted it to feel like the book - dark and mysterious with a bit of magic to it. It just looks like a default webpage right now.\"*\r\n\r\n**Do This:**\r\n1. Read Eli's `vision.md` to understand what they originally asked for.\r\n2. Fix the page using AI Tutor. You can:\r\n   - Update `vision.md` to be more specific, then ask AI Tutor to regenerate the page, **or**\r\n   - Prompt AI Tutor directly to fix specific issues, **or**\r\n   - Do both.\r\n\r\n> **Hint:** Think about what's missing from Eli's vision - he described the content well but left out details about how the page should look. What specific style properties could you add to capture \"dark and mysterious\"?\r\n\r\nKeep iterating and prompting AI tutor. When the page addresses Eli's feedback, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- Do NOT use relative units. Use px values.\n- You should generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Eli's Favorite Book Page",
+    "bubble_choice_description": "Help Eli wrangle AI tools to help him with his webpage: \"The content is all there but the page looks so boring and plain.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: sans-serif;\n        padding: 10px;\n        background-color: #ffffff;\n        color: #000000;\n      }\n      h1 {\n        font-size: 20px;\n      }\n      h2 {\n        font-size: 15px;\n      }\n      p {\n        font-size: 12px;\n      }\n      ol {\n        padding: 10px;\n      }\n      li {\n        margin: 5px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Percy Jackson and the Olympians</h1>\n    <p>Percy Jackson and the Olympians is a fantasy series by Rick Riordan. It follows Percy Jackson, a twelve-year-old who discovers he is the son of a Greek god. I like it because I get to learn about Greek mythology but it's still funny and I like the characters.</p>\n    <h2>Books in the Series</h2>\n    <ol>\n      <li>The Lightning Thief</li>\n      <li>The Sea of Monsters</li>\n      <li>The Titan's Curse</li>\n      <li>The Battle of the Labyrinth</li>\n      <li>The Last Olympian</li>\n    </ol>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page about my favorite book series, Percy Jackson and the Olympians by Rick Riordan.\n\nThe page should have a title at the top, a paragraph describing the series, and a list of the five books in order.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/637130aec62558b916677637259de338-image-1775017913710.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:23.517+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12b\"},{\"changed_at\":\"2026-04-07 03:59:53 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

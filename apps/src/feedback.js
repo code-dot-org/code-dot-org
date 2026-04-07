@@ -289,7 +289,10 @@ FeedbackUtils.prototype.displayFeedback = function (
       >
         {displayShowCode && this.getShowCodeComponent_(options, true)}
       </ChallengeDialog>,
-      container
+      container,
+      {
+        legacyReactDomRender: true,
+      }
     );
     return;
   }
@@ -567,7 +570,10 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
       assetUrl={this.studioApp_.assetUrl}
       freePlay={options.freePlay}
     />,
-    buttons
+    buttons,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   return buttons;
@@ -934,7 +940,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
       var annotatedShareLink = options.shareLink + '?qr=true';
-      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode);
+      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode, {
+        legacyReactDomRender: true,
+      });
 
       if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
@@ -988,7 +996,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
       <Provider store={getStore()}>
         <DownloadReplayVideoButton onError={onDownloadError} />
       </Provider>,
-      downloadReplayVideoContainer
+      downloadReplayVideoContainer,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -998,7 +1009,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-  createReactRoot(this.getShowCodeComponent_(options), showCodeDiv);
+  createReactRoot(this.getShowCodeComponent_(options), showCodeDiv, {
+    legacyReactDomRender: true,
+  });
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1158,7 +1171,10 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
       />
       <DialogButtons ok={true} />
     </div>,
-    codeDiv
+    codeDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   var dialog = this.createModalDialog({
@@ -1246,7 +1262,10 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
         isDangerCancel={!!options.isDangerCancel}
       />
     </div>,
-    contentDiv
+    contentDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   var dialog = this.createModalDialog({
@@ -1296,7 +1315,9 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  createReactRoot(<DialogButtons ok={true} />, buttons);
+  createReactRoot(<DialogButtons ok={true} />, buttons, {
+    legacyReactDomRender: true,
+  });
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

@@ -2257,8 +2257,8 @@ class UserTest < ActiveSupport::TestCase
 
     User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
-    assert_nil user_level.locale
-    assert_nil user_level.locale_supported
+    assert_equal I18n.default_locale.to_s, user_level.locale
+    assert_equal true, user_level.locale_supported
 
     current_locale = 'uk-UA'
     User.track_level_progress(**level_progress_params.merge(locale: current_locale, unit_group: unit_group))

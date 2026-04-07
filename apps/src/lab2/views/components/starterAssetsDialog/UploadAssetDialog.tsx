@@ -1,5 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useState} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
@@ -169,38 +170,48 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       customBottomContent={
         <>
           <div className={styles.modalActionsRow}>
-            <Button
-              type="secondary"
-              color="black"
-              text="Cancel"
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
               onClick={onClose}
-            />
+              type="button"
+            >
+              {'Cancel'}
+            </MuiButton>
             {selectedFiles.length > 0 && (
-              <Button
-                type="primary"
-                color="destructive"
-                text={`Delete ${selectedFiles.length} ${
-                  selectedFiles.length === 1 ? 'file' : 'files'
-                }`}
-                onClick={onDeleteSelected}
+              <MuiButton
+                variant="contained"
+                color="error"
+                size="medium"
+                loadingPosition="start"
                 disabled={!!requestInProgress}
-                iconLeft={{iconName: 'trash'}}
-              />
+                onClick={onDeleteSelected}
+                type="button"
+                startIcon={<FontAwesomeV6Icon iconName="trash" />}
+              >{`Delete ${selectedFiles.length} ${
+                selectedFiles.length === 1 ? 'file' : 'files'
+              }`}</MuiButton>
             )}
-            <Button
-              type="primary"
-              color="purple"
-              text={buttonText}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              disabled={loading || !!requestInProgress}
               onClick={() => {
                 clearAlert();
                 openFileInput();
               }}
-              iconLeft={{
-                iconName: requestInProgress ? 'spinner' : 'upload',
-                animationType: requestInProgress ? 'spin' : undefined,
-              }}
-              disabled={loading || !!requestInProgress}
-            />
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName={requestInProgress ? 'spinner' : 'upload'}
+                  animationType={requestInProgress ? 'spin' : undefined}
+                />
+              }
+            >
+              {buttonText}
+            </MuiButton>
           </div>
           {alert && <DialogAlert {...alert} />}
         </>

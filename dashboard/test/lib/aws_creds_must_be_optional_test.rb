@@ -23,8 +23,6 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
     # Then you will see that it is not the list that grows, it is your mind.
     LEGACY_SECRETS_THAT_ALREADY_BREAK_THINGS = %w(
       slack_bot_token
-      openai_lesson_summaries_api_key
-      elevenlabs_api_key
     ).map {|secret| "CDO_#{secret}"}.index_with('')
 
     # Start a new `rails runner` process and make sure it boots w/o AWS access

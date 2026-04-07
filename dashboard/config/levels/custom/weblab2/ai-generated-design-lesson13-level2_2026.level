@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Build Your First Draft\r\n- Upload your wireframe. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**",
+    "long_instructions": "## Build Your First Draft\r\n\r\n1. Upload your wireframe from your <i class=\"fa-solid fa-backpack\"></i> Backpack.\r\n2. Prompt AI with structured recipe to create your page using your wireframe as context.\r\n3. Compare AI output to wireframe.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -41,8 +41,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.566+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level2_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level2_2025\"},{\"changed_at\":\"2026-03-20 17:56:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.566+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level2_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level2_2025\"},{\"changed_at\":\"2026-03-20 17:56:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:35:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

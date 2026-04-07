@@ -39,7 +39,7 @@ class Unplugged < Level
     }
     update_i18n(new_attributes[:name], i18n_strings)
 
-    super(new_attributes)
+    super
   end
 
   def title
