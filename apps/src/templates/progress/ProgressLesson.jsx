@@ -93,8 +93,6 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    console.log('lesson', lesson);
-
     const showAsLocked = isLockedForUser || isLockedForAllStudents;
 
     const title =
@@ -207,7 +205,7 @@ class ProgressLesson extends React.Component {
                   !lesson.survey &&
                   experiments.isEnabled(experiments.LESSON_TUTOR) && (
                     <MuiButton
-                      href={`${lesson.lessonPath}/tutor`}
+                      href={lesson.lessonTutorPath}
                       variant="contained"
                       color="white"
                       target="_blank"
