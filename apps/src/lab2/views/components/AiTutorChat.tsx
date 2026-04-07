@@ -36,6 +36,7 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
+  enableTutorVideos?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -48,6 +49,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
+  enableTutorVideos,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -59,6 +61,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
+    enableTutorVideos,
   });
 
   const chatButtons = useMemo(() => {
