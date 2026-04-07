@@ -31,7 +31,7 @@ export default function RubricEditor({
   return (
     <div>
       <div style={styles.containerStyle}>
-        <label htmlFor="ai_rubric_s3_config">
+        <label htmlFor="s3_config_dir">
           AI Rubric S3 config directory name
           <HelpTip>
             <p>
@@ -42,7 +42,7 @@ export default function RubricEditor({
           </HelpTip>
         </label>
         <input
-          id="ai_rubric_s3_config"
+          id="s3_config_dir"
           type="text"
           value={aiRubricS3ConfigValue || ''}
           onChange={e => onAiRubricS3ConfigChange(e.target.value)}

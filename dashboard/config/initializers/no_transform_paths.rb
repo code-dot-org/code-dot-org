@@ -10,7 +10,7 @@ module Cdo
     ).freeze
 
     def serve(request, filepath, content_headers)
-      status, headers, body = super(request, filepath, content_headers)
+      status, headers, body = super
       new_headers = filter_headers(request.path_info, headers)
       return [status, new_headers, body]
     end
