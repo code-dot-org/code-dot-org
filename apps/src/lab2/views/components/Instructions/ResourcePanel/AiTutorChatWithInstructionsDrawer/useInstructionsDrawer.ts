@@ -216,8 +216,13 @@ export const useInstructionsDrawer = ({
         const availableHeight = containerElement
           ? containerElement.clientHeight - RESIZE_BAR_SIZE_PX
           : contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX;
+        // Set the drawer height to 50% of the available container space,
+        // but not less than the minimum height or greater than the content height + padding.
         setRawInstructionsHeight(
-          Math.max(availableHeight / 2, MIN_INSTRUCTIONS_HEIGHT)
+          Math.min(
+            Math.max(availableHeight / 2, MIN_INSTRUCTIONS_HEIGHT),
+            contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+          )
         );
         return;
       }
