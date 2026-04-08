@@ -58,6 +58,8 @@ describe('CollapsibleEditorSection', () => {
 
     wrapper.find('button').simulate('click');
 
-    expect(wrapper.find('FontAwesome').props().icon).to.include('chevron-right');
+    expect(wrapper.find('FontAwesome').props().icon).to.include(
+      'chevron-right'
+    );
   });
 });
