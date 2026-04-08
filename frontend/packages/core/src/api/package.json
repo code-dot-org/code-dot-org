@@ -2,7 +2,6 @@
   "name": "@code-dot-org/core",
   "version": "0.0.0",
   "private": true,
-  "description": "Core utilities, API client, and plugin interfaces.",
   "keywords": [
     "design-system",
     "code.org"
@@ -37,6 +36,26 @@
       "types": "./dist/plugins/observability/index.d.ts",
       "import": "./dist/plugins/observability/index.mjs",
       "require": "./dist/plugins/observability/index.cjs"
+    },
+    "./metrics": {
+      "types": "./dist/metrics/index.d.ts",
+      "import": "./dist/metrics/index.mjs",
+      "require": "./dist/metrics/index.cjs"
+    },
+    "./audio": {
+      "types": "./dist/audio/index.d.ts",
+      "import": "./dist/audio/index.mjs",
+      "require": "./dist/audio/index.cjs"
+    },
+    "./textToSpeech": {
+      "types": "./dist/textToSpeech/index.d.ts",
+      "import": "./dist/textToSpeech/index.mjs",
+      "require": "./dist/textToSpeech/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
@@ -46,43 +65,64 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@newrelic/browser-agent": "^1.294.0",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@statsig/js-client": "^3.20.2",
+    "@statsig/session-replay": "^3.20.2",
+    "@statsig/web-analytics": "^3.20.2",
     "@tanstack/react-query": "^5.90.20",
     "@tanstack/react-query-devtools": "^5.91.3",
+    "@types/new-relic-browser": "^1.230.5",
+    "aws-sdk": "^2.1692.0",
     "camelcase-keys": "^10.0.2",
+    "classnames": "^2.5.1",
     "events": "^3.3.0",
     "flat": "^6.0.1",
+    "js-cookie": "^3.0.5",
+    "markdown-to-txt": "^2.0.1",
+    "query-string": "^9.3.1",
+    "react-redux": "^9.2.0",
     "tldts": "^7.0.23",
     "zod": "^4.3.6"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
-    "@sentry/browser": "catalog:",
+    "@sentry/browser": "^10.46.0",
     "@types/flat": "^5.0.5",
-    "@types/node": "catalog:",
+    "@types/google.analytics": "^0.0.46",
+    "@types/js-cookie": "^3",
+    "@types/node": "^20",
     "@types/tldjs": "^2",
     "@types/uuid": "^10.0.0",
-    "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-react-refresh": "catalog:",
-    "ky": "catalog:",
-    "prettier": "catalog:",
-    "react": "catalog:",
-    "typescript": "catalog:",
-    "uuid": "^14.0.0",
-    "vite": "catalog:",
-    "vite-plugin-dts": "catalog:",
-    "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "ky": "^1.14.3",
+    "prettier": "3.4.2",
+    "react": "^19.2.0",
+    "stylelint": "^16.14.1",
+    "typescript": "~5.9.3",
+    "uuid": "^11.1.0",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.10.0",
+    "vitest": "^4.0.17"
   },
   "peerDependencies": {
-    "@sentry/browser": "^10.51.0",
+    "@sentry/browser": "^10.46.0",
     "ky": "^1.14.3",
-    "react": "^18.0.0 || ^19.0.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "uuid": ">=8.3.2"
   }
 }
