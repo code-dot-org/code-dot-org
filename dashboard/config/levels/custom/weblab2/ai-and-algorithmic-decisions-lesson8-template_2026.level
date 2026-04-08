@@ -13,7 +13,7 @@
           "id": "1",
           "name": "index.html",
           "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>The Forgotten Labyrinth: A CYOA Tale</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"image-section\">\n        <img id=\"img-sword-forest\"  class=\"hide\" src=\"forest-sword.jpg\"  alt=\"Deep inside the Forgotten Forest, a sword appears.\">\n        <img id=\"img-sword-road\"    class=\"hide\" src=\"forest-shield.jpg\" alt=\"Deep inside the Forgotten Forest, a shield appears.\">\n        \n        <img id=\"img-shield-forest\" class=\"hide\" src=\"road-sword.jpg\"   alt=\"Along the Wandering Road, a sword appears.\">\n        <img id=\"img-shield-road\"   class=\"hide\" src=\"road-shield.jpg\"  alt=\"Along the Wandering Road, a shield appears.\">\n      </div>\n\n      <div class=\"questions-section\">\n        <header>\n          <h1>The Journey Begins</h1>\n          <p class=\"story-intro\">The mist clears at the edge of the kingdom. You must make your first decision.</p>\n        </header>\n\n        <div class=\"question-group\">\n          <p class=\"question-text\">Which path do you choose?</p>\n          <div class=\"button-group\">\n            <button id=\"choice-forest\" class=\"btn-action\">The Forgotten Forest</button>\n            <button id=\"choice-road\"   class=\"btn-action\">The Wandering Road</button>\n          </div>\n        </div>\n\n        <div class=\"question-group\">\n          <p class=\"question-text\">You come across two items in the path but you can only take one. Which do you choose?</p>\n          <div class=\"button-group\">\n            <button id=\"choice-sword\"  class=\"btn-action\">Sword</button>\n            <button id=\"choice-shield\" class=\"btn-action\">Shield</button>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
-          "active": true,
+          "active": false,
           "folderId": "0"
         },
         "2": {
@@ -26,36 +26,9 @@
         "3": {
           "id": "3",
           "name": "script.js",
-          "contents": "// The variables start as 'null' so no button is selected by default.\nlet locationChoice = null;\nlet itemChoice = null;\n\n// Reference the HTML elements we want to control.\nconst forestBtn = document.getElementById(\"choice-forest\");\nconst roadBtn   = document.getElementById(\"choice-road\");\nconst swordBtn  = document.getElementById(\"choice-sword\");\nconst shieldBtn = document.getElementById(\"choice-shield\");\n\nconst imgForestSword  = document.getElementById(\"img-sword-forest\");\nconst imgForestShield = document.getElementById(\"img-sword-road\");\nconst imgRoadSword    = document.getElementById(\"img-shield-forest\");\nconst imgRoadShield   = document.getElementById(\"img-shield-road\");\n\n// This function runs every time a button is clicked. \n// It checks the state and updates the screen so it matches.\nconst updateStory = (location, item) => {\n  \n  // Update state variables only if a new value was passed in\n  if (location !== undefined) locationChoice = location;\n  if (item !== undefined) itemChoice = item;\n  \n  // RESET: Remove highlight from all buttons\n  forestBtn.classList.remove(\"btn-primary\");\n  roadBtn.classList.remove(\"btn-primary\");\n  swordBtn.classList.remove(\"btn-primary\");\n  shieldBtn.classList.remove(\"btn-primary\");\n\n  // RESET: Hide all images\n  imgForestSword.classList.replace(\"show\", \"hide\");\n  imgForestShield.classList.replace(\"show\", \"hide\");\n  imgRoadSword.classList.replace(\"show\", \"hide\");\n  imgRoadShield.classList.replace(\"show\", \"hide\");\n\n  // DECISION TREE LOGIC\n  if (locationChoice === \"forest\") {\n    // If Forest is chosen, highlight the Forest button\n    forestBtn.classList.add(\"btn-primary\");\n\n    if (itemChoice === \"sword\") {\n      // Forest + Sword\n      swordBtn.classList.add(\"btn-primary\");\n      imgForestSword.classList.replace(\"hide\", \"show\");\n    \n    } else if (itemChoice === \"shield\") {\n      // Forest + Shield\n      shieldBtn.classList.add(\"btn-primary\");\n      imgForestShield.classList.replace(\"hide\", \"show\");\n    }\n\n  } else if (locationChoice === \"road\") {\n    // If Road is chosen, highlight the Road button\n    roadBtn.classList.add(\"btn-primary\");\n    \n    if (itemChoice === \"sword\") {\n      // Road + Sword\n      swordBtn.classList.add(\"btn-primary\");\n      imgRoadSword.classList.replace(\"hide\", \"show\");\n    \n    } else if (itemChoice === \"shield\") {\n      // Road + Shield\n      shieldBtn.classList.add(\"btn-primary\");\n      imgRoadShield.classList.replace(\"hide\", \"show\");\n    }\n  }\n};\n\n// Event handlers: Pass the choice string for the specific button clicked\nforestBtn.addEventListener(\"click\", () => updateStory(\"forest\", undefined));\nroadBtn.addEventListener(\"click\", () => updateStory(\"road\", undefined));\nswordBtn.addEventListener(\"click\", () => updateStory(undefined, \"sword\"));\nshieldBtn.addEventListener(\"click\", () => updateStory(undefined, \"shield\"));\n\n// Call once on load to initialize the screen\nupdateStory();",
+          "contents": "// The variables start as 'null' so no button is selected by default.\nlet locationChoice = null;\nlet itemChoice = null;\n\n// Reference the HTML elements we want to control.\nconst forestBtn = document.getElementById(\"choice-forest\");\nconst roadBtn   = document.getElementById(\"choice-road\");\nconst swordBtn  = document.getElementById(\"choice-sword\");\nconst shieldBtn = document.getElementById(\"choice-shield\");\n\nconst imgForestSword  = document.getElementById(\"img-sword-forest\");\nconst imgForestShield = document.getElementById(\"img-sword-road\");\nconst imgRoadSword    = document.getElementById(\"img-shield-forest\");\nconst imgRoadShield   = document.getElementById(\"img-shield-road\");\n\n// This function runs every time a button is clicked. \n// It checks the state and updates the screen so it matches.\nconst updateStory = (location, item) => {\n  \n  // Update state variables only if a new value was passed in\n  if (location !== undefined) locationChoice = location;\n  if (item !== undefined) itemChoice = item;\n\n  // RESET: Remove highlight from all buttons\n  forestBtn.classList.remove(\"btn-primary\");\n  roadBtn.classList.remove(\"btn-primary\");\n  swordBtn.classList.remove(\"btn-primary\");\n  shieldBtn.classList.remove(\"btn-primary\");\n  \n  // RESET: Hide all images\n  imgForestSword.classList.replace(\"show\", \"hide\");\n  imgForestShield.classList.replace(\"show\", \"hide\");\n  imgRoadSword.classList.replace(\"show\", \"hide\");\n  imgRoadShield.classList.replace(\"show\", \"hide\");\n\n  // DECISION TREE LOGIC\n\n\n\n\n\n\n\n// Event handlers: Pass the choice string for the specific button clicked\nforestBtn.addEventListener(\"click\", () => updateStory(\"forest\", undefined));\nroadBtn.addEventListener(\"click\", () => updateStory(\"road\", undefined));\nswordBtn.addEventListener(\"click\", () => updateStory(undefined, \"sword\"));\nshieldBtn.addEventListener(\"click\", () => updateStory(undefined, \"shield\"));\n\n// Call once on load to initialize the screen\nupdateStory();",
           "folderId": "0",
-          "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "forest-sword.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/9784298c-abab-474c-92c8-c91b9edb922e.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "5": {
-          "id": "5",
-          "name": "sword-road.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/91c9acc6-6c27-4f8a-a8bc-c6cc2f8fec44.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "6": {
-          "id": "6",
-          "name": "road-sword.jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/34fd81c0-d188-42fc-9bb5-f996a8f05424.jpg",
-          "type": "starter",
-          "active": false
+          "active": true
         },
         "7": {
           "id": "7",
@@ -65,11 +38,37 @@
           "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/79ccad80-45b7-4f26-8c48-9af997938cf6.jpg",
           "type": "starter",
           "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "road-shield.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/f603b0eb-6793-42c2-9523-ddc15468e379.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "road-sword.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/ce0c1752-45b6-48b1-973f-9aa397630bad.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "forest-sword.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-template_2026/uuid/97415bb7-d496-418d-aaee-313dd789317d.jpg",
+          "type": "starter",
+          "active": false
         }
       },
       "openFiles": [
-        "3",
-        "1"
+        "3"
       ]
     },
     "encrypted": "false",
@@ -108,6 +107,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-07T23:29:52.262+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level2-weblab_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level2-weblab_2026\"},{\"changed_at\":\"2026-04-07 23:29:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:31:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:32:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:35:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:36:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:36:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:40 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:53:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:53:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:57:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:58:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:18:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:19:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-07T23:29:52.262+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level2-weblab_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level2-weblab_2026\"},{\"changed_at\":\"2026-04-07 23:29:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:31:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:32:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:35:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:36:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:36:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:49:40 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:53:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:53:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:57:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:58:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:18:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:19:22 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:37:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:37:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:49:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 00:58:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 01:00:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 01:00:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
