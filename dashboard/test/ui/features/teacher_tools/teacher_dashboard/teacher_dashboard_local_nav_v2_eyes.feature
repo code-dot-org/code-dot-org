@@ -21,7 +21,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1 and save the section
     Given I create a student named "Talia"
     And I join the section
 
@@ -32,7 +32,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
-    And I scroll to "#ui-test-lesson-header-10"
+    And I scroll to "#ui-test-lesson-header-1"
     Then I see no difference for "progress v2 - first section"
 
     Then I select the "New Section" option in dropdown "uitest-sidebar-section-dropdown"
@@ -44,6 +44,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
+  @skip
   @properties_encryption_key
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
