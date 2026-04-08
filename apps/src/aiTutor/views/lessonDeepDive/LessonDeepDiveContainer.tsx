@@ -1,5 +1,5 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useEffect, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 
@@ -21,6 +21,10 @@ const darkTheme = createTheme({
   },
 });
 
+import {
+  fetchLessonStudentProfile,
+  LessonStudentProfile,
+} from '@cdo/apps/aiTutor/lessonStudentProfile';
 import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
 import PracticeBox from './PracticeBox';
@@ -46,6 +50,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   lessonDeepDiveData,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [studentProfile, setStudentProfile] =
+    useState<LessonStudentProfile | null>(null);
+
+  useEffect(() => {
+    fetchLessonStudentProfile(lessonDeepDiveData.lessonId)
+      .then(setStudentProfile)
+      .catch(e => console.error('Failed to load student profile:', e));
+  }, [lessonDeepDiveData.lessonId]);
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -69,6 +81,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <LessonSummaryBox
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
+            studentProfile={studentProfile}
           />
         );
       case 'reflection':

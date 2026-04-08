@@ -1222,6 +1222,8 @@ Dashboard::Application.routes.draw do
     resources :user_lesson_reflections, only: [:create]
     resources :user_lesson_objective_reflections, only: [:create]
 
+    get '/api/v1/lessons/:lesson_id/student_profile', to: 'api/v1/lesson_student_profiles#show'
+
     resources :ai_lesson_summary_podcasts do
       collection do
         get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
