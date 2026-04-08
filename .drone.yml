@@ -338,12 +338,15 @@ steps:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
+      - EXIT_CODE=0
+      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh || EXIT_CODE=$?
       - mysqldump -uroot --all-databases > mysql_databases.sql
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
+      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+      - exit $EXIT_CODE
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
