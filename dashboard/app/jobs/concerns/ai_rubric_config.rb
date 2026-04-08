@@ -77,17 +77,14 @@ class AiRubricConfig
       )
   end
 
-  # There are two main validations we want to perform on our AI rubric config in S3:
+  # Validates AI rubric config in S3 for every rubric. For each rubric:
   #
-  # 1) For each rubric in our database with an s3_config_dir set, we want to
-  #   confirm that we can successfully read the essential config files from S3
-  #   (params.json, system_prompt.txt, and standard_rubric.csv). If any of these
-  #   files are missing, an error will be raised.
+  # 1) If s3_config_dir is set, confirms that essential config files exist in
+  #    S3 (params.json, system_prompt.txt, standard_rubric.csv).
   #
-  # 2) For each rubric in our database with ai-enabled learning goals, we want
-  #    to confirm that the rubric has an s3_config_dir set and that every
-  #    ai-enabled learning goal in the database has a corresponding learning
-  #    goal in the standard_rubric.csv file in S3.
+  # 2) If any learning goals are ai-enabled, confirms the rubric has an
+  #    s3_config_dir and that each ai-enabled learning goal has a matching
+  #    entry in standard_rubric.csv.
   def self.validate_ai_config
     Rubric.all.each do |rubric|
       validate_ai_config_for_rubric(rubric)
