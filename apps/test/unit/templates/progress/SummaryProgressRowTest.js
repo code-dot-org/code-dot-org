@@ -81,6 +81,12 @@ describe('SummaryProgressRow', () => {
     const tutorLesson = {
       ...fakeLesson('Maze', 1, false, 3),
       lessonTutorPath: '/s/course/lessons/1/tutor',
+      hasLessonPlan: true,
+    };
+    const tutorProps = {
+      ...baseProps,
+      lesson: tutorLesson,
+      viewAs: ViewType.Participant,
     };
 
     let realIsEnabled;
@@ -91,54 +97,35 @@ describe('SummaryProgressRow', () => {
       experiments.isEnabled = realIsEnabled;
     });
 
-    it('shows when experiment is enabled and viewing as participant', () => {
+    it('shows when experiment is enabled, viewing as participant, hasLessonPlan is true', () => {
       experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({
-        lesson: tutorLesson,
-        viewAs: ViewType.Participant,
-      });
+      const wrapper = setUp(tutorProps);
       expect(wrapper.text()).toContain('Lesson Tutor');
     });
 
     it('does not show when experiment is disabled', () => {
       experiments.isEnabled = jest.fn(() => false);
-      const wrapper = setUp({
-        lesson: tutorLesson,
-        viewAs: ViewType.Participant,
-      });
+      const wrapper = setUp(tutorProps);
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
     it('does not show when viewing as instructor', () => {
       experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({lesson: tutorLesson});
+      const wrapper = setUp({...tutorProps, viewAs: ViewType.Instructor});
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
     it('does not show when isOnLevelView is true', () => {
       experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({
-        lesson: tutorLesson,
-        viewAs: ViewType.Participant,
-        isOnLevelView: true,
-      });
+      const wrapper = setUp({...tutorProps, isOnLevelView: true});
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
-    it('does not show for assessment lessons', () => {
+    it('does not show when hasLessonPlan is false', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = setUp({
-        lesson: {...tutorLesson, assessment: true},
-        viewAs: ViewType.Participant,
-      });
-      expect(wrapper.text()).not.toContain('Lesson Tutor');
-    });
-
-    it('does not show for survey lessons', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({
-        lesson: {...tutorLesson, survey: true},
-        viewAs: ViewType.Participant,
+        ...tutorProps,
+        lesson: {...tutorLesson, hasLessonPlan: false},
       });
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });

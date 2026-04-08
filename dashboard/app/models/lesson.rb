@@ -253,10 +253,6 @@ class Lesson < ApplicationRecord
     localized_lesson_plan(unit_group_unit: unit_group_unit) || "#{lesson_plan_base_url}/Teacher"
   end
 
-  def survey?
-    name.present? && name.downcase.include?('survey')
-  end
-
   def lesson_feedback_url
     url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{CGI.escape(localized_name)}"
     url += if script.get_original_unit_group
@@ -308,7 +304,6 @@ class Lesson < ApplicationRecord
         name: localized_name,
         key: key,
         assessment: !!assessment,
-        survey: survey?,
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,

@@ -48,6 +48,11 @@ function SummaryProgressRow({
     lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
   }
 
+  // We want to exclude the Lesson Tutor button for assessment and survey lessons.
+  // These lessons don't have lesson plans, so we can use that as a proxy for
+  // whether or not to show the Lesson Tutor button.
+  const showLessonTutorButton = lesson.lessonTutorPath && lesson.hasLessonPlan;
+
   const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;
 
   const titleTooltipId = _.uniqueId();
@@ -145,8 +150,7 @@ function SummaryProgressRow({
                   {i18n.lessonResources()}
                 </MuiButton>
               )}
-              {!lesson.assessment &&
-                !lesson.survey &&
+              {showLessonTutorButton &&
                 experiments.isEnabled(experiments.LESSON_TUTOR) && (
                   <MuiButton
                     href={lesson.lessonTutorPath}
