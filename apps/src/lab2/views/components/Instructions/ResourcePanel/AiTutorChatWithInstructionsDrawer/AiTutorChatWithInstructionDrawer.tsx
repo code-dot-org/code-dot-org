@@ -49,6 +49,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   isPredictLevel,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const instructionsScrollAreaRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
   const instructionsHeightAtDragStartRef = useRef<number | null>(null);
   const hasSetInitialHeightFromContentRef = useRef(false);
@@ -65,6 +66,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     number | undefined
   >(undefined);
   const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
+  const [showScrollFade, setShowScrollFade] = useState(false);
 
   const {
     position: rawInstructionsHeight,
@@ -258,6 +260,34 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     };
   }, [setRawInstructionsHeight, isCollapsed, isPredictLevel]);
 
+  const updateScrollFade = useCallback(() => {
+    const el = instructionsScrollAreaRef.current;
+    if (!el) {
+      setShowScrollFade(false);
+      return;
+    }
+    const visibleHeight = el.clientHeight;
+    // scrollHeight is a floating point, but scrollTop is an integer so rounding up so fade isn't triggered when at bottom.
+    const instructionsContentHeight = Math.ceil(el.scrollHeight);
+    const scrolledFromTopDistance = el.scrollTop;
+    setShowScrollFade(
+      scrolledFromTopDistance + visibleHeight < instructionsContentHeight
+    );
+  }, []);
+
+  // Re-check fade whenever drawer height changes (resize, collapse).
+  useEffect(() => {
+    updateScrollFade();
+  }, [instructionsHeight, updateScrollFade]);
+
+  // Re-check fade on scroll.
+  useEffect(() => {
+    const el = instructionsScrollAreaRef.current;
+    if (!el || isCollapsed) return;
+    el.addEventListener('scroll', updateScrollFade);
+    return () => el.removeEventListener('scroll', updateScrollFade);
+  }, [isCollapsed, updateScrollFade]);
+
   const toggleInstructions = useCallback(() => {
     const eventToReport = isCollapsed
       ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED
@@ -274,9 +304,13 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           className={styles.instructionsDrawer}
           style={{height: instructionsHeight}}
         >
-          <div className={styles.instructionsScrollArea}>
+          <div
+            ref={instructionsScrollAreaRef}
+            className={styles.instructionsScrollArea}
+          >
             <div ref={instructionsContentRef}>{instructionsContent}</div>
           </div>
+          {showScrollFade && <div className={styles.scrollFade} aria-hidden />}
         </div>
       )}
       <div
