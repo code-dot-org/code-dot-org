@@ -97,15 +97,11 @@ namespace :seed do
     frozen
     hero
     hourofcode
-    infinity
     mc
     playlab
     starwars
-    starwarsblocks
     step
     oceans
-    sports
-    jigsaw
     mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
@@ -283,19 +279,15 @@ namespace :seed do
        frozen
        hero
        hourofcode
-       infinity
        mc
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
        playlab
        starwars
-       starwarsblocks
        step
        oceans
-       jigsaw
-       mix-move-ai-2025
-       sports).each do |course_name|
+       mix-move-ai-2025).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
