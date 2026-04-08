@@ -11,7 +11,7 @@
 
 ## Technical Writing Style
 
-IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, its a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
+IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
 
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX
@@ -120,4 +120,4 @@ and architecture.
 ## Continuous improvement
 
 - If you hit a wrong assumption or repeated correction working in this repo, propose an update to the relevant subdirectory `AGENTS.md` or (rarely) $reporoot/AGENTS.md.
-- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise.
+- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise, justify it.
