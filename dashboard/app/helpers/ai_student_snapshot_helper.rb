@@ -25,29 +25,22 @@ module AiStudentSnapshotHelper
               maximum(:updated_at)
   end
 
-  # Returns true when the stored insight should be regenerated.
-  def self.lesson_insight_stale?(insight, unit_id, lesson_id, student_id)
+  # Returns true when a lesson insight should be (re)generated.
+  def self.should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id, refresh: false)
+    return true if insight.nil?
     # Never regenerate if the insight is less than 5 minutes old.
     return false if insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
+    return true if refresh
 
     current_max = max_user_level_updated_at(unit_id, lesson_id, student_id)
-    # Stale when any UserLevel was touched after the insight was last generated.
+    # Regenerate when any UserLevel was touched after the insight was last generated.
     current_max.present? && current_max > insight.updated_at
   end
 
   def self.fetch_or_generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id, refresh: false)
     insight = LessonInsight.find_by(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
 
-    should_generate =
-      if insight.nil?
-        true
-      elsif insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
-        false
-      elsif refresh
-        true
-      else
-        lesson_insight_stale?(insight, unit_id, lesson_id, student_id)
-      end
+    should_generate = should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id, refresh: refresh)
 
     if should_generate
       response = generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
