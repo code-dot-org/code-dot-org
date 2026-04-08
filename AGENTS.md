@@ -120,4 +120,4 @@ and architecture.
 ## Continuous improvement
 
 - If you hit a wrong assumption or repeated correction working in this repo, propose an update to the relevant subdirectory `AGENTS.md` or (rarely) $reporoot/AGENTS.md.
-- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise, justify it.
+- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise.
