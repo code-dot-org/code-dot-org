@@ -72,7 +72,6 @@ class BubbleChoiceDSL < ContentDSL
     end
 
     # Serialize additional properties, separated by a blank line from sublevels.
-    # uses_lab2 must come before standalone, since standalone requires uses_lab2.
     extra_lines = []
     extra_lines << "custom_mode '#{level.custom_mode}'" if level.custom_mode.present?
     extra_lines << "uses_lab2" if level.uses_lab2
