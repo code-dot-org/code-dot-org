@@ -9,6 +9,7 @@ class AiRubricConfigTest < ActiveSupport::TestCase
   end
 
   test 'get_lesson_s3_name returns S3 name from rubric s3_config_dir' do
+    Rubric.any_instance.stubs(:validate_ai_config)
     create(:rubric, lesson: @lesson, level: @level, s3_config_dir: 'test-lesson-L1')
 
     result = AiRubricConfig.get_lesson_s3_name(@script_level)
@@ -33,6 +34,7 @@ class AiRubricConfigTest < ActiveSupport::TestCase
   end
 
   test 'ai_enabled? returns true when rubric has s3_config_dir' do
+    Rubric.any_instance.stubs(:validate_ai_config)
     create(:rubric, lesson: @lesson, level: @level, s3_config_dir: 'test-lesson-L1')
 
     assert AiRubricConfig.ai_enabled?(@script_level)
