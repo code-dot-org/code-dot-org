@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$DIR"
+TEST_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"/../test && pwd)"
+cd "$TEST_DIR"
 
 NAMESPACE="staging"
 ADHOC_NAMESPACE="adhoc-addons-test-123"

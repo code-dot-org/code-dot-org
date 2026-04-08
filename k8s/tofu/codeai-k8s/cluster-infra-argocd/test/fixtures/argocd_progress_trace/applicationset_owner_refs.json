@@ -1,0 +1,36 @@
+[
+  {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "ApplicationSet",
+    "metadata": {
+      "name": "app-of-apps",
+      "namespace": "argocd",
+      "uid": "appset-uid-1"
+    },
+    "status": {
+      "resources": []
+    }
+  },
+  {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "Application",
+    "metadata": {
+      "name": "infra",
+      "namespace": "argocd",
+      "uid": "app-uid-3",
+      "ownerReferences": [
+        {
+          "apiVersion": "argoproj.io/v1alpha1",
+          "kind": "ApplicationSet",
+          "name": "app-of-apps",
+          "uid": "appset-uid-1",
+          "controller": true
+        }
+      ]
+    },
+    "status": {
+      "sync": {"status": "OutOfSync"},
+      "health": {"status": "Progressing"}
+    }
+  }
+]

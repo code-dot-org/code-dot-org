@@ -24,28 +24,39 @@ tofu init
 AWS_PROFILE=codeorg-admin tofu apply
 ```
 
-### MacOS users
+## Watching Argo
 
-In some conditions, if a DNS lookup fails, MacOS' local DNS cache will refuse to check
-the remote NS for 30 minutes, ignoring previous TTLs on the value. This can cause
-tofu to fail, because we wait for https://dex.k8s.code.org to come up to declare
-a succesful release.
+`bin/argo-trace` prints the live Argo/Kubernetes dependency tree to
+stdout.
 
-As a workaround, run this in a terminal while running `tofu apply`:
-```
-while true; do
-  echo "[$(date)] flushing macOS DNS cache"
-  sudo dscacheutil -flushcache
-  sudo killall -HUP mDNSResponder
-  sleep 10
-done
-```
+- One snapshot, suitable for `watch`:
+  `bin/argo-trace --operation destroy`
+- Watch at a fixed cadence:
+  `bin/argo-trace --operation destroy --poll-every 1m`
+- Follow one specific root:
+  `bin/argo-trace --root-name app-of-apps --operation apply --poll-every 30s`
 
-## Smoke tests
+`bin/logged-tofu apply` and `bin/logged-tofu destroy` already run this tracer as
+a sidecar, capture that stdout in `logs/argocd-<action>-<timestamp>.log.md`,
+and print the md log path at the start of the run.
 
-```bash
-./test/test-external-secrets.sh
-./test/test-ingress.sh
-./test/test-nlb.sh
-./test/test-gateway-http.sh
-```
+## Testing
+
+### Testing scripts used in deploying the cluster
+
+- If you modify `bin/argo-trace`, run before commit:
+  `ruby test/argocd_progress_trace_test.rb`
+- If you modify `bin/logged-tofu`, run before commit:
+  `ruby test/logged_tofu_test.rb`
+- If you modify `bin/wait-for-200`, run before commit:
+  `ruby test/wait_for_200_test.rb`
+- `bin/wait-for-200` smoke:
+  `bin/wait-for-200 --timeout-seconds 30 https://studio.code.org`
+
+### Smoke testing a cluster is working once its up
+
+- once a cluster is up, you can use these smoke tests to test it:
+  `./cluster-smoke-tests/test-external-secrets.sh`
+  `./cluster-smoke-tests/test-ingress.sh`
+  `./cluster-smoke-tests/test-nlb.sh`
+  `./cluster-smoke-tests/test-gateway-http.sh`

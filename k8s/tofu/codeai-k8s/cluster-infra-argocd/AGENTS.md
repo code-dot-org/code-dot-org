@@ -1,33 +1,61 @@
-- When making Helm chart changes you wish to `tofu apply`, be sure to bump the Helm chart version number or it will say there is no diff to apply.
+- When making Helm chart changes you intend to `tofu apply`, bump the chart version or Helm may report no diff.
 
-## Diagnosing tofu apply/destroy failures
+## Logged tofu
 
-- In this directory, use `bin/logged-tofu <apply|destroy> "<what is being tested>"` for every `tofu` apply or destroy unless the user explicitly says not to log. Plain `tofu plan` is fine unless a logged plan is specifically requested. `bin/logged-tofu` writes both the rolling file `tofu.log` in this directory and a per-run timestamped file under `logs/`, inserts 50 blank lines and a `START OF TOFU RUN` marker before each run, and keeps the `kubectl get events -A --watch --output-watch-events` logger running after `tofu` exits. When starting a logged run I must echo the exact `tail -n +1 -f ...` commands for both the per-run log and the rolling `tofu.log` in chat. When I am figuring out what happened in a logged run, I must only inspect the latest per-run log file, not `tofu.log`, because the rolling file will blow out context. After I have verified health of everything in Argo and on the cluster, or we have accepted the remaining problem, I must stop the watcher with `bin/logged-tofu-stop`.
-- After any `tofu destroy` here says it is done, I must immediately run `bin/check-phase-deployment-status`. That command is the source of truth for the phase-3 workloads that must be gone. Any row it reports with a status other than `missing` is a destroy failure, and must be debugged until we've gotten it destroying perfectly. Immediate next step: inspect the end of the latest per-run `logs/tofu-*.log` file and diagnose why those resources survived.
-- Argo sync option `CreateNamespace=true` can leave phase namespaces behind after destroy. Namespace-only residue is expected here and is not a destroy failure by itself.
-- After diagnosis, we must try to make systemic fixes that prevent the un-cleaned-up resources from surviving the next "tofu destroy"
-- Before adding any destroy hook, cleanup helper, or teardown script, prove from logs and rendered ownership why ordering, dependencies, health checks, dry-run handling, or Crossplane/Argo ownership cannot solve the issue. For the Apr. 6 Crossplane destroy regression, start from `TODO.destroy.failed.apr6.md`. A teardown workaround is not an acceptable first answer.
-- After diagnosis, maybe some discussion, and making fixes, the default is to discuss the cleanup plan with the user before deleting residue. I should not start cleanup on my own unless the user explicitly tells me otherwise. You can ask if you think we've got a fix in place and you think we're ready to cleanup just say "Cleanup cluster?" at the end of your chat.
-- When the user says `cleanup`, `clean up`, or `cleanup the phase` (or variants, be smart), then I should keep deleting residue until every row from `bin/check-phase-deployment-status` reports `missing`, then verify again and report the final clean state.
-- Cleanup scope is exact, not inferred.
-- `bin/check-phase-deployment-status` is necessary but not always sufficient to
-  call the phase "clean". If an app in this phase owns cluster-scoped or
-  shared-namespace support objects, verify those are gone too before the next
-  apply.
-- When cleaning phase residue, delete only:
-  - the workload objects named directly by `bin/check-phase-deployment-status`
-- Do not delete resources created by the previous phase. Some of them may look tempting, but they are not for you.
-- Do not delete any other support objects just because they appear related. In particular, do not delete namespaces, service accounts, RBAC, webhooks, ingress classes, CRDs, secrets, configmaps, or cloud-side residue unless:
-  - the object is directly named by `bin/check-phase-deployment-status`, or
-  - ownership has been proven from source code, and the user explicitly approves broader cleanup
-- For workloads listed in shared namespaces like `kube-system`, delete only the exact listed workload object, not adjacent support objects.
-- Exception for proven phase-owned cluster-scoped/shared-namespace residue:
-  once ownership is proven from rendered source, it is allowed to delete those
-  exact rendered objects even if `bin/check-phase-deployment-status` does not
-  name them directly.
-- For cleanup-to-scratch or other brute cleanup, do not hand-pick first. The required default fast path is: render the exact phase-owned manifests from `~/src/k8s-gitops/apps/infra/*/chart` with the real values file `~/src/k8s-gitops/apps/infra/codeai-cluster-config.values.yaml`, make one exact object list from that rendered output, and try one bulk delete of that whole rendered set in a single pass.
-- Explicit approval rule: if an object is created by the rendered `~/src/k8s-gitops/apps/infra/*/chart` manifests, it is in scope for cleanup here and should be included in that bulk delete without extra approval.
-- Source of truth for that rendered cleanup is `~/src/k8s-gitops/apps/infra`, not the local charts or experiments under `code-dot-org/k8s/tofu/...`.
-- Rendered bulk cleanup is allowed here because the current `~/src/k8s-gitops/apps/infra/*/application.yaml` files all point at `apps/infra/*/chart`. If that stops being true, re-check before using this rule.
-- After I think phase 3 is clean, I must run `tofu apply` in `../cluster-infra` as a sanity check for accidental previous-phase deletions before trusting the baseline.
-- If that `../cluster-infra` apply wants to recreate anything, I must treat that as proof that phase-3 cleanup deleted previous-phase objects by mistake, and I must list those recreated objects by exact name in `NOTES.md` as a cleanup mistake.
+- In this directory, use `bin/logged-tofu <apply|destroy> [extra tofu args...]` for logged OpenTofu applies and destroys unless the user explicitly says otherwise.
+- Do not use `bin/logged-tofu` for `plan`. Run `tofu plan` directly when a plain plan is what you need.
+- `bin/logged-tofu` runs `bin/argo-trace` for the same operation as a sidecar logger and writes `logs/argocd-<action>-<timestamp>.log.md`. That tracer is not an implementation detail; treat that md log as a primary debugging tool and mirror its output raw in chat when it emits updates.
+- `bin/logged-tofu` now writes three first-class logs per run:
+  - `logs/tofu-<timestamp>-<action>.log`
+  - `tofu.log`
+  - `logs/argocd-<action>-<timestamp>.log.md`
+- When starting a logged run, print the exact `tail -n +1 -f ...` commands for all three logs in chat.
+- `bin/logged-tofu` starts and stops its sidecar watchers itself. `bin/logged-tofu-stop` is only for stale cleanup after an interrupted run.
+
+## Reading runs
+
+- For human-facing progress, read `logs/argocd-<action>-<timestamp>.log.md` first. That file is the primary progress view.
+- For deep debugging, start with these two paths in this order:
+  - `logs/argocd-<action>-<timestamp>.log.md`
+  - `bin/argo-trace`
+- Think from those two files first. Use the tracer output as the clearest view of what Argo is blocked on. Use the tracer source to prove why the tree looks the way it does. Do not treat its output as magic.
+- In chat, mirror that `.log.md` output raw. Add interpretation only after the raw block, and only if needed to explain what changed or why it matters.
+- Use the per-run `logs/tofu-*.log` only for proof, low-level provider errors, shell output, or other debug spew the md log does not carry.
+- Do not diagnose from `tofu.log` unless you need long-run history. Prefer the latest per-run files.
+
+## Destroy rules
+
+- After any `tofu destroy`, immediately run `bin/check-phase-deployment-status`.
+- Namespace-only residue is expected here because Argo uses `CreateNamespace=true`. Treat that as non-gating.
+- Any non-namespace residue is a destroy failure until explained.
+- Fix ordering, ownership, health, dry-run, or dependency issues first. Do not reach for teardown hooks or cleanup scripts as a first answer.
+- For the Apr. 6 Crossplane destroy regression, start from `TODO.destroy.failed.apr6.md`.
+
+## Cleanup rules
+
+- Do not clean up residue unless the user explicitly asks.
+- If the user asks for cleanup, delete only exact proven phase-owned residue. Do not broaden scope by guesswork.
+- After cleanup, verify again with `bin/check-phase-deployment-status`.
+
+## Sanity check
+
+- If phase 3 looks clean, sanity-check with `tofu apply` in `../cluster-infra` before trusting the baseline. If that apply wants to recreate previous-phase objects, treat that as proof of over-deletion.
+
+## Testing
+
+### Testing scripts used in deploying the cluster
+
+- If you modify `bin/argo-trace`, run before commit:
+  `ruby test/argocd_progress_trace_test.rb`
+- If you modify `bin/logged-tofu`, run before commit:
+  `ruby test/logged_tofu_test.rb`
+- If you modify `bin/wait-for-200`, run before commit:
+  `ruby test/wait_for_200_test.rb`
+
+### Smoke testing a cluster is working once its up
+
+- once a cluster is up, you can use these smoke tests to test it:
+  `./cluster-smoke-tests/test-external-secrets.sh`
+  `./cluster-smoke-tests/test-ingress.sh`
+  `./cluster-smoke-tests/test-nlb.sh`
+  `./cluster-smoke-tests/test-gateway-http.sh`

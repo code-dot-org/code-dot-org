@@ -1,0 +1,34 @@
+[
+  {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "Application",
+    "metadata": {
+      "name": "my-app",
+      "namespace": "argocd",
+      "uid": "app-uid-1"
+    },
+    "status": {
+      "sync": {"status": "OutOfSync"},
+      "health": {"status": "Progressing"}
+    }
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "web",
+      "namespace": "default",
+      "uid": "deploy-uid-1",
+      "annotations": {
+        "argocd.argoproj.io/tracking-id": "my-app:apps/Deployment:default/web"
+      }
+    },
+    "status": {
+      "observedGeneration": 1,
+      "readyReplicas": 0
+    },
+    "spec": {
+      "replicas": 1
+    }
+  }
+]
