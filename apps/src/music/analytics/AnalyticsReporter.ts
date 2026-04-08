@@ -133,10 +133,12 @@ export default class MusicAnalyticsReporter {
   }
 
   onKeyPressed(keyName: string, properties?: object) {
-    this.trackUIEvent('Key pressed', {
-      keyName,
-      ...properties,
-    });
+    this.log(
+      `Key pressed. Payload: ${JSON.stringify({
+        keyName,
+        ...properties,
+      })}`
+    );
   }
 
   onValidationAttempt(passed: boolean, message: string) {
@@ -148,7 +150,9 @@ export default class MusicAnalyticsReporter {
   }
 
   onGenerateAiPatternStart(temperature: number) {
-    this.trackUIEvent('Generate AI pattern start', {temperature});
+    this.log(
+      `Generate AI pattern start. Payload: ${JSON.stringify({temperature})}`
+    );
   }
 
   onGenerateAiPatternEnd(
@@ -156,11 +160,13 @@ export default class MusicAnalyticsReporter {
     isInitialGenerate: boolean,
     temperature: number
   ) {
-    this.trackUIEvent('Generate AI pattern end', {
-      timeSeconds,
-      isInitialGenerate,
-      temperature,
-    });
+    this.log(
+      `Generate AI pattern end. Payload: ${JSON.stringify({
+        timeSeconds,
+        isInitialGenerate,
+        temperature,
+      })}`
+    );
   }
 
   private trackUIEvent(eventType: string, payload: object = {}) {

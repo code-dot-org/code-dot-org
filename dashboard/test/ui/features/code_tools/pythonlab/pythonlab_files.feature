@@ -4,7 +4,7 @@
 Feature: Python Lab manage files and folders
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?noIntrojs=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true"
   And I wait to see "#uitest-codebridge-run"
 
 Scenario: Can add a new, unlocked file

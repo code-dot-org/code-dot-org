@@ -44,6 +44,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
       id="starter-assets-dialog"
       onClose={onClose}
       title={lab2I18n.library()}
+      className={styles.starterAssetsModal}
       primaryButtonProps={{
         text: lab2I18n.attach(),
         onClick: primaryOnClick,

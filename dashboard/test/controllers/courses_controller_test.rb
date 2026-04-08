@@ -63,6 +63,8 @@ class CoursesControllerTest < ActionController::TestCase
       Unit.clear_cache
       UnitGroup.clear_cache
 
+      ActiveRecord::Base.connection.disable_query_cache!
+
       offering = create(:course_offering, key: 'csx')
 
       @unit_group = create(:unit_group, name: 'csx-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001')

@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -106,39 +106,50 @@ const DanceShare: React.FC<DanceShareProps> = props => {
           disabled={(usingMusicProject && !props.loadedMusicProject) || false}
         />
         <div className={moduleStyles.actionBar}>
-          <Button
-            text={'View code'}
-            type="tertiary"
-            color="black"
-            size="s"
-            iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="small"
             onClick={() =>
               Lab2Registry.getInstance().getProjectManager()?.redirectToView()
             }
-          />
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
+          >
+            {'View code'}
+          </MuiButton>
           {canShare && (
-            <Button
-              text={'Share'}
-              type="tertiary"
-              color="black"
-              size="s"
-              iconLeft={{
-                iconStyle: 'solid',
-                iconName: 'arrow-up-from-bracket',
-              }}
+            <MuiButton
+              variant="text"
+              color="secondary"
+              size="small"
               onClick={() => navigator?.share(shareData)}
-            />
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName="arrow-up-from-bracket"
+                />
+              }
+            >
+              {'Share'}
+            </MuiButton>
           )}
-          <Button
-            text={'Make my own'}
-            type="tertiary"
-            color="black"
-            size="s"
-            iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="small"
+            loadingPosition="start"
             onClick={() =>
               Lab2Registry.getInstance().getProjectManager()?.redirectToRemix()
             }
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
+            }
+          >
+            {'Make my own'}
+          </MuiButton>
         </div>
       </div>
     </div>

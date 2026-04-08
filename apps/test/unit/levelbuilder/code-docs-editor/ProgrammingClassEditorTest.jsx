@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -140,7 +141,7 @@ describe('ProgrammingClassEditor', () => {
     expect(orderableMethodList.props().list.length).to.equal(1);
   });
 
-  it('attempts to save when save is pressed', () => {
+  it('attempts to save when save is pressed', async () => {
     const store = getStore();
     const wrapper = mount(
       <Provider store={store}>
@@ -153,7 +154,9 @@ describe('ProgrammingClassEditor', () => {
 
     const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-    saveAndCloseButton.simulate('click');
+    await act(async () => {
+      saveAndCloseButton.simulate('click');
+    });
 
     expect(fetchSpy).to.be.called.once;
     const fetchCall = fetchSpy.getCall(0);

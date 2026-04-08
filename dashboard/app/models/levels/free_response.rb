@@ -54,7 +54,7 @@ class FreeResponse < Level
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   # FND-985 Create shared API to get localized level properties.

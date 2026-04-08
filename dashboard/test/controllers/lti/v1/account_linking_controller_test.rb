@@ -17,7 +17,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
     )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes session, partial_lti_teacher
@@ -51,7 +51,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
       )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     roster_synced_teacher.authentication_options = [ao]
     Services::Lti.create_lti_user_identity(roster_synced_teacher)
@@ -115,6 +115,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     context 'when signed in' do
       before do
         sign_in user
+        PartialRegistration.persist_attributes(session, user)
       end
 
       it 'opts the user out of lms landing' do
@@ -122,6 +123,12 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
         user.reload
         _(user.lms_landing_opted_out).must_equal true
+      end
+
+      it 'clears partial registration from the session' do
+        new_account_request
+
+        _(PartialRegistration.in_progress?(session)).must_be_nil
       end
 
       it 'verifies the teacher' do
@@ -139,6 +146,13 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
         partial_user = User.new_with_session(ActionController::Parameters.new, session)
         _(partial_user.lms_landing_opted_out).must_equal true
+      end
+
+      it 'keeps partial registration in the session' do
+        PartialRegistration.persist_attributes(session, user)
+        new_account_request
+
+        _(PartialRegistration.in_progress?(session)).must_equal true
       end
     end
 

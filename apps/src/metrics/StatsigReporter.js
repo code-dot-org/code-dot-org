@@ -218,7 +218,13 @@ class StatsigReporter {
     }
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       const client = new StatsigClient(this.api_key, this.user, this.options);
-      runStatsigAutoCapture(client);
+      runStatsigAutoCapture(client, {
+        eventFilterFunc: event =>
+          ![
+            'auto_capture::performance',
+            'auto_capture::page_view_end',
+          ].includes(event.eventName),
+      });
       await client.initializeAsync();
     }
   }

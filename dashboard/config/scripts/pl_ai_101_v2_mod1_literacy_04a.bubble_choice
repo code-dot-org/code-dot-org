@@ -1,6 +1,6 @@
 name 'pl-ai-101-V2-mod1-literacy-04a'
 display_name 'AI Literacy Skills'
-description 'Learn more about **AI Literacy Skills**. Choose the grade band that is best for you and your role. Come back to this level if you wish to explore multiple grade bands.'
+description '####Learn more about **AI Literacy Skills**. Choose the grade band that is best for you and your role. Come back to this level if you wish to explore multiple grade bands.'
 
 sublevels
 level 'pl-ai-101-V2-mod1-literacy-04'

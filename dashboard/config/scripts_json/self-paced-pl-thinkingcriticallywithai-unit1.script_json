@@ -4,16 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_6_8",
       "has_unnumbered_lessons": true,
       "is_migrated": true,
       "project_sharing": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-10 23:33:30 UTC",
+    "serialized_at": "2026-03-13 16:33:07 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -305,6 +307,17 @@
       },
       "seeding_key": {
         "activity_section.key": "ee95444e-3e48-49a7-86e0-677cba8298b7",
+        "lesson_activity.key": "32c79cdc-d204-4159-bee4-9b09209d7e95"
+      }
+    },
+    {
+      "key": "70024160-3dbf-4204-9902-5598a0dbcf1c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "70024160-3dbf-4204-9902-5598a0dbcf1c",
         "lesson_activity.key": "32c79cdc-d204-4159-bee4-9b09209d7e95"
       }
     }
@@ -1123,6 +1136,28 @@
       "level_keys": [
         "self-paced-TCaAI-L6-Lesson10"
       ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L6-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "70024160-3dbf-4204-9902-5598a0dbcf1c"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L6-WrapUp"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1580,6 +1615,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
         "activity_section.key": "ee95444e-3e48-49a7-86e0-677cba8298b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L6-WrapUp",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L6-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "70024160-3dbf-4204-9902-5598a0dbcf1c"
       }
     }
   ],

@@ -1,17 +1,25 @@
+import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
+import supportsClientApi from '../api/supportsClientApi';
+import {
+  selectIsWaitingForChatResponse,
+  submitChatContents,
+  uploadFiles,
+} from '../redux';
 import {
   AiChatClientType,
   ChatButtonAndKey,
   ModelParameters,
   AnalyticsProperties,
 } from '../types';
+import {getAllowedFileTypes} from '../utils';
 
 import UploadButton, {UploadButtonProps} from './assets/UploadButton';
 
@@ -136,6 +144,35 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
+  // Speech to text is only enabled if the client API is supported for the current model
+  // since it makes use of the AI Gateway.
+  const speechToTextEnabled =
+    supportsClientApi(modelParameters.selectedModelId) ||
+    experiments.isEnabledAllowingQueryString('enable-speech-to-text');
+
+  const acceptedFileTypes = getAllowedFileTypes(
+    modelParameters.selectedModelId
+  );
+
+  const canUploadFiles =
+    multimodalAvailable && buildAssetUrl && acceptedFileTypes.length > 0;
+
+  const onPaste = useCallback(
+    (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+      if (!canUploadFiles) {
+        return;
+      }
+      const files = Array.from(e.clipboardData.items)
+        .filter(({type}) =>
+          acceptedFileTypes.includes(`.${mimeToExtension(type) || ''}`)
+        )
+        .map(item => item.getAsFile())
+        .filter(item => item !== null);
+      dispatch(uploadFiles({files, buildAssetUrl}));
+    },
+    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
+  );
+
   return (
     <>
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
@@ -151,15 +188,18 @@ const UserChatMessageEditor: React.FunctionComponent<
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
+        speechToTextEnabled={speechToTextEnabled}
+        onPaste={onPaste}
         ref={inputRef}
       >
-        {multimodalAvailable && buildAssetUrl && levelName && (
+        {canUploadFiles && levelName && (
           <div className={moduleStyles.buttonRow}>
             <UploadButton
               isDisabled={!!uploadDisabled || disabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
+              acceptedFileTypes={acceptedFileTypes}
             />
           </div>
         )}

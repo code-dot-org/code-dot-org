@@ -27,7 +27,10 @@ markdown <<MARKDOWN
 <div style="flex:1; text-align:center;">
 <img src="https://images.code.org/6aac191fc61f33592100e3d59ac7b717-image-1762187266713.png" 
            alt="Eboxes symbolizing variable storage" 
-           style="width:70%; border-radius:10px;">
+            style="width:70%; 
+            border-radius:12px; 
+            
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
     </div>
   </div>
 
@@ -48,7 +51,10 @@ markdown <<MARKDOWN
 <div style="flex:1; text-align:center;">
       <img src="https://images.code.org/e3a6cd792666963257437c276c283ed5-image-1762187492236.png" 
            alt="Graph showing score and level as state" 
-           style="width:70%; border-radius:10px;">
+            style="width:70%; 
+            border-radius:12px; 
+             
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
     </div>
   </div>
 
@@ -69,7 +75,10 @@ markdown <<MARKDOWN
 <div style="flex:1; text-align:center;">
       <img src="https://images.code.org/2d7424f5c8832b0c3266d95848076aa7-image-1762187634384.png" 
            alt="Graph showing +1 operation changing score" 
-           style="width:60%; border-radius:10px;">
+            style="width:70%; 
+            border-radius:12px; 
+           
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
     </div>
   </div>
 
@@ -78,42 +87,6 @@ markdown <<MARKDOWN
     
 <br>  
 
----
-
-## Let's see what this looks like in code:
-
-#### This code defines the variables using the keyword `let`.
-
-#### In JavaScript, a variable must be declared, or defined, before it can be used. 
-
-<p style="text-align:center;">
-  <img src="https://images.code.org/3fc90531df0a250a6d4d032641296c12-image-1762197748560.png" 
-       alt="JavaScript variable example" 
-       style="width:600px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
-</p>
-
-
-### Here, an **event listener** increases the `strength` variable by 2 each time the **strength-up** button is clicked.
-
-
-<p style="text-align:center;">
-  <img src="https://images.code.org/642d6e6839a3abde291b95a4ae7258f1-image-1771971228529.png" 
-       alt="Event handler example" 
-       style="width:600px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
-</p>
-
-## Remember:
-
-#### There are always two steps when working with variables:
-
-- #### 1. Define the variable (give it a name and a starting value).
-
-- #### 2. Use or update the variable within the program’s actions or logic.
-
-
-## Let's practice! 
-
-#### In the next level, you will use AI to help debug a program with variables. 
 
 
 MARKDOWN

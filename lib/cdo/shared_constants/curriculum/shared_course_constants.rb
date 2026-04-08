@@ -49,6 +49,7 @@ module Curriculum
         CSA: 'CSA',
         HOC: 'HOC',
         HOAI: 'HOAI',
+        AID: 'AID',
         foundations_of_cs: 'AIF',
         foundations_of_programming: 'Foundations of Programming',
         CSC_K_5: 'CSC K-5',
@@ -151,7 +152,8 @@ module Curriculum
         csa: 'CSA',
         csp: 'CSP',
         csd: 'CSD',
-        aif: 'AIF'
+        aif: 'AIF',
+        aid: 'AID',
       }
     )
 

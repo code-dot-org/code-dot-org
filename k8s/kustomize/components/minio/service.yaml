@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cdo-minio
+  labels:
+    app.kubernetes.io/component: minio
+spec:
+  ports:
+    - name: api
+      port: 9000
+    - name: console
+      port: 9001
+  selector:
+    app.kubernetes.io/component: minio

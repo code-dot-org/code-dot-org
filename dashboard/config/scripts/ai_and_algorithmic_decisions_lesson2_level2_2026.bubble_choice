@@ -1,0 +1,8 @@
+name 'ai-and-algorithmic-decisions-lesson2-level2_2026'
+display_name 'Fixing Broken Features'
+description 'Choose one broken feature to investigate. Open it and test what happens when you click. Use your debugging checklist to find and fix the issue so the page behaves the way users expect.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson2-level2a_2026'
+level 'ai-and-algorithmic-decisions-lesson2-level2b_2026'
+level 'ai-and-algorithmic-decisions-lesson2-level2c_2026'

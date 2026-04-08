@@ -49,7 +49,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-edit" />
+          <i className="fa-solid fa-pen-to-square" />
         </div>
         <div
           style={styles.remove}
@@ -61,7 +61,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -186,9 +186,9 @@ class VocabulariesEditor extends Component {
           />
         )}
         <div style={styles.search}>
-          <label>
+          <div style={styles.sectionLabel}>
             <strong>Select a vocabulary word to add</strong>
-          </label>
+          </div>
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
@@ -208,7 +208,7 @@ class VocabulariesEditor extends Component {
           type="button"
           className="unit-test-add-vocabulary"
         >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          <i className="fa-solid fa-plus" style={{marginRight: 7}} /> Create New
           Vocabulary
         </button>
       </div>
@@ -217,6 +217,9 @@ class VocabulariesEditor extends Component {
 }
 
 const styles = {
+  sectionLabel: {
+    marginBottom: 5,
+  },
   search: {
     paddingBottom: 10,
   },

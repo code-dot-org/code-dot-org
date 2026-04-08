@@ -34,17 +34,25 @@
           "name": "index.html",
           "language": "html",
           "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Your content here!\n  </body>\n</html>\n  ",
-          "active": true,
+          "active": false,
           "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "prompt.md",
+          "contents": "1. What are the goals?\n\n2. What are the constraints?\n\n3. What are the edge cases?",
+          "folderId": "0",
+          "active": true
         }
       },
       "openFiles": [
-        "1"
+        "1",
+        "2"
       ]
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:53.226+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level4-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level4-template-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:53.226+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level4-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level4-template-test-2025\"},{\"changed_at\":\"2026-03-11 21:07:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:07:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:36:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

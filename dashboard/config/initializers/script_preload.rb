@@ -2,8 +2,6 @@
 # This speeds up load time of new Unicorn child worker processes
 # and Spring application preloader (Rails console, unit tests).
 Rails.application.config.to_prepare do
-  # Skip if this is running a Rake task (e.g. rake db:setup) or when caching is disabled
-  next if File.basename($0) == 'rake'
   next unless Unit.should_cache? && !ENV['SKIP_SCRIPT_PRELOAD']
 
   # Populate the shared in-memory cache from the database.

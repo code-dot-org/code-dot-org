@@ -2,15 +2,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {
   setThreadId,
   addThreadMessage,
   setThreadTitle,
   setArtifactType,
-} from '@cdo/apps/aichat/redux/slice';
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+} from '@cdo/apps/aiDifferentiation/redux';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -53,9 +53,10 @@ interface AiDiffChatProps {
   personalizationData?: PersonalizationData;
 }
 
-const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
-  artifact,
-}) => {
+const AiDiffArtifactLink: React.FC<{
+  artifact: AiArtifact | undefined;
+  callback: () => void;
+}> = ({artifact, callback}) => {
   if (artifact) {
     const title = artifact.title
       ? artifact.title
@@ -72,6 +73,7 @@ const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
           href={artifact.url}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={callback}
           startIcon={<FontAwesomeV6Icon iconName="shapes" />}
         >
           {title}
@@ -108,14 +110,16 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const viewAsUserId = useAppSelector(state => {
     return state.progress?.viewAsUserId || undefined;
   });
-  const threadId = useAppSelector(state => state.aichat.threadId);
-  const threadTitle = useAppSelector(state => state.aichat.threadTitle);
+  const threadId = useAppSelector(state => state.aiDiffChat.threadId);
+  const threadTitle = useAppSelector(state => state.aiDiffChat.threadTitle);
   const initialThreadPrompt = useAppSelector(
-    state => state.aichat.initialThreadPrompt
+    state => state.aiDiffChat.initialThreadPrompt
   );
-  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
-  const artifactType = useAppSelector(state => state.aichat.artifactType);
-  const artifact = useAppSelector(state => state.aichat.artifact);
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
+  const artifactType = useAppSelector(state => state.aiDiffChat.artifactType);
+  const artifact = useAppSelector(state => state.aiDiffChat.artifact);
 
   const dispatch = useAppDispatch();
 
@@ -134,12 +138,43 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     [reportingData]
   );
 
+  const sendArtifactEvent = React.useCallback(
+    (
+      thread: number,
+      event: (typeof EVENTS)[keyof typeof EVENTS],
+      prompt?: string
+    ) => {
+      const responseEventData = {
+        ...reportingData,
+        artifactType: artifactType,
+        artifactId: artifact ? artifact.id : undefined,
+        threadId: thread,
+        url: window.location.href,
+        prompt: prompt,
+      };
+      analyticsReporter.sendEvent(event, responseEventData);
+    },
+    [reportingData, artifactType, artifact]
+  );
+
   const getAIResponse = React.useCallback(
     (prompt: string, isPreset: boolean, presetChipText: string | null) => {
       setIsWaitingForResponse(true);
 
       if (threadId !== 0) {
         sendChatEvent(Role.USER, prompt, isPreset, threadId);
+      }
+
+      if (
+        artifactType &&
+        experiments.isEnabled(experiments.AI_ARTIFACT) &&
+        !isPreset
+      ) {
+        sendArtifactEvent(
+          threadId,
+          EVENTS.AI_ARTIFACT_PROMPT_RESPONDED,
+          prompt
+        );
       }
 
       const endpoint =
@@ -206,6 +241,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       context,
       viewAsUserId,
       sendChatEvent,
+      sendArtifactEvent,
       dispatch,
       threadFetchCallback,
       chatResponseCallback,
@@ -260,9 +296,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       }
       if (prompt.artifactCandidateType) {
         dispatch(setArtifactType(prompt.artifactCandidateType));
+        sendArtifactEvent(
+          threadId,
+          EVENTS.AI_ARTIFACT_PROMPT_CLICKED,
+          prompt.label
+        );
       }
     },
-    [dispatch, getAIResponse, threadTitle]
+    [dispatch, getAIResponse, sendArtifactEvent, threadId, threadTitle]
   );
 
   React.useEffect(() => {
@@ -318,9 +359,23 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
               text={item.chatMessageText}
               postText={
                 (item.isArtifactCandidate && (
-                  <AiDiffCreateArtifactButtons message={item} />
+                  <AiDiffCreateArtifactButtons
+                    message={item}
+                    threadId={threadId}
+                    eventCallback={sendArtifactEvent}
+                  />
                 )) ||
-                (item.isArtifact && <AiDiffArtifactLink artifact={artifact} />)
+                (item.isArtifact && (
+                  <AiDiffArtifactLink
+                    artifact={artifact}
+                    callback={() => {
+                      sendArtifactEvent(
+                        threadId,
+                        EVENTS.AI_ARTIFACT_OPEN_FROM_THREAD
+                      );
+                    }}
+                  />
+                ))
               }
               role={item.role}
               customStyles={style}

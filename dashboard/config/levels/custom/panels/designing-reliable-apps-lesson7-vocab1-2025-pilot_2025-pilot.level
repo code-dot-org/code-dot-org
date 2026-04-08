@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-03-13T12:09:48.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Network Failure\n\nA **network failure** happens when there is a breakdown in communication between your device and a web server. It prevents data—like an API request—from reaching its destination by failing to send a response back.",
+        "imageUrl": "https://images.code.org/fd86a8bf0a73fbe8ba675e4b9980098a-Screenshot 2026-02-10 at 12.41.39 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:09:48.310+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-vocab1-2025-pilot\"}]"
+}]]></config>
+</Panels>

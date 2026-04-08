@@ -69,14 +69,26 @@ describe('ManageStudentsActionsCell', () => {
     expect(wrapper).not.to.contain('Edit');
   });
 
-  it('does not render the edit option when loginType is lti', () => {
+  it('does not render the edit option when loginType is lti and roster sync is enabled', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell
         {...DEFAULT_PROPS}
         loginType={SectionLoginType.lti_v1}
+        syncEnabled={true}
       />
     );
     expect(wrapper).not.to.contain('Edit');
+  });
+
+  it('renders the edit option when loginType is lti and roster sync is disabled', () => {
+    const wrapper = shallow(
+      <ManageStudentsActionsCell
+        {...DEFAULT_PROPS}
+        loginType={SectionLoginType.lti_v1}
+        syncEnabled={null}
+      />
+    );
+    expect(wrapper).to.contain('Edit');
   });
 
   describe('onDelete', () => {

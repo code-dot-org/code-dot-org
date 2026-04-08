@@ -1,8 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -108,20 +107,25 @@ const VersionHistoryRow: React.FunctionComponent<
             size="s"
           />
           {showRestoreButton && (
-            <Button
-              className={moduleStyles.restoreButton}
-              text={commonI18n.restore()}
-              size="xs"
-              type="secondary"
-              color="gray"
-              iconLeft={{
-                iconName: 'arrow-rotate-left',
-                iconStyle: 'solid',
-              }}
-              onClick={restoreOnClick}
-              isPending={restoreLoading}
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              loading={restoreLoading}
+              loadingPosition="start"
               disabled={restoreDisabled}
-            />
+              className={moduleStyles.restoreButton}
+              onClick={restoreOnClick}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="arrow-rotate-left"
+                  iconStyle="solid"
+                />
+              }
+            >
+              {commonI18n.restore()}
+            </MuiButton>
           )}
           {aiSavedComment && !showRestoreButton && (
             <WithTooltip

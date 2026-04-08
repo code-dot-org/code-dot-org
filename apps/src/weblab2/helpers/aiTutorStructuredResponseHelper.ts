@@ -14,7 +14,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
-      tutorMode: {
+      answerType: {
         type: 'string',
         enum: [...AI_TUTOR_ANSWER_TYPES],
       },
@@ -41,7 +41,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`text`, `html`, `css`, or `js` fences. Limit to one language (text, html, css, or js) across the entire list. ' +
+          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -61,16 +61,28 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         description:
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
+      pseudocode: {
+        type: 'string',
+        description:
+          'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
+      },
+      example: {
+        type: 'string',
+        description:
+          "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
+      },
     },
-    // We return tutorMode and goal but do not show them to the student.
+    // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
+    required: ['answerType', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
-      'tutorMode',
+      'answerType',
       'goal',
       'assumptions',
       'code',
       'explanation',
+      'pseudocode',
+      'example',
       'nextSteps',
       'questions',
     ],
@@ -85,13 +97,14 @@ export const acceptRejectAnswerTypes = [
   'buildHTML',
   'buildCSS',
   'buildJavaScript',
+  'buildJSON',
 ];
 
-const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
+const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];
 
 /**
  * Validates that all files have file types that are supported in the accept-reject flow.
- * Returns true if all files are html, css, or js files.
+ * Returns true if all files are of supported types, false otherwise.
  */
 export const isAcceptRejectCodeFileTypes = (
   files: Array<{name: string}>
@@ -123,7 +136,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -140,6 +153,8 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
+  formattedResponse += formatSection('Pseudocode', response.pseudocode);
+  formattedResponse += formatSection('Example', response.example);
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
 
@@ -157,7 +172,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -170,7 +185,7 @@ export const formatAcceptRejectResponse = (
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
-    answerType: response.tutorMode,
+    answerType: response.answerType,
   };
 };
 

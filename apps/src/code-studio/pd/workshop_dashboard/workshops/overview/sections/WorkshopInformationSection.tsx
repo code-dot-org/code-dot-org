@@ -1,4 +1,3 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {
   Card,
   CardContent,
@@ -6,6 +5,7 @@ import {
   Box,
   Divider,
   Typography,
+  Button as MuiButton,
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import classNames from 'classnames';
@@ -54,13 +54,15 @@ export const WorkshopInformationSection: React.FC<
               <Typography variant="strong">Workshop Information</Typography>
             </Typography>
             {canEdit && canShowEditButton && (
-              <Button
-                text={isWorkshopAdmin ? 'Edit (admin)' : 'Edit'}
-                size="xs"
-                type="secondary"
-                color={buttonColors.gray}
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
                 onClick={handleEditClick}
-              />
+                type="button"
+              >
+                {isWorkshopAdmin ? 'Edit (admin)' : 'Edit'}
+              </MuiButton>
             )}
           </Box>
         }

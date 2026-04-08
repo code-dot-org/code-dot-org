@@ -1,7 +1,6 @@
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
@@ -202,11 +201,15 @@ export default function RegionalWorkshopCatalog({
                 maxLength={255}
                 placeholder="12345"
               />
-              <Button
-                text="Submit"
-                color="purple"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 onClick={() => handleSubmitZip(zipCode, false)}
-              />
+                type="button"
+              >
+                {'Submit'}
+              </MuiButton>
             </div>
           </div>
         </>
@@ -247,12 +250,16 @@ export default function RegionalWorkshopCatalog({
                 workshops.
               </Typography>
             </div>
-            <LinkButton
-              text="Contact regional partner"
-              target="_blank"
-              color="purple"
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {'Contact regional partner'}
+            </MuiButton>
           </div>
         </>
       );
@@ -344,13 +351,17 @@ export default function RegionalWorkshopCatalog({
               placeholder="12345"
               color="gray"
             />
-            <Button
-              aria-label="submitZip"
-              text="Submit"
-              color="purple"
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              loading={isSubmitting}
               onClick={() => handleSubmitZip(zipCode, false)}
-              isPending={isSubmitting}
-            />
+              aria-label="submitZip"
+              type="button"
+            >
+              {'Submit'}
+            </MuiButton>
           </div>
           <div className={style.rpInfoContainer}>
             <Typography
@@ -371,25 +382,29 @@ export default function RegionalWorkshopCatalog({
                 {regionalPartnerText}
               </Typography>
               <div className={style.rpInfoButtons}>
-                <Button
-                  aria-label="partnerInfo"
-                  text="Partner info"
-                  color="black"
-                  type="secondary"
-                  size="xs"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
+                  disabled={!regionalPartnerName}
                   onClick={() => setShowRPInfoDialog(true)}
+                  aria-label="partnerInfo"
+                  type="button"
+                >
+                  {'Partner info'}
+                </MuiButton>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
                   disabled={!regionalPartnerName}
-                />
-                <LinkButton
                   id="rpContactLink"
-                  text="Contact"
-                  target="_blank"
-                  color="black"
-                  type="secondary"
-                  size="xs"
                   href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
-                  disabled={!regionalPartnerName}
-                />
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {'Contact'}
+                </MuiButton>
               </div>
             </div>
           </div>

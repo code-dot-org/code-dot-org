@@ -15,7 +15,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
+      super || TRUSTED_PROXIES.any? do |proxy|
         proxy.include?(ip)
       rescue
         false
@@ -99,6 +99,10 @@ module Cdo
 
     def splat_path_info
       env[:splat_path_info]
+    end
+
+    def user
+      env['warden']&.user
     end
 
     def user_id

@@ -11,12 +11,11 @@ module AiStudentSnapshotHelper
     feedback_record
   end
 
-  API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
+    start_time = Time.now
 
     begin
       response = client.request_lesson_insight(system_prompt)
@@ -25,11 +24,29 @@ module AiStudentSnapshotHelper
     rescue StandardError => exception
       raise StandardError.new("Error processing AI lesson insight: #{exception.message}")
     end
+
     if response.code == 200
       response_body = JSON.parse(response.body)
-      response_body = response_body['choices'][0]['message']['content']
-      evaluation =  {status: response.code, json: response_body}
-      return {status: evaluation[:status], json: evaluation[:json]}
+      content = response_body['choices'][0]['message']['content']
+      end_time = Time.now
+
+      LangfuseHelper.trace_lesson_insight(
+        model: MODEL,
+        teacher_id: teacher_id,
+        lesson_id: lesson_id,
+        lesson_name: Lesson.find(lesson_id).name,
+        unit_id: unit_id,
+        unit_name: Unit.find(unit_id).name,
+        section_id: section_id,
+        student_id: student_id,
+        system_prompt: system_prompt,
+        output: content,
+        usage: response_body['usage'],
+        start_time: start_time,
+        end_time: end_time,
+      )
+
+      return {status: response.code, json: content}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
     end
@@ -37,7 +54,6 @@ module AiStudentSnapshotHelper
 
   def self.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
 
     begin
       response = client.request_lesson_feedback(system_prompt)
@@ -147,5 +163,9 @@ module AiStudentSnapshotHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end

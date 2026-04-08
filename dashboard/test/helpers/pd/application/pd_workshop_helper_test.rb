@@ -81,11 +81,13 @@ module Pd::Application
     end
 
     test 'cache expires in 30 seconds' do
-      TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
+      ActiveRecord::Base.connection.uncached do
+        TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
 
-      Timecop.travel(30.seconds) do
-        assert_queries 3 do
-          assert_equal @workshop, @application.workshop
+        Timecop.travel(30.seconds) do
+          assert_queries 3 do
+            assert_equal @workshop, @application.workshop
+          end
         end
       end
     end

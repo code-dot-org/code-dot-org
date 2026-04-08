@@ -1,4 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useState} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
@@ -47,6 +49,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
   >();
+  const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
 
   const onFilesSelected = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -102,24 +105,28 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
     ACCEPTED_FILE_TYPES.join(',')
   );
 
-  const onDelete = useCallback(
-    async (filename: string) => {
-      clearAlert();
-      setRequestInProgress('delete');
-      try {
-        await deleteFile(filename, levelName);
-        removeAsset(filename);
-      } catch (error) {
-        updateAlert(
-          'Error deleting file. Please try again',
-          'danger',
-          error as Error
-        );
-      }
-      setRequestInProgress(undefined);
-    },
-    [clearAlert, levelName, removeAsset, updateAlert]
-  );
+  const onSelectAsset = useCallback((selected: boolean, filename: string) => {
+    setSelectedFiles(prev =>
+      selected ? [...prev, filename] : prev.filter(f => f !== filename)
+    );
+  }, []);
+
+  const onDeleteSelected = useCallback(async () => {
+    clearAlert();
+    setRequestInProgress('delete');
+    try {
+      await Promise.all(selectedFiles.map(f => deleteFile(f, levelName)));
+      selectedFiles.forEach(f => removeAsset(f));
+      setSelectedFiles([]);
+    } catch (error) {
+      updateAlert(
+        'Error deleting file. Please try again',
+        'danger',
+        error as Error
+      );
+    }
+    setRequestInProgress(undefined);
+  }, [clearAlert, levelName, removeAsset, selectedFiles, updateAlert]);
 
   const buttonText =
     requestInProgress === 'upload'
@@ -133,19 +140,12 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       id="starter-assets-dialog"
       onClose={onClose}
       title={'Manage Starter Assets'}
+      className={styles.starterAssetsModal}
       primaryButtonProps={{
-        text: buttonText,
-        onClick: () => {
-          clearAlert();
-          openFileInput();
-        },
-        iconLeft: {
-          iconName: requestInProgress ? 'spinner' : 'upload',
-          animationType: requestInProgress ? 'spin' : undefined,
-        },
-        disabled: loading || !!requestInProgress,
+        text: 'Upload',
+        onClick: () => {},
+        style: {display: 'none'},
       }}
-      secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={
         loading ? (
           <Loading />
@@ -158,7 +158,8 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
                   {...asset}
                   key={asset.filename}
                   levelName={levelName}
-                  onDelete={onDelete}
+                  onSelect={selected => onSelectAsset(selected, asset.filename)}
+                  selected={selectedFiles.includes(asset.filename)}
                   showWarnings={true}
                 />
               ))}
@@ -166,7 +167,55 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
           </>
         )
       }
-      customBottomContent={alert && <DialogAlert {...alert} />}
+      customBottomContent={
+        <>
+          <div className={styles.modalActionsRow}>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
+              onClick={onClose}
+              type="button"
+            >
+              {'Cancel'}
+            </MuiButton>
+            {selectedFiles.length > 0 && (
+              <MuiButton
+                variant="contained"
+                color="error"
+                size="medium"
+                loadingPosition="start"
+                disabled={!!requestInProgress}
+                onClick={onDeleteSelected}
+                type="button"
+                startIcon={<FontAwesomeV6Icon iconName="trash" />}
+              >{`Delete ${selectedFiles.length} ${
+                selectedFiles.length === 1 ? 'file' : 'files'
+              }`}</MuiButton>
+            )}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              disabled={loading || !!requestInProgress}
+              onClick={() => {
+                clearAlert();
+                openFileInput();
+              }}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName={requestInProgress ? 'spinner' : 'upload'}
+                  animationType={requestInProgress ? 'spin' : undefined}
+                />
+              }
+            >
+              {buttonText}
+            </MuiButton>
+          </div>
+          {alert && <DialogAlert {...alert} />}
+        </>
+      }
     />
   );
 };

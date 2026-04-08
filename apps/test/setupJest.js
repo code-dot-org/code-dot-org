@@ -4,7 +4,6 @@ import 'whatwg-fetch';
  * Import locales to jest environment
  */
 import '../build/locales/en_us/common_locale.js';
-import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
 import '../build/locales/en_us/codebridge_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
@@ -23,7 +22,7 @@ import '../build/locales/en_us/flappy_locale.js';
 import '../build/locales/en_us/lab2_locale.js';
 import '../build/locales/en_us/weblab2_locale.js';
 
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';

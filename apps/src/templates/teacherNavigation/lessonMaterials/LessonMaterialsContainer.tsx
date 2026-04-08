@@ -5,9 +5,11 @@ import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {
+  setChatIsOpen,
+  fetchThreadMessages,
+} from '@cdo/apps/aiDifferentiation/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -372,7 +374,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
       return (
         <CustomLessonResources
-          unitId={selectedSection.unitId}
+          unitId={selectedUnitId}
           lessonId={selectedLesson.id}
           sectionId={selectedSection.id}
         />

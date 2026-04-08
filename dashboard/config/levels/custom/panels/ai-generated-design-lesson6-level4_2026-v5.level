@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-12T04:47:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Adding Images",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Add Images to Your Webpage\n\nImages make your webpage more engaging and visually clear. Adding photos, graphics, or illustrations helps users understand your content faster and strengthens your design.",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-90f598cf-70ae-4ddf-8788-cdd69b931239"
+      },
+      {
+        "text": "## Step 1:\n\nClick <i class=\"fa-solid fa-plus\"></i> in your Files panel and choose <i class=\"fa-solid fa-upload\"></i> Upload to add an image from your computer.",
+        "imageUrl": "https://images.code.org/9491e33bd71b08fecc069f8ea21d1a32-step1-upload image.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-fe585fd5-6be2-4d90-84a9-e04d332f1182",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "## Step 2:\n\nAdd the image as context for AI by clicking the <i class=\"fa-solid fa-ellipsis-vertical\"></i> next to your image in your Files panel and choosing `Add to AI Tutor Chat`.",
+        "imageUrl": "https://images.code.org/199c0236994baba011005a1bd0ad2ecf-step2-image as context.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-dcaeae89-d30c-404b-b479-06bfe7f8cc6c"
+      },
+      {
+        "text": "## Step 3:\n\nIn the prompt box, ask AI to add the image to your webpage by referencing the file name of the image, the page you want it to appear on, and any details about where and how you want it to appear. \n\n**Example:** *“Add an image card after the Our Services section in index.html with the web-design.png image”*",
+        "imageUrl": "https://images.code.org/6a8085af2d11101e5949c6f4a7d0dcf5-Screenshot 2026-03-11 221309.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-6f5fae24-4402-428b-ba31-5bb8cc8526be",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "## Step 4: \nSend your prompt, review how AI has added the image, preview the results, and choose `Reject` or `Accept`. If you accept the changes, remember to add a note about what was changed. ",
+        "imageUrl": "https://images.code.org/04c143419aaa40e4a7f45cea06f4c601-Screenshot 2026-03-11 221603.png",
+        "key": "ai-generated-design-lesson6-level4_2026-v5-d6c097fa-8816-4a10-ae89-df4a682f3f47",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-12T04:47:54.581+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1_2026\"},{\"changed_at\":\"2026-03-12 05:17:44 +0000\",\"changed\":[\"display_name\",\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-12 05:23:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-12 05:26:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

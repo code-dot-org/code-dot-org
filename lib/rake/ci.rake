@@ -64,12 +64,6 @@ TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
-# Runs without pegasus content:
-# 1. omits most pegasus content from the git client via git sparse-checkout
-# 2. skips any tests tagged with @pegasus_content or CDO.has_pegasus_content
-# For more information, see: https://github.com/code-dot-org/code-dot-org/pull/65825
-SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
-
 # By default, to conserve our SauceLabs credits we run our UI and Eyes tests
 # against a local webdriver first, and only use SauceLabs to rerun any tests
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
@@ -204,45 +198,6 @@ namespace :ci do
   timed_task_with_logging :force_seed_ui_test do
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:ui_test'
-    end
-  end
-
-  timed_task_with_logging :sparse_checkout do
-    # never do sparse checkout in prepare_cacheable_build CI job, or it will
-    # cause later unit and ui jobs to fail.
-    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT) && ['unit_tests', 'ui_tests'].include?(ENV.fetch('CI_JOB', nil))
-      cmd = 'bin/sparse-checkout no-pegasus-content'
-      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
-      RakeUtils.system_stream_output "git status --porcelain"
-      RakeUtils.system_stream_output cmd
-
-      # As of May 2025, a full checkout leaves 10,000+ files in pegasus/sites.v3
-      # while a sparse checkout leaves only 32.
-      max_files = 32
-      num_files = `find pegasus/sites.v3 -type f | wc -l`.strip.to_i
-      if num_files > max_files
-        raise "Sparse checkout failed. Expected at most #{max_files} files in pegasus/sites.v3, but found #{num_files} files."
-      end
-
-      # Ensure there are no files in pegasus/sites
-      if Dir.exist?('pegasus/sites')
-        num_sites_files = `find pegasus/sites -type f | wc -l`.strip.to_i
-        if num_sites_files > 0
-          raise "Sparse checkout failed. Expected 0 files in pegasus/sites, but found #{num_sites_files}."
-        end
-      end
-
-      # Ensure there are no missing directories
-      raise "Sparse checkout failed. apps directory missing" unless Dir.exist?('apps')
-      raise "Sparse checkout failed. dashboard directory missing" unless Dir.exist?('dashboard')
-
-      ChatClient.log "Sparse checkout complete. #{num_files} files remaining in pegasus/sites.v3."
-
-      # let the caller know that we did a sparse checkout
-      exit 11
-    else
-      # let the caller know that we did a full checkout
-      exit 0
     end
   end
 end

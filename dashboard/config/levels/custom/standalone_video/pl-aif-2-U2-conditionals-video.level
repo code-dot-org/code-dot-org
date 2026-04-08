@@ -6,17 +6,17 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "how-ai-works-llms-full",
+    "video_key": "aif2-pl-conditionals",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 28811,
     "name_suffix": "_24",
     "encrypted": "false",
-    "long_instructions": "#### This video walks you through the next activity. You’ll upload the flowchart you created in the previous level and use AI to build a working app. The app will use if/else statements to check whether a condition is true and display the appropriate response.\r\n\r\n\r\n#### You can watch this video to prepare before starting. Feel free to come back to it anytime if you need clarification while working through the activity on your own.\r\n\r\nHold for [conditionals video](https://docs.google.com/videos/d/1SVe-A8Er11oOP-01rBKHLPrxuZT3TtLUmqkUr59yRQ8/edit?usp=sharing)"
+    "long_instructions": "#### This video walks you through the next activity. You’ll upload the flowchart you created in the previous level and use AI to build a working app. The app will use if/else statements to check whether a condition is true and display the appropriate response.\r\n\r\n\r\n#### You can watch this video to prepare before starting. Feel free to come back to it anytime if you need clarification while working through the activity on your own.\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-03-05T19:41:49.338+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-variable-debugging-video\\\"\"],\"cloned_from\":\"pl-aif-2-U2-variable-debugging-video\"},{\"changed_at\":\"2026-03-06 18:40:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-06 18:48:49 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-03-05T19:41:49.338+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-variable-debugging-video\\\"\"],\"cloned_from\":\"pl-aif-2-U2-variable-debugging-video\"},{\"changed_at\":\"2026-03-06 18:40:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-06 18:48:49 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-11 16:11:32 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

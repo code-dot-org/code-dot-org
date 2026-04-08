@@ -276,6 +276,7 @@ gem 'aws-sdk-ec2'
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
+gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemaker'
@@ -414,15 +415,9 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-gem "opentelemetry-exporter-otlp", "~> 0.31.1"
-gem 'opentelemetry-sdk', '~> 1.10'
-
-# pinned due to rails 7, upgrade on rails 7.1
-gem "opentelemetry-instrumentation-all", "0.85.0"
-
-# Automatically include all rails engines
-Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
-  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
+# Automatically include all rails engines under dashboard/
+Dir[Bundler.root.join('{,dashboard/}engines/*/*.gemspec')].sort.each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '{,dashboard/}engines/*/*.gemspec'
 end
 
 # OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949

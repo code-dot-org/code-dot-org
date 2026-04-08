@@ -7,4 +7,7 @@ level 'ai-generated-design-lesson13-level1a_2026'
 level 'ai-generated-design-lesson13-level1b_2026'
 level 'ai-generated-design-lesson13-level1c_2026'
 level 'ai-generated-design-lesson13-level1d_2026'
+level 'ai-generated-design-lesson13-rope_2026'
 level 'ai-generated-design-lesson13-level1e_2026'
+
+uses_lab2

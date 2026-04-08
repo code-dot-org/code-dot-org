@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cdo-locals.yml
+data:
+  aws_s3_endpoint: "http://cdo-minio:9000"
+  aws_s3_emulated: "true"

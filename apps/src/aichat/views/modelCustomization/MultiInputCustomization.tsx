@@ -1,9 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
-import aichatI18n from '../../locale';
 import {Visibility} from '../../types';
 
 import FieldLabel from './FieldLabel';
@@ -66,23 +64,23 @@ const MultiInputCustomization: React.FunctionComponent<{
             {!isReadOnly && validationAlert}
           </div>
           <div className={modelCustomizationStyles.addItemContainer}>
-            <Button
+            <MuiButton
               id={addButtonId}
-              text={aichatI18n.addCustomizationButtonText()}
-              type="secondary"
-              color="gray"
-              size="s"
-              onClick={onAdd}
-              iconLeft={{iconName: 'plus'}}
+              variant="outlined"
+              color="tertiary"
+              size="small"
               disabled={!newItem.trim() || isReadOnly}
-            />
+              onClick={onAdd}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="plus" />}
+            >
+              {'Add'}
+            </MuiButton>
           </div>
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <Typography variant="strong">
-          {aichatI18n.addCustomizationCompletionText()}
-        </Typography>
+        <Typography variant="strong">{'Added'}</Typography>
       </div>
       {addedItems.map((message, index) => {
         return (

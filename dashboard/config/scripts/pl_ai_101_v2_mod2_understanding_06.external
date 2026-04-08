@@ -81,7 +81,7 @@ The result is language that can sound logical, structured, and confident — bec
 <div style="width:50%; margin-left:50%; padding-left:50px; box-sizing:border-box; position:relative;">
 <div style="position:absolute; left:-10px; top:16px; width:20px; height:20px; background:white; border:3px solid #0f766e; border-radius:50%; z-index:2;"></div>
 <details>
-<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">4. Steering Output: Temperature and System Prompts</summary>
+<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">4. Steering Output: Temperature and Prompts</summary>
 <div style="margin-top:10px; background:#f8fafc; padding:16px; border-radius:14px; line-height:1.55;">
 Humans influence AI output primarily through the prompts they write. The level of detail, constraints, and framing in a prompt strongly affect the response.
 <br><br>

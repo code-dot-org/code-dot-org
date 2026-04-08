@@ -143,6 +143,8 @@ export default class ProgressBubble extends React.Component {
           url={this.getUrl()}
           onClick={this.onClickLevel}
           a11y_description={description}
+          clickedLevelNumber={level.levelNumber}
+          lessonName={lessonName}
         >
           {this.createBubbleElement()}
         </BubbleLink>

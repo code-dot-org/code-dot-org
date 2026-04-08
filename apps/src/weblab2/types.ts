@@ -30,6 +30,7 @@ export const AI_TUTOR_ANSWER_TYPES = [
   'buildCSS',
   'buildHTML',
   'buildJavaScript',
+  'buildJSON',
   'debug',
   'documentation',
   'example',
@@ -43,6 +44,7 @@ export const AI_TUTOR_ANSWER_TYPES = [
 
 export type AiTutorAnswerType = (typeof AI_TUTOR_ANSWER_TYPES)[number];
 
+// These are no longer used and replaced by answerTypes, but are kept for backwards compatibility.
 export type AiTutorMode =
   | 'suggest'
   | 'outline'

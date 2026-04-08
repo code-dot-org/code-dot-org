@@ -1,0 +1,86 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:07:28.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "Disney Database API",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Disney Explorer Dashboard</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n<div class=\"dashboard\">\n    <header>\n        <h1>Disney Explorer</h1>\n        <button id=\"generate-btn\">Generate Random Character</button>\n        <div id=\"debug-log\"></div>\n    </header>\n\n    <div class=\"card\">\n        <div class=\"image-container\">\n            <img id=\"char-img\" src=\"https://studio.code.org/lab_resources/html-placeholder-image.avif\" alt=\"Character\">\n        </div>\n        <div class=\"card-content\">\n            <h2 id=\"char-name\" class=\"placeholder\">Character Name</h2>\n            \n            <div class=\"info-section\">\n                <strong>Featured In Films</strong>\n                <p id=\"char-films\" class=\"placeholder\">Film list goes here...</p>\n            </div>\n\n            <div class=\"info-section\">\n                <strong>TV Appearances</strong>\n                <p id=\"char-tv\" class=\"placeholder\">TV show list goes here...</p>\n            </div>\n        </div>\n    </div>\n</div>\n\n<script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": ":root {\n    --disney-blue: #0066cc;\n    --skeleton-color: #e0e0e0;\n    --text-main: #333;\n}\n\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #f8f9fa;\n    display: flex;\n    justify-content: center;\n    padding: 40px 20px;\n    margin: 0;\n}\n\n.dashboard {\n    width: 100%;\n    max-width: 450px;\n    text-align: center;\n}\n\nheader h1 {\n    color: var(--disney-blue);\n    margin-bottom: 20px;\n}\n\n#generate-btn {\n    background-color: var(--disney-blue);\n    color: white;\n    border: none;\n    padding: 14px 28px;\n    font-size: 1rem;\n    font-weight: 600;\n    border-radius: 50px;\n    cursor: pointer;\n    transition: transform 0.2s, background-color 0.2s;\n    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);\n    margin-bottom: 30px;\n}\n\n#generate-btn:hover {\n    background-color: #0052a3;\n    transform: translateY(-2px);\n}\n\n#generate-btn:disabled {\n    background-color: #bdc3c7;\n    cursor: not-allowed;\n}\n\n.card {\n    background: white;\n    border-radius: 15px;\n    overflow: hidden;\n    box-shadow: 0 8px 20px rgba(0,0,0,0.1);\n    text-align: left;\n}\n\n.image-container {\n    width: 100%;\n    height: 300px;\n    background-color: var(--skeleton-color);\n}\n\n#char-img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n}\n\n.card-content {\n    padding: 24px;\n}\n\n/* Skeleton/Placeholder Text Effects */\n.placeholder {\n    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);\n    background-size: 200% 100%;\n    animation: shimmer 1.5s infinite linear;\n    color: transparent !important;\n    border-radius: 4px;\n}\n\n@keyframes shimmer {\n    0% { background-position: 200% 0; }\n    100% { background-position: -200% 0; }\n}\n\n.info-section {\n    margin-top: 18px;\n}\n\n.info-section strong {\n    display: block;\n    color: var(--disney-blue);\n    font-size: 0.75rem;\n    text-transform: uppercase;\n    margin-bottom: 4px;\n}\n\n#debug-log {\n    margin-top: 10px;\n    color: #e74c3c;\n    font-size: 0.85rem;\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.getElementById('generate-btn');\nconst charImg = document.getElementById('char-img');\nconst charName = document.getElementById('char-name');\nconst charFilms = document.getElementById('char-films');\nconst charTv = document.getElementById('char-tv');\nconst debugLog = document.getElementById('debug-log');\n\nconst PLACEHOLDER_URL = \"https://studio.code.org/lab_resources/html-placeholder-image.avif\";\n\n// Refactored to Arrow Notation\nconst fetchRandomCharacter = async () => {\n    // 1. Set Loading UI\n    btn.disabled = true;\n    btn.innerText = \"Finding Magic...\";\n    debugLog.innerText = \"\";\n    \n    // Reset to placeholders\n    charName.classList.add('placeholder');\n    charFilms.classList.add('placeholder');\n    charTv.classList.add('placeholder');\n\n    try {\n        // 2. Pick a random page (1-149) to get diverse characters\n        const randomPage = Math.floor(Math.random() * 149) + 1;\n        const response = await fetch(`https://api.disneyapi.dev/character?page=${randomPage}&pageSize=50`);\n        \n        if (!response.ok) throw new Error(\"API Limit reached or server down.\");\n\n        const result = await response.json();\n        \n        // 3. Pick a random character from the list\n        const character = result.data[Math.floor(Math.random() * result.data.length)];\n\n        // 4. Populate UI\n        charName.innerText = character.name;\n        charFilms.innerText = character.films.length > 0 ? character.films.join(', ') : 'No movies found';\n        charTv.innerText = character.tvShows.length > 0 ? character.tvShows.join(', ') : 'No TV shows found';\n\n        // 5. Update Image\n        charImg.src = character.imageUrl || PLACEHOLDER_URL;\n\n        // 6. Remove placeholder styles\n        charName.classList.remove('placeholder');\n        charFilms.classList.remove('placeholder');\n        charTv.classList.remove('placeholder');\n\n    } catch (error) {\n        console.error(error);\n        debugLog.innerText = \"Error: Check your connection or run this in CodePen/Live Server.\";\n        // Reset to placeholder values on error\n        charName.innerText = \"Search Failed\";\n        charImg.src = PLACEHOLDER_URL;\n    } finally {\n        btn.disabled = false;\n        btn.innerText = \"Generate Random Character\";\n    }\n};\n\nbtn.addEventListener('click', fetchRandomCharacter);",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "disney.json",
+          "language": "json",
+          "contents": "[\n  {\n    \"_id\": 7848,\n    \"films\": [\n      \"Rudyard Kipling's The Jungle Book\"\n    ],\n    \"shortFilms\": [],\n    \"tvShows\": [],\n    \"videoGames\": [],\n    \"parkAttractions\": [],\n    \"allies\": [],\n    \"enemies\": [],\n    \"name\": \"Baloo\",\n    \"imageUrl\": \"https://static.wikia.nocookie.net/disney/images/2/2b/Real_Baloo.jpg\",\n    \"url\": \"https://api.disneyapi.dev/characters/7848\"\n  },\n  {\n    \"_id\": 7849,\n    \"films\": [],\n    \"shortFilms\": [],\n    \"tvShows\": [\n      \"TaleSpin\",\n      \"Chibi Tiny Tales\"\n    ],\n    \"videoGames\": [\n      \"TaleSpin (NES video game)\",\n      \"TaleSpin (Sega Genesis Video Game)\",\n      \"Disney Emoji Blitz\",\n      \"Disney Mirrorverse\"\n    ],\n    \"parkAttractions\": [],\n    \"allies\": [],\n    \"enemies\": [],\n    \"name\": \"Baloo\",\n    \"imageUrl\": \"https://static.wikia.nocookie.net/disney/images/4/41/Profile-_TS_Baloo.jpg\",\n    \"url\": \"https://api.disneyapi.dev/characters/7849\"\n  },\n  {\n    \"_id\": 7850,\n    \"films\": [\n      \"The Jungle Book (2016 film)\",\n      \"The Jungle Book 2 (live-action film)\",\n      \"Chip 'n Dale Rescue Rangers (film)\"\n    ],\n    \"shortFilms\": [],\n    \"tvShows\": [],\n    \"videoGames\": [\n      \"The Jungle Book: Mowgli's Run\",\n      \"Disney Crossy Road\"\n    ],\n    \"parkAttractions\": [],\n    \"allies\": [],\n    \"enemies\": [],\n    \"name\": \"Baloo\",\n    \"imageUrl\": \"https://static.wikia.nocookie.net/disney/images/9/9f/The_Jungle_Book_Textless_Character_Poster_02.jpg\",\n    \"url\": \"https://api.disneyapi.dev/characters/7850\"\n  },\n  {\n    \"_id\": 7851,\n    \"films\": [\n      \"The Jungle Book: Mowgli's Story\"\n    ],\n    \"shortFilms\": [],\n    \"tvShows\": [],\n    \"videoGames\": [],\n    \"parkAttractions\": [],\n    \"allies\": [],\n    \"enemies\": [],\n    \"name\": \"Baloo\",\n    \"imageUrl\": \"https://static.wikia.nocookie.net/disney/images/5/59/The_Jungle_Book_-_Mowgli%27s_Story_-_Baloo.jpg\",\n    \"url\": \"https://api.disneyapi.dev/characters/7851\"\n  }\n]",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "| Name | Description | Type |\n| :--- | :--- | :--- |\n| **_id** | The unique identifier for the character. | integer |\n| **url** | The API endpoint URL for the character. | string |\n| **name** | The name of the character. | string |\n| **sourceUrl** | The link to the character's source/fandom page. | string |\n| **films** | A list of films the character has appeared in. | list [string] |\n| **shortFilms** | A list of short films the character has appeared in. | list [string] |\n| **tvShows** | A list of TV shows the character has appeared in. | list [string] |\n| **videoGames** | A list of video games the character has appeared in. | list [string] |\n| **alignment** | The character's affiliation (e.g., hero or villain). | string |\n| **parkAttractions** | Disney park attractions featuring the character. | list [string] |\n| **allies** | A list of the character's known allies. | list [string] |\n| **enemies** | A list of the character's known enemies. | list [string] |",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "bubble_choice_description": "Explore the Disney characters database API and create your own custom dashboard.",
+    "thumbnail_url": "https://images.code.org/0283296f6a7f6700f0a7056a714fe895-Screenshot 2026-01-28 at 1.08.22 PM.png",
+    "encrypted": "false",
+    "long_instructions": "## Explore The Disney Characters Database\r\n\r\nSkim the official Disney Characters documentation in `documentation.md`. Then look at the JSON response for a single character in `disney.json` to figure out how the data is structured. \r\n\r\nUse AI Tutor to help you modify your code to display different information (like \"allies\" or \"TV shows\").\r\n\r\n_Hint: You can upload files like `disney.json` to use when prompting AI Tutor._\r\n\r\n:::details [Not sure how to modify the code?]\r\n\r\nTry one of the following prompts:\r\n\r\n- In the file `disney.json`, how do I access the \"vote\\_average\" to show the rating?\r\n- How do I change the code to display the \"release\\_date\" in a more readable format?\r\n- What is the difference between \"popularity\" and \"vote\\_count\"? \r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:07:28.563+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level3b-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level3b-test-2025-pilot\"}]"
+}]]></config>
+</Weblab2>

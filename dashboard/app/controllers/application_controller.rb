@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cdo/brand'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -29,6 +30,8 @@ class ApplicationController < ActionController::Base
   before_action :clear_sign_up_session_vars
 
   before_action :initialize_statsig_stable_id
+
+  before_action :persist_brand_params
 
   around_action :with_global_current_user
 
@@ -65,6 +68,29 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Persist brand selection as a cookie so the brand sticks across page navigations.
+  # Set brand:   ?brand=codeai
+  # Clear brand: ?brand-reset=1
+  def persist_brand_params
+    return unless DCDO.get('brand-router-enabled', false)
+
+    brand_cookie = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
+
+    if params['brand-reset']
+      cookies.delete(brand_cookie, domain: :all)
+      return
+    end
+
+    return if params['brand'].blank?
+
+    brand = params['brand']
+    if Cdo::Brand::BRANDS.key?(brand)
+      cookies[brand_cookie] = {value: brand, domain: :all}
+    else
+      cookies.delete(brand_cookie, domain: :all)
+    end
+  end
+
   rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
@@ -86,6 +112,15 @@ class ApplicationController < ActionController::Base
   # requesting a file in the wrong format, send a 404 instead of a 500
   rescue_from ActionView::MissingTemplate do |exception|
     Rails.logger.warn("Missing template: #{exception}")
+    render_404
+  end
+
+  # Unsafe redirects can happen for a variety of reasons; including unexpected
+  # attempts to redirect to an external domain, typos in the path for internal
+  # redirects, and simple malformed URIs. In the interest of simplicity,
+  # respond to all with a simple 404.
+  rescue_from ActionController::Redirecting::UnsafeRedirectError do |exception|
+    Rails.logger.warn("Unsafe redirection: #{exception}")
     render_404
   end
 

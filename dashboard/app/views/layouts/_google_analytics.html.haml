@@ -24,4 +24,4 @@
 / Google tag (gtag.js)
 %script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
 
-%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}
+%script{src: webpack_asset_path("js/layouts/_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}

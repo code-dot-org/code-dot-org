@@ -19,6 +19,8 @@ export default function RubricsContainer({
     !!rubric ? rubric.learningGoals : initialLearningGoal
   );
 
+  const [s3ConfigDir, setS3ConfigDir] = useState(rubric?.s3ConfigDir || '');
+
   const [saveNotificationText, setSaveNotificationText] = useState('');
   const hasSubmittableLevels = submittableLevels.length > 0;
 
@@ -147,7 +149,8 @@ export default function RubricsContainer({
       learningGoalList,
       setLearningGoalList,
       selectedLevelForAssessment,
-      lessonId
+      lessonId,
+      s3ConfigDir
     );
   };
 
@@ -207,6 +210,8 @@ export default function RubricsContainer({
             addNewConcept={addNewConceptHandler}
             deleteLearningGoal={deleteLearningGoal}
             updateLearningGoal={updateLearningGoal}
+            aiRubricS3ConfigValue={s3ConfigDir}
+            onAiRubricS3ConfigChange={setS3ConfigDir}
           />
           <div style={styles.bottomRow}>
             <Button

@@ -10,11 +10,10 @@ markdown <<MARKDOWN
 #### 👉 Click on each of the pitfalls below to expand each one. Review the scenarios to learn more about what happened, why it occured, and how to avoid making similar mistakes in the future.
 
 >#### **💬 Quick Reflection:** What pitfalls have you fallen into when using AI? What pitfalls have you seen your colleagues or students fall into?
->#### Keep an eye out for these pitfalls as you're reviewing the following scenarios.
+>#### Keep an eye out for these as you're reviewing the following scenarios.
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 1️⃣ Treating AI Like It Has Awareness of the Current World
 </summary>
 
@@ -42,7 +41,7 @@ Ms. Alvarez, a 10th-grade civics teacher in Arizona, asks an AI tool on Monday m
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px">
-Create a warm-up activity about the major election news happening this week.
+✨ Create a warm-up activity about the major election news happening this week.
 </div>
 </div>
 
@@ -76,11 +75,13 @@ If timing matters, always specify the exact date, event, or context instead of a
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px">
-Create a warm-up activity about major U.S. election news for the week of <b>March 4–8, 2026</b>. Include 3 discussion questions.
+✨ Create a warm-up activity about major U.S. election news for the week of <b>March 4–8, 2026</b>. Include 3 discussion questions.
 </div>
 </div>
 
 </div>
+</div>
+
 </div>
 
 </div>
@@ -96,7 +97,7 @@ Create a warm-up activity about major U.S. election news for the week of <b>Marc
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 2️⃣ Assuming AI Works Like a Google Search
 </summary>
 
@@ -123,7 +124,7 @@ Mr. Chen, a middle school science teacher, asks:
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px;">
-What are the most research-backed strategies for teaching climate change to 7th graders?
+✨ What are the most research-backed strategies for teaching climate change to 7th graders?
 </div>
 </div>
 
@@ -157,7 +158,7 @@ Use AI to brainstorm and organize ideas, but verify research claims and citation
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px;">
-Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).
+✨ Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).
 </div>
 </div>
 
@@ -174,7 +175,7 @@ Suggest lesson approaches for teaching climate change to 7th graders. For each s
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 3️⃣ Mistaking Confidence for Accuracy
 </summary>
 
@@ -201,7 +202,7 @@ Dr. Patel, an assistant principal, asks AI to summarize a newly released distric
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px">
-Summarize this newly released district grading policy for me to share with staff.
+✨ Summarize this newly released district grading policy for me to share with staff.
 </div>
 </div>
 
@@ -235,7 +236,7 @@ Confidence in tone does not equal accuracy — always compare AI summaries direc
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px">
-Summarize this policy in bullet points and include 3 direct quotes (with section headings) that support each key claim. Also list any sections that are ambiguous or allow exceptions.
+✨ Summarize this policy in bullet points and include 3 direct quotes (with section headings) that support each key claim. Also list any sections that are ambiguous or allow exceptions.
 </div>
 </div>
 
@@ -251,7 +252,7 @@ Summarize this policy in bullet points and include 3 direct quotes (with section
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 4️⃣ Leaving Out Critical Context
 </summary>
 
@@ -278,7 +279,7 @@ Ms. Thompson, a 3rd-grade teacher, pastes her reading lesson into an AI tool and
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px">
-Make this lesson more engaging.
+✨ Make this lesson more engaging.
 </div>
 </div>
 
@@ -312,7 +313,7 @@ The more specific your context, the more useful and realistic the AI’s respons
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px;">
-Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no devices, whole-group then pairs, reading level around ___, goal: ___, and I need 2 options that use simple materials.
+✨ Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no devices, whole-group then pairs, reading level around ___, goal: ___, and I need 2 options that use simple materials.
 </div>
 </div>
 
@@ -328,7 +329,7 @@ Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no de
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 5️⃣ Believing AI Has Long-Term Memory
 </summary>
 
@@ -355,7 +356,7 @@ Over several days, Mr. Johnson works with AI to design assessments for a 6-week 
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px">
-Can you rewrite the quiz we planned to better support English learners?
+✨ Can you rewrite the quiz we planned to better support English learners?
 </div>
 </div>
 
@@ -389,7 +390,7 @@ Reintroduce key materials and context whenever you want the AI to build on previ
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px">
-Here is our unit outline and the original quiz (pasted below). Rewrite the quiz to support English learners while staying aligned to Unit Week 3 objectives. Keep the same skills and difficulty.
+✨ Here is our unit outline and the original quiz (pasted below). Rewrite the quiz to support English learners while staying aligned to Unit Week 3 objectives. Keep the same skills and difficulty.
 </div>
 </div>
 
@@ -404,7 +405,7 @@ Here is our unit outline and the original quiz (pasted below). Rewrite the quiz 
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 6️⃣ Leading AI Toward a Pre-Chosen Solution
 </summary>
 
@@ -427,12 +428,12 @@ Scenario
 </div>
 
 <div style="margin-bottom:12px;">
-Ms. Rivera is thinking about changing her classroom seating chart to help a student, Jimmy, who struggles with focus and participation. She asks:
+Ms. Rivera is thinking about changing her classroom seating chart to help a student, Jimmy, who struggles with focus and participation. She asks an AI tool:
 </div>
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
 <div style="font-size:16px">
-Jimmy struggles in class. Come up with a strategy for changing the seating chart frequently so he can be successful.
+✨ Jimmy struggles in class. Come up with a strategy for changing the seating chart frequently so he can be successful.
 </div>
 </div>
 
@@ -470,7 +471,7 @@ Describe the challenge clearly, then ask for multiple recommendations before nar
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
 <div style="font-size:16px">
-Jimmy struggles with focus and participation during whole-group instruction. Provide 3 evidence-informed recommendations to support him. Briefly explain the rationale for each and suggest which you would prioritize.
+✨ Jimmy struggles with focus and participation during whole-group instruction. Provide 3 evidence-informed recommendations to support him. Briefly explain the rationale for each and suggest which you would prioritize.
 </div>
 </div>
 
@@ -485,5 +486,8 @@ Jimmy struggles with focus and participation during whole-group instruction. Pro
 </div>
 </div>
 </details>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
 
 MARKDOWN

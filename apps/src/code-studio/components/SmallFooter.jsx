@@ -76,10 +76,12 @@ export default class SmallFooter extends React.Component {
     );
 
     localization.on('change', info => {
-      this.setState({
-        localeOptions: localization.locales,
-        currentLocale: info.locale,
-      });
+      debounce(() => {
+        this.setState({
+          localeOptions: localization.locales,
+          currentLocale: info.locale,
+        });
+      }, 100);
     });
   }
 
@@ -234,8 +236,8 @@ export default class SmallFooter extends React.Component {
     if (menuItems && menuItems.length > 0) {
       const caretIcon =
         this.state.menuState === MenuState.EXPANDED
-          ? 'fa fa-caret-down'
-          : 'fa fa-caret-up';
+          ? 'fa-solid fa-caret-down'
+          : 'fa-solid fa-caret-up';
       // FND-1169: Copyright should be a <button>, not a <a>
       return (
         <button

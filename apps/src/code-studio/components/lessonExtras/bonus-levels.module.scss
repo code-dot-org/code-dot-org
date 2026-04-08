@@ -1,0 +1,60 @@
+@import 'color';
+@import '@code-dot-org/component-library-styles/font';
+
+.lessonNumberHeading {
+  @include main-font-regular;
+  background-color: $purple;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  font-size: 20px;
+  line-height: 35px;
+  font-style: normal;
+  margin: 0;
+}
+
+.scroller {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 40px;
+  cursor: pointer;
+  vertical-align: -30px;
+  margin: 10px;
+}
+
+.arrowDisabled {
+  color: $lighter-gray;
+  cursor: default;
+}
+
+.challenges {
+  display: inline-block;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: width 0.1s ease-out;
+  vertical-align: top;
+}
+
+.challengeRow {
+  clear: both;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+  transition: left 0.25s ease-out;
+  padding: 10px 0;
+  vertical-align: top;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $white;
+}

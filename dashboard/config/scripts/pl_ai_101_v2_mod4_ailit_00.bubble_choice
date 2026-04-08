@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod4-AILit-00'
+display_name 'AILit Framework'
+description '####Learn more about the **AILit Framework**. Choose to explore Knowledges, Skills, and/or Attitudes.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-AILit-00a'
+level 'pl-ai-101-V2-mod4-AILit-00b'
+level 'pl-ai-101-V2-mod4-AILit-00c'
+
+uses_lab2

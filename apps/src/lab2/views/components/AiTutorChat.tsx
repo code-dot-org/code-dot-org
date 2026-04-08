@@ -1,7 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
   ChatButtonClickHandler,
@@ -9,9 +11,12 @@ import {
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './AiTutorChat.module.scss';
@@ -44,6 +49,13 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
 }) => {
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+  const versionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
+
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
@@ -53,28 +65,47 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
       ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-        <Button
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           className={moduleStyles.chatButton}
-          aria-label={button.label}
-          iconLeft={
-            {
-              ...button.icon,
-              className: classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
           onClick={() => onClick(button.value, button.analyticsProperties)}
-          text={button.label}
-          size="s"
-          type="secondary"
-          color="black"
-        />
+          aria-label={button.label}
+          startIcon={
+            button.icon ? (
+              <FontAwesomeV6Icon
+                {...(button.icon as FontAwesomeV6IconProps)}
+                className={classNames({
+                  [moduleStyles['icon']]: true,
+                  [moduleStyles[`icon-${button.icon.iconName}`]]: true,
+                })}
+              />
+            ) : undefined
+          }
+          type="button"
+        >
+          {button.label}
+        </MuiButton>
       ),
       key: button.label,
     }));
   }, [aiTutorChatButtonData]);
+
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
 
   if (loading || !modelParameters) {
     return (
@@ -97,6 +128,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
+        renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
   );

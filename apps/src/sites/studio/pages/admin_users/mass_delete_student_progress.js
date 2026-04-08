@@ -6,6 +6,8 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 document.addEventListener('DOMContentLoaded', function () {
   const mountPoint = document.getElementById('mass-delete-container');
   if (mountPoint) {
-    createReactRoot(<MassDeleteContainer />, mountPoint);
+    createReactRoot(<MassDeleteContainer />, mountPoint, {
+      legacyReactDomRender: true,
+    });
   }
 });

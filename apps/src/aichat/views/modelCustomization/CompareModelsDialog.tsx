@@ -1,11 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
@@ -51,10 +49,15 @@ const CompareModelsDialog: React.FunctionComponent<{
       </div>
       <hr />
       <div className={styles.rightAlign}>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={onClose}
-          text={aichatI18n.modelComparisonCompletionButton()}
-        />
+          type="button"
+        >
+          {'Finish'}
+        </MuiButton>
       </div>
     </AccessibleDialog>
   );

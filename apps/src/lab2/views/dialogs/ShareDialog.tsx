@@ -11,8 +11,6 @@ import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
@@ -118,7 +116,6 @@ const ShareDialog: React.FunctionComponent<{
   projectType: ProjectType;
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
-  channelId: string;
   userSharingDisabled: boolean | undefined;
 }> = ({
   dialogId,
@@ -127,7 +124,6 @@ const ShareDialog: React.FunctionComponent<{
   projectType,
   onSubmitClick,
   submissionStatus,
-  channelId,
   userSharingDisabled,
 }) => {
   const dispatch = useAppDispatch();
@@ -136,11 +132,7 @@ const ShareDialog: React.FunctionComponent<{
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
-    analyticsReporter.sendEvent(EVENTS.SHARING_CLOSE_ESCAPE, {
-      lab_type: projectType,
-      channel_id: channelId,
-    });
-  }, [channelId, dispatch, projectType]);
+  }, [dispatch]);
 
   const feedbackLink = useAppSelector(state => {
     const {userType, signInState} = state.currentUser;
@@ -162,7 +154,6 @@ const ShareDialog: React.FunctionComponent<{
         finishUrl={finishUrl}
         shareUrl={shareUrl}
         projectType={projectType}
-        channelId={channelId}
         theme={theme}
       />
     );
@@ -218,7 +209,6 @@ const ShareDialog: React.FunctionComponent<{
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
-                  channelId={channelId}
                 />
                 <SubmitButtonInfo
                   submissionStatus={submissionStatus}

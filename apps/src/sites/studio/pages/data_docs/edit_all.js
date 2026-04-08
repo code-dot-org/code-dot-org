@@ -9,6 +9,9 @@ $(() => {
   const dataDocs = getScriptData('dataDocs');
   createReactRoot(
     <DataDocEditAll dataDocs={dataDocs} />,
-    document.getElementById('edit-all-data-docs')
+    document.getElementById('edit-all-data-docs'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -20,7 +20,6 @@ interface Props {
   finishUrl: string;
   shareUrl: string;
   projectType: ProjectType;
-  channelId: string | undefined;
   theme?: Theme;
 }
 
@@ -33,7 +32,6 @@ const HoaiCongrats: React.FC<Props> = ({
   shareUrl,
   theme,
   projectType,
-  channelId,
 }) => {
   return (
     <Modal
@@ -58,7 +56,6 @@ const HoaiCongrats: React.FC<Props> = ({
               <CopyToClipboardButton
                 shareUrl={shareUrl}
                 projectType={projectType}
-                channelId={channelId}
               />
             </div>
           </div>

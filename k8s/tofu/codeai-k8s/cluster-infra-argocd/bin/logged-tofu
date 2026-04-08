@@ -1,0 +1,93 @@
+#!/bin/sh
+set -eu
+
+usage() {
+  echo "usage: $0 <apply|destroy|plan> <test-description>" >&2
+  exit 2
+}
+
+[ $# -eq 2 ] || usage
+
+action=$1
+test_description=$2
+
+case "$action" in
+  apply|destroy|plan)
+    ;;
+  *)
+    usage
+    ;;
+esac
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+module_name=$(basename "$cwd")
+run_stamp=$(date '+%Y-%m-%dT%H-%M-%S')
+logs_dir="$cwd/logs"
+shared_log_file="$cwd/tofu.log"
+run_log_file="$logs_dir/tofu-$run_stamp-$action.log"
+log_pointer="/tmp/$module_name-last-log-path"
+action_pointer="/tmp/$module_name-$action-log-path"
+watchers_pid_file="$cwd/.logged-tofu-watchers.pid"
+
+mkdir -p "$logs_dir"
+
+printf '%s\n' "$run_log_file" > "$log_pointer"
+printf '%s\n' "$run_log_file" > "$action_pointer"
+
+cd "$cwd"
+
+tail_command="tail -n +1 -f $run_log_file"
+shared_tail_command="tail -n +1 -f $shared_log_file"
+stop_command="$cwd/bin/logged-tofu-stop"
+printf '%s\n' "$tail_command"
+printf '%s\n' "$shared_tail_command"
+
+{
+  i=0
+  while [ "$i" -lt 50 ]; do
+    printf '\n'
+    i=$((i + 1))
+  done
+  printf '%s [meta] ===== START OF TOFU RUN =====\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')"
+  printf '%s [codex] test=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$test_description"
+  printf '%s [meta] cwd=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$cwd"
+  printf '%s [meta] command=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "AWS_PROFILE=codeorg-admin tofu $action"
+  printf '%s [meta] run-log=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$run_log_file"
+  printf '%s [meta] shared-log=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$shared_log_file"
+} | tee -a "$shared_log_file" "$run_log_file"
+
+"$stop_command" >/dev/null 2>&1 || true
+
+start_watch() {
+  label=$1
+  shift
+
+  nohup sh -c "
+    COLUMNS=115 stdbuf -oL -eL $* 2>&1 \
+      | stdbuf -oL -eL ts '%Y-%m-%dT%H:%M:%S%z [$label]' \
+      | tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
+  " >/dev/null 2>&1 &
+  watcher_pid=$!
+  printf '%s\t%s\n' "$label" "$watcher_pid" >> "$watchers_pid_file"
+  printf '%s [meta] %s-watch-pid=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$label" "$watcher_pid" \
+    | tee -a "$shared_log_file" "$run_log_file"
+}
+
+: > "$watchers_pid_file"
+
+start_watch events kubectl get events -A --watch-only --output-watch-events
+start_watch argocd-application-controller kubectl logs -n argocd statefulset/argocd-application-controller --tail=0 -f
+start_watch argocd-applicationset-controller kubectl logs -n argocd deployment/argocd-applicationset-controller --tail=0 -f
+
+printf '%s [meta] tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$tail_command" | tee -a "$shared_log_file" "$run_log_file"
+printf '%s [meta] shared-tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$shared_tail_command" | tee -a "$shared_log_file" "$run_log_file"
+printf '%s [meta] stop=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$stop_command" | tee -a "$shared_log_file" "$run_log_file"
+printf '%s [%s] starting tofu %s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$action" "$action" | tee -a "$shared_log_file" "$run_log_file"
+
+script -qF /dev/null /bin/sh -c "cd \"$cwd\" && AWS_PROFILE=codeorg-admin tofu $action" 2>&1 \
+  | while IFS= read -r line || [ -n "$line" ]; do
+      clean_line=$(printf '%s' "$line" | perl -pe 's/\r//g; s/\x08//g; s/\^D//g')
+      printf '%s [%s] %s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$action" "$clean_line"
+    done \
+  | tee -a "$shared_log_file" "$run_log_file"

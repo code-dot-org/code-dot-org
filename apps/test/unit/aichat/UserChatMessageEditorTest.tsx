@@ -37,7 +37,7 @@ let mockState: {
 };
 
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  __esModule: true,
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppSelector: (selector: (s: unknown) => unknown) => selector(mockState),
   useAppDispatch: () => mockDispatch,
 }));

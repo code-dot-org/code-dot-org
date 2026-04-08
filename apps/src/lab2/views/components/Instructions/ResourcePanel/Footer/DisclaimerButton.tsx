@@ -51,7 +51,7 @@ const DisclaimerButton: React.FunctionComponent<DisclaimerProps> = ({
       iconName={'shield-exclamation'}
       setIsDialogOpen={setIsDisclaimerOpen}
       ariaLabel={lab2I18n.aiTutorDisclaimerShort()}
-      buttonSize="s"
+      buttonSize="small"
     />
   );
 };

@@ -132,7 +132,7 @@ FactoryBot.define do
 
     trait :with_units do
       transient do
-        units {[create(:unit), create(:unit)]}
+        units {create_list(:unit, 2)}
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
@@ -1451,6 +1451,12 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :user_lesson_objective_reflection do
+    association(:student, factory: :student)
+    objective
+    reflection {"confident"}
+  end
+
   factory :vocabulary do
     association :course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
@@ -1497,6 +1503,13 @@ FactoryBot.define do
     sequence(:key) {|n| "lesson-activity-#{n}"}
     sequence(:position)
     lesson
+  end
+
+  factory :user_lesson_reflection do
+    association(:student, factory: :student)
+    lesson
+    success {"It went well"}
+    struggle {"This was hard"}
   end
 
   factory :lesson_feedback do
@@ -1636,7 +1649,7 @@ FactoryBot.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        levels_and_texts_by_page = [create_list(:sublevel, 2), [create(:sublevel)]]
         lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end

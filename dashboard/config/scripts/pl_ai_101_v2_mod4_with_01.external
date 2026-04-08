@@ -1,0 +1,53 @@
+name 'pl-ai-101-V2-mod4-with-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching with AI
+
+#### Here are some examples of ways teachers use AI with their students:
+
+<div style="max-width:900px; margin:40px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+<!-- Quote 1 -->
+<div style="display:flex; justify-content:flex-start; margin:25px 0;">
+<div style="max-width:70%; background-color:#b2dee3; border-radius:40px; padding:24px; box-shadow:0 6px 12px rgba(0,0,0,0.08); position:relative;">
+<div style="font-size:40px; opacity:0.35;">&ldquo;</div>
+<div style="line-height:1.6; font-size:16px;">My students use Claude when they are coding and come across an error they don't understand. They paste in their code and the error message and ask Claude to explain the error to them so they can fix it.</div>
+<div style="font-size:40px; text-align:right; opacity:0.35;">&rdquo;</div>
+</div>
+</div>
+
+<!-- Quote 2 -->
+<div style="display:flex; justify-content:flex-end; margin:25px 0;">
+<div style="max-width:70%; background-color:#ffd199; border-radius:40px; padding:24px; box-shadow:0 6px 12px rgba(0,0,0,0.08); position:relative;">
+<div style="font-size:40px; opacity:0.35;">&ldquo;</div>
+<div style="line-height:1.6; font-size:16px;">When my students are about to start a major project, I have them use Claude to help them make a plan. They often will tell Claude what they want to make and ask it to help them break their task into reasonable chunks. They also use the tool to ensure they have hit all the requirements.</div>
+<div style="font-size:40px; text-align:right; opacity:0.35;">&rdquo;</div>
+</div>
+</div>
+
+<!-- Quote 3 -->
+<div style="display:flex; justify-content:flex-start; margin:25px 0;">
+<div style="max-width:70%; background-color:#b2dee3; border-radius:40px; padding:24px; box-shadow:0 6px 12px rgba(0,0,0,0.08);">
+<div style="font-size:40px; opacity:0.35;">&ldquo;</div>
+<div style="line-height:1.6; font-size:16px;">I have my students use chatGPT to edit their essays. They prompt it to look for grammatical mistakes.</div>
+<div style="font-size:40px; text-align:right; opacity:0.35;">&rdquo;</div>
+</div>
+</div>
+
+<!-- Quote 4 -->
+<div style="display:flex; justify-content:flex-end; margin:25px 0;">
+<div style="max-width:70%; background-color:#ffd199; border-radius:40px; padding:24px; box-shadow:0 6px 12px rgba(0,0,0,0.08);">
+<div style="font-size:40px; opacity:0.35;">&ldquo;</div>
+<div style="line-height:1.6; font-size:16px;">We talk about the challenge of creating prompts that get the AI to do what you actually want. Then, I have students write a short story and challenge them to get Stable Diffusion to generate illustrations for it.</div>
+<div style="font-size:40px; text-align:right; opacity:0.35;">&rdquo;</div>
+</div>
+</div>
+
+</div>
+
+
+
+>#### **💬 Quick Reflection:** Have you done anything similar with your students? Or have you seen teachers at your school use AI with their students in any similar ways?
+MARKDOWN

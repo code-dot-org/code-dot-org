@@ -1,0 +1,88 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:43:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "### **Game HUD**\r\n\r\nBuild a game display where buttons update health, energy, or score.\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a description for each button. Include:\r\n\r\n   * Name of the button\r\n   * Event type \r\n   * What the button should do \r\n   * What on the page changes\r\n\r\n2. **Build:** Use AI to generate a named function based on your description.\r\n\r\n3. **Wire it up:** Connect each function to a button using `addEventListener`.\r\n\r\n4. **Test:** Click your buttons and confirm the page updates as expected.",
+    "display_name": "Game HUD",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>L4 — Game HUD</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n  <h1>Game HUD</h1>\n  <p>Track health and power with simple button actions.</p>\n\n  <p>\n    Health: <span id=\"healthDisplay\">100</span>\n    &nbsp;&nbsp;\n    Power: <span id=\"powerDisplay\">1</span>\n  </p>\n\n  <p id=\"output\">Ready.</p>\n\n  <h2>Actions</h2>\n  <button id=\"powerUpButton\">Power Up</button>\n  <button id=\"loseHealthButton\">Lose 10 Health</button>\n  <button id=\"applyPowerButton\">Apply Power</button>\n  <button id=\"resetButton\">Reset</button>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  line-height: 1.5;\n  color: #0f172a;\n  background: #f5f7ff;\n  text-align: center;\n  padding: 24px 12px;\n}\n\nh1 {\n  margin: 10px 0;\n}\n\nh2 {\n  margin-top: 24px;\n}\n\np {\n  margin: 8px 0;\n}\n\n#healthDisplay,\n#powerDisplay {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 999px;\n  font-weight: 600;\n  margin-left: 6px;\n}\n\n#healthDisplay {\n  background: #fee2e2;\n  color: #991b1b;\n}\n\n#powerDisplay {\n  background: #ede9fe;\n  color: #5b21b6;\n}\n\n#output {\n  margin: 16px auto;\n  max-width: 400px;\n  min-height: 30px;\n  padding: 10px;\n  border: 1px dashed #cbd5e1;\n  border-radius: 10px;\n  background: #fbfdff;\n}\n\nbutton {\n  display: inline-block;\n  margin: 6px;\n  padding: 10px 14px;\n  border-radius: 10px;\n  font-weight: 600;\n  cursor: pointer;\n  border: 1px solid #d1d5db;\n}\n\n#powerUpButton {\n  background: #ddd6fe;\n  border-color: #c4b5fd;\n  color: #5b21b6;\n}\n\n#loseHealthButton {\n  background: #fee2e2;\n  border-color: #fecaca;\n  color: #b91c1c;\n}\n\n#applyPowerButton {\n  background: #dbeafe;\n  border-color: #93c5fd;\n  color: #1e3a8a;\n}\n\n#resetButton {\n  background: #f3f4f6;\n  border-color: #d1d5db;\n  color: #374151;\n}\n\nbutton:hover {\n  opacity: 0.9;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "contents": "Button One\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Two\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Three\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Four\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: ",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\no00GLO6OkpVpIzj4ZgumkfOF42+JqyAwwfjMqQw=\n",
+    "thumbnail_url": "https://images.code.org/1c2844206dc94df60d7c953edbba8d5b-video-display.png",
+    "bubble_choice_description": "Build a mini game display where health and power levels change as you play.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:18.858+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8c_2025\"},{\"changed_at\":\"2026-04-04 00:58:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:58:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:08:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:08:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:12:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:31:13 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

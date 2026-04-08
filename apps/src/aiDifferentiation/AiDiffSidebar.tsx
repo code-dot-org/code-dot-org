@@ -13,7 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -94,7 +94,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   unreadNotificationCount,
   curriculumCourses,
 }) => {
-  const selectedThreadId = useAppSelector(state => state.aichat.threadId);
+  const selectedThreadId = useAppSelector(state => state.aiDiffChat.threadId);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [showDailyBytes, setShowDailyBytes] = useState(false);
 
@@ -132,6 +132,10 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         curriculumCourses: curriculumCourses,
       })
     );
+    analyticsReporter.sendEvent(EVENTS.AI_ARTIFACT_THREAD_REOPENED, {
+      threadId: chatId,
+      url: window.location.href,
+    });
   };
 
   const todayChats = threads.filter(thread => {

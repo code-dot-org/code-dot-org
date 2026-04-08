@@ -351,6 +351,7 @@ class RubricsController < ApplicationController
     params.transform_keys(&:underscore).permit(
       :level_id,
       :lesson_id,
+      :s3_config_dir,
       :seen,
       learning_goals_attributes: [
         :id,

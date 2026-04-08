@@ -15,11 +15,30 @@ export default defineConfig({
     // Instead, they are expected to be provided by the host application.
     externalizeDeps(),
   ],
+  server: {
+    allowedHosts: ['localhost-studio.code.org'],
+  },
   build: {
     lib: {
-      entry: ['src/App.tsx'],
+      entry: ['src/index.ts'],
       name: 'music-lab',
       formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].cjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+      ],
     },
   },
 });

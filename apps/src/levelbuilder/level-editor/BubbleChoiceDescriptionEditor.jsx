@@ -31,7 +31,7 @@ const BubbleChoiceDescriptionEditor = ({
 
   return (
     <div className={styles.fieldRow}>
-      <label>Description</label>
+      <label htmlFor={`bubble_choice_description_${index}`}>Description</label>
       <textarea
         id={`bubble_choice_description_${index}`}
         defaultValue={description}

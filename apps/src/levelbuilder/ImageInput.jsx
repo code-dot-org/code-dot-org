@@ -46,7 +46,7 @@ export default function ImageInput({
             }}
             text={!!currentImageUrl ? 'Replace Image' : 'Choose Image'}
             color="gray"
-            icon="plus-circle"
+            icon="circle-plus"
           />
         </label>
         {showPreview && !!currentImageUrl && (

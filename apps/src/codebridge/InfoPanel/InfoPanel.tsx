@@ -152,8 +152,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
-        isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         documentationUrl={
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.

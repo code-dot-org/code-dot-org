@@ -11,6 +11,12 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     @test_audio_data = "fake_audio_data_mp3_content"
   end
 
+  setup do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+    DCDO.stubs(:get).with('modularity', true).returns(true)
+    DCDO.stubs(:get).with('i18n_string_tracking', false).returns(false)
+  end
+
   # *****
   # Authentication tests
   # *****
