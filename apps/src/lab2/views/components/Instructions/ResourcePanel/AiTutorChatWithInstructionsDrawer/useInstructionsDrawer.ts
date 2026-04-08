@@ -151,8 +151,7 @@ export const useInstructionsDrawer = ({
       );
       const contentMax =
         maxInstructionsHeightRef.current !== undefined
-          ? maxInstructionsHeightRef.current +
-            INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+          ? maxInstructionsHeightRef.current // already includes padding
           : halfContainer;
       setRawInstructionsHeight(Math.min(halfContainer, contentMax));
     }, 30);
@@ -199,7 +198,9 @@ export const useInstructionsDrawer = ({
     const updateMaxHeight = () => {
       const contentHeight = instructionsContentElement.scrollHeight;
       const currentHeight = rawInstructionsHeightRef.current;
-      setMaxInstructionsHeight(contentHeight);
+      setMaxInstructionsHeight(
+        contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+      );
 
       // Set initial drawer height to 50% of the available container space.
       // Exception is predict levels which we set to full content height.
