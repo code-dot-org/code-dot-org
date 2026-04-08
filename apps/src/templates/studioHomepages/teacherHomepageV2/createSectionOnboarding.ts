@@ -1,6 +1,9 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
-import {nextButton} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {
+  nextButton,
+  completeButton,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 export const CREATE_SECTION_BUTTON_ID = 'create-section-button';
 
@@ -73,24 +76,35 @@ export const createSectionOnboardingTourSteps = (
   {
     id: 'name-section',
     attachTo: {
-      element: '.uitest-section-name-setup',
+      element: '#uitest-section-name-setup',
       on: 'bottom',
     },
     text: 'Give your class section a name that makes sense to you. Most teachers use their period or class time. You can also change the avatar below to tell class sections apart at a glance.',
-    beforeShowPromise: () => waitForElement('.uitest-section-name-setup'),
+    beforeShowPromise: () => waitForElement('#uitest-section-name-setup'),
     buttons: [nextButton(tour)],
-    when: highlightAttachedElement('.uitest-section-name-setup'),
   },
   {
     id: 'choose-curriculum',
     attachTo: {
-      element: '.uitest-curriculum-quick-assign-top-row',
+      element: '#uitest-curriculum-quick-assign-top-row',
       on: 'top',
     },
     text: "This is where you decide what course your students will work through. The catalog is already filtered to your grade band so you're not sorting through content that isn't relevant. Not sure yet? Choose 'Decide later' and come back when you're ready.",
     beforeShowPromise: () =>
-      waitForElement('.uitest-curriculum-quick-assign-top-row'),
+      waitForElement('#uitest-curriculum-quick-assign-top-row'),
     buttons: [nextButton(tour)],
-    when: highlightAttachedElement('.uitest-curriculum-quick-assign-top-row'),
+    when: highlightAttachedElement('#uitest-curriculum-quick-assign-top-row'),
+  },
+  {
+    id: 'co-teacher-container',
+    attachTo: {
+      element: '#uitest-expandable-coteacher-container',
+      on: 'bottom',
+    },
+    text: 'Teaching this class with a colleague, or want a department head to be able to check in? Adding a co-teacher gives them the same access you have.',
+    beforeShowPromise: () =>
+      waitForElement('#uitest-expandable-coteacher-container'),
+    buttons: [completeButton(tour)],
+    when: highlightAttachedElement('#uitest-expandable-coteacher-container'),
   },
 ];

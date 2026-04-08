@@ -12,6 +12,12 @@ export const doneButton = (tour: Tour): StepOptionsButton => ({
   classes: 'custom-shepherd-button-primary',
 });
 
+export const completeButton = (tour: Tour): StepOptionsButton => ({
+  text: 'Complete Lesson',
+  action: () => tour.complete(),
+  classes: 'custom-shepherd-button-primary',
+});
+
 export const backButton = (tour: Tour): StepOptionsButton => ({
   text: 'Back',
   action: () => tour.back(),

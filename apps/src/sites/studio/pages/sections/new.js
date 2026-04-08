@@ -3,6 +3,7 @@ import React from 'react';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useTeacherHomepageTour';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
@@ -10,6 +11,7 @@ import i18n from '@cdo/locale';
 import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
+  console.log('[sections/new.js] document.ready fired');
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
   const userCountry = getScriptData('userCountry');
 
@@ -31,5 +33,6 @@ $(document).ready(() => {
       legacyReactDomRender: true,
     }
   );
+  resumeCreateSectionOnboardingTour(true);
   displayDifferentiationChat();
 });
