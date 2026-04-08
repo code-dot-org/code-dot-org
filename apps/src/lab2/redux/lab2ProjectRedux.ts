@@ -50,6 +50,11 @@ const initialState: Lab2ProjectState = {
   projectSourceLevelId: undefined,
 };
 
+function markEdited(state: Lab2ProjectState) {
+  state.hasEdited = true;
+  state.hasEditedSinceLastVersionSave = true;
+}
+
 // SLICE
 
 const projectSlice = createSlice({
@@ -132,8 +137,7 @@ const projectSlice = createSlice({
             url: action.payload.url,
           }),
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     createNewExternalFile(
@@ -160,8 +164,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: newSource,
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     renameFile(
@@ -190,8 +193,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     saveFile(
@@ -223,8 +225,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     setFileType(
@@ -253,8 +254,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     activateFile(state, action: PayloadAction<FileId>) {
@@ -301,8 +301,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: deleteResult.newSource,
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     moveFile(
@@ -332,8 +331,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     moveFolder(
@@ -363,8 +361,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     createNewFolder(
@@ -380,8 +377,7 @@ const projectSlice = createSlice({
             action.payload.parentId
           ),
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     toggleOpenFolder(state, action: PayloadAction<FolderId>) {
@@ -424,8 +420,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: deleteResult.newSource,
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     renameFolder(
@@ -455,8 +450,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
-        state.hasEditedSinceLastVersionSave = true;
+        markEdited(state);
       }
     },
     rearrangeFiles(state, action: PayloadAction<FileId[]>) {
