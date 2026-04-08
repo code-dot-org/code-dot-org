@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-03 23:41:31 UTC",
+    "serialized_at": "2026-04-07 23:24:12 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2710,6 +2710,7 @@
       "key": "93780ca2-8bde-4701-b773-3d743289cec5",
       "position": 2,
       "properties": {
+        "progression_name": "Code it Yourself: Conditionals"
       },
       "seeding_key": {
         "activity_section.key": "93780ca2-8bde-4701-b773-3d743289cec5",
@@ -2717,8 +2718,29 @@
       }
     },
     {
-      "key": "91ba6dcb-9ed5-49d9-a4ad-d65f4da25712",
+      "key": "122baadc-4e1f-43dd-b058-1f2521771223",
       "position": 3,
+      "properties": {
+        "progression_name": "Code with AI: Nested Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "122baadc-4e1f-43dd-b058-1f2521771223",
+        "lesson_activity.key": "d37941bf-8c39-40b6-b570-0e6a5a57c375"
+      }
+    },
+    {
+      "key": "e92c2dc0-d114-44d6-baa8-c8f0aabfab33",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e92c2dc0-d114-44d6-baa8-c8f0aabfab33",
+        "lesson_activity.key": "d37941bf-8c39-40b6-b570-0e6a5a57c375"
+      }
+    },
+    {
+      "key": "91ba6dcb-9ed5-49d9-a4ad-d65f4da25712",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does nesting conditions add depth to our logic?*\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that nesting creates a hierarchy of decisions, allowing for a more granular control flow that mirrors complex real-world scenarios and flowcharts.\n"
       },
@@ -2729,7 +2751,7 @@
     },
     {
       "key": "a0e67753-6f1c-44c9-bf15-e9a27a5d87de",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of nested if/else logic by planning, coding, and testing a multi-decision feature. They’ll connect their flowchart to working code, use AI to debug and refine logic, and verify that all four paths behave as intended through systematic testing.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4 and 5 by planning nested decisions and finally implement them in code. They will use scaffolds like the Test Cases table in their activity guide and AI support to refine their work.\n\n- Level 4: Students will plan a feature by creating a flowchart with nested decisions and test cases.\n- Level 5: Students will implement their plan in code, debug using test cases, and refine with AI support.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students implement their nested if/else logic, check that their code directly maps to the flowchart. Ask them to explain how each branch changes their web app and how they’re using test cases to verify correctness.\n",
         "duration": "20",
@@ -2743,7 +2765,7 @@
     },
     {
       "key": "445b8443-6e63-4d44-95ee-72d1a1c432fd",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Code and Test"
       },
@@ -2754,7 +2776,7 @@
     },
     {
       "key": "a5b9b8ce-ec7c-4b2b-b746-ae91dd88ac8b",
-      "position": 6,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -2764,7 +2786,7 @@
     },
     {
       "key": "6cc903e6-d289-4af0-b075-b43a7200f044",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What paths in your flowchart did AI miss?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may notice that the AI assumed one condition mattered more (e.g., finished movie = true) — a small example of bias in logic or oversimplification.\n",
         "tips": [
@@ -4247,6 +4269,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Code it Yourself: Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
+        ],
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "93780ca2-8bde-4701-b773-3d743289cec5"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code with AI: Nested Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
+        ],
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "122baadc-4e1f-43dd-b058-1f2521771223"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Plan in Sketch Lab"
       },
       "bonus": false,
@@ -4264,8 +4330,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 3,
+      "chapter": 39,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4286,7 +4352,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4308,7 +4374,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4330,7 +4396,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4352,7 +4418,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4374,7 +4440,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4396,7 +4462,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4418,7 +4484,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4440,7 +4506,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4462,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4484,7 +4550,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4506,7 +4572,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4528,7 +4594,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4550,7 +4616,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4991,6 +5057,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "ea16792b-1b3b-4a3e-8aed-c516e572a1ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
+        ],
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "93780ca2-8bde-4701-b773-3d743289cec5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
+        ],
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "122baadc-4e1f-43dd-b058-1f2521771223"
       }
     },
     {
