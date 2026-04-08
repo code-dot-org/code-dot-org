@@ -2250,6 +2250,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: md5
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_bin
+    comment: 
   delayed_jobs:
   - *9
   - &61 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -15576,7 +15584,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260402000000
+version: 20260407175945
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
