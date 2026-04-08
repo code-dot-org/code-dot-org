@@ -45,8 +45,9 @@ const BlocklyLabWrapper = <T extends LevelProperties = LevelProperties>({
 /**
  * This wraps a lab that has a Blockly workspace and Blockly-based sources.
  *
- * Effectively, this is a special case of a LabWithSources that understands that
- * the sources are meant to be some kind of Blockly serialization.
+ * This is a legacy Blockly-lab that uses the lastAttempt method of storing
+ * progress or otherwise is not meant to interact with the Projects or
+ * Sources APIs.
  */
 const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   children,
