@@ -86,7 +86,7 @@ class AiRubricConfig
   #    s3_config_dir and that each ai-enabled learning goal has a matching
   #    entry in standard_rubric.csv.
   def self.validate_ai_config
-    Rubric.all.each do |rubric|
+    Parallel.each(Rubric.all.to_a, in_processes: 10) do |rubric|
       validate_ai_config_for_rubric(rubric)
     end
 
