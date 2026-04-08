@@ -1000,7 +1000,7 @@ module Services
     end
 
     class RubricSerializer < ActiveModel::Serializer
-      attributes :level_name, :seeding_key
+      attributes :level_name, :s3_config_dir, :seeding_key
 
       def level_name
         object.level&.name

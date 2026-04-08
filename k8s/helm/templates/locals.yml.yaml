@@ -18,8 +18,6 @@ data:
   cloudfront_private_key: ""
   slack_bot_token: ""
   properties_encryption_key: ""
-  openai_lesson_summaries_api_key: ""
-  elevenlabs_api_key: ""
 
   # Configuration for cluster local services in "development mode":
   {{- if .Values.services.mysql.enabled }}

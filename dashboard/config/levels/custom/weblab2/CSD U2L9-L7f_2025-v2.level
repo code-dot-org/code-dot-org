@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:46:36.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Fix Image Position",
+    "long_instructions": "# Change the Position\r\n\r\n# Do This\r\n1) Move the images using the `float` property so that they are to the side of the text rather than below it.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Make it so the images are next to the text",
+    "thumbnail_url": "https://images.code.org/696274704d2760a354ab7b41a5dad962-image-1566508917753.PNG",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1> Things I like </h1>\n    <h2> These are some photos of things that I really like!</h2>\n      <h3> Foxes </h3>\n    <img src=\"fox.jpg\" alt=\"A fox\">\n    <h6> Pexels, Pixabay, Pixabay License </h6>\n    <p> I. LOVE. FOXES. I think they are the CUTEST animal that exists on this planet. They are incredibly smart and sly, and that usually means people will think they are evil, but I won't have any of that. They're so smart, being able to adapt to new environments like urban ones.  </p>\n    <img src=\"arctic_fox.jpg\" alt=\"An Arctic fox\">\n    <h6> David Mark, Pixabay, Pixabay License </h6>\n   <p> And like come on, Arctic foxes are just the cutest with their white fur. You cannot tell me that this fox isn't cute. </p>\n    \n    <h3> Flowers</h3>\n    <img src=\"flower.jpg\" alt=\"Close up of a flower\">\n    <h6> Jill Wellington, Pixabay, Pixabay License </h6>\n    <p> I love gardens and I love having flowers in  gardens. I also love flower gardens. Flowers are amazing in the sense that different types of flowers can look so different from each other, but each one is beautiful and unique in their own way. I just want to grow as many flowers as possible in my lifetime. </p>\n    <h3> Watermelon </h3>\n    <img src=\"watermelon.jpg\" alt=\"Cut up watermelon\">\n    <p> When it comes to summer fruit, watermelon is my favorite fruit. At every picnic or gathering, I know that I can expect watermelon to be there and it makes me so happy. \n    <h6> Jill Wellington, Pixabay, Pixabay License </h6>\n    <h3> Birds </h3>\n    <img src=\"bird.jpg\" alt=\"A flying bird\">\n    <h6> homecare119, Pixabay, Pixabay License </h6>\n    <p> I want to be a bird researcher, or ornithologist as they call it. I think that they are just so fascniating. Their features and how they live and survive is just so incredible and I want to be the one in the nature documentaries rather than be the one watching them. </p>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n background: lightpink;\n color: lightcyan;\n font-family: monospace;\n}\n\nh6 {\n  text-align: right;\n}\n\nimg {\n  border-radius: 20px;\n  width: 200px;\n}\n\np {\n    text-align: left;\n    font-size: 17px;\n}\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "poppy.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/768410df-7bad-4e6b-950c-473705923a54.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "watermelon.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/5a36d19d-1524-47c7-b631-bf5b8184cdc1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "bird.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/0cef3414-9183-4e46-848f-882d0a7124c3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "arctic_fox.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/c8a22fb0-d179-4c98-a664-3846fd77ea93.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "fox.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/bb556c7d-db30-4a0b-a774-dc75c44fb8b7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "flower.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7f-2025/uuid/4ef95d6f-296f-4d6a-b3a3-54d7e9804709.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n/2+EcGCXQNf+\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:36.818+00:00\",\"changed\":[\"cloned from \\\"CSD U2L9-L7f-2025\\\"\"],\"cloned_from\":\"CSD U2L9-L7f-2025\"}]"
+}]]></config>
+</Weblab2>

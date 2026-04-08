@@ -1,0 +1,200 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:10.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Adding Hover Styles",
+    "long_instructions": "# Adding Hover Styling\r\n\r\nAlana is creating this page about Animal Kingdom oddities. She has links styled as buttons that the user can click on to learn more about each strange animal but she would like each button's style to change when the user hovers over them in the hope that it will draw their attention and motivate them to click on the links. \r\n\r\nCan you help her give each button an appealing, yet unique style?\r\n\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Give each `<a>` tag a different class attribute.\r\n\r\n**In the CSS file:**\r\n1. Add a rule set for each hyperlink using its class attribute in combination with the \"hover\" pseudo-class.\r\n2. Give each hyperlink a unique style. Consider using any of the following suggestions:\r\n   - Adding different font colors\r\n   - Adding different background colors\r\n   - Adding different font styles\r\n   - Increasing the font size\r\n   - Changing the border styles\r\n   - Changing the border colors\r\n   - Changing the border radius\r\n3. Make sure to test the links on each page to ensure they are working as expected.\r\n\r\n**Don't forget to click \"Refresh and Save\" to see if everything is working as expected.**\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/b91cae0431b9f50fae36a1b5af160ae1-image-1708197517853.gif\" style=\"width:500px\">\r\n\r\n:::\r\n\r\n<br>\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Pseudo Classes](https://studio.code.org/courses/csd-2024/guides/pseudo-classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Practice adding \"hover\" pseudo-class styling to draw attention to the buttons.",
+    "thumbnail_url": "https://images.code.org/3021d2bb5abb0ceef7cfa34623f921dd-click.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Wonders of the Wild: Top 3 Strangest Animals in the Animal Kingdom</h1>\n    \n    <!-- 1) Give each <a> tag a different class attribute -->\n    <!-- page links -->\n    <div class=\"buttons\">\n      <a href=\"index.html\">Home</a>\n      <a href=\"platypus.html\">The Platypus</a>\n      <a href=\"axolotl.html\">The Axolotl</a>\n      <a href=\"narwhal.html\">The Narwhal</a>\n    </div>\n    \n    <!-- informational paragraph -->\n    <p>The animal kingdom is full of wonders, with millions of species exhibiting bizarre behaviors, incredible adaptations, and unusual appearances that defy our understanding of life on Earth. From the deepest oceans to the densest forests, nature's creativity knows no bounds. Join us on a journey to discover three of the strangest animals that roam our planet, each a testament to the diversity and adaptability of life.</p> \n    \n    <!-- image container w/images -->\n    <div class=\"images\">\n      <img src=\"platypus.png\" alt=\"platypus\">\n      <img src=\"axolotl.png\" alt=\"axolotl\">\n      <img src=\"narwhal.png\" alt=\"narwhal\">\n    </div>\n    \n    <!-- image citation -->\n    <div class=\"citation\">\n      <p>All images CC0</p>\n    </div>\n  \n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "axolotl.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- Title -->\n    <h1>Wonders of the Wild: The Axolotl</h1>\n    \n    <!-- 1) Give each <a> tag a different class attribute -->\n    <!-- page links -->\n    <div class=\"buttons\">\n      <a href=\"index.html\">Home</a>\n      <a href=\"platypus.html\">The Platypus</a>\n      <a href=\"axolotl.html\">The Axolotl</a>\n      <a href=\"narwhal.html\">The Narwhal</a>\n    </div>\n\n    <!-- informational paragraph -->\n    <p>The axolotl, also known as the Mexican walking fish, is not a fish but a salamander that never undergoes metamorphosis, spending its entire life underwater. With its fringed gills, wide eyes, and an ability to regenerate lost body parts, the axolotl looks like a creature from a fantasy novel. This critically endangered species is native to the lake complex of Xochimilco near Mexico City.</p> \n    \n    <!-- image container w/images -->\n    <div class=\"images\">\n      <img src=\"axolotl.png\" alt=\"Axolotl\">\n      <img src=\"axolotlTypes.png\" alt=\"alolotl types\">\n      <img src=\"starburstAxolotl.jpg\" alt=\"Starburst Axolotl\">\n    </div>\n    \n    <!-- image citation -->\n    <div class=\"citation\">\n      <p>All images CC0</p>\n    </div>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "narwhal.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- Title -->\n    <h1>Wonders of the Wild: The Narwhal</h1>\n    \n    <!-- 1) Give each <a> tag a different class attribute -->\n    <!-- page links -->\n    <div class=\"buttons\">\n      <a href=\"index.html\">Home</a>\n      <a href=\"platypus.html\">The Platypus</a>\n      <a href=\"axolotl.html\">The Axolotl</a>\n      <a href=\"narwhal.html\">The Narwhal</a>\n    </div>\n\n    <!-- informational paragraph -->\n    <p>Often referred to as the \"unicorn of the sea,\" the narwhal is a medium-sized whale known for the long, spiraled tusk protruding from its head. The tusk is actually an elongated upper left canine tooth that can grow up to 10 feet long. Narwhals inhabit the cold waters of the Arctic and are a marvel of marine mammal evolution.</p> \n    \n    <!-- image container w/images -->\n    <div class=\"images\">\n      <img src=\"narwhal.png\" alt=\"Narwhal\">\n      <img class=\"narwhal\" src=\"narwhalTusk.jpg\" alt=\"Narkwhal Tusk\">\n      <img src=\"narwhals_breach.jpg\" alt=\"Group of narwhals breach\">\n    </div>\n    \n    <!-- image citation -->\n    <div class=\"citation\">\n      <p>All images CC0</p>\n    </div>\n\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "platypus.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Wonders of the Wild: The Platypus</h1>\n    \n    <!-- 1) Give each <a> tag a different class attribute -->\n    <!-- page links -->\n    <div class=\"buttons\">\n      <a href=\"index.html\">Home</a>\n      <a href=\"platypus.html\">The Platypus</a>\n      <a href=\"axolotl.html\">The Axolotl</a>\n      <a href=\"narwhal.html\">The Narwhal</a>\n    </div>\n\n    <!-- informational paragraph -->\n    <p>At first glance, the platypus looks like it was assembled from parts of different animals; it has the bill and feet of a duck, the tail of a beaver, and the body of an otter. This unique mammal is one of the few venomous mammals, with males possessing a spur on their hind foot that can deliver a painful injection of venom. The platypus is also among the few mammals that lay eggs.</p> \n    \n    <!-- image container w/images -->\n    <div class=\"images\">\n      <img src=\"platypus.png\" alt=\"Platypus\">\n      <img src=\"venomousSpur.jpg\" alt=\"venomous spur\">\n      <img src=\"platypusEggs.png\" alt=\"platypus with eggs\">\n    </div>\n    \n    <!-- image citation -->\n    <div class=\"citation\">\n      <p>All images CC0</p>\n    </div>\n    \n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "starburstAxolotl.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/8d3eeb1a-1234-4bfa-bf9e-78a446f482a8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "venomousSpur.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/f8117265-0343-478b-bbc3-194015fdc64a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "narwhalTusk.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/93e6e8cb-5adc-40a3-a8ec-351c2afd529f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "narwhals_breach.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/fe849573-8897-4a5c-a10f-46cd5242156f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "platypusEggs.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/038422d0-87b0-4538-aff0-a9719d65ddfd.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "narwhal.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/e5f21b96-ed63-4a0e-9a5d-0f5a6f0265a4.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "platypus.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/0759491c-727b-43f8-b97c-b5270ad1952f.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "axolotl.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/097819e5-316b-47b0-9177-affd821f0ad1.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "axolotlTypes.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6d-2025/uuid/7988c977-6de7-4407-8943-db5306dc0f11.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style for hyperlink buttons */\na {\n  border-style: solid;\n  border-color: darkmagenta; \n  border-radius: 5px;\n  padding: 10px;\n  text-decoration: none;\n  background-color: aliceblue;\n}\n\na:link {\n  font-size: 18px;\n  color:darkmagenta;\n  font-weight: bold;\n}\n\n/* 1) ADD A RULE SET FOR EACH HYPERLINK TO STYLE THE HOVER PSEUDO-CLASS */\n\n/* 2) Give each hyperlink a unique style */\n\n\n\n\n\n\n/* style for div container */\n.buttons {\n  text-align: center;\n  height: 40px;\n  margin: 20px;\n}\n\n/* body style */\nbody {\n  background-color: #daffd9;\n  text-align: center;\n  font-family: Arial;\n}\n\n/* title style */\nh1 {\n  font-size: 36px;\n  text-align: center;\n}\n\n/* paragraph style */\np {\n  font-size: 18px;\n}\n\n/* image container flex layout */\n.images {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  align-content: center;\n}\n\n/* image style */\nimg {\n  border-style: solid;\n  border-radius: 15px;\n}\n\n.narwhal {\n  max-width: 450px;\n}\n\n/* image citation */\n.citation {\n  height: 300px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.citation > p {\n  font-size: 12px;\n  font-style: italic;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:10.617+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L6d-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L6d-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -80,7 +80,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             {!this.props.isFrozen && (
               <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
                 <FontAwesome
-                  icon="times-circle"
+                  icon="circle-xmark"
                   className={moduleStyles.xIcon}
                 />
                 {i18n.delete()}

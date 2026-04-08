@@ -1,0 +1,630 @@
+{
+  "script": {
+    "name": "hoai-web-design-pilot-v2",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-06 22:58:24 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "hoai-web-design-pilot-v2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Web Design",
+      "name": "Web Design",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2ee69f98-c425-41b8-ae35-cc66a2840c47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "07041948-c286-4e48-a54a-c0b7a3b3576c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Act 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c",
+        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+      }
+    },
+    {
+      "key": "683bb53d-6ede-44ec-9de3-b1d1298ac137",
+      "position": 2,
+      "properties": {
+        "progression_name": "Act 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137",
+        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+      }
+    },
+    {
+      "key": "89fcbef0-9fa3-4da7-af07-071197da132a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Act 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a",
+        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+      }
+    },
+    {
+      "key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd",
+        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-1_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-1_pilot2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-2_pilot2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-3_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-3_pilot2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-6_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-6_pilot2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-7_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-7_pilot2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-8_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-8_pilot2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-9_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-9_pilot2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-10_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-10_pilot2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-11_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-11_pilot2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-12_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-12_pilot2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-13_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-13_pilot2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-14_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-14_pilot2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Act 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-15_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-15_pilot2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-pilot-survey_pilot2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-1_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-1_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-2_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-3_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-3_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-6_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-6_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-7_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-7_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-8_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-8_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-9_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-9_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-10_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-10_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-11_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-11_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-12_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-12_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-13_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-13_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-14_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-14_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-15_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-15_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-pilot-survey_pilot2",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey_pilot2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-design-pilot-v2",
+        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

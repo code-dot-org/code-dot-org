@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
-import React, {useState, useCallback} from 'react';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -15,6 +16,7 @@ import moduleStyles from './ai-tutor-version-actions.module.scss';
 
 interface AiTutorVersionActionsProps {
   files: ProjectFile[];
+  onRequestScrollToBottom: () => void;
 }
 
 /**
@@ -23,12 +25,27 @@ interface AiTutorVersionActionsProps {
  */
 const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   files,
+  onRequestScrollToBottom,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isAcceptMode, setIsAcceptMode] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
   const dispatch = useAppDispatch();
+
+  // Warn the user if they attempt to reload the page before accepting or
+  // rejecting the proposed updates.
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      // Chrome requires returnValue to be set.
+      event.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   const handleSaveAiTutorVersion = useCallback(async () => {
     if (isSaving) return;
@@ -51,6 +68,14 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     dispatch(rejectAiTutorVersion(files));
   }, [dispatch, files]);
 
+  // Scroll to the bottom of the page when switching to accept mode,
+  // so that the commit description input and save button are visible to the user.
+  useLayoutEffect(() => {
+    if (isAcceptMode) {
+      onRequestScrollToBottom();
+    }
+  }, [isAcceptMode, onRequestScrollToBottom]);
+
   return (
     <div className={moduleStyles.container}>
       <div className={moduleStyles.fileList}>
@@ -70,7 +95,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             startIcon={
               <FontAwesomeV6Icon
                 iconStyle="solid"
-                iconName="close"
+                iconName="xmark"
                 title="Reject"
               />
             }
@@ -122,19 +147,42 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             />
             This is what you'll see in the version history.
           </div>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
-            className={moduleStyles.saveAiTutorVersionButton}
-            id="save-ai-tutor-version-button"
-            disabled={isSaving || commitDescription.trim() === ''}
-            onClick={handleSaveAiTutorVersion}
-            type="button"
-            startIcon={<FontAwesomeV6Icon iconName="save" iconStyle="solid" />}
-          >
-            Accept and save version
-          </MuiButton>
+          <div className={moduleStyles.saveAiTutorVersionActions}>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              className={moduleStyles.saveAiTutorVersionButton}
+              id="save-ai-tutor-version-button"
+              disabled={isSaving || commitDescription.trim() === ''}
+              onClick={handleSaveAiTutorVersion}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+              }
+            >
+              Accept and save version
+            </MuiButton>
+            <WithTooltip
+              tooltipProps={{
+                text: 'Reject AI Changes',
+                size: 's',
+                tooltipId: 'secondary-reject-ai-tutor-version-tooltip',
+                direction: 'onBottom',
+              }}
+            >
+              <MuiIconButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                onClick={handleReject}
+                type="button"
+                aria-label="Reject AI Changes"
+              >
+                <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+              </MuiIconButton>
+            </WithTooltip>
+          </div>
         </div>
       )}
     </div>
