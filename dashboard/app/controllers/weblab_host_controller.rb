@@ -4,7 +4,7 @@ class WeblabHostController < ApplicationController
   STUDIO_URL = CDO.studio_url('', CDO.default_scheme)
 
   def index
-    @dev_mode = false # Change to true to point to Bramble running on localhost
+    @dev_mode = true # Change to true to point to Bramble running on localhost
     @bramble_base_url = @dev_mode ? BRAMBLE_LOCALHOST_URL : BRAMBLE_URL
     @studio_url = STUDIO_URL
     @skip_files = params[:skip_files] == "true" # Special case for checking that Bramble can be initialized without loading files
