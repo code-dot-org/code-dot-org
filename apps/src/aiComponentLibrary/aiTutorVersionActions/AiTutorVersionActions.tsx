@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
@@ -146,19 +147,42 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             />
             This is what you'll see in the version history.
           </div>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
-            className={moduleStyles.saveAiTutorVersionButton}
-            id="save-ai-tutor-version-button"
-            disabled={isSaving || commitDescription.trim() === ''}
-            onClick={handleSaveAiTutorVersion}
-            type="button"
-            startIcon={<FontAwesomeV6Icon iconName="save" iconStyle="solid" />}
-          >
-            Accept and save version
-          </MuiButton>
+          <div className={moduleStyles.saveAiTutorVersionActions}>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              className={moduleStyles.saveAiTutorVersionButton}
+              id="save-ai-tutor-version-button"
+              disabled={isSaving || commitDescription.trim() === ''}
+              onClick={handleSaveAiTutorVersion}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+              }
+            >
+              Accept and save version
+            </MuiButton>
+            <WithTooltip
+              tooltipProps={{
+                text: 'Reject AI Changes',
+                size: 's',
+                tooltipId: 'secondary-reject-ai-tutor-version-tooltip',
+                direction: 'onBottom',
+              }}
+            >
+              <MuiIconButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                onClick={handleReject}
+                type="button"
+                aria-label="Reject AI Changes"
+              >
+                <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+              </MuiIconButton>
+            </WithTooltip>
+          </div>
         </div>
       )}
     </div>
