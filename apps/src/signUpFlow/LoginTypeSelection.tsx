@@ -323,8 +323,6 @@ const LoginTypeSelection: React.FunctionComponent<{
             </MuiButton>
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
-          {/* TODO: once the Classlink icon has been added to our Font Awesome account,
-              we can uncomment this form */}
           <form action="/users/auth/classlink" method="POST">
             <MuiButton
               variant="contained"
