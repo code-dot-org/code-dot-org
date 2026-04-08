@@ -8,7 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-27 16:04:33 UTC",
+    "serialized_at": "2026-04-08 22:17:46 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19,19 +20,49 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Chapter One"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "ui-test-single-unit-2026"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Lesson One",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ui-test-single-unit-2026"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson Two",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ui-test-single-unit-2026"
+      }
+    }
   ],
   "lesson_activities": [
 
