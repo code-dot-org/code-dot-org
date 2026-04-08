@@ -19,7 +19,9 @@ describe('LessonInsightWidget', () => {
   };
 
   // Timestamp from 10 minutes ago (refresh should be enabled)
-  const staleTimestamp = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+  const defaultInsightTimestamp = new Date(
+    Date.now() - 10 * 60 * 1000
+  ).toISOString();
 
   const mockInsightData = {
     progress: 'Student has made good progress',
@@ -55,7 +57,7 @@ describe('LessonInsightWidget', () => {
     const defaultMockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
-        updated_at: staleTimestamp,
+        updated_at: defaultInsightTimestamp,
       },
       response: new Response(),
     };
@@ -76,7 +78,7 @@ describe('LessonInsightWidget', () => {
     const mockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
-        updated_at: staleTimestamp,
+        updated_at: defaultInsightTimestamp,
       },
       response: new Response(),
     };
@@ -143,11 +145,13 @@ describe('LessonInsightWidget', () => {
     });
   });
 
-  it('allows refreshing insight data via settings menu when insight is stale', async () => {
+  it('allows refreshing insight data via settings menu when insight is older than 5 minutes', async () => {
+    // Insight is 6 minutes old. We could use the default here, but as this test is testing this logic, let's make it explicit.
+    const insightTimestamp = new Date(Date.now() - 6 * 60 * 1000).toISOString();
     const mockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
-        updated_at: staleTimestamp,
+        updated_at: insightTimestamp,
       },
       response: new Response(),
     };
