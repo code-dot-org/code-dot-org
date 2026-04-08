@@ -293,6 +293,24 @@ services:
       MYSQL_ROOT_PASSWORD: ''
 
 steps:
+  - name: bin/drone/shell
+    image: curlimages/curl
+    commands:
+      - set +x
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
   - name: clone
     image: bitnamilegacy/git
     environment:
