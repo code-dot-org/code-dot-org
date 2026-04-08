@@ -19,12 +19,12 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
 def main
-  ninety_days_ago = Time.now - 90.days
-
-  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < ninety_days_ago}.delete
+  # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
+  # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
+  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < Time.now - 90.days}.delete
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < ninety_days_ago}.delete
+  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < Time.now - 91.days}.delete
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
 end
 
