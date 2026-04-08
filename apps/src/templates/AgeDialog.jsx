@@ -106,6 +106,7 @@ class AgeDialog extends Component {
               <div style={styles.middleCell}>
                 {i18n.provideAge()}
                 <div style={styles.age}>
+                  <label htmlFor="uitest-age-selector">{i18n.age()}</label>
                   <AgeDropdown
                     style={styles.dropdown}
                     ref={element => (this.ageDropdown = element)}
