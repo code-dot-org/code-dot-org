@@ -14,8 +14,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
       student.summarize.merge(
         depends_on_this_section_for_login:
           student.teacher_managed_account? &&
-            student.sections_as_student.size == 1,
-        is_demo_student: Policies::DemoSections.demo_student?(student.id)
+            student.sections_as_student.size == 1
       )
     end
     render json: summaries

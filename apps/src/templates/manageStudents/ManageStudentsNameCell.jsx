@@ -1,4 +1,3 @@
-import {Chip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -7,6 +6,7 @@ import {
   getSelectedCourseName,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -70,17 +70,15 @@ class ManageStudentNameCell extends Component {
                 >
                   {name}
                 </a>
-                {this.props.isDemoStudent && (
-                  <Chip
-                    label="Demo"
-                    size="small"
-                    color="default"
-                    sx={{ml: 1, height: 18, maxHeight: 18}}
-                  />
-                )}
+                {this.props.isDemoStudent && <DemoStudentChip />}
               </span>
             )}
-            {!studentUrl && <span>{name}</span>}
+            {!studentUrl && (
+              <span style={styles.nameWithChip}>
+                {name}
+                {this.props.isDemoStudent && <DemoStudentChip />}
+              </span>
+            )}
             {username && (
               <div style={styles.details}>
                 {i18n.usernameLabel() + username}

@@ -706,6 +706,9 @@ export default function manageStudents(state = initialState, action) {
     };
     for (const studentKey in state.studentData) {
       const student = state.studentData[studentKey];
+      if (student.isDemoStudent) {
+        continue;
+      }
       newState.studentData[student.id].isEditing = true;
       newState.editingData[student.id] = {
         ...newState.studentData[student.id],
