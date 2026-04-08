@@ -27213,6 +27213,12 @@ en:
               name: Lesson One
             lesson-2:
               name: Design Mode
+            lesson-3:
+              name: Lesson Three
+            lesson-4:
+              name: Extended Lesson
+            lesson-5:
+              name: Final Project
           lesson_groups: {}
           name: ui-test-csp1-2019
           title: Applab
