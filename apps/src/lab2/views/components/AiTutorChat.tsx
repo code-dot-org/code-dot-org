@@ -64,12 +64,19 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
-      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+      ChatButton: ({
+        onClick,
+        disabled,
+      }: {
+        onClick: ChatButtonClickHandler;
+        disabled?: boolean;
+      }) => (
         <MuiButton
           variant="outlined"
           color="secondary"
           size="small"
           className={moduleStyles.chatButton}
+          disabled={disabled}
           onClick={() => onClick(button.value, button.analyticsProperties)}
           aria-label={button.label}
           startIcon={
