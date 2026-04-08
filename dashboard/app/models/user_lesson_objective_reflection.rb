@@ -11,9 +11,9 @@
 #
 # Indexes
 #
-#  index_ulor_on_objective_and_student                              (objective_id,student_id)
-#  index_user_lesson_objective_reflections_on_objective_id          (objective_id)
-#  index_user_lesson_objective_reflections_on_student_id            (student_id)
+#  index_ulor_on_objective_and_student                      (objective_id,student_id)
+#  index_user_lesson_objective_reflections_on_objective_id  (objective_id)
+#  index_user_lesson_objective_reflections_on_student_id    (student_id)
 #
 class UserLessonObjectiveReflection < ApplicationRecord
   belongs_to :objective

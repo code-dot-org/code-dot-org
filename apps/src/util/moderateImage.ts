@@ -45,7 +45,7 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
   }: AnalyticsData
-): Promise<'ok' | 'flagged' | 'skipped'> => {
+): Promise<'ok' | 'flagged' | 'skipped' | 'error'> => {
   const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
@@ -68,11 +68,12 @@ export const moderateImage = async (
       'Content-Type': file.type || 'application/octet-stream',
     });
     const json = await response.json();
+    if (json === null) {
+      return 'error';
+    }
+
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
-    if (json === null) {
-      return 'skipped';
-    }
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
@@ -97,6 +98,6 @@ export const moderateImage = async (
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
-    return 'skipped';
+    return 'error';
   }
 };
