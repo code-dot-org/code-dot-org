@@ -25,8 +25,7 @@ services:
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: ''
 
 steps:
   - name: bin/drone/shell
@@ -150,8 +149,7 @@ services:
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: ''
 
 steps:
   - name: bin/drone/shell
@@ -292,8 +290,7 @@ services:
     environment:
       # TODO: GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: ''
 
 steps:
   - name: clone
