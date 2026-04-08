@@ -46,6 +46,7 @@ class Lesson < ApplicationRecord
   # join tables needed for seeding logic
   has_many :lessons_resources
   has_many :lessons_vocabularies
+  has_many :jit_pl_concepts_lessons
   has_many :lessons_programming_expressions
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -467,6 +468,8 @@ class Lesson < ApplicationRecord
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
+      jitPlConcepts: jit_pl_concepts.map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
+      allJitPlConcepts: JitPlConcept.order(:name).map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
       lessonPath: get_uncached_show_path,
       rubric: rubric,
     }
