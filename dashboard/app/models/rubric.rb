@@ -8,6 +8,7 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  s3_config_dir :string(255)
+#  foo           :string(255)
 #
 # Indexes
 #
