@@ -24,13 +24,10 @@ class LearningGoal < ApplicationRecord
 
   validate :validate_ai_config
   def validate_ai_config
-    if ai_enabled && !CDO.aws_s3_emulated
-      lesson_s3_name = AiRubricConfig.get_lesson_s3_name(rubric.get_script_level)
-      s3_learning_goals = AiRubricConfig.get_s3_learning_goals(lesson_s3_name)
-      unless s3_learning_goals.include?(learning_goal)
-        errors.add(:learning_goal, "no valid AI config in S3 for ai-enabled learning goal '#{learning_goal}'")
-      end
-    end
+    return if CDO.aws_s3_emulated
+    AiRubricConfig.validate_ai_config_for_learning_goal(self)
+  rescue => exception
+    errors.add(:learning_goal, exception.message)
   end
 
   accepts_nested_attributes_for :learning_goal_evidence_levels
