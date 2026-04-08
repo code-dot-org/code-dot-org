@@ -49,6 +49,15 @@ resource "helm_release" "argocd_bootstrap" {
   create_namespace = true
   values = [
     yamlencode({
+      # Blank-cluster bootstrap needs the one-time Redis secret-init hook.
+      # The steady-state chart values in k8s-gitops disable it so self-managed
+      # Argo does not keep resuming this hook on itself:
+      # https://github.com/argoproj/argo-helm/issues/2887
+      argo-cd = {
+        redisSecretInit = {
+          enabled = true
+        }
+      }
       _bootstrap = {
         k8s_gitops_revision = data.github_branch.k8s_gitops_default.sha
       }
