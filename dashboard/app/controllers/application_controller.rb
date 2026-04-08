@@ -456,24 +456,19 @@ class ApplicationController < ActionController::Base
 
   UUID_RE = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
 
-  STATSIG_COOKIE_OPTIONS = {
-    domain: '.code.org',
-    path: '/',
-    secure: true,
-    same_site: :lax,
-  }.freeze
-
   # Creates a statsig stable id for use of signed-out user tracking.
   # This cookie is used by the Statsig SDK for both JS and Ruby.
   #
   # When a request arrives with a valid statsig_stable_id URL parameter
-  # (e.g. from code.ai cross-domain navigation), adopt that value and
-  # persist it as a cookie so the frontend JS picks it up.
+  # (e.g. from code.ai cross-domain navigation), adopt that value into
+  # the server-side session immediately and pass it to the template via
+  # @statsig_param_id so the frontend JS can set the cookie through the
+  # existing OneTrust consent-gated path.
   protected def initialize_statsig_stable_id
     param_stable_id = params[:statsig_stable_id]
     if param_stable_id.present? && param_stable_id.match?(UUID_RE)
-      cookies[:statsig_stable_id] = STATSIG_COOKIE_OPTIONS.merge(value: param_stable_id)
       session[:statsig_stable_id] = param_stable_id
+      @statsig_param_id = param_stable_id
       return
     end
 

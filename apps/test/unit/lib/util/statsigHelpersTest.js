@@ -1,6 +1,8 @@
+import cookies from 'js-cookie';
 import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
+  findOrCreateStableId,
   formatUserId,
   stripStableIdParam,
 } from '@cdo/apps/metrics/statsigHelpers';
@@ -19,7 +21,6 @@ describe('StatsigReporter', () => {
 
     afterEach(() => {
       replaceStateStub.restore();
-      // Reset location if we changed it
       if (window.location !== originalLocation) {
         delete window.location;
         window.location = originalLocation;
@@ -55,6 +56,42 @@ describe('StatsigReporter', () => {
       window.location = new URL('http://localhost/page?other=bar');
       stripStableIdParam();
       expect(replaceStateStub.called).to.be.false;
+    });
+  });
+
+  describe('findOrCreateStableId with cross-domain param', () => {
+    const paramUuid = '550e8400-e29b-41d4-a716-446655440000';
+    let scriptEl;
+
+    beforeEach(() => {
+      // Simulate the data attribute emitted by Rails
+      scriptEl = document.createElement('script');
+      scriptEl.dataset.statsigParamId = paramUuid;
+      document.head.appendChild(scriptEl);
+      // Stub replaceState to avoid side effects from stripStableIdParam
+      stub(window.history, 'replaceState');
+      // Enable consent so cookies.set is called
+      window.OnetrustActiveGroups = ',C0002,';
+    });
+
+    afterEach(() => {
+      scriptEl.remove();
+      window.history.replaceState.restore();
+      cookies.remove('statsig_stable_id', {path: '/', domain: '.code.org'});
+      localStorage.removeItem('STATSIG_STABLE_ID');
+      delete window.OnetrustActiveGroups;
+    });
+
+    it('returns the param value when data attribute is present', () => {
+      const result = findOrCreateStableId();
+      expect(result).to.equal(paramUuid);
+    });
+
+    it('prefers the data attribute over an existing cookie', () => {
+      // Set a cookie without domain restriction so jsdom can read it
+      cookies.set('statsig_stable_id', 'old-cookie-value');
+      const result = findOrCreateStableId();
+      expect(result).to.equal(paramUuid);
     });
   });
 

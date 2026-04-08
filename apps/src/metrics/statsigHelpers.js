@@ -40,21 +40,24 @@ export function stripStableIdParam() {
   window.history.replaceState(window.history.state, '', url.toString());
 }
 
+// Read the cross-domain stable ID passed from code.ai via a data attribute
+// set by Rails in application.html.haml.
+function getParamStableId() {
+  if (typeof document === 'undefined') {
+    return null;
+  }
+  const el = document.querySelector('script[data-statsig-param-id]');
+  return el ? el.dataset.statsigParamId : null;
+}
+
 export function findOrCreateStableId() {
   stripStableIdParam();
 
+  const paramId = getParamStableId();
   const cookieId = cookies.get(STABLE_ID_KEY);
   const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
-  let stableId;
-
-  if (cookieId) {
-    // Prefer the cookie value if it exists
-    stableId = cookieId;
-  } else if (localStorageId) {
-    stableId = localStorageId;
-  } else {
-    stableId = createUuid();
-  }
+  // Prefer cross-domain param, then cookie, then localStorage, then new UUID.
+  const stableId = paramId || cookieId || localStorageId || createUuid();
 
   if (consentAllowsStatsigCookie()) {
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
