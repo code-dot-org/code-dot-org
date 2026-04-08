@@ -32,7 +32,9 @@ export const useInstructionsDrawer = ({
     DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT
   );
 
-  const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
+  const [containerAvailableHeight, setContainerAvailableHeight] = useState<
+    number | undefined
+  >(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
   >(DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT);
@@ -79,30 +81,25 @@ export const useInstructionsDrawer = ({
     }
   }, [isDragging, rawInstructionsHeight]);
 
-  const adjustChatHeight = useCallback(() => {
+  const adjustInstructionsHeight = useCallback(() => {
     const containerElement = containerRef.current;
     if (!containerElement) {
       return;
     }
     const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
+    setContainerAvailableHeight(availableHeight);
     if (isCollapsed) {
-      setChatHeight(availableHeight);
       setInstructionsHeight(0);
       return;
     }
-    setChatHeight(
-      Math.max(availableHeight - rawInstructionsHeight, MIN_CHAT_HEIGHT)
+    setInstructionsHeight(
+      Math.min(rawInstructionsHeight, availableHeight - MIN_CHAT_HEIGHT)
     );
-    const newInstructionsHeight = Math.min(
-      rawInstructionsHeight,
-      availableHeight - MIN_CHAT_HEIGHT
-    );
-    setInstructionsHeight(newInstructionsHeight);
   }, [isCollapsed, rawInstructionsHeight]);
 
-  const throttledAdjustChatHeight = useMemo(
-    () => throttle(adjustChatHeight, 30),
-    [adjustChatHeight]
+  const throttledAdjustInstructionsHeight = useMemo(
+    () => throttle(adjustInstructionsHeight, 30),
+    [adjustInstructionsHeight]
   );
 
   const updateScrollFade = useCallback(() => {
@@ -121,17 +118,17 @@ export const useInstructionsDrawer = ({
   }, []);
 
   useEffect(() => {
-    throttledAdjustChatHeight();
-    return () => throttledAdjustChatHeight.cancel();
-  }, [throttledAdjustChatHeight]);
+    throttledAdjustInstructionsHeight();
+    return () => throttledAdjustInstructionsHeight.cancel();
+  }, [throttledAdjustInstructionsHeight]);
 
   // Listen for window resize events.
   useEffect(() => {
-    window.addEventListener('resize', throttledAdjustChatHeight);
+    window.addEventListener('resize', throttledAdjustInstructionsHeight);
     return () => {
-      window.removeEventListener('resize', throttledAdjustChatHeight);
+      window.removeEventListener('resize', throttledAdjustInstructionsHeight);
     };
-  }, [throttledAdjustChatHeight]);
+  }, [throttledAdjustInstructionsHeight]);
 
   // Keep instructions at 50% of container height as the container resizes,
   // unless the user has manually dragged the resize bar or it's a predict level.
@@ -270,6 +267,16 @@ export const useInstructionsDrawer = ({
     sendLab2AnalyticsEvent(eventToReport);
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
+
+  const chatHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : isCollapsed
+      ? containerAvailableHeight
+      : Math.max(
+          containerAvailableHeight - (instructionsHeight ?? 0),
+          MIN_CHAT_HEIGHT
+        );
 
   return {
     containerRef,
