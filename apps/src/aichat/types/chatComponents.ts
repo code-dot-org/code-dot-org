@@ -24,6 +24,7 @@ export type ChatButtonClickHandler = (
 
 export type ChatButtonProps = {
   onClick: ChatButtonClickHandler;
+  disabled?: boolean;
 };
 
 export type ChatButtonComponent = React.ComponentType<ChatButtonProps>;
