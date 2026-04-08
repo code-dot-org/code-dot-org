@@ -238,7 +238,7 @@ module AichatRubyTypes
           kwargs.each do |name, value|
             AichatRubyTypes.assert_value_is_type(value, value_type, name)
           end
-          super(**kwargs)
+          super
         end
       end
 
@@ -274,7 +274,7 @@ module AichatRubyTypes
           types.each do |name, type|
             AichatRubyTypes.assert_value_is_type(kwargs[name], type, name)
           end
-          super(**kwargs)
+          super
         end
       end
 

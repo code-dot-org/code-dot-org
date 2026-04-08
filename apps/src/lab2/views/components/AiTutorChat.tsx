@@ -3,7 +3,7 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
   ChatButtonClickHandler,
@@ -68,12 +68,19 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
-      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+      ChatButton: ({
+        onClick,
+        disabled,
+      }: {
+        onClick: ChatButtonClickHandler;
+        disabled?: boolean;
+      }) => (
         <MuiButton
           variant="outlined"
           color="secondary"
           size="small"
           className={moduleStyles.chatButton}
+          disabled={disabled}
           onClick={() => onClick(button.value, button.analyticsProperties)}
           aria-label={button.label}
           startIcon={
@@ -96,6 +103,21 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
+
   if (loading || !modelParameters) {
     return (
       <div className={moduleStyles.loading}>
@@ -103,11 +125,6 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
       </div>
     );
   }
-
-  const lastMessagePostText =
-    viewingAiTutorVersionFileUpdates && versionFiles ? (
-      <AiTutorVersionActions files={versionFiles} />
-    ) : undefined;
 
   return (
     <div className={moduleStyles.container}>
@@ -126,8 +143,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
-        lastMessagePostText={lastMessagePostText}
         lessonId={lessonId}
+        renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
   );

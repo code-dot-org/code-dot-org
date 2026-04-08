@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -30,7 +31,6 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  isCompletedChatMessage,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -188,9 +188,9 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          chatEventsCurrent
-            .filter(isCompletedChatMessage)
-            .filter(event => event.status === Status.OK),
+          buildMessagesForModelHistory(chatEventsCurrent).filter(
+            event => event.status === Status.OK
+          ),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -200,7 +200,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
+          buildMessagesForModelHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );

@@ -207,9 +207,6 @@ namespace :build do
           raise exception
         end
       end
-
-      ChatClient.log 'Restarting <b>pegasus</b> web server.'
-      RakeUtils.restart_service CDO.pegasus_web_server_name unless rack_env?(:development)
     end
   end
 

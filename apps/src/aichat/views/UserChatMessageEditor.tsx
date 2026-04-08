@@ -4,6 +4,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -72,6 +73,10 @@ const UserChatMessageEditor: React.FunctionComponent<
     selectIsWaitingForChatResponse
   );
 
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
@@ -91,6 +96,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     isWaitingForChatResponse ||
     saveInProgress ||
     uploadsPending ||
+    viewingAiTutorVersionFileUpdates ||
     chatDisabled;
 
   const clearUserMessage = () => setUserMessage('');
@@ -183,7 +189,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
-            <ChatButton key={key} onClick={handleSubmit} />
+            <ChatButton key={key} onClick={handleSubmit} disabled={disabled} />
           ))}
         </div>
       )}
