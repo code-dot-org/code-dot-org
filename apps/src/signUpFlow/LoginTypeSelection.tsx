@@ -333,7 +333,8 @@ const LoginTypeSelection: React.FunctionComponent<{
               type="submit"
               startIcon={
                 <FontAwesomeV6Icon
-                  iconName="fa-kit fa-classlink"
+                  iconFamily="kit"
+                  iconName="classlink"
                   iconStyle="solid"
                 />
               }
