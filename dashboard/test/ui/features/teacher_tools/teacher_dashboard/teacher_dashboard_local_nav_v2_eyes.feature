@@ -44,7 +44,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
-  @skip
   @properties_encryption_key
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
