@@ -89,6 +89,7 @@ class AiRubricConfig
   #    ai-enabled learning goal in the database has a corresponding learning
   #    goal in the standard_rubric.csv file in S3.
   def self.validate_ai_config
+    return if CDO.aws_s3_emulated
     rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
     lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
     lesson_s3_names.each do |lesson_s3_name|
@@ -102,6 +103,7 @@ class AiRubricConfig
   end
 
   def self.validate_ai_config_for_rubric(rubric)
+    return if CDO.aws_s3_emulated
     s3_config_dir = rubric.s3_config_dir
     validate_s3_config_dir(s3_config_dir) if s3_config_dir.present?
     validate_learning_goals_for_rubric(rubric)
