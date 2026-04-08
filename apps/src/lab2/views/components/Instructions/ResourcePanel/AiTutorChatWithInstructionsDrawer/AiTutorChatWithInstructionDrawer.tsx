@@ -131,6 +131,21 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     [adjustChatHeight]
   );
 
+  const updateScrollFade = useCallback(() => {
+    const el = instructionsScrollAreaRef.current;
+    if (!el) {
+      setShowScrollFade(false);
+      return;
+    }
+    const visibleHeight = el.clientHeight;
+    // scrollHeight is a floating point, but scrollTop is an integer so rounding up so fade isn't triggered when at bottom.
+    const instructionsContentHeight = Math.ceil(el.scrollHeight);
+    const scrolledFromTopDistance = el.scrollTop;
+    setShowScrollFade(
+      scrolledFromTopDistance + visibleHeight < instructionsContentHeight
+    );
+  }, []);
+
   useEffect(() => {
     throttledAdjustChatHeight();
     return () => throttledAdjustChatHeight.cancel();
@@ -249,6 +264,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     // Watch for size changes (e.g., when details elements expand/collapse).
     const resizeObserver = new ResizeObserver(() => {
       updateMaxHeight();
+      updateScrollFade();
     });
 
     resizeObserver.observe(instructionsContentElement);
@@ -258,22 +274,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       // Reset so the next expand always restores full height from content.
       hasSetInitialHeightFromContentRef.current = false;
     };
-  }, [setRawInstructionsHeight, isCollapsed, isPredictLevel]);
-
-  const updateScrollFade = useCallback(() => {
-    const el = instructionsScrollAreaRef.current;
-    if (!el) {
-      setShowScrollFade(false);
-      return;
-    }
-    const visibleHeight = el.clientHeight;
-    // scrollHeight is a floating point, but scrollTop is an integer so rounding up so fade isn't triggered when at bottom.
-    const instructionsContentHeight = Math.ceil(el.scrollHeight);
-    const scrolledFromTopDistance = el.scrollTop;
-    setShowScrollFade(
-      scrolledFromTopDistance + visibleHeight < instructionsContentHeight
-    );
-  }, []);
+  }, [setRawInstructionsHeight, isCollapsed, isPredictLevel, updateScrollFade]);
 
   // Re-check fade whenever drawer height changes (resize, collapse).
   useEffect(() => {
