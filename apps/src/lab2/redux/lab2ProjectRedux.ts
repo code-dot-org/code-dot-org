@@ -108,9 +108,6 @@ const projectSlice = createSlice({
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
     },
-    setHasEdited(state, action: PayloadAction<boolean>) {
-      state.hasEdited = action.payload;
-    },
     resetHasEditedSinceLastVersionSave(state) {
       state.hasEditedSinceLastVersionSave = false;
     },
@@ -494,7 +491,6 @@ export const {
   setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
-  setHasEdited,
   resetHasEditedSinceLastVersionSave,
   setSource,
   setProjectTooLarge,

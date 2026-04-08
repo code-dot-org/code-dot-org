@@ -13,7 +13,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project, {
   createNewFile,
-  setHasEdited,
+  resetHasEditedSinceLastVersionSave,
   setProjectSource,
   setViewingOldVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -386,8 +386,9 @@ describe('VersionHistoryPanel', () => {
     };
 
     it('does not show save version panel when hasEdited is true but hasEditedSinceLastVersionSave is false', async () => {
-      // setHasEdited only sets hasEdited, not hasEditedSinceLastVersionSave
-      store.dispatch(setHasEdited(true));
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+      store.dispatch(resetHasEditedSinceLastVersionSave());
       renderDefault();
 
       await waitFor(
