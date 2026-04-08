@@ -164,11 +164,11 @@ export class StartNewProject extends React.Component {
         {!!showAboveFold && (
           <>
             <h4 className="new-project-heading" style={styles.headingStartNew}>
-              {i18n.projectCreateNew()}
+              {'Create a new project'}
             </h4>
             {!!blocksProjectTypes.length && (
               <NewProjectButtons
-                description={i18n.projectGroupBlocks()}
+                description={'Blocks'}
                 projectTypes={blocksProjectTypes}
               />
             )}

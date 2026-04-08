@@ -16,10 +16,12 @@ const ProjectsPromo = () => {
           <img src={appLabImg} alt="" className={moduleStyles.image} />
           <div className={moduleStyles.text}>
             <Typography variant="body2" sx={{fontWeight: 600}}>
-              {i18n.projectPromoHeading()}
+              {'Learn more about labs and widgets'}
             </Typography>
             <Typography variant="body3">
-              {i18n.projectPromoDescription()}
+              {
+                'Code.org labs and widgets let students explore computer science concepts through hands-on discovery, no structured course required.'
+              }
             </Typography>
           </div>
           <MuiButton
