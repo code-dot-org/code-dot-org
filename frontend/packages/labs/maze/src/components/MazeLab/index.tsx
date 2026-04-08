@@ -3,7 +3,7 @@ import {StartOverDialog} from '@code-dot-org/lab/dialogs';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {Blockly} from '@code-dot-org/blockly-workspace';
-import {useRef, useCallback, useState} from 'react';
+import {useRef, useCallback, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import {
   getToolboxWidth,
@@ -85,6 +85,13 @@ const MazeLab = () => {
   const [startOverOpen, setStartOverOpen] = useState<boolean>(false);
   const [showCode, setShowCode] = useState<string>('');
 
+  useEffect(() => {
+    return () => {
+      mazeRef.current?.uninitialize();
+      mazeRef.current = null;
+    };
+  }, []);
+
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
     if (toolboxHeaderRef.current && workspaceRef.current) {
@@ -149,6 +156,7 @@ const MazeLab = () => {
 
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg, environment: MazeEnvironment) => {
+      mazeRef.current?.uninitialize();
       mazeRef.current = new Maze(
         workspace,
         levelProperties,
@@ -211,8 +219,16 @@ const MazeLab = () => {
         <PanelContainer
           className={moduleStyles.visArea}
           id="vis-panel"
-          headerContent={<div>Play Area</div>}
+          headerContent={<div>Instructions</div>}
         >
+          <Panel className={moduleStyles.visUnderBox}>
+            <Instructions
+              skin={skin}
+              longInstructions={levelProperties.longInstructions || ''}
+              authoredHints={levelProperties.authoredHints}
+            />
+          </Panel>
+          <PanelContainerHeader>Play Area</PanelContainerHeader>
           <Panel className={moduleStyles.visBox}>
             <Visualization
               className={moduleStyles.visualization}
@@ -226,13 +242,6 @@ const MazeLab = () => {
               onReset={onReset}
               onStep={onStep}
               onFinish={() => {}}
-            />
-          </Panel>
-          <Panel className={moduleStyles.visUnderBox}>
-            <Instructions
-              skin={skin}
-              longInstructions={levelProperties.longInstructions || ''}
-              authoredHints={levelProperties.authoredHints}
             />
           </Panel>
         </PanelContainer>

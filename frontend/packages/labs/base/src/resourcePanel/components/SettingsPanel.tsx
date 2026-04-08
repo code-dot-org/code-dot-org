@@ -4,8 +4,11 @@ import {useEffect, useState} from 'react';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {localization, useLocalization} from '@code-dot-org/core';
-import type {LanguageInfo} from '@code-dot-org/core';
+import {
+  localization,
+  useLocalization,
+} from '@code-dot-org/core/plugins/localization';
+import type {LanguageInfo} from '@code-dot-org/core/plugins/localization';
 import {EVENTS} from '@code-dot-org/core/metrics';
 
 import PanelContainer from '../../components/PanelContainer';

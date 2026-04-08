@@ -157,17 +157,12 @@ class Maze extends EventTarget {
    * Will ensure that the controller can tear itself down gracefully.
    */
   uninitialize() {
-    // We need to remount the old <svg> so that the controller can uninitialize
-    const container = document.createElement('div');
-    container.style.display = 'hidden';
-    container.appendChild(this.svg);
-    document.body.appendChild(container);
-    if (this.controller) {
-      this.controller.reset(false);
-      this.controller.destroy?.();
-    }
+    this.controller?.reset(false);
+    this.controller?.destroy?.();
     this.soundBoard.stopAllAudio();
-    container.remove();
+
+    // Remove contents from svg
+    this.svg.innerHTML = '';
   }
 
   /**

@@ -1,15 +1,16 @@
 import classNames from 'classnames';
-import type {PropsWithChildren, ReactNode} from 'react';
+import type {ReactNode} from 'react';
 import {forwardRef} from 'react';
-import PanelContainerHeader from './PanelContainerHeader';
+import PanelContainerHeader, {
+  type PanelContainerHeaderProps,
+} from './PanelContainerHeader';
 
 import moduleStyles from './panelContainer.module.scss';
 
-export interface PanelContainerProps extends PropsWithChildren {
+export interface PanelContainerProps
+  extends Omit<PanelContainerHeaderProps, 'className'> {
   id: string;
   headerContent: ReactNode;
-  rightHeaderContent?: ReactNode;
-  leftHeaderContent?: ReactNode;
   hideHeaders?: boolean;
   className?: string;
   headerClassName?: string;
@@ -46,39 +47,19 @@ const PanelContainer = forwardRef<HTMLDivElement, PanelContainerProps>(
       id={id}
     >
       {!hideHeaders && (
-        <div
-          className={classNames(
-            'panelContainerHeader',
-            moduleStyles.panelContainerHeader,
-            headerClassName,
-          )}
+        <PanelContainerHeader
+          className={headerClassName}
+          leftHeaderContent={leftHeaderContent}
+          rightHeaderContent={rightHeaderContent}
         >
-          <div
-            className={classNames(
-              'panelContainerHeaderItemLeft',
-              moduleStyles.panelContainerHeaderItem,
-              moduleStyles.panelContainerHeaderItemLeft,
-            )}
-          >
-            {leftHeaderContent}
-          </div>
-          <PanelContainerHeader>{headerContent}</PanelContainerHeader>
-          <div
-            className={classNames(
-              'panelContainerHeaderItemRight',
-              moduleStyles.panelContainerHeaderItem,
-              moduleStyles.panelContainerHeaderItemRight,
-            )}
-          >
-            {rightHeaderContent}
-          </div>
-        </div>
+          {headerContent}
+        </PanelContainerHeader>
       )}
       {children}
     </div>
   ),
 );
 
-export {PanelContainerHeader};
+export {PanelContainerHeader, type PanelContainerHeaderProps};
 
 export default PanelContainer;

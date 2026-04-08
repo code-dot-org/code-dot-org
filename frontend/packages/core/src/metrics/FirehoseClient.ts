@@ -13,8 +13,8 @@ import {
   getEnvironmentFromHostname,
   isDevelopmentEnvironment,
   isTestEnvironment,
-  localization,
 } from '@code-dot-org/core';
+import {localization} from '@code-dot-org/core/plugins/localization';
 
 import {logError} from './NewRelicReporter';
 

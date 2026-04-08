@@ -2070,6 +2070,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/platform@workspace:packages/platform"
   dependencies:
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@reduxjs/toolkit": "npm:^2.8.2"

@@ -1,6 +1,6 @@
 import {markdownToTxt} from 'markdown-to-txt';
 
-import {localization} from '@code-dot-org/core';
+import {localization} from '@code-dot-org/core/plugins/localization';
 
 /**
  * Manages native Browser Text to Speech functionality.

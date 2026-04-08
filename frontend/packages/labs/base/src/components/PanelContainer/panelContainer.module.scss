@@ -18,6 +18,10 @@
     padding-inline: 0.5rem;
     position: relative;
 
+    &:not(:first-child) {
+      border-top: var(--lab-border-default);
+    }
+
     &Item {
       align-items: center;
       color: var(--text-neutral-quaternary);
