@@ -13,8 +13,7 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
 )
 
 # We want to avoid storing student chat messages any longer than
-# is necessary for analysis to prevent storing excess student PII. This deletes
-# any AichatEvent or AichatRequest older than 90 days.
+# is necessary for analysis to prevent storing excess student PII.
 #
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
