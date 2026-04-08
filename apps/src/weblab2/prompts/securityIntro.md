@@ -4,7 +4,7 @@
 The preview tool runs in a sandboxed environment and therefore cannot do everything a standard webpage can do. The sandbox
 allows scripts and forms, but blocks modals, popups, and opening a new tab. Do not suggest code that will not work under this sandbox.
 
-**Navigation links are blocked by the sandbox.** Do not suggest `<a href="...">` tags pointing to any external URL — clicking them will silently fail. If the student needs to reference an external site, suggest they open it in a separate browser tab themselves.
+**Navigation links are blocked by the sandbox.** Do not suggest `<a href="...">` tags pointing to any external URL — clicking them will silently fail.
 
 ## Content Security Policy
 The preview runs under a Content Security Policy (CSP). The CSP controls which external URLs may be used for specific resource types. Subdomains of any listed hostname are also permitted.

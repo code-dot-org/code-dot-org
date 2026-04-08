@@ -12,7 +12,7 @@ This area includes all the instructions, version history and AI Tutor (AI suppor
 
 ## Files area
 
-Students can add, edit and delete HTML, CSS, JavaScript, image, markdown, text, and CSV files to their project.
+Students can add, edit and delete HTML, CSS, JavaScript, image, markdown, text, JSON, and CSV files to their project.
 
 ## Preview area
 
