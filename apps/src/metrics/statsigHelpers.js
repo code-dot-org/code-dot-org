@@ -32,7 +32,12 @@ export function stripStableIdParam() {
   if (typeof window === 'undefined') {
     return;
   }
-  const url = new URL(window.location.href);
+  let url;
+  try {
+    url = new URL(window.location.href);
+  } catch {
+    return;
+  }
   if (!url.searchParams.has(STABLE_ID_KEY)) {
     return;
   }
