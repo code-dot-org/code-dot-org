@@ -84,6 +84,12 @@ describe('SummaryProgressRow', () => {
       lessonTutorPath: '/s/course/lessons/1/tutor',
     };
 
+    const nonTutorLesson = {
+      ...fakeLesson('Maze', 1, false, 3),
+      lessonTutorAvailable: false,
+      lessonTutorPath: '/s/course/lessons/1/tutor',
+    };
+
     let realIsEnabled;
     beforeEach(() => {
       realIsEnabled = experiments.isEnabled;
@@ -126,19 +132,10 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
-    it('does not show for assessment lessons', () => {
+    it('does not show when lessonTutorAvailable is false', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = setUp({
-        lesson: {...tutorLesson, assessment: true},
-        viewAs: ViewType.Participant,
-      });
-      expect(wrapper.text()).not.toContain('Lesson Tutor');
-    });
-
-    it('does not show for survey lessons', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({
-        lesson: {...tutorLesson, survey: true},
+        lesson: {...nonTutorLesson},
         viewAs: ViewType.Participant,
       });
       expect(wrapper.text()).not.toContain('Lesson Tutor');
