@@ -105,7 +105,6 @@
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
       cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
-      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
       cronjob at:'00 23 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'30 19 * * *', do:deploy_dir('bin', 'cron', 'monitor_mysql_to_redshift_zeroetl_integration') # Once a day roughly after the legacy DMS export completes.
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
