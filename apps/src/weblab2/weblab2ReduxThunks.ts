@@ -2,7 +2,11 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
-import {Notification} from '@cdo/apps/aichat/types/chatEvents';
+import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
+  Notification,
+} from '@cdo/apps/aichat/types/chatEvents';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   setAiTutorVersionFiles,
@@ -67,7 +71,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
       text: "You accepted AI Tutor's changes.",
-      notificationType: 'aiTutorVersionActionAccept',
+      notificationType: AI_TUTOR_VERSION_ACTION_ACCEPT,
       includeInChatHistory: true,
       files: files,
       commitDescription: commitDescription,
@@ -170,7 +174,7 @@ export const rejectAiTutorVersion = createAsyncThunk<
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
     text: "You rejected AI Tutor's changes.",
-    notificationType: 'aiTutorVersionActionReject',
+    notificationType: AI_TUTOR_VERSION_ACTION_REJECT,
     includeInChatHistory: true,
     files: files,
   };
