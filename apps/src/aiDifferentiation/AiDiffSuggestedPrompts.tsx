@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {setSelectedPrompt} from '@cdo/apps/aichat/redux/slice';
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import {setSelectedPrompt} from '@cdo/apps/aiDifferentiation/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatPrompt} from './types';
@@ -17,7 +17,9 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
   isLatest,
   onSubmit,
 }) => {
-  const selectedPrompt = useAppSelector(state => state.aichat.selectedPrompt);
+  const selectedPrompt = useAppSelector(
+    state => state.aiDiffChat.selectedPrompt
+  );
 
   const dispatch = useAppDispatch();
 
