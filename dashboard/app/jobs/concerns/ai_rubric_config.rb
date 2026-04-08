@@ -6,7 +6,7 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-09-05-lesson-7-release/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2026-04-06-claude-4-update/'.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError

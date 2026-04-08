@@ -2,12 +2,12 @@ import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import AiDiffDrawer from '@cdo/apps/aiDifferentiation/AiDiffDrawer';
 import {
-  aichatReducer,
   setChatIsOpen,
   setPendingArtifactMessage,
-} from '@cdo/apps/aichat/redux/slice';
-import AiDiffDrawer from '@cdo/apps/aiDifferentiation/AiDiffDrawer';
+} from '@cdo/apps/aiDifferentiation/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -72,7 +72,7 @@ describe('AiDiffDrawer', () => {
     registerReducers({
       currentUser,
       teacherSections,
-      aichat: aichatReducer,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({

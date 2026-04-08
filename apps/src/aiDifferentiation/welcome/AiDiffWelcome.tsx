@@ -5,11 +5,11 @@ import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   setInitialChatMessage,
   setThreadMessages,
-} from '@cdo/apps/aichat/redux/slice';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+} from '@cdo/apps/aiDifferentiation/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
