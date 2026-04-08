@@ -52,6 +52,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const instructionsContentRef = useRef<HTMLDivElement>(null);
   const instructionsHeightAtDragStartRef = useRef<number | null>(null);
   const hasSetInitialHeightFromContentRef = useRef(false);
+  const hasUserManuallyResizedRef = useRef(false);
+  const maxInstructionsHeightRef = useRef<number | undefined>(undefined);
   const rawInstructionsHeightRef = useRef<number>(
     DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT
   );
@@ -92,6 +94,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
           : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED;
       if (endHeight !== startHeight) {
+        hasUserManuallyResizedRef.current = true;
         sendLab2AnalyticsEvent(eventToReport, {
           startHeight: startHeight,
           endHeight: endHeight,
@@ -139,14 +142,54 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     };
   }, [throttledAdjustChatHeight]);
 
+  // Keep instructions at 50% of container height as the container resizes,
+  // unless the user has manually dragged the resize bar or it's a predict level.
+  useEffect(() => {
+    const containerElement = containerRef.current;
+    if (!containerElement || isCollapsed || isPredictLevel) return;
+
+    const handleContainerResize = throttle(() => {
+      if (
+        hasUserManuallyResizedRef.current ||
+        !hasSetInitialHeightFromContentRef.current
+      ) {
+        return;
+      }
+      const availableHeight =
+        containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
+      const halfContainer = Math.max(
+        availableHeight / 2,
+        MIN_INSTRUCTIONS_HEIGHT
+      );
+      const contentMax =
+        maxInstructionsHeightRef.current !== undefined
+          ? maxInstructionsHeightRef.current +
+            INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX
+          : halfContainer;
+      setRawInstructionsHeight(Math.min(halfContainer, contentMax));
+    }, 30);
+
+    const resizeObserver = new ResizeObserver(handleContainerResize);
+    resizeObserver.observe(containerElement);
+
+    return () => {
+      handleContainerResize.cancel();
+      resizeObserver.disconnect();
+    };
+  }, [isCollapsed, isPredictLevel, setRawInstructionsHeight]);
+
   useEffect(() => {
     setIsCollapsed(isCollapsedByDefault);
   }, [isCollapsedByDefault]);
 
-  // Keep ref in sync with current height.
+  // Keep refs in sync with current values.
   useEffect(() => {
     rawInstructionsHeightRef.current = rawInstructionsHeight;
   }, [rawInstructionsHeight]);
+
+  useEffect(() => {
+    maxInstructionsHeightRef.current = maxInstructionsHeight;
+  }, [maxInstructionsHeight]);
 
   // Measure the instructions content height on load and when it changes,
   // (e.g., details elements expanded/collapsed), and set the drawer height to match.
@@ -156,6 +199,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     if (isCollapsed) {
       return () => {
         hasSetInitialHeightFromContentRef.current = false;
+        hasUserManuallyResizedRef.current = false;
       };
     }
 
