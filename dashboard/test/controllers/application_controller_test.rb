@@ -204,6 +204,51 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'initialize_statsig_stable_id' do
+    it 'sets cookie and session from valid URL param' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      get root_path, params: {statsig_stable_id: uuid}
+      assert_equal uuid, response.cookies['statsig_stable_id']
+    end
+
+    it 'accepts uppercase UUIDs' do
+      uuid = '550E8400-E29B-41D4-A716-446655440000'
+      get root_path, params: {statsig_stable_id: uuid}
+      assert_equal uuid, response.cookies['statsig_stable_id']
+    end
+
+    it 'ignores invalid param value' do
+      get root_path, params: {statsig_stable_id: 'not-a-uuid'}
+      assert_nil response.cookies['statsig_stable_id']
+    end
+
+    it 'ignores empty param value' do
+      get root_path, params: {statsig_stable_id: ''}
+      assert_nil response.cookies['statsig_stable_id']
+    end
+
+    it 'overrides existing cookie when valid param is present' do
+      old_uuid = '00000000-0000-0000-0000-000000000001'
+      new_uuid = '00000000-0000-0000-0000-000000000002'
+      cookies[:statsig_stable_id] = old_uuid
+      get root_path, params: {statsig_stable_id: new_uuid}
+      assert_equal new_uuid, response.cookies['statsig_stable_id']
+    end
+
+    it 'preserves existing cookie when no param is present' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      cookies[:statsig_stable_id] = uuid
+      get root_path
+      # No new Set-Cookie header means the existing cookie is untouched
+      assert_nil response.cookies['statsig_stable_id']
+    end
+
+    it 'rejects script injection attempts' do
+      get root_path, params: {statsig_stable_id: '<script>alert(1)</script>'}
+      assert_nil response.cookies['statsig_stable_id']
+    end
+  end
+
   describe 'exception handling' do
     it 'gracefully handles UnsafeRedirectErrors' do
       Rails.logger.expects(:warn).once

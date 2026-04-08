@@ -26,7 +26,23 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
+// Remove statsig_stable_id from the visible URL (set by code.ai cross-domain
+// navigation). The value has already been consumed server-side by Rails.
+export function stripStableIdParam() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  const url = new URL(window.location.href);
+  if (!url.searchParams.has(STABLE_ID_KEY)) {
+    return;
+  }
+  url.searchParams.delete(STABLE_ID_KEY);
+  window.history.replaceState(window.history.state, '', url.toString());
+}
+
 export function findOrCreateStableId() {
+  stripStableIdParam();
+
   const cookieId = cookies.get(STABLE_ID_KEY);
   const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
   let stableId;
