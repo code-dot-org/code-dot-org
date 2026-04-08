@@ -1,11 +1,28 @@
-import {Typography} from '@mui/material';
-import type {TypographyProps} from '@mui/material/Typography';
 import type {Meta, StoryObj} from '@storybook/react-vite';
+
+import Typography, {
+  StrongText,
+  EmText,
+  BodyOneText,
+  BodyTwoText,
+  BodyThreeText,
+  BodyFourText,
+  OverlineOneText,
+  OverlineTwoText,
+  OverlineThreeText,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+  Figcaption,
+} from '../index';
 
 export default {
   title: 'DesignSystem/Typography',
   component: Typography,
-} as Meta<typeof Typography>;
+} as Meta;
 
 type Story = StoryObj<typeof Typography>;
 
@@ -18,62 +35,64 @@ type Story = StoryObj<typeof Typography>;
  */
 export const Playground: Story = {
   args: {
-    component: 'p',
-    variant: 'body2',
+    semanticTag: 'p',
+    visualAppearance: 'body-two',
     children: 'This is a dynamic Typography Component.',
-  } as TypographyProps,
+  },
 };
 
 export const AllTypographyElements: Story = {
   render: () => (
     <>
-      <Typography variant="h1" gutterBottom>
+      <Typography semanticTag="h1" visualAppearance="heading-xxl">
         This is a Typography Component. (H1)
       </Typography>
-      <Typography variant="h2" gutterBottom>
+      <Typography semanticTag="h2" visualAppearance="heading-xl">
         This is a Typography Component. (H2)
       </Typography>
-      <Typography variant="h3" gutterBottom>
+      <Typography semanticTag="h3" visualAppearance="heading-lg">
         This is a Typography Component. (H3)
       </Typography>
-      <Typography variant="h4" gutterBottom>
+      <Typography semanticTag="h4" visualAppearance="heading-md">
         This is a Typography Component. (H4)
       </Typography>
-      <Typography variant="h5" gutterBottom>
+      <Typography semanticTag="h5" visualAppearance="heading-sm">
         This is a Typography Component. (H5)
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography semanticTag="h6" visualAppearance="heading-xs">
         This is a Typography Component. (H6)
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="body-one">
         This is a Typography Component. (body-one)
       </Typography>
-      <Typography variant="body2" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="body-two">
         This is a Typography Component. (body-two)
       </Typography>
-      <Typography variant="body3" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="body-three">
         This is a Typography Component. (body-three)
       </Typography>
-      <Typography variant="body4" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="body-four">
         This is a Typography Component. (body-four)
       </Typography>
-      <Typography variant="overline1" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="overline-one">
         This is a Typography Component. (overline-one)
       </Typography>
-      <Typography variant="overline2" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="overline-two">
         This is a Typography Component. (overline-two)
       </Typography>
-      <Typography variant="overline3" gutterBottom>
+      <Typography semanticTag="p" visualAppearance="overline-three">
         This is a Typography Component. (overline-three)
       </Typography>
-      <Typography variant="em">This is a Typography Component. (em)</Typography>
-      <Typography variant="strong">
+      <Typography semanticTag="em" visualAppearance="em">
+        This is a Typography Component. (em)
+      </Typography>
+      <Typography semanticTag="strong" visualAppearance="strong">
         This is a Typography Component. (strong)
       </Typography>
-      <Typography variant="figcaption" gutterBottom>
+      <Typography semanticTag="figcaption" visualAppearance="figcaption">
         This is a Typography Component. (figcaption)
       </Typography>
-      <Typography component="div" variant="body2" gutterBottom>
+      <Typography semanticTag="div" visualAppearance="body-two">
         <p>
           This is a Typography Component that wraps text elements. (div)
           <br />
@@ -98,24 +117,12 @@ export const AllTypographyElements: Story = {
 export const Headings: Story = {
   render: () => (
     <>
-      <Typography variant="h1" gutterBottom>
-        This is a Typography Component. (H1)
-      </Typography>
-      <Typography variant="h2" gutterBottom>
-        This is a Typography Component. (H2)
-      </Typography>
-      <Typography variant="h3" gutterBottom>
-        This is a Typography Component. (H3)
-      </Typography>
-      <Typography variant="h4" gutterBottom>
-        This is a Typography Component. (H4)
-      </Typography>
-      <Typography variant="h5" gutterBottom>
-        This is a Typography Component. (H5)
-      </Typography>
-      <Typography variant="h6" gutterBottom>
-        This is a Typography Component. (H6)
-      </Typography>
+      <Heading1>This is a Typography Component. (H1)</Heading1>
+      <Heading2>This is a Typography Component. (H2)</Heading2>
+      <Heading3>This is a Typography Component. (H3)</Heading3>
+      <Heading4>This is a Typography Component. (H4)</Heading4>
+      <Heading5>This is a Typography Component. (H5)</Heading5>
+      <Heading6>This is a Typography Component. (H6)</Heading6>
     </>
   ),
 };
@@ -123,18 +130,12 @@ export const Headings: Story = {
 export const BodyTexts: Story = {
   render: () => (
     <>
-      <Typography variant="body1" gutterBottom>
-        This is a Typography Component. (body-one)
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        This is a Typography Component. (body-two)
-      </Typography>
-      <Typography variant="body3" gutterBottom>
+      <BodyOneText>This is a Typography Component. (body-one)</BodyOneText>
+      <BodyTwoText>This is a Typography Component. (body-two)</BodyTwoText>
+      <BodyThreeText>
         This is a Typography Component. (body-three)
-      </Typography>
-      <Typography variant="body4" gutterBottom>
-        This is a Typography Component. (body-four)
-      </Typography>
+      </BodyThreeText>
+      <BodyFourText>This is a Typography Component. (body-four)</BodyFourText>
     </>
   ),
 };
@@ -142,15 +143,15 @@ export const BodyTexts: Story = {
 export const OverlineTexts: Story = {
   render: () => (
     <>
-      <Typography variant="overline1" gutterBottom>
+      <OverlineOneText>
         This is a Typography Component. (overline-one)
-      </Typography>
-      <Typography variant="overline2" gutterBottom>
+      </OverlineOneText>
+      <OverlineTwoText>
         This is a Typography Component. (overline-two)
-      </Typography>
-      <Typography variant="overline3" gutterBottom>
+      </OverlineTwoText>
+      <OverlineThreeText>
         This is a Typography Component. (overline-three)
-      </Typography>
+      </OverlineThreeText>
     </>
   ),
 };
@@ -158,13 +159,9 @@ export const OverlineTexts: Story = {
 export const OtherTexts: Story = {
   render: () => (
     <>
-      <Typography variant="em">This is a Typography Component. (em)</Typography>
-      <Typography variant="strong">
-        This is a Typography Component. (strong)
-      </Typography>
-      <Typography variant="figcaption" gutterBottom>
-        This is a Typography Component. (figcaption)
-      </Typography>
+      <EmText>This is a Typography Component. (em)</EmText>
+      <StrongText>This is a Typography Component. (strong)</StrongText>
+      <Figcaption>This is a Typography Component. (figcaption)</Figcaption>
     </>
   ),
 };
@@ -172,17 +169,17 @@ export const OtherTexts: Story = {
 export const TextWrapper: Story = {
   render: () => (
     <>
-      <Typography component="div" variant="h3" gutterBottom>
+      <Typography semanticTag="div" visualAppearance="heading-lg">
         <h1>h1 child styled as an h3</h1>
       </Typography>
-      <Typography component="div" variant="body1" gutterBottom>
+      <Typography semanticTag="div" visualAppearance="body-one">
         <p>paragraph element child, styled as body-one</p>
         <ul>
           <li>child list items</li>
           <li>are also styled as body-one</li>
         </ul>
       </Typography>
-      <Typography component="div" variant="body3" gutterBottom>
+      <Typography semanticTag="div" visualAppearance="body-three">
         <p>
           paragraph element child here containing <strong>bold</strong> and{' '}
           <em>emphasized</em> inline elements, styled as body-three
@@ -195,14 +192,14 @@ export const TextWrapper: Story = {
 export const CustomUsageExamples: Story = {
   render: () => (
     <>
-      <Typography component="h1" variant="h3" gutterBottom>
+      <Heading1 visualAppearance="heading-lg">
         (Heading1 as Heading3) This is a Typography Component. (H1 as H3)
-      </Typography>
-      <Typography component="h2" variant="body1" gutterBottom>
+      </Heading1>
+      <Typography semanticTag="h2" visualAppearance="body-one">
         (Heading2 as body-one) This is a Typography Component. (H2 as
         p.body-one)
       </Typography>
-      <Typography component="h3" variant="h5" gutterBottom>
+      <Typography semanticTag="h3" visualAppearance="heading-sm">
         (Heading3 as Heading5) This is a Typography Component. (H3 as H5)
       </Typography>
     </>
@@ -212,24 +209,22 @@ export const CustomUsageExamples: Story = {
 export const RichTextExamples: Story = {
   render: () => (
     <>
-      <Typography variant="body2" gutterBottom>
-        <Typography variant="em">This is a body-two em text</Typography>
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        <Typography variant="strong">This is a body-two strong text</Typography>
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        <Typography variant="strong">
-          <Typography variant="em">
-            This is a body-two strong em text
-          </Typography>
-        </Typography>
-      </Typography>
-      <Typography variant="em">This is an em text</Typography>
-      <Typography variant="strong">This is a strong text</Typography>
-      <Typography variant="em">
-        <Typography variant="strong">This is a strong em text</Typography>
-      </Typography>
+      <BodyTwoText>
+        <EmText>This is a body-two em text</EmText>
+      </BodyTwoText>
+      <BodyTwoText>
+        <StrongText>This is a body-two strong text</StrongText>
+      </BodyTwoText>
+      <BodyTwoText>
+        <StrongText>
+          <EmText>This is a body-two strong em text</EmText>
+        </StrongText>
+      </BodyTwoText>
+      <EmText>This is an em text</EmText>
+      <StrongText>This is a strong text</StrongText>
+      <EmText>
+        <StrongText>This is a strong em text</StrongText>
+      </EmText>
     </>
   ),
 };
@@ -238,13 +233,13 @@ export const ElementsWithNoMargin: Story = {
   render: () => (
     <>
       <hr />
-      <Typography variant="h6">Heading without margins</Typography>
+      <Heading6 noMargin>Heading without margins</Heading6>
       <hr />
-      <Typography variant="body2">Paragraph without margins</Typography>
+      <BodyTwoText noMargin>Paragraph without margins</BodyTwoText>
       <hr />
-      <Typography variant="strong">Strong text without margins</Typography>
+      <StrongText noMargin>Strong text without margins</StrongText>
       <hr />
-      <Typography variant="em">Italic text without margins</Typography>
+      <EmText noMargin>Italic text without margins</EmText>
       <hr />
     </>
   ),
