@@ -145,6 +145,7 @@ netsim_redis_groups:
 
 # custom database config for CI
 db_endpoint_writer: 'ci-tests-mysql'
+db_writer: 'mysql://root:@ci-tests-mysql:3306/'
 
 # CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>
