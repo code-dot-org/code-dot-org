@@ -15,10 +15,10 @@ import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtra
 import LessonTutorProgressBubble from '@cdo/apps/templates/progress/LessonTutorProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import color from '../../../util/color';
-import experiments from '../../../util/experiments';
 import {canChangeLevelInPage} from '../../browserNavigation';
 
 /**
