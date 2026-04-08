@@ -12,6 +12,9 @@ import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project, {
+  createNewFile,
+  setHasEdited,
+  setProjectSource,
   setViewingOldVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
@@ -369,6 +372,87 @@ describe('VersionHistoryPanel', () => {
     if (restoreButton) {
       expect(restoreButton).toBeDisabled();
     }
+  });
+
+  describe('save version panel', () => {
+    const SOURCE_WITH_FILE = {
+      source: {
+        files: {
+          file1: {id: 'file1', name: 'index.html', contents: '<p>hi</p>'},
+        },
+        folders: {},
+        openFiles: ['file1'],
+      },
+    };
+
+    it('does not show save version panel when hasEdited is true but hasEditedSinceLastVersionSave is false', async () => {
+      // setHasEdited only sets hasEdited, not hasEditedSinceLastVersionSave
+      store.dispatch(setHasEdited(true));
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      expect(
+        screen.queryByPlaceholderText('Describe your changes')
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows save version panel after an edit action sets hasEditedSinceLastVersionSave', async () => {
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      // createNewFile sets both hasEdited and hasEditedSinceLastVersionSave
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      expect(
+        screen.getByPlaceholderText('Describe your changes')
+      ).toBeInTheDocument();
+    });
+
+    it('hides save version panel after saving a version but keeps hasEdited true', async () => {
+      mockedProjectManager = {
+        ...mockedProjectManager,
+        save: jest.fn(() => Promise.resolve()),
+        getCurrentVersionId: jest.fn(() => null),
+      } as unknown as jest.Mocked<ProjectManager>;
+      Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      const textarea = screen.getByPlaceholderText('Describe your changes');
+      const user = userEvent.setup();
+      await user.type(textarea, 'my changes');
+
+      const saveButton = screen.getByRole('button', {
+        name: /save current version/i,
+      });
+      await user.click(saveButton);
+
+      await waitFor(() => {
+        expect(
+          screen.queryByPlaceholderText('Describe your changes')
+        ).not.toBeInTheDocument();
+      });
+
+      // hasEdited must remain true — it tracks edits for the whole session
+      expect(store.getState().lab2Project.hasEdited).toBe(true);
+    });
   });
 
   it('collapses and expands auto-save groups when collapse button is clicked', async () => {
