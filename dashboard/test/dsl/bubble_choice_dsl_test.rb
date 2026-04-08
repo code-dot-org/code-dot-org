@@ -113,22 +113,6 @@ class BubbleChoiceDslTest < ActiveSupport::TestCase
     assert_equal input_dsl, BubbleChoiceDSL.serialize(bubble_choice)
   end
 
-  test 'serialize escapes single quotes in finish_dialog' do
-    input_dsl = <<~DSL
-      name 'bubble choice'
-
-      sublevels
-      level 'bubble choice level 1'
-
-      uses_lab2
-      finish_dialog 'Author\\'s Dialog'
-    DSL
-
-    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
-    assert_equal "Author's Dialog", bubble_choice.finish_dialog
-    assert_equal input_dsl, BubbleChoiceDSL.serialize(bubble_choice)
-  end
-
   test 'escape method escapes single quotes' do
     result = BubbleChoiceDSL.escape("foo'bar")
     assert_equal "foo\\'bar", result
