@@ -790,7 +790,9 @@ class ManageStudentsTable extends Component {
           {this.isMoveStudentsEnabled() && (
             <div style={styles.button}>
               <MoveStudents
-                studentData={this.studentDataMinusBlanks()}
+                studentData={this.studentDataMinusBlanks().filter(
+                  s => !s.isDemoStudent
+                )}
                 transferData={transferData}
                 transferStatus={transferStatus}
               />
