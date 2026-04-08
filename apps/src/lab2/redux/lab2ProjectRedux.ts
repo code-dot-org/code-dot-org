@@ -29,6 +29,7 @@ export interface Lab2ProjectState {
   viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
+  hasEditedSinceLastVersionSave: boolean;
   projectTooLarge: boolean;
   lastSavedLabConfig: LabConfig | undefined;
   projectSourceLevelId: number | undefined;
@@ -43,6 +44,7 @@ const initialState: Lab2ProjectState = {
   viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
+  hasEditedSinceLastVersionSave: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
   projectSourceLevelId: undefined,
@@ -104,6 +106,9 @@ const projectSlice = createSlice({
     setHasEdited(state, action: PayloadAction<boolean>) {
       state.hasEdited = action.payload;
     },
+    resetHasEditedSinceLastVersionSave(state) {
+      state.hasEditedSinceLastVersionSave = false;
+    },
     setProjectTooLarge(state, action: PayloadAction<boolean>) {
       state.projectTooLarge = action.payload;
     },
@@ -128,6 +133,7 @@ const projectSlice = createSlice({
           }),
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     createNewExternalFile(
@@ -155,6 +161,7 @@ const projectSlice = createSlice({
           source: newSource,
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     renameFile(
@@ -184,6 +191,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     saveFile(
@@ -216,6 +224,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     setFileType(
@@ -245,6 +254,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     activateFile(state, action: PayloadAction<FileId>) {
@@ -292,6 +302,7 @@ const projectSlice = createSlice({
           source: deleteResult.newSource,
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     moveFile(
@@ -322,6 +333,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     moveFolder(
@@ -352,6 +364,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     createNewFolder(
@@ -368,6 +381,7 @@ const projectSlice = createSlice({
           ),
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     toggleOpenFolder(state, action: PayloadAction<FolderId>) {
@@ -411,6 +425,7 @@ const projectSlice = createSlice({
           source: deleteResult.newSource,
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     renameFolder(
@@ -441,6 +456,7 @@ const projectSlice = createSlice({
           },
         };
         state.hasEdited = true;
+        state.hasEditedSinceLastVersionSave = true;
       }
     },
     rearrangeFiles(state, action: PayloadAction<FileId[]>) {
@@ -461,6 +477,7 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.hasEditedSinceLastVersionSave = false;
       state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
@@ -484,6 +501,7 @@ export const {
   setRestoredOldVersion,
   resetProjectMetadata,
   setHasEdited,
+  resetHasEditedSinceLastVersionSave,
   setSource,
   setProjectTooLarge,
   createNewFile,
