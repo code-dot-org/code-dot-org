@@ -83,6 +83,7 @@ const initialState: Lab2ProjectState = {
   projectSourceBeforeAiTutorVersion: undefined,
   restoredOldVersion: false,
   hasEdited: false,
+  hasEditedSinceLastVersionSave: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
   projectSourceLevelId: undefined,
