@@ -27248,6 +27248,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-csd1-2025:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-csd1-2025
+          title: Problem Solving
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-facilitators-aif2-intro-2026:
           lessons: {}
           lesson_groups: {}
