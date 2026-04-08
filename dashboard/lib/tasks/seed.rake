@@ -569,6 +569,12 @@ namespace :seed do
     end
   end
 
+  # Script seeding already validates rubrics (see script_seed.rb), but only
+  # when a .script_json file has changed (gated by md5). When a developer
+  # updates S3_AI_RELEASE_PATH without changing any .script_json files, script
+  # seeding is skipped and those validations never run. This task ensures AI
+  # rubric config is validated on every full seed regardless, ideally catching
+  # any issues on staging, before they reach production.
   timed_task_with_logging validate_ai_rubrics: :environment do
     AiRubricConfig.validate_ai_config
   end
