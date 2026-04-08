@@ -109,12 +109,6 @@ class AiRubricConfig
     validate_learning_goals_for_rubric(rubric)
   end
 
-  def self.get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
-  end
-
   private_class_method def self.validate_s3_config_dir(lesson_s3_name)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
@@ -146,5 +140,11 @@ class AiRubricConfig
     if missing_learning_goals.any?
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
+  end
+
+  private_class_method def self.get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
   end
 end
