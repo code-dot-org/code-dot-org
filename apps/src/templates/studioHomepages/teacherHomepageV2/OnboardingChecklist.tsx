@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
+import {Tour} from 'shepherd.js';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -10,11 +11,19 @@ const CHECKLIST_ITEMS = [
   {label: 'Create a class section', completed: true},
 ];
 
-const OnboardingChecklist: React.FC = () => {
+interface OnboardingChecklistProps {
+  onboardingTour: Tour | null;
+}
+
+const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
+  onboardingTour,
+}) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
-  const handleButtonClick = () => {
-    console.log('Tour started');
+  const handleButtonClick = (label: string) => {
+    if (label === 'Create a class section') {
+      onboardingTour?.start();
+    }
   };
 
   if (isHidden) {
@@ -25,7 +34,10 @@ const OnboardingChecklist: React.FC = () => {
     <div className={styles.onboardingChecklistOuter}>
       <div className={styles.onboardingChecklistInner}>
         <Typography variant="h4" gutterBottom>
-          ✦ Where should we start?
+          <span className={styles.gradientIcon}>
+            <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
+          </span>
+          Where should we start?
         </Typography>
         <Typography variant="body2">
           Teaching Assistant can help you get started with Code.org
@@ -37,7 +49,7 @@ const OnboardingChecklist: React.FC = () => {
               variant="outlined"
               color="secondary"
               className={styles.onboardingChecklistButton}
-              onClick={handleButtonClick}
+              onClick={() => handleButtonClick(label)}
               type="button"
             >
               {completed && (

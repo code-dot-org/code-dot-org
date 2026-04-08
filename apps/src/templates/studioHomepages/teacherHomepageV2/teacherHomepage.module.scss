@@ -427,6 +427,22 @@
   margin-inline-start: 8px;
 }
 
+.gradientIcon {
+  background: linear-gradient(
+    to right,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  padding-right: 4px;
+}
+
 .onboardingChecklistOuter {
   align-items: center;
   display: flex;
