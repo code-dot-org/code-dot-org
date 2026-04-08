@@ -31,7 +31,7 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
-const orange = 'rgb(255, 164, 0)';
+const teal = '#007785';
 const white = 'rgb(255, 255, 255)';
 
 module.exports = {
@@ -70,9 +70,9 @@ module.exports = {
         );
 
         assert.equal(
-          orange,
+          teal,
           $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
+          'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
@@ -451,9 +451,9 @@ module.exports = {
         // enter design mode
         $('#designModeButton').click();
         assert.equal(
-          orange,
+          teal,
           $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
+          'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
@@ -487,9 +487,9 @@ module.exports = {
           'expected Design button (inactive) to have white background.'
         );
         assert.equal(
-          orange,
+          teal,
           $('#codeModeButton').css('background-color'),
-          'expected Code button (active) to have orange background.'
+          'expected Code button (active) to have teal background.'
         );
 
         // should be on screen 2
@@ -585,9 +585,9 @@ module.exports = {
 
         // design toggle row still shows design mode
         assert.equal(
-          orange,
+          teal,
           $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
+          'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
