@@ -111,17 +111,6 @@ class AiRubricConfig
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
-  # For each rubric with ai-enabled learning goals, validate that the rubric
-  # has s3_config_dir set and that every ai-enabled learning goal in the
-  # database has a corresponding learning goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals(rubrics)
-    rubrics.each do |rubric|
-      validate_learning_goals_for_rubric(rubric)
-    rescue StandardError => exception
-      raise "Error validating learning goals for rubric #{rubric.id} (level #{rubric.level&.name.inspect}): #{exception.message}"
-    end
-  end
-
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
     return if db_learning_goals.empty?
