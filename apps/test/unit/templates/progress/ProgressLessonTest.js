@@ -355,6 +355,7 @@ describe('ProgressLesson', () => {
       ...fakeLesson('lesson1', 1, false, lessonNumber),
       lessonTutorAvailable: true,
       lessonTutorPath: '/s/course/lessons/1/tutor',
+      hasLessonPlan: true,
     };
     const tutorProps = {
       ...defaultProps,
@@ -370,7 +371,7 @@ describe('ProgressLesson', () => {
       experiments.isEnabled = realIsEnabled;
     });
 
-    it('shows when experiment is enabled, viewing as participant', () => {
+    it('shows when experiment is enabled, viewing as participant, hasLessonPlan is true', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = shallow(<ProgressLesson {...tutorProps} />);
       expect(wrapper.text()).toContain('Lesson Tutor');
@@ -398,23 +399,12 @@ describe('ProgressLesson', () => {
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
-    it('does not show for assessment lessons', () => {
+    it('does not show when hasLessonPlan is false', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = shallow(
         <ProgressLesson
           {...tutorProps}
-          lesson={{...tutorLesson, assessment: true}}
-        />
-      );
-      expect(wrapper.text()).not.toContain('Lesson Tutor');
-    });
-
-    it('does not show for survey lessons', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = shallow(
-        <ProgressLesson
-          {...tutorProps}
-          lesson={{...tutorLesson, survey: true}}
+          lesson={{...tutorLesson, hasLessonPlan: false}}
         />
       );
       expect(wrapper.text()).not.toContain('Lesson Tutor');
