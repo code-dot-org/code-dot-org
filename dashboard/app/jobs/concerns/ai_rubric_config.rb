@@ -86,7 +86,10 @@ class AiRubricConfig
   #    s3_config_dir and that each ai-enabled learning goal has a matching
   #    entry in standard_rubric.csv.
   def self.validate_ai_config
-    Parallel.each(Rubric.all.to_a, in_processes: 10) do |rubric|
+    # Use 4 threads to parallelize S3 reads. Limited to 4 because the
+    # ActiveRecord connection pool is 5 (see database.yml) and the main
+    # thread holds one connection.
+    Parallel.each(Rubric.all.to_a, in_threads: 4) do |rubric|
       validate_ai_config_for_rubric(rubric)
     end
 
