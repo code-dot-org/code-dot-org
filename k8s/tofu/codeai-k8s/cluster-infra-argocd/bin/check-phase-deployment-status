@@ -19,14 +19,6 @@ EXPECTED_WORKLOADS = [
   {app: "codeai-test", kind: "Deployment", namespace: "test", name: "test-cdo-dashboard"},
 ].freeze
 
-EXPECTED_NAMESPACES = [
-  {app: "argocd", namespace: "argocd"},
-  {app: "dex", namespace: "dex"},
-  {app: "external-dns", namespace: "external-dns"},
-  {app: "external-secrets-operator", namespace: "external-secrets"},
-  {app: "kargo", namespace: "kargo"},
-].freeze
-
 script_dir = File.expand_path(__dir__)
 cluster_dir = File.expand_path("../../cluster", script_dir)
 cluster_stdout, cluster_stderr, cluster_status = Open3.capture3("tofu", "output", "-json", chdir: cluster_dir)
@@ -72,7 +64,7 @@ Tempfile.create("kubeconfig") do |kubeconfig|
   YAML
   kubeconfig.flush
 
-  stdout, stderr, status = Open3.capture3("kubectl", "--kubeconfig", kubeconfig.path, "get", "deployment,statefulset,namespaces", "-A", "-o", "json")
+  stdout, stderr, status = Open3.capture3("kubectl", "--kubeconfig", kubeconfig.path, "get", "deployment,statefulset", "-A", "-o", "json")
   abort(stderr.empty? ? "kubectl get failed" : stderr) unless status.success?
 
   resources = JSON.parse(stdout).fetch("items")
@@ -86,13 +78,6 @@ Tempfile.create("kubeconfig") do |kubeconfig|
       item.fetch("metadata").fetch("name"),
     ]
     index[key] = item
-  end
-
-  namespaces = resources.each_with_object({}) do |item, index|
-    next unless item.fetch("kind") == "Namespace"
-
-    metadata = item.fetch("metadata")
-    index[metadata.fetch("name")] = item
   end
 
   def workload_status(item)
@@ -124,23 +109,10 @@ Tempfile.create("kubeconfig") do |kubeconfig|
     "not-running"
   end
 
-  def namespace_status(item)
-    return "missing" unless item
-
-    item.fetch("status", {}).fetch("phase", "Unknown").downcase
-  end
-
   rows = EXPECTED_WORKLOADS.map do |workload|
     item = items[[workload[:kind], workload[:namespace], workload[:name]]]
     workload.merge(resource: "workload", status: workload_status(item))
   end
-
-  namespace_rows = EXPECTED_NAMESPACES.map do |namespace|
-    item = namespaces[namespace[:namespace]]
-    namespace.merge(kind: "Namespace", name: namespace[:namespace], resource: "namespace", status: namespace_status(item))
-  end
-
-  rows += namespace_rows
 
   widths = {
     resource: rows.map {|row| row[:resource].length}.max,
@@ -171,4 +143,8 @@ Tempfile.create("kubeconfig") do |kubeconfig|
       row[:status].ljust(widths[:status]),
     ].join("  ")
   end
+
+  puts
+  puts "NOTE: phase namespaces created through Argo sync option CreateNamespace=true may remain after destroy."
+  puts "      Namespace-only residue is expected here and is not a destroy failure by itself."
 end

@@ -40,11 +40,6 @@ resource "terraform_data" "argocd_bootstrap_checkout" {
       git -C "$checkout_dir" sparse-checkout set apps/infra/argocd
     EOT
   }
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = "rm -rf '${path.module}/.terraform/argocd-bootstrap-checkout'"
-  }
 }
 
 resource "helm_release" "argocd_bootstrap" {
