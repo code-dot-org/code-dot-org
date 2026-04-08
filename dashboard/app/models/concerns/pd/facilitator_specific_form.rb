@@ -87,7 +87,7 @@ module Pd::FacilitatorSpecificForm
       hash[field][facilitator] = hash.delete(field_name)
     end
 
-    super(hash)
+    super
   end
 
   # Get a summary of the form data hash specific to a facilitator

@@ -2,7 +2,7 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
@@ -50,7 +50,7 @@ describe('AiDiffWelcome', () => {
   function renderDefault(propOverrides = {}) {
     const store = getStore();
 
-    registerReducers({aichat: aichatReducer});
+    registerReducers({aiDiffChat: aiDiffChatReducer});
 
     render(
       <Provider store={store}>

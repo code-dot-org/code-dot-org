@@ -2,7 +2,8 @@
   "name": "ui-test-csp-2019",
   "script_names": [
     "ui-test-csp1-2019",
-    "ui-test-csp2-2019"
+    "ui-test-csp2-2019",
+    "ui-test-csp-survey"
   ],
   "original_script_names": [
 

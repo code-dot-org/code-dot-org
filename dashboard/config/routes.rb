@@ -557,7 +557,11 @@ Dashboard::Application.routes.draw do
     end
 
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
-      resources :jit_pl_misconceptions, only: [:create, :update, :destroy]
+      resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
+        resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      end
+      resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      resources :jit_pl_teaching_tips, only: [:create, :update, :destroy]
       collection do
         get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
       end
@@ -1072,7 +1076,10 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      post '/api/dev/check-dts', to: 'dev#check_dts'
+      scope path: '/api/dev', controller: :dev do
+        post 'check-dts', action: 'check_dts'
+        post 'start-build', action: 'start_build'
+      end
     end
 
     namespace :api do
@@ -1212,6 +1219,8 @@ Dashboard::Application.routes.draw do
 
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
     resources :lesson_feedbacks, only: [:create, :update]
+    resources :user_lesson_reflections, only: [:create]
+    resources :user_lesson_objective_reflections, only: [:create]
 
     resources :ai_lesson_summary_podcasts do
       collection do

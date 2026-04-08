@@ -4,7 +4,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @properties_encryption_key
   Scenario: View Instructor In Training Applab Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/1"
     And I wait for the lab page to fully load
@@ -19,7 +19,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @no_mobile
   Scenario: View Instructor In Training Dance Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/2"
     And I dismiss the hoc guide dialog
@@ -35,7 +35,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @properties_encryption_key
   Scenario: View Instructor In Training Free Response Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
 
@@ -48,7 +48,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @no_mobile
   Scenario: View Instructor In Training External Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/6"
 
@@ -61,7 +61,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @no_mobile
   Scenario: View Instructor In Training Bubble Choice Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/7"
 
@@ -75,7 +75,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
   @properties_encryption_key
   Scenario: View Instructor In Training LevelGroup Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I sign in as "Universal Instructor"
+    And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
     Then I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/2/levels/1"
 

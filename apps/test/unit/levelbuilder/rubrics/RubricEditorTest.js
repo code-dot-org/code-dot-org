@@ -52,13 +52,13 @@ describe('RubricEditorTest ', () => {
   });
 
   it('renders the AI Rubric S3 config text field with prepopulated value', () => {
-    const input = wrapper.find('input#ai_rubric_s3_config');
+    const input = wrapper.find('input#s3_config_dir');
     expect(input).toHaveLength(1);
     expect(input.prop('value')).toBe('allthethings-L48');
   });
 
   it('calls onAiRubricS3ConfigChange when the S3 config field is edited', () => {
-    const input = wrapper.find('input#ai_rubric_s3_config');
+    const input = wrapper.find('input#s3_config_dir');
     input.simulate('change', {target: {value: 'csd3-2023-L11'}});
     expect(onAiRubricS3ConfigChangeSpy).toHaveBeenCalledWith('csd3-2023-L11');
   });
@@ -67,7 +67,7 @@ describe('RubricEditorTest ', () => {
     const emptyWrapper = shallow(
       <RubricEditor {...defaultProps} aiRubricS3ConfigValue={undefined} />
     );
-    const input = emptyWrapper.find('input#ai_rubric_s3_config');
+    const input = emptyWrapper.find('input#s3_config_dir');
     expect(input).toHaveLength(1);
     expect(input.prop('value')).toBe('');
   });

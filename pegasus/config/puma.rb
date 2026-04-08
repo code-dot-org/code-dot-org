@@ -6,7 +6,7 @@ else
   bind "tcp://#{CDO.pegasus_host}:#{CDO.pegasus_port}"
 end
 
-workers CDO.pegasus_workers
+workers 2
 threads 1, 5
 
 drain_on_shutdown

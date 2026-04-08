@@ -624,6 +624,7 @@ function createWebpackConfig({
                 test(module) {
                   return [
                     '@babel/polyfill/noConflict',
+                    '@mui',
                     'immutable',
                     'lodash',
                     'moment',

@@ -10,7 +10,7 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
     .field
-      = f.label :makerlab_enabled, 'Select Maker API:'
+      = f.label :makerlab_enabled, 'Select Maker API (note: selecting an API will add/remove appropriate blocks from the Droplet palette below)'
       -# Old level format - @level.makerlab_enabled = true/false
       -# New level format - @level.makerlab_enabled = 'circuitPlayground', 'microbit', ''
       -# When converting old format to new format, 'true' -> 'circuitPlayground'

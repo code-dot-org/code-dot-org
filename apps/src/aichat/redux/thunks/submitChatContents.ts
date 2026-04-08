@@ -21,10 +21,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
-import {
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
@@ -186,21 +183,11 @@ export const submitChatContents = createAsyncThunk(
           (levelProperties as AichatLevelProperties)?.aichatSettings
             ?.levelSystemPrompt;
 
-        let filteredChatEvents: CompletedChatMessage[] =
-          chatEventsCurrent.filter(isCompletedChatMessage);
-
-        if (
-          modelParameters.selectedModelId ===
-          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
-        ) {
-          filteredChatEvents = filteredChatEvents.filter(
-            message => message.status === Status.OK
-          );
-        }
-
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          filteredChatEvents,
+          chatEventsCurrent
+            .filter(isCompletedChatMessage)
+            .filter(event => event.status === Status.OK),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>

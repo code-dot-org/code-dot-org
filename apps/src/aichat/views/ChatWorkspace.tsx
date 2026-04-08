@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
@@ -62,6 +63,11 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
 }
 
 /**
@@ -80,11 +86,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
+  renderLastMessagePostText,
 }) => {
-  const {chatDisabled} = useAiChatDisabled();
-  if (multimodalEnabled && (!levelName || !channelId)) {
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const canDisplayAssets = !!levelName && !!channelId;
+  if (multimodalEnabled && !canDisplayAssets) {
     console.warn(
-      'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
+      'Multimodal support requires level name and channel ID. Asset uploads will not be available.'
     );
     multimodalEnabled = false;
   }
@@ -107,10 +115,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
-  );
-
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -120,14 +124,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
 
-  const multimodalSupported = useMemo(() => {
+  const supportsMultimodalInput = useMemo(() => {
     return modelDescriptions.find(
       model => model.id === modelParameters.selectedModelId
     )?.multimodal;
   }, [modelParameters.selectedModelId]);
 
-  const multimodalAvailable =
-    multimodalSupported && multimodalEnabled && !!levelName && !!channelId;
+  const canUploadAssets =
+    supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
 
   const buildAssetUrl = useCallback(
     (asset: ChatAsset) => {
@@ -231,21 +235,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const [liveAnnouncement, setLiveAnnouncement] = useState('');
   const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  const hasChatHistory = chatEvents.length > 0;
   useEffect(() => {
-    if (chatEvents.length > 0) {
+    if (hasChatHistory) {
       const last = chatEvents[chatEvents.length - 1];
       if ('chatMessageText' in last && last.chatMessageText) {
         setLiveAnnouncement(markdownToTxt(last.chatMessageText));
       }
     }
-  }, [chatEvents]);
+  }, [hasChatHistory, chatEvents]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
   };
 
-  const buildAssetUrlValue = multimodalAvailable ? buildAssetUrl : undefined;
+  const buildAssetUrlValue = canDisplayAssets ? buildAssetUrl : undefined;
 
   const tabs = [
     {
@@ -259,7 +264,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
@@ -271,7 +275,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -315,14 +318,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={chatEvents}
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
-          isAiTutorVersion={isAiTutorVersion}
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
+          renderLastMessagePostText={renderLastMessagePostText}
         />
       )}
       <div className={moduleStyles.footer}>
-        {multimodalAvailable && (
+        {canUploadAssets && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
         <UserAddedSelectionContextPreview />
@@ -333,17 +336,29 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
-            multimodalAvailable={multimodalAvailable}
+            multimodalAvailable={canUploadAssets}
             responseCallback={responseCallback}
             levelName={levelName}
             hasStarterAssets={hasStarterAssets}
-            buildAssetUrl={buildAssetUrl}
+            buildAssetUrl={buildAssetUrlValue}
             logLevelActivity={logLevelActivity}
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
           />
         )}
       </div>
+      {isTeacherView && hasChatHistory && chatDisabled && (
+        <Alert
+          type={alertTypes.info}
+          text={chatDisabledMessage || ''}
+          icon={{
+            className: moduleStyles.chatDisabledAlertIcon,
+            iconName: 'ai-locked',
+            iconFamily: 'kit',
+          }}
+          className={moduleStyles.chatDisabledAlert}
+        />
+      )}
     </div>
   );
 };
