@@ -17,6 +17,7 @@ import reducer, {
   renameFolder,
   rearrangeFiles,
   resetProjectMetadata,
+  resetHasEditedSinceLastVersionSave,
   Lab2ProjectState,
   createNewExternalFile,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -111,6 +112,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe(DEFAULT_FOLDER_ID);
       expect(newFile?.contents).toBe('Add your changes to newFile.txt');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should create a new file in specific folder with custom contents', () => {
@@ -137,6 +139,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe('1');
       expect(newFile?.contents).toBe('print("hello world")');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not create file when project sources is undefined', () => {
@@ -175,6 +178,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should create a new external file in specific folder', () => {
@@ -203,6 +207,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not create file when project sources is undefined', () => {
@@ -233,6 +238,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).files['1'].name
       ).toBe('renamed.html');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not rename if file does not exist', () => {
@@ -278,6 +284,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).files['1'].contents
       ).toBe(newContents);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not save if file does not exist', () => {
@@ -322,6 +329,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).files['1'].type
       ).toBe(ProjectFileType.VALIDATION);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not set type if file does not exist', () => {
@@ -363,6 +371,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).files['2'].active
       ).toBe(true);
       expect(state.hasEdited).toBe(false); // Activating doesn't count as edit
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
     });
 
     it('should not activate when project sources is undefined', () => {
@@ -387,6 +396,7 @@ describe('lab2ProjectRedux', () => {
       expect(newSource.openFiles).toEqual(['2']);
       expect(newSource.files['2'].active).toBe(true);
       expect(state.hasEdited).toBe(false); // Closing doesn't count as edit
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
     });
 
     it('should not close when project sources is undefined', () => {
@@ -412,6 +422,7 @@ describe('lab2ProjectRedux', () => {
       expect(newSource.openFiles).toEqual(['2']);
       expect(newSource.files['2'].active).toBe(true);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not delete if file does not exist', () => {
@@ -452,6 +463,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).files['1'].folderId
       ).toBe('1');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not move if file does not exist', () => {
@@ -501,6 +513,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).folders['2'].parentId
       ).toBe(DEFAULT_FOLDER_ID);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not move if folder does not exist', () => {
@@ -550,6 +563,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFolder).toBeDefined();
       expect(newFolder?.parentId).toBe(DEFAULT_FOLDER_ID);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should create new folder in specific parent', () => {
@@ -573,6 +587,7 @@ describe('lab2ProjectRedux', () => {
       expect(newFolder).toBeDefined();
       expect(newFolder?.parentId).toBe('1');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not create folder when project sources is undefined', () => {
@@ -603,6 +618,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).folders['1'].open
       ).toBe(true);
       expect(state.hasEdited).toBe(false); // Toggling doesn't count as edit
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
     });
 
     it('should toggle folder from open to closed', () => {
@@ -622,6 +638,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).folders['1'].open
       ).toBe(false);
       expect(state.hasEdited).toBe(false);
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
     });
 
     it('should not toggle if folder does not exist', () => {
@@ -680,6 +697,7 @@ describe('lab2ProjectRedux', () => {
       expect(newSource.folders['1']).toBeUndefined();
       expect(newSource.files['1'].active).toBe(true);
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not delete if folder does not exist', () => {
@@ -720,6 +738,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).folders['1'].name
       ).toBe('renamedFolder');
       expect(state.hasEdited).toBe(true);
+      expect(state.hasEditedSinceLastVersionSave).toBe(true);
     });
 
     it('should not rename if folder does not exist', () => {
@@ -766,6 +785,7 @@ describe('lab2ProjectRedux', () => {
         (state.projectSources!.source as MultiFileSource).openFiles
       ).toEqual(['2', '1']);
       expect(state.hasEdited).toBe(false); // Rearranging doesn't count as edit
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
     });
 
     it('should not rearrange when project sources is undefined', () => {
@@ -779,6 +799,7 @@ describe('lab2ProjectRedux', () => {
       const stateWithMetadata = {
         ...initialState,
         hasEdited: true,
+        hasEditedSinceLastVersionSave: true,
         viewingOldVersion: true,
         restoredOldVersion: true,
         projectSources: undefined,
@@ -787,8 +808,29 @@ describe('lab2ProjectRedux', () => {
       const state = reducer(stateWithMetadata, resetProjectMetadata());
 
       expect(state.hasEdited).toBe(false);
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
       expect(state.viewingOldVersion).toBe(false);
       expect(state.restoredOldVersion).toBe(false);
+    });
+  });
+
+  describe('resetHasEditedSinceLastVersionSave', () => {
+    it('should reset hasEditedSinceLastVersionSave without affecting hasEdited', () => {
+      const initialProjectSources = createMockProjectSources();
+      const stateAfterEdit = reducer(
+        {...initialState, projectSources: initialProjectSources},
+        saveFile({fileId: '1', contents: '<h1>Updated</h1>'})
+      );
+      expect(stateAfterEdit.hasEdited).toBe(true);
+      expect(stateAfterEdit.hasEditedSinceLastVersionSave).toBe(true);
+
+      const state = reducer(
+        stateAfterEdit,
+        resetHasEditedSinceLastVersionSave()
+      );
+
+      expect(state.hasEditedSinceLastVersionSave).toBe(false);
+      expect(state.hasEdited).toBe(true);
     });
   });
 });
