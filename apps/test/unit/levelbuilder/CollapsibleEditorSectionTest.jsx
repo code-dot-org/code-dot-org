@@ -26,7 +26,7 @@ describe('CollapsibleEditorSection', () => {
     expect(wrapper.find('span').length).to.equal(1);
     let icon = wrapper.find('FontAwesome');
     expect(icon.length).to.equal(1);
-    expect(icon.props().icon).to.include('compress');
+    expect(icon.props().icon).to.include('chevron-down');
 
     const editorsWrapper = wrapper.children().last();
     expect(editorsWrapper.props().className).to.include(
@@ -54,10 +54,10 @@ describe('CollapsibleEditorSection', () => {
     );
 
     let icon = wrapper.find('FontAwesome');
-    expect(icon.props().icon).to.include('compress');
+    expect(icon.props().icon).to.include('chevron-down');
 
     wrapper.find('button').simulate('click');
 
-    expect(wrapper.find('FontAwesome').props().icon).to.include('expand');
+    expect(wrapper.find('FontAwesome').props().icon).to.include('chevron-right');
   });
 });
