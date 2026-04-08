@@ -207,11 +207,7 @@ class ProgressLesson extends React.Component {
                     {i18n.lessonResources()}
                   </MuiButton>
                 )}
-<<<<<<< HEAD
-                {lesson.lessonTutorAvailable &&
-=======
                 {showLessonTutorButton &&
->>>>>>> erin-tutor-entrypoints
                   experiments.isEnabled(experiments.LESSON_TUTOR) && (
                     <MuiButton
                       href={lesson.lessonTutorPath}

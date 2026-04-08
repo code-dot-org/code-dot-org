@@ -80,13 +80,6 @@ describe('SummaryProgressRow', () => {
   describe('Lesson Tutor button', () => {
     const tutorLesson = {
       ...fakeLesson('Maze', 1, false, 3),
-      lessonTutorAvailable: true,
-      lessonTutorPath: '/s/course/lessons/1/tutor',
-    };
-
-    const nonTutorLesson = {
-      ...fakeLesson('Maze', 1, false, 3),
-      lessonTutorAvailable: false,
       lessonTutorPath: '/s/course/lessons/1/tutor',
       hasLessonPlan: true,
     };

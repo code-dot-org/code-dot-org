@@ -353,7 +353,6 @@ describe('ProgressLesson', () => {
   describe('Lesson Tutor button', () => {
     const tutorLesson = {
       ...fakeLesson('lesson1', 1, false, lessonNumber),
-      lessonTutorAvailable: true,
       lessonTutorPath: '/s/course/lessons/1/tutor',
       hasLessonPlan: true,
     };

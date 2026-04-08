@@ -313,7 +313,6 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonTutorAvailable: lesson_tutor_available?,
         lessonTutorPath: "#{get_uncached_show_path}/tutor",
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),

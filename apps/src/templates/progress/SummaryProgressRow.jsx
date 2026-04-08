@@ -57,6 +57,7 @@ function SummaryProgressRow({
 
   const titleTooltipId = _.uniqueId();
   const lockedTooltipId = _.uniqueId();
+
   return (
     <tr
       id={`summary-progress-row-${lesson.lessonNumber}`}
