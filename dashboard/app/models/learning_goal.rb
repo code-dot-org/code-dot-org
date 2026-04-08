@@ -22,14 +22,6 @@ class LearningGoal < ApplicationRecord
 
   before_create :generate_key
 
-  validate :validate_ai_config
-  def validate_ai_config
-    return if CDO.aws_s3_emulated
-    AiRubricConfig.validate_ai_config_for_learning_goal(self)
-  rescue => exception
-    errors.add(:learning_goal, exception.message)
-  end
-
   accepts_nested_attributes_for :learning_goal_evidence_levels
 
   def summarize

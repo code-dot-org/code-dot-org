@@ -113,7 +113,7 @@ class RubricsControllerTest < ActionController::TestCase
     end
     assert_response :bad_request
     errors = JSON.parse(response.body)
-    assert_equal "No valid AI config in S3 for lesson fake-lesson-s3-name ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+    assert_equal 'Missing AI config in S3 for lesson fake-lesson-s3-name learning goals: ["non-ai learning goal"]', errors['base'].first
   end
 
   test 'updates rubric and learning goals with valid params' do

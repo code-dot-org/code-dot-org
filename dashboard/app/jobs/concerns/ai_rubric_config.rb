@@ -107,21 +107,6 @@ class AiRubricConfig
     validate_learning_goals_for_rubric(rubric)
   end
 
-  def self.validate_ai_config_for_learning_goal(learning_goal)
-    return unless learning_goal.ai_enabled
-
-    rubric = learning_goal.rubric
-    lesson_s3_name = rubric.s3_config_dir
-    raise "Learning goal '#{learning_goal.learning_goal}' is ai-enabled but rubric has no s3_config_dir set" if lesson_s3_name.blank?
-
-    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
-    unless s3_learning_goals.include?(learning_goal.learning_goal)
-      raise "No valid AI config in S3 for lesson #{lesson_s3_name} ai-enabled learning goal '#{learning_goal.learning_goal}'"
-    end
-  rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for learning goal '#{learning_goal.learning_goal}' in lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
-
   def self.get_s3_learning_goals(lesson_s3_name)
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
