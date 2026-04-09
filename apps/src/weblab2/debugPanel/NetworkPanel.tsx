@@ -202,45 +202,7 @@ const NetworkPanel: React.FC = () => {
   const blockToggleLabel = blockNetwork ? 'Unblock network' : 'Block network';
 
   return (
-    <div className={moduleStyles.networkPanelWrapper}>
-      <div className={moduleStyles.networkPanelHeader}>
-        <Typography variant="body4" gutterBottom>
-          <Typography variant="strong">Activity</Typography>
-        </Typography>
-        <div className={moduleStyles.networkHeaderButtons}>
-          <WithTooltip
-            tooltipProps={{
-              text: blockToggleLabel,
-              direction: 'onBottom',
-              tooltipId: 'block-network-tooltip',
-              size: 'xs',
-            }}
-          >
-            <MuiIconButton
-              variant="outlined"
-              color={blockNetwork ? 'error' : 'tertiary'}
-              size="extraSmall"
-              onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
-              aria-label={blockToggleLabel}
-              type="button"
-            >
-              <FontAwesomeV6Icon iconName="ban" />
-            </MuiIconButton>
-          </WithTooltip>
-          {orderedNetworkRequests.length > 0 && (
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="extraSmall"
-              onClick={() => setNewestFirst(!newestFirst)}
-              type="button"
-              startIcon={<FontAwesomeV6Icon iconName="sort" />}
-            >
-              {newestFirst ? 'Newest first' : 'Oldest first'}
-            </MuiButton>
-          )}
-        </div>
-      </div>
+    <>
       {orderedNetworkRequests.length === 0 ? (
         <EmptyPanelPlaceholder
           iconName="globe"
@@ -250,6 +212,42 @@ const NetworkPanel: React.FC = () => {
       ) : (
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
+            <div className={moduleStyles.networkSummaryHeader}>
+              <Typography variant="body4" gutterBottom>
+                <Typography variant="strong">Activity</Typography>
+              </Typography>
+              <div className={moduleStyles.networkHeaderButtons}>
+                <WithTooltip
+                  tooltipProps={{
+                    text: blockToggleLabel,
+                    direction: 'onBottom',
+                    tooltipId: 'block-network-tooltip',
+                    size: 'xs',
+                  }}
+                >
+                  <MuiIconButton
+                    variant="outlined"
+                    color={blockNetwork ? 'error' : 'tertiary'}
+                    size="extraSmall"
+                    onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
+                    aria-label={blockToggleLabel}
+                    type="button"
+                  >
+                    <FontAwesomeV6Icon iconName="ban" />
+                  </MuiIconButton>
+                </WithTooltip>
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
+                  onClick={() => setNewestFirst(!newestFirst)}
+                  type="button"
+                  startIcon={<FontAwesomeV6Icon iconName="sort" />}
+                >
+                  {newestFirst ? 'Newest first' : 'Oldest first'}
+                </MuiButton>
+              </div>
+            </div>
             <div className={moduleStyles.requestList}>
               {orderedNetworkRequests.map(request => (
                 <NetworkRequestChip
@@ -320,7 +318,7 @@ const NetworkPanel: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
