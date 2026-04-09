@@ -84,7 +84,9 @@ function StudentColumn({
         title="caret"
         className={styles.studentColumnNameCaret}
       />
-      {getFullName(student)}
+      <span className={styles.studentColumnNameText}>
+        {getFullName(student)}
+      </span>
       {student.isDemoStudent && <DemoStudentChip />}
     </button>
   );
@@ -105,7 +107,9 @@ function StudentColumn({
           icon="caret-down"
           className={styles.studentColumnNameCaret}
         />
-        {getFullName(student)}
+        <span className={styles.studentColumnNameText}>
+          {getFullName(student)}
+        </span>
         {student.isDemoStudent && <DemoStudentChip />}
       </button>
       <div
