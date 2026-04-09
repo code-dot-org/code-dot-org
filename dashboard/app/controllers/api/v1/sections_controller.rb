@@ -229,7 +229,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, I18n.locale.to_s)
     render json: course_offerings
   end
 

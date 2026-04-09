@@ -8,3 +8,5 @@ level 'CSD U2L10-L1b_2025-v2'
 level 'CSD U2L10-L1c_2025-v2'
 level 'CSD U2L10-L1d_2025-v2'
 level 'CSD U2L10-L1e_2025-v2'
+
+uses_lab2
