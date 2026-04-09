@@ -69,7 +69,7 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
                 ]
               : []),
             '',
-            'Open the conversation by greeting the student warmly. Reference their specific struggles or objectives they marked as lost or unsure. Be specific and encouraging. Do not wait for the student to speak first.',
+            'Engage with the student warmly. Reference their specific struggles or objectives they marked as lost or unsure. Be specific and encouraging.',
           ]
         : [
             '',
