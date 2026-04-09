@@ -18,8 +18,8 @@ Feature: Curriculum Catalog Assign and Unassign
     And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Assign a course
-    Then I wait until element "h4:contains(Computer Science Principles)" is visible
-    And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
+    Then I wait until element "h4:contains(UI Test CSP)" is visible
+    And I click selector "[aria-label='Assign UI Test CSP to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
     And element "input[type=checkbox]:eq(2)" is not checked
@@ -34,7 +34,7 @@ Feature: Curriculum Catalog Assign and Unassign
     # Confirm assignment
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is assigned to "AI for Oceans" in the section table
-    And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
+    And I see that "Section 2" is assigned to "UI Test CSP" in the section table
 
     # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
@@ -50,8 +50,8 @@ Feature: Curriculum Catalog Assign and Unassign
     And I click selector "button:contains(Confirm section assignments)"
 
     # Unassign course unit
-    Then I wait until element "h4:contains(Computer Science Principles)" is visible
-    And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
+    Then I wait until element "h4:contains(UI Test CSP)" is visible
+    And I click selector "[aria-label='Assign UI Test CSP to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
     And element "input[type=checkbox]:eq(2)" is not checked
@@ -66,7 +66,7 @@ Feature: Curriculum Catalog Assign and Unassign
     # Confirm unassign
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
-    And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
+    And I see that "Section 2" is not assigned to "UI Test CSP" in the section table
 
   @no_mobile
   Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
@@ -88,9 +88,9 @@ Feature: Curriculum Catalog Assign and Unassign
     And I click selector "button:contains(Confirm section assignments)"
 
     # Assign a course
-    Then I wait until element "h4:contains(Computer Science Principles)" is visible
+    Then I wait until element "h4:contains(UI Test CSP)" is visible
 
-    And I click selector "[aria-label='View details about Computer Science Principles']"
+    And I click selector "[aria-label='View details about UI Test CSP']"
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
@@ -106,7 +106,7 @@ Feature: Curriculum Catalog Assign and Unassign
     # Confirm assignment
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is assigned to "AI for Oceans" in the section table
-    And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
+    And I see that "Section 2" is assigned to "UI Test CSP" in the section table
 
     # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
@@ -124,9 +124,9 @@ Feature: Curriculum Catalog Assign and Unassign
     And I click selector "button:contains(Confirm section assignments)"
 
     # Unassign course unit
-    Then I wait until element "h4:contains(Computer Science Principles)" is visible
+    Then I wait until element "h4:contains(UI Test CSP)" is visible
 
-    And I click selector "[aria-label='View details about Computer Science Principles']"
+    And I click selector "[aria-label='View details about UI Test CSP']"
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
@@ -142,4 +142,4 @@ Feature: Curriculum Catalog Assign and Unassign
     # Confirm unassign
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
-    And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
+    And I see that "Section 2" is not assigned to "UI Test CSP" in the section table

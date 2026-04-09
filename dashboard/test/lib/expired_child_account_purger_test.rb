@@ -68,7 +68,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'only expired child accounts are purged' do
-    expired_accounts = Array.new(3) {|_| create(:locked_out_child, :expired)}
+    expired_accounts = create_list(:locked_out_child, 3, :expired)
     locked_account = create(:locked_out_child)
     u13_colorado_account = create(:student, :U13, :in_colorado)
     student_account = create(:student)
@@ -87,7 +87,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'expired child accounts are reported in metrics' do
-    expired_accounts = Array.new(3) {|_| create(:locked_out_child, :expired)}
+    expired_accounts = create_list(:locked_out_child, 3, :expired)
     Cdo::Metrics.expects(:push).with(
       'ExpiredChildAccountPurger',
       includes_metrics(

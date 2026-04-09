@@ -1,0 +1,33 @@
+{
+  "name": "ai-foundations-exploring-ai-and-cs-2026",
+  "script_names": [
+    "problem-solving-with-ai-2026",
+    "ai-and-the-systems-that-power-it-2026",
+    "the-fabric-of-the-internet-and-ai-2026",
+    "ai-powered-threats-and-defenses-2026",
+    "insights-from-data-and-ai-2026"
+  ],
+  "original_script_names": [
+    "problem-solving-with-ai-2026",
+    "ai-and-the-systems-that-power-it-2026",
+    "the-fabric-of-the-internet-and-ai-2026",
+    "ai-powered-threats-and-defenses-2026",
+    "insights-from-data-and-ai-2026"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-foundations-exploring-ai-and-cs",
+    "has_verified_resources": true,
+    "numbered_units": "auto",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

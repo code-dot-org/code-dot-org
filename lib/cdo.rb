@@ -11,6 +11,8 @@ module Cdo
     prepend SecretsConfig
     include Singleton
 
+    attr_accessor :execution_context
+
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
@@ -32,11 +34,12 @@ module Cdo
     ].freeze
 
     def initialize
+      @execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
-        # 1. ENV - environment variables (CDO_*)
-        ENV.to_h.select {|k, _| k.match?(ENV_PREFIX)}.transform_keys {|k| k.sub(ENV_PREFIX, '').downcase},
+        # 1. ENV - environment variables (CDO_*, e.g. CDO_BUILD_APPS => build_apps)
+        env_vars_to_configuration,
         # 2. locals.yml - local configuration
         "#{root}/locals.yml",
         # 3. globals.yml - [Chef-]provisioned configuration
@@ -51,14 +54,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      configured_properties = to_h.keys.map(&:to_sym)
-      default_properties = render("#{root}/config.yml.erb").first.keys
-      unknown_properties = configured_properties - default_properties
-      unless unknown_properties.empty?
-        raise <<~ERROR
-          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
-          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
-        ERROR
+      unless ENV['PERMIT_UNKNOWN_PROPERTIES_IN_CDO']
+        configured_properties = to_h.keys.map(&:to_sym)
+        default_properties = render("#{root}/config.yml.erb").first.keys
+        unknown_properties = configured_properties - default_properties
+        unless unknown_properties.empty?
+          raise <<~ERROR
+            Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+            Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+          ERROR
+        end
       end
 
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
@@ -310,13 +315,12 @@ module Cdo
       rack_env?(:test) && dashboard_hostname == 'test-studio.code.org' && chef_managed
     end
 
-    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
-    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
-    # Some components may operate differently within a web application server, such as using a database proxy to
-    # connect to the database. We use the `puma` web application server in most environments, except development, where
-    # we use `thin`.
+    # Identify whether we are executing within a puma web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb,
+    # rails console). Some components may operate differently within a web application server. For example, database
+    # timeouts are shorter when executing within a web application server.
     def running_web_application?
-      %w(puma thin).include?(File.basename($0))
+      execution_context == :web_application
     end
 
     # Whether we are executing within a web application server on the
@@ -386,6 +390,26 @@ module Cdo
         ]
       ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
       servers.merge(self[:app_servers])
+    end
+
+    # Parse CDO_* env vars to set the same params as locals.yml
+    private def env_vars_to_configuration
+      ENV.to_h.
+        select {|k, _| k.match?(ENV_PREFIX)}.
+        transform_keys {|k| k.sub(ENV_PREFIX, '')}.
+        # Ignore keys like `CDO__*`, e.g. ignore CDO__skip_it
+        reject {|k, _| k.start_with?('_')}.
+        # CDO_BUILD_APPS or CDO_build_apps both => build_apps
+        transform_keys(&:downcase).
+        # Try to parse CDO_* env vars as YAML, fall back to strings
+        transform_values do |env_var_value|
+          YAML.load(env_var_value)
+        rescue Psych::Exception
+          # Pass thru yaml parse fails as strings: this allows random ascii password strings
+          # that happen to start with { or [, but don't have a matching close bracket:
+          # {fj@95randompassword or [#092pass
+          env_var_value
+        end
     end
   end
 end

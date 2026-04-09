@@ -5,37 +5,100 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Unit 3: Building Data-Driven Systems culminates with a final **Value Explorer** project. 
+#### Let's take a moment to begin with the end in mind by taking a look at the Final Project for this Unit.
 
-<img src="https://images.code.org/ae1f7db6b63189e93e183a912e8456b3-image-1767975441911.png" alt="prototype of volunteer app that has input for interests and time and suggests a volunteer opportunity" width="300px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+<div style="display:flex; gap:30px; align-items:flex-start; max-width:1000px; margin:20px auto;">
+
+<div style="flex:2;">
 
 ## Value Explorer
-#### In the Value Explorer project, students act as product designers and data stewards, creating a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs. 
 
-#### Students define their own dataset, design a simple schema, and build features that let users sort and filter the collection through different “value lenses,” such as profit, time, or social impact. By making their ranking rules transparent, students learn that data design and algorithms always involve choices.
+#### In the **Value Explorer** project, students take on the role of **product designers and data stewards**, building a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs.
 
- 
+<div style="background:#f7f8fa; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); font-size:14pt; line-height:1.6; margin-top:15px;">
 
+<h4 style="margin-top:0; font-weight:bold;">Students will:</h4>
 
+<ul style="padding-left:20px; font-size:14pt;">
+
+<li>Define their own dataset and design a simple schema for organizing the information.</li>
+<br>
+
+<li>Create features that allow users to sort and filter items using different “value lenses.”</li>
+<br>
+
+<li>Implement ranking systems that prioritize values such as profit, time commitment, or social impact.</li>
+<br>
+
+<li>Make their sorting logic transparent by explaining how the ranking rules work.</li>
+<br>
+
+<li>Reflect on how data choices and algorithm design influence outcomes.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div style="flex:1;">
+
+<img src="https://images.code.org/ae1f7db6b63189e93e183a912e8456b3-image-1767975441911.png" 
+alt="prototype of volunteer app that has input for interests and time and suggests a volunteer opportunity"
+style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+
+</div>
+
+</div>
+
+#### The result is a web app that helps users explore opportunities through different perspectives, while demonstrating that **data design and algorithms always involve choices.**
+
+---
 
 ### **When Project Begins:** Final lesson of the unit
 
 ### The project extends over five class periods beginning in Lesson 11.
 
+---
 
-## What success looks like
-- #### Loads a small, curated dataset of items or opportunities that conforms to a student-defined schema.
-- #### Allows a user to apply at least two different “value lenses” to rank the data.
-- #### Displays the results as a transparent ranking and includes a plain-language explanation of the sorting rule currently being applied.
-- #### Is guided by a Project Charter that includes the app’s mission, its ethical principles, and a reflection on the data choices and trade-offs made during development.
+## What Success Looks Like
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how data structures, algorithms, and values shape digital systems.
+
+<div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">📊</span>
+Loads a curated dataset that follows a student-designed schema
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">🔎</span>
+Allows users to apply multiple “value lenses” to explore the data
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">📈</span>
+Displays transparent rankings and explains the sorting rule being used
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">🧭</span>
+Includes a Project Charter outlining the app’s mission and ethical principles
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">💡</span>
+Reflects on data design decisions and trade-offs made during development
+</div>
+
+</div>
 
 ---
 
-#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+## Now, let’s see how we get here!
 
-## Now, let’s see how we get here! 
-
-#### Arrays are up next! 
+#### Arrays are up next!
 
 
 MARKDOWN

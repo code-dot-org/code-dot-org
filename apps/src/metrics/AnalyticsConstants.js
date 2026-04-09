@@ -180,8 +180,7 @@ const EVENTS = {
     'Section students table save all clicked',
 
   // Section progress v2
-  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
-  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
   PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
   PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
@@ -391,6 +390,9 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
+  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
+  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
+  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -574,9 +576,6 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
-  // Global Edition - Region Reset Button
-  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
-    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
     'Global Edition Region Switch Confirm Shown',
@@ -612,11 +611,6 @@ const EVENTS = {
     'Resource Panel Instructions Drawer Resized Increased',
   RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
     'Resource Panel Instructions Drawer Resized Decreased',
-
-  // IntroJS flows
-  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
-  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
-  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
   // Generic Intro flow events
   INTRO_FLOW_STARTED: 'Intro Flow Started',

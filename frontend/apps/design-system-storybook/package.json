@@ -26,7 +26,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "storybook": "storybook dev -p 6006",
-    "test": "vitest",
+    "test": "vitest --run",
     "test-storybook": "vitest --project=storybook",
     "test:ui:ci": "bash ./scripts/test-storybook.sh",
     "test:ui:local": "test-storybook --url http://localhost:6006",

@@ -110,6 +110,7 @@ class Level < ApplicationRecord
     stay_on_level_after_submit
     skill_keys
     additional_ai_evaluation_instructions
+    product_tours
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -240,7 +241,7 @@ class Level < ApplicationRecord
       encrypted_properties = hash.delete('encrypted_properties')
       encrypted_notes = hash.delete('encrypted_notes')
       if encrypted_properties
-        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+        hash['properties'] = Encryption.decrypt_object(encrypted_properties)
       end
       if encrypted_notes
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)

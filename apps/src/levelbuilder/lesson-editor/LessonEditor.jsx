@@ -496,7 +496,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/new?lessonId=' + this.getLessonId()}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Add Rubric
           </a>
         )}
@@ -506,7 +506,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/' + rubricId + '/edit'}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Edit Rubric
           </a>
         )}

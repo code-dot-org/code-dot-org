@@ -1,7 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
@@ -11,6 +13,7 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -21,7 +24,6 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
@@ -29,10 +31,8 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import experiments from '@cdo/apps/util/experiments';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import '@cdo/apps/lab2/introjs.scss';
 
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
@@ -51,13 +51,10 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
-import OnboardingTourSteps from './OnboardingTour/OnboardingTourSteps';
-import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
 import {Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
 } from './Validation/ValidationPanel';
-import ValidationTourSteps from './Validation/ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
@@ -135,8 +132,6 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
-  isValidationTourEnabled?: boolean;
-  isOnboardingTourEnabled?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
@@ -168,8 +163,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
-  isValidationTourEnabled,
-  isOnboardingTourEnabled,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
@@ -211,21 +204,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
+  const isPredictLevel =
+    instructionsProps.levelProperties.predictSettings?.isPredictLevel;
   const dispatch = useAppDispatch();
   const setBackpackTabAsActive = useCallback(
     () => setCurrentTab(Tabs.Backpack),
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
-  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
-    experiments.SHEPHERD_PRODUCT_TOURS
-  );
-  useResourcePanelShepherdTours({
-    isOnboardingTourEnabled: isOnboardingTourEnabled || false,
-    isValidationTourEnabled: isValidationTourEnabled || false,
-    hasValidationConditions,
-    validationSettings,
-  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -247,6 +233,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor') === 'true';
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
+  useResourcePanelTours({
+    appName,
+    productToursForLevel: instructionsProps.levelProperties.productTours,
+    isStandaloneCollapsed,
+    hasValidationConditions,
+    validationSettings,
+  });
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -288,6 +281,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {...aiTutorProps}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
+            isPredictLevel={isPredictLevel}
           />
         );
       }
@@ -378,6 +372,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     onImageFlagged,
     hasInstructionsDrawer,
     validationSettings,
+    isPredictLevel,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -519,21 +514,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {!showShepherdProductTours && (
-          <>
-            <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
-              <OnboardingTourSteps />
-            </IntroJSTourWrapper>
-            <IntroJSTourWrapper enabled={isValidationTourEnabled}>
-              <ValidationTourSteps
-                hasValidationConditions={hasValidationConditions}
-                hasValidationSettings={!!validationSettings}
-                setCurrentTab={setCurrentTab}
-                onValidate={validationSettings?.onValidate}
-              />
-            </IntroJSTourWrapper>
-          </>
-        )}
         <div
           className={classNames(
             styles.sidebar,
@@ -561,25 +541,29 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   hideDelayMs={hideTooltipDelayMs}
                   hideOnFirstLeave={true}
                 >
-                  <Button
+                  <MuiIconButton
+                    variant="text"
+                    color="tertiary"
+                    size="medium"
                     className={styles.resourcePanelButton}
                     onClick={() =>
                       dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
                     }
-                    isIconOnly={true}
-                    icon={{
-                      iconName: isStandaloneCollapsed
-                        ? 'arrow-right-from-line'
-                        : 'arrow-left-from-line',
-                    }}
-                    color={'gray'}
-                    type={'tertiary'}
                     aria-label={
                       isStandaloneCollapsed
                         ? lab2I18n.expand()
                         : lab2I18n.collapse()
                     }
-                  />
+                    type="button"
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={
+                        isStandaloneCollapsed
+                          ? 'arrow-right-from-line'
+                          : 'arrow-left-from-line'
+                      }
+                    />
+                  </MuiIconButton>
                 </WithTooltip>
               )}
             </div>
@@ -598,26 +582,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   key={`tooltip-${tab}`}
                 >
                   <div id={`resource-panel-tab-${tab}`}>
-                    <Button
+                    <MuiIconButton
+                      variant="text"
+                      color="tertiary"
+                      size="medium"
                       className={classNames(
                         styles.tabButton,
                         tab === currentTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
-                      onClick={() => onClickTab(tab)}
-                      key={tab}
-                      color={'gray'}
-                      type={'tertiary'}
-                      isIconOnly={true}
-                      icon={{
-                        iconName: tabInfo[tab].icon,
-                        iconFamily: kitIcons.has(tabInfo[tab].icon)
-                          ? 'kit'
-                          : undefined,
-                      }}
-                      aria-label={tabInfo[tab].title}
                       id={`resource-panel-tab-button-${tab}`}
-                    />
+                      onClick={() => onClickTab(tab)}
+                      aria-label={tabInfo[tab].title}
+                      type="button"
+                      key={tab}
+                    >
+                      <FontAwesomeV6Icon
+                        iconName={tabInfo[tab].icon}
+                        iconFamily={
+                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                        }
+                      />
+                    </MuiIconButton>
                   </div>
                 </WithTooltip>
               ))}
@@ -633,13 +619,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="documentation"
                 label={commonI18n.documentation()}
                 icon={{iconName: 'book', iconStyle: 'solid'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             )}
             {aiTutorVisible && <DisclaimerButton theme={theme} />}
@@ -649,13 +635,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="settings"
                 label={commonI18n.settings()}
                 icon={{iconName: 'gear'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             </div>
           </div>

@@ -1,0 +1,78 @@
+// 50px = .header-wrapper height (application.scss .header-wrapper)
+$header-height: 50px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$header-height});
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a2e;
+  color: #e8e8f2;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 40px;
+
+  @media (max-width: 480px) {
+    padding: 20px 16px;
+  }
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #2e2e50;
+  flex-shrink: 0;
+}
+
+.bottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-top: 1px solid #2e2e50;
+  flex-shrink: 0;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #c8c8e0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  @media (max-width: 480px) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    background-color: #2a2a48;
+    color: #e8e8f2;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #6b9fd4;
+    outline-offset: 2px;
+  }
+}
+
+.pageIndicator {
+  font-size: 14px;
+  color: #9898b8;
+  min-width: 48px;
+  text-align: center;
+}

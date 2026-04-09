@@ -17,7 +17,6 @@ export default {
   title: 'DesignSystem/Button/MuiButton',
   component: MuiButton,
   parameters: {
-    useMui: true,
     docs: {
       description: {
         component:
@@ -169,13 +168,7 @@ PendingButton.args = {
   size: 'medium',
   variant: 'contained',
   color: 'primary',
-  startIcon: (
-    <FontAwesomeV6Icon
-      iconName="spinner"
-      iconStyle="solid"
-      animationType="spin"
-    />
-  ),
+  loading: true,
 };
 
 export const ButtonWithIcons = SingleTemplate.bind({});

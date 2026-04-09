@@ -1,0 +1,174 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "open3"
+require "tempfile"
+
+EXPECTED_WORKLOADS = [
+  {app: "argocd", kind: "Deployment", namespace: "argocd", name: "argocd-server"},
+  {app: "argocd", kind: "StatefulSet", namespace: "argocd", name: "argocd-application-controller"},
+  {app: "dex", kind: "Deployment", namespace: "dex", name: "dex"},
+  {app: "external-dns", kind: "Deployment", namespace: "external-dns", name: "external-dns"},
+  {app: "external-secrets-operator", kind: "Deployment", namespace: "external-secrets", name: "external-secrets-operator"},
+  {app: "external-secrets-operator", kind: "Deployment", namespace: "external-secrets", name: "external-secrets-operator-webhook"},
+  {app: "networking", kind: "Deployment", namespace: "kube-system", name: "networking-aws-load-balancer-controller"},
+  {app: "kargo", kind: "Deployment", namespace: "kargo", name: "kargo-api"},
+  {app: "kargo", kind: "Deployment", namespace: "kargo", name: "kargo-controller"},
+  {app: "codeai-staging", kind: "Deployment", namespace: "staging", name: "staging-cdo-dashboard"},
+  {app: "codeai-test", kind: "Deployment", namespace: "test", name: "test-cdo-dashboard"},
+].freeze
+
+EXPECTED_NAMESPACES = [
+  {app: "argocd", namespace: "argocd"},
+  {app: "dex", namespace: "dex"},
+  {app: "external-dns", namespace: "external-dns"},
+  {app: "external-secrets-operator", namespace: "external-secrets"},
+  {app: "kargo", namespace: "kargo"},
+].freeze
+
+script_dir = File.expand_path(__dir__)
+cluster_dir = File.expand_path("../../cluster", script_dir)
+cluster_stdout, cluster_stderr, cluster_status = Open3.capture3("tofu", "output", "-json", chdir: cluster_dir)
+abort(cluster_stderr.empty? ? "tofu output failed" : cluster_stderr) unless cluster_status.success?
+cluster_outputs = JSON.parse(cluster_stdout)
+
+cluster = {
+  "cluster_name" => cluster_outputs.fetch("cluster_name").fetch("value"),
+  "cluster_region" => cluster_outputs.fetch("cluster_region").fetch("value"),
+  "cluster_endpoint" => cluster_outputs.fetch("cluster_endpoint").fetch("value"),
+  "cluster_certificate_authority_data" => cluster_outputs.fetch("cluster_certificate_authority_data").fetch("value"),
+}
+
+token_stdout, token_stderr, token_status = Open3.capture3(
+  "aws", "eks", "get-token",
+  "--region", cluster.fetch("cluster_region"),
+  "--cluster-name", cluster.fetch("cluster_name"),
+  "--output", "json",
+)
+abort(token_stderr.empty? ? "aws eks get-token failed" : token_stderr) unless token_status.success?
+
+token = JSON.parse(token_stdout).dig("status", "token") or abort("aws eks get-token returned no token")
+
+Tempfile.create("kubeconfig") do |kubeconfig|
+  kubeconfig.write(<<~YAML)
+    apiVersion: v1
+    kind: Config
+    clusters:
+    - name: cluster
+      cluster:
+        certificate-authority-data: #{cluster.fetch('cluster_certificate_authority_data')}
+        server: #{cluster.fetch('cluster_endpoint')}
+    contexts:
+    - name: context
+      context:
+        cluster: cluster
+        user: user
+    current-context: context
+    users:
+    - name: user
+      user:
+        token: #{token}
+  YAML
+  kubeconfig.flush
+
+  stdout, stderr, status = Open3.capture3("kubectl", "--kubeconfig", kubeconfig.path, "get", "deployment,statefulset,namespaces", "-A", "-o", "json")
+  abort(stderr.empty? ? "kubectl get failed" : stderr) unless status.success?
+
+  resources = JSON.parse(stdout).fetch("items")
+
+  items = resources.each_with_object({}) do |item, index|
+    next if item.fetch("kind") == "Namespace"
+
+    key = [
+      item.fetch("kind"),
+      item.fetch("metadata").fetch("namespace"),
+      item.fetch("metadata").fetch("name"),
+    ]
+    index[key] = item
+  end
+
+  namespaces = resources.each_with_object({}) do |item, index|
+    next unless item.fetch("kind") == "Namespace"
+
+    metadata = item.fetch("metadata")
+    index[metadata.fetch("name")] = item
+  end
+
+  def workload_status(item)
+    return "missing" unless item
+
+    case item.fetch("kind")
+    when "Deployment"
+      generation = item.fetch("metadata").fetch("generation", 0)
+      observed_generation = item.fetch("status", {}).fetch("observedGeneration", 0)
+      ready_replicas = item.fetch("status", {}).fetch("readyReplicas", 0)
+      available_replicas = item.fetch("status", {}).fetch("availableReplicas", 0)
+      unavailable_replicas = item.fetch("status", {}).fetch("unavailableReplicas", 0)
+
+      return "running" if observed_generation == generation &&
+        ready_replicas.positive? &&
+        available_replicas.positive? &&
+        unavailable_replicas.zero?
+    when "StatefulSet"
+      generation = item.fetch("metadata").fetch("generation", 0)
+      observed_generation = item.fetch("status", {}).fetch("observedGeneration", 0)
+      replicas = item.fetch("status", {}).fetch("replicas", 0)
+      ready_replicas = item.fetch("status", {}).fetch("readyReplicas", 0)
+
+      return "running" if observed_generation == generation &&
+        replicas.positive? &&
+        ready_replicas == replicas
+    end
+
+    "not-running"
+  end
+
+  def namespace_status(item)
+    return "missing" unless item
+
+    item.fetch("status", {}).fetch("phase", "Unknown").downcase
+  end
+
+  rows = EXPECTED_WORKLOADS.map do |workload|
+    item = items[[workload[:kind], workload[:namespace], workload[:name]]]
+    workload.merge(resource: "workload", status: workload_status(item))
+  end
+
+  namespace_rows = EXPECTED_NAMESPACES.map do |namespace|
+    item = namespaces[namespace[:namespace]]
+    namespace.merge(kind: "Namespace", name: namespace[:namespace], resource: "namespace", status: namespace_status(item))
+  end
+
+  rows += namespace_rows
+
+  widths = {
+    resource: rows.map {|row| row[:resource].length}.max,
+    app: rows.map {|row| row[:app].length}.max,
+    kind: rows.map {|row| row[:kind].length}.max,
+    namespace: rows.map {|row| row[:namespace].length}.max,
+    name: rows.map {|row| row[:name].length}.max,
+    status: rows.map {|row| row[:status].length}.max,
+  }
+
+  header = [
+    ["RESOURCE", widths[:resource]],
+    ["APP", widths[:app]],
+    ["KIND", widths[:kind]],
+    ["NAMESPACE", widths[:namespace]],
+    ["NAME", widths[:name]],
+    ["STATUS", widths[:status]],
+  ]
+
+  puts header.map {|label, width| label.ljust(width)}.join("  ")
+  rows.each do |row|
+    puts [
+      row[:resource].ljust(widths[:resource]),
+      row[:app].ljust(widths[:app]),
+      row[:kind].ljust(widths[:kind]),
+      row[:namespace].ljust(widths[:namespace]),
+      row[:name].ljust(widths[:name]),
+      row[:status].ljust(widths[:status]),
+    ].join("  ")
+  end
+end

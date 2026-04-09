@@ -35,6 +35,7 @@ class ScaryChangeDetector
     detect_special_files
     detect_dropbox_conflicts
     detect_changed_feature_files
+    detect_ai_release_path_change
   end
 
   private def detect_new_models
@@ -164,6 +165,26 @@ class ScaryChangeDetector
       EOS
       raise "Commit blocked."
     end
+  end
+
+  private def detect_ai_release_path_change
+    changes = @all.grep(/ai_rubric_config\.rb$/)
+    return if changes.empty?
+    return unless @changed_lines.include?('S3_AI_RELEASE_PATH')
+
+    puts red <<-EOS
+
+        You changed S3_AI_RELEASE_PATH. Before merging, please validate
+        the new release path against all AI-enabled rubrics:
+
+          1. Seed production courses:  cd dashboard && bundle exec rake seed:all
+          2. Validate AI config:       cd dashboard && bin/rails runner 'puts AiRubricConfig.validate_ai_config'
+
+        This ensures that the S3 release directory contains valid config
+        (params.json, system_prompt.txt, standard_rubric.csv) for every
+        rubric with an s3_config_dir or AI-enabled learning goals.
+
+    EOS
   end
 end
 

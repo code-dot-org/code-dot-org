@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 ## What is a pipeline?
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔗 <strong>Pipeline</strong> is a series of steps that run in order, where the output from one step becomes the input to the next.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Pipeline</strong> is a series of steps that run in order, where the output from one step becomes the input to the next.</p>
 </div>
 
 #### In programming, pipelines help manage complex tasks by breaking them into **clear, logical stages**.
@@ -55,18 +55,8 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
----
 
-## Thinking like a programmer
 
-#### Designing a pipeline is less about writing code first and more about asking the right questions:
-
-- #### What problem am I trying to solve for the user?
-- #### Which step needs to happen **first**?
-- #### What data should move on to the next step?
-- #### What should the final output look like?
-
-#### Two apps can use the **same data** but different pipelines — and get very different results.
 
 
 

@@ -1,0 +1,8 @@
+{
+  "key": "ai-tutor",
+  "name": "AI Tutor",
+  "category": "Lab Features",
+  "category_key": "lab_features",
+  "content": "### About AI Tutor\nThe AI Tutor is an interactive, generative AI-powered learning assistant designed to help you think critically, debug code, and deepen your understanding of computer science concepts. In addition to asking guiding questions and helping you debug, it can also generate code directly when that best supports the learning goals of the activity. \n\n### Accessing AI Tutor\n\nAI Tutor is available as a tab in the Resource Panel. If you can not access it you should ask your teacher for help.\n\n### Using AI Tutor\n\ncoming soon\n\n### FAQs\nWhat should I do if AI Tutor gives incorrect or confusing responses?\nAI models can occasionally make factual or logical mistakes. When this happens, try these steps:\n\nReflect and verify the AI’s response rather than copy it directly.\nFigure out how to identify and fix errors.\nShare any concerning or confusing behavior with your teacher\n",
+  "short_description": "AI Tutor is an interactive, generative AI-powered learning assistant designed to help students think critically, debug code, and deepen their understanding of computer science concepts while working on projects in Code.org’s curriculum."
+}

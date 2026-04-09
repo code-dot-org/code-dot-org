@@ -99,12 +99,14 @@ export async function getUserChatHistory(
   userId: number,
   levelId: number,
   scriptId: number | null,
-  channelId?: string
+  channelId?: string,
+  lessonId?: number
 ): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
     userId: userId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
+    lessonId: lessonId?.toString() || '',
     channelId: channelId ?? '',
   };
   const response = await HttpClient.fetchJson<ServerChatEvent[]>(
@@ -308,6 +310,19 @@ function getUpdatedMessages(
           role: Role.ASSISTANT,
           timestamp: Date.now(),
           status: AiInteractionStatus.MODEL_TIMEOUT,
+        },
+      ];
+    case AiRequestExecutionStatus.MODEL_RATE_LIMITED:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.MODEL_RATE_LIMITED,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.MODEL_RATE_LIMITED,
         },
       ];
     default:

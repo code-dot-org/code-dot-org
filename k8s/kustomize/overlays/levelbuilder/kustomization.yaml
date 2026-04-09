@@ -1,0 +1,11 @@
+# This overlay exists only so `verify-helm-parity` can reference remote envType
+# overlays and so Skaffold can run locally with server-shaped parameters.
+#
+# Do not include this directory in scoped sources for Kargo or Argo deploys.
+# Do not use this directory in production code paths. For local dev ONLY.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+components:
+  - git::https://github.com/code-dot-org/k8s-gitops//apps/codeai/envTypes/levelbuilder

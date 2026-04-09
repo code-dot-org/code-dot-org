@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:07:44.000Z",
   "level_num": "custom",
@@ -14,7 +15,8 @@
       "setProperty": null,
       "getProperty": null,
       "getText": null,
-      "setText": null
+      "setText": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -79,9 +81,8 @@
     "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:44.920+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:44.920+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - A_2024\"},{\"changed_at\":\"2026-03-23 19:38:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
