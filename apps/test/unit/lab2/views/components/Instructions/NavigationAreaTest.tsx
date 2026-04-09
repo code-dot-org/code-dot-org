@@ -36,7 +36,6 @@ interface SubmitButtonMockProps {
 
 // Mock child components, exposing props via data attributes so tests can
 // inspect them without exercising child rendering logic.
-// Buttons intentionally omit data-testid (restricted by lint); use getByRole.
 jest.mock(
   '@cdo/apps/lab2/views/components/Instructions/ContinueButton',
   () => ({
@@ -223,14 +222,13 @@ describe('NavigationArea', () => {
       expect(btn.dataset.tooltip).toBe('To continue, submit your prediction');
     });
 
-    it('is enabled when isPredictLevel and predict IS submitted', () => {
+    it('is enabled when isPredictLevel and predict is submitted', () => {
       store.dispatch(setHasSubmittedResponse(true));
       renderDefault({
         levelProperties: makeLevelProperties({
           predictSettings: {isPredictLevel: true},
         }),
       });
-      // Tooltip hint still present; disabled=false is the key assertion.
       expect(getContinueButton().dataset.disabled).toBe('false');
     });
 
@@ -259,7 +257,6 @@ describe('NavigationArea', () => {
         })
       );
       renderDefault();
-      // Tooltip hint still present; disabled=false is the key assertion.
       expect(getContinueButton().dataset.disabled).toBe('false');
     });
 
