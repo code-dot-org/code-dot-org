@@ -45,13 +45,13 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
   }: AnalyticsData
-): Promise<'ok' | 'flagged' | 'skipped' | 'error'> => {
+): Promise<'safe' | 'flagged' | 'error'> => {
   const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
     !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
   ) {
-    return 'skipped';
+    return 'error';
   }
   const dimensions = [
     {name: 'UploaderType', value: uploaderType},
@@ -82,7 +82,7 @@ export const moderateImage = async (
           CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
       )
     ) {
-      return 'ok';
+      return 'safe';
     }
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
