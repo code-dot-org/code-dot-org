@@ -55,12 +55,14 @@ const CARDS: Card[] = [
 ];
 
 interface InterventionBoxProps {
+  lessonId: number;
   lessonName: string;
   lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
 }
 
 const InterventionBox: FC<InterventionBoxProps> = ({
+  lessonId,
   lessonName,
   lessonSummary,
   vocabulary,
@@ -104,6 +106,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         {selected === 'chat' && (
           <ThemeProvider theme={lightTheme}>
             <LessonDeepDiveTutorChat
+              lessonId={lessonId}
               lessonName={lessonName}
               lessonSummary={lessonSummary}
               vocabulary={vocabulary}
