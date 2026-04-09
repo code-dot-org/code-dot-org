@@ -6826,6 +6826,18 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'19-'20"
+        ui-test-csp-2025:
+          title: UI Test CSP
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        ui-test-csd-2025:
+          title: UI Test CSD
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
         teaching-aif-design-build-ai-facilitators-2026:
           title: 'Teaching AIF: Designing & Building with AI'
           description_short: ''
