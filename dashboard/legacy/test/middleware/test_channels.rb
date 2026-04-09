@@ -248,7 +248,7 @@ class ChannelsTest < Minitest::Test
 
   def test_update_channel_truncates_subprojects_for_music_dance_ai
     project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
-    max_subprojects = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS
+    max_subprojects = BubbleChoice::CUSTOM_MODE_MAX_SUBPROJECTS
 
     post '/v3/channels', {projectType: project_type}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
