@@ -1,11 +1,10 @@
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require("path");
 
 const commonConfig = {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
     // Note: Separate aliases are required for aliases to work in unit tests. These should
     // be added in package.json in the jest configuration.
     alias: {
@@ -15,35 +14,32 @@ const commonConfig = {
   },
   output: {
     filename: "[name].js",
-    libraryTarget: 'umd'
+    library: {
+      type: 'umd'
+    },
+    clean: true
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
-        test: /\.jsx$/,
-        enforce: 'pre',
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'babel-loader',
-          }
-        ]
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-          outputPath: 'assets/images',
-          publicPath: 'images',
-          postTransformPublicPath: p =>
-            `__ml_playground_asset_public_path__ + ${p}`,
-          name: '[name].[ext]?[contenthash]'
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8192
+          }
+        },
+        generator: {
+          filename: 'assets/images/[name][ext][query]'
         }
       },
     ]
@@ -59,14 +55,14 @@ const commonConfig = {
 
 const firstConfigOnly = {
   plugins: [
-    new CleanWebpackPlugin(),
-    new CopyPlugin([
-      {
-        from: 'public/datasets/*.*',
-        to: 'assets/datasets/',
-        flatten: true
-      }
-    ])
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public/datasets/*.*',
+          to: 'assets/datasets/[name][ext]'
+        }
+      ]
+    })
   ]
 };
 
