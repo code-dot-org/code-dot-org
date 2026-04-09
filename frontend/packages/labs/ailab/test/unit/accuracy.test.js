@@ -8,7 +8,7 @@ import {
   getSummaryStat
 } from '../../src/helpers/accuracy.js';
 import { classificationState, regressionState } from './testData';
-import { ResultsGrades, ColumnTypes, MLTypes } from '../../src/constants.js';
+import { ResultsGrades, MLTypes } from '../../src/constants.js';
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,
