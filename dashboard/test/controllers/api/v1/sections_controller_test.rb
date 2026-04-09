@@ -1650,20 +1650,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   # create_demo
 
   test 'create_demo: returns bad_request when not signed in' do
-    post :create_demo, as: :json, params: {section_type: 'aif'}
+    post :create_demo, params: {section_type: 'aif'}
     assert_response :redirect
   end
 
   test 'create_demo: returns bad_request for invalid section type' do
     sign_in @teacher
-    post :create_demo, as: :json, params: {section_type: 'invalid'}
+    post :create_demo, params: {section_type: 'invalid'}
     assert_response :bad_request
   end
 
   test 'create_demo: creates section with preset config' do
     sign_in @teacher
     preset = Policies::DemoSections.get_preset(:aif)
-    post :create_demo, as: :json, params: {section_type: 'aif'}
+    post :create_demo, params: {section_type: 'aif'}
     assert_response :success
 
     section = returned_section
@@ -1680,7 +1680,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CDO.stubs(:demo_student_ids).returns({'aif' => [demo_student.id.to_s]})
     Policies::DemoSections.reset_cache!
 
-    post :create_demo, as: :json, params: {section_type: 'aif'}
+    post :create_demo, params: {section_type: 'aif'}
     assert_response :success
 
     section = returned_section
@@ -1689,7 +1689,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'create_demo: students cannot create demo sections' do
     sign_in @student
-    post :create_demo, as: :json, params: {section_type: 'aif'}
+    post :create_demo, params: {section_type: 'aif'}
     assert_response :forbidden
   end
 
