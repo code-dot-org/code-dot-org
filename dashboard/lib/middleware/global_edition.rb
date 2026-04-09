@@ -197,6 +197,8 @@ module Middleware
             new_locale:,
           },
         )
+      ensure
+        Cdo::GlobalEdition.current_region = request.cookies[REGION_KEY].presence
       end
 
       private def existing_route?(path = original_path_info)

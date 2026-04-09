@@ -111,8 +111,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
-    authorize! :read, current_section
+    authorize! :manage, current_section
 
     students = User.where(id: student_ids).all
     if students.count != student_ids.count
@@ -146,7 +145,14 @@ class TransfersController < ApplicationController
 
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
       params[:stay_enrolled_in_current_section] != 'false'
+    skipped_students = []
     students.each do |student|
+      # Skip students the teacher cannot manage (e.g. demo students).
+      unless can?(:manage, student)
+        skipped_students << student.name
+        next
+      end
+
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
         follower_same_user_teacher.update!(section_id: new_section.id)
@@ -163,6 +169,10 @@ class TransfersController < ApplicationController
       student.assign_script(new_section.script, new_section.unit_group) if new_section.script
     end
 
-    render json: {}, status: :no_content
+    if skipped_students.any?
+      render json: {warning: "The following demo students could not be transferred: #{skipped_students.join(', ')}."}, status: :ok
+    else
+      render json: {}, status: :no_content
+    end
   end
 end

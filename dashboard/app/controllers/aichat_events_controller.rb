@@ -140,6 +140,7 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_submit_feedback?(user_id)
-    User.find_by_id(user_id)&.student_of?(current_user)
+    student = User.find_by_id(user_id)
+    student&.student_of?(current_user) && can?(:manage, student)
   end
 end
