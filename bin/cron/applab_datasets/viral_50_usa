@@ -6,7 +6,7 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # This script fetches US top song data from the iTunes RSS feed and uploads it to the
-# shared datablock storage table used by the legacy "Viral 50 USA" dataset.
+# shared datablock storage table for the "Viral 50 USA" dataset.
 require_relative '../../../dashboard/config/environment'
 require_relative '../../../deployment'
 require 'cdo/profanity_filter'
