@@ -177,7 +177,7 @@ ensure_excludes() {
 print_usage() {
   cat <<'EOF'
 Usage:
-  bin/sdd-overlay [speckit|openspec]
+  experimental/sdd-overlay.sh [speckit|openspec]
 
 Behavior:
   - Clones or updates sdd-experiment
