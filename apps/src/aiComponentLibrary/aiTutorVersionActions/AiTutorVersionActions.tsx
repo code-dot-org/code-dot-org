@@ -3,10 +3,18 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
+import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
+import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
+import {
+  AI_TUTOR_VERSION_ACTION_REJECT,
+  Notification,
+} from '@cdo/apps/aichat/types';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
   acceptAiTutorVersion,
   rejectAiTutorVersion,
@@ -31,6 +39,10 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const [isAcceptMode, setIsAcceptMode] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+
   const dispatch = useAppDispatch();
 
   // Warn the user if they attempt to reload the page before accepting or
@@ -46,6 +58,37 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
+
+  useEffect(() => {
+    const possiblyRejectOnPageHide = async (event: PageTransitionEvent) => {
+      if (viewingAiTutorVersionFileUpdates) {
+        const notification: Notification = {
+          timestamp: Date.now(),
+          removeId: getNewRemoveId(),
+          text: "You rejected AI Tutor's changes.",
+          notificationType: AI_TUTOR_VERSION_ACTION_REJECT,
+          includeInChatHistory: true,
+          files: files,
+        };
+
+        const payload = {
+          newChatEvent: notification,
+          aichatContext: ChatEventLogger.getInstance().aichatContext,
+          authenticity_token: await getAuthenticityToken(),
+        };
+
+        navigator.sendBeacon(
+          '/aichat_events/log_chat_event',
+          new Blob([JSON.stringify(payload)], {type: 'application/json'})
+        );
+      }
+    };
+
+    window.addEventListener('pagehide', possiblyRejectOnPageHide);
+
+    return () =>
+      window.removeEventListener('pagehide', possiblyRejectOnPageHide);
+  }, [files, viewingAiTutorVersionFileUpdates]);
 
   const handleSaveAiTutorVersion = useCallback(async () => {
     if (isSaving) return;
