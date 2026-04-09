@@ -28,7 +28,7 @@ class TeacherDashboardController < ApplicationController
       @section_summary = @section.selected_section_summarize.except('secret_words')
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
-    @locale_code = request.locale
+    @locale_code = I18n.locale.to_s
     @flash = flash
     view_options(full_width: true, no_padding_container: true)
   end
