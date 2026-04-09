@@ -45,7 +45,7 @@ describe('LessonProgress', () => {
       experiments.isEnabled = realIsEnabled;
     });
 
-    it('does not include tutor bubble when lessonTutorAvailable is false', () => {
+    it('does not include tutor bubble when hasLessonPlan is false', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = shallow(<LessonProgress {...defaultProps} />);
       assert.equal(wrapper.find('LessonTutorProgressBubble').length, 0);
@@ -56,19 +56,19 @@ describe('LessonProgress', () => {
       const wrapper = shallow(
         <LessonProgress
           {...defaultProps}
-          lessonTutorAvailable={true}
+          hasLessonPlan={true}
           lessonTutorPath={'/tutor'}
         />
       );
       assert.equal(wrapper.find('LessonTutorProgressBubble').length, 0);
     });
 
-    it('includes tutor bubble when lessonTutorAvailable is true and experiment is enabled', () => {
+    it('includes tutor bubble when hasLessonPlan is true and experiment is enabled', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = shallow(
         <LessonProgress
           {...defaultProps}
-          lessonTutorAvailable={true}
+          hasLessonPlan={true}
           lessonTutorPath={'/tutor'}
         />
       );
@@ -80,7 +80,7 @@ describe('LessonProgress', () => {
       const wrapper = shallow(
         <LessonProgress
           {...defaultProps}
-          lessonTutorAvailable={true}
+          hasLessonPlan={true}
           lessonTutorPath={'/tutor'}
         />
       );

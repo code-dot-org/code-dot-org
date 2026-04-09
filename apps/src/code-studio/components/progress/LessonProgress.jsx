@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   lessonExtrasUrl,
-  lessonTutorAvailable,
+  hasLessonPlan,
   lessonTutorPath,
   getCurrentLevel,
   getCurrentLevels,
@@ -29,7 +29,7 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonName: PropTypes.string,
     lessonExtrasUrl: PropTypes.string,
-    lessonTutorAvailable: PropTypes.bool,
+    hasLessonPlan: PropTypes.bool,
     lessonTutorPath: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
@@ -148,12 +148,18 @@ class LessonProgress extends Component {
     const {
       currentPageNumber,
       lessonExtrasUrl,
-      lessonTutorAvailable,
+      hasLessonPlan,
       lessonTutorPath,
       lessonName,
       navigateToLevelId,
       currentLevel,
     } = this.props;
+
+    const showLessonTutorBubble =
+      lessonTutorPath &&
+      hasLessonPlan &&
+      experiments.isEnabled(experiments.LESSON_TUTOR);
+
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -219,14 +225,11 @@ class LessonProgress extends Component {
                 />
               </div>
             )}
-            {lessonTutorAvailable &&
-              experiments.isEnabled(experiments.LESSON_TUTOR) && (
-                <div>
-                  <LessonTutorProgressBubble
-                    lessonTutorPath={lessonTutorPath}
-                  />
-                </div>
-              )}
+            {showLessonTutorBubble && (
+              <div>
+                <LessonTutorProgressBubble lessonTutorPath={lessonTutorPath} />
+              </div>
+            )}
           </div>
         </div>
         <div className="vignette" style={vignetteStyle} />
@@ -303,7 +306,7 @@ export default connect(
       state.progress,
       state.progress.currentLessonId
     ),
-    lessonTutorAvailable: lessonTutorAvailable(
+    hasLessonPlan: hasLessonPlan(
       state.progress,
       state.progress.currentLessonId
     ),

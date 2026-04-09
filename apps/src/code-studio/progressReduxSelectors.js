@@ -367,8 +367,8 @@ export const lessonExtrasUrl = (state, lessonId) =>
 export const lessonTutorPath = (state, lessonId) =>
   state.lessons.find(lesson => lesson.id === lessonId)?.lessonTutorPath || '';
 
-export const lessonTutorAvailable = (state, lessonId) =>
-  !!state.lessons.find(lesson => lesson.id === lessonId)?.lessonTutorAvailable;
+export const hasLessonPlan = (state, lessonId) =>
+  !!state.lessons.find(lesson => lesson.id === lessonId)?.hasLessonPlan;
 
 export const isPerfect = (state, levelId) =>
   !!state.levelResults &&
