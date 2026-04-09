@@ -395,7 +395,7 @@ class ApiController < ApplicationController
     end
 
     render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
-                  course_summary: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  course_summary: unit_group.summarize(current_user, for_edit: false, locale_code: I18n.locale.to_s),
                   hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group),
                   redirect_to_course_url: unit_group.redirect_to_course_url(current_user),
                   show_version_warning: unit_group.has_older_version_progress?(current_user) && !unit_group.has_dismissed_version_warning?(current_user)}
@@ -427,13 +427,13 @@ class ApiController < ApplicationController
     end
     return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
 
-    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: request.locale)
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: I18n.locale.to_s)
 
     additional_script_data = {
       is_instructor: unit.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
-      locale: Unit.locale_english_name_map[request.locale],
-      locale_code: request.locale,
+      locale: Unit.locale_english_name_map[I18n.locale.to_s],
+      locale_code: I18n.locale.to_s,
       course_link: unit_group&.link(section_id: params[:section_id]),
       course_title: unit_group&.localized_title || I18n.t('view_all_units'),
       course_name: course_name,
@@ -446,7 +446,7 @@ class ApiController < ApplicationController
     end
 
     render json: {
-      unitData: unit.summarize(true, current_user, false, request.locale, unit_group_unit: unit_group_unit).merge(additional_script_data),
+      unitData: unit.summarize(true, current_user, false, I18n.locale.to_s, unit_group_unit: unit_group_unit).merge(additional_script_data),
       plcBreadcrumb: plc_breadcrumb
     }
   end

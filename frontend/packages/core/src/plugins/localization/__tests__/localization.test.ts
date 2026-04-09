@@ -6,6 +6,7 @@ import {vi} from 'vitest';
 
 import type {LocalizeJS} from '../Localize';
 import {Localization} from '../Localization';
+import {localizationPlugin} from '../index';
 
 const mockedLocalizeJS = (currentLocale: string) => ({
   getLanguage: vi.fn(() => {
@@ -224,5 +225,21 @@ describe('localization', () => {
         foz: 'zof',
       });
     });
+  });
+});
+
+describe('localizationPlugin', () => {
+  it('is a CorePlugin with an onCoreReady method', () => {
+    expect(typeof localizationPlugin.onCoreReady).toBe('function');
+  });
+
+  it('onCoreReady does not throw', () => {
+    // The plugin relies on window.LocalizeLoader being set up asynchronously;
+    // onCoreReady itself should be a no-op and never throw.
+    expect(() =>
+      localizationPlugin.onCoreReady(
+        {} as Parameters<typeof localizationPlugin.onCoreReady>[0],
+      ),
+    ).not.toThrow();
   });
 });

@@ -45,7 +45,7 @@ const lessonFromLesson = lesson =>
     'lockable',
     'lessonNumber',
     'lessonStartUrl',
-    'lessonTutorAvailable',
+    'hasLessonPlan',
     'lessonTutorPath',
     'assessment',
     'lesson_plan_html_url',
