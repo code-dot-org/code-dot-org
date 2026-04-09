@@ -1,0 +1,18 @@
+{
+  "integration": "speckit",
+  "version": "0.5.0",
+  "installed_at": "2026-04-09T21:28:09.456241+00:00",
+  "files": {
+    ".specify/scripts/bash/common.sh": "237a34d1ba8d3cbf19613f1cfc05cf592401db42db5e4a05a0f2d98a30f8bf89",
+    ".specify/scripts/bash/setup-plan.sh": "bcaa0ccbf45b7d9ea9bff04006500d7eb28a2bdf82bcc819986b21e5294bf76c",
+    ".specify/scripts/bash/check-prerequisites.sh": "aff361639c504b95a2901493f5022788adc01a6792fd37f132de8f57782e4b80",
+    ".specify/scripts/bash/update-agent-context.sh": "f59d5e0538a00417d2532158415b87ac95efc6f7ef700333d45e7b85da0cc07b",
+    ".specify/scripts/bash/create-new-feature.sh": "7347a89d1b1a9b410e935a88b5c539431905125b57261e14d7abce09c03f60e9",
+    ".specify/templates/checklist-template.md": "312eee8291dfa984b21f95ddd0ca778e7a1f0b3a64bfc470d79762a3e3f5d7b8",
+    ".specify/templates/spec-template.md": "785dc50d856dd92d6515eca0761e16dce0c9ba0a3cd07154fd33eae77932422a",
+    ".specify/templates/constitution-template.md": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
+    ".specify/templates/agent-file-template.md": "55ed438c2e861444ef22f45fe5238f3ebf0dc1cb6e53067d7232fbbf4ce82892",
+    ".specify/templates/plan-template.md": "873e84b226fe3d24afe28046931b20db9bbb9210366428dc958a515349ed6e68",
+    ".specify/templates/tasks-template.md": "5da92ac1fbf5be2f9018a5064497995bf3592761ccb6b3951503c63d851297e8"
+  }
+}
