@@ -151,7 +151,7 @@ module Cdo
     end
 
     def ge_region
-      RequestStore.store[Cdo::GlobalEdition::REGION_KEY]
+      Cdo::GlobalEdition.current_region
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so
