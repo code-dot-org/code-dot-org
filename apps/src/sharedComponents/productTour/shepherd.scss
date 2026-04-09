@@ -116,6 +116,24 @@
   @extend %shepherd-step-container-base;
 }
 
+.onboarding-completion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+
+  .onboarding-completion-emoji {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+.onboarding-completion-step .shepherd-footer {
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .onboarding-step-content {
   display: flex;
   flex-direction: row;

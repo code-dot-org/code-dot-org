@@ -1,8 +1,8 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
 import {
+  createCompletionStep,
   nextButton,
-  completeButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 // Wraps step text with the sparkle icon + text layout shown in the design.
@@ -125,7 +125,8 @@ export const createSectionOnboardingTourSteps = (
     ),
     beforeShowPromise: () =>
       waitForElement('#uitest-expandable-coteacher-container'),
-    buttons: [completeButton(tour)],
+    buttons: [nextButton(tour)],
     when: highlightAttachedElement('#uitest-expandable-coteacher-container'),
   },
+  createCompletionStep(tour, 'Create a Class Section', 'Stay on Sections page'),
 ];
