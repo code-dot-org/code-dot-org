@@ -103,6 +103,9 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
+      if (file.uint8Array.length === 0) {
+        return {response: text, status: AiRequestExecutionStatus.FAILURE};
+      }
       // Check generated images for safety.
       const imageModerationStatus = await getImageModerationStatus(
         file,
