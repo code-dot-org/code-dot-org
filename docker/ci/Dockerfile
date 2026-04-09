@@ -87,6 +87,7 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
+    psmisc \
     python \
     python-dev \
     python3-pip \
