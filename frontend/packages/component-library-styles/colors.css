@@ -135,7 +135,8 @@
 */
 /* stylelint-disable color-hex-length */
 [data-brand='codeai']:root,
-[data-brand='codeai'][data-theme='Light'] {
+[data-brand='codeai'][data-theme='Light'],
+[data-brand='codeai'] [data-theme='Light'] {
   --background-accent-orange-light: #fff0f7;
   --background-accent-orange-primary: #ff69b4;
   --background-accent-orange-strong: #b02e6c;
@@ -246,7 +247,8 @@
 }
 
 /* Alternative brand — Dark theme overrides (ALL pink for visual auditing) */
-[data-brand='codeai'][data-theme='Dark'] {
+[data-brand='codeai'][data-theme='Dark'],
+[data-brand='codeai'] [data-theme='Dark'] {
   --background-accent-orange-light: #6e1543;
   --background-accent-orange-primary: #ff69b4;
   --background-accent-orange-strong: #ff8fc9;

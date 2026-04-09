@@ -1,5 +1,4 @@
 module AiLessonSummaryPodcastsHelper
-  API_KEY = CDO.elevenlabs_api_key
   MODEL = "eleven_v3"
   PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
   PODCAST_FOLDER = 'podcasts/'
@@ -20,7 +19,6 @@ module AiLessonSummaryPodcastsHelper
   end
 
   def self.get_podcast_from_script(script)
-    client = Client.new(API_KEY, MODEL)
     begin
       response = client.request_podcast(script)
     rescue Net::OpenTimeout, Net::ReadTimeout
@@ -65,5 +63,9 @@ module AiLessonSummaryPodcastsHelper
         timeout: 180,
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.elevenlabs_api_key, MODEL)
   end
 end

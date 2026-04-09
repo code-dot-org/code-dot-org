@@ -100,6 +100,7 @@ class LessonsController < ApplicationController
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
     @lesson_deep_dive_data = {
+      lessonId: @lesson.id,
       lessonName: @lesson.localized_name,
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},

@@ -92,9 +92,6 @@ const SILENCED = [
 
   // needed to initialize the locales before all other app code loads
   'localization',
-
-  // DataDog global entry point
-  'dataDog',
 ];
 const SITES_CONFIG = {
   studio: {

@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:19.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Sections\r\n\r\nIn this level, we'll use AI Tutor to help us understand section tags and add a new section to our webpage.\r\n\r\n**Do This:**\r\n1. Ask AI Tutor: \"How do sections work in HTML?\"\r\n    - You can type directly, or highlight lines of code and select **\"Add to AI Tutor\"**.\r\n2. Ask AI Tutor to add a new dance style to this page.\r\n    - Be specific - use clear terms or the tag name in your prompt (e.g., *\"Add a new `<section>` that...\"*).\r\n\r\nOnce you've added your content, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildHTML",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildHTML": "- Only generate section, header, and paragraph elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Sections",
+    "bubble_choice_description": "Learn about Section elements, like &lt;section&gt;",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>Dance Styles Around the World</h1>\n\n    <section>\n      <h2>Salsa</h2>\n      <p>Salsa is a lively partner dance with roots in Cuban and Puerto Rican music.</p>\n      <p>It is known for its quick footwork, hip movements, and energetic rhythm.</p>\n    </section>\n\n    <section>\n      <h2>Kathak</h2>\n      <p>Kathak is one of the major classical dance forms of India, originating in North India.</p>\n      <p>It features intricate footwork, graceful spins, and expressive storytelling through movement.</p>\n    </section>\n\n    <section>\n      <h2>Breakdancing</h2>\n      <p>Breakdancing, also called B-boying, emerged from the hip-hop culture of the Bronx in New York City.</p>\n      <p>It combines acrobatic moves, footwork, and freezes performed to the beat of the music.</p>\n    </section>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/5719963da0231456884c38b4a004790e-Screenshot 2025-04-02 at 7.42.24 AM.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:19.256+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9e\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9e\"},{\"changed_at\":\"2026-04-06 23:18:53 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:20:37 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
-import {setPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
+import {setPendingArtifactMessage} from '@cdo/apps/aiDifferentiation/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {EVENTS} from '../metrics/AnalyticsConstants';

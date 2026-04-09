@@ -15,7 +15,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
+      super || TRUSTED_PROXIES.any? do |proxy|
         proxy.include?(ip)
       rescue
         false

@@ -17,7 +17,8 @@ module Cdo
     # Brand configurations keyed by brand code
     BRANDS = {
       BRAND_CODE_ORG => {
-        logo_filename: 'logo-inverse.svg',
+        logo_filename: 'logo.svg',
+        header_logo_filename: 'logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
         legal_name: 'Code.org',
@@ -25,6 +26,7 @@ module Cdo
       },
       BRAND_CODEAI => {
         logo_filename: 'logo.svg',
+        header_logo_filename: 'logo.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
         legal_name: 'Code.ai',
@@ -50,9 +52,14 @@ module Cdo
       BRANDS[brand_code] || BRANDS[BRAND_CODE_ORG]
     end
 
-    # Get the logo filename for the current brand
+    # Get the logo filename for the current brand (used on share pages)
     def self.logo_filename(request = nil)
       current_brand_configuration(request)[:logo_filename]
+    end
+
+    # Get the header logo filename for the current brand (used in the site header)
+    def self.header_logo_filename(request = nil)
+      current_brand_configuration(request)[:header_logo_filename]
     end
 
     # Get the I18n key for the logo alt text
