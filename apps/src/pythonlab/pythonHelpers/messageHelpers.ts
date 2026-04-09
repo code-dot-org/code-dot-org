@@ -1,5 +1,7 @@
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {KMeansSignalType} from '@cdo/apps/miniApps/kmeans/constants';
+import {KMeansSignal} from '@cdo/apps/miniApps/kmeans/types';
 import {
   NeighborhoodSignalType,
   NeighborhoodExceptionType,
@@ -122,6 +124,24 @@ export function extractNeighborhoodExceptionType(
   } else {
     return null;
   }
+}
+
+// This function parses the message string (example: '[KMEANS] ADD_POINT {"x": 1.0, "y": 2.0, "id": 0}') to a KMeansSignal.
+export function parseMessageToKMeansSignal(message: string): KMeansSignal | null {
+  const regex = /^\[(\w+)]\s+([^\s]+)(?:\s+(\{.*\}))?$/;
+  const match = message.match(regex);
+  if (!match) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(`Error in parseMessageToKMeansSignal. message: ${message}`);
+    return null;
+  }
+  const [, , value, detail] = match;
+  const signal: KMeansSignal = {value: value as KMeansSignalType};
+  if (detail) {
+    signal.detail = JSON.parse(detail);
+  }
+  return signal;
 }
 
 // This function parses the message string (example: '[NEIGHBORHOOD] PAINT {"color": "Blue"}') to a NeighborhoodSignal.

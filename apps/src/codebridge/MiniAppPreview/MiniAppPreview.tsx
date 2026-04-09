@@ -13,6 +13,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import KMeansPreview from './KMeansPreview';
 import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
@@ -61,6 +62,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     if (miniApp === MiniApps.Neighborhood) {
       return <NeighborhoodPreview handleScaling={handleScaling} />;
     }
+    if (miniApp === MiniApps.KMeans) {
+      return <KMeansPreview />;
+    }
     return null;
   }, [handleScaling, miniApp]);
 
@@ -68,6 +72,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     setIsResetButtonDisabled(true);
     if (miniApp === MiniApps.Neighborhood) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    }
+    if (miniApp === MiniApps.KMeans) {
+      CodebridgeRegistry.getInstance().getKMeans()?.reset();
     }
   };
 
