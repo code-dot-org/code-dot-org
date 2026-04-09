@@ -42,7 +42,6 @@ apps/i18n/tts_keys/** !text !filter !merge !diff
 apps/static/aichat/modelDescriptions.json !text !filter !merge !diff
 dashboard/app/assets/javascripts/** !text !filter !merge !diff
 dashboard/app/assets/stylesheets/** !text !filter !merge !diff
-dashboard/config/datablock_storage/datasets/covid-19-cases-per-country.json !text !filter !merge !diff
 dashboard/config/locales/**/*en.yml !text !filter !merge !diff
 dashboard/config/locales/**/*en.json !text !filter !merge !diff
 dashboard/public/**/README.md !text !filter !merge !diff
