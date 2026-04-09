@@ -6,7 +6,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
   before_action :get_course_and_unit, only: [:create, :update]
 
-  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
@@ -136,6 +136,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section.update!(fields)
     if @unit
       section.students.each do |student|
+        next unless can?(:manage, student) # Don't modify students the teacher can't manage (like demo students)
         student.assign_script(@unit, @course)
       end
     end
@@ -209,15 +210,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     }
   end
 
-  def update_sharing_disabled
-    @section.update!(sharing_disabled: params[:sharing_disabled])
-    @section.update_student_sharing(params[:sharing_disabled])
-    render json: {
-      sharing_disabled: @section.sharing_disabled,
-      students: @section.students.map(&:summarize)
-    }
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
@@ -229,7 +221,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, I18n.locale.to_s)
     render json: course_offerings
   end
 
