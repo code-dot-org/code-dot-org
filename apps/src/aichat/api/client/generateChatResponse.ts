@@ -116,10 +116,7 @@ export async function generateChatResponse(
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
-      } else if (
-        imageModerationStatus === 'error' ||
-        imageModerationStatus === 'skipped'
-      ) {
+      } else if (imageModerationStatus === 'error') {
         return {
           response: text,
           status: AiRequestExecutionStatus.FAILURE,
