@@ -3935,9 +3935,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    "@tanstack/react-query": "npm:^5.90.20"
+    "@tanstack/react-query-devtools": "npm:^5.91.3"
+    camelcase-keys: "npm:^10.0.2"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
     tldts: "npm:^7.0.23"
+    zod: "npm:^4.3.6"
   peerDependencies:
     "@sentry/browser": 10.40.0
     ky: ^1.14.3
@@ -8019,6 +8023,43 @@ __metadata:
   dependencies:
     tslib: "npm:^2.4.0"
   checksum: 10/6ba2f7e215d32d71fce139e2cfc426b3ed7eaa709febdeb07b97260a4c9eea4784cf047cc1271be273990b08220b576b94a42b5780947c0b3be84973a847a24d
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:5.96.2":
+  version: 5.96.2
+  resolution: "@tanstack/query-core@npm:5.96.2"
+  checksum: 10/1150ed5623f8352bbf83d15e39fecdf2326e6080a35a89d124124cecd4f38ace022c2cd79523a297fca9ddb23ff759bd16406fa50fa837528a3941bf74cbbec0
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-devtools@npm:5.96.2":
+  version: 5.96.2
+  resolution: "@tanstack/query-devtools@npm:5.96.2"
+  checksum: 10/fffa48854b4564a8d201d14f9dce0e0bcf816c4f5f0daf5ab8cc23e53a2ae59da84cf4321afc11e66085cf2a303c71cb5650305a953b381daae52303a285d6fc
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.91.3":
+  version: 5.96.2
+  resolution: "@tanstack/react-query-devtools@npm:5.96.2"
+  dependencies:
+    "@tanstack/query-devtools": "npm:5.96.2"
+  peerDependencies:
+    "@tanstack/react-query": ^5.96.2
+    react: ^18 || ^19
+  checksum: 10/c4c417b1d51387bcd9a3935955c986b3b4d45bc196f62360ae89ba857c7951075f6a67a4403be5a8e024f747acd2be4906b4e58e4b16acdeac29dea7d245db77
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.90.20":
+  version: 5.96.2
+  resolution: "@tanstack/react-query@npm:5.96.2"
+  dependencies:
+    "@tanstack/query-core": "npm:5.96.2"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10/cd11ae6e65557bf2f9027f5333bb22c646230acc96a007d12abec1ae1717b6f0cd7dd37d73d0a73a0cd603368ce43b700078934f1158ce03ab312ff2cb2a7fb8
   languageName: node
   linkType: hard
 
@@ -12135,6 +12176,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"camelcase-keys@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "camelcase-keys@npm:10.0.2"
+  dependencies:
+    camelcase: "npm:^9.0.0"
+    map-obj: "npm:6.0.0"
+    quick-lru: "npm:^7.3.0"
+    type-fest: "npm:^5.4.1"
+  checksum: 10/a35982324da3b30a271c8732e68c8dca10c8a7ab9f70edd3067cea944a26effd6af8dea77c875363e399728d56d75029032130f32fc683aa3dc4963f61e2129f
+  languageName: node
+  linkType: hard
+
 "camelcase-keys@npm:^6.2.2":
   version: 6.2.2
   resolution: "camelcase-keys@npm:6.2.2"
@@ -12171,6 +12224,13 @@ __metadata:
   version: 6.3.0
   resolution: "camelcase@npm:6.3.0"
   checksum: 10/8c96818a9076434998511251dcb2761a94817ea17dbdc37f47ac080bd088fc62c7369429a19e2178b993497132c8cbcf5cc1f44ba963e76782ba469c0474938d
+  languageName: node
+  linkType: hard
+
+"camelcase@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "camelcase@npm:9.0.0"
+  checksum: 10/3353142290814db68eaf2880bff094f25ee0d2ded4b99b20373e32758aa533abffe5da6aecba8627b3101ec1919c990c4ba41a981d8652d766273006360995fe
   languageName: node
   linkType: hard
 
@@ -21885,6 +21945,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"map-obj@npm:6.0.0":
+  version: 6.0.0
+  resolution: "map-obj@npm:6.0.0"
+  checksum: 10/993b4c50b761eadd70839d653a02f158de950e359dcbaf28009185d17a2a431f6513cef139fbf23c334d556a8b311bf814c3c14c43b15de219dc517c881c9fbb
+  languageName: node
+  linkType: hard
+
 "map-obj@npm:^1.0.0":
   version: 1.0.1
   resolution: "map-obj@npm:1.0.1"
@@ -25137,6 +25204,13 @@ canvg@gabelerner/canvg:
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
   checksum: 10/5c7c75f1c696750f619b165cc9957382f919e4207dabf04597a64f0298861391cdc5ee91a1dde1a5d460ecf7ee1af7fc36fef6d155bef2be66f05d43fd63d4f0
+  languageName: node
+  linkType: hard
+
+"quick-lru@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "quick-lru@npm:7.3.0"
+  checksum: 10/5acbfe925c47065a479df2df6899491fded29e910f56a436094c7370031b5cdcbfbf44f70bb10f2c4ade0d6b1f8c90e20cce780494e9f6eedd5fdef8ff8a90a8
   languageName: node
   linkType: hard
 
@@ -29380,6 +29454,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"tagged-tag@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "tagged-tag@npm:1.0.0"
+  checksum: 10/e37653df3e495daa7ea7790cb161b810b00075bba2e4d6c93fb06a709e747e3ae9da11a120d0489833203926511b39e038a2affbd9d279cfb7a2f3fcccd30b5d
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.0.0, tapable@npm:^2.1.1, tapable@npm:^2.2.0, tapable@npm:^2.2.1":
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
@@ -30255,6 +30336,15 @@ canvg@gabelerner/canvg:
   version: 2.19.0
   resolution: "type-fest@npm:2.19.0"
   checksum: 10/7bf9e8fdf34f92c8bb364c0af14ca875fac7e0183f2985498b77be129dc1b3b1ad0a6b3281580f19e48c6105c037fb966ad9934520c69c6434d17fd0af4eed78
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^5.4.1":
+  version: 5.5.0
+  resolution: "type-fest@npm:5.5.0"
+  dependencies:
+    tagged-tag: "npm:^1.0.0"
+  checksum: 10/b5423e991f29dd8cb6ba1bf613f6ab95065673706bf6ffbc8319a457256af8e9844de013801b4ab94572cee32eb35e3ebc9ff67db2bd4b2937cc153a2b91a093
   languageName: node
   linkType: hard
 
