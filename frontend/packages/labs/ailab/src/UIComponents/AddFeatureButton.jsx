@@ -1,6 +1,5 @@
 /* React component to handle selecting columns as features. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { addSelectedFeature } from "../redux";

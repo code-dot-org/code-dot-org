@@ -1,5 +1,4 @@
 /* React component to handle showing details of categorical columns. */
-import React from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";

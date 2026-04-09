@@ -1,6 +1,5 @@
 /* React component to display a statement about our model. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { setLabelColumn, removeSelectedFeature } from "../redux";
 import { styles } from "../constants";

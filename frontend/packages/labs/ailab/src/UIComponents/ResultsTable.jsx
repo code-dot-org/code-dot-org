@@ -1,6 +1,6 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
 import PropTypes from "prop-types";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { connect } from "react-redux";
 import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";

@@ -3,7 +3,7 @@
   each active combination of features values, and corresponding percentage of
   label values, with a heatmap style applied.
 */
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { connect } from "react-redux";
 import { getCrossTabData } from "../selectors/visualizationSelectors";
 import { styles } from "../constants.js";

@@ -1,6 +1,6 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import {
   setSelectedName,

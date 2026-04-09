@@ -1,6 +1,5 @@
 /* React component to handle animation descriptions for screen readers. */
 import PropTypes from "prop-types";
-import React from "react";
 import I18n from "../i18n";
 
 function AnimationDescription({ description }) {

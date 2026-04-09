@@ -3,7 +3,6 @@
   for selected columns.
 */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { getCurrentColumnDetails } from "../selectors/currentColumnSelectors";
 import { styles, ColumnTypes } from "../constants.js";

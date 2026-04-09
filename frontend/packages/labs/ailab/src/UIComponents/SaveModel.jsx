@@ -1,6 +1,6 @@
 /* React component to handle saving a trained model. */
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail } from "../redux";
 import {

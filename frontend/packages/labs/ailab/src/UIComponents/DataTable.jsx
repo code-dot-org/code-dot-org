@@ -1,6 +1,5 @@
 /* React component to handle displaying imported data. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";

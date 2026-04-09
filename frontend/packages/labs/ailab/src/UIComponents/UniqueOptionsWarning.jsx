@@ -1,6 +1,5 @@
 /* React component to handle showing warning for excessive unique options. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { styles, UNIQUE_OPTIONS_MAX } from "../constants";
 import {

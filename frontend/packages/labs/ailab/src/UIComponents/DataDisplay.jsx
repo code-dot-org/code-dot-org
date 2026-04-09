@@ -1,6 +1,5 @@
 /* React component to handle displaying imported data. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import Statement from "./Statement";
 import DataTable from "./DataTable";

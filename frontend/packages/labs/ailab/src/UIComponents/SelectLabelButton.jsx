@@ -1,6 +1,5 @@
 /* React component to handle selecting a column as the label. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { setLabelColumn } from "../redux";

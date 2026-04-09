@@ -1,6 +1,5 @@
 /* React component to show information about the currently-selected data set. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";

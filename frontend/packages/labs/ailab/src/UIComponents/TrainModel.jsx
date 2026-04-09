@@ -1,6 +1,6 @@
 /* React component to handle training. */
 import PropTypes from "prop-types";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { store } from "../index.js";
 import train from "../train";

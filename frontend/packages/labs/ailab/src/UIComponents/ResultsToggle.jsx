@@ -1,6 +1,5 @@
 /* React component to handle toggling between correct/incorrect test results */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { setResultsTab } from "../redux";
 import { ResultsGrades, styles } from "../constants";

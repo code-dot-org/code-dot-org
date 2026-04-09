@@ -1,5 +1,4 @@
 /* React component to handle showing details of numerical columns. */
-import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";

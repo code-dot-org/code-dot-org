@@ -1,6 +1,5 @@
 /* React component to handle displaying the model card. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getLabelToSave, getFeaturesToSave } from "../redux";

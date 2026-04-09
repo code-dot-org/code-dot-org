@@ -1,6 +1,5 @@
 /* React component to handle predicting and displaying predictions. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { store } from "../index.js";
 import train from "../train";

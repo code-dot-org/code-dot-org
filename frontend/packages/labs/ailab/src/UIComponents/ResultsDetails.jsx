@@ -1,6 +1,6 @@
 /* React component to handle displaying accuracy results. */
 import PropTypes from "prop-types";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { connect } from "react-redux";
 import { setShowResultsDetails } from "../redux";
 import {

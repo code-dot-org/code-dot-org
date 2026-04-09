@@ -1,6 +1,6 @@
 /* React component to handle training. */
 import PropTypes from "prop-types";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { connect } from "react-redux";
 import { getTableData, readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";

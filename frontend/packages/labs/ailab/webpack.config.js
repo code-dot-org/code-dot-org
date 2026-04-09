@@ -72,7 +72,8 @@ const externalConfig = {
   externals: {
     lodash: 'lodash',
     react: 'react',
-    'react-dom': 'react-dom'
+    'react-dom': 'react-dom',
+    'react/jsx-runtime': 'react/jsx-runtime'
   }
 };
 

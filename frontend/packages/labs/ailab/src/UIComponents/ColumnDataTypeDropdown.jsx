@@ -1,6 +1,5 @@
 /* React component to handle setting datatype for selected columns. */
 import PropTypes from "prop-types";
-import React from "react";
 import { connect } from "react-redux";
 import { setColumnsByDataType } from "../redux";
 import { ColumnTypes } from "../constants.js";
