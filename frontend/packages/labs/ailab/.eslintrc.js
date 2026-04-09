@@ -23,14 +23,11 @@ module.exports = {
       "version": "detect"
     }
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "ecmaVersion": 6,
-      "experimentalObjectRestSpread": true
+      "jsx": true
     }
   },
   "rules": {

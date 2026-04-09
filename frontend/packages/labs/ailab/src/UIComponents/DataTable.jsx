@@ -143,7 +143,7 @@ class DataTable extends Component {
                       onKeyDown={() => this.setCurrentColumn(columnId)}
                       onMouseEnter={() => this.setHighlightColumn(columnId)}
                       onMouseLeave={() => this.setHighlightColumn(undefined)}
-                      role="presentation"
+                      role="gridcell"
                     >
                       {startingRow !== undefined && index <= startingRow ? (
                         <span>&nbsp;</span>
