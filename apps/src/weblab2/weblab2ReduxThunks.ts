@@ -120,6 +120,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       )
     );
     if (!isEqual(sourcesBeforeAiTutorVersion, sources)) {
+      // If the tutor made changes to the project, mark the project as edited.
       thunkAPI.dispatch(markProjectEdited());
     }
     const projectManager = Lab2Registry.getInstance().getProjectManager();
