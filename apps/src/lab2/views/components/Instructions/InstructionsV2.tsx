@@ -35,6 +35,9 @@ export interface InstructionsProps {
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
   requireRun?: boolean;
+  /** If the lab requires the user to edit their code in order to continue.
+   * Only applies to non-validated levels. */
+  requireEdit?: boolean;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */

@@ -146,6 +146,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         headerClassName={moduleStyles.infoPanelHeader}
         levelProperties={levelProperties}
         requireRun={appName === 'pythonlab'}
+        requireEdit={appName === 'weblab2'}
         hiddenContextCallback={hiddenContextCallback}
         settings={settings}
         aiTutorSystemPrompt={aiTutorSystemPrompt}
