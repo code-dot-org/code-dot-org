@@ -21,7 +21,9 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
   newestFirst,
 }) => {
   const requestIcon = useMemo(() => {
-    if (request.response && request.response.status < 300) {
+    if (request.request.blocked) {
+      return {iconName: 'ban', className: parentStyles.errorIcon};
+    } else if (request.response && request.response.status < 300) {
       return {iconName: 'check-circle', className: parentStyles.successIcon};
     } else if (!request.response && !request.request.cspDirectiveViolated) {
       return {
@@ -32,7 +34,7 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
     } else {
       return {iconName: 'xmark-circle', className: parentStyles.errorIcon};
     }
-  }, [request.request.cspDirectiveViolated, request.response]);
+  }, [request.request.blocked, request.request.cspDirectiveViolated, request.response]);
 
   const label = useMemo(() => {
     try {

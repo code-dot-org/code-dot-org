@@ -1,9 +1,37 @@
 @use '../../lab2/views/components/layout/variables.scss' as variables;
 
+.networkPanelWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.networkPanelHeader {
+  display: flex;
+  padding: 10px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  border-bottom: variables.$default-border;
+
+  p {
+    margin-bottom: 0;
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.networkHeaderButtons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .networkPanelContainer {
   display: flex;
   overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
 }
 
 .networkSummary {

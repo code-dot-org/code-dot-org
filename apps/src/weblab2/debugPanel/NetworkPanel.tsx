@@ -1,15 +1,20 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {
+  Typography,
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import PendingDivider from '@cdo/apps/weblab2/debugPanel/images/Pending.svg';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
-import {NetworkEntry} from '../redux/networkRedux';
+import {NetworkEntry, setBlockNetwork} from '../redux/networkRedux';
 
 import DetailsBox, {DetailsField} from './DetailsBox';
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
@@ -18,8 +23,12 @@ import NetworkRequestChip from './NetworkRequestChip';
 import moduleStyles from './network-panel.module.scss';
 
 const NetworkPanel: React.FC = () => {
+  const dispatch = useAppDispatch();
   const networkRequests = useAppSelector(
     state => state.weblab2Network.requests
+  );
+  const blockNetwork = useAppSelector(
+    state => state.weblab2Network.blockNetwork
   );
   const [orderedNetworkRequests, setOrderedNetworkRequests] = useState(
     [...networkRequests].reverse()
@@ -68,31 +77,39 @@ const NetworkPanel: React.FC = () => {
 
   const requestSuccess = useMemo(() => {
     if (selectedRequest) {
-      return selectedRequest.request.cspDirectiveViolated === undefined;
+      return (
+        selectedRequest.request.cspDirectiveViolated === undefined &&
+        !selectedRequest.request.blocked
+      );
     }
     return false;
   }, [selectedRequest]);
 
   const responseSuccess = useMemo(() => {
-    if (selectedRequest?.response) {
+    if (selectedRequest?.response && !selectedRequest.request.blocked) {
       return selectedRequest.response.status < 300;
     }
     return false;
   }, [selectedRequest]);
 
-  // A response is pending if it did not fail due to a csp violation but we don't yet have a response.
+  // A response is pending if it did not fail due to a csp violation or blocking, but we don't yet have a response.
   const responsePending = useMemo(() => {
     return (
+      !selectedRequest?.request.blocked &&
       selectedRequest?.request.cspDirectiveViolated === undefined &&
       !selectedRequest?.response
     );
   }, [
+    selectedRequest?.request.blocked,
     selectedRequest?.request.cspDirectiveViolated,
     selectedRequest?.response,
   ]);
 
   const showResponseDetails = useMemo(() => {
-    return responsePending || selectedRequest?.response;
+    return (
+      !selectedRequest?.request.blocked &&
+      (responsePending || selectedRequest?.response)
+    );
   }, [responsePending, selectedRequest]);
 
   const {dividerIcon, dividerAltText} = useMemo(() => {
@@ -166,6 +183,9 @@ const NetworkPanel: React.FC = () => {
   }, [selectedRequest?.response]);
 
   const requestErrorMessage = useMemo(() => {
+    if (selectedRequest?.request.blocked) {
+      return 'Network requests are blocked.';
+    }
     if (selectedRequest?.request.cspDirectiveViolated) {
       let requestDomain = selectedRequest.request.url;
       try {
@@ -179,8 +199,48 @@ const NetworkPanel: React.FC = () => {
     }
     return undefined;
   }, [selectedRequest]);
+  const blockToggleLabel = blockNetwork ? 'Unblock network' : 'Block network';
+
   return (
-    <>
+    <div className={moduleStyles.networkPanelWrapper}>
+      <div className={moduleStyles.networkPanelHeader}>
+        <Typography variant="body4" gutterBottom>
+          <Typography variant="strong">Activity</Typography>
+        </Typography>
+        <div className={moduleStyles.networkHeaderButtons}>
+          <WithTooltip
+            tooltipProps={{
+              text: blockToggleLabel,
+              direction: 'onBottom',
+              tooltipId: 'block-network-tooltip',
+              size: 'xs',
+            }}
+          >
+            <MuiIconButton
+              variant="outlined"
+              color={blockNetwork ? 'error' : 'tertiary'}
+              size="extraSmall"
+              onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
+              aria-label={blockToggleLabel}
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="ban" />
+            </MuiIconButton>
+          </WithTooltip>
+          {orderedNetworkRequests.length > 0 && (
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              onClick={() => setNewestFirst(!newestFirst)}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="sort" />}
+            >
+              {newestFirst ? 'Newest first' : 'Oldest first'}
+            </MuiButton>
+          )}
+        </div>
+      </div>
       {orderedNetworkRequests.length === 0 ? (
         <EmptyPanelPlaceholder
           iconName="globe"
@@ -190,21 +250,6 @@ const NetworkPanel: React.FC = () => {
       ) : (
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
-            <div className={moduleStyles.networkSummaryHeader}>
-              <Typography variant="body4" gutterBottom>
-                <Typography variant="strong">Activity</Typography>
-              </Typography>
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
-                onClick={() => setNewestFirst(!newestFirst)}
-                type="button"
-                startIcon={<FontAwesomeV6Icon iconName="sort" />}
-              >
-                {newestFirst ? 'Newest first' : 'Oldest first'}
-              </MuiButton>
-            </div>
             <div className={moduleStyles.requestList}>
               {orderedNetworkRequests.map(request => (
                 <NetworkRequestChip
@@ -275,7 +320,7 @@ const NetworkPanel: React.FC = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

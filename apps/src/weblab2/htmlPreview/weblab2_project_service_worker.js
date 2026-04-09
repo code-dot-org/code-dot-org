@@ -13,6 +13,7 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
+const SET_BLOCK_NETWORK = 'SET_BLOCK_NETWORK';
 const NETWORK_REQUEST = 'NETWORK_REQUEST';
 const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
 
@@ -25,6 +26,7 @@ function main() {
   // Generate a cache bust suffix for this service worker instance.
   const cacheBustSuffix = Date.now().toString();
   let contentSecurityPolicyValue = null;
+  let blockNetworkRequests = false;
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -43,6 +45,8 @@ function main() {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
       contentSecurityPolicyValue = contentSecurityPolicy;
+    } else if (type === SET_BLOCK_NETWORK && event.origin === location.origin) {
+      blockNetworkRequests = !!event.data.blockNetwork;
     }
   });
 
@@ -73,9 +77,6 @@ function main() {
         const performanceStartTime = performance.now();
         const startTime = new Date().toLocaleString();
         const requestId = crypto.randomUUID();
-        let response;
-        let performanceEndTime;
-        let error;
         broadcastChannel.postMessage({
           type: NETWORK_REQUEST,
           requestData: {
@@ -83,8 +84,25 @@ function main() {
             method: event.request.method,
             startTime,
             id: requestId,
+            blocked: blockNetworkRequests,
           },
         });
+        if (blockNetworkRequests) {
+          broadcastChannel.postMessage({
+            type: NETWORK_RESPONSE,
+            responseData: {
+              url: event.request.url,
+              id: requestId,
+              status: 0,
+              timeElapsed: 0,
+              blocked: true,
+            },
+          });
+          return new Response(null, {status: 0});
+        }
+        let response;
+        let performanceEndTime;
+        let error;
         try {
           response = await fetch(event.request);
           performanceEndTime = performance.now();
