@@ -16,7 +16,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=8.15",
+    "node": ">=22.21",
     "npm": ">=3.10.8"
   },
   "scripts": {
