@@ -167,7 +167,7 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
-          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, I18n.locale.to_s)
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
@@ -175,7 +175,7 @@ class RegistrationsController < Devise::RegistrationsController
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {
-              locale: request.locale,
+              locale: I18n.locale.to_s,
             }
           )
         end
