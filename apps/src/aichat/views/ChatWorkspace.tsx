@@ -2,17 +2,13 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useRef, useState, useMemo} from 'react';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChatEventLogger from '../chatEventLogger';
 import {
@@ -25,11 +21,9 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
-  sendInitialGreeting,
   setClientType,
   setNewChatSession,
   setChatWorkspaceSelectedTab,
-  setLastAutoGreetKey,
 } from '../redux';
 import {clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
@@ -70,12 +64,6 @@ interface ChatWorkspaceProps {
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
-  initialAssistantMessage?: string;
-  autoGreet?: boolean;
-  // Opaque key that changes when a new reflection is submitted. When it
-  // differs from `lastAutoGreetKey` in Redux, a fresh greeting fires even if
-  // history already ends with an assistant message.
-  autoGreetKey?: number;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -100,20 +88,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   logLevelActivity,
   hasInstructionsDrawer,
   lessonId,
-  initialAssistantMessage,
-  autoGreet,
-  autoGreetKey,
   renderLastMessagePostText,
 }) => {
-  const lastAutoGreetKey = useAppSelector(
-    state => state.aichat.lastAutoGreetKey
-  );
-
-  // Tracks whether the auto-greeting has been sent for the current mount.
-  // Prevents double-firing if this effect re-runs while the component is still
-  // mounted (e.g. due to dep changes).
-  const hasSentGreetingRef = useRef(false);
-
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const canDisplayAssets = !!levelName && !!channelId;
   if (multimodalEnabled && !canDisplayAssets) {
@@ -187,86 +163,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     dispatch(clearStagedFiles());
     dispatch(clearUserAddedSelectionContext());
 
-    const historyFetch = selectedStudent
-      ? dispatch(
-          fetchUserChatHistory({
-            userId: selectedStudent.id,
-            isOwnHistory: false,
-            channelId,
-            lessonId,
-          })
-        )
-      : dispatch(
-          fetchUserChatHistory({
-            userId: currentUserId,
-            isOwnHistory: true,
-            channelId,
-            lessonId,
-          })
-        );
-
-    if (!selectedStudent) {
-      if (initialAssistantMessage) {
-        historyFetch.then(() => {
-          // Only inject the greeting when there is no prior history for this
-          // session. Once saved, the greeting will be returned by the server on
-          // future loads and chatEventsCurrent will already be populated.
-          dispatch((innerDispatch, getState) => {
-            if (getState().aichat.chatEventsCurrent.length === 0) {
-              innerDispatch(
-                addChatEvent({
-                  role: Role.ASSISTANT,
-                  status: Status.OK,
-                  chatMessageText: initialAssistantMessage,
-                  timestamp: Date.now(),
-                  requestId: 0,
-                })
-              );
-            }
-          });
-        });
-      } else if (autoGreet && hiddenContextCallback && modelParameters) {
-        historyFetch.then(() => {
-          dispatch((innerDispatch, getState) => {
-            if (hasSentGreetingRef.current) return;
-
-            const {chatEventsCurrent} = getState().aichat;
-            const lastEvent = chatEventsCurrent[chatEventsCurrent.length - 1];
-            const lastIsAssistant =
-              lastEvent &&
-              'role' in lastEvent &&
-              lastEvent.role === 'assistant';
-
-            // A new reflection submission (autoGreetKey changed) forces a
-            // fresh greeting even when history already ends with an assistant
-            // message. Otherwise only greet when history is empty or ends with
-            // a user message (first visit or conversation ended mid-student).
-            const isNewReflection =
-              autoGreetKey !== undefined &&
-              autoGreetKey !== getState().aichat.lastAutoGreetKey;
-
-            if (!lastIsAssistant || isNewReflection) {
-              hasSentGreetingRef.current = true;
-              // Clear the stale greeting key so the next re-render doesn't
-              // re-enter this branch before sendInitialGreeting sets the key.
-              if (isNewReflection) {
-                innerDispatch(setLastAutoGreetKey(null));
-              }
-              hiddenContextCallback().then(hiddenContext => {
-                innerDispatch(
-                  sendInitialGreeting({
-                    hiddenContext,
-                    modelParameters,
-                    clientType,
-                    lessonId,
-                    autoGreetKey,
-                  })
-                );
-              });
-            }
-          });
-        });
-      }
+    if (selectedStudent) {
+      dispatch(
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+          lessonId,
+        })
+      );
+    } else {
+      dispatch(
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
+          lessonId,
+        })
+      );
     }
   }, [
     dispatch,
@@ -275,13 +189,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     selectedStudent,
     channelId,
     lessonId,
-    initialAssistantMessage,
-    autoGreet,
-    autoGreetKey,
-    lastAutoGreetKey,
-    hiddenContextCallback,
-    modelParameters,
-    clientType,
   ]);
 
   useEffect(() => {

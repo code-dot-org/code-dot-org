@@ -38,8 +38,6 @@ interface AiTutorChatProps {
   hasInstructionsDrawer?: boolean;
   isLessonDeepDive?: boolean;
   lessonId?: number;
-  initialAssistantMessage?: string;
-  autoGreet?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -54,8 +52,6 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hasInstructionsDrawer,
   isLessonDeepDive = false,
   lessonId,
-  initialAssistantMessage,
-  autoGreet,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -148,8 +144,6 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
-        initialAssistantMessage={initialAssistantMessage}
-        autoGreet={autoGreet}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>

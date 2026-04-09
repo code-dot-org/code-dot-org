@@ -85,7 +85,6 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
         aiTutorChatButtonData={[]}
         isLessonDeepDive={true}
         lessonId={lessonId}
-        autoGreet={!!reflectionData}
       />
     </div>
   );
