@@ -202,65 +202,71 @@ const NetworkPanel: React.FC = () => {
   const blockToggleLabel = blockNetwork ? 'Unblock network' : 'Block network';
 
   return (
-    <>
-      {orderedNetworkRequests.length === 0 ? (
-        <EmptyPanelPlaceholder
-          iconName="globe"
-          title="No network activity"
-          description="Network requests will appear here when your app makes API calls."
-        />
-      ) : (
-        <div className={moduleStyles.networkPanelContainer}>
-          <div className={moduleStyles.networkSummary}>
-            <div className={moduleStyles.networkSummaryHeader}>
-              <Typography variant="body4" gutterBottom>
-                <Typography variant="strong">Activity</Typography>
-              </Typography>
-              <div className={moduleStyles.networkHeaderButtons}>
-                <WithTooltip
-                  tooltipProps={{
-                    text: blockToggleLabel,
-                    direction: 'onBottom',
-                    tooltipId: 'block-network-tooltip',
-                    size: 'xs',
-                  }}
-                >
-                  <MuiIconButton
-                    variant="outlined"
-                    color={blockNetwork ? 'error' : 'tertiary'}
-                    size="extraSmall"
-                    onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
-                    aria-label={blockToggleLabel}
-                    type="button"
-                  >
-                    <FontAwesomeV6Icon iconName="ban" />
-                  </MuiIconButton>
-                </WithTooltip>
-                <MuiButton
-                  variant="outlined"
-                  color="tertiary"
-                  size="extraSmall"
-                  onClick={() => setNewestFirst(!newestFirst)}
-                  type="button"
-                  startIcon={<FontAwesomeV6Icon iconName="sort" />}
-                >
-                  {newestFirst ? 'Newest first' : 'Oldest first'}
-                </MuiButton>
-              </div>
-            </div>
-            <div className={moduleStyles.requestList}>
-              {orderedNetworkRequests.map(request => (
-                <NetworkRequestChip
-                  key={request.id}
-                  request={request}
-                  onChange={onInputChange}
-                  isSelected={selectedRequest?.id === request.id}
-                  newestFirst={newestFirst}
-                />
-              ))}
-            </div>
+    <div className={moduleStyles.networkPanelContainer}>
+      <div className={moduleStyles.networkSummary}>
+        <div className={moduleStyles.networkSummaryHeader}>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">Activity</Typography>
+          </Typography>
+          <div className={moduleStyles.networkHeaderButtons}>
+            <WithTooltip
+              tooltipProps={{
+                text: blockToggleLabel,
+                direction: 'onBottom',
+                tooltipId: 'block-network-tooltip',
+                size: 'xs',
+              }}
+            >
+              <MuiIconButton
+                variant="outlined"
+                color={blockNetwork ? 'error' : 'tertiary'}
+                size="extraSmall"
+                onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
+                aria-label={blockToggleLabel}
+                type="button"
+              >
+                <FontAwesomeV6Icon iconName="ban" />
+              </MuiIconButton>
+            </WithTooltip>
+            {orderedNetworkRequests.length > 0 && (
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                onClick={() => setNewestFirst(!newestFirst)}
+                type="button"
+                startIcon={<FontAwesomeV6Icon iconName="sort" />}
+              >
+                {newestFirst ? 'Newest first' : 'Oldest first'}
+              </MuiButton>
+            )}
           </div>
-          <div className={moduleStyles.detailsContainer}>
+        </div>
+        <div className={moduleStyles.requestList}>
+          {orderedNetworkRequests.length === 0 ? (
+            <Typography variant="body4">No activity to show</Typography>
+          ) : (
+            orderedNetworkRequests.map(request => (
+              <NetworkRequestChip
+                key={request.id}
+                request={request}
+                onChange={onInputChange}
+                isSelected={selectedRequest?.id === request.id}
+                newestFirst={newestFirst}
+              />
+            ))
+          )}
+        </div>
+      </div>
+      <div className={moduleStyles.detailsContainer}>
+        {orderedNetworkRequests.length === 0 ? (
+          <EmptyPanelPlaceholder
+            iconName="globe"
+            title="No network activity"
+            description="Network requests will appear here when your app makes API calls."
+          />
+        ) : (
+          <>
             <DetailsBox
               title="Request"
               status={requestSuccess ? 'success' : 'error'}
@@ -315,10 +321,10 @@ const NetworkPanel: React.FC = () => {
                 />
               </div>
             )}
-          </div>
-        </div>
-      )}
-    </>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 
