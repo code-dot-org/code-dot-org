@@ -152,7 +152,11 @@ export default class KMeans {
   }
 
   private _playStep(iteration: number) {
-    if (!this.isPlayRunning || this.isConverged || iteration >= MAX_ITERATIONS) {
+    if (
+      !this.isPlayRunning ||
+      this.isConverged ||
+      iteration >= MAX_ITERATIONS
+    ) {
       this.isPlayRunning = false;
       return;
     }

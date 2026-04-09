@@ -8,8 +8,9 @@ import {
   POINT_RADIUS,
   UNASSIGNED_COLOR,
 } from './constants';
-import moduleStyles from './kmeans.module.scss';
 import {Centroid, KMeansVisualizationState, Point} from './types';
+
+import moduleStyles from './kmeans.module.scss';
 
 interface KMeansVisualizationProps {
   state: KMeansVisualizationState;
@@ -79,8 +80,7 @@ const KMeansVisualization: React.FunctionComponent<
   const {toSvgX, toSvgY} = makeScalers(bounds);
 
   const canInitialize = isReady && !isAnimating;
-  const canStep =
-    isReady && centroids.length > 0 && !converged && !isAnimating;
+  const canStep = isReady && centroids.length > 0 && !converged && !isAnimating;
   const canPlay = canStep;
 
   return (
@@ -88,6 +88,7 @@ const KMeansVisualization: React.FunctionComponent<
       {/* Control bar */}
       <div className={moduleStyles.controls}>
         <button
+          type="button"
           className={moduleStyles.controlButton}
           onClick={onInitialize}
           disabled={!canInitialize}
@@ -95,6 +96,7 @@ const KMeansVisualization: React.FunctionComponent<
           Initialize Centroids
         </button>
         <button
+          type="button"
           className={moduleStyles.controlButton}
           onClick={onStep}
           disabled={!canStep}
@@ -102,6 +104,7 @@ const KMeansVisualization: React.FunctionComponent<
           Step ▶
         </button>
         <button
+          type="button"
           className={moduleStyles.controlButton}
           onClick={onPlay}
           disabled={!canPlay}
@@ -155,7 +158,9 @@ const KMeansVisualization: React.FunctionComponent<
           <g
             key={centroid.id}
             style={{
-              transform: `translate(${toSvgX(centroid.x)}px, ${toSvgY(centroid.y)}px)`,
+              transform: `translate(${toSvgX(centroid.x)}px, ${toSvgY(
+                centroid.y
+              )}px)`,
               transition: `transform ${CENTROID_MOVE_ANIMATION_MS}ms ease`,
             }}
           >
@@ -176,9 +181,7 @@ const KMeansVisualization: React.FunctionComponent<
           <span className={moduleStyles.convergedBadge}>✓ Converged</span>
         )}
         {!isReady && points.length === 0 && (
-          <span className={moduleStyles.emptyMessage}>
-            Waiting for data...
-          </span>
+          <span className={moduleStyles.emptyMessage}>Waiting for data...</span>
         )}
       </div>
     </div>

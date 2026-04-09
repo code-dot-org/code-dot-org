@@ -34,7 +34,8 @@ const KMeansPreview: React.FunctionComponent = () => {
         setState(prev => ({
           ...prev,
           assignments: new Map(assignments),
-          iteration: assignments.length > 0 ? prev.iteration + 1 : prev.iteration,
+          iteration:
+            assignments.length > 0 ? prev.iteration + 1 : prev.iteration,
         })),
       onCentroidsUpdated: centroids => setState(prev => ({...prev, centroids})),
       onConverged: () =>

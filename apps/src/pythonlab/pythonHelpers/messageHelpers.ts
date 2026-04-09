@@ -127,7 +127,9 @@ export function extractNeighborhoodExceptionType(
 }
 
 // This function parses the message string (example: '[KMEANS] ADD_POINT {"x": 1.0, "y": 2.0, "id": 0}') to a KMeansSignal.
-export function parseMessageToKMeansSignal(message: string): KMeansSignal | null {
+export function parseMessageToKMeansSignal(
+  message: string
+): KMeansSignal | null {
   const regex = /^\[(\w+)]\s+([^\s]+)(?:\s+(\{.*\}))?$/;
   const match = message.match(regex);
   if (!match) {
