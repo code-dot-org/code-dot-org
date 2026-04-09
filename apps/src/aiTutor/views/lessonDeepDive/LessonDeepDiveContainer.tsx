@@ -58,6 +58,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
 
+  const handleReflectionComplete = useCallback(
+    (data: ReflectionData) => {
+      setReflectionData(data);
+      goToNext();
+    },
+    [goToNext]
+  );
+
   if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
     return null;
   }
@@ -79,7 +87,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
             objectives={lessonDeepDiveData.objectives}
-            onSubmitComplete={setReflectionData}
+            onSubmitComplete={handleReflectionComplete}
           />
         );
       case 'intervention':
