@@ -45,9 +45,9 @@ const lessonFromLesson = lesson =>
     'lockable',
     'lessonNumber',
     'lessonStartUrl',
+    'hasLessonPlan',
     'lessonTutorPath',
     'assessment',
-    'survey',
     'lesson_plan_html_url',
     'lesson_feedback_url',
     'student_lesson_plan_html_url',
@@ -363,6 +363,12 @@ export const lessonExtrasUrl = (state, lessonId) =>
     ? state.lessons.find(lesson => lesson.id === lessonId)
         .lesson_extras_level_url
     : '';
+
+export const lessonTutorPath = (state, lessonId) =>
+  state.lessons.find(lesson => lesson.id === lessonId)?.lessonTutorPath || '';
+
+export const hasLessonPlan = (state, lessonId) =>
+  !!state.lessons.find(lesson => lesson.id === lessonId)?.hasLessonPlan;
 
 export const isPerfect = (state, levelId) =>
   !!state.levelResults &&
