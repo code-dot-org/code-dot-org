@@ -31,7 +31,7 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
-const teal = '#007785';
+const teal = 'rgb(0, 129, 143)';
 const white = 'rgb(255, 255, 255)';
 
 module.exports = {
