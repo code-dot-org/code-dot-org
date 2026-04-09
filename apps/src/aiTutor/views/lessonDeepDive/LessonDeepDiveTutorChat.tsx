@@ -16,42 +16,6 @@ interface LessonDeepDiveTutorChatProps {
   reflectionData: ReflectionData | null;
 }
 
-function buildGreeting(
-  objectives: LessonDeepDiveData['objectives'],
-  reflectionData: ReflectionData
-): string {
-  const needsWork = objectives.filter(o => {
-    const v = reflectionData.objectiveReflections[o.id];
-    return (
-      v === LessonObjectiveReflectionValues.LOST ||
-      v === LessonObjectiveReflectionValues.UNSURE
-    );
-  });
-
-  const lines: string[] = ['Hi!'];
-
-  if (needsWork.length > 0) {
-    const listed = needsWork
-      .map(o => `"${o.description}"`)
-      .join(needsWork.length > 1 ? ' and ' : '');
-    lines.push(`I can see you want to work on ${listed}.`);
-  }
-
-  if (reflectionData.struggle) {
-    lines.push(`You mentioned: "${reflectionData.struggle}"`);
-  }
-
-  if (needsWork.length === 0 && !reflectionData.struggle) {
-    lines.push(
-      'You seem confident about everything in this lesson — great work! Ask me anything to go deeper or double-check your understanding.'
-    );
-  } else {
-    lines.push('Ask me anything to get started!');
-  }
-
-  return lines.join(' ');
-}
-
 const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
   lessonId,
   lessonName,
@@ -104,32 +68,24 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
                   ...needsWork.map(o => `- ${o.description}`),
                 ]
               : []),
+            '',
+            'Open the conversation by greeting the student warmly. Reference their specific struggles or objectives they marked as lost or unsure. Be specific and encouraging. Do not wait for the student to speak first.',
           ]
-        : []),
-      '',
-      'Help the student review and reflect on what they learned and provide guidance for their misunderstandings.',
+        : [
+            '',
+            'Help the student review and reflect on what they learned and provide guidance for their misunderstandings.',
+          ]),
     ].join('\n');
   }, [lessonName, lessonSummary, vocabulary, objectives, reflectionData]);
 
-  const greeting = reflectionData
-    ? buildGreeting(objectives, reflectionData)
-    : null;
-
-  console.log('reflectionData:', reflectionData);
-  console.log('greeting:', greeting);
-
   return (
     <div className={styles.container}>
-      {greeting && (
-        <div className={styles.greetingWrapper}>
-          <div className={styles.greeting}>{greeting}</div>
-        </div>
-      )}
       <AiTutorChat
         hiddenContextCallback={hiddenContextCallback}
         aiTutorChatButtonData={[]}
         isLessonDeepDive={true}
         lessonId={lessonId}
+        autoGreet={!!reflectionData}
       />
     </div>
   );

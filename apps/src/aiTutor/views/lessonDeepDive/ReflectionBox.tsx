@@ -18,18 +18,20 @@ interface ReflectionBoxProps {
   lessonId: number;
   objectives: LessonDeepDiveData['objectives'];
   onSubmitComplete: (data: ReflectionData) => void;
+  initialValues?: ReflectionData | null;
 }
 
 const ReflectionBox: FC<ReflectionBoxProps> = ({
   lessonId,
   objectives,
   onSubmitComplete,
+  initialValues,
 }) => {
   const [objectiveReflections, setObjectiveReflections] = useState<
     Record<string, ReflectionValue | null>
-  >({});
-  const [success, setSuccess] = useState('');
-  const [struggle, setStruggle] = useState('');
+  >(initialValues?.objectiveReflections ?? {});
+  const [success, setSuccess] = useState(initialValues?.success ?? '');
+  const [struggle, setStruggle] = useState(initialValues?.struggle ?? '');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSelectionChange = useCallback(
