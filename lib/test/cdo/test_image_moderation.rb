@@ -17,6 +17,10 @@ class ImageModerationTest < Minitest::Test
   def test_returns_nil_when_missing_api_key
     CDO.stubs(azure_ai_content_safety_key: nil)
     AzureAiContentSafety.expects(:new).never
+    Honeybadger.expects(:notify).once.with(
+      "Azure AI Content Safety API key is missing",
+      context: {endpoint: CDO.azure_ai_content_safety_endpoint}
+    )
     assert_nil ImageModeration.moderate_image(@image_body, @content_type)
   end
 
