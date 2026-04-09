@@ -113,7 +113,9 @@ class ActivityCard extends Component {
               {hasLessonPlan && (
                 <div>
                   <FontAwesome
-                    icon={this.props.collapsed ? 'expand' : 'compress'}
+                    icon={
+                      this.props.collapsed ? 'chevron-right' : 'chevron-down'
+                    }
                     onClick={this.props.handleCollapse}
                   />
                   <label style={styles.labelAndInput}>

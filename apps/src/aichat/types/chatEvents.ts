@@ -83,6 +83,9 @@ export interface ModelUpdate extends BaseChatEvent {
   updatedValue: ModelParameters[keyof ModelParameters];
 }
 
+export const AI_TUTOR_VERSION_ACTION_ACCEPT = 'aiTutorVersionActionAccept';
+export const AI_TUTOR_VERSION_ACTION_REJECT = 'aiTutorVersionActionReject';
+
 /** Any other general type of notification in the chat workspace. */
 export interface Notification extends BaseChatEvent {
   /** ID used for removing from this event from the student's chat workspace. */
@@ -92,8 +95,8 @@ export interface Notification extends BaseChatEvent {
     | 'permissionsError'
     | 'error'
     | 'success'
-    | 'aiTutorVersionActionAccept'
-    | 'aiTutorVersionActionReject';
+    | typeof AI_TUTOR_VERSION_ACTION_ACCEPT
+    | typeof AI_TUTOR_VERSION_ACTION_REJECT;
   includeInChatHistory?: boolean;
   files?: ProjectFile[];
   commitDescription?: string;

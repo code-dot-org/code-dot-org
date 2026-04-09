@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:20.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Fonts\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\n> **Note:** The `<link>` tag at the top of the HTML loads fonts from <a href=\"https://fonts.google.com/?preview.text=These%20are%20google%20fonts!&lang=en_Latn\" target=\"_blank\">Google Fonts</a>. You can tell AI Tutor to use a Google Font by name.\r\n\r\n**Do This:**\r\n1. Ask AI Tutor to explain how `font-family` work in CSS.\r\n2. Ask AI Tutor to update the paragraph text this page with a different style.\r\n   - Use the property name in your prompt (e.g., *\"Set the `font-family` to a Google font like...\"*).\r\n\r\nOnce you've styled the page, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildCSS",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Do not use relative units for spacing; only use px.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Exploring Fonts",
+    "bubble_choice_description": "Learn the rules for how to change the _font-family_ of text and load fonts from Google Fonts",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Code+Pro&display=swap\" rel=\"stylesheet\">\n    <style>\n      h1 {\n        font-family: 'Playfair Display', serif;\n      }\n      li {\n        font-family: 'Source Code Pro', monospace;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Maya Chen</h1>\n    <h2>Summary</h2>\n    <p>A creative and detail-oriented student with experience in web design, writing, and community organizing.</p>\n\n    <h2>Skills</h2>\n    <ul>\n      <li>HTML and CSS</li>\n      <li>Graphic design</li>\n      <li>Public speaking</li>\n      <li>Team collaboration</li>\n    </ul>\n\n    <h2>Experience</h2>\n    <h3>Student Council — Secretary</h3>\n    <p>Organized meetings, took notes, and helped coordinate school events for two years.</p>\n\n    <h3>School Newspaper — Staff Writer</h3>\n    <p>Wrote articles covering school news, student profiles, and community events.</p>\n\n    <h2>Education</h2>\n    <p>Currently enrolled at Westview High School, expected graduation 2026.</p>\n    <ol>\n      <li>AP English Language</li>\n      <li>Web Design</li>\n      <li>Studio Art</li>\n    </ol>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/5719963da0231456884c38b4a004790e-Screenshot 2025-04-02 at 7.42.24 AM.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:20.275+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10b\"},{\"changed_at\":\"2026-04-06 23:28:56 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:29:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

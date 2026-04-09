@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -30,7 +31,6 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  isCompletedChatMessage,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -62,6 +62,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
       logLevelActivity?: () => void;
+      lessonId?: number;
     },
     thunkAPI
   ) => {
@@ -78,6 +79,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -90,6 +92,7 @@ export const submitChatContents = createAsyncThunk(
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
+      lessonId,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
@@ -185,9 +188,9 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          chatEventsCurrent
-            .filter(isCompletedChatMessage)
-            .filter(event => event.status === Status.OK),
+          buildMessagesForModelHistory(chatEventsCurrent).filter(
+            event => event.status === Status.OK
+          ),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -197,7 +200,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
+          buildMessagesForModelHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );

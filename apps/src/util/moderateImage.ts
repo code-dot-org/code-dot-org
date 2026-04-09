@@ -45,13 +45,13 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
   }: AnalyticsData
-): Promise<'ok' | 'flagged' | 'skipped'> => {
+): Promise<'safe' | 'flagged' | 'error'> => {
   const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
     !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
   ) {
-    return 'skipped';
+    return 'error';
   }
   const dimensions = [
     {name: 'UploaderType', value: uploaderType},
@@ -68,11 +68,12 @@ export const moderateImage = async (
       'Content-Type': file.type || 'application/octet-stream',
     });
     const json = await response.json();
+    if (json === null) {
+      return 'error';
+    }
+
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
-    if (json === null) {
-      return 'skipped';
-    }
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
@@ -81,7 +82,7 @@ export const moderateImage = async (
           CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
       )
     ) {
-      return 'ok';
+      return 'safe';
     }
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
@@ -97,6 +98,6 @@ export const moderateImage = async (
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
-    return 'skipped';
+    return 'error';
   }
 };

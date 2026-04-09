@@ -31,7 +31,7 @@ class CourseOfferingsController < ApplicationController
     participant_type = params[:participantType]
     return head :bad_request unless participant_type
 
-    offerings = QuickAssignHelper.course_offerings(current_user, request.locale, participant_type)
+    offerings = QuickAssignHelper.course_offerings(current_user, I18n.locale.to_s, participant_type)
     render :ok, json: offerings.to_json
   end
 

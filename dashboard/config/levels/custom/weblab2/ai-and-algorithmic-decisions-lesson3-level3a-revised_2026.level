@@ -1,0 +1,140 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-09T04:05:30.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pet Care Simulator</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header>\n    <h1>Pet Care Simulator</h1>\n    <p class=\"subtitle\">Take care of your pet and keep its stats in a healthy state.</p>\n  </header>\n\n  <main>\n    <section id=\"dashboardCard\">\n      <div id=\"petPanel\">\n        <img\n          id=\"petImage\"\n          src=\"images/dog-face.png\"\n          alt=\"Image of a hand-drawn dog's face\"\n        >\n      </div>\n\n      <div id=\"infoPanel\">\n        <div id=\"petInfo\">\n          <h2 id=\"petNameDisplay\">Mochi</h2>\n          <p id=\"petTypeDisplay\">Puppy</p>\n        </div>\n\n        <div class=\"statBox\">\n          <div class=\"iconWrapper\">\n            <img\n              src=\"images/energy-icon.png\"\n              alt=\"Energy icon\"\n              class=\"statIcon\"\n            >\n          </div>\n\n          <div class=\"statMain\">\n            <h3>Energy</h3>\n            <p id=\"energyDisplay\">10</p>\n          </div>\n\n          <div class=\"statButtons statButtonsVertical\">\n            <button id=\"playButton\">Play</button>\n            <button id=\"restButton\">Rest</button>\n          </div>\n        </div>\n\n        <div class=\"statBox\">\n          <div class=\"iconWrapper\">  \n            <img\n              src=\"images/dog-food-icon.png\"\n              alt=\"Hunger icon\"\n              class=\"statIcon\"\n            >\n          </div>\n          \n          <div class=\"statMain\">\n            <h3>Hunger</h3>\n            <p id=\"hungerDisplay\">5</p>\n          </div>\n\n          <div class=\"statButtons statButtonsVertical\">\n            <button id=\"feedButton\">Feed</button>\n            <button id=\"snackButton\">Snack</button>\n          </div>\n        </div>\n\n        <div class=\"statBox\">\n          <div class=\"iconWrapper\">\n            <img\n              src=\"images/mood-icon.png\"\n              alt=\"Mood icon\"\n              class=\"statIcon\"\n            >\n          </div>\n\n          <div class=\"statMain\">\n            <h3>Mood</h3>\n            <p id=\"moodDisplay\">8</p>\n          </div>\n\n          <div class=\"statButtons statButtonsVertical\">\n            <button id=\"petButton\">Pet</button>\n            <button id=\"bathButton\">Bath</button>\n          </div>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, sans-serif;\n}\n\nbody {\n  background: linear-gradient(to bottom, #fdf6f0, #f4e6d8);\n  color: #4a3427;\n  min-height: 100vh;\n}\n\nheader {\n  text-align: center;\n  padding: 24px 20px 12px;\n}\n\nheader h1 {\n  font-size: 2rem;\n  color: #6a4330;\n  letter-spacing: 0.4px;\n}\n\n.subtitle {\n  margin-top: 8px;\n  font-size: 1rem;\n  color: #8a6854;\n}\n\nmain {\n  max-width: 860px;\n  margin: 0 auto;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\nsection {\n  background-color: #fffaf5;\n  border: 3px solid #e2c8ae;\n  border-radius: 20px;\n  padding: 20px;\n  box-shadow: 0 6px 0 rgba(120, 91, 62, 0.1);\n}\n\n#dashboardCard {\n  display: flex;\n  gap: 16px;\n  align-items: stretch;\n}\n\n#petPanel {\n  flex: 1.05;\n}\n\n#petPanel img {\n  width: 100%;\n  height: 100%;\n  min-height: 320px;\n  object-fit: cover;\n  display: block;\n  border-radius: 16px;\n  border: 3px solid #e2c8ae;\n  background-color: #f7ede2;\n}\n\n#infoPanel {\n  flex: 0.95;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n}\n\n#petInfo {\n  background-color: #fff3e8;\n  border: 2px solid #ead2ba;\n  border-radius: 16px;\n  padding: 16px;\n  text-align: center;\n}\n\n#petNameDisplay {\n  font-size: 1.6rem;\n  color: #5a3d2d;\n  margin-bottom: 4px;\n}\n\n#petTypeDisplay {\n  font-size: 1rem;\n  color: #8d6b57;\n}\n\n.statBox {\n  background-color: #fff3e8;\n  border: 2px solid #ead2ba;\n  border-radius: 16px;\n  padding: 14px 16px;\n  display: grid;\n  grid-template-columns: 52px 1fr auto; /* controls icon size */\n  align-items: center;\n  column-gap: 14px;\n}\n\n.iconWrapper {\n  width: 48px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.statIcon {\n  width: 100%;\n  height: 100%;\n  object-fit: contain;\n}\n\n.statIcon {\n  width: 100%;\n  object-fit: contain;\n  justify-self: center;\n  border-radius: 10px;\n  background-color: #f7ede2;\n  border: 2px solid #ead2ba;\n}\n\n.statMain {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 4px;\n  min-width: 0;\n}\n\n.statMain h3 {\n  font-size: 1rem;\n  color: #7a5843;\n  font-weight: bold;\n  line-height: 1.1;\n}\n\n.statMain p {\n  font-size: 2.2rem;\n  font-weight: bold;\n  color: #4a3427;\n  line-height: 1;\n}\n\n.statButtons {\n  display: flex;\n  gap: 8px;\n}\n\n.statButtonsVertical {\n  flex-direction: column;\n}\n\nbutton {\n  border: none;\n  border-radius: 10px;\n  padding: 8px 12px;\n  min-width: 72px;\n  font-size: 0.9rem;\n  font-weight: bold;\n  cursor: pointer;\n  color: #fffaf5;\n  transition: transform 0.15s ease, filter 0.15s ease;\n}\n\nbutton:hover {\n  transform: translateY(-1px);\n  filter: brightness(1.05);\n}\n\nbutton:active {\n  transform: translateY(1px);\n}\n\n#playButton {\n  background-color: #f29e4c;\n}\n\n#restButton {\n  background-color: #7a9e7e;\n}\n\n#feedButton {\n  background-color: #e76f51;\n}\n\n#snackButton {\n  background-color: #d4a373;\n}\n\n#petButton {\n  background-color: #8e7dbe;\n}\n\n#bathButton {\n  background-color: #5fa8d3;\n}\n\n@media (max-width: 700px) {\n  #dashboardCard {\n    flex-direction: column;\n  }\n\n  #petPanel img {\n    min-height: 240px;\n  }\n\n  .statBox {\n    grid-template-columns: 44px 1fr auto;\n    column-gap: 12px;\n  }\n\n  .statIcon {\n    width: 36px;\n    height: 36px;\n  }\n\n  .statMain p {\n    font-size: 2rem;\n  }\n\n  button {\n    min-width: 68px;\n    padding: 8px 10px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "// Starting state\nlet energy = 10;\nconst hunger = 5;\nlet mood = \"8\";\n\nlet petName = \"Mochi\";\nlet petType = \"Puppy\";\n\n// Get elements from the page\nconst energyDisplay = document.getElementById(\"energyDisplay\");\nconst hungerDisplay = document.getElementById(\"hungerDisplay\");\nconst moodDisplay = document.getElementById(\"moodDisplay\");\n\nconst petNameDisplay = document.getElementById(\"petNameDisplay\");\nconst petTypeDisplay = document.getElementById(\"petTypeDisplay\");\n\nconst playButton = document.getElementById(\"playButton\");\nconst restButton = document.getElementById(\"restButton\");\nconst feedButton = document.getElementById(\"feedButton\");\nconst snackButton = document.getElementById(\"snackButton\");\nconst petButton = document.getElementById(\"petButton\");\nconst bathButton = document.getElementById(\"bathButton\");\n\n// Show the current state on the page\nfunction updateScreen() {\n  energyDisplay.textContent = energy;\n  hungerDisplay.textContent = hunger;\n  moodDisplay.textContent = mood;\n\n  petNameDisplay.textContent = \"petName\";\n  petTypeDisplay.textContent = petType;\n}\n\n// Energy buttons\nplayButton.addEventListener(\"click\", function () {\n  energy = energy - 2;\n  updateScreen();\n});\n\nrestButton.addEventListener(\"click\", function () {\n  energy = energy - 3;\n  updateScreen();\n});\n\n// Hunger buttons\nfeedButton.addEventListener(\"click\", function () {\n  hunger = hunger - 2;\n  updateScreen();\n});\n\nsnackButton.addEventListener(\"click\", function () {\n  hunger = 5;\n  updateScreen();\n});\n\n// Mood buttons\npetButton.addEventListener(\"click\", function () {\n  mood = mood + 1;\n  updateScreen();\n});\n\nbathButton.addEventListener(\"click\", function () {\n  mood = mood - 1;\n  updateScreen();\n});\n\n// Show starting state when the page loads\nupdateScreen();",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "dog-face.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/4d665775-44eb-4aae-9863-ab3f3adf2c3c.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "dog-face-sleepy.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/055658b3-9abe-4ef4-832a-2a664626f09a.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "dog-food-icon.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/51b110e6-c2df-406b-8bfb-02085b984941.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "mood-icon.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/af52d7db-a676-4588-b140-7a9356d5fc7b.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "pet-scene.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/f82897ae-42f6-497d-8981-734e63141886.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "energy-icon.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level3a-revised_2026/uuid/4354a2fe-4635-4eff-b34b-97528335ca50.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "documentation.md",
+          "contents": "# Pet Care Simulator Debug Notes\n\nFor each bug, include:\n- what you clicked  \n- what happened to the state  \n- what should have happened  \n- what caused the issue  \n\n## Bug 1\n- I clicked:\n- The state changed to:\n- I expected:\n- I think the problem is:\n\n## Bug 2\n- I clicked:\n- The state changed to:\n- I expected:\n- I think the problem is:\n\n## Bug 3\n- I clicked:\n- The state changed to:\n- I expected:\n- I think the problem is:\n\n## Bug 4\n- I clicked:\n- The state changed to:\n- I expected:\n- I think the problem is:\n\n## Bug 5\n- I clicked:\n- The state changed to:\n- I expected:\n- I think the problem is:",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "11",
+        "3"
+      ]
+    },
+    "long_instructions": "## Debug the Pet Care Simulator\r\n\r\n1. Click each button and observe how the pet’s state changes.\r\n2. Compare what happens to what the hints say *should* happen.\r\n3. Find bugs where the state:\r\n   - doesn’t change  \r\n   - changes the wrong way  \r\n   - resets  \r\n   - behaves strangely  \r\n   - shows the wrong value  \r\n4. Record each bug in `documentation.md`.\r\n5. Fix the code in `script.js` and test again.\r\n\r\n<br/>\r\n\r\n:::details [Not Sure Where to Start?]\r\nIf you’re not sure where something is in the code or how it works, use AI Tutor to ask questions like:\r\n- “Where is the energy value stored?”\r\n- “Why doesn’t this value change when I click the button?”\r\n- “What happens when I add a number to a string?”\r\n:::",
+    "display_name": "Pet Care Simulator",
+    "thumbnail_url": "https://images.code.org/c1ebf5692e8a92a439a03382e4ab0d75-dog.png",
+    "bubble_choice_description": "Take care of a virtual pet by managing its energy, hunger, and mood. Debug how each action changes the pet’s state over time."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-09T04:05:30.949+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026\"},{\"changed_at\":\"2026-04-09 04:09:46 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 04:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 04:57:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 04:57:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:01:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:16:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:19:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:22:48 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:23:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 05:28:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 06:00:49 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
