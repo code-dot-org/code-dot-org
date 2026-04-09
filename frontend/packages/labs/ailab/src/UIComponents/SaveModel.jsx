@@ -1,6 +1,6 @@
 /* React component to handle saving a trained model. */
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail } from "../redux";
 import {
@@ -14,45 +14,34 @@ import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
-class SaveModel extends Component {
-  static propTypes = {
-    trainedModel: PropTypes.object,
-    setTrainedModelDetail: PropTypes.func,
-    trainedModelDetails: PropTypes.object,
-    labelColumn: PropTypes.string,
-    columnDescriptions: PropTypes.array,
-    dataDescription: PropTypes.string,
-    isUserUploadedDataset: PropTypes.bool,
-    datasetId: PropTypes.string
+function SaveModel({
+  trainedModel,
+  setTrainedModelDetail,
+  trainedModelDetails,
+  labelColumn,
+  columnDescriptions,
+  dataDescription,
+  isUserUploadedDataset: isUserUploaded,
+  datasetId
+}) {
+  const [showColumnDescriptions, setShowColumnDescriptions] = useState(isUserUploaded);
+
+  const toggleColumnDescriptions = () => {
+    setShowColumnDescriptions(!showColumnDescriptions);
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showColumnDescriptions: this.props.isUserUploadedDataset
-    };
-  }
-
-  toggleColumnDescriptions = () => {
-    this.setState({
-      showColumnDescriptions: !this.state.showColumnDescriptions
-    });
+  const handleChange = (event, field, isColumn) => {
+    setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
-  handleChange = (event, field, isColumn) => {
-    this.props.setTrainedModelDetail(field, event.target.value, isColumn);
-  };
-
-  getColumnFields = () => {
+  const getColumnFields = () => {
     var fields = [];
 
-    for (const columnDescription of this.props.columnDescriptions) {
-      const datasetId = this.props.datasetId;
+    for (const columnDescription of columnDescriptions) {
       const labelType = I18n.t("saveModelColumnTypeLabel");
       const featureType = I18n.t("saveModelColumnTypeFeature");
       const columnType =
-        columnDescription.id === this.props.labelColumn ? labelType : featureType
+        columnDescription.id === labelColumn ? labelType : featureType
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -64,7 +53,7 @@ class SaveModel extends Component {
     return fields;
   };
 
-  getUsesFields = () => {
+  const getUsesFields = () => {
     var fields = [];
     fields.push({
       id: "potentialUses",
@@ -87,144 +76,153 @@ class SaveModel extends Component {
     return fields;
   };
 
-  render() {
-    const nameField = {
-      id: "name",
-      text: I18n.t("modelNameLabel")
-    };
+  const nameField = {
+    id: "name",
+    text: I18n.t("modelNameLabel")
+  };
 
-    const dataDescriptionField = {
-      id: "datasetDescription",
-      text: I18n.t("datasetDescriptionLabel"),
-      placeholder: I18n.t("datasetDescriptionPlaceholder"),
-      answer: this.props.dataDescription
-    };
+  const dataDescriptionField = {
+    id: "datasetDescription",
+    text: I18n.t("datasetDescriptionLabel"),
+    placeholder: I18n.t("datasetDescriptionPlaceholder"),
+    answer: dataDescription
+  };
 
-    const arrowIcon = this.state.showColumnDescriptions
-      ? "fa fa-caret-up"
-      : "fa fa-caret-down";
+  const arrowIcon = showColumnDescriptions
+    ? "fa fa-caret-up"
+    : "fa fa-caret-down";
 
-    const columnCount = this.getColumnFields().length;
+  const columnCount = getColumnFields().length;
 
-    return (
-      <div id="uitest-model-card-form" style={styles.panel}>
-        <Statement />
-        <ScrollableContent tinted={true}>
-          <div key={nameField.id} style={styles.cardRow}>
-            <span style={styles.bold}>{nameField.text}</span>
-            &nbsp;
-            <span style={styles.italic}>({I18n.t("saveModelFieldRequired")})</span>
+  return (
+    <div id="uitest-model-card-form" style={styles.panel}>
+      <Statement />
+      <ScrollableContent tinted={true}>
+        <div key={nameField.id} style={styles.cardRow}>
+          <span style={styles.bold}>{nameField.text}</span>
+          &nbsp;
+          <span style={styles.italic}>({I18n.t("saveModelFieldRequired")})</span>
+          <div>
+            <input
+              id="uitest-model-name-input"
+              onChange={event =>
+                handleChange(event, nameField.id, nameField.isColumn)
+              }
+              maxLength={ModelNameMaxLength}
+            />
+          </div>
+        </div>
+        <div>
+          {getUsesFields().map(field => {
+            return (
+              <div key={field.id} style={styles.cardRow}>
+                <div style={styles.bold}>{field.text}</div>
+                <div>{field.description}</div>
+                <ul>
+                  {field.descriptionDetails &&
+                    field.descriptionDetails.map((detail, index) => {
+                      return (
+                        <li style={styles.regularText} key={index}>
+                          {detail}
+                        </li>
+                      );
+                    })}
+                </ul>
+                {!field.answer && (
+                  <div>
+                    <textarea
+                      rows="4"
+                      onChange={event =>
+                        handleChange(event, field.id, field.isColumn)
+                      }
+                      placeholder={field.placeholder}
+                      style={styles.saveInputsWidth}
+                    />
+                  </div>
+                )}
+                {field.answer && <div>{field.answer}</div>}
+              </div>
+            );
+          })}
+        </div>
+        <div key={dataDescriptionField.id} style={styles.cardRow}>
+          <div style={styles.bold}>{dataDescriptionField.text}</div>
+          {isUserUploaded && (
             <div>
-              <input
-                id="uitest-model-name-input"
+              <textarea
+                rows="4"
                 onChange={event =>
-                  this.handleChange(event, nameField.id, nameField.isColumn)
+                  handleChange(event, dataDescriptionField.id, false)
                 }
-                maxLength={ModelNameMaxLength}
+                placeholder={dataDescriptionField.placeholder}
+                style={styles.saveInputsWidth}
               />
             </div>
-          </div>
-          <div>
-            {this.getUsesFields().map(field => {
-              return (
-                <div key={field.id} style={styles.cardRow}>
-                  <div style={styles.bold}>{field.text}</div>
-                  <div>{field.description}</div>
-                  <ul>
-                    {field.descriptionDetails &&
-                      field.descriptionDetails.map((detail, index) => {
-                        return (
-                          <li style={styles.regularText} key={index}>
-                            {detail}
-                          </li>
-                        );
-                      })}
-                  </ul>
-                  {!field.answer && (
+          )}
+          {!isUserUploaded && (
+            <div>{dataDescriptionField.answer}</div>
+          )}
+        </div>
+        <div>
+          <span
+            onClick={toggleColumnDescriptions}
+            onKeyDown={toggleColumnDescriptions}
+            style={styles.saveModelToggle}
+            role="button"
+            tabIndex={0}
+          >
+            <i className={arrowIcon} />
+            &nbsp;
+            <span style={styles.bold}>{I18n.t("saveModelColumnCountLabel")}</span>
+            &nbsp;
+            ({columnCount})
+          </span>
+          {showColumnDescriptions && (
+            <div style={styles.saveModelToggleContents}>
+              {getColumnFields().map(field => {
+                return (
+                  <div key={field.id} style={styles.cardRow}>
                     <div>
-                      <textarea
-                        rows="4"
-                        onChange={event =>
-                          this.handleChange(event, field.id, field.isColumn)
-                        }
-                        placeholder={field.placeholder}
-                        style={styles.saveInputsWidth}
-                      />
+                      <span style={styles.bold}>{field.localizedName}</span> (
+                      {field.columnType})
                     </div>
-                  )}
-                  {field.answer && <div>{field.answer}</div>}
-                </div>
-              );
-            })}
-          </div>
-          <div key={dataDescriptionField.id} style={styles.cardRow}>
-            <div style={styles.bold}>{dataDescriptionField.text}</div>
-            {this.props.isUserUploadedDataset && (
-              <div>
-                <textarea
-                  rows="4"
-                  onChange={event =>
-                    this.handleChange(event, dataDescriptionField.id, false)
-                  }
-                  placeholder={dataDescriptionField.placeholder}
-                  style={styles.saveInputsWidth}
-                />
-              </div>
-            )}
-            {!this.props.isUserUploadedDataset && (
-              <div>{dataDescriptionField.answer}</div>
-            )}
-          </div>
-          <div>
-            <span
-              onClick={this.toggleColumnDescriptions}
-              onKeyDown={this.toggleColumnDescriptions}
-              style={styles.saveModelToggle}
-              role="button"
-              tabIndex={0}
-            >
-              <i className={arrowIcon} />
-              &nbsp;
-              <span style={styles.bold}>{I18n.t("saveModelColumnCountLabel")}</span>
-              &nbsp;
-              ({columnCount})
-            </span>
-            {this.state.showColumnDescriptions && (
-              <div style={styles.saveModelToggleContents}>
-                {this.getColumnFields().map(field => {
-                  return (
-                    <div key={field.id} style={styles.cardRow}>
+                    {isUserUploaded && (
                       <div>
-                        <span style={styles.bold}>{field.localizedName}</span> (
-                        {field.columnType})
+                        <textarea
+                          rows="1"
+                          onChange={event =>
+                            handleChange(event, field.id, field.isColumn)
+                          }
+                          placeholder={field.placeholder}
+                          value={field.answer || ""}
+                          style={styles.saveInputsWidth}
+                        />
                       </div>
-                      {this.props.isUserUploadedDataset && (
-                        <div>
-                          <textarea
-                            rows="1"
-                            onChange={event =>
-                              this.handleChange(event, field.id, field.isColumn)
-                            }
-                            placeholder={field.placeholder}
-                            value={field.answer || ""}
-                            style={styles.saveInputsWidth}
-                          />
-                        </div>
-                      )}
-                      {!this.props.isUserUploadedDataset && (
-                        <div>{field.answer}</div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </ScrollableContent>
-      </div>
-    );
-  }
+                    )}
+                    {!isUserUploaded && (
+                      <div>{field.answer}</div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </ScrollableContent>
+    </div>
+  );
 }
+
+SaveModel.propTypes = {
+  trainedModel: PropTypes.object,
+  setTrainedModelDetail: PropTypes.func,
+  trainedModelDetails: PropTypes.object,
+  labelColumn: PropTypes.string,
+  columnDescriptions: PropTypes.array,
+  dataDescription: PropTypes.string,
+  isUserUploadedDataset: PropTypes.bool,
+  datasetId: PropTypes.string
+};
 
 export default connect(
   state => ({

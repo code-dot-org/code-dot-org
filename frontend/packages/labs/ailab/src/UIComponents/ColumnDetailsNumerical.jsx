@@ -1,38 +1,36 @@
 /* React component to handle showing details of numerical columns. */
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
 import { numericalColumnDetailsShape } from "./shapes"
 import I18n from "../i18n";
 
-class ColumnDetailsNumerical extends Component {
-  static propTypes = {
-    columnDetails: numericalColumnDetailsShape
-  };
+function ColumnDetailsNumerical({ columnDetails }) {
+  const { extrema, containsOnlyNumbers } = columnDetails;
 
-  render() {
-    const { extrema, containsOnlyNumbers } = this.props.columnDetails;
-
-    return (
-      <div>
-        <div style={styles.bold}>{I18n.t("columnDetailsInformation")}</div>
-        {!containsOnlyNumbers && (
-          <p style={styles.error}>{I18n.t("columnDetailsNumericalTypeError")}</p>
-        )}
-        {containsOnlyNumbers && extrema && (
-          <div style={styles.contents}>
-            {I18n.t("columnDetailsMinimumValue")} {extrema.min}
-            <br />
-            {I18n.t("columnDetailsMaximumValue")} {extrema.max}
-            <br />
-            {I18n.t("columnDetailsValueRange")} {extrema.range}
-          </div>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <div style={styles.bold}>{I18n.t("columnDetailsInformation")}</div>
+      {!containsOnlyNumbers && (
+        <p style={styles.error}>{I18n.t("columnDetailsNumericalTypeError")}</p>
+      )}
+      {containsOnlyNumbers && extrema && (
+        <div style={styles.contents}>
+          {I18n.t("columnDetailsMinimumValue")} {extrema.min}
+          <br />
+          {I18n.t("columnDetailsMaximumValue")} {extrema.max}
+          <br />
+          {I18n.t("columnDetailsValueRange")} {extrema.range}
+        </div>
+      )}
+    </div>
+  );
 }
+
+ColumnDetailsNumerical.propTypes = {
+  columnDetails: numericalColumnDetailsShape
+};
 
 export default connect(
   state => ({

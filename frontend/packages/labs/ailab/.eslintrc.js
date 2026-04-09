@@ -6,12 +6,14 @@ module.exports = {
   "globals": {
   },
   "plugins": [
-    "jsx-a11y"
+    "jsx-a11y",
+    "react-hooks"
   ],
   "extends": [
     'plugin:react/recommended',
     "eslint:recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "env": {
     "browser": true,
