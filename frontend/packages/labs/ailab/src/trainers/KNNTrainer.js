@@ -11,7 +11,7 @@ import {
 } from "../redux";
 import { getPercentCorrect } from "../helpers/accuracy";
 import { logFirehoseMetric } from "../helpers/metrics";
-const KNN = require("ml-knn");
+import KNN from "ml-knn";
 
 export default class KNNTrainer {
 
