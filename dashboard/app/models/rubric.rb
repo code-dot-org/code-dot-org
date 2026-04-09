@@ -30,6 +30,13 @@ class Rubric < ApplicationRecord
     lesson.script_levels.find {|sl| sl.levels.include?(level)}
   end
 
+  validate :validate_lesson_and_level
+  def validate_lesson_and_level
+    unless get_script_level
+      errors.add(:base, "Rubric #{id} lesson #{lesson_id} does not include level #{level_id}")
+    end
+  end
+
   def summarize
     script_level = get_script_level
     {
