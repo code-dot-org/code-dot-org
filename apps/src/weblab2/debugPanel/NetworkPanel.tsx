@@ -1,10 +1,7 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {
-  Typography,
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-} from '@mui/material';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -218,8 +215,8 @@ const NetworkPanel: React.FC = () => {
               }}
             >
               <MuiIconButton
-                variant="outlined"
                 color={blockNetwork ? 'error' : 'tertiary'}
+                variant={blockNetwork ? 'contained' : 'outlined'}
                 size="extraSmall"
                 onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
                 aria-label={blockToggleLabel}
@@ -229,16 +226,33 @@ const NetworkPanel: React.FC = () => {
               </MuiIconButton>
             </WithTooltip>
             {orderedNetworkRequests.length > 0 && (
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
-                onClick={() => setNewestFirst(!newestFirst)}
-                type="button"
-                startIcon={<FontAwesomeV6Icon iconName="sort" />}
-              >
-                {newestFirst ? 'Newest first' : 'Oldest first'}
-              </MuiButton>
+              <ActionDropdown
+                name="sort-order"
+                labelText={newestFirst ? 'Newest first' : 'Oldest first'}
+                size="xs"
+                options={[
+                  {
+                    value: 'newest',
+                    label: 'Newest first',
+                    icon: {iconName: 'arrow-down-wide-short'},
+                    onClick: () => setNewestFirst(true),
+                  },
+                  {
+                    value: 'oldest',
+                    label: 'Oldest first',
+                    icon: {iconName: 'arrow-up-short-wide'},
+                    onClick: () => setNewestFirst(false),
+                  },
+                ]}
+                triggerButtonProps={{
+                  icon: {
+                    iconName: 'sort',
+                  },
+                  isIconOnly: true,
+                  type: 'secondary',
+                  color: 'gray',
+                }}
+              />
             )}
           </div>
         </div>
