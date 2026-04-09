@@ -1647,25 +1647,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
   end
 
-  private def set_up_code_review_groups
-    # create a new section to avoid extra unassigned students
-    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
-    # Create 5 students
-    @followers = []
-    5.times do |i|
-      student = create(:student, name: "student_#{i}")
-      @followers << create(:follower, section: @code_review_group_section, student_user: student)
-    end
-
-    # Create 2 code review groups
-    @group1 = create(:code_review_group, section: @code_review_group_section)
-    @group2 = create(:code_review_group, section: @code_review_group_section)
-    # put student 0 and 1 in group 1, and student 2 in group 2
-    create(:code_review_group_member, follower: @followers[0], code_review_group: @group1)
-    create(:code_review_group_member, follower: @followers[1], code_review_group: @group1)
-    create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
-  end
-
   # create_demo
 
   test 'create_demo: returns bad_request when not signed in' do
@@ -1710,6 +1691,25 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student
     post :create_demo, as: :json, params: {section_type: 'aif'}
     assert_response :forbidden
+  end
+
+  private def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = create(:code_review_group, section: @code_review_group_section)
+    @group2 = create(:code_review_group, section: @code_review_group_section)
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    create(:code_review_group_member, follower: @followers[0], code_review_group: @group1)
+    create(:code_review_group_member, follower: @followers[1], code_review_group: @group1)
+    create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
   end
 
   private def create_unit_group_with_essential_ai_chat_tools
