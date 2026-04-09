@@ -17,7 +17,6 @@ const commonConfig = {
     library: {
       type: 'umd'
     },
-    clean: true
   },
   module: {
     rules: [
@@ -54,6 +53,9 @@ const commonConfig = {
 };
 
 const firstConfigOnly = {
+  output: {
+    clean: true
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
@@ -69,7 +71,6 @@ const firstConfigOnly = {
 const externalConfig = {
   externals: {
     lodash: 'lodash',
-    radium: 'radium',
     react: 'react',
     'react-dom': 'react-dom'
   }
