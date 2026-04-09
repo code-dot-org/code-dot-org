@@ -76,7 +76,7 @@ class CoursesController < ApplicationController
 
     @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
 
-    @locale_code = request.locale
+    @locale_code = I18n.locale.to_s
 
     @page_title = @unit_group.localized_title
     @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
@@ -200,7 +200,7 @@ class CoursesController < ApplicationController
       # Look for latest version in the user's locale, fall back to latest version
       # in English if no translated version exists.
       unit_group =
-        UnitGroup.latest_stable_version(params[:course_name], locale: request.locale) ||
+        UnitGroup.latest_stable_version(params[:course_name], locale: I18n.locale.to_s) ||
         UnitGroup.latest_stable_version(params[:course_name])
       if unit_group
         redirect_path = url_for(action: params[:action], course_name: unit_group.name)
@@ -248,12 +248,12 @@ class CoursesController < ApplicationController
 
   private def redirect_unit_group(unit_group)
     # Return nil if unit_group is nil or we know the user can view the version requested.
-    return nil if !unit_group || unit_group.can_view_version?(current_user, request.locale)
+    return nil if !unit_group || unit_group.can_view_version?(current_user, I18n.locale.to_s)
 
     # Redirect the user to the latest assigned unit_group in this family, or to the latest unit_group in this family if none
     # are assigned.
     redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
-    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: request.locale)
+    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: I18n.locale.to_s)
     redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name)
 
     # Do not redirect if we are already on the correct unit_group.

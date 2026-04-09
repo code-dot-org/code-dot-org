@@ -238,7 +238,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected def with_locale(&block)
-    I18n.with_locale(locale, &block)
+    I18n.with_locale(request.locale, &block)
   end
 
   protected def milestone_response(options)

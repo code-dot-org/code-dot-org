@@ -9,6 +9,10 @@
   - frontend is React, see apps/, particularly apps/src (most existing jsx/tsx), and frontend/ (some new modules)
   - backend is Rails, see dashboard/ which is the root of a conventional Rails app
 
+## Technical Writing Style
+
+IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
+
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX
 - TESTING.md: how to run various types of tests, both frontend, backend and ui tests
@@ -115,5 +119,5 @@ and architecture.
 
 ## Continuous improvement
 
-If you hit a wrong assumption or repeated correction working in this repo,
-propose an update to this file or the relevant subdirectory `AGENTS.md`.
+- If you hit a wrong assumption or repeated correction working in this repo, propose an update to the relevant subdirectory `AGENTS.md` or (rarely) $reporoot/AGENTS.md.
+- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise.
