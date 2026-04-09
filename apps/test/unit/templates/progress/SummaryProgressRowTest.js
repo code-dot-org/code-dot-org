@@ -7,6 +7,7 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
+import experiments from '@cdo/apps/util/experiments';
 
 const baseProps = {
   dark: false,
@@ -31,39 +32,103 @@ describe('SummaryProgressRow', () => {
     expect(wrapper.props().id).toEqual('summary-progress-row-3');
   });
 
-  it('shows lesson resources button when lesson has student_lesson_plan_html_url', () => {
+  it('shows lesson resources button when lesson has student_lesson_plan_html_url and viewing as participant', () => {
     const lessonWithUrl = {
       ...fakeLesson('Maze', 1, false, 3),
       student_lesson_plan_html_url: 'https://example.com/lesson-plan',
     };
     const wrapper = setUp({
       lesson: lessonWithUrl,
+      viewAs: ViewType.Participant,
     });
 
-    const button = wrapper.find('Button');
+    const button = wrapper.find('.ui-test-lesson-resources');
     expect(button).toHaveLength(1);
     expect(button.props().href).toEqual('https://example.com/lesson-plan');
-    expect(button.props().className).toEqual('ui-test-lesson-resources');
+  });
+
+  it('does not show lesson resources button when viewing as instructor', () => {
+    const lessonWithUrl = {
+      ...fakeLesson('Maze', 1, false, 3),
+      student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+    };
+    const wrapper = setUp({lesson: lessonWithUrl});
+
+    expect(wrapper.find('.ui-test-lesson-resources')).toHaveLength(0);
   });
 
   it('does not show lesson resources button when lesson has no student_lesson_plan_html_url', () => {
-    const wrapper = setUp();
+    const wrapper = setUp({viewAs: ViewType.Participant});
 
-    expect(wrapper.find('Button')).toHaveLength(0);
+    expect(wrapper.find('.ui-test-lesson-resources')).toHaveLength(0);
   });
 
-  it('does not show lesson resources button when lesson has student_lesson_plan_html_url and isOnLevelView is true', () => {
+  it('does not show lesson resources button when isOnLevelView is true', () => {
     const lessonWithUrl = {
       ...fakeLesson('Maze', 1, false, 3),
       student_lesson_plan_html_url: 'https://example.com/lesson-plan',
     };
     const wrapper = setUp({
       lesson: lessonWithUrl,
+      viewAs: ViewType.Participant,
       isOnLevelView: true,
     });
 
-    const button = wrapper.find('Button');
-    expect(button).toHaveLength(0);
+    expect(wrapper.find('.ui-test-lesson-resources')).toHaveLength(0);
+  });
+
+  describe('Lesson Tutor button', () => {
+    const tutorLesson = {
+      ...fakeLesson('Maze', 1, false, 3),
+      lessonTutorPath: '/s/course/lessons/1/tutor',
+      hasLessonPlan: true,
+    };
+    const tutorProps = {
+      ...baseProps,
+      lesson: tutorLesson,
+      viewAs: ViewType.Participant,
+    };
+
+    let realIsEnabled;
+    beforeEach(() => {
+      realIsEnabled = experiments.isEnabled;
+    });
+    afterEach(() => {
+      experiments.isEnabled = realIsEnabled;
+    });
+
+    it('shows when experiment is enabled, viewing as participant, hasLessonPlan is true', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = setUp(tutorProps);
+      expect(wrapper.text()).toContain('Lesson Tutor');
+    });
+
+    it('does not show when experiment is disabled', () => {
+      experiments.isEnabled = jest.fn(() => false);
+      const wrapper = setUp(tutorProps);
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('does not show when viewing as instructor', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = setUp({...tutorProps, viewAs: ViewType.Instructor});
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('does not show when isOnLevelView is true', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = setUp({...tutorProps, isOnLevelView: true});
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('does not show when hasLessonPlan is false', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = setUp({
+        ...tutorProps,
+        lesson: {...tutorLesson, hasLessonPlan: false},
+      });
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
   });
 
   describe('when viewing as Participant', () => {
