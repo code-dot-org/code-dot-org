@@ -148,7 +148,7 @@ module Cdo
       MARKETING_SITES_HOSTS
     end
 
-    def site_url(domain, path = '', scheme = '', ge_region: nil)
+    def site_url(domain, path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
       path = '/' + path unless path.empty? || path[0] == '/'
 
       if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
