@@ -32,6 +32,11 @@ module Cdo
       locale.split('-').first
     end
 
+    # The requested locale, not the effective rendering locale.
+    #
+    # @note The effective rendering locale is resolved by the I18n backend and is available via `I18n.locale`
+    # @see `VarnishEnvironment` middleware, defined in `/shared/middleware/varnish_environment.rb`
+    # @return [String] the requested locale, or `Cdo::I18n::DEFAULT_LOCALE` when no locale is set
     def locale
       env[LOCALE_ENV] || Cdo::I18n::DEFAULT_LOCALE
     end

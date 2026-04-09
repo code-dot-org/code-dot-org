@@ -7,7 +7,7 @@ describe Observability::Sentry do
     CDO.enable_sentry = false
     CDO.enable_opentelemetry = false
     CDO.running_web_application = false
-    CDO.sentry_dsn = nil
+    CDO.dashboard_sentry_dsn = nil
   end
 
   describe '.setup' do
@@ -29,11 +29,11 @@ describe Observability::Sentry do
       before do
         CDO.enable_sentry = true
         CDO.running_web_application = true
-        CDO.sentry_dsn = 'https://key@sentry.example.com/1'
+        CDO.dashboard_sentry_dsn = 'https://key@sentry.example.com/1'
       end
 
-      describe 'when sentry_dsn is blank' do
-        before {CDO.sentry_dsn = nil}
+      describe 'when dashboard_sentry_dsn is blank' do
+        before {CDO.dashboard_sentry_dsn = nil}
 
         it 'does not initialize Sentry' do
           Sentry.expects(:init).never

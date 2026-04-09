@@ -126,8 +126,8 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:isEnglish] = request.language == 'en'
-    @homepage_data[:locale] = Unit.locale_english_name_map[request.locale]
-    @homepage_data[:localeCode] = request.locale
+    @homepage_data[:locale] = Unit.locale_english_name_map[I18n.locale.to_s]
+    @homepage_data[:localeCode] = I18n.locale.to_s
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:currentUserId] = current_user.id
 

@@ -6,3 +6,5 @@ sublevels
 level 'CSD U2L11-L8a_2025-v2'
 level 'CSD U2L11-L8b_2025-v2'
 level 'CSD U2L11-L8c_2025-v2'
+
+uses_lab2
