@@ -528,7 +528,7 @@ class ProjectsController < ApplicationController
     src_project = project.get(src_channel_id)
 
     if src_project["subprojects"]
-      if project_type == BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+      if @level.is_a?(BubbleChoice)
         # Only process a reasonable number of subprojects.
         sub_projects = src_project["subprojects"].first(BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
         # Remix each subproject and update the parent channel.
