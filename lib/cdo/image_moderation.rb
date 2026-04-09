@@ -22,7 +22,14 @@ module ImageModeration
       api_key: CDO.azure_ai_content_safety_key
     ).moderate_image(moderation_io, moderation_type)
   rescue AzureAiContentSafety::AzureError => exception
-    Honeybadger.notify(exception)
+    context = {content_type: content_type, moderation_type: moderation_type}
+    if moderation_io
+      moderation_io.rewind
+      # Get the first 4 bytes of the image as hex valuesto identify the actual image file type.
+      # This is added for debugging Azure errors reported in HoneyBadger as 'image format is not supported'.
+      context[:magic_bytes] = moderation_io.read(4).bytes.map {|b| format('%02X', b)}.join(' ')
+    end
+    Honeybadger.notify(exception, context: context)
     nil
   end
 
