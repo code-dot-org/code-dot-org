@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_07_175945) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_09_183405) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2278,6 +2278,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_07_175945) do
     t.integer "avatar_color"
     t.integer "avatar_emoji"
     t.string "ai_chat_access_level", default: "disabled"
+    t.boolean "is_demo", default: false, null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"

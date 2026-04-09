@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :update, :require_captcha]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -91,6 +91,37 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     if @unit
       AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit, current_user.id)
+    end
+
+    render json: section.summarize
+  end
+
+  # POST /api/v1/sections/demo/:section_type
+  # Creates a demo section with preset properties and adds demo students.
+  def create_demo
+    authorize! :create, Section
+
+    config = Policies::DemoSections.get_preset(params[:section_type])
+    return render json: {error: "unknown demo section type: #{params[:section_type]}"}, status: :bad_request unless config
+
+    unit = Unit.get_from_cache(config[:unit_name]) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    section = Section.create(
+      user_id: current_user.id,
+      name: config[:section_name],
+      login_type: config[:login_type],
+      participant_type: config[:participant_type],
+      grades: config[:grades],
+      script_id: unit&.id,
+      course_id: unit_group&.id,
+      is_demo: true,
+    )
+    return head :bad_request unless section.persisted?
+
+    Policies::DemoSections.demo_student_ids(params[:section_type]).each do |student_id|
+      student = User.find_by(id: student_id)
+      section.add_student(student) if student
     end
 
     render json: section.summarize

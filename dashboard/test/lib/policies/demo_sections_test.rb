@@ -46,6 +46,38 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal Set[], Policies::DemoSections.all_demo_student_ids
   end
 
+  # get_preset
+
+  test 'get_preset returns preset for known type' do
+    preset = Policies::DemoSections.get_preset(:aif)
+
+    assert_equal 'My first AIF section', preset[:section_name]
+    assert_equal 'email', preset[:login_type]
+    assert_equal 'student', preset[:participant_type]
+    assert_equal ['9', '10'], preset[:grades]
+    assert_equal 'aif2-2025', preset[:unit_name]
+    assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
+  end
+
+  test 'get_preset returns preset for each demo type' do
+    Policies::DemoSections::DEMO_TYPES.each do |type|
+      preset = Policies::DemoSections.get_preset(type)
+
+      assert preset, "expected preset for #{type}"
+      assert preset[:section_name], "expected section_name for #{type}"
+      assert preset[:unit_name], "expected unit_name for #{type}"
+    end
+  end
+
+  test 'get_preset accepts string argument' do
+    assert_equal Policies::DemoSections.get_preset(:csd),
+      Policies::DemoSections.get_preset('csd')
+  end
+
+  test 'get_preset returns nil for unknown type' do
+    assert_nil Policies::DemoSections.get_preset(:unknown)
+  end
+
   # demo_student?
 
   test 'demo_student? returns true for a demo student id' do

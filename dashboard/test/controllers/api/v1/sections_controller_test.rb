@@ -1666,6 +1666,52 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
   end
 
+  # create_demo
+
+  test 'create_demo: returns bad_request when not signed in' do
+    post :create_demo, as: :json, params: {section_type: 'aif'}
+    assert_response :redirect
+  end
+
+  test 'create_demo: returns bad_request for invalid section type' do
+    sign_in @teacher
+    post :create_demo, as: :json, params: {section_type: 'invalid'}
+    assert_response :bad_request
+  end
+
+  test 'create_demo: creates section with preset config' do
+    sign_in @teacher
+    preset = Policies::DemoSections.get_preset(:aif)
+    post :create_demo, as: :json, params: {section_type: 'aif'}
+    assert_response :success
+
+    section = returned_section
+    assert_equal preset[:section_name], section.name
+    assert_equal preset[:login_type], section.login_type
+    assert_equal preset[:participant_type], section.participant_type
+    assert_equal preset[:grades], section.grades
+    assert section.is_demo
+  end
+
+  test 'create_demo: adds demo students to the section' do
+    sign_in @teacher
+    demo_student = create(:student)
+    CDO.stubs(:demo_student_ids).returns({'aif' => [demo_student.id.to_s]})
+    Policies::DemoSections.reset_cache!
+
+    post :create_demo, as: :json, params: {section_type: 'aif'}
+    assert_response :success
+
+    section = returned_section
+    assert_includes section.students.map(&:id), demo_student.id
+  end
+
+  test 'create_demo: students cannot create demo sections' do
+    sign_in @student
+    post :create_demo, as: :json, params: {section_type: 'aif'}
+    assert_response :forbidden
+  end
+
   private def create_unit_group_with_essential_ai_chat_tools
     unit = create(:unit, :with_lessons, lessons_count: 1)
     lesson = unit.lessons.first
