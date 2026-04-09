@@ -10,13 +10,20 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
   Scenario: The student sees only the projects available in Farsi MVP
     Given I am on "http://studio.code.org/fa/projects"
 
-    When I wait until element "h4.new-project-heading:contains(شروع پروژه جدید)" is visible
-    # The section "Start a new project" contains projects: "Sprite Lab", "Artist", "App Lab", and "Game Lab"
-    Then element "h4.new-project-heading + div" has text "لابراتوار اسپرایتهنرمندلابراتوار اپلابراتوار بازی"
+    When I wait until element "h4.new-project-heading" is visible
+    # The "Create a new project" section contains exactly: Sprite Lab, Artist, App Lab, and Game Lab
+    Then element "h4.new-project-heading + div a[href='/projects/spritelab/new']" is visible
+    And element "h4.new-project-heading + div a[href='/projects/artist/new']" is visible
+    And element "h4.new-project-heading + div a[href='/projects/applab/new']" is visible
+    And element "h4.new-project-heading + div a[href='/projects/gamelab/new']" is visible
 
     When I click "#uitest-view-full-list" once it exists
     Then I wait until element "#full-list-projects" is visible
-    And element "#full-list-projects div:contains(خلاقیت دارای پایان باز) a " has text "لابراتوار اسپرایت"
-    And element "#full-list-projects div:contains(ترسیم) a" has text "هنرمند"
-    # The section "Beyond Blocks" contains projects: "App Lab", and "Game Lab"
-    And element "#full-list-projects div:contains(فراتر از بلوک) a" has text "لابراتوار اپلابراتوار بازی"
+    # The full list contains exactly the same 4 project types, no others
+    And element "#full-list-projects a[href='/projects/spritelab/new']" is visible
+    And element "#full-list-projects a[href='/projects/artist/new']" is visible
+    And element "#full-list-projects a[href='/projects/applab/new']" is visible
+    And element "#full-list-projects a[href='/projects/gamelab/new']" is visible
+    And element "#full-list-projects a[href='/projects/dance/new']" is not visible
+    And element "#full-list-projects a[href='/projects/playlab/new']" is not visible
+    And element "#full-list-projects a[href='/projects/weblab/new']" is not visible

@@ -11,9 +11,6 @@ export default {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
   component: Button.type,
-  parameters: {
-    useMui: true,
-  },
 } as Meta;
 
 //

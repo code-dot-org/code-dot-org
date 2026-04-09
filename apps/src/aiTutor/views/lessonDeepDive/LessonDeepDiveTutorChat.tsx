@@ -1,4 +1,3 @@
-import {Typography} from '@mui/material';
 import React, {FC, useCallback} from 'react';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
@@ -8,12 +7,14 @@ import {LessonDeepDiveData} from './types';
 import styles from './lesson-deep-dive-tutor-chat.module.scss';
 
 interface LessonDeepDiveTutorChatProps {
+  lessonId: number;
   lessonName: string;
   lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
 }
 
 const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
+  lessonId,
   lessonName,
   lessonSummary,
   vocabulary,
@@ -38,13 +39,11 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
 
   return (
     <div className={styles.container}>
-      <Typography variant="h6" className={styles.header}>
-        ⚠️ 🛠️ Chat History is broken because that fetch expects a levelId or
-        projectId, which we don't have...
-      </Typography>
       <AiTutorChat
         hiddenContextCallback={hiddenContextCallback}
         aiTutorChatButtonData={[]}
+        isLessonDeepDive={true}
+        lessonId={lessonId}
       />
     </div>
   );
