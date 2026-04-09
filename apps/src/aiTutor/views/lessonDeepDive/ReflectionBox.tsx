@@ -10,16 +10,21 @@ import LessonObjectiveReflection, {
   ReflectionValue,
 } from './LessonObjectiveReflection';
 import LessonReflection from './LessonReflection';
-import {LessonDeepDiveData} from './types';
+import {LessonDeepDiveData, ReflectionData} from './types';
 
 import styles from './reflection.module.scss';
 
 interface ReflectionBoxProps {
   lessonId: number;
   objectives: LessonDeepDiveData['objectives'];
+  onSubmitComplete: (data: ReflectionData) => void;
 }
 
-const ReflectionBox: FC<ReflectionBoxProps> = ({lessonId, objectives}) => {
+const ReflectionBox: FC<ReflectionBoxProps> = ({
+  lessonId,
+  objectives,
+  onSubmitComplete,
+}) => {
   const [objectiveReflections, setObjectiveReflections] = useState<
     Record<string, ReflectionValue | null>
   >({});
@@ -53,10 +58,25 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({lessonId, objectives}) => {
         saveUserLessonReflection(lessonId, success, struggle),
         ...objectiveSaves,
       ]);
+      onSubmitComplete({
+        objectiveReflections: objectiveReflections as Record<
+          string,
+          ReflectionValue
+        >,
+        success,
+        struggle,
+      });
     } finally {
       setIsSubmitting(false);
     }
-  }, [lessonId, success, struggle, objectives, objectiveReflections]);
+  }, [
+    lessonId,
+    success,
+    struggle,
+    objectives,
+    objectiveReflections,
+    onSubmitComplete,
+  ]);
 
   return (
     <div>

@@ -5,3 +5,21 @@
   height: 100%;
   overflow: hidden;
 }
+
+.greetingWrapper {
+  background-color: var(--background-neutral-primary);
+  flex-shrink: 0;
+  padding: 0.625rem 0.625rem 0;
+}
+
+.greeting {
+  background-color: var(--background-brand-aqua-extra-light);
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 0;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  padding: 0.625rem 0.75rem;
+  word-break: break-word;
+}
