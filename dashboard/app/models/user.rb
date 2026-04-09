@@ -214,6 +214,7 @@ class User < ApplicationRecord
     educator_role
     signup_sources_tracking
     has_dismissed_personalization_alert
+    grades_teaching
   )
 
   attr_accessor(
