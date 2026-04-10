@@ -10,12 +10,9 @@
  * This file also includes apps-specific Typography type augmentations.
  */
 
-import {Theme as MuiTheme} from '@mui/material/styles';
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
-
-type Theme = Omit<MuiTheme, 'components'>;
 
 // Apps-specific Typography type augmentations
 declare module '@mui/material/styles' {
@@ -116,5 +113,3 @@ declare module '@mui/material/Breadcrumbs' {
     size?: 'xs' | 's' | 'm' | 'l';
   }
 }
-
-export {};
