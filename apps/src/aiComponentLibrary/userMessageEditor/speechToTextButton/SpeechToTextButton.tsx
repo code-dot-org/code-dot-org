@@ -15,8 +15,11 @@ const unknownErrorMessage = 'An unknown error occurred.';
 const recordingTimeoutMs = 60000;
 
 export interface SpeechToTextAnalytics {
+  /** Amount of time the user spent recording audio. */
   recordTimeSeconds: number;
+  /** Total amount of time from the start of recording to the end of transcription. */
   totalTimeSeconds: number;
+  /** Whether the recording ended due to a timeout. */
   timedOut: boolean;
 }
 
