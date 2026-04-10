@@ -104,7 +104,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     config = Policies::DemoSections.get_preset(params[:section_type])
     return render json: {error: "unknown demo section type: #{params[:section_type]}"}, status: :bad_request unless config
 
-    unit = Unit.get_from_cache(config[:unit_name]) if config[:unit_name].present?
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
     section = Section.create(

@@ -1649,9 +1649,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   # create_demo
 
-  test 'create_demo: returns bad_request when not signed in' do
+  test 'create_demo: returns forbidden when not signed in' do
     post :create_demo, params: {section_type: 'aif'}
-    assert_response :redirect
+    assert_response :forbidden
   end
 
   test 'create_demo: returns bad_request for invalid section type' do
@@ -1662,20 +1662,23 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'create_demo: creates section with preset config' do
     sign_in @teacher
-    preset = Policies::DemoSections.get_preset(:aif)
+    stub_demo_preset
     post :create_demo, params: {section_type: 'aif'}
     assert_response :success
 
     section = returned_section
-    assert_equal preset[:section_name], section.name
-    assert_equal preset[:login_type], section.login_type
-    assert_equal preset[:participant_type], section.participant_type
-    assert_equal preset[:grades], section.grades
+    assert_equal 'My first AIF section', section.name
+    assert_equal 'email', section.login_type
+    assert_equal 'student', section.participant_type
+    assert_equal ['9', '10'], section.grades
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
     assert section.is_demo
   end
 
   test 'create_demo: adds demo students to the section' do
     sign_in @teacher
+    stub_demo_preset
     demo_student = create(:student)
     CDO.stubs(:demo_student_ids).returns({'aif' => [demo_student.id.to_s]})
     Policies::DemoSections.reset_cache!
@@ -1691,6 +1694,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student
     post :create_demo, params: {section_type: 'aif'}
     assert_response :forbidden
+  end
+
+  private def stub_demo_preset
+    Policies::DemoSections.stubs(:get_preset).with('aif').returns(
+      {
+        section_name: 'My first AIF section',
+        login_type: 'email',
+        participant_type: 'student',
+        grades: ['9', '10'],
+        unit_name: @csp_script.name,
+        unit_group_name: @csp_unit_group.name,
+      }
+    )
   end
 
   private def set_up_code_review_groups
