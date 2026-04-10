@@ -9,6 +9,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -35,6 +36,10 @@ const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+}
+
+interface EssentialAiDependencyResponse {
+  has_assigned_essential_ai_dependency: boolean;
 }
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
@@ -120,12 +125,12 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
     const fetchEssentialAiDependency = async () => {
       try {
-        const response = await fetch(
-          '/api/v1/sections/assigned_essential_ai_dependency'
-        );
-        const data = await response.json();
+        const {value} =
+          await HttpClient.fetchJson<EssentialAiDependencyResponse>(
+            '/api/v1/sections/assigned_essential_ai_dependency'
+          );
         setHasAssignedEssentialAiDependency(
-          data.has_assigned_essential_ai_dependency
+          value.has_assigned_essential_ai_dependency
         );
       } catch (error) {
         console.error('Error fetching essential AI dependency:', error);
