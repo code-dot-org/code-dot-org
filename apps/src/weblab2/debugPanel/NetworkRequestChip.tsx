@@ -34,7 +34,11 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
     } else {
       return {iconName: 'xmark-circle', className: parentStyles.errorIcon};
     }
-  }, [request.request.blocked, request.request.cspDirectiveViolated, request.response]);
+  }, [
+    request.request.blocked,
+    request.request.cspDirectiveViolated,
+    request.response,
+  ]);
 
   const label = useMemo(() => {
     try {
