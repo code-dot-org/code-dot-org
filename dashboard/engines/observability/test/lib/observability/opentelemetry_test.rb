@@ -46,21 +46,26 @@ describe Observability::OpenTelemetry do
       it 'sets the service name to dashboard' do
         fake_config = mock('otel_config')
         fake_config.expects(:service_name=).with('dashboard')
-        fake_config.stubs(:sampler=)
         fake_config.stubs(:use_all)
         fake_config.stubs(:add_span_processor)
         OpenTelemetry::SDK.expects(:configure).yields(fake_config)
         Observability::OpenTelemetry.setup
       end
 
-      it 'sets the sampler to ALWAYS_ON' do
-        fake_config = mock('otel_config')
-        fake_config.stubs(:service_name=)
-        fake_config.expects(:sampler=).with(OpenTelemetry::SDK::Trace::Samplers::ALWAYS_ON)
-        fake_config.stubs(:use_all)
-        fake_config.stubs(:add_span_processor)
-        OpenTelemetry::SDK.expects(:configure).yields(fake_config)
-        Observability::OpenTelemetry.setup
+      describe 'OTEL_TRACES_SAMPLER' do
+        after {ENV.delete('OTEL_TRACES_SAMPLER')}
+
+        it 'sets OTEL_TRACES_SAMPLER to always_on' do
+          ENV.delete('OTEL_TRACES_SAMPLER')
+          Observability::OpenTelemetry.setup
+          _(ENV.fetch('OTEL_TRACES_SAMPLER', nil)).must_equal 'always_on'
+        end
+
+        it 'does not override an existing OTEL_TRACES_SAMPLER' do
+          ENV['OTEL_TRACES_SAMPLER'] = 'parentbased_always_on'
+          Observability::OpenTelemetry.setup
+          _(ENV.fetch('OTEL_TRACES_SAMPLER', nil)).must_equal 'parentbased_always_on'
+        end
       end
 
       describe 'OTEL_LOG_LEVEL' do
