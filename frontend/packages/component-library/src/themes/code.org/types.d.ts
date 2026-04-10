@@ -10,54 +10,10 @@
  * This file also includes apps-specific Typography type augmentations.
  */
 
+import '@mui/material/styles';
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
-
-// Apps-specific Typography type augmentations
-declare module '@mui/material/styles' {
-  // Custom Typography definitions
-  interface TypographyVariants {
-    body3: React.CSSProperties;
-    body4: React.CSSProperties;
-    overline1: React.CSSProperties;
-    overline2: React.CSSProperties;
-    overline3: React.CSSProperties;
-    figcaption: React.CSSProperties;
-    strong: React.CSSProperties;
-    em: React.CSSProperties;
-  }
-
-  interface TypographyVariantsOptions {
-    body3?: React.CSSProperties;
-    body4?: React.CSSProperties;
-    overline1?: React.CSSProperties;
-    overline2?: React.CSSProperties;
-    overline3?: React.CSSProperties;
-    figcaption?: React.CSSProperties;
-    strong?: React.CSSProperties;
-    em?: React.CSSProperties;
-  }
-}
-
-declare module '@mui/material/Typography' {
-  interface TypographyPropsVariantOverrides {
-    body3: true;
-    body4: true;
-    overline: false; // disable the default overline
-    overline1: true; // add overline1 variant to match DSCO naming pattern
-    overline2: true;
-    overline3: true;
-    caption: false; // disable the default caption
-    figcaption: true; // add figcaption variant to match DSCO naming pattern
-    label1: true;
-    label2: true;
-    label3: true;
-    label4: true;
-    strong: true;
-    em: true;
-  }
-}
 
 // Button and IconButton type augmentations (manually copied from component-library)
 // Source: frontend/packages/component-library/src/themes/code.org/types.d.ts
