@@ -6,7 +6,7 @@ import painterObjectUrl from '@cdo/static/json/jsonVideo/pythonLab/Painter_Objec
 import variablesUrl from '@cdo/static/json/jsonVideo/pythonLab/Variables_V1.json';
 import whileLoopUrl from '@cdo/static/json/jsonVideo/pythonLab/While_Loops_V1.json';
 
-import {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 
 /**
  *  Importing from @cdo/static/json doesn't actually import the file but rather a path to

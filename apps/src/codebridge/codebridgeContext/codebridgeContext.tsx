@@ -2,7 +2,7 @@ import React, {createContext, useContext} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
-import {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import {
