@@ -42,6 +42,7 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
   has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_lessons
   has_many :objectives, dependent: :destroy
+  has_many :rubrics, dependent: :destroy
 
   # join tables needed for seeding logic
   has_many :lessons_resources
@@ -313,6 +314,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
+        lessonTutorPath: "#{get_uncached_show_path}/tutor",
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -615,7 +617,6 @@ class Lesson < ApplicationRecord
       lessonNumber: relative_position,
       lessonName: name,
       levels: level_summary,
-      aiRubricS3Config: script.ai_rubric_s3_config || {}
     }
   end
 

@@ -37,7 +37,7 @@ module AWS
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < RuntimeError
       def initialize(message = nil)
-        super(message)
+        super
       end
     end
 

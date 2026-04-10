@@ -7,6 +7,8 @@ import useProductTour, {
   UseProductTourProps,
 } from '@cdo/apps/sharedComponents/productTour/useProductTour';
 
+import useHideTourOnTourChange from './useHideTourOnTourChange';
+
 // Wrapper around useProductTour that enforces common restrictions for Lab2 tours.
 const useLab2ProductTour = ({
   tourAvailable,
@@ -16,10 +18,13 @@ const useLab2ProductTour = ({
   const viewingExemplar = !!getAppOptionsViewingExemplar();
   const editingExemplar = !!getAppOptionsEditingExemplar();
   const hideTour = isStartMode || viewingExemplar || editingExemplar;
-  return useProductTour({
+  const {tour} = useProductTour({
     tourAvailable: tourAvailable && !hideTour,
     ...useProductTourProps,
   });
+
+  useHideTourOnTourChange(tour);
+  return {tour};
 };
 
 export default useLab2ProductTour;

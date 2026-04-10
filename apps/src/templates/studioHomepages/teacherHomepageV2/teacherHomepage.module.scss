@@ -427,6 +427,44 @@
   margin-inline-start: 8px;
 }
 
+.onboardingChecklistOuter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.onboardingChecklistInner {
+  border-radius: 10px;
+  padding: 28px 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--brand-purple-50);
+  text-align: center;
+}
+
+.onboardingChecklistButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.onboardingChecklistButton {
+  border-radius: 9999px !important;
+}
+
+.onboardingChecklistCheckIcon {
+  color: var(--sentiment-success-50);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
 // Drawer Component
 .drawer :global(.MuiDrawer-paperAnchorBottom) {
   display: flex;

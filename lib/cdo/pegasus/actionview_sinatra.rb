@@ -55,7 +55,7 @@ module ActionViewSinatra
     def render(options = {}, locals = {})
       # save locals hash for access by the locals method
       @locals = locals
-      super(options, locals)
+      super
     rescue ActionView::Template::Error => exception
       # allow templates to throw a Sinatra::NotFound error to trigger a 404
       raise exception.cause if exception.cause.is_a?(Sinatra::NotFound)

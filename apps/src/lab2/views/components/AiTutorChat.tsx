@@ -3,7 +3,7 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
   ChatButtonClickHandler,
@@ -36,6 +36,9 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
+  enableTutorVideos?: boolean;
+  isLessonDeepDive?: boolean;
+  lessonId?: number;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -48,6 +51,9 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
+  enableTutorVideos,
+  isLessonDeepDive = false,
+  lessonId,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -59,17 +65,25 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
+    enableTutorVideos,
   });
 
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
-      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+      ChatButton: ({
+        onClick,
+        disabled,
+      }: {
+        onClick: ChatButtonClickHandler;
+        disabled?: boolean;
+      }) => (
         <MuiButton
           variant="outlined"
           color="secondary"
           size="small"
           className={moduleStyles.chatButton}
+          disabled={disabled}
           onClick={() => onClick(button.value, button.analyticsProperties)}
           aria-label={button.label}
           startIcon={
@@ -92,6 +106,21 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
+
   if (loading || !modelParameters) {
     return (
       <div className={moduleStyles.loading}>
@@ -100,15 +129,14 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     );
   }
 
-  const lastMessagePostText =
-    viewingAiTutorVersionFileUpdates && versionFiles ? (
-      <AiTutorVersionActions files={versionFiles} />
-    ) : undefined;
-
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
-        clientType={AiChatClientTypes.AI_TUTOR}
+        clientType={
+          isLessonDeepDive
+            ? AiChatClientTypes.LESSON_DEEP_DIVE
+            : AiChatClientTypes.AI_TUTOR
+        }
         modelParameters={modelParameters}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
@@ -118,7 +146,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
-        lastMessagePostText={lastMessagePostText}
+        lessonId={lessonId}
+        renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
   );

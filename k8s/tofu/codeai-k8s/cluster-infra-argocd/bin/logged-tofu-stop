@@ -1,0 +1,24 @@
+#!/bin/sh
+set -eu
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+module_name=$(basename "$cwd")
+shared_log_file="$cwd/tofu.log"
+run_log_file_file="/tmp/$module_name-last-log-path"
+watchers_pid_file="$cwd/.logged-tofu-watchers.pid"
+
+[ -f "$watchers_pid_file" ] || exit 0
+
+run_log_file=$(cat "$run_log_file_file" 2>/dev/null || true)
+
+while IFS="$(printf '\t')" read -r label watcher_pid; do
+  [ -n "${watcher_pid:-}" ] || continue
+  if kill -0 "$watcher_pid" 2>/dev/null; then
+    printf '%s [meta] stopping %s watch pid=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$label" "$watcher_pid" \
+      | tee -a "$shared_log_file" ${run_log_file:+"$run_log_file"}
+    kill "$watcher_pid" 2>/dev/null || true
+  fi
+done < "$watchers_pid_file"
+
+rm -f "$watchers_pid_file"

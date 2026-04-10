@@ -27,7 +27,7 @@ class TeacherScore < ApplicationRecord
     script_id = lesson.script.id
     level_ids = lesson.script_levels.map(&:level_id)
 
-    student_ids.each do |student_id|
+    student_ids.reject {|id| Policies::DemoSections.demo_student?(id)}.each do |student_id|
       level_ids.each do |level_id|
         TeacherScore.score_level_for_student(
           teacher_id,
@@ -47,6 +47,8 @@ class TeacherScore < ApplicationRecord
     script_id,
     score
   )
+    return if Policies::DemoSections.demo_student?(student_id)
+
     # TODO: TEACH-2144 - set unit_group_id on the UserLevel
     user_level = UserLevel.find_or_create_by(user_id: student_id, level_id: level_id, script_id: script_id)
 

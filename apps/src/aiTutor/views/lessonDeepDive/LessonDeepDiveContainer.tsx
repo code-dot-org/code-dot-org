@@ -23,6 +23,7 @@ const darkTheme = createTheme({
 
 import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
+import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData} from './types';
@@ -33,6 +34,7 @@ const BOX_IDS = [
   'lesson-summary',
   'reflection',
   'intervention',
+  'practice',
   'tutor-summary',
 ] as const;
 
@@ -70,10 +72,24 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           />
         );
       case 'reflection':
-        return <ReflectionBox objectives={lessonDeepDiveData.objectives} />;
+        return (
+          <ReflectionBox
+            lessonId={lessonDeepDiveData.lessonId}
+            objectives={lessonDeepDiveData.objectives}
+          />
+        );
       case 'intervention':
         return (
           <InterventionBox
+            lessonId={lessonDeepDiveData.lessonId}
+            lessonName={lessonDeepDiveData.lessonName}
+            lessonSummary={lessonDeepDiveData.lessonSummary}
+            vocabulary={lessonDeepDiveData.vocabulary}
+          />
+        );
+      case 'practice':
+        return (
+          <PracticeBox
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
