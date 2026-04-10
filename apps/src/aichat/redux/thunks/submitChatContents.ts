@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -21,10 +22,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
-import {
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
@@ -33,7 +31,6 @@ import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  isCompletedChatMessage,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -65,6 +62,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
       logLevelActivity?: () => void;
+      lessonId?: number;
     },
     thunkAPI
   ) => {
@@ -81,6 +79,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -93,6 +92,7 @@ export const submitChatContents = createAsyncThunk(
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
+      lessonId,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
@@ -186,21 +186,11 @@ export const submitChatContents = createAsyncThunk(
           (levelProperties as AichatLevelProperties)?.aichatSettings
             ?.levelSystemPrompt;
 
-        let filteredChatEvents: CompletedChatMessage[] =
-          chatEventsCurrent.filter(isCompletedChatMessage);
-
-        if (
-          modelParameters.selectedModelId ===
-          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
-        ) {
-          filteredChatEvents = filteredChatEvents.filter(
-            message => message.status === Status.OK
-          );
-        }
-
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          filteredChatEvents,
+          buildMessagesForModelHistory(chatEventsCurrent).filter(
+            event => event.status === Status.OK
+          ),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -210,7 +200,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
+          buildMessagesForModelHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );

@@ -2,7 +2,7 @@ module Pd::Summary
   class TeacherSummary
     TeacherAttendanceTotal = Struct.new(:days, :hours) do
       def initialize(days = 0, hours = 0)
-        super(days, hours)
+        super
       end
 
       def add_session(hours)

@@ -4,11 +4,11 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import supportsClientApi from '../api/supportsClientApi';
-import {ACCEPTED_FILE_TYPES} from '../constants';
 import {
   selectIsWaitingForChatResponse,
   submitChatContents,
@@ -20,6 +20,7 @@ import {
   ModelParameters,
   AnalyticsProperties,
 } from '../types';
+import {getAllowedFileTypes} from '../utils';
 
 import UploadButton, {UploadButtonProps} from './assets/UploadButton';
 
@@ -35,6 +36,8 @@ interface UserChatMessageEditorProps {
   responseCallback?: (response: string) => string;
   currentLevelId?: string | null;
   logLevelActivity?: () => void;
+
+  lessonId?: number;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -58,6 +61,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   responseCallback,
   currentLevelId,
   logLevelActivity,
+  lessonId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -67,6 +71,10 @@ const UserChatMessageEditor: React.FunctionComponent<
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     selectIsWaitingForChatResponse
+  );
+
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
@@ -88,6 +96,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     isWaitingForChatResponse ||
     saveInProgress ||
     uploadsPending ||
+    viewingAiTutorVersionFileUpdates ||
     chatDisabled;
 
   const clearUserMessage = () => setUserMessage('');
@@ -113,6 +122,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 : undefined,
             responseCallback,
             logLevelActivity,
+            lessonId,
           })
         );
         clearUserMessage();
@@ -129,6 +139,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     ]
   );
 
@@ -150,20 +161,27 @@ const UserChatMessageEditor: React.FunctionComponent<
     supportsClientApi(modelParameters.selectedModelId) ||
     experiments.isEnabledAllowingQueryString('enable-speech-to-text');
 
+  const acceptedFileTypes = getAllowedFileTypes(
+    modelParameters.selectedModelId
+  );
+
+  const canUploadFiles =
+    multimodalAvailable && buildAssetUrl && acceptedFileTypes.length > 0;
+
   const onPaste = useCallback(
     (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
-      if (!multimodalAvailable || !buildAssetUrl) {
+      if (!canUploadFiles) {
         return;
       }
       const files = Array.from(e.clipboardData.items)
         .filter(({type}) =>
-          ACCEPTED_FILE_TYPES.includes(`.${mimeToExtension(type) || ''}`)
+          acceptedFileTypes.includes(`.${mimeToExtension(type) || ''}`)
         )
         .map(item => item.getAsFile())
         .filter(item => item !== null);
       dispatch(uploadFiles({files, buildAssetUrl}));
     },
-    [multimodalAvailable, buildAssetUrl, dispatch]
+    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
   );
 
   return (
@@ -171,7 +189,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
-            <ChatButton key={key} onClick={handleSubmit} />
+            <ChatButton key={key} onClick={handleSubmit} disabled={disabled} />
           ))}
         </div>
       )}
@@ -185,13 +203,14 @@ const UserChatMessageEditor: React.FunctionComponent<
         onPaste={onPaste}
         ref={inputRef}
       >
-        {multimodalAvailable && buildAssetUrl && levelName && (
+        {canUploadFiles && levelName && (
           <div className={moduleStyles.buttonRow}>
             <UploadButton
               isDisabled={!!uploadDisabled || disabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
+              acceptedFileTypes={acceptedFileTypes}
             />
           </div>
         )}

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 17:53:38 UTC",
+    "serialized_at": "2026-04-08 16:14:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -111,7 +111,7 @@
       "key": "d3f289a2-8947-492a-9ede-e182df556cad",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment and Integrity"
+        "progression_name": "Academic Integrity and Assessment"
       },
       "seeding_key": {
         "activity_section.key": "d3f289a2-8947-492a-9ede-e182df556cad",
@@ -122,7 +122,7 @@
       "key": "05440f74-8a65-453e-a98c-b63a484d2b40",
       "position": 6,
       "properties": {
-        "progression_name": "Teaching About AI"
+        "progression_name": "AI Curriculum Resources"
       },
       "seeding_key": {
         "activity_section.key": "05440f74-8a65-453e-a98c-b63a484d2b40",
@@ -130,19 +130,8 @@
       }
     },
     {
-      "key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe",
-      "position": 7,
-      "properties": {
-        "progression_name": "Dump"
-      },
-      "seeding_key": {
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe",
-        "lesson_activity.key": "040942a8-b3ba-45a6-aad7-be7d6cfe227c"
-      }
-    },
-    {
       "key": "e03f10cd-9553-44ad-9d3f-50c93b74122a",
-      "position": 8,
+      "position": 7,
       "properties": {
         "progression_name": "Closing"
       },
@@ -596,32 +585,10 @@
     {
       "chapter": 21,
       "position": 21,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Using AI with Students"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-AIchat-07"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "13cd0ce8-a0a5-46d1-bd90-2d6369576e2b"
-      },
-      "level_keys": [
-        "pl-ai-101-V2-mod4-AIchat-07"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 22,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Assessment and Integrity"
+        "progression": "Academic Integrity and Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -638,12 +605,12 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Assessment and Integrity"
+        "progression": "Academic Integrity and Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -660,12 +627,12 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Assessment and Integrity"
+        "progression": "Academic Integrity and Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -682,17 +649,17 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Assessment and Integrity"
+        "progression": "Academic Integrity and Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-asses-04"
+          "pl-ai-101-V2-mod4-asses-04a"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -700,38 +667,16 @@
         "activity_section.key": "d3f289a2-8947-492a-9ede-e182df556cad"
       },
       "level_keys": [
-        "pl-ai-101-V2-mod4-asses-04"
+        "pl-ai-101-V2-mod4-asses-04a"
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessment and Integrity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-asses-05"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "d3f289a2-8947-492a-9ede-e182df556cad"
-      },
-      "level_keys": [
-        "pl-ai-101-V2-mod4-asses-05"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Teaching About AI"
+        "progression": "AI Curriculum Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -748,12 +693,12 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Teaching About AI"
+        "progression": "AI Curriculum Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -770,12 +715,12 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Teaching About AI"
+        "progression": "AI Curriculum Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -792,34 +737,12 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 1,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Dump"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-with-01"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
-      },
-      "level_keys": [
-        "pl-ai-101-V2-mod4-with-01"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Dump"
+        "progression": "AI Curriculum Resources"
       },
       "bonus": false,
       "seeding_key": {
@@ -829,37 +752,15 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
+        "activity_section.key": "05440f74-8a65-453e-a98c-b63a484d2b40"
       },
       "level_keys": [
         "pl-ai-101-V2-mod4-with-04b"
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Dump"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-eval-05"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
-      },
-      "level_keys": [
-        "pl-ai-101-V2-mod4-eval-05"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -880,8 +781,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -902,8 +803,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1167,18 +1068,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod4-AIchat-07",
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-AIchat-07"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "13cd0ce8-a0a5-46d1-bd90-2d6369576e2b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl-ai-101-V2-mod4-asses-01",
         "script_level.level_keys": [
           "pl-ai-101-V2-mod4-asses-01"
@@ -1215,21 +1104,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod4-asses-04",
+        "level.key": "pl-ai-101-V2-mod4-asses-04a",
         "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-asses-04"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "d3f289a2-8947-492a-9ede-e182df556cad"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod4-asses-05",
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-asses-05"
+          "pl-ai-101-V2-mod4-asses-04a"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1275,18 +1152,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod4-with-01",
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-with-01"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl-ai-101-V2-mod4-with-04b",
         "script_level.level_keys": [
           "pl-ai-101-V2-mod4-with-04b"
@@ -1294,19 +1159,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod4-eval-05",
-        "script_level.level_keys": [
-          "pl-ai-101-V2-mod4-eval-05"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-ai-101-v2-mod4",
-        "activity_section.key": "c5fc3774-271f-4bbc-a4d4-39bdf46787fe"
+        "activity_section.key": "05440f74-8a65-453e-a98c-b63a484d2b40"
       }
     },
     {

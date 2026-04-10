@@ -10,6 +10,8 @@ import {FAQ_LINK, modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
   ModelUpdate,
   isChatMessage,
@@ -39,10 +41,9 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
-  isLastMessage?: boolean;
   clientType?: string;
   modelParameters?: ModelParameters;
+  postText?: React.ReactNode;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -79,10 +80,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       buildAssetUrl,
       tabIndex,
       onKeyDown,
-      isAiTutorVersion,
-      isLastMessage,
       clientType,
       modelParameters,
+      postText,
     },
     ref
   ) => {
@@ -111,10 +111,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             chatMessage={event}
             isChatHistoryView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
-            isAiTutorVersion={isAiTutorVersion}
-            isLastMessage={isLastMessage}
             clientType={clientType}
             modelParameters={modelParameters}
+            postText={postText}
           />
         </div>
       );
@@ -132,14 +131,14 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
       // Use special notification component for AI tutor version actions.
       if (
-        notificationType === 'aiTutorVersionActionAccept' ||
-        notificationType === 'aiTutorVersionActionReject'
+        notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        notificationType === AI_TUTOR_VERSION_ACTION_REJECT
       ) {
         return (
           <AiTutorVersionActionNotification
             text={text}
             type={
-              notificationType === 'aiTutorVersionActionAccept'
+              notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
                 ? 'accept'
                 : 'reject'
             }

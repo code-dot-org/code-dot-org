@@ -1,20 +1,69 @@
 /**
- * Type declarations to extend MUI's Button, IconButton, and Breadcrumbs components with custom sizes and colors
+ * MUI type overrides for apps
  *
- * IMPORTANT: These type augmentations must be manually copied to apps/src/types/mui.d.ts
- * when they change. TypeScript module augmentations don't propagate across package
- * boundaries (they are scoped to the tsconfig that includes them), so manual
- * synchronization is required even though @mui/material is a peerDependency.
+ * IMPORTANT: This file contains manually copied type augmentations from:
+ *   frontend/packages/component-library/src/themes/code.org/types.d.ts
  *
- * To update apps types:
- * 1. Make changes to this file
- * 2. Copy the Button, IconButton, and Breadcrumbs declare module blocks to apps/src/types/mui.d.ts
- * 3. Keep the source reference comment in apps/src/types/mui.d.ts pointing to this file
+ * When Button/IconButton/Breadcrumbs or any other Mui component type augmentations change in component-library,
+ * they must be manually copied here to keep apps in sync.
+ *
+ * This file also includes apps-specific Typography type augmentations.
  */
 
-import '@mui/material/styles';
+import {Theme as MuiTheme} from '@mui/material/styles';
+import '@mui/material/Button';
+import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
 
+type Theme = Omit<MuiTheme, 'components'>;
+
+// Apps-specific Typography type augmentations
+declare module '@mui/material/styles' {
+  // Custom Typography definitions
+  interface TypographyVariants {
+    body3: React.CSSProperties;
+    body4: React.CSSProperties;
+    overline1: React.CSSProperties;
+    overline2: React.CSSProperties;
+    overline3: React.CSSProperties;
+    figcaption: React.CSSProperties;
+    strong: React.CSSProperties;
+    em: React.CSSProperties;
+  }
+
+  interface TypographyVariantsOptions {
+    body3?: React.CSSProperties;
+    body4?: React.CSSProperties;
+    overline1?: React.CSSProperties;
+    overline2?: React.CSSProperties;
+    overline3?: React.CSSProperties;
+    figcaption?: React.CSSProperties;
+    strong?: React.CSSProperties;
+    em?: React.CSSProperties;
+  }
+}
+
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    body3: true;
+    body4: true;
+    overline: false; // disable the default overline
+    overline1: true; // add overline1 variant to match DSCO naming pattern
+    overline2: true;
+    overline3: true;
+    caption: false; // disable the default caption
+    figcaption: true; // add figcaption variant to match DSCO naming pattern
+    label1: true;
+    label2: true;
+    label3: true;
+    label4: true;
+    strong: true;
+    em: true;
+  }
+}
+
+// Button and IconButton type augmentations (manually copied from component-library)
+// Source: frontend/packages/component-library/src/themes/code.org/types.d.ts
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
     extraSmall: true;
@@ -61,8 +110,11 @@ declare module '@mui/material/IconButton' {
   }
 }
 
+// Breadcrumbs type augmentations
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
     size?: 'xs' | 's' | 'm' | 'l';
   }
 }
+
+export {};

@@ -115,6 +115,15 @@ class ApplicationController < ActionController::Base
     render_404
   end
 
+  # Unsafe redirects can happen for a variety of reasons; including unexpected
+  # attempts to redirect to an external domain, typos in the path for internal
+  # redirects, and simple malformed URIs. In the interest of simplicity,
+  # respond to all with a simple 404.
+  rescue_from ActionController::Redirecting::UnsafeRedirectError do |exception|
+    Rails.logger.warn("Unsafe redirection: #{exception}")
+    render_404
+  end
+
   def render_404
     respond_to do |format|
       format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
@@ -229,7 +238,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected def with_locale(&block)
-    I18n.with_locale(locale, &block)
+    I18n.with_locale(request.locale, &block)
   end
 
   protected def milestone_response(options)

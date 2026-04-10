@@ -2,9 +2,14 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
-import {Notification} from '@cdo/apps/aichat/types/chatEvents';
+import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
+  Notification,
+} from '@cdo/apps/aichat/types/chatEvents';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  setAiTutorVersionFiles,
   setProjectSourceBeforeAiTutorVersion,
   setSource,
   setViewingAiTutorVersion,
@@ -23,7 +28,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
-import {setAiFilePathToPreview, setAiTutorVersionFiles} from './weblab2Redux';
+import {setAiFilePathToPreview} from './weblab2Redux';
 
 /**
  * Helper function to reset all AI tutor version state.
@@ -66,7 +71,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
       text: "You accepted AI Tutor's changes.",
-      notificationType: 'aiTutorVersionActionAccept',
+      notificationType: AI_TUTOR_VERSION_ACTION_ACCEPT,
       includeInChatHistory: true,
       files: files,
       commitDescription: commitDescription,
@@ -169,7 +174,7 @@ export const rejectAiTutorVersion = createAsyncThunk<
     timestamp: Date.now(),
     removeId: getNewRemoveId(),
     text: "You rejected AI Tutor's changes.",
-    notificationType: 'aiTutorVersionActionReject',
+    notificationType: AI_TUTOR_VERSION_ACTION_REJECT,
     includeInChatHistory: true,
     files: files,
   };

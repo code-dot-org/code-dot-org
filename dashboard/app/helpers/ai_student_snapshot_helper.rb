@@ -11,12 +11,10 @@ module AiStudentSnapshotHelper
     feedback_record
   end
 
-  API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
     start_time = Time.now
 
     begin
@@ -56,7 +54,6 @@ module AiStudentSnapshotHelper
 
   def self.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
 
     begin
       response = client.request_lesson_feedback(system_prompt)
@@ -166,5 +163,9 @@ module AiStudentSnapshotHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end

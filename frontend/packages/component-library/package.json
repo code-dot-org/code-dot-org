@@ -415,6 +415,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
     "react-player": "^3.4.0",
     "react-schemaorg": "^2.0.0"
@@ -466,7 +467,6 @@
     "vite-plugin-lib-inject-css": "^2.2.2"
   },
   "peerDependencies": {
-    "@mui/material": "^7.3.2",
     "classnames": "^2.5.1",
     "react": ">=16",
     "react-dom": ">=16",

@@ -71,7 +71,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
 
 ## Type Augmentations
 
-Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` and must be manually synced to `apps/src/types/mui.d.ts`. TypeScript module augmentations don't propagate across package boundaries (they are scoped to the tsconfig that includes them), even though `@mui/material` is now a `peerDependency`.
+Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` and must be manually synced to `apps/src/types/mui.d.ts` (TypeScript module augmentation doesn't cross package boundaries in this monorepo).
 
 ## How to Migrate a Component
 
