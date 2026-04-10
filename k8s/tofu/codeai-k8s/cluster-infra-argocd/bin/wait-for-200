@@ -112,6 +112,7 @@ module WaitFor200
         hosts: nameservers,
         nameservers: @public_dns_servers,
       )
+      ip_addresses = preferred_ip_addresses(ip_addresses)
       errors << "no authoritative nameserver IPs found" if nameservers.any? && ip_addresses.empty?
 
       [ip_addresses, errors]
@@ -173,6 +174,19 @@ module WaitFor200
 
       (0..(labels.length - 2)).map {|index| labels[index..].join(".")}
     end
+
+    # If both families are published for the authoritative nameserver hostnames,
+    # prefer IPv4. This workstation often has no IPv6 route to AWS nameservers,
+    # and the wait should not be held hostage by unreachable AAAA glue.
+    private def preferred_ip_addresses(ip_addresses)
+      ipv4_addresses, other_addresses = ip_addresses.partition {|ip_address| IPAddr.new(ip_address).ipv4?}
+      return ipv4_addresses unless ipv4_addresses.empty?
+
+      other_addresses
+    rescue IPAddr::InvalidAddressError
+      ip_addresses
+    end
+
     private def literal_ip_address?(host)
       IPAddr.new(host)
       true

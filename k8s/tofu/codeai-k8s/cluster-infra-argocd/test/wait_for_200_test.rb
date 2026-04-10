@@ -171,6 +171,26 @@ class WaitFor200Test < Minitest::Test
     assert_empty http.requests
   end
 
+  def test_prefers_ipv4_authoritative_nameserver_ips_when_both_families_exist
+    host = "dex.k8s.code.org"
+    dns = FakeDnsClient.new(
+      results: {
+        [CLOUDFLARE, "k8s.code.org", "NS"] => ["ns-one.awsdns.test"],
+        [CLOUDFLARE, "ns-one.awsdns.test", "A"] => ["192.0.2.50"],
+        [CLOUDFLARE, "ns-one.awsdns.test", "AAAA"] => ["2001:db8::50"],
+        ["192.0.2.50", host, "A"] => ["203.0.113.50"],
+      },
+      errors: {
+        ["2001:db8::50", host, "A"] => StandardError.new("ipv6 should not be queried"),
+      },
+    )
+
+    ips, errors = WaitFor200::Resolver.new(dns_client: dns).endpoint_ip_addresses(host)
+
+    assert_equal ["203.0.113.50"], ips
+    refute_includes errors.join(" "), "ipv6 should not be queried"
+  end
+
   def test_smoke_fetches_studio_code_org
     stdout, stderr, status = Open3.capture3(
       File.expand_path("../bin/wait-for-200", __dir__),

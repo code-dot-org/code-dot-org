@@ -98,7 +98,7 @@ start_watch() {
 start_watch events "kubectl get events -A --watch-only --output-watch-events"
 start_watch argocd-application-controller "kubectl logs -n argocd statefulset/argocd-application-controller --tail=0 -f"
 start_watch argocd-applicationset-controller "kubectl logs -n argocd deployment/argocd-applicationset-controller --tail=0 -f"
-start_watch argocd-progress "ruby \"$cwd/bin/argo-trace\" --operation \"$action\" --poll-every 1m | tee \"$argocd_progress_log_file\""
+start_watch argocd-progress "ruby \"$cwd/bin/argo-trace\" --poll-every 1m | tee \"$argocd_progress_log_file\""
 
 printf '%s [meta] tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$tail_command" | tee -a "$shared_log_file" "$run_log_file"
 printf '%s [meta] shared-tail=%s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$shared_tail_command" | tee -a "$shared_log_file" "$run_log_file"
