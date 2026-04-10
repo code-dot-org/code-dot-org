@@ -5,6 +5,7 @@
 - In this directory, use `bin/logged-tofu <apply|destroy> [extra tofu args...]` for logged OpenTofu applies and destroys unless the user explicitly says otherwise.
 - Do not use `bin/logged-tofu` for `plan`. Run `tofu plan` directly when a plain plan is what you need.
 - `bin/logged-tofu` runs `bin/argo-trace` for the same operation as a sidecar logger and writes `logs/argocd-<action>-<timestamp>.log.md`. That tracer is not an implementation detail; treat that md log as a primary debugging tool and mirror its output raw in chat when it emits updates.
+- While `bin/logged-tofu` is running, relay each new `bin/argo-trace` message to the user verbatim in chat as soon as it arrives.
 - `bin/logged-tofu` now writes three first-class logs per run:
   - `logs/tofu-<timestamp>-<action>.log`
   - `tofu.log`
@@ -47,6 +48,8 @@
 
 - If you modify `bin/argo-trace`, run before commit:
   `ruby test/argocd_progress_trace_test.rb`
+- For live `bin/argo-trace` stress coverage, run:
+  `ruby test/argo-trace-stress-test/run.rb`
 - If you modify `bin/logged-tofu`, run before commit:
   `ruby test/logged_tofu_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:

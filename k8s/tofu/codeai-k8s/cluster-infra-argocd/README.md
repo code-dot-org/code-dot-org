@@ -30,11 +30,11 @@ AWS_PROFILE=codeorg-admin tofu apply
 stdout.
 
 - One snapshot, suitable for `watch`:
-  `bin/argo-trace --operation destroy`
+  `bin/argo-trace`
 - Watch at a fixed cadence:
-  `bin/argo-trace --operation destroy --poll-every 1m`
+  `bin/argo-trace --poll-every 1m`
 - Follow one specific root:
-  `bin/argo-trace --root-name app-of-apps --operation apply --poll-every 30s`
+  `bin/argo-trace --root-name app-of-apps --poll-every 30s`
 
 `bin/logged-tofu apply` and `bin/logged-tofu destroy` already run this tracer as
 a sidecar, capture that stdout in `logs/argocd-<action>-<timestamp>.log.md`,
@@ -46,6 +46,10 @@ and print the md log path at the start of the run.
 
 - If you modify `bin/argo-trace`, run before commit:
   `ruby test/argocd_progress_trace_test.rb`
+- For the live `bin/argo-trace` stress harness, run:
+  `ruby test/argo-trace-stress-test/run.rb`
+  Fixtures live in
+  [`k8s-gitops/argo-trace-stress-test/`](https://github.com/code-dot-org/k8s-gitops/tree/seth/argo-trace-stress-test/argo-trace-stress-test).
 - If you modify `bin/logged-tofu`, run before commit:
   `ruby test/logged_tofu_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:

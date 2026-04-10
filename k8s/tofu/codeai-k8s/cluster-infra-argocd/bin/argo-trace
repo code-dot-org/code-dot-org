@@ -11,6 +11,78 @@ require "tmpdir"
 
 Thread.report_on_exception = false
 
+class CommandTimings
+  Entry = Struct.new(:calls, :total_seconds, :max_seconds, :example, keyword_init: true)
+
+  def initialize(path:)
+    @path = path.to_s
+    @entries = {}
+    @mutex = Mutex.new
+  end
+
+  def enabled?
+    !@path.empty?
+  end
+
+  def measure(command)
+    return yield unless enabled?
+
+    started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    yield
+  ensure
+    if enabled? && started_at
+      elapsed = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
+      label = command_label(command)
+      example = command.join(" ")
+
+      @mutex.synchronize do
+        entry = @entries[label] ||= Entry.new(calls: 0, total_seconds: 0.0, max_seconds: 0.0, example: example)
+        entry.calls += 1
+        entry.total_seconds += elapsed
+        entry.max_seconds = [entry.max_seconds, elapsed].max
+      end
+    end
+  end
+
+  def dump!
+    return unless enabled?
+
+    lines = ["count total_s avg_ms max_ms label example"]
+    @entries.sort_by {|_, entry| -entry.total_seconds}.each do |label, entry|
+      average_ms = entry.total_seconds * 1000 / entry.calls
+      lines << format(
+        "%5d %7.3f %7.1f %7.1f %s %s",
+        entry.calls,
+        entry.total_seconds,
+        average_ms,
+        entry.max_seconds * 1000,
+        label,
+        entry.example,
+      )
+    end
+    File.write(@path, lines.join("\n") + "\n")
+  end
+
+  private def command_label(command)
+    return command.first.to_s unless command.first == "kubectl"
+
+    tokens = command.drop(1)
+    index = tokens.index("get")
+    if index
+      subject = tokens[index + 1].to_s
+      return "kubectl get #{subject}"
+    end
+
+    index = tokens.index("api-resources")
+    return "kubectl api-resources" if index
+
+    command.first(3).join(" ")
+  end
+end
+
+COMMAND_TIMINGS = CommandTimings.new(path: ENV.fetch("ARGO_TRACE_TIMINGS_OUT", nil))
+at_exit {COMMAND_TIMINGS.dump!}
+
 # #### API and identity types
 
 ApiResource = Struct.new(
@@ -58,9 +130,43 @@ Ref = Struct.new(:group, :kind, :namespace, :name, keyword_init: true) do
   end
 end
 
+Edge = Struct.new(:ref, :source, :argo, keyword_init: true)
+
 # #### Argo tracking and shell/discovery
 
 ARGO_TREE_KINDS = %w[Application ApplicationSet].freeze
+EVENT_SPARSE_KINDS = Set.new(
+  %w[
+    Application
+    ApplicationSet
+    ControllerRevision
+    CustomResourceDefinition
+    DaemonSet
+    Deployment
+    ReplicaSet
+    Service
+    ServiceAccount
+    StatefulSet
+  ],
+).freeze
+PASSIVE_APPLICATION_CHILD_KINDS = Set.new(
+  %w[
+    ConfigMap
+    CustomResourceDefinition
+    Namespace
+    Secret
+    Service
+    ServiceAccount
+  ],
+).freeze
+WORKLOAD_DESCENDANT_KINDS_BY_KIND = {
+  "Deployment" => %w[ReplicaSet Pod],
+  "ReplicaSet" => %w[Pod],
+  "StatefulSet" => %w[Pod],
+  "DaemonSet" => %w[Pod],
+  "Job" => %w[Pod],
+  "CronJob" => %w[Job Pod],
+}.freeze
 
 TrackingConfig = Struct.new(
   :tracking_method,
@@ -68,27 +174,52 @@ TrackingConfig = Struct.new(
   :installation_id,
   keyword_init: true,
 ) do
+  CACHE_TTL_SECONDS = 21_600
+
   # Read the live Argo tracking mode from `argocd-cm`. This is the contract
   # that tells us how Argo associates a Kubernetes object back to an
   # Application.
   def self.load(shell:, argocd_namespace:)
+    cache_path = cache_path(argocd_namespace)
+    if File.exist?(cache_path)
+      cached = JSON.parse(File.read(cache_path))
+      generated_at = Time.parse(cached.fetch("generatedAt"))
+      if Time.now - generated_at < CACHE_TTL_SECONDS
+        data = cached.fetch("data")
+        return new(
+          tracking_method: data["tracking_method"],
+          instance_label_key: data["instance_label_key"],
+          installation_id: data["installation_id"],
+        )
+      end
+    end
+
     raw = shell.json!(
       "kubectl", "-n", argocd_namespace, "get", "configmap", "argocd-cm",
       "-o", "json", "--ignore-not-found",
     )
     data = raw.fetch("data", {})
-
-    new(
+    config = new(
       tracking_method: data["application.resourceTrackingMethod"].to_s.empty? ? "annotation" : data.fetch("application.resourceTrackingMethod"),
       instance_label_key: data["application.instanceLabelKey"].to_s.empty? ? "app.kubernetes.io/instance" : data.fetch("application.instanceLabelKey"),
       installation_id: data["installationID"],
     )
-  rescue SystemExit
-    new(
-      tracking_method: "annotation",
-      instance_label_key: "app.kubernetes.io/instance",
-      installation_id: nil,
+    File.write(
+      cache_path,
+      JSON.pretty_generate(
+        {
+          generatedAt: Time.now.iso8601,
+          data: {
+            tracking_method: config.tracking_method,
+            instance_label_key: config.instance_label_key,
+            installation_id: config.installation_id,
+          },
+        },
+      ),
     )
+    config
+  rescue StandardError, SystemExit
+    default
   end
 
   def annotation_tracking?
@@ -98,16 +229,43 @@ TrackingConfig = Struct.new(
   def label_tracking?
     tracking_method == "label"
   end
+
+  def self.default
+    new(
+      tracking_method: "annotation",
+      instance_label_key: "app.kubernetes.io/instance",
+      installation_id: nil,
+    )
+  end
+
+  def self.cache_path(argocd_namespace)
+    repo_fingerprint = Digest::SHA256.hexdigest(File.expand_path("..", __dir__))[0, 12]
+    File.join(Dir.tmpdir, "argo-trace-#{repo_fingerprint}.tracking-#{argocd_namespace}.json")
+  end
 end
 
 # Thin command runner for the live cluster and cloud reads this tracer needs.
 # In Argo terms, everything below this point is driven from server state, not
 # from repo render output.
 class Shell
+  attr_reader :caveats
+
+  def initialize(kubectl_timeout_seconds: 30)
+    @kubectl_timeout_seconds = kubectl_timeout_seconds
+    @caveats = []
+  end
+
   def text!(*command, check: true)
-    stdout, stderr, status = Open3.capture3(*with_kubectl_timeout(command))
+    stdout = stderr = +""
+    status = nil
+    COMMAND_TIMINGS.measure(command) do
+      stdout, stderr, status = Open3.capture3(*with_kubectl_timeout(command))
+    end
     return stdout if status.success?
-    return stdout unless check
+    unless check
+      record_caveat("#{command.join(' ')} failed: #{summarize_output(stderr, stdout, status)}")
+      return stdout
+    end
 
     message = stderr.empty? ? stdout : stderr
     abort("#{command.join(' ')} failed:\n#{message}")
@@ -117,10 +275,22 @@ class Shell
     JSON.parse(text!(*command))
   end
 
+  def record_caveat(message)
+    return if message.to_s.empty?
+
+    @caveats << message
+  end
+
   private def with_kubectl_timeout(command)
     return command unless command.first == "kubectl"
 
-    ["kubectl", "--request-timeout=10s", *command.drop(1)]
+    ["kubectl", "--request-timeout=#{@kubectl_timeout_seconds}s", *command.drop(1)]
+  end
+
+  private def summarize_output(stderr, stdout, status)
+    text = [stderr, stdout].find {|value| !value.to_s.strip.empty?}.to_s.strip
+    text = "exit #{status.exitstatus}" if text.empty?
+    text.lines.first.to_s.strip
   end
 end
 
@@ -287,6 +457,13 @@ class LiveObject
   def conditions
     raw.dig("status", "conditions") || []
   end
+
+  def manager_names
+    (raw.dig("metadata", "managedFields") || []).filter_map do |entry|
+      manager = entry["manager"].to_s.strip
+      manager unless manager.empty?
+    end.uniq
+  end
 end
 
 # #### Tracking and graph indexes
@@ -301,8 +478,6 @@ class TrackingMatcher
   # Return the owning Argo Application name for a live object, if the object is
   # tracked by Argo according to the cluster's configured tracking method.
   def tracked_application_name(k8s_object)
-    return nil if k8s_object.ref.kind == "ApplicationSet"
-
     installation_id = @tracking_config.installation_id
     if installation_id && k8s_object.raw.dig("metadata", "annotations", "argocd.argoproj.io/installation-id") != installation_id
       return nil
@@ -373,13 +548,13 @@ class ObjectIndex
 
   def known_generic_children(k8s_object)
     children = @children_by_owner_uid.fetch(k8s_object.uid, []).dup
-    explicit_resource_refs(k8s_object).each do |ref|
+    explicit_resource_refs_for(k8s_object).each do |ref|
       children << ref
     end
     @usage_refs_by_target_key.fetch(k8s_object.ref.key, []).each do |usage_ref|
       children << usage_ref
     end
-    children.uniq(&:key)
+    children.uniq {|edge| edge.ref.key}
   end
 
   def usage_using_ref(usage_object)
@@ -397,6 +572,7 @@ class ObjectIndex
     @usage_refs_by_target_key = Hash.new {|hash, key| hash[key] = []}
     @usage_using_ref_by_usage_key = {}
     @tracking_refs_by_app_name = Hash.new {|hash, key| hash[key] = []}
+    @explicit_resource_refs_by_object_key = {}
   end
 
   private def objects_for_kind(group, kind)
@@ -412,7 +588,7 @@ class ObjectIndex
       k8s_object.owner_references.each do |owner|
         next unless owner["uid"]
 
-        @children_by_owner_uid[owner.fetch("uid")] << k8s_object.ref
+        @children_by_owner_uid[owner.fetch("uid")] << Edge.new(ref: k8s_object.ref, source: "owner-ref")
       end
 
       tracking_application_name = @tracking_matcher.tracked_application_name(k8s_object)
@@ -420,7 +596,7 @@ class ObjectIndex
         # Argo tracking is the app boundary edge. It is what lets the tracer
         # find live managed objects even when `status.resources` is shallow or
         # stale during create/delete.
-        @tracking_refs_by_app_name[tracking_application_name] << k8s_object.ref
+        @tracking_refs_by_app_name[tracking_application_name] << Edge.new(ref: k8s_object.ref, source: "argo-tracking")
       end
     end
   end
@@ -433,8 +609,8 @@ class ObjectIndex
       target_ref = resolve_usage_endpoint(usage, usage.raw.dig("spec", "of"))
       using_ref = resolve_usage_endpoint(usage, usage.raw.dig("spec", "by"))
 
-      @usage_refs_by_target_key[target_ref.key] << usage.ref if target_ref
-      @usage_using_ref_by_usage_key[usage.ref.key] = using_ref if using_ref
+      @usage_refs_by_target_key[target_ref.key] << Edge.new(ref: usage.ref, source: "usage.of") if target_ref
+      @usage_using_ref_by_usage_key[usage.ref.key] = Edge.new(ref: using_ref, source: "usage.by") if using_ref
     end
   end
 
@@ -482,7 +658,10 @@ class ObjectIndex
     candidates.min_by {|candidate| [candidate.namespace.to_s, candidate.name]}&.ref
   end
 
-  private def explicit_resource_refs(k8s_object)
+  private def explicit_resource_refs_for(k8s_object)
+    cached = @explicit_resource_refs_by_object_key[k8s_object.ref.key]
+    return cached if cached
+
     refs = []
     # Many controllers, especially IaC frameworks, publish live dependency
     # edges as `resourceRef`/`resourceRefs` instead of owner refs.
@@ -490,7 +669,9 @@ class ObjectIndex
       ref = ref_from_resource_ref(entry, k8s_object.namespace)
       refs << ref if ref
     end
-    refs.uniq(&:key)
+    @explicit_resource_refs_by_object_key[k8s_object.ref.key] = refs.uniq(&:key).map do |ref|
+      Edge.new(ref: ref, source: "resource-ref")
+    end
   end
 
   private def walk_resource_ref_fields(value, &block)
@@ -546,8 +727,38 @@ def condition_text(condition)
   [condition["reason"], condition["message"]].compact.join(" ")
 end
 
+def blocked_condition?(condition)
+  return false if condition["status"] == "True"
+
+  condition_text(condition).match?(/error|failure|denied|conflict|invalid|notempty|rejected|timeout/i)
+end
+
+def waiting_condition?(condition)
+  return false if condition["status"] == "True"
+
+  condition_text(condition).match?(/\Awaiting|waiting\b/i)
+end
+
+def active_condition?(condition)
+  return false if condition["status"] == "True"
+
+  condition_text(condition).match?(/creating|deleting|reconcil|progress|pending|inuse|watchcircuitopen/i)
+end
+
+def condition_state(condition)
+  return "blocked" if blocked_condition?(condition)
+  return "waiting" if waiting_condition?(condition)
+  return "progressing" if active_condition?(condition)
+
+  nil
+end
+
 def argo_tree_ref?(ref)
   ref.group == "argoproj.io" && ARGO_TREE_KINDS.include?(ref.kind)
+end
+
+def event_sparse_kind?(kind)
+  EVENT_SPARSE_KINDS.include?(kind)
 end
 
 # Manifest-generation failures are special: there may be no live subtree at all,
@@ -594,9 +805,12 @@ class Snapshot
     @objects_by_key = {}
     @index = nil
     @loaded_crossplane_children = Set.new
+    @loaded_namespaces = Hash.new {|hash, key| hash[key] = Set.new}
+    @tracking_argo_tree_scan_loaded = false
     @tracking_full_scan_loaded = false
     @tracking_label_scans = Set.new
     @events_by_uid = {}
+    reset_edge_caches
   end
 
   def applications
@@ -616,7 +830,7 @@ class Snapshot
     app_def = @discovery.find("argoproj.io", "Application") or abort("Application discovery missing")
     appset_def = @discovery.find("argoproj.io", "ApplicationSet") or abort("ApplicationSet discovery missing")
 
-    prime_objects(fetch_defs([app_def, appset_def]))
+    prime_objects(fetch_defs_in_namespace([app_def, appset_def], @argocd_namespace))
     rebuild_index
   end
 
@@ -642,6 +856,8 @@ class Snapshot
   end
 
   def application_children(argo_app)
+    return @application_children_by_key[argo_app.ref.key] if @application_children_by_key.key?(argo_app.ref.key)
+
     refs = []
     seen = Set.new
 
@@ -652,7 +868,7 @@ class Snapshot
       next if seen.include?(ref.key)
 
       seen << ref.key
-      refs << {ref: ref, argo: argo_metadata_for_entry(entry)}
+      refs << Edge.new(ref: ref, source: "argo-status", argo: argo_metadata_for_entry(entry))
     end
 
     tracking_refs = @index.application_tracking_refs(argo_app.name)
@@ -661,14 +877,14 @@ class Snapshot
       tracking_refs = @index.application_tracking_refs(argo_app.name)
     end
 
-    tracking_refs.each do |ref|
-      next if seen.include?(ref.key)
+    tracking_refs.each do |edge|
+      next if seen.include?(edge.ref.key)
 
-      seen << ref.key
-      refs << {ref: ref, argo: nil}
+      seen << edge.ref.key
+      refs << edge
     end
 
-    refs
+    @application_children_by_key[argo_app.ref.key] = refs
   end
 
   def prefetch_refs(refs)
@@ -705,18 +921,30 @@ class Snapshot
       k8s_object = objects_by_key[ref.key]
       index[k8s_object.uid] = ref if k8s_object&.uid
     end
+    nested_generic_keys = refs.each_with_object(Set.new) do |ref, keys|
+      k8s_object = objects_by_key[ref.key]
+      next unless k8s_object
+
+      known_generic_children(k8s_object).each do |edge|
+        keys << edge.ref.key
+      end
+    end
 
     refs.reject do |ref|
       k8s_object = objects_by_key[ref.key]
       next false unless k8s_object
 
-      k8s_object.owner_references.any? do |owner|
+      owner_nested = k8s_object.owner_references.any? do |owner|
         refs_by_uid.key?(owner["uid"])
       end
+
+      owner_nested || nested_generic_keys.include?(ref.key)
     end
   end
 
   def applicationset_children(argo_appset)
+    return @applicationset_children_by_key[argo_appset.ref.key] if @applicationset_children_by_key.key?(argo_appset.ref.key)
+
     children = []
     seen = Set.new
 
@@ -736,7 +964,7 @@ class Snapshot
       next if seen.include?(ref.key)
 
       seen << ref.key
-      children << ref
+      children << Edge.new(ref: ref, source: "appset-status", argo: argo_metadata_for_entry(resource))
     end
 
     applications.each_value do |argo_app|
@@ -747,20 +975,23 @@ class Snapshot
       next if seen.include?(argo_app.ref.key)
 
       seen << argo_app.ref.key
-      children << argo_app.ref
+      children << Edge.new(ref: argo_app.ref, source: "owner-ref")
     end
 
-    children
+    @applicationset_children_by_key[argo_appset.ref.key] = children
   end
 
   def generic_children(k8s_object)
+    return @generic_children_by_key[k8s_object.ref.key] if @generic_children_by_key.key?(k8s_object.ref.key)
+
     # Crossplane can hide useful child edges until we know we are on an XR, so
     # load that extra data lazily at the point we need it.
     ensure_crossplane_children_loaded(k8s_object)
-    known_generic_children(k8s_object)
+    ensure_namespace_children_loaded(k8s_object) if known_generic_children(k8s_object).empty?
+    @generic_children_by_key[k8s_object.ref.key] = known_generic_children(k8s_object)
   end
 
-  def usage_using_ref(usage_object)
+  def usage_using_edge(usage_object)
     @index.usage_using_ref(usage_object)
   end
 
@@ -772,16 +1003,26 @@ class Snapshot
     return [] unless k8s_object.uid
     return @events_by_uid[k8s_object.uid] if @events_by_uid.key?(k8s_object.uid)
 
-    stdout = @shell.text!(
-      "kubectl", "get", "events", "-A",
+    # Namespaced objects keep their Events in the same namespace, so there is
+    # no reason to make the apiserver scan the whole cluster for the common
+    # case. Cluster-scoped objects still need the broader read.
+    command = ["kubectl", "get", "events"]
+    if k8s_object.namespace
+      command.push("-n", k8s_object.namespace)
+    else
+      command << "-A"
+    end
+    command.push(
       "--field-selector", "involvedObject.uid=#{k8s_object.uid}",
       "-o", "json", "--ignore-not-found",
-      check: false,
     )
-    raw_events = stdout.to_s.strip.empty? ? [] : JSON.parse(stdout).fetch("items", [])
+
+    stdout = @shell.text!(*command, check: false)
+    raw_events = parse_items_json(
+      stdout,
+      caveat: "kubectl get events for #{k8s_object.ref.display} returned malformed JSON",
+    )
     @events_by_uid[k8s_object.uid] = raw_events.sort_by {|raw_event| event_sort_key(raw_event)}.reverse
-  rescue JSON::ParserError
-    @events_by_uid[k8s_object.uid] = []
   end
 
   private def should_scan_tracked_objects_for_application?(argo_app)
@@ -813,15 +1054,21 @@ class Snapshot
       stdout = @shell.text!(*command, check: false)
       next if stdout.to_s.strip.empty?
 
-      raw = JSON.parse(stdout)
+      raw = parse_json(
+        stdout,
+        caveat: "kubectl get #{resource_def.kubectl_name} returned malformed JSON; retrying individually",
+      )
+      unless raw
+        slice.each do |ref|
+          fetched.concat(fetch_ref(ref, resource_def))
+        end
+        next
+      end
+
       if raw["items"]
         fetched.concat(raw.fetch("items"))
       elsif raw.dig("metadata", "name")
         fetched << raw
-      end
-    rescue JSON::ParserError
-      slice.each do |ref|
-        fetched.concat(fetch_ref(ref, resource_def))
       end
     end
 
@@ -842,24 +1089,51 @@ class Snapshot
     fetched
   end
 
-  private def fetch_slice(resource_defs, namespaced:)
+  private def fetch_defs_in_namespace(resource_defs, namespace)
+    fetched = []
+
+    resource_defs.compact.uniq.each_slice(25) do |slice|
+      fetched.concat(fetch_slice(slice, namespaced: true, namespace: namespace))
+    end
+
+    fetched
+  end
+
+  private def fetch_slice(resource_defs, namespaced:, namespace: nil)
     # `kubectl get kind1,kind2 -o json` is the fast path. Fall back to per-kind
     # fetches if the aggregated JSON comes back malformed or partial.
     command = ["kubectl", "get", resource_defs.map(&:kubectl_name).join(",")]
-    command << "-A" if namespaced
+    if namespaced
+      if namespace
+        command.push("-n", namespace)
+      else
+        command << "-A"
+      end
+    end
     command.push("-o", "json", "--ignore-not-found")
 
     stdout = @shell.text!(*command, check: false)
-    return JSON.parse(stdout).fetch("items", []) unless stdout.to_s.empty?
+    raw = parse_json(
+      stdout,
+      caveat: "kubectl get #{resource_defs.map(&:kubectl_name).join(',')} returned malformed JSON; retrying per kind",
+    )
+    return raw.fetch("items", []) if raw
 
     resource_defs.flat_map do |resource_def|
       fallback = ["kubectl", "get", resource_def.kubectl_name]
-      fallback << "-A" if resource_def.namespaced
+      if resource_def.namespaced
+        if namespace
+          fallback.push("-n", namespace)
+        else
+          fallback << "-A"
+        end
+      end
       fallback.push("-o", "json", "--ignore-not-found")
       fallback_stdout = @shell.text!(*fallback, check: false)
-      JSON.parse(fallback_stdout).fetch("items", [])
-    rescue JSON::ParserError
-      []
+      parse_items_json(
+        fallback_stdout,
+        caveat: "kubectl get #{resource_def.kubectl_name} returned malformed JSON",
+      )
     end
   end
 
@@ -879,6 +1153,13 @@ class Snapshot
   private def rebuild_index
     @index ||= ObjectIndex.new(tracking_matcher: TrackingMatcher.new(tracking_config: @tracking_config))
     @index.rebuild(objects_by_key)
+    reset_edge_caches
+  end
+
+  private def reset_edge_caches
+    @application_children_by_key = {}
+    @applicationset_children_by_key = {}
+    @generic_children_by_key = {}
   end
 
   private def resource_def_for(ref)
@@ -889,6 +1170,25 @@ class Snapshot
 
     @discovery.refresh!
     @discovery.find(ref.group, ref.kind)
+  end
+
+  private def ensure_namespace_children_loaded(k8s_object)
+    return unless k8s_object.resource.namespaced
+    return unless k8s_object.namespace
+    resource_defs = namespace_descendant_resource_defs_for(k8s_object)
+    return if resource_defs.empty?
+
+    loaded_kinds = @loaded_namespaces[k8s_object.namespace]
+    missing_defs = resource_defs.reject {|resource_def| loaded_kinds.include?(resource_def.kind)}
+    return if missing_defs.empty?
+
+    # App manifests often stop at the workload controller. A one-time scan of
+    # the common built-in descendant kinds lets the owner-ref graph pick up
+    # live children such as ReplicaSets, Pods, Jobs, and ControllerRevisions
+    # without exploding into a full per-namespace scan of every API kind.
+    prime_objects(fetch_defs_in_namespace(missing_defs, k8s_object.namespace))
+    missing_defs.each {|resource_def| loaded_kinds << resource_def.kind}
+    rebuild_index
   end
 
   private def ensure_crossplane_children_loaded(k8s_object)
@@ -913,9 +1213,7 @@ class Snapshot
       "-o", "json", "--ignore-not-found",
       check: false,
     )
-    JSON.parse(stdout).fetch("items", [])
-  rescue JSON::ParserError
-    []
+    parse_items_json(stdout, caveat: "kubectl get #{category} -l #{selector} returned malformed JSON")
   end
 
   private def fetch_ref(ref, resource_def)
@@ -929,22 +1227,37 @@ class Snapshot
     stdout = @shell.text!(*command, check: false)
     return [] if stdout.to_s.strip.empty?
 
-    raw = JSON.parse(stdout)
+    raw = parse_json(
+      stdout,
+      caveat: "kubectl get #{resource_def.kubectl_name} #{ref.name} returned malformed JSON",
+    )
+    return [] unless raw
+
     raw["items"] ? raw.fetch("items") : [raw]
-  rescue JSON::ParserError
-    []
   end
 
   private def ensure_tracked_objects_loaded_for_application(application_name)
     return if @index.application_tracking_refs(application_name).any?
 
-    # Annotation tracking needs a one-time broad scan; label tracking can target
-    # one Application name at a time.
+    # Annotation tracking can be very expensive on a crowded cluster. Scan Argo
+    # tree objects first so app-of-apps roots do not pay for a full cluster
+    # object walk just to find child Applications or ApplicationSets.
     if @tracking_config.annotation_tracking?
+      ensure_tracking_argo_tree_scan_loaded
+      return if @index.application_tracking_refs(application_name).any?
+
       ensure_tracking_full_scan_loaded
     elsif @tracking_config.label_tracking?
       ensure_tracking_label_scan_loaded(application_name)
     end
+  end
+
+  private def ensure_tracking_argo_tree_scan_loaded
+    return if @tracking_argo_tree_scan_loaded
+
+    prime_objects(fetch_defs(argo_tree_resource_defs))
+    rebuild_index
+    @tracking_argo_tree_scan_loaded = true
   end
 
   private def ensure_tracking_full_scan_loaded
@@ -979,13 +1292,30 @@ class Snapshot
         stdout = @shell.text!(*command, check: false)
         next if stdout.to_s.strip.empty?
 
-        fetched.concat(JSON.parse(stdout).fetch("items", []))
-      rescue JSON::ParserError
-        next
+        fetched.concat(
+          parse_items_json(
+            stdout,
+            caveat: "kubectl get #{slice.map(&:kubectl_name).join(',')} -l #{selector} returned malformed JSON",
+          ),
+        )
       end
     end
 
     fetched
+  end
+
+  private def parse_items_json(stdout, caveat:)
+    raw = parse_json(stdout, caveat: caveat)
+    raw ? raw.fetch("items", []) : []
+  end
+
+  private def parse_json(stdout, caveat:)
+    return nil if stdout.to_s.strip.empty?
+
+    JSON.parse(stdout)
+  rescue JSON::ParserError
+    @shell.record_caveat(caveat)
+    nil
   end
 
   private def trackable_resource_defs
@@ -995,32 +1325,66 @@ class Snapshot
     end
   end
 
+  private def namespace_descendant_resource_defs_for(k8s_object)
+    descendant_kinds = WORKLOAD_DESCENDANT_KINDS_BY_KIND.fetch(k8s_object.ref.kind, [].freeze)
+
+    @namespace_descendant_resource_defs_by_kind ||= {}
+    @namespace_descendant_resource_defs_by_kind[k8s_object.ref.kind] ||= trackable_resource_defs.select do |resource|
+      resource.namespaced && descendant_kinds.include?(resource.kind)
+    end
+  end
+
+  private def argo_tree_resource_defs
+    @argo_tree_resource_defs ||= trackable_resource_defs.select do |resource|
+      resource.group == "argoproj.io" && ARGO_TREE_KINDS.include?(resource.kind)
+    end
+  end
+
   private def resource_entries_for_application(argo_app)
-    entries = []
-    seen = Set.new
+    entries_by_key = {}
+    order = []
 
     # `status.resources` is current intent; `syncResult.resources` catches the
     # last operation even when steady-state status has already moved on.
     [argo_app.raw.dig("status", "resources"), argo_app.raw.dig("status", "operationState", "syncResult", "resources")].compact.each do |items|
       items.each do |entry|
         ref = ref_from_argo_entry(entry)
-        next if seen.include?(ref.key)
+        unless entries_by_key.key?(ref.key)
+          order << ref.key
+          entries_by_key[ref.key] = entry
+          next
+        end
 
-        seen << ref.key
-        entries << entry
+        entries_by_key[ref.key] = merge_present_fields(entries_by_key.fetch(ref.key), entry)
       end
     end
 
-    entries
+    order.map {|key| entries_by_key.fetch(key)}
   end
 
   private def ref_from_argo_entry(entry)
+    group = entry["group"].to_s
+    kind = entry.fetch("kind")
+    namespace = entry["namespace"]
+    resource_def = @discovery.find(group, kind)
+    namespace = nil if resource_def && !resource_def.namespaced
+
     Ref.new(
-      group: entry["group"].to_s,
-      kind: entry.fetch("kind"),
-      namespace: entry["namespace"],
+      group: group,
+      kind: kind,
+      namespace: namespace,
       name: entry.fetch("name"),
     )
+  end
+
+  private def merge_present_fields(existing, incoming)
+    existing.merge(incoming) do |_key, old_value, new_value|
+      present_value?(new_value) ? new_value : old_value
+    end
+  end
+
+  private def present_value?(value)
+    !value.nil? && (!value.respond_to?(:empty?) || !value.empty?)
   end
 
   private def argo_metadata_for_entry(entry)
@@ -1074,15 +1438,7 @@ class BlockingLeafBuilder
     # Render each non-true condition as a leaf only when we have no deeper
     # object-level child to descend into.
     k8s_object.conditions.filter_map do |condition|
-      next if condition["status"] == "True"
-
-      state = if blocked_condition?(condition)
-                "blocked"
-              elsif waiting_condition?(condition)
-                "waiting"
-              elsif active_condition?(condition)
-                "progressing"
-              end
+      state = condition_state(condition)
       next unless state
 
       detail_parts = ["status=#{condition.fetch('status')}"]
@@ -1114,6 +1470,9 @@ class BlockingLeafBuilder
   end
 
   private def event_nodes(k8s_object)
+    return [] if k8s_object.ref.kind == "Pod"
+    return [] if event_sparse_kind?(k8s_object.ref.kind)
+
     @snapshot.events_for(k8s_object).first(3).filter_map do |raw_event|
       next unless interesting_event?(raw_event)
 
@@ -1129,18 +1488,6 @@ class BlockingLeafBuilder
         path: ["event/#{raw_event['reason'] || 'Event'}"],
       )
     end
-  end
-
-  private def blocked_condition?(condition)
-    condition_text(condition).match?(/error|failure|denied|conflict|invalid|notempty|rejected|timeout/i)
-  end
-
-  private def waiting_condition?(condition)
-    condition_text(condition).match?(/\Awaiting|waiting\b/i)
-  end
-
-  private def active_condition?(condition)
-    condition_text(condition).match?(/creating|deleting|reconcil|progress|pending|inuse|watchcircuitopen/i)
   end
 
   private def interesting_event?(raw_event)
@@ -1181,39 +1528,65 @@ class TraceBuilder
     }
   end
 
-  private def build_ref_node(ref, edge_meta: nil, seen:)
+  private def build_ref_node(ref, edge_meta: nil, edge_source: nil, seen:)
     return nil if seen.include?(ref.key)
 
     # Everything in the visible tree is built from refs first so app/appset
     # recursion and plain Kubernetes resource recursion share one entry point.
     k8s_object = @snapshot.k8s_object_for(ref)
-    return nil unless k8s_object
+    return build_missing_argo_edge_node(ref, edge_meta: edge_meta, edge_source: edge_source) unless k8s_object
 
     seen = seen.dup << ref.key
 
     case [ref.group, ref.kind]
     when ["argoproj.io", "Application"]
-      build_application_node(k8s_object, seen: seen)
+      build_application_node(k8s_object, edge_source: edge_source, seen: seen)
     when ["argoproj.io", "ApplicationSet"]
-      build_applicationset_node(k8s_object, seen: seen)
+      build_applicationset_node(k8s_object, edge_source: edge_source, seen: seen)
     when ["protection.crossplane.io", "Usage"]
-      build_usage_node(k8s_object, seen: seen)
+      build_usage_node(k8s_object, edge_source: edge_source, seen: seen)
     else
-      build_resource_node(k8s_object, edge_meta: edge_meta, seen: seen)
+      build_resource_node(k8s_object, edge_meta: edge_meta, edge_source: edge_source, seen: seen)
     end
   end
 
-  private def build_application_node(argo_app, seen:)
+  private def build_missing_argo_edge_node(ref, edge_meta:, edge_source:)
+    return nil unless edge_meta
+
+    state = state_from_argo_edge(edge_meta)
+    return nil unless state
+
+    detail_parts = []
+    detail_parts << edge_source_detail(edge_source) if edge_source
+    edge_detail = argo_edge_detail(edge_meta)
+    detail_parts << edge_detail if edge_detail
+    detail_parts << "live-object=missing"
+
+    evidence_message = if edge_meta[:message].to_s.empty?
+                         "Argo still reports this edge, but the live object was not found"
+                       else
+                         edge_meta[:message]
+                       end
+    evidence = ["`#{ref.display}`: `#{evidence_message}`"]
+
+    TreeNode.new(
+      label: ref.display,
+      state: state,
+      detail: "(#{detail_parts.join('; ')})",
+      children: [],
+      evidence: evidence,
+      path: [ref.display],
+    )
+  end
+
+  private def build_application_node(argo_app, edge_source:, seen:)
     children = []
     if expand_application_children?(argo_app)
       # Argo gives us edge metadata for resources under an app. Preserve that so
       # the tree can show whether Argo itself still sees the edge as Progressing,
       # Missing, HookPending, and so on.
-      child_edges = relevant_application_children(argo_app, @snapshot.application_children(argo_app))
-      edge_meta_by_key = child_edges.each_with_object({}) do |child, index|
-        index[child.fetch(:ref).key] = child.fetch(:argo)
-      end
-      children = build_child_nodes(child_edges.map {|child| child.fetch(:ref)}, seen: seen, edge_meta_by_key: edge_meta_by_key)
+      child_edges = relevant_application_children(@snapshot.application_children(argo_app))
+      children = build_child_nodes(child_edges, seen: seen)
     end
 
     state = application_state(argo_app, children)
@@ -1222,17 +1595,17 @@ class TraceBuilder
     TreeNode.new(
       label: argo_app.ref.display,
       state: state || "progressing",
-      detail: application_detail(argo_app),
+      detail: application_detail(argo_app, edge_source: edge_source),
       children: children,
       evidence: application_evidence(argo_app),
       path: [argo_app.ref.display],
     )
   end
 
-  private def build_applicationset_node(argo_appset, seen:)
+  private def build_applicationset_node(argo_appset, edge_source:, seen:)
     # ApplicationSets are graph parents in Argo space even though the live
     # Kubernetes ownership edge is usually only to the child Applications.
-    children = build_child_nodes(@snapshot.applicationset_children(argo_appset), seen: seen)
+    children = build_child_nodes(relevant_applicationset_children(argo_appset, @snapshot.applicationset_children(argo_appset)), seen: seen)
 
     state = applicationset_state(argo_appset, children)
     return nil unless state || children.any?
@@ -1240,18 +1613,18 @@ class TraceBuilder
     TreeNode.new(
       label: argo_appset.ref.display,
       state: state || "progressing",
-      detail: applicationset_detail(argo_appset, children),
+      detail: applicationset_detail(argo_appset, children, edge_source: edge_source),
       children: children,
       evidence: applicationset_evidence(argo_appset),
       path: [argo_appset.ref.display],
     )
   end
 
-  private def build_usage_node(crossplane_usage, seen:)
+  private def build_usage_node(crossplane_usage, edge_source:, seen:)
     children = []
-    using_ref = @snapshot.usage_using_ref(crossplane_usage)
-    if using_ref
-      child = build_ref_node(using_ref, seen: seen)
+    using_edge = @snapshot.usage_using_edge(crossplane_usage)
+    if using_edge
+      child = build_ref_node(using_edge.ref, edge_source: using_edge.source, seen: seen)
       children << child if child
     end
 
@@ -1261,16 +1634,17 @@ class TraceBuilder
     TreeNode.new(
       label: crossplane_usage.ref.display,
       state: state || "waiting",
-      detail: generic_detail(crossplane_usage),
+      detail: generic_detail(crossplane_usage, edge_source: edge_source),
       children: children,
       evidence: generic_evidence(crossplane_usage),
       path: [crossplane_usage.ref.display],
     )
   end
 
-  private def build_resource_node(k8s_object, edge_meta:, seen:)
+  private def build_resource_node(k8s_object, edge_meta:, edge_source:, seen:)
     state = generic_state(k8s_object, edge_meta: edge_meta)
     children = []
+    leaf_clues_only = false
 
     # For plain Kubernetes resources, descend through owner refs and other live
     # graph edges first. Only synthesize condition/finalizer leaves if there is
@@ -1279,16 +1653,24 @@ class TraceBuilder
       children = build_child_nodes(@snapshot.generic_children(k8s_object), seen: seen)
     end
 
-    children.concat(@blocking_leaf_builder.leaves_for(k8s_object)) if children.empty?
+    if children.empty?
+      children.concat(@blocking_leaf_builder.leaves_for(k8s_object))
+      leaf_clues_only = children.any?
+    end
 
     return nil unless state || children.any?
 
     TreeNode.new(
       label: k8s_object.ref.display,
       state: state || "progressing",
-      detail: generic_detail(k8s_object, edge_meta: edge_meta),
+      detail: generic_detail(
+        k8s_object,
+        edge_meta: edge_meta,
+        edge_source: edge_source,
+        show_manager_names: leaf_clues_only,
+      ),
       children: children,
-      evidence: generic_evidence(k8s_object, edge_meta: edge_meta),
+      evidence: generic_evidence(k8s_object, edge_meta: edge_meta, include_events: children.empty?),
       path: [k8s_object.ref.display],
     )
   end
@@ -1298,6 +1680,7 @@ class TraceBuilder
     # owned/dependent children. Stable leaves stop here.
     return true if k8s_object.deleting?
     return true if %w[blocked waiting progressing].include?(state)
+    return true if k8s_object.resource.namespaced
     return true if @snapshot.known_generic_children(k8s_object).any?
 
     if edge_meta
@@ -1323,18 +1706,87 @@ class TraceBuilder
     nil
   end
 
-  private def relevant_application_children(argo_app, child_refs)
-    # Healthy steady-state apps can own a large stable subtree. Keep only the
-    # child resources Argo still marks as active so the trace stays on the
-    # blocker path.
-    return child_refs if argo_app.deleting?
+  private def relevant_application_children(child_refs)
+    relevant = child_refs.select do |child|
+      # Argo tree kinds are graph parents. Even when the immediate edge looks
+      # synced, the child Application or ApplicationSet can still carry the
+      # real blocker deeper in the Argo graph.
+      next true if ARGO_TREE_KINDS.include?(child.ref.kind)
+
+      edge_meta = child.argo
+      edge_meta.nil? || relevant_argo_edge?(edge_meta)
+    end
+
+    interesting_relevant = relevant.reject do |child|
+      PASSIVE_APPLICATION_CHILD_KINDS.include?(child.ref.kind)
+    end
+    return interesting_relevant unless interesting_relevant.empty?
+    return relevant unless relevant.empty?
+
+    interesting = child_refs.reject do |child|
+      PASSIVE_APPLICATION_CHILD_KINDS.include?(child.ref.kind)
+    end
+    interesting.empty? ? child_refs : interesting
+  end
+
+  private def relevant_applicationset_children(argo_appset, child_edges)
+    return child_edges if argo_appset.deleting?
+
+    relevant = child_edges.select do |child_edge|
+      argo_tree_child_active?(child_edge.ref, seen: Set.new)
+    end
+
+    relevant.empty? ? child_edges : relevant
+  end
+
+  private def argo_tree_child_active?(ref, seen:)
+    return false if seen.include?(ref.key)
+
+    argo_node = @snapshot.k8s_object_for(ref)
+    return true unless argo_node
+
+    seen = seen.dup << ref.key
+
+    case [ref.group, ref.kind]
+    when ["argoproj.io", "Application"]
+      return true if application_active_without_children?(argo_node)
+
+      argo_tree_application_children(argo_node).any? do |child_edge|
+        argo_tree_child_active?(child_edge.ref, seen: seen)
+      end
+    when ["argoproj.io", "ApplicationSet"]
+      return true if applicationset_active_without_children?(argo_node)
+
+      @snapshot.applicationset_children(argo_node).any? do |child_edge|
+        argo_tree_child_active?(child_edge.ref, seen: seen)
+      end
+    else
+      false
+    end
+  end
+
+  private def argo_tree_application_children(argo_app)
+    @snapshot.application_children(argo_app).select do |child_edge|
+      ARGO_TREE_KINDS.include?(child_edge.ref.kind)
+    end
+  end
+
+  private def application_active_without_children?(argo_app)
+    return true if argo_app.deleting?
 
     state = application_argo_state(argo_app)
-    return child_refs unless state == {sync: "Synced", health: "Healthy", phase: "Succeeded"}
+    return true if %w[Running Failed Error].include?(state.fetch(:phase))
+    return true if state.fetch(:sync) && state.fetch(:sync) != "Synced"
+    return true if state.fetch(:health) && state.fetch(:health) != "Healthy"
 
-    child_refs.select do |child|
-      edge_meta = child[:argo]
-      edge_meta.nil? || relevant_argo_edge?(edge_meta)
+    false
+  end
+
+  private def applicationset_active_without_children?(argo_appset)
+    return true if argo_appset.deleting?
+
+    argo_appset.conditions.any? do |condition|
+      blocked_condition?(condition) || active_condition?(condition)
     end
   end
 
@@ -1361,13 +1813,14 @@ class TraceBuilder
     false
   end
 
-  private def application_detail(argo_app)
+  private def application_detail(argo_app, edge_source:)
     # Keep Argo's own sync/health/op tuple visible so operators can compare the
     # controller's summary with the deeper live subtree under it.
     parts = []
     state = application_argo_state(argo_app)
     as_of = argo_app.raw.dig("status", "reconciledAt") || argo_app.raw.dig("status", "operationState", "finishedAt") || argo_app.raw.dig("status", "operationState", "startedAt")
 
+    parts << edge_source_detail(edge_source) if edge_source
     parts << "argo sync=#{state.fetch(:sync)}" if state.fetch(:sync)
     parts << "health=#{state.fetch(:health)}" if state.fetch(:health)
     parts << "op=#{state.fetch(:phase)}" if state.fetch(:phase)
@@ -1398,10 +1851,11 @@ class TraceBuilder
     nil
   end
 
-  private def applicationset_detail(argo_appset, children)
+  private def applicationset_detail(argo_appset, children, edge_source:)
     # ApplicationSets matter mainly as Argo graph parents, so the useful detail
     # is child count plus any rollout/reconcile conditions.
     parts = []
+    parts << edge_source_detail(edge_source) if edge_source
     parts << "children=#{children.length}" if children.any?
     condition_summary = summarize_conditions(argo_appset.conditions)
     parts << "conditions #{condition_summary}" unless condition_summary.empty?
@@ -1417,19 +1871,26 @@ class TraceBuilder
     end
   end
 
+  private def state_from_argo_edge(edge_meta)
+    return nil unless edge_meta
+
+    argo_health = edge_meta[:health]
+    argo_status = edge_meta[:status]
+    hook_phase = edge_meta[:hook_phase]
+
+    return "blocked" if %w[Failed Error].include?(hook_phase) || argo_health == "Degraded"
+    return "waiting" if argo_health == "Missing"
+    return "progressing" if (argo_health && argo_health != "Healthy") || (argo_status && argo_status != "Synced")
+
+    nil
+  end
+
   private def generic_state(k8s_object, edge_meta: nil)
     # Argo's edge view gets first say for a child resource under an Application,
     # because Argo may still consider that edge Progressing even if the object
     # itself looks mostly stable.
-    if edge_meta
-      argo_health = edge_meta[:health]
-      argo_status = edge_meta[:status]
-      hook_phase = edge_meta[:hook_phase]
-
-      return "blocked" if %w[Failed Error].include?(hook_phase) || argo_health == "Degraded"
-      return "waiting" if argo_health == "Missing"
-      return "progressing" if (argo_health && argo_health != "Healthy") || (argo_status && argo_status != "Synced")
-    end
+    edge_state = state_from_argo_edge(edge_meta)
+    return edge_state if edge_state
 
     return "blocked" if blocked_conditions?(k8s_object)
     return "waiting" if waiting_conditions?(k8s_object)
@@ -1460,20 +1921,12 @@ class TraceBuilder
     nil
   end
 
-  private def generic_detail(k8s_object, edge_meta: nil)
+  private def generic_detail(k8s_object, edge_meta: nil, edge_source: nil, show_manager_names: false)
     parts = []
+    parts << edge_source_detail(edge_source) if edge_source
 
-    if edge_meta
-      edge_parts = []
-      edge_parts << "argo status=#{edge_meta[:status]}" if edge_meta[:status]
-      edge_parts << "health=#{edge_meta[:health]}" if edge_meta[:health]
-      if edge_meta[:hook_type] || edge_meta[:hook_phase]
-        hook_bits = [edge_meta[:hook_type], edge_meta[:hook_phase]].compact.join("/")
-        edge_parts << "hook=#{hook_bits}"
-      end
-      edge_parts << "sync-wave=#{edge_meta[:sync_wave]}" unless edge_meta[:sync_wave].nil?
-      parts << edge_parts.join(" ") unless edge_parts.empty?
-    end
+    edge_detail = argo_edge_detail(edge_meta)
+    parts << edge_detail if edge_detail
 
     condition_summary = summarize_conditions(k8s_object.conditions)
     parts << "conditions #{condition_summary}" unless condition_summary.empty?
@@ -1485,11 +1938,26 @@ class TraceBuilder
 
     runtime_summary = runtime_summary(k8s_object)
     parts << runtime_summary if runtime_summary
+    parts << "managers=#{k8s_object.manager_names.first(3).join(',')}" if show_manager_names && k8s_object.manager_names.any?
 
     parts.empty? ? nil : "(#{parts.join('; ')})"
   end
 
-  private def generic_evidence(k8s_object, edge_meta: nil)
+  private def argo_edge_detail(edge_meta)
+    return nil unless edge_meta
+
+    edge_parts = []
+    edge_parts << "argo status=#{edge_meta[:status]}" if edge_meta[:status]
+    edge_parts << "health=#{edge_meta[:health]}" if edge_meta[:health]
+    if edge_meta[:hook_type] || edge_meta[:hook_phase]
+      hook_bits = [edge_meta[:hook_type], edge_meta[:hook_phase]].compact.join("/")
+      edge_parts << "hook=#{hook_bits}"
+    end
+    edge_parts << "sync-wave=#{edge_meta[:sync_wave]}" unless edge_meta[:sync_wave].nil?
+    edge_parts.empty? ? nil : edge_parts.join(" ")
+  end
+
+  private def generic_evidence(k8s_object, edge_meta: nil, include_events: true)
     # Evidence is intentionally terse: only the messages most likely to explain
     # why a human would care about this node.
     messages = k8s_object.conditions.filter_map do |condition|
@@ -1508,10 +1976,12 @@ class TraceBuilder
       messages << "`#{k8s_object.ref.display}`: `#{message}`"
     end
 
-    @snapshot.events_for(k8s_object).first(3).each do |raw_event|
-      next unless raw_event["message"].to_s.match?(/wait|error|fail|block|denied|conflict|timeout|pending|pull|schedul|mount/i) || raw_event["type"] == "Warning"
+    if include_events && messages.empty? && k8s_object.ref.kind != "Pod" && !event_sparse_kind?(k8s_object.ref.kind)
+      @snapshot.events_for(k8s_object).first(3).each do |raw_event|
+        next unless raw_event["message"].to_s.match?(/wait|error|fail|block|denied|conflict|timeout|pending|pull|schedul|mount/i) || raw_event["type"] == "Warning"
 
-      messages << "`#{k8s_object.ref.display}`: `event #{raw_event['reason'] || raw_event['type']}: #{raw_event.fetch('message')}`"
+        messages << "`#{k8s_object.ref.display}`: `event #{raw_event['reason'] || raw_event['type']}: #{raw_event.fetch('message')}`"
+      end
     end
 
     messages.uniq
@@ -1525,35 +1995,27 @@ class TraceBuilder
     k8s_object.conditions.any? {|condition| waiting_condition?(condition)}
   end
 
-  private def blocked_condition?(condition)
-    # These are heuristics, not controller-specific truth tables. They are
-    # deliberately biased toward surfacing likely blockers over perfect nuance.
-    return false if condition["status"] == "True"
-
-    condition_text(condition).match?(/error|failure|denied|conflict|invalid|notempty|rejected|timeout/i)
-  end
-
-  private def waiting_condition?(condition)
-    condition_text(condition).match?(/\Awaiting|waiting\b/i)
-  end
-
-  private def active_condition?(condition)
-    return false if condition["status"] == "True"
-
-    condition_text(condition).match?(/creating|deleting|reconcil|progress|pending|inuse|watchcircuitopen/i)
-  end
-
-  private def build_child_nodes(child_refs, seen:, edge_meta_by_key: {})
-    @snapshot.prefetch_refs(child_refs)
-    root_ref_keys = @snapshot.prune_nested_refs(child_refs).to_set(&:key)
+  private def build_child_nodes(child_edges, seen:)
+    refs = child_edges.map(&:ref)
+    @snapshot.prefetch_refs(refs)
+    root_ref_keys = @snapshot.prune_nested_refs(refs).to_set(&:key)
+    emitted_keys = Set.new
 
     # Do not print both a parent and the same subtree again through its owned
     # descendants at the same level.
-    child_refs.filter_map do |child_ref|
-      next unless root_ref_keys.include?(child_ref.key)
+    child_edges.filter_map do |child_edge|
+      next unless root_ref_keys.include?(child_edge.ref.key)
+      next if emitted_keys.include?(child_edge.ref.key)
 
-      build_ref_node(child_ref, edge_meta: edge_meta_by_key[child_ref.key], seen: seen)
+      emitted_keys << child_edge.ref.key
+      build_ref_node(child_edge.ref, edge_meta: child_edge.argo, edge_source: child_edge.source, seen: seen)
     end
+  end
+
+  private def edge_source_detail(edge_source)
+    return "via=argo-tracking(inferred)" if edge_source == "argo-tracking"
+
+    "via=#{edge_source}(observed)"
   end
 
   private def summarize_conditions(conditions)
@@ -1650,7 +2112,7 @@ class TraceBuilder
 
     child_paths = trace_node.children.flat_map {|child| deepest_blocker_paths(child, prefix: prefix)}
     max_depth = child_paths.map(&:length).max
-    child_paths.select {|path| path.length == max_depth}
+    child_paths.select {|path| path.length == max_depth}.uniq
   end
 
   private def collect_evidence(trace_node)
@@ -1732,6 +2194,12 @@ def parse_duration(value)
   total
 end
 
+def kubectl_timeout_seconds(poll_interval_seconds)
+  return 30 if poll_interval_seconds.nil? || poll_interval_seconds <= 0
+
+  [30, poll_interval_seconds].min
+end
+
 # Finds top-level Argo roots from the live app/appset graph. This keeps the
 # tracer generic across installs that use app-of-apps, direct Applications, or
 # several disconnected root trees at once.
@@ -1789,10 +2257,10 @@ class RootInference
                      []
                    end
 
-      child_refs.each do |child_ref|
-        next unless nodes_by_key.key?(child_ref.key)
+      child_refs.each do |child_edge|
+        next unless nodes_by_key.key?(child_edge.ref.key)
 
-        incoming[child_ref.key] << argo_node.ref.key
+        incoming[child_edge.ref.key] << argo_node.ref.key
       end
     end
 
@@ -1868,8 +2336,7 @@ class RootInference
 
   private def application_child_refs(argo_app)
     @snapshot.application_children(argo_app).filter_map do |child|
-      ref = child.fetch(:ref)
-      ref if argo_tree_ref?(ref)
+      child if argo_tree_ref?(child.ref)
     end
   end
 end
@@ -1882,8 +2349,11 @@ def infer_root_refs_from_snapshot(snapshot:, requested_kind: nil, requested_name
   ).root_refs
 end
 
-def infer_root_refs(argocd_namespace:, requested_kind: nil, requested_namespace: nil)
-  snapshot = load_live_context(argocd_namespace: argocd_namespace).fetch(:snapshot)
+def infer_root_refs(argocd_namespace:, requested_kind: nil, requested_namespace: nil, kubectl_timeout_seconds: 30)
+  snapshot = load_live_context(
+    argocd_namespace: argocd_namespace,
+    kubectl_timeout_seconds: kubectl_timeout_seconds,
+  ).fetch(:snapshot)
   infer_root_refs_from_snapshot(
     snapshot: snapshot,
     requested_kind: requested_kind,
@@ -1912,16 +2382,17 @@ def normalize_options(options)
       argocd_namespace: options.fetch(:argocd_namespace),
       requested_kind: options[:root_kind],
       requested_namespace: options[:root_namespace],
+      kubectl_timeout_seconds: options.fetch(:kubectl_timeout_seconds, 30),
     )
   end
 
   options
 end
 
-def load_live_context(argocd_namespace:)
+def load_live_context(argocd_namespace:, kubectl_timeout_seconds: 30)
   # Each trace pass is a fresh snapshot: discovery, then live objects, then the
   # graph indexes derived from those objects.
-  shell = Shell.new
+  shell = Shell.new(kubectl_timeout_seconds: kubectl_timeout_seconds)
   discovery = Discovery.new(shell)
   discovery.load!
 
@@ -1934,12 +2405,39 @@ def load_live_context(argocd_namespace:)
   {shell: shell, snapshot: snapshot}
 end
 
+def fallback_root_state(root_k8s_object)
+  return "absent" unless root_k8s_object
+  return "deleting" if root_k8s_object.deleting?
+
+  case root_k8s_object.ref.kind
+  when "Application"
+    argo_state = application_argo_state(root_k8s_object)
+    return "blocked" if %w[Error Failed].include?(argo_state.fetch(:phase))
+    return "progressing" if argo_state.fetch(:phase) == "Running" || argo_state.fetch(:sync) != "Synced" || argo_state.fetch(:health) != "Healthy"
+  when "ApplicationSet"
+    return "progressing" if root_k8s_object.conditions.any? {|condition| active_condition?(condition)}
+  end
+
+  "idle"
+end
+
 def idle_trace_for_root(snapshot:, root_ref:)
   # Idle roots are reported explicitly so operators can tell the difference
   # between "nothing is happening" and "the tracer could not find the root".
   root_k8s_object = snapshot.k8s_object_for(root_ref)
-  root_state = root_k8s_object ? "idle" : "absent"
-  root_evidence = root_k8s_object ? "`#{root_ref.display}` exists but has no live progress branch" : "`#{root_ref.display}` is absent"
+  root_state = fallback_root_state(root_k8s_object)
+  root_evidence = case root_state
+                  when "absent"
+                    "`#{root_ref.display}` is absent"
+                  when "deleting"
+                    "`#{root_ref.display}` has a deletion timestamp"
+                  when "progressing"
+                    "`#{root_ref.display}` is progressing but no deeper live progress branch was discovered"
+                  when "blocked"
+                    "`#{root_ref.display}` is blocked but no deeper live progress branch was discovered"
+                  else
+                    "`#{root_ref.display}` exists but has no live progress branch"
+                  end
   {
     tree: TreeNode.new(
       label: root_ref.display,
@@ -1962,7 +2460,10 @@ def trace_payload(options)
     end
   end
 
-  live = load_live_context(argocd_namespace: options.fetch(:argocd_namespace))
+  live = load_live_context(
+    argocd_namespace: options.fetch(:argocd_namespace),
+    kubectl_timeout_seconds: options.fetch(:kubectl_timeout_seconds, 30),
+  )
   snapshot = live.fetch(:snapshot)
 
   traces = root_refs.map do |root_ref|
@@ -1977,6 +2478,7 @@ def trace_payload(options)
   {
     root_refs: root_refs,
     traces: traces,
+    caveats: live.fetch(:shell).caveats.uniq,
   }
 end
 
@@ -2035,6 +2537,8 @@ def render_trace_entry(payload:, include_header:, status_label: nil, now: Time.n
     "Diagnosis:",
     diagnosis_lines.join("\n"),
   ]
+  caveat_lines = payload.fetch(:caveats, []).map {|line| "- #{line}"}
+  sections.push("", "Caveats:", caveat_lines.join("\n")) if caveat_lines.any?
 
   (header_lines + sections).join("\n") + "\n"
 end
@@ -2064,24 +2568,22 @@ end
 def run_cli!
   options = {
     argocd_namespace: "argocd",
-    operation: ENV["ARGOCD_PROGRESS_TRACE_OPERATION"] || "trace",
     poll_every: ENV.fetch("ARGOCD_PROGRESS_TRACE_POLL_EVERY", nil),
   }
 
   OptionParser.new do |parser|
     parser.banner = "usage: bin/argo-trace [--root-name NAME] [options]"
     parser.on("--argocd-namespace NAMESPACE", "Argo CD namespace (default: argocd)") {|value| options[:argocd_namespace] = value}
-    parser.on("--operation NAME", "Label the log as apply, destroy, plan, or trace") {|value| options[:operation] = value}
     parser.on("--root-kind KIND", "Root kind: Application or ApplicationSet (default: Application)") {|value| options[:root_kind] = value}
     parser.on("--root-namespace NAMESPACE", "Root namespace (default: argocd)") {|value| options[:root_namespace] = value}
     parser.on("--root-name NAME", "Root object name") {|value| options[:root_name] = value}
     parser.on("--poll-every DURATION", "Repeat at an interval like 30s, 1m, or 1hr") {|value| options[:poll_every] = value}
   end.parse!
 
-  normalize_options(options)
-
   $stdout.sync = true
   interval = options[:poll_every] ? parse_duration(options[:poll_every]) : nil
+  options[:kubectl_timeout_seconds] = kubectl_timeout_seconds(interval)
+  normalize_options(options)
   poll_state = interval.nil? ? nil : {start_time: Time.now, last_digest: nil}
 
   begin
@@ -2101,4 +2603,19 @@ def run_cli!
   end
 end
 
-run_cli! if __FILE__ == $PROGRAM_NAME
+def with_stackprof(&block)
+  output_path = ENV["ARGO_TRACE_STACKPROF_OUT"].to_s
+  return yield if output_path.empty?
+
+  require "stackprof"
+
+  StackProf.run(
+    mode: ENV.fetch("ARGO_TRACE_STACKPROF_MODE", "wall").to_sym,
+    out: output_path,
+    raw: true,
+    interval: ENV.fetch("ARGO_TRACE_STACKPROF_INTERVAL", "1000").to_i,
+    &block
+  )
+end
+
+with_stackprof {run_cli!} if __FILE__ == $PROGRAM_NAME
