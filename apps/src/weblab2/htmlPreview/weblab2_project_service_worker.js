@@ -89,14 +89,18 @@ function main() {
         });
         if (blockNetworkRequests) {
           // No need to broadcast a response since we mark the request as blocked.
-          console.log('Blocking network request to:', event.request.url);
-          return new Response(null, {status: 500});
+          event.respondWith(
+            new Response(null, {
+              status: 500,
+              statusText: 'Network requests are blocked',
+            })
+          );
+          return;
         }
         let response;
         let performanceEndTime;
         let error;
         try {
-          console.log('Fetching:', event.request.url);
           response = await fetch(event.request);
           performanceEndTime = performance.now();
         } catch (e) {
@@ -122,7 +126,7 @@ function main() {
             contentType: response?.headers?.get('Content-Type'),
           },
         });
-        return response;
+        event.respondWith(response);
       }
       return;
     }
