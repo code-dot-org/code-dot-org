@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-02-24T18:12:02.000Z",
   "level_num": "custom",
@@ -28,6 +27,11 @@
     },
     "start_sources": {
       "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
       },
       "files": {
         "2": {
@@ -43,7 +47,7 @@
           "name": "umbrella1.png",
           "language": "png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/6b920e16-98b6-4809-9fa4-15a591af9c5a.png",
           "type": "starter",
           "active": false
@@ -53,7 +57,7 @@
           "name": "umbrella3.png",
           "language": "png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/bdfe63fc-2999-42e3-9e0a-6e6e261a5276.png",
           "type": "starter",
           "active": false
@@ -63,7 +67,7 @@
           "name": "umbrella2.png",
           "language": "png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/71c02b20-5e3f-4bfb-aa9b-40a8ee43c7ce.png",
           "type": "starter",
           "active": false
@@ -73,7 +77,7 @@
           "name": "umbrellaHeader.png",
           "language": "png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level1-test-2025/uuid/315999c9-028b-42cc-985f-2f0d039614d3.png",
           "type": "starter",
           "active": false
@@ -90,7 +94,7 @@
           "id": "8",
           "name": "hero.png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level3_2026/uuid/038a4475-3c01-4bb3-a26f-87cad0af208f.png",
           "type": "starter",
           "active": false
@@ -99,7 +103,7 @@
           "id": "9",
           "name": "product3.png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level3_2026/uuid/21921d7d-acca-4af8-90ce-fe3a4ee35ce1.png",
           "type": "starter",
           "active": false
@@ -108,7 +112,7 @@
           "id": "10",
           "name": "product1.png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level3_2026/uuid/18a7fc1d-670a-44e6-be26-ce1d6133c4a6.png",
           "type": "starter",
           "active": false
@@ -117,14 +121,13 @@
           "id": "11",
           "name": "product2.png",
           "contents": "",
-          "folderId": "0",
+          "folderId": "1",
           "url": "/level_starter_assets/ai-generated-design-lesson9-level3_2026/uuid/efd94639-2717-47c9-8e7e-38d4abd33155.png",
           "type": "starter",
           "active": false
         }
       },
       "openFiles": [
-        "7",
         "2"
       ]
     },
@@ -144,6 +147,7 @@
     "teacher_markdown": "**Student responses will vary. Use this as an example of the kinds of accessibility concerns students might identify and the kinds of AI prompts they might write to improve the page.**\r\n\r\n---\r\n\r\n\r\n#### Perceivable\r\n- The banner image does not include alt text, so screen reader users may miss important visual information.\r\n- Some text may have low contrast against the background, making it harder to read.\r\n- Important information may rely too heavily on visual styling rather than clear text support.\r\n\r\n**Example prompts students might write**\r\n- “Add alt text to describe the banner image so everyone can understand it.”\r\n- “Ensure all body text and headings have a color contrast ratio of at least 4.5:1 against the background.”\r\n- “Avoid using only color to show important information or feedback.”\r\n\r\n#### Operable\r\n- Users may not be able to navigate to all buttons and inputs using only the keyboard.\r\n- Buttons may be difficult to focus on or activate without a mouse.\r\n- The page may not support efficient keyboard navigation for users who rely on assistive technology.\r\n\r\n**Example prompts students might write**\r\n- “Make sure users can navigate through the site using only the keyboard and tab key.”\r\n- “Design buttons and links that are large enough and easy to click, tap, and focus.”\r\n- “Make sure all interactive elements can be reached and activated using keyboard controls.”\r\n\r\n#### Understandable\r\n- The “Your name” input box may not be clearly labeled.\r\n- Buttons like “Add” may be too vague and not explain what action will happen.\r\n- The site may not provide confirmation or feedback after a user completes an action.\r\n- Instructions and labels may be unclear or inconsistent.\r\n\r\n**Example prompts students might write**\r\n- “Write labels and instructions using clear and simple language.”\r\n- “If users make a mistake, show an error message that explains how to fix it.”\r\n- “Revise button labels so they clearly describe the action, such as ‘Add umbrella to cart’ instead of ‘Add.’”\r\n- “Add a confirmation message after actions so users know what happened.”\r\n\r\n#### Robust\r\n- The site may not work well across different screen sizes or devices.\r\n- Interactive elements and forms may not use proper labels or structure for screen readers.\r\n- Some page elements may not be fully usable with assistive technologies.\r\n\r\n**Example prompts students might write**\r\n- “Test the site on different devices and screen sizes to make sure it still works.”\r\n- “Use proper HTML tags and structure so screen readers can read the site correctly.”\r\n- “Make sure all interactive elements, forms, and buttons are usable with assistive technologies.”\r\n\r\n",
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:02.864+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level3_2025\"},{\"changed_at\":\"2026-03-12 16:14:13 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:15:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:14:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:22:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:26:37 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:27:08 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:19:51 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:35:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:37:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:55:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:58:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-18 20:42:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 20:58:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 21:01:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 23:43:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 16:42:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-06 14:17:39 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-06 14:17:58 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:02.864+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level3_2025\"},{\"changed_at\":\"2026-03-12 16:14:13 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:15:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:14:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:22:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:26:37 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 20:27:08 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:19:51 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:35:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:37:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:55:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:58:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-18 20:42:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 20:58:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 21:01:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 23:43:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 16:42:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-06 14:17:39 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-06 14:17:58 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-10 05:37:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:38:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:39:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:40:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>
