@@ -165,7 +165,7 @@ class ChannelsApi < Sinatra::Base
     # Remove subprojects entirely for all other project types.
     if value["subprojects"]
       if project_type == BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
-        value["subprojects"] = value["subprojects"].first(BubbleChoice::CUSTOM_MODE_MAX_SUBPROJECTS)
+        value["subprojects"] = value["subprojects"].first(BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
       else
         value.delete("subprojects")
       end

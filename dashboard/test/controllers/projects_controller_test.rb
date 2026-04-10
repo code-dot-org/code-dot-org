@@ -580,7 +580,7 @@ class ProjectsControllerTest < ActionController::TestCase
     channel_id = '123456'
     new_channel_id = 'new_parent_channel'
     project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
-    max_subprojects = BubbleChoice::CUSTOM_MODE_MAX_SUBPROJECTS
+    max_subprojects = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS
 
     # Create more subprojects than the max allowed.
     subprojects = Array.new(max_subprojects + 2) {|i| {"channel_id" => "sub_#{i}", "level_id" => "level_#{i}"}}

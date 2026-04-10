@@ -30,8 +30,6 @@ class BubbleChoice < DSLDefined
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  CUSTOM_MODE_MAX_SUBPROJECTS = 3
-
   serialized_attrs %w(
     display_name
     description
