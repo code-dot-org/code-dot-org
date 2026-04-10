@@ -3,7 +3,10 @@ export type JsonVideoFileMetadata = {
   url: string;
 };
 
-export const getJsonVideoPrompt = (videos: JsonVideoFileMetadata[] | undefined) => {
+export const getJsonVideoPrompt = (
+  videos: JsonVideoFileMetadata[] | undefined,
+  useJsonSchema?: boolean
+) => {
   if (!videos || videos.length === 0) {
     return ``;
   }
@@ -14,6 +17,20 @@ export const getJsonVideoPrompt = (videos: JsonVideoFileMetadata[] | undefined) 
         `{"url": "${video.url}", "description": "${video.description.replace(/"/g, '\\"')}"}`
     )
     .join('\n');
+
+  if (useJsonSchema) {
+    return `
+
+The following tutorial videos may be shared with the student. Use at most one per response, only if it directly addresses the concept they currently need. Do not include a video that has already appeared earlier in this conversation.
+
+Available videos:
+${videoLines}
+
+When including a video, set the \`videoUrl\` field in your JSON response to the url value exactly as shown — including the leading slash. Otherwise omit the \`videoUrl\` field entirely.
+
+Do not modify the URL.
+`;
+  }
 
   return `
 
