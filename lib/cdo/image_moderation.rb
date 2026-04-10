@@ -6,6 +6,8 @@ require 'stringio'
 module ImageModeration
   # Azure AI Content Safety requires both dimensions to be at least this many pixels.
   MIN_MODERATION_DIMENSION = 50
+  # Azure AI Content Safety requires images to be at most 4MB.
+  MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - image/gif, image/jpeg, image/png
@@ -33,13 +35,26 @@ module ImageModeration
     nil
   end
 
+  # Scales images to meet Azure AI Content Safety dimension and size requirements.
   # Scales up images smaller than MIN_MODERATION_DIMENSION on either dimension.
+  # Scales down images larger than MAX_MODERATION_SIZE.
   # On errors, passes the original bytes through so Azure can still be tried.
   def self.scale_image_for_moderation_if_needed(image_data, content_type)
     raw_data = image_data.read
     image = MiniMagick::Image.read(raw_data)
     width = image.width
     height = image.height
+
+    if raw_data.bytesize > MAX_MODERATION_SIZE
+      # Scale factor is approximate: file size is not strictly proportional to pixel
+      # count for compressed formats, so scale conservatively to stay under the limit.
+      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.9
+      new_w = (width * scale).floor
+      new_h = (height * scale).floor
+      image.resize "#{new_w}x#{new_h}!"
+      return [StringIO.new(image.to_blob), content_type]
+    end
+
     if width >= MIN_MODERATION_DIMENSION && height >= MIN_MODERATION_DIMENSION
       return StringIO.new(raw_data), content_type
     end

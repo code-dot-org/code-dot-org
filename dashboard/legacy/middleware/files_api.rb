@@ -1084,7 +1084,6 @@ class FilesApi < Sinatra::Base
 
     # Read the raw bytes and wrap in an IO.
     raw = request.body.read
-    puts "raw: #{raw}"
     if raw.empty?
       status 400
       return {error: 'No image data provided.'}.to_json
