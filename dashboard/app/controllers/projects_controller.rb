@@ -530,7 +530,7 @@ class ProjectsController < ApplicationController
     if src_project["subprojects"]
       if @level.is_a?(BubbleChoice)
         # Only process a reasonable number of subprojects.
-        sub_projects = src_project["subprojects"].first(BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
+        sub_projects = src_project["subprojects"].first(BubbleChoice::CUSTOM_MODE_MAX_SUBPROJECTS)
         # Remix each subproject and update the parent channel.
         new_subprojects = sub_projects.map do |entry|
           subproject_src_channel_id = entry['channel_id']
