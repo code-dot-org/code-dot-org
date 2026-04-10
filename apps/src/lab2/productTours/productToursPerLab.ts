@@ -2,7 +2,7 @@ import {StepOptions, Tour} from 'shepherd.js';
 
 import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
 
-import {AppName} from '../types';
+import {AppName, LevelProperties} from '../types';
 
 import {createOnboardingTourSteps} from './onboardingTourSteps';
 import {createValidationTourSteps} from './validationTourSteps';
@@ -24,6 +24,9 @@ export interface ProductTourConfig {
   // tour will not be shown on the level edit page.
   description?: string;
   getSteps: (tour: Tour) => StepOptions[];
+  // Optional function for more specific checks on whether the tour should be shown for a given level.
+  // If not provided, we will show by default.
+  shouldShowOnLevel?: (levelProperties: LevelProperties) => boolean;
 }
 
 const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
@@ -42,6 +45,7 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     description:
       'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
     getSteps: createValidationTourSteps,
+    shouldShowOnLevel: levelProperties => !!levelProperties.validations,
   },
   [ProductTour.SketchlabIntro]: {
     name: ProductTour.SketchlabIntro,
@@ -55,18 +59,25 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 // Tours with triggeredByLevel=true require the tour to be available on the lab
 // and present in the level's productTours field.
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
-// TODO: instead of appName, pass in level properties so we can do more specific checks (such as a level with validation)
+// todo: should we pull productTours from level properties now?
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  appName: string,
+  levelProperties: LevelProperties,
   productTours: string[] | undefined
 ): boolean {
-  const isAvailableForLab = ToursPerLab[appName as AppName]?.some(
-    config => config.name === tour
-  );
-  if (!isAvailableForLab) return false;
+  const isAvailableForLab = ToursPerLab[
+    levelProperties.appName as AppName
+  ]?.some(config => config.name === tour);
+  if (!isAvailableForLab) {
+    return false;
+  }
   const config = ProductTourConfigurations[tour];
-  if (!config.triggeredByLevel) return true;
+  if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
+    return false;
+  }
+  if (!config.triggeredByLevel) {
+    return true;
+  }
   return productTours?.includes(tour) ?? false;
 }
 

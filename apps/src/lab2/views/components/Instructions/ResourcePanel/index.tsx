@@ -239,11 +239,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
-    appName,
+    levelProperties,
     productToursForLevel: instructionsProps.levelProperties.productTours,
     isStandaloneCollapsed,
-    hasValidationConditions,
-    validationSettings,
   });
 
   // Build available tabs based on level information.

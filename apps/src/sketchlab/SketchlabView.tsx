@@ -325,7 +325,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  useSketchlabTour({productTours: levelProperties.productTours});
+  useSketchlabTour({
+    productTours: levelProperties.productTours,
+    levelProperties,
+  });
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
