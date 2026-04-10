@@ -101,7 +101,9 @@ function main() {
         let performanceEndTime;
         let error;
         try {
-          response = await fetch(event.request);
+          const fetchRequest = fetch(event.request);
+          event.respondWith(fetchRequest);
+          response = await fetchRequest;
           performanceEndTime = performance.now();
         } catch (e) {
           error = e;
@@ -126,9 +128,7 @@ function main() {
             contentType: response?.headers?.get('Content-Type'),
           },
         });
-        event.respondWith(response);
       }
-      return;
     }
   });
 
