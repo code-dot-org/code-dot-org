@@ -88,22 +88,15 @@ function main() {
           },
         });
         if (blockNetworkRequests) {
-          broadcastChannel.postMessage({
-            type: NETWORK_RESPONSE,
-            responseData: {
-              url: event.request.url,
-              id: requestId,
-              status: 0,
-              timeElapsed: 0,
-              blocked: true,
-            },
-          });
-          return new Response(null, {status: 0});
+          // No need to broadcast a response since we mark the request as blocked.
+          console.log('Blocking network request to:', event.request.url);
+          return new Response(null, {status: 500});
         }
         let response;
         let performanceEndTime;
         let error;
         try {
+          console.log('Fetching:', event.request.url);
           response = await fetch(event.request);
           performanceEndTime = performance.now();
         } catch (e) {

@@ -97,13 +97,14 @@ const NetworkPanel: React.FC = () => {
   }, [selectedRequest]);
 
   const responseSuccess = useMemo(() => {
-    if (selectedRequest?.response && !selectedRequest.request.blocked) {
+    if (selectedRequest?.response) {
       return selectedRequest.response.status < 300;
     }
     return false;
   }, [selectedRequest]);
 
-  // A response is pending if it did not fail due to a csp violation or blocking, but we don't yet have a response.
+  // A response is pending if it did not fail due to a csp violation or request blocking,
+  // but we don't yet have a response.
   const responsePending = useMemo(() => {
     return (
       !selectedRequest?.request.blocked &&
@@ -117,10 +118,7 @@ const NetworkPanel: React.FC = () => {
   ]);
 
   const showResponseDetails = useMemo(() => {
-    return (
-      !selectedRequest?.request.blocked &&
-      (responsePending || selectedRequest?.response)
-    );
+    return responsePending || selectedRequest?.response;
   }, [responsePending, selectedRequest]);
 
   const {dividerIcon, dividerAltText} = useMemo(() => {
