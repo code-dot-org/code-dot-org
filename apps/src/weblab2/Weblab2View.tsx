@@ -31,6 +31,7 @@ import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import ShareView from './layout/ShareView';
+import {weblab2VideoFiles} from './weblab2Videos';
 import VerticalLayout from './layout/VerticalLayout';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
@@ -187,6 +188,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
+          tutorVideos={weblab2VideoFiles}
         />
       )}
     </div>
