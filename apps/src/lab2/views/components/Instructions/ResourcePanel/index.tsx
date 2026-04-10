@@ -9,6 +9,7 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
@@ -134,7 +135,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileObject[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
@@ -166,7 +167,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
-  enableTutorVideos,
+  tutorVideos,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
@@ -274,7 +275,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
-        enableTutorVideos,
+        tutorVideos,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -364,7 +365,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
-    enableTutorVideos,
+    tutorVideos,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,

@@ -10,6 +10,7 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
+import {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
@@ -36,7 +37,7 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileObject[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
 }
@@ -51,7 +52,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
-  enableTutorVideos,
+  tutorVideos,
   isLessonDeepDive = false,
   lessonId,
 }) => {
@@ -65,7 +66,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
-    enableTutorVideos,
+    tutorVideos,
   });
 
   const chatButtons = useMemo(() => {
