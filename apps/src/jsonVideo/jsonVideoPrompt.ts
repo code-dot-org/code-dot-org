@@ -11,7 +11,9 @@ const videoLines = jsonVideoFiles
 
 export const getJsonVideoPrompt = (enabled: boolean) =>
   enabled
-    ? `The following tutorial videos may be shared with the student. Use at most one per response, only if it directly addresses the concept they currently need. Do not include a video that has already appeared earlier in this conversation.
+    ? `
+
+The following tutorial videos may be shared with the student. Use at most one per response, only if it directly addresses the concept they currently need. Do not include a video that has already appeared earlier in this conversation.
 
 Available videos:
 ${videoLines}
