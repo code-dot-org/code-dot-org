@@ -85,9 +85,10 @@ module MailJet
     list_key = MAILJET_COURSE_ASSIGNMENT_CONTACT_LISTS[unit_group_name]
     return unless list_key
 
-    contact = find_or_create_contact(user.email, user.name)
+    contact_list_id = CONTACT_LISTS.dig(list_key, subaccount.to_sym, :default)
+    return unless contact_list_id
 
-    contact_list_id = CONTACT_LISTS[list_key][subaccount.to_sym][:default]
+    contact = find_or_create_contact(user.email, user.name)
     add_to_contact_list(contact, contact_list_id)
   end
 
