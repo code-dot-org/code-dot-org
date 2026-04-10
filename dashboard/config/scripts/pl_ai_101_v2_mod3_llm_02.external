@@ -1,0 +1,98 @@
+name 'pl-ai-101-V2-mod3-llm-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Examples of AI Use
+
+#### Review the following scenarios where a teacher improved their teaching practice by using AI.
+
+#### 👉 Click on each scenario to expand. 
+
+<!-- Planning and Preparation -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Planning and Preparation
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>A 7th-grade science teacher in a suburban middle school is planning a lesson on ecosystems and food webs. They pull materials from the district curriculum and create a set of discussion questions and examples. While the lesson covers key concepts, generating engaging, real-world connections and differentiated questions takes significant time, and the teacher relies on a limited set of familiar examples.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>The teacher uses AI during planning to quickly generate multiple real-world ecosystem examples (e.g., local wetlands, urban parks), tiered discussion questions, and ideas for a short interactive activity. They review the options, select the most relevant ones, and adapt them to align with their standards and students’ interests. Instead of spending most of their time creating materials from scratch, the teacher is able to focus on refining and customizing a stronger, more engaging lesson.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<!-- Communication and Materials Creation -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Communication and Materials Creation
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>A 3rd-grade teacher in an elementary school writes a weekly classroom update email to families summarizing what students are learning in reading and math. Drafting the message takes time, especially when trying to explain learning goals clearly and maintain a warm, family-friendly tone. The teacher often revises multiple times before sending.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>The teacher uses AI to generate a first draft of the weekly update based on a few key points, such as upcoming topics and reminders. The draft provides a clear structure and organized language, which the teacher then revises to reflect their voice, adjust tone, and ensure accuracy. This allows the teacher to communicate more efficiently while still maintaining a personal and thoughtful connection with families.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<!-- Reflection and Improvement -->
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
+Reflection and Improvement
+</summary>
+<div style="padding:20px 24px 24px 24px;">
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+<div style="background:#F4F6F8; padding:24px;">
+<div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">Before</div>
+<div>A 10th-grade English teacher in a high school reflects on a recent lesson about analyzing theme in a novel. They recall that some students struggled during discussion but rely mostly on general impressions and informal notes. It’s difficult to identify exactly where students had difficulty or what changes would improve the next lesson.</div>
+</div>
+</div>
+<div style="width:48px; height:48px; border-radius:50%; background:#8C52BA; color:white; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800;">→</div>
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">After: AI Integration</div>
+<div>The teacher uses AI as a thought partner by describing the lesson, including where students seemed confused and how the discussion unfolded. AI suggests possible patterns (such as unclear prompts or insufficient modeling) and offers ideas for adjustments, like adding guided examples or restructuring discussion questions. The teacher reviews these suggestions, compares them with their own observations, and uses them to make more specific, targeted improvements for the next lesson.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+>#### **💬 Quick Reflection:** Are there any parts of your teaching practice which you'd like to improve using AI integration?
+MARKDOWN
