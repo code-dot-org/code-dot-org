@@ -15,7 +15,7 @@ Dashboard::Application.routes.draw do
   get '/robots.txt' => 'robots#index'
 
   # Redirect studio.code.org/courses to code.org/students
-  get "/courses", to: redirect(CDO.code_org_url("/students"))
+  get "/courses", to: "courses_redirect#show"
 
   # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")

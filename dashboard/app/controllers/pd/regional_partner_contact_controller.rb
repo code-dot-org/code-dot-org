@@ -8,6 +8,7 @@ require 'honeybadger/ruby'
 # have saved links that use this controller.
 
 class Pd::RegionalPartnerContactController < ApplicationController
+  include StableIdRedirect
   # GET /pd/regional_partner_contacts/new
   def new
     Honeybadger.notify(
@@ -22,6 +23,6 @@ class Pd::RegionalPartnerContactController < ApplicationController
         referer: request.referer
       }
     )
-    redirect_to CDO.code_org_url('educate/professional-learning/contact-regional-partner')
+    redirect_to_code_org('educate/professional-learning/contact-regional-partner')
   end
 end
