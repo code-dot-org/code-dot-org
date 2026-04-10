@@ -122,7 +122,6 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
               onClick={() => {
                 submitCallback(true);
                 correctCallback(isCorrect);
-                console.log('clicked submit button');
               }}
             >
               <Typography variant="body1" className={styles.cardLabel}>
