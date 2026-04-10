@@ -35,8 +35,7 @@ If you are looking to update the FontAwesome files in the `injectFontAwesome` fu
    This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
 2. **Use "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts).
    Supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
-3. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths**
-   for font files listed in CSS to be absolute paths to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
+3. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files listed in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
 
 **Example CSS with absolute paths**
 ```
