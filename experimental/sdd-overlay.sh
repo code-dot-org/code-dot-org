@@ -29,7 +29,13 @@ fail() {
 }
 
 git_exclude_file() {
-  git rev-parse --git-path info/exclude
+  local repo_root
+
+  [ -e "$REPO_DIR" ] || fail "$REPO_DIR does not exist"
+  repo_root="$(git -C "$REPO_DIR" rev-parse --show-toplevel 2>/dev/null)" \
+    || fail "$REPO_DIR is not inside a git worktree"
+
+  git -C "$repo_root" rev-parse --git-path info/exclude
 }
 
 ensure_repo() {
@@ -125,11 +131,11 @@ install_speckit() {
   mkdir -p .agents/skills
 
   log "Linking Speckit .specify..."
-  safe_symlink "sdd-experiment/speckit/.specify" ".specify"
+  safe_symlink "$REPO_DIR/speckit/.specify" ".specify"
 
   if [ -e "$tool_dir/specs" ]; then
     log "Linking Speckit specs..."
-    safe_symlink "sdd-experiment/speckit/specs" "specs"
+    safe_symlink "$REPO_DIR/speckit/specs" "specs"
   else
     log "Speckit specs directory not present yet; skipping specs symlink."
   fi
@@ -138,7 +144,7 @@ install_speckit() {
   for skill in "${SPECKIT_SKILLS[@]}"; do
     ensure_target_exists "$tool_dir/.agents/skills/$skill"
     log "Linking $skill..."
-    safe_symlink "../../../sdd-experiment/speckit/.agents/skills/$skill" ".agents/skills/$skill"
+    safe_symlink "../../../$REPO_DIR/speckit/.agents/skills/$skill" ".agents/skills/$skill"
   done
 }
 
@@ -149,7 +155,7 @@ install_openspec() {
 
   if [ -e "$tool_dir/specs" ]; then
     log "Linking OpenSpec specs..."
-    safe_symlink "sdd-experiment/openspec/specs" "specs"
+    safe_symlink "$REPO_DIR/openspec/specs" "specs"
   else
     log "OpenSpec specs directory not present yet; skipping specs symlink."
   fi
@@ -158,12 +164,12 @@ install_openspec() {
   # Example:
   # if [ -e "$tool_dir/openspec" ]; then
   #   log "Linking openspec..."
-  #   safe_symlink "sdd-experiment/openspec/openspec" "openspec"
+  #   safe_symlink "$REPO_DIR/openspec/openspec" "openspec"
   # fi
 }
 
 ensure_excludes() {
-  ensure_local_exclude "sdd-experiment/"
+  ensure_local_exclude "$REPO_DIR/"
   ensure_local_exclude ".specify"
   ensure_local_exclude "specs"
   ensure_local_exclude "openspec"
