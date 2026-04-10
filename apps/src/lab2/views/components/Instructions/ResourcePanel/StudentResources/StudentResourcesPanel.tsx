@@ -1,11 +1,16 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
 import React from 'react';
+import {Tour} from 'shepherd.js';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {ToursPerLab} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {AppName} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 import styles from './student-resources-panel.module.scss';
+
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface StudentResourcesPanelProps {
@@ -16,13 +21,33 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
   appName,
 }) => {
   const [isTourRunning, setIsTourRunning] = React.useState(false);
+  const activeTourRef = React.useRef<Tour | null>(null);
   // TODO: only show tours we can run (for example, only show validation on python lab levels with validation)
   const tours = ToursPerLab[appName as AppName] ?? [];
 
-  // TODO: build the tour using productTourHelpers.createTourWithSteps and start it.
-  // We should only start one tour at a time.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    endActiveTour();
+  });
+
+  const endActiveTour = () => {
+    if (activeTourRef.current) {
+      activeTourRef.current.hide();
+      activeTourRef.current = null;
+    }
+    setIsTourRunning(false);
+  };
+
   const startTour = (tourName: string) => {
     if (isTourRunning) return;
+    setIsTourRunning(true);
+    const tourConfig = tours.find(tour => tour.name === tourName);
+    if (tourConfig) {
+      const tour = createTourWithSteps(tourConfig.getSteps);
+      activeTourRef.current = tour;
+      tour.start();
+      tour.on('complete', () => endActiveTour());
+      tour.on('cancel', () => endActiveTour());
+    }
   };
 
   return (

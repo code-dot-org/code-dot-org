@@ -1,4 +1,11 @@
+import {StepOptions, Tour} from 'shepherd.js';
+
+import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
+
 import {AppName} from '../types';
+
+import {createOnboardingTourSteps} from './onboardingTourSteps';
+import {createValidationTourSteps} from './validationTourSteps';
 
 export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
@@ -16,6 +23,7 @@ export interface ProductTourConfig {
   // Description shown to level editors. Not necessary if triggeredByLevel is false, because the
   // tour will not be shown on the level edit page.
   description?: string;
+  getSteps: (tour: Tour) => StepOptions[];
 }
 
 const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
@@ -25,6 +33,7 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     triggeredByLevel: true,
     description:
       'Gives users an overview of the different components of the resource panel, including the tabs, extra links and continue button.',
+    getSteps: createOnboardingTourSteps,
   },
   [ProductTour.ResourcePanelValidation]: {
     name: ProductTour.ResourcePanelValidation,
@@ -32,11 +41,13 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     triggeredByLevel: true,
     description:
       'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
+    getSteps: createValidationTourSteps,
   },
   [ProductTour.SketchlabIntro]: {
     name: ProductTour.SketchlabIntro,
     displayName: 'Intro to Sketch Lab',
     triggeredByLevel: false,
+    getSteps: createSketchlabTourSteps,
   },
 };
 
@@ -44,6 +55,7 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 // Tours with triggeredByLevel=true require the tour to be available on the lab
 // and present in the level's productTours field.
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
+// TODO: instead of appName, pass in level properties so we can do more specific checks (such as a level with validation)
 export function isTourEnabledOnLevel(
   tour: ProductTour,
   appName: string,

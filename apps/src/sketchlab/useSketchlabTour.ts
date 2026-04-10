@@ -12,7 +12,7 @@ import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/us
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
-import {createSketchlabTourSteps} from './sketchlabTourSteps';
+import {createSketchlabTourSteps} from '../lab2/productTours/sketchlabTourSteps';
 
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
