@@ -66,6 +66,8 @@ declare module '@mui/material/Typography' {
   }
 }
 
+// Button and IconButton type augmentations (manually copied from component-library)
+// Source: frontend/packages/component-library/src/themes/code.org/types.d.ts
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
     extraSmall: true;
@@ -112,6 +114,7 @@ declare module '@mui/material/IconButton' {
   }
 }
 
+// Breadcrumbs type augmentations
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
     size?: 'xs' | 's' | 'm' | 'l';

@@ -5836,7 +5836,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/material@npm:^7.3.2":
+"@mui/material@npm:^7.3.2, @mui/material@npm:^7.3.5":
   version: 7.3.10
   resolution: "@mui/material@npm:7.3.10"
   dependencies:
@@ -11425,7 +11425,7 @@ __metadata:
     "@mapbox/search-js-react": "npm:^1.0.0"
     "@microbit/microbit-fs": "npm:^0.9.2"
     "@microsoft/immersive-reader-sdk": "npm:^1.1.0"
-    "@mui/material": "npm:^7.3.2"
+    "@mui/material": "npm:^7.3.5"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
     "@pyodide/webpack-plugin": "npm:^1.4.0"
     "@rails/actioncable": "npm:^8.0.201"
