@@ -4,17 +4,13 @@ import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
-import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
-import {
-  AI_TUTOR_VERSION_ACTION_REJECT,
-  Notification,
-} from '@cdo/apps/aichat/types';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import getRejectNotification from '@cdo/apps/weblab2/helpers/getRejectNotification';
 import {
   acceptAiTutorVersion,
   rejectAiTutorVersion,
@@ -62,15 +58,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   useEffect(() => {
     const possiblyRejectOnPageHide = async (event: PageTransitionEvent) => {
       if (viewingAiTutorVersionFileUpdates) {
-        const notification: Notification = {
-          timestamp: Date.now(),
-          removeId: getNewRemoveId(),
-          text: "You rejected AI Tutor's changes.",
-          notificationType: AI_TUTOR_VERSION_ACTION_REJECT,
-          includeInChatHistory: true,
-          files: files,
-        };
-
+        const notification = getRejectNotification(files);
         const payload = {
           newChatEvent: notification,
           aichatContext: ChatEventLogger.getInstance().aichatContext,
