@@ -60,6 +60,7 @@ interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
   attachments?: boolean;
   onUpdateLinting?: (errors: Array<{message: string}>) => void;
+  additionalAnnotations?: (text: string) => Diagnostic[];
   lintConfig?: {
     es5?: boolean;
     disableRecommendedJsConfig?: boolean;
@@ -132,7 +133,7 @@ function getLanguageExtension(mode: EditorMode): Extension | null {
   return languageExtensionMap[mode] || null;
 }
 
-const getLintExtension = (
+const getLanguageLintExtension = (
   mode: EditorMode,
   lintConfig?: Options['lintConfig']
 ): Extension | null => {
@@ -205,6 +206,7 @@ function resolvePreviewElement(
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
  * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
+ * @param {function} [options.additionalAnnotations] - optional lint annotation callback; receives editor text and returns additional diagnostics to display.
  * @param {Object} [options.lintConfig] - configuration options for linting (only applicable for javascript mode).
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
@@ -224,6 +226,7 @@ function initializeCodeMirror6(
     callback,
     attachments,
     onUpdateLinting,
+    additionalAnnotations,
     lineNumberFormatter,
     lineHighlightClassName,
     themeStyles,
@@ -233,7 +236,21 @@ function initializeCodeMirror6(
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
   const languageExtension = getLanguageExtension(mode);
-  const lintExtension = getLintExtension(mode, options.lintConfig);
+
+  const lintExtensions: Extension[] = [];
+  const languageLintExtension = getLanguageLintExtension(
+    mode,
+    options.lintConfig
+  );
+  if (languageLintExtension && onUpdateLinting) {
+    lintExtensions.push(languageLintExtension);
+  }
+  if (additionalAnnotations) {
+    lintExtensions.push(
+      linter(view => additionalAnnotations(view.state.doc.toString()))
+    );
+  }
+
   const errorLineHighlightField = lineHighlightClassName
     ? createErrorLineHighlightField(lineHighlightClassName)
     : null;
@@ -346,7 +363,7 @@ function initializeCodeMirror6(
     ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
     ...(errorLineHighlightField ? [errorLineHighlightField] : []),
-    ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
+    ...(lintExtensions.length ? [...lintExtensions, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {
         dropListeners.forEach(listener => listener(event));

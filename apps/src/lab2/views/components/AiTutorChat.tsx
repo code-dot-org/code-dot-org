@@ -37,6 +37,8 @@ interface AiTutorChatProps {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
   enableTutorVideos?: boolean;
+  isLessonDeepDive?: boolean;
+  lessonId?: number;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -50,6 +52,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
   enableTutorVideos,
+  isLessonDeepDive = false,
+  lessonId,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -67,12 +71,19 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
-      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+      ChatButton: ({
+        onClick,
+        disabled,
+      }: {
+        onClick: ChatButtonClickHandler;
+        disabled?: boolean;
+      }) => (
         <MuiButton
           variant="outlined"
           color="secondary"
           size="small"
           className={moduleStyles.chatButton}
+          disabled={disabled}
           onClick={() => onClick(button.value, button.analyticsProperties)}
           aria-label={button.label}
           startIcon={
@@ -121,7 +132,11 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
-        clientType={AiChatClientTypes.AI_TUTOR}
+        clientType={
+          isLessonDeepDive
+            ? AiChatClientTypes.LESSON_DEEP_DIVE
+            : AiChatClientTypes.AI_TUTOR
+        }
         modelParameters={modelParameters}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
@@ -131,6 +146,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
+        lessonId={lessonId}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>

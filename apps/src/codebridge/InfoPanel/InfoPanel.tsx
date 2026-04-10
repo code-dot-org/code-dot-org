@@ -131,6 +131,15 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
+  const documentationUrl = useMemo(() => {
+    if (appName === 'pythonlab') {
+      return '/docs/ide/pythonlab';
+    } else if (appName === 'weblab2') {
+      return '/docs/ide/weblab2';
+    }
+    return undefined;
+  }, [appName]);
+
   return (
     <div style={style} className={className}>
       <ResourcePanel
@@ -155,9 +164,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         aiTutorChatButtonData={aiTutorChatButtonData}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         enableTutorVideos={enableTutorVideos}
-        documentationUrl={
-          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
-        }
+        documentationUrl={documentationUrl}
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}
         hasInstructionsDrawer={appName === 'weblab2'}

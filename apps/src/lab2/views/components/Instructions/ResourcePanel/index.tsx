@@ -206,6 +206,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
+  const isPredictLevel =
+    instructionsProps.levelProperties.predictSettings?.isPredictLevel;
   const dispatch = useAppDispatch();
   const setBackpackTabAsActive = useCallback(
     () => setCurrentTab(Tabs.Backpack),
@@ -282,6 +284,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {...aiTutorProps}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
+            isPredictLevel={isPredictLevel}
           />
         );
       }
@@ -373,6 +376,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     onImageFlagged,
     hasInstructionsDrawer,
     validationSettings,
+    isPredictLevel,
   ]);
 
   const hasTabs = useMemo(() => {

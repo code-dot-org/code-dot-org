@@ -55,10 +55,10 @@ export async function isTextSafe(
   return classification === 'OK';
 }
 
-export async function isImageSafe(
+export async function getImageModerationStatus(
   file: GeneratedFile,
   assetUrl: string
-): Promise<boolean> {
+): Promise<'safe' | 'flagged' | 'error'> {
   const {filename, fileBuffer, mediaType} = prepareGeneratedFile(
     file,
     ACCEPTED_IMAGE_MEDIA_TYPES
@@ -69,5 +69,5 @@ export async function isImageSafe(
     flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
     assetUrl,
   });
-  return moderationStatus === 'ok' || moderationStatus === 'skipped';
+  return moderationStatus;
 }
