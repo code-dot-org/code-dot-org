@@ -90,6 +90,10 @@
   color: var(--text-neutral-tertiary);
 }
 
+.emptyText {
+  color: var(--text-neutral-quaternary);
+}
+
 .sortDropdown.sortDropdown {
   // hide the label text in the sort dropdown to show icon-only
   > button > span {

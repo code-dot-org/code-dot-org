@@ -210,9 +210,11 @@ const NetworkPanel: React.FC = () => {
     }
     return undefined;
   }, [selectedRequest]);
-  const blockToggleLabel = blockNetwork
-    ? 'Unblock network requests'
-    : 'Block network requests';
+  const blockToggleLabel = useMemo(
+    () =>
+      blockNetwork ? 'Unblock network activity' : 'Block network activity',
+    [blockNetwork]
+  );
 
   return (
     <div className={moduleStyles.networkPanelContainer}>
@@ -244,8 +246,9 @@ const NetworkPanel: React.FC = () => {
             {orderedNetworkRequests.length > 0 && (
               <IconDropdown
                 name="sort-order"
-                // This label is hidden with CSS to save space, but the IconDropdown requires it.
-                labelText={newestFirst ? 'Newest first' : 'Oldest first'}
+                // This label is hidden with CSS to save space, but IconDropdown requires it.
+                // We use aria-label for accessibility.
+                labelText={''}
                 size="xs"
                 className={moduleStyles.sortDropdown}
                 options={SORT_OPTIONS}
@@ -259,7 +262,9 @@ const NetworkPanel: React.FC = () => {
         </div>
         <div className={moduleStyles.requestList}>
           {orderedNetworkRequests.length === 0 ? (
-            <Typography variant="body4">No activity to show</Typography>
+            <Typography variant="body4" className={moduleStyles.emptyText}>
+              No activity to show
+            </Typography>
           ) : (
             orderedNetworkRequests.map(request => (
               <NetworkRequestChip
@@ -278,7 +283,7 @@ const NetworkPanel: React.FC = () => {
           <EmptyPanelPlaceholder
             iconName="globe"
             title="No network activity"
-            description="Network requests will appear here when your app makes API calls."
+            description="Network request details will appear here when your app makes API calls."
           />
         ) : (
           <>
