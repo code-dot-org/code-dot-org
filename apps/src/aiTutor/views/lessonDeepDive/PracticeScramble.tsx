@@ -16,7 +16,7 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import {Typography} from '@mui/material';
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 
 import {DraggableOptionCard} from './DraggableOptionCard';
 import {PracticeProblem, ScrambleSolution} from './types';
@@ -45,11 +45,6 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
   const [sortableOptions, setSortableOptions] = useState<string[]>(
     sortedOptions.map(s => s.option).sort(() => Math.random() - 0.5)
   );
-
-  useEffect(() => {
-    console.log(`sorted: ${sortedOptions.map(s => s.option)}`);
-    console.log(`sortable: ${sortableOptions}`);
-  }, [sortedOptions, sortableOptions]);
 
   const isCorrect = () => {
     for (let i = 0; i < sortableOptions.length; i++) {
