@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_07_175945) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -635,7 +635,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_07_175945) do
     t.string "is_shared_table", limit: 700
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "md5"
     t.index ["project_id"], name: "index_datablock_storage_tables_on_project_id"
   end
 

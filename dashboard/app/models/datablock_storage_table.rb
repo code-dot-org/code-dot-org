@@ -6,7 +6,6 @@
 #  table_name      :string(700)      not null, primary key
 #  columns         :json
 #  is_shared_table :string(700)
-#  md5             :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
