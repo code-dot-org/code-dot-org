@@ -89,3 +89,10 @@
 .placeholderIcon {
   color: var(--text-neutral-tertiary);
 }
+
+.sortDropdown.sortDropdown {
+  // hide the label text in the sort dropdown to show icon-only
+  > button > span {
+    display: none;
+  }
+}

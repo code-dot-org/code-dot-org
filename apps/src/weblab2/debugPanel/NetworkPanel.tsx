@@ -1,4 +1,5 @@
-import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {IconDropdown} from '@code-dot-org/component-library/dropdown';
+import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
@@ -18,6 +19,19 @@ import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 import NetworkRequestChip from './NetworkRequestChip';
 
 import moduleStyles from './network-panel.module.scss';
+
+const SORT_OPTIONS: IconDropdownOption[] = [
+  {
+    value: 'newest',
+    label: 'Newest first',
+    icon: {iconName: 'arrow-down-wide-short'},
+  },
+  {
+    value: 'oldest',
+    label: 'Oldest first',
+    icon: {iconName: 'arrow-up-short-wide'},
+  },
+] as const;
 
 const NetworkPanel: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -196,7 +210,9 @@ const NetworkPanel: React.FC = () => {
     }
     return undefined;
   }, [selectedRequest]);
-  const blockToggleLabel = blockNetwork ? 'Unblock network' : 'Block network';
+  const blockToggleLabel = blockNetwork
+    ? 'Unblock network requests'
+    : 'Block network requests';
 
   return (
     <div className={moduleStyles.networkPanelContainer}>
@@ -226,32 +242,17 @@ const NetworkPanel: React.FC = () => {
               </MuiIconButton>
             </WithTooltip>
             {orderedNetworkRequests.length > 0 && (
-              <ActionDropdown
+              <IconDropdown
                 name="sort-order"
+                // This label is hidden with CSS to save space, but the IconDropdown requires it.
                 labelText={newestFirst ? 'Newest first' : 'Oldest first'}
                 size="xs"
-                options={[
-                  {
-                    value: 'newest',
-                    label: 'Newest first',
-                    icon: {iconName: 'arrow-down-wide-short'},
-                    onClick: () => setNewestFirst(true),
-                  },
-                  {
-                    value: 'oldest',
-                    label: 'Oldest first',
-                    icon: {iconName: 'arrow-up-short-wide'},
-                    onClick: () => setNewestFirst(false),
-                  },
-                ]}
-                triggerButtonProps={{
-                  icon: {
-                    iconName: 'sort',
-                  },
-                  isIconOnly: true,
-                  type: 'secondary',
-                  color: 'gray',
-                }}
+                className={moduleStyles.sortDropdown}
+                options={SORT_OPTIONS}
+                selectedOption={newestFirst ? SORT_OPTIONS[0] : SORT_OPTIONS[1]}
+                onChange={option => setNewestFirst(option.value === 'newest')}
+                aria-label={'Change sort order'}
+                color={'gray'}
               />
             )}
           </div>
