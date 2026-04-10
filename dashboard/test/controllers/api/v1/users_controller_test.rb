@@ -286,7 +286,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(teacher)
 
     post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
-    assert_response :unauthorized
+    assert_response :forbidden
   end
 
   test 'student cannot modify ai tutor access' do
@@ -298,13 +298,13 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response :unauthorized
   end
 
-  test 'updating ai tutor access for uncreated user returns unauthorized' do
+  test 'updating ai tutor access for uncreated user returns forbidden' do
     teacher = create(:teacher)
     sign_in(teacher)
 
     post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
 
-    assert_response :unauthorized
+    assert_response :forbidden
   end
 
   test 'set_seen_ta_scores updates seen_ta_scores_map' do

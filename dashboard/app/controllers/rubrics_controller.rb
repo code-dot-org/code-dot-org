@@ -121,10 +121,14 @@ class RubricsController < ApplicationController
     return head :forbidden unless can?(:manage, student)
 
     # Get the latest rubric evaluation
-    rubric_ai_evaluation = RubricAiEvaluation.where(
+    scope = RubricAiEvaluation.where(
       rubric_id: permitted_params[:id],
       user_id: student.id
-    ).order(updated_at: :desc).first
+    )
+    # Demo students are shared across teachers, so scope to the current teacher's
+    # evaluations to prevent cross-teacher data leakage.
+    scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(student.id)
+    rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
     learning_goal_ai_evaluations = rubric_ai_evaluation&.learning_goal_ai_evaluations || []
@@ -157,8 +161,12 @@ class RubricsController < ApplicationController
       next unless @user&.student_of?(current_user)
 
       learning_goal_ids = @rubric.learning_goals.pluck(:id)
+      scope = LearningGoalTeacherEvaluation.where(user_id: user_id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil)
+      # Demo students are shared across teachers, so scope to the current teacher's
+      # evaluations to prevent cross-teacher data leakage.
+      scope = scope.where(teacher_id: current_user.id) if Policies::DemoSections.demo_student?(user_id)
       teacher_evaluations =
-        LearningGoalTeacherEvaluation.where(user_id: user_id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil).
+        scope.
           group_by(&:learning_goal_id).
           map {|_, eval_list| eval_list.max_by(&:submitted_at)}
       teacher_evals.append({user_name: @user.name, user_family_name: @user.family_name, user_id: user_id, eval: teacher_evaluations.map(&:summarize_for_participant)})
@@ -260,10 +268,14 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    rubric_ai_evaluation = RubricAiEvaluation.where(
+    scope = RubricAiEvaluation.where(
       rubric_id: @rubric.id,
       user_id: user_id
-    ).order(updated_at: :desc).first
+    )
+    # Demo students are shared across teachers, so scope to the current teacher's
+    # evaluations to prevent cross-teacher data leakage.
+    scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(user_id.to_i)
+    rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
     status = nil
     if rubric_ai_evaluation&.status
@@ -305,10 +317,14 @@ class RubricsController < ApplicationController
       attempted = attempted_at
       evaluated = ai_evaluated_at # only finished, successful evaluations
       last_attempt_evaluated = attempted && evaluated && evaluated >= attempted
-      rubric_ai_evaluation = RubricAiEvaluation.where(
+      scope = RubricAiEvaluation.where(
         rubric_id: @rubric.id,
         user_id: user_id
-      ).order(updated_at: :desc).first
+      )
+      # Demo students are shared across teachers, so scope to the current teacher's
+      # evaluations to prevent cross-teacher data leakage.
+      scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(user_id)
+      rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
       status = rubric_ai_evaluation&.status
       is_pending = status == RUBRIC_AI_EVALUATION_STATUS[:QUEUED] || status == RUBRIC_AI_EVALUATION_STATUS[:RUNNING]

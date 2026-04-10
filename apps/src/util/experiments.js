@@ -65,8 +65,6 @@ experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
-// Enable AI Content Safety image moderation
-experiments.AI_CONTENT_SAFETY = 'ai-content-safety';
 // Enable Onboarding experiments
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
