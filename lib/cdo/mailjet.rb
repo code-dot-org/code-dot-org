@@ -76,6 +76,21 @@ module MailJet
     add_to_contact_list(contact, contact_list_id)
   end
 
+  def self.create_contact_and_add_to_course_list(user, unit_group_name)
+    return unless enabled?
+
+    return unless user&.id.present?
+    return unless user.teacher?
+
+    list_key = MAILJET_COURSE_ASSIGNMENT_CONTACT_LISTS[unit_group_name]
+    return unless list_key
+
+    contact = find_or_create_contact(user.email, user.name)
+
+    contact_list_id = CONTACT_LISTS[list_key][subaccount.to_sym][:default]
+    add_to_contact_list(contact, contact_list_id)
+  end
+
   def self.find_or_create_contact(email, name)
     return nil unless enabled?
     return nil unless valid_email?(email)

@@ -259,6 +259,18 @@ class Section < ApplicationRecord
     add_instructor(user)
   end
 
+  after_save :add_teacher_to_mailjet_course_list
+  def add_teacher_to_mailjet_course_list
+    return unless saved_change_to_course_id? && course_id.present? && teacher.present?
+
+    unit_group = UnitGroup.get_from_cache(course_id)
+    return unless unit_group
+
+    MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
+  rescue => exception
+    Honeybadger.notify(exception)
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
