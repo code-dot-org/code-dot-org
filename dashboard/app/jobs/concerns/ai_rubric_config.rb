@@ -77,54 +77,38 @@ class AiRubricConfig
       )
   end
 
-  # There are two main validations we want to perform on our AI rubric config in S3:
+  # Validates AI rubric config in S3 for every rubric. For each rubric:
   #
-  # 1) For each rubric in our database with an s3_config_dir set, we want to
-  #   confirm that we can successfully read the essential config files from S3
-  #   (params.json, system_prompt.txt, and standard_rubric.csv). If any of these
-  #   files are missing, an error will be raised.
+  # 1) If s3_config_dir is set, confirms that essential config files exist in
+  #    S3 (params.json, system_prompt.txt, standard_rubric.csv).
   #
-  # 2) For each rubric in our database with ai-enabled learning goals, we want
-  #    to confirm that the rubric has an s3_config_dir set and that every
-  #    ai-enabled learning goal in the database has a corresponding learning
-  #    goal in the standard_rubric.csv file in S3.
+  # 2) If any learning goals are ai-enabled, confirms the rubric has an
+  #    s3_config_dir and that each ai-enabled learning goal has a matching
+  #    entry in standard_rubric.csv.
   def self.validate_ai_config
-    rubrics_with_s3_config = Rubric.where.not(s3_config_dir: [nil, ''])
-    lesson_s3_names = rubrics_with_s3_config.pluck(:s3_config_dir).uniq
-    code = 'hello world'
-    lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name, code)
+    # Use 4 threads to parallelize S3 reads. Limited to 4 because the
+    # ActiveRecord connection pool is 5 (see database.yml) and the main
+    # thread holds one connection.
+    Parallel.each(Rubric.all.to_a, in_threads: 4) do |rubric|
+      validate_ai_config_for_rubric(rubric)
     end
-
-    rubrics_with_ai = Rubric.joins(:learning_goals).where(learning_goals: {ai_enabled: true}).distinct
-    validate_learning_goals(rubrics_with_ai)
 
     S3_AI_RELEASE_PATH
   end
 
-  def self.get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
+  def self.validate_ai_config_for_rubric(rubric)
+    return if CDO.aws_s3_emulated
+    s3_config_dir = rubric.s3_config_dir
+    validate_s3_config_dir(s3_config_dir) if s3_config_dir.present?
+    validate_learning_goals_for_rubric(rubric)
   end
 
-  private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
+  private_class_method def self.validate_s3_config_dir(lesson_s3_name)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
-    get_openai_params(lesson_s3_name, code)
+    get_openai_params(lesson_s3_name, 'hello world')
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
-
-  # For each rubric with ai-enabled learning goals, validate that the rubric
-  # has s3_config_dir set and that every ai-enabled learning goal in the
-  # database has a corresponding learning goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals(rubrics)
-    rubrics.each do |rubric|
-      validate_learning_goals_for_rubric(rubric)
-    rescue StandardError => exception
-      raise "Error validating learning goals for rubric #{rubric.id} (level #{rubric.level&.name.inspect}): #{exception.message}"
-    end
   end
 
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
@@ -139,5 +123,11 @@ class AiRubricConfig
     if missing_learning_goals.any?
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
+  end
+
+  private_class_method def self.get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
   end
 end

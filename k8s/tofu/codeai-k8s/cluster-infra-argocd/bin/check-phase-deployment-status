@@ -57,8 +57,8 @@ Tempfile.create("kubeconfig") do |kubeconfig|
     clusters:
     - name: cluster
       cluster:
-        certificate-authority-data: #{cluster.fetch("cluster_certificate_authority_data")}
-        server: #{cluster.fetch("cluster_endpoint")}
+        certificate-authority-data: #{cluster.fetch('cluster_certificate_authority_data')}
+        server: #{cluster.fetch('cluster_endpoint')}
     contexts:
     - name: context
       context:
