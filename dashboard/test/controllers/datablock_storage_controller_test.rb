@@ -14,13 +14,8 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     Cdo::Throttle.stubs(:throttle).returns(false)
     # stub writes so none of the models serialize to disk during testing
+    # alsdfjasldk
     File.stubs(:write)
-  end
-
-  teardown do
-    # Explicitly unstub; we're not sure why, but we get a memory leak in Drone
-    # otherwise
-    File.unstub(:write)
   end
 
   def _url(action)
