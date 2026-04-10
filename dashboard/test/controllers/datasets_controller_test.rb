@@ -2,6 +2,10 @@ require 'test_helper'
 
 class DatasetsControllerTest < ActionController::TestCase
   setup do
+    # stub writes so none of the models serialize to disk during testing
+    # aldkjfasl
+    File.stubs(:write)
+
     @levelbuilder = create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
