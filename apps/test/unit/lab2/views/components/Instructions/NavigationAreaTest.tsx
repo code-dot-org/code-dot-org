@@ -299,6 +299,33 @@ describe('NavigationArea', () => {
       });
       expect(getContinueButton().dataset.disabled).toBe('false');
     });
+
+    it('is enabled when requireRun=true but has already continued', () => {
+      mockGetCurrentLevel.mockReturnValue({
+        id: '1',
+        levelNumber: 1,
+        status: LevelStatus.perfect,
+      });
+      renderDefault({requireRun: true, hasRun: false});
+      const btn = getContinueButton();
+      expect(btn.dataset.disabled).toBe('false');
+      expect(btn.dataset.tooltip).toBeUndefined();
+    });
+
+    it('is enabled when requireEditToContinue but has already continued', () => {
+      mockGetCurrentLevel.mockReturnValue({
+        id: '1',
+        levelNumber: 1,
+        status: LevelStatus.perfect,
+      });
+      renderDefault({
+        levelProperties: makeLevelProperties({requireEditToContinue: true}),
+        hasEdited: false,
+      });
+      const btn = getContinueButton();
+      expect(btn.dataset.disabled).toBe('false');
+      expect(btn.dataset.tooltip).toBeUndefined();
+    });
   });
 
   describe('SubmitButton enabled/disabled state', () => {
