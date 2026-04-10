@@ -3,7 +3,6 @@ require 'test_helper'
 class DatasetsControllerTest < ActionController::TestCase
   setup do
     # stub writes so none of the models serialize to disk during testing
-    # aldkjfasl
     File.stubs(:write)
 
     @levelbuilder = create(:levelbuilder)
@@ -29,6 +28,12 @@ class DatasetsControllerTest < ActionController::TestCase
         }
       ]
     }
+  end
+
+  teardown do
+    # Explicitly unstub; we're not sure why, but we get a memory leak in Drone
+    # otherwise
+    File.unstub(:write)
   end
 
   test 'update_manifest: can update manifest' do
