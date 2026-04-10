@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+# opentelemetry-sdk is not auto-required during Rails boot (the require lives inside
+# Observability::OpenTelemetry.setup, gated by running_web_application?). Pre-require
+# it here so constants are available for stubbing regardless of which test_helper
+# is on the load path.
+require 'opentelemetry-sdk'
 
 describe Observability::OpenTelemetry do
   before do
@@ -41,6 +46,17 @@ describe Observability::OpenTelemetry do
       it 'sets the service name to dashboard' do
         fake_config = mock('otel_config')
         fake_config.expects(:service_name=).with('dashboard')
+        fake_config.stubs(:sampler=)
+        fake_config.stubs(:use_all)
+        fake_config.stubs(:add_span_processor)
+        OpenTelemetry::SDK.expects(:configure).yields(fake_config)
+        Observability::OpenTelemetry.setup
+      end
+
+      it 'sets the sampler to ALWAYS_ON' do
+        fake_config = mock('otel_config')
+        fake_config.stubs(:service_name=)
+        fake_config.expects(:sampler=).with(OpenTelemetry::SDK::Trace::Samplers::ALWAYS_ON)
         fake_config.stubs(:use_all)
         fake_config.stubs(:add_span_processor)
         OpenTelemetry::SDK.expects(:configure).yields(fake_config)

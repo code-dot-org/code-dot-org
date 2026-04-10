@@ -18,6 +18,13 @@ module Observability
       ::OpenTelemetry::SDK.configure do |c|
         c.service_name = 'dashboard'
 
+        # Always sample every span so the full span volume reaches the collector.
+        # The default parentbased_always_on sampler would drop spans whose remote
+        # parent carries traceparent: sampled=0 (e.g. unsampled frontend sessions),
+        # causing Prometheus spanmetrics to undercount. Sampling decisions for the
+        # APM backend are made at the collector, not here.
+        c.sampler = ::OpenTelemetry::SDK::Trace::Samplers::ALWAYS_ON
+
         # Enable all ruby instrumentation
         c.use_all(
           'OpenTelemetry::Instrumentation::ActionPack' => {

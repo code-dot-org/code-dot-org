@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+# sentry-ruby is not auto-required during Rails boot (the require lives inside
+# Observability::Sentry.setup, gated by running_web_application?). Pre-require
+# it here so the Sentry constant is available for stubbing.
+require 'sentry-ruby'
 
 describe Observability::Sentry do
   before do
@@ -36,7 +40,7 @@ describe Observability::Sentry do
       end
 
       describe 'when dashboard_sentry_dsn is blank' do
-        before {CDO.dashboard_sentry_dsn = nil}
+        before {CDO.stubs(:dashboard_sentry_dsn).returns(nil)}
 
         it 'does not initialize Sentry' do
           Sentry.expects(:init).never
@@ -66,7 +70,7 @@ describe Observability::Sentry do
       end
 
       describe 'when CDO.enable_opentelemetry is true' do
-        before {CDO.enable_opentelemetry = true}
+        before {CDO.stubs(:enable_opentelemetry).returns(true)}
 
         it 'enables the OTLP integration and defers exporting and propagation to the collector' do
           mock_otlp = mock('otlp_config')
