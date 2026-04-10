@@ -15,7 +15,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
-import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -49,7 +49,7 @@ type CodebridgeProps = {
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  tutorVideos?: JsonVideoFileObject[];
+  tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
 };
 

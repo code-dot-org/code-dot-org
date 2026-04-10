@@ -10,7 +10,7 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
-import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
@@ -37,7 +37,7 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
-  tutorVideos?: JsonVideoFileObject[];
+  tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
 }

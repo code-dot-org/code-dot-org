@@ -6,14 +6,14 @@ import painterObjectUrl from '@cdo/static/json/jsonVideo/pythonLab/Painter_Objec
 import variablesUrl from '@cdo/static/json/jsonVideo/pythonLab/Variables_V1.json';
 import whileLoopUrl from '@cdo/static/json/jsonVideo/pythonLab/While_Loops_V1.json';
 
-import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 
 /**
  *  Importing from @cdo/static/json doesn't actually import the file but rather a path to
  *  the file. We need to assert the result is a string.
  **/
 
-export const pythonLabVideoFiles: JsonVideoFileObject[] = [
+export const pythonLabVideoFiles: JsonVideoFileMetadata[] = [
   {
     description:
       'This video covers the basics of variables, describing them as labeled containers or boxes that store information in memory. It introduces three fundamental data types: Integers (Ints), Strings, and Booleans. The speech explains how to assign values using the equal sign and how to use the print function to output these values by referencing the variable name without quotes.',

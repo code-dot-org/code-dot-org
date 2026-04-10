@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
-import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -22,7 +22,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
-  tutorVideos?: JsonVideoFileObject[];
+  tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
 }
 

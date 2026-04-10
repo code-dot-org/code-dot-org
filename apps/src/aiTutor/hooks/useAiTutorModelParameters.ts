@@ -2,7 +2,7 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {getJsonVideoPrompt, type JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {getJsonVideoPrompt, type JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import experiments from '@cdo/apps/util/experiments';
@@ -46,7 +46,7 @@ export const baseModelParameters: ModelParameters = {
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPrompt?: string;
   aiTutorJsonSchema?: object;
-  tutorVideos?: JsonVideoFileObject[];
+  tutorVideos?: JsonVideoFileMetadata[];
 }
 
 export const useAiTutorModelParameters = (

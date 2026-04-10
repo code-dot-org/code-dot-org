@@ -44,7 +44,7 @@ import {
   PYTHONLAB_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
-import {pythonLabVideoFiles} from './pythonLabVideoFiles';
+import {pythonLabVideoFiles} from './pythonLabVideos';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';

@@ -9,7 +9,7 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
-import type {JsonVideoFileObject} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
@@ -135,7 +135,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  tutorVideos?: JsonVideoFileObject[];
+  tutorVideos?: JsonVideoFileMetadata[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;

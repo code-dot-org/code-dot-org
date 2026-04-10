@@ -1,9 +1,9 @@
-export type JsonVideoFileObject = {
+export type JsonVideoFileMetadata = {
   description: string;
   url: string;
 };
 
-export const getJsonVideoPrompt = (videos: JsonVideoFileObject[] | undefined) => {
+export const getJsonVideoPrompt = (videos: JsonVideoFileMetadata[] | undefined) => {
   if (!videos || videos.length === 0) {
     return ``;
   }
