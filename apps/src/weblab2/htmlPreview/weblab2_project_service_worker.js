@@ -101,9 +101,10 @@ function main() {
         let performanceEndTime;
         let error;
         try {
-          const fetchRequest = fetch(event.request);
-          event.respondWith(fetchRequest);
-          response = await fetchRequest;
+          // We don't need to return here, the fetch will happen as normal. We do a separate fetch so we can
+          // read the response for the broadcast without interfering with the response that goes back to the page
+          // (responses can only be read once).
+          response = await fetch(event.request);
           performanceEndTime = performance.now();
         } catch (e) {
           error = e;
