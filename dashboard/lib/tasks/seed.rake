@@ -449,9 +449,16 @@ namespace :seed do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
-  # Courses must be seeded before JIT PL content because the resources refer
-  # to a pre-defined JIT PL course.
-  JIT_PL_DEPENDENCIES = [:environment, :courses]
+  timed_task_with_logging courses_jit_pl: :environment do
+    # seed the course that is required for just-in-time PL resources
+    %w(
+      just-in-time-pl
+    ).each do |course_name|
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
+    end
+  end
+
+  JIT_PL_DEPENDENCIES = [:environment, :courses_jit_pl]
 
   timed_task_with_logging jit_pl_concepts: JIT_PL_DEPENDENCIES do
     JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)
@@ -570,7 +577,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
