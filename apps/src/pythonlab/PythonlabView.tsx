@@ -268,6 +268,7 @@ const PythonlabView: React.FunctionComponent<
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          enableTutorVideos={true}
         />
       )}
       {showProjectPickerModal && (
