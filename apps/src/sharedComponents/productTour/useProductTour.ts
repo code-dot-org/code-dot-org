@@ -1,4 +1,4 @@
-import {useMemo} from 'react';
+import {useMemo, useRef} from 'react';
 import {StepOptions, Tour} from 'shepherd.js';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -32,6 +32,15 @@ const useProductTour = ({
   onCancel,
   additionalStepOptions,
 }: UseProductTourProps) => {
+  // Store callbacks in refs so the tour instance doesn't need to be recreated
+  // when callback identity changes between renders.
+  const onStartRef = useRef(onStart);
+  onStartRef.current = onStart;
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
+  const onCancelRef = useRef(onCancel);
+  onCancelRef.current = onCancel;
+
   const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
     const urlParams = new URLSearchParams(window.location.search);
@@ -41,13 +50,11 @@ const useProductTour = ({
     }
     const tour = createTourWithSteps(getSteps, additionalStepOptions);
 
-    if (onStart) {
-      tour.on('start', onStart);
-    }
+    tour.on('start', () => onStartRef.current && onStartRef.current());
 
     tour.on('complete', () => {
       trySetLocalStorage(localStorageKey, 'yes');
-      onComplete && onComplete();
+      onCompleteRef.current && onCompleteRef.current();
     });
 
     tour.on('cancel', () => {
@@ -55,18 +62,10 @@ const useProductTour = ({
         ? tour.steps.indexOf(tour.currentStep)
         : 0;
       trySetLocalStorage(localStorageKey, 'yes');
-      onCancel && onCancel(currentIndex);
+      onCancelRef.current && onCancelRef.current(currentIndex);
     });
     return tour;
-  }, [
-    additionalStepOptions,
-    getSteps,
-    localStorageKey,
-    onCancel,
-    onComplete,
-    onStart,
-    tourAvailable,
-  ]);
+  }, [additionalStepOptions, getSteps, localStorageKey, tourAvailable]);
 
   return {tour};
 };

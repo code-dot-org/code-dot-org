@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player';
@@ -6,7 +7,6 @@ import type {VideoObject} from 'schema-dts';
 
 import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 import Facade from '@/video/Facade';
 import NativeVideo from '@/video/NativeVideo';
 import {RenderState, VideoProps} from '@/video/types';
@@ -126,12 +126,14 @@ const Video: React.FC<VideoProps> = ({
               iconName="exclamation-circle"
               iconStyle="solid"
             />
-            <BodyTwoText>
-              <StrongText>{errorHeading || 'Video unavailable'}</StrongText>
-            </BodyTwoText>
-            <BodyThreeText>
+            <Typography variant="body2" gutterBottom>
+              <Typography variant="strong">
+                {errorHeading || 'Video unavailable'}
+              </Typography>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
               {errorBody || 'This video is blocked on your network.'}
-            </BodyThreeText>
+            </Typography>
           </div>
         );
       case 'cookie-blocked':
@@ -141,15 +143,15 @@ const Video: React.FC<VideoProps> = ({
               iconName="exclamation-circle"
               iconStyle="solid"
             />
-            <BodyTwoText>
-              <StrongText>
+            <Typography variant="body2" gutterBottom>
+              <Typography variant="strong">
                 {errorHeading || 'Cookie consent required'}
-              </StrongText>
-            </BodyTwoText>
-            <BodyThreeText>
+              </Typography>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
               {errorBody ||
                 'Please enable "Functional Cookies" and refresh the page to play this video.'}
-            </BodyThreeText>
+            </Typography>
             <Button
               className={moduleStyles.cookieConsentButton}
               onClick={() => {
@@ -168,7 +170,11 @@ const Video: React.FC<VideoProps> = ({
     >
       <div className={moduleStyles.videoWrapper}>{getVideoPlayer()}</div>
       <div className={moduleStyles.footer}>
-        {showCaption && <Figcaption>{videoTitle}</Figcaption>}
+        {showCaption && (
+          <Typography variant="figcaption" gutterBottom>
+            {videoTitle}
+          </Typography>
+        )}
         {videoFallback && (
           <LinkButton
             className={moduleStyles.download}
@@ -186,7 +192,6 @@ const Video: React.FC<VideoProps> = ({
           />
         )}
       </div>
-
       {/* JSON-LD for structured data. Needed for Google SEO.
       (see https://developers.google.com/search/docs/appearance/structured-data/video#json-ld) */}
       {videoTitle && posterThumbnail && uploadDate && (
