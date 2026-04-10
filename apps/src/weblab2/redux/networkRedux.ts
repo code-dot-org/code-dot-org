@@ -27,12 +27,12 @@ interface ResponseData {
 
 export interface Weblab2NetworkState {
   requests: NetworkEntry[];
-  blockNetwork: boolean;
+  networkRequestsBlocked: boolean;
 }
 
 const initialState: Weblab2NetworkState = {
   requests: [],
-  blockNetwork: false,
+  networkRequestsBlocked: false,
 };
 
 const networkSlice = createSlice({
@@ -58,15 +58,19 @@ const networkSlice = createSlice({
     clearRequests: state => {
       state.requests = [];
     },
-    setBlockNetwork: (state, action: PayloadAction<boolean>) => {
-      state.blockNetwork = action.payload;
+    setNetworkRequestsBlocked: (state, action: PayloadAction<boolean>) => {
+      state.networkRequestsBlocked = action.payload;
     },
   },
 });
 
 registerReducers({weblab2Network: networkSlice.reducer});
 
-export const {addRequestData, addResponseData, clearRequests, setBlockNetwork} =
-  networkSlice.actions;
+export const {
+  addRequestData,
+  addResponseData,
+  clearRequests,
+  setNetworkRequestsBlocked,
+} = networkSlice.actions;
 
 export default networkSlice.reducer;

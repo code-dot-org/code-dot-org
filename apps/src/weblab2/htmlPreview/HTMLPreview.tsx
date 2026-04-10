@@ -145,7 +145,7 @@ export const HTMLPreview: React.FC = () => {
   const allowUserScripts =
     !isPredictLevel || hasSubmittedPredictResponse || isStartMode;
   const blockNetwork = useAppSelector(
-    state => state.weblab2Network.blockNetwork
+    state => state.weblab2Network.networkRequestsBlocked
   );
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =

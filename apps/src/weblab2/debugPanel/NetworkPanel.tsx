@@ -6,13 +6,15 @@ import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import PendingDivider from '@cdo/apps/weblab2/debugPanel/images/Pending.svg';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
-import {NetworkEntry, setBlockNetwork} from '../redux/networkRedux';
+import {NetworkEntry, setNetworkRequestsBlocked} from '../redux/networkRedux';
 
 import DetailsBox, {DetailsField} from './DetailsBox';
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
@@ -39,7 +41,7 @@ const NetworkPanel: React.FC = () => {
     state => state.weblab2Network.requests
   );
   const blockNetwork = useAppSelector(
-    state => state.weblab2Network.blockNetwork
+    state => state.weblab2Network.networkRequestsBlocked
   );
   const [orderedNetworkRequests, setOrderedNetworkRequests] = useState(
     [...networkRequests].reverse()
@@ -48,6 +50,11 @@ const NetworkPanel: React.FC = () => {
     NetworkEntry | undefined
   >(orderedNetworkRequests.length > 0 ? orderedNetworkRequests[0] : undefined);
   const [newestFirst, setNewestFirst] = useState(true);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    // Unblock network requests on level change to avoid confusion.
+    dispatch(setNetworkRequestsBlocked(false));
+  });
 
   useEffect(() => {
     if (!selectedRequest && orderedNetworkRequests.length > 0) {
@@ -234,7 +241,9 @@ const NetworkPanel: React.FC = () => {
                 color={blockNetwork ? 'error' : 'tertiary'}
                 variant={blockNetwork ? 'contained' : 'outlined'}
                 size="extraSmall"
-                onClick={() => dispatch(setBlockNetwork(!blockNetwork))}
+                onClick={() =>
+                  dispatch(setNetworkRequestsBlocked(!blockNetwork))
+                }
                 aria-label={blockToggleLabel}
                 type="button"
               >
