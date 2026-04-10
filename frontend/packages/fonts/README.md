@@ -38,6 +38,7 @@ If you are looking to update the FontAwesome files in the `injectFontAwesome` fu
 3. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files listed in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
 
 **Example CSS with absolute paths**
+
 ```
 @font-face {
   font-family: "Font Awesome Kit";
