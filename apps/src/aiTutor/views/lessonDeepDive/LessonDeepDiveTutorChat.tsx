@@ -2,7 +2,7 @@ import React, {FC, useCallback} from 'react';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 
-import {LessonDeepDiveData} from './types';
+import {AssessmentQuestionResult, LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-tutor-chat.module.scss';
 
@@ -11,6 +11,7 @@ interface LessonDeepDiveTutorChatProps {
   lessonName: string;
   lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
+  assessmentAnalysis: AssessmentQuestionResult[];
 }
 
 const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
@@ -18,11 +19,18 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
   lessonName,
   lessonSummary,
   vocabulary,
+  assessmentAnalysis,
 }) => {
   const hiddenContextCallback = useCallback(async () => {
     const vocabList = vocabulary
       .map(v => `- ${v.word}: ${v.definition}`)
       .join('\n');
+
+    const attempted = assessmentAnalysis.filter(q => q.attempts > 0);
+    const assessmentLines = attempted.map((q, i) => {
+      const status = q.correct ? 'correct' : 'incorrect';
+      return `- Question ${i + 1}: ${q.attempts} attempt${q.attempts === 1 ? '' : 's'}, ${status}`;
+    });
 
     return [
       `The student has just finished a lesson titled "${lessonName}".`,
@@ -32,10 +40,13 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
       ...(vocabulary.length > 0
         ? ['', 'Vocabulary from this lesson:', vocabList]
         : []),
+      ...(assessmentLines.length > 0
+        ? ['', 'Assessment question results:', ...assessmentLines]
+        : []),
       '',
       'Help the student review and reflect on what they learned and provide guidance for their misunderstandings.',
     ].join('\n');
-  }, [lessonName, lessonSummary, vocabulary]);
+  }, [lessonName, lessonSummary, vocabulary, assessmentAnalysis]);
 
   return (
     <div className={styles.container}>

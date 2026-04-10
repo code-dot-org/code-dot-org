@@ -1,9 +1,18 @@
+export type AssessmentQuestionResult = {
+  level_id: number;
+  script_level_id: number;
+  attempts: number;
+  correct: boolean;
+  evaluation?: string;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
+  assessmentAnalysis: AssessmentQuestionResult[];
 };
 
 export type PracticeProblem = {
