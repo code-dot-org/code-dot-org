@@ -1,8 +1,9 @@
 import cookies from 'js-cookie';
 
-// TODO: should we move these to shared constants?
 const STABLE_ID_KEY = 'statsig_stable_id';
 const TARGET_HOSTNAME = 'code.org';
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 // Read the statsig_stable_id cookie. Returns null if not set (i.e., user
 // has not given OneTrust C0002 consent).
@@ -30,7 +31,7 @@ function handleOutboundClick(event) {
   }
 
   const stableId = getStableIdFromCookie();
-  if (!stableId) {
+  if (!stableId || !UUID_RE.test(stableId)) {
     return;
   }
 
@@ -38,11 +39,13 @@ function handleOutboundClick(event) {
   anchor.href = url.toString();
 }
 
+let initialized = false;
+
 // Register a single delegated click listener on document.
 export function initOutboundStableId() {
-  if (typeof document === 'undefined') {
+  if (typeof document === 'undefined' || initialized) {
     return;
   }
-  console.log('Initializing outbound stable ID handler');
+  initialized = true;
   document.addEventListener('click', handleOutboundClick);
 }

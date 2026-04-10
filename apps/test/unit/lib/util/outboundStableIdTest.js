@@ -9,16 +9,16 @@ describe('outboundStableId', () => {
   const stableId = '550e8400-e29b-41d4-a716-446655440000';
   let cookieGetStub;
 
+  beforeAll(() => {
+    initOutboundStableId();
+  });
+
   beforeEach(() => {
     cookieGetStub = stub(cookies, 'get');
-    initOutboundStableId();
   });
 
   afterEach(() => {
     cookieGetStub.restore();
-    // Remove the listener by re-adding (we can't easily remove it since
-    // the handler is private). Tests use isolated anchors so stale listeners
-    // on document don't interfere.
   });
 
   function clickAnchor(href) {
@@ -40,6 +40,14 @@ describe('outboundStableId', () => {
 
   it('does nothing when cookie does not exist', () => {
     cookieGetStub.withArgs('statsig_stable_id').returns(undefined);
+    const result = clickAnchor('https://code.org/students');
+    expect(result).to.not.include('statsig_stable_id');
+  });
+
+  it('does not append param when cookie value is not a valid UUID', () => {
+    cookieGetStub
+      .withArgs('statsig_stable_id')
+      .returns('<script>alert(1)</script>');
     const result = clickAnchor('https://code.org/students');
     expect(result).to.not.include('statsig_stable_id');
   });

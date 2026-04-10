@@ -454,7 +454,7 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  UUID_RE = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
+  UUID_REGEX = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
 
   # Creates a statsig stable id for use of signed-out user tracking.
   # This cookie is used by the Statsig SDK for both JS and Ruby.
@@ -466,7 +466,7 @@ class ApplicationController < ActionController::Base
   # existing OneTrust consent-gated path.
   protected def initialize_statsig_stable_id
     param_stable_id = params[:statsig_stable_id]
-    if param_stable_id.present? && param_stable_id.match?(UUID_RE)
+    if param_stable_id.present? && param_stable_id.match?(UUID_REGEX)
       session[:statsig_stable_id] = param_stable_id
       @statsig_param_id = param_stable_id
       return

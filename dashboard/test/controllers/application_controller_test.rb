@@ -225,12 +225,12 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'ignores invalid param and generates a session ID' do
       get root_path, params: {statsig_stable_id: 'not-a-uuid'}
-      assert_match ApplicationController::UUID_RE, session[:statsig_stable_id]
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
     end
 
     it 'ignores empty param and generates a session ID' do
       get root_path, params: {statsig_stable_id: ''}
-      assert_match ApplicationController::UUID_RE, session[:statsig_stable_id]
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
     end
 
     it 'param overrides existing cookie in session' do
@@ -252,7 +252,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       get root_path, params: {statsig_stable_id: '<script>alert(1)</script>'}
       # Session should have a generated UUID, not the injected string
       refute_equal '<script>alert(1)</script>', session[:statsig_stable_id]
-      assert_match ApplicationController::UUID_RE, session[:statsig_stable_id]
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
     end
 
     it 'emits data attribute in rendered page for valid param' do
