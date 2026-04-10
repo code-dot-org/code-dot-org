@@ -12,6 +12,10 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
     And I select the "فارسی" option in dropdown "locale" to load a new page
     And I wait until current URL contains "http://studio.code.org/fa/projects"
 
+    When I reload the page
+    Then element "script[data-ge-region='fa']" does exist
+    And element "html[lang='fa-IR']" is visible
+
     When I wait until element "h4.new-project-heading" is visible
     # The "Create a new project" section contains exactly: Sprite Lab, Artist, App Lab, and Game Lab
     Then element "h4.new-project-heading + div a[href='/projects/spritelab/new']" is visible
@@ -26,6 +30,6 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
     And element "#full-list-projects a[href='/projects/artist/new']" is visible
     And element "#full-list-projects a[href='/projects/applab/new']" is visible
     And element "#full-list-projects a[href='/projects/gamelab/new']" is visible
-    And element "#full-list-projects a[href='/projects/dance/new']" is not visible
-    And element "#full-list-projects a[href='/projects/playlab/new']" is not visible
-    And element "#full-list-projects a[href='/projects/weblab/new']" is not visible
+    And element "#full-list-projects a[href='/projects/dance/new']" does not exist
+    And element "#full-list-projects a[href='/projects/playlab/new']" does not exist
+    And element "#full-list-projects a[href='/projects/weblab/new']" does not exist
