@@ -80,9 +80,15 @@ declare module '@mui/material/Button' {
     white: true;
     tertiary: true;
   }
+}
 
-  // MUI Button renders as <a> when href is provided, but the base
-  // ButtonProps don't include anchor attributes. Add them here.
+// MUI Button renders as <a> when href is provided, but the base
+// ButtonProps don't include anchor attributes.
+// Must target '@mui/material' (barrel), not '@mui/material/Button',
+// because ButtonOwnProps is defined in a sub-module (Button/Button.d.ts)
+// and re-exported — augmenting the subpath doesn't merge with the
+// original definition under node16 module resolution.
+declare module '@mui/material' {
   interface ButtonOwnProps {
     target?: string;
     rel?: string;
