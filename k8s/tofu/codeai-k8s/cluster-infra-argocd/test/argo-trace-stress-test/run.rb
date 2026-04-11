@@ -13,7 +13,7 @@ $stdout.sync = true
 class StressHarnessError < StandardError; end
 
 class StressHarness
-  BRANCH = "seth/argo-trace-stress-test"
+  BRANCH = "main"
   WAIT_REASONS = %w[ErrImagePull ImagePullBackOff].freeze
 
   def initialize(mode: "full")
@@ -33,10 +33,12 @@ class StressHarness
       ensure_remote_branch!
       cleanup_live_state!
       wait_for_stress_roots_gone!
+      wait_for_stress_namespaces_gone!
       stage_profile_root!
     when "cleanup"
       cleanup_live_state!
       wait_for_stress_roots_gone!
+      wait_for_stress_namespaces_gone!
     else
       raise StressHarnessError, "unknown mode #{@mode.inspect}"
     end
@@ -48,6 +50,7 @@ class StressHarness
     FileUtils.mkdir_p(@artifact_dir)
     cleanup_live_state!
     wait_for_stress_roots_gone!
+    wait_for_stress_namespaces_gone!
 
     begin
       log("running quiet-root scenarios")
@@ -326,21 +329,25 @@ class StressHarness
   end
 
   def assert_includes(text, needle, scenario_name)
-    return if text.include?(needle)
+    return if strip_ansi(text).include?(needle)
 
     raise StressHarnessError, "#{scenario_name}: expected output to include #{needle.inspect}"
   end
 
   def assert_excludes(text, needle, scenario_name)
-    return unless text.include?(needle)
+    return unless strip_ansi(text).include?(needle)
 
     raise StressHarnessError, "#{scenario_name}: expected output to exclude #{needle.inspect}"
   end
 
   def assert_matches(text, pattern, scenario_name)
-    return if pattern.match?(text)
+    return if pattern.match?(strip_ansi(text))
 
     raise StressHarnessError, "#{scenario_name}: expected output to match #{pattern.inspect}"
+  end
+
+  def strip_ansi(text)
+    text.gsub(/\e\[[\d;]*m/, "")
   end
 
   def emit_review!(milestone)
@@ -388,13 +395,34 @@ class StressHarness
 
   def clear_synthetic_finalizers!
     sh!("kubectl", "patch", "configmap", "stress-argo-trace-finalizer", "-n", "stress-argo-trace-finalizer", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    sh!("kubectl", "patch", "xstresstrace", "stress-argo-trace", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    usages = sh!("kubectl", "get", "usage.protection.crossplane.io", "-n", "stress-argo-trace-crossplane", "-o", "name", allow_failure: true)
+    usages.lines.map(&:strip).reject(&:empty?).each do |usage|
+      sh!("kubectl", "patch", usage, "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    end
+    sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-root", "stress-argo-trace-middle", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
     sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+  end
+
+  def delete_crossplane_stress_residue!
+    sh!("kubectl", "delete", "usage.protection.crossplane.io", "-A", "-l", "crossplane.io/composite=stress-argo-trace", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+    sh!("kubectl", "delete", "stressmanagedthing", "stress-argo-trace-root", "stress-argo-trace-middle", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+    sh!("kubectl", "delete", "xstresstrace", "stress-argo-trace", "-n", "stress-argo-trace-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+  end
+
+  def force_delete_stress_argo_roots!
+    resources = sh!("kubectl", "get", "application,applicationset", "-n", "argocd", "-o", "name", allow_failure: true)
+    resources.lines.grep(/stress-argo-trace/).map(&:strip).reject(&:empty?).each do |resource|
+      sh!("kubectl", "patch", resource, "-n", "argocd", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    end
   end
 
   def cleanup_live_state!
     clear_synthetic_finalizers!
     delete_bootstrap!(primary_bootstrap, wait: false)
     delete_bootstrap!(secondary_bootstrap, wait: false)
+    delete_crossplane_stress_residue!
+    force_delete_stress_argo_roots!
   end
 
   def wait_for_stress_roots_gone!(timeout: 600)
@@ -404,13 +432,25 @@ class StressHarness
     end
   end
 
+  def wait_for_stress_namespaces_gone!(timeout: 600)
+    wait_until("stress namespaces to finish terminating", timeout: timeout, interval: 3) do
+      namespaces = json!("kubectl", "get", "namespace", "-o", "json")
+      namespaces.fetch("items", []).none? do |namespace|
+        namespace.dig("metadata", "name").to_s.start_with?("stress-argo-trace-") &&
+          namespace.dig("metadata", "deletionTimestamp")
+      end
+    rescue StressHarnessError
+      false
+    end
+  end
+
   # The secondary root is intentionally quiet. It proves that a healthy root
   # stays readable and that root inference does not require production naming.
   def run_quiet_root_scenarios
     stage_quiet_root!
 
     output = capture_trace!("single-idle-root", root_name: "stress-argo-trace-secondary-root")
-    assert_includes(output, "stress-argo-trace-secondary-root [idle]", "single-idle-root")
+    assert_matches(output, /stress-argo-trace-secondary-root(?:: idle| \[idle\])/, "single-idle-root")
     assert_excludes(output, "Caveats:", "single-idle-root")
   end
 
@@ -427,7 +467,7 @@ class StressHarness
     # explicit root tracing stays isolated even when more than one stress root
     # exists at once.
     secondary_output = capture_trace!("secondary-root-with-primary-present", root_name: "stress-argo-trace-secondary-root")
-    assert_includes(secondary_output, "stress-argo-trace-secondary-root [idle]", "secondary-root-with-primary-present")
+    assert_matches(secondary_output, /stress-argo-trace-secondary-root(?:: idle| \[idle\])/, "secondary-root-with-primary-present")
     assert_excludes(secondary_output, "stress-argo-trace-app-of-apps", "secondary-root-with-primary-present")
 
     # Capture the top-level root while every noisy child branch is still live.
@@ -481,8 +521,8 @@ class StressHarness
     cluster_scope_output = capture_trace!("cluster-scope-resource-ref", root_name: "stress-argo-trace-cluster-scope")
     assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-cluster-parent", "cluster-scope-resource-ref")
     assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-cluster-child", "cluster-scope-resource-ref")
-    assert_includes(cluster_scope_output, "condition/Ready", "cluster-scope-resource-ref")
-    assert_matches(cluster_scope_output, /via=resource-ref\(observed\)/, "cluster-scope-resource-ref")
+    assert_includes(cluster_scope_output, "status.conditions.Ready: waiting", "cluster-scope-resource-ref")
+    assert_matches(cluster_scope_output, /via=resource-ref/, "cluster-scope-resource-ref")
 
     # This real Crossplane-core shape is intentionally quiet on apply once the
     # XR and composed resources settle. The live graph proof we care about is

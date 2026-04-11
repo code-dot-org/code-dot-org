@@ -49,7 +49,7 @@ and print the md log path at the start of the run.
 - For the live `bin/argo-trace` stress harness, run:
   `ruby test/argo-trace-stress-test/run.rb`
   Fixtures live in
-  [`k8s-gitops/argo-trace-stress-test/`](https://github.com/code-dot-org/k8s-gitops/tree/seth/argo-trace-stress-test/argo-trace-stress-test).
+  [`k8s-gitops/argo-trace-stress-test/`](https://github.com/code-dot-org/k8s-gitops/tree/main/argo-trace-stress-test).
 - If you modify `bin/logged-tofu`, run before commit:
   `ruby test/logged_tofu_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:

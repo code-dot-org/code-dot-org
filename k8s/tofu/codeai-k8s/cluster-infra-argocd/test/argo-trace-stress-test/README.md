@@ -18,13 +18,8 @@ The runner is `run.rb`. It writes each captured `argo-trace` output under:
 
 ## Usage
 
-Before running the harness, push the `k8s-gitops` stress branch:
-
-```sh
-git -C ~/src/k8s-gitops push -u origin seth/argo-trace-stress-test
-```
-
-Then run:
+Before running the harness, make sure the stress tree changes are pushed to
+`k8s-gitops` `main`, then run:
 
 ```sh
 ruby /Users/seth/src/code-dot-org/k8s/tofu/codeai-k8s/cluster-infra-argocd/test/argo-trace-stress-test/run.rb
