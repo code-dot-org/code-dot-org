@@ -4018,9 +4018,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-activities@npm:0.1.2":
-  version: 0.1.2
-  resolution: "@code-dot-org/ml-activities@npm:0.1.2"
+"@code-dot-org/ml-activities@npm:0.1.3":
+  version: 0.1.3
+  resolution: "@code-dot-org/ml-activities@npm:0.1.3"
   dependencies:
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
@@ -4032,7 +4032,7 @@ __metadata:
     radium: ^0.25.2
     react: ~16.14.0
     react-dom: ~16.14.0
-  checksum: 10/69421679f2ea179eef7d7b993d13ae7a0bf3afe132d1dee6c4dbcd023023517c7150b364b37b7b30c2cc0aa1f07912f7215de7246eb1db7e295318f32233c289
+  checksum: 10/d99e38527011bc115e4e0ffcd27bcdd3e1f44fe3dfc521b2f20ddbd055438f1aecc8e93d7f06455fa055360b5644bc8a0b6bbcef91eeccea4856efe478f31e80
   languageName: node
   linkType: hard
 
@@ -11389,7 +11389,7 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
-    "@code-dot-org/ml-activities": "npm:0.1.2"
+    "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.47"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
