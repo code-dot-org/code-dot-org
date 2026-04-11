@@ -39,7 +39,8 @@ class StudentWorkHelperTest < ActionView::TestCase
 
   test "returns empty array when lesson has no assessment script levels" do
     create(:script_level, levels: [create(:level)], lesson: @lesson, script: @script,
-      activity_section: @lesson.activity_sections.first)
+      activity_section: @lesson.activity_sections.first
+)
 
     result = lesson_assessment_analysis(@lesson.id, @student.id)
 
@@ -64,7 +65,8 @@ class StudentWorkHelperTest < ActionView::TestCase
 
   test "non-assessment script levels are excluded" do
     create(:script_level, levels: [create(:multi)], lesson: @lesson, script: @script,
-      activity_section: @lesson.activity_sections.first)
+      activity_section: @lesson.activity_sections.first
+)
     assessment_multi = create(:multi)
     make_assessment_script_level(assessment_multi)
 
@@ -104,7 +106,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     multi = create(:multi)
     make_assessment_script_level(multi)
     create(:user_level, user: @student, level: multi, script: @script,
-      attempts: 3, best_result: failing_result)
+      attempts: 3, best_result: failing_result
+)
 
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
 
@@ -116,7 +119,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     multi = create(:multi)
     make_assessment_script_level(multi)
     create(:user_level, user: @student, level: multi, script: @script,
-      attempts: 1, best_result: passing_result)
+      attempts: 1, best_result: passing_result
+)
 
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
 
@@ -142,7 +146,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_assessment_script_level(multi)
     level_source = create(:level_source, level: multi, data: '0')
     create(:user_level, user: @student, level: multi, script: @script,
-      attempts: 1, best_result: passing_result, level_source: level_source)
+      attempts: 1, best_result: passing_result, level_source: level_source
+)
 
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
 
@@ -176,7 +181,8 @@ class StudentWorkHelperTest < ActionView::TestCase
       level_id: fr.id,
       unit_id: @script.id,
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT],
-      reasoning: 'Good work')
+      reasoning: 'Good work'
+)
     OpenaiEvaluateHelper.expects(:evaluate_free_response).never
 
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
@@ -193,7 +199,8 @@ class StudentWorkHelperTest < ActionView::TestCase
       student_id: @student.id,
       level_id: fr.id,
       unit_id: @script.id,
-      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT])
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]
+)
     OpenaiEvaluateHelper.stubs(:evaluate_free_response)
 
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
@@ -206,7 +213,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_assessment_script_level(fr)
     level_source = create(:level_source, level: fr, data: 'my answer')
     create(:user_level, user: @student, level: fr, script: @script,
-      attempts: 1, best_result: failing_result, level_source: level_source)
+      attempts: 1, best_result: failing_result, level_source: level_source
+)
 
     OpenaiEvaluateHelper.expects(:evaluate_free_response).with(instance_of(UserLevel), instance_of(Unit)).once
     # Stub find_by to simulate evaluate_free_response having created the evaluation.
@@ -272,7 +280,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     lg.update_levels_and_texts_by_page([[sub]])
     make_assessment_script_level(lg)
     create(:user_level, user: @student, level: sub, script: @script,
-      attempts: 2, best_result: passing_result)
+      attempts: 2, best_result: passing_result
+)
 
     result = lesson_assessment_analysis(@lesson.id, @student.id)
 
@@ -288,7 +297,8 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_assessment_script_level(lg)
     level_source = create(:level_source, level: fr, data: 'sublevel answer')
     create(:user_level, user: @student, level: fr, script: @script,
-      attempts: 1, best_result: failing_result, level_source: level_source)
+      attempts: 1, best_result: failing_result, level_source: level_source
+)
 
     OpenaiEvaluateHelper.expects(:evaluate_free_response).with(instance_of(UserLevel), instance_of(Unit)).once
     mock_eval = stub(
