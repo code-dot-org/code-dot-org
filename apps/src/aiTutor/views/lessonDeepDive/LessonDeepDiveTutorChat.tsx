@@ -21,17 +21,12 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
   vocabulary,
   assessmentAnalysis,
 }) => {
-  const hiddenContextCallback = useCallback(async () => {
+  const hiddenContextCallback = useCallback(async () => '', []);
+
+  const getSystemPrompt = () => {
     const vocabList = vocabulary
       .map(v => `- ${v.word}: ${v.definition}`)
       .join('\n');
-
-    const attempted = assessmentAnalysis.filter(q => q.attempts > 0);
-    const assessmentLines = attempted.map((q, i) => {
-      const status = q.correct ? 'correct' : 'incorrect';
-      return `- Question ${i + 1}: ${q.attempts} attempt${q.attempts === 1 ? '' : 's'}, ${status}`;
-    });
-
     return [
       `The student has just finished a lesson titled "${lessonName}".`,
       '',
@@ -40,18 +35,23 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
       ...(vocabulary.length > 0
         ? ['', 'Vocabulary from this lesson:', vocabList]
         : []),
-      ...(assessmentLines.length > 0
-        ? ['', 'Assessment question results:', ...assessmentLines]
+      ...(assessmentAnalysis.length > 0
+        ? [
+            '',
+            'Assessment question results:',
+            JSON.stringify(assessmentAnalysis, null, 2),
+          ]
         : []),
       '',
-      'Help the student review and reflect on what they learned and provide guidance for their misunderstandings.',
+      'Help the student review and reflect on what they learned in the lesson and provide guidance for their misunderstandings. Coach them on how to improve assessment question answers if they were not correct.',
     ].join('\n');
-  }, [lessonName, lessonSummary, vocabulary, assessmentAnalysis]);
+  };
 
   return (
     <div className={styles.container}>
       <AiTutorChat
         hiddenContextCallback={hiddenContextCallback}
+        aiTutorSystemPrompt={getSystemPrompt()}
         aiTutorChatButtonData={[]}
         isLessonDeepDive={true}
         lessonId={lessonId}
