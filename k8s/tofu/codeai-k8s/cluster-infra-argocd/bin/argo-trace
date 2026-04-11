@@ -154,9 +154,28 @@ PASSIVE_APPLICATION_CHILD_KINDS = Set.new(
     ConfigMap
     CustomResourceDefinition
     Namespace
+    ClusterRole
+    ClusterRoleBinding
+    MutatingWebhookConfiguration
+    Role
+    RoleBinding
     Secret
     Service
     ServiceAccount
+    ValidatingWebhookConfiguration
+  ],
+).freeze
+BRANCHY_SYNCED_APPLICATION_CHILD_KINDS = Set.new(
+  %w[
+    Application
+    ApplicationSet
+    CronJob
+    DaemonSet
+    Deployment
+    Job
+    Pod
+    ReplicaSet
+    StatefulSet
   ],
 ).freeze
 WORKLOAD_DESCENDANT_KINDS_BY_KIND = {
@@ -839,6 +858,7 @@ class Snapshot
   def k8s_object_for(ref)
     k8s_object = objects_by_key[ref.key]
     return k8s_object if k8s_object
+    return nil if argo_tree_ref?(ref)
 
     resource_def = resource_def_for(ref)
     return nil unless resource_def
@@ -1035,7 +1055,7 @@ class Snapshot
     return false if manifest_generation_error?(argo_app)
     return true if state.fetch(:phase) == "Running"
     return true if %w[Error Failed].include?(state.fetch(:phase))
-    return true if state.fetch(:sync) == "Synced"
+    return true if state.fetch(:sync) == "Synced" && resource_entries_for_application(argo_app).empty?
     return true if state.fetch(:health) && state.fetch(:health) != "Healthy"
 
     false
@@ -1581,7 +1601,7 @@ class TraceBuilder
 
   private def build_application_node(argo_app, edge_source:, seen:)
     children = []
-    if expand_application_children?(argo_app)
+    if expand_application_children?(argo_app, edge_source: edge_source)
       # Argo gives us edge metadata for resources under an app. Preserve that so
       # the tree can show whether Argo itself still sees the edge as Progressing,
       # Missing, HookPending, and so on.
@@ -1670,7 +1690,11 @@ class TraceBuilder
         show_manager_names: leaf_clues_only,
       ),
       children: children,
-      evidence: generic_evidence(k8s_object, edge_meta: edge_meta, include_events: children.empty?),
+      evidence: generic_evidence(
+        k8s_object,
+        edge_meta: edge_meta,
+        include_events: children.empty? && %w[blocked waiting deleting].include?(state),
+      ),
       path: [k8s_object.ref.display],
     )
   end
@@ -1680,7 +1704,7 @@ class TraceBuilder
     # owned/dependent children. Stable leaves stop here.
     return true if k8s_object.deleting?
     return true if %w[blocked waiting progressing].include?(state)
-    return true if k8s_object.resource.namespaced
+    return true if WORKLOAD_DESCENDANT_KINDS_BY_KIND.key?(k8s_object.ref.kind)
     return true if @snapshot.known_generic_children(k8s_object).any?
 
     if edge_meta
@@ -1790,18 +1814,42 @@ class TraceBuilder
     end
   end
 
-  private def expand_application_children?(argo_app)
-    # Expand synced apps too, because a synced app can still have a live delete
-    # branch underneath it while steady-state status looks quiet.
+  private def expand_application_children?(argo_app, edge_source:)
+    # Keep steady-state synced/healthy apps shallow. They made the tracer walk
+    # huge passive subtrees even when nothing was actually wrong.
+    return false if nested_deleting_application_can_stay_collapsed?(argo_app, edge_source: edge_source)
     return true if argo_app.deleting?
 
     state = application_argo_state(argo_app)
 
     return true if ["Running", "Failed", "Error"].include?(state.fetch(:phase))
     return true if state.fetch(:health) && state.fetch(:health) != "Healthy"
-    return true if state.fetch(:sync) == "Synced"
+    return false if edge_source
+    return true if synced_application_needs_deeper_walk?(argo_app)
 
     false
+  end
+
+  private def nested_deleting_application_can_stay_collapsed?(argo_app, edge_source:)
+    return false unless edge_source
+    return false unless argo_app.deleting?
+
+    state = application_argo_state(argo_app)
+    return false if ["Running", "Failed", "Error"].include?(state.fetch(:phase))
+
+    true
+  end
+
+  private def synced_application_needs_deeper_walk?(argo_app)
+    state = application_argo_state(argo_app)
+    return false unless state.fetch(:sync) == "Synced"
+
+    resources = [argo_app.raw.dig("status", "resources"), argo_app.raw.dig("status", "operationState", "syncResult", "resources")].compact.flatten
+    return true if resources.empty?
+
+    resources.any? do |entry|
+      BRANCHY_SYNCED_APPLICATION_CHILD_KINDS.include?(entry["kind"])
+    end
   end
 
   private def relevant_argo_edge?(edge_meta)
