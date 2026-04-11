@@ -270,7 +270,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     result = lesson_assessment_analysis(@lesson.id, @student.id)
 
     assert_equal 3, result.length
-    assert_equal([sub1.id, sub2.id, sub3.id], result.map {|e| e[:level_id]})
+    assert_equal([sub1.id, sub2.id, sub3.id], result.pluck(:level_id))
     result.each {|e| assert_equal sl.id, e[:script_level_id]}
   end
 
