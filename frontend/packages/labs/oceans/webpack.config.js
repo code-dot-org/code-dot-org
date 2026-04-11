@@ -48,14 +48,14 @@ const commonConfig = {
         type: 'asset/resource',
         test: /src\/oceans\/model.json$/,
         generator: {
-          filename: 'models/[name][ext]?[contenthash]'
+          filename: 'assets/models/[name][ext]?[contenthash]'
         }
       },
       {
         test: /\.(mp3|ogg|wav)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'sounds/[name][ext]?[contenthash]'
+          filename: 'assets/sounds/[name][ext]?[contenthash]'
         }
       }
     ]
@@ -81,7 +81,7 @@ const firstConfigOnly = {
       patterns: [
         {
           from: 'src/oceans/*.bin',
-          to: 'models/[name][ext]'
+          to: 'assets/models/[name][ext]'
         }
       ]
     })
