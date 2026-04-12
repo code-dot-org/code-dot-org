@@ -1748,6 +1748,126 @@ class ArgocdProgressTraceTest < Minitest::Test
     assert_includes namespace_node.evidence.first, "Pending deletion"
   end
 
+  def test_nested_deleting_application_enriches_from_argocd_app_get_when_cr_status_is_shallow
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "root", "namespace" => "argocd", "uid" => "root-app-argocd-refresh"},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Running"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "aws-resources", "status" => "Synced", "health" => {"status" => "Progressing"}}
+        ],
+      },
+    }
+    shallow_child = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "aws-resources",
+        "namespace" => "argocd",
+        "uid" => "aws-resources-app-refresh",
+        "deletionTimestamp" => "2026-04-12T07:44:52Z",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "Application", "name" => "root", "uid" => "root-app-argocd-refresh"}],
+      },
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Succeeded"},
+        "resources" => [
+          {"group" => "infra.code.org", "version" => "v1alpha1", "kind" => "XClusterDNSCertificate", "namespace" => "crossplane-system", "name" => "dns-cert", "status" => "Synced"}
+        ],
+      },
+    }
+    enriched_child = Marshal.load(Marshal.dump(shallow_child))
+    enriched_child["status"]["resources"] = [
+      {"group" => "infra.code.org", "version" => "v1alpha1", "kind" => "XClusterDNSCertificate", "namespace" => "crossplane-system", "name" => "dns-cert", "status" => "Synced", "health" => {"status" => "Progressing", "message" => "Pending deletion"}}
+    ]
+    shell = FakeShell.new(
+      json_map: {
+        ["argocd", "--core", "--app-namespace", "argocd", "app", "get", "aws-resources", "-o", "json"].join("\u0000") => enriched_child,
+      },
+    )
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, shallow_child], shell: shell),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "root"),
+    ).build
+
+    labels = flatten_labels(trace.fetch(:tree))
+    child_node = find_node(trace.fetch(:tree), "aws-resources")
+    pending_child = find_node(trace.fetch(:tree), "xclusterdnscertificate/dns-cert")
+
+    assert_includes labels, "aws-resources"
+    assert_equal "pending deletion", child_node.state
+    assert_equal "pending deletion", pending_child.state
+    assert_includes pending_child.evidence.first, "Pending deletion"
+  end
+
+  def test_nested_deleting_application_enriches_from_real_argocd_json_shape_without_kind_or_api_version
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "root", "namespace" => "argocd", "uid" => "root-app-argocd-real-refresh"},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Running"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "aws-resources", "status" => "Synced", "health" => {"status" => "Progressing"}}
+        ],
+      },
+    }
+    shallow_child = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "aws-resources",
+        "namespace" => "argocd",
+        "uid" => "aws-resources-app-real-refresh",
+        "deletionTimestamp" => "2026-04-12T07:44:52Z",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "Application", "name" => "root", "uid" => "root-app-argocd-real-refresh"}],
+      },
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Succeeded"},
+        "resources" => [
+          {"group" => "infra.code.org", "version" => "v1alpha1", "kind" => "XClusterDNSCertificate", "namespace" => "crossplane-system", "name" => "dns-cert", "status" => "Synced"}
+        ],
+      },
+    }
+    enriched_child = {
+      "metadata" => {"name" => "aws-resources", "namespace" => "argocd"},
+      "spec" => {},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Succeeded"},
+        "resources" => [
+          {"group" => "infra.code.org", "version" => "v1alpha1", "kind" => "XClusterDNSCertificate", "namespace" => "crossplane-system", "name" => "dns-cert", "status" => "Synced", "health" => {"status" => "Progressing", "message" => "Pending deletion"}}
+        ],
+      },
+    }
+    shell = FakeShell.new(
+      json_map: {
+        ["argocd", "--core", "--app-namespace", "argocd", "app", "get", "aws-resources", "-o", "json"].join("\u0000") => enriched_child,
+      },
+    )
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, shallow_child], shell: shell),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "root"),
+    ).build
+
+    pending_child = find_node(trace.fetch(:tree), "xclusterdnscertificate/dns-cert")
+
+    assert_equal "pending deletion", pending_child.state
+    assert_includes pending_child.evidence.first, "Pending deletion"
+  end
+
   def test_annotation_tracking_scans_argo_tree_before_full_cluster_scan
     root_application = {
       "apiVersion" => "argoproj.io/v1alpha1",

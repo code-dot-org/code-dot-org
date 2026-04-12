@@ -1071,6 +1071,41 @@ class Snapshot
     rebuild_index
   end
 
+  def enrich_application_via_argocd(argo_app)
+    return unless argo_app.ref.group == "argoproj.io" && argo_app.ref.kind == "Application"
+    return if @argocd_enriched_applications&.include?(argo_app.ref.key)
+
+    @argocd_enriched_applications ||= Set.new
+    @argocd_enriched_applications << argo_app.ref.key
+
+    profile_context("argocd_app_get(#{argo_app.name})") do
+      stdout = @shell.text!(
+        "argocd", "--core", "--app-namespace", @argocd_namespace,
+        "app", "get", argo_app.name, "-o", "json",
+        check: false,
+      )
+      raw = parse_json(
+        stdout,
+        caveat: "argocd app get #{argo_app.name} -o json returned malformed JSON",
+      )
+      return unless raw.is_a?(Hash)
+
+      # `argocd app get -o json` returns an Application-shaped payload with
+      # metadata/spec/status, but not the Kubernetes apiVersion/kind wrapper.
+      # Synthesize those so the normal live-object indexing path can replace the
+      # shallow kubectl Application with the richer Argo view.
+      raw = raw.merge(
+        "apiVersion" => raw["apiVersion"] || "#{argo_app.ref.group}/v1alpha1",
+        "kind" => raw["kind"] || argo_app.ref.kind,
+        "metadata" => (argo_app.raw["metadata"] || {}).merge(raw["metadata"] || {}),
+      )
+      return unless raw["kind"] == "Application"
+
+      prime_objects([raw])
+      rebuild_index
+    end
+  end
+
   # Resolve one live Kubernetes object from a ref, refreshing discovery if a
   # custom GVK appeared after the initial snapshot.
   def k8s_object_for(ref)
@@ -1965,6 +2000,9 @@ class TraceBuilder
   end
 
   private def build_application_node(argo_app, edge_meta:, edge_source:, seen:)
+    maybe_enrich_application_via_argocd(argo_app, edge_source: edge_source)
+    argo_app = @snapshot.k8s_object_for(argo_app.ref) || argo_app
+
     children = []
     if expand_application_children?(argo_app, edge_source: edge_source)
       # Argo gives us edge metadata for resources under an app. Preserve that so
@@ -2320,18 +2358,11 @@ class TraceBuilder
     if argo_app.deleting?
       argo_tree_children = deleting_application_argo_tree_children(argo_tree_children)
 
-      deleting_namespace_frontier = non_argo_children.select do |child|
-        deleting_application_namespace_frontier_child?(child)
-      end
-      unless deleting_namespace_frontier.empty?
-        return argo_tree_children + deleting_namespace_frontier.map {|child| annotate_pending_deletion_edge(child)}
-      end
-
       deleting_frontier_children = non_argo_children.select do |child|
         deleting_application_frontier_child?(child)
       end
       unless deleting_frontier_children.empty?
-        return argo_tree_children + deleting_frontier_children.map {|child| annotate_pending_deletion_edge(child)}
+        return argo_tree_children + deleting_frontier_children
       end
       return argo_tree_children
     end
@@ -2487,6 +2518,28 @@ class TraceBuilder
     return true if synced_application_needs_deeper_walk?(argo_app)
 
     false
+  end
+
+  private def maybe_enrich_application_via_argocd(argo_app, edge_source:)
+    return unless edge_source
+    return unless application_needs_argocd_enrichment?(argo_app)
+
+    @snapshot.enrich_application_via_argocd(argo_app)
+  end
+
+  private def application_needs_argocd_enrichment?(argo_app)
+    state = application_argo_state(argo_app)
+    return false if application_has_resource_health_messages?(argo_app)
+
+    argo_app.deleting? ||
+      %w[Running Failed Error].include?(state.fetch(:phase)) ||
+      (state.fetch(:health) && state.fetch(:health) != "Healthy")
+  end
+
+  private def application_has_resource_health_messages?(argo_app)
+    [argo_app.raw.dig("status", "resources"), argo_app.raw.dig("status", "operationState", "syncResult", "resources")].compact.flatten.any? do |entry|
+      !entry.dig("health", "message").to_s.empty?
+    end
   end
 
   private def nested_application_has_argo_tree_child?(argo_app)
@@ -2813,30 +2866,12 @@ class TraceBuilder
     edge_meta && edge_meta[:health_message].to_s.match?(/pending deletion/i)
   end
 
-  private def annotate_pending_deletion_edge(child)
-    return child unless child.argo
-    return child if pending_deletion_argo_edge?(child.argo)
-
-    Edge.new(
-      ref: child.ref,
-      source: child.source,
-      argo: child.argo.merge(health_message: "Pending deletion"),
-    )
-  end
-
-  private def deleting_application_namespace_frontier_child?(child)
-    return false unless child.ref.kind == "Namespace"
-    return false unless child.argo
-
-    pending_deletion_argo_edge?(child.argo) ||
-      (child.argo[:status] == "Synced" && active_hook_phase?(child.argo[:hook_phase]))
-  end
-
   private def deleting_application_frontier_child?(child)
-    return false if PASSIVE_APPLICATION_CHILD_KINDS.include?(child.ref.kind)
     return false unless child.argo
 
+    return true if child.argo[:health] == "Progressing"
     return true if pending_deletion_argo_edge?(child.argo)
+    return false if PASSIVE_APPLICATION_CHILD_KINDS.include?(child.ref.kind)
 
     false
   end
