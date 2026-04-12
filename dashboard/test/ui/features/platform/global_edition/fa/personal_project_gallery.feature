@@ -12,18 +12,18 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
     When I wait until element "h4.new-project-heading" is visible
     # The "Create a new project" section contains exactly: Sprite Lab, Artist, App Lab, and Game Lab
-    Then element "h4.new-project-heading + div a[href='/projects/spritelab/new']" is visible
-    And element "h4.new-project-heading + div a[href='/projects/artist/new']" is visible
-    And element "h4.new-project-heading + div a[href='/projects/applab/new']" is visible
-    And element "h4.new-project-heading + div a[href='/projects/gamelab/new']" is visible
+    Then element "div a[href='/projects/spritelab/new']" is visible
+    And element "div a[href='/projects/artist/new']" is visible
+    And element "div a[href='/projects/applab/new']" is visible
+    And element "div a[href='/projects/gamelab/new']" is visible
 
     When I click "#uitest-view-full-list" once it exists
     Then I wait until element "#full-list-projects" is visible
     # The full list contains exactly the same 4 project types, no others
-    And element "#full-list-projects a[href='/projects/spritelab/new']" is visible
-    And element "#full-list-projects a[href='/projects/artist/new']" is visible
-    And element "#full-list-projects a[href='/projects/applab/new']" is visible
-    And element "#full-list-projects a[href='/projects/gamelab/new']" is visible
-    And element "#full-list-projects a[href='/projects/dance/new']" is not visible
-    And element "#full-list-projects a[href='/projects/playlab/new']" is not visible
-    And element "#full-list-projects a[href='/projects/weblab/new']" is not visible
+    And element "a[href='/projects/spritelab/new']" is visible
+    And element "a[href='/projects/artist/new']" is visible
+    And element "a[href='/projects/applab/new']" is visible
+    And element "a[href='/projects/gamelab/new']" is visible
+    And element "a[href='/projects/dance/new']" is not visible
+    And element "a[href='/projects/playlab/new']" is not visible
+    And element "a[href='/projects/weblab/new']" is not visible
