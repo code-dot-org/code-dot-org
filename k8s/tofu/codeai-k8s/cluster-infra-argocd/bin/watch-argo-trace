@@ -6,4 +6,4 @@ require "shellwords"
 script = File.expand_path("argo-trace", __dir__)
 command = Shellwords.join(["bundle", "exec", script, *ARGV])
 
-exec("watch", "--color", "-d", command)
+exec("watch", "--color", command)

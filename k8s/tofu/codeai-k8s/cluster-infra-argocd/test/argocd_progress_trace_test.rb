@@ -136,7 +136,7 @@ class ArgocdProgressTraceTest < Minitest::Test
 
     assert_equal "#!/usr/bin/env -S bundle exec ruby\n", contents.lines.first
     assert_includes contents, 'Shellwords.join(["bundle", "exec", script, *ARGV])'
-    assert_includes contents, 'exec("watch", "--color", "-d", command)'
+    assert_includes contents, 'exec("watch", "--color", command)'
   end
 
   def test_render_trace_entry_formats_poll_header_and_trailing_newlines
@@ -172,10 +172,10 @@ class ArgocdProgressTraceTest < Minitest::Test
     node = TreeNode.new(
       label: "deployment/kargo-api",
       state: "progressing",
-      detail: "(argo-status=OutOfSync, live-object=missing, via=argo-status)",
+      detail: "(live-object=missing, via=argo-status)",
       metadata: [
-        ["metadata.creationTimestamp", "50s ago (2026-04-11T05:00:10Z)"],
-        ["metadata.deletionTimestamp", "10s ago (2026-04-11T05:00:50Z)"],
+        ["metadata.creationTimestamp", "less than a minute ago (2026-04-11T05:00:10Z)"],
+        ["metadata.deletionTimestamp", "less than 20 seconds ago (2026-04-11T05:00:50Z)"],
       ],
       children: [],
       evidence: ["`deployment/kargo-api`: `live object not found, but Argo still reports this resource`"],
@@ -185,10 +185,26 @@ class ArgocdProgressTraceTest < Minitest::Test
     lines = render_tree(node)
 
     assert_includes lines, "- deployment/kargo-api: in progress"
-    assert_includes lines, "  - Details: argo-status=OutOfSync, live-object=missing, via=argo-status"
-    assert_includes lines, "  - metadata.creationTimestamp: 50s ago (2026-04-11T05:00:10Z)"
-    assert_includes lines, "\e[31m  - metadata.deletionTimestamp: 10s ago (2026-04-11T05:00:50Z)\e[39m"
+    assert_includes lines, "  - Details: live-object=missing, via=argo-status"
+    assert_includes lines, "  - metadata.creationTimestamp: less than a minute ago (2026-04-11T05:00:10Z)"
+    assert_includes lines, "\e[31m  - metadata.deletionTimestamp: less than 20 seconds ago (2026-04-11T05:00:50Z)\e[39m"
     assert_includes lines, "  - Message: live object not found, but Argo still reports this resource"
+  end
+
+  def test_render_tree_bolds_rollout_progressing_condition_when_true
+    node = TreeNode.new(
+      label: "status.conditions.RolloutProgressing",
+      state: nil,
+      detail: [["status", "True"], ["reason", "ApplicationSetModified"]],
+      children: [],
+      evidence: [],
+      path: ["status.conditions.RolloutProgressing"],
+      active: true,
+    )
+
+    lines = render_tree(node)
+
+    assert_equal "\e[1m→- status.conditions.RolloutProgressing\e[22m", lines.first
   end
 
   def test_render_tree_omits_state_suffix_for_structural_group_nodes
@@ -319,6 +335,114 @@ class ArgocdProgressTraceTest < Minitest::Test
     refute_includes output, "\e[1m      - aws-resources: in progress\e[22m"
   end
 
+  def test_render_trace_entry_bolds_active_path_instead_of_deepest_non_blocking_leaf
+    payload = {
+      traces: [
+        {
+          tree: TreeNode.new(
+            label: "infra",
+            state: "progressing",
+            detail: nil,
+            children: [
+              TreeNode.new(
+                label: "sync-wave 4",
+                state: nil,
+                detail: nil,
+                children: [
+                  TreeNode.new(
+                    label: "external-dns",
+                    state: "progressing",
+                    detail: nil,
+                    children: [],
+                    evidence: [],
+                    path: ["infra", "sync-wave 4", "external-dns"],
+                    active: true,
+                  ),
+                ],
+                evidence: [],
+                path: ["infra", "sync-wave 4"],
+              ),
+              TreeNode.new(
+                label: "sync-wave 40",
+                state: nil,
+                detail: nil,
+                children: [
+                  TreeNode.new(
+                    label: "dex",
+                    state: "healthy",
+                    detail: nil,
+                    children: [],
+                    evidence: [],
+                    path: ["infra", "sync-wave 40", "dex"],
+                  ),
+                ],
+                evidence: [],
+                path: ["infra", "sync-wave 40"],
+              ),
+            ],
+            evidence: [],
+            path: ["infra"],
+          ),
+        },
+      ],
+      caveats: [],
+    }
+
+    output = render_trace_entry(payload: payload, include_header: false)
+
+    refute_includes output, "\e[1m→- infra: in progress\e[22m"
+    refute_includes output, "\e[1m→ - sync-wave 4\e[22m"
+    assert_includes output, "\e[1m→   - external-dns: in progress\e[22m"
+    refute_includes output, "\e[1m→    - dex: healthy\e[22m"
+  end
+
+  def test_render_trace_entry_bolds_wait_target_frontier_when_no_active_or_blocked_path
+    payload = {
+      traces: [
+        {
+          tree: TreeNode.new(
+            label: "infra",
+            state: "progressing",
+            detail: nil,
+            children: [
+              TreeNode.new(
+                label: "external-dns",
+                state: "progressing",
+                detail: nil,
+                children: [],
+                evidence: [],
+                metadata: nil,
+                path: ["infra", "external-dns"],
+                active: false,
+              ),
+              TreeNode.new(
+                label: "dex",
+                state: "healthy",
+                detail: nil,
+                children: [],
+                evidence: [],
+                metadata: nil,
+                path: ["infra", "dex"],
+                active: false,
+              ),
+            ],
+            evidence: ["`infra`: `waiting for healthy state of argoproj.io/Application/external-dns`"],
+            metadata: nil,
+            path: ["infra"],
+            active: false,
+          ),
+        },
+      ],
+      caveats: [],
+    }
+
+    output = render_trace_entry(payload: payload, include_header: false)
+
+    refute_includes output, "\e[1m→- infra: in progress\e[22m"
+    assert_includes output, "\e[1m→ - external-dns: in progress\e[22m"
+    refute_includes output, "\e[1m→  - dex: healthy\e[22m"
+  end
+
   def test_render_trace_entry_bolds_deepest_resource_not_helper_condition
     payload = {
       traces: [
@@ -372,7 +496,7 @@ class ArgocdProgressTraceTest < Minitest::Test
               TreeNode.new(
                 label: "infra",
                 state: "progressing",
-                detail: "sync=OutOfSync, via=appset-status",
+                detail: "via=appset-status",
                 children: [
                   TreeNode.new(
                     label: "zone/example",
@@ -416,7 +540,7 @@ class ArgocdProgressTraceTest < Minitest::Test
 
     assert_includes output, "\e[2m- app-of-apps: in progress\e[22m"
     assert_includes output, "\e[2m  - infra: in progress\e[22m"
-    assert_includes output, "\e[2m    - Details: sync=OutOfSync, via=appset-status\e[22m"
+    assert_includes output, "\e[2m    - Details: via=appset-status\e[22m"
     assert_includes output, "\e[1m→   - zone/example: blocked\e[22m"
     assert_includes output, "\e[1m→     - status.conditions.Synced: blocked\e[22m"
     assert_includes output, "\e[2m  - dex: in progress\e[22m"
@@ -628,6 +752,29 @@ class ArgocdProgressTraceTest < Minitest::Test
 )
   end
 
+  def test_infer_root_refs_reports_kubernetes_read_failure_before_root_name_hint
+    snapshot = Snapshot.new(
+      shell: FakeShell.new,
+      discovery: FakeDiscovery.new(
+        [
+          ApiResource.new(group: "argoproj.io", version: "v1alpha1", kind: "Application", resource: "applications", namespaced: true, categories: []),
+          ApiResource.new(group: "argoproj.io", version: "v1alpha1", kind: "ApplicationSet", resource: "applicationsets", namespaced: true, categories: []),
+        ],
+      ),
+      argocd_namespace: "argocd",
+      tracking_config: TrackingConfig.default,
+    )
+    snapshot.caveats << "kubectl get applications.argoproj.io,applicationsets.argoproj.io -n argocd -o json --ignore-not-found failed: Unable to connect to the server"
+
+    error = assert_raises(SystemExit) do
+      infer_root_refs_from_snapshot(snapshot: snapshot)
+    end
+
+    assert_equal 1, error.status
+    assert_match(/failed to read Argo Application\/ApplicationSet objects from Kubernetes:/, error.message)
+    refute_match(/pass --root-name/, error.message)
+  end
+
   def test_bounded_batch_map_preserves_input_order_when_parallel
     snapshot = Snapshot.new(
       shell: FakeShell.new,
@@ -688,7 +835,7 @@ class ArgocdProgressTraceTest < Minitest::Test
     }
     shell = FakeShell.new(
       json_map: {
-        ["kubectl", "get", "configmaps/present", "configmaps/missing", "-n", "ns-a", "-o", "json", "--ignore-not-found"].join("\u0000") => {
+        ["kubectl", "get", "configmaps", "present", "missing", "-n", "ns-a", "-o", "json", "--ignore-not-found"].join("\u0000") => {
           "items" => [present_configmap],
         },
         ["kubectl", "get", "secrets", "present-secret", "-n", "ns-b", "-o", "json", "--ignore-not-found"].join("\u0000") => present_secret,
@@ -792,8 +939,21 @@ class ArgocdProgressTraceTest < Minitest::Test
           {"kind" => "Application", "namespace" => "argocd", "name" => "kargo", "status" => "OutOfSync", "health" => {"status" => "Missing"}},
         ],
         "applicationStatus" => [
-          {"application" => "infra", "step" => "1", "status" => "Pending"},
-          {"application" => "codeai", "step" => "2", "status" => "Waiting"},
+          {
+            "application" => "infra",
+            "step" => "1",
+            "status" => "Pending",
+            "lastTransitionTime" => "2026-04-11T17:27:05Z",
+            "message" => "Application moved to Pending status, watching for the Application resource to start Progressing",
+            "targetRevisions" => ["abc123"],
+          },
+          {
+            "application" => "codeai",
+            "step" => "2",
+            "status" => "Waiting",
+            "lastTransitionTime" => "2026-04-11T17:27:05Z",
+            "message" => "Application has pending changes, setting status to Waiting",
+          },
         ],
       },
     }
@@ -847,6 +1007,15 @@ class ArgocdProgressTraceTest < Minitest::Test
     assert_equal [["status", "True"], ["reason", "ApplicationSetModified"], ["message", "ApplicationSet is performing rollout of step 1"]], appset_node.children.first.detail
     assert_equal ["infra"], appset_node.children[1].children.map(&:label)
     assert_equal ["codeai"], appset_node.children[2].children.map(&:label)
+    infra_node = appset_node.children[1].children.first
+    assert_includes infra_node.detail, "rollout-updated="
+    assert_match(/\(2026-04-11T17:27:05Z\)/, infra_node.detail)
+    assert_includes infra_node.evidence, "`infra`: `Application moved to Pending status, watching for the Application resource to start Progressing`"
+
+    codeai_node = appset_node.children[2].children.first
+    assert_includes codeai_node.detail, "rollout-updated="
+    assert_match(/\(2026-04-11T17:27:05Z\)/, codeai_node.detail)
+    assert_includes codeai_node.evidence, "`codeai`: `Application has pending changes, setting status to Waiting`"
   end
 
   def test_trace_groups_application_children_by_sync_wave_with_annotation_fallback
@@ -896,6 +1065,113 @@ class ArgocdProgressTraceTest < Minitest::Test
     assert_equal ["sync-wave 0", "sync-wave 2", "codeai"], trace.fetch(:tree).children.map(&:label)
     assert_equal ["crossplane"], trace.fetch(:tree).children[0].children.map(&:label)
     assert_equal ["aws-resources"], trace.fetch(:tree).children[1].children.map(&:label)
+  end
+
+  def test_trace_keeps_healthy_application_children_visible_alongside_active_siblings
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "infra", "namespace" => "argocd", "uid" => "infra-root-visible"},
+      "status" => {
+        "sync" => {"status" => "OutOfSync"},
+        "health" => {"status" => "Progressing"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "aws-resources", "status" => "Synced", "health" => {"status" => "Progressing"}, "syncWave" => 2},
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "external-dns", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 4},
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "argocd", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 25},
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "dex", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 40},
+        ],
+      },
+    }
+    aws_resources_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "aws-resources", "namespace" => "argocd", "uid" => "aws-resources-app-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Progressing"}},
+    }
+    external_dns_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "external-dns", "namespace" => "argocd", "uid" => "external-dns-app-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+    argocd_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "argocd", "namespace" => "argocd", "uid" => "argocd-app-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+    dex_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "dex", "namespace" => "argocd", "uid" => "dex-app-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, aws_resources_application, external_dns_application, argocd_application, dex_application]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "infra"),
+    ).build
+
+    assert_equal ["sync-wave 2", "sync-wave 4", "sync-wave 25", "sync-wave 40"], trace.fetch(:tree).children.map(&:label)
+    assert_equal ["aws-resources"], trace.fetch(:tree).children[0].children.map(&:label)
+    assert_equal ["external-dns"], trace.fetch(:tree).children[1].children.map(&:label)
+    assert_equal ["argocd"], trace.fetch(:tree).children[2].children.map(&:label)
+    assert_equal ["dex"], trace.fetch(:tree).children[3].children.map(&:label)
+
+    output = render_trace_entry(payload: {traces: [trace], caveats: []}, include_header: false)
+    assert_includes output, "- external-dns: healthy"
+    assert_includes output, "- argocd: healthy"
+    assert_includes output, "- dex: healthy"
+  end
+
+  def test_trace_keeps_healthy_parent_application_expanded_for_argo_child_apps
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "infra", "namespace" => "argocd", "uid" => "infra-root-healthy-visible"},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Healthy"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "external-dns", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 4},
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "argocd", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 25},
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "dex", "status" => "Synced", "health" => {"status" => "Healthy"}, "syncWave" => 40},
+        ],
+      },
+    }
+    external_dns_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "external-dns", "namespace" => "argocd", "uid" => "external-dns-app-healthy-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+    argocd_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "argocd", "namespace" => "argocd", "uid" => "argocd-app-healthy-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+    dex_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "dex", "namespace" => "argocd", "uid" => "dex-app-healthy-visible"},
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, external_dns_application, argocd_application, dex_application]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "infra"),
+    ).build
+
+    assert_equal "healthy", trace.fetch(:tree).state
+    assert_equal ["sync-wave 4", "sync-wave 25", "sync-wave 40"], trace.fetch(:tree).children.map(&:label)
+
+    output = render_trace_entry(payload: {traces: [trace], caveats: []}, include_header: false)
+    assert_includes output, "- infra: healthy"
+    assert_includes output, "- external-dns: healthy"
+    assert_includes output, "- argocd: healthy"
+    assert_includes output, "- dex: healthy"
   end
 
   def test_nested_step_and_sync_wave_groups_render_and_keep_blocker_highlight_on_real_resource
@@ -1021,6 +1297,145 @@ class ArgocdProgressTraceTest < Minitest::Test
     assert_includes output, "\e[1m→               - zone/example-zone: blocked\e[22m"
     refute_includes output, "\e[1m      - RollingSync step 1 (code.org/bootstrap-group In [infra])\e[22m"
     refute_includes output, "\e[1m          - sync-wave 2\e[22m"
+  end
+
+  def test_trace_keeps_healthy_applicationset_children_visible_alongside_active_siblings
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "root", "namespace" => "argocd", "uid" => "root-appset-visible"},
+      "status" => {
+        "sync" => {"status" => "OutOfSync"},
+        "health" => {"status" => "Progressing"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "ApplicationSet", "namespace" => "argocd", "name" => "bootstrap"},
+        ],
+      },
+    }
+    bootstrap_appset = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "ApplicationSet",
+      "metadata" => {"name" => "bootstrap", "namespace" => "argocd", "uid" => "bootstrap-visible-appset"},
+      "spec" => {
+        "strategy" => {
+          "rollingSync" => {
+            "steps" => [
+              {
+                "matchExpressions" => [
+                  {"key" => "code.org/bootstrap-group", "operator" => "In", "values" => ["infra"]},
+                ],
+              },
+              {
+                "matchExpressions" => [
+                  {"key" => "code.org/bootstrap-group", "operator" => "NotIn", "values" => ["infra"]},
+                ],
+              },
+            ],
+          },
+        },
+      },
+      "status" => {
+        "conditions" => [
+          {
+            "type" => "RolloutProgressing",
+            "status" => "True",
+            "reason" => "ApplicationSetModified",
+            "message" => "ApplicationSet is performing rollout of step 1",
+          },
+        ],
+        "resources" => [
+          {"kind" => "Application", "namespace" => "argocd", "name" => "infra", "status" => "OutOfSync", "health" => {"status" => "Progressing"}},
+          {"kind" => "Application", "namespace" => "argocd", "name" => "codeai", "status" => "Synced", "health" => {"status" => "Healthy"}},
+          {"kind" => "Application", "namespace" => "argocd", "name" => "kargo", "status" => "Synced", "health" => {"status" => "Healthy"}},
+        ],
+        "applicationStatus" => [
+          {"application" => "infra", "step" => "1", "status" => "Pending"},
+          {"application" => "codeai", "step" => "2", "status" => "Healthy"},
+          {"application" => "kargo", "step" => "2", "status" => "Healthy"},
+        ],
+      },
+    }
+    infra_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "infra",
+        "namespace" => "argocd",
+        "uid" => "infra-visible-app",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "ApplicationSet", "name" => "bootstrap", "uid" => "bootstrap-visible-appset"}],
+      },
+      "status" => {"sync" => {"status" => "OutOfSync"}, "health" => {"status" => "Progressing"}},
+    }
+    codeai_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "codeai",
+        "namespace" => "argocd",
+        "uid" => "codeai-visible-app",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "ApplicationSet", "name" => "bootstrap", "uid" => "bootstrap-visible-appset"}],
+      },
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+    kargo_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "kargo",
+        "namespace" => "argocd",
+        "uid" => "kargo-visible-app",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "ApplicationSet", "name" => "bootstrap", "uid" => "bootstrap-visible-appset"}],
+      },
+      "status" => {"sync" => {"status" => "Synced"}, "health" => {"status" => "Healthy"}},
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, bootstrap_appset, infra_application, codeai_application, kargo_application]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "root"),
+    ).build
+
+    appset_node = find_node(trace.fetch(:tree), "applicationset/bootstrap")
+    assert_equal ["infra"], appset_node.children[1].children.map(&:label)
+    assert_equal ["codeai", "kargo"], appset_node.children[2].children.map(&:label)
+
+    output = render_trace_entry(payload: {traces: [trace], caveats: []}, include_header: false)
+    assert_includes output, "- codeai: healthy"
+    assert_includes output, "- kargo: healthy"
+  end
+
+  def test_trace_surfaces_application_comparison_error_even_when_health_is_healthy
+    broken_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "codeai-test", "namespace" => "argocd", "uid" => "codeai-test-app"},
+      "status" => {
+        "sync" => {"status" => "Unknown"},
+        "health" => {"status" => "Healthy"},
+        "conditions" => [
+          {
+            "type" => "ComparisonError",
+            "message" => "Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA",
+          },
+        ],
+      },
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([broken_application]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "codeai-test"),
+    ).build
+
+    app_node = trace.fetch(:tree)
+    condition_node = find_node(app_node, "status.conditions.ComparisonError: blocked")
+
+    assert_equal "blocked", app_node.state
+    refute_nil condition_node
+
+    output = render_trace_entry(payload: {traces: [trace], caveats: []}, include_header: false)
+    assert_includes output, "- codeai-test: blocked"
+    assert_includes output, "- status.conditions.ComparisonError: blocked"
+    assert_includes output, "Failed to load target state: failed to generate manifest for source 1 of 2"
+    assert_includes output, "'k8s/reorg' to a commit SHA"
   end
 
   def test_trace_keeps_applicationset_branch_when_argo_still_reports_missing_child_application
@@ -1230,6 +1645,107 @@ class ArgocdProgressTraceTest < Minitest::Test
 
     assert_includes labels, "missing-child"
     refute_includes labels, "deployment/missing-web"
+  end
+
+  def test_nested_deleting_application_keeps_deletion_error_condition_without_noisy_missing_children
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "root", "namespace" => "argocd", "uid" => "root-app-deleting-expand"},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Running"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "deleting-child", "status" => "OutOfSync", "health" => {"status" => "Progressing"}}
+        ],
+      },
+    }
+    deleting_child = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "deleting-child",
+        "namespace" => "argocd",
+        "uid" => "deleting-child-app",
+        "deletionTimestamp" => "2026-04-11T21:27:42Z",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "Application", "name" => "root", "uid" => "root-app-deleting-expand"}],
+      },
+      "status" => {
+        "sync" => {"status" => "OutOfSync"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Succeeded"},
+        "resources" => [
+          {"group" => "", "version" => "v1", "kind" => "ServiceAccount", "namespace" => "default", "name" => "missing-sa", "status" => "OutOfSync"}
+        ],
+        "conditions" => [
+          {"type" => "DeletionError", "message" => "serviceaccounts \"missing-sa\" not found"}
+        ],
+      },
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, deleting_child]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "root"),
+    ).build
+
+    labels = flatten_labels(trace.fetch(:tree))
+
+    assert_includes labels, "deleting-child"
+    refute_includes labels, "serviceaccount/missing-sa"
+    assert_includes labels, "status.conditions.DeletionError: blocked"
+  end
+
+  def test_nested_deleting_application_prefers_pending_deletion_namespace_frontier
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "root", "namespace" => "argocd", "uid" => "root-app-deleting-frontier"},
+      "status" => {
+        "sync" => {"status" => "Synced"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Running"},
+        "resources" => [
+          {"group" => "argoproj.io", "version" => "v1alpha1", "kind" => "Application", "namespace" => "argocd", "name" => "deleting-child", "status" => "OutOfSync", "health" => {"status" => "Progressing"}}
+        ],
+      },
+    }
+    deleting_child = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {
+        "name" => "deleting-child",
+        "namespace" => "argocd",
+        "uid" => "deleting-child-app-frontier",
+        "deletionTimestamp" => "2026-04-11T21:27:42Z",
+        "ownerReferences" => [{"apiVersion" => "argoproj.io/v1alpha1", "kind" => "Application", "name" => "root", "uid" => "root-app-deleting-frontier"}],
+      },
+      "status" => {
+        "sync" => {"status" => "OutOfSync"},
+        "health" => {"status" => "Progressing"},
+        "operationState" => {"phase" => "Succeeded"},
+        "resources" => [
+          {"group" => "", "version" => "v1", "kind" => "Namespace", "name" => "levelbuilder", "status" => "Synced", "health" => {"status" => "Progressing", "message" => "Pending deletion"}},
+          {"group" => "", "version" => "v1", "kind" => "ServiceAccount", "namespace" => "levelbuilder", "name" => "external-secrets-sa-levelbuilder", "status" => "Synced", "hookPhase" => "Running", "message" => "serviceaccount created"}
+        ],
+        "conditions" => [
+          {"type" => "DeletionError", "message" => "serviceaccounts \"missing-sa\" not found"}
+        ],
+      },
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, deleting_child]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "root"),
+    ).build
+
+    labels = flatten_labels(trace.fetch(:tree))
+    namespace_node = find_node(trace.fetch(:tree), "namespace/levelbuilder")
+
+    assert_includes labels, "namespace/levelbuilder"
+    refute_includes labels, "serviceaccount/external-secrets-sa-levelbuilder"
+    assert_equal "pending deletion", namespace_node.state
+    assert_includes namespace_node.evidence.first, "Pending deletion"
   end
 
   def test_annotation_tracking_scans_argo_tree_before_full_cluster_scan
@@ -1557,6 +2073,90 @@ class ArgocdProgressTraceTest < Minitest::Test
     assert_equal "argo-status", children.first.source
     assert_includes deployment_node.detail, "via=argo-status"
     refute_includes deployment_node.detail, "via=argo-tracking"
+  end
+
+  def test_nested_healthy_application_renders_as_one_line_leaf
+    root_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "infra", "namespace" => "argocd", "uid" => "infra-uid"},
+      "status" => {
+        "sync" => {"status" => "OutOfSync"},
+        "health" => {"status" => "Progressing"},
+        "resources" => [
+          {
+            "group" => "argoproj.io",
+            "kind" => "Application",
+            "namespace" => "argocd",
+            "name" => "dex",
+            "status" => "Synced",
+            "health" => {"status" => "Healthy"},
+          },
+        ],
+      },
+    }
+    dex_application = {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => "Application",
+      "metadata" => {"name" => "dex", "namespace" => "argocd", "uid" => "dex-uid"},
+      "status" => {
+        "sync" => {"status" => "Unknown"},
+        "health" => {"status" => "Healthy"},
+        "operationState" => {"phase" => "Succeeded"},
+      },
+    }
+
+    trace = TraceBuilder.new(
+      snapshot: snapshot_from_objects([root_application, dex_application]),
+      root_ref: Ref.new(group: "argoproj.io", kind: "Application", namespace: "argocd", name: "infra"),
+    ).build
+
+    dex_node = find_node(trace.fetch(:tree), "dex")
+
+    refute_nil dex_node
+    assert_equal "healthy", dex_node.state
+    assert_nil dex_node.detail
+    assert_empty dex_node.children
+    assert_empty dex_node.evidence
+    assert_nil dex_node.metadata
+  end
+
+  def test_application_with_only_healthy_descendants_renders_healthy
+    payload = {
+      traces: [
+        {
+          tree: TreeNode.new(
+            label: "app-of-apps",
+            state: "healthy",
+            detail: nil,
+            children: [
+              TreeNode.new(
+                label: "applicationset/app-of-apps",
+                state: "healthy",
+                detail: nil,
+                children: [
+                  TreeNode.new(label: "infra", state: "healthy", detail: nil, children: [], evidence: [], path: ["infra"]),
+                  TreeNode.new(label: "codeai", state: "healthy", detail: nil, children: [], evidence: [], path: ["codeai"]),
+                ],
+                evidence: [],
+                path: ["applicationset/app-of-apps"],
+              ),
+            ],
+            evidence: [],
+            path: ["app-of-apps"],
+          ),
+        },
+      ],
+      caveats: [],
+    }
+
+    output = render_trace_entry(payload: payload, include_header: false)
+
+    assert_includes output, "- app-of-apps: healthy"
+    assert_includes output, "  - applicationset/app-of-apps: healthy"
+    assert_includes output, "    - infra: healthy"
+    assert_includes output, "    - codeai: healthy"
+    refute_includes output, ": in progress"
   end
 
   def test_trace_merges_argo_status_and_live_tracked_children_without_duplication
