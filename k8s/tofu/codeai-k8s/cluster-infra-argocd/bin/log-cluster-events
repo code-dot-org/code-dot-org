@@ -1,0 +1,143 @@
+#!/bin/sh
+set -eu
+
+usage() {
+  echo "usage: $0 <start|stop> [label]" >&2
+  exit 2
+}
+
+[ $# -ge 1 ] || usage
+
+command=$1
+shift 1
+
+case "$command" in
+  start)
+    [ $# -le 1 ] || usage
+    label=${1:-session}
+    ;;
+  stop)
+    [ $# -eq 0 ] || usage
+    ;;
+  *)
+    usage
+    ;;
+esac
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cwd=$(CDPATH= cd -- "$script_dir/.." && pwd)
+module_name=$(basename "$cwd")
+logs_dir="$cwd/logs"
+shared_log_file="$cwd/cluster.log"
+watchers_pid_file="$cwd/.log-cluster-events-watchers.pid"
+run_log_pointer="/tmp/$module_name-last-cluster-log-path"
+trace_log_pointer="/tmp/$module_name-last-argo-trace-log-path"
+label_pointer="/tmp/$module_name-last-cluster-log-label"
+controller_log_tail=200
+
+mkdir -p "$logs_dir"
+
+human_timestamp() {
+  date '+%Y-%m-%d-at-%I:%M%p %Z' | sed 's/-at-0/-at-/; s/AM /a /; s/PM /p /'
+}
+
+stop_watchers() {
+  [ -f "$watchers_pid_file" ] || return 0
+
+  run_log_file=$(cat "$run_log_pointer" 2>/dev/null || true)
+
+  while IFS="$(printf '\t')" read -r watcher_label watcher_pid; do
+    [ -n "${watcher_pid:-}" ] || continue
+    if kill -0 "$watcher_pid" 2>/dev/null; then
+      printf '%s [meta] stopping %s watch pid=%s\n' "$(human_timestamp)" "$watcher_label" "$watcher_pid" \
+        | tee -a "$shared_log_file" ${run_log_file:+"$run_log_file"} >/dev/null
+      kill "$watcher_pid" 2>/dev/null || true
+    fi
+  done < "$watchers_pid_file"
+
+  rm -f "$watchers_pid_file"
+}
+
+run_once() {
+  watcher_label=$1
+  watcher_command=$2
+  run_log_file=$3
+
+  COLUMNS=115 sh -c "
+    $watcher_command 2>&1 \
+      | stdbuf -oL -eL ts '%Y-%m-%d-at-%I:%M%p %Z [$watcher_label]' \
+      | stdbuf -oL -eL perl -pe 's/-at-0/-at-/; s/AM /a /; s/PM /p /' \
+      | stdbuf -oL -eL tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
+  "
+}
+
+start_watch() {
+  watcher_label=$1
+  watcher_command=$2
+  run_log_file=$3
+
+  nohup sh -c "
+    COLUMNS=115 $watcher_command 2>&1 \
+      | stdbuf -oL -eL ts '%Y-%m-%d-at-%I:%M%p %Z [$watcher_label]' \
+      | stdbuf -oL -eL perl -pe 's/-at-0/-at-/; s/AM /a /; s/PM /p /' \
+      | stdbuf -oL -eL tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
+  " >/dev/null 2>&1 &
+  watcher_pid=$!
+  printf '%s\t%s\n' "$watcher_label" "$watcher_pid" >> "$watchers_pid_file"
+  printf '%s [meta] %s-watch-pid=%s\n' "$(human_timestamp)" "$watcher_label" "$watcher_pid" \
+    | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+}
+
+case "$command" in
+  stop)
+    stop_watchers
+    exit 0
+    ;;
+  start)
+    run_stamp=$(date '+%Y-%m-%d-at-%I%M%p' | sed 's/-at-0/-at-/; s/AM/a/; s/PM/p/')
+    run_log_file="$logs_dir/cluster-$run_stamp-$label.log"
+    argo_trace_log_file="$logs_dir/argo-trace-$label-$run_stamp.log.md"
+
+    printf '%s\n' "$run_log_file" > "$run_log_pointer"
+    printf '%s\n' "$argo_trace_log_file" > "$trace_log_pointer"
+    printf '%s\n' "$label" > "$label_pointer"
+
+    run_tail_command="tail -n +1 -f $run_log_file"
+    shared_tail_command="tail -n +1 -f $shared_log_file"
+    trace_tail_command="tail -n +1 -f $argo_trace_log_file"
+
+    printf '%s\n' "$run_tail_command"
+    printf '%s\n' "$shared_tail_command"
+    printf '%s\n' "$trace_tail_command"
+
+    stop_watchers
+
+    {
+      i=0
+      while [ "$i" -lt 50 ]; do
+        printf '\n'
+        i=$((i + 1))
+      done
+      printf '%s [meta] ===== START OF CLUSTER %s LOG SESSION =====\n' "$(human_timestamp)" "$(printf '%s' "$label" | tr '[:lower:]' '[:upper:]')"
+      printf '%s [meta] label=%s\n' "$(human_timestamp)" "$label"
+      printf '%s [meta] argo-trace-log=%s\n' "$(human_timestamp)" "$argo_trace_log_file"
+      printf '%s [meta] cwd=%s\n' "$(human_timestamp)" "$cwd"
+      printf '%s [meta] run-log=%s\n' "$(human_timestamp)" "$run_log_file"
+      printf '%s [meta] shared-log=%s\n' "$(human_timestamp)" "$shared_log_file"
+    } | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+
+    : > "$watchers_pid_file"
+
+    run_once events "stdbuf -oL -eL kubectl get events -A" "$run_log_file"
+    start_watch events "stdbuf -oL -eL kubectl get events -A --watch-only --output-watch-events" "$run_log_file"
+    start_watch argocd-application-controller "stdbuf -oL -eL kubectl logs -n argocd statefulset/argocd-application-controller --tail=$controller_log_tail -f" "$run_log_file"
+    start_watch argocd-applicationset-controller "stdbuf -oL -eL kubectl logs -n argocd deployment/argocd-applicationset-controller --tail=$controller_log_tail -f" "$run_log_file"
+    start_watch argo-trace "stdbuf -oL -eL \"$cwd/bin/argo-trace\" --poll-every 30s | stdbuf -oL -eL tee \"$argo_trace_log_file\"" "$run_log_file"
+
+    printf '%s [meta] tail=%s\n' "$(human_timestamp)" "$run_tail_command" | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+    printf '%s [meta] shared-tail=%s\n' "$(human_timestamp)" "$shared_tail_command" | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+    printf '%s [meta] argo-trace-tail=%s\n' "$(human_timestamp)" "$trace_tail_command" | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+    printf '%s [meta] stop=%s stop\n' "$(human_timestamp)" "$0" | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+    printf '%s [meta] log-cluster-events started for %s\n' "$(human_timestamp)" "$label" | tee -a "$shared_log_file" "$run_log_file" >/dev/null
+    ;;
+esac

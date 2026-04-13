@@ -47,6 +47,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     options = ArgoTrace.parse_cli_options([])
 
     assert_equal true, options[:kubectl_details]
+    assert_equal 2, options[:ref_max_recursion_depth]
   end
 
   def test_parse_cli_options_accepts_supported_kubectl_details_values
@@ -54,6 +55,11 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     assert_equal false, ArgoTrace.parse_cli_options(["--kubectl-details", "0"])[:kubectl_details]
     assert_equal true, ArgoTrace.parse_cli_options(["--kubectl-details", "true"])[:kubectl_details]
     assert_equal false, ArgoTrace.parse_cli_options(["--kubectl-details", "false"])[:kubectl_details]
+  end
+
+  def test_parse_cli_options_accepts_ref_max_recursion_depth
+    assert_equal 0, ArgoTrace.parse_cli_options(["--ref-max-recursion-depth", "0"])[:ref_max_recursion_depth]
+    assert_equal 3, ArgoTrace.parse_cli_options(["--ref-max-recursion-depth", "3"])[:ref_max_recursion_depth]
   end
 
   def test_snapshot_body_keeps_wave_3_off_when_frontier_is_only_apps_and_appsets
@@ -70,7 +76,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
   end
 
   def test_snapshot_body_turns_wave_3_on_for_emphasized_non_app_resource_leaves
-    kubectl_command = ["kubectl", "get", "namespace", "production", "-o", "yaml", "--ignore-not-found"]
+    kubectl_command = ["kubectl", "get", "Namespace", "production", "-o", "yaml", "--ignore-not-found"]
     command_runner = Wave3FakeCommandRunner.new(
       outputs: wave_3_fixture_outputs.merge(
         kubectl_command => <<~YAML
@@ -97,7 +103,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     )
 
     assert_includes command_runner.seen_commands, kubectl_command
-    assert_includes body_text, "→     - production (Namespace) [sync.status=Synced, health.status=Progressing]"
+    assert_includes body_text, "→   - production (Namespace) [sync.status=Synced, health.status=Progressing, status.conditions.NamespaceDeletionDiscoveryFailure=True]"
     assert_includes body_text, "      - metadata.deletionTimestamp: 2026-04-12T09:00:00Z"
     assert_includes body_text, '      - metadata.finalizers: ["kubernetes"]'
     assert_includes body_text, "      - status.phase: Active"
@@ -109,8 +115,8 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
       wave_3_resource_node(kind: "Namespace", name: "production"),
       wave_3_resource_node(kind: "Namespace", name: "staging"),
     ]
-    production_command = ["kubectl", "get", "namespace", "production", "-o", "yaml", "--ignore-not-found"]
-    staging_command = ["kubectl", "get", "namespace", "staging", "-o", "yaml", "--ignore-not-found"]
+    production_command = ["kubectl", "get", "Namespace", "production", "-o", "yaml", "--ignore-not-found"]
+    staging_command = ["kubectl", "get", "Namespace", "staging", "-o", "yaml", "--ignore-not-found"]
     command_runner = Wave3FakeCommandRunner.new(
       outputs: {
         production_command => {"metadata" => {"name" => "production"}}.to_yaml,
@@ -136,7 +142,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
   end
 
   def test_wave_3_does_not_recurse_beyond_direct_live_object_fetch
-    kubectl_command = ["kubectl", "get", "namespace", "production", "-o", "yaml", "--ignore-not-found"]
+    kubectl_command = ["kubectl", "get", "Namespace", "production", "-o", "yaml", "--ignore-not-found"]
     command_runner = Wave3FakeCommandRunner.new(
       outputs: wave_3_fixture_outputs.merge(
         kubectl_command => <<~YAML
@@ -173,6 +179,271 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     refute_includes body_text, "            - metadata.creationTimestamp: 2026-04-12T08:32:19Z"
     refute_includes body_text, "        - status.applicationStatus.message: Application resource became Healthy, updating status from Progressing to Healthy"
     refute_includes body_text, "        - metadata.creationTimestamp: 2026-04-12T08:41:30Z"
+  end
+
+  def test_wave_4_follows_crossplane_resource_refs_from_arrowed_live_resource_nodes
+    xcert_command = ["kubectl", "get", "XClusterDNSCertificate", "codeai-k8s-cluster-dns-certificate", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    zone_command = ["kubectl", "get", "Zone", "codeai-k8s-cluster-dns-certificate-zone", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    command_runner = Wave3FakeCommandRunner.new(
+      outputs: wave_4_crossplane_fixture_outputs.merge(
+        xcert_command => <<~YAML,
+          apiVersion: infra.code.org/v1alpha1
+          kind: XClusterDNSCertificate
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+            finalizers:
+              - foregroundDeletion
+          spec:
+            crossplane:
+              resourceRefs:
+                - apiVersion: route53.aws.m.upbound.io/v1beta1
+                  kind: Zone
+                  name: codeai-k8s-cluster-dns-certificate-zone
+          status:
+            conditions:
+              - type: Ready
+                status: "False"
+                reason: Deleting
+        YAML
+        zone_command => <<~YAML
+          apiVersion: route53.aws.m.upbound.io/v1beta1
+          kind: Zone
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate-zone
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+            finalizers:
+              - finalizer.managedresource.crossplane.io
+          status:
+            conditions:
+              - type: Ready
+                status: "False"
+                reason: Deleting
+              - type: Synced
+                status: "False"
+                reason: ReconcileError
+                message: HostedZoneNotEmpty
+        YAML
+      )
+    )
+
+    body_text = ArgoTrace.snapshot_body(
+      command_runner: command_runner,
+      wrap_width: nil,
+      kubectl_details: true,
+      ref_max_recursion_depth: 2
+    )
+
+    seen_commands = command_runner.seen_commands
+    assert_includes seen_commands, xcert_command
+    assert_includes seen_commands, zone_command
+    assert_includes body_text, "    - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Ready=False]"
+    assert_includes body_text, "→     - codeai-k8s-cluster-dns-certificate-zone (Zone) [status.conditions.Ready=False, status.conditions.Synced=False]"
+    assert_includes body_text, "→       - status.conditions.Synced: status=False, reason=ReconcileError, message=HostedZoneNotEmpty"
+  end
+
+  def test_wave_4_stops_recursing_after_child_exposes_blocker_message
+    xcert_command = ["kubectl", "get", "XClusterDNSCertificate", "codeai-k8s-cluster-dns-certificate", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    zone_command = ["kubectl", "get", "Zone", "codeai-k8s-cluster-dns-certificate-zone", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    record_command = ["kubectl", "get", "Record", "codeai-k8s-cluster-dns-certificate-record", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    command_runner = Wave3FakeCommandRunner.new(
+      outputs: wave_4_crossplane_fixture_outputs.merge(
+        xcert_command => <<~YAML,
+          apiVersion: infra.code.org/v1alpha1
+          kind: XClusterDNSCertificate
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+          spec:
+            crossplane:
+              resourceRefs:
+                - apiVersion: route53.aws.m.upbound.io/v1beta1
+                  kind: Zone
+                  name: codeai-k8s-cluster-dns-certificate-zone
+          status:
+            conditions:
+              - type: Ready
+                status: "False"
+                reason: Deleting
+        YAML
+        zone_command => <<~YAML,
+          apiVersion: route53.aws.m.upbound.io/v1beta1
+          kind: Zone
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate-zone
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+          spec:
+            crossplane:
+              resourceRefs:
+                - apiVersion: route53.aws.m.upbound.io/v1beta1
+                  kind: Record
+                  name: codeai-k8s-cluster-dns-certificate-record
+          status:
+            conditions:
+              - type: Synced
+                status: "False"
+                reason: ReconcileError
+                message: HostedZoneNotEmpty
+        YAML
+        record_command => <<~YAML
+          apiVersion: route53.aws.m.upbound.io/v1beta1
+          kind: Record
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate-record
+            namespace: crossplane-system
+          status:
+            conditions:
+              - type: Ready
+                status: "False"
+                reason: Deleting
+                message: should not be fetched
+        YAML
+      )
+    )
+
+    body_text = ArgoTrace.snapshot_body(
+      command_runner: command_runner,
+      wrap_width: nil,
+      kubectl_details: true,
+      ref_max_recursion_depth: 2
+    )
+
+    seen_commands = command_runner.seen_commands
+    assert_includes seen_commands, xcert_command
+    assert_includes seen_commands, zone_command
+    refute_includes seen_commands, record_command
+    assert_includes body_text, "→       - status.conditions.Synced: status=False, reason=ReconcileError, message=HostedZoneNotEmpty"
+    refute_includes body_text, "codeai-k8s-cluster-dns-certificate-record"
+  end
+
+  def test_wave_4_does_not_start_when_wave_3_node_already_has_blocker_message
+    xcert_command = ["kubectl", "get", "XClusterDNSCertificate", "codeai-k8s-cluster-dns-certificate", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    command_runner = Wave3FakeCommandRunner.new(
+      outputs: wave_4_crossplane_fixture_outputs.merge(
+        xcert_command => <<~YAML
+          apiVersion: infra.code.org/v1alpha1
+          kind: XClusterDNSCertificate
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+          status:
+            conditions:
+              - type: Synced
+                status: "False"
+                reason: ReconcileError
+                message: HostedZoneNotEmpty
+          spec:
+            crossplane:
+              resourceRefs:
+                - apiVersion: route53.aws.m.upbound.io/v1beta1
+                  kind: Zone
+                  name: codeai-k8s-cluster-dns-certificate-zone
+        YAML
+      )
+    )
+
+    body_text = ArgoTrace.snapshot_body(
+      command_runner: command_runner,
+      wrap_width: nil,
+      kubectl_details: true,
+      ref_max_recursion_depth: 2
+    )
+
+    seen_commands = command_runner.seen_commands
+    assert_includes seen_commands, xcert_command
+    refute_includes seen_commands, ["kubectl", "get", "Zone", "codeai-k8s-cluster-dns-certificate-zone", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    assert_includes body_text, "→   - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Synced=False]"
+    assert_includes body_text, "→     - status.conditions.Synced: status=False, reason=ReconcileError, message=HostedZoneNotEmpty"
+  end
+
+  def test_wave_4_follows_owner_references_from_arrowed_live_resource_nodes
+    config_map_command = ["kubectl", "get", "ConfigMap", "app-config", "-n", "default", "-o", "yaml", "--ignore-not-found"]
+    owner_command = ["kubectl", "get", "Deployment", "app-owner", "-n", "default", "-o", "yaml", "--ignore-not-found"]
+    command_runner = Wave3FakeCommandRunner.new(
+      outputs: wave_4_owner_ref_fixture_outputs.merge(
+        config_map_command => <<~YAML,
+          apiVersion: v1
+          kind: ConfigMap
+          metadata:
+            name: app-config
+            namespace: default
+            deletionTimestamp: 2026-04-13T04:05:07Z
+            ownerReferences:
+              - apiVersion: apps/v1
+                kind: Deployment
+                name: app-owner
+        YAML
+        owner_command => <<~YAML
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: app-owner
+            namespace: default
+            deletionTimestamp: 2026-04-13T04:05:07Z
+          status:
+            conditions:
+              - type: Available
+                status: "False"
+                reason: Deleting
+                message: deployment is deleting
+        YAML
+      )
+    )
+
+    body_text = ArgoTrace.snapshot_body(
+      command_runner: command_runner,
+      wrap_width: nil,
+      kubectl_details: true,
+      ref_max_recursion_depth: 1
+    )
+
+    seen_commands = command_runner.seen_commands
+    assert_includes seen_commands, config_map_command
+    assert_includes seen_commands, owner_command
+    assert_includes body_text, "→     - app-owner (Deployment) [status.conditions.Available=False]"
+    assert_includes body_text, "→       - status.conditions.Available: status=False, reason=Deleting, message=deployment is deleting"
+  end
+
+  def test_wave_4_respects_ref_max_recursion_depth_limit
+    xcert_command = ["kubectl", "get", "XClusterDNSCertificate", "codeai-k8s-cluster-dns-certificate", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    zone_command = ["kubectl", "get", "Zone", "codeai-k8s-cluster-dns-certificate-zone", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
+    command_runner = Wave3FakeCommandRunner.new(
+      outputs: wave_4_crossplane_fixture_outputs.merge(
+        xcert_command => <<~YAML,
+          apiVersion: infra.code.org/v1alpha1
+          kind: XClusterDNSCertificate
+          metadata:
+            name: codeai-k8s-cluster-dns-certificate
+            namespace: crossplane-system
+            deletionTimestamp: 2026-04-13T04:05:07Z
+          spec:
+            crossplane:
+              resourceRefs:
+                - apiVersion: route53.aws.m.upbound.io/v1beta1
+                  kind: Zone
+                  name: codeai-k8s-cluster-dns-certificate-zone
+          status:
+            conditions:
+              - type: Ready
+                status: "False"
+                reason: Deleting
+        YAML
+      )
+    )
+
+    ArgoTrace.snapshot_body(
+      command_runner: command_runner,
+      wrap_width: nil,
+      kubectl_details: true,
+      ref_max_recursion_depth: 0
+    )
+
+    refute_includes command_runner.seen_commands, zone_command
   end
 
   private def fixture_argocd_outputs_only
@@ -225,6 +496,89 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
                 "message" => "Pending deletion",
               },
               "syncWave" => 30,
+            }
+          ],
+        },
+      }.to_yaml,
+    }
+  end
+
+  private def wave_4_crossplane_fixture_outputs
+    {
+      ArgoTrace::WAVE1_APPSET_LIST_COMMAND => [].to_yaml,
+      ArgoTrace::WAVE1_APP_LIST_COMMAND => [
+        {
+          "metadata" => {
+            "name" => "aws-resources",
+            "namespace" => "argocd",
+          },
+          "status" => {
+            "sync" => {"status" => "Synced"},
+            "health" => {"status" => "Progressing"},
+            "operationState" => {"phase" => "Succeeded"},
+          },
+        }
+      ].to_yaml,
+      ArgoTrace.app_get_command("aws-resources") => {
+        "metadata" => {
+          "name" => "aws-resources",
+          "namespace" => "argocd",
+        },
+        "status" => {
+          "sync" => {"status" => "Synced"},
+          "health" => {"status" => "Progressing"},
+          "operationState" => {"phase" => "Succeeded"},
+          "resources" => [
+            {
+              "group" => "infra.code.org",
+              "kind" => "XClusterDNSCertificate",
+              "name" => "codeai-k8s-cluster-dns-certificate",
+              "namespace" => "crossplane-system",
+              "status" => "Synced",
+              "syncWave" => 1,
+            }
+          ],
+        },
+      }.to_yaml,
+    }
+  end
+
+  private def wave_4_owner_ref_fixture_outputs
+    {
+      ArgoTrace::WAVE1_APPSET_LIST_COMMAND => [].to_yaml,
+      ArgoTrace::WAVE1_APP_LIST_COMMAND => [
+        {
+          "metadata" => {
+            "name" => "sample-app",
+            "namespace" => "argocd",
+          },
+          "status" => {
+            "sync" => {"status" => "Synced"},
+            "health" => {"status" => "Progressing"},
+            "operationState" => {"phase" => "Succeeded"},
+          },
+        }
+      ].to_yaml,
+      ArgoTrace.app_get_command("sample-app") => {
+        "metadata" => {
+          "name" => "sample-app",
+          "namespace" => "argocd",
+        },
+        "status" => {
+          "sync" => {"status" => "Synced"},
+          "health" => {"status" => "Progressing"},
+          "operationState" => {"phase" => "Succeeded"},
+          "resources" => [
+            {
+              "kind" => "ConfigMap",
+              "name" => "app-config",
+              "namespace" => "default",
+              "status" => "Synced",
+              "health" => {
+                "status" => "Progressing",
+                "message" => "Pending deletion",
+              },
+              "syncWave" => 1,
             }
           ],
         },

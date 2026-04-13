@@ -26,38 +26,23 @@ AWS_PROFILE=codeorg-admin tofu apply
 
 ## Watching Argo
 
-`bin/argo-trace` prints the live Argo/Kubernetes dependency tree to
+- `bin/argo-trace` prints the live Argo/Kubernetes dependency tree to
 stdout.
 
-- One snapshot, suitable for `watch`:
-  `bin/argo-trace`
-- Watch at a fixed cadence:
-  `bin/argo-trace --poll-every 1m`
-- Follow one specific root:
-  `bin/argo-trace --root-name app-of-apps --poll-every 30s`
-
-`bin/logged-tofu apply` and `bin/logged-tofu destroy` already run this tracer as
-a sidecar, capture that stdout in `logs/argocd-<action>-<timestamp>.log.md`,
-and print the md log path at the start of the run.
+- `bin/watch-argo-trace` runs argo-trace in a loop, watching its output using `watch`, use this as your human default go to command to watch the cluster.
 
 ## Testing
 
 ### Testing scripts used in deploying the cluster
 
 - If you modify `bin/argo-trace`, run before commit:
-  `ruby test/argo-trace/argocd_progress_trace_test.rb`
-- For the live `bin/argo-trace` stress harness, run:
-  `ruby test/argo-trace-stress-test/run.rb`
-  Fixtures live in
-  [`k8s-gitops/argo-trace-stress-test/`](https://github.com/code-dot-org/k8s-gitops/tree/main/argo-trace-stress-test).
-- `test/argo-trace/fixtures/argocd_progress_trace/` holds the unit-test fixture
-  payloads for `bin/argo-trace`.
-- `test/argo-cli-trace/fixtures/argo-cli-data/` holds saved `argocd --core`
-  YAML responses for `argo-cli-trace`.
-- `test/argo-cli-trace/expected-output-from-argo-cli-given-data-responses.txt`
+  `ruby test/argo-trace/argo_trace_test.rb`
+- `test/argo-trace/fixtures/argo-cli-data/` holds saved `argocd --core`
+  YAML responses for `argo-trace`.
+- `test/argo-trace/expected-output-from-argo-trace-given-data-responses.txt`
   is the expected rendered tree for that saved Argo CLI dataset.
-- If you modify `bin/logged-tofu`, run before commit:
-  `ruby test/logged_tofu_test.rb`
+- If you modify `bin/log-cluster-events`, run before commit:
+  `ruby test/log_cluster_events_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:
   `ruby test/wait_for_200_test.rb`
 - `bin/wait-for-200` smoke:

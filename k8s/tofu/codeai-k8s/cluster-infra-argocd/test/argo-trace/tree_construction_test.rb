@@ -132,6 +132,22 @@ class ArgoTraceTreeConstructionTest < Minitest::Test
     assert_includes sync_wave_30.children.map(&:name), "levelbuilder"
   end
 
+  def test_build_tree_tolerates_appset_children_missing_from_app_inventory_during_delete
+    app_inventory_without_codeai = @app_inventory.reject {|name, _argocd_app| name == "codeai"}
+
+    tree = ArgoTrace.build_tree(
+      root_inventory: ArgoTrace.build_root_inventory(app_inventory_without_codeai),
+      app_inventory: app_inventory_without_codeai,
+      appset_inventory: @appset_inventory,
+      app_enrichment: @app_enrichment.reject {|name, _result| name == "codeai"},
+      appset_enrichment: @appset_enrichment
+    )
+
+    codeai_node = tree.first.children.first.children.last.children.find {|node| node.name == "codeai"}
+    refute_nil codeai_node
+    assert_equal "Application", codeai_node.kind
+  end
+
   private def build_tree
     @build_tree ||= ArgoTrace.build_tree(
       root_inventory: @root_inventory,

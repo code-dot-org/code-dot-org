@@ -44,7 +44,48 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
     lines = ArgoTrace.render_display_lines(@tree)
 
     assert_includes lines, "- app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]"
-    assert_includes lines, "      - infra (Application) [step=1, status=Healthy]"
+    assert_includes lines, "      - infra (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=1, rollout.status=Healthy]"
+  end
+
+  def test_missing_delete_race_application_renders_as_missing_not_stale_rollout_status
+    missing_codeai_tree = ArgoTrace.build_tree(
+      root_inventory: ArgoTrace.build_root_inventory(@app_inventory.reject {|name, _argocd_app| name == "codeai"}),
+      app_inventory: @app_inventory.reject {|name, _argocd_app| name == "codeai"},
+      appset_inventory: @appset_inventory,
+      app_enrichment: @app_enrichment.reject {|name, _result| name == "codeai"},
+      appset_enrichment: @appset_enrichment
+    )
+
+    lines = ArgoTrace.render_display_lines(missing_codeai_tree)
+
+    assert_includes lines, "→     - codeai (Application) [missing]"
+    refute_includes lines, "      - codeai (Application) [step=2, status=Healthy]"
+  end
+
+  def test_missing_child_under_deleting_parent_renders_as_missing_but_not_arrowed
+    deleting_parent = Marshal.load(Marshal.dump(@app_enrichment["infra"][:raw]))
+    deleting_parent["metadata"]["deletionTimestamp"] = "2026-04-13T04:02:47Z"
+    app_inventory_without_external_dns = @app_inventory.reject {|name, _argocd_app| name == "external-dns"}
+
+    infra_node = ArgoTrace.build_application_tree(
+      "infra",
+      app_inventory: app_inventory_without_external_dns,
+      appset_inventory: @appset_inventory,
+      app_enrichment: @app_enrichment.merge("infra" => {raw: deleting_parent, error: nil}).reject {|name, _result| name == "external-dns"},
+      appset_enrichment: @appset_enrichment
+    )
+
+    lines = ArgoTrace.render_display_lines([infra_node])
+
+    assert_includes lines, "    - external-dns (Application) [missing]"
+    refute_includes lines, "        → external-dns (Application) [missing]"
+  end
+
+  def test_deepest_non_good_frontier_gets_arrow_not_the_whole_ancestor_chain
+    lines = ArgoTrace.render_display_lines(@tree)
+
+    refute(lines.any? {|line| line.start_with?("→ - app-of-apps (Application)")})
+    refute(lines.any? {|line| line.start_with?("      → codeai (Application)")})
   end
 
   def test_applicationset_label_uses_mechanical_all_conditions_good_summary
@@ -136,6 +177,34 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
     assert_equal ["- healthy-leaf (Application) [sync.status=Synced, health.status=Healthy]"], lines
   end
 
+  def test_successful_operation_message_is_not_rendered_as_active_detail
+    node = ArgoTrace::TreeNode.new(
+      kind: "Application",
+      name: "deleting-app",
+      children: [],
+      metadata: {
+        raw: {
+          "metadata" => {
+            "deletionTimestamp" => "2026-04-13T04:02:47Z",
+            "finalizers" => ["resources-finalizer.argocd.argoproj.io"],
+          },
+          "status" => {
+            "sync" => {"status" => "Synced"},
+            "health" => {"status" => "Progressing"},
+            "operationState" => {
+              "phase" => "Succeeded",
+              "message" => "successfully synced (all tasks run)",
+            },
+          }
+        }
+      }
+    )
+
+    lines = ArgoTrace.render_display_lines([node])
+
+    refute(lines.any? {|line| line.include?("status.operationState.message: successfully synced (all tasks run)")})
+  end
+
   def test_renders_error_attachment_in_operator_output
     node = ArgoTrace::TreeNode.new(
       kind: "Application",
@@ -175,7 +244,7 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
 
     lines = ArgoTrace.render_display_lines([infra_node])
 
-    assert_includes lines, "→     - networking (Application) [sync.status=Synced, health.status=Progressing]"
+    assert_includes lines, "→   - networking (Application) [sync.status=Synced, health.status=Progressing]"
   end
 
   def test_non_application_resource_leaf_under_normal_application_is_rendered_and_arrowed
@@ -201,8 +270,47 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
 
     lines = ArgoTrace.render_display_lines([infra_node])
 
-    assert_includes lines, "→     - levelbuilder (Namespace) [sync.status=Synced, health.status=Progressing]"
-    assert_includes lines, "→       - health.message: Pending deletion"
+    assert_includes lines, "→   - levelbuilder (Namespace) [sync.status=Synced, health.status=Progressing]"
+    assert_includes lines, "→     - health.message: Pending deletion"
+  end
+
+  def test_live_kubectl_detail_makes_resource_child_non_good_and_shows_detail
+    node = ArgoTrace::TreeNode.new(
+      kind: "XClusterDNSCertificate",
+      name: "codeai-k8s-cluster-dns-certificate",
+      children: [],
+      metadata: {
+        raw: {
+          "kind" => "XClusterDNSCertificate",
+          "name" => "codeai-k8s-cluster-dns-certificate",
+          "status" => "Synced",
+        },
+        kubectl_detail: {
+          raw: {
+            "metadata" => {
+              "deletionTimestamp" => "2026-04-13T04:05:07Z",
+              "finalizers" => ["foregroundDeletion"],
+            },
+            "status" => {
+              "conditions" => [
+                {
+                  "type" => "Ready",
+                  "status" => "False",
+                  "reason" => "Deleting",
+                }
+              ]
+            }
+          }
+        }
+      }
+    )
+
+    lines = ArgoTrace.render_display_lines([node])
+
+    assert_includes lines, "→ - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Ready=False]"
+    assert_includes lines, "  - metadata.deletionTimestamp: 2026-04-13T04:05:07Z"
+    assert_includes lines, '  - metadata.finalizers: ["foregroundDeletion"]'
+    assert_includes lines, "→ - status.conditions.Ready: status=False, reason=Deleting"
   end
 
   def test_appset_children_app_children_and_resource_leaves_share_attention_selection
@@ -258,6 +366,13 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
     end
 
     assert_equal ["levelbuilder"], resource_selected_children.map(&:name)
+  end
+
+  def test_sync_wave_rendering_does_not_duplicate_wrapper_appset_child
+    lines = ArgoTrace.render_display_lines(@tree)
+
+    refute_includes lines, "  - sync-wave 0"
+    assert_equal 1, (lines.count {|line| line == "  - app-of-apps (ApplicationSet) [all conditions good]"})
   end
 
   private def fixture_get(filename)

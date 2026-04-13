@@ -2,16 +2,14 @@ starting argo-trace @ 12:33p and 10s
 
 # ArgoCD dependency tree @ 12:33p and 10s, argo-trace took 30.0s
 
-[2m
-- app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]
+[2m- app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]
   - metadata.creationTimestamp: 2026-04-12T08:31:09Z
   - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
-  - status.operationState.message: successfully synced (all tasks run)
   - app-of-apps (ApplicationSet) [all conditions good]
     - metadata.creationTimestamp: 2026-04-12T08:31:13Z
     - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
     - RollingSync step 1 (code.org/bootstrap-group In [infra])
-      - infra (Application) [step=1, status=Healthy]
+      - infra (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=1, rollout.status=Healthy]
         - sync-wave 0
           - crossplane (Application) [sync.status=Synced, health.status=Healthy]
         - sync-wave 2
@@ -30,30 +28,24 @@ starting argo-trace @ 12:33p and 10s
         - sync-wave 40
           - dex (Application) [sync.status=Synced, health.status=Healthy]
     - RollingSync step 2 (code.org/bootstrap-group NotIn [infra])
-      - codeai (Application) [step=2, status=Healthy]
+      - codeai (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=2, rollout.status=Healthy]
         - metadata.creationTimestamp: 2026-04-12T08:31:14Z
         - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
         - status.applicationStatus.lastTransitionTime: 2026-04-12T20:59:57Z
         - status.applicationStatus.message: Application resource has synced, updating status to Healthy
-        - status.operationState.message: successfully synced (all tasks run)
         - codeai (ApplicationSet) [all conditions good]
           - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-[22m
-[1m
           - codeai-staging (Application) [sync.status=Unknown, health.status=Healthy, status.operationState.phase=Error, ComparisonError=True]
             - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
-→           - status.conditions.ComparisonError
+            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[1m→           - status.conditions.ComparisonError
 →             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA
-→           - status.operationState.message: ComparisonError: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA
-          - codeai-test (Application) [sync.status=Unknown, health.status=Healthy, ComparisonError=True]
+→           - status.operationState.message: ComparisonError: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
+[2m          - codeai-test (Application) [sync.status=Unknown, health.status=Healthy, ComparisonError=True]
             - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
-→           - status.conditions.ComparisonError
-→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA
-[22m
-[2m
-      - kargo (Application) [step=2, status=Healthy]
+            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[1m→           - status.conditions.ComparisonError
+→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
+[2m      - kargo (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=2, rollout.status=Healthy]
         - sync-wave 1
-          - kargo-project-codeai (Application) [sync.status=Synced, health.status=Healthy]
-[22m
+          - kargo-project-codeai (Application) [sync.status=Synced, health.status=Healthy][22m

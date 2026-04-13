@@ -18,6 +18,18 @@ module ArgoTrace
   DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS = 90
   DEFAULT_MAX_PARALLEL_CALLS = 50
   DEFAULT_KUBECTL_DETAILS = true
+  DEFAULT_REF_MAX_RECURSION_DEPTH = 2
+  FOLLOW_REF_NOISE_KINDS = Set.new(
+    %w[
+      Certificate
+      CertificateValidation
+      Policy
+      Record
+      Role
+      RolePolicy
+      RolePolicyAttachment
+    ]
+  ).freeze
   APPSET_GOOD_CONDITION_STATUSES = {
     "ParametersGenerated" => "True",
     "ResourcesUpToDate" => "True",
@@ -33,6 +45,7 @@ module ArgoTrace
       poll_every: nil,
       soft_wrap: :auto,
       kubectl_details: DEFAULT_KUBECTL_DETAILS,
+      ref_max_recursion_depth: DEFAULT_REF_MAX_RECURSION_DEPTH,
     }
 
     OptionParser.new do |parser|
@@ -52,6 +65,12 @@ module ArgoTrace
 
       parser.on("--kubectl-details VALUE", "Enable or disable wave-3 kubectl detail fetches (1, 0, true, false)") do |value|
         options[:kubectl_details] = parse_cli_boolean(value, flag_name: "--kubectl-details")
+      end
+
+      parser.on("--ref-max-recursion-depth DEPTH", Integer, "Follow owner/ref children this many levels from already-arrowed live resource nodes") do |value|
+        raise OptionParser::InvalidArgument, value.to_s if value.negative?
+
+        options[:ref_max_recursion_depth] = value
       end
     end.parse!(argv)
 
@@ -83,6 +102,10 @@ module ArgoTrace
     }.fetch(unit)
 
     amount * seconds
+  end
+
+  def parse_api_group(api_version)
+    api_version.to_s.split("/", 2)[1].to_s
   end
 
   def format_clock_time(time)
@@ -511,7 +534,11 @@ module ArgoTrace
     (sync && sync != "Synced") || (health && health != "Healthy")
   end
 
-  def build_app_resource_node(app_resource, duplicate_counts:, app_inventory:, appset_inventory:, app_enrichment:, appset_enrichment:)
+  def deleting_argocd_object?(argocd_object)
+    !!argocd_object.dig("metadata", "deletionTimestamp")
+  end
+
+  def build_app_resource_node(app_resource, duplicate_counts:, app_inventory:, appset_inventory:, app_enrichment:, appset_enrichment:, parent_deleting:)
     display_name = app_resource_display_name(app_resource, duplicate_counts)
 
     case app_resource["kind"]
@@ -532,7 +559,8 @@ module ArgoTrace
         app_inventory: app_inventory,
         appset_inventory: appset_inventory,
         app_enrichment: app_enrichment,
-        appset_enrichment: appset_enrichment
+        appset_enrichment: appset_enrichment,
+        parent_deleting: parent_deleting
       ).tap do |node|
         node.name = display_name
       end
@@ -554,6 +582,7 @@ module ArgoTrace
     app_resources = (argocd_app.dig("status", "resources") || []).
       select {|app_resource| app_resource["kind"] == "ApplicationSet"}
     duplicate_counts = duplicate_app_resource_counts(app_resources)
+    parent_deleting = deleting_argocd_object?(argocd_app)
 
     app_resources.map do |app_resource|
       build_app_resource_node(
@@ -562,7 +591,8 @@ module ArgoTrace
         app_inventory: app_inventory,
         appset_inventory: appset_inventory,
         app_enrichment: app_enrichment,
-        appset_enrichment: appset_enrichment
+        appset_enrichment: appset_enrichment,
+        parent_deleting: parent_deleting
       )
     end
   end
@@ -573,7 +603,7 @@ module ArgoTrace
 
   def sync_wave_app_resources(argocd_app)
     (argocd_app.dig("status", "resources") || []).select do |app_resource|
-      app_resource["kind"] == "Application" || app_resource_non_good?(app_resource)
+      app_resource["kind"] != "ApplicationSet" && (app_resource["kind"] == "Application" || app_resource_non_good?(app_resource))
     end
   end
 
@@ -583,6 +613,7 @@ module ArgoTrace
 
     duplicate_counts = duplicate_app_resource_counts(app_resources)
     grouped_resources = app_resources.group_by {|app_resource| sync_wave_key(app_resource)}
+    parent_deleting = deleting_argocd_object?(argocd_app)
     grouped_resources.keys.sort.map do |wave|
       wave_app_resources = grouped_resources.fetch(wave).sort_by do |app_resource|
         [
@@ -600,7 +631,8 @@ module ArgoTrace
           app_inventory: app_inventory,
           appset_inventory: appset_inventory,
           app_enrichment: app_enrichment,
-          appset_enrichment: appset_enrichment
+          appset_enrichment: appset_enrichment,
+          parent_deleting: parent_deleting
         )
       end
 
@@ -613,11 +645,12 @@ module ArgoTrace
     end
   end
 
-  def build_appset_tree(appset_name, app_inventory:, appset_inventory:, appset_enrichment:)
+  def build_appset_tree(appset_name, app_inventory:, appset_inventory:, appset_enrichment:, parent_deleting: false)
     enrichment_result = appset_enrichment[appset_name]
-    argocd_appset = enrichment_result&.dig(:raw) || appset_inventory.fetch(appset_name).fetch(:raw)
+    argocd_appset = enrichment_result&.dig(:raw) || appset_inventory[appset_name]&.fetch(:raw, nil) || missing_argocd_object("ApplicationSet", appset_name)
     application_status_by_name = appset_status_by_application(argocd_appset)
     steps = argocd_appset.dig("spec", "strategy", "rollingSync", "steps") || []
+    appset_deleting = deleting_argocd_object?(argocd_appset)
 
     children = if steps.any?
                  steps.each_with_index.map do |step, step_index|
@@ -631,8 +664,9 @@ module ArgoTrace
                          app_inventory: app_inventory,
                          appset_inventory: appset_inventory,
                          appset_enrichment: appset_enrichment,
-                         rollout_status: application_status,
-                       )
+                          rollout_status: application_status,
+                          parent_deleting: appset_deleting || parent_deleting,
+                        )
                      end
 
                    TreeNode.new(
@@ -654,6 +688,7 @@ module ArgoTrace
                        app_inventory: app_inventory,
                        appset_inventory: appset_inventory,
                        appset_enrichment: appset_enrichment,
+                       parent_deleting: appset_deleting || parent_deleting,
                      )
                    end
                end
@@ -666,13 +701,32 @@ module ArgoTrace
       metadata: {
         raw: argocd_appset,
         enrichment_result: enrichment_result,
+        expected_missing: parent_deleting && missing_argocd_object?(argocd_appset),
       }
     )
   end
 
-  def build_application_tree(app_name, app_inventory:, appset_inventory:, app_enrichment: {}, appset_enrichment: {}, rollout_status: nil)
+  def missing_argocd_object(kind, name)
+    {
+      "apiVersion" => "argoproj.io/v1alpha1",
+      "kind" => kind,
+      "metadata" => {
+        "name" => name,
+        "annotations" => {
+          "argo-trace/code-object-missing" => "true",
+        },
+      },
+      "status" => {},
+    }
+  end
+
+  def missing_argocd_object?(argocd_object)
+    argocd_object.dig("metadata", "annotations", "argo-trace/code-object-missing") == "true"
+  end
+
+  def build_application_tree(app_name, app_inventory:, appset_inventory:, app_enrichment: {}, appset_enrichment: {}, rollout_status: nil, parent_deleting: false)
     enrichment_result = app_enrichment[app_name]
-    argocd_app = enrichment_result&.dig(:raw) || app_inventory.fetch(app_name).fetch(:raw)
+    argocd_app = enrichment_result&.dig(:raw) || app_inventory[app_name]&.fetch(:raw, nil) || missing_argocd_object("Application", app_name)
     sync_wave_groups = build_sync_wave_groups(
       argocd_app,
       app_inventory: app_inventory,
@@ -695,7 +749,8 @@ module ArgoTrace
           node.metadata.fetch(:appset_name),
           app_inventory: app_inventory,
           appset_inventory: appset_inventory,
-          appset_enrichment: appset_enrichment
+          appset_enrichment: appset_enrichment,
+          parent_deleting: deleting_argocd_object?(argocd_app)
         )
       end
 
@@ -708,6 +763,7 @@ module ArgoTrace
         raw: argocd_app,
         enrichment_result: enrichment_result,
         rollout_status: rollout_status,
+        expected_missing: parent_deleting && missing_argocd_object?(argocd_app),
       }
     )
   end
@@ -738,6 +794,10 @@ module ArgoTrace
     error[:message] == :total_timeout || error[:message] == :timeout ? "timed out" : "error"
   end
 
+  def expected_missing_node?(node)
+    node.metadata[:expected_missing]
+  end
+
   def display_sync_health_parts(argocd_object)
     parts = []
     parts << "sync.status=#{sync_status(argocd_object)}" if sync_status(argocd_object)
@@ -745,22 +805,36 @@ module ArgoTrace
     parts
   end
 
+  def live_resource_bracket_parts(node)
+    kubectl_detail = node.metadata[:kubectl_detail]
+    return [] unless kubectl_detail
+    return ["error"] if kubectl_detail[:error]
+
+    live_resource = kubectl_detail[:raw]
+    return [] unless live_resource.is_a?(Hash) && !live_resource.empty?
+
+    interesting_live_resource_conditions(live_resource).filter_map do |condition|
+      next unless condition["type"] && condition["status"]
+
+      "status.conditions.#{condition['type']}=#{condition['status']}"
+    end
+  end
+
   def display_resource_bracket_parts(node)
-    display_sync_health_parts(node.metadata[:raw] || {})
+    display_sync_health_parts(node.metadata[:raw] || {}) + live_resource_bracket_parts(node)
   end
 
   def display_application_bracket_parts(node)
-    if (rollout_status = node.metadata[:rollout_status])
-      parts = []
-      parts << "step=#{rollout_status['step']}" if rollout_status["step"]
-      parts << "status=#{rollout_status['status']}" if rollout_status["status"]
-      return parts if parts.any?
-    end
-
     argocd_object = node.metadata[:raw] || {}
+    return ["missing"] if missing_argocd_object?(argocd_object)
+
     parts = display_sync_health_parts(argocd_object)
     phase = operation_phase(argocd_object)
     parts << "status.operationState.phase=#{phase}" if phase && (phase != "Succeeded" || node.children.any?)
+    if (rollout_status = node.metadata[:rollout_status])
+      parts << "step=#{rollout_status['step']}" if rollout_status["step"]
+      parts << "rollout.status=#{rollout_status['status']}" if rollout_status["status"]
+    end
     application_conditions(node.metadata).each do |condition|
       parts << "#{condition['type']}=#{condition.fetch('status', 'True')}"
     end
@@ -807,8 +881,12 @@ module ArgoTrace
 
   def node_non_good?(node)
     return true if node.metadata.dig(:enrichment_result, :error)
+    return true if live_resource_non_good?(node.metadata[:kubectl_detail])
 
     argocd_object = node.metadata[:raw] || {}
+    return false if missing_argocd_object?(argocd_object) && expected_missing_node?(node)
+    return true if missing_argocd_object?(argocd_object)
+
     case node.kind
     when "Application"
       return true if application_conditions(node.metadata).any?
@@ -830,12 +908,15 @@ module ArgoTrace
 
     argocd_object = node.metadata[:raw] || {}
     return 3 if node.metadata.dig(:enrichment_result, :error)
+    return 2 if live_resource_non_good?(node.metadata[:kubectl_detail])
+    return nil if missing_argocd_object?(argocd_object) && expected_missing_node?(node)
+    return 1 if missing_argocd_object?(argocd_object)
 
     case node.kind
     when "Application"
-      return 3 if application_conditions(node.metadata).any? || operation_phase(argocd_object)
+      return 3 if application_conditions(node.metadata).any?
     when "ApplicationSet"
-      return 3 if non_good_appset_conditions(argocd_object).any? || operation_phase(argocd_object)
+      return 3 if non_good_appset_conditions(argocd_object).any?
     end
 
     return 2 if health_message(argocd_object)
@@ -868,6 +949,19 @@ module ArgoTrace
     end
   end
 
+  def deepest_arrowed_node_ids(nodes)
+    direct_arrowed = arrowed_child_node_ids(nodes)
+
+    nodes.each_with_object(Set.new) do |node, arrowed_node_ids|
+      child_arrowed = deepest_arrowed_node_ids(node.children)
+      if child_arrowed.empty?
+        arrowed_node_ids << node.object_id if direct_arrowed.include?(node.object_id)
+      else
+        child_arrowed.each {|node_id| arrowed_node_ids << node_id}
+      end
+    end
+  end
+
   def wave_3_resource_node?(node)
     node.metadata[:argo_resource_ref].is_a?(Hash)
   end
@@ -881,14 +975,74 @@ module ArgoTrace
     ]
   end
 
-  def collect_selected_wave_3_resource_nodes(nodes, arrowed_node_ids: arrowed_child_node_ids(nodes))
+  def live_object_ref(raw_ref, default_namespace:)
+    return unless raw_ref.is_a?(Hash)
+
+    kind = raw_ref["kind"]
+    name = raw_ref["name"]
+    return unless kind && name
+
+    {
+      group: parse_api_group(raw_ref["apiVersion"]),
+      kind: kind,
+      namespace: raw_ref["namespace"] || default_namespace,
+      name: name,
+    }
+  end
+
+  def followable_live_object_refs(live_resource)
+    return [] unless live_resource.is_a?(Hash)
+
+    default_namespace = live_resource.dig("metadata", "namespace")
+    refs = []
+    Array(live_resource.dig("metadata", "ownerReferences")).each do |owner_reference|
+      ref = live_object_ref(owner_reference, default_namespace: default_namespace)
+      refs << ref if ref
+    end
+    [
+      live_resource.dig("spec", "resourceRef"),
+      live_resource.dig("status", "resourceRef"),
+      live_resource.dig("spec", "crossplane", "resourceRef"),
+    ].each do |raw_ref|
+      ref = live_object_ref(raw_ref, default_namespace: default_namespace)
+      refs << ref if ref
+    end
+    [
+      live_resource.dig("spec", "resourceRefs"),
+      live_resource.dig("status", "resourceRefs"),
+      live_resource.dig("spec", "crossplane", "resourceRefs"),
+    ].each do |raw_refs|
+      Array(raw_refs).each do |raw_ref|
+        ref = live_object_ref(raw_ref, default_namespace: default_namespace)
+        refs << ref if ref
+      end
+    end
+
+    seen_ref_keys = Set.new
+    deduped_refs = refs.each_with_object([]) do |ref, memo|
+      ref_key = wave_3_resource_key(ref)
+      next if seen_ref_keys.include?(ref_key)
+
+      seen_ref_keys << ref_key
+      memo << ref
+    end
+
+    non_boring_refs = deduped_refs.reject {|ref| boring_follow_ref?(ref)}
+    non_boring_refs
+  end
+
+  def boring_follow_ref?(argo_resource_ref)
+    FOLLOW_REF_NOISE_KINDS.include?(argo_resource_ref[:kind].to_s)
+  end
+
+  def collect_selected_wave_3_resource_nodes(nodes, arrowed_node_ids: deepest_arrowed_node_ids(nodes))
     Array(nodes).flat_map do |node|
       selected_nodes = []
       selected_nodes << node if arrowed_node_ids.include?(node.object_id) && wave_3_resource_node?(node)
       selected_nodes.concat(
         collect_selected_wave_3_resource_nodes(
           node.children,
-          arrowed_node_ids: arrowed_child_node_ids(node.children)
+          arrowed_node_ids: deepest_arrowed_node_ids(node.children)
         )
       )
       selected_nodes
@@ -907,17 +1061,24 @@ module ArgoTrace
     end
   end
 
-  def kubectl_resource_subject(argo_resource_ref)
-    kind_subject = argo_resource_ref.fetch(:kind).downcase
-    group = argo_resource_ref.fetch(:group).to_s
+  def flatten_tree_nodes(nodes)
+    Array(nodes).flat_map {|node| [node, *flatten_tree_nodes(node.children)]}
+  end
 
-    return kind_subject if group.empty?
+  def selected_wave_3_application_nodes(nodes)
+    nodes_by_id = flatten_tree_nodes(nodes).to_h {|node| [node.object_id, node]}
 
-    "#{kind_subject}.#{group}"
+    deepest_arrowed_node_ids(nodes).filter_map do |node_id|
+      node = nodes_by_id[node_id]
+      next unless node&.kind == "Application"
+      next unless (node.metadata[:raw].dig("status", "resources") || []).any? {|app_resource| !ARGO_TREE_KINDS.include?(app_resource["kind"])}
+
+      node
+    end
   end
 
   def kubectl_get_command(argo_resource_ref)
-    command = ["kubectl", "get", kubectl_resource_subject(argo_resource_ref), argo_resource_ref.fetch(:name)]
+    command = ["kubectl", "get", argo_resource_ref.fetch(:kind), argo_resource_ref.fetch(:name)]
     namespace = argo_resource_ref[:namespace]
     command.push("-n", namespace) if namespace && !namespace.empty?
     command.push("-o", "yaml", "--ignore-not-found")
@@ -935,8 +1096,91 @@ module ArgoTrace
     end
   end
 
+  def wave_3_application_resource_detail_jobs(application_nodes)
+    application_nodes.flat_map do |node|
+      argocd_app = node.metadata[:raw] || {}
+      app_name = node.name
+      (argocd_app.dig("status", "resources") || []).filter_map do |app_resource|
+        next if ARGO_TREE_KINDS.include?(app_resource["kind"])
+        next unless app_resource_candidate_for_live_detail?(app_resource)
+
+        resource_key = [app_name, *wave_3_resource_key(app_resource_ref(app_resource))]
+        {
+          type: :application_resource,
+          name: resource_key.join("/"),
+          resource_key: resource_key,
+          parent_app_name: app_name,
+          app_resource: app_resource,
+          command: kubectl_get_command(app_resource_ref(app_resource)),
+        }
+      end
+    end
+  end
+
+  def app_resource_candidate_for_live_detail?(app_resource)
+    return true if app_resource["status"] && app_resource["status"] != "Synced"
+    return true if app_resource.dig("health", "status") && app_resource.dig("health", "status") != "Healthy"
+    return true if app_resource.dig("health", "message")
+
+    # Crossplane-style composite resources are often the one useful next hop
+    # under a bad app, while the IAM/attachment clutter is not.
+    app_resource["kind"].to_s.start_with?("X")
+  end
+
   def fetch_wave_3_kubectl_details(command_runner:, resource_nodes:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
     jobs = wave_3_kubectl_detail_jobs(resource_nodes)
+    fetch_jobs_in_parallel(
+      command_runner: command_runner,
+      jobs: jobs,
+      result_key: ->(job) {job.fetch(:resource_key)},
+      parser: ->(payload) {payload},
+      max_parallel_calls: max_parallel_calls,
+      per_call_timeout_seconds: per_call_timeout_seconds,
+      total_snapshot_timeout_seconds: total_snapshot_timeout_seconds,
+      monotonic_now: monotonic_now
+    ).fetch(:results)
+  end
+
+  def fetch_wave_3_application_resource_details(command_runner:, application_nodes:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
+    jobs = wave_3_application_resource_detail_jobs(application_nodes)
+    fetch_jobs_in_parallel(
+      command_runner: command_runner,
+      jobs: jobs,
+      result_key: ->(job) {job.fetch(:resource_key)},
+      parser: ->(payload) {payload},
+      max_parallel_calls: max_parallel_calls,
+      per_call_timeout_seconds: per_call_timeout_seconds,
+      total_snapshot_timeout_seconds: total_snapshot_timeout_seconds,
+      monotonic_now: monotonic_now
+    ).fetch(:results)
+  end
+
+  def selected_wave_4_ref_root_nodes(nodes)
+    nodes_by_id = flatten_tree_nodes(nodes).to_h {|node| [node.object_id, node]}
+
+    deepest_arrowed_node_ids(nodes).filter_map do |node_id|
+      node = nodes_by_id[node_id]
+      next unless node&.metadata&.dig(:kubectl_detail, :raw).is_a?(Hash)
+      next if live_resource_has_blocker_message?(node.metadata[:kubectl_detail])
+      next if followable_live_object_refs(node.metadata.dig(:kubectl_detail, :raw)).empty?
+
+      node
+    end
+  end
+
+  def wave_4_ref_follow_jobs(refs)
+    refs.map do |argo_resource_ref|
+      {
+        type: :follow_ref,
+        name: wave_3_resource_key(argo_resource_ref).join("/"),
+        resource_key: wave_3_resource_key(argo_resource_ref),
+        command: kubectl_get_command(argo_resource_ref),
+      }
+    end
+  end
+
+  def fetch_wave_4_follow_refs(command_runner:, refs:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
+    jobs = wave_4_ref_follow_jobs(refs)
     fetch_jobs_in_parallel(
       command_runner: command_runner,
       jobs: jobs,
@@ -959,10 +1203,162 @@ module ArgoTrace
     end
   end
 
+  def live_resource_non_good?(kubectl_detail)
+    return false unless kubectl_detail
+    return true if kubectl_detail[:error]
+
+    live_resource = kubectl_detail[:raw]
+    return false unless live_resource.is_a?(Hash) && !live_resource.empty?
+
+    return true if live_resource.dig("metadata", "deletionTimestamp")
+    return true if interesting_live_resource_conditions(live_resource).any?
+
+    status = status_hash(live_resource)
+    status && (status["reason"] || status["message"])
+  end
+
+  def live_resource_has_blocker_message?(kubectl_detail)
+    return false unless kubectl_detail
+    return true if kubectl_detail[:error]
+
+    live_resource = kubectl_detail[:raw]
+    return false unless live_resource.is_a?(Hash) && !live_resource.empty?
+
+    status = status_hash(live_resource)
+    return true if status && status["reason"] && status["message"]
+
+    interesting_live_resource_conditions(live_resource).any? do |condition|
+      condition["status"] != "True" && condition["message"]
+    end
+  end
+
+  def ensure_sync_wave_group!(application_node, wave)
+    group_name = "sync-wave #{wave}"
+    existing_group = application_node.children.find {|child| child.kind == "SyncWave" && child.name == group_name}
+    return existing_group if existing_group
+
+    new_group = TreeNode.new(kind: "SyncWave", name: group_name, children: [], metadata: {})
+    application_node.children << new_group
+    application_node.children.sort_by! do |child|
+      if child.kind == "SyncWave"
+        [0, child.name.sub("sync-wave ", "").to_i]
+      else
+        [1, child.kind, child.name]
+      end
+    end
+    new_group
+  end
+
+  def attach_wave_3_application_resource_children!(nodes, details_by_resource_key)
+    flatten_tree_nodes(nodes).each do |node|
+      next unless node.kind == "Application"
+
+      argocd_app = node.metadata[:raw] || {}
+      app_resources = (argocd_app.dig("status", "resources") || []).reject {|app_resource| ARGO_TREE_KINDS.include?(app_resource["kind"])}
+      next if app_resources.empty?
+
+      app_resources.each do |app_resource|
+        resource_key = [node.name, *wave_3_resource_key(app_resource_ref(app_resource))]
+        kubectl_detail = details_by_resource_key[resource_key]
+        next unless kubectl_detail && live_resource_non_good?(kubectl_detail)
+
+        sync_wave_group = ensure_sync_wave_group!(node, sync_wave_key(app_resource))
+        argo_resource_key = wave_3_resource_key(app_resource_ref(app_resource))
+        next if sync_wave_group.children.any? {|child| child.metadata[:argo_resource_ref] && wave_3_resource_key(child.metadata[:argo_resource_ref]) == argo_resource_key}
+
+        sync_wave_group.children << TreeNode.new(
+          kind: app_resource["kind"],
+          name: app_resource_display_name(app_resource, duplicate_app_resource_counts([app_resource])),
+          namespace: app_resource["namespace"],
+          children: [],
+          metadata: {
+            raw: app_resource,
+            argo_resource_ref: app_resource_ref(app_resource),
+            kubectl_detail: kubectl_detail,
+          }
+        )
+        sync_wave_group.children.sort_by! do |child|
+          [
+            child.kind == "Application" ? 0 : 1,
+            child.kind,
+            child.name,
+            child.namespace.to_s,
+          ]
+        end
+      end
+    end
+  end
+
+  def build_live_ref_tree_node(argo_resource_ref, kubectl_detail)
+    live_resource = kubectl_detail[:raw]
+    TreeNode.new(
+      kind: live_resource["kind"] || argo_resource_ref[:kind],
+      name: live_resource.dig("metadata", "name") || argo_resource_ref[:name],
+      namespace: live_resource.dig("metadata", "namespace") || argo_resource_ref[:namespace],
+      children: [],
+      metadata: {
+        raw: live_resource.is_a?(Hash) ? live_resource : {},
+        argo_resource_ref: argo_resource_ref,
+        kubectl_detail: kubectl_detail,
+      }
+    )
+  end
+
+  def attach_wave_4_follow_refs!(nodes, command_runner:, ref_max_recursion_depth:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
+    return if ref_max_recursion_depth <= 0
+
+    frontier_nodes = selected_wave_4_ref_root_nodes(nodes)
+    seen_ref_keys = frontier_nodes.each_with_object(Set.new) do |node, keys|
+      argo_resource_ref = node.metadata[:argo_resource_ref]
+      keys << wave_3_resource_key(argo_resource_ref) if argo_resource_ref
+    end
+    remaining_depth = ref_max_recursion_depth
+
+    while remaining_depth.positive? && frontier_nodes.any?
+      refs_by_parent_node = frontier_nodes.to_h do |node|
+        live_resource = node.metadata.dig(:kubectl_detail, :raw)
+        refs = followable_live_object_refs(live_resource).reject do |argo_resource_ref|
+          seen_ref_keys.include?(wave_3_resource_key(argo_resource_ref))
+        end
+        refs.each {|argo_resource_ref| seen_ref_keys << wave_3_resource_key(argo_resource_ref)}
+        [node, refs]
+      end
+
+      refs = refs_by_parent_node.values.flatten(1)
+      break if refs.empty?
+
+      details_by_resource_key = fetch_wave_4_follow_refs(
+        command_runner: command_runner,
+        refs: refs,
+        max_parallel_calls: max_parallel_calls,
+        per_call_timeout_seconds: per_call_timeout_seconds,
+        total_snapshot_timeout_seconds: total_snapshot_timeout_seconds,
+        monotonic_now: monotonic_now
+      )
+
+      next_frontier_nodes = []
+      refs_by_parent_node.each do |node, parent_refs|
+        parent_refs.each do |argo_resource_ref|
+          kubectl_detail = details_by_resource_key[wave_3_resource_key(argo_resource_ref)]
+          next unless kubectl_detail
+
+          child_node = build_live_ref_tree_node(argo_resource_ref, kubectl_detail)
+          node.children << child_node
+          next if live_resource_has_blocker_message?(kubectl_detail)
+          next_frontier_nodes << child_node if followable_live_object_refs(kubectl_detail[:raw]).any?
+        end
+        node.children.sort_by! {|child| [child.kind.to_s, child.name.to_s, child.namespace.to_s]}
+      end
+
+      frontier_nodes = next_frontier_nodes
+      remaining_depth -= 1
+    end
+  end
+
   def interesting_live_resource_conditions(live_resource)
     Array(status_hash(live_resource)&.fetch("conditions", nil)).
       select do |condition|
-        condition["status"] != "True" || condition["reason"] || condition["message"]
+        condition["status"] != "True" || condition["message"]
       end.
       first(3)
   end
@@ -1044,7 +1440,7 @@ module ArgoTrace
     when "ApplicationSet"
       non_good_appset_conditions(argocd_object).each {|condition| entries.concat(condition_detail_entries(condition))}
     end
-    if (message = operation_message(argocd_object)) && (node_non_good?(node) || node.children.any?)
+    if (message = operation_message(argocd_object)) && operation_phase(argocd_object) && operation_phase(argocd_object) != "Succeeded"
       entries << [:line, "status.operationState.message: #{message}", node_non_good?(node)]
     end
     if (message = health_message(argocd_object)) && node_non_good?(node)
@@ -1078,7 +1474,7 @@ module ArgoTrace
         collect_display_lines(
           node.children,
           indent: indent + 1,
-          arrowed_node_ids: arrowed_child_node_ids(node.children)
+          arrowed_node_ids: deepest_arrowed_node_ids(node.children)
         )
       )
       lines
@@ -1088,35 +1484,50 @@ module ArgoTrace
   # ANSI is emitted as standalone block markers so the visible lines stay easy
   # to diff against the expected fixture and `watch --color` output.
   def render_ansi_display_lines(nodes)
-    rendered = []
-    current_style = nil
-
-    collect_display_lines(nodes, arrowed_node_ids: arrowed_child_node_ids(nodes)).each do |indent, text, highlighted, arrow, line_kind|
-      style = highlighted ? :bold : :faint
-      if style != current_style
-        rendered << "\e[22m" if current_style
-        rendered << (style == :bold ? "\e[1m" : "\e[2m")
-        current_style = style
-      end
-
+    styled_lines = collect_display_lines(nodes, arrowed_node_ids: deepest_arrowed_node_ids(nodes)).map do |indent, text, _highlighted, arrow, _line_kind|
+      style = arrow ? :bold : :faint
       normal_prefix = "#{'  ' * indent}- "
-      rendered << if arrow
-                    if line_kind == :node
-                      "→ #{normal_prefix}#{text}"
-                    else
-                      "→#{normal_prefix[1..]}#{text}"
-                    end
-                  else
-                    "#{normal_prefix}#{text}"
-                  end
+      rendered_line = if arrow
+                        arrow_prefix = "→#{' ' * [((indent * 2) - 1), 1].max}- "
+                        "#{arrow_prefix}#{text}"
+                      else
+                        "#{normal_prefix}#{text}"
+                      end
+      [style, rendered_line]
     end
 
-    rendered << "\e[22m" if current_style
+    rendered = []
+    current_style = nil
+    style_start_code = {"bold" => "\e[1m", "faint" => "\e[2m"}
+
+    styled_lines.each do |style, rendered_line|
+      if style == current_style
+        rendered << rendered_line
+      else
+        rendered[-1] = "#{rendered[-1]}\e[22m" if current_style
+        rendered << "#{style == :bold ? style_start_code.fetch('bold') : style_start_code.fetch('faint')}#{rendered_line}"
+        current_style = style
+      end
+    end
+
+    rendered[-1] = "#{rendered[-1]}\e[22m" if current_style
     rendered
   end
 
   def ansi_control_line?(line)
     line.match?(/\A\e\[\d+m\z/)
+  end
+
+  def strip_ansi_codes(line)
+    line.gsub(/\e\[\d+m/, "")
+  end
+
+  def ansi_leading_codes(line)
+    line[/\A(?:\e\[\d+m)*/].to_s
+  end
+
+  def ansi_trailing_codes(line)
+    line[/(?:\e\[\d+m)*\z/].to_s
   end
 
   def wrap_chunk(text, width)
@@ -1140,9 +1551,15 @@ module ArgoTrace
   end
 
   def soft_wrap_line(line, wrap_width)
-    return [line] if wrap_width.nil? || ansi_control_line?(line) || line.length <= wrap_width
+    return [line] if wrap_width.nil? || ansi_control_line?(line)
 
-    prefix, text = wrap_prefix_and_text(line)
+    leading_codes = ansi_leading_codes(line)
+    trailing_codes = ansi_trailing_codes(line)
+    visible_line = line[leading_codes.length...(line.length - trailing_codes.length)]
+    visible_line = "" if visible_line.nil?
+    return [line] if visible_line.length <= wrap_width
+
+    prefix, text = wrap_prefix_and_text(visible_line)
     return [line] if text.nil? || text.empty?
 
     continuation_prefix = " " * prefix.length
@@ -1161,6 +1578,8 @@ module ArgoTrace
       current_width = [wrap_width - continuation_prefix.length, 1].max
     end
 
+    wrapped_lines[0] = "#{leading_codes}#{wrapped_lines[0]}" unless wrapped_lines.empty?
+    wrapped_lines[-1] = "#{wrapped_lines[-1]}#{trailing_codes}" unless wrapped_lines.empty?
     wrapped_lines
   end
 
@@ -1170,7 +1589,8 @@ module ArgoTrace
 
   def render_display_lines(nodes, wrap_width: nil)
     soft_wrap_rendered_lines(render_ansi_display_lines(nodes), wrap_width: wrap_width).
-      reject {|line| ansi_control_line?(line)}
+      reject {|line| ansi_control_line?(line)}.
+      map {|line| strip_ansi_codes(line)}
   end
 
   def render_fixture_snapshot(tree_lines:, start_time:, end_time:, elapsed_seconds:)
@@ -1206,7 +1626,7 @@ module ArgoTrace
     ].join("\n").sub(/\n+\z/, "") + "\n\n\n"
   end
 
-  def snapshot_body(command_runner:, wrap_width:, kubectl_details: DEFAULT_KUBECTL_DETAILS)
+  def snapshot_body(command_runner:, wrap_width:, kubectl_details: DEFAULT_KUBECTL_DETAILS, ref_max_recursion_depth: DEFAULT_REF_MAX_RECURSION_DEPTH)
     inventory = fetch_wave1_app_and_appset_list(command_runner: command_runner)
     app_names = apps_requiring_detail(
       app_inventory: inventory.fetch(:app_inventory),
@@ -1229,6 +1649,7 @@ module ArgoTrace
 
     if kubectl_details
       selected_resource_nodes = selected_wave_3_resource_nodes(tree)
+      selected_application_nodes = selected_wave_3_application_nodes(tree)
       unless selected_resource_nodes.empty?
         attach_wave_3_details!(
           tree,
@@ -1238,6 +1659,20 @@ module ArgoTrace
           )
         )
       end
+      unless selected_application_nodes.empty?
+        attach_wave_3_application_resource_children!(
+          tree,
+          fetch_wave_3_application_resource_details(
+            command_runner: command_runner,
+            application_nodes: selected_application_nodes
+          )
+        )
+      end
+      attach_wave_4_follow_refs!(
+        tree,
+        command_runner: command_runner,
+        ref_max_recursion_depth: ref_max_recursion_depth
+      )
     end
 
     soft_wrap_rendered_lines(render_ansi_display_lines(tree), wrap_width: wrap_width).join("\n")
@@ -1249,7 +1684,8 @@ module ArgoTrace
       snapshot_body(
         command_runner: command_runner,
         wrap_width: wrap_width,
-        kubectl_details: options.fetch(:kubectl_details, DEFAULT_KUBECTL_DETAILS)
+        kubectl_details: options.fetch(:kubectl_details, DEFAULT_KUBECTL_DETAILS),
+        ref_max_recursion_depth: options.fetch(:ref_max_recursion_depth, DEFAULT_REF_MAX_RECURSION_DEPTH)
       )
     end
 

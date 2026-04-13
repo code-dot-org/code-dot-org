@@ -3,18 +3,20 @@ re-read `AGENTS.md` and `CHECKLIST.md` and continue on.
 
 - When making Helm chart changes you intend to `tofu apply`, bump the chart version or Helm may report no diff.
 
-## Logged tofu
+## Cluster log helper
 
-- In this directory, use `bin/logged-tofu <apply|destroy> [extra tofu args...]` for logged OpenTofu applies and destroys unless the user explicitly says otherwise.
-- Do not use `bin/logged-tofu` for `plan`. Run `tofu plan` directly when a plain plan is what you need.
-- `bin/logged-tofu` runs `bin/argo-trace` for the same operation as a sidecar logger and writes `logs/argocd-<action>-<timestamp>.log.md`. That tracer is not an implementation detail; treat that md log as a primary debugging tool and mirror its output raw in chat when it emits updates.
-- While `bin/logged-tofu` is running, relay each new `bin/argo-trace` message to the user verbatim in chat as soon as it arrives.
-- `bin/logged-tofu` now writes three first-class logs per run:
-  - `logs/tofu-<timestamp>-<action>.log`
-  - `tofu.log`
-  - `logs/argocd-<action>-<timestamp>.log.md`
-- When starting a logged run, print the exact `tail -n +1 -f ...` commands for all three logs in chat.
-- `bin/logged-tofu` starts and stops its sidecar watchers itself. `bin/logged-tofu-stop` is only for stale cleanup after an interrupted run.
+- When starting an apply or destroy, whether via `tofu apply`, `tofu destroy`, or by manually adding or removing app-of-apps from Argo and watching, run `bin/log-cluster-events start` before you begin.
+- No matter what happens, when the watched run is done, run `bin/log-cluster-events stop`.
+- `bin/log-cluster-events start` accepts an optional label. If omitted, it uses `session`.
+- `bin/log-cluster-events` does not run OpenTofu. Start logging first, then run `tofu apply` or `tofu destroy` separately.
+- `bin/log-cluster-events` runs `bin/argo-trace` as a sidecar logger and writes `logs/argo-trace-<label>-<timestamp>.log.md`. That tracer is not an implementation detail; treat that md log as a primary debugging tool and mirror its output raw in chat when it emits updates.
+- While `bin/log-cluster-events` is active, relay each new `bin/argo-trace` message to the user verbatim in chat as soon as it arrives.
+- `bin/log-cluster-events` now writes three first-class logs per session:
+  - `logs/cluster-<timestamp>-<label>.log`
+  - `cluster.log`
+  - `logs/argo-trace-<label>-<timestamp>.log.md`
+- When starting a logged session, print the exact `tail -n +1 -f ...` commands for all three logs in chat.
+- Stop the sidecar watchers with `bin/log-cluster-events stop`.
 
 ## Freeze Argo
 
@@ -31,8 +33,8 @@ re-read `AGENTS.md` and `CHECKLIST.md` and continue on.
   - `bin/argo-trace`
 - Think from those two files first. Use the tracer output as the clearest view of what Argo is blocked on. Use the tracer source to prove why the tree looks the way it does. Do not treat its output as magic.
 - In chat, mirror that `.log.md` output raw. Add interpretation only after the raw block, and only if needed to explain what changed or why it matters.
-- Use the per-run `logs/tofu-*.log` only for proof, low-level provider errors, shell output, or other debug spew the md log does not carry.
-- Do not diagnose from `tofu.log` unless you need long-run history. Prefer the latest per-run files.
+- Use the per-run `logs/cluster-*.log` only for proof, low-level provider errors, shell output, or other debug spew the md log does not carry.
+- Do not diagnose from `cluster.log` unless you need long-run history. Prefer the latest per-run files.
 
 ## Destroy rules
 
@@ -62,8 +64,8 @@ re-read `AGENTS.md` and `CHECKLIST.md` and continue on.
   YAML responses for the new `argo-trace` work.
 - `test/argo-trace/expected-output-from-argo-trace-given-data-responses.txt`
   is the expected rendered tree for that saved Argo CLI dataset.
-- If you modify `bin/logged-tofu`, run before commit:
-  `ruby test/logged_tofu_test.rb`
+- If you modify `bin/log-cluster-events`, run before commit:
+  `ruby test/log_cluster_events_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:
   `ruby test/wait_for_200_test.rb`
 
