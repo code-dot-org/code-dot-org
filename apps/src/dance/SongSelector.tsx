@@ -77,7 +77,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
       id="song-selector-wrapper"
       className={moduleStyles.songSelectorWrapper}
     >
-      <label>
+      <label htmlFor="song_selector">
         <b>{commonI18n.selectSong()}</b>
       </label>
 
