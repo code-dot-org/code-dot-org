@@ -107,24 +107,34 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
-    section = Section.create(
-      user_id: current_user.id,
-      name: config[:section_name],
-      login_type: config[:login_type],
-      participant_type: config[:participant_type],
-      grades: config[:grades],
-      script_id: unit&.id,
-      course_id: unit_group&.id,
-      is_demo: true,
-    )
-    return head :bad_request unless section.persisted?
+    section = ActiveRecord::Base.transaction do
+      s = Section.create!(
+        user_id: current_user.id,
+        name: config[:section_name],
+        login_type: config[:login_type],
+        participant_type: config[:participant_type],
+        grades: config[:grades],
+        script_id: unit&.id,
+        course_id: unit_group&.id,
+        is_demo: true,
+      )
 
-    Policies::DemoSections.demo_student_ids(params[:section_type]).each do |student_id|
-      student = User.find_by(id: student_id)
-      section.add_student(student) if student
+      Policies::DemoSections.demo_student_ids(params[:section_type]).each do |student_id|
+        student = User.find_by(id: student_id)
+        next unless student
+        begin
+          s.add_student(student)
+        rescue ActiveRecord::ActiveRecordError => exception
+          Honeybadger.notify(exception, context: {section_id: s.id, student_id: student_id})
+        end
+      end
+
+      s
     end
 
     render json: section.summarize
+  rescue ActiveRecord::RecordInvalid
+    head :bad_request
   end
 
   # PATCH /api/v1/sections/<id>
