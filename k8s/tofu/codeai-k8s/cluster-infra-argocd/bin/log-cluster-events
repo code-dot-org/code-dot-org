@@ -64,9 +64,10 @@ run_once() {
   run_log_file=$3
 
   COLUMNS=115 sh -c "
+    WATCHER_LABEL=\"$watcher_label\"
+    export WATCHER_LABEL
     $watcher_command 2>&1 \
-      | stdbuf -oL -eL ts '%Y-%m-%d-at-%I:%M%p %Z [$watcher_label]' \
-      | stdbuf -oL -eL perl -pe 's/-at-0/-at-/; s/AM /a /; s/PM /p /' \
+      | stdbuf -oL -eL perl -MPOSIX=strftime -ne 'BEGIN {\$| = 1} \$timestamp = strftime(\"%Y-%m-%d-at-%I:%M%p %Z\", localtime); \$timestamp =~ s/-at-0/-at-/; \$timestamp =~ s/AM /a /; \$timestamp =~ s/PM /p /; print qq{\$timestamp [\$ENV{WATCHER_LABEL}] \$_};' \
       | stdbuf -oL -eL tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
   "
 }
@@ -77,9 +78,10 @@ start_watch() {
   run_log_file=$3
 
   nohup sh -c "
+    WATCHER_LABEL=\"$watcher_label\"
+    export WATCHER_LABEL
     COLUMNS=115 $watcher_command 2>&1 \
-      | stdbuf -oL -eL ts '%Y-%m-%d-at-%I:%M%p %Z [$watcher_label]' \
-      | stdbuf -oL -eL perl -pe 's/-at-0/-at-/; s/AM /a /; s/PM /p /' \
+      | stdbuf -oL -eL perl -MPOSIX=strftime -ne 'BEGIN {\$| = 1} \$timestamp = strftime(\"%Y-%m-%d-at-%I:%M%p %Z\", localtime); \$timestamp =~ s/-at-0/-at-/; \$timestamp =~ s/AM /a /; \$timestamp =~ s/PM /p /; print qq{\$timestamp [\$ENV{WATCHER_LABEL}] \$_};' \
       | stdbuf -oL -eL tee -a \"$shared_log_file\" \"$run_log_file\" >/dev/null
   " >/dev/null 2>&1 &
   watcher_pid=$!
