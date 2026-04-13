@@ -1,4 +1,4 @@
-import {type FilePart, type GeneratedFile} from 'ai';
+import {type FilePart} from 'ai';
 import {
   extension as mimeToExtension,
   lookup as extensionToMime,
@@ -62,43 +62,25 @@ export async function assetToFilePart(
 }
 
 /**
- * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
+ * Uploads a browser File to the user's project and returns a ChatAsset.
  */
 export async function generatedFileToAsset(
-  file: GeneratedFile,
+  file: File,
   buildAssetUrl: (asset: ChatAsset) => string,
   accepts: string[]
 ): Promise<ChatAsset> {
-  const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
+  const extension = convertMediaTypeToExtension(file.type, accepts);
+  const filename = `generated-file-${createUuid()}.${extension}`;
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
   };
   const assetUrl = buildAssetUrl(asset);
+  const fileBuffer = new Uint8Array(await file.arrayBuffer());
 
-  // Upload file contents to assetUrl
   await HttpClient.put(assetUrl, fileBuffer, true, {
-    'Content-Type': file.mediaType,
+    'Content-Type': file.type,
   });
 
   return asset;
-}
-
-interface PreparedFile {
-  filename: string;
-  fileBuffer: Uint8Array<ArrayBuffer>;
-  mediaType: string;
-}
-
-/**
- * Extracts the buffer and derives filename/extension from a model-generated file.
- */
-export function prepareGeneratedFile(
-  file: GeneratedFile,
-  accepts: string[]
-): PreparedFile {
-  const fileBuffer = file.uint8Array.slice();
-  const extension = convertMediaTypeToExtension(file.mediaType, accepts);
-  const filename = `generated-file-${createUuid()}.${extension}`;
-  return {filename, fileBuffer, mediaType: file.mediaType};
 }

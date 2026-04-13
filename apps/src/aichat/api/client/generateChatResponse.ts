@@ -1,4 +1,4 @@
-import {type ModelMessage} from 'ai';
+import {type GeneratedFile, type ModelMessage} from 'ai';
 
 import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/constants';
 import {generateText} from '@cdo/apps/aiGateway';
@@ -21,6 +21,37 @@ import {
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
 import {isTextSafe, getImageModerationStatus} from './helpers/safetyHelpers';
+
+// Converts any browser-renderable image to PNG via canvas.
+// Used with model-generated images since Vercel AI SDK doesn't currently expose output format configuration.
+// Also, Vercel AI SDK does not always report media type accurately (seen from HoneyBadger Azure error reports).
+const convertToPng = (file: GeneratedFile): Promise<File> =>
+  new Promise((resolve, reject) => {
+    const blob = new Blob([new Uint8Array(file.uint8Array)], {
+      type: file.mediaType,
+    });
+    const img = new Image();
+    const url = URL.createObjectURL(blob);
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      canvas.getContext('2d')?.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(pngBlob => {
+        if (!pngBlob) {
+          reject(new Error('canvas toBlob failed'));
+          return;
+        }
+        resolve(new File([pngBlob], 'generated.png', {type: 'image/png'}));
+      }, 'image/png');
+    };
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error('image load failed'));
+    };
+    img.src = url;
+  });
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -88,27 +119,32 @@ export async function generateChatResponse(
     if (file.uint8Array.length === 0) {
       return {response: text, status: AiRequestExecutionStatus.FAILURE};
     }
-    let asset: ChatAsset;
-    try {
-      asset = await generatedFileToAsset(
-        file,
-        buildAssetUrl,
-        ACCEPTED_IMAGE_MEDIA_TYPES // Currently only image files are supported.
-      );
-    } catch (error) {
-      // Log and skip files with unsupported or unrecognized media types so the
-      // text response is still returned to the user.
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Skipping unsupported generated file type', error as Error);
-      continue;
-    }
-    assets.push(asset);
+    // Currently only image files are supported.
     if (file.mediaType.startsWith('image/')) {
+      // Gemini API output format is not configurable, so we convert to PNG for consistent asset storage and moderation.
+      const fileToSave = await convertToPng(file);
+
+      let asset: ChatAsset;
+      try {
+        asset = await generatedFileToAsset(
+          fileToSave,
+          buildAssetUrl,
+          ACCEPTED_IMAGE_MEDIA_TYPES
+        );
+      } catch (error) {
+        // Log and skip files with unsupported or unrecognized media types so the
+        // text response is still returned to the user.
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Skipping unsupported generated file type', error as Error);
+        continue;
+      }
+      assets.push(asset);
+
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
       const imageModerationStatus = await getImageModerationStatus(
-        file,
+        fileToSave,
         buildAssetUrl(asset)
       );
       if (imageModerationStatus === 'flagged') {
