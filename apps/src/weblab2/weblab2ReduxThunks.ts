@@ -1,4 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
+import {isEqual} from 'lodash';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
@@ -9,6 +10,7 @@ import {
 } from '@cdo/apps/aichat/types/chatEvents';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  markProjectEdited,
   setAiTutorVersionFiles,
   setProjectSourceBeforeAiTutorVersion,
   setSource,
@@ -117,6 +119,10 @@ export const acceptAiTutorVersion = createAsyncThunk<
         /* forceNewVersion */ true
       )
     );
+    if (!isEqual(sourcesBeforeAiTutorVersion, sources)) {
+      // If the tutor made changes to the project, mark the project as edited.
+      thunkAPI.dispatch(markProjectEdited());
+    }
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
       Lab2Registry.getInstance()

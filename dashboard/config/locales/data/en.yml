@@ -926,6 +926,8 @@ en:
         aif2-pl-schema: Displaying Data
         aif2-pl-filtering-echo: 'Filtering Data '
         aif2-pl-pipelines: Building Pipelines
+        pl-aif2-display-arrays: Display Arrays
+        aif2-pl-filter-logic-U4: Filter Logic
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
