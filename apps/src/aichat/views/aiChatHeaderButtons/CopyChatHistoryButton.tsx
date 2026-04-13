@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -11,15 +10,17 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {timestampToDateTime} from '../../redux/utils';
 import {
   ChatEvent,
+  ChatEventDescriptionKey,
   isChatMessage,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
   WorkspaceTeacherViewTab,
 } from '../../types';
 import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
-  const visibleMessages = useSelector(selectAllVisibleMessages);
+  const visibleMessages = useAppSelector(selectAllVisibleMessages);
   const studentChatHistory = useAppSelector(
     state => state.aichat.studentChatHistory
   );
@@ -83,6 +84,16 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
 
   if (isNotification(chatEvent)) {
     return `[${formattedTimestamp} - Notification] ${chatEvent.text}`;
+  }
+
+  if (isUserActionEvent(chatEvent)) {
+    const descriptions: {[key in ChatEventDescriptionKey]: string} = {
+      CLEAR_CHAT: 'The user cleared the chat workspace.',
+      LOAD_LEVEL: 'The user loaded the level.',
+    };
+    return `[${formattedTimestamp} - User Action] ${
+      descriptions[chatEvent.descriptionKey]
+    }`;
   }
 }
 

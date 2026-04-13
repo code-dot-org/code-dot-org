@@ -5,6 +5,7 @@ import '@testing-library/jest-dom';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   CompletedChatMessage,
+  UserActionEvent,
   WorkspaceTeacherViewTab,
 } from '@cdo/apps/aichat/types';
 import CopyChatHistoryButton from '@cdo/apps/aichat/views/aiChatHeaderButtons/CopyChatHistoryButton';
@@ -20,12 +21,7 @@ const mockDispatch = jest.fn();
 // mockState is mutated per-test to simulate different redux store shapes.
 let mockState: {aichat: Partial<AichatState>};
 
-// Route all useSelector / useAppSelector calls through mockState instead of a real store.
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useSelector: (selector: (s: unknown) => unknown) => selector(mockState),
-}));
-
+// Route all useAppSelector calls through mockState instead of a real store.
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppSelector: (selector: (s: unknown) => unknown) => selector(mockState),
@@ -55,6 +51,12 @@ const studentHistoryMessage: CompletedChatMessage & {id: number} = {
   timestamp: 3000000,
   requestId: 3,
   id: 100,
+};
+
+const clearChatEvent: UserActionEvent & {id: number} = {
+  descriptionKey: 'CLEAR_CHAT',
+  timestamp: 4000000,
+  id: 101,
 };
 
 describe('CopyChatHistoryButton', () => {
@@ -120,6 +122,24 @@ describe('CopyChatHistoryButton', () => {
     const copied = (copyToClipboard as jest.Mock).mock.calls[0][0] as string;
     expect(copied).toContain('Hello from user');
     expect(copied).not.toContain('Student message');
+  });
+
+  // UserActionEvents (e.g. CLEAR_CHAT) appear in teacher-facing student history
+  // and must be included in the copied text.
+  it('includes UserActionEvents when copying student chat history', () => {
+    mockState.aichat.studentChatHistory = [
+      studentHistoryMessage,
+      clearChatEvent,
+    ];
+    mockState.aichat.chatWorkspaceSelectedTab =
+      WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY;
+
+    render(<CopyChatHistoryButton />);
+    fireEvent.click(screen.getByRole('button'));
+
+    const copied = (copyToClipboard as jest.Mock).mock.calls[0][0] as string;
+    expect(copied).toContain('Student message');
+    expect(copied).toContain('The user cleared the chat workspace.');
   });
 
   // Copies an empty string rather than erroring with an empty chat.
