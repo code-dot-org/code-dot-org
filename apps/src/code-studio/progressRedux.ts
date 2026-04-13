@@ -359,17 +359,22 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     if (!newLevel) {
       return;
     }
+    // If the requested level is the same as the current level, don't do anything.
+    if (state.currentLevelId === levelId) {
+      return;
+    }
 
     const currentLevel = getCurrentLevel(getState());
 
-    if (canChangeLevelInPage(currentLevel, newLevel)) {
-      // If the requested level is the same as the current level, don't do anything.
-      if (state.currentLevelId === levelId) {
+    if (currentLevel?.usesLab2) {
+      const canProceed = notifyLevelChange(currentLevel.id, levelId);
+      if (!canProceed) {
         return;
       }
+    }
+
+    if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
-      // Notify the Lab2 system that the level is changing.
-      notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
       Lab2ProgressTimer.getInstance().resetMilestoneTimer();
     } else {

@@ -25,7 +25,7 @@ type CallbackArgs = {
 
 export type Callback<T extends LifecycleEvent> = (
   ...args: CallbackArgs[T]
-) => void;
+) => unknown;
 
 /**
  * Notifies listeners of lifecycle events in the Lab2 system, which doesn't reload the page between levels.
@@ -55,10 +55,18 @@ class LifecycleNotifier {
     return this;
   }
 
-  notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {
+  notify<T extends LifecycleEvent>(
+    event: T,
+    ...args: CallbackArgs[T]
+  ): boolean {
     // Copy the listener list to avoid skipping listeners if the list is modified during iteration.
     const staticListenerList = [...(this.listeners[event] || [])];
-    staticListenerList.forEach(callback => callback(...args));
+    for (const callback of staticListenerList) {
+      if (callback(...args) === false) {
+        return false;
+      }
+    }
+    return true;
   }
 }
 

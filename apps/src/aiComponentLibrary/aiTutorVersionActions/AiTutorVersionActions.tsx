@@ -5,9 +5,11 @@ import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import getRejectNotification from '@cdo/apps/weblab2/helpers/getRejectNotification';
@@ -40,6 +42,19 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   );
 
   const dispatch = useAppDispatch();
+
+  const confirmAiTutorLevelNavigation = useCallback(
+    () =>
+      window.confirm(
+        "You have pending AI Tutor changes. If you leave this level now, you'll lose those changes. Do you want to continue to another level?"
+      ),
+    []
+  );
+
+  useLifecycleNotifier(
+    LifecycleEvent.LevelChangeRequested,
+    confirmAiTutorLevelNavigation
+  );
 
   // Warn the user if they attempt to reload the page before accepting or
   // rejecting the proposed updates.
