@@ -45,7 +45,8 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     description:
       'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
     getSteps: createValidationTourSteps,
-    shouldShowOnLevel: levelProperties => !!levelProperties.validations,
+    shouldShowOnLevel: levelProperties =>
+      (levelProperties.validations?.length ?? 0) > 0,
   },
   [ProductTour.SketchlabIntro]: {
     name: ProductTour.SketchlabIntro,

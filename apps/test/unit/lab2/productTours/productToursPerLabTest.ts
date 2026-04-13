@@ -181,6 +181,19 @@ describe('isTourEnabledOnLevel', () => {
       ).toBe(false);
     });
 
+    it('returns false for ResourcePanelValidation when levelProperties has empty validations', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab', {
+            validations: [],
+            productTours: [ProductTour.ResourcePanelValidation],
+          }),
+          true
+        )
+      ).toBe(false);
+    });
+
     it('returns true for ResourcePanelValidation when levelProperties has validations', () => {
       expect(
         isTourEnabledOnLevel(

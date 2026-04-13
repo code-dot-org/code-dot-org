@@ -60,9 +60,7 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
       <div className={styles.tourList}>
         {availableTours.map(tour => (
           <div key={tour.name} className={styles.tourChip}>
-            <Typography variant="body3" className={styles.tourName}>
-              {tour.displayName}
-            </Typography>
+            <Typography variant="body3">{tour.displayName}</Typography>
             <IconButton
               size="extraSmall"
               onClick={() => startTour(tour.name)}

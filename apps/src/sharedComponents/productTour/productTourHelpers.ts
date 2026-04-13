@@ -24,7 +24,7 @@ export const backButton = (tour: Tour): StepOptionsButton => ({
 
 export const createTourWithSteps = (
   getSteps: (tour: Tour) => StepOptions[],
-  additionalStepOptions?: StepOptions
+  additionalStepOptions?: Partial<StepOptions>
 ) => {
   const tour = new Shepherd.Tour({
     useModalOverlay: true,
