@@ -7,7 +7,7 @@ Feature: Using the teacher homepage
     And I get levelbuilder access
 
     # Create a section with a course
-    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1 and save the section
 
     # Create a student to join the second section
     And I create a student named "Bobby"
@@ -53,7 +53,7 @@ Feature: Using the teacher homepage
     And I click "#ui-test-teaching"
     Then I wait until element "#section-options-dropdown-dropdown-button" is visible
 
-Scenario: Teacher can delete a section from the section options dropdown
+  Scenario: Teacher can delete a section from the section options dropdown
     Given I am a teacher
     And I create a new student section
     And I am on "http://studio.code.org/teacher_dashboard/home"
@@ -91,7 +91,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Given I create a teacher named "Teacher Hank"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
-    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1 and save the section
     Then I create a student named "Bobby"
     And I sign in as "Bobby"
     And I join the section
@@ -102,7 +102,7 @@ Scenario: Teacher can delete a section from the section options dropdown
 
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
     Given I am a teacher
-    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-lesson-materials-New-Section" once it exists
     Then I wait until element "h1:contains(Lesson Materials)" is visible
@@ -118,7 +118,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section
 
     # Create a section with a course
-    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1 and save the section
 
     # Create a student to join the second section
     Given I create a student named "Bobby"

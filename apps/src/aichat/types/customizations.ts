@@ -59,6 +59,7 @@ export type AichatContext = {
   currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;
+  lessonId?: number;
 };
 
 export enum ViewMode {

@@ -2,8 +2,9 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer, setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setChatIsOpen} from '@cdo/apps/aiDifferentiation/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {
   getStore,
   registerReducers,
@@ -83,7 +84,7 @@ describe('AIDiffFloatingActionButton', () => {
     registerReducers({
       currentUser,
       teacherSections,
-      aichat: aichatReducer,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({

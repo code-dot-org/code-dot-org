@@ -7,7 +7,7 @@ When making changes, check if the following docs need updates:
 - **[docs/architecture.md](./docs/architecture.md)** — Update when changing:
 
   - How the lab is registered in Studio (`labs.ts`, `getLabEntrypoint.ts`)
-  - Init ordering (if `initializeCodeStudioConfig()` moves or new init steps are added)
+  - Init ordering (if `initializeCore()` moves or new init steps are added)
   - Build output shape (entry point, formats, externalized deps)
 
 - **[README.md](./README.md)** — Update when changing:

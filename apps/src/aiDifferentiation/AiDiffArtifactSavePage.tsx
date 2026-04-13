@@ -4,12 +4,12 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   addThreadMessage,
   clearPendingArtifactMessage,
   setArtifact,
-} from '@cdo/apps/aichat/redux/slice';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+} from '@cdo/apps/aiDifferentiation/redux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -59,7 +59,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
-  const threadId = useAppSelector(state => state.aichat.threadId);
+  const threadId = useAppSelector(state => state.aiDiffChat.threadId);
 
   const artifactTitleIsEmpty = useMemo(() => {
     return artifactTitle.trim() === '';
