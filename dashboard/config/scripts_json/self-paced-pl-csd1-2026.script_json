@@ -1,0 +1,531 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd1-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-10 20:24:04 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd1-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Welcome"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026"
+      }
+    },
+    {
+      "key": "Welcome to \"Teaching CS Discoveries\"",
+      "name": "Welcome to \"Teaching CS Discoveries\"",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 2 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 2 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a7ecb781-7278-4430-8415-f84eaed206a8",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7ecb781-7278-4430-8415-f84eaed206a8",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026"
+      }
+    },
+    {
+      "key": "12f33b81-aa86-4fc4-ace1-6e7797a51840",
+      "position": 1,
+      "properties": {
+        "duration": 2
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12f33b81-aa86-4fc4-ace1-6e7797a51840",
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "954fd21e-177a-47fa-83a4-83b0893a7178",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "954fd21e-177a-47fa-83a4-83b0893a7178",
+        "lesson_activity.key": "a7ecb781-7278-4430-8415-f84eaed206a8"
+      }
+    },
+    {
+      "key": "1f358940-8955-4a93-a5e5-457e7d648f78",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78",
+        "lesson_activity.key": "a7ecb781-7278-4430-8415-f84eaed206a8"
+      }
+    },
+    {
+      "key": "64181daa-f1ae-4962-b510-040f18e220d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to CS Discoveries"
+      },
+      "seeding_key": {
+        "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9",
+        "lesson_activity.key": "a7ecb781-7278-4430-8415-f84eaed206a8"
+      }
+    },
+    {
+      "key": "f954a765-8c4b-4023-b906-a1529de99d87",
+      "position": 1,
+      "properties": {
+        "progression_name": "Engaging in this course"
+      },
+      "seeding_key": {
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87",
+        "lesson_activity.key": "12f33b81-aa86-4fc4-ace1-6e7797a51840"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Overview-Welcome_physical-computing_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "954fd21e-177a-47fa-83a4-83b0893a7178"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Overview-Welcome_physical-computing_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "954fd21e-177a-47fa-83a4-83b0893a7178"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_physical-computing_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to CS Discoveries"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-AboutCSD1_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9"
+      },
+      "level_keys": [
+        "SP-VPL-24-AboutCSD1_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to CS Discoveries"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-AboutCSD2_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9"
+      },
+      "level_keys": [
+        "SP-VPL-24-AboutCSD2_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Engaging in this course"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-ModuleOverview_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Engaging in this course"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-ActivityOverview_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Engaging in this course"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-Navigation_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-Navigation_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Overview-Welcome_physical-computing_2026",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Overview-Welcome_physical-computing_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "954fd21e-177a-47fa-83a4-83b0893a7178"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_2026",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "954fd21e-177a-47fa-83a4-83b0893a7178"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_physical-computing_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "1f358940-8955-4a93-a5e5-457e7d648f78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-AboutCSD1_2026",
+        "script_level.level_keys": [
+          "SP-VPL-24-AboutCSD1_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-AboutCSD2_2026",
+        "script_level.level_keys": [
+          "SP-VPL-24-AboutCSD2_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-ModuleOverview_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-ActivityOverview_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-Navigation_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-Navigation_2026"
+        ],
+        "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2026",
+        "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

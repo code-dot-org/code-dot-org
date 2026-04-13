@@ -35,9 +35,9 @@ const PROJECT_INFO = {
     label: i18n.projectTypeGamelab(),
     thumbnail: studio('/shared/images/courses/game-lab-icon.png'),
   },
-  weblab: {
-    label: i18n.projectTypeWeblab(),
-    thumbnail: studio('/shared/images/courses/logo_weblab.png'),
+  weblab2: {
+    label: 'Web Lab (new)',
+    thumbnail: studio('/shared/images/courses/logo_weblab2.png'),
   },
   frozen: {
     label: i18n.projectTypeFrozen(),
