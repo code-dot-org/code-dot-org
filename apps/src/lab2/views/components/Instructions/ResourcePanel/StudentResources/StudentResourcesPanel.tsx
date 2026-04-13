@@ -1,14 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
-import React, {useMemo} from 'react';
+import React from 'react';
 import {Tour} from 'shepherd.js';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {
-  isTourEnabledOnLevel,
-  ToursPerLab,
-} from '@cdo/apps/lab2/productTours/productToursPerLab';
-import {AppName, LevelProperties} from '@cdo/apps/lab2/types';
+import {ProductTourConfig} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
@@ -17,21 +13,14 @@ import styles from './student-resources-panel.module.scss';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface StudentResourcesPanelProps {
-  levelProperties: LevelProperties;
+  availableTours: ProductTourConfig[];
 }
 
 const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
-  levelProperties,
+  availableTours,
 }) => {
   const [isTourRunning, setIsTourRunning] = React.useState(false);
   const activeTourRef = React.useRef<Tour | null>(null);
-
-  const tours = useMemo(() => {
-    const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
-    return toursForLab.filter(tour =>
-      isTourEnabledOnLevel(tour.name, levelProperties, false)
-    );
-  }, [levelProperties]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     endActiveTour();
@@ -48,7 +37,7 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
   const startTour = (tourName: string) => {
     if (isTourRunning) return;
     setIsTourRunning(true);
-    const tourConfig = tours.find(tour => tour.name === tourName);
+    const tourConfig = availableTours.find(tour => tour.name === tourName);
     if (tourConfig) {
       const tour = createTourWithSteps(tourConfig.getSteps);
       activeTourRef.current = tour;
@@ -69,7 +58,7 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
         this lab. You won&apos;t lose your progress.
       </Typography>
       <div className={styles.tourList}>
-        {tours.map(tour => (
+        {availableTours.map(tour => (
           <div key={tour.name} className={styles.tourChip}>
             <Typography variant="body3" className={styles.tourName}>
               {tour.displayName}

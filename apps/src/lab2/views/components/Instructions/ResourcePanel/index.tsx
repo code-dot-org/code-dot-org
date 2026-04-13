@@ -13,7 +13,10 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {ToursPerLab} from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {
+  isTourEnabledOnLevel,
+  ToursPerLab,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
   isReadOnlyWorkspace,
@@ -243,6 +246,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isStandaloneCollapsed,
   });
 
+  const availableTours = useMemo(() => {
+    const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
+    return toursForLab.filter(tour =>
+      isTourEnabledOnLevel(tour.name, levelProperties, false)
+    );
+  }, [levelProperties]);
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     if (sidebarOnly) {
@@ -341,9 +351,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (ToursPerLab[levelProperties.appName as AppName]?.length) {
+    if (availableTours.length > 0) {
       tabMap[Tabs.StudentResources] = (
-        <StudentResourcesPanel levelProperties={levelProperties} />
+        <StudentResourcesPanel availableTours={availableTours} />
       );
     }
 
@@ -352,6 +362,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     sidebarOnly,
     levelProperties,
     instructionsProps,
+    hideInstructionsNavigation,
+    validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
     aiTutorVisible,
@@ -363,7 +375,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     showRubric,
     showBackpack,
     isUserTeacher,
-    hideInstructionsNavigation,
+    availableTours,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
@@ -371,6 +383,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     enableTutorVideos,
+    hasInstructionsDrawer,
+    isPredictLevel,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
@@ -380,9 +394,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
-    hasInstructionsDrawer,
-    validationSettings,
-    isPredictLevel,
   ]);
 
   const hasTabs = useMemo(() => {
