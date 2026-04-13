@@ -478,6 +478,9 @@ const projectSlice = createSlice({
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
     },
+    markProjectEdited(state) {
+      markEdited(state);
+    },
   },
 });
 
@@ -510,6 +513,7 @@ export const {
   renameFolder,
   rearrangeFiles,
   setLastSavedLabConfig,
+  markProjectEdited,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

@@ -4,6 +4,10 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {
+  COLORS,
+  EMOJIS,
+} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
 import * as windowUtils from '@cdo/apps/utils';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -20,6 +24,16 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
+  });
+
+  it('initializes with random avatar_color and avatar_emoji within valid range', () => {
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+    const section = wrapper.find('SingleSectionSetUp').prop('section');
+
+    expect(section.avatar_color).to.be.at.least(0);
+    expect(section.avatar_color).to.be.below(COLORS.length);
+    expect(section.avatar_emoji).to.be.at.least(0);
+    expect(section.avatar_emoji).to.be.below(EMOJIS.length);
   });
 
   it('renders headers and button', () => {

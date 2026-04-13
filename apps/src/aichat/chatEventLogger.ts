@@ -10,7 +10,7 @@ export default class ChatEventLogger {
 
   private static instance: ChatEventLogger;
 
-  constructor(private readonly aichatContext: AichatContext) {
+  constructor(public readonly aichatContext: AichatContext) {
     this.queue = [];
     this.sendingInProgress = false;
   }

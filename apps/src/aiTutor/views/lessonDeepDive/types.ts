@@ -1,3 +1,14 @@
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+
+export type ReflectionValue =
+  (typeof LessonObjectiveReflectionValues)[keyof typeof LessonObjectiveReflectionValues];
+
+export type ReflectionData = {
+  objectiveReflections: Record<string, ReflectionValue>;
+  success: string;
+  struggle: string;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;

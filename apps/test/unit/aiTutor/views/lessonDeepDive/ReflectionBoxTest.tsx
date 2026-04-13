@@ -22,8 +22,14 @@ const OBJECTIVES = [
   {id: '2', description: 'Objective two'},
 ];
 
-function renderReflectionBox() {
-  render(<ReflectionBox lessonId={LESSON_ID} objectives={OBJECTIVES} />);
+function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
+  render(
+    <ReflectionBox
+      lessonId={LESSON_ID}
+      objectives={OBJECTIVES}
+      onSubmitComplete={onSubmitComplete}
+    />
+  );
 }
 
 describe('ReflectionBox submit button', () => {

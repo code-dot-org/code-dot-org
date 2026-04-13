@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({
   const studentOptions = useMemo(() => {
     return sortedStudents.map(student => ({
       value: student.id.toString(),
-      text: getFullName(student),
+      text: getFullName(student) + (student.isDemoStudent ? ' (Demo)' : ''),
     }));
   }, [sortedStudents]);
 
