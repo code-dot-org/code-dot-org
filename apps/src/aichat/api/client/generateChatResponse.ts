@@ -85,6 +85,9 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
+    if (file.uint8Array.length === 0) {
+      return {response: text, status: AiRequestExecutionStatus.FAILURE};
+    }
     let asset: ChatAsset;
     try {
       asset = await generatedFileToAsset(
@@ -102,9 +105,6 @@ export async function generateChatResponse(
     }
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
-      if (file.uint8Array.length === 0) {
-        return {response: text, status: AiRequestExecutionStatus.FAILURE};
-      }
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
       const imageModerationStatus = await getImageModerationStatus(
