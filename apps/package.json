@@ -295,7 +295,7 @@
     "intro.js": "^7.2.0",
     "intro.js-react": "^1.0.0",
     "isolate-react": "^2.3.0",
-    "jquery": "1.12.1",
+    "jquery": "3.5.0",
     "jquery-ui": "^1.12.1",
     "js-cookie": "^2.1.2",
     "js-file-download": "^0.4.12",
