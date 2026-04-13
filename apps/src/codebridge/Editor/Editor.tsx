@@ -162,10 +162,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
             },
           })
         );
-      } else if (fileExt === 'md') {
-        // Wrap lines for markdown files.
-        extensions.push(EditorView.lineWrapping);
       }
+    }
+    if (fileExt === 'md' || fileExt === 'txt') {
+      // Wrap lines for markdown and plain text files.
+      extensions.push(EditorView.lineWrapping);
     }
     if (hasUnifiedDiffView) {
       // For new files that don't exist in the original version, we still want

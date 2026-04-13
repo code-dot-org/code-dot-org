@@ -81,16 +81,7 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    csd3-2023
-    interactive-games-animations-2023
-    focus-on-creativity3-2023
-    focus-on-coding3-2023
-    csd3-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
     customizing-llms-2024
-    csd3-2025
     dance
     events
     flappy
@@ -274,8 +265,6 @@ namespace :seed do
        alltheselfpacedplthings
        allthettsthings
        artist
-       interactive-games-animations-2023
-       interactive-games-animations-2024
        customizing-llms-2024
        dance
        events

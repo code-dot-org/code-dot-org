@@ -262,6 +262,7 @@ export interface LevelProperties {
   validationCode?: string;
   hideVersionHistory?: boolean;
   parentLevelName?: string;
+  requireEditToContinue?: boolean;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

@@ -58,7 +58,7 @@ export async function isTextSafe(
 export async function getImageModerationStatus(
   file: GeneratedFile,
   assetUrl: string
-): Promise<'ok' | 'flagged' | 'skipped' | 'error'> {
+): Promise<'safe' | 'flagged' | 'error'> {
   const {filename, fileBuffer, mediaType} = prepareGeneratedFile(
     file,
     ACCEPTED_IMAGE_MEDIA_TYPES
