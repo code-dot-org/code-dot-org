@@ -88,7 +88,6 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
   validates :course_id, presence: true, if: -> {script_id.present?}
-  validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::DEMO_TYPES.map(&:to_s)}}, allow_nil: true
   validates :demo_type, uniqueness: {scope: :user_id}, allow_nil: true
 
   belongs_to :script, class_name: 'Unit', optional: true
