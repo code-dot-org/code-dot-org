@@ -89,9 +89,13 @@ Recommendations:
 ## Bootstraping a prod-like codeai-k8s kubernetes cluster on EKS
 
 Normally, you'll not need to create a new cluster, you'll deploy to an existing cluster or a local
-kubernetes cluster. But if you're starting from scratch (e.g., new org, disaster, curiosity, etc), see: [bootstrap/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/README.md) in the [k8s-gitops repo](https://github.com/code-dot-org/k8s-gitops).
+kubernetes cluster. But if you're starting from scratch (e.g., new org, disaster, curiosity, etc), see: [k8s-gitops/bootstrap/codeai-k8s/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/codeai-k8s/README.md) in the [k8s-gitops repo](https://github.com/code-dot-org/k8s-gitops).
 
-Conventionally, the k8s-gitops repo will be checked out to ../k8s-gitops.
+Conventionally, the k8s-gitops repo will be checked out at ../k8s-gitops. 
+
+Commits to the main branch of k8s-gitops will be synced to the live cluster by ArgoCD, 
+see: [k8s-gitops/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/README.md)
+to learn more.
 
 ## Useful dev commands
 
