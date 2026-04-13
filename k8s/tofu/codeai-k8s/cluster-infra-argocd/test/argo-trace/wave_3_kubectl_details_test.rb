@@ -18,7 +18,7 @@ class Wave3FakeCommandRunner
     @max_in_flight = 0
   end
 
-  def call(*command)
+  def call(*command, timeout_seconds: nil)
     @commands << command
     @mutex.synchronize do
       @in_flight += 1
@@ -166,6 +166,124 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     assert_equal [kubectl_command], kubectl_commands
   end
 
+  def test_wave_3_ignores_plain_missing_resources_without_more_signal
+    jobs = ArgoTrace.wave_3_application_resource_detail_jobs(
+      [
+        ArgoTrace::TreeNode.new(
+          kind: "Application",
+          name: "kargo",
+          namespace: "argocd",
+          children: [],
+          metadata: {
+            raw: {
+              "status" => {
+                "resources" => [
+                  {
+                    "kind" => "ClusterRole",
+                    "name" => "boring-missing-cluster-role",
+                    "status" => "OutOfSync",
+                    "health" => {"status" => "Missing"},
+                  },
+                  {
+                    "kind" => "RoleBinding",
+                    "name" => "also-boring-missing-role-binding",
+                    "status" => "OutOfSync",
+                    "health" => {"status" => "Missing"},
+                  },
+                  {
+                    "kind" => "Certificate",
+                    "name" => "useful-lead",
+                    "namespace" => "default",
+                    "status" => "Synced",
+                    "health" => {"status" => "Progressing", "message" => "waiting for issuer"},
+                  },
+                ],
+              },
+            },
+          }
+        ),
+      ]
+    )
+
+    assert_equal 1, jobs.length
+    assert_equal "useful-lead", jobs.first.fetch(:app_resource).fetch("name")
+  end
+
+  def test_wave_3_limits_application_resource_fetches_to_top_four_ranked_leads
+    jobs = ArgoTrace.wave_3_application_resource_detail_jobs(
+      [
+        ArgoTrace::TreeNode.new(
+          kind: "Application",
+          name: "infra",
+          namespace: "argocd",
+          children: [],
+          metadata: {
+            raw: {
+              "status" => {
+                "resources" => [
+                  {"kind" => "Certificate", "name" => "first-lead", "status" => "Synced", "health" => {"status" => "Progressing", "message" => "waiting for issuer"}},
+                  {"kind" => "Namespace", "name" => "production", "status" => "Synced", "health" => {"status" => "Progressing", "message" => "pending deletion"}},
+                  {"kind" => "Deployment", "name" => "second-lead", "namespace" => "argocd", "status" => "OutOfSync", "health" => {"status" => "Progressing", "message" => "waiting for rollout"}},
+                  {"kind" => "Ingress", "name" => "argocd-server", "namespace" => "argocd", "status" => "OutOfSync", "health" => {"status" => "Progressing", "message" => "waiting for load balancer cleanup"}},
+                  {"kind" => "StatefulSet", "name" => "third-lead", "namespace" => "argocd", "status" => "OutOfSync", "health" => {"status" => "Progressing"}},
+                  {"kind" => "ConfigMap", "name" => "too-boring", "status" => "OutOfSync", "health" => {"status" => "Missing"}},
+                  {"kind" => "ServiceAccount", "name" => "also-too-boring", "status" => "OutOfSync", "health" => {"status" => "Missing"}},
+                ],
+              },
+            },
+          }
+        ),
+      ]
+    )
+
+    assert_equal 4, jobs.length
+    assert_equal(
+      ["second-lead", "argocd-server", "first-lead", "production"],
+      jobs.map {|job| job.fetch(:app_resource).fetch("name")}
+    )
+  end
+
+  def test_selected_wave_3_application_nodes_skips_boring_missing_apps
+    aws_resources = ArgoTrace::TreeNode.new(
+      kind: "Application",
+      name: "aws-resources",
+      namespace: "argocd",
+      children: [],
+      metadata: {
+        raw: {
+          "status" => {
+            "sync" => {"status" => "Synced"},
+            "health" => {"status" => "Progressing"},
+            "resources" => [
+              {"kind" => "XClusterDNSCertificate", "name" => "dns-cert", "status" => "Synced"},
+            ],
+          },
+        },
+      }
+    )
+    kargo = ArgoTrace::TreeNode.new(
+      kind: "Application",
+      name: "kargo",
+      namespace: "argocd",
+      children: [],
+      metadata: {
+        raw: {
+          "status" => {
+            "sync" => {"status" => "OutOfSync"},
+            "health" => {"status" => "Missing"},
+            "resources" => [
+              {"kind" => "ClusterRole", "name" => "boring-missing", "status" => "OutOfSync", "health" => {"status" => "Missing"}},
+            ],
+          },
+        },
+      }
+    )
+
+    selected_nodes = ArgoTrace.selected_wave_3_application_nodes([aws_resources, kargo])
+
+    assert_equal ["aws-resources"], selected_nodes.map(&:name)
+  end
+
   def test_wave_3_keeps_detail_bullets_suppressed_for_fully_all_ok_subtrees
     command_runner = Wave3FakeCommandRunner.new(outputs: fixture_argocd_outputs_only)
 
@@ -239,7 +357,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     seen_commands = command_runner.seen_commands
     assert_includes seen_commands, xcert_command
     assert_includes seen_commands, zone_command
-    assert_includes body_text, "    - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Ready=False]"
+    assert_includes body_text, "    - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, health.status=Progressing, status.conditions.Ready=False]"
     assert_includes body_text, "→     - codeai-k8s-cluster-dns-certificate-zone (Zone) [status.conditions.Ready=False, status.conditions.Synced=False]"
     assert_includes body_text, "→       - status.conditions.Synced: status=False, reason=ReconcileError, message=HostedZoneNotEmpty"
   end
@@ -357,7 +475,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
     seen_commands = command_runner.seen_commands
     assert_includes seen_commands, xcert_command
     refute_includes seen_commands, ["kubectl", "get", "Zone", "codeai-k8s-cluster-dns-certificate-zone", "-n", "crossplane-system", "-o", "yaml", "--ignore-not-found"]
-    assert_includes body_text, "→   - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Synced=False]"
+    assert_includes body_text, "→   - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, health.status=Progressing, status.conditions.Synced=False]"
     assert_includes body_text, "→     - status.conditions.Synced: status=False, reason=ReconcileError, message=HostedZoneNotEmpty"
   end
 
@@ -535,6 +653,10 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
               "name" => "codeai-k8s-cluster-dns-certificate",
               "namespace" => "crossplane-system",
               "status" => "Synced",
+              "health" => {
+                "status" => "Progressing",
+                "message" => "Waiting for referenced zone",
+              },
               "syncWave" => 1,
             }
           ],

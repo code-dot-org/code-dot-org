@@ -19,7 +19,9 @@ module ArgoTrace
   DEFAULT_MAX_PARALLEL_CALLS = 50
   DEFAULT_KUBECTL_DETAILS = true
   DEFAULT_REF_MAX_RECURSION_DEPTH = 2
+  DEFAULT_MAX_WAVE_3_APPLICATION_RESOURCE_DETAILS = 4
   ARGO_TREE_KINDS = Set.new(%w[Application ApplicationSet]).freeze
+  ORDERED_GROUP_KINDS = Set.new(%w[SyncWave RollingSyncStep]).freeze
   FOLLOW_REF_NOISE_KINDS = Set.new(
     %w[
       Certificate
@@ -282,14 +284,22 @@ module ArgoTrace
     argocd_apps_requiring_detail.map {|argocd_app| argocd_app.fetch(:name)}.sort
   end
 
+  def run_command(command_runner, command, timeout_seconds: nil)
+    command_runner.call(*command, timeout_seconds: timeout_seconds)
+  rescue ArgumentError => exception
+    raise unless exception.message.include?("unknown keyword: :timeout_seconds")
+
+    command_runner.call(*command)
+  end
+
   def fetch_argocd_list(command_runner, command)
-    payload = load_argocd_yaml(command_runner.call(*command))
+    payload = load_argocd_yaml(run_command(command_runner, command))
     argocd_output_list(payload)
   end
 
   def shell_command_runner
-    lambda do |*command|
-      stdout, stderr, status = Open3.capture3(*command)
+    lambda do |*command, timeout_seconds: nil|
+      stdout, stderr, status = capture_command(*command, timeout_seconds: timeout_seconds)
       return stdout if status.success?
 
       message = stderr.to_s.strip
@@ -297,6 +307,55 @@ module ArgoTrace
       message = "command failed with exit #{status.exitstatus}" if message.empty?
       raise CommandFailed, "#{command.join(' ')}: #{message}"
     end
+  end
+
+  def capture_command(*command, timeout_seconds: nil)
+    Open3.popen3(*command) do |stdin, stdout, stderr, wait_thr|
+      stdin.close
+
+      stdout_reader = Thread.new do
+        stdout.read
+      rescue IOError
+        +""
+      end
+      stdout_reader.report_on_exception = false
+
+      stderr_reader = Thread.new do
+        stderr.read
+      rescue IOError
+        +""
+      end
+      stderr_reader.report_on_exception = false
+
+      status =
+        if timeout_seconds
+          wait_thr.join(timeout_seconds)&.value || timeout_process(wait_thr, stdout, stderr)
+        else
+          wait_thr.value
+        end
+
+      [stdout_reader.value, stderr_reader.value, status]
+    ensure
+      stdout.close unless stdout.closed?
+      stderr.close unless stderr.closed?
+      stdout_reader&.join
+      stderr_reader&.join
+    end
+  end
+
+  def timeout_process(wait_thr, stdout, stderr)
+    pid = wait_thr.pid
+    Process.kill("TERM", pid)
+    wait_thr.join(5)&.value || begin
+      Process.kill("KILL", pid)
+      wait_thr.value
+    end
+  rescue Errno::ESRCH
+    wait_thr.value
+  ensure
+    stdout.close unless stdout.closed?
+    stderr.close unless stderr.closed?
+    raise Timeout::Error
   end
 
   def appset_get_command(name)
@@ -377,9 +436,7 @@ module ArgoTrace
   end
 
   def call_with_timeout(command_runner, job, per_call_timeout_seconds, parser: method(:argocd_output_object))
-    yaml_text = Timeout.timeout(per_call_timeout_seconds) do
-      command_runner.call(*job.fetch(:command))
-    end
+    yaml_text = run_command(command_runner, job.fetch(:command), timeout_seconds: per_call_timeout_seconds)
     payload = load_argocd_yaml(yaml_text)
 
     success_result(job, raw: parser.call(payload))
@@ -604,7 +661,10 @@ module ArgoTrace
 
   def sync_wave_app_resources(argocd_app)
     (argocd_app.dig("status", "resources") || []).select do |app_resource|
-      app_resource["kind"] != "ApplicationSet" && (app_resource["kind"] == "Application" || app_resource_non_good?(app_resource))
+      next false if app_resource["kind"] == "ApplicationSet"
+      next true if app_resource["kind"] == "Application"
+
+      app_resource_non_good?(app_resource) && !boring_app_resource_for_live_detail?(app_resource)
     end
   end
 
@@ -646,7 +706,7 @@ module ArgoTrace
     end
   end
 
-  def build_appset_tree(appset_name, app_inventory:, appset_inventory:, appset_enrichment:, parent_deleting: false)
+  def build_appset_tree(appset_name, app_inventory:, appset_inventory:, app_enrichment:, appset_enrichment:, parent_deleting: false)
     enrichment_result = appset_enrichment[appset_name]
     argocd_appset = enrichment_result&.dig(:raw) || appset_inventory[appset_name]&.fetch(:raw, nil) || missing_argocd_object("ApplicationSet", appset_name)
     application_status_by_name = appset_status_by_application(argocd_appset)
@@ -664,6 +724,7 @@ module ArgoTrace
                          application_status.fetch("application"),
                          app_inventory: app_inventory,
                          appset_inventory: appset_inventory,
+                         app_enrichment: app_enrichment,
                          appset_enrichment: appset_enrichment,
                           rollout_status: application_status,
                           parent_deleting: appset_deleting || parent_deleting,
@@ -688,6 +749,7 @@ module ArgoTrace
                        argocd_app.fetch(:name),
                        app_inventory: app_inventory,
                        appset_inventory: appset_inventory,
+                       app_enrichment: app_enrichment,
                        appset_enrichment: appset_enrichment,
                        parent_deleting: appset_deleting || parent_deleting,
                      )
@@ -750,6 +812,7 @@ module ArgoTrace
           node.metadata.fetch(:appset_name),
           app_inventory: app_inventory,
           appset_inventory: appset_inventory,
+          app_enrichment: app_enrichment,
           appset_enrichment: appset_enrichment,
           parent_deleting: deleting_argocd_object?(argocd_app)
         )
@@ -950,10 +1013,23 @@ module ArgoTrace
     end
   end
 
-  def deepest_arrowed_node_ids(nodes)
-    direct_arrowed = arrowed_child_node_ids(nodes)
+  def subtree_has_attention?(node)
+    !!node_attention_rank(node) || node.children.any? {|child| subtree_has_attention?(child)}
+  end
 
-    nodes.each_with_object(Set.new) do |node, arrowed_node_ids|
+  def focused_ordered_children(children)
+    kinds = children.map(&:kind).uniq
+    return children unless kinds.length == 1 && ORDERED_GROUP_KINDS.include?(kinds.first)
+
+    active_child = children.find {|child| subtree_has_attention?(child)}
+    active_child ? [active_child] : children
+  end
+
+  def deepest_arrowed_node_ids(nodes)
+    focused_nodes = focused_ordered_children(nodes)
+    direct_arrowed = arrowed_child_node_ids(focused_nodes)
+
+    focused_nodes.each_with_object(Set.new) do |node, arrowed_node_ids|
       child_arrowed = deepest_arrowed_node_ids(node.children)
       if child_arrowed.empty?
         arrowed_node_ids << node.object_id if direct_arrowed.include?(node.object_id)
@@ -1068,14 +1144,38 @@ module ArgoTrace
 
   def selected_wave_3_application_nodes(nodes)
     nodes_by_id = flatten_tree_nodes(nodes).to_h {|node| [node.object_id, node]}
-
-    deepest_arrowed_node_ids(nodes).filter_map do |node_id|
+    selected_nodes = deepest_arrowed_node_ids(nodes).filter_map do |node_id|
       node = nodes_by_id[node_id]
       next unless node&.kind == "Application"
       next unless (node.metadata[:raw].dig("status", "resources") || []).any? {|app_resource| !ARGO_TREE_KINDS.include?(app_resource["kind"])}
+      priority = application_node_live_detail_priority(node)
+      next unless priority.positive?
 
-      node
+      [priority, node]
     end
+
+    selected_nodes.sort_by do |priority, node|
+      [-priority, node.name]
+    end.map(&:last)
+  end
+
+  def application_node_live_detail_priority(node)
+    argocd_object = node.metadata[:raw] || {}
+    return 0 if missing_argocd_object?(argocd_object)
+    return 0 if health_status(argocd_object) == "Missing"
+    return 0 if application_conditions(node.metadata).empty? &&
+      sync_status(argocd_object) == "Synced" &&
+      health_status(argocd_object) == "Healthy" &&
+      [nil, "Succeeded"].include?(operation_phase(argocd_object))
+
+    return 100 if application_conditions(node.metadata).any?
+    return 90 if health_message(argocd_object) && health_status(argocd_object) != "Healthy"
+    return 80 if operation_phase(argocd_object) && operation_phase(argocd_object) != "Succeeded"
+    return 70 if operation_message(argocd_object) && !operation_message(argocd_object).match?(/\Asuccessfully synced\b/i)
+    return 70 if %w[Progressing Degraded Suspended Unknown].include?(health_status(argocd_object))
+    return 20 if sync_status(argocd_object) && sync_status(argocd_object) != "Synced"
+
+    0
   end
 
   def kubectl_get_command(argo_resource_ref)
@@ -1098,12 +1198,13 @@ module ArgoTrace
   end
 
   def wave_3_application_resource_detail_jobs(application_nodes)
-    application_nodes.flat_map do |node|
+    jobs = application_nodes.flat_map do |node|
       argocd_app = node.metadata[:raw] || {}
       app_name = node.name
       (argocd_app.dig("status", "resources") || []).filter_map do |app_resource|
         next if ARGO_TREE_KINDS.include?(app_resource["kind"])
-        next unless app_resource_candidate_for_live_detail?(app_resource)
+        priority = app_resource_live_detail_priority(app_resource)
+        next unless priority.positive?
 
         resource_key = [app_name, *wave_3_resource_key(app_resource_ref(app_resource))]
         {
@@ -1113,19 +1214,60 @@ module ArgoTrace
           parent_app_name: app_name,
           app_resource: app_resource,
           command: kubectl_get_command(app_resource_ref(app_resource)),
+          priority: priority,
         }
       end
+    end
+
+    jobs = jobs.sort_by do |job|
+      [
+        -job.fetch(:priority),
+        job.fetch(:parent_app_name),
+        job.fetch(:app_resource).fetch("kind", ""),
+        job.fetch(:app_resource).fetch("name", ""),
+      ]
+    end
+
+    jobs.first(DEFAULT_MAX_WAVE_3_APPLICATION_RESOURCE_DETAILS).map do |job|
+      job.reject {|key, _value| key == :priority}
     end
   end
 
   def app_resource_candidate_for_live_detail?(app_resource)
-    return true if app_resource["status"] && app_resource["status"] != "Synced"
-    return true if app_resource.dig("health", "status") && app_resource.dig("health", "status") != "Healthy"
-    return true if app_resource.dig("health", "message")
+    app_resource_live_detail_priority(app_resource).positive?
+  end
 
-    # Crossplane-style composite resources are often the one useful next hop
-    # under a bad app, while the IAM/attachment clutter is not.
-    app_resource["kind"].to_s.start_with?("X")
+  def boring_app_resource_for_live_detail?(app_resource)
+    sync_status = app_resource["status"].to_s
+    health_status = app_resource.dig("health", "status").to_s
+    health_message = app_resource.dig("health", "message").to_s
+
+    return true if sync_status == "Synced" && health_status == "Healthy"
+    return true if sync_status != "Synced" && health_status == "Missing" && health_message.empty?
+    return true if health_message == "CRD is healthy"
+
+    false
+  end
+
+  def app_resource_live_detail_priority(app_resource)
+    sync_status = app_resource["status"].to_s
+    health_status = app_resource.dig("health", "status").to_s
+    health_message = app_resource.dig("health", "message").to_s
+    return 0 if boring_app_resource_for_live_detail?(app_resource)
+
+    score = 0
+
+    # Keep this state-driven. Do not boost by kind name, CRD group, or project-
+    # specific prefixes. If a resource deserves follow-up, that decision should
+    # come from its visible state, conditions, or messages, not from branding.
+    score += 100 unless health_message.empty?
+    score += 80 if %w[Progressing Degraded Suspended Unknown].include?(health_status)
+
+    if !sync_status.empty? && sync_status != "Synced" && !health_status.empty? && health_status != "Missing"
+      score += 20
+    end
+
+    score
   end
 
   def fetch_wave_3_kubectl_details(command_runner:, resource_nodes:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
@@ -1451,42 +1593,67 @@ module ArgoTrace
     entries
   end
 
-  def collect_display_lines(nodes, indent: 0, arrowed_node_ids: Set.new)
+  def collect_display_lines(nodes, indent: 0, arrowed_node_ids: Set.new, selected_ancestor: false)
     Array(nodes).flat_map do |node|
       highlighted = node_non_good?(node)
       selected = arrowed_node_ids.include?(node.object_id)
-      lines = [[indent, display_label(node), highlighted, arrow_node_label?(node, selected: selected), :node]]
+      ancestor_of_selected = !selected && subtree_contains_arrowed_node?(node, arrowed_node_ids)
+      selected_subtree = selected_ancestor || selected
+      node_style = if selected_subtree
+                     :bold
+                   elsif ancestor_of_selected
+                     :normal
+                   else
+                     :faint
+                   end
+      lines = [[indent, display_label(node), highlighted, arrow_node_label?(node, selected: selected), :node, node_style]]
       display_detail_entries(node).each do |entry_type, text, arrow|
         # Condition/error nodes keep their arrows on the attached detail lines,
         # while Progressing/health.message frontiers arrow the resource/app label.
-        detail_arrow = arrow && (selected || arrowed_node_ids.empty?)
+        detail_arrow = arrow && !selected && !selected_ancestor && (selected || arrowed_node_ids.empty?)
+        detail_style = selected_subtree ? :bold : :faint
         lines << case entry_type
                  when :condition_header
-                   [indent + 1, text, highlighted, detail_arrow, :detail]
+                   [indent + 1, text, highlighted, detail_arrow, :detail, detail_style]
                  when :condition_detail
-                   [indent + 2, text, highlighted, detail_arrow, :detail]
+                   [indent + 2, text, highlighted, detail_arrow, :detail, detail_style]
                  when :health_message
-                   [indent + 1, text, highlighted, detail_arrow, :node]
+                   [indent + 1, text, highlighted, detail_arrow, :node, detail_style]
                  else
-                   [indent + 1, text, highlighted, detail_arrow, :detail]
+                   [indent + 1, text, highlighted, detail_arrow, :detail, detail_style]
                  end
       end
+      child_arrowed_node_ids =
+        if arrowed_node_ids.empty?
+          Set.new
+        elsif ORDERED_GROUP_KINDS.include?(node.kind) && !subtree_contains_arrowed_node?(node, arrowed_node_ids)
+          Set.new
+        else
+          deepest_arrowed_node_ids(node.children)
+        end
+
       lines.concat(
         collect_display_lines(
           node.children,
           indent: indent + 1,
-          arrowed_node_ids: deepest_arrowed_node_ids(node.children)
+          arrowed_node_ids: child_arrowed_node_ids,
+          selected_ancestor: selected_subtree
         )
       )
       lines
     end
   end
 
+  def subtree_contains_arrowed_node?(node, arrowed_node_ids)
+    node.children.any? do |child|
+      arrowed_node_ids.include?(child.object_id) || subtree_contains_arrowed_node?(child, arrowed_node_ids)
+    end
+  end
+
   # ANSI is emitted as standalone block markers so the visible lines stay easy
   # to diff against the expected fixture and `watch --color` output.
   def render_ansi_display_lines(nodes)
-    styled_lines = collect_display_lines(nodes, arrowed_node_ids: deepest_arrowed_node_ids(nodes)).map do |indent, text, _highlighted, arrow, _line_kind|
-      style = arrow ? :bold : :faint
+    styled_lines = collect_display_lines(nodes, arrowed_node_ids: deepest_arrowed_node_ids(nodes)).map do |indent, text, _highlighted, arrow, _line_kind, style|
       normal_prefix = "#{'  ' * indent}- "
       rendered_line = if arrow
                         arrow_prefix = "→#{' ' * [((indent * 2) - 1), 1].max}- "
@@ -1506,7 +1673,16 @@ module ArgoTrace
         rendered << rendered_line
       else
         rendered[-1] = "#{rendered[-1]}\e[22m" if current_style
-        rendered << "#{style == :bold ? style_start_code.fetch('bold') : style_start_code.fetch('faint')}#{rendered_line}"
+        start_code =
+          case style
+          when :bold
+            style_start_code.fetch("bold")
+          when :faint
+            style_start_code.fetch("faint")
+          else
+            ""
+          end
+        rendered << "#{start_code}#{rendered_line}"
         current_style = style
       end
     end

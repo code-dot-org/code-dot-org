@@ -1,0 +1,311 @@
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/aws-resources
+  creationTimestamp: "2026-04-13T05:36:43Z"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 49
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: "2026-04-13T05:36:43Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:controllerNamespace: {}
+        f:health:
+          .: {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceTypes: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination:
+              .: {}
+              f:namespace: {}
+              f:server: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2026-04-13T07:09:04Z"
+  name: aws-resources
+  namespace: argocd
+  resourceVersion: "39019913"
+  uid: 73852689-2fa1-49e9-8264-90f31a2fbc87
+spec:
+  destination:
+    namespace: crossplane-system
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: aws-resources
+      valueFiles:
+      - $values/apps/infra/codeai-cluster-config.values.yaml
+    path: apps/infra/aws-resources/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+    - SkipDryRunOnMissingResource=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-04-13T05:36:44Z"
+    status: Progressing
+  reconciledAt: "2026-04-13T07:09:04Z"
+  resourceHealthSource: appTree
+  resources:
+  - group: apiextensions.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: CompositeResourceDefinition
+    name: xclusterdnscertificates.infra.code.org
+    status: Synced
+    version: v1
+  - group: apiextensions.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Composition
+    name: codeai-k8s-cluster-dns-certificate
+    status: Synced
+    version: v1
+  - group: aws.m.upbound.io
+    health:
+      message: Resource is in use.
+      status: Healthy
+    kind: ClusterProviderConfig
+    name: default
+    status: Synced
+    syncWave: -10
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Policy
+    name: aws-load-balancer-controller
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: aws-load-balancer-controller
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: dex-external-secrets
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: eso-adhoc
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: eso-levelbuilder
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: eso-production
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: eso-staging
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: eso-test
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Role
+    name: kargo-external-secret-stores
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: dex-external-secrets
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: eso-adhoc
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: eso-levelbuilder
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: eso-production
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: eso-staging
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: eso-test
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicy
+    name: kargo-external-secret-stores
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: iam.aws.m.upbound.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: RolePolicyAttachment
+    name: aws-load-balancer-controller
+    namespace: crossplane-system
+    status: Synced
+    version: v1beta1
+  - group: infra.code.org
+    health:
+      message: Pending deletion
+      status: Progressing
+    kind: XClusterDNSCertificate
+    name: codeai-k8s-cluster-dns-certificate
+    namespace: crossplane-system
+    status: Synced
+    syncWave: 1
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ""
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: crossplane-system
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ""
+      sources:
+      - helm:
+          releaseName: aws-resources
+          valueFiles:
+          - $values/apps/infra/codeai-cluster-config.values.yaml
+        path: apps/infra/aws-resources/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    status: Synced

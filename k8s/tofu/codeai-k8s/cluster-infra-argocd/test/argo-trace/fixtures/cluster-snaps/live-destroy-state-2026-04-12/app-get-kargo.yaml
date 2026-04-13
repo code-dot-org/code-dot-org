@@ -1,0 +1,738 @@
+metadata:
+  creationTimestamp: "2026-04-13T05:36:38Z"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 33
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9acfe1b1-aef1-47b1-9417-a1393117bd76"}: {}
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          .: {}
+          f:automated:
+            .: {}
+            f:enabled: {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source:
+              .: {}
+              f:repoURL: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: "2026-04-13T05:36:38Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceTypes: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2026-04-13T07:09:19Z"
+  name: kargo
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: app-of-apps
+    uid: 9acfe1b1-aef1-47b1-9417-a1393117bd76
+  resourceVersion: "39020658"
+  uid: 2729aea6-7a27-4f15-9619-2ab97c7798ce
+spec:
+  destination:
+    namespace: kargo
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - chart: kargo
+    helm:
+      valueFiles:
+      - $values/apps/kargo/values.yaml
+    repoURL: ghcr.io/akuity/kargo-charts
+    targetRevision: 1.9.5
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/kargo/projects/codeai
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-04-13T05:36:40Z"
+    status: Missing
+  reconciledAt: "2026-04-13T07:09:19Z"
+  resourceHealthSource: appTree
+  resources:
+  - health:
+      status: Missing
+    kind: ConfigMap
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ConfigMap
+    name: kargo-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ConfigMap
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ConfigMap
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ConfigMap
+    name: kargo-management-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: Namespace
+    name: kargo-cluster-secrets
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: Secret
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: Service
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: Service
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-admin
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-management-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-project-creator
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-user
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - health:
+      status: Missing
+    kind: ServiceAccount
+    name: kargo-viewer
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: clusterconfigs.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: clusterpromotiontasks.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: freights.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: projectconfigs.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: projects.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: promotions.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: promotiontasks.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: stages.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: warehouses.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Missing
+    kind: Deployment
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: apps
+    health:
+      status: Missing
+    kind: Deployment
+    name: kargo-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: apps
+    health:
+      status: Missing
+    kind: Deployment
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: apps
+    health:
+      status: Missing
+    kind: Deployment
+    name: kargo-management-controller
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: kargo-project-codeai
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 1
+    version: v1alpha1
+  - group: batch
+    health:
+      status: Missing
+    kind: CronJob
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: networking.k8s.io
+    health:
+      status: Missing
+    kind: Ingress
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-admin
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-api
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-api-rollouts
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-controller
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-controller-argocd
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-controller-crd-discovery
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-controller-read-secrets
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-controller-rollouts
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-external-webhooks-server
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-garbage-collector
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-management-controller
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-project-admin
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-project-creator
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-project-secrets-reader
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-user
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRole
+    name: kargo-viewer
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-admin
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-api
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-api-rollouts
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-controller
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-controller-argocd
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-controller-crd-discovery
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-controller-rollouts
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-external-webhooks-server
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-garbage-collector
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-management-controller
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-project-creator
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-user
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: ClusterRoleBinding
+    name: kargo-viewer
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-cluster-secrets-admin
+    namespace: kargo-cluster-secrets
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-cluster-secrets-reader
+    namespace: kargo-cluster-secrets
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-shared-resources-admin
+    namespace: kargo-shared-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-shared-resources-reader
+    namespace: kargo-shared-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-system-resources-admin
+    namespace: kargo-system-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-system-resources-reader
+    namespace: kargo-system-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-admin
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: Role
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-cluster-secrets-admin
+    namespace: kargo-cluster-secrets
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-cluster-secrets-reader
+    namespace: kargo-cluster-secrets
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-shared-resources-admin
+    namespace: kargo-shared-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-shared-resources-reader
+    namespace: kargo-shared-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-system-resources-admin
+    namespace: kargo-system-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-system-resources-reader
+    namespace: kargo-system-resources
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-admin
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  - group: rbac.authorization.k8s.io
+    health:
+      status: Missing
+    kind: RoleBinding
+    name: kargo-api
+    namespace: kargo
+    status: OutOfSync
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ""
+  - Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: kargo
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ""
+      sources:
+      - chart: kargo
+        helm:
+          valueFiles:
+          - $values/apps/kargo/values.yaml
+        repoURL: ghcr.io/akuity/kargo-charts
+        targetRevision: 1.9.5
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/kargo/projects/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - 1.9.5
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    status: OutOfSync

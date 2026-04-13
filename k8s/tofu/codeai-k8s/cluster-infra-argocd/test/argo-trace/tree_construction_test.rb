@@ -21,6 +21,7 @@ class ArgoTraceTreeConstructionTest < Minitest::Test
     @root_inventory = ArgoTrace.build_root_inventory(@app_inventory)
     @app_enrichment = {
       "app-of-apps" => {raw: fixture_get("app-get-app-of-apps.yaml"), error: nil},
+      "aws-resources" => {raw: fixture_get("app-get-aws-resources.yaml"), error: nil},
       "codeai" => {raw: fixture_get("app-get-codeai.yaml"), error: nil},
       "infra" => {raw: fixture_get("app-get-infra.yaml"), error: nil},
       "kargo" => {raw: fixture_get("app-get-kargo.yaml"), error: nil},
@@ -78,6 +79,21 @@ class ArgoTraceTreeConstructionTest < Minitest::Test
     assert_equal %w[kargo-secrets standard-envtypes], infra_node.children[6].children.map(&:name)
   end
 
+  def test_build_tree_uses_app_get_enrichment_for_appset_rollout_children
+    infra_node = build_tree.first.children.first.children.first.children.first
+    aws_resources_node = infra_node.children.find {|child| child.name == "sync-wave 2"}.children.first
+    dns_certificate = aws_resources_node.metadata[:raw].dig("status", "resources").find do |app_resource|
+      app_resource["kind"] == "XClusterDNSCertificate"
+    end
+    expected_dns_certificate = @app_enrichment["aws-resources"][:raw].dig("status", "resources").find do |app_resource|
+      app_resource["kind"] == "XClusterDNSCertificate"
+    end
+
+    refute_nil dns_certificate
+    assert_equal expected_dns_certificate, dns_certificate
+    refute_nil dns_certificate["health"]
+  end
+
   def test_build_tree_keeps_wrapper_app_for_nested_appset
     codeai_node = build_tree.first.children.first.children.last.children.first
 
@@ -130,6 +146,41 @@ class ArgoTraceTreeConstructionTest < Minitest::Test
     sync_wave_30 = node.children.find {|child| child.name == "sync-wave 30"}
     refute_nil sync_wave_30
     assert_includes sync_wave_30.children.map(&:name), "levelbuilder"
+  end
+
+  def test_build_tree_suppresses_plain_missing_non_application_resource_leaves
+    argocd_app = Marshal.load(Marshal.dump(@app_enrichment["kargo"][:raw]))
+    argocd_app["status"]["resources"] = [
+      {
+        "kind" => "ClusterRole",
+        "name" => "boring-missing-cluster-role",
+        "status" => "OutOfSync",
+        "health" => {"status" => "Missing"},
+        "syncWave" => 0,
+      },
+      {
+        "kind" => "Application",
+        "name" => "kargo-project-codeai",
+        "status" => "OutOfSync",
+        "health" => {"status" => "Missing"},
+        "syncWave" => 1,
+      },
+    ]
+
+    node = ArgoTrace.build_application_tree(
+      "kargo",
+      app_inventory: @app_inventory,
+      appset_inventory: @appset_inventory,
+      app_enrichment: @app_enrichment.merge("kargo" => {raw: argocd_app, error: nil}),
+      appset_enrichment: @appset_enrichment
+    )
+
+    sync_wave_0 = node.children.find {|child| child.name == "sync-wave 0"}
+    sync_wave_1 = node.children.find {|child| child.name == "sync-wave 1"}
+
+    assert_nil sync_wave_0
+    refute_nil sync_wave_1
+    assert_equal ["kargo-project-codeai"], sync_wave_1.children.map(&:name)
   end
 
   def test_build_tree_tolerates_appset_children_missing_from_app_inventory_during_delete

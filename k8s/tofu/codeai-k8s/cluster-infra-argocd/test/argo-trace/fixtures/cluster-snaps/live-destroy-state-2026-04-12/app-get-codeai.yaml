@@ -1,0 +1,147 @@
+metadata:
+  creationTimestamp: "2026-04-13T05:36:38Z"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 34
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9acfe1b1-aef1-47b1-9417-a1393117bd76"}: {}
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          .: {}
+          f:directory:
+            .: {}
+            f:include: {}
+            f:jsonnet: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+        f:syncPolicy:
+          .: {}
+          f:automated:
+            .: {}
+            f:enabled: {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: "2026-04-13T05:36:38Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              f:directory:
+                .: {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2026-04-13T07:09:16Z"
+  name: codeai
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: app-of-apps
+    uid: 9acfe1b1-aef1-47b1-9417-a1393117bd76
+  resourceVersion: "39020496"
+  uid: 1e8b24d3-7326-415e-b5ec-695d4f6a2866
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      include: applicationset.yaml
+      jsonnet: {}
+    path: apps/codeai
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-04-13T05:36:39Z"
+    status: Healthy
+  reconciledAt: "2026-04-13T07:09:16Z"
+  resourceHealthSource: appTree
+  resources:
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: ApplicationSet
+    name: codeai
+    namespace: argocd
+    status: OutOfSync
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        directory:
+          include: applicationset.yaml
+          jsonnet: {}
+        path: apps/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revision: 6d2f565725283175216f1e94bdf52f7dbb10762e
+    status: OutOfSync

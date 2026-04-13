@@ -293,7 +293,7 @@ class ArgoTraceTest < Minitest::Test
   private def fixture_command_runner
     fixture_dir = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
 
-    lambda do |*command|
+    lambda do |*command, **_kwargs|
       if command == ArgoTrace::WAVE1_APPSET_LIST_COMMAND
         (fixture_dir / "appset-list.yaml").read
       elsif command == ArgoTrace::WAVE1_APP_LIST_COMMAND

@@ -375,6 +375,135 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
     assert_equal 1, (lines.count {|line| line == "  - app-of-apps (ApplicationSet) [all conditions good]"})
   end
 
+  def test_later_sync_wave_missing_nodes_are_not_arrowed_while_earlier_wave_has_real_blocker
+    infra_node = ArgoTrace::TreeNode.new(
+      kind: "Application",
+      name: "infra",
+      children: [
+        ArgoTrace::TreeNode.new(
+          kind: "SyncWave",
+          name: "sync-wave 2",
+          children: [
+            ArgoTrace::TreeNode.new(
+              kind: "Application",
+              name: "aws-resources",
+              children: [],
+              metadata: {
+                raw: {
+                  "status" => {
+                    "sync" => {"status" => "Synced"},
+                    "health" => {"status" => "Progressing"},
+                  },
+                },
+              }
+            )
+          ],
+          metadata: {}
+        ),
+        ArgoTrace::TreeNode.new(
+          kind: "SyncWave",
+          name: "sync-wave 4",
+          children: [
+            ArgoTrace::TreeNode.new(
+              kind: "Application",
+              name: "external-dns",
+              children: [],
+              metadata: {
+                raw: {
+                  "metadata" => {
+                    "annotations" => {
+                      "argo-trace/code-object-missing" => "true",
+                    },
+                  },
+                  "status" => {},
+                },
+              }
+            )
+          ],
+          metadata: {}
+        ),
+      ],
+      metadata: {
+        raw: {
+          "status" => {
+            "sync" => {"status" => "OutOfSync"},
+            "health" => {"status" => "Progressing"},
+          },
+        },
+      }
+    )
+
+    lines = ArgoTrace.render_display_lines([infra_node])
+
+    assert_includes lines, "→   - aws-resources (Application) [sync.status=Synced, health.status=Progressing]"
+    assert_includes lines, "    - external-dns (Application) [missing]"
+    refute_includes lines, "→   - external-dns (Application) [missing]"
+  end
+
+  def test_later_rolling_sync_step_missing_nodes_are_not_arrowed_while_earlier_step_is_active
+    appset_node = ArgoTrace::TreeNode.new(
+      kind: "ApplicationSet",
+      name: "app-of-apps",
+      children: [
+        ArgoTrace::TreeNode.new(
+          kind: "RollingSyncStep",
+          name: "RollingSync step 1 (group In [infra])",
+          children: [
+            ArgoTrace::TreeNode.new(
+              kind: "Application",
+              name: "infra",
+              children: [],
+              metadata: {
+                raw: {
+                  "status" => {
+                    "sync" => {"status" => "OutOfSync"},
+                    "health" => {"status" => "Progressing"},
+                  },
+                },
+              }
+            )
+          ],
+          metadata: {}
+        ),
+        ArgoTrace::TreeNode.new(
+          kind: "RollingSyncStep",
+          name: "RollingSync step 2 (group NotIn [infra])",
+          children: [
+            ArgoTrace::TreeNode.new(
+              kind: "Application",
+              name: "codeai",
+              children: [],
+              metadata: {
+                raw: {
+                  "metadata" => {
+                    "annotations" => {
+                      "argo-trace/code-object-missing" => "true",
+                    },
+                  },
+                  "status" => {},
+                },
+              }
+            )
+          ],
+          metadata: {}
+        ),
+      ],
+      metadata: {
+        raw: {
+          "status" => {
+            "conditions" => [],
+          },
+        },
+      }
+    )
+
+    lines = ArgoTrace.render_display_lines([appset_node])
+
+    assert_includes lines, "→   - infra (Application) [sync.status=OutOfSync, health.status=Progressing]"
+    assert_includes lines, "    - codeai (Application) [missing]"
+    refute_includes lines, "→   - codeai (Application) [missing]"
+  end
+
   private def fixture_get(filename)
     ArgoTrace.load_argocd_yaml((FIXTURE_DIR / filename).read)
   end

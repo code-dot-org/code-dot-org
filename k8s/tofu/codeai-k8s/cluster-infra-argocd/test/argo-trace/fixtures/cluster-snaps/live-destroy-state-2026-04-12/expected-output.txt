@@ -1,0 +1,58 @@
+starting argo-trace @ 9:11p and 40s
+
+# ArgoCD dependency tree @ 9:11p and 40s, argo-trace took 0.0s
+
+- app-of-apps (Application) [sync.status=Synced, health.status=Progressing, status.operationState.phase=Succeeded][22m
+[2m  - metadata.creationTimestamp: 2026-04-13T05:36:37Z
+  - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+  - app-of-apps (ApplicationSet) [ErrorOccurred=False, ParametersGenerated=True, ResourcesUpToDate=True, RolloutProgressing=True][22m
+[2m    - metadata.creationTimestamp: 2026-04-13T05:36:38Z
+    - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
+    - status.conditions.RolloutProgressing
+      - status: True
+      - reason: ApplicationSetModified
+      - message: ApplicationSet is performing rollout of step 1[22m
+    - RollingSync step 1 (code.org/bootstrap-group In [infra])
+      - infra (Application) [sync.status=OutOfSync, health.status=Progressing, status.operationState.phase=Running, step=1, rollout.status=Pending][22m
+[2m        - metadata.creationTimestamp: 2026-04-13T05:36:38Z
+        - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
+        - status.applicationStatus.lastTransitionTime: 2026-04-13T05:36:39Z
+        - status.applicationStatus.message: Application moved to Pending status, watching for the Application resource to start Progressing
+        - status.operationState.message: waiting for healthy state of argoproj.io/Application/aws-resources
+        - sync-wave 0
+          - crossplane (Application) [sync.status=Synced, health.status=Healthy][22m
+        - sync-wave 2
+          - aws-resources (Application) [sync.status=Synced, health.status=Progressing][22m
+[2m            - metadata.creationTimestamp: 2026-04-13T05:36:43Z
+            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+            - sync-wave 1[22m
+[1m→             - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, health.status=Progressing]
+                - health.message: Pending deletion[22m
+[2m        - sync-wave 3
+          - networking (Application) [missing]
+        - sync-wave 4
+          - external-dns (Application) [missing]
+          - external-dns-delete-delay (Application) [missing]
+        - sync-wave 20
+          - external-secrets-operator (Application) [missing]
+        - sync-wave 25
+          - argocd (Application) [missing]
+        - sync-wave 30
+          - kargo-secrets (Application) [missing]
+          - standard-envtypes (Application) [missing]
+        - sync-wave 40
+          - dex (Application) [missing]
+    - RollingSync step 2 (code.org/bootstrap-group NotIn [infra])
+      - codeai (Application) [sync.status=OutOfSync, health.status=Healthy, step=2, rollout.status=Waiting]
+        - metadata.creationTimestamp: 2026-04-13T05:36:38Z
+        - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
+        - status.applicationStatus.lastTransitionTime: 2026-04-13T05:36:39Z
+        - status.applicationStatus.message: Application has pending changes, setting status to Waiting
+        - codeai (ApplicationSet)
+      - kargo (Application) [sync.status=OutOfSync, health.status=Missing, step=2, rollout.status=Waiting]
+        - metadata.creationTimestamp: 2026-04-13T05:36:38Z
+        - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
+        - status.applicationStatus.lastTransitionTime: 2026-04-13T05:36:40Z
+        - status.applicationStatus.message: Application has pending changes, setting status to Waiting
+        - sync-wave 1
+          - kargo-project-codeai (Application) [missing][22m

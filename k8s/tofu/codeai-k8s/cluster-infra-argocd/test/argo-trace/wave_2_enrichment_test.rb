@@ -19,7 +19,7 @@ class ConcurrentFakeCommandRunner
     @max_in_flight = 0
   end
 
-  def call(*command)
+  def call(*command, timeout_seconds: nil)
     @commands << command
     @mutex.synchronize do
       @in_flight += 1

@@ -15,7 +15,7 @@ class FakeCommandRunner
     @mutex = Mutex.new
   end
 
-  def call(*command)
+  def call(*command, timeout_seconds: nil)
     @mutex.synchronize do
       @commands << command
     end
@@ -151,5 +151,33 @@ class ArgoTraceWave1InventoryTest < Minitest::Test
 
     assert_equal(["app-of-apps"], inventory[:root_inventory].map {|argocd_app| argocd_app.fetch(:name)})
     assert_equal "argocd", inventory[:appset_inventory]["app-of-apps"][:namespace]
+  end
+
+  def test_fetch_wave1_app_and_appset_list_times_out_a_slow_list_call
+    command_runner = Class.new do
+      def initialize
+        @commands = Queue.new
+      end
+
+      attr_reader :commands
+
+      def call(*command, timeout_seconds: nil)
+        @commands << command
+        sleep 0.05 if command == ArgoTrace::WAVE1_APP_LIST_COMMAND
+        return "---\n[]\n" if command == ArgoTrace::WAVE1_APPSET_LIST_COMMAND
+        return "---\n[]\n" if command == ArgoTrace::WAVE1_APP_LIST_COMMAND
+
+        raise "unexpected command: #{command.inspect}"
+      end
+    end.new
+
+    inventory = ArgoTrace.fetch_wave1_app_and_appset_list(
+      command_runner: command_runner,
+      per_call_timeout_seconds: 0.01,
+      total_snapshot_timeout_seconds: 1
+    )
+
+    assert_equal [], inventory[:argocd_apps]
+    assert_equal [], inventory[:argocd_appsets]
   end
 end

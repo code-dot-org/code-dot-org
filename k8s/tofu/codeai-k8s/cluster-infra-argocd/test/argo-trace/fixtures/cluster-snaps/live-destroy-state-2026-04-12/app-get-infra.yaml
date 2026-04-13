@@ -1,0 +1,528 @@
+metadata:
+  creationTimestamp: "2026-04-13T05:36:38Z"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 39
+  labels:
+    code.org/bootstrap-group: infra
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:labels:
+          .: {}
+          f:code.org/bootstrap-group: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9acfe1b1-aef1-47b1-9417-a1393117bd76"}: {}
+      f:operation:
+        .: {}
+        f:info: {}
+        f:initiatedBy:
+          .: {}
+          f:automated: {}
+          f:username: {}
+        f:retry:
+          .: {}
+          f:limit: {}
+        f:sync:
+          .: {}
+          f:prune: {}
+          f:syncOptions: {}
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          .: {}
+          f:automated:
+            .: {}
+            f:enabled: {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source:
+              .: {}
+              f:repoURL: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: "2026-04-13T05:36:39Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:operationState:
+          .: {}
+          f:message: {}
+          f:operation:
+            .: {}
+            f:info: {}
+            f:initiatedBy:
+              .: {}
+              f:automated: {}
+              f:username: {}
+            f:retry:
+              .: {}
+              f:limit: {}
+            f:sync:
+              .: {}
+              f:prune: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            .: {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              .: {}
+              f:directory:
+                .: {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceTypes: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2026-04-13T07:08:52Z"
+  name: infra
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: app-of-apps
+    uid: 9acfe1b1-aef1-47b1-9417-a1393117bd76
+  resourceVersion: "39019341"
+  uid: 670ca64e-f7d0-467f-914c-1330cc36cdd9
+operation:
+  info:
+  - name: Reason
+    value: ApplicationSet RollingSync triggered a sync of this Application resource
+  initiatedBy:
+    automated: true
+    username: applicationset-controller
+  retry:
+    limit: 5
+  sync:
+    prune: true
+    syncOptions:
+    - ServerSideApply=true
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/argocd
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/crossplane
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/aws-resources
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/dex
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/external-dns
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/external-dns-delete-delay
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/external-secrets-operator
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/kargo-secrets
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/networking
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/infra/standard-envtypes
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-04-13T05:36:43Z"
+    status: Progressing
+  operationState:
+    message: waiting for healthy state of argoproj.io/Application/aws-resources
+    operation:
+      info:
+      - name: Reason
+        value: ApplicationSet RollingSync triggered a sync of this Application resource
+      initiatedBy:
+        automated: true
+        username: applicationset-controller
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        syncOptions:
+        - ServerSideApply=true
+    phase: Running
+    startedAt: "2026-04-13T05:36:39Z"
+    syncResult:
+      resources:
+      - group: argoproj.io
+        hookPhase: Succeeded
+        kind: Application
+        message: application.argoproj.io/crossplane serverside-applied
+        name: crossplane
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: argoproj.io
+        hookPhase: Running
+        kind: Application
+        message: application.argoproj.io/aws-resources serverside-applied
+        name: aws-resources
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: ""
+      revisions:
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      - 6d2f565725283175216f1e94bdf52f7dbb10762e
+      source:
+        directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/argocd
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      sources:
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/argocd
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/crossplane
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/aws-resources
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/dex
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-dns
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-dns-delete-delay
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-secrets-operator
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/kargo-secrets
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/networking
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/standard-envtypes
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: "2026-04-13T07:08:52Z"
+  resourceHealthSource: appTree
+  resources:
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: argocd
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 25
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Progressing
+    kind: Application
+    name: aws-resources
+    namespace: argocd
+    status: Synced
+    syncWave: 2
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: crossplane
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: dex
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 40
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: external-dns
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 4
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: external-dns-delete-delay
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 4
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: external-secrets-operator
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 20
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: kargo-secrets
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 30
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: networking
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 3
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Missing
+    kind: Application
+    name: standard-envtypes
+    namespace: argocd
+    status: OutOfSync
+    syncWave: 30
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceTypes:
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  - Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ""
+      sources:
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/argocd
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/crossplane
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/aws-resources
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/dex
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-dns
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-dns-delete-delay
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/external-secrets-operator
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/kargo-secrets
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/networking
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/infra/standard-envtypes
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    - 6d2f565725283175216f1e94bdf52f7dbb10762e
+    status: OutOfSync

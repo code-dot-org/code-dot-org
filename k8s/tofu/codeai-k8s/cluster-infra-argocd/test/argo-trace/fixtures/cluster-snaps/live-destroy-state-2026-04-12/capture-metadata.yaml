@@ -1,0 +1,13 @@
+capturedAt: 2026-04-12T21:11:40-10:00
+capturedFrom:
+  - argocd --core --app-namespace argocd app list -o yaml
+  - argocd --core appset list -o yaml
+  - argocd --core --app-namespace argocd app get app-of-apps -o yaml
+  - argocd --core --app-namespace argocd app get aws-resources -o yaml
+  - argocd --core --app-namespace argocd app get codeai -o yaml
+  - argocd --core --app-namespace argocd app get infra -o yaml
+  - argocd --core --app-namespace argocd app get kargo -o yaml
+  - argocd --core appset get app-of-apps -o yaml
+notes:
+  - Saved live destroy-state Argo CLI payloads.
+  - Expected output fixture is built from Argo wave-1 and wave-2 data only.
