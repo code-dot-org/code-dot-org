@@ -240,7 +240,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
     levelProperties,
-    productToursForLevel: instructionsProps.levelProperties.productTours,
     isStandaloneCollapsed,
   });
 

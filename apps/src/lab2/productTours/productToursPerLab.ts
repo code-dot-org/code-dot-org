@@ -62,8 +62,7 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 // todo: should we pull productTours from level properties now?
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  levelProperties: LevelProperties,
-  productTours: string[] | undefined
+  levelProperties: LevelProperties
 ): boolean {
   const isAvailableForLab = ToursPerLab[
     levelProperties.appName as AppName
@@ -78,7 +77,7 @@ export function isTourEnabledOnLevel(
   if (!config.triggeredByLevel) {
     return true;
   }
-  return productTours?.includes(tour) ?? false;
+  return levelProperties.productTours?.includes(tour) ?? false;
 }
 
 // These tour configurations are used to determine which tours should be shown in the level editor for a given lab.

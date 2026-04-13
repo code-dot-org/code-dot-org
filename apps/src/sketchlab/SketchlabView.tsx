@@ -326,7 +326,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   }, [dispatch]);
 
   useSketchlabTour({
-    productTours: levelProperties.productTours,
     levelProperties,
   });
 

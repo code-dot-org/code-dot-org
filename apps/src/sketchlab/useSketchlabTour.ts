@@ -35,14 +35,10 @@ const onTourCancel = (stepIndex: number) =>
   });
 
 interface UseSketchlabTourParams {
-  productTours: string[] | undefined;
   levelProperties: LevelProperties;
 }
 
-const useSketchlabTour = ({
-  productTours,
-  levelProperties,
-}: UseSketchlabTourParams) => {
+const useSketchlabTour = ({levelProperties}: UseSketchlabTourParams) => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
@@ -89,11 +85,7 @@ const useSketchlabTour = ({
     localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
     tourAvailable:
       isToolbarReady &&
-      isTourEnabledOnLevel(
-        ProductTour.SketchlabIntro,
-        levelProperties,
-        productTours
-      ),
+      isTourEnabledOnLevel(ProductTour.SketchlabIntro, levelProperties),
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,

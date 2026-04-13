@@ -21,7 +21,6 @@ import {createValidationTourSteps} from './validationTourSteps';
 
 interface UseResourcePanelToursParams {
   levelProperties: LevelProperties;
-  productToursForLevel: string[] | undefined;
   isStandaloneCollapsed?: boolean;
 }
 
@@ -39,7 +38,6 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
 
 const useResourcePanelTours = ({
   levelProperties,
-  productToursForLevel,
   isStandaloneCollapsed,
 }: UseResourcePanelToursParams) => {
   // We track level load state to avoid starting tours while the level is still loading.
@@ -57,16 +55,10 @@ const useResourcePanelTours = ({
   const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
-      levelProperties,
-      productToursForLevel
+      levelProperties
     );
     return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
-  }, [
-    levelProperties,
-    productToursForLevel,
-    isStandaloneCollapsed,
-    isLevelLoading,
-  ]);
+  }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
   // ONBOARDING TOUR
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
@@ -103,15 +95,13 @@ const useResourcePanelTours = ({
       (!isLevelLoading &&
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelValidation,
-          levelProperties,
-          productToursForLevel
+          levelProperties
         ) &&
         (!isOnboardingTourEnabled || onboardingTourSeen)) ||
       false,
     [
       isLevelLoading,
       levelProperties,
-      productToursForLevel,
       isOnboardingTourEnabled,
       onboardingTourSeen,
     ]

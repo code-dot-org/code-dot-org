@@ -3,7 +3,6 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProductTour} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -41,14 +40,11 @@ const defaultLevelProperties = {
   id: 0,
   name: 'test',
   validations: [{}],
+  productTours: ['resource_panel_onboarding', 'resource_panel_validation'],
 } as LevelProperties;
 
 const defaultParams = {
   levelProperties: defaultLevelProperties,
-  productToursForLevel: [
-    ProductTour.ResourcePanelOnboarding,
-    ProductTour.ResourcePanelValidation,
-  ],
   isStandaloneCollapsed: false,
 };
 
@@ -95,7 +91,7 @@ describe('useResourcePanelTours', () => {
       renderHook(() =>
         useResourcePanelTours({
           ...defaultParams,
-          productToursForLevel: [],
+          levelProperties: {...defaultLevelProperties, productTours: []},
         })
       );
 
@@ -172,7 +168,10 @@ describe('useResourcePanelTours', () => {
       renderHook(() =>
         useResourcePanelTours({
           ...defaultParams,
-          productToursForLevel: ['resource_panel_validation'], // Onboarding tour not in productTours, so not enabled.
+          levelProperties: {
+            ...defaultLevelProperties,
+            productTours: ['resource_panel_validation'], // Onboarding tour not in productTours, so not enabled.
+          },
         })
       );
 
@@ -231,7 +230,10 @@ describe('useResourcePanelTours', () => {
       renderHook(() =>
         useResourcePanelTours({
           ...defaultParams,
-          productToursForLevel: ['resource_panel_onboarding'],
+          levelProperties: {
+            ...defaultLevelProperties,
+            productTours: ['resource_panel_onboarding'],
+          },
         })
       );
 
