@@ -10,7 +10,8 @@ module Observability
       end
 
       private def set_user_context
-        ::Sentry.set_user(id: current_user.id.to_s) if current_user
+        user = request.env['warden']&.user(scope: :user, run_callbacks: false)
+        ::Sentry.set_user(id: user.id) if user.present?
       end
     end
   end
