@@ -1,12 +1,17 @@
 import {Channel, LevelProperties, ProjectSources} from '../types';
 
 export enum LifecycleEvent {
+  BeforeLevelChange,
   LevelChangeRequested,
   LevelLoadStarted,
   LevelLoadCompleted,
 }
 
 type CallbackArgs = {
+  [LifecycleEvent.BeforeLevelChange]: [
+    previousLevelId: string | null,
+    nextLevelId: string
+  ];
   [LifecycleEvent.LevelChangeRequested]: [
     previousLevelId: string | null,
     nextLevelId: string

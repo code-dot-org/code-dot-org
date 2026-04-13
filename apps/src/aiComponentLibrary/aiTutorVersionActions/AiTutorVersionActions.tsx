@@ -52,7 +52,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   );
 
   useLifecycleNotifier(
-    LifecycleEvent.LevelChangeRequested,
+    LifecycleEvent.BeforeLevelChange,
     confirmAiTutorLevelNavigation
   );
 

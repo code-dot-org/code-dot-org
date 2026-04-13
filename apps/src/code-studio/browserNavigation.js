@@ -6,6 +6,7 @@
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 
+import notifyBeforeLevelChange from '../lab2/utils/notifyBeforeLevelChange';
 import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getStore} from '../redux';
 
@@ -39,10 +40,12 @@ export function setupNavigationHandler(initialLevelId) {
     const store = getStore();
     const progressStoreState = store.getState().progress;
     const previousLevelId = progressStoreState.currentLevelId;
-    // Notify the Lab2 system (that handles changing levels without reload) about the level change.
-    // The browser history API does not provide access to the state of the page we just came from,
-    // so we don't know the previous level ID.
-    const canProceed = notifyLevelChange(previousLevelId || null, levelId);
+    // Notify the Lab2 system (that handles changing levels without reload)
+    // before attempting to switch levels. Any listener can veto.
+    const canProceed = notifyBeforeLevelChange(
+      previousLevelId || null,
+      levelId
+    );
     if (!canProceed) {
       // Restore URL history for the current level when navigation is canceled.
       if (previousLevelId && progressStoreState.currentLessonId) {
@@ -61,6 +64,7 @@ export function setupNavigationHandler(initialLevelId) {
       }
       return;
     }
+    notifyLevelChange(previousLevelId || null, levelId);
     store.dispatch(setCurrentLevelId(levelId));
   });
 }

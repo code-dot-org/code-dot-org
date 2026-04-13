@@ -13,6 +13,7 @@ import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+import notifyBeforeLevelChange from '@cdo/apps/lab2/utils/notifyBeforeLevelChange';
 import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
 import {
   processServerStudentProgress,
@@ -367,7 +368,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const currentLevel = getCurrentLevel(getState());
 
     if (currentLevel?.usesLab2) {
-      const canProceed = notifyLevelChange(currentLevel.id, levelId);
+      const canProceed = notifyBeforeLevelChange(currentLevel.id, levelId);
       if (!canProceed) {
         return;
       }
@@ -375,6 +376,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+      notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
       Lab2ProgressTimer.getInstance().resetMilestoneTimer();
     } else {
