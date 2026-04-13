@@ -44,7 +44,7 @@ module ImageModeration
     if raw_data.bytesize > MAX_MODERATION_SIZE
       # Scale factor is approximate: file size is not strictly proportional to pixel
       # count for compressed formats, so scale conservatively to stay under the limit.
-      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.9
+      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.85
       new_w = (width * scale).floor
       new_h = (height * scale).floor
       image.resize "#{new_w}x#{new_h}!"
