@@ -101,8 +101,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def create_demo
     authorize! :create, Section
 
-    config = Policies::DemoSections.get_preset(params[:section_type])
-    return render json: {error: "unknown demo section type: #{params[:section_type]}"}, status: :bad_request unless config
+    demo_type = params[:section_type]
+    config = Policies::DemoSections.get_preset(demo_type)
+    return render json: {error: "unknown demo section type: #{demo_type}"}, status: :bad_request unless config
 
     unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
@@ -116,10 +117,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         grades: config[:grades],
         script_id: unit&.id,
         course_id: unit_group&.id,
-        is_demo: true,
+        demo_type: demo_type,
       )
 
-      Policies::DemoSections.demo_student_ids(params[:section_type]).each do |student_id|
+      Policies::DemoSections.demo_student_ids(demo_type).each do |student_id|
         student = User.find_by(id: student_id)
         next unless student
         begin
@@ -133,8 +134,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     render json: section.summarize
-  rescue ActiveRecord::RecordInvalid
-    head :bad_request
+  rescue ActiveRecord::RecordNotUnique
+    render json: {error: "demo section of type #{params[:section_type]} already exists"}, status: :conflict
+  rescue ActiveRecord::RecordInvalid => exception
+    if exception.record.errors.of_kind?(:demo_type, :taken)
+      render json: {error: "demo section of type #{params[:section_type]} already exists"}, status: :conflict
+    else
+      head :bad_request
+    end
   end
 
   # PATCH /api/v1/sections/<id>

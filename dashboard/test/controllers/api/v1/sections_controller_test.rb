@@ -1673,7 +1673,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal ['9', '10'], section.grades
     assert_equal @csp_script.id, section.script_id
     assert_equal @csp_unit_group.id, section.course_id
-    assert section.is_demo
+    assert_equal 'aif', section.demo_type
   end
 
   test 'create_demo: adds demo students to the section' do
@@ -1694,6 +1694,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student
     post :create_demo, params: {section_type: 'aif'}
     assert_response :forbidden
+  end
+
+  test 'create_demo: returns conflict when teacher already has a demo section of that type' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {section_type: 'aif'}
+    assert_response :success
+
+    post :create_demo, params: {section_type: 'aif'}
+    assert_response :conflict
   end
 
   private def stub_demo_preset
