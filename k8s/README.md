@@ -8,6 +8,8 @@ as deploy real production/test/etc instances to a k8s cluster.
 This makes debugging your production infra setup really easy: its just like what you're running
 locally.
 
+This document also describes the same skaffold setup used by our GitHub Actions k8s experiment.
+
 
 ## Setting up skaffold
 
