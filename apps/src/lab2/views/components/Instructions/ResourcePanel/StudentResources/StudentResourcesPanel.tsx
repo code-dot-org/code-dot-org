@@ -68,21 +68,23 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
         Short, interactive tours that teach you how to use important features in
         this lab. You won&apos;t lose your progress.
       </Typography>
-      {tours.map(tour => (
-        <div key={tour.name} className={styles.tourChip}>
-          <Typography variant="body3" className={styles.tourName}>
-            {tour.displayName}
-          </Typography>
-          <IconButton
-            size="extraSmall"
-            onClick={() => startTour(tour.name)}
-            aria-label={`Play ${tour.displayName}`}
-            className={styles.tourPlayButton}
-          >
-            <FontAwesomeV6Icon iconName="play" />
-          </IconButton>
-        </div>
-      ))}
+      <div className={styles.tourList}>
+        {tours.map(tour => (
+          <div key={tour.name} className={styles.tourChip}>
+            <Typography variant="body3" className={styles.tourName}>
+              {tour.displayName}
+            </Typography>
+            <IconButton
+              size="extraSmall"
+              onClick={() => startTour(tour.name)}
+              aria-label={`Play ${tour.displayName}`}
+              className={styles.tourPlayButton}
+            >
+              <FontAwesomeV6Icon iconName="play" />
+            </IconButton>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

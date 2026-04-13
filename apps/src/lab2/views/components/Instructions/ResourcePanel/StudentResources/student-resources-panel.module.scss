@@ -10,24 +10,19 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
   font-weight: bold;
   margin: 0 0 8px;
 }
 
 .sectionDescription {
-  font-size: 14px;
   color: var(--text-neutral-secondary);
   margin: 0 0 12px;
 }
 
 .tourList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .tourChip {
