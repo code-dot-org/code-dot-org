@@ -2190,6 +2190,13 @@ FactoryBot.define do
     association :lesson
     association :level
 
+    before(:create) do |rubric|
+      unless rubric.lesson.script_levels.any? {|sl| sl.levels.include?(rubric.level)}
+        create(:script_level, script: rubric.lesson.script, lesson: rubric.lesson, levels: [rubric.level])
+        rubric.lesson.reload
+      end
+    end
+
     trait :with_learning_goals do
       transient do
         num_learning_goals {2}

@@ -30,6 +30,14 @@ class Rubric < ApplicationRecord
     lesson.script_levels.find {|sl| sl.levels.include?(level)}
   end
 
+  validate :validate_lesson_and_level
+  def validate_lesson_and_level
+    unless get_script_level
+      url = "https://levelbuilder-studio.code.org/s/#{lesson&.script&.name}/lessons/#{lesson&.relative_position}/edit"
+      errors.add(:base, "Rubric #{id} lesson #{lesson_id} does not include level #{level_id}. Please go to: #{url} --> Edit Rubric and select a valid level.")
+    end
+  end
+
   def summarize
     script_level = get_script_level
     {
