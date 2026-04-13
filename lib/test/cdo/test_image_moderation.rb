@@ -60,6 +60,34 @@ class ImageModerationTest < Minitest::Test
     assert_equal sample, ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
 
+  def test_scales_down_wide_images_exceeding_max_dimension
+    blob = tiny_png_blob(7300, 100)
+    io, ct = ImageModeration.scale_image_for_moderation_if_needed(StringIO.new(blob), 'image/png')
+    assert_equal 'image/png', ct
+    out = MiniMagick::Image.read(io.read)
+    assert_operator out.width, :<=, ImageModeration::MAX_MODERATION_DIMENSION
+    assert_operator out.height, :<=, ImageModeration::MAX_MODERATION_DIMENSION
+    assert_operator out.width, :>=, ImageModeration::MIN_MODERATION_DIMENSION
+    assert_operator out.height, :>=, ImageModeration::MIN_MODERATION_DIMENSION
+  end
+
+  def test_scales_down_tall_images_exceeding_max_dimension
+    blob = tiny_png_blob(100, 7300)
+    io, ct = ImageModeration.scale_image_for_moderation_if_needed(StringIO.new(blob), 'image/png')
+    assert_equal 'image/png', ct
+    out = MiniMagick::Image.read(io.read)
+    assert_operator out.width, :<=, ImageModeration::MAX_MODERATION_DIMENSION
+    assert_operator out.height, :<=, ImageModeration::MAX_MODERATION_DIMENSION
+  end
+
+  def test_scales_down_large_real_image_exceeding_max_byte_size
+    # A synthetic 2000x2000 uncompressed BMP is well over 4MB.
+    blob = large_png_blob_over_max_size
+    io, ct = ImageModeration.scale_image_for_moderation_if_needed(StringIO.new(blob), 'image/png')
+    assert_operator io.read.bytesize, :<=, ImageModeration::MAX_MODERATION_SIZE
+    assert_equal 'image/png', ct
+  end
+
   def test_returns_nil_when_moderation_fails
     test_err = AzureAiContentSafety::RequestFailed.new('Test error')
     AzureAiContentSafety.any_instance.expects(:moderate_image).raises(test_err)
@@ -73,6 +101,23 @@ class ImageModerationTest < Minitest::Test
       MiniMagick::Tool::Convert.new do |c|
         c.size "#{width}x#{height}"
         c << 'xc:white'
+        c << f.path
+      end
+      File.binread(f.path)
+    end
+  end
+
+  # Produces an uncompressed PNG large enough to exceed MAX_MODERATION_SIZE.
+  # A 1500x1500 noise image encodes to ~6-7MB without compression.
+  private def large_png_blob_over_max_size
+    Tempfile.create(%w[large .png]) do |f|
+      MiniMagick::Tool::Convert.new do |c|
+        c.size '1500x1500'
+        # plasma:fractal is an ImageMagick build-in image generator that produceds
+        # a ranndomly colored plasma grident. It results in enough pixel variation to defeat
+        # PNG's compression algorithm so we can produce a large image that exceeds MAX_MODERATION_SIZE.
+        c << 'plasma:fractal'
+        c.compress 'None'
         c << f.path
       end
       File.binread(f.path)
