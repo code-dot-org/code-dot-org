@@ -96,6 +96,15 @@ use_my_studio: true
 #saucelabs_tunnel_name: 'cdo-tunnel'
 
 
+# ARN of an AWS Device Farm Desktop Browser Testing project, used as an
+# alternative to SauceLabs for running selenium tests against multiple browsers.
+# Create a project via the AWS Device Farm console or:
+#   aws devicefarm create-test-grid-project --name cdo-ui-tests --region us-west-2
+# Note: AWS credentials must also be configured (e.g. via aws-sdk environment
+# variables or instance profile) for the device_farm.rb module to call the API.
+#device_farm_project_arn: 'arn:aws:devicefarm:us-west-2:123456789012:testgrid-project:...'
+
+
 # Credentails for applitools.com, used for running automated visual tests
 #applitools_eyes_api_key: ''
 

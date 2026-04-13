@@ -2,12 +2,18 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
+require_relative '../../../../../lib/cdo/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
 UI_TEST_DIR = File.expand_path('../..', __dir__)
-$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json'))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+
+# Load browser config from the appropriate JSON file depending on provider.
+# When TEST_DEVICE_FARM=true, use browsers_device_farm.json; otherwise use
+# the standard browsers.json (SauceLabs).
+browser_configs_file = ENV['TEST_DEVICE_FARM'] == 'true' ? 'browsers_device_farm.json' : 'browsers.json'
+$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, browser_configs_file))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
 SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
@@ -17,14 +23,20 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
-# Should we run the tests using the local Selenium webdriver rather than on
-# Saucelabs?
+# Should we run the tests using the local Selenium webdriver rather than a
+# remote provider (SauceLabs or Device Farm)?
 #
 # Used not only to modify the behavior of `get_browser` but also to avoid
 # unnecessarily applying various Saucelabs-specific accommodations throughout
 # the codebase. We expect TEST_LOCAL to be set by `runner.rb`.
 def test_local?
   return ENV['TEST_LOCAL'] == 'true'
+end
+
+# Should we run the tests using AWS Device Farm instead of SauceLabs?
+# We expect TEST_DEVICE_FARM to be set by `runner.rb`.
+def test_device_farm?
+  return ENV['TEST_DEVICE_FARM'] == 'true'
 end
 
 def saucelabs_browser(test_run_name, http_client: nil)
@@ -56,6 +68,19 @@ def saucelabs_browser(test_run_name, http_client: nil)
   return browser
 end
 
+def device_farm_browser(http_client: nil)
+  # Device Farm issues a one-time session URL per Selenium connection.
+  url = Cdo::DeviceFarm.create_test_grid_url
+
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+
+  SeleniumBrowser.remote(
+    url,
+    capabilities: capabilities,
+    http_client: http_client
+  )
+end
+
 # Set HTTP read timeout to the specified value during the block.
 # Invocable from Cucumber steps.
 def with_read_timeout(timeout, &block)
@@ -80,6 +105,13 @@ def get_browser(test_run_name)
   if test_local?
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
+  elsif test_device_farm?
+    browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+      device_farm_browser(http_client: $selenium_http_client)
+    end
+    $session_id = browser.session_id
+    $device_farm_job_arn = Cdo::DeviceFarm.job_arn_for($session_id)
+    puts "AWS Device Farm session: #{$session_id} (job: #{$device_farm_job_arn})"
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)
@@ -105,6 +137,7 @@ def get_browser(test_run_name)
 end
 
 $browser = nil
+$device_farm_job_arn = nil
 
 Before('@dashboard_db_access') do
   require_rails_env
@@ -129,6 +162,11 @@ end
 
 def log_result(result)
   return unless $session_id
+
+  if test_device_farm?
+    Cdo::DeviceFarm.log_result($device_farm_job_arn)
+    return
+  end
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
   HTTParty.put(
@@ -168,7 +206,7 @@ After do |scenario|
 end
 
 def context(str)
-  unless test_local?
+  unless test_local? || test_device_farm?
     $browser&.execute_script("sauce:context=#{str}")
   end
 rescue => exception

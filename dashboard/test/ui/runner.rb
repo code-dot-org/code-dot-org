@@ -106,6 +106,7 @@ def parse_options
     options.local = nil
     options.local_headless = true
     options.first_run_local = nil
+    options.device_farm = nil
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
@@ -149,6 +150,12 @@ def parse_options
       end
       opts.on("--first-run-local", "Use the local webdriver (not Saucelabs) only for the first run of a test; reruns will use Saucelabs.") do
         options.first_run_local = 'true'
+      end
+      opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
+                               "Requires CDO.device_farm_project_arn to be set. " \
+                               "Note: Device Farm browsers cannot reach localhost; use a public domain."
+              ) do
+        options.device_farm = true
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -267,7 +274,8 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
+  browsers_file = options.device_farm ? 'browsers_device_farm.json' : 'browsers.json'
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, browsers_file)))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -773,6 +781,7 @@ def run_feature(browser, feature, options)
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
@@ -808,6 +817,7 @@ def run_feature(browser, feature, options)
   # After the first run, we no longer want to consider the `first_run_local`
   # option when deciding whether a test should be run locally.
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
 
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)

@@ -276,6 +276,9 @@ GEM
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
+    aws-sdk-devicefarm (1.99.0)
+      aws-sdk-core (~> 3, >= 3.239.1)
+      aws-sigv4 (~> 1.5)
     aws-sdk-dynamodb (1.62.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -1245,6 +1248,7 @@ DEPENDENCIES
   aws-sdk-comprehend
   aws-sdk-core (>= 3.239.2)
   aws-sdk-databasemigrationservice
+  aws-sdk-devicefarm
   aws-sdk-dynamodb
   aws-sdk-ec2
   aws-sdk-firehose
