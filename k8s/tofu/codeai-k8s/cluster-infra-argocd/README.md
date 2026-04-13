@@ -45,11 +45,17 @@ and print the md log path at the start of the run.
 ### Testing scripts used in deploying the cluster
 
 - If you modify `bin/argo-trace`, run before commit:
-  `ruby test/argocd_progress_trace_test.rb`
+  `ruby test/argo-trace/argocd_progress_trace_test.rb`
 - For the live `bin/argo-trace` stress harness, run:
   `ruby test/argo-trace-stress-test/run.rb`
   Fixtures live in
   [`k8s-gitops/argo-trace-stress-test/`](https://github.com/code-dot-org/k8s-gitops/tree/main/argo-trace-stress-test).
+- `test/argo-trace/fixtures/argocd_progress_trace/` holds the unit-test fixture
+  payloads for `bin/argo-trace`.
+- `test/argo-cli-trace/fixtures/argo-cli-data/` holds saved `argocd --core`
+  YAML responses for `argo-cli-trace`.
+- `test/argo-cli-trace/expected-output-from-argo-cli-given-data-responses.txt`
+  is the expected rendered tree for that saved Argo CLI dataset.
 - If you modify `bin/logged-tofu`, run before commit:
   `ruby test/logged_tofu_test.rb`
 - If you modify `bin/wait-for-200`, run before commit:

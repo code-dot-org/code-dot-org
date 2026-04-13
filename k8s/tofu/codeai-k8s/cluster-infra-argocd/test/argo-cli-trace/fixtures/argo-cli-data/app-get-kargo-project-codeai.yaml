@@ -1,0 +1,358 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '1'
+    argocd.argoproj.io/tracking-id: kargo:argoproj.io/Application:argocd/kargo-project-codeai
+  creationTimestamp: '2026-04-12T08:41:30Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 293
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          f:directory:
+            f:exclude: {}
+            f:recurse: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:41:30Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:source:
+          f:directory:
+            f:jsonnet: {}
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revision: {}
+              f:source:
+                ".": {}
+                f:directory:
+                  ".": {}
+                  f:exclude: {}
+                  f:jsonnet: {}
+                  f:recurse: {}
+                f:path: {}
+                f:repoURL: {}
+                f:targetRevision: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              ".": {}
+              f:directory:
+                ".": {}
+                f:exclude: {}
+                f:jsonnet: {}
+                f:recurse: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceType: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:directory:
+                ".": {}
+                f:exclude: {}
+                f:jsonnet: {}
+                f:recurse: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:18Z'
+  name: kargo-project-codeai
+  namespace: argocd
+  resourceVersion: '37548595'
+  uid: c720875d-731b-46d6-9fb1-fe4af7adea6a
+spec:
+  destination:
+    namespace: kargo
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      exclude: application.yaml
+      jsonnet: {}
+      recurse: true
+    path: apps/kargo/projects/codeai
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:41:33Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:41:30Z'
+    deployedAt: '2026-04-12T08:41:33Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      directory:
+        exclude: application.yaml
+        jsonnet: {}
+        recurse: true
+      path: apps/kargo/projects/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:41:33Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        source:
+          directory:
+            exclude: application.yaml
+            jsonnet: {}
+            recurse: true
+          path: apps/kargo/projects/codeai
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:41:30Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/kargo-project-codeai serverside-applied
+        name: kargo-project-codeai
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: ClusterConfig
+        message: clusterconfig.kargo.akuity.io/cluster serverside-applied
+        name: cluster
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: ProjectConfig
+        message: projectconfig.kargo.akuity.io/kargo-project-codeai serverside-applied
+        name: kargo-project-codeai
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Project
+        message: project.kargo.akuity.io/kargo-project-codeai serverside-applied
+        name: kargo-project-codeai
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Warehouse
+        message: warehouse.kargo.akuity.io/kargo-project-codeai serverside-applied
+        name: kargo-project-codeai
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Stage
+        message: stage.kargo.akuity.io/levelbuilder serverside-applied
+        name: levelbuilder
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Stage
+        message: stage.kargo.akuity.io/production serverside-applied
+        name: production
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Stage
+        message: stage.kargo.akuity.io/test serverside-applied
+        name: test
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: kargo.akuity.io
+        hookPhase: Running
+        kind: Stage
+        message: stage.kargo.akuity.io/staging serverside-applied
+        name: staging
+        namespace: kargo-project-codeai
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        directory:
+          exclude: application.yaml
+          jsonnet: {}
+          recurse: true
+        path: apps/kargo/projects/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:18Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: Namespace
+    name: kargo-project-codeai
+    status: Synced
+    version: v1
+  - group: kargo.akuity.io
+    kind: ClusterConfig
+    name: cluster
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    health:
+      message: Project is synced and ready for use
+      status: Healthy
+    kind: Project
+    name: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: ProjectConfig
+    name: kargo-project-codeai
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: Stage
+    name: levelbuilder
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: Stage
+    name: production
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: Stage
+    name: staging
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: Stage
+    name: test
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  - group: kargo.akuity.io
+    kind: Warehouse
+    name: kargo-project-codeai
+    namespace: kargo-project-codeai
+    status: Synced
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: kargo
+        server: https://kubernetes.default.svc
+      source:
+        directory:
+          exclude: application.yaml
+          jsonnet: {}
+          recurse: true
+        path: apps/kargo/projects/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revision: a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

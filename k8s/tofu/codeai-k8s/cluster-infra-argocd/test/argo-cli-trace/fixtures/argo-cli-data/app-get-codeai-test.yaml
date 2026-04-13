@@ -1,0 +1,150 @@
+---
+metadata:
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-project-codeai:test
+  creationTimestamp: '2026-04-12T08:40:15Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 262
+  labels:
+    app.kubernetes.io/managed-by: kargo
+    kargo.akuity.io/project: kargo-project-codeai
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          ".": {}
+          f:kargo.akuity.io/authorized-stage: {}
+        f:finalizers:
+          ".": {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:labels:
+          ".": {}
+          f:app.kubernetes.io/managed-by: {}
+          f:kargo.akuity.io/project: {}
+        f:ownerReferences:
+          ".": {}
+          k:{"uid":"94956045-a096-4e69-bc9c-904eac38658e"}: {}
+      f:spec:
+        ".": {}
+        f:destination:
+          ".": {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          ".": {}
+          f:automated:
+            ".": {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        ".": {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: '2026-04-12T08:40:15Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:sources: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:30Z'
+  name: codeai-test
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: codeai
+    uid: 94956045-a096-4e69-bc9c-904eac38658e
+  resourceVersion: '37549264'
+  uid: 9a97d8db-8f43-443f-bda9-7b381292ced9
+spec:
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: test
+      valueFiles:
+      - "$values/apps/codeai/envTypes/test.values.yaml"
+      - "$values/apps/codeai/deployments/test/values.yaml"
+    path: k8s/helm
+    repoURL: https://github.com/code-dot-org/code-dot-org.git
+    targetRevision: k8s/reorg
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  conditions:
+  - lastTransitionTime: '2026-04-12T08:40:15Z'
+    message: 'Failed to load target state: failed to generate manifest for source
+      1 of 2: rpc error: code = Unknown desc = unable to resolve ''k8s/reorg'' to
+      a commit SHA'
+    type: ComparisonError
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:40:19Z'
+    status: Healthy
+  reconciledAt: '2026-04-12T22:19:29Z'
+  resourceHealthSource: appTree
+  sourceHydrator: {}
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: test
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: test
+          valueFiles:
+          - "$values/apps/codeai/envTypes/test.values.yaml"
+          - "$values/apps/codeai/deployments/test/values.yaml"
+        path: k8s/helm
+        repoURL: https://github.com/code-dot-org/code-dot-org.git
+        targetRevision: k8s/reorg
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    status: Unknown

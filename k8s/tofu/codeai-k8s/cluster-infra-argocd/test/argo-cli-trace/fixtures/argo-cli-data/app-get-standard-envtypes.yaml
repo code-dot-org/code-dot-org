@@ -1,0 +1,577 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '30'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/standard-envtypes
+  creationTimestamp: '2026-04-12T08:39:11Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 278
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:39:11Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:45Z'
+  name: standard-envtypes
+  namespace: argocd
+  resourceVersion: '37550076'
+  uid: e0dd64b8-0505-4577-a022-980d23954883
+spec:
+  destination:
+    namespace: external-secrets
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: standard-envtypes
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/standard-envtypes/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:39:26Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:39:12Z'
+    deployedAt: '2026-04-12T08:39:19Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: standard-envtypes
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/standard-envtypes/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:39:19Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: standard-envtypes
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/standard-envtypes/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:39:12Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/test serverside-applied
+        name: test
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/levelbuilder serverside-applied
+        name: levelbuilder
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/production serverside-applied
+        name: production
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/staging serverside-applied
+        name: staging
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-production serverside-applied
+        name: external-secrets-sa-production
+        namespace: production
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-adhoc serverside-applied
+        name: external-secrets-sa-adhoc
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-test serverside-applied
+        name: external-secrets-sa-test
+        namespace: test
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-staging serverside-applied
+        name: external-secrets-sa-staging
+        namespace: staging
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-levelbuilder serverside-applied
+        name: external-secrets-sa-levelbuilder
+        namespace: levelbuilder
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/aws-secrets-manager-store serverside-applied
+        name: aws-secrets-manager-store
+        namespace: test
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/aws-secrets-manager-store serverside-applied
+        name: aws-secrets-manager-store
+        namespace: levelbuilder
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/aws-secrets-manager-store serverside-applied
+        name: aws-secrets-manager-store
+        namespace: production
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/aws-secrets-manager-store serverside-applied
+        name: aws-secrets-manager-store
+        namespace: staging
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ClusterSecretStore
+        message: clustersecretstore.external-secrets.io/aws-secrets-manager-store-adhoc
+          serverside-applied
+        name: aws-secrets-manager-store-adhoc
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/cdo-external-secrets serverside-applied
+        name: cdo-external-secrets
+        namespace: production
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/cdo-external-secrets serverside-applied
+        name: cdo-external-secrets
+        namespace: staging
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/cdo-external-secrets serverside-applied
+        name: cdo-external-secrets
+        namespace: test
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/cdo-external-secrets serverside-applied
+        name: cdo-external-secrets
+        namespace: levelbuilder
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ClusterExternalSecret
+        message: clusterexternalsecret.external-secrets.io/cdo-external-secrets-adhoc
+          serverside-applied
+        name: cdo-external-secrets-adhoc
+        namespace: external-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: vpcresources.k8s.aws
+        hookPhase: Running
+        kind: SecurityGroupPolicy
+        message: securitygrouppolicy.vpcresources.k8s.aws/frontend-security-group
+          serverside-applied
+        name: frontend-security-group
+        namespace: production
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      - group: vpcresources.k8s.aws
+        hookPhase: Running
+        kind: SecurityGroupPolicy
+        message: securitygrouppolicy.vpcresources.k8s.aws/frontend-security-group
+          serverside-applied
+        name: frontend-security-group
+        namespace: levelbuilder
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      - group: vpcresources.k8s.aws
+        hookPhase: Running
+        kind: SecurityGroupPolicy
+        message: securitygrouppolicy.vpcresources.k8s.aws/frontend-security-group
+          serverside-applied
+        name: frontend-security-group
+        namespace: test
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: standard-envtypes
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/standard-envtypes/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:45Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: Namespace
+    name: levelbuilder
+    status: Synced
+    version: v1
+  - kind: Namespace
+    name: production
+    status: Synced
+    version: v1
+  - kind: Namespace
+    name: staging
+    status: Synced
+    version: v1
+  - kind: Namespace
+    name: test
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-adhoc
+    namespace: external-secrets
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-levelbuilder
+    namespace: levelbuilder
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-production
+    namespace: production
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-staging
+    namespace: staging
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-test
+    namespace: test
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      status: Healthy
+    kind: ClusterExternalSecret
+    name: cdo-external-secrets-adhoc
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: ClusterSecretStore
+    name: aws-secrets-manager-store-adhoc
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: cdo-external-secrets
+    namespace: levelbuilder
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: cdo-external-secrets
+    namespace: production
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: cdo-external-secrets
+    namespace: staging
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: cdo-external-secrets
+    namespace: test
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: aws-secrets-manager-store
+    namespace: levelbuilder
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: aws-secrets-manager-store
+    namespace: production
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: aws-secrets-manager-store
+    namespace: staging
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: aws-secrets-manager-store
+    namespace: test
+    status: Synced
+    version: v1
+  - group: vpcresources.k8s.aws
+    kind: SecurityGroupPolicy
+    name: frontend-security-group
+    namespace: levelbuilder
+    status: Synced
+    version: v1beta1
+  - group: vpcresources.k8s.aws
+    kind: SecurityGroupPolicy
+    name: frontend-security-group
+    namespace: production
+    status: Synced
+    version: v1beta1
+  - group: vpcresources.k8s.aws
+    kind: SecurityGroupPolicy
+    name: frontend-security-group
+    namespace: test
+    status: Synced
+    version: v1beta1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: external-secrets
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: standard-envtypes
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/standard-envtypes/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

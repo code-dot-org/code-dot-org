@@ -1,0 +1,604 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '40'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/dex
+  creationTimestamp: '2026-04-12T08:39:14Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 289
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:39:14Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary:
+          ".": {}
+          f:externalURLs: {}
+          f:images: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:30Z'
+  name: dex
+  namespace: argocd
+  resourceVersion: '37549283'
+  uid: e16c75e3-ba6f-47e8-8354-3b58aa9885fe
+spec:
+  destination:
+    namespace: dex
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: dex
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/dex/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:40:14Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:39:15Z'
+    deployedAt: '2026-04-12T08:39:22Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: dex
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/dex/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:39:22Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: dex
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/dex/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:39:15Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/dex created
+        name: dex
+        namespace: ''
+        status: Synced
+        syncPhase: PreSync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-secret-reader created
+        name: argocd-secret-reader
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-secrets-sa-dex created
+        name: external-secrets-sa-dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/dex created
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/dex-config created
+        name: dex-config
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/dex reconciled. reconciliation
+          required create\n\tmissing rules added:\n\t\t{Verbs:[list create] APIGroups:[apiextensions.k8s.io]
+          Resources:[customresourcedefinitions] ResourceNames:[] NonResourceURLs:[]}.
+          clusterrole.rbac.authorization.k8s.io/dex configured. Warning: resource
+          clusterroles/dex is missing the kubectl.kubernetes.io/last-applied-configuration
+          annotation which is required by  apply.  apply should only be used on resources
+          created declaratively by either  create --save-config or  apply. The missing
+          annotation will be patched automatically."
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRoleBinding
+        message: "clusterrolebinding.rbac.authorization.k8s.io/dex-cluster reconciled.
+          reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:dex Namespace:dex}. clusterrolebinding.rbac.authorization.k8s.io/dex-cluster
+          configured. Warning: resource clusterrolebindings/dex-cluster is missing
+          the kubectl.kubernetes.io/last-applied-configuration annotation which is
+          required by  apply.  apply should only be used on resources created declaratively
+          by either  create --save-config or  apply. The missing annotation will be
+          patched automatically."
+        name: dex-cluster
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: "role.rbac.authorization.k8s.io/dex-argocd-secret-reader reconciled.
+          reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[secrets] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[create]
+          APIGroups:[authorization.k8s.io] Resources:[selfsubjectrulesreviews] ResourceNames:[]
+          NonResourceURLs:[]}. role.rbac.authorization.k8s.io/dex-argocd-secret-reader
+          configured. Warning: resource roles/dex-argocd-secret-reader is missing
+          the kubectl.kubernetes.io/last-applied-configuration annotation which is
+          required by  apply.  apply should only be used on resources created declaratively
+          by either  create --save-config or  apply. The missing annotation will be
+          patched automatically."
+        name: dex-argocd-secret-reader
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: "role.rbac.authorization.k8s.io/dex reconciled. reconciliation required
+          create\n\tmissing rules added:\n\t\t{Verbs:[*] APIGroups:[dex.coreos.com]
+          Resources:[*] ResourceNames:[] NonResourceURLs:[]}. role.rbac.authorization.k8s.io/dex
+          configured. Warning: resource roles/dex is missing the kubectl.kubernetes.io/last-applied-configuration
+          annotation which is required by  apply.  apply should only be used on resources
+          created declaratively by either  create --save-config or  apply. The missing
+          annotation will be patched automatically."
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: "rolebinding.rbac.authorization.k8s.io/dex reconciled. reconciliation
+          required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount APIGroup:
+          Name:dex Namespace:dex}. rolebinding.rbac.authorization.k8s.io/dex configured.
+          Warning: resource rolebindings/dex is missing the kubectl.kubernetes.io/last-applied-configuration
+          annotation which is required by  apply.  apply should only be used on resources
+          created declaratively by either  create --save-config or  apply. The missing
+          annotation will be patched automatically."
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: "rolebinding.rbac.authorization.k8s.io/dex-argocd-secret-reader reconciled.
+          reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:argocd-secret-reader Namespace:dex}. rolebinding.rbac.authorization.k8s.io/dex-argocd-secret-reader
+          configured. Warning: resource rolebindings/dex-argocd-secret-reader is missing
+          the kubectl.kubernetes.io/last-applied-configuration annotation which is
+          required by  apply.  apply should only be used on resources created declaratively
+          by either  create --save-config or  apply. The missing annotation will be
+          patched automatically."
+        name: dex-argocd-secret-reader
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/dex created
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - ghcr.io/dexidp/dex:v2.44.0
+        kind: Deployment
+        message: deployment.apps/dex created
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: networking.k8s.io
+        hookPhase: Running
+        kind: Ingress
+        message: ingress.networking.k8s.io/dex created
+        name: dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: generators.external-secrets.io
+        hookPhase: Running
+        kind: Password
+        message: password.generators.external-secrets.io/argocd-dex-client-secret
+          created
+        name: argocd-dex-client-secret
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/argocd-secret created
+        name: argocd-secret
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/argocd-secret-store created
+        name: argocd-secret-store
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: SecretStore
+        message: secretstore.external-secrets.io/aws-secrets-manager-store-dex created
+        name: aws-secrets-manager-store-dex
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/dex-google-client-secret-env created
+        name: dex-google-client-secret-env
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/oidc-client-secrets created
+        name: oidc-client-secrets
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: external-secrets.io
+        hookPhase: Running
+        kind: ExternalSecret
+        message: externalsecret.external-secrets.io/dex-google-service-account created
+        name: dex-google-service-account
+        namespace: dex
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: dex
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/dex/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:30Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: Secret
+    name: dex-config
+    namespace: dex
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-secret-reader
+    namespace: dex
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-secrets-sa-dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: argocd-secret
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: dex-google-client-secret-env
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: dex-google-service-account
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: secret synced
+      status: Healthy
+    kind: ExternalSecret
+    name: oidc-client-secrets
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: argocd-secret-store
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: external-secrets.io
+    health:
+      message: store validated
+      status: Healthy
+    kind: SecretStore
+    name: aws-secrets-manager-store-dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: generators.external-secrets.io
+    kind: Password
+    name: argocd-dex-client-secret
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  - group: networking.k8s.io
+    health:
+      status: Healthy
+    kind: Ingress
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: dex
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: dex-cluster
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: dex-argocd-secret-reader
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: dex-argocd-secret-reader
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: dex
+    namespace: dex
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary:
+    externalURLs:
+    - http://dex.k8s.code.org/
+    images:
+    - ghcr.io/dexidp/dex:v2.44.0
+  sync:
+    comparedTo:
+      destination:
+        namespace: dex
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: dex
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/dex/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

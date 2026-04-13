@@ -1,0 +1,9 @@
+#!/usr/bin/env -S bundle exec ruby
+# frozen_string_literal: true
+
+require "shellwords"
+
+script = File.expand_path("argo-cli-trace", __dir__)
+command = Shellwords.join(["bundle", "exec", script, *ARGV])
+
+exec("watch", "--color", command)

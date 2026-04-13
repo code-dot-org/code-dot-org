@@ -1,0 +1,214 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: app-of-apps:argoproj.io/ApplicationSet:argocd/app-of-apps
+  creationTimestamp: '2026-04-12T08:31:13Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 3
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/tracking-id: {}
+      f:spec:
+        f:generators: {}
+        f:goTemplate: {}
+        f:goTemplateOptions: {}
+        f:strategy:
+          f:deletionOrder: {}
+          f:rollingSync:
+            f:steps: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:name: {}
+          f:spec:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:project: {}
+        f:templatePatch: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:31:14Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          ".": {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: '2026-04-12T08:31:13Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:applicationStatus: {}
+        f:conditions: {}
+        f:resources: {}
+        f:resourcesCount: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    subresource: status
+    time: '2026-04-12T22:13:03Z'
+  name: app-of-apps
+  namespace: argocd
+  resourceVersion: '37529486'
+  uid: 5ee83712-166b-47f1-b29d-6a7b66e6c5e8
+spec:
+  generators:
+  - git:
+      files:
+      - path: apps/*/application.yaml
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      revision: main
+      template:
+        metadata: {}
+        spec:
+          destination: {}
+          project: ''
+  - git:
+      files:
+      - path: apps/*/applicationset.yaml
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      revision: main
+      template:
+        metadata:
+          finalizers:
+          - resources-finalizer.argocd.argoproj.io
+        spec:
+          destination:
+            namespace: argocd
+            server: https://kubernetes.default.svc
+          project: default
+          source:
+            directory:
+              include: applicationset.yaml
+              jsonnet: {}
+            path: apps/{{.path.basename}}
+            repoURL: https://github.com/code-dot-org/k8s-gitops.git
+            targetRevision: main
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
+            syncOptions:
+            - ServerSideApply=true
+  goTemplate: true
+  goTemplateOptions:
+  - missingkey=error
+  strategy:
+    deletionOrder: Reverse
+    rollingSync:
+      steps:
+      - matchExpressions:
+        - key: code.org/bootstrap-group
+          operator: In
+          values:
+          - infra
+      - matchExpressions:
+        - key: code.org/bootstrap-group
+          operator: NotIn
+          values:
+          - infra
+    type: RollingSync
+  template:
+    metadata:
+      name: "{{.metadata.name}}"
+    spec:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      project: '{{if hasKey .spec "project"}}{{.spec.project}}{{else}}default{{end}}'
+  templatePatch: |
+    {{- if or (hasKey .spec "source") (hasKey .spec "sources") }}
+    metadata: {{ .metadata | toJson }}
+    spec: {{ omit .spec "project" | toJson }}
+    {{- end }}
+status:
+  applicationStatus:
+  - application: codeai
+    lastTransitionTime: '2026-04-12T20:59:57Z'
+    message: Application resource has synced, updating status to Healthy
+    status: Healthy
+    step: '2'
+    targetRevisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+  - application: infra
+    lastTransitionTime: '2026-04-12T21:00:01Z'
+    message: Application resource became Healthy, updating status from Progressing
+      to Healthy
+    status: Healthy
+    step: '1'
+    targetRevisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+  - application: kargo
+    lastTransitionTime: '2026-04-12T20:59:57Z'
+    message: Application resource has synced, updating status to Healthy
+    status: Healthy
+    step: '2'
+    targetRevisions:
+    - 1.9.5
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+  conditions:
+  - lastTransitionTime: '2026-04-12T08:31:14Z'
+    message: All applications have been generated successfully
+    reason: ApplicationSetUpToDate
+    status: 'False'
+    type: ErrorOccurred
+  - lastTransitionTime: '2026-04-12T08:31:14Z'
+    message: Successfully generated parameters for all Applications
+    reason: ParametersGenerated
+    status: 'True'
+    type: ParametersGenerated
+  - lastTransitionTime: '2026-04-12T08:31:14Z'
+    message: All applications have been generated successfully
+    reason: ApplicationSetUpToDate
+    status: 'True'
+    type: ResourcesUpToDate
+  - lastTransitionTime: '2026-04-12T21:00:01Z'
+    message: ApplicationSet Rollout has completed
+    reason: ApplicationSetRolloutComplete
+    status: 'False'
+    type: RolloutProgressing
+  resources:
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: codeai
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: infra
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: kargo
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  resourcesCount: 3

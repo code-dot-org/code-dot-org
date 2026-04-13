@@ -1,0 +1,1551 @@
+---
+metadata:
+  creationTimestamp: '2026-04-12T08:31:14Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 292
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          ".": {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:ownerReferences:
+          ".": {}
+          k:{"uid":"5ee83712-166b-47f1-b29d-6a7b66e6c5e8"}: {}
+      f:spec:
+        ".": {}
+        f:destination:
+          ".": {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          ".": {}
+          f:automated:
+            ".": {}
+            f:enabled: {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        ".": {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: '2026-04-12T08:41:30Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:info: {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+              f:username: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:chart: {}
+              f:helm:
+                ".": {}
+                f:valueFiles: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceTypes: {}
+        f:summary:
+          f:externalURLs: {}
+          f:images: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:21Z'
+  name: kargo
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: app-of-apps
+    uid: 5ee83712-166b-47f1-b29d-6a7b66e6c5e8
+  resourceVersion: '37548773'
+  uid: e19ddd02-82fd-44c4-9145-a9a2cbf5afab
+spec:
+  destination:
+    namespace: kargo
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - chart: kargo
+    helm:
+      valueFiles:
+      - "$values/apps/kargo/values.yaml"
+    repoURL: ghcr.io/akuity/kargo-charts
+    targetRevision: 1.9.5
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - directory:
+      include: application.yaml
+      jsonnet: {}
+    path: apps/kargo/projects/codeai
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:41:30Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:40:15Z'
+    deployedAt: '2026-04-12T08:41:30Z'
+    id: 0
+    initiatedBy:
+      automated: true
+      username: applicationset-controller
+    revisions:
+    - 1.9.5
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - chart: kargo
+      helm:
+        valueFiles:
+        - "$values/apps/kargo/values.yaml"
+      repoURL: ghcr.io/akuity/kargo-charts
+      targetRevision: 1.9.5
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - directory:
+        include: application.yaml
+        jsonnet: {}
+      path: apps/kargo/projects/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  - deployStartedAt: '2026-04-12T08:41:30Z'
+    deployedAt: '2026-04-12T08:41:41Z'
+    id: 1
+    initiatedBy:
+      automated: true
+      username: applicationset-controller
+    revisions:
+    - 1.9.5
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - chart: kargo
+      helm:
+        valueFiles:
+        - "$values/apps/kargo/values.yaml"
+      repoURL: ghcr.io/akuity/kargo-charts
+      targetRevision: 1.9.5
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - directory:
+        include: application.yaml
+        jsonnet: {}
+      path: apps/kargo/projects/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:41:41Z'
+    message: successfully synced (all tasks run)
+    operation:
+      info:
+      - name: Reason
+        value: ApplicationSet RollingSync triggered a sync of this Application resource
+      initiatedBy:
+        automated: true
+        username: applicationset-controller
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:41:30Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Succeeded
+        kind: Namespace
+        message: namespace/kargo-cluster-secrets serverside-applied
+        name: kargo-cluster-secrets
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-management-controller serverside-applied
+        name: kargo-management-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-admin serverside-applied
+        name: kargo-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-external-webhooks-server serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-user serverside-applied
+        name: kargo-user
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-viewer serverside-applied
+        name: kargo-viewer
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-garbage-collector serverside-applied
+        name: kargo-garbage-collector
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-controller serverside-applied
+        name: kargo-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/kargo-project-creator serverside-applied
+        name: kargo-project-creator
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Secret
+        message: secret/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ConfigMap
+        message: configmap/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ConfigMap
+        message: configmap/kargo-garbage-collector serverside-applied
+        name: kargo-garbage-collector
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ConfigMap
+        message: configmap/kargo-controller serverside-applied
+        name: kargo-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ConfigMap
+        message: configmap/kargo-management-controller serverside-applied
+        name: kargo-management-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ConfigMap
+        message: configmap/kargo-external-webhooks-server serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: promotions.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: clusterpromotiontasks.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: projects.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: freights.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: clusterconfigs.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: warehouses.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: promotiontasks.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: projectconfigs.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: stages.kargo.akuity.io
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-external-webhooks-server
+          reconciled. clusterrole.rbac.authorization.k8s.io/kargo-external-webhooks-server
+          serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-viewer reconciled. clusterrole.rbac.authorization.k8s.io/kargo-viewer
+          serverside-applied
+        name: kargo-viewer
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-project-secrets-reader
+          reconciled. clusterrole.rbac.authorization.k8s.io/kargo-project-secrets-reader
+          serverside-applied
+        name: kargo-project-secrets-reader
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-user reconciled. clusterrole.rbac.authorization.k8s.io/kargo-user
+          serverside-applied
+        name: kargo-user
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-admin reconciled. clusterrole.rbac.authorization.k8s.io/kargo-admin
+          serverside-applied
+        name: kargo-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-controller-rollouts reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-controller-rollouts serverside-applied
+        name: kargo-controller-rollouts
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-controller reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-controller serverside-applied
+        name: kargo-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-management-controller
+          reconciled. clusterrole.rbac.authorization.k8s.io/kargo-management-controller
+          serverside-applied
+        name: kargo-management-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-garbage-collector reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-garbage-collector serverside-applied
+        name: kargo-garbage-collector
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-project-creator reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-project-creator serverside-applied
+        name: kargo-project-creator
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-project-admin reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-project-admin serverside-applied
+        name: kargo-project-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-controller-crd-discovery
+          reconciled. clusterrole.rbac.authorization.k8s.io/kargo-controller-crd-discovery
+          serverside-applied
+        name: kargo-controller-crd-discovery
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-controller-argocd reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-controller-argocd serverside-applied
+        name: kargo-controller-argocd
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-api reconciled. clusterrole.rbac.authorization.k8s.io/kargo-api
+          serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-controller-read-secrets
+          reconciled. clusterrole.rbac.authorization.k8s.io/kargo-controller-read-secrets
+          serverside-applied
+        name: kargo-controller-read-secrets
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/kargo-api-rollouts reconciled.
+          clusterrole.rbac.authorization.k8s.io/kargo-api-rollouts serverside-applied
+        name: kargo-api-rollouts
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-controller reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-controller serverside-applied
+        name: kargo-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-user reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-user serverside-applied
+        name: kargo-user
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-management-controller
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-management-controller
+          serverside-applied
+        name: kargo-management-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-external-webhooks-server
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-external-webhooks-server
+          serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-argocd
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-argocd
+          serverside-applied
+        name: kargo-controller-argocd
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-admin reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-admin serverside-applied
+        name: kargo-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-rollouts
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-rollouts
+          serverside-applied
+        name: kargo-controller-rollouts
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-project-creator
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-project-creator
+          serverside-applied
+        name: kargo-project-creator
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-api-rollouts reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-api-rollouts serverside-applied
+        name: kargo-api-rollouts
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-viewer reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-viewer serverside-applied
+        name: kargo-viewer
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-crd-discovery
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-controller-crd-discovery
+          serverside-applied
+        name: kargo-controller-crd-discovery
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-api reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/kargo-garbage-collector
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/kargo-garbage-collector
+          serverside-applied
+        name: kargo-garbage-collector
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-cluster-secrets-admin reconciled.
+          role.rbac.authorization.k8s.io/kargo-cluster-secrets-admin serverside-applied
+        name: kargo-cluster-secrets-admin
+        namespace: kargo-cluster-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-admin reconciled. role.rbac.authorization.k8s.io/kargo-admin
+          serverside-applied
+        name: kargo-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-api reconciled. role.rbac.authorization.k8s.io/kargo-api
+          serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-system-resources-reader reconciled.
+          role.rbac.authorization.k8s.io/kargo-system-resources-reader serverside-applied
+        name: kargo-system-resources-reader
+        namespace: kargo-system-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-system-resources-admin reconciled.
+          role.rbac.authorization.k8s.io/kargo-system-resources-admin serverside-applied
+        name: kargo-system-resources-admin
+        namespace: kargo-system-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-shared-resources-reader reconciled.
+          role.rbac.authorization.k8s.io/kargo-shared-resources-reader serverside-applied
+        name: kargo-shared-resources-reader
+        namespace: kargo-shared-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-shared-resources-admin reconciled.
+          role.rbac.authorization.k8s.io/kargo-shared-resources-admin serverside-applied
+        name: kargo-shared-resources-admin
+        namespace: kargo-shared-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: role.rbac.authorization.k8s.io/kargo-cluster-secrets-reader reconciled.
+          role.rbac.authorization.k8s.io/kargo-cluster-secrets-reader serverside-applied
+        name: kargo-cluster-secrets-reader
+        namespace: kargo-cluster-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-api reconciled. rolebinding.rbac.authorization.k8s.io/kargo-api
+          serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-admin reconciled. rolebinding.rbac.authorization.k8s.io/kargo-admin
+          serverside-applied
+        name: kargo-admin
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-cluster-secrets-admin
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-cluster-secrets-admin
+          serverside-applied
+        name: kargo-cluster-secrets-admin
+        namespace: kargo-cluster-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-cluster-secrets-reader
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-cluster-secrets-reader
+          serverside-applied
+        name: kargo-cluster-secrets-reader
+        namespace: kargo-cluster-secrets
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-system-resources-admin
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-system-resources-admin
+          serverside-applied
+        name: kargo-system-resources-admin
+        namespace: kargo-system-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-shared-resources-reader
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-shared-resources-reader
+          serverside-applied
+        name: kargo-shared-resources-reader
+        namespace: kargo-shared-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-shared-resources-admin
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-shared-resources-admin
+          serverside-applied
+        name: kargo-shared-resources-admin
+        namespace: kargo-shared-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/kargo-system-resources-reader
+          reconciled. rolebinding.rbac.authorization.k8s.io/kargo-system-resources-reader
+          serverside-applied
+        name: kargo-system-resources-reader
+        namespace: kargo-system-resources
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Service
+        message: service/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Service
+        message: service/kargo-external-webhooks-server serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - ghcr.io/akuity/kargo:v1.9.5
+        kind: Deployment
+        message: deployment.apps/kargo-external-webhooks-server serverside-applied
+        name: kargo-external-webhooks-server
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - ghcr.io/akuity/kargo:v1.9.5
+        kind: Deployment
+        message: deployment.apps/kargo-management-controller serverside-applied
+        name: kargo-management-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - ghcr.io/akuity/kargo:v1.9.5
+        kind: Deployment
+        message: deployment.apps/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - ghcr.io/akuity/kargo:v1.9.5
+        kind: Deployment
+        message: deployment.apps/kargo-controller serverside-applied
+        name: kargo-controller
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: batch
+        hookPhase: Succeeded
+        images:
+        - ghcr.io/akuity/kargo:v1.9.5
+        kind: CronJob
+        message: CronJob has not been scheduled yet
+        name: kargo-garbage-collector
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: networking.k8s.io
+        hookPhase: Succeeded
+        kind: Ingress
+        message: ingress.networking.k8s.io/kargo-api serverside-applied
+        name: kargo-api
+        namespace: kargo
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: argoproj.io
+        hookPhase: Running
+        kind: Application
+        message: application.argoproj.io/kargo-project-codeai serverside-applied
+        name: kargo-project-codeai
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: ''
+      revisions:
+      - 1.9.5
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        chart: kargo
+        helm:
+          valueFiles:
+          - "$values/apps/kargo/values.yaml"
+        repoURL: ghcr.io/akuity/kargo-charts
+        targetRevision: 1.9.5
+      sources:
+      - chart: kargo
+        helm:
+          valueFiles:
+          - "$values/apps/kargo/values.yaml"
+        repoURL: ghcr.io/akuity/kargo-charts
+        targetRevision: 1.9.5
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/kargo/projects/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:21Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: ConfigMap
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: kargo-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: kargo-management-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: Namespace
+    name: kargo-cluster-secrets
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-admin
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-management-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-project-creator
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-user
+    namespace: kargo
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: kargo-viewer
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: clusterconfigs.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: clusterpromotiontasks.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: freights.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: projectconfigs.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: projects.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: promotions.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: promotiontasks.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: stages.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: warehouses.kargo.akuity.io
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: kargo-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: kargo-external-webhooks-server
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: kargo-management-controller
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: kargo-project-codeai
+    namespace: argocd
+    status: Synced
+    syncWave: 1
+    version: v1alpha1
+  - group: batch
+    health:
+      message: CronJob has completed its last execution successfully
+      status: Healthy
+    kind: CronJob
+    name: kargo-garbage-collector
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: networking.k8s.io
+    health:
+      status: Healthy
+    kind: Ingress
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-api
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-api-rollouts
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-controller-argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-controller-crd-discovery
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-controller-read-secrets
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-controller-rollouts
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-external-webhooks-server
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-garbage-collector
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-management-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-project-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-project-creator
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-project-secrets-reader
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-user
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: kargo-viewer
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-api
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-api-rollouts
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-controller-argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-controller-crd-discovery
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-controller-rollouts
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-external-webhooks-server
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-garbage-collector
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-management-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-project-creator
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-user
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: kargo-viewer
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-cluster-secrets-admin
+    namespace: kargo-cluster-secrets
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-cluster-secrets-reader
+    namespace: kargo-cluster-secrets
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-shared-resources-admin
+    namespace: kargo-shared-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-shared-resources-reader
+    namespace: kargo-shared-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-system-resources-admin
+    namespace: kargo-system-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-system-resources-reader
+    namespace: kargo-system-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-admin
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-cluster-secrets-admin
+    namespace: kargo-cluster-secrets
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-cluster-secrets-reader
+    namespace: kargo-cluster-secrets
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-shared-resources-admin
+    namespace: kargo-shared-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-shared-resources-reader
+    namespace: kargo-shared-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-system-resources-admin
+    namespace: kargo-system-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-system-resources-reader
+    namespace: kargo-system-resources
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-admin
+    namespace: kargo
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: kargo-api
+    namespace: kargo
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  - Directory
+  summary:
+    externalURLs:
+    - http://kargo.k8s.code.org/
+    - http://kargo.k8s.code.org/webhooks
+    images:
+    - ghcr.io/akuity/kargo:v1.9.5
+  sync:
+    comparedTo:
+      destination:
+        namespace: kargo
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - chart: kargo
+        helm:
+          valueFiles:
+          - "$values/apps/kargo/values.yaml"
+        repoURL: ghcr.io/akuity/kargo-charts
+        targetRevision: 1.9.5
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - directory:
+          include: application.yaml
+          jsonnet: {}
+        path: apps/kargo/projects/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - 1.9.5
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

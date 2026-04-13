@@ -1,0 +1,248 @@
+---
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"argoproj.io/v1alpha1","kind":"Application","metadata":{"annotations":{},"finalizers":["resources-finalizer.argocd.argoproj.io"],"name":"app-of-apps","namespace":"argocd"},"spec":{"destination":{"namespace":"argocd","server":"https://kubernetes.default.svc"},"project":"default","source":{"directory":{"include":"app-of-apps.yaml"},"path":"apps/app-of-apps","repoURL":"https://github.com/code-dot-org/k8s-gitops.git","targetRevision":"main"},"syncPolicy":{"automated":{"prune":true,"selfHeal":true},"syncOptions":["ServerSideApply=true"]}}}
+
+      '
+  creationTimestamp: '2026-04-12T08:31:09Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 289
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          ".": {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:finalizers:
+          ".": {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        ".": {}
+        f:destination:
+          ".": {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          ".": {}
+          f:directory:
+            ".": {}
+            f:include: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+        f:syncPolicy:
+          ".": {}
+          f:automated:
+            ".": {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: '2026-04-12T08:31:09Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:source:
+          f:directory:
+            f:jsonnet: {}
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:autoHealAttemptsCount: {}
+              f:prune: {}
+              f:resources: {}
+              f:revision: {}
+              f:source:
+                ".": {}
+                f:directory:
+                  ".": {}
+                  f:include: {}
+                  f:jsonnet: {}
+                f:path: {}
+                f:repoURL: {}
+                f:targetRevision: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              ".": {}
+              f:directory:
+                ".": {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceType: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:directory:
+                ".": {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:17:23Z'
+  name: app-of-apps
+  namespace: argocd
+  resourceVersion: '37542816'
+  uid: e7af1a77-8411-447d-8ce7-ac8d2940f44f
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      include: app-of-apps.yaml
+      jsonnet: {}
+    path: apps/app-of-apps
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T21:00:01Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:31:13Z'
+    deployedAt: '2026-04-12T08:31:13Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      directory:
+        include: app-of-apps.yaml
+        jsonnet: {}
+      path: apps/app-of-apps
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:31:14Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        autoHealAttemptsCount: 1
+        prune: true
+        resources:
+        - group: argoproj.io
+          kind: ApplicationSet
+          name: app-of-apps
+        revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        source:
+          directory:
+            include: app-of-apps.yaml
+            jsonnet: {}
+          path: apps/app-of-apps
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:31:14Z'
+    syncResult:
+      resources:
+      - group: argoproj.io
+        hookPhase: Running
+        kind: ApplicationSet
+        message: applicationset.argoproj.io/app-of-apps serverside-applied
+        name: app-of-apps
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        directory:
+          include: app-of-apps.yaml
+          jsonnet: {}
+        path: apps/app-of-apps
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:17:23Z'
+  resourceHealthSource: appTree
+  resources:
+  - group: argoproj.io
+    health:
+      message: All applications have been generated successfully
+      status: Healthy
+    kind: ApplicationSet
+    name: app-of-apps
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        directory:
+          include: app-of-apps.yaml
+          jsonnet: {}
+        path: apps/app-of-apps
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revision: a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

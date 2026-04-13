@@ -1,0 +1,131 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: codeai:argoproj.io/ApplicationSet:argocd/codeai
+  creationTimestamp: '2026-04-12T08:40:15Z'
+  generation: 1
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/tracking-id: {}
+      f:spec:
+        f:generators: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              f:kargo.akuity.io/authorized-stage: {}
+            f:labels:
+              f:app.kubernetes.io/managed-by: {}
+              f:kargo.akuity.io/project: {}
+            f:name: {}
+          f:spec:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:project: {}
+            f:sources: {}
+            f:syncPolicy:
+              f:automated:
+                f:prune: {}
+                f:selfHeal: {}
+              f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:40:15Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:conditions: {}
+        f:resources: {}
+        f:resourcesCount: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    subresource: status
+    time: '2026-04-12T08:40:19Z'
+  name: codeai
+  namespace: argocd
+  resourceVersion: '35178761'
+  uid: 94956045-a096-4e69-bc9c-904eac38658e
+spec:
+  generators:
+  - git:
+      files:
+      - path: apps/codeai/deployments/*/deployment.yaml
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      revision: main
+      template:
+        metadata: {}
+        spec:
+          destination: {}
+          project: ''
+  template:
+    metadata:
+      annotations:
+        kargo.akuity.io/authorized-stage: kargo-project-codeai:{{path.basename}}
+      labels:
+        app.kubernetes.io/managed-by: kargo
+        kargo.akuity.io/project: kargo-project-codeai
+      name: codeai-{{path.basename}}
+    spec:
+      destination:
+        namespace: "{{namespace}}"
+        server: https://kubernetes.default.svc
+      project: default
+      sources:
+      - helm:
+          releaseName: "{{path.basename}}"
+          valueFiles:
+          - "$values/apps/codeai/envTypes/{{envType}}.values.yaml"
+          - "$values/apps/codeai/deployments/{{path.basename}}/values.yaml"
+        path: k8s/helm
+        repoURL: https://github.com/code-dot-org/code-dot-org.git
+        targetRevision: "{{branch}}"
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - ServerSideApply=true
+status:
+  conditions:
+  - lastTransitionTime: '2026-04-12T08:40:15Z'
+    message: All applications have been generated successfully
+    reason: ApplicationSetUpToDate
+    status: 'False'
+    type: ErrorOccurred
+  - lastTransitionTime: '2026-04-12T08:40:15Z'
+    message: Successfully generated parameters for all Applications
+    reason: ParametersGenerated
+    status: 'True'
+    type: ParametersGenerated
+  - lastTransitionTime: '2026-04-12T08:40:15Z'
+    message: All applications have been generated successfully
+    reason: ApplicationSetUpToDate
+    status: 'True'
+    type: ResourcesUpToDate
+  resources:
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: codeai-staging
+    namespace: argocd
+    status: Unknown
+    version: v1alpha1
+  - group: argoproj.io
+    health:
+      status: Healthy
+    kind: Application
+    name: codeai-test
+    namespace: argocd
+    status: Unknown
+    version: v1alpha1
+  resourcesCount: 2

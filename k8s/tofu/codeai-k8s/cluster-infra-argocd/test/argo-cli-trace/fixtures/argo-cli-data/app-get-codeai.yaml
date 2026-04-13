@@ -1,0 +1,263 @@
+---
+metadata:
+  creationTimestamp: '2026-04-12T08:31:14Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 285
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          ".": {}
+          v:"resources-finalizer.argocd.argoproj.io": {}
+        f:ownerReferences:
+          ".": {}
+          k:{"uid":"5ee83712-166b-47f1-b29d-6a7b66e6c5e8"}: {}
+      f:spec:
+        ".": {}
+        f:destination:
+          ".": {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          ".": {}
+          f:directory:
+            ".": {}
+            f:include: {}
+            f:jsonnet: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+        f:syncPolicy:
+          ".": {}
+          f:automated:
+            ".": {}
+            f:enabled: {}
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+      f:status:
+        ".": {}
+        f:health: {}
+        f:sourceHydrator: {}
+        f:summary: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination: {}
+            f:source: {}
+    manager: argocd-applicationset-controller
+    operation: Update
+    time: '2026-04-12T08:40:18Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:controllerNamespace: {}
+        f:health:
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:info: {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+              f:username: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              ".": {}
+              f:directory:
+                ".": {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              f:directory:
+                ".": {}
+                f:include: {}
+                f:jsonnet: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:17:19Z'
+  name: codeai
+  namespace: argocd
+  ownerReferences:
+  - apiVersion: argoproj.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ApplicationSet
+    name: app-of-apps
+    uid: 5ee83712-166b-47f1-b29d-6a7b66e6c5e8
+  resourceVersion: '37542570'
+  uid: 6a7738ee-d3f9-4a34-bf47-bf4bf3f32a4c
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      include: applicationset.yaml
+      jsonnet: {}
+    path: apps/codeai
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:40:16Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:40:15Z'
+    deployedAt: '2026-04-12T08:40:15Z'
+    id: 0
+    initiatedBy:
+      automated: true
+      username: applicationset-controller
+    revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      directory:
+        include: applicationset.yaml
+        jsonnet: {}
+      path: apps/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  - deployStartedAt: '2026-04-12T08:40:16Z'
+    deployedAt: '2026-04-12T08:40:18Z'
+    id: 1
+    initiatedBy:
+      automated: true
+      username: applicationset-controller
+    revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      directory:
+        include: applicationset.yaml
+        jsonnet: {}
+      path: apps/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  - deployStartedAt: '2026-04-12T08:40:18Z'
+    deployedAt: '2026-04-12T08:40:19Z'
+    id: 2
+    initiatedBy:
+      automated: true
+      username: applicationset-controller
+    revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      directory:
+        include: applicationset.yaml
+        jsonnet: {}
+      path: apps/codeai
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:40:19Z'
+    message: successfully synced (all tasks run)
+    operation:
+      info:
+      - name: Reason
+        value: ApplicationSet RollingSync triggered a sync of this Application resource
+      initiatedBy:
+        automated: true
+        username: applicationset-controller
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        syncOptions:
+        - ServerSideApply=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:40:18Z'
+    syncResult:
+      resources:
+      - group: argoproj.io
+        hookPhase: Running
+        kind: ApplicationSet
+        message: applicationset.argoproj.io/codeai serverside-applied
+        name: codeai
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        directory:
+          include: applicationset.yaml
+          jsonnet: {}
+        path: apps/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:17:19Z'
+  resourceHealthSource: appTree
+  resources:
+  - group: argoproj.io
+    health:
+      message: All applications have been generated successfully
+      status: Healthy
+    kind: ApplicationSet
+    name: codeai
+    namespace: argocd
+    status: Synced
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        directory:
+          include: applicationset.yaml
+          jsonnet: {}
+        path: apps/codeai
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revision: a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

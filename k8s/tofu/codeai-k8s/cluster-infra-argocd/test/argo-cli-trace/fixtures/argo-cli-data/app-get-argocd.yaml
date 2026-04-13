@@ -1,0 +1,999 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '25'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/argocd
+  creationTimestamp: '2026-04-12T08:37:22Z'
+  finalizers:
+  - post-delete-finalizer.argocd.argoproj.io
+  - post-delete-finalizer.argocd.argoproj.io/cleanup
+  generation: 269
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:37:22Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          ".": {}
+          v:"post-delete-finalizer.argocd.argoproj.io": {}
+          v:"post-delete-finalizer.argocd.argoproj.io/cleanup": {}
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary:
+          ".": {}
+          f:externalURLs: {}
+          f:images: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:18:56Z'
+  name: argocd
+  namespace: argocd
+  resourceVersion: '37547493'
+  uid: 4640a33a-4fb0-44b1-a38d-0b24e2b19d8c
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: argocd
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/argocd/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T22:13:03Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:37:26Z'
+    deployedAt: '2026-04-12T08:39:04Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: argocd
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/argocd/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:39:04Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: argocd
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/argocd/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:37:26Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-notifications-controller serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-server serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-applicationset-controller serverside-applied
+        name: argocd-applicationset-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-application-controller serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/argocd-repo-server serverside-applied
+        name: argocd-repo-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/repo-k8s-gitops serverside-applied
+        name: repo-k8s-gitops
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/repo-code-dot-org serverside-applied
+        name: repo-code-dot-org
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/argocd-notifications-secret serverside-applied
+        name: argocd-notifications-secret
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/argocd-secret serverside-applied
+        name: argocd-secret
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Secret
+        message: secret/repo-kargo-charts serverside-applied
+        name: repo-kargo-charts
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-cmd-params-cm serverside-applied
+        name: argocd-cmd-params-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-notifications-cm serverside-applied
+        name: argocd-notifications-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-tls-certs-cm serverside-applied
+        name: argocd-tls-certs-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-ssh-known-hosts-cm serverside-applied
+        name: argocd-ssh-known-hosts-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-gpg-keys-cm serverside-applied
+        name: argocd-gpg-keys-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-rbac-cm serverside-applied
+        name: argocd-rbac-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-redis-health-configmap serverside-applied
+        name: argocd-redis-health-configmap
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/argocd-cm serverside-applied
+        name: argocd-cm
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Running
+        kind: CustomResourceDefinition
+        message: customresourcedefinition.apiextensions.k8s.io/appprojects.argoproj.io
+          serverside-applied
+        name: appprojects.argoproj.io
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Running
+        kind: CustomResourceDefinition
+        message: customresourcedefinition.apiextensions.k8s.io/applications.argoproj.io
+          serverside-applied
+        name: applications.argoproj.io
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Running
+        kind: CustomResourceDefinition
+        message: customresourcedefinition.apiextensions.k8s.io/applicationsets.argoproj.io
+          serverside-applied
+        name: applicationsets.argoproj.io
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/argocd-server reconciled. clusterrole.rbac.authorization.k8s.io/argocd-server
+          serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/argocd-application-controller
+          reconciled. clusterrole.rbac.authorization.k8s.io/argocd-application-controller
+          serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/argocd-notifications-controller
+          reconciled. clusterrole.rbac.authorization.k8s.io/argocd-notifications-controller
+          serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/argocd-application-controller
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/argocd-application-controller
+          serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/argocd-notifications-controller
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/argocd-notifications-controller
+          serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/argocd-server reconciled.
+          clusterrolebinding.rbac.authorization.k8s.io/argocd-server serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: role.rbac.authorization.k8s.io/argocd-notifications-controller reconciled.
+          role.rbac.authorization.k8s.io/argocd-notifications-controller serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: role.rbac.authorization.k8s.io/argocd-repo-server reconciled. role.rbac.authorization.k8s.io/argocd-repo-server
+          serverside-applied
+        name: argocd-repo-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: role.rbac.authorization.k8s.io/argocd-server reconciled. role.rbac.authorization.k8s.io/argocd-server
+          serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: role.rbac.authorization.k8s.io/argocd-applicationset-controller reconciled.
+          role.rbac.authorization.k8s.io/argocd-applicationset-controller serverside-applied
+        name: argocd-applicationset-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: Role
+        message: role.rbac.authorization.k8s.io/argocd-application-controller reconciled.
+          role.rbac.authorization.k8s.io/argocd-application-controller serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/argocd-application-controller
+          reconciled. rolebinding.rbac.authorization.k8s.io/argocd-application-controller
+          serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/argocd-repo-server reconciled.
+          rolebinding.rbac.authorization.k8s.io/argocd-repo-server serverside-applied
+        name: argocd-repo-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/argocd-notifications-controller
+          reconciled. rolebinding.rbac.authorization.k8s.io/argocd-notifications-controller
+          serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/argocd-applicationset-controller
+          reconciled. rolebinding.rbac.authorization.k8s.io/argocd-applicationset-controller
+          serverside-applied
+        name: argocd-applicationset-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: RoleBinding
+        message: rolebinding.rbac.authorization.k8s.io/argocd-server reconciled. rolebinding.rbac.authorization.k8s.io/argocd-server
+          serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/argocd-server serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/argocd-repo-server serverside-applied
+        name: argocd-repo-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/argocd-redis serverside-applied
+        name: argocd-redis
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/argocd-applicationset-controller serverside-applied
+        name: argocd-applicationset-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - quay.io/argoproj/argocd:v3.3.4
+        kind: Deployment
+        message: deployment.apps/argocd-applicationset-controller serverside-applied
+        name: argocd-applicationset-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - quay.io/argoproj/argocd:v3.3.4
+        kind: Deployment
+        message: deployment.apps/argocd-notifications-controller serverside-applied
+        name: argocd-notifications-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - ecr-public.aws.com/docker/library/redis:8.2.3-alpine
+        kind: Deployment
+        message: deployment.apps/argocd-redis serverside-applied
+        name: argocd-redis
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - quay.io/argoproj/argocd:v3.3.4
+        kind: Deployment
+        message: deployment.apps/argocd-server serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - quay.io/argoproj/argocd:v3.3.4
+        kind: Deployment
+        message: deployment.apps/argocd-repo-server serverside-applied
+        name: argocd-repo-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - quay.io/argoproj/argocd:v3.3.4
+        kind: StatefulSet
+        message: statefulset.apps/argocd-application-controller serverside-applied
+        name: argocd-application-controller
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: networking.k8s.io
+        hookPhase: Running
+        kind: Ingress
+        message: ingress.networking.k8s.io/argocd-server serverside-applied
+        name: argocd-server
+        namespace: argocd
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: argocd
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/argocd/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:18:55Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: ConfigMap
+    name: argocd-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-cmd-params-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-gpg-keys-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-notifications-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-rbac-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-redis-health-configmap
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-ssh-known-hosts-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ConfigMap
+    name: argocd-tls-certs-cm
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: argocd-notifications-secret
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: argocd-secret
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: repo-code-dot-org
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: repo-k8s-gitops
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: repo-kargo-charts
+    namespace: argocd
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: argocd-applicationset-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: argocd-redis
+    namespace: argocd
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: argocd-repo-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-application-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-applicationset-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-notifications-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-repo-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: applications.argoproj.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: applicationsets.argoproj.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: appprojects.argoproj.io
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: argocd-applicationset-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: argocd-notifications-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: argocd-redis
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: argocd-repo-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      message: 'partitioned roll out complete: 1 new pods have been updated...'
+      status: Healthy
+    kind: StatefulSet
+    name: argocd-application-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: networking.k8s.io
+    health:
+      status: Healthy
+    kind: Ingress
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: argocd-application-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: argocd-notifications-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: argocd-server
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: argocd-application-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: argocd-notifications-controller
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: argocd-server
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: argocd-application-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: argocd-applicationset-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: argocd-notifications-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: argocd-repo-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: argocd-application-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: argocd-applicationset-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: argocd-notifications-controller
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: argocd-repo-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: argocd-server
+    namespace: argocd
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary:
+    externalURLs:
+    - http://argocd.k8s.code.org/
+    images:
+    - ecr-public.aws.com/docker/library/redis:8.2.3-alpine
+    - quay.io/argoproj/argocd:v3.3.4
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: argocd
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/argocd/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

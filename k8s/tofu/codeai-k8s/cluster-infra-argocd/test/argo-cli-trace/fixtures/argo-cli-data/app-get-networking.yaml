@@ -1,0 +1,820 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '3'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/networking
+  creationTimestamp: '2026-04-12T08:32:19Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 280
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:ignoreDifferences: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:39:24Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary:
+          ".": {}
+          f:images: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:ignoreDifferences: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:17:31Z'
+  name: networking
+  namespace: argocd
+  resourceVersion: '37543174'
+  uid: bed9a16c-b74d-4664-a5fd-13f345e73517
+spec:
+  destination:
+    namespace: kube-system
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - jsonPointers:
+    - "/data"
+    kind: Secret
+    name: aws-load-balancer-tls
+    namespace: kube-system
+  - group: admissionregistration.k8s.io
+    jqPathExpressions:
+    - ".webhooks[]?.clientConfig.caBundle"
+    kind: MutatingWebhookConfiguration
+    name: aws-load-balancer-webhook
+  - group: admissionregistration.k8s.io
+    jqPathExpressions:
+    - ".webhooks[]?.clientConfig.caBundle"
+    kind: ValidatingWebhookConfiguration
+    name: aws-load-balancer-webhook
+  project: default
+  sources:
+  - helm:
+      releaseName: networking
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/networking/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:33:37Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:32:21Z'
+    deployedAt: '2026-04-12T08:33:35Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: networking
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/networking/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:33:35Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: networking
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/networking/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:32:21Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/aws-load-balancer-controller-sa serverside-applied
+        name: aws-load-balancer-controller-sa
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Secret
+        message: secret/aws-load-balancer-tls serverside-applied
+        name: aws-load-balancer-tls
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: albtargetcontrolconfigs.elbv2.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: listenerruleconfigurations.gateway.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: backendtlspolicies.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: listenersets.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: targetgroupbindings.elbv2.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: gateways.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: grpcroutes.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: globalaccelerators.aga.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: referencegrants.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: ingressclassparams.elbv2.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: targetgroupconfigurations.gateway.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: gatewayclasses.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: loadbalancerconfigurations.gateway.k8s.aws
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: tlsroutes.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apiextensions.k8s.io
+        hookPhase: Succeeded
+        kind: CustomResourceDefinition
+        message: CRD is healthy
+        name: httproutes.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-role
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[create
+          delete get list patch update watch] APIGroups:[elbv2.k8s.aws] Resources:[targetgroupbindings]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list watch] APIGroups:[elbv2.k8s.aws]
+          Resources:[ingressclassparams] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get]
+          APIGroups:[elbv2.k8s.aws] Resources:[albtargetcontrolconfigs] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[create patch] APIGroups:[] Resources:[events]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list watch] APIGroups:[]
+          Resources:[pods] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list
+          watch] APIGroups:[networking.k8s.io] Resources:[ingressclasses] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list patch update watch] APIGroups:[
+          extensions networking.k8s.io] Resources:[services ingresses] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list watch] APIGroups:[] Resources:[nodes
+          namespaces endpoints] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          delete create update] APIGroups:[] Resources:[configmaps] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[update patch] APIGroups:[elbv2.k8s.aws
+          \ extensions networking.k8s.io] Resources:[targetgroupbindings/status pods/status
+          services/status ingresses/status] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[discovery.k8s.io] Resources:[endpointslices] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list watch patch] APIGroups:[gateway.k8s.aws]
+          Resources:[loadbalancerconfigurations targetgroupconfigurations listenerruleconfigurations]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update patch] APIGroups:[gateway.k8s.aws]
+          Resources:[loadbalancerconfigurations/finalizers targetgroupconfigurations/finalizers
+          listenerruleconfigurations/finalizers] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          patch watch] APIGroups:[gateway.k8s.aws] Resources:[loadbalancerconfigurations/status
+          targetgroupconfigurations/status listenerruleconfigurations/status] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list watch patch] APIGroups:[gateway.networking.k8s.io]
+          Resources:[gatewayclasses gateways] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[gateway.networking.k8s.io] Resources:[referencegrants]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update patch] APIGroups:[gateway.networking.k8s.io]
+          Resources:[gatewayclasses/finalizers gateways/finalizers] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get patch update] APIGroups:[gateway.networking.k8s.io]
+          Resources:[gatewayclasses/status gateways/status] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[gateway.networking.k8s.io] Resources:[grpcroutes
+          httproutes tcproutes tlsroutes udproutes] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update]
+          APIGroups:[gateway.networking.k8s.io] Resources:[grpcroutes/finalizers httproutes/finalizers
+          tcproutes/finalizers tlsroutes/finalizers udproutes/finalizers] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get patch update] APIGroups:[gateway.networking.k8s.io]
+          Resources:[grpcroutes/status httproutes/status tcproutes/status tlsroutes/status
+          udproutes/status] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list patch watch] APIGroups:[aga.k8s.aws] Resources:[globalaccelerators]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[patch update] APIGroups:[aga.k8s.aws]
+          Resources:[globalaccelerators/finalizers] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[patch
+          update] APIGroups:[aga.k8s.aws] Resources:[globalaccelerators/status] ResourceNames:[]
+          NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-role
+          serverside-applied"
+        name: networking-aws-load-balancer-controller-role
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: "clusterrolebinding.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-rolebinding
+          reconciled. reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:aws-load-balancer-controller-sa Namespace:kube-system}. clusterrolebinding.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-rolebinding
+          serverside-applied"
+        name: networking-aws-load-balancer-controller-rolebinding
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: Role
+        message: "role.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-leader-election-role
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[create]
+          APIGroups:[] Resources:[configmaps] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          patch update] APIGroups:[] Resources:[configmaps] ResourceNames:[aws-load-balancer-controller-leader]
+          NonResourceURLs:[]}\n\t\t{Verbs:[create] APIGroups:[coordination.k8s.io]
+          Resources:[leases] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          update patch] APIGroups:[coordination.k8s.io] Resources:[leases] ResourceNames:[aws-load-balancer-controller-leader]
+          NonResourceURLs:[]}. role.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-leader-election-role
+          serverside-applied"
+        name: networking-aws-load-balancer-controller-leader-election-role
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: RoleBinding
+        message: "rolebinding.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-leader-election-rolebinding
+          reconciled. reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:aws-load-balancer-controller-sa Namespace:kube-system}. rolebinding.rbac.authorization.k8s.io/networking-aws-load-balancer-controller-leader-election-rolebinding
+          serverside-applied"
+        name: networking-aws-load-balancer-controller-leader-election-rolebinding
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Service
+        message: service/aws-load-balancer-webhook-service serverside-applied
+        name: aws-load-balancer-webhook-service
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - public.ecr.aws/eks/aws-load-balancer-controller:v2.17.1
+        kind: Deployment
+        message: deployment.apps/networking-aws-load-balancer-controller serverside-applied
+        name: networking-aws-load-balancer-controller
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: networking.k8s.io
+        hookPhase: Succeeded
+        kind: IngressClass
+        message: ingressclass.networking.k8s.io/aws-alb serverside-applied
+        name: aws-alb
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: elbv2.k8s.aws
+        hookPhase: Succeeded
+        kind: IngressClassParams
+        message: ingressclassparams.elbv2.k8s.aws/aws-alb serverside-applied
+        name: aws-alb
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      - group: admissionregistration.k8s.io
+        hookPhase: Succeeded
+        kind: MutatingWebhookConfiguration
+        message: mutatingwebhookconfiguration.admissionregistration.k8s.io/aws-load-balancer-webhook
+          serverside-applied
+        name: aws-load-balancer-webhook
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: admissionregistration.k8s.io
+        hookPhase: Succeeded
+        kind: ValidatingWebhookConfiguration
+        message: validatingwebhookconfiguration.admissionregistration.k8s.io/aws-load-balancer-webhook
+          serverside-applied
+        name: aws-load-balancer-webhook
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: admissionregistration.k8s.io
+        hookPhase: Succeeded
+        kind: ValidatingAdmissionPolicy
+        message: validatingadmissionpolicy.admissionregistration.k8s.io/safe-upgrades.gateway.networking.k8s.io
+          serverside-applied
+        name: safe-upgrades.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: admissionregistration.k8s.io
+        hookPhase: Succeeded
+        kind: ValidatingAdmissionPolicyBinding
+        message: validatingadmissionpolicybinding.admissionregistration.k8s.io/safe-upgrades.gateway.networking.k8s.io
+          serverside-applied
+        name: safe-upgrades.gateway.networking.k8s.io
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: gateway.networking.k8s.io
+        hookPhase: Running
+        kind: GatewayClass
+        message: gatewayclass.gateway.networking.k8s.io/aws-alb serverside-applied
+        name: aws-alb
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: gateway.k8s.aws
+        hookPhase: Running
+        kind: LoadBalancerConfiguration
+        message: loadbalancerconfiguration.gateway.k8s.aws/aws-alb serverside-applied
+        name: aws-alb
+        namespace: kube-system
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: networking
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/networking/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:17:30Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: Secret
+    name: aws-load-balancer-tls
+    namespace: kube-system
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: aws-load-balancer-webhook-service
+    namespace: kube-system
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: aws-load-balancer-controller-sa
+    namespace: kube-system
+    status: Synced
+    version: v1
+  - group: admissionregistration.k8s.io
+    kind: MutatingWebhookConfiguration
+    name: aws-load-balancer-webhook
+    status: Synced
+    version: v1
+  - group: admissionregistration.k8s.io
+    kind: ValidatingAdmissionPolicy
+    name: safe-upgrades.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: admissionregistration.k8s.io
+    kind: ValidatingAdmissionPolicyBinding
+    name: safe-upgrades.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: admissionregistration.k8s.io
+    kind: ValidatingWebhookConfiguration
+    name: aws-load-balancer-webhook
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: albtargetcontrolconfigs.elbv2.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: backendtlspolicies.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: gatewayclasses.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: gateways.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: globalaccelerators.aga.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: grpcroutes.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: httproutes.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: ingressclassparams.elbv2.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: listenerruleconfigurations.gateway.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: listenersets.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: loadbalancerconfigurations.gateway.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: referencegrants.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: targetgroupbindings.elbv2.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: targetgroupconfigurations.gateway.k8s.aws
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: tlsroutes.gateway.networking.k8s.io
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: networking-aws-load-balancer-controller
+    namespace: kube-system
+    status: Synced
+    version: v1
+  - group: elbv2.k8s.aws
+    kind: IngressClassParams
+    name: aws-alb
+    status: Synced
+    version: v1beta1
+  - group: gateway.k8s.aws
+    kind: LoadBalancerConfiguration
+    name: aws-alb
+    namespace: kube-system
+    status: Synced
+    syncWave: 1
+    version: v1beta1
+  - group: gateway.networking.k8s.io
+    kind: GatewayClass
+    name: aws-alb
+    status: Synced
+    syncWave: 1
+    version: v1
+  - group: networking.k8s.io
+    kind: IngressClass
+    name: aws-alb
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: networking-aws-load-balancer-controller-role
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: networking-aws-load-balancer-controller-rolebinding
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: Role
+    name: networking-aws-load-balancer-controller-leader-election-role
+    namespace: kube-system
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: networking-aws-load-balancer-controller-leader-election-rolebinding
+    namespace: kube-system
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary:
+    images:
+    - public.ecr.aws/eks/aws-load-balancer-controller:v2.17.1
+  sync:
+    comparedTo:
+      destination:
+        namespace: kube-system
+        server: https://kubernetes.default.svc
+      ignoreDifferences:
+      - jsonPointers:
+        - "/data"
+        kind: Secret
+        name: aws-load-balancer-tls
+        namespace: kube-system
+      - group: admissionregistration.k8s.io
+        jqPathExpressions:
+        - ".webhooks[]?.clientConfig.caBundle"
+        kind: MutatingWebhookConfiguration
+        name: aws-load-balancer-webhook
+      - group: admissionregistration.k8s.io
+        jqPathExpressions:
+        - ".webhooks[]?.clientConfig.caBundle"
+        kind: ValidatingWebhookConfiguration
+        name: aws-load-balancer-webhook
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: networking
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/networking/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

@@ -6,7 +6,7 @@ require "minitest/autorun"
 require "mocha/minitest"
 require "pathname"
 
-load File.expand_path("../bin/argo-trace", __dir__)
+load File.expand_path("../../bin/argo-trace", __dir__)
 
 class FakeShell
   attr_reader :caveats, :commands
@@ -89,7 +89,7 @@ end
 
 class ArgocdProgressTraceTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "argocd_progress_trace"
-  BIN_DIR = Pathname.new(__dir__).parent / "bin"
+  BIN_DIR = Pathname.new(__dir__).parent.parent / "bin"
 
   def test_parse_duration_accepts_common_units
     assert_equal 0, parse_duration("0s")

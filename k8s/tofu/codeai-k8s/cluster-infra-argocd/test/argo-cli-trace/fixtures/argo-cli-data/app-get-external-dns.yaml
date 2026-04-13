@@ -1,0 +1,337 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '4'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/external-dns
+  creationTimestamp: '2026-04-12T08:33:42Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 283
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:33:42Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:autoHealAttemptsCount: {}
+              f:prune: {}
+              f:resources: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary:
+          ".": {}
+          f:images: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:30Z'
+  name: external-dns
+  namespace: argocd
+  resourceVersion: '37549267'
+  uid: b20b3d6d-6c61-40a1-bb79-f9ef1e99cc2f
+spec:
+  destination:
+    namespace: external-dns
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - helm:
+      releaseName: external-dns
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/external-dns/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T08:34:47Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:33:45Z'
+    deployedAt: '2026-04-12T08:33:48Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: external-dns
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/external-dns/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:33:51Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        autoHealAttemptsCount: 1
+        prune: true
+        resources:
+        - kind: ServiceAccount
+          name: external-dns-sa
+        - group: rbac.authorization.k8s.io
+          kind: ClusterRole
+          name: external-dns
+        - group: rbac.authorization.k8s.io
+          kind: ClusterRoleBinding
+          name: external-dns-viewer
+        - kind: Service
+          name: external-dns
+        - group: apps
+          kind: Deployment
+          name: external-dns
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: external-dns
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/external-dns/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:33:49Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: ServiceAccount
+        message: serviceaccount/external-dns-sa serverside-applied
+        name: external-dns-sa
+        namespace: external-dns
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/external-dns reconciled. clusterrole.rbac.authorization.k8s.io/external-dns
+          serverside-applied
+        name: external-dns
+        namespace: external-dns
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Running
+        kind: ClusterRoleBinding
+        message: clusterrolebinding.rbac.authorization.k8s.io/external-dns-viewer
+          reconciled. clusterrolebinding.rbac.authorization.k8s.io/external-dns-viewer
+          serverside-applied
+        name: external-dns-viewer
+        namespace: external-dns
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Running
+        kind: Service
+        message: service/external-dns serverside-applied
+        name: external-dns
+        namespace: external-dns
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - registry.k8s.io/external-dns/external-dns:v0.20.0
+        kind: Deployment
+        message: deployment.apps/external-dns serverside-applied
+        name: external-dns
+        namespace: external-dns
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: external-dns
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/external-dns/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:30Z'
+  resourceHealthSource: appTree
+  resources:
+  - health:
+      status: Healthy
+    kind: Service
+    name: external-dns
+    namespace: external-dns
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: external-dns-sa
+    namespace: external-dns
+    status: Synced
+    version: v1
+  - group: apiextensions.k8s.io
+    health:
+      message: CRD is healthy
+      status: Healthy
+    kind: CustomResourceDefinition
+    name: dnsendpoints.externaldns.k8s.io
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: external-dns
+    namespace: external-dns
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: external-dns
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: external-dns-viewer
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary:
+    images:
+    - registry.k8s.io/external-dns/external-dns:v0.20.0
+  sync:
+    comparedTo:
+      destination:
+        namespace: external-dns
+        server: https://kubernetes.default.svc
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: external-dns
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/external-dns/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

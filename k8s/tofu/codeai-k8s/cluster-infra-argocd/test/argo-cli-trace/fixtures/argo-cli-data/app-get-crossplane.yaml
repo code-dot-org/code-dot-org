@@ -1,0 +1,899 @@
+---
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '0'
+    argocd.argoproj.io/tracking-id: infra:argoproj.io/Application:argocd/crossplane
+  creationTimestamp: '2026-04-12T08:31:17Z'
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  generation: 305
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:argocd.argoproj.io/sync-wave: {}
+          f:argocd.argoproj.io/tracking-id: {}
+        f:finalizers:
+          v:"resources-finalizer.argocd.argoproj.io": {}
+      f:spec:
+        f:destination:
+          f:namespace: {}
+          f:server: {}
+        f:ignoreDifferences: {}
+        f:project: {}
+        f:sources: {}
+        f:syncPolicy:
+          f:automated:
+            f:prune: {}
+            f:selfHeal: {}
+          f:syncOptions: {}
+    manager: argocd-controller
+    operation: Apply
+    time: '2026-04-12T08:31:17Z'
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        ".": {}
+        f:controllerNamespace: {}
+        f:health:
+          ".": {}
+          f:lastTransitionTime: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          ".": {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            ".": {}
+            f:initiatedBy:
+              ".": {}
+              f:automated: {}
+            f:retry:
+              ".": {}
+              f:limit: {}
+            f:sync:
+              ".": {}
+              f:prune: {}
+              f:revisions: {}
+              f:sources: {}
+              f:syncOptions: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            ".": {}
+            f:resources: {}
+            f:revision: {}
+            f:revisions: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+        f:reconciledAt: {}
+        f:resourceHealthSource: {}
+        f:resources: {}
+        f:sourceHydrator: {}
+        f:sourceTypes: {}
+        f:summary:
+          ".": {}
+          f:images: {}
+        f:sync:
+          ".": {}
+          f:comparedTo:
+            ".": {}
+            f:destination:
+              ".": {}
+              f:namespace: {}
+              f:server: {}
+            f:ignoreDifferences: {}
+            f:source:
+              ".": {}
+              f:repoURL: {}
+            f:sources: {}
+          f:revisions: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: '2026-04-12T22:19:45Z'
+  name: crossplane
+  namespace: argocd
+  resourceVersion: '37550054'
+  uid: 234b78af-1108-403f-8bc1-2c2dfbae0ad8
+spec:
+  destination:
+    namespace: crossplane-system
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - group: admissionregistration.k8s.io
+    jqPathExpressions:
+    - ".webhooks[]?.clientConfig.caBundle"
+    kind: MutatingWebhookConfiguration
+  - group: admissionregistration.k8s.io
+    jqPathExpressions:
+    - ".webhooks[]?.clientConfig.caBundle"
+    kind: ValidatingWebhookConfiguration
+  project: default
+  sources:
+  - helm:
+      releaseName: crossplane
+      valueFiles:
+      - "$values/apps/infra/codeai-cluster-config.values.yaml"
+    path: apps/infra/crossplane/chart
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  - ref: values
+    repoURL: https://github.com/code-dot-org/k8s-gitops.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - ServerSideApply=true
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: '2026-04-12T21:00:00Z'
+    status: Healthy
+  history:
+  - deployStartedAt: '2026-04-12T08:31:17Z'
+    deployedAt: '2026-04-12T08:32:19Z'
+    id: 0
+    initiatedBy:
+      automated: true
+    revisions:
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+    source:
+      repoURL: ''
+    sources:
+    - helm:
+        releaseName: crossplane
+        valueFiles:
+        - "$values/apps/infra/codeai-cluster-config.values.yaml"
+      path: apps/infra/crossplane/chart
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+    - ref: values
+      repoURL: https://github.com/code-dot-org/k8s-gitops.git
+      targetRevision: main
+  operationState:
+    finishedAt: '2026-04-12T08:32:19Z'
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revisions:
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+        sources:
+        - helm:
+            releaseName: crossplane
+            valueFiles:
+            - "$values/apps/infra/codeai-cluster-config.values.yaml"
+          path: apps/infra/crossplane/chart
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        - ref: values
+          repoURL: https://github.com/code-dot-org/k8s-gitops.git
+          targetRevision: main
+        syncOptions:
+        - ServerSideApply=true
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: '2026-04-12T08:31:17Z'
+    syncResult:
+      resources:
+      - group: ''
+        hookPhase: Running
+        kind: Namespace
+        message: namespace/crossplane-system serverside-applied
+        name: crossplane-system
+        namespace: ''
+        status: Synced
+        syncPhase: PreSync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/rbac-manager serverside-applied
+        name: rbac-manager
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: ServiceAccount
+        message: serviceaccount/crossplane serverside-applied
+        name: crossplane
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Secret
+        message: secret/crossplane-tls-server serverside-applied
+        name: crossplane-tls-server
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Secret
+        message: secret/crossplane-root-ca serverside-applied
+        name: crossplane-root-ca
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Secret
+        message: secret/crossplane-tls-client serverside-applied
+        name: crossplane-tls-client
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane-admin reconciled.
+          reconciliation required create. clusterrole.rbac.authorization.k8s.io/crossplane-admin
+          serverside-applied
+        name: crossplane-admin
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane reconciled. reconciliation
+          required create. clusterrole.rbac.authorization.k8s.io/crossplane serverside-applied
+        name: crossplane
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane-browse reconciled.
+          reconciliation required create. clusterrole.rbac.authorization.k8s.io/crossplane-browse
+          serverside-applied
+        name: crossplane-browse
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-browse
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apiextensions.crossplane.io] Resources:[*] ResourceNames:[]
+          NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-browse
+          serverside-applied"
+        name: crossplane:aggregate-to-browse
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane-view reconciled.
+          reconciliation required create. clusterrole.rbac.authorization.k8s.io/crossplane-view
+          serverside-applied
+        name: crossplane-view
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane:allowed-provider-permissions
+          reconciled. reconciliation required create. clusterrole.rbac.authorization.k8s.io/crossplane:allowed-provider-permissions
+          serverside-applied
+        name: crossplane:allowed-provider-permissions
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane-rbac-manager reconciled.
+          reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[create
+          update patch delete] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[namespaces] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apps] Resources:[deployments] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update]
+          APIGroups:[] Resources:[namespaces/finalizers] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apiextensions.crossplane.io] Resources:[compositeresourcedefinitions]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update] APIGroups:[apiextensions.crossplane.io]
+          Resources:[compositeresourcedefinitions/finalizers] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[pkg.crossplane.io] Resources:[providerrevisions]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[update] APIGroups:[pkg.crossplane.io]
+          Resources:[providerrevisions/finalizers] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apiextensions.k8s.io] Resources:[customresourcedefinitions]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list watch create
+          update patch escalate] APIGroups:[rbac.authorization.k8s.io] Resources:[clusterroles
+          roles] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[bind] APIGroups:[rbac.authorization.k8s.io]
+          Resources:[clusterroles] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[rbac.authorization.k8s.io] Resources:[clusterrolebindings] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list create update patch watch delete]
+          APIGroups:[ coordination.k8s.io] Resources:[configmaps leases] ResourceNames:[]
+          NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/crossplane-rbac-manager
+          serverside-applied"
+        name: crossplane-rbac-manager
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: clusterrole.rbac.authorization.k8s.io/crossplane-edit reconciled.
+          reconciliation required create. clusterrole.rbac.authorization.k8s.io/crossplane-edit
+          serverside-applied
+        name: crossplane-edit
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-edit
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[] Resources:[secrets] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[namespaces] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[apiextensions.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[pkg.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[secrets.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[protection.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[ops.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}.
+          clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-edit serverside-applied"
+        name: crossplane:aggregate-to-edit
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-admin
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[] Resources:[secrets namespaces] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[rbac.authorization.k8s.io] Resources:[clusterroles
+          roles] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*] APIGroups:[rbac.authorization.k8s.io]
+          Resources:[clusterrolebindings rolebindings] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[apiextensions.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[pkg.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[secrets.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apiextensions.k8s.io] Resources:[customresourcedefinitions]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*] APIGroups:[protection.crossplane.io]
+          Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*] APIGroups:[ops.crossplane.io]
+          Resources:[*] ResourceNames:[] NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-admin
+          serverside-applied"
+        name: crossplane:aggregate-to-admin
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-view
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[] Resources:[namespaces] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list watch] APIGroups:[apiextensions.crossplane.io] Resources:[*] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list watch] APIGroups:[pkg.crossplane.io]
+          Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list
+          watch] APIGroups:[secrets.crossplane.io] Resources:[*] ResourceNames:[]
+          NonResourceURLs:[]}\n\t\t{Verbs:[get list watch] APIGroups:[protection.crossplane.io]
+          Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list
+          watch] APIGroups:[ops.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}.
+          clusterrole.rbac.authorization.k8s.io/crossplane:aggregate-to-view serverside-applied"
+        name: crossplane:aggregate-to-view
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRole
+        message: "clusterrole.rbac.authorization.k8s.io/crossplane:system:aggregate-to-crossplane
+          reconciled. reconciliation required create\n\tmissing rules added:\n\t\t{Verbs:[create
+          update patch delete] APIGroups:[] Resources:[events] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[apiextensions.k8s.io] Resources:[customresourcedefinitions customresourcedefinitions/status]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list watch create
+          update patch delete] APIGroups:[] Resources:[secrets] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[] Resources:[serviceaccounts services] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[*]
+          APIGroups:[apiextensions.crossplane.io ops.crossplane.io pkg.crossplane.io
+          protection.crossplane.io] Resources:[*] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get
+          list create update patch delete watch] APIGroups:[extensions apps] Resources:[deployments]
+          ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list create update
+          patch watch delete] APIGroups:[ coordination.k8s.io] Resources:[configmaps
+          leases] ResourceNames:[] NonResourceURLs:[]}\n\t\t{Verbs:[get list create
+          update patch watch delete] APIGroups:[admissionregistration.k8s.io] Resources:[validatingwebhookconfigurations
+          mutatingwebhookconfigurations] ResourceNames:[] NonResourceURLs:[]}. clusterrole.rbac.authorization.k8s.io/crossplane:system:aggregate-to-crossplane
+          serverside-applied"
+        name: crossplane:system:aggregate-to-crossplane
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: "clusterrolebinding.rbac.authorization.k8s.io/crossplane-rbac-manager
+          reconciled. reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:rbac-manager Namespace:crossplane-system}. clusterrolebinding.rbac.authorization.k8s.io/crossplane-rbac-manager
+          serverside-applied"
+        name: crossplane-rbac-manager
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: "clusterrolebinding.rbac.authorization.k8s.io/crossplane reconciled.
+          reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:ServiceAccount
+          APIGroup: Name:crossplane Namespace:crossplane-system}. clusterrolebinding.rbac.authorization.k8s.io/crossplane
+          serverside-applied"
+        name: crossplane
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: rbac.authorization.k8s.io
+        hookPhase: Succeeded
+        kind: ClusterRoleBinding
+        message: "clusterrolebinding.rbac.authorization.k8s.io/crossplane-admin reconciled.
+          reconciliation required create\n\tmissing subjects added:\n\t\t{Kind:Group
+          APIGroup:rbac.authorization.k8s.io Name:crossplane:masters Namespace:}.
+          clusterrolebinding.rbac.authorization.k8s.io/crossplane-admin serverside-applied"
+        name: crossplane-admin
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: ''
+        hookPhase: Succeeded
+        kind: Service
+        message: service/crossplane-webhooks serverside-applied
+        name: crossplane-webhooks
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - xpkg.crossplane.io/crossplane/crossplane:v2.2.0
+        kind: Deployment
+        message: deployment.apps/crossplane serverside-applied
+        name: crossplane
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Succeeded
+        images:
+        - xpkg.crossplane.io/crossplane/crossplane:v2.2.0
+        kind: Deployment
+        message: deployment.apps/crossplane-rbac-manager serverside-applied
+        name: crossplane-rbac-manager
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Succeeded
+        kind: DeploymentRuntimeConfig
+        message: Resource is up-to-date.
+        name: provider-aws
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1beta1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Function
+        message: function.pkg.crossplane.io/function-go-templating serverside-applied
+        name: function-go-templating
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Function
+        message: function.pkg.crossplane.io/function-auto-ready serverside-applied
+        name: function-auto-ready
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-rds serverside-applied
+        name: provider-aws-rds
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-secretsmanager serverside-applied
+        name: provider-aws-secretsmanager
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-acm serverside-applied
+        name: provider-aws-acm
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-cloudfront serverside-applied
+        name: provider-aws-cloudfront
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-iam serverside-applied
+        name: provider-aws-iam
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-elasticache serverside-applied
+        name: provider-aws-elasticache
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/upbound-provider-family-aws serverside-applied
+        name: upbound-provider-family-aws
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: pkg.crossplane.io
+        hookPhase: Running
+        kind: Provider
+        message: provider.pkg.crossplane.io/provider-aws-route53 serverside-applied
+        name: provider-aws-route53
+        namespace: crossplane-system
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: ''
+      revisions:
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      - 9aa9bbfc463f99d23c5e77b75608f6309882501c
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: crossplane
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/crossplane/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+  reconciledAt: '2026-04-12T22:19:45Z'
+  resourceHealthSource: appTree
+  resources:
+  - kind: Secret
+    name: crossplane-root-ca
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: crossplane-tls-client
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - kind: Secret
+    name: crossplane-tls-server
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - health:
+      status: Healthy
+    kind: Service
+    name: crossplane-webhooks
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: crossplane
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - kind: ServiceAccount
+    name: rbac-manager
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: crossplane
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: crossplane-rbac-manager
+    namespace: crossplane-system
+    status: Synced
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: DeploymentRuntimeConfig
+    name: provider-aws
+    status: Synced
+    syncWave: 10
+    version: v1beta1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Function
+    name: function-auto-ready
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Function
+    name: function-go-templating
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-acm
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-cloudfront
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-elasticache
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-iam
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-rds
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-route53
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: provider-aws-secretsmanager
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: pkg.crossplane.io
+    health:
+      message: Resource is up-to-date.
+      status: Healthy
+    kind: Provider
+    name: upbound-provider-family-aws
+    status: Synced
+    syncWave: 20
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane-browse
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane-edit
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane-rbac-manager
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane-view
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:aggregate-to-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:aggregate-to-browse
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:aggregate-to-edit
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:aggregate-to-view
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:allowed-provider-permissions
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: crossplane:system:aggregate-to-crossplane
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: crossplane
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: crossplane-admin
+    status: Synced
+    version: v1
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: crossplane-rbac-manager
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceTypes:
+  - Helm
+  - ''
+  summary:
+    images:
+    - xpkg.crossplane.io/crossplane/crossplane:v2.2.0
+    - xpkg.upbound.io/upbound/function-auto-ready:v0.6.3
+    - xpkg.upbound.io/upbound/function-go-templating:v0.11.6
+    - xpkg.upbound.io/upbound/provider-aws-acm:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-cloudfront:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-elasticache:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-iam:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-rds:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-route53:v2.5.1
+    - xpkg.upbound.io/upbound/provider-aws-secretsmanager:v2.5.1
+    - xpkg.upbound.io/upbound/provider-family-aws:v2.5.1
+  sync:
+    comparedTo:
+      destination:
+        namespace: crossplane-system
+        server: https://kubernetes.default.svc
+      ignoreDifferences:
+      - group: admissionregistration.k8s.io
+        jqPathExpressions:
+        - ".webhooks[]?.clientConfig.caBundle"
+        kind: MutatingWebhookConfiguration
+      - group: admissionregistration.k8s.io
+        jqPathExpressions:
+        - ".webhooks[]?.clientConfig.caBundle"
+        kind: ValidatingWebhookConfiguration
+      source:
+        repoURL: ''
+      sources:
+      - helm:
+          releaseName: crossplane
+          valueFiles:
+          - "$values/apps/infra/codeai-cluster-config.values.yaml"
+        path: apps/infra/crossplane/chart
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+      - ref: values
+        repoURL: https://github.com/code-dot-org/k8s-gitops.git
+        targetRevision: main
+    revisions:
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    - a6e08eac42c43394fd28339df8426880b710fa13
+    status: Synced

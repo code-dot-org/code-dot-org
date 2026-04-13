@@ -1,0 +1,82 @@
+---
+app-get-app-of-apps.yaml:
+  command: argocd --core --app-namespace argocd app get app-of-apps -o yaml
+  elapsed_s: 9.29
+  success: true
+app-get-argocd.yaml:
+  command: argocd --core --app-namespace argocd app get argocd -o yaml
+  elapsed_s: 9.172
+  success: true
+app-get-aws-resources.yaml:
+  command: argocd --core --app-namespace argocd app get aws-resources -o yaml
+  elapsed_s: 9.032
+  success: true
+app-get-codeai-staging.yaml:
+  command: argocd --core --app-namespace argocd app get codeai-staging -o yaml
+  elapsed_s: 9.204
+  success: true
+app-get-codeai-test.yaml:
+  command: argocd --core --app-namespace argocd app get codeai-test -o yaml
+  elapsed_s: 9.196
+  success: true
+app-get-codeai.yaml:
+  command: argocd --core --app-namespace argocd app get codeai -o yaml
+  elapsed_s: 9.28
+  success: true
+app-get-crossplane.yaml:
+  command: argocd --core --app-namespace argocd app get crossplane -o yaml
+  elapsed_s: 9.207
+  success: true
+app-get-dex.yaml:
+  command: argocd --core --app-namespace argocd app get dex -o yaml
+  elapsed_s: 9.487
+  success: true
+app-get-external-dns.yaml:
+  command: argocd --core --app-namespace argocd app get external-dns -o yaml
+  elapsed_s: 9.292
+  success: true
+app-get-external-secrets-operator.yaml:
+  command: argocd --core --app-namespace argocd app get external-secrets-operator
+    -o yaml
+  elapsed_s: 9.137
+  success: true
+app-get-infra.yaml:
+  command: argocd --core --app-namespace argocd app get infra -o yaml
+  elapsed_s: 8.935
+  success: true
+app-get-kargo-project-codeai.yaml:
+  command: argocd --core --app-namespace argocd app get kargo-project-codeai -o yaml
+  elapsed_s: 8.939
+  success: true
+app-get-kargo-secrets.yaml:
+  command: argocd --core --app-namespace argocd app get kargo-secrets -o yaml
+  elapsed_s: 9.202
+  success: true
+app-get-kargo.yaml:
+  command: argocd --core --app-namespace argocd app get kargo -o yaml
+  elapsed_s: 9.167
+  success: true
+app-get-networking.yaml:
+  command: argocd --core --app-namespace argocd app get networking -o yaml
+  elapsed_s: 9.173
+  success: true
+app-get-standard-envtypes.yaml:
+  command: argocd --core --app-namespace argocd app get standard-envtypes -o yaml
+  elapsed_s: 9.312
+  success: true
+app-list.yaml:
+  command: argocd --core --app-namespace argocd app list -o yaml
+  elapsed_s: 5.792
+  success: true
+appset-get-app-of-apps.yaml:
+  command: argocd --core appset get app-of-apps -o yaml
+  elapsed_s: 5.736
+  success: true
+appset-get-codeai.yaml:
+  command: argocd --core appset get codeai -o yaml
+  elapsed_s: 5.736
+  success: true
+appset-list.yaml:
+  command: argocd --core appset list -o yaml
+  elapsed_s: 5.705
+  success: true
