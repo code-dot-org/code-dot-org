@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 <br>
 
-<div style="width:80%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+<div style="width:60%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
 <div style="border:1px solid #D9DDE3; border-radius:16px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 
@@ -71,7 +71,7 @@ K
 
 ## Evaulation Scenarios
 
-#### 👉 Click on the scenario to see how it does against the checklist.
+#### 👉 Click on the scenario to see how it does using the THINK framework.
 
 >#### **💬 Quick Reflection:** Take a moment to evaluate each scenario on your own before clicking to show the answer.
 
@@ -118,7 +118,9 @@ AI output replaces teacher decision-making.</p>
 Scenario B
 </div>
 <div style="font-size:14px; color:#555;">
-A 4th-grade teacher uses AI to draft an email to a parent about ongoing behavioral challenges. To get a more tailored response, they include specific details about recent incidents. The AI generates a clear, professional message, and the teacher sends it with only minor edits.</div>
+A 4th-grade teacher uses AI to draft an email to a parent about ongoing behavioral challenges. To get a more tailored response, they include specific details about recent incidents. The AI generates a clear, professional message, and the teacher sends it with only minor edits.<br><br>
+Afterward, the teacher realizes the tone feels impersonal and doesn’t reflect their relationship with the family. Additionally, they shared more detailed student information with the AI tool than necessary, raising concerns about privacy.
+</div>
 </summary>
 
 <div style="padding:18px; font-size:16px; line-height:1.5;">
