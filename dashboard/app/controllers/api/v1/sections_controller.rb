@@ -110,14 +110,20 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     section = ActiveRecord::Base.transaction do
       s = Section.create!(
-        user_id: current_user.id,
-        name: config[:section_name],
-        login_type: config[:login_type],
-        participant_type: config[:participant_type],
-        grades: config[:grades],
-        script_id: unit&.id,
-        course_id: unit_group&.id,
-        demo_type: demo_type,
+        {
+          user_id: current_user.id,
+          name: config[:section_name],
+          login_type: config[:login_type],
+          participant_type: config[:participant_type],
+          grades: config[:grades],
+          script_id: unit&.id,
+          course_id: unit_group&.id,
+          avatar_color: config[:avatar_color],
+          avatar_emoji: config[:avatar_emoji],
+          ai_chat_access_level: config[:ai_chat_access_level],
+          ai_tutor_enabled: config[:ai_tutor_enabled],
+          demo_type: demo_type,
+        }.compact
       )
 
       Policies::DemoSections.demo_student_ids(demo_type).each do |student_id|

@@ -11,7 +11,9 @@ class Policies::DemoSections
       grades: %w[K 1 2 3 4 5],
       unit_name: 'k5-ai-data-2024',
       unit_group_name: 'k5-ai-data-2024',
-      avatar: 'purple_cat',
+      # Purple cat: COLORS[2] = Purple, EMOJIS[10] = 😺
+      avatar_color: 2,
+      avatar_emoji: 10,
       ai_chat_access_level: 'essential_only',
       ai_tutor_enabled: false,
     }.freeze,
@@ -22,7 +24,9 @@ class Policies::DemoSections
       grades: %w[6 7 8],
       unit_name: 'csd3-2024',
       unit_group_name: 'csd-2024',
-      avatar: 'pink_fire',
+      # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
+      avatar_color: 1,
+      avatar_emoji: 0,
       ai_chat_access_level: 'enabled',
       ai_tutor_enabled: true,
     }.freeze,
@@ -33,7 +37,9 @@ class Policies::DemoSections
       grades: %w[9 10 11 12],
       unit_name: 'aif-foundations-2026',
       unit_group_name: 'ai-foundations-exploring-ai-and-cs-2026',
-      avatar: 'robot_green',
+      # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
+      avatar_color: 8,
+      avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
       ai_tutor_enabled: true,
     }.freeze,
