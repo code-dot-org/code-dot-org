@@ -13,8 +13,8 @@ import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
-import notifyBeforeLevelChange from '@cdo/apps/lab2/utils/notifyBeforeLevelChange';
 import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
+import requestLevelNavigation from '@cdo/apps/lab2/utils/requestLevelNavigation';
 import {
   processServerStudentProgress,
   getLevelResult,
@@ -368,7 +368,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const currentLevel = getCurrentLevel(getState());
 
     if (currentLevel?.usesLab2) {
-      const canProceed = notifyBeforeLevelChange(currentLevel.id, levelId);
+      const canProceed = await requestLevelNavigation();
       if (!canProceed) {
         return;
       }
