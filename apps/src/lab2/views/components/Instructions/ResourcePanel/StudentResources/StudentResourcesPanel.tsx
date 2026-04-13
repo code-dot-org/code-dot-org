@@ -56,7 +56,7 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
       <Typography variant="body3">{tour.displayName}</Typography>
       <IconButton
         size="extraSmall"
-        onClick={() => startTour(tour.name, 'level')}
+        onClick={() => startTour(tour.name, type)}
         aria-label={`Play ${tour.displayName}`}
         className={styles.tourPlayButton}
       >
@@ -77,11 +77,15 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
       </Typography>
       <div className={styles.tourList}>
         {levelTours.length > 0 && (
-          <Typography variant="overline3">For This Level</Typography>
+          <Typography variant="overline3" className={styles.subSectionHeading}>
+            For This Level
+          </Typography>
         )}
         {levelTours.map(tour => renderTourChip(tour, 'level'))}
         {otherAvailableTours.length > 0 && (
-          <Typography variant="overline3">All Walkthroughs</Typography>
+          <Typography variant="overline3" className={styles.subSectionHeading}>
+            All Walkthroughs
+          </Typography>
         )}
         {otherAvailableTours.map(tour => renderTourChip(tour, 'other'))}
       </div>
