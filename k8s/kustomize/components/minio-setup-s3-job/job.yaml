@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: minio-setup-s3-job
+  name: cdo-minio-setup-s3-job
   labels:
     app.kubernetes.io/component: minio-setup-s3-job
 spec:

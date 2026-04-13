@@ -79,7 +79,7 @@ export default function CodeReviewGroupsDialog({
             style={styles.successMessageContainer}
             id="uitest-code-review-groups-save-confirm"
           >
-            <i className={'fa fa-check fa-lg'} style={styles.checkIcon} />
+            <i className={'fa-solid fa-check fa-lg'} style={styles.checkIcon} />
             {i18n.codeReviewGroupsSaveSuccess()}
           </span>
         );

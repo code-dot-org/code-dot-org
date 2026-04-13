@@ -10,12 +10,47 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "Panel 1",
-        "imageUrl": "",
-        "key": "undefined-904541ec-483c-456e-aadb-a278e20e7bfe"
+        "text": "You've learned a lot about how to work with AI.\nHow to describe what you want. How to evaluate what it gives you. How to push back when it misses.\nIt turns out, different people put those skills together in different ways.",
+        "imageUrl": "https://images.code.org/74e2ce3e5b4de8c3b993428275ed80f4-panel-1.png ",
+        "key": "undefined-904541ec-483c-456e-aadb-a278e20e7bfe",
+        "layout": "text-top-left",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Jordan always starts their work on their own, using AI tools to help catch mistakes and debug.\nWhen something looks off, they highlight the specific HTML tag that's causing the problem and ask AI to debug it.\nFor Jordan, knowing what's on the page means they always know exactly where to look.",
+        "imageUrl": "https://images.code.org/8a82a5728586de13892ac10d70fda287-panel-2.png",
+        "key": "hoai-web-design-v2-14-76fc3ab7-05e3-4e8e-bd59-8054a8991375",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "Mia works with AI the whole way through - but in small steps.\nShe brainstorms ideas with AI before building it together. She writes some things, it writes others - they both make suggestions.\nSince they speak the same language, it doesn’t take long to turn her vision into reality.",
+        "imageUrl": "https://images.code.org/09dd1809537286248874511389ae5a07-panel-3.png ",
+        "key": "hoai-web-design-v2-14-2b827bfb-a536-4448-9f8f-d6af2c745213",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Dev spends a lot of time on his vision document before asking AI to build anything.\nIt’s not just ideas anymore - it's specific: fonts, colors, layout structure, and how each section should behave.\nFor Dev, a detailed vision with clear language means the first draft is already close.\n",
+        "imageUrl": "https://images.code.org/21c8e0eb92f232f5d0c5e34c40a6472a-panel-4.png",
+        "key": "hoai-web-design-v2-14-d1d56243-50ce-49b7-ae2e-7969a58b69fa",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "None of these approaches is the right one. They're just different.\nYou've practiced all three - maybe without even realizing it.\nNow it's your turn. How do you want to work with AI?\n",
+        "imageUrl": "https://images.code.org/4f0ecba5d54802ad2160c6cc7edc5203-panel-5.png ",
+        "key": "hoai-web-design-v2-14-1bb72fe2-08f4-4271-8f64-bc93e95cb5bd",
+        "layout": "text-top-left",
+        "typing": true,
+        "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:39:25.425+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-panel-template\\\"\"],\"cloned_from\":\"hoai-web-design-panel-template\"},{\"changed_at\":\"2026-03-18 21:39:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:39:25.425+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-panel-template\\\"\"],\"cloned_from\":\"hoai-web-design-panel-template\"},{\"changed_at\":\"2026-03-18 21:39:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 04:03:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

@@ -11,73 +11,30 @@ const LABS_WITH_IMAGE_MODERATION = [
   'gamelab',
   'spritelab',
   'poetry',
+  'game_design',
 ];
 
 const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 
-// Azure Content Moderator requires both dimensions to be at least this size.
-const MIN_MODERATION_DIMENSION = 128;
+// Severity level blocked by category for AI Content Safety.
+// If any category's severity level is greater than or equal to the severity level blocked value,
+// the image is flagged. If all categories' severity levels are less than the severity level blocked value,
+// the image is 'ok'
+// The severity value increases with the severity of the input content:
+// 0 (safe), 2 (low), 4 (medium), 6 (high)
+const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
+  Hate: 2,
+  SelfHarm: 2,
+  Sexual: 2,
+  Violence: 2,
+};
 
 interface AnalyticsData {
   uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
+  assetUrl?: string;
 }
-
-/**
- * Returns a scaled-up PNG copy of the file if either dimension is below
- * MIN_MODERATION_DIMENSION, otherwise returns the original file unchanged.
- * The copy is only used for the moderation API call — callers still upload
- * the original file.
- */
-const scaleFileForModeration = (file: File): Promise<File> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const img = new Image();
-      img.onload = () => {
-        const {width, height} = img;
-        if (
-          width >= MIN_MODERATION_DIMENSION &&
-          height >= MIN_MODERATION_DIMENSION
-        ) {
-          resolve(file);
-          return;
-        }
-        const scale = Math.max(
-          MIN_MODERATION_DIMENSION / width,
-          MIN_MODERATION_DIMENSION / height
-        );
-        const canvas = document.createElement('canvas');
-        canvas.width = Math.ceil(width * scale);
-        canvas.height = Math.ceil(height * scale);
-        const ctx = canvas.getContext('2d')!;
-        if (!ctx) {
-          reject(
-            new Error(
-              'Unable to get 2D canvas context for image moderation scaling'
-            )
-          );
-          return;
-        }
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        canvas.toBlob(blob => {
-          if (!blob) {
-            reject(new Error('Canvas toBlob returned null'));
-            return;
-          }
-          resolve(
-            new File([blob], 'moderation-scaled.png', {type: 'image/png'})
-          );
-        }, 'image/png');
-      };
-      img.onerror = reject;
-      img.src = reader.result as string;
-    };
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-};
 
 export const moderateImage = async (
   file: File,
@@ -86,14 +43,15 @@ export const moderateImage = async (
     uploaderType = 'n/a',
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
+    assetUrl,
   }: AnalyticsData
-): Promise<'ok' | 'flagged' | 'skipped'> => {
+): Promise<'safe' | 'flagged' | 'error'> => {
   const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
     !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
   ) {
-    return 'skipped';
+    return 'error';
   }
   const dimensions = [
     {name: 'UploaderType', value: uploaderType},
@@ -106,28 +64,40 @@ export const moderateImage = async (
     levelPath: window.location.pathname,
   });
   try {
-    const fileToModerate = await scaleFileForModeration(file);
-    const response = await HttpClient.post(
-      `/v3/images/moderate`,
-      fileToModerate,
-      true,
-      {'Content-Type': fileToModerate.type || 'application/octet-stream'}
-    );
+    const response = await HttpClient.post('/v3/images/moderate', file, true, {
+      'Content-Type': file.type || 'application/octet-stream',
+    });
     const json = await response.json();
-    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
-    if (json?.rating === 'everyone' || json?.rating === 'unknown') {
-      return 'ok';
+    if (json === null) {
+      return 'error';
     }
+
+    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
+
+    const categories = json?.categoriesAnalysis;
+    if (
+      categories?.every(
+        (category: {severity: number; category: string}) =>
+          category?.severity <
+          CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
+      )
+    ) {
+      return 'safe';
+    }
+
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
     analyticsReporter.sendEvent(flaggedEvent, {
       UploaderType: uploaderType,
       appName,
       levelPath: window.location.pathname,
+      moderationService: 'AI Content Safety',
+      moderationResult: JSON.stringify(json),
+      assetUrl: assetUrl ? `${window.location.origin}${assetUrl}` : undefined,
     });
     return 'flagged';
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
-    return 'skipped';
+    return 'error';
   }
 };

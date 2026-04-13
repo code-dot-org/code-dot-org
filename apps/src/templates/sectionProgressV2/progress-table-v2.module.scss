@@ -500,7 +500,8 @@ $level-cell-width: 52;
   padding-inline-start: 12px;
   padding-inline-end: 0.5em;
   text-align: start;
-  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   white-space: nowrap;
 
@@ -509,7 +510,14 @@ $level-cell-width: 52;
     border-right: 0 !important;
   }
 
+  &Text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
   &Caret {
+    flex-shrink: 0;
     margin-inline-end: 12px;
   }
 }

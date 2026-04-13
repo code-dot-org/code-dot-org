@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: dashboard-job-setup-db
+  name: cdo-dashboard-job-setup-db
 spec:
   template:
     spec:

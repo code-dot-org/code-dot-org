@@ -540,7 +540,7 @@ unless options[:just_save_prompt]
   end
   ) do |object|
     # The generated path
-    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+    original_path = "#{object[:pack]}-#{object[:adlib_option]}-#{object[:adlibs].join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt"
     file_path = File.join(output_path, original_path)
     unless File.exist?(file_path)
       puts "Warning: #{file_path} does not exist"
@@ -551,7 +551,7 @@ unless options[:just_save_prompt]
 
     object[:adlibs].permutation(object[:adlibs].length).each do |adlibs|
       # All 'same' permutations get uploaded from the original generated path
-      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ""}-#{object[:variant].to_s.rjust(2, '0')}.txt"
+      path = "#{object[:pack]}-#{object[:adlib_option]}-#{adlibs.join('-')}#{object[:types] && options[:use_full_layers] ? "-#{object[:length_word] || object[:length]}" : ''}-#{object[:variant].to_s.rjust(2, '0')}.txt"
 
       if error
         puts "Not uploading: #{path}\n        Error: #{error}"

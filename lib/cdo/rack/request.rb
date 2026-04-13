@@ -15,7 +15,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
+      super || TRUSTED_PROXIES.any? do |proxy|
         proxy.include?(ip)
       rescue
         false
@@ -32,6 +32,11 @@ module Cdo
       locale.split('-').first
     end
 
+    # The requested locale, not the effective rendering locale.
+    #
+    # @note The effective rendering locale is resolved by the I18n backend and is available via `I18n.locale`
+    # @see `VarnishEnvironment` middleware, defined in `/shared/middleware/varnish_environment.rb`
+    # @return [String] the requested locale, or `Cdo::I18n::DEFAULT_LOCALE` when no locale is set
     def locale
       env[LOCALE_ENV] || Cdo::I18n::DEFAULT_LOCALE
     end
@@ -101,6 +106,10 @@ module Cdo
       env[:splat_path_info]
     end
 
+    def user
+      env['warden']&.user
+    end
+
     def user_id
       @user_id ||= user_id_from_session_store
     end
@@ -142,7 +151,7 @@ module Cdo
     end
 
     def ge_region
-      RequestStore.store[Cdo::GlobalEdition::REGION_KEY]
+      Cdo::GlobalEdition.current_region
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so

@@ -207,9 +207,9 @@ crowdin_project_test_mapping:
   codeorg-restricted: codeorg-restricted-test
   hour-of-code: hour-of-code-test
 
-# Azure Content Moderator
-azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
-azure_content_moderation_key:
+# Azure AI Content Safety
+azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
+azure_ai_content_safety_key: !Secret
 
 # Credentials for SauceLabs.com, used for running selenium tests against
 # multiple browsers
@@ -258,7 +258,12 @@ enable_opentelemetry: false
 
 # Sentry trace and error reporting.
 enable_sentry: false
-sentry_dsn: !Secret
+# DSN for the Dashboard Rails backend Sentry project.
+dashboard_sentry_dsn: !Secret
+# DSN for the apps/ webpack bundle Sentry project.
+frontend_apps_sentry_dsn: !Secret
+# DSN for the frontend/apps/studio Vite app Sentry project.
+frontend_studio_sentry_dsn: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -438,7 +443,7 @@ dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
-dashboard_workers: 8
+dashboard_workers:
 dashboard_web_server_name: dashboard
 dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
@@ -552,20 +557,14 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
@@ -590,22 +589,18 @@ db_credential_reader: !StackSecret
 db_proxy_admin:
 
 db_writer: !Secret
-reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
 pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
-reporting_db_reader: <%=reporting_db_writer%>
 
 # Default DB-specific endpoints to base endpoint plus db name.
 dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
 pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
 pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
-pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
-pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
@@ -722,3 +717,6 @@ contentful_cs_for_all_api_url: preview.contentful.com
 
 # HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
 hoc_tracking_enabled: true
+
+# Demo student IDs for demo sections. See Policies::DemoSections for usage.
+demo_student_ids:

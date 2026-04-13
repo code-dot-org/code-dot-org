@@ -25,7 +25,7 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "long_instructions": "## Refine and Expand\r\n- Write targeted fixes (_e.g., “Place nav at top with links labeled Home, About, Contact”_).\r\n- Use styling to make sure the look and feel match your brand identity.\r\n- Apply POUR checklist from of your unit guide to ensure accessibility.\r\n- Save **Version 2**\r\n",
+    "long_instructions": "## Refine and Expand\r\n\r\n1. Prompt the AI to make targeted fixes and improvements.\r\n2. Apply styling to make sure the look and feel match your brand identity.\r\n3. Ensure accessibility using the POUR checklist.\r\n\r\n:::details [POUR Checklist]\r\n\r\n**Perceivable** \r\n- Text stands out clearly from the background (no low-contrast colors)\r\n- Images, videos, or icons have alt text or captions that describe them\r\n- Important information isn’t shown by color alone (don’t rely only on red = error, green = good).\r\n\r\n**Operable** \r\n- Everything can be used with a keyboard (no mouse required)\r\n- Links, buttons, and menus are easy to find and click or tap.\r\n- There’s enough time to read or complete tasks—nothing moves or disappears too fast\r\n\r\n**Understandable** \r\n- Text is written in clear, simple language.\r\n- Navigation works the same way on every page (consistent menus/buttons).\r\n- Error messages explain what went wrong and how to fix it.\r\n\r\n**Robust**\r\n- Can the website work well with different devices and tools (like screen readers)?\r\n- The site loads correctly on phones, tablets, and computers.\r\n- HTML is clean and valid so assistive tech can read it.\r\n- Interactive parts (like forms or buttons) still work with assistive technologies.\r\n\r\n:::",
     "project_template_level_name": "ai-generated-design-lesson13-weblab-template-test_2026",
     "name_suffix": "_2026",
     "ai_tutor_prompt_settings": {
@@ -41,8 +41,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.956+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3_2025\"},{\"changed_at\":\"2026-03-20 18:41:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.956+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3_2025\"},{\"changed_at\":\"2026-03-20 18:41:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:39:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

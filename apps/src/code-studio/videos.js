@@ -209,7 +209,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
   });
 
   var download = $('<a/>')
-    .append($('<i class="fa fa-download" />'))
+    .append($('<i class="fa-solid fa-download" />'))
     .addClass('download-video btn')
     .attr('aria-label', 'Download Video')
     .css('float', 'left')
@@ -535,7 +535,10 @@ function showFallbackPlayerCaptionLink(inDialog) {
   if (mountPoint) {
     createReactRoot(
       <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint
+      mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

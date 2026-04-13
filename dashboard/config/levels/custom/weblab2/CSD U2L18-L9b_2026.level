@@ -1,0 +1,141 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T20:51:12.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Image Emphasis",
+    "long_instructions": "<img src=\"https://images.code.org/e19b6fd29ec3cad6dd2a99669ff8a145-image-1707950878809.gif\" style=\"width:300px; float:right;\">\r\n\r\n# Image Emphasis with Hover\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can code our images with the \"hover\" pseudo-class to bring attention to them.\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add a rule set to style the images with the \"hover\" pseudo-class. \r\n   - Add the following properties:\r\n      - Increased width of the image\r\n      - \"fushia\" border color\r\n      - A defined `border-width` to at least 10px\r\n   - Add any other properties you think will make the image stand out and bring a user's attention to it!\r\n3. Hover over the the images to see what happens!\r\n\r\n**Don't forget to click <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> to see if everything is working as expected.**",
+    "bubble_choice_description": "Learn how to use the \"hover\" pseudo-class to bring a user's attention to an image!",
+    "thumbnail_url": "https://images.code.org/b94276893ae107d7b2bc6a900627c778-imageHover.gif",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Mystical Creatures and Where to Find Them</h1>\n    \n    <!-- info content -->\n    <p>Embark on a mythical journey and uncover the secrets of creatures from legends around the world. From the depths of the ocean where the Kraken lurks to the forests home to the elusive Bigfoot, click on each image to discover the stories that have captivated human imagination for centuries.</p>\n    \n    <!-- hyperlinked image gallery -->\n    <div class=\"images\">\n      <a href=\"https://kids.kiddle.co/Bigfoot\"><img src=\"bigfoot.jpg\" alt=\"bigfoot\"></a>\n      <a href=\"https://kids.kiddle.co/Kraken\"><img src=\"kraken.png\" alt=\"kraken\"></a>\n      <a href=\"https://kids.kiddle.co/Phoenix_(mythology)\"><img src=\"phoenix.png\" alt=\"a phoenix\"></a>\n      <a href=\"https://kids.kiddle.co/Dragon\"><img src=\"dragon.png\" alt=\"dragon\"></a>\n      <a href=\"https://kids.kiddle.co/Griffin\"><img src=\"griffin.png\" alt=\"griffin\"></a>\n      <a href=\"https://kids.kiddle.co/Unicorn\"><img src=\"unicorn.png\" alt=\"unicorn\"></a>\n    </div>\n    \n\n\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule set to style the images with the hover pseudo-class */\n\n\n\n/* basic style for all text */\nbody {\n  font-family: Verdana;\n  text-align: center;\n  font-weight: bold;\n  background-color: azure;\n}\n\n/* flex layout for images in container */\n.images {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  align-content: center;\n}\n\n/* basic image style */\nimg {\n  width: 250px;\n  border-style: inset;\n  border-color:darkmagenta;\n  border-radius: 5px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "bigfoot.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/27e73257-875d-466b-aedd-52e547a559fe.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "unicorn.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/973a4e2b-48d8-4c97-abeb-47feb7818c98.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "kraken.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/0e4bdf94-3aef-43b9-ba7d-68616ed3e3eb.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "phoenix.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/829f75be-8f97-4dd2-a850-2f66ef139105.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "dragon.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/a9b4b24d-4c76-4bfd-b7cc-be79ee375226.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "griffin.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L9b-2025/uuid/adc43bc2-68c7-42c0-bbb7-78a6c9cd7264.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nCHwX9VU=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:51:12.173+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9b-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9b-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -64,7 +64,7 @@ module AiDiffBedrockHelper
   def populate_new_session_messages(messages, input)
     new_input_text = "This is a continuation of a previous conversation. The previous messages are:"
     messages.each do |msg|
-      new_input_text << "\n\n#{msg.user? ? "User" : "Assistant"}: #{msg.raw_content}"
+      new_input_text << "\n\n#{msg.user? ? 'User' : 'Assistant'}: #{msg.raw_content}"
     end
     new_input_text << "\n\n\n**The current message that you should respond to is:**\nUser: #{input}"
   end
@@ -247,7 +247,7 @@ module AiDiffBedrockHelper
     if reference_urls.any?
       text << "\n\n**See also:**"
       reference_urls.each_with_index do |url, index|
-        text << "\n- [Link #{index+1}](#{url})"
+        text << "\n- [Link #{index + 1}](#{url})"
       end
     end
     {

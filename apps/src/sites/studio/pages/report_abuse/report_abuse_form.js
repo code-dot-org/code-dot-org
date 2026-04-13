@@ -19,6 +19,9 @@ $(document).ready(function () {
     : document.referrer;
   createReactRoot(
     <ReportAbuseForm {...props} />,
-    document.getElementById('report-abuse-form')
+    document.getElementById('report-abuse-form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

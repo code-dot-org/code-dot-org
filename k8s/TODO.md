@@ -34,25 +34,76 @@ include prometheus as a helm chart dependency??
 
 - Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
 - set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
+- Install `cert-manager` as a platform Argo app, then enable Kargo admission
+  webhooks. Kargo admission webhooks for resource validation/defaulting are
+  currently disabled because they require TLS and CA wiring for the internal
+  webhook server. Once `cert-manager` is installed and healthy, enable
+  `webhooks.register` and `webhooksServer.enabled`. This is separate from
+  `externalWebhooksServer.enabled`, which is already on for external
+  GitHub/package/push webhooks.
 
 ## Tofu EKS Cluster
 
-See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
+See `k8s-gitops/bootstrap/codeai-k8s/TODO.argocd.diskfill.bug.md` for the Argo CD
 repo-server disk-fill investigation notes.
 
-In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
+Manage AWS Load Balancer Controller CRDs explicitly in `k8s-gitops/bootstrap/codeai-k8s/cluster/`.
+Helm install creates them, but Helm upgrade does not update them, and we already hit stale
+live CRDs missing newer `IngressClassParams` fields like `certificateArn`, `targetType`,
+and `sslRedirectPort`.
+
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
 
-### Manage ArgoCD with ArgoCD
+### Argo CD / Dex first-boot SSO
 
-Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
-`ServerSideApply=true` requirement for self-management:
-<https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
+After a fresh `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/` deploy, Dex SSO to
+`https://argocd.k8s.code.org` came up broken until we manually ran:
+
+`kubectl rollout restart deployment/argocd-server -n argocd`
+
+Symptom:
+
+`failed to query provider "": Get "/.well-known/openid-configuration": unsupported protocol scheme ""`
+
+What happened:
+
+- Module/chart: `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd`
+- Argo CD now gets `dex.argocd.clientSecret` by ESO merging into `argocd-secret`
+  from `templates/argocd-secret-external-secret.yaml`
+- Pre-reorg, the same key was present at first boot via Argo chart
+  `configs.secret.extra`
+- On first boot, `argocd-server` started once with empty SSO config, then later
+  noticed `oidc.config` and restarted, but `/auth/login` still kept using an
+  empty issuer until a clean pod restart
+
+Observed live objects:
+
+- `ConfigMap/argocd-cm`: correct `oidc.config`
+- `Secret/argocd-secret`: correct `dex.argocd.clientSecret`
+- `Deployment/argocd-server`: login still broken until restarted
+
+Most likely fix:
+
+- Restore pre-reorg ownership for `dex.argocd.clientSecret` in the Argo chart
+  itself, likely via `configs.secret.extra`, and remove the ESO merge into
+  `argocd-secret`
+
+If we keep the ESO merge design, verify whether Argo CD has a bug in the late
+OIDC-config reload path and whether there is a chart-level way to block
+`argocd-server` startup until `argocd-secret` already has the Dex client secret.
+
+### Argo CD controller sizing
+
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd/values.yaml`,
+evaluate proper CPU and memory request for `controller`. The current proposed `controller.resources` block was copied over after
+Fargate OOMs, but `argocd-application-controller` is a different workload and
+needs its own CPU / RAM profiling before we lock in requests / limits.
 
 ### Dex
 
-In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+In `k8s-gitops/bootstrap/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
 
 ## Helm / Kustomize parity

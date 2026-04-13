@@ -206,7 +206,7 @@ class DSLDefined < Level
     if params[:dsl_text].present?
       self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params, name)
     else
-      super(params)
+      super
     end
   end
 
