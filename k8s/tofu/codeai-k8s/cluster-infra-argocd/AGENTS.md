@@ -15,7 +15,7 @@ re-read `AGENTS.md` and `CHECKLIST.md` and continue on.
   - `logs/cluster-<timestamp>-<label>.log`
   - `cluster.log`
   - `logs/argo-trace-<label>-<timestamp>.log.md`
-- When starting a logged session, print the exact `tail -n +1 -f ...` commands for all three logs in chat.
+- When running `bin/log-cluster-events start`, ALWAYS print the verbatim `tail -n +1 -f ...` commands for all three logs to the chat with user once they are sent to you.
 - Stop the sidecar watchers with `bin/log-cluster-events stop`.
 
 ## Freeze Argo
