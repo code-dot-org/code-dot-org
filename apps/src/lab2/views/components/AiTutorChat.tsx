@@ -36,6 +36,7 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
+  enableTutorVideos?: boolean;
   isLessonDeepDive?: boolean;
   lessonId?: number;
 }
@@ -50,6 +51,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
+  enableTutorVideos,
   isLessonDeepDive = false,
   lessonId,
 }) => {
@@ -63,6 +65,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
+    enableTutorVideos,
   });
 
   const chatButtons = useMemo(() => {
