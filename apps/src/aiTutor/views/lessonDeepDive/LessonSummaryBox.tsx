@@ -2,15 +2,18 @@ import {Typography} from '@mui/material';
 import React, {FC} from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {LessonStudentProfile} from '@cdo/apps/aiTutor/lessonStudentProfile';
 
 interface LessonSummaryBoxProps {
   lessonName: string;
   lessonSummary: string;
+  studentProfile: LessonStudentProfile | null;
 }
 
 const LessonSummaryBox: FC<LessonSummaryBoxProps> = ({
   lessonName,
   lessonSummary,
+  studentProfile: _studentProfile,
 }) => (
   <div>
     <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
