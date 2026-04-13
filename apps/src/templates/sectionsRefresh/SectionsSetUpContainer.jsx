@@ -1,5 +1,6 @@
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
@@ -23,6 +24,11 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {
+  COLORS,
+  EMOJIS,
+} from '../studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
@@ -53,6 +59,8 @@ const useSections = section => {
             lessonExtras: true,
             aiTutorEnabled: false,
             course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+            avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
+            avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
           },
         ]
   );
