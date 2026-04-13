@@ -26,7 +26,13 @@ class ConcurrentFakeCommandRunner
       @max_in_flight = [@max_in_flight, @in_flight].max
     end
 
-    sleep(@delays.fetch(command, 0))
+    delay = @delays.fetch(command, 0)
+    if timeout_seconds && delay > timeout_seconds
+      sleep(timeout_seconds)
+      raise Timeout::Error
+    end
+
+    sleep(delay)
     raise @errors.fetch(command) if @errors.key?(command)
 
     @outputs.fetch(command)
@@ -190,6 +196,51 @@ class ArgoTraceWave2EnrichmentTest < Minitest::Test
     assert_equal :command_failed, enrichment[:appsets]["codeai"][:error][:message]
     assert_equal "argocd --core appset get codeai -o yaml", enrichment[:appsets]["codeai"][:error][:command]
     assert_equal "argocd said no", enrichment[:appsets]["codeai"][:error][:stderr]
+  end
+
+  def test_falls_back_to_wave_1_objects_when_wave_2_get_fails
+    app_inventory = {
+      "codeai" => {
+        raw: {
+          "metadata" => {"name" => "codeai"},
+          "status" => {
+            "sync" => {"status" => "OutOfSync"},
+            "health" => {"status" => "Healthy"},
+          },
+        },
+      },
+    }
+    appset_inventory = {
+      "codeai" => {
+        raw: {
+          "metadata" => {"name" => "codeai"},
+          "status" => {
+            "conditions" => [{"type" => "ResourcesUpToDate", "status" => "True"}],
+          },
+        },
+      },
+    }
+    command_runner = ConcurrentFakeCommandRunner.new(
+      outputs: {},
+      errors: {
+        ArgoTrace.app_get_command("codeai") => RuntimeError.new("helm core mode blew up"),
+        ArgoTrace.appset_get_command("codeai") => RuntimeError.new("permission denied"),
+      }
+    )
+
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
+      command_runner: command_runner,
+      appset_names: %w[codeai],
+      app_names: %w[codeai],
+      app_inventory: app_inventory,
+      appset_inventory: appset_inventory,
+      max_parallel_calls: 2
+    )
+
+    assert_equal "codeai", enrichment[:apps]["codeai"][:raw].dig("metadata", "name")
+    assert_nil enrichment[:apps]["codeai"][:error]
+    assert_equal "codeai", enrichment[:appsets]["codeai"][:raw].dig("metadata", "name")
+    assert_nil enrichment[:appsets]["codeai"][:error]
   end
 
   def test_total_snapshot_timeout_marks_unfinished_jobs

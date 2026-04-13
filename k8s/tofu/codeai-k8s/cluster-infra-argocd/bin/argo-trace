@@ -400,18 +400,20 @@ module ArgoTrace
     }
   end
 
-  def wave_2_app_details_jobs(appset_names:, app_names:)
+  def wave_2_app_details_jobs(appset_names:, app_names:, app_inventory: {}, appset_inventory: {})
     appset_names.map do |name|
       {
         type: :appset,
         name: name,
         command: appset_get_command(name),
+        fallback_raw: appset_inventory[name]&.fetch(:raw, nil),
       }
     end + app_names.map do |name|
       {
         type: :app,
         name: name,
         command: app_get_command(name),
+        fallback_raw: app_inventory[name]&.fetch(:raw, nil),
       }
     end
   end
@@ -452,6 +454,9 @@ module ArgoTrace
       error: :timeout
     )
   rescue StandardError => exception
+    fallback_raw = job[:fallback_raw]
+    return success_result(job, raw: fallback_raw) if fallback_raw
+
     error_result(
       job,
       stderr: exception.message,
@@ -523,8 +528,13 @@ module ArgoTrace
     {results: results, timed_out: timed_out}
   end
 
-  def fetch_wave_2_app_details(command_runner:, appset_names:, app_names:, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
-    jobs = wave_2_app_details_jobs(appset_names: appset_names, app_names: app_names)
+  def fetch_wave_2_app_details(command_runner:, appset_names:, app_names:, app_inventory: {}, appset_inventory: {}, max_parallel_calls: DEFAULT_MAX_PARALLEL_CALLS, per_call_timeout_seconds: DEFAULT_PER_CALL_TIMEOUT_SECONDS, total_snapshot_timeout_seconds: DEFAULT_TOTAL_SNAPSHOT_TIMEOUT_SECONDS, monotonic_now: -> {Process.clock_gettime(Process::CLOCK_MONOTONIC)})
+    jobs = wave_2_app_details_jobs(
+      appset_names: appset_names,
+      app_names: app_names,
+      app_inventory: app_inventory,
+      appset_inventory: appset_inventory
+    )
     fetch_results = fetch_jobs_in_parallel(
       command_runner: command_runner,
       jobs: jobs,
@@ -1871,7 +1881,9 @@ module ArgoTrace
     enrichment = fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: appset_names,
-      app_names: app_names
+      app_names: app_names,
+      app_inventory: inventory.fetch(:app_inventory),
+      appset_inventory: inventory.fetch(:appset_inventory)
     )
     tree = build_tree(
       root_inventory: inventory.fetch(:root_inventory),
