@@ -1,13 +1,21 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
-import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
+import React, {
+  useState,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from 'react';
 
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
+import {registerLevelNavigationBlocker} from '@cdo/apps/lab2/utils/levelNavigationBlocker';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import getRejectNotification from '@cdo/apps/weblab2/helpers/getRejectNotification';
@@ -40,6 +48,33 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   );
 
   const dispatch = useAppDispatch();
+  const dialogControl = useDialogControl();
+  const unregisterNavigationBlockerRef = useRef<(() => void) | null>(null);
+  const clearNavigationBlocker = useCallback(() => {
+    unregisterNavigationBlockerRef.current?.();
+    unregisterNavigationBlockerRef.current = null;
+  }, []);
+
+  useEffect(() => {
+    unregisterNavigationBlockerRef.current = registerLevelNavigationBlocker(
+      async () => {
+        if (!dialogControl) {
+          return true;
+        }
+
+        const {type} = await dialogControl.showDialog({
+          type: DialogType.GenericConfirmation,
+          title: 'Leave this level?',
+          message:
+            'You have pending AI Tutor changes. If you leave this level now, those changes will be lost. Do you want to leave this level?',
+          confirmText: 'Leave level',
+        });
+
+        return type === 'confirm';
+      }
+    );
+    return clearNavigationBlocker;
+  }, [clearNavigationBlocker, dialogControl]);
 
   // Warn the user if they attempt to reload the page before accepting or
   // rejecting the proposed updates.
@@ -83,6 +118,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     setIsSaving(true);
     try {
       await dispatch(acceptAiTutorVersion({files, commitDescription}));
+      clearNavigationBlocker();
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -93,11 +129,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     } finally {
       setIsSaving(false);
     }
-  }, [dispatch, files, commitDescription, isSaving]);
+  }, [dispatch, files, commitDescription, isSaving, clearNavigationBlocker]);
 
-  const handleReject = useCallback(() => {
-    dispatch(rejectAiTutorVersion(files));
-  }, [dispatch, files]);
+  const handleReject = useCallback(async () => {
+    await dispatch(rejectAiTutorVersion(files));
+    clearNavigationBlocker();
+  }, [dispatch, files, clearNavigationBlocker]);
 
   // Scroll to the bottom of the page when switching to accept mode,
   // so that the commit description input and save button are visible to the user.

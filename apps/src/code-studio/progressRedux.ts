@@ -13,6 +13,7 @@ import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+import {shouldAllowLevelNavigation} from '@cdo/apps/lab2/utils/levelNavigationBlocker';
 import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
 import {
   processServerStudentProgress,
@@ -361,6 +362,9 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     }
 
     const currentLevel = getCurrentLevel(getState());
+    if (!(await shouldAllowLevelNavigation())) {
+      return;
+    }
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       // If the requested level is the same as the current level, don't do anything.
