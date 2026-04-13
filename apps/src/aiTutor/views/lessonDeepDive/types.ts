@@ -6,6 +6,12 @@ export type AssessmentQuestionResult = {
   evaluation?: string;
 };
 
+export type LessonProgressCounts = {
+  levelsTotalCount: number;
+  levelsCompletedCount: number;
+  levelsCorrectCount: number;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
@@ -13,6 +19,7 @@ export type LessonDeepDiveData = {
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
+  progressCounts: LessonProgressCounts;
 };
 
 export type PracticeProblem = {

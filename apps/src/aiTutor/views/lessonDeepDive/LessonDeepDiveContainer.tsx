@@ -69,6 +69,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <LessonSummaryBox
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
+            progressCounts={lessonDeepDiveData.progressCounts}
           />
         );
       case 'reflection':
