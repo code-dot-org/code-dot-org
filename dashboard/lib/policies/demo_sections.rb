@@ -1,32 +1,41 @@
 # frozen_string_literal: true
 
 class Policies::DemoSections
-  DEMO_TYPES = %i[aif csd csf].freeze
+  DEMO_TYPES = %i[high middle elementary].freeze
 
   DEMO_SECTION_PRESETS = {
-    aif: {
-      section_name: 'My first AIF section',
-      login_type: 'email',
-      participant_type: 'student',
-      grades: ['9', '10'],
-      unit_name: 'aif2-2025',
-      unit_group_name: 'artificial-intelligence-foundations-2025',
-    }.freeze,
-    csd: {
-      section_name: 'My first CSD section',
-      login_type: 'word',
-      participant_type: 'student',
-      grades: ['7', '8'],
-      unit_name: 'csd1-2024',
-      unit_group_name: 'csd-2024',
-    }.freeze,
-    csf: {
-      section_name: 'My first CSF section',
+    elementary: {
+      section_name: 'Elementary School Practice Section',
       login_type: 'picture',
       participant_type: 'student',
-      grades: ['3', '4'],
-      unit_name: 'coursed-2024',
-      unit_group_name: 'coursed-2024',
+      grades: %w[K 1 2 3 4 5],
+      unit_name: 'k5-ai-data-2024',
+      unit_group_name: 'k5-ai-data-2024',
+      avatar: 'purple_cat',
+      ai_chat_access_level: 'essential_only',
+      ai_tutor_enabled: false,
+    }.freeze,
+    middle: {
+      section_name: 'Middle School Practice Section',
+      login_type: 'word',
+      participant_type: 'student',
+      grades: %w[6 7 8],
+      unit_name: 'csd3-2024',
+      unit_group_name: 'csd-2024',
+      avatar: 'pink_fire',
+      ai_chat_access_level: 'enabled',
+      ai_tutor_enabled: true,
+    }.freeze,
+    high: {
+      section_name: 'High School Practice Section',
+      login_type: 'email',
+      participant_type: 'student',
+      grades: %w[9 10 11 12],
+      unit_name: 'aif-foundations-2026',
+      unit_group_name: 'ai-foundations-exploring-ai-and-cs-2026',
+      avatar: 'robot_green',
+      ai_chat_access_level: 'enabled',
+      ai_tutor_enabled: true,
     }.freeze,
   }.freeze
 
