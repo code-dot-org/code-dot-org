@@ -4,7 +4,7 @@
 
 ### Purpose
 
-`argo-trace` is a new tracer. It is separate from `bin/argo-trace-old`.
+`argo-trace` is the tracer.
 
 It exists to answer one question well:
 
@@ -73,7 +73,7 @@ This tool should make the same move generically:
 2. Use `kubectl` only after the Argo trace has already landed on a concrete
    non-app `status.resources[]` member.
 3. Keep `kubectl` use bounded and parallel by default.
-4. Share no code with `bin/argo-trace-old`.
+4. Keep the implementation standalone.
 5. Optimize from measured call costs, not guesswork.
 6. Prefer broad batched calls, then maximally parallel enrichment calls.
 7. Do not add complexity not proven to be needed.
@@ -194,7 +194,7 @@ Required commands and flags:
 - `argocd --core --app-namespace argocd app get NAME -o yaml`
   - Application detail and resource status
 
-The polling behavior should match `bin/argo-trace-old` in spirit:
+The polling behavior should be:
 
 - default: one-shot, no polling
 - polling is opt-in
@@ -209,12 +209,11 @@ The implementation should also add:
 
 - `bin/watch-argo-trace`
 
-That wrapper can initially be a near-copy of the existing
-`bin/watch-argo-trace-old`, pointed at `bin/argo-trace`.
+That wrapper should invoke `bin/argo-trace`.
 
 ### Soft-wrap behavior
 
-Carry forward the wrap controls from `bin/argo-trace-old`:
+The wrap controls are:
 
 - `--soft-wrap WIDTH`
 - `--no-wrap`
@@ -1321,8 +1320,6 @@ dataset and must stay aligned with the executable path.
 
 This sample is normative for formatting shape, not for exact live field values.
 
-The point is not byte-for-byte identity with `bin/argo-trace-old`.
-
 The point is:
 
 - same rough tree
@@ -1359,8 +1356,8 @@ First version should support:
 
 It should not support:
 
-1. old `argo-trace-old` Kubernetes owner-ref expansion
-2. old `argo-trace-old` Crossplane graph walking
+1. broad Kubernetes owner-ref expansion
+2. broad Crossplane graph walking
 3. synthetic blocker diagnosis
 4. recursive wave-3 descent
 
@@ -1375,7 +1372,7 @@ Crossplane-specific handling is limited to this:
 
 - Put the new tool at:
   - `bin/argo-trace`
-- Do not import helper code from `bin/argo-trace-old`.
+- Keep the implementation independent.
 - Give it its own tests.
 - Give it built-in timing output and per-call timing logs during development.
 - Measure before and after each concurrency or selection change.
@@ -1468,12 +1465,12 @@ Cost:
 The user should explicitly confirm whether this is wanted in the default fast
 path.
 
-## Critique of argo-trace-old, why this is a clean rewrite
+## Critique of runaway tracer growth
 
-`bin/argo-trace-old` proved the operator problem is real.
+The operator problem is real.
 
-It also proved what happens when a useful script is fed a steady diet of
-"one more thing" until it turns into a ruby-shaped cursed artifact.
+A useful script can still be fed a steady diet of "one more thing" until it
+turns into a ruby-shaped cursed artifact.
 
 It grew into a `3934` line Ruby beast that tries to be:
 
