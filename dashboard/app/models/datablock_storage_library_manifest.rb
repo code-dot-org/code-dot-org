@@ -58,6 +58,9 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   validate :library_manifest
 
   def self.seed_all
+    # FIXME: is there a way to optimize this? as far as we can tell, in `def seed_record` (search for this)
+    # calls in other serialized levelbuilder objects they really don't hash or optimize seeding, so
+    # we're not really worse than anyone else, but some of the tables are REALLY big.
     seed_manifest
     seed_tables
   end
@@ -72,17 +75,9 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   end
 
   def self.seed_tables(glob = "config/datablock_storage/datasets/*.json")
-    existing_md5s = DatablockStorageTable.where(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID).pluck(:table_name, :md5).to_h
-
     Dir.glob(Rails.root.join(glob)).each do |path|
-      contents = File.read(path)
-      md5 = Digest::MD5.hexdigest(contents)
-
-      dataset_json = JSON.parse(contents)
+      dataset_json = JSON.parse(File.read(path))
       table_name = dataset_json['table_name']
-
-      next if existing_md5s[table_name] == md5
-
       dataset_csv = dataset_json['csv']
 
       # Overwrite the table if it already exists
@@ -93,7 +88,6 @@ class DatablockStorageLibraryManifest < ApplicationRecord
       end
 
       table.import_csv dataset_csv
-      table.update_column(:md5, md5)
     rescue => exception
       raise exception.class, "#{exception.message} (while importing #{path})", exception.backtrace
     end
