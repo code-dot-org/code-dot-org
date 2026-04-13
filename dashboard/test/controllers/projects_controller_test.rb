@@ -574,4 +574,77 @@ class ProjectsControllerTest < ActionController::TestCase
     post :submit, params: {project_type: 'music', channel_id: @channel_id, submissionDescription: submission_description}
     assert_response :success
   end
+
+  test 'remix dance_music_ai project truncates subprojects to max allowed' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    new_channel_id = 'new_parent_channel'
+    project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    max_subprojects = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS
+
+    # Create more subprojects than the max allowed.
+    subprojects = Array.new(max_subprojects + 2) {|i| {"channel_id" => "sub_#{i}", "level_id" => "level_#{i}"}}
+
+    # Stub the Projects API layer.
+    mock_projects = mock('Projects')
+    mock_projects.stubs(:get).with(channel_id).returns({"subprojects" => subprojects, "projectType" => project_type})
+    subprojects.first(max_subprojects).each do |entry|
+      mock_projects.stubs(:get).with(entry['channel_id']).returns({"projectType" => "music"})
+    end
+    mock_projects.stubs(:get).with(new_channel_id).returns({"projectType" => project_type})
+
+    # Capture the update call to verify truncation.
+    updated_subprojects = nil
+    mock_projects.stubs(:update).with do |ch_id, value, _ip|
+      updated_subprojects = value["subprojects"] if ch_id == new_channel_id
+      true
+    end
+
+    @controller.stubs(:get_storage_id).returns(123)
+    Projects.stubs(:new).with(123).returns(mock_projects)
+    Projects.stubs(:in_restricted_share_mode).returns(false)
+
+    # Stub remix_project to return predictable channel IDs.
+    @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
+    subprojects.first(max_subprojects).each_with_index do |entry, i|
+      @controller.stubs(:remix_project).with(entry['channel_id'], 'music', is_subproject: true).returns("new_sub_#{i}")
+    end
+
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :redirect
+
+    refute_nil updated_subprojects, 'Expected project.update to be called with subprojects'
+    assert_equal max_subprojects, updated_subprojects.length, "Expected subprojects to be truncated to #{max_subprojects}"
+  end
+
+  test 'remix non-music_dance_ai project removes subprojects' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    new_channel_id = 'new_parent_channel'
+    project_type = 'applab'
+
+    subprojects = [{"channel_id" => "sub_0", "level_id" => "level_0"}]
+
+    mock_projects = mock('Projects')
+    mock_projects.stubs(:get).with(channel_id).returns({"subprojects" => subprojects, "projectType" => project_type})
+    mock_projects.stubs(:get).with(new_channel_id).returns({"subprojects" => subprojects, "projectType" => project_type})
+
+    # Capture the update call to verify subprojects are removed.
+    updated_value = nil
+    mock_projects.stubs(:update).with do |ch_id, value, _ip|
+      updated_value = value if ch_id == new_channel_id
+      true
+    end
+
+    @controller.stubs(:get_storage_id).returns(123)
+    Projects.stubs(:new).with(123).returns(mock_projects)
+    Projects.stubs(:in_restricted_share_mode).returns(false)
+    @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
+
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :redirect
+
+    refute_nil updated_value, 'Expected project.update to be called'
+    assert_nil updated_value['subprojects'], 'Expected subprojects to be removed'
+  end
 end

@@ -1,0 +1,39 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-10T22:01:58.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Predict & Trace**\r\n\r\n#### **Do This:**\r\n\r\n1. Look at the JavaScript code in `script.js`.\r\n   Predict what will happen when the user interacts with the feature.\r\n\r\n2. Run the app and test it.\r\n   Did the result match your prediction?\r\n\r\n3. Use AI Tutor to help you understand how the code creates this behavior.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-11 00:30:59 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -120,8 +120,8 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
-          src: ['**'],
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist',
+          src: ['assets/**'],
           dest: 'build/package/media/skins/fish',
         },
         {

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
@@ -83,7 +84,10 @@ function StudentColumn({
         title="caret"
         className={styles.studentColumnNameCaret}
       />
-      {getFullName(student)}
+      <span className={styles.studentColumnNameText}>
+        {getFullName(student)}
+      </span>
+      {student.isDemoStudent && <DemoStudentChip />}
     </button>
   );
 
@@ -103,7 +107,10 @@ function StudentColumn({
           icon="caret-down"
           className={styles.studentColumnNameCaret}
         />
-        {getFullName(student)}
+        <span className={styles.studentColumnNameText}>
+          {getFullName(student)}
+        </span>
+        {student.isDemoStudent && <DemoStudentChip />}
       </button>
       <div
         className={classNames(
