@@ -1,4 +1,5 @@
 import {
+  isTourAvailableOnLevel,
   isTourEnabledOnLevel,
   ProductTour,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
@@ -147,6 +148,83 @@ describe('isTourEnabledOnLevel', () => {
           makeLevelProperties('pythonlab', {
             validations: [{}] as LevelProperties['validations'],
             productTours: [ProductTour.ResourcePanelValidation],
+          })
+        )
+      ).toBe(true);
+    });
+  });
+});
+
+describe('isTourAvailableOnLevel', () => {
+  describe('when the tour is not registered for the lab', () => {
+    it('returns false for a tour absent from the lab list', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.SketchlabIntro,
+          makeLevelProperties('pythonlab')
+        )
+      ).toBe(false);
+    });
+
+    it('returns false for an unknown lab', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelOnboarding,
+          makeLevelProperties('unknownlab')
+        )
+      ).toBe(false);
+    });
+  });
+
+  describe('when the tour is registered for the lab and has no shouldShowOnLevel', () => {
+    it('returns true for ResourcePanelOnboarding on pythonlab', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelOnboarding,
+          makeLevelProperties('pythonlab')
+        )
+      ).toBe(true);
+    });
+  });
+
+  describe('when the tour has a shouldShowOnLevel check', () => {
+    it('returns false for ResourcePanelValidation with no validations', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab')
+        )
+      ).toBe(false);
+    });
+
+    it('returns false for ResourcePanelValidation with empty validations', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab', {validations: []})
+        )
+      ).toBe(false);
+    });
+
+    it('returns true for ResourcePanelValidation when validations are present', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab', {
+            validations: [{}] as LevelProperties['validations'],
+          })
+        )
+      ).toBe(true);
+    });
+
+    it('ignores productTours field — availability is independent of level tour list', () => {
+      // isTourAvailableOnLevel does not gate on productTours.
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab', {
+            validations: [{}] as LevelProperties['validations'],
+            productTours: [],
           })
         )
       ).toBe(true);
