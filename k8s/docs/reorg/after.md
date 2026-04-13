@@ -1,14 +1,14 @@
 # OpenTofu
 
 **Prerequisite: non-dependent non-AWS / non-cluster bootstrap**
-- `k8s/tofu/codeai-k8s-dex`
+- `k8s-gitops/bootstrap/codeai-k8s-dex`
 
 **Phase 1: `cluster` only**
-- `k8s/tofu/codeai-k8s/cluster`
+- `k8s-gitops/bootstrap/codeai-k8s/cluster`
 
 **Phase 2: `cluster-infra`; split from Phase 2 in `before.md`**
 
-- `k8s/tofu/codeai-k8s/cluster-infra`
+- `k8s-gitops/bootstrap/codeai-k8s/cluster-infra`
 
 - `infra-modules.tf`
   - module `external_dns`: (HostedZone.route53 k8s.code.org), (RecordSet.route53 k8s.code.org NS), module `external_dns_addon`: (Role.iam external-dns-20260319022352248300000003), (Policy.iam external-dns-20260319022352248200000002), (Namespace.v1 external-dns), (ServiceAccount.v1 external-dns-sa)
@@ -20,7 +20,7 @@
 
 **Phase 3: `cluster-infra-argocd`; split from Phase 2 in `before.md`; K8S, either Crossplane or ACK**
 
-- `k8s/tofu/codeai-k8s/cluster-infra-argocd`
+- `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd`
 
 - `helm.tf`: (helm external-secrets), (helm argo-cd), (helm networking), (helm external-dns), (helm dex), (helm kargo-secrets)
 - `app-of-apps-bootstrap.tf`: app-of-apps `ApplicationSet` bootstrap
