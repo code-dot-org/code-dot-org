@@ -13,11 +13,13 @@ import styles from './student-resources-panel.module.scss';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface StudentResourcesPanelProps {
-  availableTours: ProductTourConfig[];
+  levelTours: ProductTourConfig[];
+  otherAvailableTours: ProductTourConfig[];
 }
 
 const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
-  availableTours,
+  levelTours,
+  otherAvailableTours,
 }) => {
   const [isTourRunning, setIsTourRunning] = React.useState(false);
   const activeTourRef = React.useRef<Tour | null>(null);
@@ -34,10 +36,12 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
     setIsTourRunning(false);
   };
 
-  const startTour = (tourName: string) => {
+  const startTour = (tourName: string, type: 'level' | 'other') => {
     if (isTourRunning) return;
     setIsTourRunning(true);
-    const tourConfig = availableTours.find(tour => tour.name === tourName);
+    const tourConfig = (
+      type === 'level' ? levelTours : otherAvailableTours
+    ).find(tour => tour.name === tourName);
     if (tourConfig) {
       const tour = createTourWithSteps(tourConfig.getSteps);
       activeTourRef.current = tour;
@@ -46,6 +50,20 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
       tour.on('cancel', () => endActiveTour());
     }
   };
+
+  const renderTourChip = (tour: ProductTourConfig, type: 'level' | 'other') => (
+    <div key={tour.name} className={styles.tourChip}>
+      <Typography variant="body3">{tour.displayName}</Typography>
+      <IconButton
+        size="extraSmall"
+        onClick={() => startTour(tour.name, 'level')}
+        aria-label={`Play ${tour.displayName}`}
+        className={styles.tourPlayButton}
+      >
+        <FontAwesomeV6Icon iconName="play" />
+      </IconButton>
+    </div>
+  );
 
   return (
     <div className={styles.panel}>
@@ -58,19 +76,14 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
         this lab. You won&apos;t lose your progress.
       </Typography>
       <div className={styles.tourList}>
-        {availableTours.map(tour => (
-          <div key={tour.name} className={styles.tourChip}>
-            <Typography variant="body3">{tour.displayName}</Typography>
-            <IconButton
-              size="extraSmall"
-              onClick={() => startTour(tour.name)}
-              aria-label={`Play ${tour.displayName}`}
-              className={styles.tourPlayButton}
-            >
-              <FontAwesomeV6Icon iconName="play" />
-            </IconButton>
-          </div>
-        ))}
+        {levelTours.length > 0 && (
+          <Typography variant="overline3">For This Level</Typography>
+        )}
+        {levelTours.map(tour => renderTourChip(tour, 'level'))}
+        {otherAvailableTours.length > 0 && (
+          <Typography variant="overline3">All Walkthroughs</Typography>
+        )}
+        {otherAvailableTours.map(tour => renderTourChip(tour, 'other'))}
       </div>
     </div>
   );

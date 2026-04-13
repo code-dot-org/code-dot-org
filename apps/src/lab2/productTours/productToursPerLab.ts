@@ -58,13 +58,30 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 
 // Returns true if the given tour should be shown for the given level and lab.
 // Tours with triggeredByLevel=true require the tour to be available on the lab
-// and present in the level's productTours field if checkProductToursPerLevel is true.
-// (We allow overriding the productToursPerLevel for cases such as user-initiated tours).
+// and present in the level's productTours field.
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  levelProperties: LevelProperties,
-  checkProductToursPerLevel: boolean
+  levelProperties: LevelProperties
+): boolean {
+  const isAvailableOnLevel = isTourAvailableOnLevel(tour, levelProperties);
+  if (!isAvailableOnLevel) {
+    return false;
+  }
+  const config = ProductTourConfigurations[tour];
+  if (!config.triggeredByLevel) {
+    return true;
+  }
+  return levelProperties.productTours?.includes(tour) ?? false;
+}
+
+// Returns true if the given tour is generally available for the given level,
+// ignoring whether the tour is triggered by the level or not.
+// This is used to determine whether to show tours in the student resources tab,
+// which should show all tours available for that level, not just those triggered by the level.
+export function isTourAvailableOnLevel(
+  tour: ProductTour,
+  levelProperties: LevelProperties
 ): boolean {
   const isAvailableForLab = ToursPerLab[
     levelProperties.appName as AppName
@@ -76,10 +93,7 @@ export function isTourEnabledOnLevel(
   if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
     return false;
   }
-  if (!config.triggeredByLevel || !checkProductToursPerLevel) {
-    return true;
-  }
-  return levelProperties.productTours?.includes(tour) ?? false;
+  return true;
 }
 
 // These tour configurations are used to determine which tours should be shown in the level editor for a given lab.

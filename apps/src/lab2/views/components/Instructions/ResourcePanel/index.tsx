@@ -14,7 +14,9 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
+  isTourAvailableOnLevel,
   isTourEnabledOnLevel,
+  ProductTourConfig,
   ToursPerLab,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
@@ -246,11 +248,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isStandaloneCollapsed,
   });
 
-  const availableTours = useMemo(() => {
+  const {levelTours, otherAvailableTours} = useMemo(() => {
     const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
-    return toursForLab.filter(tour =>
-      isTourEnabledOnLevel(tour.name, levelProperties, false)
-    );
+    const levelTours: ProductTourConfig[] = [];
+    const otherAvailableTours: ProductTourConfig[] = [];
+    toursForLab.forEach(tour => {
+      if (isTourEnabledOnLevel(tour.name, levelProperties)) {
+        levelTours.push(tour);
+      } else if (isTourAvailableOnLevel(tour.name, levelProperties)) {
+        otherAvailableTours.push(tour);
+      }
+    });
+    return {levelTours, otherAvailableTours};
   }, [levelProperties]);
 
   // Build available tabs based on level information.
@@ -351,9 +360,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (availableTours.length > 0) {
+    if (levelTours.length > 0 || otherAvailableTours.length > 0) {
       tabMap[Tabs.StudentResources] = (
-        <StudentResourcesPanel availableTours={availableTours} />
+        <StudentResourcesPanel
+          levelTours={levelTours}
+          otherAvailableTours={otherAvailableTours}
+        />
       );
     }
 
@@ -375,7 +387,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     showRubric,
     showBackpack,
     isUserTeacher,
-    availableTours,
+    levelTours,
+    otherAvailableTours,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
