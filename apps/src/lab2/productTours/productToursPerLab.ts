@@ -57,12 +57,13 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 
 // Returns true if the given tour should be shown for the given level and lab.
 // Tours with triggeredByLevel=true require the tour to be available on the lab
-// and present in the level's productTours field.
+// and present in the level's productTours field if checkProductToursPerLevel is true.
+// (We allow overriding the productToursPerLevel for cases such as user-initiated tours).
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
-// todo: should we pull productTours from level properties now?
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  levelProperties: LevelProperties
+  levelProperties: LevelProperties,
+  checkProductToursPerLevel: boolean
 ): boolean {
   const isAvailableForLab = ToursPerLab[
     levelProperties.appName as AppName
@@ -74,7 +75,7 @@ export function isTourEnabledOnLevel(
   if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
     return false;
   }
-  if (!config.triggeredByLevel) {
+  if (!config.triggeredByLevel || !checkProductToursPerLevel) {
     return true;
   }
   return levelProperties.productTours?.includes(tour) ?? false;

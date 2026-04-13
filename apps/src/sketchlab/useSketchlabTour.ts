@@ -85,7 +85,7 @@ const useSketchlabTour = ({levelProperties}: UseSketchlabTourParams) => {
     localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
     tourAvailable:
       isToolbarReady &&
-      isTourEnabledOnLevel(ProductTour.SketchlabIntro, levelProperties),
+      isTourEnabledOnLevel(ProductTour.SketchlabIntro, levelProperties, true),
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,

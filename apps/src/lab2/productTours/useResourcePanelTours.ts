@@ -55,7 +55,8 @@ const useResourcePanelTours = ({
   const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
-      levelProperties
+      levelProperties,
+      true
     );
     return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
   }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
@@ -95,7 +96,8 @@ const useResourcePanelTours = ({
       (!isLevelLoading &&
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelValidation,
-          levelProperties
+          levelProperties,
+          true
         ) &&
         (!isOnboardingTourEnabled || onboardingTourSeen)) ||
       false,

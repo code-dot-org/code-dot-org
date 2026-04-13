@@ -16,7 +16,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.SketchlabIntro,
-          makeLevelProperties('pythonlab')
+          makeLevelProperties('pythonlab'),
+          true
         )
       ).toBe(false);
     });
@@ -25,7 +26,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelOnboarding,
-          makeLevelProperties('unknownlab')
+          makeLevelProperties('unknownlab'),
+          true
         )
       ).toBe(false);
     });
@@ -36,7 +38,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.SketchlabIntro,
-          makeLevelProperties('sketchlab')
+          makeLevelProperties('sketchlab'),
+          true
         )
       ).toBe(true);
     });
@@ -45,7 +48,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.SketchlabIntro,
-          makeLevelProperties('sketchlab', {productTours: []})
+          makeLevelProperties('sketchlab', {productTours: []}),
+          true
         )
       ).toBe(true);
     });
@@ -54,7 +58,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.SketchlabIntro,
-          makeLevelProperties('sketchlab', {productTours: ['some_other_tour']})
+          makeLevelProperties('sketchlab', {productTours: ['some_other_tour']}),
+          true
         )
       ).toBe(true);
     });
@@ -65,7 +70,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelOnboarding,
-          makeLevelProperties('pythonlab')
+          makeLevelProperties('pythonlab'),
+          true
         )
       ).toBe(false);
     });
@@ -74,7 +80,8 @@ describe('isTourEnabledOnLevel', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelOnboarding,
-          makeLevelProperties('pythonlab', {productTours: []})
+          makeLevelProperties('pythonlab', {productTours: []}),
+          true
         )
       ).toBe(false);
     });
@@ -85,7 +92,8 @@ describe('isTourEnabledOnLevel', () => {
           ProductTour.ResourcePanelOnboarding,
           makeLevelProperties('pythonlab', {
             productTours: [ProductTour.ResourcePanelValidation],
-          })
+          }),
+          true
         )
       ).toBe(false);
     });
@@ -96,7 +104,8 @@ describe('isTourEnabledOnLevel', () => {
           ProductTour.ResourcePanelOnboarding,
           makeLevelProperties('pythonlab', {
             productTours: [ProductTour.ResourcePanelOnboarding],
-          })
+          }),
+          true
         )
       ).toBe(true);
     });
@@ -110,9 +119,52 @@ describe('isTourEnabledOnLevel', () => {
               ProductTour.ResourcePanelValidation,
               ProductTour.ResourcePanelOnboarding,
             ],
-          })
+          }),
+          true
         )
       ).toBe(true);
+    });
+  });
+
+  describe('when checkProductToursPerLevel is false', () => {
+    it('returns true even when productTours is undefined', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelOnboarding,
+          makeLevelProperties('pythonlab'),
+          false
+        )
+      ).toBe(true);
+    });
+
+    it('returns true even when productTours is empty', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelOnboarding,
+          makeLevelProperties('pythonlab', {productTours: []}),
+          false
+        )
+      ).toBe(true);
+    });
+
+    it('still returns false when the tour is not available for the lab', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelOnboarding,
+          makeLevelProperties('unknownlab'),
+          false
+        )
+      ).toBe(false);
+    });
+
+    it('still returns false when shouldShowOnLevel fails', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelValidation,
+          makeLevelProperties('pythonlab'), // no validations
+          false
+        )
+      ).toBe(false);
     });
   });
 
@@ -123,7 +175,8 @@ describe('isTourEnabledOnLevel', () => {
           ProductTour.ResourcePanelValidation,
           makeLevelProperties('pythonlab', {
             productTours: [ProductTour.ResourcePanelValidation],
-          })
+          }),
+          true
         )
       ).toBe(false);
     });
@@ -135,7 +188,8 @@ describe('isTourEnabledOnLevel', () => {
           makeLevelProperties('pythonlab', {
             validations: [{}] as LevelProperties['validations'],
             productTours: [ProductTour.ResourcePanelValidation],
-          })
+          }),
+          true
         )
       ).toBe(true);
     });
