@@ -93,7 +93,6 @@ module AiDiffBedrockHelper
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: RETRIEVAL_LIMIT,
             }
           }
@@ -137,7 +136,7 @@ module AiDiffBedrockHelper
       end
     end
 
-    if lesson_number.nil? && unit_num.nil? && course_names.nil?
+    if lesson_number.nil? && unit_num.nil? && course_names.nil? && !section_contexts.empty?
       or_all_filters.push({equals: {key: "scope", value: "general"}})
       section_contexts&.each do |section_context|
         or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
@@ -186,7 +185,7 @@ module AiDiffBedrockHelper
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
     filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
-    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
+    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config unless filter_config.empty?
 
     attempts = 0
     begin
