@@ -1,6 +1,3 @@
-We are currently working on a destroy/apply project. If you just compacted,
-re-read `AGENTS.md` and `CHECKLIST.md` and continue on.
-
 - When making Helm chart changes you intend to `tofu apply`, bump the chart version or Helm may report no diff.
 
 ## Cluster log helper
