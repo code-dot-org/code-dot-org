@@ -9,5 +9,5 @@ export default function notifyLevelChange(
 ) {
   Lab2Registry.getInstance()
     .getLifecycleNotifier()
-    .notify(LifecycleEvent.LevelChangeRequested, previousLevelId, nextLevelId);
+    .notify(LifecycleEvent.LevelChangeStarted, previousLevelId, nextLevelId);
 }

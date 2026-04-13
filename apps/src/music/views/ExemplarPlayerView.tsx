@@ -64,7 +64,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     setExemplarIsPlaying(false);
   }, [isPlaying, player]);
 
-  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelChangeStarted, () => {
     if (exemplarIsPlaying) {
       onStopSong();
     }

@@ -2,7 +2,7 @@ import {Channel, LevelProperties, ProjectSources} from '../types';
 
 export enum LifecycleEvent {
   BeforeLevelChange,
-  LevelChangeRequested,
+  LevelChangeStarted,
   LevelLoadStarted,
   LevelLoadCompleted,
 }
@@ -12,7 +12,7 @@ type CallbackArgs = {
     previousLevelId: string | null,
     nextLevelId: string
   ];
-  [LifecycleEvent.LevelChangeRequested]: [
+  [LifecycleEvent.LevelChangeStarted]: [
     previousLevelId: string | null,
     nextLevelId: string
   ];

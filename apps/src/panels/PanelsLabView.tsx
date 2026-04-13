@@ -70,7 +70,7 @@ const PanelsLabView: React.FunctionComponent<
     startTime.current = Date.now();
   }, [panels]);
 
-  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelChangeStarted, () => {
     if (startTime.current) {
       sendAnalyticsEvent('Panels Level Completed', {
         timeSpentSeconds: (Date.now() - startTime.current) / 1000,

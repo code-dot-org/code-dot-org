@@ -205,10 +205,7 @@ class UnconnectedMusicView extends React.Component {
 
     Lab2Registry.getInstance()
       .getLifecycleNotifier()
-      .addListener(
-        LifecycleEvent.LevelChangeRequested,
-        this.levelChangeRequested
-      )
+      .addListener(LifecycleEvent.LevelChangeStarted, this.levelChangeStarted)
       .addListener(LifecycleEvent.LevelLoadCompleted, this.levelLoadCompleted);
   }
 
@@ -216,8 +213,8 @@ class UnconnectedMusicView extends React.Component {
     Lab2Registry.getInstance()
       .getLifecycleNotifier()
       .removeListener(
-        LifecycleEvent.LevelChangeRequested,
-        this.levelChangeRequested
+        LifecycleEvent.LevelChangeStarted,
+        this.levelChangeStarted
       )
       .removeListener(
         LifecycleEvent.LevelLoadCompleted,
@@ -235,7 +232,7 @@ class UnconnectedMusicView extends React.Component {
   // since a new set of sounds will be loaded on the next level.  Also clear the
   // callout that might be showing, and dispose of the Blockly workspace so that
   // any lingering UI is removed.
-  levelChangeRequested = () => {
+  levelChangeStarted = () => {
     if (this.props.levelProperties?.appName === 'music') {
       this.stopSong();
       this.setState({

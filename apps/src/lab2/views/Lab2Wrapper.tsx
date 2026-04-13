@@ -143,7 +143,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   }, [dispatch, userAppOptionsPath]);
 
   // Add listeners to cancel in any-progress text to speech on level change or reload.
-  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
+  useLifecycleNotifier(LifecycleEvent.LevelChangeStarted, cancel);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
   const blockedType = isBlockedAbuse

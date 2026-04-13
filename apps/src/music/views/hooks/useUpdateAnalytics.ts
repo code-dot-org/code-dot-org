@@ -57,7 +57,7 @@ function useUpdateAnalytics(
     );
 
     lifecycleNotifier.addListener(
-      LifecycleEvent.LevelChangeRequested,
+      LifecycleEvent.LevelChangeStarted,
       endSession
     );
 
@@ -77,7 +77,7 @@ function useUpdateAnalytics(
         startSession
       );
       lifecycleNotifier.removeListener(
-        LifecycleEvent.LevelChangeRequested,
+        LifecycleEvent.LevelChangeStarted,
         endSession
       );
       lifecycleNotifier.removeListener(
