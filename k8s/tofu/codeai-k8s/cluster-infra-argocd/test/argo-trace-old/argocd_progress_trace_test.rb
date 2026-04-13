@@ -6,7 +6,7 @@ require "minitest/autorun"
 require "mocha/minitest"
 require "pathname"
 
-load File.expand_path("../../bin/argo-trace", __dir__)
+load File.expand_path("../../bin/argo-trace-old", __dir__)
 
 class FakeShell
   attr_reader :caveats, :commands
@@ -128,11 +128,11 @@ class ArgocdProgressTraceTest < Minitest::Test
   end
 
   def test_argo_trace_uses_bundle_exec_shebang
-    assert_equal "#!/usr/bin/env -S bundle exec ruby\n", (BIN_DIR / "argo-trace").readlines.first
+    assert_equal "#!/usr/bin/env -S bundle exec ruby\n", (BIN_DIR / "argo-trace-old").readlines.first
   end
 
   def test_watch_argo_trace_wraps_argo_trace_under_watch
-    contents = (BIN_DIR / "watch-argo-trace").read
+    contents = (BIN_DIR / "watch-argo-trace-old").read
 
     assert_equal "#!/usr/bin/env -S bundle exec ruby\n", contents.lines.first
     assert_includes contents, 'Shellwords.join(["bundle", "exec", script, *ARGV])'
@@ -164,7 +164,7 @@ class ArgocdProgressTraceTest < Minitest::Test
       start_time: Time.parse("2026-04-11T05:32:00-10:00"),
     )
 
-    assert_includes output, "# ArgoCD dependency tree @ 5:33a and 31s (+1m 31s), argo-trace took unknown\n"
+    assert_includes output, "# ArgoCD dependency tree @ 5:33a and 31s (+1m 31s), argo-trace-old took unknown\n"
     assert output.end_with?("\n\n\n")
   end
 
@@ -3581,7 +3581,7 @@ class ArgocdProgressTraceTest < Minitest::Test
     stubs(:ensure_stackprof_loaded).returns(false)
 
     stdout, stderr = capture_io do
-      result = with_stackprof(output_path: "/tmp/argo-trace-stackprof.dump") {"ok"}
+      result = with_stackprof(output_path: "/tmp/argo-trace-old-stackprof.dump") {"ok"}
       assert_equal "ok", result
     end
 

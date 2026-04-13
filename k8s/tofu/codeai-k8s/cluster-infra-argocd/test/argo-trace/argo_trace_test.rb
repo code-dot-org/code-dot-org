@@ -7,7 +7,7 @@ require "pathname"
 require "stringio"
 require "tmpdir"
 
-load File.expand_path("../../bin/argo-cli-trace", __dir__)
+load File.expand_path("../../bin/argo-trace", __dir__)
 
 class FakeTtyOutput < StringIO
   def initialize(tty:, width: 91)
@@ -25,37 +25,37 @@ class FakeTtyOutput < StringIO
   end
 end
 
-class ArgoCliTraceTest < Minitest::Test
+class ArgoTraceTest < Minitest::Test
   BIN_DIR = Pathname.new(__dir__).parent.parent / "bin"
 
   def test_parse_cli_options_defaults_to_one_shot_and_auto_wrap
-    options = ArgoCliTrace.parse_cli_options([])
+    options = ArgoTrace.parse_cli_options([])
 
     assert_nil options[:poll_every]
     assert_equal :auto, options[:soft_wrap]
   end
 
   def test_parse_cli_options_accepts_poll_every_and_wrap_flags
-    options = ArgoCliTrace.parse_cli_options(["--poll-every", "30s", "--soft-wrap", "88"])
+    options = ArgoTrace.parse_cli_options(["--poll-every", "30s", "--soft-wrap", "88"])
 
     assert_equal 30, options[:poll_every]
     assert_equal 88, options[:soft_wrap]
   end
 
   def test_parse_cli_options_disables_wrap
-    options = ArgoCliTrace.parse_cli_options(["--no-wrap"])
+    options = ArgoTrace.parse_cli_options(["--no-wrap"])
 
     assert_nil options[:soft_wrap]
   end
 
   def test_parse_duration_accepts_supported_units
-    assert_equal 30, ArgoCliTrace.parse_duration("30s")
-    assert_equal 60, ArgoCliTrace.parse_duration("1m")
-    assert_equal 3600, ArgoCliTrace.parse_duration("1hr")
+    assert_equal 30, ArgoTrace.parse_duration("30s")
+    assert_equal 60, ArgoTrace.parse_duration("1m")
+    assert_equal 3600, ArgoTrace.parse_duration("1hr")
   end
 
   def test_render_snapshot_formats_startup_header_and_trailing_newlines
-    rendered = ArgoCliTrace.render_snapshot(
+    rendered = ArgoTrace.render_snapshot(
       start_time: Time.parse("2026-04-12T12:33:00-10:00"),
       end_time: Time.parse("2026-04-12T12:33:10-10:00"),
       elapsed_seconds: 10.0,
@@ -63,9 +63,9 @@ class ArgoCliTraceTest < Minitest::Test
     )
 
     assert_equal <<~TEXT, rendered
-      starting argo-cli-trace @ 12:33p and 0s
+      starting argo-trace @ 12:33p and 0s
 
-      # ArgoCD dependency tree @ 12:33p and 10s, argo-cli-trace took 10.0s
+      # ArgoCD dependency tree @ 12:33p and 10s, argo-trace took 10.0s
 
 
     TEXT
@@ -73,11 +73,11 @@ class ArgoCliTraceTest < Minitest::Test
 
   def test_render_snapshot_uses_tty_width_for_auto_wrap
     output = FakeTtyOutput.new(tty: true, width: 123)
-    assert_equal 123, ArgoCliTrace.wrap_width_for_snapshot({soft_wrap: :auto}, output: output)
+    assert_equal 123, ArgoTrace.wrap_width_for_snapshot({soft_wrap: :auto}, output: output)
   end
 
   def test_soft_wrap_rendered_lines_wraps_tree_content_with_hanging_indent
-    wrapped = ArgoCliTrace.soft_wrap_rendered_lines(
+    wrapped = ArgoTrace.soft_wrap_rendered_lines(
       ["- this line wraps nicely"],
       wrap_width: 12
     )
@@ -86,7 +86,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   def test_soft_wrap_rendered_lines_keeps_ansi_control_lines_and_arrow_alignment
-    wrapped = ArgoCliTrace.soft_wrap_rendered_lines(
+    wrapped = ArgoTrace.soft_wrap_rendered_lines(
       ["\e[1m", "→ - bad leaf detail happened badly", "\e[22m"],
       wrap_width: 20
     )
@@ -98,7 +98,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   def test_snapshot_body_applies_soft_wrap_to_real_tree_output
-    body_text = ArgoCliTrace.snapshot_body(
+    body_text = ArgoTrace.snapshot_body(
       command_runner: fixture_command_runner,
       wrap_width: 55
     )
@@ -108,7 +108,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   def test_snapshot_body_respects_no_wrap
-    body_text = ArgoCliTrace.snapshot_body(
+    body_text = ArgoTrace.snapshot_body(
       command_runner: fixture_command_runner,
       wrap_width: nil
     )
@@ -125,7 +125,7 @@ class ArgoCliTraceTest < Minitest::Test
     body_calls = 0
     sleeps = []
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: nil, soft_wrap: :auto},
       output: output,
       now: -> {times.shift},
@@ -135,7 +135,7 @@ class ArgoCliTraceTest < Minitest::Test
 
     assert_equal 1, body_calls
     assert_equal [], sleeps
-    assert_equal 1, output.string.scan(/^starting argo-cli-trace @ /).length
+    assert_equal 1, output.string.scan(/^starting argo-trace @ /).length
   end
 
   def test_run_uses_start_time_for_startup_line_and_end_time_for_header_line
@@ -145,15 +145,15 @@ class ArgoCliTraceTest < Minitest::Test
       Time.parse("2026-04-12T12:00:03-10:00"),
     ]
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: nil, soft_wrap: :auto},
       output: output,
       now: -> {times.shift},
       body: ->(**) {"body"}
     )
 
-    assert_includes output.string, "starting argo-cli-trace @ 11:59a and 58s\n"
-    assert_includes output.string, "# ArgoCD dependency tree @ 12:00p and 3s, argo-cli-trace took 5.0s\n"
+    assert_includes output.string, "starting argo-trace @ 11:59a and 58s\n"
+    assert_includes output.string, "# ArgoCD dependency tree @ 12:00p and 3s, argo-trace took 5.0s\n"
   end
 
   def test_run_measures_elapsed_across_body_generation
@@ -164,7 +164,7 @@ class ArgoCliTraceTest < Minitest::Test
     ]
     body_wrap_widths = []
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: nil, soft_wrap: :auto},
       output: output,
       now: -> {times.shift},
@@ -172,7 +172,7 @@ class ArgoCliTraceTest < Minitest::Test
     )
 
     assert_equal [150], body_wrap_widths
-    assert_includes output.string, "argo-cli-trace took 7.0s"
+    assert_includes output.string, "argo-trace took 7.0s"
   end
 
   def test_run_polls_until_max_snapshots_in_test_mode
@@ -185,7 +185,7 @@ class ArgoCliTraceTest < Minitest::Test
     ]
     sleeps = []
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: 30, soft_wrap: :auto},
       output: output,
       now: -> {times.shift},
@@ -195,13 +195,13 @@ class ArgoCliTraceTest < Minitest::Test
     )
 
     assert_equal [30], sleeps
-    assert_equal 2, output.string.scan(/^starting argo-cli-trace @ /).length
+    assert_equal 2, output.string.scan(/^starting argo-trace @ /).length
   end
 
   def test_run_without_body_uses_real_snapshot_pipeline
     output = StringIO.new
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: nil, soft_wrap: :auto},
       output: output,
       now: -> {Time.parse("2026-04-12T12:33:10-10:00")},
@@ -219,7 +219,7 @@ class ArgoCliTraceTest < Minitest::Test
       Time.parse("2026-04-12T12:33:10-10:00"),
     ]
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: nil, soft_wrap: nil},
       output: output,
       now: -> {times.shift},
@@ -242,7 +242,7 @@ class ArgoCliTraceTest < Minitest::Test
     ]
     sleeps = []
 
-    ArgoCliTrace.run(
+    ArgoTrace.run(
       {poll_every: 30, soft_wrap: nil},
       output: output,
       now: -> {times.shift},
@@ -262,12 +262,12 @@ class ArgoCliTraceTest < Minitest::Test
     assert_equal [30], sleeps
   end
 
-  def test_argo_cli_trace_uses_bundle_exec_shebang
-    assert_equal "#!/usr/bin/env -S bundle exec ruby\n", (BIN_DIR / "argo-cli-trace").readlines.first
+  def test_argo_trace_uses_bundle_exec_shebang
+    assert_equal "#!/usr/bin/env -S bundle exec ruby\n", (BIN_DIR / "argo-trace").readlines.first
   end
 
-  def test_watch_argo_cli_trace_wraps_script_under_watch
-    contents = (BIN_DIR / "watch-argo-cli-trace").read
+  def test_watch_argo_trace_wraps_script_under_watch
+    contents = (BIN_DIR / "watch-argo-trace").read
 
     assert_equal "#!/usr/bin/env -S bundle exec ruby\n", contents.lines.first
     assert_includes contents, 'Shellwords.join(["bundle", "exec", script, *ARGV])'
@@ -275,7 +275,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   def test_real_executable_path_renders_tree_body_from_saved_fixture_data
-    output, status = run_script_with_fake_cli(BIN_DIR / "argo-cli-trace")
+    output, status = run_script_with_fake_cli(BIN_DIR / "argo-trace")
 
     assert status.success?, output
     assert_includes output, "# ArgoCD dependency tree @ "
@@ -284,7 +284,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   def test_watch_wrapper_executes_real_trace_command_in_fake_watch
-    output, status = run_script_with_fake_cli(BIN_DIR / "watch-argo-cli-trace", include_watch: true)
+    output, status = run_script_with_fake_cli(BIN_DIR / "watch-argo-trace", include_watch: true)
 
     assert status.success?, output
     assert_includes output, "- app-of-apps (Application)"
@@ -294,9 +294,9 @@ class ArgoCliTraceTest < Minitest::Test
     fixture_dir = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
 
     lambda do |*command|
-      if command == ArgoCliTrace::WAVE1_APPSET_LIST_COMMAND
+      if command == ArgoTrace::WAVE1_APPSET_LIST_COMMAND
         (fixture_dir / "appset-list.yaml").read
-      elsif command == ArgoCliTrace::WAVE1_APP_LIST_COMMAND
+      elsif command == ArgoTrace::WAVE1_APP_LIST_COMMAND
         (fixture_dir / "app-list.yaml").read
       elsif command[0, 4] == ["argocd", "--core", "appset", "get"] && command[-2, 2] == ["-o", "yaml"]
         (fixture_dir / "appset-get-#{command[4]}.yaml").read
@@ -310,7 +310,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   private def run_script_with_fake_cli(script_path, include_watch: false)
-    Dir.mktmpdir("argo-cli-trace-test") do |temp_dir|
+    Dir.mktmpdir("argo-trace-test") do |temp_dir|
       bin_dir = Pathname.new(temp_dir) / "bin"
       bin_dir.mkpath
       write_fake_argocd(bin_dir / "argocd")
@@ -326,9 +326,9 @@ class ArgoCliTraceTest < Minitest::Test
 
   private def expected_run_snapshot_text(start_clock:, end_clock:)
     <<~TEXT.delete_suffix("\n") + "\n\n\n"
-      starting argo-cli-trace @ #{start_clock}
+      starting argo-trace @ #{start_clock}
 
-      # ArgoCD dependency tree @ #{end_clock}, argo-cli-trace took 30.0s
+      # ArgoCD dependency tree @ #{end_clock}, argo-trace took 30.0s
 
       #{expected_fixture_body_text}
     TEXT
@@ -339,7 +339,7 @@ class ArgoCliTraceTest < Minitest::Test
   end
 
   private def expected_fixture_output
-    (Pathname.new(__dir__) / "expected-output-from-argo-cli-given-data-responses.txt").read
+    (Pathname.new(__dir__) / "expected-output-from-argo-trace-given-data-responses.txt").read
   end
 
   private def write_fake_argocd(path)

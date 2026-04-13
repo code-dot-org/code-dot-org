@@ -1,10 +1,10 @@
-# argo-cli-trace
+# argo-trace
 
 ## Purpose
 
 ### Purpose
 
-`argo-cli-trace` is a new tracer. It is separate from `bin/argo-trace`.
+`argo-trace` is a new tracer. It is separate from `bin/argo-trace-old`.
 
 It exists to answer one question well:
 
@@ -73,7 +73,7 @@ This tool should make the same move generically:
 2. Use `kubectl` only after the Argo trace has already landed on a concrete
    non-app `status.resources[]` member.
 3. Keep `kubectl` use bounded and parallel by default.
-4. Share no code with `bin/argo-trace`.
+4. Share no code with `bin/argo-trace-old`.
 5. Optimize from measured call costs, not guesswork.
 6. Prefer broad batched calls, then maximally parallel enrichment calls.
 7. Do not add complexity not proven to be needed.
@@ -98,8 +98,8 @@ This constraint is valuable twice:
 
 Implementation language is part of the contract:
 
-- `bin/argo-cli-trace` is a Ruby program
-- `bin/watch-argo-cli-trace` is a Ruby wrapper in the same style
+- `bin/argo-trace` is a Ruby program
+- `bin/watch-argo-trace` is a Ruby wrapper in the same style
 
 Ruby style is part of the contract too:
 
@@ -135,7 +135,7 @@ field or structure is already available.
 For first implementation, assume the information needed for the intended tree
 comes from the exact Argo CLI call family already captured in:
 
-- `test/argo-cli-trace/fixtures/argo-cli-data/`
+- `test/argo-trace/fixtures/argo-cli-data/`
 
 That fixture set is the working proof set for this spec:
 
@@ -172,18 +172,18 @@ Default behavior is one-shot, no polling.
 
 Required commands and flags:
 
-- `bin/argo-cli-trace`
+- `bin/argo-trace`
   - one snapshot, then exit
-- `bin/argo-cli-trace --poll-every 30s`
+- `bin/argo-trace --poll-every 30s`
   - repeat snapshots on a fixed cadence
-- `bin/argo-cli-trace --kubectl-details 1`
+- `bin/argo-trace --kubectl-details 1`
   - enable optional wave 3 kubectl detail expansion for highlighted resource
     leaves
-- `bin/argo-cli-trace --kubectl-details 0`
+- `bin/argo-trace --kubectl-details 0`
   - disable wave 3 kubectl detail expansion
-- `bin/argo-cli-trace --soft-wrap WIDTH`
+- `bin/argo-trace --soft-wrap WIDTH`
   - soft-wrap tree lines at `WIDTH` columns
-- `bin/argo-cli-trace --no-wrap`
+- `bin/argo-trace --no-wrap`
   - disable soft-wrapping
 - `argocd --core appset list -o yaml`
   - batched ApplicationSet inventory
@@ -194,7 +194,7 @@ Required commands and flags:
 - `argocd --core --app-namespace argocd app get NAME -o yaml`
   - Application detail and resource status
 
-The polling behavior should match `bin/argo-trace` in spirit:
+The polling behavior should match `bin/argo-trace-old` in spirit:
 
 - default: one-shot, no polling
 - polling is opt-in
@@ -207,14 +207,14 @@ The separator contract is exact:
 
 The implementation should also add:
 
-- `bin/watch-argo-cli-trace`
+- `bin/watch-argo-trace`
 
 That wrapper can initially be a near-copy of the existing
-`bin/watch-argo-trace`, pointed at `bin/argo-cli-trace`.
+`bin/watch-argo-trace-old`, pointed at `bin/argo-trace`.
 
 ### Soft-wrap behavior
 
-Carry forward the wrap controls from `bin/argo-trace`:
+Carry forward the wrap controls from `bin/argo-trace-old`:
 
 - `--soft-wrap WIDTH`
 - `--no-wrap`
@@ -231,7 +231,7 @@ This wrap decision should be made once per snapshot render.
 
 For avoidance of doubt, the expected first-version data source set is exactly
 the command family listed above and exemplified by the saved fixture payloads
-in `test/argo-cli-trace/fixtures/argo-cli-data/`, including the `app-get-*.yaml`
+in `test/argo-trace/fixtures/argo-cli-data/`, including the `app-get-*.yaml`
 files there.
 
 ### kubectl details flag
@@ -272,7 +272,7 @@ tracer.
 Required form:
 
 ```text
-starting argo-cli-trace @ 12:33p and 10s
+starting argo-trace @ 12:33p and 10s
 ```
 
 Then emit the same blank-line separation style as the current tracer before the
@@ -281,7 +281,7 @@ rendered tree body.
 After the startup line, also print the snapshot header line:
 
 ```text
-# ArgoCD dependency tree @ 12:33p and 10s, argo-cli-trace took 14s
+# ArgoCD dependency tree @ 12:33p and 10s, argo-trace took 14s
 ```
 
 Both lines are part of the interface contract.
@@ -432,7 +432,7 @@ So first-version pruning should happen immediately after wave 1, before any
 `app get` calls are started.
 
 For first implementation, treat the saved files in
-`test/argo-cli-trace/fixtures/argo-cli-data/` as the concrete reference data
+`test/argo-trace/fixtures/argo-cli-data/` as the concrete reference data
 shape for these commands.
 
 #### Layer 2: app-local rich status
@@ -906,7 +906,7 @@ Timed-out node form:
 
 ```text
 - <name> (<kind>) [timed out]
-  - argo_cli_trace.error: timed out after 60s
+  - argo_trace.error: timed out after 60s
 ```
 
 #### Error handling
@@ -922,8 +922,8 @@ Error form:
 
 ```text
 - <name> (<kind>) [error]
-  - argo_cli_trace.command: argocd --core --app-namespace argocd app get <name> -o yaml
-  - argo_cli_trace.stderr: <stderr summary>
+  - argo_trace.command: argocd --core --app-namespace argocd app get <name> -o yaml
+  - argo_trace.stderr: <stderr summary>
 ```
 
 ## Rendering Contract
@@ -1312,7 +1312,7 @@ The test expectation for `k8s-gitops` should therefore be:
 
 Authoritative example target:
 
-- [`test/argo-cli-trace/expected-output-from-argo-cli-given-data-responses.txt`](/Users/seth/src/code-dot-org/k8s/tofu/codeai-k8s/cluster-infra-argocd/test/argo-cli-trace/expected-output-from-argo-cli-given-data-responses.txt)
+- [`test/argo-trace/expected-output-from-argo-cli-given-data-responses.txt`](/Users/seth/src/code-dot-org/k8s/tofu/codeai-k8s/cluster-infra-argocd/test/argo-trace/expected-output-from-argo-cli-given-data-responses.txt)
 
 Do not maintain a second handwritten full-output block in this spec.
 
@@ -1321,7 +1321,7 @@ dataset and must stay aligned with the executable path.
 
 This sample is normative for formatting shape, not for exact live field values.
 
-The point is not byte-for-byte identity with `bin/argo-trace`.
+The point is not byte-for-byte identity with `bin/argo-trace-old`.
 
 The point is:
 
@@ -1359,8 +1359,8 @@ First version should support:
 
 It should not support:
 
-1. old `argo-trace` Kubernetes owner-ref expansion
-2. old `argo-trace` Crossplane graph walking
+1. old `argo-trace-old` Kubernetes owner-ref expansion
+2. old `argo-trace-old` Crossplane graph walking
 3. synthetic blocker diagnosis
 4. recursive wave-3 descent
 
@@ -1374,8 +1374,8 @@ Crossplane-specific handling is limited to this:
 ### Implementation Notes
 
 - Put the new tool at:
-  - `bin/argo-cli-trace`
-- Do not import helper code from `bin/argo-trace`.
+  - `bin/argo-trace`
+- Do not import helper code from `bin/argo-trace-old`.
 - Give it its own tests.
 - Give it built-in timing output and per-call timing logs during development.
 - Measure before and after each concurrency or selection change.
@@ -1468,9 +1468,9 @@ Cost:
 The user should explicitly confirm whether this is wanted in the default fast
 path.
 
-## Critique of argo-trace, why this is a clean rewrite
+## Critique of argo-trace-old, why this is a clean rewrite
 
-`bin/argo-trace` proved the operator problem is real.
+`bin/argo-trace-old` proved the operator problem is real.
 
 It also proved what happens when a useful script is fed a steady diet of
 "one more thing" until it turns into a ruby-shaped cursed artifact.
@@ -1549,7 +1549,7 @@ This is what happens when spec creep is allowed to pile up without anyone
 pushing back on whether the feature still belongs in the tool, or whether the
 tool has started collecting hobbies.
 
-So `argo-cli-trace` must avoid these failure modes:
+So `argo-trace` must avoid these failure modes:
 
 1. do not rebuild Argo internals in Ruby
 2. do not bolt Kubernetes archaeology onto an Argo status viewer

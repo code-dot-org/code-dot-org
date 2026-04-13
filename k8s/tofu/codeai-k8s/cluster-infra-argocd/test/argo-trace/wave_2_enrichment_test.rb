@@ -4,7 +4,7 @@
 require "minitest/autorun"
 require "pathname"
 
-load File.expand_path("../../bin/argo-cli-trace", __dir__)
+load File.expand_path("../../bin/argo-trace", __dir__)
 
 class ConcurrentFakeCommandRunner
   attr_reader :commands, :max_in_flight
@@ -43,20 +43,20 @@ class ConcurrentFakeCommandRunner
   end
 end
 
-class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
+class ArgoTraceWave2EnrichmentTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
 
   def test_fetches_all_appsets_and_selected_apps
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {
-        ArgoCliTrace.appset_get_command("app-of-apps") => (FIXTURE_DIR / "appset-get-app-of-apps.yaml").read,
-        ArgoCliTrace.appset_get_command("codeai") => (FIXTURE_DIR / "appset-get-codeai.yaml").read,
-        ArgoCliTrace.app_get_command("app-of-apps") => (FIXTURE_DIR / "app-get-app-of-apps.yaml").read,
-        ArgoCliTrace.app_get_command("codeai") => (FIXTURE_DIR / "app-get-codeai.yaml").read,
+        ArgoTrace.appset_get_command("app-of-apps") => (FIXTURE_DIR / "appset-get-app-of-apps.yaml").read,
+        ArgoTrace.appset_get_command("codeai") => (FIXTURE_DIR / "appset-get-codeai.yaml").read,
+        ArgoTrace.app_get_command("app-of-apps") => (FIXTURE_DIR / "app-get-app-of-apps.yaml").read,
+        ArgoTrace.app_get_command("codeai") => (FIXTURE_DIR / "app-get-codeai.yaml").read,
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: %w[app-of-apps codeai],
       app_names: %w[app-of-apps codeai],
@@ -73,11 +73,11 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   def test_fetch_wave_2_accepts_live_unwrapped_object_payloads
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {
-        ArgoCliTrace.app_get_command("app-of-apps") => "---\nmetadata:\n  name: app-of-apps\n",
+        ArgoTrace.app_get_command("app-of-apps") => "---\nmetadata:\n  name: app-of-apps\n",
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: [],
       app_names: %w[app-of-apps],
@@ -90,19 +90,19 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   def test_argocd_output_object_accepts_live_direct_object_payload
     payload = {"metadata" => {"name" => "app-of-apps"}}
 
-    assert_equal payload, ArgoCliTrace.argocd_output_object(payload)
+    assert_equal payload, ArgoTrace.argocd_output_object(payload)
   end
 
   def test_fetch_wave_2_accepts_live_unwrapped_object_payloads_for_apps_and_appsets
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {
-        ArgoCliTrace.appset_get_command("app-of-apps") => <<~YAML,
+        ArgoTrace.appset_get_command("app-of-apps") => <<~YAML,
           ---
           metadata:
             name: app-of-apps
             namespace: argocd
         YAML
-        ArgoCliTrace.app_get_command("app-of-apps") => <<~YAML,
+        ArgoTrace.app_get_command("app-of-apps") => <<~YAML,
           ---
           metadata:
             name: app-of-apps
@@ -111,7 +111,7 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: %w[app-of-apps],
       app_names: %w[app-of-apps],
@@ -125,14 +125,14 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   def test_respects_max_parallel_call_cap
     app_names = Array.new(55) {|i| "app-#{i}"}
     outputs = app_names.to_h do |name|
-      [ArgoCliTrace.app_get_command(name), "---\nmetadata:\n  name: #{name}\n"]
+      [ArgoTrace.app_get_command(name), "---\nmetadata:\n  name: #{name}\n"]
     end
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: outputs,
       delays: outputs.keys.to_h {|command| [command, 0.02]}
     )
 
-    ArgoCliTrace.fetch_wave_2_app_details(
+    ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: [],
       app_names: app_names,
@@ -145,8 +145,8 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   end
 
   def test_attaches_per_call_timeout_errors_without_discarding_other_results
-    slow_command = ArgoCliTrace.app_get_command("slow-app")
-    fast_command = ArgoCliTrace.app_get_command("fast-app")
+    slow_command = ArgoTrace.app_get_command("slow-app")
+    fast_command = ArgoTrace.app_get_command("fast-app")
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {
         slow_command => "---\nmetadata:\n  name: slow-app\n",
@@ -157,7 +157,7 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: [],
       app_names: %w[slow-app fast-app],
@@ -172,7 +172,7 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   end
 
   def test_attaches_command_failures_to_results
-    command = ArgoCliTrace.appset_get_command("codeai")
+    command = ArgoTrace.appset_get_command("codeai")
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {},
       errors: {
@@ -180,7 +180,7 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: %w[codeai],
       app_names: [],
@@ -193,8 +193,8 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
   end
 
   def test_total_snapshot_timeout_marks_unfinished_jobs
-    slow_command = ArgoCliTrace.app_get_command("slow-app")
-    queued_command = ArgoCliTrace.app_get_command("queued-app")
+    slow_command = ArgoTrace.app_get_command("slow-app")
+    queued_command = ArgoTrace.app_get_command("queued-app")
     command_runner = ConcurrentFakeCommandRunner.new(
       outputs: {
         slow_command => "---\nmetadata:\n  name: slow-app\n",
@@ -205,7 +205,7 @@ class ArgoCliTraceWave2EnrichmentTest < Minitest::Test
       }
     )
 
-    enrichment = ArgoCliTrace.fetch_wave_2_app_details(
+    enrichment = ArgoTrace.fetch_wave_2_app_details(
       command_runner: command_runner,
       appset_names: [],
       app_names: %w[slow-app queued-app],

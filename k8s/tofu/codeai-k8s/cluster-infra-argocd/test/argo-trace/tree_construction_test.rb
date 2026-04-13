@@ -4,21 +4,21 @@
 require "minitest/autorun"
 require "pathname"
 
-load File.expand_path("../../bin/argo-cli-trace", __dir__)
+load File.expand_path("../../bin/argo-trace", __dir__)
 
-class ArgoCliTraceTreeConstructionTest < Minitest::Test
+class ArgoTraceTreeConstructionTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
 
   def setup
-    @argocd_apps = ArgoCliTrace.argocd_output_list(
-      ArgoCliTrace.load_argocd_yaml((FIXTURE_DIR / "app-list.yaml").read)
+    @argocd_apps = ArgoTrace.argocd_output_list(
+      ArgoTrace.load_argocd_yaml((FIXTURE_DIR / "app-list.yaml").read)
     )
-    @argocd_appsets = ArgoCliTrace.argocd_output_list(
-      ArgoCliTrace.load_argocd_yaml((FIXTURE_DIR / "appset-list.yaml").read)
+    @argocd_appsets = ArgoTrace.argocd_output_list(
+      ArgoTrace.load_argocd_yaml((FIXTURE_DIR / "appset-list.yaml").read)
     )
-    @app_inventory = ArgoCliTrace.build_app_inventory(@argocd_apps)
-    @appset_inventory = ArgoCliTrace.build_appset_inventory(@argocd_appsets)
-    @root_inventory = ArgoCliTrace.build_root_inventory(@app_inventory)
+    @app_inventory = ArgoTrace.build_app_inventory(@argocd_apps)
+    @appset_inventory = ArgoTrace.build_appset_inventory(@argocd_appsets)
+    @root_inventory = ArgoTrace.build_root_inventory(@app_inventory)
     @app_enrichment = {
       "app-of-apps" => {raw: fixture_get("app-get-app-of-apps.yaml"), error: nil},
       "codeai" => {raw: fixture_get("app-get-codeai.yaml"), error: nil},
@@ -34,7 +34,7 @@ class ArgoCliTraceTreeConstructionTest < Minitest::Test
   end
 
   def test_build_tree_preserves_wrapper_app_and_appset_structure
-    tree = ArgoCliTrace.build_tree(
+    tree = ArgoTrace.build_tree(
       root_inventory: @root_inventory,
       app_inventory: @app_inventory,
       appset_inventory: @appset_inventory,
@@ -94,7 +94,7 @@ class ArgoCliTraceTreeConstructionTest < Minitest::Test
       "namespace" => "other-namespace",
     }
 
-    node = ArgoCliTrace.build_application_tree(
+    node = ArgoTrace.build_application_tree(
       "infra",
       app_inventory: @app_inventory,
       appset_inventory: @appset_inventory,
@@ -119,7 +119,7 @@ class ArgoCliTraceTreeConstructionTest < Minitest::Test
       },
     }
 
-    node = ArgoCliTrace.build_application_tree(
+    node = ArgoTrace.build_application_tree(
       "infra",
       app_inventory: @app_inventory,
       appset_inventory: @appset_inventory,
@@ -133,7 +133,7 @@ class ArgoCliTraceTreeConstructionTest < Minitest::Test
   end
 
   private def build_tree
-    @build_tree ||= ArgoCliTrace.build_tree(
+    @build_tree ||= ArgoTrace.build_tree(
       root_inventory: @root_inventory,
       app_inventory: @app_inventory,
       appset_inventory: @appset_inventory,
@@ -143,6 +143,6 @@ class ArgoCliTraceTreeConstructionTest < Minitest::Test
   end
 
   private def fixture_get(filename)
-    ArgoCliTrace.load_argocd_yaml((FIXTURE_DIR / filename).read)
+    ArgoTrace.load_argocd_yaml((FIXTURE_DIR / filename).read)
   end
 end

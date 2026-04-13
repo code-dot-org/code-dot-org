@@ -20,8 +20,8 @@ class StressHarness
     @mode = mode
     @cluster_root = Pathname(__dir__).join("..", "..").realpath
     @k8s_gitops = Pathname("~/src/k8s-gitops").expand_path
-    @argo_trace = @cluster_root / "bin" / "argo-trace"
-    @artifact_dir = @cluster_root / "logs" / "argo-trace-stress-test" / Time.now.utc.strftime("%Y-%m-%dT%H-%M-%SZ")
+    @argo_trace = @cluster_root / "bin" / "argo-trace-old"
+    @artifact_dir = @cluster_root / "logs" / "argo-trace-old-stress-test" / Time.now.utc.strftime("%Y-%m-%dT%H-%M-%SZ")
     @cleanup_enabled = true
   end
 
@@ -85,12 +85,12 @@ class StressHarness
     stderr = +""
     status = nil
 
-    Tempfile.create("argo-trace-stress-stdout") do |stdout_file|
-      Tempfile.create("argo-trace-stress-stderr") do |stderr_file|
+    Tempfile.create("argo-trace-old-stress-stdout") do |stdout_file|
+      Tempfile.create("argo-trace-old-stress-stderr") do |stderr_file|
         spawn_options = {out: stdout_file.path, err: stderr_file.path}
 
         if input
-          Tempfile.create("argo-trace-stress-stdin") do |stdin_file|
+          Tempfile.create("argo-trace-old-stress-stdin") do |stdin_file|
             stdin_file.write(input)
             stdin_file.flush
             spawn_options[:in] = stdin_file.path
@@ -355,11 +355,11 @@ class StressHarness
   end
 
   def primary_bootstrap
-    @k8s_gitops / "argo-trace-stress-test" / "roots" / "primary" / "bootstrap.yaml"
+    @k8s_gitops / "argo-trace-old-stress-test" / "roots" / "primary" / "bootstrap.yaml"
   end
 
   def secondary_bootstrap
-    @k8s_gitops / "argo-trace-stress-test" / "roots" / "secondary" / "bootstrap.yaml"
+    @k8s_gitops / "argo-trace-old-stress-test" / "roots" / "secondary" / "bootstrap.yaml"
   end
 
   def critique_text(milestone)
@@ -394,25 +394,25 @@ class StressHarness
   end
 
   def clear_synthetic_finalizers!
-    sh!("kubectl", "patch", "configmap", "stress-argo-trace-finalizer", "-n", "stress-argo-trace-finalizer", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
-    sh!("kubectl", "patch", "xstresstrace", "stress-argo-trace", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
-    usages = sh!("kubectl", "get", "usage.protection.crossplane.io", "-n", "stress-argo-trace-crossplane", "-o", "name", allow_failure: true)
+    sh!("kubectl", "patch", "configmap", "stress-argo-trace-old-finalizer", "-n", "stress-argo-trace-old-finalizer", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    sh!("kubectl", "patch", "xstresstrace", "stress-argo-trace-old", "-n", "stress-argo-trace-old-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    usages = sh!("kubectl", "get", "usage.protection.crossplane.io", "-n", "stress-argo-trace-old-crossplane", "-o", "name", allow_failure: true)
     usages.lines.map(&:strip).reject(&:empty?).each do |usage|
-      sh!("kubectl", "patch", usage, "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+      sh!("kubectl", "patch", usage, "-n", "stress-argo-trace-old-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
     end
-    sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-root", "stress-argo-trace-middle", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
-    sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-old-root", "stress-argo-trace-old-middle", "stress-argo-trace-old-leaf", "-n", "stress-argo-trace-old-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
+    sh!("kubectl", "patch", "stressmanagedthing", "stress-argo-trace-old-leaf", "-n", "stress-argo-trace-old-crossplane", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
   end
 
   def delete_crossplane_stress_residue!
-    sh!("kubectl", "delete", "usage.protection.crossplane.io", "-A", "-l", "crossplane.io/composite=stress-argo-trace", "--ignore-not-found=true", "--wait=false", allow_failure: true)
-    sh!("kubectl", "delete", "stressmanagedthing", "stress-argo-trace-root", "stress-argo-trace-middle", "stress-argo-trace-leaf", "-n", "stress-argo-trace-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
-    sh!("kubectl", "delete", "xstresstrace", "stress-argo-trace", "-n", "stress-argo-trace-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+    sh!("kubectl", "delete", "usage.protection.crossplane.io", "-A", "-l", "crossplane.io/composite=stress-argo-trace-old", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+    sh!("kubectl", "delete", "stressmanagedthing", "stress-argo-trace-old-root", "stress-argo-trace-old-middle", "stress-argo-trace-old-leaf", "-n", "stress-argo-trace-old-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
+    sh!("kubectl", "delete", "xstresstrace", "stress-argo-trace-old", "-n", "stress-argo-trace-old-crossplane", "--ignore-not-found=true", "--wait=false", allow_failure: true)
   end
 
   def force_delete_stress_argo_roots!
     resources = sh!("kubectl", "get", "application,applicationset", "-n", "argocd", "-o", "name", allow_failure: true)
-    resources.lines.grep(/stress-argo-trace/).map(&:strip).reject(&:empty?).each do |resource|
+    resources.lines.grep(/stress-argo-trace-old/).map(&:strip).reject(&:empty?).each do |resource|
       sh!("kubectl", "patch", resource, "-n", "argocd", "--type=merge", "-p", '{"metadata":{"finalizers":[]}}', allow_failure: true)
     end
   end
@@ -428,7 +428,7 @@ class StressHarness
   def wait_for_stress_roots_gone!(timeout: 600)
     wait_until("stress Applications and ApplicationSets to be deleted", timeout: timeout, interval: 3) do
       resources = sh!("kubectl", "get", "application,applicationset", "-n", "argocd", "-o", "name", allow_failure: true)
-      resources.lines.grep(/stress-argo-trace/).empty?
+      resources.lines.grep(/stress-argo-trace-old/).empty?
     end
   end
 
@@ -436,7 +436,7 @@ class StressHarness
     wait_until("stress namespaces to finish terminating", timeout: timeout, interval: 3) do
       namespaces = json!("kubectl", "get", "namespace", "-o", "json")
       namespaces.fetch("items", []).none? do |namespace|
-        namespace.dig("metadata", "name").to_s.start_with?("stress-argo-trace-") &&
+        namespace.dig("metadata", "name").to_s.start_with?("stress-argo-trace-old-") &&
           namespace.dig("metadata", "deletionTimestamp")
       end
     rescue StressHarnessError
@@ -449,8 +449,8 @@ class StressHarness
   def run_quiet_root_scenarios
     stage_quiet_root!
 
-    output = capture_trace!("single-idle-root", root_name: "stress-argo-trace-secondary-root")
-    assert_matches(output, /stress-argo-trace-secondary-root(?:: idle| \[idle\])/, "single-idle-root")
+    output = capture_trace!("single-idle-root", root_name: "stress-argo-trace-old-secondary-root")
+    assert_matches(output, /stress-argo-trace-old-secondary-root(?:: idle| \[idle\])/, "single-idle-root")
     assert_excludes(output, "Caveats:", "single-idle-root")
   end
 
@@ -466,9 +466,9 @@ class StressHarness
     # still covered in the fast unit tests; the live harness instead proves that
     # explicit root tracing stays isolated even when more than one stress root
     # exists at once.
-    secondary_output = capture_trace!("secondary-root-with-primary-present", root_name: "stress-argo-trace-secondary-root")
-    assert_matches(secondary_output, /stress-argo-trace-secondary-root(?:: idle| \[idle\])/, "secondary-root-with-primary-present")
-    assert_excludes(secondary_output, "stress-argo-trace-app-of-apps", "secondary-root-with-primary-present")
+    secondary_output = capture_trace!("secondary-root-with-primary-present", root_name: "stress-argo-trace-old-secondary-root")
+    assert_matches(secondary_output, /stress-argo-trace-old-secondary-root(?:: idle| \[idle\])/, "secondary-root-with-primary-present")
+    assert_excludes(secondary_output, "stress-argo-trace-old-app-of-apps", "secondary-root-with-primary-present")
 
     # Capture the top-level root while every noisy child branch is still live.
     # The narrower per-app traces below take time, and the hook job can finish
@@ -476,51 +476,51 @@ class StressHarness
     # so the root scenario is testing the tracer, not an avoidable timing race.
     wait_for_status_resources(
       kind: "applicationset",
-      name: "stress-argo-trace-app-of-apps",
+      name: "stress-argo-trace-old-app-of-apps",
       expected_names: %w[
-        stress-argo-trace-broken-pod
-        stress-argo-trace-broken-statefulset
-        stress-argo-trace-cluster-scope
-        stress-argo-trace-hook-job
-        stress-argo-trace-nested
-        stress-argo-trace-pvc-pending
+        stress-argo-trace-old-broken-pod
+        stress-argo-trace-old-broken-statefulset
+        stress-argo-trace-old-cluster-scope
+        stress-argo-trace-old-hook-job
+        stress-argo-trace-old-nested
+        stress-argo-trace-old-pvc-pending
       ],
     )
     wait_for_status_resources(
       kind: "applicationset",
-      name: "stress-argo-trace-nested",
+      name: "stress-argo-trace-old-nested",
       expected_names: [
-        "stress-argo-trace-noisy",
-        "stress-argo-trace-quiet",
+        "stress-argo-trace-old-noisy",
+        "stress-argo-trace-old-quiet",
       ],
     )
-    wait_for_pod_wait_reason("stress-argo-trace-noisy", "app=stress-argo-trace-noisy")
-    nested_output = capture_trace!("nested-active-branch", root_name: "stress-argo-trace-app-of-apps")
-    assert_includes(nested_output, "stress-argo-trace-nested", "nested-active-branch")
-    assert_includes(nested_output, "stress-argo-trace-noisy", "nested-active-branch")
-    assert_excludes(nested_output, "stress-argo-trace-secondary-root", "nested-active-branch")
+    wait_for_pod_wait_reason("stress-argo-trace-old-noisy", "app=stress-argo-trace-old-noisy")
+    nested_output = capture_trace!("nested-active-branch", root_name: "stress-argo-trace-old-app-of-apps")
+    assert_includes(nested_output, "stress-argo-trace-old-nested", "nested-active-branch")
+    assert_includes(nested_output, "stress-argo-trace-old-noisy", "nested-active-branch")
+    assert_excludes(nested_output, "stress-argo-trace-old-secondary-root", "nested-active-branch")
 
-    hook_output = capture_trace!("hook-job-in-progress", root_name: "stress-argo-trace-hook-job")
-    assert_includes(hook_output, "job/stress-argo-trace-presync", "hook-job-in-progress")
+    hook_output = capture_trace!("hook-job-in-progress", root_name: "stress-argo-trace-old-hook-job")
+    assert_includes(hook_output, "job/stress-argo-trace-old-presync", "hook-job-in-progress")
 
-    workload_output = capture_trace!("owner-ref-workload-chain", root_name: "stress-argo-trace-broken-pod")
+    workload_output = capture_trace!("owner-ref-workload-chain", root_name: "stress-argo-trace-old-broken-pod")
     assert_matches(workload_output, %r{replicaset/}, "owner-ref-workload-chain")
     assert_matches(workload_output, %r{pod/}, "owner-ref-workload-chain")
     assert_matches(workload_output, /ImagePullBackOff|ErrImagePull|pulling image/i, "owner-ref-workload-chain")
 
-    statefulset_output = capture_trace!("statefulset-workload-chain", root_name: "stress-argo-trace-broken-statefulset")
-    assert_includes(statefulset_output, "statefulset/stress-argo-trace-broken-statefulset", "statefulset-workload-chain")
+    statefulset_output = capture_trace!("statefulset-workload-chain", root_name: "stress-argo-trace-old-broken-statefulset")
+    assert_includes(statefulset_output, "statefulset/stress-argo-trace-old-broken-statefulset", "statefulset-workload-chain")
     assert_matches(statefulset_output, %r{pod/}, "statefulset-workload-chain")
     assert_matches(statefulset_output, /ImagePullBackOff|ErrImagePull|pulling image/i, "statefulset-workload-chain")
 
-    storage_output = capture_trace!("pvc-pending-workload", root_name: "stress-argo-trace-pvc-pending")
-    assert_includes(storage_output, "persistentvolumeclaim/stress-argo-trace-pvc", "pvc-pending-workload")
+    storage_output = capture_trace!("pvc-pending-workload", root_name: "stress-argo-trace-old-pvc-pending")
+    assert_includes(storage_output, "persistentvolumeclaim/stress-argo-trace-old-pvc", "pvc-pending-workload")
     assert_matches(storage_output, %r{pod/}, "pvc-pending-workload")
     assert_matches(storage_output, /PersistentVolumeClaim|persistentvolumeclaim|unbound|storage/i, "pvc-pending-workload")
 
-    cluster_scope_output = capture_trace!("cluster-scope-resource-ref", root_name: "stress-argo-trace-cluster-scope")
-    assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-cluster-parent", "cluster-scope-resource-ref")
-    assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-cluster-child", "cluster-scope-resource-ref")
+    cluster_scope_output = capture_trace!("cluster-scope-resource-ref", root_name: "stress-argo-trace-old-cluster-scope")
+    assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-old-cluster-parent", "cluster-scope-resource-ref")
+    assert_includes(cluster_scope_output, "clustertracething/stress-argo-trace-old-cluster-child", "cluster-scope-resource-ref")
     assert_includes(cluster_scope_output, "status.conditions.Ready: waiting", "cluster-scope-resource-ref")
     assert_matches(cluster_scope_output, /via=resource-ref/, "cluster-scope-resource-ref")
 
@@ -533,7 +533,7 @@ class StressHarness
   def stage_quiet_root!
     log("staging quiet root")
     apply_bootstrap!(secondary_bootstrap)
-    wait_for_app("stress-argo-trace-secondary-idle", sync: "Synced", health: "Healthy")
+    wait_for_app("stress-argo-trace-old-secondary-idle", sync: "Synced", health: "Healthy")
   end
 
   def stage_profile_root!
@@ -546,57 +546,57 @@ class StressHarness
     log("staging active root")
     apply_bootstrap!(primary_bootstrap)
 
-    wait_for_app("stress-argo-trace-broken-pod")
-    wait_for_app("stress-argo-trace-broken-statefulset")
-    wait_for_app("stress-argo-trace-pvc-pending")
-    wait_for_app("stress-argo-trace-cluster-scope")
-    wait_for_app("stress-argo-trace-hook-job")
-    wait_for_app("stress-argo-trace-crossplane")
-    wait_for_status_resources(kind: "application", name: "stress-argo-trace-app-of-apps", expected_names: ["stress-argo-trace-app-of-apps"])
+    wait_for_app("stress-argo-trace-old-broken-pod")
+    wait_for_app("stress-argo-trace-old-broken-statefulset")
+    wait_for_app("stress-argo-trace-old-pvc-pending")
+    wait_for_app("stress-argo-trace-old-cluster-scope")
+    wait_for_app("stress-argo-trace-old-hook-job")
+    wait_for_app("stress-argo-trace-old-crossplane")
+    wait_for_status_resources(kind: "application", name: "stress-argo-trace-old-app-of-apps", expected_names: ["stress-argo-trace-old-app-of-apps"])
     wait_for_status_resources(
       kind: "applicationset",
-      name: "stress-argo-trace-app-of-apps",
+      name: "stress-argo-trace-old-app-of-apps",
       expected_names: %w[
-        stress-argo-trace-broken-pod
-        stress-argo-trace-broken-statefulset
-        stress-argo-trace-cluster-scope
-        stress-argo-trace-hook-job
-        stress-argo-trace-nested
-        stress-argo-trace-pvc-pending
+        stress-argo-trace-old-broken-pod
+        stress-argo-trace-old-broken-statefulset
+        stress-argo-trace-old-cluster-scope
+        stress-argo-trace-old-hook-job
+        stress-argo-trace-old-nested
+        stress-argo-trace-old-pvc-pending
       ],
     )
-    wait_for_app("stress-argo-trace-nested", sync: "Synced", health: "Healthy")
-    wait_for_status_resources(kind: "application", name: "stress-argo-trace-nested", expected_names: ["stress-argo-trace-nested"])
+    wait_for_app("stress-argo-trace-old-nested", sync: "Synced", health: "Healthy")
+    wait_for_status_resources(kind: "application", name: "stress-argo-trace-old-nested", expected_names: ["stress-argo-trace-old-nested"])
     wait_for_status_resources(
       kind: "applicationset",
-      name: "stress-argo-trace-nested",
+      name: "stress-argo-trace-old-nested",
       expected_names: [
-        "stress-argo-trace-noisy",
-        "stress-argo-trace-quiet",
+        "stress-argo-trace-old-noisy",
+        "stress-argo-trace-old-quiet",
       ],
     )
-    wait_for_app("stress-argo-trace-noisy")
+    wait_for_app("stress-argo-trace-old-noisy")
     if require_active_hook_job
-      wait_for_job_active("stress-argo-trace-hook-job", "stress-argo-trace-presync")
+      wait_for_job_active("stress-argo-trace-old-hook-job", "stress-argo-trace-old-presync")
     else
-      wait_for_any_application_resources("stress-argo-trace-hook-job")
+      wait_for_any_application_resources("stress-argo-trace-old-hook-job")
     end
-    wait_for_pod_wait_reason("stress-argo-trace-broken-pod", "app=stress-argo-trace-broken-pod")
-    wait_for_pod_wait_reason("stress-argo-trace-broken-statefulset", "app=stress-argo-trace-broken-statefulset")
-    wait_for_pod_wait_reason("stress-argo-trace-noisy", "app=stress-argo-trace-noisy")
-    wait_for_pod_phase("stress-argo-trace-pvc-pending", "app=stress-argo-trace-pvc-pending", "Pending")
-    wait_for_resource(namespace: "stress-argo-trace-pvc-pending", kind: "persistentvolumeclaim", name: "stress-argo-trace-pvc")
-    wait_for_cluster_resource(kind: "clustertracething", name: "stress-argo-trace-cluster-parent")
-    wait_for_cluster_resource(kind: "clustertracething", name: "stress-argo-trace-cluster-child")
-    wait_for_resource(namespace: "stress-argo-trace-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-root")
-    wait_for_resource(namespace: "stress-argo-trace-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-leaf")
-    wait_for_any_application_resources("stress-argo-trace-broken-pod")
-    wait_for_any_application_resources("stress-argo-trace-broken-statefulset")
-    wait_for_any_application_resources("stress-argo-trace-hook-job")
-    wait_for_any_application_resources("stress-argo-trace-pvc-pending")
-    wait_for_any_application_resources("stress-argo-trace-cluster-scope")
-    wait_for_any_application_resources("stress-argo-trace-crossplane")
-    wait_for_any_application_resources("stress-argo-trace-noisy")
+    wait_for_pod_wait_reason("stress-argo-trace-old-broken-pod", "app=stress-argo-trace-old-broken-pod")
+    wait_for_pod_wait_reason("stress-argo-trace-old-broken-statefulset", "app=stress-argo-trace-old-broken-statefulset")
+    wait_for_pod_wait_reason("stress-argo-trace-old-noisy", "app=stress-argo-trace-old-noisy")
+    wait_for_pod_phase("stress-argo-trace-old-pvc-pending", "app=stress-argo-trace-old-pvc-pending", "Pending")
+    wait_for_resource(namespace: "stress-argo-trace-old-pvc-pending", kind: "persistentvolumeclaim", name: "stress-argo-trace-old-pvc")
+    wait_for_cluster_resource(kind: "clustertracething", name: "stress-argo-trace-old-cluster-parent")
+    wait_for_cluster_resource(kind: "clustertracething", name: "stress-argo-trace-old-cluster-child")
+    wait_for_resource(namespace: "stress-argo-trace-old-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-old-root")
+    wait_for_resource(namespace: "stress-argo-trace-old-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-old-leaf")
+    wait_for_any_application_resources("stress-argo-trace-old-broken-pod")
+    wait_for_any_application_resources("stress-argo-trace-old-broken-statefulset")
+    wait_for_any_application_resources("stress-argo-trace-old-hook-job")
+    wait_for_any_application_resources("stress-argo-trace-old-pvc-pending")
+    wait_for_any_application_resources("stress-argo-trace-old-cluster-scope")
+    wait_for_any_application_resources("stress-argo-trace-old-crossplane")
+    wait_for_any_application_resources("stress-argo-trace-old-noisy")
   end
 
   # Delete-time tracing is where the generic walker usually proves itself or
@@ -604,20 +604,20 @@ class StressHarness
   # Crossplane all get a chance to expose their real blocking leaves.
   def run_delete_scenarios
     delete_bootstrap!(primary_bootstrap, wait: false)
-    wait_for_resource(namespace: "stress-argo-trace-finalizer", kind: "configmap", name: "stress-argo-trace-finalizer", deleting: true)
-    wait_for_resource(namespace: "stress-argo-trace-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-leaf", deleting: true)
+    wait_for_resource(namespace: "stress-argo-trace-old-finalizer", kind: "configmap", name: "stress-argo-trace-old-finalizer", deleting: true)
+    wait_for_resource(namespace: "stress-argo-trace-old-crossplane", kind: "stressmanagedthing", name: "stress-argo-trace-old-leaf", deleting: true)
 
     # The app-of-apps recursion is already exercised on the apply side. For the
     # delete-time finalizer case, the sharper check is the app that actually
     # owns the stalled ConfigMap. That keeps this scenario fast and isolates the
     # generic finalizer leaf behavior from unrelated sibling delete churn.
-    finalizer_output = capture_trace!("finalizer-delete-stall", root_name: "stress-argo-trace-finalizer-stall")
-    assert_includes(finalizer_output, "configmap/stress-argo-trace-finalizer", "finalizer-delete-stall")
+    finalizer_output = capture_trace!("finalizer-delete-stall", root_name: "stress-argo-trace-old-finalizer-stall")
+    assert_includes(finalizer_output, "configmap/stress-argo-trace-old-finalizer", "finalizer-delete-stall")
     assert_includes(finalizer_output, "stress.argotrace.test/finalizer", "finalizer-delete-stall")
 
-    crossplane_output = capture_trace!("crossplane-delete-hold", root_name: "stress-argo-trace-crossplane")
-    assert_includes(crossplane_output, "xstresstrace/stress-argo-trace", "crossplane-delete-hold")
-    assert_includes(crossplane_output, "stressmanagedthing/stress-argo-trace-leaf", "crossplane-delete-hold")
+    crossplane_output = capture_trace!("crossplane-delete-hold", root_name: "stress-argo-trace-old-crossplane")
+    assert_includes(crossplane_output, "xstresstrace/stress-argo-trace-old", "crossplane-delete-hold")
+    assert_includes(crossplane_output, "stressmanagedthing/stress-argo-trace-old-leaf", "crossplane-delete-hold")
     assert_matches(crossplane_output, /usage\/|via=usage\./, "crossplane-delete-hold")
   ensure
     clear_synthetic_finalizers!

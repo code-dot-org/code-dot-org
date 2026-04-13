@@ -4,7 +4,7 @@
 require "minitest/autorun"
 require "yaml"
 
-load File.expand_path("../../bin/argo-cli-trace", __dir__)
+load File.expand_path("../../bin/argo-trace", __dir__)
 
 class Wave3FakeCommandRunner
   attr_reader :commands, :max_in_flight
@@ -42,24 +42,24 @@ class Wave3FakeCommandRunner
   end
 end
 
-class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
+class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
   def test_parse_cli_options_defaults_kubectl_details_to_enabled
-    options = ArgoCliTrace.parse_cli_options([])
+    options = ArgoTrace.parse_cli_options([])
 
     assert_equal true, options[:kubectl_details]
   end
 
   def test_parse_cli_options_accepts_supported_kubectl_details_values
-    assert_equal true, ArgoCliTrace.parse_cli_options(["--kubectl-details", "1"])[:kubectl_details]
-    assert_equal false, ArgoCliTrace.parse_cli_options(["--kubectl-details", "0"])[:kubectl_details]
-    assert_equal true, ArgoCliTrace.parse_cli_options(["--kubectl-details", "true"])[:kubectl_details]
-    assert_equal false, ArgoCliTrace.parse_cli_options(["--kubectl-details", "false"])[:kubectl_details]
+    assert_equal true, ArgoTrace.parse_cli_options(["--kubectl-details", "1"])[:kubectl_details]
+    assert_equal false, ArgoTrace.parse_cli_options(["--kubectl-details", "0"])[:kubectl_details]
+    assert_equal true, ArgoTrace.parse_cli_options(["--kubectl-details", "true"])[:kubectl_details]
+    assert_equal false, ArgoTrace.parse_cli_options(["--kubectl-details", "false"])[:kubectl_details]
   end
 
   def test_snapshot_body_keeps_wave_3_off_when_frontier_is_only_apps_and_appsets
     command_runner = Wave3FakeCommandRunner.new(outputs: fixture_argocd_outputs_only)
 
-    body_text = ArgoCliTrace.snapshot_body(
+    body_text = ArgoTrace.snapshot_body(
       command_runner: command_runner,
       wrap_width: nil,
       kubectl_details: true
@@ -90,7 +90,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
       )
     )
 
-    body_text = ArgoCliTrace.snapshot_body(
+    body_text = ArgoTrace.snapshot_body(
       command_runner: command_runner,
       wrap_width: nil,
       kubectl_details: true
@@ -122,7 +122,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
       }
     )
 
-    details = ArgoCliTrace.fetch_wave_3_kubectl_details(
+    details = ArgoTrace.fetch_wave_3_kubectl_details(
       command_runner: command_runner,
       resource_nodes: resource_nodes,
       max_parallel_calls: 2,
@@ -150,7 +150,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
       )
     )
 
-    ArgoCliTrace.snapshot_body(
+    ArgoTrace.snapshot_body(
       command_runner: command_runner,
       wrap_width: nil,
       kubectl_details: true
@@ -163,7 +163,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
   def test_wave_3_keeps_detail_bullets_suppressed_for_fully_all_ok_subtrees
     command_runner = Wave3FakeCommandRunner.new(outputs: fixture_argocd_outputs_only)
 
-    body_text = ArgoCliTrace.snapshot_body(
+    body_text = ArgoTrace.snapshot_body(
       command_runner: command_runner,
       wrap_width: nil,
       kubectl_details: true
@@ -179,23 +179,23 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
     fixture_dir = File.expand_path("fixtures/argo-cli-data", __dir__)
 
     {
-      ArgoCliTrace::WAVE1_APPSET_LIST_COMMAND => File.read(File.join(fixture_dir, "appset-list.yaml")),
-      ArgoCliTrace::WAVE1_APP_LIST_COMMAND => File.read(File.join(fixture_dir, "app-list.yaml")),
-      ArgoCliTrace.appset_get_command("app-of-apps") => File.read(File.join(fixture_dir, "appset-get-app-of-apps.yaml")),
-      ArgoCliTrace.appset_get_command("codeai") => File.read(File.join(fixture_dir, "appset-get-codeai.yaml")),
-      ArgoCliTrace.app_get_command("app-of-apps") => File.read(File.join(fixture_dir, "app-get-app-of-apps.yaml")),
-      ArgoCliTrace.app_get_command("codeai") => File.read(File.join(fixture_dir, "app-get-codeai.yaml")),
-      ArgoCliTrace.app_get_command("codeai-staging") => File.read(File.join(fixture_dir, "app-get-codeai-staging.yaml")),
-      ArgoCliTrace.app_get_command("codeai-test") => File.read(File.join(fixture_dir, "app-get-codeai-test.yaml")),
-      ArgoCliTrace.app_get_command("infra") => File.read(File.join(fixture_dir, "app-get-infra.yaml")),
-      ArgoCliTrace.app_get_command("kargo") => File.read(File.join(fixture_dir, "app-get-kargo.yaml")),
+      ArgoTrace::WAVE1_APPSET_LIST_COMMAND => File.read(File.join(fixture_dir, "appset-list.yaml")),
+      ArgoTrace::WAVE1_APP_LIST_COMMAND => File.read(File.join(fixture_dir, "app-list.yaml")),
+      ArgoTrace.appset_get_command("app-of-apps") => File.read(File.join(fixture_dir, "appset-get-app-of-apps.yaml")),
+      ArgoTrace.appset_get_command("codeai") => File.read(File.join(fixture_dir, "appset-get-codeai.yaml")),
+      ArgoTrace.app_get_command("app-of-apps") => File.read(File.join(fixture_dir, "app-get-app-of-apps.yaml")),
+      ArgoTrace.app_get_command("codeai") => File.read(File.join(fixture_dir, "app-get-codeai.yaml")),
+      ArgoTrace.app_get_command("codeai-staging") => File.read(File.join(fixture_dir, "app-get-codeai-staging.yaml")),
+      ArgoTrace.app_get_command("codeai-test") => File.read(File.join(fixture_dir, "app-get-codeai-test.yaml")),
+      ArgoTrace.app_get_command("infra") => File.read(File.join(fixture_dir, "app-get-infra.yaml")),
+      ArgoTrace.app_get_command("kargo") => File.read(File.join(fixture_dir, "app-get-kargo.yaml")),
     }
   end
 
   private def wave_3_fixture_outputs
     {
-      ArgoCliTrace::WAVE1_APPSET_LIST_COMMAND => [].to_yaml,
-      ArgoCliTrace::WAVE1_APP_LIST_COMMAND => [
+      ArgoTrace::WAVE1_APPSET_LIST_COMMAND => [].to_yaml,
+      ArgoTrace::WAVE1_APP_LIST_COMMAND => [
         {
           "metadata" => {
             "name" => "standard-envtypes",
@@ -207,7 +207,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
           },
         }
       ].to_yaml,
-      ArgoCliTrace.app_get_command("standard-envtypes") => {
+      ArgoTrace.app_get_command("standard-envtypes") => {
         "metadata" => {
           "name" => "standard-envtypes",
           "namespace" => "argocd",
@@ -233,7 +233,7 @@ class ArgoCliTraceWave3KubectlDetailsTest < Minitest::Test
   end
 
   private def wave_3_resource_node(kind:, name:, namespace: nil, group: "")
-    ArgoCliTrace::TreeNode.new(
+    ArgoTrace::TreeNode.new(
       kind: kind,
       name: name,
       namespace: namespace,

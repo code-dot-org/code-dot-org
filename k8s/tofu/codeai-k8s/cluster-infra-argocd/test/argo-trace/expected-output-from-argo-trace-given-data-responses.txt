@@ -1,6 +1,6 @@
-starting argo-cli-trace @ 12:33p and 10s
+starting argo-trace @ 12:33p and 10s
 
-# ArgoCD dependency tree @ 12:33p and 10s, argo-cli-trace took 30.0s
+# ArgoCD dependency tree @ 12:33p and 10s, argo-trace took 30.0s
 
 [2m
 - app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]
