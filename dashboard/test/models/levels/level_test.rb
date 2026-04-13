@@ -1491,21 +1491,20 @@ class LevelTest < ActiveSupport::TestCase
     other_script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    other_lesson_group = create(:lesson_group, script: other_script)
-    other_lesson = create(:lesson, script: other_script, lesson_group: other_lesson_group)
     parent_level = create(:bubble_choice_level, name: 'parent bubble choice 2')
     child_level = create(:music, name: 'music sublevel 2')
     parent_level.child_levels << child_level
     create(:rubric, level: parent_level, lesson: lesson)
-    # Child is accessed from other_script, not the script with the rubric
+    # Parent is in other_script, not the script with the rubric
+    create(:script_level, script: other_script, levels: [parent_level])
     script_level = create(
       :script_level,
-      lesson: other_lesson,
-      script: other_script,
+      lesson: lesson,
+      script: script,
       levels: [child_level]
     )
 
-    properties = child_level.summarize_for_lab2_properties(other_script, script_level).stringify_keys
+    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
 
     assert_nil properties["showRubric"]
   end
