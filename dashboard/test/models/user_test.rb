@@ -3059,6 +3059,7 @@ class UserTest < ActiveSupport::TestCase
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
         us_state: us_state,
+        is_demo_student: false,
       },
       @student.summarize
     )
