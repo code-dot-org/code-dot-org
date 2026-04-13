@@ -36,6 +36,18 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal expected_summary, @response.body
   end
 
+  test 'is_demo_student is true for demo students' do
+    sign_in @teacher
+
+    Policies::DemoSections.stubs(:demo_student?).with(@student.id).returns(true)
+
+    get :index, params: {section_id: @section.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    assert response[0]['is_demo_student']
+  end
+
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
     student = create(:student_in_picture_section)
     assert student.teacher_managed_account?

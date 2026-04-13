@@ -54,7 +54,9 @@ function LessonLockDialog({
   //
   const setAllLockStatus = lockStatus => {
     setClientLockState(clientLockState =>
-      clientLockState.map(item => ({...item, lockStatus}))
+      clientLockState.map(item =>
+        item.isDemoStudent ? item : {...item, lockStatus}
+      )
     );
   };
 
@@ -236,12 +238,13 @@ function LessonLockDialog({
           {loading ? (
             <SkeletonRows numRows={5} numCols={4} />
           ) : (
-            clientLockState.map(({name, lockStatus}, index) => (
+            clientLockState.map(({name, lockStatus, isDemoStudent}, index) => (
               <StudentRow
                 key={index}
                 index={index}
                 name={name}
                 lockStatus={lockStatus}
+                isDemoStudent={isDemoStudent}
                 handleRadioChange={handleRadioChange}
               />
             ))

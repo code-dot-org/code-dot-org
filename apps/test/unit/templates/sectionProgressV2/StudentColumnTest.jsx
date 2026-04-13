@@ -90,13 +90,13 @@ describe('StudentColumn', () => {
     renderDefault({
       sortedStudents: [studentA, studentB],
     });
-    let holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).toBe('false');
+    let holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('false');
 
-    fireEvent.click(holmes);
+    fireEvent.click(holmesButton);
 
-    holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).toBe('true');
+    holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('true');
 
     screen.getByText('Time Spent (mins)');
     screen.getByText('Last Updated');
