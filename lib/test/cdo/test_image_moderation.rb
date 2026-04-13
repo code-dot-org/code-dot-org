@@ -112,7 +112,7 @@ class ImageModerationTest < Minitest::Test
     Tempfile.create(%w[large .png]) do |f|
       MiniMagick::Tool::Convert.new do |c|
         c.size '1500x1500'
-        # plasma:fractal is an ImageMagick build-in image generator that produces
+        # plasma:fractal is an ImageMagick built-in image generator that produces
         # a randomly colored plasma gradient. It results in enough pixel variation to defeat
         # PNG's compression algorithm so we can produce a large image that exceeds MAX_MODERATION_SIZE.
         c << 'plasma:fractal'
