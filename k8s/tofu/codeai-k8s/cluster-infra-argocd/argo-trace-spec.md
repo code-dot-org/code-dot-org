@@ -1312,7 +1312,7 @@ The test expectation for `k8s-gitops` should therefore be:
 
 Authoritative example target:
 
-- [`test/argo-trace/expected-output-from-argo-cli-given-data-responses.txt`](/Users/seth/src/code-dot-org/k8s/tofu/codeai-k8s/cluster-infra-argocd/test/argo-trace/expected-output-from-argo-cli-given-data-responses.txt)
+- [`test/argo-trace/expected-output-from-argo-trace-given-data-responses.txt`](/Users/seth/src/code-dot-org/k8s/tofu/codeai-k8s/cluster-infra-argocd/test/argo-trace/expected-output-from-argo-trace-given-data-responses.txt)
 
 Do not maintain a second handwritten full-output block in this spec.
 
