@@ -344,7 +344,6 @@ class Level < ApplicationRecord
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
     'Sketchlab', # no ideal solution
-    'Sketchlab2', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl

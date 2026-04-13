@@ -7837,30 +7837,6 @@
       ]
     },
     {
-      "chapter": 232,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "allthethings sketchlab2 1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "allthethings sketchlab2 1"
-        ],
-        "lesson.key": "lesson-57",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
-      },
-      "level_keys": [
-        "allthethings sketchlab2 1"
-      ]
-    },
-    {
       "chapter": 233,
       "position": 1,
       "activity_section_position": 1,
@@ -10777,18 +10753,6 @@
         "level.key": "allthethings sketchlab 4",
         "script_level.level_keys": [
           "allthethings sketchlab 4"
-        ],
-        "lesson.key": "lesson-57",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "allthethings sketchlab2 1",
-        "script_level.level_keys": [
-          "allthethings sketchlab2 1"
         ],
         "lesson.key": "lesson-57",
         "lesson_group.key": "",
