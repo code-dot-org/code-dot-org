@@ -267,24 +267,17 @@ class JsDebugger extends React.Component {
   onTransitionEnd = () => this.setState({transitionType: null});
 
   onMouseDownDebugResizeBar = event => {
-    // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
-    if (eventSourceElm.id === 'debugResizeBar') {
-      this._draggingDebugResizeBar = true;
+    this._draggingDebugResizeBar = true;
+    document.body.addEventListener('mousemove', this.onMouseMoveDebugResizeBar);
+    const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (mouseMoveTouchEventName) {
       document.body.addEventListener(
-        'mousemove',
+        mouseMoveTouchEventName,
         this.onMouseMoveDebugResizeBar
       );
-      const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-      if (mouseMoveTouchEventName) {
-        document.body.addEventListener(
-          mouseMoveTouchEventName,
-          this.onMouseMoveDebugResizeBar
-        );
-      }
-
-      event.preventDefault();
     }
+
+    event.preventDefault();
   };
 
   setDebugHeight = height => {
@@ -343,24 +336,20 @@ class JsDebugger extends React.Component {
   };
 
   onMouseDownWatchersResizeBar = event => {
-    // When we see a mouse down in the resize bar, start tracking mouse moves:
-    const eventSourceElm = event.srcElement || event.target;
-    if (eventSourceElm.id === 'watchersResizeBar') {
-      this._draggingWatchersResizeBar = true;
+    this._draggingWatchersResizeBar = true;
+    document.body.addEventListener(
+      'mousemove',
+      this.onMouseMoveWatchersResizeBar
+    );
+    const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (mouseMoveTouchEventName) {
       document.body.addEventListener(
-        'mousemove',
+        mouseMoveTouchEventName,
         this.onMouseMoveWatchersResizeBar
       );
-      const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-      if (mouseMoveTouchEventName) {
-        document.body.addEventListener(
-          mouseMoveTouchEventName,
-          this.onMouseMoveWatchersResizeBar
-        );
-      }
-
-      event.preventDefault();
     }
+
+    event.preventDefault();
   };
 
   onMouseUpWatchersResizeBar = () => {
@@ -447,10 +436,11 @@ class JsDebugger extends React.Component {
       >
         <div
           id="debugResizeBar"
-          className="fa fa-ellipsis-h"
           onMouseDown={this.onMouseDownDebugResizeBar}
           ref={debugResizeBar => (this._debugResizeBar = debugResizeBar)}
-        />
+        >
+          <i className="fa-solid fa-ellipsis" />
+        </div>
         <PaneHeader
           id="debug-area-header"
           hasFocus={hasFocus}
@@ -479,7 +469,7 @@ class JsDebugger extends React.Component {
           >
             <FontAwesome
               icon={
-                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
+                this.state.open ? 'circle-chevron-down' : 'circle-chevron-up'
               }
             />
           </button>
@@ -547,8 +537,8 @@ class JsDebugger extends React.Component {
                   id="hide-watcher"
                   icon={
                     this.state.watchersHidden
-                      ? 'chevron-circle-left'
-                      : 'chevron-circle-right'
+                      ? 'circle-chevron-left'
+                      : 'circle-chevron-right'
                   }
                 />
               </button>
@@ -561,7 +551,7 @@ class JsDebugger extends React.Component {
           )}
           <PaneButton
             id="clear-console-header"
-            iconClass="fa fa-eraser"
+            iconClass="fa-solid fa-eraser"
             label={i18n.debugClearButton()}
             headerHasFocus={hasFocus}
             isRtl={false}
@@ -569,7 +559,7 @@ class JsDebugger extends React.Component {
           />
           {isRunning && canShowDebugSprites && (
             <PaneButton
-              iconClass="fa fa-bug"
+              iconClass="fa-solid fa-bug"
               label={i18n.debugSpritesOff()}
               headerHasFocus={hasFocus}
               isRtl={false}

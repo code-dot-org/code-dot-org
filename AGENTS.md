@@ -7,12 +7,32 @@
 - broadly contains teacher tools, student labs (=learning activities), and levelbuilder (curriculum authoring tool)
 - key directories:
   - frontend is React, see apps/, particularly apps/src (most existing jsx/tsx), and frontend/ (some new modules)
-  - backend is Rails, see dashboard/ which is the root of a conventional Rails app 
+  - backend is Rails, see dashboard/ which is the root of a conventional Rails app
+
+## Technical Writing Style
+
+IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
 
 ## A few other useful docs:
-- apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX
-- TESTING.md: how to run various types of tests, both frontend, backend and ui tests
+- apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX. ALWAYS read @apps/README.md before working with frontend code.
+- TESTING.md: how to run various types of tests, both frontend, backend and ui tests. ALWAYS read @TESTING.md before running any kind of tests.
+- frontend/AGENTS.md: conventions, commands, and architecture guidance for the Turborepo
+  workspace — read this before working in `frontend/`
 - Assorted docs are scattered through the repo, most as .md files, you may find these relevant as you work in different parts of the repo
+
+## README hierarchy
+
+Before editing or creating files in any subdirectory, read all `README.md`
+files in the directory path from the repo root down to and including the
+target file's directory. This helps identify local patterns, conventions,
+and architecture.
+
+**Example:** Before editing
+`dashboard/engines/observability/lib/observability/sentry.rb`, read:
+
+- `dashboard/README.md` (if exists)
+- `dashboard/engines/README.md` (if exists)
+- `dashboard/engines/observability/README.md` (if exists)
 
 ## Rails Tips and Tricks:
 - As previously mentioned, see `dashboard/` directory for a conventional rails app with the usual directories (i.e. with dashboard/app/controllers, dashboard/app/models, dashboard/bin/rails, etc)
@@ -46,6 +66,11 @@
     - It takes ~10s to typecheck, so it can be run too frequently too.
     - A good litmus test is if you've made a batch of changes, or before reporting success to the user, run `yarn run typecheck` first.
 
+## Design System
+- When working on React UI in `apps/` or `frontend/`, refer to the `design-system` agent skill for component library guidelines, styling rules, and DSCO-to-MUI migration guidance.
+- Our design system lives in `frontend/packages/component-library/` with shared styles in `frontend/packages/component-library-styles/`.
+- **Always prefer design system components** over custom or legacy alternatives. Only create custom UI components when no design system equivalent exists.
+
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
 - Levelbuilder is mostly implemented in rails, but with some react views
@@ -56,7 +81,7 @@
   - dashboard/config/scripts contains a variety of curriculum related files with a nested directory structure
   - dashboard/config/scripts_json/*.script_json
   - etc
-  
+
 ## Other potentially interesting directories
 
 - `aws/`: contains IaC, in particular `aws/cloudformation`
@@ -87,7 +112,12 @@
 - finally, if there's a relevant test suite, run it
 - once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
 
-# Agent skills
+## Agent skills
 - Add agent skills to the `.agents/skills` directory shared by all agents.
 - Skill directories matching `.agents/skills/*.local` are not committed to git.
 - Prefer adding agent skills to extending AGENTS.md.
+
+## Continuous improvement
+
+- If you hit a wrong assumption or repeated correction working in this repo, propose an update to the relevant subdirectory `AGENTS.md` or (rarely) $reporoot/AGENTS.md.
+- PRs that modify $reporoot/AGENTS.md should measure+mention how many tokens they add to everyone's context. Be concise.

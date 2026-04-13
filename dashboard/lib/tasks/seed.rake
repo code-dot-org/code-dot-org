@@ -81,43 +81,7 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    coursea-2017
-    courseb-2017
-    coursec-2017
-    coursea-2019
-    coursec-2019
-    csd3-2023
-    interactive-games-animations-2023
-    focus-on-creativity3-2023
-    focus-on-coding3-2023
-    csd3-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
     customizing-llms-2024
-    csd3-2025
-    csp-ap
-    csp1-2024
-    csp2-2024
-    csp3-2024
-    csp4-2024
-    csp5-2024
-    csp6-2024
-    csp7-2024
-    csp8-2024
-    csp9-2024
-    csp10-2024
-    csp-post-survey-2024
-    csp1-2025
-    csp2-2025
-    csp3-2025
-    csp4-2025
-    csp5-2025
-    csp6-2025
-    csp7-2025
-    csp8-2025
-    csp9-2025
-    csp10-2025
     dance
     events
     flappy
@@ -295,22 +259,12 @@ namespace :seed do
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
-       csp-2024
-       csp-2025
        20-hour
        algebra
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
        artist
-       coursea-2017
-       courseb-2017
-       coursec-2017
-       coursea-2019
-       coursec-2019
-       csp-ap
-       interactive-games-animations-2023
-       interactive-games-animations-2024
        customizing-llms-2024
        dance
        events
@@ -604,7 +558,17 @@ namespace :seed do
     end
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
+  # Script seeding already validates rubrics (see script_seed.rb), but only
+  # when a .script_json file has changed (gated by md5). When a developer
+  # updates S3_AI_RELEASE_PATH without changing any .script_json files, script
+  # seeding is skipped and those validations never run. This task ensures AI
+  # rubric config is validated on every full seed regardless, ideally catching
+  # any issues on staging, before they reach production.
+  timed_task_with_logging validate_ai_rubrics: :environment do
+    AiRubricConfig.validate_ai_config
+  end
+
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 

@@ -1,6 +1,7 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createAppAsyncThunk} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
@@ -47,6 +48,7 @@ export const uploadFiles = createAppAsyncThunk<
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
+    let imageFlaggedCount = 0;
     let fileCountPdf = 0;
     let fileCountImage = 0;
     for (const [key, asset, file] of allowedFiles) {
@@ -64,6 +66,13 @@ export const uploadFiles = createAppAsyncThunk<
       if (file.name.endsWith('.pdf')) {
         fileCountPdf += 1;
       } else {
+        // Moderate images before uploading.
+        const moderationResult = await moderateImage(file, 'aichat', {});
+        if (moderationResult === 'flagged') {
+          imageFlaggedCount += 1;
+          dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
+          continue;
+        }
         fileCountImage += 1;
       }
 
@@ -104,6 +113,7 @@ export const uploadFiles = createAppAsyncThunk<
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+        imageFlaggedNotStagedCount: imageFlaggedCount,
         fileCountImage,
         fileCountPdf,
       })

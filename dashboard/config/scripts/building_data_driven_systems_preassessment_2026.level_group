@@ -1,0 +1,27 @@
+name 'building-data-driven-systems-preassessment_2026'
+title 'Building Data-Driven Systems Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'building-data-driven-systems-preassessment-intro_2026'
+level 'building-data-driven-systems-preassessment-q1_2026'
+level 'building-data-driven-systems-preassessment-q2_2026'
+level 'building-data-driven-systems-preassessment-q3_2026'
+level 'building-data-driven-systems-preassessment-q4_2026'
+level 'building-data-driven-systems-preassessment-q5_2026'
+
+page
+level 'building-data-driven-systems-preassessment-q6_2026'
+level 'building-data-driven-systems-preassessment-q7_2026'
+level 'building-data-driven-systems-preassessment-q8_2026'
+level 'building-data-driven-systems-preassessment-q9_2026'
+level 'building-data-driven-systems-preassessment-q10_2026'
+
+page
+level 'building-data-driven-systems-preassessment-q11_2026'
+level 'building-data-driven-systems-preassessment-q12_2026'
+level 'building-data-driven-systems-preassessment-q13_2026'
+level 'building-data-driven-systems-preassessment-q14_2026'
+level 'building-data-driven-systems-preassessment-q15_2026'

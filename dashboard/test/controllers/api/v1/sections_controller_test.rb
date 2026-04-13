@@ -188,9 +188,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :join, params: {id: section.code}
     assert_response :forbidden
@@ -1359,44 +1357,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   # response, for additional assertions about the state of the database.
   def returned_section
     Section.find returned_json['id']
-  end
-
-  test "update_sharing_disabled updates sharing_disabled" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script.id)
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: true
-    }
-    assert_response :success
-    section.reload
-    assert_equal(true, section.sharing_disabled)
-
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: false
-    }
-    assert_response :success
-    section.reload
-    assert_equal(false, section.sharing_disabled)
-  end
-
-  test "update_sharing_disabled: cannot update section you dont own" do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
-  end
-
-  test "update_sharing_disabled: cannot update section if not logged in " do
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
   end
 
   test "available_participant_types: returns forbidden if no user" do

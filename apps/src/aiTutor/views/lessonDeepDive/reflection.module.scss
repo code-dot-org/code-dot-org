@@ -1,0 +1,35 @@
+// ── ReflectionBox ─────────────────────────────────────────────────────────────
+
+.reflectionHeading {
+  font-size: 1.5rem;
+
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
+}
+
+.submitButton {
+  margin-top: 5px;
+  // Override MUI Button default uppercase
+  text-transform: none !important;
+}
+
+// ── LessonObjectiveReflection ─────────────────────────────────────────────────
+
+.objectiveRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.objectiveDescription {
+  margin: 0;
+  flex: 1;
+}
+
+.emojiButton {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

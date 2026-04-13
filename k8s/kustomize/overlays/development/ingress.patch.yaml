@@ -1,0 +1,6 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cdo-dashboard
+  labels:
+    code.ai/dns-name: studio-development

@@ -85,7 +85,7 @@ class Match < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)

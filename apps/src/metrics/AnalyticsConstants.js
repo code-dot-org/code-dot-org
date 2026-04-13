@@ -390,6 +390,9 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
+  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
+  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
+  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -494,6 +497,7 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
   AICHAT_UNSUPPORTED_MODEL_SELECTED:
     'User had previously selected a model that is no longer supported',
+  AICHAT_DICTATION_COMPLETED: 'User completes dictation in aichat',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -573,9 +577,6 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
-  // Global Edition - Region Reset Button
-  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
-    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
     'Global Edition Region Switch Confirm Shown',

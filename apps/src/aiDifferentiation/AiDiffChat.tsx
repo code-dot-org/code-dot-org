@@ -2,15 +2,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {
   setThreadId,
   addThreadMessage,
   setThreadTitle,
   setArtifactType,
-} from '@cdo/apps/aichat/redux/slice';
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+} from '@cdo/apps/aiDifferentiation/redux';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -110,14 +110,16 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const viewAsUserId = useAppSelector(state => {
     return state.progress?.viewAsUserId || undefined;
   });
-  const threadId = useAppSelector(state => state.aichat.threadId);
-  const threadTitle = useAppSelector(state => state.aichat.threadTitle);
+  const threadId = useAppSelector(state => state.aiDiffChat.threadId);
+  const threadTitle = useAppSelector(state => state.aiDiffChat.threadTitle);
   const initialThreadPrompt = useAppSelector(
-    state => state.aichat.initialThreadPrompt
+    state => state.aiDiffChat.initialThreadPrompt
   );
-  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
-  const artifactType = useAppSelector(state => state.aichat.artifactType);
-  const artifact = useAppSelector(state => state.aichat.artifact);
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
+  const artifactType = useAppSelector(state => state.aiDiffChat.artifactType);
+  const artifact = useAppSelector(state => state.aiDiffChat.artifact);
 
   const dispatch = useAppDispatch();
 

@@ -574,7 +574,7 @@ class AdminUsersController < ApplicationController
   end
 
   private def log_admin_action(event, affected_user_id = nil, attributes = {})
-    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id.to_i}.merge(attributes)
+    log_payload = {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id.to_i}.merge(attributes)
     CDO.log.warn log_payload.to_json
   end
 end

@@ -241,7 +241,7 @@ class TeacherPanel extends React.Component {
                 <div>
                   <div style={styles.text}>
                     <FontAwesome
-                      icon="exclamation-triangle"
+                      icon="triangle-exclamation"
                       style={styles.exclamation}
                     />
                     <div style={styles.dontForget}>{i18n.dontForget()}</div>

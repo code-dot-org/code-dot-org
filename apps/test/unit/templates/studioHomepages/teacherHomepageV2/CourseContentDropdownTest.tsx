@@ -96,7 +96,7 @@ describe('CourseContentDropdown', () => {
   const lessons = [
     {
       text: "Unit 3 - Interactive Animations and Games ('24-'25)",
-      value: '/courses/csd-2024/units/3',
+      value: '/teacher_dashboard/sections/11/courses/csd-2024/units/3',
     },
     {
       text: '1: Programming for a Purpose',
@@ -188,7 +188,7 @@ describe('CourseContentDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
       {
-        lesson: '/courses/csd-2024/units/3',
+        lesson: '/teacher_dashboard/sections/11/courses/csd-2024/units/3',
       }
     );
   });

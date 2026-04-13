@@ -227,7 +227,7 @@ class LtiV1Controller < ApplicationController
           redirect_to lti_v1_deep_linking_path(deep_linking_settings:) and return
         end
 
-        redirect_to destination_url
+        redirect_to destination_url, allow_other_host: true
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first

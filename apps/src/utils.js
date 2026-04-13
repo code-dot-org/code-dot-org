@@ -827,14 +827,20 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
  * @param {string} text
  * @param {string} locale Optional.
  * @param {string} authenticityToken Rails authenticity token. Optional.
+ * @param {boolean} extractTextFromJs Whether to extract user-written text from JavaScript before checking.
  * @returns {Array<string>|null} Array of profane words.
  */
-export const findProfanity = (text, locale, authenticityToken = null) => {
+export const findProfanity = (
+  text,
+  locale,
+  authenticityToken = null,
+  extractTextFromJs = false
+) => {
   let request = {
     url: '/profanity/find',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify({text, locale}),
+    data: JSON.stringify({text, locale, extractTextFromJs}),
   };
 
   if (authenticityToken) {

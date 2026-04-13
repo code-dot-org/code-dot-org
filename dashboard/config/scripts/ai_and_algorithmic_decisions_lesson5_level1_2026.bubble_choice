@@ -5,3 +5,5 @@ description 'Simulate conditional decision-making using Sketch Lab or AI Chat.'
 sublevels
 level 'ai-and-algorithmic-decisions-lesson5-level1a_2026'
 level 'ai-and-algorithmic-decisions-lesson5-level1b_2026'
+
+uses_lab2

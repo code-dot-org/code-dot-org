@@ -44,7 +44,14 @@ class Weblab2 < Level
     level_system_prompt
     ai_tutor_prompt_settings
     widget2
+    require_edit_to_continue
   )
+
+  after_initialize do
+    # New levels should have require_edit_to_continue default to true,
+    # but we don't want to enforce this behavior on existing levels.
+    self.require_edit_to_continue = true if new_record? && require_edit_to_continue.nil?
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(

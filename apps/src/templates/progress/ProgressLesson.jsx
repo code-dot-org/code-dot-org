@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,8 +8,8 @@ import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
@@ -26,6 +28,7 @@ class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -83,6 +86,7 @@ class ProgressLesson extends React.Component {
       selectedSectionId,
       isRtl,
       unitHasUnnumberedLessons,
+      isOnLevelView,
     } = this.props;
 
     if (!isVisible) {
@@ -99,6 +103,12 @@ class ProgressLesson extends React.Component {
           })
         : lesson.name;
 
+    // We want to exclude the Lesson Tutor button for assessment and survey lessons.
+    // These lessons don't have lesson plans, so we can use that as a proxy for
+    // whether or not to show the Lesson Tutor button.
+    const showLessonTutorButton =
+      lesson.lessonTutorPath && lesson.hasLessonPlan;
+
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
     const caret = this.state.collapsed ? 'caret-right' : 'caret-down';
@@ -109,12 +119,6 @@ class ProgressLesson extends React.Component {
       viewAs === ViewType.Instructor
         ? lesson.description_teacher
         : lesson.description_student;
-
-    // There's no url for a lesson so use the url of the first level of the lesson
-    // as the url for the lesson.
-    // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
-    // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
-    const lessonUrl = levels[0] && levels[0].url;
 
     // If a instructor is not verified they will not be lockableAuthorized (meaning they can't
     // lock or unlock lessons). For a lockable lesson where instructor is not authorized, we will
@@ -188,19 +192,41 @@ class ProgressLesson extends React.Component {
               )}
               <span>{title}</span>
             </div>
-            {viewAs === ViewType.Participant &&
-              lesson.student_lesson_plan_html_url && (
-                <Button
-                  __useDeprecatedTag
-                  className="ui-test-lesson-resources"
-                  href={lesson.student_lesson_plan_html_url}
-                  text={i18n.lessonResources()}
-                  icon="file-text"
-                  color="white"
-                  target="_blank"
-                  style={styles.buttonStyle}
-                />
-              )}
+            {viewAs === ViewType.Participant && !isOnLevelView && (
+              <div style={styles.buttonColumn}>
+                {lesson.student_lesson_plan_html_url && (
+                  <MuiButton
+                    className="ui-test-lesson-resources"
+                    href={lesson.student_lesson_plan_html_url}
+                    variant="contained"
+                    color="white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                  >
+                    {i18n.lessonResources()}
+                  </MuiButton>
+                )}
+                {showLessonTutorButton &&
+                  experiments.isEnabled(experiments.LESSON_TUTOR) && (
+                    <MuiButton
+                      href={lesson.lessonTutorPath}
+                      variant="contained"
+                      color="white"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconName="ai-bot-solid"
+                          iconFamily="kit"
+                        />
+                      }
+                    >
+                      {'Lesson Tutor'}
+                    </MuiButton>
+                  )}
+              </div>
+            )}
           </div>
           {showNotAuthorizedWarning && (
             <div style={styles.notAuthorizedWarning}>
@@ -224,7 +250,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
-          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
+          <ProgressLessonTeacherInfo lesson={lesson} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
@@ -264,9 +290,12 @@ const styles = {
     cursor: 'pointer',
     flexGrow: 1,
   },
-  buttonStyle: {
+  buttonColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: 8,
     marginLeft: 'auto',
-    boxShadow: 'none',
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',

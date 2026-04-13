@@ -241,7 +241,7 @@ class Level < ApplicationRecord
       encrypted_properties = hash.delete('encrypted_properties')
       encrypted_notes = hash.delete('encrypted_notes')
       if encrypted_properties
-        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+        hash['properties'] = Encryption.decrypt_object(encrypted_properties)
       end
       if encrypted_notes
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)

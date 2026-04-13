@@ -49,8 +49,8 @@ CollapserIcon.propTypes = {
 };
 
 CollapserIcon.defaultProps = {
-  collapsedIconClass: 'fa-chevron-circle-down',
-  expandedIconClass: 'fa-chevron-circle-up',
+  collapsedIconClass: 'fa-circle-chevron-down',
+  expandedIconClass: 'fa-circle-chevron-up',
   style: {},
 };
 

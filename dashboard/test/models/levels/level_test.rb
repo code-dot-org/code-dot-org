@@ -312,7 +312,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'returns concept videos with related videos' do
     level = create(:level)
-    level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
+    level.concepts = create_list(:concept, 2, :with_video)
     assert_includes(level.related_videos, level.concepts.first.related_video)
     assert_includes(level.related_videos, level.concepts.second.related_video)
   end
@@ -654,19 +654,13 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil level.ideal_level_source_id
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
-    6.times do
-      create(:activity, level: level, level_source: right, test_result: 100)
-    end
+    create_list(:activity, 6, level: level, level_source: right, test_result: 100)
 
     wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
-    10.times do
-      create(:activity, level: level, level_source: wrong, test_result: 0)
-    end
+    create_list(:activity, 10, level: level, level_source: wrong, test_result: 0)
 
     right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
-    2.times do
-      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
-    end
+    create_list(:activity, 2, level: level, level_source: right_but_unpopular, test_result: 100)
 
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source
@@ -1497,20 +1491,21 @@ class LevelTest < ActiveSupport::TestCase
     other_script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    other_lesson_group = create(:lesson_group, script: other_script)
+    other_lesson = create(:lesson, script: other_script, lesson_group: other_lesson_group)
     parent_level = create(:bubble_choice_level, name: 'parent bubble choice 2')
     child_level = create(:music, name: 'music sublevel 2')
     parent_level.child_levels << child_level
     create(:rubric, level: parent_level, lesson: lesson)
-    # Parent is in other_script, not the script with the rubric
-    create(:script_level, script: other_script, levels: [parent_level])
+    # Child is accessed from other_script, not the script with the rubric
     script_level = create(
       :script_level,
-      lesson: lesson,
-      script: script,
+      lesson: other_lesson,
+      script: other_script,
       levels: [child_level]
     )
 
-    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+    properties = child_level.summarize_for_lab2_properties(other_script, script_level).stringify_keys
 
     assert_nil properties["showRubric"]
   end

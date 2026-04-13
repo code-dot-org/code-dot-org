@@ -132,7 +132,10 @@ Ailab.prototype.init = function (config) {
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
