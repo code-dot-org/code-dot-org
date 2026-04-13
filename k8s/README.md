@@ -8,7 +8,6 @@ as deploy real production/test/etc instances to a k8s cluster.
 This makes debugging your production infra setup really easy: its just like what you're running
 locally.
 
-
 ## Setting up skaffold
 
 We recommend adding `export SKAFFOLD_CACHE_ARTIFACTS=false` to your `~/.zprofile` or `~/.zshrc`.
@@ -86,6 +85,13 @@ Recommendations:
 1. [Headlamp](https://headlamp.dev/) is a cross-platform open source k8s browser application in relatively early dev days. I recommend starting here for k8s exploration purposes.
 1. The [VSCode Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools) is top-notch.
 1. [k9s](https://k9scli.io/) is great if you want a keyboard navigable curses-style CLI.
+
+## Bootstraping a prod-like codeai-k8s kubernetes cluster on EKS
+
+Normally, you'll not need to create a new cluster, you'll deploy to an existing cluster or a local
+kubernetes cluster. But if you're starting from scratch (e.g., new org, disaster, curiosity, etc), see: [bootstrap/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/README.md) in the [k8s-gitops repo](https://github.com/code-dot-org/k8s-gitops).
+
+Conventionally, the k8s-gitops repo will be checked out to ../k8s-gitops.
 
 ## Useful dev commands
 
