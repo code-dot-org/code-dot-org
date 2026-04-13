@@ -341,16 +341,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (ToursPerLab[appName as AppName]?.length) {
+    if (ToursPerLab[levelProperties.appName as AppName]?.length) {
       tabMap[Tabs.StudentResources] = (
-        <StudentResourcesPanel appName={appName} />
+        <StudentResourcesPanel levelProperties={levelProperties} />
       );
     }
 
     return tabMap;
   }, [
     sidebarOnly,
-    appName,
     levelProperties,
     instructionsProps,
     hasValidationConditions,

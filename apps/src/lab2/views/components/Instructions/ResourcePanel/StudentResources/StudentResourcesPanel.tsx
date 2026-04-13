@@ -1,11 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
-import React from 'react';
+import React, {useMemo} from 'react';
 import {Tour} from 'shepherd.js';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {ToursPerLab} from '@cdo/apps/lab2/productTours/productToursPerLab';
-import {AppName} from '@cdo/apps/lab2/types';
+import {
+  isTourEnabledOnLevel,
+  ToursPerLab,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {AppName, LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
@@ -14,16 +17,21 @@ import styles from './student-resources-panel.module.scss';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface StudentResourcesPanelProps {
-  appName: string;
+  levelProperties: LevelProperties;
 }
 
 const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
-  appName,
+  levelProperties,
 }) => {
   const [isTourRunning, setIsTourRunning] = React.useState(false);
   const activeTourRef = React.useRef<Tour | null>(null);
-  // TODO: only show tours we can run (for example, only show validation on python lab levels with validation)
-  const tours = ToursPerLab[appName as AppName] ?? [];
+
+  const tours = useMemo(() => {
+    const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
+    return toursForLab.filter(tour =>
+      isTourEnabledOnLevel(tour.name, levelProperties, false)
+    );
+  }, [levelProperties]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     endActiveTour();
