@@ -81,7 +81,6 @@ class ImageModerationTest < Minitest::Test
   end
 
   def test_scales_down_large_real_image_exceeding_max_byte_size
-    # A synthetic 2000x2000 uncompressed BMP is well over 4MB.
     blob = large_png_blob_over_max_size
     io, ct = ImageModeration.scale_image_for_moderation_if_needed(StringIO.new(blob), 'image/png')
     assert_operator io.read.bytesize, :<=, ImageModeration::MAX_MODERATION_SIZE
@@ -113,8 +112,8 @@ class ImageModerationTest < Minitest::Test
     Tempfile.create(%w[large .png]) do |f|
       MiniMagick::Tool::Convert.new do |c|
         c.size '1500x1500'
-        # plasma:fractal is an ImageMagick build-in image generator that produceds
-        # a ranndomly colored plasma grident. It results in enough pixel variation to defeat
+        # plasma:fractal is an ImageMagick build-in image generator that produces
+        # a randomly colored plasma gradient. It results in enough pixel variation to defeat
         # PNG's compression algorithm so we can produce a large image that exceeds MAX_MODERATION_SIZE.
         c << 'plasma:fractal'
         c.compress 'None'
