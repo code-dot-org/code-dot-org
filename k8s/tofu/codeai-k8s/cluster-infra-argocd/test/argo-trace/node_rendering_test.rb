@@ -2,12 +2,14 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "mocha/minitest"
 require "pathname"
 
 load File.expand_path("../../bin/argo-trace", __dir__)
 
 class ArgoTraceNodeRenderingTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
+  FIXED_METADATA_NOW = Time.parse("2026-04-12T09:00:09Z")
 
   def setup
     @argocd_apps = ArgoTrace.argocd_output_list(
@@ -105,9 +107,10 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
   end
 
   def test_operator_output_includes_metadata_lines_from_saved_fixture_output
+    Time.stubs(:now).returns(FIXED_METADATA_NOW)
     lines = ArgoTrace.render_display_lines(@tree)
 
-    assert_includes lines, "  - metadata.creationTimestamp: 2026-04-12T08:31:09Z"
+    assert_includes lines, "  - metadata.creationTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T08:31:09Z', now: FIXED_METADATA_NOW)}"
     assert_includes lines, '  - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]'
   end
 
@@ -145,11 +148,15 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
       }
     )
 
+    Time.stubs(:now).returns(FIXED_METADATA_NOW)
     lines = ArgoTrace.render_display_lines([node])
+    ansi_lines = ArgoTrace.render_ansi_display_lines([node])
 
-    assert_includes lines, "  - metadata.creationTimestamp: 2026-04-12T08:31:09Z"
-    assert_includes lines, "  - metadata.deletionTimestamp: 2026-04-12T09:00:00Z"
+    assert_includes lines, "  - metadata.creationTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T08:31:09Z', now: FIXED_METADATA_NOW)}"
+    assert_includes lines, "  - metadata.deletionTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T09:00:00Z', now: FIXED_METADATA_NOW)}"
     assert_includes lines, '  - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]'
+    assert_includes ansi_lines, "\e[2m  - metadata.creationTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T08:31:09Z', now: FIXED_METADATA_NOW)}\e[22m"
+    assert_includes ansi_lines, "\e[2;31m  - metadata.deletionTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T09:00:00Z', now: FIXED_METADATA_NOW)}\e[39;22m"
   end
 
   def test_operator_output_suppresses_detail_bullets_under_fully_all_ok_subtree
@@ -305,10 +312,12 @@ class ArgoTraceNodeRenderingTest < Minitest::Test
       }
     )
 
+    deletion_now = Time.parse("2026-04-13T04:05:16Z")
+    Time.stubs(:now).returns(deletion_now)
     lines = ArgoTrace.render_display_lines([node])
 
     assert_includes lines, "→ - codeai-k8s-cluster-dns-certificate (XClusterDNSCertificate) [sync.status=Synced, status.conditions.Ready=False]"
-    assert_includes lines, "  - metadata.deletionTimestamp: 2026-04-13T04:05:07Z"
+    assert_includes lines, "  - metadata.deletionTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-13T04:05:07Z', now: deletion_now)}"
     assert_includes lines, '  - metadata.finalizers: ["foregroundDeletion"]'
     assert_includes lines, "→ - status.conditions.Ready: status=False, reason=Deleting"
   end

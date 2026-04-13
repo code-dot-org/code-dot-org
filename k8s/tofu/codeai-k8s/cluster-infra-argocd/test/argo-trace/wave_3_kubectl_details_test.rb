@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "mocha/minitest"
 require "yaml"
 
 load File.expand_path("../../bin/argo-trace", __dir__)
@@ -96,6 +97,8 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
       )
     )
 
+    deletion_now = Time.parse("2026-04-12T09:00:09Z")
+    Time.stubs(:now).returns(deletion_now)
     body_text = ArgoTrace.snapshot_body(
       command_runner: command_runner,
       wrap_width: nil,
@@ -104,7 +107,7 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
 
     assert_includes command_runner.seen_commands, kubectl_command
     assert_includes body_text, "→   - production (Namespace) [sync.status=Synced, health.status=Progressing, status.conditions.NamespaceDeletionDiscoveryFailure=True]"
-    assert_includes body_text, "      - metadata.deletionTimestamp: 2026-04-12T09:00:00Z"
+    assert_includes body_text, "      - metadata.deletionTimestamp: #{ArgoTrace.display_metadata_timestamp('2026-04-12T09:00:00Z', now: deletion_now)}"
     assert_includes body_text, '      - metadata.finalizers: ["kubernetes"]'
     assert_includes body_text, "      - status.phase: Active"
     assert_includes body_text, "→     - status.conditions.NamespaceDeletionDiscoveryFailure: status=True, reason=DiscoveryFailed, message=waiting for discovery"
@@ -293,10 +296,18 @@ class ArgoTraceWave3KubectlDetailsTest < Minitest::Test
       kubectl_details: true
     )
 
+    plain_body_text = ArgoTrace.strip_ansi_codes(body_text)
+
     assert_includes body_text, "          - networking (Application) [sync.status=Synced, health.status=Healthy]"
-    refute_includes body_text, "            - metadata.creationTimestamp: 2026-04-12T08:32:19Z"
+    refute_match(
+      /          - networking \(Application\) \[sync\.status=Synced, health\.status=Healthy\]\n            - metadata\.creationTimestamp:/,
+      plain_body_text
+    )
     refute_includes body_text, "        - status.applicationStatus.message: Application resource became Healthy, updating status from Progressing to Healthy"
-    refute_includes body_text, "        - metadata.creationTimestamp: 2026-04-12T08:41:30Z"
+    refute_match(
+      /          - kargo-project-codeai \(Application\) \[sync\.status=Synced, health\.status=Healthy\]\n            - metadata\.creationTimestamp:/,
+      plain_body_text
+    )
   end
 
   def test_wave_4_follows_crossplane_resource_refs_from_arrowed_live_resource_nodes

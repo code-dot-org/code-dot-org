@@ -2,18 +2,21 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "mocha/minitest"
 require "pathname"
 
 load File.expand_path("../../bin/argo-trace", __dir__)
 
 class ArgoTraceLiveDestroyStateExactOutputTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "cluster-snaps" / "live-destroy-state-2026-04-12"
+  FIXED_NOW = Time.parse("2026-04-12T21:11:40-10:00")
 
   def test_matches_expected_output_fixture_for_live_destroy_state
+    Time.stubs(:now).returns(FIXED_NOW)
     output = ArgoTrace.render_fixture_snapshot(
       tree_lines: ArgoTrace.render_ansi_display_lines(tree),
-      start_time: Time.parse("2026-04-12T21:11:40-10:00"),
-      end_time: Time.parse("2026-04-12T21:11:40-10:00"),
+      start_time: FIXED_NOW,
+      end_time: FIXED_NOW,
       elapsed_seconds: 0.0
     )
 

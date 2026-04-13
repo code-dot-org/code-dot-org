@@ -2,18 +2,21 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "mocha/minitest"
 require "pathname"
 
 load File.expand_path("../../bin/argo-trace", __dir__)
 
 class ArgoTraceExactOutputTest < Minitest::Test
   FIXTURE_DIR = Pathname.new(__dir__) / "fixtures" / "argo-cli-data"
+  FIXED_NOW = Time.parse("2026-04-12T12:33:10-10:00")
 
   def test_matches_expected_output_fixture_for_saved_argocd_cli_data
+    Time.stubs(:now).returns(FIXED_NOW)
     output = ArgoTrace.render_fixture_snapshot(
       tree_lines: ArgoTrace.render_ansi_display_lines(tree),
-      start_time: Time.parse("2026-04-12T12:33:10-10:00"),
-      end_time: Time.parse("2026-04-12T12:33:10-10:00"),
+      start_time: FIXED_NOW,
+      end_time: FIXED_NOW,
       elapsed_seconds: 30.0
     )
 

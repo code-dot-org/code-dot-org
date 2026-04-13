@@ -2,50 +2,50 @@ starting argo-trace @ 12:33p and 10s
 
 # ArgoCD dependency tree @ 12:33p and 10s, argo-trace took 30.0s
 
-[2m- app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]
-  - metadata.creationTimestamp: 2026-04-12T08:31:09Z
-  - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
+- app-of-apps (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded]
+[2m  - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:31:09 PM HST)[22m
+[2m  - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
   - app-of-apps (ApplicationSet) [all conditions good]
-    - metadata.creationTimestamp: 2026-04-12T08:31:13Z
-    - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
-    - RollingSync step 1 (code.org/bootstrap-group In [infra])
-      - infra (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=1, rollout.status=Healthy]
-        - sync-wave 0
-          - crossplane (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 2
-          - aws-resources (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 3
-          - networking (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 4
-          - external-dns (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 20
-          - external-secrets-operator (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 25
-          - argocd (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 30
-          - kargo-secrets (Application) [sync.status=Synced, health.status=Healthy]
-          - standard-envtypes (Application) [sync.status=Synced, health.status=Healthy]
-        - sync-wave 40
-          - dex (Application) [sync.status=Synced, health.status=Healthy]
+[2m    - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:31:13 PM HST)[22m
+[2m    - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[2m    - RollingSync step 1 (code.org/bootstrap-group In [infra])[22m
+[2m      - infra (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=1, rollout.status=Healthy][22m
+[2m        - sync-wave 0[22m
+[2m          - crossplane (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 2[22m
+[2m          - aws-resources (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 3[22m
+[2m          - networking (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 4[22m
+[2m          - external-dns (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 20[22m
+[2m          - external-secrets-operator (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 25[22m
+[2m          - argocd (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 30[22m
+[2m          - kargo-secrets (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m          - standard-envtypes (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m        - sync-wave 40[22m
+[2m          - dex (Application) [sync.status=Synced, health.status=Healthy][22m
     - RollingSync step 2 (code.org/bootstrap-group NotIn [infra])
       - codeai (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=2, rollout.status=Healthy]
-        - metadata.creationTimestamp: 2026-04-12T08:31:14Z
-        - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"]
-        - status.applicationStatus.lastTransitionTime: 2026-04-12T20:59:57Z
-        - status.applicationStatus.message: Application resource has synced, updating status to Healthy
+[2m        - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:31:14 PM HST)[22m
+[2m        - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[2m        - status.applicationStatus.lastTransitionTime: 2026-04-12T20:59:57Z[22m
+[2m        - status.applicationStatus.message: Application resource has synced, updating status to Healthy[22m
         - codeai (ApplicationSet) [all conditions good]
-          - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-          - codeai-staging (Application) [sync.status=Unknown, health.status=Healthy, status.operationState.phase=Error, ComparisonError=True]
-            - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
-[1m→           - status.conditions.ComparisonError
-→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA
-→           - status.operationState.message: ComparisonError: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
-[2m          - codeai-test (Application) [sync.status=Unknown, health.status=Healthy, ComparisonError=True]
-            - metadata.creationTimestamp: 2026-04-12T08:40:15Z
-            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
-[1m→           - status.conditions.ComparisonError
-→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
-[2m      - kargo (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=2, rollout.status=Healthy]
-        - sync-wave 1
-          - kargo-project-codeai (Application) [sync.status=Synced, health.status=Healthy][22m
+[2m          - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:40:15 PM HST)[22m
+[1m          - codeai-staging (Application) [sync.status=Unknown, health.status=Healthy, status.operationState.phase=Error, ComparisonError=True][22m
+[1m            - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:40:15 PM HST)[22m
+[1m            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[1m→           - status.conditions.ComparisonError[22m
+[1m→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
+[1m→           - status.operationState.message: ComparisonError: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
+[1m          - codeai-test (Application) [sync.status=Unknown, health.status=Healthy, ComparisonError=True][22m
+[1m            - metadata.creationTimestamp: about 14 hours ago (4/11/2026 10:40:15 PM HST)[22m
+[1m            - metadata.finalizers: ["resources-finalizer.argocd.argoproj.io"][22m
+[1m→           - status.conditions.ComparisonError[22m
+[1m→             - message: Failed to load target state: failed to generate manifest for source 1 of 2: rpc error: code = Unknown desc = unable to resolve 'k8s/reorg' to a commit SHA[22m
+[2m      - kargo (Application) [sync.status=Synced, health.status=Healthy, status.operationState.phase=Succeeded, step=2, rollout.status=Healthy][22m
+[2m        - sync-wave 1[22m
+[2m          - kargo-project-codeai (Application) [sync.status=Synced, health.status=Healthy][22m
