@@ -70,9 +70,9 @@ This tool should make the same move generically:
 ### Constraints
 
 1. Use Argo CLI first.
-2. Use no `kubectl` by default.
-3. Fall back to `kubectl` only for data the user explicitly approves as worth
-   the latency.
+2. Use `kubectl` only after the Argo trace has already landed on a concrete
+   non-app `status.resources[]` member.
+3. Keep `kubectl` use bounded and parallel by default.
 4. Share no code with `bin/argo-trace`.
 5. Optimize from measured call costs, not guesswork.
 6. Prefer broad batched calls, then maximally parallel enrichment calls.
@@ -176,6 +176,11 @@ Required commands and flags:
   - one snapshot, then exit
 - `bin/argo-cli-trace --poll-every 30s`
   - repeat snapshots on a fixed cadence
+- `bin/argo-cli-trace --kubectl-details 1`
+  - enable optional wave 3 kubectl detail expansion for highlighted resource
+    leaves
+- `bin/argo-cli-trace --kubectl-details 0`
+  - disable wave 3 kubectl detail expansion
 - `bin/argo-cli-trace --soft-wrap WIDTH`
   - soft-wrap tree lines at `WIDTH` columns
 - `bin/argo-cli-trace --no-wrap`
@@ -228,6 +233,36 @@ For avoidance of doubt, the expected first-version data source set is exactly
 the command family listed above and exemplified by the saved fixture payloads
 in `test/argo-cli-trace/fixtures/argo-cli-data/`, including the `app-get-*.yaml`
 files there.
+
+### kubectl details flag
+
+`--kubectl-details` is part of the interface contract.
+
+Accepted values:
+
+- `1`
+- `0`
+- `true`
+- `false`
+
+Default:
+
+- `--kubectl-details=1`
+
+Semantics:
+
+- `1` / `true`: allow optional wave 3 kubectl detail fetches
+- `0` / `false`: disable wave 3 kubectl detail fetches entirely
+
+Wave 3 is not a generic kubectl graph walk.
+
+It is a bounded Argo-led follow-up:
+
+- only after waves 1 and 2 have already identified an emphasized non-app
+  resource leaf
+- only for resource leaves that came directly from Argo `status.resources[]`
+- one hop only
+- parallel like wave 2
 
 ### Startup Banner
 
@@ -324,7 +359,8 @@ Overall elapsed: 25.767s
 
 The tracer should build its tree from Argo-native layers in this order.
 
-First version should be designed around a two-wave parallel call plan.
+The implementation should be designed around a wave-oriented parallel call
+plan.
 
 Wave 1 is inventory:
 
@@ -337,10 +373,18 @@ Wave 2 is enrichment:
 - `argocd --core --app-namespace argocd app get NAME -o yaml` for selected
   apps
 
-Do not add a third default wave in first version.
+Wave 3 is optional kubectl detail:
 
-If a requested feature would require a third wave, or recursion that behaves
-like a third wave, stop and ask before widening the design.
+- `kubectl` fetch for highlighted non-app resource leaves only
+
+Wave 3 is enabled by default, but only activates when waves 1 and 2 have
+already narrowed the live frontier to one or more concrete resource leaves from
+Argo `status.resources[]`.
+
+Do not add any fourth wave in first version.
+
+If a requested feature would require a fourth wave, or recursion beyond the
+bounded wave-3 live-object fetch, stop and ask before widening the design.
 
 #### Layer 1: global app graph
 
@@ -407,6 +451,8 @@ Use this for:
 - per-resource `syncWave`
 - app-level `status.conditions`
 - richer app-level operation status
+- app/appset metadata fields such as `metadata.creationTimestamp`,
+  `metadata.deletionTimestamp`, and `metadata.finalizers` when present
 
 This is the source of truth for Argo-native signals such as:
 
@@ -422,14 +468,41 @@ Initial rule:
 - if `status.operationState.message` exists, render it
 - do not add deduplication or suppression logic in the first version
 
-#### Layer 3: no default third layer
+#### Layer 3: optional bounded kubectl detail
 
-There is no default third layer.
+Source:
 
-Do not add `kubectl` just to preserve the old tracer's data shape.
+- `kubectl get ... -o yaml` for the specific highlighted resource leaf
 
-If a missing field matters, name the field, name the missing call, and give the
-measured cost.
+Use this for:
+
+- highlighted live-resource `metadata.finalizers`
+- highlighted live-resource `metadata.deletionTimestamp`
+- a few high-signal status fields on the highlighted live object
+
+Do not use wave 3 just to recover app/appset metadata fields already carried in
+Argo wave-1 or wave-2 payloads.
+
+Do not use this for:
+
+- generic owner-ref graph walking
+- generic `resourceRef` / `resourceRefs` recursion
+- Crossplane `Usage` graph walking
+- namespace descendant scans
+- deep composed-resource graph spelunking
+
+This layer exists only because some Argo `status.resources[]` leaves still need
+live-object metadata or status detail.
+
+Example:
+
+- Argo may identify `Namespace/production` or an XR as the live frontier
+- the operator may still need the live object's finalizers or deletion
+  timestamp
+- wave 3 may fetch that one live object and stop there
+
+If a missing field still matters after this live-object fetch, name the field,
+name the missing call, and ask before widening scope further.
 
 ### Enrichment Plan
 
@@ -537,6 +610,37 @@ argocd --core --app-namespace argocd app get APPNAME -o yaml
 
 Use the enriched payload only to refine nodes already known from the global
  list call.
+
+#### Step 4: optional parallel wave_3_kubectl_details
+
+Only run this step when all of these are true:
+
+- `--kubectl-details` is enabled
+- the emphasized frontier contains one or more non-app resource leaves
+- those leaves came directly from Argo `status.resources[]`
+
+Do not run wave 3 just because a parent app is non-good.
+
+Do not run wave 3 for app nodes or appset nodes.
+
+Purpose:
+
+- tell the operator a little more about the concrete Argo-named resource leaf
+- not rebuild the full old tracer
+
+Required behavior:
+
+- run the selected kubectl fetches in parallel
+- keep the selected resource set minimal and deterministic
+- show finalizers and deletion timestamp when present
+
+Not allowed in wave 3:
+
+- recursive descent
+- one-hop child expansion
+- broad namespace scans
+- generic owner-ref forest walking
+- generic Crossplane graph walking
 
 Use a fixed parallel-call cap in the first version.
 
@@ -711,24 +815,51 @@ If any condition is unknown or non-good, do not use `all conditions good`.
 
 #### Metadata lines
 
-Metadata lines are not part of the default operator-facing output in the first
-version.
-
-Do not render these by default:
+Metadata lines for `Application` and `ApplicationSet` nodes are part of the
+default operator-facing output when present in the Argo payloads:
 
 - `metadata.creationTimestamp`
 - `metadata.deletionTimestamp`
 - `metadata.finalizers`
 
-Reason:
+These fields are cheap because they already come from waves 1 and 2.
 
-- they add noise faster than they add guidance in the apply/destroy view
-- the saved expected-output fixture already omits them
-- the tracer's main job is to show active Argo work and blocking state, not
-  object bookkeeping
+Wave 3 must not be used to recover metadata fields for app/appset nodes.
 
-These fields may still be present in the underlying Argo CLI payloads and saved
-fixtures, but they are not rendered in the default tree.
+For non-app resource leaves, metadata lines are wave-3-only and limited to the
+small live-object set approved for that wave.
+
+#### Suppress idle detail bullets
+
+If a node is fully all-ok, and every descendant in its rendered subtree is also
+fully all-ok, do not render detail bullets under that node.
+
+Examples of detail bullets that should be suppressed for a fully all-ok
+subtree:
+
+- metadata lines
+- rollout detail lines
+- operationState message lines
+- other non-structural detail bullets
+
+Keep the structural tree:
+
+- the node line itself
+- RollingSync step nodes
+- sync-wave nodes
+- child node lines
+
+But do not add bookkeeping bullets under a fully all-ok subtree just because
+the fields exist.
+
+This means a healthy wave child such as:
+
+```text
+- networking (Application) [sync.status=Synced, health.status=Healthy]
+```
+
+should stay a single line unless that node or some rendered descendant is not
+all-ok.
 
 #### Distinguishing appset rollup status from app object status
 
@@ -1059,12 +1190,16 @@ For avoidance of doubt, this rule applies equally to:
 - non-app Argo-tracked resource leaves from `Application.status.resources[]`
 
 If `infra` is deleting, and its child app `networking` is the only child app in
-non-good Argo state, the trace should make that obvious without extra
-round-trips beyond the two-wave model.
+non-good Argo state, the trace should make that obvious from waves 1 and 2
+alone.
 
 If `networking` itself is waiting on a specific resource from the already-fetched
 `app get networking -o yaml` payload, the trace should show that resource leaf
 too.
+
+If that resource leaf still needs more context, wave 3 may fetch its live
+object for finalizers, deletion timestamp, and a few high-signal status fields,
+but must stop there.
 
 This should not use weird heuristics. The data is already in the Argo YAML.
 
@@ -1204,6 +1339,8 @@ Target on a normal live cluster:
 - first useful tree in `<= 15s`
 - steady-state typical run in `<= 25s`
 - acceptable worst case in `<= 40s`
+- still operationally acceptable with wave 3 in common apply/destroy cases
+  where only a few highlighted resource leaves trigger kubectl detail fetches
 
 If a field pushes the tracer past that target, the field must justify itself.
 
@@ -1215,15 +1352,17 @@ First version should support:
 2. ApplicationSet RollingSync grouping
 3. sync-wave grouping
 4. parallel `app get` enrichment for `apps_requiring_detail`
-5. Argo-native `Pending deletion`
-6. Argo-native condition rendering
-7. zero `kubectl` calls
+5. optional parallel `wave_3_kubectl_details` for highlighted resource leaves
+6. Argo-native `Pending deletion`
+7. Argo-native condition rendering
+8. bounded live-object kubectl detail only
 
 It should not support:
 
 1. old `argo-trace` Kubernetes owner-ref expansion
 2. old `argo-trace` Crossplane graph walking
 3. synthetic blocker diagnosis
+4. recursive wave-3 descent
 
 Crossplane-specific handling is limited to this:
 
@@ -1253,8 +1392,7 @@ already in the chosen Argo CLI payloads.
 - app sync status
 - app health status
 - app conditions summary
-- metadata may be present in the payload, but is omitted from the default
-  operator-facing output
+- app/appset metadata lines when present
 
 #### Cheap enough from chosen `app get`
 
@@ -1265,10 +1403,11 @@ already in the chosen Argo CLI payloads.
 
 #### Not approved by default
 
-- raw Kubernetes live object metadata via `kubectl`
-- owner-reference walks outside what Argo already reports
+- owner-reference walks outside the bounded wave-3 live-object rule
 - deep resource manifest inspection
 - events
+- broad namespace scans
+- generic graph recursion below wave-3 leaves
 
 If the user wants one of these, the tool should name the exact extra call and
 the measured cost.

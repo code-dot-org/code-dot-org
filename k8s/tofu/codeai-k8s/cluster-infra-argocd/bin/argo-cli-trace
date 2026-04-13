@@ -470,6 +470,15 @@ module ArgoCliTrace
     end
   end
 
+  def app_resource_ref(app_resource)
+    {
+      group: app_resource["group"].to_s,
+      kind: app_resource["kind"],
+      name: app_resource["name"],
+      namespace: app_resource["namespace"],
+    }
+  end
+
   def rolling_sync_step_label(step_index, step)
     match_expression = Array(step["matchExpressions"]).first || {}
     values = Array(match_expression["values"])
@@ -535,12 +544,7 @@ module ArgoCliTrace
         children: [],
         metadata: {
           raw: app_resource,
-          argo_resource_ref: {
-            group: app_resource["group"].to_s,
-            kind: app_resource["kind"],
-            name: app_resource["name"],
-            namespace: app_resource["namespace"],
-          },
+          argo_resource_ref: app_resource_ref(app_resource),
         }
       )
     end
@@ -734,12 +738,15 @@ module ArgoCliTrace
     error[:message] == :total_timeout || error[:message] == :timeout ? "timed out" : "error"
   end
 
-  def display_resource_bracket_parts(node)
-    argocd_object = node.metadata[:raw] || {}
+  def display_sync_health_parts(argocd_object)
     parts = []
     parts << "sync.status=#{sync_status(argocd_object)}" if sync_status(argocd_object)
     parts << "health.status=#{health_status(argocd_object)}" if health_status(argocd_object)
     parts
+  end
+
+  def display_resource_bracket_parts(node)
+    display_sync_health_parts(node.metadata[:raw] || {})
   end
 
   def display_application_bracket_parts(node)
@@ -751,9 +758,7 @@ module ArgoCliTrace
     end
 
     argocd_object = node.metadata[:raw] || {}
-    parts = []
-    parts << "sync.status=#{sync_status(argocd_object)}" if sync_status(argocd_object)
-    parts << "health.status=#{health_status(argocd_object)}" if health_status(argocd_object)
+    parts = display_sync_health_parts(argocd_object)
     phase = operation_phase(argocd_object)
     parts << "status.operationState.phase=#{phase}" if phase && (phase != "Succeeded" || node.children.any?)
     application_conditions(node.metadata).each do |condition|
@@ -997,6 +1002,23 @@ module ArgoCliTrace
     entries
   end
 
+  def metadata_detail_entries(argocd_object)
+    metadata = argocd_object["metadata"] || {}
+    entries = []
+    entries << [:line, "metadata.creationTimestamp: #{display_scalar(metadata['creationTimestamp'])}", false] if metadata["creationTimestamp"]
+    entries << [:line, "metadata.deletionTimestamp: #{display_scalar(metadata['deletionTimestamp'])}", false] if metadata["deletionTimestamp"]
+    entries << [:line, "metadata.finalizers: #{Array(metadata['finalizers']).inspect}", false] if metadata["finalizers"]
+    entries
+  end
+
+  def condition_detail_entries(condition)
+    entries = [[:condition_header, "status.conditions.#{condition['type']}", true]]
+    entries << [:condition_detail, "status: #{condition['status']}", false] if condition["status"]
+    entries << [:condition_detail, "reason: #{condition['reason']}", false] if condition["reason"]
+    entries << [:condition_detail, "message: #{condition['message']}", true] if condition["message"]
+    entries
+  end
+
   def display_detail_entries(node)
     if node.metadata.dig(:enrichment_result, :error)
       return [
@@ -1011,31 +1033,16 @@ module ArgoCliTrace
 
     argocd_object = node.metadata[:raw] || {}
     entries = []
-    if %w[Application ApplicationSet].include?(node.kind)
-      metadata = argocd_object["metadata"] || {}
-      entries << [:line, "metadata.creationTimestamp: #{display_scalar(metadata['creationTimestamp'])}", false] if metadata["creationTimestamp"]
-      entries << [:line, "metadata.deletionTimestamp: #{display_scalar(metadata['deletionTimestamp'])}", false] if metadata["deletionTimestamp"]
-      entries << [:line, "metadata.finalizers: #{Array(metadata['finalizers']).inspect}", false] if metadata["finalizers"]
-    end
+    entries.concat(metadata_detail_entries(argocd_object)) if %w[Application ApplicationSet].include?(node.kind)
     if (rollout_status = node.metadata[:rollout_status])
       entries << [:line, "status.applicationStatus.lastTransitionTime: #{display_scalar(rollout_status['lastTransitionTime'])}", false] if rollout_status["lastTransitionTime"]
       entries << [:line, "status.applicationStatus.message: #{rollout_status['message']}", false] if rollout_status["message"]
     end
     case node.kind
     when "Application"
-      application_conditions(node.metadata).each do |condition|
-        entries << [:condition_header, "status.conditions.#{condition['type']}", true]
-        entries << [:condition_detail, "status: #{condition['status']}", false] if condition["status"]
-        entries << [:condition_detail, "reason: #{condition['reason']}", false] if condition["reason"]
-        entries << [:condition_detail, "message: #{condition['message']}", true] if condition["message"]
-      end
+      application_conditions(node.metadata).each {|condition| entries.concat(condition_detail_entries(condition))}
     when "ApplicationSet"
-      non_good_appset_conditions(argocd_object).each do |condition|
-        entries << [:condition_header, "status.conditions.#{condition['type']}", true]
-        entries << [:condition_detail, "status: #{condition['status']}", false] if condition["status"]
-        entries << [:condition_detail, "reason: #{condition['reason']}", false] if condition["reason"]
-        entries << [:condition_detail, "message: #{condition['message']}", true] if condition["message"]
-      end
+      non_good_appset_conditions(argocd_object).each {|condition| entries.concat(condition_detail_entries(condition))}
     end
     if (message = operation_message(argocd_object)) && (node_non_good?(node) || node.children.any?)
       entries << [:line, "status.operationState.message: #{message}", node_non_good?(node)]
