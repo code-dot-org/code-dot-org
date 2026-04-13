@@ -17,7 +17,7 @@ import React, {
 import NodePalette, {type NodeShape} from './NodePalette';
 import PalettePositionContext from './PalettePositionContext';
 
-import moduleStyles from './styles/sketchlab2-view.module.scss';
+import moduleStyles from './styles/sketchlab-reactflow-view.module.scss';
 
 // All shapes use this height so they match the rectangle's rendered size
 // (min-height 60px + padding 16px + border 4px = 80px in content-box).

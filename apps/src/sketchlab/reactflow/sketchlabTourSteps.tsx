@@ -7,7 +7,9 @@ import {
   nextButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
-export const createSketchlab2TourSteps = (tour: Tour): StepOptions[] => [
+export const createSketchlabReactFlowTourSteps = (
+  tour: Tour
+): StepOptions[] => [
   {
     id: 'canvas-overview',
     attachTo: {element: '.react-flow', on: 'bottom'},
@@ -17,7 +19,7 @@ export const createSketchlab2TourSteps = (tour: Tour): StepOptions[] => [
   },
   {
     id: 'toolbar',
-    attachTo: {element: '.sketchlab2-toolbar', on: 'bottom'},
+    attachTo: {element: '.sketchlab-reactflow-toolbar', on: 'bottom'},
     title: 'Toolbar',
     text: 'Click the rounded rectangle icon to add a new text box node to the canvas.',
     buttons: [backButton(tour), nextButton(tour)],

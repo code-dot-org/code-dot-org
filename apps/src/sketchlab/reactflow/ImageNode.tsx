@@ -1,7 +1,7 @@
 import {Handle, NodeResizer, Position, type NodeProps} from '@xyflow/react';
 import React, {memo} from 'react';
 
-import moduleStyles from './styles/sketchlab2-view.module.scss';
+import moduleStyles from './styles/sketchlab-reactflow-view.module.scss';
 
 const MIN_WIDTH = 80;
 const MIN_HEIGHT = 60;

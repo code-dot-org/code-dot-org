@@ -11,36 +11,37 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-import {SKETCHLAB2_ONBOARDING_TOUR_SEEN} from './constants';
-import {createSketchlab2TourSteps} from './sketchlab2TourSteps';
+import {SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN} from './constants';
+import {createSketchlabReactFlowTourSteps} from './sketchlabTourSteps';
 
-const SKETCHLAB2_ONBOARDING_FLOW_NAME = 'Sketch Lab 2 Onboarding';
+const FLOW_NAME = 'Sketch Lab React Flow Onboarding';
 
 const onTourStart = () =>
-  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
-    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
-  });
+  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {flowName: FLOW_NAME});
 
 const onTourComplete = () =>
-  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
-    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
-  });
+  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {flowName: FLOW_NAME});
 
 const onTourCancel = (stepIndex: number) =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
-    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
+    flowName: FLOW_NAME,
     step: stepIndex.toString(),
   });
 
-interface UseSketchlab2TourParams {
+interface UseSketchlabReactFlowTourParams {
   productTours: string[] | undefined;
 }
 
-const useSketchlab2Tour = ({productTours}: UseSketchlab2TourParams) => {
-  // Wait for the ReactFlow canvas to be fully rendered before starting the tour.
+const useSketchlabReactFlowTour = ({
+  productTours,
+}: UseSketchlabReactFlowTourParams) => {
+  // Wait for the React Flow canvas to render before starting the tour.
   const [isCanvasReady, setIsCanvasReady] = useState(false);
   useEffect(() => {
-    const tourSeen = tryGetLocalStorage(SKETCHLAB2_ONBOARDING_TOUR_SEEN, 'no');
+    const tourSeen = tryGetLocalStorage(
+      SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
+      'no'
+    );
     if (tourSeen === 'yes') {
       return;
     }
@@ -70,22 +71,18 @@ const useSketchlab2Tour = ({productTours}: UseSketchlab2TourParams) => {
   }, []);
 
   const additionalStepOptions = useMemo(
-    () => ({
-      floatingUIOptions: {
-        middleware: [offset(12)],
-      },
-    }),
+    () => ({floatingUIOptions: {middleware: [offset(12)]}}),
     []
   );
 
   const {tour} = useLab2ProductTour({
-    getSteps: createSketchlab2TourSteps,
-    localStorageKey: SKETCHLAB2_ONBOARDING_TOUR_SEEN,
+    getSteps: createSketchlabReactFlowTourSteps,
+    localStorageKey: SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
     tourAvailable:
       isCanvasReady &&
       isTourEnabledOnLevel(
         ProductTour.SketchlabIntro,
-        'sketchlab2',
+        'sketchlab',
         productTours
       ),
     onStart: onTourStart,
@@ -97,4 +94,4 @@ const useSketchlab2Tour = ({productTours}: UseSketchlab2TourParams) => {
   useStartTourWhenAvailable(tour);
 };
 
-export default useSketchlab2Tour;
+export default useSketchlabReactFlowTour;

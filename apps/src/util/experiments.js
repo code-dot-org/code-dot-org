@@ -69,6 +69,8 @@ experiments.LESSON_TUTOR = 'lesson-tutor';
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Use the React-Flow-based "Sketch 2" implementation in Sketch Lab in place of Excalidraw
+experiments.SKETCH2 = 'sketch2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

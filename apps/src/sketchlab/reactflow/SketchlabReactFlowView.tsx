@@ -28,7 +28,6 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
-  LabProps,
   LevelProperties,
   ProjectSources,
   Sketchlab2Node,
@@ -39,26 +38,28 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
-import SourcesContainer, {
-  useSources,
-} from '@cdo/apps/lab2/views/SourcesContainer';
+import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useDialogControl} from '../lab2/views/dialogs';
-import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
+import {useDialogControl} from '../../lab2/views/dialogs';
+import {BackpackAPIContext} from '../../sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '../../sharedComponents/backpack/BackpackClientApi';
 
 import ImageNode from './ImageNode';
 import NodePalette, {type NodeShape} from './NodePalette';
 import PalettePositionContext from './PalettePositionContext';
 import TextBoxNode from './TextBoxNode';
-import {Sketchlab2Sources} from './types';
-import useSketchlab2Tour from './useSketchlab2Tour';
+import {SketchlabReactFlowSources} from './types';
+import useSketchlabReactFlowTour from './useSketchlabTour';
 import {handleSaveToBackpack} from './utils';
+import {
+  isExcalidrawSource,
+  migrateExcalidrawToReactFlow,
+} from './utils/excalidrawToReactFlow';
 import {uploadImageFile} from './utils/uploadImage';
 
-import moduleStyles from './styles/sketchlab2-view.module.scss';
+import moduleStyles from './styles/sketchlab-reactflow-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
@@ -108,7 +109,7 @@ const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
     return n;
   });
 
-const Sketchlab2Canvas: React.FC<{
+const SketchlabReactFlowCanvas: React.FC<{
   levelProperties: LevelProperties;
 }> = ({levelProperties}) => {
   const {
@@ -116,7 +117,7 @@ const Sketchlab2Canvas: React.FC<{
     updateSources,
     setReinitializationHandler,
     showStartOverDialog,
-  } = useSources<Sketchlab2Sources>();
+  } = useSources<SketchlabReactFlowSources>();
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const reactFlowInstanceRef = useRef<ReactFlowInstance | null>(null);
@@ -125,23 +126,26 @@ const Sketchlab2Canvas: React.FC<{
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
+  // If we're loading an Excalidraw-formatted source (left over from before
+  // the SKETCH2 experiment was enabled, or from a starter source authored
+  // for the legacy implementation), translate it on the fly.
+  const reactFlowSource = useMemo(() => {
+    const src = currentSources.source as unknown;
+    if (isExcalidrawSource(src)) {
+      return migrateExcalidrawToReactFlow(src);
+    }
+    return currentSources.source;
+  }, [currentSources.source]);
+
   const initialNodes = useMemo(
     () =>
-      normalizeNodeDimensions(
-        cloneDeep(currentSources.source.nodes || []) as Node[]
-      ),
-    [currentSources.source.nodes]
+      normalizeNodeDimensions(cloneDeep(reactFlowSource.nodes || []) as Node[]),
+    [reactFlowSource.nodes]
   );
   const initialEdges = useMemo(
-    () => cloneDeep(currentSources.source.edges || []) as Edge[],
-    [currentSources.source.edges]
+    () => cloneDeep(reactFlowSource.edges || []) as Edge[],
+    [reactFlowSource.edges]
   );
-
-  console.log('sketchlab2 load:', {
-    nodes: initialNodes.length,
-    edges: initialEdges.length,
-    rawEdges: currentSources.source.edges,
-  });
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -151,14 +155,12 @@ const Sketchlab2Canvas: React.FC<{
 
   const toolbarPosition = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('sketchlab2-toolbar-position') === 'left'
-      ? 'left'
-      : 'top';
+    return params.get('sketch2-toolbar-position') === 'left' ? 'left' : 'top';
   }, []);
 
   const palettePosition = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('sketchlab2-nodepalette-position') === 'left'
+    return params.get('sketch2-nodepalette-position') === 'left'
       ? 'left'
       : 'top';
   }, []) as 'left' | 'top';
@@ -174,7 +176,7 @@ const Sketchlab2Canvas: React.FC<{
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const backpackContext = useMemo(() => {
     if (currentUserId) {
-      return {primaryApi: new BackpackClientApi('sketchlab2', null)};
+      return {primaryApi: new BackpackClientApi('sketchlab', null)};
     }
     return null;
   }, [currentUserId]);
@@ -202,7 +204,6 @@ const Sketchlab2Canvas: React.FC<{
             ? {x: viewport.x, y: viewport.y, zoom: viewport.zoom}
             : undefined,
         };
-        console.log('sketchlab2 sources:', source);
         updateSources(() => ({source}));
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
@@ -513,7 +514,7 @@ const Sketchlab2Canvas: React.FC<{
   const onLoadVersion = useCallback(
     (sources: ProjectSources) => {
       if (sources) {
-        updateSources(sources as Sketchlab2Sources);
+        updateSources(sources as SketchlabReactFlowSources);
       }
       reinitializationHandler();
     },
@@ -527,12 +528,14 @@ const Sketchlab2Canvas: React.FC<{
   // Reinitialize nodes/edges when mount key changes (source reinitialized)
   useEffect(() => {
     if (mountKey > 0) {
+      const src = currentSources.source as unknown;
+      const reloaded = isExcalidrawSource(src)
+        ? migrateExcalidrawToReactFlow(src)
+        : currentSources.source;
       setNodes(
-        normalizeNodeDimensions(
-          cloneDeep(currentSources.source.nodes || []) as Node[]
-        )
+        normalizeNodeDimensions(cloneDeep(reloaded.nodes || []) as Node[])
       );
-      setEdges(cloneDeep(currentSources.source.edges || []) as Edge[]);
+      setEdges(cloneDeep(reloaded.edges || []) as Edge[]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mountKey]);
@@ -559,7 +562,7 @@ const Sketchlab2Canvas: React.FC<{
     };
   }, [dispatch]);
 
-  useSketchlab2Tour({productTours: levelProperties.productTours});
+  useSketchlabReactFlowTour({productTours: levelProperties.productTours});
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
@@ -582,7 +585,7 @@ const Sketchlab2Canvas: React.FC<{
       initialWidth: INITIAL_WORKSPACE_WIDTH,
       name: 'workspace',
     },
-    appName: 'sketchlab2',
+    appName: 'sketchlab',
   });
 
   const defaultViewport = currentSources.source.viewport || {
@@ -595,14 +598,14 @@ const Sketchlab2Canvas: React.FC<{
 
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
-      <div className={moduleStyles.sketchlab2Container}>
+      <div className={moduleStyles.sketchlabContainer}>
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
-            settings={[useThemeSetting('sketchlab2')]}
+            settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.startSources as ProjectSources) ||
@@ -700,7 +703,7 @@ const Sketchlab2Canvas: React.FC<{
                     toolbarPosition === 'left'
                       ? moduleStyles.floatingToolbarLeft
                       : ''
-                  } sketchlab2-toolbar`}
+                  } sketchlab-reactflow-toolbar`}
                 >
                   <button
                     className={moduleStyles.toolbarButton}
@@ -781,14 +784,18 @@ const Sketchlab2Canvas: React.FC<{
   );
 };
 
-export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={DEFAULT_SOURCES}
-    key={props.levelProperties.id}
-  >
-    <ReactFlowProvider>
-      <Sketchlab2Canvas levelProperties={props.levelProperties} />
-    </ReactFlowProvider>
-  </SourcesContainer>
+// The React-Flow-backed Sketch Lab view. Expects to be rendered inside a
+// SourcesContainer set up by the parent router (SketchlabView).
+const SketchlabReactFlowView: React.FC<{
+  levelProperties: LevelProperties;
+}> = props => (
+  <ReactFlowProvider>
+    <SketchlabReactFlowCanvas {...props} />
+  </ReactFlowProvider>
 );
+
+export default SketchlabReactFlowView;
+
+// Re-exported so the parent router can pass an identical default-sources
+// blob into its SourcesContainer when this implementation is active.
+export {DEFAULT_SOURCES as REACTFLOW_DEFAULT_SOURCES};
