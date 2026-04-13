@@ -1,20 +1,29 @@
-type NavigationBlocker = () => boolean | Promise<boolean>;
+export type NavigationBlocker = () => boolean | Promise<boolean>;
 
-let activeNavigationBlocker: NavigationBlocker | undefined;
+type LevelNavigationBlocker = {
+  register: (blocker: NavigationBlocker) => () => void;
+  shouldAllow: () => Promise<boolean>;
+};
 
-export function registerLevelNavigationBlocker(
-  blocker: NavigationBlocker
-): () => void {
-  activeNavigationBlocker = blocker;
-  return () => {
-    if (activeNavigationBlocker === blocker) {
-      activeNavigationBlocker = undefined;
-    }
+export default function createLevelNavigationBlocker(): LevelNavigationBlocker {
+  let activeNavigationBlocker: NavigationBlocker | undefined;
+
+  const register = (blocker: NavigationBlocker) => {
+    activeNavigationBlocker = blocker;
+    return () => {
+      if (activeNavigationBlocker === blocker) {
+        activeNavigationBlocker = undefined;
+      }
+    };
   };
-}
 
-export function shouldAllowLevelNavigation(): Promise<boolean> {
-  return activeNavigationBlocker
-    ? Promise.resolve(activeNavigationBlocker())
-    : Promise.resolve(true);
+  const shouldAllow = () =>
+    activeNavigationBlocker
+      ? Promise.resolve(activeNavigationBlocker())
+      : Promise.resolve(true);
+
+  return {
+    register,
+    shouldAllow,
+  };
 }

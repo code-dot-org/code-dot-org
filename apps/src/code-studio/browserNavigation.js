@@ -6,7 +6,7 @@
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 
-import {shouldAllowLevelNavigation} from '../lab2/utils/levelNavigationBlocker';
+import Lab2Registry from '../lab2/Lab2Registry';
 import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getStore} from '../redux';
 
@@ -40,7 +40,7 @@ export function setupNavigationHandler(initialLevelId) {
     const store = getStore();
     const progressStoreState = store.getState().progress;
     const previousLevelId = progressStoreState.currentLevelId;
-    if (!(await shouldAllowLevelNavigation())) {
+    if (!(await Lab2Registry.getInstance().shouldAllowLevelNavigation())) {
       // Restore URL history for the current level when navigation is canceled.
       if (previousLevelId && progressStoreState.currentLessonId) {
         const previousLevel = levelById(

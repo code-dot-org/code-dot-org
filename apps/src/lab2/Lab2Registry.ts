@@ -5,6 +5,9 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
 import {AppName} from './types';
+import createLevelNavigationBlocker, {
+  NavigationBlocker,
+} from './utils/levelNavigationBlocker';
 import LifecycleNotifier from './utils/LifecycleNotifier';
 
 export default class Lab2Registry {
@@ -13,6 +16,7 @@ export default class Lab2Registry {
   private lifecycleNotifier: LifecycleNotifier;
   private appName: AppName | null;
   private theme: Theme | undefined;
+  private levelNavigationBlocker = createLevelNavigationBlocker();
 
   private static _instance: Lab2Registry;
 
@@ -76,5 +80,13 @@ export default class Lab2Registry {
 
   public getTheme() {
     return this.theme;
+  }
+
+  public registerLevelNavigationBlocker(blocker: NavigationBlocker) {
+    return this.levelNavigationBlocker.register(blocker);
+  }
+
+  public shouldAllowLevelNavigation() {
+    return this.levelNavigationBlocker.shouldAllow();
   }
 }

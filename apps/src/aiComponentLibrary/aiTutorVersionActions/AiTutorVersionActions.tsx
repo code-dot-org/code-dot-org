@@ -14,7 +14,6 @@ import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionF
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {registerLevelNavigationBlocker} from '@cdo/apps/lab2/utils/levelNavigationBlocker';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -56,8 +55,8 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   }, []);
 
   useEffect(() => {
-    unregisterNavigationBlockerRef.current = registerLevelNavigationBlocker(
-      async () => {
+    unregisterNavigationBlockerRef.current =
+      Lab2Registry.getInstance().registerLevelNavigationBlocker(async () => {
         if (!dialogControl) {
           return true;
         }
@@ -71,8 +70,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
         });
 
         return type === 'confirm';
-      }
-    );
+      });
     return clearNavigationBlocker;
   }, [clearNavigationBlocker, dialogControl]);
 
