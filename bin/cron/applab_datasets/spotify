@@ -123,7 +123,7 @@ end
 def generate_profanity_regex(items)
   str = items.reduce('') {|acc, item| acc + get_track_info_string(item['track'])}
   profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
-  profanities.empty? ? nil : /(#{profanities.join("|")})/i
+  profanities.empty? ? nil : /(#{profanities.join('|')})/i
 end
 
 def main

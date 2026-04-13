@@ -22,8 +22,8 @@ Feature: Using the V2 teacher dashboard local navigation
 
     And I press the first "input[name='grades[]']" element
 
-    And I click selector "button:contains(Middle School)" once I see it
-    And I click selector "input[name='Interactive Animations and Games']" once I see it
+    And I click selector "button:contains(Elementary School)" once I see it
+    And I click selector "input[name='UI Test CSF']" once I see it
 
     And I press backspace to clear element "#uitest-section-name-setup"
     And I press keys "Sally's Super Section" for element "#uitest-section-name-setup"
@@ -35,7 +35,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
 
-    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games"
+    And I wait until element "#unit-selector-v2" contains text "UI Test CSF"
     Then element "#uitest-sidebar-section-dropdown" contains text "Sally's Super Section"
     Then element "#uitest-sidebar-section-dropdown" does not contain text "All the Things Section"
 

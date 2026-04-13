@@ -35,7 +35,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   def update
     # Teachers aren't allowed to update other teachers' information, even if the teacher is
     # a student in a section.
-    return head :forbidden if @student.teacher?
+    return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 

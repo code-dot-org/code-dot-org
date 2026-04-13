@@ -14,8 +14,17 @@ import styles from './styles.module.scss';
 const unknownErrorMessage = 'An unknown error occurred.';
 const recordingTimeoutMs = 60000;
 
+export interface SpeechToTextAnalytics {
+  /** Amount of time the user spent recording audio. */
+  recordTimeSeconds: number;
+  /** Total amount of time from the start of recording to the end of transcription. */
+  totalTimeSeconds: number;
+  /** Whether the recording ended due to a timeout. */
+  timedOut: boolean;
+}
+
 interface SpeechToTextButtonProps {
-  onTranscribed: (text: string) => void;
+  onTranscribed: (text: string, analytics: SpeechToTextAnalytics) => void;
   onRecordStart?: () => void;
   disabled?: boolean;
 }
@@ -30,6 +39,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
   const [errorMessage, setErrorMessage] = useState<string>();
   const timeoutRef = useRef<NodeJS.Timeout>();
   const recorderRef = useRef<AudioRecorder>(new AudioRecorder());
+  const startTimeRef = useRef<number>(Date.now());
 
   const onStartRecording = async () => {
     if (timeoutRef.current) {
@@ -41,7 +51,11 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       if (startState === 'Started') {
         setIsRecording(true);
         onRecordStart?.();
-        timeoutRef.current = setTimeout(onEndRecording, recordingTimeoutMs);
+        startTimeRef.current = Date.now();
+        timeoutRef.current = setTimeout(
+          () => onEndRecording(true),
+          recordingTimeoutMs
+        );
       } else {
         setErrorMessage(
           startState === 'PermissionDenied'
@@ -55,7 +69,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
     }
   };
 
-  const onEndRecording = async () => {
+  const onEndRecording = async (timedOut = false) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -63,10 +77,14 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
     setIsTranscribing(true);
     try {
       const audio = await recorderRef.current.stop();
+      const recordTimeSeconds = (Date.now() - startTimeRef.current) / 1000;
+
       const aichatClientApi = await getClientApi();
       const text = await aichatClientApi.transcribeAudio(audio);
+      const totalTimeSeconds = (Date.now() - startTimeRef.current) / 1000;
+
       setIsTranscribing(false);
-      onTranscribed(text);
+      onTranscribed(text, {recordTimeSeconds, totalTimeSeconds, timedOut});
     } catch (error) {
       console.error(error);
       setErrorMessage(unknownErrorMessage);
@@ -126,7 +144,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
             <MuiIconButton
               variant="outlined"
               size="extraSmall"
-              onClick={isRecording ? onEndRecording : onStartRecording}
+              onClick={isRecording ? () => onEndRecording() : onStartRecording}
               disabled={!canRecord || isTranscribing || disabled}
               color={isRecording ? 'white' : 'secondary'}
               className={classNames(isRecording && styles.recording)}
