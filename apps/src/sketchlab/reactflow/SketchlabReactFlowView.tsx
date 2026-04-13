@@ -12,6 +12,7 @@ import {
   ReactFlowProvider,
   useNodesState,
   useEdgesState,
+  useUpdateNodeInternals,
   type Edge,
   type Node,
   type OnConnect,
@@ -81,7 +82,11 @@ const getNodeId = () => crypto.randomUUID();
 // (min-height 60 + padding 16 + border 4 = 80px in content-box).
 const SHAPE_HEIGHT = 80;
 
-// Ensure circle/triangle nodes use the standard SHAPE_HEIGHT.
+// Force all circle/triangle nodes to the standard SHAPE_HEIGHT. This keeps
+// the wrapper dimensions that React Flow uses for handle hit-testing lined
+// up with the visible shape (whose inner CSS fills that wrapper), and
+// matches the fixed-size convention enforced by `onShapeSelect` when the
+// user picks a shape.
 const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
   nodes.map(n => {
     const shape = n.data?.shape as string | undefined;
@@ -149,6 +154,19 @@ const SketchlabReactFlowCanvas: React.FC<{
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  // Nodes that enter via the initial state (sources loaded at first mount —
+  // including any Excalidraw migration output) can land in React Flow
+  // before it runs its handle-position measurement pass. Without that pass
+  // `handleBounds` stays empty: edges connected to the node don't render,
+  // and drags off its handles never fire `onConnectStart`. Forcing a
+  // re-measure of every initial node fixes both.
+  const updateNodeInternals = useUpdateNodeInternals();
+  useEffect(() => {
+    if (initialNodes.length === 0) return;
+    updateNodeInternals(initialNodes.map(n => n.id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Remount key for when sources are reinitialized
   const [mountKey, setMountKey] = useState(0);
@@ -532,10 +550,16 @@ const SketchlabReactFlowCanvas: React.FC<{
       const reloaded = isExcalidrawSource(src)
         ? migrateExcalidrawToReactFlow(src)
         : currentSources.source;
-      setNodes(
-        normalizeNodeDimensions(cloneDeep(reloaded.nodes || []) as Node[])
+      const reloadedNodes = normalizeNodeDimensions(
+        cloneDeep(reloaded.nodes || []) as Node[]
       );
+      setNodes(reloadedNodes);
       setEdges(cloneDeep(reloaded.edges || []) as Edge[]);
+      // Same reason as the mount-time call above: nodes re-seeded into
+      // state need their handle positions re-measured.
+      if (reloadedNodes.length > 0) {
+        updateNodeInternals(reloadedNodes.map(n => n.id));
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mountKey]);
