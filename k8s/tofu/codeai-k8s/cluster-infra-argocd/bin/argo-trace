@@ -19,6 +19,7 @@ module ArgoTrace
   DEFAULT_MAX_PARALLEL_CALLS = 50
   DEFAULT_KUBECTL_DETAILS = true
   DEFAULT_REF_MAX_RECURSION_DEPTH = 2
+  ARGO_TREE_KINDS = Set.new(%w[Application ApplicationSet]).freeze
   FOLLOW_REF_NOISE_KINDS = Set.new(
     %w[
       Certificate
