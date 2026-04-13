@@ -217,6 +217,12 @@ saucelabs_username:
 saucelabs_authkey:
 saucelabs_tunnel_name:
 
+# Credentials for AWS Device Farm, used as an alternative to SauceLabs for
+# running selenium tests against multiple browsers.
+# device_farm_project_arn is the ARN of a Desktop Browser Testing project,
+# created via the AWS Device Farm console or CLI.
+device_farm_project_arn:
+
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
 applitools_eyes_api_key_view:

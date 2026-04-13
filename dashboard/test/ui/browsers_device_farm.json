@@ -1,0 +1,17 @@
+/* AWS Device Farm Desktop Browser Testing browser configurations.
+   Device Farm supports Chrome and Firefox on Linux (managed by AWS).
+   Unlike browsers.json (SauceLabs), no sauce:options or appium keys are used.
+   Platform configurator: https://docs.aws.amazon.com/devicefarm/latest/testgrid/techref-support.html */
+
+[
+  {
+    "name": "Chrome",
+    "browserName": "chrome",
+    "browserVersion": "latest"
+  },
+  {
+    "name": "Firefox",
+    "browserName": "firefox",
+    "browserVersion": "latest"
+  }
+]
