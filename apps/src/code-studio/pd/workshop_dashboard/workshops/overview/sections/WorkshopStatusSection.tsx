@@ -39,7 +39,7 @@ const dialogs = [
     description:
       'Ending this workshop will close the attendance. Are you sure you want to end this workshop now?',
     primaryButtonProps: {
-      color: 'error' as const,
+      color: 'destructive' as const,
     },
   },
   {
@@ -351,17 +351,17 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
             title={`${label} Workshop?`}
             description={description}
             primaryButtonProps={{
-              children: `${label} Workshop`,
-              size: 'small',
+              text: `${label} Workshop`,
+              size: 's',
               disabled: isUpdating,
               onClick: generateHandler(stateKey),
               ...primaryButtonProps,
             }}
             secondaryButtonProps={{
-              size: 'small',
-              children: 'Cancel',
-              color: 'tertiary',
-              variant: 'outlined',
+              size: 's',
+              text: 'Cancel',
+              type: 'secondary',
+              color: 'gray',
               onClick: () => setActiveDialog(null),
               disabled: isUpdating,
             }}

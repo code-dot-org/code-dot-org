@@ -93,7 +93,7 @@ export const WithPartnerAndCTA: Story = {
       },
     },
     buttonProps: {
-      children: 'Learn More',
+      text: 'Learn More',
       href: '#',
     },
     VideoComponent: Video,

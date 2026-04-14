@@ -1,6 +1,6 @@
-import {ButtonProps as MuiButtonProps} from '@mui/material';
 import {HTMLAttributes} from 'react';
 
+import {LinkButtonProps} from '@/button';
 import {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
 
@@ -28,10 +28,10 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
     /** Detail text */
     description: string;
   };
-  /** Primary button props (MUI Button) */
-  primaryButton?: MuiButtonProps;
-  /** Secondary button props (MUI Button) */
-  secondaryButton?: MuiButtonProps;
+  /** Primary button props */
+  primaryButton?: LinkButtonProps;
+  /** Secondary button props */
+  secondaryButton?: LinkButtonProps;
   /** Action Block background */
   background?: 'primary' | 'secondary';
   /** Action Block custom className */

@@ -269,7 +269,7 @@ ActionBlockCarousel.args = {
           image={{src: image1}}
           overline={'Overline 1'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />
@@ -284,7 +284,7 @@ ActionBlockCarousel.args = {
           image={{src: image2}}
           overline={'Overline 2'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />
@@ -299,7 +299,7 @@ ActionBlockCarousel.args = {
           image={{src: image3}}
           overline={'Overline 3'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />
@@ -314,7 +314,7 @@ ActionBlockCarousel.args = {
           image={{src: image4}}
           overline={'Overline 4'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />
@@ -329,7 +329,7 @@ ActionBlockCarousel.args = {
           image={{src: image5}}
           overline={'Overline 5'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />
@@ -344,7 +344,7 @@ ActionBlockCarousel.args = {
           image={{src: image6}}
           overline={'Overline 6'}
           primaryButton={{
-            children: 'Primary Button',
+            text: 'Primary Button',
             href: '#',
           }}
         />

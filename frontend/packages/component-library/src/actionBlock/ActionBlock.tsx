@@ -1,10 +1,7 @@
-import {
-  Button as MuiButton,
-  ButtonProps as MuiButtonProps,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 
+import {LinkButton, LinkButtonProps} from '@/button';
 import Image, {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
 
@@ -38,37 +35,43 @@ export const getVideo = (VideoComponent?: typeof Video, video?: VideoProps) => {
 export const getDetail = (details?: {label: string; description: string}) => {
   if (!details) return null;
   return (
-    <MuiTypography
+    <Typography
       className={classNames(moduleStyles.detail)}
       variant="body3"
       gutterBottom
     >
-      <MuiTypography variant="strong">{`${details.label}: `}</MuiTypography>
+      <Typography variant="strong">{`${details.label}: `}</Typography>
       {details.description}
-    </MuiTypography>
+    </Typography>
   );
 };
 
 export const getButtons = (
-  primaryButton?: MuiButtonProps,
-  secondaryButton?: MuiButtonProps,
+  primaryButton?: LinkButtonProps,
+  secondaryButton?: LinkButtonProps,
 ) => {
   if (!primaryButton) return null;
   return (
     <div className={moduleStyles.buttonWrapper}>
       {primaryButton && (
-        <MuiButton
-          variant="contained"
-          size="medium"
-          color="primary"
+        <LinkButton
+          type="primary"
+          size="m"
+          color="purple"
+          text={primaryButton.text}
+          href={primaryButton.href}
+          ariaLabel={primaryButton.ariaLabel}
           {...primaryButton}
         />
       )}
       {secondaryButton && (
-        <MuiButton
-          variant="outlined"
-          size="medium"
-          color="secondary"
+        <LinkButton
+          type="secondary"
+          size="m"
+          color="black"
+          text={secondaryButton.text}
+          href={secondaryButton.href}
+          ariaLabel={secondaryButton.ariaLabel}
           {...secondaryButton}
         />
       )}
@@ -78,13 +81,13 @@ export const getButtons = (
 
 export const getTag = (tag: string) => {
   return (
-    <MuiTypography
+    <Typography
       className={classNames(moduleStyles.tag)}
       variant="body4"
       gutterBottom
     >
       {tag}
-    </MuiTypography>
+    </Typography>
   );
 };
 
@@ -146,30 +149,30 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       <div>
         {tag && getTag(tag)}
         {overline && (
-          <MuiTypography
+          <Typography
             className={classNames(moduleStyles.overline)}
             variant="overline2"
             gutterBottom
           >
             {overline}
-          </MuiTypography>
+          </Typography>
         )}
-        <MuiTypography
+        <Typography
           className={classNames(moduleStyles.title)}
           component="h3"
           variant="h4"
           gutterBottom
         >
           {title}
-        </MuiTypography>
+        </Typography>
         {video ? getVideo(VideoComponent, video) : image && getImage(image)}
-        <MuiTypography
+        <Typography
           className={classNames(moduleStyles.description)}
           variant="body3"
           gutterBottom
         >
           {description}
-        </MuiTypography>
+        </Typography>
         {details && getDetail(details)}
       </div>
       {primaryButton && getButtons(primaryButton, secondaryButton)}

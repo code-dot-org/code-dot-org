@@ -43,19 +43,19 @@ class DeleteVocabularyDialog extends Component {
         onClose={() => handleDeleteVocabularyDialogClose()}
         primaryButtonProps={{
           id: 'delete-vocabulary',
-          children: `Delete`,
-          size: 'small',
+          text: `Delete`,
+          size: 's',
           onClick: () => {
             this.deleteVocabulary();
           },
-          color: 'error',
+          color: 'destructive',
         }}
         secondaryButtonProps={{
           id: 'cancel-delete-vocabulary',
-          size: 'small',
-          children: 'Cancel',
-          color: 'tertiary',
-          variant: 'outlined',
+          size: 's',
+          text: 'Cancel',
+          type: 'secondary',
+          color: 'gray',
           onClick: () => {
             handleDeleteVocabularyDialogClose();
           },

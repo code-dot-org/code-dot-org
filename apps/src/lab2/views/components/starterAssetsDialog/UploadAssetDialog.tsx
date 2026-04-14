@@ -142,7 +142,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       title={'Manage Starter Assets'}
       className={styles.starterAssetsModal}
       primaryButtonProps={{
-        children: 'Upload',
+        text: 'Upload',
         onClick: () => {},
         style: {display: 'none'},
       }}

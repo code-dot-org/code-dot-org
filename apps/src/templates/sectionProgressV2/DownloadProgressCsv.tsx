@@ -1,5 +1,4 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
 import React from 'react';
 
@@ -237,15 +236,19 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = ({
       labelText={i18n.downloadProgressCsv()}
       size="s"
       disabled={isLoading}
-      useMuiIconButtonAsTrigger
+      useDSCOButtonAsTrigger
       triggerButtonProps={{
-        children: <FontAwesomeV6Icon iconName="download" iconStyle="solid" />,
-        color: 'tertiary',
-        variant: 'outlined',
-        size: 'small',
-        'aria-label': i18n.downloadProgressCsv(),
+        isIconOnly: true,
+        icon: {
+          iconName: 'download',
+          iconStyle: 'solid',
+        },
+        color: 'gray',
+        type: 'secondary',
+        size: 's',
+        ariaLabel: i18n.downloadProgressCsv(),
         className: styles.downloadCsvDropdown,
-        loading: isLoading,
+        isPending: isLoading,
       }}
       menuPlacement="right"
     >

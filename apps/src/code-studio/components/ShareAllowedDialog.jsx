@@ -279,7 +279,7 @@ class ShareAllowedDialog extends React.Component {
               }
               primaryButtonProps={{
                 onClick: this.close,
-                children: i18n.ok(),
+                text: i18n.ok(),
                 id: 'uitest-sharing-disabled-button',
               }}
             />

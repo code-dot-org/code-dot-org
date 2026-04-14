@@ -9,7 +9,7 @@ describe('Modal Component', () => {
     title: 'Test Modal',
     description: 'This is a test description.',
     primaryButtonProps: {
-      children: 'Primary Action',
+      text: 'Primary Action',
       onClick: jest.fn(),
     },
     onClose: jest.fn(),
@@ -27,10 +27,7 @@ describe('Modal Component', () => {
     render(
       <Modal
         {...defaultProps}
-        secondaryButtonProps={{
-          children: 'Secondary Action',
-          onClick: jest.fn(),
-        }}
+        secondaryButtonProps={{text: 'Secondary Action', onClick: jest.fn()}}
       />,
     );
     expect(

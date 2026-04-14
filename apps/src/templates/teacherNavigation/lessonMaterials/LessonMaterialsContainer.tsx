@@ -391,7 +391,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <Dialog
             title={i18n.audioTranscript()}
             primaryButtonProps={{
-              children: i18n.closeDialog(),
+              text: i18n.closeDialog(),
               onClick: () => handleTranscriptButtonClick(),
             }}
             onClose={() => handleTranscriptButtonClick()}

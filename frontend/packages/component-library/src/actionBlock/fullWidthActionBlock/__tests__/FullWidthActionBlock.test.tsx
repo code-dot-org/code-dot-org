@@ -37,17 +37,17 @@ describe('FullWidthActionBlock', () => {
 
   const primaryButtonProps = {
     primaryButton: {
-      children: 'Full Width Primary Button',
+      text: 'Full Width Primary Button',
       href: 'https://code.org',
-      'aria-label': 'Full Width Primary Button aria label',
+      ariaLabel: 'Full Width Primary Button aria label',
     },
   };
 
   const secondaryButtonProps = {
     secondaryButton: {
-      children: 'Full Width Secondary Button',
+      text: 'Full Width Secondary Button',
       href: 'https://hourofcode.com',
-      'aria-label': 'Full Width Secondary Button aria label',
+      ariaLabel: 'Full Width Secondary Button aria label',
     },
   };
 

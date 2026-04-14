@@ -2,8 +2,6 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
 import ActionDropdown, {ActionDropdownOption} from './../index';
 
 const allOptions: ActionDropdownOption[] = [
@@ -28,13 +26,12 @@ const allOptions: ActionDropdownOption[] = [
 ];
 
 const triggerButtonProps = {
-  children: (
-    <FontAwesomeV6Icon
-      iconName="check"
-      iconStyle="solid"
-      title="Trigger Icon"
-    />
-  ),
+  isIconOnly: true,
+  icon: {
+    iconName: 'check',
+    iconStyle: 'solid' as const,
+    title: 'Trigger Icon',
+  },
 };
 
 describe('Design System - Action Dropdown Component', () => {
@@ -88,9 +85,7 @@ describe('Design System - Action Dropdown Component', () => {
   });
 
   it("doesn't call onClick when dropdown is disabled", async () => {
-    // MUI disabled IconButton sets pointer-events: none, so we need to
-    // bypass the pointer-events check to test click behavior.
-    const user = userEvent.setup({pointerEventsCheck: 0});
+    const user = userEvent.setup();
     render(
       <ActionDropdown
         name="test2-dropdown"

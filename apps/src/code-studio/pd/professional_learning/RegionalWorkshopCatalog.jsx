@@ -320,7 +320,7 @@ export default function RegionalWorkshopCatalog({
           title={regionalPartnerName}
           description={regionalPartnerInfo}
           primaryButtonProps={{
-            children: 'Return to workshops',
+            text: 'Return to workshops',
             onClick: () => setShowRPInfoDialog(false),
           }}
         />

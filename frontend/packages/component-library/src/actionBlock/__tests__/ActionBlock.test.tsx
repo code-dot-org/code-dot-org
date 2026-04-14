@@ -37,17 +37,17 @@ describe('ActionBlock', () => {
 
   const primaryButtonProps = {
     primaryButton: {
-      children: 'Primary Button',
+      text: 'Primary Button',
       href: 'https://code.org',
-      'aria-label': 'Primary Button aria label',
+      ariaLabel: 'Primary Button aria label',
     },
   };
 
   const secondaryButtonProps = {
     secondaryButton: {
-      children: 'Secondary Button',
+      text: 'Secondary Button',
       href: 'https://hourofcode.com',
-      'aria-label': 'Secondary Button aria label',
+      ariaLabel: 'Secondary Button aria label',
     },
   };
 

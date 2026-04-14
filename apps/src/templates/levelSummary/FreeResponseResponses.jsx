@@ -88,16 +88,11 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             menuPlacement="right"
             labelText={i18n.additionalOptions()}
             size="xs"
-            useIconButton
             triggerButtonProps={{
-              children: (
-                <FontAwesomeV6Icon
-                  iconName="ellipsis-vertical"
-                  iconStyle="solid"
-                />
-              ),
-              variant: 'text',
-              color: unpinResponse ? 'white' : 'primary',
+              isIconOnly: true,
+              icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
+              type: 'tertiary',
+              color: unpinResponse ? 'white' : 'purple',
               className: unpinResponse && styles.freeresponsePinnedDropdown,
             }}
             options={getMenuOptions(pinResponse, unpinResponse, response)}

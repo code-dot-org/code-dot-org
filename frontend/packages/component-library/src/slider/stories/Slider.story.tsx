@@ -1,8 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
 import Slider, {SliderProps} from '../index';
 
 export default {
@@ -102,12 +100,12 @@ SliderWithButtons.args = {
   name: 'controlled_Slider_buttons',
   label: 'Slider Label',
   leftButtonProps: {
-    children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-    'aria-label': 'Decrease',
+    icon: {iconName: 'minus', title: 'Decrease'},
+    ['aria-label']: 'Decrease',
   },
   rightButtonProps: {
-    children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-    'aria-label': 'Increase',
+    icon: {iconName: 'plus', title: 'Increase'},
+    ['aria-label']: 'Increase',
   },
   value: 0,
 };
@@ -128,12 +126,12 @@ GroupOfDefaultSliders.args = {
       onChange: () => null,
       value: 0,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -143,12 +141,12 @@ GroupOfDefaultSliders.args = {
       onChange: () => null,
       value: 0,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="turtle" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'turtle', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="rabbit" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'rabbit', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -182,12 +180,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 25,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -198,12 +196,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 50,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -214,12 +212,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 75,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -230,12 +228,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 50,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -247,12 +245,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 25,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -264,12 +262,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 65,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -281,12 +279,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 75,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -298,12 +296,12 @@ GroupOfDisabledSliders.args = {
       onChange: () => null,
       value: 65,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
   ],
@@ -319,12 +317,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 25,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -334,12 +332,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 50,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -349,12 +347,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 75,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -364,12 +362,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 50,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -380,12 +378,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 25,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -396,12 +394,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 65,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -412,12 +410,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 75,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
     {
@@ -428,12 +426,12 @@ GroupOfColorsOfSliders.args = {
       onChange: () => null,
       value: 65,
       leftButtonProps: {
-        children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
-        'aria-label': 'Decrease',
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
       },
       rightButtonProps: {
-        children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
-        'aria-label': 'Increase',
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
       },
     },
   ],

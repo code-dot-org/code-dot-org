@@ -694,19 +694,12 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                       }}
                       className={styles.temperatureInput}
                       leftButtonProps={{
-                        children: (
-                          <FontAwesomeV6Icon
-                            iconName="minus"
-                            title="Decrease"
-                          />
-                        ),
+                        icon: {iconName: 'minus', title: 'Decrease'},
                         ['aria-label']: 'Decrease',
                         tabIndex: showBotArea ? 0 : -1,
                       }}
                       rightButtonProps={{
-                        children: (
-                          <FontAwesomeV6Icon iconName="plus" title="Increase" />
-                        ),
+                        icon: {iconName: 'plus', title: 'Increase'},
                         ['aria-label']: 'Increase',
                         tabIndex: showBotArea ? 0 : -1,
                       }}

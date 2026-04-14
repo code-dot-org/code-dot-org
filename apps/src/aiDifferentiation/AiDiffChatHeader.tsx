@@ -115,19 +115,13 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
       <div className={style.chatHeaderButtons}>
         <ActionDropdown
           size="s"
-          useIconButton={false}
           triggerButtonProps={{
-            size: 'small',
-            color: 'tertiary',
-            variant: 'outlined',
-            children: commonI18n.aiDifferentiation_suggest_prompt(),
+            size: 's',
+            color: 'gray',
+            type: 'secondary',
+            text: commonI18n.aiDifferentiation_suggest_prompt(),
             'aria-label': commonI18n.aiDifferentiation_suggest_prompt(),
-            startIcon: (
-              <FontAwesomeV6Icon
-                iconName="solid-pen-sparkle"
-                iconFamily="kit"
-              />
-            ),
+            iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
           }}
           labelText={commonI18n.aiDifferentiation_suggest_prompt()}
           name="aiDiffChatHeaderDropdown"

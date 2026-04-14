@@ -438,16 +438,16 @@ export const WorkshopEnrollments: FC = () => {
             </Box>
           }
           primaryButtonProps={{
-            children: `Remove enrollment${s}`,
-            size: 'small',
+            text: `Remove enrollment${s}`,
+            size: 's',
             onClick: handleRemoveEnrollments,
-            color: 'error',
+            color: 'destructive',
           }}
           secondaryButtonProps={{
-            size: 'small',
-            children: 'Cancel',
-            color: 'tertiary',
-            variant: 'outlined',
+            size: 's',
+            text: 'Cancel',
+            type: 'secondary',
+            color: 'gray',
             onClick: () => {
               setActiveDialog(null);
               setRemoveEnrollmentError('');
@@ -501,16 +501,16 @@ export const WorkshopEnrollments: FC = () => {
             </Box>
           }
           primaryButtonProps={{
-            children: `Move enrollment${s}`,
-            size: 'small',
+            text: `Move enrollment${s}`,
+            size: 's',
             onClick: handleMoveEnrollments,
             disabled: !moveToWorkshopId,
           }}
           secondaryButtonProps={{
-            size: 'small',
-            children: 'Cancel',
-            color: 'tertiary',
-            variant: 'outlined',
+            size: 's',
+            text: 'Cancel',
+            type: 'secondary',
+            color: 'gray',
             onClick: () => {
               setActiveDialog(null);
               setMoveToWorkshopId('');

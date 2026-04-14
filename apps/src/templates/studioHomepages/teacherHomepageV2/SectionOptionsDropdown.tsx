@@ -166,16 +166,18 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         labelText="Section Options"
         menuPlacement="right"
         size="m"
-        useMuiIconButtonAsTrigger={true}
+        useDSCOButtonAsTrigger={true}
         triggerButtonProps={{
-          children: (
-            <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
-          ),
-          color: 'tertiary',
-          variant: 'text',
-          size: 'small',
+          isIconOnly: true,
+          icon: {
+            iconName: 'ellipsis-vertical',
+            iconStyle: 'solid',
+          },
+          color: 'gray',
+          type: 'tertiary',
+          size: 's',
           className: styles.dropdownButton,
-          'aria-label': i18n.sectionOptionsDropdown(),
+          ariaLabel: i18n.sectionOptionsDropdown(),
         }}
       >
         <ul>{dropdownOptions}</ul>

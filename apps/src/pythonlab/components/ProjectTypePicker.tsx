@@ -1,7 +1,6 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -54,14 +53,13 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               description={pythonlabI18n.consoleOnlyDescription()}
               image={{src: consoleImage}}
               primaryButton={{
-                children: pythonlabI18n.consoleOnly(),
-                color: 'primary',
+                text: pythonlabI18n.consoleOnly(),
+                color: 'purple',
+                useAsLink: false,
                 onClick: () => setProjectCallback('console'),
-                endIcon: (
-                  <FontAwesomeV6Icon
-                    iconName={isConsole ? 'check' : 'chevron-right'}
-                  />
-                ),
+                iconRight: isConsole
+                  ? {iconName: 'check'}
+                  : {iconName: 'chevron-right'},
                 disabled: isConsole,
               }}
             />
@@ -69,14 +67,13 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               description={pythonlabI18n.neighborhoodDescription()}
               image={{src: neighborhoodImage}}
               primaryButton={{
-                children: pythonlabI18n.neighborhood(),
-                color: 'primary',
+                text: pythonlabI18n.neighborhood(),
+                color: 'purple',
+                useAsLink: false,
                 onClick: () => setProjectCallback('neighborhood'),
-                endIcon: (
-                  <FontAwesomeV6Icon
-                    iconName={isNeighborhood ? 'check' : 'chevron-right'}
-                  />
-                ),
+                iconRight: isNeighborhood
+                  ? {iconName: 'check'}
+                  : {iconName: 'chevron-right'},
                 disabled: isNeighborhood,
               }}
             />

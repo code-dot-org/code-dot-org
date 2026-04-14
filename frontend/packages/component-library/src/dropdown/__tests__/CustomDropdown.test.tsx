@@ -86,17 +86,17 @@ describe('Design System - Custom Dropdown Component', () => {
     expect(icon).toBeInTheDocument();
   });
 
-  it('renders with MUI button as trigger', () => {
+  it('renders with DSCO button as trigger', () => {
     render(
       <CustomDropdown
         name="test-dropdown"
         labelText="Dropdown label"
         size="m"
-        useMuiButtonAsTrigger={true}
+        useDSCOButtonAsTrigger={true}
         triggerButtonProps={{
-          children: 'MUI Button',
-          color: 'primary',
-          variant: 'contained',
+          text: 'DSCO Button',
+          color: 'purple',
+          type: 'primary',
         }}
       >
         <div>Dropdown content</div>
