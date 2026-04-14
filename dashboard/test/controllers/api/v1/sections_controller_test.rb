@@ -1650,20 +1650,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   # create_demo
 
   test 'create_demo: returns forbidden when not signed in' do
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :forbidden
   end
 
   test 'create_demo: returns bad_request for invalid section type' do
     sign_in @teacher
-    post :create_demo, params: {section_type: 'invalid'}
+    post :create_demo, params: {demo_type: 'invalid'}
     assert_response :bad_request
   end
 
   test 'create_demo: creates section with preset config' do
     sign_in @teacher
     stub_demo_preset
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :success
 
     section = returned_section
@@ -1683,7 +1683,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CDO.stubs(:demo_student_ids).returns({'high' => [demo_student.id.to_s]})
     Policies::DemoSections.reset_cache!
 
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :success
 
     section = returned_section
@@ -1692,17 +1692,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'create_demo: students cannot create demo sections' do
     sign_in @student
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :forbidden
   end
 
   test 'create_demo: returns conflict when teacher already has a demo section of that type' do
     sign_in @teacher
     stub_demo_preset
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :success
 
-    post :create_demo, params: {section_type: 'high'}
+    post :create_demo, params: {demo_type: 'high'}
     assert_response :conflict
   end
 
