@@ -120,6 +120,7 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
+    Rails.cache.cleanup
   end
 
   def after_teardown
