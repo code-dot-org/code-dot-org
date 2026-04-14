@@ -78,7 +78,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -92,7 +92,6 @@ User: oh no"
           },
             retrieval_configuration: {
               vector_search_configuration: {
-                filter: {},
                 number_of_results: 10,
               }
             }
@@ -108,7 +107,7 @@ User: oh no"
     course_names = ["test_course"]
     unit_num = 2
     lesson_number = 3
-    section_contexts = nil
+    section_contexts = []
     formatted_input = format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -118,7 +117,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -132,7 +131,6 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
@@ -163,7 +161,7 @@ User: oh no"
     course_names = ["test_course"]
     unit_num = 2
     lesson_number = 3
-    section_contexts = nil
+    section_contexts = []
     formatted_input = format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -173,7 +171,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -187,7 +185,6 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
@@ -223,7 +220,7 @@ User: oh no"
     course_names = ["test_course"]
     unit_num = 2
     lesson_number = nil
-    section_contexts = nil
+    section_contexts = []
     formatted_input = format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -233,7 +230,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -247,7 +244,6 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
@@ -274,7 +270,7 @@ User: oh no"
     course_names = ["test_course"]
     unit_num = nil
     lesson_number = nil
-    section_contexts = nil
+    section_contexts = []
     formatted_input = format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -284,7 +280,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -298,7 +294,6 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
@@ -319,7 +314,7 @@ User: oh no"
     course_names = nil
     unit_num = nil
     lesson_number = nil
-    section_contexts = nil
+    section_contexts = []
     formatted_input = format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -329,7 +324,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -343,16 +338,13 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
         }
       }
     }
-    expected_filter = {
-      equals: {key: "scope", value: "general"}
-    }
+    expected_filter = {}
     assert_equal formatted_input, expected_input
     filter = filter_for_context(lesson_number, unit_num, course_names, section_contexts)
     assert_equal filter, expected_filter
@@ -386,7 +378,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -400,7 +392,6 @@ User: oh no"
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: 10,
             }
           }
