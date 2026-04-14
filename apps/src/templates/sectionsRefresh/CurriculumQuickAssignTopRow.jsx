@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {memo, useCallback} from 'react';
+import React, {memo} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -21,14 +21,6 @@ const MarketingAudienceButton = memo(
     const isActive = selectedMarketingAudience === audience;
     const icon = isActive ? 'caret-down' : 'caret-right';
 
-    const onClick = useCallback(
-      e => {
-        e.preventDefault();
-        determineMarketingAudience(audience);
-      },
-      [determineMarketingAudience, audience]
-    );
-
     return (
       <Button
         id={`uitest-${audience}-button`}
@@ -39,7 +31,8 @@ const MarketingAudienceButton = memo(
         text={text}
         size={Button.ButtonSize.large}
         icon={icon}
-        onClick={onClick}
+        onClick={() => determineMarketingAudience(audience)}
+        type="button"
       />
     );
   }
@@ -61,16 +54,13 @@ export default function CurriculumQuickAssignTopRow({
 }) {
   // If the given audience is already selected, deselect it.
   // Otherwise, set to this audience
-  const determineMarketingAudience = useCallback(
-    newAudience => {
-      if (newAudience === marketingAudience) {
-        updateMarketingAudience('');
-      } else {
-        updateMarketingAudience(newAudience);
-      }
-    },
-    [marketingAudience, updateMarketingAudience]
-  );
+  const determineMarketingAudience = newAudience => {
+    if (newAudience === marketingAudience) {
+      updateMarketingAudience('');
+    } else {
+      updateMarketingAudience(newAudience);
+    }
+  };
 
   return (
     <div className={moduleStyles.buttonRow}>
