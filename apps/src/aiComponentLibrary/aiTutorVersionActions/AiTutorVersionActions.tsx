@@ -1,13 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-} from 'react';
+import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
@@ -48,31 +42,27 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
 
   const dispatch = useAppDispatch();
   const dialogControl = useDialogControl();
-  const unregisterNavigationBlockerRef = useRef<(() => void) | null>(null);
-  const clearNavigationBlocker = useCallback(() => {
-    unregisterNavigationBlockerRef.current?.();
-    unregisterNavigationBlockerRef.current = null;
-  }, []);
 
   useEffect(() => {
-    unregisterNavigationBlockerRef.current =
-      Lab2Registry.getInstance().registerLevelNavigationBlocker(async () => {
-        if (!dialogControl) {
-          return true;
-        }
+    Lab2Registry.getInstance().setLevelNavigationConfirmation(async () => {
+      if (!dialogControl) {
+        return true;
+      }
 
-        const {type} = await dialogControl.showDialog({
-          type: DialogType.GenericConfirmation,
-          title: 'Leave this level?',
-          message:
-            'You have pending AI Tutor changes. If you leave this level now, those changes will be lost. Do you want to leave this level?',
-          confirmText: 'Leave level',
-        });
-
-        return type === 'confirm';
+      const {type} = await dialogControl.showDialog({
+        type: DialogType.GenericConfirmation,
+        title: 'Leave this level?',
+        message:
+          'You have pending AI Tutor changes. If you leave this level now, those changes will be lost. Do you want to leave this level?',
+        confirmText: 'Leave level',
       });
-    return clearNavigationBlocker;
-  }, [clearNavigationBlocker, dialogControl]);
+
+      return type === 'confirm';
+    });
+    return () => {
+      Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
+    };
+  }, [dialogControl]);
 
   // Warn the user if they attempt to reload the page before accepting or
   // rejecting the proposed updates.
@@ -116,7 +106,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     setIsSaving(true);
     try {
       await dispatch(acceptAiTutorVersion({files, commitDescription}));
-      clearNavigationBlocker();
+      Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -127,12 +117,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     } finally {
       setIsSaving(false);
     }
-  }, [dispatch, files, commitDescription, isSaving, clearNavigationBlocker]);
+  }, [dispatch, files, commitDescription, isSaving]);
 
   const handleReject = useCallback(async () => {
     await dispatch(rejectAiTutorVersion(files));
-    clearNavigationBlocker();
-  }, [dispatch, files, clearNavigationBlocker]);
+    Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
+  }, [dispatch, files]);
 
   // Scroll to the bottom of the page when switching to accept mode,
   // so that the commit description input and save button are visible to the user.

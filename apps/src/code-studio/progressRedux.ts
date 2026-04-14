@@ -361,7 +361,9 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     }
 
     const currentLevel = getCurrentLevel(getState());
-    if (!(await Lab2Registry.getInstance().shouldAllowLevelNavigation())) {
+    const levelNavigationConfirmation =
+      Lab2Registry.getInstance().getLevelNavigationConfirmation();
+    if (levelNavigationConfirmation && !(await levelNavigationConfirmation())) {
       return;
     }
 

@@ -5,10 +5,9 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
 import {AppName} from './types';
-import createLevelNavigationBlocker, {
-  NavigationBlocker,
-} from './utils/levelNavigationBlocker';
 import LifecycleNotifier from './utils/LifecycleNotifier';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;
@@ -16,7 +15,7 @@ export default class Lab2Registry {
   private lifecycleNotifier: LifecycleNotifier;
   private appName: AppName | null;
   private theme: Theme | undefined;
-  private levelNavigationBlocker = createLevelNavigationBlocker();
+  private levelNavigationConfirmation: LevelNavigationConfirmation | undefined;
 
   private static _instance: Lab2Registry;
 
@@ -26,6 +25,7 @@ export default class Lab2Registry {
     this.lifecycleNotifier = new LifecycleNotifier();
     this.appName = null;
     this.theme = undefined;
+    this.levelNavigationConfirmation = undefined;
   }
 
   public static getInstance(): Lab2Registry {
@@ -82,11 +82,13 @@ export default class Lab2Registry {
     return this.theme;
   }
 
-  public registerLevelNavigationBlocker(blocker: NavigationBlocker) {
-    return this.levelNavigationBlocker.register(blocker);
+  public getLevelNavigationConfirmation() {
+    return this.levelNavigationConfirmation;
   }
 
-  public shouldAllowLevelNavigation() {
-    return this.levelNavigationBlocker.shouldAllow();
+  public setLevelNavigationConfirmation(
+    confirmation: LevelNavigationConfirmation | undefined
+  ) {
+    this.levelNavigationConfirmation = confirmation;
   }
 }

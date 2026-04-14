@@ -40,7 +40,9 @@ export function setupNavigationHandler(initialLevelId) {
     const store = getStore();
     const progressStoreState = store.getState().progress;
     const previousLevelId = progressStoreState.currentLevelId;
-    if (!(await Lab2Registry.getInstance().shouldAllowLevelNavigation())) {
+    const levelNavigationConfirmation =
+      Lab2Registry.getInstance().getLevelNavigationConfirmation();
+    if (levelNavigationConfirmation && !(await levelNavigationConfirmation())) {
       // Restore URL history for the current level when navigation is canceled.
       if (previousLevelId && progressStoreState.currentLessonId) {
         const previousLevel = levelById(
