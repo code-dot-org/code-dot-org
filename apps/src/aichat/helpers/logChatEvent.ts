@@ -1,5 +1,10 @@
 import ChatEventLogger from '../chatEventLogger';
-import {ChatEvent, isModelUpdate, isNotification} from '../types';
+import {
+  ChatEvent,
+  isChatMessage,
+  isModelUpdate,
+  isNotification,
+} from '../types';
 
 // Logs the event to the backend for all chat events except:
 // - notifications with includeInHistory != true
@@ -30,6 +35,11 @@ export const logChatEvent = (
       ...chatEvent,
       updatedValue: updatedValueToLog,
     };
+  }
+
+  // remove hiddenContext from chat event logging
+  if (isChatMessage(chatEvent)) {
+    delete chatEvent.hiddenContext;
   }
 
   ChatEventLogger.getInstance().logChatEvent(chatEvent);

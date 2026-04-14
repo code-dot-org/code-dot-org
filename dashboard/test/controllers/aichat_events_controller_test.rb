@@ -99,6 +99,22 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_equal stored_aichat_event['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
   end
 
+  test 'log_chat_event logs excludes hiddenContext from AichatEvents table' do
+    params = @valid_params_log_chat_event.
+      merge(newChatEvent: @valid_params_log_chat_event[:newChatEvent].
+      merge(hiddenContext: 'hidden context')
+)
+    sign_in(@authorized_student1)
+    post :log_chat_event, params: params, as: :json
+
+    assert_response :success
+    event_id = json_response['id']
+    assert_equal json_response, @valid_params_log_chat_event[:newChatEvent].merge(id: event_id).stringify_keys
+    aichat_event_row = AichatEvent.find(event_id)
+    stored_aichat_event = aichat_event_row.aichat_event
+    assert_nil stored_aichat_event['hiddenContext']
+  end
+
   test 'log_chat_event logs requestId successfully to AichatEvents table' do
     sign_in(@authorized_student1)
 
