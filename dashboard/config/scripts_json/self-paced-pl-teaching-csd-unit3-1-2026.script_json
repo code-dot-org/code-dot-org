@@ -1,0 +1,2821 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-csd-unit3-1-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-13 19:17:52 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Interactive Animations and Games",
+      "name": "Introduction to Interactive Animations and Games",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "Create a Scene",
+      "name": "Create a Scene",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Use the coordinate grid in Game Lab to draw colorful shapes.\n* Customize shapes by adjusting multiple parameters. \n* Use variables to store information that is used multiple times in a program.\n\n**Suggested time:** 40 minutes\n",
+        "student_overview": "**You will:**\n\n* Use the coordinate grid in Game Lab to draw colorful shapes.\n* Customize shapes by adjusting multiple parameters. \n* Use variables to store information that is used multiple times in a program.\n\n**Suggested time:** 40 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "Animate a Scene Using Sprites",
+      "name": "Animate a Scene Using Sprites",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Create and use a sprite.\n* Use a draw loop to create sprite animations. \n* Use the counter pattern to move sprites across the screen. \n\n**Suggested time:** 40 minutes",
+        "student_overview": "**You will:**\n\n* Create and use a sprite.\n* Use a draw loop to create sprite animations. \n* Use the counter pattern to move sprites across the screen. \n\n**Suggested time:** 40 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "Explore Game Design",
+      "name": "Explore Game Design",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Use conditionals to react to changes in variables and sprite properties.\n* Move sprites in response to inputs. \n* Use abstractions to reduce the complexity of code. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Use conditionals to react to changes in variables and sprite properties.\n* Move sprites in response to inputs. \n* Use abstractions to reduce the complexity of code. \n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "Unit Wrap Up",
+      "name": "Unit Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore end-of-chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "daee79be-e3bf-4e8a-b214-0464f36323ff",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff",
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "7efcfaea-243c-44ce-970d-133fec74cd24",
+      "position": 1,
+      "properties": {
+        "duration": 40
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24",
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "c14400d8-01af-42c4-bf70-cb9be9464257",
+      "position": 1,
+      "properties": {
+        "duration": 40
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257",
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f",
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    },
+    {
+      "key": "d32dfe78-ad20-4acc-8228-009620a30f51",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d32dfe78-ad20-4acc-8228-009620a30f51",
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "42402601-a905-4e86-856a-93e72e965e33",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33",
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff"
+      }
+    },
+    {
+      "key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e",
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff"
+      }
+    },
+    {
+      "key": "8651b0ca-1eb2-4aba-bde1-7258fbbd2e00",
+      "position": 3,
+      "properties": {
+        "progression_name": "Learning Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "8651b0ca-1eb2-4aba-bde1-7258fbbd2e00",
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff"
+      }
+    },
+    {
+      "key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teaching Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced",
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff"
+      }
+    },
+    {
+      "key": "a484033e-2c44-4d8c-9d6e-710d7d559e20",
+      "position": 5,
+      "properties": {
+        "progression_name": "Explore the First Week of Curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "a484033e-2c44-4d8c-9d6e-710d7d559e20",
+        "lesson_activity.key": "daee79be-e3bf-4e8a-b214-0464f36323ff"
+      }
+    },
+    {
+      "key": "62353a4f-6250-4771-81a0-a379ad4dfc86",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "62353a4f-6250-4771-81a0-a379ad4dfc86",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Position Shapes on the Grid"
+      },
+      "seeding_key": {
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "39703e23-a10f-481f-a9b6-15afb040f397",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add Color to Shapes"
+      },
+      "seeding_key": {
+        "activity_section.key": "39703e23-a10f-481f-a9b6-15afb040f397",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb",
+      "position": 5,
+      "properties": {
+        "progression_name": "Add Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "1f5503f9-48bb-4333-ae2e-eaa7984adff1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f5503f9-48bb-4333-ae2e-eaa7984adff1",
+        "lesson_activity.key": "7efcfaea-243c-44ce-970d-133fec74cd24"
+      }
+    },
+    {
+      "key": "a7e6a125-33a1-421b-9109-46d5e07057e4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7e6a125-33a1-421b-9109-46d5e07057e4",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "f6da0db7-cd07-40ef-8f84-7835c4740f27",
+      "position": 2,
+      "properties": {
+        "progression_name": "Create a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "39f45cda-3ea0-4a06-b555-58c169da11ab",
+      "position": 3,
+      "properties": {
+        "progression_name": "Animate a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add Movement to a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "20b3f937-96d5-4c18-81fd-d37e22560b3a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Move a Sprite Across the Screen"
+      },
+      "seeding_key": {
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "ffae3236-1cf9-468d-ae72-f48919b25781",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffae3236-1cf9-468d-ae72-f48919b25781",
+        "lesson_activity.key": "c14400d8-01af-42c4-bf70-cb9be9464257"
+      }
+    },
+    {
+      "key": "6a79c5d5-a01e-4867-b2f6-04c30328f62f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a79c5d5-a01e-4867-b2f6-04c30328f62f",
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f"
+      }
+    },
+    {
+      "key": "eddd7198-a22d-40ce-a101-17dcef164ff5",
+      "position": 2,
+      "properties": {
+        "progression_name": "React to Changes Using Conditional Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5",
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f"
+      }
+    },
+    {
+      "key": "b4b73a8c-7959-4f5e-add2-7936d94180b6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Change Conditions Using Inputs"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6",
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f"
+      }
+    },
+    {
+      "key": "5afc439f-52fb-4984-af7d-447a300aeacf",
+      "position": 4,
+      "properties": {
+        "progression_name": "Hide Details with Abstractions"
+      },
+      "seeding_key": {
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf",
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f"
+      }
+    },
+    {
+      "key": "ac3ac128-cc25-46be-9eee-064301bf53de",
+      "position": 5,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac3ac128-cc25-46be-9eee-064301bf53de",
+        "lesson_activity.key": "4071028b-6ac6-4f4e-a450-91b9ac498f7f"
+      }
+    },
+    {
+      "key": "8ce4bcbb-a997-425c-9cf2-30243245f403",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ce4bcbb-a997-425c-9cf2-30243245f403",
+        "lesson_activity.key": "d32dfe78-ad20-4acc-8228-009620a30f51"
+      }
+    },
+    {
+      "key": "489df612-2d2f-4783-b7e6-d808bcf2d59e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e",
+        "lesson_activity.key": "d32dfe78-ad20-4acc-8228-009620a30f51"
+      }
+    },
+    {
+      "key": "45689c5c-b9dc-4f8d-8c68-4954e212a0e9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "45689c5c-b9dc-4f8d-8c68-4954e212a0e9",
+        "lesson_activity.key": "d32dfe78-ad20-4acc-8228-009620a30f51"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-25-mod1-Certificate_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      },
+      "level_keys": [
+        "SP-VPL-25-mod1-Certificate_25_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Project Overview_U3L2_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      },
+      "level_keys": [
+        "VPL-CSD-Project Overview_U3L2_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "8651b0ca-1eb2-4aba-bde1-7258fbbd2e00"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_tools-U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced"
+      },
+      "level_keys": [
+        "VPL-CSD-U3-TeacherTools_25_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools-AITAVid_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced"
+      },
+      "level_keys": [
+        "VPL-CSD-U3-TeacherTools-AITAVid_25_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the First Week of Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-exU3L5_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "a484033e-2c44-4d8c-9d6e-710d7d559e20"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-exU3L5_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "62353a4f-6250-4771-81a0-a379ad4dfc86"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Position Shapes on the Grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Position Shapes on the Grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_25_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Position Shapes on the Grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corner_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corner_25_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Color to Shapes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39703e23-a10f-481f-a9b6-15afb040f397"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_25_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Color to Shapes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39703e23-a10f-481f-a9b6-15afb040f397"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_25_2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_self-paced-unit3_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_self-paced-unit3_2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_25_2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_25_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Add Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_self-paced-unit3__2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_self-paced-unit3__2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part_25_2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_25_2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Add Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_self-paced-unit3__2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_self-paced-unit3__2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with ass_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with ass_25_2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "1f5503f9-48bb-4333-ae2e-eaa7984adff1"
+      },
+      "level_keys": [
+        "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "a7e6a125-33a1-421b-9109-46d5e07057e4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_25_2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_25_2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_25_2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_25_2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_25_2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Animate a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-Making_self-paced-_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-Making_self-paced-_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_25_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Movement to a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Lo_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Lo_25_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Movement to a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange _25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange _25_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Movement to a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_25_2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Movement to a Sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a Sprite Across the Screen"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_25_2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a Sprite Across the Screen"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_25_2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a Sprite Across the Screen"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_25_2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a Sprite Across the Screen"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_self-paced-unit_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_self-paced-unit_2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 18,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Move a Sprite Across the Screen"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_self-paced-u_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_self-paced-u_2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ffae3236-1cf9-468d-ae72-f48919b25781"
+      },
+      "level_keys": [
+        "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "6a79c5d5-a01e-4867-b2f6-04c30328f62f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "React to Changes Using Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_25_2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "React to Changes Using Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_self-paced-unit_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_self-paced-unit_2026"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "React to Changes Using Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_self-paced-unit3_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_self-paced-unit3_2026"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "React to Changes Using Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements vi_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements vi_25_2026"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "React to Changes Using Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_25_2026"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Change Conditions Using Inputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_25_2026"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Change Conditions Using Inputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2026"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Change Conditions Using Inputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_25_2026"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Change Conditions Using Inputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_self-paced-uni_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_self-paced-uni_2026"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hide Details with Abstractions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hide Details with Abstractions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_25_2026"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Hide Details with Abstractions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_25_2026"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Hide Details with Abstractions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching int_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching int_25_2026"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Hide Details with Abstractions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_self-paced-unit_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_self-paced-unit_2026"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac3ac128-cc25-46be-9eee-064301bf53de"
+      },
+      "level_keys": [
+        "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "8ce4bcbb-a997-425c-9cf2-30243245f403"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_self-paced-unit3_25_2026"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_self-paced-unit3_2_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_self-paced-unit3_2_2026"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_self-paced-u_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_self-paced-u_2026"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_self-paced-u_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_self-paced-u_2026"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Unit3_WrapUp_25_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "45689c5c-b9dc-4f8d-8c68-4954e212a0e9"
+      },
+      "level_keys": [
+        "VPL-CSD-Unit3_WrapUp_25_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-25-mod1-Certificate_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-25-mod1-Certificate_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "42402601-a905-4e86-856a-93e72e965e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Project Overview_U3L2_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-Project Overview_U3L2_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "69e12e0a-4745-42cf-bfdb-b1e26d54d70e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "8651b0ca-1eb2-4aba-bde1-7258fbbd2e00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U3-TeacherTools_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U3-TeacherTools-AITAVid_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-U3-TeacherTools-AITAVid_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "542fc3b7-ec2d-451f-ab3f-b138a59c1ced"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-exU3L5_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-exU3L5_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Introduction to Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "a484033e-2c44-4d8c-9d6e-710d7d559e20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "62353a4f-6250-4771-81a0-a379ad4dfc86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corner_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corner_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "43a1ea2a-b6b5-445d-85b9-3b7bb17ef0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39703e23-a10f-481f-a9b6-15afb040f397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39703e23-a10f-481f-a9b6-15afb040f397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_self-paced-unit3_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_self-paced-unit3_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_self-paced-unit3__2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_self-paced-unit3__2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac38fe19-2d05-4a70-8159-be137f0aeb6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_self-paced-unit3__2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_self-paced-unit3__2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with ass_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with ass_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "709320ae-07b2-480b-ab3e-c72dfb89bbeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Create a Scene",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "1f5503f9-48bb-4333-ae2e-eaa7984adff1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "a7e6a125-33a1-421b-9109-46d5e07057e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "f6da0db7-cd07-40ef-8f84-7835c4740f27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-Making_self-paced-_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-Making_self-paced-_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39f45cda-3ea0-4a06-b555-58c169da11ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Lo_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Lo_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange _25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange _25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "39ad4867-1cc1-469f-aebd-adb0dc55f91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_self-paced-unit_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_self-paced-unit_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_self-paced-u_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_self-paced-u_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "20b3f937-96d5-4c18-81fd-d37e22560b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Animate a Scene Using Sprites",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ffae3236-1cf9-468d-ae72-f48919b25781"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "6a79c5d5-a01e-4867-b2f6-04c30328f62f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_self-paced-unit_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_self-paced-unit_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_self-paced-unit3_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_self-paced-unit3_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements vi_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements vi_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "eddd7198-a22d-40ce-a101-17dcef164ff5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_self-paced-uni_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_self-paced-uni_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "b4b73a8c-7959-4f5e-add2-7936d94180b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching int_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching int_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_self-paced-unit_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_self-paced-unit_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "5afc439f-52fb-4984-af7d-447a300aeacf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Explore Game Design",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "ac3ac128-cc25-46be-9eee-064301bf53de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_self-paced-unit3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_self-paced-unit3_25_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "8ce4bcbb-a997-425c-9cf2-30243245f403"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_self-paced-unit3_2_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_self-paced-unit3_2_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_self-paced-u_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_self-paced-u_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_self-paced-u_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_self-paced-u_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "489df612-2d2f-4783-b7e6-d808bcf2d59e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Unit3_WrapUp_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-Unit3_WrapUp_25_2026"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit3-1-2026",
+        "activity_section.key": "45689c5c-b9dc-4f8d-8c68-4954e212a0e9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
