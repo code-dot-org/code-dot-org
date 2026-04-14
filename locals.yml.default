@@ -15,6 +15,7 @@
 #ta_langfuse_public_key: localoverride
 #google_gemini_ai_chat_lab_api_key: localoverride
 #google_gemini_ai_tutor_api_key: localoverride
+#azure_ai_content_safety_key: localoverride
 #ai_gateway_auth_key: localoverride
 #ai_gateway_auth_public_key: localoverride
 #ai_gateway_auth_key_passphrase: localoverride
