@@ -244,10 +244,13 @@ class Hamburger
         info[:key] = info[:title]
         i18n_prefix = info[:loc_prefix] || loc_prefix
         info[:title] = I18n.t("#{i18n_prefix}#{info[:title]}")
-        if info[:domain] == 'studio.code.org'
+        case info[:domain]
+        when 'studio.code.org'
           info[:url] = CDO.studio_url(info[:url])
-        elsif info[:domain] == 'code.org'
+        when 'code.org'
           info[:url] = CDO.code_org_url(info[:url])
+        when CDO.csforall_domain
+          info[:url] = CDO.csforall_url(info[:url])
         end
       end
 
