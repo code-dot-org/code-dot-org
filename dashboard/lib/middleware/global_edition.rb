@@ -249,7 +249,7 @@ module Middleware
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?(path = original_path)
+      private def redirectable?(path = main_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
