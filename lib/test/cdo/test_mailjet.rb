@@ -287,10 +287,10 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contact)
 
-    MailJet.stubs(:subaccount).returns('development')
-    MailJet.expects(:add_to_contact_list).with(mock_contact, MailJet::CONTACT_LISTS[:hoai_web_design][:development][:default])
+    MailJet.stubs(:subaccount).returns('production')
+    MailJet.expects(:add_to_contact_list).with(mock_contact, MailJet::CONTACT_LISTS[:intro_web_lab][:production][:default])
 
-    MailJet.create_contact_and_add_to_course_list(user, 'hoai-web-design-pilot-v2')
+    MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
   end
 
   def test_create_contact_and_add_to_course_list_non_teacher
@@ -301,7 +301,7 @@ class MailJetTest < Minitest::Test
     MailJet.expects(:find_or_create_contact).never
     MailJet.expects(:add_to_contact_list).never
 
-    MailJet.create_contact_and_add_to_course_list(user, 'hoai-web-design-pilot-v2')
+    MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
   end
 
   def test_create_contact_and_add_to_course_list_unmapped_unit_group

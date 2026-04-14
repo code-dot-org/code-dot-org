@@ -103,9 +103,9 @@ module MailjetConstants
         'es-MX': 10_443_295,
       },
     },
-    hoai_web_design: {
+    intro_web_lab: {
       production: {
-        default: 0, # TODO: Replace with actual MailJet list ID
+        default: 10_488_233,
       },
     }
   }
@@ -113,6 +113,6 @@ module MailjetConstants
   # Maps UnitGroup name to CONTACT_LISTS key. When a teacher assigns one of
   # these courses to a section, they are added to the corresponding contact list.
   MAILJET_COURSE_ASSIGNMENT_CONTACT_LISTS = {
-    'hoai-web-design-pilot-v2' => :hoai_web_design,
+    'intro-to-web-lab' => :intro_web_lab,
   }.freeze
 end
