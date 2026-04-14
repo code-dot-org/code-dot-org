@@ -313,6 +313,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
+        lessonTutorPath: "#{get_uncached_show_path}/tutor",
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -697,7 +698,8 @@ class Lesson < ApplicationRecord
         },
         name: student.name,
         locked: locked,
-        readonly_answers: readonly
+        readonly_answers: readonly,
+        is_demo_student: Policies::DemoSections.demo_student?(student.id)
       }
     end
   end

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-08 06:29:25 UTC",
+    "serialized_at": "2026-04-11 08:33:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -561,8 +561,21 @@
       }
     },
     {
-      "key": "30a93f3d-cc02-4500-8a64-858949959938",
+      "key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5",
       "position": 1,
+      "properties": {
+        "name": "Revised Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5",
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "30a93f3d-cc02-4500-8a64-858949959938",
+      "position": 2,
       "properties": {
         "name": "New Levels"
       },
@@ -575,7 +588,7 @@
     },
     {
       "key": "a84b66f1-e827-441c-bc56-5bb92ec0ac28",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -589,7 +602,7 @@
     },
     {
       "key": "3531ff01-c9bb-4671-9b96-667b323f7bce",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -603,7 +616,7 @@
     },
     {
       "key": "9d51cb3a-dd12-4f4c-b8c0-a19fb0c5ee75",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -616,8 +629,21 @@
       }
     },
     {
-      "key": "f818420a-1655-4915-9f2e-bd4ec8dcc299",
+      "key": "d6528bc7-0e94-469a-b659-1baf2b5eafe9",
       "position": 1,
+      "properties": {
+        "name": "Revised Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6528bc7-0e94-469a-b659-1baf2b5eafe9",
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "f818420a-1655-4915-9f2e-bd4ec8dcc299",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -631,7 +657,7 @@
     },
     {
       "key": "e0f789a6-34de-4c93-ac10-436f8fd0a63b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -645,7 +671,7 @@
     },
     {
       "key": "897cb38f-da38-4924-abfe-2a1f1c2ab8a1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1401,7 +1427,7 @@
       "key": "b2c3960d-a997-446f-9012-ecd02f0314f4",
       "position": 1,
       "properties": {
-        "progression_name": "Placeholder - Level 1 - Annotate Variables (SketchLab)"
+        "progression_name": "Level 1 - Annotate Variables (SketchLab)"
       },
       "seeding_key": {
         "activity_section.key": "b2c3960d-a997-446f-9012-ecd02f0314f4",
@@ -1416,6 +1442,28 @@
       },
       "seeding_key": {
         "activity_section.key": "4aaf943b-29fc-4618-9a16-d427cf5a7041",
+        "lesson_activity.key": "488e2532-0bb4-4bc9-aa28-252e7130d671"
+      }
+    },
+    {
+      "key": "7985bfce-c47b-40e4-af98-ced287cb475e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Debugging Choice Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "7985bfce-c47b-40e4-af98-ced287cb475e",
+        "lesson_activity.key": "488e2532-0bb4-4bc9-aa28-252e7130d671"
+      }
+    },
+    {
+      "key": "971c319b-2f64-4460-a195-fcff98d41756",
+      "position": 4,
+      "properties": {
+        "progression_name": "Reflection (Assessment)"
+      },
+      "seeding_key": {
+        "activity_section.key": "971c319b-2f64-4460-a195-fcff98d41756",
         "lesson_activity.key": "488e2532-0bb4-4bc9-aa28-252e7130d671"
       }
     },
@@ -2325,6 +2373,42 @@
       }
     },
     {
+      "key": "07dfb4d8-c288-4a23-b809-0085e704cda6",
+      "position": 1,
+      "properties": {
+        "description": "Unchanged",
+        "name": "Predict Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "07dfb4d8-c288-4a23-b809-0085e704cda6",
+        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
+      }
+    },
+    {
+      "key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09",
+      "position": 2,
+      "properties": {
+        "description": "Added an explore step, updated the html and css to be more engaging. ",
+        "name": "AI Do - Student Do"
+      },
+      "seeding_key": {
+        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09",
+        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
+      }
+    },
+    {
+      "key": "3e7fd350-4e73-42a3-917d-2fadc5130083",
+      "position": 3,
+      "properties": {
+        "description": "Updated 4a: made html/css more engaging, added \"expand\" step. ",
+        "name": "Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e7fd350-4e73-42a3-917d-2fadc5130083",
+        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
+      }
+    },
+    {
       "key": "69b7429c-25bd-4b8d-8230-12fb0cef4add",
       "position": 1,
       "properties": {
@@ -2468,6 +2552,28 @@
       "seeding_key": {
         "activity_section.key": "3111a1cd-fb83-4ecc-a93f-ae3b41cd28f5",
         "lesson_activity.key": "9d51cb3a-dd12-4f4c-b8c0-a19fb0c5ee75"
+      }
+    },
+    {
+      "key": "1fae7a42-1b39-404d-a182-988d9b11100c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore Dynamic Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fae7a42-1b39-404d-a182-988d9b11100c",
+        "lesson_activity.key": "d6528bc7-0e94-469a-b659-1baf2b5eafe9"
+      }
+    },
+    {
+      "key": "24a1a559-2518-4e2e-a735-fc62a762ab0a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Generate Dynamic Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a",
+        "lesson_activity.key": "d6528bc7-0e94-469a-b659-1baf2b5eafe9"
       }
     },
     {
@@ -3714,7 +3820,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Placeholder - Level 1 - Annotate Variables (SketchLab)"
+        "progression": "Level 1 - Annotate Variables (SketchLab)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3758,6 +3864,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Debugging Choice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7985bfce-c47b-40e4-af98-ced287cb475e"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection (Assessment)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "971c319b-2f64-4460-a195-fcff98d41756"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict & Trace: Difficulty Level"
       },
       "bonus": false,
@@ -3775,8 +3925,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 4,
+      "chapter": 14,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3797,8 +3947,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 5,
+      "chapter": 15,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3819,8 +3969,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 6,
+      "chapter": 16,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3841,7 +3991,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3863,7 +4013,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3885,7 +4035,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3907,7 +4057,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3929,7 +4079,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3951,7 +4101,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3973,7 +4123,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3995,7 +4145,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4017,7 +4167,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4039,8 +4189,71 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4a-revised_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "3e7fd350-4e73-42a3-917d-2fadc5130083"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level4a-revised_2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4061,8 +4274,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 2,
+      "chapter": 30,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4082,8 +4295,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 3,
+      "chapter": 31,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4103,8 +4316,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 4,
+      "chapter": 32,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4124,8 +4337,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 5,
+      "chapter": 33,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4145,73 +4358,161 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Accessibility Concepts"
+        "progression": "Explore Dynamic Features"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level1_2026"
+          "ai-and-algorithmic-decisions-lesson7-choicelevel_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8409e2ba-b069-4de7-bdda-7849979a43e6"
+        "activity_section.key": "1fae7a42-1b39-404d-a182-988d9b11100c"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson7-level1_2026"
+        "ai-and-algorithmic-decisions-lesson7-choicelevel_revised_2026"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Redesign for a User"
+        "progression": "Explore Dynamic Features"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level2_2026"
+          "ai-and-algorithmic-decisions-lesson7-frq_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6043dc29-ed33-43e1-8ef7-a4501f869dcf"
+        "activity_section.key": "1fae7a42-1b39-404d-a182-988d9b11100c"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson7-level2_2026"
+        "ai-and-algorithmic-decisions-lesson7-frq_revised_2026"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Menu of Accessibility Features"
+        "progression": "Generate Dynamic Features"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level3_2026"
+          "ai-and-algorithmic-decisions-lesson7-level1_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "59564248-7699-4e0d-bf93-a06e7e18a232"
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson7-level3_2026"
+        "ai-and-algorithmic-decisions-lesson7-level1_revised_2026"
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate Dynamic Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level2_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson7-level2_revised_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate Dynamic Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level3_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson7-level3_revised_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate Dynamic Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level4_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson7-level4_revised_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate Dynamic Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level5_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson7-level5_revised_2026"
+      ]
+    },
+    {
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4233,7 +4534,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4255,7 +4556,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4277,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4299,7 +4600,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4321,7 +4622,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4343,7 +4644,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4365,7 +4666,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4387,7 +4688,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4409,7 +4710,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4431,7 +4732,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4453,7 +4754,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4475,7 +4776,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4497,7 +4798,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4519,7 +4820,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4541,7 +4842,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4563,7 +4864,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4585,7 +4886,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4726,6 +5027,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "4aaf943b-29fc-4618-9a16-d427cf5a7041"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7985bfce-c47b-40e4-af98-ced287cb475e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "971c319b-2f64-4460-a195-fcff98d41756"
       }
     },
     {
@@ -4886,6 +5211,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4a-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4a-revised_2026"
+        ],
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "3e7fd350-4e73-42a3-917d-2fadc5130083"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson6-level1-revised_2026",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson6-level1-revised_2026"
@@ -4946,38 +5307,86 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson7-level1_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson7-choicelevel_revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level1_2026"
+          "ai-and-algorithmic-decisions-lesson7-choicelevel_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8409e2ba-b069-4de7-bdda-7849979a43e6"
+        "activity_section.key": "1fae7a42-1b39-404d-a182-988d9b11100c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson7-level2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson7-frq_revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level2_2026"
+          "ai-and-algorithmic-decisions-lesson7-frq_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6043dc29-ed33-43e1-8ef7-a4501f869dcf"
+        "activity_section.key": "1fae7a42-1b39-404d-a182-988d9b11100c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson7-level3_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson7-level1_revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-level3_2026"
+          "ai-and-algorithmic-decisions-lesson7-level1_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "59564248-7699-4e0d-bf93-a06e7e18a232"
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson7-level2_revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level2_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson7-level3_revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level3_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson7-level4_revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level4_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson7-level5_revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-level5_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
       }
     },
     {

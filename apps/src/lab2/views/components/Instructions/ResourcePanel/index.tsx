@@ -134,6 +134,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  enableTutorVideos?: boolean;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
@@ -165,6 +166,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  enableTutorVideos,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
@@ -204,6 +206,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
+  const isPredictLevel =
+    instructionsProps.levelProperties.predictSettings?.isPredictLevel;
   const dispatch = useAppDispatch();
   const setBackpackTabAsActive = useCallback(
     () => setCurrentTab(Tabs.Backpack),
@@ -270,6 +274,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
+        enableTutorVideos,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -279,6 +284,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {...aiTutorProps}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
+            isPredictLevel={isPredictLevel}
           />
         );
       }
@@ -358,6 +364,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
+    enableTutorVideos,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
@@ -369,6 +376,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     onImageFlagged,
     hasInstructionsDrawer,
     validationSettings,
+    isPredictLevel,
   ]);
 
   const hasTabs = useMemo(() => {
