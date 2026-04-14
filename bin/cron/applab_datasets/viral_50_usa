@@ -46,7 +46,7 @@ end
 def generate_profanity_regex(entries)
   str = entries.reduce('') {|acc, entry| acc + get_entry_info_string(entry)}
   profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
-  profanities.empty? ? nil : /(#{profanities.join("|")})/i
+  profanities.empty? ? nil : /(#{profanities.join('|')})/i
 end
 
 def build_records(entries)
