@@ -558,6 +558,24 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_includes response_data['error'], "Unauthorized access to student data"
   end
 
+  test "student_code endpoint returns 200 with studentCode shape when student belongs to current teacher" do
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level')
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
+
+    fake_code = {'main.py' => 'print("hello")'}
+    @controller.stubs(:get_student_code).returns({student_code: fake_code})
+
+    get :student_code, params: {lesson_id: @lesson1.id, student_id: student.id, unit_id: @unit.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    assert response_data.key?('studentCode'), "response should include 'studentCode' key"
+    assert_equal fake_code, response_data['studentCode']
+  end
+
   test "student_code endpoint returns forbidden when student does not belong to current teacher" do
     other_teacher = create(:teacher)
     student = create(:student)
