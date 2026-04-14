@@ -56,6 +56,8 @@ module ImageModeration
       # Scale down images larger than MAX_MODERATION_DIMENSION on either dimension using MiniMagick's
       # > (maximum bounding box): scale down to fit within MAX_MODERATION_DIMENSION on each side,
       # preserving aspect ratio (long side hits the maximum, short side may be smaller).
+      # Note that if an image has an extreme aspect ratio, the smaller side may be scaled up in branch above,
+      # but then scaled down here to a smaller dimension than MIN_MODERATION_DIMENSION on one side (very unlikely scenario).
       image.resize "#{MAX_MODERATION_DIMENSION}x#{MAX_MODERATION_DIMENSION}>"
       raw_data = image.to_blob
       width = image.width
