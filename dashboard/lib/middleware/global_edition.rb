@@ -120,6 +120,8 @@ module Middleware
         request.path_info   = original_path_info
       end
 
+      private class_attribute :existing_route_cache, default: {}
+
       # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
         @response ||= Rack::Response[*app.call(env)]
@@ -202,11 +204,17 @@ module Middleware
       end
 
       private def existing_route?(path = original_path_info)
-        return false unless request.hostname == CDO.dashboard_hostname
-        request_method = request.params['_method'].presence || request.request_method
-        Dashboard::Application.routes.recognize_path(path, method: request_method).present?
-      rescue ActionController::RoutingError
-        false
+        request_method = request.POST['_method'].presence if request.post?
+        request_method ||= request.request_method
+
+        cache_key = [request_method, path]
+        return existing_route_cache[cache_key] if existing_route_cache.key?(cache_key)
+
+        existing_route_cache[cache_key] = begin
+          Dashboard::Application.routes.recognize_path(path, method: request_method).present?
+        rescue ActionController::RoutingError
+          false
+        end
       end
 
       private def site_locale(region)
