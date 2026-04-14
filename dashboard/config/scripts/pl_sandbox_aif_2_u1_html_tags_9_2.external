@@ -105,7 +105,7 @@ markdown <<MARKDOWN
     border-right: 5px solid #8148B2;
     display: inline-block;
   ">
-    Think of tags like a sandwich: the opening tag is the top bun, the closing tag is the bottom bun, and the content goes in between!
+    🍔Think of tags like a sandwich: the opening tag is the top bun, the closing tag is the bottom bun, and the content goes in between!
   </p>
 </div>
 
