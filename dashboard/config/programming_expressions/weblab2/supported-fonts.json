@@ -1,0 +1,8 @@
+{
+  "key": "supported-fonts",
+  "name": "Fonts",
+  "category": "Supported Content",
+  "category_key": "supported_content",
+  "content": "### Allowed hostnames\nFor security reasons, only fonts with certain hostnames can be accessed in Web Lab. Currently, the hostname must end in one of the following:\n\n**Google Fonts**\n- [fonts.googleapis.com](https://developers.google.com/fonts/docs/getting_started) - API for google fonts\n- [fonts.gstatic.com](https://developers.google.com/fonts/docs/developer_api) -high-speed domain used by Google to serve font files\n",
+  "short_description": "The following is the list of approved fonts which will work in Web Lab."
+}

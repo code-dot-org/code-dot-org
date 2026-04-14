@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require_relative '../../../app/controllers/concerns/observability/sentry/user_context'
 
 describe Observability::Sentry do
   before do
     CDO.enable_sentry = false
     CDO.enable_opentelemetry = false
     CDO.running_web_application = false
-    CDO.sentry_dsn = nil
+    CDO.dashboard_sentry_dsn = nil
   end
 
   describe '.setup' do
@@ -30,11 +29,11 @@ describe Observability::Sentry do
       before do
         CDO.enable_sentry = true
         CDO.running_web_application = true
-        CDO.sentry_dsn = 'https://key@sentry.example.com/1'
+        CDO.dashboard_sentry_dsn = 'https://key@sentry.example.com/1'
       end
 
-      describe 'when sentry_dsn is blank' do
-        before {CDO.sentry_dsn = nil}
+      describe 'when dashboard_sentry_dsn is blank' do
+        before {CDO.dashboard_sentry_dsn = nil}
 
         it 'does not initialize Sentry' do
           Sentry.expects(:init).never
@@ -78,41 +77,5 @@ describe Observability::Sentry do
         end
       end
     end
-  end
-end
-
-describe Observability::Sentry::UserContext do
-  before do
-    # This engine test runs without the dashboard application's ApplicationController.
-    # rubocop:disable Rails/ApplicationController
-    @controller_class = Class.new(ActionController::Base) do
-      include Observability::Sentry::UserContext
-
-      attr_accessor :current_user
-    end
-    # rubocop:enable Rails/ApplicationController
-    @controller = @controller_class.new
-  end
-
-  it 'registers set_user_context as a before_action' do
-    before_action_filters = @controller_class._process_action_callbacks.select do |callback|
-      callback.kind == :before
-    end.map(&:filter)
-
-    _(before_action_filters).must_include :set_user_context
-  end
-
-  it 'sets the Sentry user when current_user is present' do
-    @controller.current_user = stub(id: 123)
-
-    Sentry.expects(:set_user).with(id: '123')
-
-    @controller.send(:set_user_context)
-  end
-
-  it 'does not set the Sentry user when current_user is nil' do
-    Sentry.expects(:set_user).never
-
-    @controller.send(:set_user_context)
   end
 end

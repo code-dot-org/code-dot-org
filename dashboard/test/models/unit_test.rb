@@ -2242,8 +2242,6 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'is ai assessment enabled' do
-    LearningGoal.any_instance.stubs(:validate_ai_config).returns(true)
-
     unit_without_rubrics = create(:unit, :with_levels)
 
     unit_with_non_ai_rubric = create(:unit, :with_levels)

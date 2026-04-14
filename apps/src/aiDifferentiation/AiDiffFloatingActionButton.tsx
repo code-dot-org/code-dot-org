@@ -2,8 +2,10 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import {
+  setChatIsOpen,
+  fetchThreadMessages,
+} from '@cdo/apps/aiDifferentiation/redux';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -21,6 +23,7 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
+import {DRAWER_FAB_MARGIN, DRAWER_WIDTH} from './constants';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
@@ -29,6 +32,11 @@ import style from './ai-differentiation.module.scss';
 const LazyAiDiffContainer = React.lazy(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   () => import('./AiDiffContainer' as any)
+);
+
+const LazyAiDiffDrawer = React.lazy(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('./AiDiffDrawer' as any)
 );
 
 /**
@@ -77,10 +85,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
-  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
-  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
+  const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
 
   const dispatch = useAppDispatch();
+
+  const drawerIsEnabled =
+    experiments.isEnabled('ai-diff-drawer') ||
+    DCDO.get('ai-diff-drawer', false);
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -175,6 +189,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    : drawerIsEnabled
+    ? style.floatingActionButtonRight
     : style.floatingActionButton;
 
   const handleClick = () => {
@@ -211,6 +227,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         className={classes}
         onClick={handleClick}
         type="button"
+        style={
+          drawerIsEnabled
+            ? {
+                right: chatIsOpen
+                  ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
+                  : `${DRAWER_FAB_MARGIN}px`,
+                transition: chatIsOpen
+                  ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
+                  : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+              }
+            : {}
+        }
       >
         <Badge
           badgeContent={
@@ -257,15 +285,31 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         </Badge>
       </button>
       <React.Suspense fallback={<div />}>
-        <LazyAiDiffContainer
-          context={context}
-          closeTutor={handleClick}
-          curriculumCourses={curriculumCourses || ([] as string[])}
-          scriptName={scriptName}
-          unreadNotificationCount={
-            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-          }
-        />
+        {drawerIsEnabled ? (
+          <LazyAiDiffDrawer
+            context={context}
+            closeTutor={handleClick}
+            curriculumCourses={curriculumCourses || ([] as string[])}
+            scriptName={scriptName}
+            unreadNotificationCount={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount
+            }
+          />
+        ) : (
+          <LazyAiDiffContainer
+            context={context}
+            closeTutor={handleClick}
+            curriculumCourses={curriculumCourses || ([] as string[])}
+            scriptName={scriptName}
+            unreadNotificationCount={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount
+            }
+          />
+        )}
       </React.Suspense>
     </div>
   );

@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:20.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Text Styles\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\n**Do This:**\r\n1. Ask AI Tutor to explain how `font-size`, `font-weight`, and `text-decoration` work in CSS.\r\n2. Ask AI Tutor to update the headers and paragraphs on this page with a different style.\r\n   - Use the property name in your prompt (e.g., *\"Make the headers bold with a `font-size` of...\"*).\r\n\r\nOnce you've styled the page, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildCSS",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Exploring Text Styles",
+    "bubble_choice_description": "Learn the rules for how to make text appear different sizes, bolded, or underlined",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      ul {\n        font-size: 14px;\n        font-weight: bold;\n      }\n      ol {\n        font-size: 14px;\n        text-decoration: underline;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>The Golden Spoon Menu</h1>\n\n    <h2>Starters</h2>\n    <p>Perfect bites to begin your meal.</p>\n    <ul>\n      <li>Spring Rolls — crispy rolls with vegetables and dipping sauce</li>\n      <li>Soup of the Day — ask your server for today's selection</li>\n      <li>Bruschetta — toasted bread with tomato and basil</li>\n    </ul>\n\n    <h2>Mains</h2>\n    <p>Hearty dishes made with seasonal ingredients.</p>\n    <ul>\n      <li>Grilled Salmon — served with roasted vegetables and lemon butter</li>\n      <li>Mushroom Risotto — creamy arborio rice with wild mushrooms</li>\n      <li>Jerk Chicken — marinated chicken with rice and peas</li>\n    </ul>\n\n    <h2>Desserts</h2>\n    <p>Sweet endings to a great meal.</p>\n    <ol>\n      <li>Chocolate Lava Cake</li>\n      <li>Mango Sorbet</li>\n      <li>Churros with Caramel Sauce</li>\n    </ol>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7b4d46640230aa16863cc2819604d75e-Screenshot 2025-04-02 at 7.41.41 AM.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:20.660+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10d\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10d\"},{\"changed_at\":\"2026-04-07 03:31:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:24:19 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

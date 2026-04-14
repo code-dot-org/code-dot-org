@@ -81,8 +81,9 @@ gem 'rack_csrf'
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
+gem 'annotaterb', '~> 4.19', group: [:development, :test]
+
 group :development do
-  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
@@ -119,7 +120,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '~> 6.0.4' # required for Ruby 3.2 support
+  gem 'eyes_selenium', '>= 6.0.4' # required for Ruby 3.2 support
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'

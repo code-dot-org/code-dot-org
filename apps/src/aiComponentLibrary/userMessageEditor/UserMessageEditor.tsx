@@ -6,7 +6,9 @@ import React, {useState, useMemo, useEffect, useRef, useCallback} from 'react';
 import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import SpeechToTextButton from './speechToTextButton/SpeechToTextButton';
+import SpeechToTextButton, {
+  type SpeechToTextAnalytics,
+} from './speechToTextButton/SpeechToTextButton';
 
 import moduleStyles from './user-message-editor.module.scss';
 
@@ -29,6 +31,7 @@ export interface UserMessageEditorProps {
   editorContainerClassName?: string;
   customPlaceholder?: string;
   speechToTextEnabled?: boolean;
+  onSpeechToTextFinished?: (analytics: SpeechToTextAnalytics) => void;
   onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
   children?: React.ReactNode;
 }
@@ -49,6 +52,7 @@ const UserMessageEditor = React.forwardRef<
       customPlaceholder,
       showSubmitLabel = false,
       speechToTextEnabled = false,
+      onSpeechToTextFinished,
       onPaste,
       children,
     },
@@ -171,11 +175,12 @@ const UserMessageEditor = React.forwardRef<
           <div className={moduleStyles.actionButtons}>
             {speechToTextEnabled && (
               <SpeechToTextButton
-                onTranscribed={text => {
+                onTranscribed={(text, analytics) => {
                   onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
                   setIsRecording(false);
                   setSpeechToTextCount(c => c + 1);
                   setLastDictationCleared(false);
+                  onSpeechToTextFinished?.(analytics);
                 }}
                 onRecordStart={() => setIsRecording(true)}
                 disabled={disabled}

@@ -1,4 +1,5 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
@@ -11,7 +12,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
 import {useLevelProperties} from '../../levelPropertiesContext';
-import aichatI18n from '../../locale';
 import {setAiCustomizationProperty} from '../../redux';
 
 import CompareModelsDialog from './CompareModelsDialog';
@@ -83,11 +83,13 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div>
         <FieldLabel
           id="selected-model"
-          label={aichatI18n.modelCustomization_comparisonHeader()}
-          tooltipText={aichatI18n.modelCustomization_comparisonTooltipText()}
+          label={'Selected model'}
+          tooltipText={
+            'This is the underlying language model being used by the chatbot.'
+          }
         />
         <SimpleDropdown
-          labelText={aichatI18n.modelCustomization_comparisonHeader()}
+          labelText={'Selected model'}
           isLabelVisible={false}
           onChange={event =>
             dispatch(
@@ -116,7 +118,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             onClick={() => setIsShowingModelDialog(true)}
             type="button"
           >
-            {aichatI18n.modelCustomization_compareButtonText()}
+            {'Compare Models'}
           </MuiButton>
         )}
         {isShowingModelDialog && (
@@ -152,18 +154,12 @@ const SetupCustomization: React.FunctionComponent = () => {
     },
     className: styles.temperatureSlider,
     leftButtonProps: {
-      icon: {
-        iconName: 'minus',
-        title: aichatI18n.modelCustomization_sliderDecrease(),
-      },
-      ['aria-label']: aichatI18n.modelCustomization_sliderDecrease(),
+      children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
+      ['aria-label']: 'Decrease',
     },
     rightButtonProps: {
-      icon: {
-        iconName: 'plus',
-        title: aichatI18n.modelCustomization_sliderIncrease(),
-      },
-      ['aria-label']: aichatI18n.modelCustomization_sliderIncrease(),
+      children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
+      ['aria-label']: 'Increase',
     },
   };
 
@@ -181,8 +177,10 @@ const SetupCustomization: React.FunctionComponent = () => {
             >
               <FieldLabel
                 id="temperature"
-                label={aichatI18n.technicalInfoHeader_temperature()}
-                tooltipText={aichatI18n.modelCustomization_temperatureTooltipText()}
+                label={'Temperature'}
+                tooltipText={
+                  'Temperature affects which words are generated as a response. Use the slider to change the temperature.'
+                }
               />
               {aiCustomizations.temperature}
             </div>
@@ -193,8 +191,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           <>
             <FieldLabel
               id="system-prompt"
-              label={aichatI18n.technicalInfoHeader_systemPrompt()}
-              tooltipText={aichatI18n.modelCustomization_systemPromptTooltipText()}
+              label={'System Prompt'}
+              tooltipText={
+                'The system prompt controls how the chatbot behaves. Type your instructions into the text box.'
+              }
             />
             <textarea
               className={styles.systemPromptInput}

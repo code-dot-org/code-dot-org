@@ -390,6 +390,9 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
+  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
+  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
+  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -494,6 +497,7 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
   AICHAT_UNSUPPORTED_MODEL_SELECTED:
     'User had previously selected a model that is no longer supported',
+  AICHAT_DICTATION_COMPLETED: 'User completes dictation in aichat',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -713,10 +717,4 @@ const EVENT_GROUPS = {
     EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-const EXPERIMENTS = {
-  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
-    'select_grades_taught_on_account_creation',
-  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
-};
-
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

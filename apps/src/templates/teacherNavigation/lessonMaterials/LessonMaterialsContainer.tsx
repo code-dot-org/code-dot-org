@@ -5,9 +5,11 @@ import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {
+  setChatIsOpen,
+  fetchThreadMessages,
+} from '@cdo/apps/aiDifferentiation/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -389,7 +391,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <Dialog
             title={i18n.audioTranscript()}
             primaryButtonProps={{
-              text: i18n.closeDialog(),
+              children: i18n.closeDialog(),
               onClick: () => handleTranscriptButtonClick(),
             }}
             onClose={() => handleTranscriptButtonClick()}

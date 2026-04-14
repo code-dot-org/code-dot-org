@@ -477,6 +477,16 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
   end
 
+  test 'teacher with only a hidden section for the course is not redirected to teacher dashboard' do
+    teacher = create(:teacher)
+    create(:section, :hidden, user: teacher, unit_group: @unit_group_regular)
+    sign_in teacher
+
+    get :show, params: {course_name: @unit_group_regular.name}
+
+    assert_response :success
+  end
+
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
   ) do

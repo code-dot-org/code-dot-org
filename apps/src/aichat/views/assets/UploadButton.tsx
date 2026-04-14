@@ -1,9 +1,6 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Button as MuiButton,
-  ButtonProps as MuiButtonProps,
-} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {ChangeEvent, useState} from 'react';
 
 import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
@@ -12,8 +9,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ACCEPTED_FILE_TYPES, MAX_NUM_FILES} from '../../constants';
-import aichatI18n from '../../locale';
+import {MAX_NUM_FILES} from '../../constants';
 import {addStagedFile, sendAnalytics, uploadFiles} from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
@@ -21,6 +17,7 @@ export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
+  acceptedFileTypes: string[];
   hasStarterAssets?: boolean;
   showLabel?: boolean;
 }
@@ -29,6 +26,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   isDisabled,
   levelName,
   buildAssetUrl,
+  acceptedFileTypes,
   hasStarterAssets = false,
   showLabel = true,
 }) => {
@@ -77,7 +75,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     onUploadFiles,
-    ACCEPTED_FILE_TYPES.join(','),
+    acceptedFileTypes.join(','),
     true
   );
 
@@ -90,62 +88,39 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     );
   };
 
-  // TODO: Set of legacy DSCO props, remove once Dropdowns are moved to MUI.
-  const DSCO_buttonPropsCommon = {
-    type: 'secondary' as const,
-    color: 'gray' as const,
+  const buttonPropsCommon = {
+    variant: 'outlined' as const,
+    color: 'tertiary' as const,
   };
 
-  const DSCO_buttonPropsWithLabel = {
-    ...DSCO_buttonPropsCommon,
-    text: aichatI18n.aichatAddFile(),
-    iconLeft: {iconName: 'plus'},
-  };
-
-  const DSCO_buttonPropsIconOnly = {
-    ...DSCO_buttonPropsCommon,
-    icon: {iconName: 'plus', iconStyle: 'solid' as const},
-  };
-
-  const DSCO_commonProps = {
-    size: 'xs',
-    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
-  } as const;
-
-  const buttonPropsCommon: MuiButtonProps = {
-    variant: 'outlined',
-    color: 'secondary',
-  };
-
-  const buttonPropsWithLabel: MuiButtonProps = {
+  const buttonPropsWithLabel = {
     ...buttonPropsCommon,
-    children: aichatI18n.aichatAddFile(),
+    children: 'Add file',
     startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
-  const buttonPropsIconOnly: MuiButtonProps = {
+  const buttonPropsIconOnly = {
     ...buttonPropsCommon,
-    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+    children: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
-  const commonProps = {
-    size: 'extraSmall',
-    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
-  } as const;
+  const isButtonDisabled = numStagedFiles >= MAX_NUM_FILES || isDisabled;
 
   const uploadButton = hasStarterAssets ? (
     <ActionDropdown
-      {...DSCO_commonProps}
+      size="xs"
+      disabled={isButtonDisabled}
       name="uploadDropdown"
-      labelText={aichatI18n.upload()}
+      labelText={'Upload'}
+      useIconButton={!showLabel}
       triggerButtonProps={
-        showLabel ? DSCO_buttonPropsWithLabel : DSCO_buttonPropsIconOnly
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
       }
       menuVerticalPlacement="top"
       options={[
         {
           value: 'fromLibrary',
-          label: aichatI18n.fromLibrary(),
+          label: 'From Library',
           icon: {iconName: 'copy'},
           onClick: () => {
             setShowAssetManager(true);
@@ -158,19 +133,33 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         },
         {
           value: 'fromDevice',
-          label: aichatI18n.fromDevice(),
+          label: 'From Device',
           icon: {iconName: 'file-magnifying-glass'},
           onClick: onDeviceUploadClick,
         },
       ]}
     />
-  ) : (
+  ) : showLabel ? (
     <MuiButton
-      type="button"
-      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
-      {...commonProps}
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
       onClick={onDeviceUploadClick}
-    />
+      startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+    >
+      Add file
+    </MuiButton>
+  ) : (
+    <MuiIconButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+    >
+      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+    </MuiIconButton>
   );
 
   return (

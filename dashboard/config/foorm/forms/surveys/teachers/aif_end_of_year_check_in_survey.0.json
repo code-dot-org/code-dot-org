@@ -1,0 +1,279 @@
+{
+  "title": "Code.org Teacher Survey - AIF, EOY Check-In",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "variable_testing",
+          "visible": false,
+          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li>"
+        },
+        {
+          "type": "html",
+          "name": "testing_warning",
+          "visible": false,
+          "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+        },
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<h2>Welcome to Code.org's AI Foundations Check-In Survey\n<p><h2></h2><h3>End of Year Teacher Check-In Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's AI Foundations.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "html",
+          "name": "curriculum_perceptions",
+          "html": "<h2>Your Perceptions About Code.org's AIF Curriculum</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of the AI Foundations curriculum.</span></p>"
+        },
+        {
+          "type": "rating",
+          "name": "student_engagement",
+          "title": "Were most students engaged and interested in the topics covered in AIF?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Most Students Were Not Engaged",
+          "maxRateDescription": "Most Students Were Very Engaged"
+        },
+        {
+          "type": "rating",
+          "name": "confident_to_teach",
+          "title": "How confident did you feel in your ablity to effectively teach the concepts in AIF?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Confident At All",
+          "maxRateDescription": "Very Confident"
+        },
+        {
+          "type": "rating",
+          "name": "supported_to_teach",
+          "title": "Were the teaching resources provided effective in supporting you to teach the concepts in AIF?",
+          "description": "Teaching resources include lesson plans, slides, self-paced professional learning modules, etc.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Effective at all",
+          "maxRateDescription": "Very Effective"
+        },
+        {
+          "type": "rating",
+          "name": "nps_value",
+          "title": "How likely are you to recommend teaching AIF to other teachers? ",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not At All Likely",
+          "maxRateDescription": "Extremely Likely"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teach_aif_plans_next_sy",
+          "title": "Are you planning to teach AIF again next school year?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            },
+            {
+              "value": "not_sure",
+              "text": "Not sure"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "teach_aif_plans_next_sy_reasons_no",
+          "visibleIf": "{teach_aif_plans_next_sy} = 'no'",
+          "title": "Please select the reason(s) why you don't plan to teach AIF next school year",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "own_aif_material",
+              "text": "I have developed my own materials for teaching about AI and CS foundations"
+            },
+            {
+              "value": "no_interest_aif",
+              "text": "I no longer want to teach about AI and CS foundations"
+            },
+            {
+              "value": "no_teach_aif",
+              "text": "I no longer need to teach about AI and CS foundations"
+            },
+            {
+              "value": "other_provider",
+              "text": "Another provider meets my needs better"
+            },
+            {
+              "value": "did_not_meet_requirements",
+              "text": "Code.org's AIF curriculum did not meet district or school requirements"
+            },
+            {
+              "value": "tools_dont_meet_needs",
+              "text": "Code.org's teaching tools did not meet my needs (e.g. progress tracking, feedback, grading, etc.)"
+            },
+            {
+              "value": "students_not_engaged",
+              "text": "My students were not engaged when learning with Code.org's AIF curriculum"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "text",
+          "name": "teach_aif_plans_next_sy_reasons_no_switch_provider",
+          "visibleIf": "{teach_aif_plans_next_sy_reasons_no} contains 'other_provider'",
+          "title": "What provider are you planning to use next year instead?"
+        },
+        {
+          "type": "text",
+          "name": "teach_aif_plans_next_sy_reasons_not_sure_comment",
+          "visibleIf": "{teach_aif_plans_next_sy} contains 'not_sure'",
+          "title": "Please describe the main reasons why you are not sure if you will use Code.org's AIF curriculum next school year."
+        },
+        {
+          "type": "checkbox",
+          "name": "challenges_teaching",
+          "title": "What challenges did you encounter while teaching AIF?",
+          "description": "(Select up to three)",
+          "hasOther": true,
+          "validators": [
+            {
+              "type": "answercount",
+              "text": "Please select a maximum of three areas",
+              "minCount": 0,
+              "maxCount": 3
+            }
+          ],
+          "choices": [
+            {
+              "value": "lack_student_engagement",
+              "text": "Lack of student engagement or motivation"
+            },
+            {
+              "value": "difficult_explain_concepts",
+              "text": "Difficulty in explaining complex concepts"
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints in covering all the material"
+            },
+            {
+              "value": "integrate_curriculum_requirements",
+              "text": "Integrating the content with other curriculum requirements"
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles"
+            },
+            {
+              "value": "none",
+              "text": "None of these"
+            }
+          ],
+          "otherErrorText": "Please enter a description for \"Other\""
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you would like to share about your experience teaching AIF with the Code.org team? Your constructive feedback is essential for us to improve our curriculum, and we appreciate you sharing it with us.",
+          "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "aif_participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about your experience teaching AIF? We are really interested in hearing from teachers to help us improve this curriculum.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "aif_email_focus_group",
+          "title": "Great! Please share an email address where we may contact you.",
+          "visibleIf": "{aif_participate_focus_group}='yes'"
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        },
+        {
+          "type": "html",
+          "name": "gift_card_conf_header",
+          "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: left;'><span style='font-size: 8pt;'>*First 200 respondents will receive gift card. Please allow 1-2 weeks to receive the code. </span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gift_card_yes_no",
+          "title": "Would you like to receive a $10 Amazon gift card for completing this survey?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, please."
+            },
+            {
+              "value": "no",
+              "text": "No, thanks."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "gift_card_email_panel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "gift_card_email",
+              "title": "Please enter and verify the email address where you would like your $10 Amazon gift card sent."
+            },
+            {
+              "type": "text",
+              "name": "gift_card_email_verify",
+              "title": "Please re-enter the email address where you want your Amazon gift card sent."
+            },
+            {
+              "type": "html",
+              "name": "addresse_dont_match_text",
+              "visibleIf": "{gift_card_email} <> {gift_card_email_verify} and {gift_card_email_verify} notempty",
+              "html": "<p><span style='color: #800000;'>&nbsp;<strong>WARNING</strong>: The two addresses don't match!</span></p>"
+            }
+          ],
+          "visibleIf": "{gift_card_yes_no} = 'yes'",
+          "title": "Gift Card Email Verification"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes_with_name",
+              "text": "Yes, I give permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give permission to quote me."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "published": true
+}

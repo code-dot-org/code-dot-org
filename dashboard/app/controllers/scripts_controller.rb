@@ -41,7 +41,7 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course&.id)}
         most_recent_section = current_user.sections_instructed.select {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course.id)}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
@@ -76,7 +76,7 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_info = get_redirect_info(@script, request.locale, @course)
+    if !override_redirect && redirect_info = get_redirect_info(@script, I18n.locale.to_s, @course)
       if redirect_info[:redirect_ugu]
         redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
         return
@@ -88,7 +88,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: request.locale)
+    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: I18n.locale.to_s)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
@@ -107,15 +107,15 @@ class ScriptsController < ApplicationController
       user_providers: current_user&.providers,
       is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
-      locale: Unit.locale_english_name_map[request.locale],
-      locale_code: request.locale,
+      locale: Unit.locale_english_name_map[I18n.locale.to_s],
+      locale_code: I18n.locale.to_s,
       course_link: @course&.link(section_id: params[:section_id]),
       course_title: @course&.localized_title || I18n.t('view_all_units'),
       is_single_unit_course: @course&.single_unit_course?,
       sections: @sections
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group_unit: @unit_group_unit).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, I18n.locale.to_s, unit_group_unit: @unit_group_unit).merge(additional_script_data)
 
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
@@ -297,7 +297,7 @@ class ScriptsController < ApplicationController
 
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
-      unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
+      unit_group = UnitGroup.latest_stable_version(unit_name, locale: I18n.locale.to_s) ||
         UnitGroup.latest_stable_version(unit_name)
       if unit_group&.can_be_participant?(current_user)
         unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group
@@ -372,7 +372,6 @@ class ScriptsController < ApplicationController
       :lesson_groups,
       :content_area,
       :enable_blockly_keyboard_navigation,
-      :ai_rubric_s3_config,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
@@ -381,7 +380,6 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
-    h[:ai_rubric_s3_config] = JSON.parse(h[:ai_rubric_s3_config]) if h[:ai_rubric_s3_config]
     h[:lesson_groups] = JSON.parse(h[:lesson_groups]).map {|lg| lg.transform_keys(&:underscore)} if h[:lesson_groups]
 
     h

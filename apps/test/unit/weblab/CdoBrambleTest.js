@@ -834,6 +834,47 @@ describe('CdoBramble', () => {
     });
   });
 
+  describe('writeFileData', () => {
+    let writeFileStub;
+
+    beforeEach(() => {
+      writeFileStub = sinon.stub();
+      sinon.stub(cdoBramble, 'fileSystem').returns({writeFile: writeFileStub});
+    });
+
+    afterEach(() => {
+      sinon.restore();
+    });
+
+    it('logs and calls callback with TypeError when data is a plain object', () => {
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.writeFileData(
+        '/project/123/index.html',
+        {someKey: 'someValue'},
+        callbackSpy
+      );
+
+      expect(callbackSpy).to.have.been.calledOnce;
+      expect(callbackSpy.firstCall.args[0]?.name).to.equal('TypeError');
+      expect(console.error).to.have.been.calledOnce;
+    });
+
+    it('does not throw when data is a string', done => {
+      writeFileStub.callsFake((_path, _data, _opts, callback) =>
+        callback(null)
+      );
+      cdoBramble.writeFileData(
+        '/project/123/index.html',
+        '<html></html>',
+        err => {
+          expect(err).to.be.null;
+          done();
+        }
+      );
+    });
+  });
+
   describe('getConcatenatedCodeString', () => {
     beforeEach(() => {
       const openDocuments = [

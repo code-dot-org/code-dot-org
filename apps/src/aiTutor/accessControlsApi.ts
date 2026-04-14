@@ -8,6 +8,7 @@ const formatServerData = (student: StudentServerData) => ({
   id: student.id,
   name: student.name,
   aiTutorAccessDenied: student.ai_tutor_access_denied,
+  isDemoStudent: !!student.is_demo_student,
 });
 
 export const handleUpdateAITutorAccess = async (

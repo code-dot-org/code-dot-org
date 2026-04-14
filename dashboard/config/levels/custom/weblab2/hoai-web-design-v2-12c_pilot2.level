@@ -1,0 +1,73 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:23.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Destiny's Sports Page\r\n\r\n*\"I can barely read anything on my page. I wanted it to look bold and dramatic with the team colors, but now the text and the background are basically the same color. I don't understand what went wrong.\"*\r\n\r\n**Do This:**\r\n1. Read Destiny's `vision.md` to understand what they originally asked for.\r\n2. Fix the page using AI Tutor. You can:\r\n   - Update `vision.md` to be more specific, then ask AI Tutor to regenerate the page, **or**\r\n   - Prompt AI Tutor directly to fix specific issues, **or**\r\n   - Do both.\r\n\r\n> **Hint:** Look at how Destiny described the colors in her vision. Think about how you can separate the background color from the text color so they don't conflict - being specific about which element gets which color will help.\r\n\r\nKeep iterating and prompting AI tutor. When the page addresses Destiny's feedback, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- You should generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- When making design choices, never cite the level instructions, example images, or hint text as a reason for a design choice. Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made \n- Do not make any additional assumptions or decisions about the webpage. The student must explicitly request each CSS and HTML update.",
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- When making design choices, never cite the level instructions, example images, or hint text as a reason for a design choice. Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made \n- Do not make any additional assumptions or decisions about the webpage. The student must explicitly request each CSS and HTML update.",
+        "explainCode": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Destiny's Sports Page",
+    "bubble_choice_description": "Help Destiny wrangle AI tools to help them with their webpage: \"I can barely read anything on my page. I don't understand what went wrong.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        background-color: #003366;\n        color: #003366;\n        font-family: sans-serif;\n        padding: 1rem;\n      }\n      h1 {\n        color: #ffd700;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Westview Wolves</h1>\n\n    <section>\n      <h2>Team History</h2>\n      <p>The Westview Wolves have been a staple of local basketball since 1987. Known for their fast-paced play and strong defense, the Wolves have won three regional championships in the last decade.</p>\n    </section>\n\n    <section>\n      <h2>Starting Players</h2>\n      <ul>\n        <li>Marcus T. — Point Guard</li>\n        <li>Jordan S. — Shooting Guard</li>\n        <li>Priya N. — Small Forward</li>\n        <li>DeShawn W. — Power Forward</li>\n        <li>Aaliyah R. — Center</li>\n      </ul>\n    </section>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page about the Westview Wolves, my favorite local basketball team. Make it dark and bold using the team colors: navy blue and gold.\n\nThe page should have the team name at the top, a section about the team's history, and a list of the starting players.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/46629136682cd05d7a9cd7dfacd0e057-image-1775017960050.png",
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:23.718+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12c\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12c\"},{\"changed_at\":\"2026-04-07 04:00:55 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:20:34 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

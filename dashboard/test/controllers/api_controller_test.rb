@@ -177,9 +177,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     # student_1 has two answers
     level_source1a = create(:level_source, level: level1,
@@ -256,9 +254,7 @@ class ApiControllerTest < ActionController::TestCase
     level2.save!
     create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
-    7.times do
-      create(:script_level, script: script)
-    end
+    create_list(:script_level, 7, script: script)
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -804,6 +800,30 @@ class ApiControllerTest < ActionController::TestCase
     ]
     post :update_lockable_state, params: {updates: updates}
     assert_response 403
+  end
+
+  test 'update_lockable_state returns forbidden for demo students' do
+    script, level, _lesson = create_script_with_lockable_lesson
+    demo_student = @student_1
+
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    Policies::DemoSections.stubs(:demo_student?).with(demo_student.id).returns(true)
+
+    updates = [
+      {
+        user_level_data: {
+          user_id: demo_student.id,
+          level_id: level.id,
+          script_id: script.id
+        },
+        locked: false,
+        readonly_answers: false
+      }
+    ]
+
+    post :update_lockable_state, params: {updates: updates}
+    assert_response 403
+    assert_nil UserLevel.find_by(user_id: demo_student.id, level_id: level.id, script_id: script.id)
   end
 
   test "should get signed-in user's user progress" do
@@ -1568,6 +1588,22 @@ class ApiControllerTest < ActionController::TestCase
     google_auth_option.update(email: 'test@test.com')
     get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
     assert_equal true, teacher.verified_teacher?
+  end
+
+  test 'google_classrooms returns Forbidden when Signet::AuthorizationError is raised' do
+    teacher = create(:teacher, :with_google_authentication_option)
+    sign_in teacher
+
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_service.stubs(:authorization=)
+    mock_service.stubs(:list_courses).raises(Signet::AuthorizationError.new('Authorization failed.'))
+
+    mock_client = mock('Signet::OAuth2::Client')
+    Signet::OAuth2::Client.stubs(:new).returns(mock_client)
+    Google::Apis::ClassroomV1::ClassroomService.stubs(:new).returns(mock_service)
+
+    get :google_classrooms
+    assert_response :forbidden
   end
 
   test 'import_google_classroom is Forbidden when section exists and current user is not an instructor' do
