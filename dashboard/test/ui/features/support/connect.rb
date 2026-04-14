@@ -69,16 +69,40 @@ def saucelabs_browser(test_run_name, http_client: nil)
 end
 
 def device_farm_browser(http_client: nil)
-  # Device Farm issues a one-time session URL per Selenium connection.
+  # Desktop: one-shot TestGrid URL, ready immediately.
   url = Cdo::DeviceFarm.create_test_grid_url
+  $device_farm_mobile_session_arn = nil
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new(
+    $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+  )
 
   SeleniumBrowser.remote(
     url,
     capabilities: capabilities,
     http_client: http_client
   )
+end
+
+# Provisions a real mobile device, then connects Selenium with retries
+# (the Appium endpoint may return 400 briefly after status becomes RUNNING).
+def device_farm_mobile_browser(http_client: nil)
+  session = Cdo::DeviceFarm.create_mobile_session(
+    device_arn: $browser_config['device_arn']
+  )
+  $device_farm_mobile_session_arn = session[:session_arn]
+
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new(
+    $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+  )
+
+  Retryable.retryable(tries: 6, sleep: 10) do
+    SeleniumBrowser.remote(
+      session[:url],
+      capabilities: capabilities,
+      http_client: http_client
+    )
+  end
 end
 
 # Set HTTP read timeout to the specified value during the block.
@@ -106,12 +130,21 @@ def get_browser(test_run_name)
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   elsif test_device_farm?
-    browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      device_farm_browser(http_client: $selenium_http_client)
-    end
+    is_mobile = $browser_config['mobile']
+    browser = if is_mobile
+                # Provision once, then retry the Selenium connection (Appium server
+                # may need a few seconds after the session reaches RUNNING).
+                device_farm_mobile_browser(http_client: $selenium_http_client)
+              else
+                Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+                  device_farm_browser(http_client: $selenium_http_client)
+                end
+              end
     $session_id = browser.session_id
-    $device_farm_job_arn = Cdo::DeviceFarm.job_arn_for($session_id)
-    puts "AWS Device Farm session: #{$session_id} (job: #{$device_farm_job_arn})"
+    # Mobile sessions already have an ARN from create_remote_access_session;
+    # desktop sessions construct one from the project ARN + session ID.
+    $device_farm_job_arn = is_mobile ? $device_farm_mobile_session_arn : Cdo::DeviceFarm.desktop_job_arn_for($session_id)
+    puts "AWS Device Farm #{is_mobile ? 'mobile session' : 'session'}: #{$session_id} (#{is_mobile ? 'session' : 'job'}: #{$device_farm_job_arn})"
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)
@@ -129,6 +162,10 @@ def get_browser(test_run_name)
   browser.manage.timeouts.script_timeout = 30.seconds
 
   # Maximize the window on desktop, as some tests require 1280px width.
+  # TODO: ENV['MOBILE'] is always a non-empty string ("true"/"false"), so this
+  # condition is always truthy and maximize never runs for remote browsers.
+  # SauceLabs works around this via sauce:options screenResolution. If Device
+  # Farm desktop sessions need 1280px, change to: ENV['MOBILE'] == 'true'
   unless ENV['MOBILE']
     max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
     browser.manage.window.resize_to(max_width, max_height)
@@ -138,6 +175,7 @@ end
 
 $browser = nil
 $device_farm_job_arn = nil
+$device_farm_mobile_session_arn = nil
 
 Before('@dashboard_db_access') do
   require_rails_env
@@ -164,7 +202,7 @@ def log_result(result)
   return unless $session_id
 
   if test_device_farm?
-    Cdo::DeviceFarm.log_result($device_farm_job_arn)
+    Cdo::DeviceFarm.log_result($device_farm_job_arn, mobile: $browser_config['mobile'])
     return
   end
 
@@ -184,6 +222,12 @@ def quit_browser
     $browser&.quit
   rescue => exception
     puts "Error quitting browser session: #{exception}"
+  end
+  # Release the Device Farm device so subsequent sessions don't block
+  # on PENDING_CONCURRENCY.
+  if $device_farm_mobile_session_arn
+    Cdo::DeviceFarm.stop_session($device_farm_mobile_session_arn)
+    $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil
 end
