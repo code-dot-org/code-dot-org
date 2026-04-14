@@ -16,7 +16,7 @@ dependencies = [
 dev = [
   'coverage >=7',
   'ipython >=8',
-  'pytest >=8',
+  'pytest>=9.0.3',
   'pytest-mock >=3',
   'ruff >=0.8',
 ]
