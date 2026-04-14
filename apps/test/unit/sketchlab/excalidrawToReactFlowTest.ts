@@ -6,7 +6,7 @@ import {
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // Each case below corresponds to a behaviour we want the Excalidraw →
-// React-Flow migration to get right; the "hello -> there" case mirrors the
+// React Flow migration to get right; the "hello -> there" case mirrors the
 // screenshot that first motivated this code.
 describe('excalidrawToReactFlow', () => {
   describe('isExcalidrawSource', () => {
@@ -14,7 +14,7 @@ describe('excalidrawToReactFlow', () => {
       expect(isExcalidrawSource({elements: [], appState: {}})).to.be.true;
     });
 
-    it('rejects a React-Flow source (has nodes array)', () => {
+    it('rejects a React Flow source (has nodes array)', () => {
       expect(isExcalidrawSource({nodes: [], edges: []})).to.be.false;
     });
 
@@ -67,8 +67,8 @@ describe('excalidrawToReactFlow', () => {
       // all-invisible 'transparent' entry.
       expect(result.nodes?.[0].data).to.not.have.property('color');
       // We intentionally strip Excalidraw's width/height on shape elements.
-      // The React-Flow lab uses a single fixed size for every shape; carrying
-      // the source dimensions through would desync the React-Flow wrapper
+      // The React Flow lab uses a single fixed size for every shape; carrying
+      // the source dimensions through would desync the React Flow wrapper
       // from the visible element and break handle hit-testing.
       expect(result.nodes?.[0].style).to.be.undefined;
     });
@@ -227,7 +227,7 @@ describe('excalidrawToReactFlow', () => {
     it('resolves arrow bindings that target a bound text element to its container', () => {
       // Excalidraw occasionally records an arrow endpoint as bound to the
       // text element inside a shape rather than the shape itself. The edge
-      // still needs to connect to the React-Flow shape.
+      // still needs to connect to the React Flow shape.
       const source = {
         elements: [
           {
@@ -351,7 +351,7 @@ describe('excalidrawToReactFlow', () => {
       });
     });
 
-    it('carries appState scroll/zoom through to the React-Flow viewport', () => {
+    it('carries appState scroll/zoom through to the React Flow viewport', () => {
       const source = {
         elements: [],
         appState: {scrollX: 123, scrollY: -45, zoom: {value: 0.75}},

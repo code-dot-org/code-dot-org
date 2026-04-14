@@ -11,9 +11,9 @@ import SketchlabReactFlowView, {
   REACTFLOW_DEFAULT_SOURCES,
 } from './reactflow/SketchlabReactFlowView';
 
-// Sketch Lab has two implementations: the original Excalidraw-backed one,
-// and a newer React-Flow-backed one ("Sketch 2") that's gated behind the
-// SKETCH2 experiment. The React-Flow implementation knows how to migrate
+// Sketch Lab has two implementations: the original Excalidraw one, and a
+// newer React Flow one ("Sketch 2") that's gated behind the SKETCH2
+// experiment. The React Flow implementation knows how to migrate
 // an Excalidraw source on the fly, so existing student work and starter
 // sources keep working when a level opts into the experiment.
 //

@@ -69,7 +69,7 @@ experiments.LESSON_TUTOR = 'lesson-tutor';
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
-// Use the React-Flow-based "Sketch 2" implementation in Sketch Lab in place of Excalidraw
+// Use the React Flow "Sketch 2" implementation in Sketch Lab in place of Excalidraw
 experiments.SKETCH2 = 'sketch2';
 
 /**

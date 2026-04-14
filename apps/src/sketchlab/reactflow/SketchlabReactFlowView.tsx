@@ -31,8 +31,8 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   LevelProperties,
   ProjectSources,
-  Sketchlab2Node,
-  Sketchlab2Edge,
+  SketchlabReactFlowNode,
+  SketchlabReactFlowEdge,
 } from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -216,8 +216,8 @@ const SketchlabReactFlowCanvas: React.FC<{
           ({dragging, selected, resizing, ...rest}) => rest
         );
         const source = {
-          nodes: cleanNodes as unknown as Sketchlab2Node[],
-          edges: currentEdges as unknown as Sketchlab2Edge[],
+          nodes: cleanNodes as unknown as SketchlabReactFlowNode[],
+          edges: currentEdges as unknown as SketchlabReactFlowEdge[],
           viewport: viewport
             ? {x: viewport.x, y: viewport.y, zoom: viewport.zoom}
             : undefined,
@@ -808,7 +808,7 @@ const SketchlabReactFlowCanvas: React.FC<{
   );
 };
 
-// The React-Flow-backed Sketch Lab view. Expects to be rendered inside a
+// The React Flow Sketch Lab view. Expects to be rendered inside a
 // SourcesContainer set up by the parent router (SketchlabView).
 const SketchlabReactFlowView: React.FC<{
   levelProperties: LevelProperties;

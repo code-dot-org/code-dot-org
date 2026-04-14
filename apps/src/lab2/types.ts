@@ -84,7 +84,7 @@ export type Source =
   | BlocklySource
   | MultiFileSource
   | ExcalidrawSourceWithExternalFiles
-  | Sketchlab2Source;
+  | SketchlabReactFlowSource;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -136,12 +136,12 @@ export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
   filenameWithExtension?: string;
 };
 
-// -- SKETCH LAB 2 -- //
+// -- SKETCH LAB (React Flow implementation) -- //
 
-// Plain serializable types for Sketchlab2's ReactFlow-based source storage.
+// Plain serializable types for Sketch Lab's React Flow source storage.
 // Avoids using ReactFlow's Node/Edge types directly to prevent Immer
 // WritableDraft incompatibilities in Redux Toolkit reducers.
-export interface Sketchlab2Node {
+export interface SketchlabReactFlowNode {
   id: string;
   type?: string;
   position: {x: number; y: number};
@@ -149,7 +149,7 @@ export interface Sketchlab2Node {
   [key: string]: unknown;
 }
 
-export interface Sketchlab2Edge {
+export interface SketchlabReactFlowEdge {
   id: string;
   source: string;
   target: string;
@@ -158,9 +158,9 @@ export interface Sketchlab2Edge {
   [key: string]: unknown;
 }
 
-export interface Sketchlab2Source {
-  nodes: Sketchlab2Node[];
-  edges: Sketchlab2Edge[];
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
   viewport?: {x: number; y: number; zoom: number};
 }
 

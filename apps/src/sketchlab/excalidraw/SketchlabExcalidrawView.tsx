@@ -61,7 +61,7 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
 
 const DEFAULT_SOURCES = {source: {}};
 
-// The Excalidraw-backed Sketch Lab view. Expects to be rendered inside a
+// The Excalidraw Sketch Lab view. Expects to be rendered inside a
 // SourcesContainer set up by the parent router (SketchlabView).
 const SketchlabExcalidrawView: React.FC<{
   levelProperties: LevelProperties;

@@ -1,11 +1,9 @@
-import {Sketchlab2Source, ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources, SketchlabReactFlowSource} from '@cdo/apps/lab2/types';
 
-// `Sketchlab2Source` lives in lab2/types.ts for historical reasons (it was
-// added when Sketchlab 2 existed as a separate lab type). We re-export it
-// under a name that matches its current home as the React-Flow Sketchlab
-// implementation, so callers in this directory don't need to know the
-// historical naming.
-export type SketchlabReactFlowSource = Sketchlab2Source;
+// `SketchlabReactFlowSource` itself lives in lab2/types.ts so it can
+// participate in the global `Source` union; re-exported here so callers in
+// this directory don't have to reach out of the implementation.
+export type {SketchlabReactFlowSource};
 
 export interface SketchlabReactFlowSources extends ProjectSources {
   source: SketchlabReactFlowSource;

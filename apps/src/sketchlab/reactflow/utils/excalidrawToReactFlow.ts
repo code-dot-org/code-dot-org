@@ -1,13 +1,13 @@
-// Best-effort conversion of an Excalidraw source into the React-Flow source
+// Best-effort conversion of an Excalidraw source into the React Flow source
 // format used by this implementation. Handles the small set of elements our
-// React-Flow lab knows how to render: rectangle/ellipse/diamond shapes
+// React Flow lab knows how to render: rectangle/ellipse/diamond shapes
 // (mapped to `textBox` nodes), standalone `text` elements (mapped to
 // rectangles), images, and arrow/line elements (mapped to edges when both
 // ends bind to known shapes).
 //
 // Excalidraw stores "a rectangle with the word hello inside it" as TWO
 // elements: the rectangle, and a `text` element whose `containerId` points
-// at the rectangle. We merge those back into a single React-Flow `textBox`
+// at the rectangle. We merge those back into a single React Flow `textBox`
 // rather than emitting a naked shape plus a naked text box.
 //
 // Anything more exotic (drawings, formatted text, libraries, etc.) is
@@ -15,9 +15,9 @@
 // recognisable to start with, not pixel-perfect parity.
 
 import {
-  Sketchlab2Edge,
-  Sketchlab2Node,
-  Sketchlab2Source,
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+  SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
 import {PALETTE_COLORS} from '../NodePalette';
@@ -144,7 +144,7 @@ const PALETTE_HSL: Array<{value: string; hue: number; saturation: number}> =
 // (null) rather than being mapped to an unrelated hue.
 //
 // Note the semantic mismatch with Excalidraw's "transparent": there it
-// means "no fill, stroke still visible". In our React-Flow impl
+// means "no fill, stroke still visible". In our React Flow impl
 // `color: 'transparent'` means "background AND border both hidden" — a
 // ghost. So we map it to null (default fill with border), not 'transparent'.
 function normalizeBackgroundColor(color: string | undefined): string | null {
@@ -172,7 +172,7 @@ function normalizeBackgroundColor(color: string | undefined): string | null {
 
 export function migrateExcalidrawToReactFlow(
   source: ExcalidrawSource
-): Sketchlab2Source {
+): SketchlabReactFlowSource {
   const elements = (source.elements ?? []).filter(e => !e.isDeleted);
 
   // First pass: group text elements by their container, so when we process
@@ -201,8 +201,8 @@ export function migrateExcalidrawToReactFlow(
     }
   }
 
-  const nodes: Sketchlab2Node[] = [];
-  const edges: Sketchlab2Edge[] = [];
+  const nodes: SketchlabReactFlowNode[] = [];
+  const edges: SketchlabReactFlowEdge[] = [];
 
   // Excalidraw element id -> React Flow node id (we keep them identical, but
   // the map lets us check whether a given id was actually emitted).
@@ -231,7 +231,7 @@ export function migrateExcalidrawToReactFlow(
     }
 
     // Shapes with (optionally) bound text. Don't carry Excalidraw's width
-    // and height through: the React-Flow lab uses a single fixed size
+    // and height through: the React Flow lab uses a single fixed size
     // (SHAPE_HEIGHT) for every shape and relies on the wrapper/inner-div
     // sizes matching for handle hit-testing. Feeding a different wrapper
     // size here breaks that invariant.
