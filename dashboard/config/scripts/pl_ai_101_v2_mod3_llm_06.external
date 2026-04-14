@@ -1,0 +1,229 @@
+name 'pl-ai-101-V2-mod3-llm-06'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Expanded Prompt Library
+
+#### On the last level were just a few examples of prompts you could use to improve your teaching practice. Here are even more.
+
+#### 👉 Click on the title to reveal the full prompt.
+
+
+>#### **💬 Quick Reflection:** As you review, try to pick one of these that you could see yourself using.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Creating a Lesson Hook</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and instructional designer.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I am planning a lesson on <strong>[topic]</strong>.
+My learning goal for this lesson is:
+<strong>[learning goal or standard]</strong>
+I want to create a strong opening or “hook” that captures student interest and helps connect the lesson to prior knowledge.
+Please generate:
+- 3 lesson hook ideas appropriate for this topic and grade level
+- A brief explanation of why each hook would work
+- 1 suggestion for adapting each hook for students who may need additional support
+Keep the hooks realistic for a <strong>[class length]</strong> class period and appropriate for my classroom context:
+<strong>[school/classroom context]</strong>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Generating Discussion Questions</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping me prepare for instruction.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and my students are learning about <strong>[topic/text/concept]</strong>.
+I need discussion questions that support this learning goal:
+<strong>[learning goal or standard]</strong>
+Please create:
+- 3 questions that check understanding
+- 3 questions that promote deeper thinking or discussion
+- 2 follow-up prompts I can use if students get stuck
+Make the questions appropriate for <strong>[grade level]</strong> students and aligned to this classroom context:
+<strong>[relevant student or lesson context]</strong>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Building a Short Formative Check</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and assessment designer.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need a short formative check for a lesson on <strong>[topic]</strong>.
+My learning target is:
+<strong>[learning target or standard]</strong>
+Please create:
+- 3 quick questions or tasks to check student understanding
+- A brief answer key or sample responses
+- 1 suggestion for how I could use the results to adjust instruction
+Keep the formative check short enough to use in <strong>[time available]</strong> and appropriate for my students:
+<strong>[classroom context]</strong>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Differentiating an assessment</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and instructional designer.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I am creating a formative assessment on <strong>[topic/standard]</strong>.
+Here is my original assessment:
+<strong>[Paste or describe the assessment]</strong>
+My goal is to differentiate this assessment so all students can access the same learning goal:
+<strong>[learning objective/standard]</strong>
+Please create:
+- A scaffolded version (for students who need support)
+- A grade-level version
+- An extension version (for advanced learners)
+For each version:
+- Keep it aligned to the same learning objective
+- Adjust language, structure, and supports as needed
+- Include clear student directions
+- Maintain meaningful thinking (not just simplification)
+Also include:
+- A short explanation of how each version supports different learners
+- Suggested supports (sentence starters, vocabulary, graphic organizers, etc.)
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Writing a Family Newsletter Blurb</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping draft family communication.
+I teach <strong>[grade level]</strong> <strong>[subject or classroom]</strong>, and I need a short newsletter blurb for families about:
+<strong>[topic, unit, event, or update]</strong>
+Please write a short message that:
+- Explains what students are learning or doing
+- Uses a warm, clear, family-friendly tone
+- Includes any important next steps or reminders
+Please include these details:
+<strong>[important details to include]</strong>
+Keep it concise and easy to understand for families.
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Revising Student Directions</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping improve classroom materials.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I want to revise directions for this student task:
+<strong>[Paste current directions]</strong>
+My goal is to make the directions clearer and easier for students to follow without lowering rigor.
+Please:
+- Rewrite the directions for clarity
+- Break complex steps into simpler parts if needed
+- Suggest any headings, bullets, or formatting that would help students follow the task
+- Point out any parts that may confuse students
+Keep the directions appropriate for <strong>[grade level]</strong> students and aligned to this task:
+<strong>[task context]</strong>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Creating a Classroom Handout</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping create classroom materials.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need a simple student-facing handout about:
+<strong>[topic/skill/process]</strong>
+The handout should help students:
+<strong>[purpose of the handout]</strong>
+Please create a draft handout that includes:
+- A clear title
+- A short explanation in student-friendly language
+- Key points or steps students should remember
+- An example, if helpful
+Keep it concise, clear, and appropriate for <strong>[grade level]</strong> students in this classroom context:
+<strong>[classroom context]</strong>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Writing a parent email</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping draft communication with families.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need to write an email to a parent/guardian about:
+<strong>[purpose of the email]</strong>
+Here are the key points to include:
+- <strong>[Key point 1]</strong>
+- <strong>[Key point 2]</strong>
+- <strong>[Key point 3]</strong>
+Additional context (tone, relationship, sensitivity, etc.):
+<strong>[optional context]</strong>
+Please write an email that:
+- Is clear, concise, and easy to understand
+- Uses a respectful, supportive, and professional tone
+- Reflects collaboration with families
+Then provide:
+- 1–2 alternative ways to phrase key parts of the message
+- Suggestions to improve clarity or tone if needed
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Analyzing a Student Misconception</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach helping me reflect on student understanding.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and during a lesson on <strong>[topic]</strong>, I noticed this common misconception:
+<strong>[describe the misconception]</strong>
+Please help me think through:
+- Possible reasons students may be confused
+- What in my instruction may have contributed to the misunderstanding
+- 2 or 3 strategies I could try next to address it
+Keep your feedback practical and appropriate for this classroom context:
+<strong>[classroom context]</strong>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Improving a Classroom Task</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach providing feedback on task design.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I used this classroom task:
+<strong>[Paste or describe the task]</strong>
+After using it, I noticed:
+<strong>[what students did, where they struggled, or what felt off]</strong>
+Please give feedback on:
+- Whether the task was aligned to the learning goal
+- Whether the directions and structure were clear
+- How I could improve the task for next time
+Please suggest 2 specific revisions I could make while keeping the same learning goal:
+<strong>[learning goal or standard]</strong>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Planning the Next Step After a Lesson</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced instructional coach helping me plan next steps.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I just taught a lesson on <strong>[topic]</strong>.
+Here is what I observed:
+<strong>[student responses, engagement, strengths, struggles, assessment results]</strong>
+Based on this, please help me:
+- Identify what students seem to understand
+- Identify what still needs reinforcement
+- Suggest 2 next-step instructional moves for my next class
+Keep your suggestions realistic for <strong>[class length]</strong> and aligned to this learning goal:
+<strong>[learning goal or standard]</strong>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Getting feedback on a lesson plan</summary>
+<div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach providing actionable feedback.
+I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I want feedback on a lesson about:
+<strong>[lesson topic]</strong>
+Here is my lesson plan:
+<strong>[Paste or describe the lesson]</strong>
+My goals for the lesson:
+- <strong>[Goal 1]</strong>
+- <strong>[Goal 2]</strong>
+After teaching it, I noticed:
+<strong>[what worked / what didn’t / student challenges]</strong>
+Please give feedback on:
+- Alignment to the learning goals
+- Clarity of instructions
+- Level of rigor and student thinking
+- Opportunities for differentiation
+Then suggest:
+- Specific improvements I could make
+- 1–2 alternative strategies to address student challenges
+Keep feedback practical and focused on changes I can realistically implement.
+</div>
+</details>
+
+
+<div style="clear:both;"></div>
+
+
+MARKDOWN
