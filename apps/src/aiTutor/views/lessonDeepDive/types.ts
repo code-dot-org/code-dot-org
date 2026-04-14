@@ -17,12 +17,27 @@ export type LessonDeepDiveData = {
   objectives: {id: string; description: string}[];
 };
 
+export type MultiSolution = {
+  option: string;
+  correct: boolean;
+};
+
+export type ScrambleSolution = {
+  option: string;
+  correct: number;
+};
+
+export type MatchSolution = {
+  option: string;
+  correct: string;
+};
+
 export type PracticeProblem = {
   id: number;
   type: string;
   active: boolean;
   problem_text: string;
-  solution: {option: string; correct: string | number | boolean}[];
+  solution: (MultiSolution | ScrambleSolution | MatchSolution)[];
 };
 
 export const PracticeProblemTypes = {
