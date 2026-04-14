@@ -679,6 +679,12 @@ def skip_tag(tag)
   " -t 'not #{tag}'"
 end
 
+# Whether this browser config represents a mobile device.
+# Device Farm configs use "mobile", SauceLabs configs use "appium:mobile".
+def mobile_browser?(browser)
+  browser['mobile'] || browser['appium:mobile']
+end
+
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
@@ -688,7 +694,7 @@ def cucumber_arguments_for_browser(browser, options)
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['appium:mobile']
+      if mobile_browser?(browser)
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
       else
@@ -702,8 +708,8 @@ def cucumber_arguments_for_browser(browser, options)
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['appium:mobile']
-  arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
+  arguments += skip_tag('@no_mobile') if mobile_browser?(browser)
+  arguments += skip_tag('@only_mobile') unless mobile_browser?(browser)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_ci') if options.is_ci
@@ -784,7 +790,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = mobile_browser?(browser) ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['PRIORITY'] = options.priority
 
