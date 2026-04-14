@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-04-06T18:24:18.000Z",
   "level_num": "custom",
@@ -45,7 +44,7 @@
         "1": {
           "id": "1",
           "name": "index.html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>Some of my favorite things</h1>\n    \n    <h2>Places</h2>\n    <p>I really like Tucson because it has the Biosphere</p>\n\n    <h3>Foods</h3>\n    <p>hot cheetos are delicious, but they make my fingers red</p>\n\n    <h4>Drinks</h3>\n    <p>jasmine boba tea is delicious</p>\n\n\n    \n  </body>\n</html>\n  ",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>Some of my favorite things</h1>\n    \n    <h2>Places</h2>\n    <p>I really like Tucson because it has the Biosphere</p>\n\n    <h3>Foods</h3>\n    <p>hot cheetos are delicious, but they make my fingers red</p>\n\n    <h4>Drinks</h4>\n    <p>jasmine boba tea is delicious</p>\n\n\n    \n  </body>\n</html>\n  ",
           "active": true,
           "folderId": "0"
         }
@@ -58,6 +57,7 @@
     "name_suffix": "_pilot2",
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:18.466+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-04-06 23:17:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:05:56 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-13 03:23:28 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:18.466+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-04-06 23:17:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:05:56 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-13 03:23:28 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>
