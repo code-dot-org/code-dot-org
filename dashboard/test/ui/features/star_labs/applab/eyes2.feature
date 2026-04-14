@@ -7,6 +7,7 @@ Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
   And I am on "http://studio.code.org/projects/applab/new"
   And I wait for the lab page to fully load
+  And I see no difference for "initial load"
   And I switch to design mode
 
   Then I drag a TEXT_AREA into the app
