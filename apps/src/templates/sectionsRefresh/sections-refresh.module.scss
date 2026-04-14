@@ -206,6 +206,12 @@ button.advancedSettingsButton {
     display: inline-block;
     margin-top: 0.5em;
   }
+
+  &:focus-visible {
+    outline: 2px solid $brand_primary_default;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 .celebrationDialogBody {

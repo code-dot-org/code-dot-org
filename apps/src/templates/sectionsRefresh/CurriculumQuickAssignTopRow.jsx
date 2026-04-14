@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {memo} from 'react';
+import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -16,27 +16,30 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl',
 };
 
-const MarketingAudienceButton = memo(
-  ({selectedMarketingAudience, audience, determineMarketingAudience, text}) => {
-    const isActive = selectedMarketingAudience === audience;
-    const icon = isActive ? 'caret-down' : 'caret-right';
+function MarketingAudienceButton({
+  selectedMarketingAudience,
+  audience,
+  determineMarketingAudience,
+  text,
+}) {
+  const isActive = selectedMarketingAudience === audience;
+  const icon = isActive ? 'caret-down' : 'caret-right';
 
-    return (
-      <Button
-        id={`uitest-${audience}-button`}
-        className={classnames(
-          moduleStyles.buttonStyle,
-          isActive && moduleStyles.activeMarketingAudienceButton
-        )}
-        text={text}
-        size={Button.ButtonSize.large}
-        icon={icon}
-        onClick={() => determineMarketingAudience(audience)}
-        type="button"
-      />
-    );
-  }
-);
+  return (
+    <Button
+      id={`uitest-${audience}-button`}
+      className={classnames(
+        moduleStyles.buttonStyle,
+        isActive && moduleStyles.activeMarketingAudienceButton
+      )}
+      text={text}
+      size={Button.ButtonSize.large}
+      icon={icon}
+      onClick={() => determineMarketingAudience(audience)}
+      type="button"
+    />
+  );
+}
 
 MarketingAudienceButton.propTypes = {
   selectedMarketingAudience: PropTypes.string.isRequired,
@@ -44,8 +47,6 @@ MarketingAudienceButton.propTypes = {
   determineMarketingAudience: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
 };
-
-MarketingAudienceButton.displayName = 'MarketingAudienceButton';
 
 export default function CurriculumQuickAssignTopRow({
   showPlOfferings,

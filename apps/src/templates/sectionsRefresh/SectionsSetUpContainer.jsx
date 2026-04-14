@@ -124,20 +124,12 @@ export default function SectionsSetUpContainer({
   const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
 
   const toggleIsCoteacherOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setIsCoteacherOpen(!isCoteacherOpen);
-    },
+    () => setIsCoteacherOpen(!isCoteacherOpen),
     [isCoteacherOpen]
   );
 
   const toggleAdvancedSettingsOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setAdvancedSettingsOpen(!advancedSettingsOpen);
-    },
+    () => setAdvancedSettingsOpen(!advancedSettingsOpen),
     [advancedSettingsOpen]
   );
 
@@ -355,6 +347,7 @@ export default function SectionsSetUpContainer({
           styleAsText
           icon={caret(isOpen)}
           onClick={toggleIsOpen}
+          type="button"
         >
           <Typography variant="h3" gutterBottom>
             {sectionTitle()}
