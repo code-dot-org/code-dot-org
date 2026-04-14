@@ -78,7 +78,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -117,7 +117,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -171,7 +171,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -230,7 +230,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -280,7 +280,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -324,7 +324,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
@@ -378,7 +378,7 @@ User: oh no"
         type: 'KNOWLEDGE_BASE',
         knowledge_base_configuration: {
           knowledge_base_id: AiDiffBedrockHelper::KB_ID,
-          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          model_arn: AiDiffBedrockHelper::MODEL_ARN,
           generation_configuration: {
             prompt_template: {
               text_prompt_template: "prompt text"
