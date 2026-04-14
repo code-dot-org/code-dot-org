@@ -18,7 +18,9 @@ class VarnishEnvironment < Sinatra::Base
   end
 
   before do
-    request.locale = param_locale || varnish_locale || cookie_locale || default_locale
+    set_locale_cookie(http_locale) if cookie_locale.nil? && http_locale
+  ensure
+    request.locale = cookie_locale || default_locale
   end
 
   after do
@@ -36,10 +38,6 @@ class VarnishEnvironment < Sinatra::Base
   helpers do
     include Middleware::Helpers::Cookies
 
-    def varnish_locale
-      language_to_locale(request.env['HTTP_X_VARNISH_ACCEPT_LANGUAGE'])
-    end
-
     def cookie_locale
       language_to_locale(request.cookies[LOCALE_KEY])
     end
@@ -52,6 +50,26 @@ class VarnishEnvironment < Sinatra::Base
       Cdo::I18n::DEFAULT_LOCALE
     end
 
+    # Resolves the preferred locale from the `HTTP_ACCEPT_LANGUAGE` header.
+    # Languages are ordered by quality and mapped via {#language_to_locale}.
+    #
+    # @return [String, nil] the first supported locale or nil if none matches
+    def http_locale
+      http_locales_qualities = env['HTTP_ACCEPT_LANGUAGE'].to_s.gsub(/\s+/, '').split(',').each_with_object({}) do |language, hash|
+        locale, quality = language.split(';q=')
+
+        next if locale == '*'
+        next unless /^[a-z\-0-9]+|\*$/i.match?(locale)
+
+        hash[locale.downcase] = quality ? quality.to_f : 1.0
+      end
+
+      http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| language_to_locale(Cdo::I18n::LOCALE_ALIASES[l] || l)}.find(&:itself)
+    rescue ArgumentError
+      nil
+    end
+
+    # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
     def language_to_locale(language)
       case language
       when 'en'
