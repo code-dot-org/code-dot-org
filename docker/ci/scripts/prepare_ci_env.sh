@@ -16,8 +16,10 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 # Number of parallel processes for dashboard ruby unit tests,
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
-# We ran into OOM errors with 7; targeting 5 so we have a buffer.
-export PARALLEL_TEST_PROCESSORS=5
+# We ran into OOM errors with 7, and get a persistent unexplained failure in
+# test_summarize_with_numbered_units#UnitGroupTest with 5, so 6 is our
+# Goldilocks number.
+export PARALLEL_TEST_PROCESSORS=6
 
 # Apps build parallelization settings for CI
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
