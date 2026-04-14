@@ -10,6 +10,8 @@ const CHALLENGE_TIMEOUT_MS = 30_000;
 // that the user never perceives it on the happy path.
 const DEBUGGER_PROBE_TIMEOUT_MS = 100;
 
+const LOG = '🟠 [Cloudflare Turnstile]';
+
 declare global {
   interface Window {
     turnstile: {
@@ -60,6 +62,7 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
     let worker: Worker | null = null;
     let blobUrl: string | null = null;
     let settled = false;
+    const start = performance.now();
 
     const settle = (willPause: boolean) => {
       if (settled) return;
@@ -70,24 +73,44 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
       resolve(willPause);
     };
 
-    // If the Worker doesn't respond within the timeout, it was paused.
-    const timer = setTimeout(() => settle(true), DEBUGGER_PROBE_TIMEOUT_MS);
+    console.log(`${LOG} DevTools probe started`);
+
+    const timer = setTimeout(() => {
+      console.warn(
+        `${LOG} DevTools probe: breakpoints detected (${(performance.now() - start).toFixed(1)}ms) — challenge will be blocked`
+      );
+      settle(true);
+    }, DEBUGGER_PROBE_TIMEOUT_MS);
 
     try {
-      // Blob Workers have no source URL, so they match the anonymous-script
-      // context that the "Ignore List → Anonymous scripts" setting targets —
-      // giving us an accurate signal for whether Turnstile's Worker will also
-      // be paused.
       blobUrl = URL.createObjectURL(
         new Blob(['debugger; postMessage("ok");'], {
           type: 'application/javascript',
         })
       );
       worker = new Worker(blobUrl);
-      worker.onmessage = () => settle(false); // responded before timeout → no pause
-      worker.onerror = () => settle(false); // Worker error → assume safe
-    } catch {
-      // Worker or Blob URL creation blocked (CSP or unsupported) → assume safe.
+      worker.onmessage = () => {
+        console.log(
+          `${LOG} DevTools probe: no breakpoints detected (${(performance.now() - start).toFixed(1)}ms)`
+        );
+        settle(false);
+      };
+      worker.onerror = event => {
+        // Intentionally swallowed — a Worker error is not a DevTools pause,
+        // so we assume safe and let the Turnstile challenge proceed.
+        console.warn(
+          `${LOG} DevTools probe worker error — assuming safe:`,
+          event
+        );
+        settle(false);
+      };
+    } catch (err) {
+      // Intentionally swallowed — CSP or unsupported environment means we
+      // cannot probe, so we assume safe and let the Turnstile challenge proceed.
+      console.warn(
+        `${LOG} DevTools probe blocked by CSP or unsupported environment — assuming safe:`,
+        err
+      );
       settle(false);
     }
   });
@@ -96,40 +119,44 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
 let scriptLoadPromise: Promise<void> | null = null;
 
 function loadTurnstileScript(): Promise<void> {
-  if (scriptLoadPromise) return scriptLoadPromise;
+  if (scriptLoadPromise) {
+    console.log(`${LOG} Script already loaded (cached)`);
+    return scriptLoadPromise;
+  }
 
   scriptLoadPromise = new Promise((resolve, reject) => {
     if (window.turnstile) {
+      console.log(`${LOG} Turnstile already present on window (externally loaded)`);
       resolve();
       return;
     }
 
+    console.log(`${LOG} Injecting Turnstile script tag`);
     const script = document.createElement('script');
     script.src = TURNSTILE_SCRIPT_URL;
     script.async = true;
     script.defer = true;
-    script.onload = () => resolve();
-    script.onerror = () =>
-      reject(new Error('Failed to load Turnstile script'));
+    script.onload = () => {
+      console.log(`${LOG} Script loaded successfully`);
+      resolve();
+    };
+    script.onerror = event => {
+      const err = new Error('Failed to load Turnstile script');
+      console.error(`${LOG} Script load failed:`, event);
+      reject(err);
+    };
     document.head.appendChild(script);
   });
 
   return scriptLoadPromise;
 }
 
-function getOrCreateContainer(): HTMLElement {
-  let container = document.getElementById(CONTAINER_ID);
-  if (!container) {
-    container = document.createElement('div');
-    container.id = CONTAINER_ID;
-    document.body.appendChild(container);
-  }
-  return container;
-}
-
 function getSiteKey(): string {
   return (
-    (DCDO.get('ai-gateway-turnstile-site-key', undefined) as unknown as string) ?? ''
+    (DCDO.get(
+      'ai-gateway-turnstile-site-key',
+      undefined
+    ) as unknown as string) ?? ''
   );
 }
 
@@ -144,8 +171,9 @@ function getSiteKey(): string {
  *    after a safety-check call) receives an already-completing token rather
  *    than waiting for a fresh challenge from scratch.
  *
- * 3. Double-settle prevention — a `settled` flag inside each runChallenge()
- *    ensures the timeout and the token callback can never both fire.
+ * 3. Double-settle prevention — explicit checks before the settle() call in
+ *    each branch ensure the timeout and the token callback can never both
+ *    fire, and log which race occurred so it is visible in the console.
  */
 class TurnstileManager {
   private widgetId: string | null = null;
@@ -160,35 +188,70 @@ class TurnstileManager {
   // cannot claim the same one-time-use token.
   private nextToken: Promise<string> | null = null;
 
+  // Created once in the constructor and appended directly to document.body,
+  // placing it outside any React render tree so React's reconciler can never
+  // unmount or move it. Stored as a field so all child-count checks always
+  // reference the same DOM node.
+  private container: HTMLElement;
+
+  constructor() {
+    const container = document.createElement('div');
+    container.id = CONTAINER_ID;
+    document.body.appendChild(container);
+    this.container = container;
+    console.log(`${LOG} TurnstileManager initialized — container appended to body`);
+  }
+
   getToken(): Promise<string> {
     if (this.nextToken) {
+      console.log(`${LOG} Pre-fetch hit — returning in-progress token`);
       const p = this.nextToken;
       this.nextToken = null;
-      // Start the next speculative challenge now that this one is consumed.
       this.schedulePrefetch();
       return p;
     }
 
-    // No pre-fetch ready — enqueue a challenge and pre-fetch once it delivers.
+    console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
     const result = this.runSerializedChallenge();
-    result.then(() => this.schedulePrefetch(), () => {});
+    result.then(
+      () => this.schedulePrefetch(),
+      () => {}
+    );
     return result;
   }
 
   private schedulePrefetch(): void {
-    if (this.nextToken) return; // already one in flight
+    if (this.nextToken) {
+      console.log(`${LOG} Pre-fetch already in flight — skipping`);
+      return;
+    }
+    console.log(`${LOG} Scheduling pre-fetch challenge`);
     const p = this.runSerializedChallenge();
     this.nextToken = p;
-    // Don't cache a rejected promise — clear so the next real call retries cleanly.
-    p.catch(() => {
-      if (this.nextToken === p) this.nextToken = null;
-    });
+    p.then(
+      token => {
+        console.log(`${LOG} Pre-fetch resolved — token ready (len=${token.length})`);
+      },
+      err => {
+        // Intentionally swallowed — pre-fetch is speculative. Failure is
+        // logged and nextToken cleared so the next real call retries cleanly.
+        console.error(`${LOG} Pre-fetch failed — clearing nextToken:`, err);
+        if (this.nextToken === p) this.nextToken = null;
+      }
+    );
   }
 
   private runSerializedChallenge(): Promise<string> {
+    console.log(`${LOG} Challenge enqueued on chain`);
     const result = this.chain.then(
-      () => loadTurnstileScript().then(() => this.runChallenge()),
-      () => loadTurnstileScript().then(() => this.runChallenge())
+      () => {
+        console.log(`${LOG} Challenge starting (chain released)`);
+        return loadTurnstileScript().then(() => this.runChallenge());
+      },
+      () => {
+        console.log(`${LOG} Challenge starting after previous chain error (chain released)`);
+        return loadTurnstileScript().then(() => this.runChallenge());
+      }
     );
     // Absorb so the chain always advances for subsequent callers.
     this.chain = result.then(
@@ -200,8 +263,6 @@ class TurnstileManager {
 
   private runChallenge(): Promise<string> {
     return new Promise((resolve, reject) => {
-      // Prevents the timeout and the token callback from both firing if they
-      // race (e.g. token arrives at the exact moment the 30 s timer fires).
       let settled = false;
       const settle = (fn: () => void) => {
         if (settled) return;
@@ -209,34 +270,104 @@ class TurnstileManager {
         fn();
       };
 
+      console.log(
+        `${LOG} runChallenge() start — container has ${this.container.children.length} children, widgetId=${this.widgetId}`
+      );
+
+      if (this.widgetId) {
+        console.log(
+          `${LOG} Removing previous widget (${this.widgetId}) — container has ${this.container.children.length} children`
+        );
+        try {
+          window.turnstile.remove(this.widgetId);
+        } catch (err) {
+          console.error(`${LOG} remove(${this.widgetId}) threw:`, err);
+          this.widgetId = null;
+          throw err;
+        }
+        this.widgetId = null;
+
+        const afterRemoveCount = this.container.children.length;
+        if (afterRemoveCount > 0) {
+          console.warn(
+            `${LOG} WARNING: container has ${afterRemoveCount} children after remove() — cleanup may have failed`
+          );
+        } else {
+          console.log(`${LOG} Container clear after remove()`);
+        }
+      }
+
+      const beforeRenderCount = this.container.children.length;
+      if (beforeRenderCount > 0) {
+        console.warn(
+          `${LOG} WARNING: container has ${beforeRenderCount} children before render() — widget accumulation risk`
+        );
+      }
+
       const timeout = setTimeout(() => {
+        if (settled) {
+          console.log(`${LOG} Timeout fired after token already delivered — no-op`);
+          return;
+        }
+        console.error(
+          `${LOG} TIMEOUT: challenge timed out after 30s — widgetId=${this.widgetId}, container has ${this.container.children.length} children — removing widget`
+        );
         settle(() => {
           if (this.widgetId) {
-            window.turnstile.remove(this.widgetId);
+            try {
+              window.turnstile.remove(this.widgetId);
+            } catch (removeErr) {
+              console.error(
+                `${LOG} remove() in timeout handler threw:`,
+                removeErr
+              );
+            }
             this.widgetId = null;
           }
           reject(new Error('Turnstile challenge timed out'));
         });
       }, CHALLENGE_TIMEOUT_MS);
 
-      if (this.widgetId) {
-        window.turnstile.remove(this.widgetId);
-        this.widgetId = null;
+      // renderTime is initialized to 0 and updated synchronously after render()
+      // returns. The callback always fires asynchronously so renderTime is
+      // guaranteed to hold the correct value by the time it is read.
+      let renderTime = 0;
+
+      console.log(`${LOG} Calling turnstile.render()`);
+      let widgetId: string;
+      try {
+        widgetId = window.turnstile.render(this.container, {
+          sitekey: getSiteKey(),
+          callback: (token: string) => {
+            if (settled) {
+              console.warn(
+                `${LOG} Token callback fired after 30s timeout — token discarded (len=${token.length})`
+              );
+              return;
+            }
+            console.log(
+              `${LOG} Token callback fired — len=${token.length}, ${(performance.now() - renderTime).toFixed(0)}ms since render()`
+            );
+            settle(() => {
+              clearTimeout(timeout);
+              resolve(token);
+            });
+          },
+        });
+      } catch (err) {
+        console.error(`${LOG} render() threw:`, err);
+        clearTimeout(timeout);
+        throw err;
       }
 
-      const container = getOrCreateContainer();
-      // widgetId is assigned synchronously by render() before the async callback fires.
-      const widgetId = window.turnstile.render(container, {
-        sitekey: getSiteKey(),
-        callback: (token: string) => {
-          settle(() => {
-            clearTimeout(timeout);
-            resolve(token);
-          });
-        },
-      });
+      renderTime = performance.now();
+
+      console.log(
+        `${LOG} render() returned widgetId=${widgetId}, container has ${this.container.children.length} children`
+      );
 
       if (!widgetId) {
+        console.error(`${LOG} render() returned falsy widgetId — rejecting`);
         settle(() => {
           clearTimeout(timeout);
           reject(new Error('Turnstile failed to render widget'));
@@ -251,6 +382,9 @@ class TurnstileManager {
 const manager = new TurnstileManager();
 
 export async function getTurnstileToken(): Promise<string> {
+  const start = performance.now();
+  console.log(`${LOG} getTurnstileToken() called`);
+
   if (await debuggerWillPauseInAnonymousScope()) {
     console.error(
       '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
@@ -260,21 +394,50 @@ export async function getTurnstileToken(): Promise<string> {
     );
     console.group('How to fix the Turnstile / DevTools conflict');
     console.log('Option 1: Close DevTools entirely and reload the page.');
-    console.log('Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.');
-    console.log('          Click the "Deactivate breakpoints" button in the Sources panel toolbar');
+    console.log(
+      'Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.'
+    );
+    console.log(
+      '          Click the "Deactivate breakpoints" button in the Sources panel toolbar'
+    );
     console.log('          (it looks like a breakpoint circle with a slash through it).');
-    console.log('          This disables all breakpoints including debugger statements. Click again to re-enable.');
+    console.log(
+      '          This disables all breakpoints including debugger statements. Click again to re-enable.'
+    );
     console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
-    console.log('          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as');
-    console.log('          standard function keys" enabled — clicking the button directly is more reliable.');
+    console.log(
+      '          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as'
+    );
+    console.log(
+      '          standard function keys" enabled — clicking the button directly is more reliable.'
+    );
     console.log('');
-    console.log('NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,');
-    console.log('      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob');
-    console.log('      Workers which are isolated contexts — no Ignore List pattern can suppress their');
+    console.log(
+      'NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,'
+    );
+    console.log(
+      '      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob'
+    );
+    console.log(
+      '      Workers which are isolated contexts — no Ignore List pattern can suppress their'
+    );
     console.log('      debugger statements.');
     console.groupEnd();
+    console.error(`${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`);
     throw new TurnstileDevToolsError();
   }
 
-  return manager.getToken();
+  try {
+    const token = await manager.getToken();
+    console.log(
+      `${LOG} Token delivered successfully (len=${token.length}) in ${(performance.now() - start).toFixed(0)}ms`
+    );
+    return token;
+  } catch (err) {
+    console.error(
+      `${LOG} getToken() failed after ${(performance.now() - start).toFixed(0)}ms:`,
+      err
+    );
+    throw err;
+  }
 }
