@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-01T21:44:27.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Human-Centered Reliability\n\n**Human-centered reliability** is the design practice of making sure an application is helpful and transparent to the user even when technical errors occur. \n\n>Imagine you are on a flight and the plane hits unexpected turbulence.\n>\n>**Low Reliability:** The pilot says nothing and you wonder if you are in danger. \n>\n>**Human-Centered Reliability:** The pilot immediately speaks over the intercom and says, \"We're hitting some choppy air, but the plane is built for this. We’ll be through it in five minutes.\"\n",
+        "imageUrl": "https://images.code.org/0b6a2f7ca73a798e513a8b882c5f7969-Screenshot 2026-02-17 at 3.44.53 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:27.503+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot\"}]"
+}]]></config>
+</Panels>

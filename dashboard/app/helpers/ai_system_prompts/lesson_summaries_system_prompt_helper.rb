@@ -105,10 +105,10 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
 Lesson Name: #{lesson_plan[:name]}
 Lesson Overview: #{lesson_plan[:overview]}
 Learning Objectives: #{lesson_plan[:objectives].to_json}
-#{'Lesson Purpose: '+lesson_plan[:purpose] if lesson_plan[:purpose]}
-#{'Assessment Opportunities: '+lesson_plan[:assessment_opportunities] if lesson_plan[:assessment_opportunities]}
+#{'Lesson Purpose: ' + lesson_plan[:purpose] if lesson_plan[:purpose]}
+#{'Assessment Opportunities: ' + lesson_plan[:assessment_opportunities] if lesson_plan[:assessment_opportunities]}
 Standards: #{lesson_plan[:standards].to_json}
-#{'Opportunity Standards: '+lesson_plan[:opportunity_standards].to_json.to_s if lesson_plan[:opportunity_standards]}
+#{'Opportunity Standards: ' + lesson_plan[:opportunity_standards].to_json.to_s if lesson_plan[:opportunity_standards]}
 Activities: #{lesson_plan[:activities].to_json}
 Preparation: #{lesson_plan[:preparation]}
 Vocabulary: #{lesson_plan[:vocabularies].to_json}
@@ -125,22 +125,22 @@ Unit overview: #{lesson_plan[:unit_overview].to_json}
     end
     personalization_string = ""
     if profile.individual_data["yearsTeaching"]
-      personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
+      personalization_string << "\nThe teacher has #{profile.individual_data['yearsTeaching']} years of experience in the classroom."
     end
     if profile.individual_data["selectedConfidence"]
-      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data["selectedConfidence"]} out of 10, with 10 being extremely confident and 0 being not confident at all."
+      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data['selectedConfidence']} out of 10, with 10 being extremely confident and 0 being not confident at all."
     end
     if profile.individual_data["selectedGoals"]
-      personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data["selectedGoals"].join("\n  -")}"
+      personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data['selectedGoals'].join("\n  -")}"
     end
     if profile.individual_data["selectedSupports"]
-      personalization_string << "\nThey requested the following types of support from the assistant:\n  -#{profile.individual_data["selectedSupports"].join("\n  -")}"
+      personalization_string << "\nThey requested the following types of support from the assistant:\n  -#{profile.individual_data['selectedSupports'].join("\n  -")}"
     end
     if profile.individual_data["challenge"]
-      personalization_string << "\nThey stated that their biggest challenge is: #{profile.individual_data["challenge"]}"
+      personalization_string << "\nThey stated that their biggest challenge is: #{profile.individual_data['challenge']}"
     end
     if profile.individual_data["classroomVision"]
-      personalization_string << "\nTheir vision for their classroom is: #{profile.individual_data["classroomVision"]}"
+      personalization_string << "\nTheir vision for their classroom is: #{profile.individual_data['classroomVision']}"
     end
     if profile.individual_data["matchedPersona"]
       persona = case profile.individual_data["matchedPersona"]

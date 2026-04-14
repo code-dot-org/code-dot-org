@@ -754,12 +754,19 @@ module SharedConstants
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
     MODEL_TIMEOUT: 'model_timeout',
+    MODEL_RATE_LIMITED: 'model_rate_limited',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
 
   # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
   AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
+  LESSON_OBJECTIVE_REFLECTION_VALUES = {
+    UNSURE: 'unsure',
+    LOST: 'lost',
+    CONFIDENT: 'confident',
+  }.freeze
 
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
@@ -805,6 +812,8 @@ module SharedConstants
     MODEL_TIMEOUT: 1006,
     # Model output image flagged.
     MODEL_IMAGE_FLAGGED: 1007,
+    # The model is currently rate-limited (HTTP 429).
+    MODEL_RATE_LIMITED: 1008,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {
@@ -829,20 +838,22 @@ module SharedConstants
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
-    GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
+    # AI Tutor in levels and on standalone projects.
     AI_TUTOR: "ai-tutor",
     FLOW_LAB: "flow-lab",
+    LESSON_DEEP_DIVE: "lesson-deep-dive",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
     AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
     AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
+    AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
@@ -942,6 +953,8 @@ module SharedConstants
   BUBBLE_CHOICE_CUSTOM_MODES = {
     MUSIC_DANCE_AI: 'music_dance_ai',
   }.freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS = 3
 
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',

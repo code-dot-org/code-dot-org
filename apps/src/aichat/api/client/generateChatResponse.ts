@@ -1,6 +1,8 @@
 import {type ModelMessage} from 'ai';
 
+import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/constants';
 import {generateText} from '@cdo/apps/aiGateway';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -18,7 +20,7 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
+import {isTextSafe, getImageModerationStatus} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -83,16 +85,38 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
-    const asset = await generatedFileToAsset(file, buildAssetUrl);
+    let asset: ChatAsset;
+    try {
+      asset = await generatedFileToAsset(
+        file,
+        buildAssetUrl,
+        ACCEPTED_IMAGE_MEDIA_TYPES // Currently only image files are supported.
+      );
+    } catch (error) {
+      // Log and skip files with unsupported or unrecognized media types so the
+      // text response is still returned to the user.
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Skipping unsupported generated file type', error as Error);
+      continue;
+    }
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
-      const imageSafe = await isImageSafe(file);
-      if (!imageSafe) {
+      const imageModerationStatus = await getImageModerationStatus(
+        file,
+        buildAssetUrl(asset)
+      );
+      if (imageModerationStatus === 'flagged') {
         return {
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      } else if (imageModerationStatus === 'error') {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.FAILURE,
         };
       }
     }

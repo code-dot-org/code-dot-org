@@ -1,0 +1,88 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:43:19.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "### Wellness Coach\r\n\r\nTrack healthy habits with buttons that update your progress and messages.\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a description for each button. Include:\r\n\r\n   * Name of the button\r\n   * Event type\r\n   * What the button should do \r\n   * What on the page changes\r\n\r\n2. **Build:** Use AI to generate a named function based on your description.\r\n\r\n3. **Wire it up:** Connect each function to a button using `addEventListener`.\r\n\r\n4. **Test:** Click your buttons and confirm the page updates as expected.\r\n",
+    "display_name": "Wellness Coach",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>L4 — Wellness Coach</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n\n  <h1>Wellness Coach</h1>\n  <p>Track your habit streak with simple button actions.</p>\n\n  <h2>Streak</h2>\n  <p id=\"streakDisplay\">0</p>\n\n  <p id=\"output\">Ready.</p>\n\n  <h2>Actions</h2>\n  <button id=\"logHabitButton\">Log Habit</button>\n  <button id=\"breakStreakButton\">Break Streak</button>\n  <button id=\"boostStreakButton\">Boost</button>\n  <button id=\"resetButton\">Reset</button>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  line-height: 1.5;\n  color: #0f172a;\n  background: #f5f7ff;\n  text-align: center;\n  padding: 24px 12px;\n}\n\nh1 {\n  margin: 10px 0;\n}\n\nh2 {\n  margin-top: 24px;\n}\n\np {\n  margin: 8px 0;\n}\n\n#streakDisplay {\n  font-size: 32px;\n  font-weight: 800;\n  margin: 8px 0;\n}\n\n#output {\n  margin: 16px auto;\n  max-width: 400px;\n  min-height: 30px;\n  padding: 10px;\n  border: 1px dashed #cbd5e1;\n  border-radius: 10px;\n  background: #fbfdff;\n}\n\nbutton {\n  display: inline-block;\n  margin: 6px;\n  padding: 10px 14px;\n  border-radius: 10px;\n  font-weight: 600;\n  cursor: pointer;\n  border: 1px solid #d1d5db;\n}\n\n#logHabitButton {\n  background: #dcfce7;\n  border-color: #86efac;\n  color: #166534;\n}\n\n#breakStreakButton {\n  background: #fee2e2;\n  border-color: #fecaca;\n  color: #b91c1c;\n}\n\n#boostStreakButton {\n  background: #ede9fe;\n  border-color: #c4b5fd;\n  color: #5b21b6;\n}\n\n#resetButton {\n  background: #f3f4f6;\n  border-color: #d1d5db;\n  color: #374151;\n}\n\nbutton:hover {\n  opacity: 0.9;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "contents": "Button One\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Two\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Three\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Four\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: ",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\na85PuB61cNmTm9QjkGBl2+pV\n",
+    "thumbnail_url": "https://images.code.org/aa08919034a09b6853560b3548b4eca8-wellness.png",
+    "bubble_choice_description": "Create a daily habit tracker that logs, breaks, and boosts your streak to keep motivation high.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:19.048+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8d_2025\"},{\"changed_at\":\"2026-04-04 01:13:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:14:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:23:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:25:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:26:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:31:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

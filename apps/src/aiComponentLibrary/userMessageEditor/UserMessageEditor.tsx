@@ -1,9 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
-import React, {useState, useMemo, useEffect, useRef} from 'react';
+import React, {useState, useMemo, useEffect, useRef, useCallback} from 'react';
 
+import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import SpeechToTextButton, {
+  type SpeechToTextAnalytics,
+} from './speechToTextButton/SpeechToTextButton';
 
 import moduleStyles from './user-message-editor.module.scss';
 
@@ -16,12 +21,18 @@ const MAX_MESSAGE_LENGTH = 10000;
 export interface UserMessageEditorProps {
   userMessage: string;
   onChange: (userMessage: string) => void;
-  onSubmit: (userMessage: string) => void;
+  onSubmit: (
+    userMessage: string,
+    analyticsProperties?: AnalyticsProperties
+  ) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  speechToTextEnabled?: boolean;
+  onSpeechToTextFinished?: (analytics: SpeechToTextAnalytics) => void;
+  onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
   children?: React.ReactNode;
 }
 
@@ -40,6 +51,9 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      speechToTextEnabled = false,
+      onSpeechToTextFinished,
+      onPaste,
       children,
     },
     externalInputRef
@@ -48,6 +62,7 @@ const UserMessageEditor = React.forwardRef<
     // Track focus state on textarea to apply focus styles to container since
     // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
+    const [isRecording, setIsRecording] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -56,7 +71,7 @@ const UserMessageEditor = React.forwardRef<
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
       if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
-        onSubmit(userMessage);
+        submitMessage(userMessage);
       }
     };
 
@@ -74,16 +89,50 @@ const UserMessageEditor = React.forwardRef<
       variant: 'contained' as const,
       color: 'primary' as const,
       size: 'extraSmall' as const,
-      disabled: disabled || !userMessage || userMessageIsEmpty,
+      disabled: disabled || !userMessage || userMessageIsEmpty || isRecording,
       id: 'uitest-chat-submit',
       onClick: (e: React.MouseEvent) => {
         e.stopPropagation();
-        onSubmit(userMessage);
+        submitMessage(userMessage);
       },
       'aria-label': commonI18n.submit(),
       type: 'button' as const,
       component: 'button' as const,
     };
+
+    const [speechToTextCount, setSpeechToTextCount] = useState(0);
+    const [clearedMessageCount, setClearedMessageCount] = useState(0);
+    /** True after the field becomes empty following STT use, until the next successful transcription. */
+    const [lastDictationCleared, setLastDictationCleared] = useState(false);
+
+    useEffect(() => {
+      // Track how many times the message was cleared after using speech to text.
+      if (speechToTextCount > 0 && !userMessage) {
+        setClearedMessageCount(c => c + 1);
+        setLastDictationCleared(true);
+      }
+    }, [speechToTextCount, userMessage]);
+
+    const submitMessage = useCallback(
+      (userMessage: string) => {
+        onSubmit(userMessage, {
+          dictationEnabled: speechToTextEnabled,
+          dictationUsageCount: speechToTextCount,
+          dictationMessageClearedCount: clearedMessageCount,
+          dictationClearedSinceLastTranscription: lastDictationCleared,
+        });
+        setSpeechToTextCount(0);
+        setClearedMessageCount(0);
+        setLastDictationCleared(false);
+      },
+      [
+        speechToTextCount,
+        speechToTextEnabled,
+        clearedMessageCount,
+        lastDictationCleared,
+        onSubmit,
+      ]
+    );
 
     return (
       <div
@@ -112,28 +161,44 @@ const UserMessageEditor = React.forwardRef<
           }
           onChange={e => onChange(e.target.value)}
           value={userMessage}
-          disabled={disabled}
+          disabled={disabled || isRecording}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
           aria-label={commonI18n.aiUserMessagePlaceholder()}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
+          onPaste={onPaste}
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}
-          {showSubmitLabel ? (
-            <MuiButton
-              {...editorButtonCommonProps}
-              startIcon={<EditorButtonIcon />}
-            >
-              {commonI18n.submit()}
-            </MuiButton>
-          ) : (
-            <MuiIconButton {...editorButtonCommonProps}>
-              <EditorButtonIcon />
-            </MuiIconButton>
-          )}
+          <div className={moduleStyles.actionButtons}>
+            {speechToTextEnabled && (
+              <SpeechToTextButton
+                onTranscribed={(text, analytics) => {
+                  onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
+                  setIsRecording(false);
+                  setSpeechToTextCount(c => c + 1);
+                  setLastDictationCleared(false);
+                  onSpeechToTextFinished?.(analytics);
+                }}
+                onRecordStart={() => setIsRecording(true)}
+                disabled={disabled}
+              />
+            )}
+            {showSubmitLabel ? (
+              <MuiButton
+                {...editorButtonCommonProps}
+                startIcon={<EditorButtonIcon />}
+              >
+                {commonI18n.submit()}
+              </MuiButton>
+            ) : (
+              <MuiIconButton {...editorButtonCommonProps}>
+                <EditorButtonIcon />
+              </MuiIconButton>
+            )}
+          </div>
         </div>
       </div>
     );

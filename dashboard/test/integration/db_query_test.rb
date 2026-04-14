@@ -3,6 +3,7 @@ require 'test_helper'
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
   def setup
+    ActiveRecord::Base.connection.disable_query_cache!
     @unit = create(:unit, :with_levels)
     create(:single_unit_course, unit: @unit)
     setup_script_cache
@@ -73,7 +74,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(10) do
+    assert_cached_queries(9) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id,
@@ -93,7 +94,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(8) do
+    assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id,

@@ -128,7 +128,10 @@ class UnitCard extends Component {
                 type="button"
                 style={styles.addGroup}
               >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                <i
+                  style={{marginRight: 7}}
+                  className="fa-solid fa-circle-plus"
+                />
                 Add Lesson Group
               </button>
             )}

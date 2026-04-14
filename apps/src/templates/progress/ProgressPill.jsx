@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import fontConstants from '@cdo/apps/fontConstants';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
@@ -12,13 +10,14 @@ import {
   BubbleSize,
   getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import color from '@cdo/apps/util/color';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+
+import moduleStyles from './progress-pill.module.scss';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -91,15 +90,20 @@ class ProgressPill extends React.Component {
         ? () => onSingleLevelClick(firstLevel)
         : undefined;
 
-    let style = {
-      ...styles.levelPill,
-      ...((url || onClick) && hoverStyle),
+    const isHovered = this.state && this.state.isHovered;
+    const hoverRules =
+      hoverStyle && (hoverStyle[':hover'] ? hoverStyle[':hover'] : hoverStyle);
+
+    const dynamicStyle = {
+      ...((url || onClick) && isHovered && hoverRules),
       ...(!multiLevelStep &&
         levelProgressStyle(firstLevel.status, firstLevel.kind)),
     };
 
     // Adjust icon margins if locale is RTL
-    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
+    const iconMarginClass = isRtl
+      ? moduleStyles.iconMarginRTL
+      : moduleStyles.iconMargin;
 
     const tooltipProps = this.getTooltipProps();
 
@@ -111,7 +115,9 @@ class ProgressPill extends React.Component {
       !multiLevelStep &&
       (hasKeepWorkingFeedback || isLevelAssessment(firstLevel));
 
-    const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
+    const textClass = progressStyle
+      ? moduleStyles.textProgressStyle
+      : moduleStyles.text;
 
     return (
       <a
@@ -121,15 +127,19 @@ class ProgressPill extends React.Component {
         onClick={onClick}
         aria-label={`Level ${text}`}
       >
-        <div {...tooltipProps} style={style}>
+        <div
+          {...tooltipProps}
+          className={moduleStyles.levelPill}
+          style={dynamicStyle}
+          onMouseEnter={() => this.setState({isHovered: true})}
+          onMouseLeave={() => this.setState({isHovered: false})}
+        >
           {icon && <FontAwesome icon={icon} />}
           {text && (
             <div
-              className="ProgressPillTextAndIcon"
-              style={{
-                ...textStyle,
-                ...(icon && iconMarginStyle),
-              }}
+              className={`ProgressPillTextAndIcon ${textClass}${
+                icon ? ` ${iconMarginClass}` : ''
+              }`}
             >
               {text}
             </div>
@@ -152,53 +162,8 @@ class ProgressPill extends React.Component {
   }
 }
 
-const styles = {
-  levelPill: {
-    textAlign: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    color: color.charcoal,
-    display: 'flex',
-    fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
-    borderRadius: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 6,
-    paddingBottom: 6,
-    minWidth: 70,
-    lineHeight: '18px',
-    marginTop: 3,
-    marginBottom: 3,
-    position: 'relative',
-  },
-  text: {
-    display: 'inline-block',
-    ...fontConstants['main-font-semi-bold'],
-    letterSpacing: -0.12,
-  },
-  textProgressStyle: {
-    display: 'inline-block',
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 12,
-    letterSpacing: -0.12,
-    width: 120,
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-  },
-  iconMargin: {
-    marginLeft: 10,
-  },
-  iconMarginRTL: {
-    marginRight: 10,
-  },
-};
-
 export const UnconnectedProgressPill = ProgressPill;
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(ProgressPill));
+}))(ProgressPill);

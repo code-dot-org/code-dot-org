@@ -1,0 +1,126 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-20T23:44:47.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Movie Spoiler Checker\r\n\r\n\r\n**Background:**\r\nYou built a simple app that checks whether or not to show the user a post about a movie.\r\n\r\nThe app shows two decisions:\r\n\r\n1. Have you finished the movie?\r\n2. Does the post have spoiler tags?\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. **Test Each Path**: Click through the different combinations of \"Yes\" and \"No\" in the app.\r\n\r\n2. **Fill in the Logic Table**: In your [Nested Conditionals Activity Guide](https://docs.google.com/document/d/1MBVchKlQvfBe9Ob3wpiyhog1sjZHmup_wcrIqH7HtEQ/edit?usp=sharing), describe the outcome of each combination of \"Yes\" or \"No\" and check that the code works as expected.\r\n\r\n3. **Read the Code**: Use **AI Chat** to help you understand the nested `if/else` statements.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Movie Spoiler Checker</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"image-section\">\n        <img id=\"img-finished-spoiler\"     class=\"hide\" src=\"finished-spoiler.png\"     alt=\"Finished + Spoilers\">\n        <img id=\"img-finished-nospoiler\"   class=\"hide\" src=\"finished-nospoiler.png\"   alt=\"Finished + No Spoilers\">\n        <img id=\"img-unfinished-spoiler\"   class=\"hide\" src=\"unfinished-spoiler.png\"   alt=\"Unfinished + Spoilers\">\n        <img id=\"img-unfinished-nospoiler\" class=\"hide\" src=\"unfinished-nospoiler.png\" alt=\"Unfinished + No Spoilers\">\n      </div>\n\n      <div class=\"questions-section\">\n        <div class=\"question-group\">\n          <p class=\"question-text\">Have you finished the movie?</p>\n          <div class=\"button-group\">\n            <button id=\"movie-no\">No</button>\n            <button id=\"movie-yes\">Yes</button>\n          </div>\n        </div>\n\n        <div class=\"question-group\">\n          <p class=\"question-text\">Does the post contain spoiler tags?</p>\n          <div class=\"button-group\">\n            <button id=\"spoiler-no\">No</button>\n            <button id=\"spoiler-yes\">Yes</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// The variables start as 'null' so no button is selected by default.\nlet finishedMovie = null;\nlet hasSpoilerTags = null;\n\n// Reference the HTML elements we want to control.\nconst movieYesBtn    = document.getElementById(\"movie-yes\");\nconst movieNoBtn     = document.getElementById(\"movie-no\");\nconst spoilerYesBtn  = document.getElementById(\"spoiler-yes\");\nconst spoilerNoBtn   = document.getElementById(\"spoiler-no\");\n\nconst imgFinishedSpoiler = document.getElementById(\"img-finished-spoiler\");\nconst imgFinishedNoSpoiler = document.getElementById(\"img-finished-nospoiler\");\nconst imgUnfinishedSpoiler = document.getElementById(\"img-unfinished-spoiler\");\nconst imgUnfinishedNoSpoiler = document.getElementById(\"img-unfinished-nospoiler\");\n\n// This function runs every time a button is clicked. \n// It checks the state and updates the screen so it matches.\nconst updateDisplay = (finished, spoiler) => {\n  \n  // Update state variables \"finished\" and \"spoiler\" only if a new value was passed in\n  if (finished !== undefined) finishedMovie = finished;\n  if (spoiler !== undefined) hasSpoilerTags = spoiler;\n  \n  // RESET: Remove fill from all buttons and hide all images\n  movieYesBtn.classList.remove(\"btn-primary\");\n  movieNoBtn.classList.remove(\"btn-primary\");\n  spoilerYesBtn.classList.remove(\"btn-primary\");\n  spoilerNoBtn.classList.remove(\"btn-primary\");\n\n  imgFinishedSpoiler.classList.replace(\"show\", \"hide\");\n  imgFinishedNoSpoiler.classList.replace(\"show\", \"hide\");\n  imgUnfinishedSpoiler.classList.replace(\"show\", \"hide\");\n  imgUnfinishedNoSpoiler.classList.replace(\"show\", \"hide\");\n\n  // We use nested \"if/else\" (like a decision tree) to see which buttons and image to turn on.\n  if (finishedMovie === true) {\n   \n    // If the movie is finished, highlight the \"Yes\" button\n    movieYesBtn.classList.add(\"btn-primary\");\n\n    if (hasSpoilerTags === true) {\n      // If the post contains spoilers, highlight the \"Yes\" button\n      spoilerYesBtn.classList.add(\"btn-primary\");\n      imgFinishedSpoiler.classList.replace(\"hide\", \"show\");\n    \n    } else if (hasSpoilerTags === false) {\n     \n      // Otherwise, highlight \"No\"\n      spoilerNoBtn.classList.add(\"btn-primary\");\n      imgFinishedNoSpoiler.classList.replace(\"hide\", \"show\");\n    }\n\n  } else if (finishedMovie === false) {\n   \n    // If the movie is NOT finished, highlight the \"No\" button\n    movieNoBtn.classList.add(\"btn-primary\");\n    \n    // If the post contains spoilers, highlight the \"Yes\" button\n    \n    if (hasSpoilerTags === true) {\n      spoilerYesBtn.classList.add(\"btn-primary\");\n      imgUnfinishedSpoiler.classList.replace(\"hide\", \"show\");\n    \n      // Otherwise, highlight \"No\"\n    } else if (hasSpoilerTags === false) {\n      spoilerNoBtn.classList.add(\"btn-primary\");\n      imgUnfinishedNoSpoiler.classList.replace(\"hide\", \"show\");\n    }\n  }\n};\n\n// Event handlers\nmovieYesBtn.addEventListener(\"click\", () => updateDisplay(true, undefined));\nmovieNoBtn.addEventListener(\"click\", () => updateDisplay(false, undefined));\nspoilerYesBtn.addEventListener(\"click\", () => updateDisplay(undefined, true));\nspoilerNoBtn.addEventListener(\"click\", () => updateDisplay(undefined, false));\n\n// Call the function once manually when the page first loads\nupdateDisplay();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n  background-color: #f5f5f5;\n}\n\n.image-section {\n  width: 100%;\n  background-color: #e8e8e8;\n  border: 1px solid #ccc;\n  min-height: 300px;\n}\n\n\nbutton {\n  background-color: white;\n  border: 2px solid #333;\n  border-radius: 8px;\n  padding: 8px 20px;\n  margin-right: 10px;\n  cursor: pointer;\n  font-size: 14px;\n}\n\n.btn-primary {\n  background-color: #90ee90;\n}\n\n\n/* ----- Visibility Control ----- */\n\n.hide {\n  display: none;\n}\n\n.show {\n  display: block;\n  opacity: 1;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "flowchart.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/563d16c5-54bd-4d28-b712-d5064f3ec7f7.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "unfinished-nospoiler.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/06d1703e-08be-42ac-8edb-4feede065b69.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "unfinished-spoiler.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/57dc8115-dff0-4d75-a0cc-b98dd2d50502.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "finished-nospoiler.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/74a94089-d514-424e-b209-bf119dab81e2.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "finished-spoiler.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level1-test-2025/uuid/f04a073b-0a9a-4337-8dbe-80948cd3212d.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMo00HBAzYE0gHpafEiw\ndzELNsOYjnYA+BNuyTC+hCo6zEMmpXX4E8VNiLk4RdQVyk0YPHCo009xYyWx\n7JJa+jLmV13vV3X25vcJtE6VI8rJxFYst7PzE5QUN7m/c5yx6mxRvIP9wIu4\nxOtRRRvFZ8i6UPsdUnyyO0Q7nIUxfTj6c/79kyWK7YWKbaWyyU+Qw25ksFPB\nRJ07bNl0IcQLn7R7YIZ3Oq52DrydKsFabxCLYR+vz8Q7RoJ8N41/6Sfd2VTM\nA9QOo55RH3TGU+E0AI03KtaAdismQqCBFNfmxMJMDme+QWP8EvAdecAL2exe\nIvcDOooCYGDXKWTpf7I4MsLgwdVk954SbI0iaUpFeq+x+BJ2QXsS6lDbVhsJ\ntYmNlD/nuJXL/NemQDR1xQqtXKtey9b+uLHcxwiWVc35sEwD4g+r3fbuXFad\naetMTksWi7bDHMOzx+A3sfcTo8kEyrjnUQqgzO3hlyYRkYbtK7+1R/sxdgbJ\nLiqmYpvoWcWst413J5Lgnsurjz+lwAM+fNjUL1FrmkQIMceQDigqEnJ3V574\nn2O52fW/QYraC1+CNuNOMFDX8qgdAtf0GiL4OJzUyK4L8lMyJQT8cSPLj6bb\npkOq4IuMUqxKTC7AsJmRZCJu+DRVOGrBrr6pwXgsfbHp/g095Qk3k04SSyau\nQTvMPwmEdg0Kpq+++GIVoY0WIey8uV8Y7IYG9ao6Vk6T4apIIZCoQd/Yt/Ca\nfEPRX7JYK7AvPYeLkNlIhoqCuvSa+0os76IwITzs/tWVz6OCXBMcSH1+lF7m\n42soN+mzCAtrACeN1VQ4SbrrwTkx6I2peMyx09eb4r6XdfpAQjyGcW7x6Twc\nZJGaocINMymg/HWm/KxDZ87NF6IRKgrS0WtNCsZStgBK1Q6+cvQj2Li/Qon5\n5xOIkln1SLWCnSKAtvu73oPm4JrARwYdyrmwhUqoBg8nQrSc0ppap9vmWGAW\nC8iTO+5/geUIa2zizZ5mF6qB9ssTRUY3G6fLSWuPcbekmU9MY6t82u0pdH+P\n+xgQZtMR0KjLfwFdGsxx9o8H4snL7M7+9nvsafaNz2va+vdcrQVDgx+GSOAt\ncPh7y8sRjxlEdHbZoap+JHNYkZ8IKSHq84xPDXGHeQ98Zngh+Z0T/5HiuYVO\nM9o/eiIDt0LSDD+Kg/7qAHaRxfM+5rLdDoF2B3K1I1dEd0Q6E3jX88tADB4S\nK569PtEJvud3KyrUczKcPKdILpyK1Om37D3b+QfsgO9oM5x36qN0QPxSBitS\nw1JWIpD4aX6UMZNp3hE9+0c2Un8znVDqaFjUhtkOsm+poLI76aAw6itwDqci\neUdrcKu5h7jHmgzlaRlycPm89t1VgriIiXM8B5egTkid/v4Sj67U2Nmaa3x3\nRckGGpRnXqhqQ4iwwQK9gV8YYNcpV69dmC2OoVRHn8dmIugr3Ha7/qw/EPDK\nlLsjYhO2GywHjICv4/B0lRU5LagtKeO2Ru4L2/SLHdE9xpV1KRHu2l9Z/Ous\nrvr1B7xEC1fP4TJbmPMMd4riETbP22dQquzys5LB1LxqKt53sfInFRar5quP\nJuJUHoPiZKIOKdWRAq2X8Zsfwv/AoZ/Q0HfMBfEolNKirrkEFMZyVPl+2rPr\n6caq2Hfk91CJYvZC1VwCmYzegW6A7IIa72/XPbckcPaAm3esw4pk6o2Asi1L\nJpL45SSzxG/xFqRRpC2rzDm+ErR4Y/ae+64A8dc/X/261hcAUXGSesXbZV/n\nHbwQ+qV2QmEyGu7MGCc3bQmN1RADxsMTTy9YRhkigrOYr9qDT1M2csS1e3E0\nZdu6wPFuARyldLzLjwZgUu+umW4u7f2cJVM9zjionAYPWqMc//cez0beS8z1\ncy2jFPCUOyhD9nv6hNVdwBNUCBB9ULH9Te8+gU58itdw9yPayoU7XszRtv4z\nxQV9law5/RgLzCKvE3WuLm0w436J29C4UdN2fbwUqea1BoI0DGUT3L6ApCug\nb26T3NFTNiC57qRkcMLv+eCeGzFlyu9gpPwnSmiEvy6MbjyJBH9RMatZZGfv\nFycYAwssb0+jEdC3IKMZWIQQ1FHJnz45HJ6tMM7IEuaXRPMHQYNPxw2Nl2Zb\nwxozL3OvA8mAbNeRt06/XDvbjuzY0ZBdILwrE7tsH8XvExocCBYEic/05hpj\nKivEo/aqSvzamyLLNnCYoU0tIyUCNX+O20axijzEJTKBKa/lctGc9Ms/tWsv\nZfEsk00lEkot2ssbrs3zdfSlpRwfujDM2+n+ysy7kO8w5amunHnjYdK5xrVy\now65gQYZFU/5L+wuzCkSr+qKF6bNjPHY/Gx2lMphg0q6VyPQCeBXMfV/CqdY\ntPh1dLAzLIx/iRrVXt60FBAJIrfYyILdySZ9738AhdhMW1v/HnbEm/DPyIMW\nbSjJvdH2iX6g/Q2811oSX2QpPE0X3RUSjJRZUTKCvQFWN753P4D0dwFE1IJD\na/3AkFBnCIKDicPfkl265NV60aciUse7FZshJM9giFm0K3ll0T9NYZMOL6pV\nXpuxDGxs/MLLlBn3gX+wIJT1g3Xb/K8Dtm09CBtEvi7WYN46oh5EFu3lQWvV\n9gE/xBBh+ZhLW1Sv9ADZQVKtHrpr0Db6M0Vb11VXHXnCfITSCFM/LFZnS7+e\nuvBwf0T+YO6VLnaeOszGw1yQJTEJeDG9tZCbv0VFuChez4v57BXqKJskjB9t\n++Phrf7DLL/CqkYSu3BEzLma5xqQp+XGM3VjKLPkCUhJm6PUcK7rZTRpHcqo\nI7YFcHyFPR2t1XCpKjVu0X9ZAQSN4hotMmGv9+KhN4629sf7yDRrFXGRKZsr\nQZIlpsCGsKpDdfs975wVtpklnGchK1yyl0s/yuoburntvd9j6Mcw+Fl/qQE7\nrMQE9D7KKf3tqw6fj30mJrZGAgfTCt8tx3c6XZ65TS+NoNUjgVJHegjm9w6w\no5/SEGJNI4RWpPTV1vBPRp3R7oDt/qR2ja2Xg8tqc9HKk9A4mnJkJcmEinWC\nYVHD6CfxkkyO7nibyDIA1/Xr0Xjh8zHTqq1Bv78b/LngUy0oIvr4UvQyDrJ1\nuhNVwf7j5+fxkiur3oPPp4D2EZzkJI1niCxh0YNucX9nMxWNX++Uk4N4XawH\n3j7K2x0RQOzg+D4R8AG5GlihHBskupHyp99UQfXJSbhjDRrX3Jyn6tTnagVS\nsqY/egSUqyI0Bh94Ck5wMckbZdFxX9lTBXdDSsI/1IWika2GU8nbuVeJbNeU\nOZOEh1ZkbkvjogrSNvoGBIvY3Ruoq68UCZsVUqfeCUNYgK5NAUwGRvTIpxKf\n7E/Elsr/DvVV8TE5t0a+O9cAa02uYAJ4MiV8m2mySr1iGkVo4VwitxBOfAMz\nNVxAwbY6G1knEG5RuWSwpQ/9odx6WSxw10krEDlKOhzKjxjvtVZf9ag8Jmtn\nH+OdX+wCxsp8vBMFHLOXX3MrHjn8okhYOt/cBt7F6/G1KkmmN6aeL0fvQuwz\nGtBZy4Y+BqAlDWEavtkLWXfhTIW08jfxgfCkdwT8zCVvoqofz6XiGORyHjdk\nmmV0kjTUrvhXn8ffMApBBTS9d7fXExJSBYcxgYKXW3zE0bw2h3jj3H7cENjC\ncmsYM2vZ1ctmg9O+z7TpYSSTJ2Gsvs5a+OP3wO/9RpZNBO5HqmkCNWpZ8BYo\nEpEJ6RnoKZtwYxKyvDa7KimLBoNKPWGRa0sXGetxZVvFSDrUdbk7ILiOoyZp\nc2jOrdX4by9qF8LARi3U6/7mVgB566GaZgZXx/OyzTvRAHJH57b8USsQSCyq\nbDwIy/4+cutNp3t6OhuS0hvCWom10M0Tkxi97EE7RXWUc7Fxr6AaMd3XBHZO\n6zrozCIJ7cbx7yBEgqofMApDMlNXsYETSOPLJgD4i9+zNo+1r5vt7CSgR/A5\nGmT/dp+zNgoS/F0tKkrC2Kbj8K+Ef/K1Lir0PZoH1k36NhEw7j1HIVJqBS5s\nJ2OPfp3G2iMKaqfmMsgPgaw7JqEJmnzpqU+1LcF+NBRY9pORNU+lTR5JDfle\ns2tuKDrPTmiJj968ApkxknjZ/qiLqP195h/LtkeGD+F7jFq2+jKrQwbGfHHd\ns/q7MuTJlIPbiUt/iJNf4259fhtcRmhtQb2ytVlpCmdWSuGCt4PXfoRV4ICx\nX0kwy3etF6IJtBhPmbzo5oEweUM+YJPn4Qa+gb6P+qcFY+KUprQL4T85t5cx\ntyDq+GHp5AyBF1vhLvnaQ3gdafPfnSG9I1RL+pg212SjyibEu2JQXrO5atNW\nVdFJ274rJ8eISfJoKMHC3/m1dgLVop3vBZic8HtrGAx2TYsnvItkj2ESca0J\nEoPJ9z7gkIeaFNAvlHGtcRoT5Rxg86w5hx7GeinyV3DrT0zcQgsFUXykR8zB\nd7k3QKrgFMwtogjviBUnKeq5aB2o59uSRAUs0lFPDswcOwdRVPEsflb957iL\njgF7gybSMByivi4nXF5+OBOZO0PeAlUEhV/6PXpX1shVIHn24DuWHwgJXYPT\nMlMYnkInZuZSnm2zhPGaG8VpbtBu9W/uPfpqz+Lzf1n4s4hPaoRCdzdhcxZb\nD0WDSXeN8amwg1/oUaG8x1Jb6Cap8kPsnIMQsCYrm5GJNA3nQgBmRsYVidyp\nyLjq3QBCTf/bfEL4IUE6iauvjJXT+Xxsl5RBQw4n5A839J+GNegzdIqRF/5b\n9RQai+pU1t/Mu1EU8rCAkgzkqO5DHrPr8eaR1i2GZOj51yd4ClnFSBUNyRdX\nyhapGIzzpUAnz0YEjOsgPXistXUT2wbEsNnNHulHCdmZcCftFyyS+TJZ4rWQ\nEKc/Y4g/zvzZ7IgpRIH9Bs0w4KFo/m9SX7HROjgkCWpSBMgrn7Bph0gB5Zal\nXP1VXAo4HuK6AnvPsApGEo1rYBZPiBdvMPqHBv61H/YySBs5n35JJWYP/mP2\noIsAWq/PGJFcB4C0lMTMitbLeDEoOitly8o2Ggk1qtJYFRrslWAXIjvhPsMo\n3S2aFeZVaIBzSOYrvfFRzismin6J1NJGhk2X88/M6owyhpIJ4irQMLoP8CuO\nTx81zVZxUXANvCyXaqoLB17R4TqBiwnMsAuRudiJ75RqLytKWUeEQXzSZfMG\nkJba5UPCR13oq/okYqfdDZVsA9tD6ThUC/TsDOgScuJgUavq7lkiq+ks9Wug\nWPMSfi39VjdvB+mjxvU2qI5O2ddnz92VrXpCDzdyJ0UrSmDpQEzLv82EH0S4\n/5o7+JE0DGoRea0gg4b1FaKgp8CFCK4OiF7nWYbGrpnllzqt6GZ2COqb4+hZ\nNQ6ON1mGn7WXrF2eUMoTnCv15Ku8tiWPeefBgKZgurgtZsfB/0SLFLBYx4vG\nt5q3F4XSIwITwdEGP80Rj0WCLnu8dSQTFr7eoP1fbc1DgEFz12Fje5cs7rhG\nN/An8iQoN/uHfdF0WuEBRdumJ1Ex+NZqmk+nNeHqZ7HovVlxuTr6s1CtPeGG\nhoJtJmSP99VSjsiwb8NIHBR/XtWM7TFxnlnygV4EVv1MQEz3it6qmBM05X0B\nWu7QN1hZPdZfHk9mHtcaqAyVnDILUsw0/X7OzG+svnDaVi+UZ5aqka82I9CX\ncvwIRbITiEUXWjwzCpiP5jLqw+piFmNoauCdO1T5JqnG3omg174e1o2DIk6v\nXxSGDNJLjRava02/+F9VluMKr7icKD+zyHoCLTjwVC3Tdw/4pSHuZZFbe5N1\nn8NMS1lruevFuf685vDVWF95ShcVPZK81pxtKgpK50VMKOTQ/W4gCL1H/ex1\nrSWscQAFYo5GwVGEqchZe2bdRg0IPmr05O02BjjUOlgav0BURa+KjwMpKYnI\n//6Xp/aPO8vudcA5adIAgH2bCL4WF2PKTr88skhbz1Yl8WiIDFvsxTE/ODnK\nFvqHYDnJg9F1rDV89xwBAqytXQvNLUvKgvsFv2HruSRtLF2ZRM4uWxqLTlt0\nxwBtdjMZA5Ms0ERuvrxUmedsXwqrIbZ96htHUY9BwxiNI5hmGKAOYbWyuC7F\nfM+BQ8BAM1UN7FxLCpiIF5kIda3COV8tjJt35aYzvrMQsKm1KvE+pq+9ovmC\n7/P4wIIfhWRSn+TEyWiSu55MYHldYKdOvMzPlDmK1+ZMMpcjkqFcWngrL0r8\nd4U4Sq8ACQ/OBIlWOdijMcpx5QrUVFxlWS3jkNefBujz/vEnchjnrUhdBzUD\nrM2npQb42aR0nGh1ciEv68xU4yzkUBKqt5qDdNXKDnpDfKmTuxoyE5B8qRnk\nIjBxNmgZhEgW9DUpbbnEW7UIUGo5V62W3Sov1jttnOcfw5zbEvePY8exuuTv\njW291D/mXU2ytdfTNMhcb/65svz1LaSAYGw/gLZE1gM0TBJtn3qL5J8I0Z3c\nGKwho6FlNk0BuTeU9xIAOzj1tpI5GOyhmRBooGznUTmPyVraqz8n2YM+s6GE\ntR9OPG69nbKkqDRtcGANKyv+L7MAKwaQDPALTmFyiYMkDOuISbYJyb7B/mDQ\nL9TZnTUx52SYdXXudSgWhO5rK1oEk/0eEYILeMXn0mmsHOAcZzn3C0txHT0A\nSZxxPbSYDG60211WCQAzYidoLn7N8+RJ8YYcOoupFTQ7kEXCpYY8lSiB/R9T\nReKhW18uHrvIDm3Qt0hSoO6ups9M/YDM0gk6L0QBTjIUd6t//tyFIENQtbyO\nH+K5919z+8IjK8iPfkuheWFf29PX89zO5BCj1U8MVfAznM18BgNwsUjhb4Wd\ncN7JLwlMQq/ZhPYbDFeMRby4EsXUwEffGcZCE+uUwBFFqHshi/e0IYmHTOfM\nQOmAtd+DrIbHcjkBYc2LRsgxFzaV/6ER+JRPy1kScCe1z0qIPAy/oGEqvMIh\niw5NzofNq3BRNbcGetqS3+lD2lg8P2MBnH2kd0+/XbEjeq1Pdt5xUBOPgvxz\nwOmCD3U0ir4yuVF4572DLawzT6KYUycFQhaNjALpARMbkkQatFj/aNjChnNX\ndQYNsSMjhwJxslNyuf27mRVlIJyZ49HKRv+mIDqnkw/etUpanmZfm/H5WdHF\naJKUGOLAjy3DH0rVGas8eOWp5+arkmJb+QO2re1ZUrwPCpZd1TZWNGX8dxFV\n6I+n7p+sEfXtF4D5WhWUDk8lRDTeZUi0l8PZYHhMGmhtJLANOZNKTbybiqlq\nlPHEBBVvSTW9v0c7LhKjkqUH74Fes8eLsJFHOr5vTA2UzCjwFnBZOD2TSEH1\ngDL5/wE0RAMy6iRAmuVxNHJJlp2+d1h+o/5maiDFsx5UySkwcVeJ23zox/HO\nX4zISQkKfwVO9XRnmC7Cqp6vpgLMQFnDpFqovglHldA4tx12FeSgBiwtsj8y\nm3eUxhiK4eC46Zej1hzLoqPc+dOQUx9lLNYaJVMMX1MmLj3Qtdgaf1GEvJil\nGjXVLJphrikIdK36idHqe0005rVNZy+uwn3Bu/7pMI6J9ajuFPFVUQq3Mr5L\nfeTXZP7+tpk4Op2NPuEbN+2Qsq23adeSPGZPfwJbzLG0q5/Cb04G7TaSnWmu\nfkz22LzzAjxxrCjlodPx9qIzW5Zt63tqv2e8HpeIqX+dIGFVoqt2DH4j6OSX\nORMmVww+CaXyVKQ9CdVvtosOU6pnQJPGH73uixAy4sJaTCrW3OgS/HHUGvzI\nr0bwX7ipMHlkhyb6IHUdMBTip5KuTiJSKctmqcRhrJtymP+xpIVOBa2wOXpB\n7IObpIkDK/CD6+GtZBcM1QCuDVXKMHWE0c76oSLYQiMPlzv1Hh2vW3ymEtge\nbq5ruvmnOyV9Sa6Yp9NJJ8gX1tuy78PxhkD7WFnHl5ScBLYOsxGSDx66gHCK\nFx65Z8NlMe3rR2udVEnomD9CcoCnqYSO6BZr+efDy+nAftv/J3fWg8yAL7kM\nfKiVMSA93oIENB6xd6cxjeU5fSlznFpn1XcJ3V8zzqTmakR48HR94Wz3g8MR\ngg55XVjDrfm6Hzkm0gOFUoFnpIizLIqmnYB/Dk66erpqU9SK6bv7gecXyGnq\nYgokT3BvXte8sAjx78nx5IFAmGSNmHnhtR9h5sJ0EZ9JbWifnVtCnZVNmaOM\nAnuJiVYtO3Jasi7Hn9hQzYGvx0/DIdkEl9gwVB25hO3TQYmNFg7skQlU9v63\nUYgsHLDx6oi2oVT5S8x49f7qSzc4HnlsL+RhXCTpwxkrzQNu1J8Xshlv/E9Y\nw5MRX0Xxt3C2GXfaV1vWskcY2/awo/c0eDCtkgfxjMcs+ny1EBdqPZUx64fm\nHc4cSyp3DkoBfl3j4HI=\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:47.331+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level1_2025\"},{\"changed_at\":\"2026-04-07 21:16:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 21:22:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 21:23:27 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 21:23:50 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 21:24:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 21:30:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 22:43:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-07 23:18:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:50:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:51:46 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:48:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:54:13 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 19:01:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 19:02:26 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:12:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:12:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

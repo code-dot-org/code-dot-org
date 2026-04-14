@@ -1,4 +1,6 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
@@ -17,6 +19,8 @@ import {
   createAichatRequest,
   updateAichatRequest,
 } from './client/helpers/aichatRequestHelpers';
+
+const metricPrefix = 'AichatClientApi';
 
 /**
  * Performs client-side chat completion submission flow, which involves creating a new AichatRequest record,
@@ -43,6 +47,13 @@ export async function performClientApiChatCompletion(
 
   const clientApi = await getClientApi();
 
+  const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
+  const startTime = Date.now();
+  const metricDimensions = [
+    {name: 'ModelId', value: modelParameters.selectedModelId},
+  ];
+  metricsReporter.incrementCounter(`${metricPrefix}.Start`, metricDimensions);
+
   const {response, assets, status} = await clientApi.generateChatResponse(
     newMessage,
     storedMessages,
@@ -50,6 +61,22 @@ export async function performClientApiChatCompletion(
     buildAssetUrl,
     levelSystemPrompt
   );
+
+  metricsReporter.reportLoadTime(
+    `${metricPrefix}.Latency`,
+    Date.now() - startTime,
+    metricDimensions
+  );
+
+  const statusName =
+    getTypedKeys(AiRequestExecutionStatus).find(
+      key => AiRequestExecutionStatus[key] === status
+    ) || 'UNKNOWN';
+
+  metricsReporter.incrementCounter(`${metricPrefix}.Finish`, [
+    ...metricDimensions,
+    {name: 'ExecutionStatus', value: statusName},
+  ]);
 
   await updateAichatRequest(requestId, status, response);
 

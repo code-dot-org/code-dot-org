@@ -47,7 +47,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:46:12.065+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8c_2024\\\"\"],\"cloned_from\":\"courseE_artist_functions8c_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:46:12.065+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8c_2024\\\"\"],\"cloned_from\":\"courseE_artist_functions8c_2024\"},{\"changed_at\":\"2026-03-16 16:15:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-16 16:17:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4,
@@ -57,21 +57,22 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" x="200" y="100">
-          <mutation/>
-          <title name="NAME">draw a line of squares</title>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
+        <block type="procedures_defnoreturn" deletable="false" editable="false" x="329" y="163">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">draw square</field>
           <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
+            <block type="controls_repeat" movable="false">
+              <field name="TIMES">4</field>
               <statement name="DO">
-                <block type="procedures_callnoreturn">
-                  <mutation name="draw square"/>
+                <block type="draw_move_by_constant" movable="false">
+                  <field name="DIR">moveForward</field>
+                  <field name="VALUE">50</field>
                   <next>
-                    <block type="jump_by_constant">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE">100</title>
+                    <block type="draw_turn_by_constant" movable="false">
+                      <field name="DIR">turnLeft</field>
+                      <field name="VALUE">90</field>
                     </block>
                   </next>
                 </block>
@@ -79,20 +80,19 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" x="200" y="300">
-          <mutation/>
-          <title name="NAME">draw square</title>
+        <block type="procedures_defnoreturn" deletable="false" x="262" y="394">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">draw a line of squares</field>
           <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
+            <block type="controls_repeat" movable="false" editable="false">
+              <field name="TIMES">3</field>
               <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">50</title>
+                <block type="procedures_callnoreturn" movable="false">
+                  <mutation name="draw square"/>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
+                    <block type="draw_move_by_constant" movable="false">
+                      <field name="DIR">moveForward</field>
+                      <field name="VALUE">100</field>
                     </block>
                   </next>
                 </block>

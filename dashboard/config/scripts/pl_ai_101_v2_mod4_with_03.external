@@ -1,0 +1,54 @@
+name 'pl-ai-101-V2-mod4-with-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Guiding Decisions About AI in the Classroom
+
+#### As AI becomes more common in schools, the most important question is not:
+
+<div style="background:#f4f6f8; border-left:4px solid #9aa5b1; padding:14px 16px; margin-bottom:16px; font-size:18px;">
+“Should students use AI?”
+</div>
+
+#### A more useful question is:
+<div style="background:#efe8f5; border-left:4px solid #5a2ca0; padding:16px 18px; margin-bottom:18px; font-size:20px; font-weight:600;">
+“How can we design AI use in ways that strengthen learning and meet the needs of all students?”
+</div>
+
+#### Strong instructional design already gives us guidance. When deciding whether and how to use AI, we can rely on core teaching principles: expand access, preserve rigor, build independence, and protect student voice.
+
+## Designing for Access and Meaningful Learning
+
+<img src="https://images.code.org/be647511ed21be77202bb0158708cadf-Screenshot 2026-03-17 at 1.38.30 PM.png" alt="Descriptive alt text" style="width:250px; float:right; margin-left:20px; margin-bottom:10px; border:1px solid #000; border-radius:10px;">
+
+#### Students vary — in background knowledge, language proficiency, motivation, processing speed, and prior experience. Effective instruction anticipates this variability rather than reacting to it later.
+
+#### When considering AI, ask:
+* #### Does this help more students access rigorous content?
+* #### Does it provide helpful support without removing productive struggle?
+* #### Does it offer multiple ways to engage with ideas?
+* #### Does it allow students to demonstrate understanding in meaningful ways?
+
+#### AI can be powerful when it expands entry points — offering explanations, examples, scaffolds, or organizational support — while keeping the intellectual work in students’ hands.
+
+#### The goal is not efficiency. The goal is deeper learning.
+
+## Protecting Voice and Building Independence
+
+<img src="https://images.code.org/e0bae6d651c2e7b80f2c76ca1c4c6619-Screenshot 2026-03-17 at 1.38.34 PM.png" alt="Descriptive alt text" style="width:250px; float:right; margin-left:20px; margin-bottom:10px; border:1px solid #000; border-radius:10px;">
+
+#### Instruction should not only develop skills — it should strengthen confidence, agency, and identity.
+
+#### When integrating AI, consider:
+* #### Are students still making important decisions?
+* #### Does this build long-term independence?
+* #### Does it preserve authentic voice?
+* #### Does it respect students’ linguistic and cultural expression?
+* #### Does it encourage students to think critically about information and tools?
+
+#### If AI begins to replace thinking, flatten voice, or short-circuit growth, the design needs reconsideration.
+
+#### Meeting the needs of all students means increasing access without reducing challenge — and supporting growth without erasing individuality.
+
+MARKDOWN

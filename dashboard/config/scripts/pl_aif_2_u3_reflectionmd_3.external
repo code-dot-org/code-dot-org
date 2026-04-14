@@ -47,6 +47,12 @@ markdown <<MARKDOWN
 
 ## PAIR Framework: Prompt – Analyze – Integrate – Reflect
 
-#### As you work, remember to use the PAIR framework. The Reflect step is especially important in AI-supported learning. Use the `reflection.md` file to complete the R – Reflect portion of the process. Encourage students to do the same during classroom instruction.
+#### As you work, think about the PAIR framework. 
+#### **P**rompt the AI
+#### **A**nalyze the result
+#### **I**ntegrate the code
+#### **R**eflect on the code, changes, and interaction.
+
+#### The Reflect step is especially important in AI-supported learning. Use the `reflection.md` file to complete the R – Reflect portion of the process. Encourage students to do the same during classroom instruction.
 
 MARKDOWN

@@ -26,7 +26,10 @@ class ProfanityController < ApplicationController
       DCDO.get('profanity_request_limit_per_min_default', REQUEST_LIMIT_PER_MIN_DEFAULT)
     period = 60
 
-    ProfanityHelper.throttled_find_profanities(params[:text]&.to_s, locale, id, limit, period) do |profanities|
+    text_to_check = params[:text]&.to_s
+    text_to_check = ShareFiltering.extract_text_from_js(text_to_check) if should_extract_text_from_js?
+
+    ProfanityHelper.throttled_find_profanities(text_to_check, locale, id, limit, period) do |profanities|
       return render json: profanities
     end
 
@@ -35,6 +38,10 @@ class ProfanityController < ApplicationController
   end
 
   private def locale
-    params[:locale] || request.locale
+    params[:locale] || I18n.locale.to_s
+  end
+
+  private def should_extract_text_from_js?
+    ActiveModel::Type::Boolean.new.cast(params[:extractTextFromJs])
   end
 end

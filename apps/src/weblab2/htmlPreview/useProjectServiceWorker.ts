@@ -1,5 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFolderPath} from '@codebridge/utils';
+import {lookup as extensionToMime} from 'mime-types';
 import {useEffect, useMemo, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -19,6 +20,7 @@ function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   codeStudioUrl: string,
   allowScripts: boolean,
+  blockNetwork: boolean,
   parameters?: object
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
@@ -110,16 +112,15 @@ More information is available in the README in apps/src/weblab2 directory.
         );
 
         let content = file.contents;
-        let mimeType = 'text/plain';
         let url = undefined;
 
         const fileExt = getFileExtension(file.name);
+        const mimeType = extensionToMime(fileExt) || 'text/plain';
+
         if (file.url) {
           // Right now only images are handled via URL
           url = file.url;
-          mimeType = `image/${fileExt}`;
         } else if (fileExt === 'html') {
-          mimeType = 'text/html';
           // Process HTML files to add base tag
           const parser = new DOMParser();
           const doc = parser.parseFromString(file.contents, 'text/html');
@@ -131,10 +132,6 @@ More information is available in the README in apps/src/weblab2 directory.
             addParametersToDocument(parameters, doc);
           }
           content = doc.documentElement.outerHTML;
-        } else if (fileExt === 'css') {
-          mimeType = 'text/css';
-        } else if (fileExt === 'js') {
-          mimeType = 'application/javascript';
         }
 
         filesData[fullFileName] = {content, mimeType, url};
@@ -148,6 +145,17 @@ More information is available in the README in apps/src/weblab2 directory.
       });
     }
   }, [contentSecurityPolicy, parameters, serviceWorker, source]);
+
+  // Send block network state to service worker when it changes.
+  useEffect(() => {
+    if (!serviceWorker) {
+      return;
+    }
+    serviceWorker.postMessage({
+      type: ProjectServiceWorkerMessageType.SET_BLOCK_NETWORK,
+      blockNetwork,
+    });
+  }, [serviceWorker, blockNetwork]);
 
   // Send an intermittent keep-alive message to the service worker to ensure it stays active.
   useEffect(() => {

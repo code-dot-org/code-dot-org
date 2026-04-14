@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q8_2026'
+
+question 'A JSON response has this structure: { "album": { "title": "Lemonade", "streams": 1500000 } }. Which expression uses dot notation to correctly access the number of streams?'
+
+wrong 'data.streams'
+wrong 'data["album"]["streams"]'
+right 'data.album.streams'
+wrong 'data.title.streams'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+MARKDOWN

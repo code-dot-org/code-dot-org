@@ -1,9 +1,0 @@
-# Introducing CS Connections
-
-Our newest curriculum highlights the connections between computer science and other subjects like math, language arts, science, and social studies. Through these modules, projects, and lessons, classrooms can explore their usual subjects in exciting new ways!
-
-## Try out CS Connections with these activities for Hour of Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", alt_text: "The Hour of Code logo surrounded by a tiger, a smile emoji, a cupcake, an 8-bit blue worm, an octopus poetry instructor, and school subject icons representing math, language arts, biology, and art", left_heading: "Poem Art", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
-{{ clearfix }}
-
-[Learn more about CS Connections](/educate/csc)

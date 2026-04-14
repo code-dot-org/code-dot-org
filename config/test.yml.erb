@@ -8,10 +8,10 @@
 github_webhook_secret: !Secret
 slack_set_last_dtt_green_token: !Secret
 slack_start_build_token: !Secret
-azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 puma_control_server_token: !Secret
+redshift_cluster_id: !Secret
 <% else %>
 
 ##
@@ -106,6 +106,9 @@ use_geolocation_override: true
 
 # Enables OpenTelemetry instrumentation
 enable_opentelemetry: true
+
+# Enables Sentry error reporting and tracing.
+enable_sentry: true
 
 ##
 ## CI-specific config settings

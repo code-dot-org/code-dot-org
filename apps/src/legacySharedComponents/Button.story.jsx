@@ -60,7 +60,7 @@ export const ButtonsWithIcons = () => (
         {Object.values(Button.ButtonColor).map(color => (
           <Button
             __useDeprecatedTag
-            icon="file-text"
+            icon="file-lines"
             size={size}
             color={color}
             text={color}

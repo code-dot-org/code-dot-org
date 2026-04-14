@@ -14,7 +14,7 @@ module Cdo
           options = SmartTranslate.get_smart_translate_options(locale, key, options)
         end
 
-        super(locale, key, options)
+        super
       end
 
       def self.get_smart_translate_options(locale, key, options = ::I18n::EMPTY_HASH)
@@ -122,7 +122,7 @@ module Cdo
       end
 
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
-        result = super(locale, key, options)
+        result = super
         return result if options[:safe_interpolation] == false
 
         # Log unused interpolation arguments to honeybadger; these are likely

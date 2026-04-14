@@ -28,7 +28,7 @@ Scenario: As teacher, when viewing a level with student work,
 feedback can be submitted and displayed. If there is a mini rubric, teacher can give feedback on rubric.
 If a teacher on a level with mini rubric can see the rubric without viewing student work.
 Otherwise don't show feedback tab
-  Then I sign in as "Teacher_Lillian"
+  Then I sign in as "Teacher_Lillian" and go home
   And I give user "Teacher_Lillian" authorized teacher permission
 
   #Not automatically visible on contained levels with no mini rubric

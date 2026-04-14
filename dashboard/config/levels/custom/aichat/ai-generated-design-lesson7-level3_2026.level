@@ -42,13 +42,14 @@
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "name_suffix": "_2026",
     "thumbnail_url": "https://images.code.org/cc00aad3ebc4bddcb48a0fcaf007f292-aiChat.png",
     "display_name": "AI Chat",
     "bubble_choice_description": "Use AI to review or strengthen your problem statement."
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:32.344+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson7-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson7-level3_2025\"},{\"changed_at\":\"2026-03-11 19:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:28:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 20:10:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:32.344+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson7-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson7-level3_2025\"},{\"changed_at\":\"2026-03-11 19:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:28:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 20:10:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:51:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

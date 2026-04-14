@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 
 #### Students will start by brainstorming on their own and then use AI to help refine or expand their schema. This example schema uses the fields of allergy name, severity, symptoms, and treatment to store data. 
 
-<img src="https://images.code.org/8946e446da983c617f39ca66ee8f578d-image-1765557163145.png" alt="sschema for allergy app: allergen name, severity, symptoms, treatment" width="450px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<img src="https://images.code.org/8946e446da983c617f39ca66ee8f578d-image-1765557163145.png" alt="schema for allergy app: allergen name, severity, symptoms, treatment" width="450px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 ## Next up
 

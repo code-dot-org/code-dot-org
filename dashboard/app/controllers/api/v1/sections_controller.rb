@@ -6,7 +6,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
   before_action :get_course_and_unit, only: [:create, :update]
 
-  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
@@ -70,7 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
-        ai_chat_access_level: get_ai_chat_access_level,
+        ai_chat_access_level: AichatAccessHelper.compute_ai_chat_access_level(@course),
       }
     )
     return head :bad_request unless section.persisted?
@@ -112,7 +112,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
     is_updating_course = @course && @course.id != section.course_id
-    ai_chat_access_level = is_updating_course ? get_ai_chat_access_level(section.ai_chat_access_level) : params[:ai_chat_access_level]
+    ai_chat_access_level = is_updating_course ? AichatAccessHelper.compute_ai_chat_access_level(@course, section.ai_chat_access_level) : params[:ai_chat_access_level]
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
@@ -136,6 +136,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section.update!(fields)
     if @unit
       section.students.each do |student|
+        next unless can?(:manage, student) # Don't modify students the teacher can't manage (like demo students)
         student.assign_script(@unit, @course)
       end
     end
@@ -209,15 +210,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     }
   end
 
-  def update_sharing_disabled
-    @section.update!(sharing_disabled: params[:sharing_disabled])
-    @section.update_student_sharing(params[:sharing_disabled])
-    render json: {
-      sharing_disabled: @section.sharing_disabled,
-      students: @section.students.map(&:summarize)
-    }
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
@@ -229,7 +221,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, I18n.locale.to_s)
     render json: course_offerings
   end
 
@@ -349,17 +341,5 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
-  end
-
-  private def get_ai_chat_access_level(previous_access_level = nil)
-    previous_access_level ||= SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
-
-    # Leave it as is if it was already turned on or to essential_only
-    return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
-
-    # Auto-enable access if the course needs it.
-    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools?
-
-    SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 end

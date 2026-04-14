@@ -509,7 +509,10 @@ export default class P5Lab {
               labType={this.getLabType()}
             />
           </Provider>,
-          document.getElementById(config.containerId)
+          document.getElementById(config.containerId),
+          {
+            legacyReactDomRender: true,
+          }
         )
       );
 

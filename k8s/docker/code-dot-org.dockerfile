@@ -105,12 +105,77 @@ RUN \
   CI=true yarn install --immutable --silent
 EOF
 
+################################################################################
+FROM code-dot-org-node_modules AS code-dot-org-yarn-build
+################################################################################
+
+# Its sad, but we have to have our `yarn build` depend on installing ruby
+# just for bundle exec. Maybe we could decouple? NOTE, this link of rbenv
+# is also how we get ruby into the main build, its faster than double-linking.
+#
+# grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb
+# grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${HOME}/.rbenv \
+  ${HOME}/.rbenv
+
+# bundle exec also needs the repo's Ruby/Bundler manifests so rbenv selects the
+# copied Ruby version and Bundler can resolve the already-installed gem set.
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${SRC}/.ruby-version ${SRC}/Gemfile ${SRC}/Gemfile.lock \
+  ./
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${SRC}/dashboard/engines/ \
+  ./dashboard/engines/
+
+# grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb => (lib/cdo/shared_constants.rb, lib/cdo/shared_constants/**)
+# grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb => (lib/cdo.rb, lib/cdo/global_edition.rb)
+COPY --chown=${UID} ./lib/ ./lib/
+
+# grunt exec:convertScssVars => ./script/convert-scss-variables.js
+COPY --chown=${UID} ./shared/css/ ./shared/css/
+COPY --chown=${UID} --parents ./tools/scripts/convertScssToJs.js ./
+
+# grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb
+COPY --chown=${UID} ./config/i18n/ ./config/i18n/
+COPY --chown=${UID} ./config/global_editions/ ./config/global_editions/
+COPY --chown=${UID} --parents ./config.yml.erb ./
+COPY --chown=${UID} --parents ./config/development.yml.erb ./
+
+# grunt lint-entry-points => apps/script/checkEntryPoints.js => ./dashboard/app/views
+COPY --chown=${UID} ./dashboard/app/views/ ./dashboard/app/views/
+
+# yarn build resolves @cdo/static and @cdo/i18n aliases at compile time, so
+# reuse those split assets here without reintroducing them from the host context.
+COPY --chown=${UID} --link \
+  --from=code-dot-org-static /apps/static \
+  ./apps/static
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-static /apps/i18n \
+  ./apps/i18n
+
+# Main JS subdirs
+COPY --chown=${UID} ./apps/ ./apps/
+COPY --chown=${UID} ./frontend/ ./frontend/
+
+# comnpared to what we do (basically a dev rake build), on staging / prod-like build mode:
+# run yarn build:dist because optimize_webpack_assets is true and CI is not assumed
+
+RUN \
+  --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
+  <<EOF
+  cd apps
+  CI=true yarn build
+EOF
+
 # ################################################################################
 FROM code-dot-org-core
 # ################################################################################
 
 RUN \
-  # We don't copy in .git (huge), but `bundle exec rake install` references .git in 
+  # We don't copy in .git (huge), but `bundle exec rake install` references .git in
   # a couple places, like git hooks, and fails without it, create a blank .git for now
   git init -b staging --quiet
 
@@ -162,20 +227,20 @@ COPY --chown=${UID} --link \
   --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
   ${HOME}/.local/share/uv
 
-# Copy in ~/.rbenv (built in parallel)
+# Link in the full JS build layer, includes:
+# - `yarn build` output
+# - installed npm / yarn packages (node_modules)
+# - weirdly, rbenv gets added here because its required by this step, and more perf to link once
+COPY --chown=${UID} --link \
+  --from=code-dot-org-yarn-build / \
+  ./
+
+# Re-apply the bundle-install rbenv tree directly for runtime.
+# Copying the full yarn-build filesystem is not preserving the installed bundle
+# correctly in the final image, which breaks `bundle exec rails` in mimic.
 COPY --chown=${UID} --link \
   --from=code-dot-org-bundle-install ${HOME}/.rbenv \
   ${HOME}/.rbenv
-
-# Copy in apps/node_modules (built in parallel)
-COPY --chown=${UID} --link \
-  --from=code-dot-org-node_modules ${SRC}/apps/node_modules \
-  ./apps/node_modules
-
-# Copy in corepack cache (ugh, but this keeps it from prompting the first time we run yarn)
-COPY --chown=${UID} --link \
-  --from=code-dot-org-node_modules ${HOME}/.cache/node \
-  ${HOME}/.cache/node 
 
 # Copy in the rest of the source code
 COPY --chown=${UID} --link ./ ./
@@ -201,7 +266,19 @@ RUN <<EOF
   # and being unset is basically non-existent, but if we dont set RAILS_ENV=development
   # then `rake build` will do weird stuff like trying to restart the dashboard-server,
   # and possibly accidentally start it in the process?
-  RAILS_ENV=development rake build
+  # RAILS_ENV=development rake build
+
+  # Analyzed `rake build`, and the only thing we were not doing was making
+  # these two symlinks, so here goes:
+  ln -sfn ${SRC}/apps/build/package ${SRC}/dashboard/public/blockly
+  ln -sfn ${SRC}/dashboard/test/ui ${SRC}/dashboard/public/ui_test
+
+  # now in staging / in prod-like build mode, we also run (optionally with cdn_enabled: true)
+  # rake assets:precompile
+  #
+  # aif cdn_enabled is set, that also runs:
+  # assets:record_manifest_files, assets:precompile_application_js, and assets:sync
+
   rm locals.yml
 EOF
 

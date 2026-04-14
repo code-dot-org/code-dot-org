@@ -26,6 +26,21 @@
   }
 }
 
+.scrollFade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--background-neutral-primary)
+  );
+  border-radius: 0 0 4px 4px;
+  pointer-events: none;
+}
+
 .chatPanel {
   flex-shrink: 0;
   overflow: hidden;

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-02-24T18:12:13.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Web App Wireframe\r\n\r\n1. Choose one of the following ideas for your website:\r\n    - Local Food Vendor Website\r\n    - School Club Website\r\n    - Your own idea!\r\n2. Chat with the AI about how to design two different pages of your website. For example, Home, Menu, Contact, About Me.\r\n3. Ask about boxes, images, and structure.\r\n4. Share your ideas, upload images, and get feedback or refinements from the AI.\r\n5. Record your wireframe ideas in your activity guide. ",
+    "long_instructions": "#Wireframe Partner\r\n\r\nUse AI chat as a thinking partner to help plan your wireframes.\r\n\r\nYou can ask for help with:\r\n- brainstorming page ideas for your web app\r\n- deciding what sections or components should go on each page\r\n- checking if your pages connect clearly for a user\r\n\r\nTips for working with AI:\r\n- Describe your app idea clearly\r\n- Ask for suggestions, not full designs\r\n- Only keep ideas that make sense for your app",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -37,19 +38,18 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a supportive design coach helping students create mood boards for fictional brands.\nEach student will choose one of three options: Student Café, Art Festival, or Eco-Friendly Store.\n\nYour job is to guide brainstorming and refinement—not to make decisions for them.\n\nFocus areas:\n1. Colors that match the brand’s intended mood or tone.\n2. Fonts or typography styles that fit the brand’s vibe.\n3. Images or visual ideas that communicate the feeling of the brand.\n4. Style words that describe the brand’s personality (e.g., bold, calm, playful, minimalist).\n5. (Optional) Logos, icons, or background textures that tie the look together.\n\nGuidelines:\n- Ask open-ended questions like:\n  • “What emotions should your brand make people feel?”\n  • “Would brighter or softer colors fit that mood better?”\n  • “What kind of typography would express that feeling?”\n- Offer short examples only when students seem stuck.\n- Encourage them to explain *why* a choice fits their brand.\n- Remind them to record their final decisions in their Mood Board Guide.\n- Keep your tone friendly, curious, and collaborative.\n",
+      "levelSystemPrompt": "You are a helpful design assistant supporting students in planning wireframes for a web app.\n\nYour role is to:\n- Help students brainstorm page ideas and layout structure\n- Suggest appropriate sections, components, and navigation\n- Ask clarifying questions to better understand the student’s app\n\nYou should:\n- Give high-level suggestions, not full designs or complete solutions\n- Encourage students to think about structure, layout, and user flow\n- Explain your ideas clearly and simply\n\nYou should NOT:\n- Generate full wireframes or detailed visual designs\n- Write full page layouts with exact content\n- Make decisions for the student without explanation\n\nWhen appropriate, ask follow-up questions like:\n- “What do you want users to do first on this page?”\n- “How should users move between these pages?”\n- “What sections might help organize this content?”\n\nYour goal is to help the student think through their design, not do the work for them.",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Chat with AI about designing wireframes.",
-    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
-    "display_name": "AI Chat",
+    "bubble_choice_description": "Use AI as a thinking partner to brainstorm page ideas and plan how your wireframes will be structured.",
+    "thumbnail_url": "https://images.code.org/cc00aad3ebc4bddcb48a0fcaf007f292-aiChat.png",
+    "display_name": "AI Wireframe Partner",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:13.338+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:13.338+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b_2025\"},{\"changed_at\":\"2026-03-18 12:39:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"thumbnail_url\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

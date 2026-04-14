@@ -51,7 +51,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
-  const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
   const [NPSSuccess, setNPSSuccess] = React.useState(false);
 
@@ -197,7 +196,9 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           color="primary"
           size="medium"
           onClick={handlePrimaryButtonClick}
-          type="button"
+          href={pegasus('/resources/amazon-future-engineer#eligibility')}
+          target="_blank"
+          rel="noopener noreferrer"
           endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
         >
           {i18n.learnMore()}
@@ -213,7 +214,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           variant="outlined"
           color="tertiary"
           size="medium"
-          onClick={onDrawerClose}
+          onClick={() => onDrawerClose()}
           type="button"
         >
           {i18n.imStillTeachingHere()}
@@ -227,7 +228,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           variant="outlined"
           color="tertiary"
           size="medium"
-          onClick={onDrawerClose}
+          onClick={() => onDrawerClose()}
           type="button"
         >
           {i18n.notInterested()}
@@ -239,7 +240,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           variant="outlined"
           color="tertiary"
           size="medium"
-          onClick={onDrawerClose}
+          onClick={() => onDrawerClose()}
           type="button"
         >
           {i18n.dismiss()}
@@ -301,12 +302,11 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     } else if (AFEDrawerOpen) {
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT, {});
 
-      setAFEParticipate(true);
-      onDrawerClose();
+      onDrawerClose(true);
     }
   };
 
-  const onDrawerClose = () => {
+  const onDrawerClose = (afeParticipate: boolean = false) => {
     if (schoolInfoInterstitialOpen) {
       analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     } else if (schoolInfoConfirmationOpen) {
@@ -317,7 +317,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       HttpClient.post(
         '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
         JSON.stringify({
-          participate: AFEParticipate,
+          participate: afeParticipate,
           source: 'teacher_home',
         }),
         true,
@@ -325,11 +325,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           'Content-Type': 'application/json',
         }
       ).catch(error => console.error(error));
-
-      // redirect to form on amazon-future-engineer page if user accepted
-      if (AFEParticipate) {
-        window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
-      }
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
@@ -350,7 +345,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       <div id={'ui-test-drawer-toolbar'} className={styles.toolbar}>
         <CloseButton
           aria-label={'close button'}
-          onClick={onDrawerClose}
+          onClick={() => onDrawerClose()}
           color={'light'}
           size="l"
           className={''}

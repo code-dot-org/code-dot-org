@@ -191,7 +191,7 @@ export const InfoAlert = ({text, dismissable}) => {
     >
       <div className={style.infoAlertLeft}>
         <FontAwesome
-          icon="info-circle"
+          icon="circle-info"
           className={style.infoAlertIcon}
           title="info circle icon"
         />

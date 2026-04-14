@@ -8,6 +8,14 @@ as deploy real production/test/etc instances to a k8s cluster.
 This makes debugging your production infra setup really easy: its just like what you're running
 locally.
 
+## Setting up skaffold
+
+We recommend adding `export SKAFFOLD_CACHE_ARTIFACTS=false` to your `~/.zprofile` or `~/.zshrc`.
+Alternatively you can pass the `--cache-artifacts=false` flag to every skaffold invocation.
+
+Skaffold's caching feature doesn't work well with many small files, and actually adds time
+to builds instead of saving them.
+
 ## Running dashboard using skaffold
 
 ### First time setup
@@ -74,9 +82,23 @@ change, etc. While this can all be done using `kubectl`, the stock k8s tool whic
 it can be really really useful to use an interactive k8s browser.
 
 Recommendations:
-1. [Headlamp](https://headlamp.dev/) is a cross-platform open source k8s browser application in relatively early dev days. I recommend starting here for k8s exploration purposes.
+1. [Headlamp](https://headlamp.dev/) is a cross-platform open source k8s browser application in relatively early dev days.
+   I recommend starting here for k8s exploration purposes.
 1. The [VSCode Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools) is top-notch.
 1. [k9s](https://k9scli.io/) is great if you want a keyboard navigable curses-style CLI.
+
+## Bootstraping a prod-like codeai-k8s kubernetes cluster on EKS
+
+Normally, you'll not need to create a new cluster, you'll deploy to an existing cluster or a local
+kubernetes cluster. But if you're starting from scratch (e.g., new org, disaster, curiosity, etc),
+see: [k8s-gitops/bootstrap/codeai-k8s/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/codeai-k8s/README.md)
+in the [k8s-gitops repo](https://github.com/code-dot-org/k8s-gitops).
+
+Conventionally, the k8s-gitops repo will be checked out at ../k8s-gitops. 
+
+Commits to the main branch of k8s-gitops will be automatically synced to the live cluster by ArgoCD
+in approximately 3 minutes. See: [k8s-gitops/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/README.md)
+to learn more.
 
 ## Useful dev commands
 

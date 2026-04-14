@@ -81,8 +81,9 @@ gem 'rack_csrf'
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
+gem 'annotaterb', '~> 4.19', group: [:development, :test]
+
 group :development do
-  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
@@ -119,7 +120,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '~> 4.0'
+  gem 'eyes_selenium', '>= 6.0.4' # required for Ruby 3.2 support
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -277,6 +278,7 @@ gem 'aws-sdk-ec2'
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
+gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemaker'
@@ -415,15 +417,9 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-gem "opentelemetry-exporter-otlp", "~> 0.31.1"
-gem 'opentelemetry-sdk', '~> 1.10'
-
-# pinned due to rails 7, upgrade on rails 7.1
-gem "opentelemetry-instrumentation-all", "0.85.0"
-
-# Automatically include all rails engines
-Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
-  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
+# Automatically include all rails engines under dashboard/
+Dir[Bundler.root.join('{,dashboard/}engines/*/*.gemspec')].sort.each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '{,dashboard/}engines/*/*.gemspec'
 end
 
 # OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
