@@ -10,6 +10,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -95,6 +96,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const scriptId = useAppSelector(state => state.progress.scriptId);
@@ -298,6 +302,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     savedAiCustomizations.systemPrompt,
   ]);
 
+  const {disabled, disabledMessage} = useAiChatDisabledState({
+    appName: levelProperties.appName,
+    isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
+
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;
   }
@@ -390,6 +400,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
                   logLevelActivity={logLevelActivity}
+                  disabled={disabled}
+                  disabledMessage={disabledMessage}
                 />
               )}
             </PanelContainer>

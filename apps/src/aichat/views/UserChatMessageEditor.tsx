@@ -1,7 +1,6 @@
 import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
@@ -47,6 +46,7 @@ interface UserChatMessageEditorProps {
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  chatDisabled?: boolean;
 }
 
 /**
@@ -69,9 +69,9 @@ const UserChatMessageEditor: React.FunctionComponent<
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
+  chatDisabled,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
-  const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     selectIsWaitingForChatResponse
   );
@@ -100,7 +100,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     saveInProgress ||
     uploadsPending ||
     viewingAiTutorVersionFileUpdates ||
-    chatDisabled;
+    !!chatDisabled;
 
   const clearUserMessage = () => setUserMessage('');
 
