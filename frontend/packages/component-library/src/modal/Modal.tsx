@@ -1,8 +1,11 @@
-import {Typography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {GenericButton, GenericButtonProps} from '@/button';
 import CustomDialog from '@/dialog/CustomDialog';
 
 import moduleStyles from './modal.module.scss';
@@ -20,9 +23,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Modal primary button props */
-  primaryButtonProps: GenericButtonProps;
+  primaryButtonProps: MuiButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps?: GenericButtonProps;
+  secondaryButtonProps?: MuiButtonProps;
   /** @deprecated Modal color mode - use theme provider instead. This prop will be removed in a future version. */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -94,9 +97,9 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       {...HTMLAttributes}
     >
       <div className={moduleStyles.modalTitleSection}>
-        <Typography variant="h3" gutterBottom>
+        <MuiTypography variant="h3" gutterBottom>
           {title}
-        </Typography>
+        </MuiTypography>
       </div>
       <hr />
       <div
@@ -107,29 +110,29 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       >
         {imageUrl && <img src={imageUrl} alt={imageAlt || ''} />}
         {description && (
-          <Typography
+          <MuiTypography
             id="dsco-dialog-description"
             className={moduleStyles.modalDescription}
             variant="body2"
             gutterBottom
           >
             {description}
-          </Typography>
+          </MuiTypography>
         )}
         {customContent}
       </div>
       <hr />
       <div className={moduleStyles.modalActionsSection}>
         {secondaryButtonProps && (
-          <GenericButton
-            type="secondary"
-            color={mode === 'dark' ? 'white' : 'black'}
+          <MuiButton
+            variant="outlined"
+            color={mode === 'dark' ? 'white' : 'secondary'}
             {...secondaryButtonProps}
           />
         )}
-        <GenericButton
-          type="primary"
-          color={mode === 'dark' ? 'white' : 'purple'}
+        <MuiButton
+          variant="contained"
+          color={mode === 'dark' ? 'white' : 'primary'}
           {...primaryButtonProps}
         />
       </div>

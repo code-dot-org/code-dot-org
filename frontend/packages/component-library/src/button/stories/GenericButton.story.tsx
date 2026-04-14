@@ -1,30 +1,50 @@
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import type {
+  ButtonProps as MuiButtonProps,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 
-import GenericButton, {GenericButtonProps} from '../GenericButton';
-import {buttonColors} from '../index';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+
+type AnchorProps = Pick<
+  React.AnchorHTMLAttributes<HTMLAnchorElement>,
+  'target' | 'rel'
+>;
+
+type IconButtonStoryProps = MuiIconButtonProps &
+  AnchorProps & {
+    icon: FontAwesomeV6IconProps;
+  };
+
+type ButtonStoryProps = (MuiButtonProps & AnchorProps) | IconButtonStoryProps;
 
 export default {
   title: 'DesignSystem/Button/GenericButton',
-  /**
-   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
-   * This workaround (component: Component.type instead of component: Component) is taken from
-   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
-   * Feel free to remove this workaround when storybook fixes this issue.
-   */
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore-next-line
-  component: GenericButton.type,
-} as Meta;
+  component: MuiButton,
+  parameters: {
+    useMui: true,
+  },
+} as Meta<MuiButtonProps>;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<GenericButtonProps> = args => (
-  <GenericButton {...args} />
-);
+const SingleTemplate: StoryFn<ButtonStoryProps> = args => {
+  if ('icon' in args && args.icon) {
+    const {icon, ...iconButtonProps} = args as IconButtonStoryProps;
+    return (
+      <MuiIconButton {...iconButtonProps}>
+        <FontAwesomeV6Icon {...icon} />
+      </MuiIconButton>
+    );
+  }
+
+  return <MuiButton {...(args as MuiButtonProps)} />;
+};
 
 const MultipleTemplate: StoryFn<{
-  components: GenericButtonProps[];
+  components: ButtonStoryProps[];
 }> = args => (
   <div
     style={{
@@ -34,80 +54,107 @@ const MultipleTemplate: StoryFn<{
       gap: '20px',
     }}
   >
-    {args.components?.map(componentArg => (
-      <GenericButton
-        key={`${componentArg.size}-${componentArg.text}`}
-        {...componentArg}
-      />
-    ))}
+    {args.components?.map((componentArg, index) => {
+      const key = `generic-button-${index}`;
+
+      if ('icon' in componentArg && componentArg.icon) {
+        const {icon, ...iconButtonProps} = componentArg as IconButtonStoryProps;
+        return (
+          <MuiIconButton key={key} {...iconButtonProps}>
+            <FontAwesomeV6Icon {...icon} />
+          </MuiIconButton>
+        );
+      }
+
+      return <MuiButton key={key} {...(componentArg as MuiButtonProps)} />;
+    })}
   </div>
 );
 
 export const DefaultGenericButton = SingleTemplate.bind({});
 DefaultGenericButton.args = {
-  text: 'Button',
+  children: 'Button',
   onClick: () => null,
-  size: 'm',
+  size: 'medium',
+  type: 'button',
+  variant: 'contained',
+  color: 'primary',
 };
 
 export const DisabledGenericButton = SingleTemplate.bind({});
 DisabledGenericButton.args = {
-  text: 'Button',
+  children: 'Button',
   onClick: () => null,
+  variant: 'contained',
+  color: 'primary',
   disabled: true,
-  size: 'm',
+  size: 'medium',
 };
 
 export const PendingGenericButton = SingleTemplate.bind({});
 PendingGenericButton.args = {
-  text: 'Button',
-  ariaLabel: 'Button',
+  children: 'Button',
+  'aria-label': 'Button',
   onClick: () => null,
-  isPending: true,
-  size: 'm',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
+  startIcon: (
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
+  ),
 };
 
 export const GenericButtonWithIcons = SingleTemplate.bind({});
 GenericButtonWithIcons.args = {
-  text: 'Button',
+  children: 'Button',
   onClick: () => null,
-  iconLeft: {iconName: 'house', iconStyle: 'solid'},
-  iconRight: {iconName: 'smile', iconStyle: 'solid'},
-  size: 'm',
+  variant: 'contained',
+  color: 'primary',
+  startIcon: <FontAwesomeV6Icon iconName="house" iconStyle="solid" />,
+  endIcon: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
+  size: 'medium',
 };
 
 export const IconGenericButton = SingleTemplate.bind({});
 IconGenericButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
-  ariaLabel: 'Purple primary icon generic button',
-  type: 'primary',
-  isIconOnly: true,
+  'aria-label': 'Purple primary icon generic button',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
   onClick: () => null,
-  size: 'm',
 };
 
 export const LinkGenericButton = SingleTemplate.bind({});
 LinkGenericButton.args = {
-  text: 'Link',
-  useAsLink: true,
+  children: 'Link',
   href: 'https://www.google.com',
-  size: 'm',
+  size: 'medium',
+  variant: 'contained',
+  color: 'primary',
 };
 
 export const ButtonButtonVsLinkButton = MultipleTemplate.bind({});
 ButtonButtonVsLinkButton.args = {
   components: [
     {
-      text: 'Button',
+      children: 'Button',
       onClick: () => null,
-      size: 'm',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
     },
     {
-      text: 'Link',
-      useAsLink: true,
+      children: 'Link',
       href: 'https://www.google.com',
-      size: 'm',
       target: '_blank',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
     },
   ],
 };
@@ -116,200 +163,191 @@ export const GroupOfColorsOfGenericButtons = MultipleTemplate.bind({});
 GroupOfColorsOfGenericButtons.args = {
   components: [
     {
-      text: 'Button Primary Purple',
-      color: buttonColors.purple,
-      size: 'm',
+      children: 'Button Primary Purple',
+      variant: 'contained',
+      color: 'primary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Primary Black',
-      color: buttonColors.black,
-      size: 'm',
+      children: 'Button Primary Black',
+      variant: 'contained',
+      color: 'secondary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Primary White',
-      color: buttonColors.white,
-      size: 'm',
+      children: 'Button Primary White',
+      variant: 'contained',
+      color: 'white',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Primary Destructive',
-      color: buttonColors.destructive,
-      size: 'm',
+      children: 'Button Primary Destructive',
+      variant: 'contained',
+      color: 'error',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Secondary Black',
-      color: buttonColors.black,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Black',
+      variant: 'outlined',
+      color: 'secondary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Secondary Gray',
-      color: buttonColors.gray,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Gray',
+      variant: 'outlined',
+      color: 'tertiary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Secondary White',
-      color: buttonColors.white,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary White',
+      variant: 'outlined',
+      color: 'white',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Secondary Destructive',
-      color: buttonColors.destructive,
-      type: 'secondary',
-      size: 'm',
+      children: 'Button Secondary Destructive',
+      variant: 'outlined',
+      color: 'error',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Tertiary Purple',
-      color: buttonColors.purple,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary Purple',
+      variant: 'text',
+      color: 'primary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Tertiary Black',
-      color: buttonColors.black,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary Black',
+      variant: 'text',
+      color: 'secondary',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Tertiary White',
-      color: buttonColors.white,
-      type: 'tertiary',
-      size: 'm',
+      children: 'Button Tertiary White',
+      variant: 'text',
+      color: 'white',
+      size: 'medium',
       onClick: () => null,
     },
     {
-      text: 'Button Tertiary Destructive',
-      color: buttonColors.destructive,
-      type: 'tertiary',
-      size: 'm',
-      onClick: () => null,
-    },
-    {
-      icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple primary icon only generic button',
-      color: buttonColors.purple,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      children: 'Button Tertiary Destructive',
+      variant: 'text',
+      color: 'error',
+      size: 'medium',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black primary icon only generic button',
-      color: buttonColors.black,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Purple primary icon only generic button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White primary icon only generic button',
-      color: buttonColors.white,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black primary icon only generic button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'secondary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive primary icon only generic button',
-      color: buttonColors.destructive,
-      type: 'primary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White primary icon only generic button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'white',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black secondary icon only generic button',
-      color: buttonColors.black,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Destructive primary icon only generic button',
+      size: 'medium',
+      variant: 'contained',
+      color: 'error',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray secondary icon only generic button',
-      color: buttonColors.gray,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black secondary icon only generic button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'secondary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White secondary icon only generic button',
-      color: buttonColors.white,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Gray secondary icon only generic button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'tertiary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive secondary icon only generic button',
-      color: buttonColors.destructive,
-      type: 'secondary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White secondary icon only generic button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'white',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Purple tertiary icon only generic button',
-      color: buttonColors.purple,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Destructive secondary icon only generic button',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'error',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Black tertiary icon only generic button',
-      color: buttonColors.black,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Purple tertiary icon only generic button',
+      size: 'medium',
+      variant: 'text',
+      color: 'primary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'White tertiary icon only generic button',
-      color: buttonColors.white,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Black tertiary icon only generic button',
+      size: 'medium',
+      variant: 'text',
+      color: 'secondary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Gray tertiary icon only generic button',
-      color: buttonColors.gray,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'White tertiary icon only generic button',
+      size: 'medium',
+      variant: 'text',
+      color: 'white',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
-      ariaLabel: 'Destructive tertiary icon only generic button',
-      color: buttonColors.destructive,
-      type: 'tertiary',
-      isIconOnly: true,
-      size: 'm',
+      'aria-label': 'Gray tertiary icon only generic button',
+      size: 'medium',
+      variant: 'text',
+      color: 'tertiary',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      'aria-label': 'Destructive tertiary icon only generic button',
+      size: 'medium',
+      variant: 'text',
+      color: 'error',
       onClick: () => null,
     },
   ],
@@ -319,50 +357,62 @@ export const GroupOfSizesOfGenericButtons = MultipleTemplate.bind({});
 GroupOfSizesOfGenericButtons.args = {
   components: [
     {
-      text: 'Button xs',
-      size: 'xs',
+      children: 'Button xs',
+      size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
-      text: 'Button s',
-      size: 's',
+      children: 'Button s',
+      size: 'small',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
-      text: 'Button m',
-      size: 'm',
+      children: 'Button m',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
-      text: 'Button l',
-      size: 'l',
+      children: 'Button l',
+      size: 'large',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
-      isIconOnly: true,
-      size: 'xs',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only xs',
     },
     {
-      isIconOnly: true,
-      size: 's',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'small',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only s',
     },
     {
-      isIconOnly: true,
-      size: 'm',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only m',
     },
     {
-      isIconOnly: true,
-      size: 'l',
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      size: 'large',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only l',
     },

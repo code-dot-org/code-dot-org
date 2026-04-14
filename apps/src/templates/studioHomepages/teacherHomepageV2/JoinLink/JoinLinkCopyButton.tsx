@@ -125,7 +125,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           description={i18n.noSectionDialogBody({classroom: classroomType})}
           primaryButtonProps={{
             onClick: () => setShouldShowDialog(false),
-            text: i18n.ok(),
+            children: i18n.ok(),
           }}
           onClose={() => setShouldShowDialog(false)}
         />
