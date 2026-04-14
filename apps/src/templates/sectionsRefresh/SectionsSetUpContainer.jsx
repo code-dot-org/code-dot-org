@@ -490,10 +490,8 @@ export default function SectionsSetUpContainer({
                 icon="plus"
                 text={i18n.addAnotherClassSection()}
                 color={Button.ButtonColor.neutralDark}
-                onClick={e => {
-                  e.preventDefault();
-                  saveSection(sections[0], true, coteachersToAdd);
-                }}
+                onClick={() => saveSection(sections[0], true, coteachersToAdd)}
+                type="button"
               />
             )}
             <Button
@@ -508,11 +506,11 @@ export default function SectionsSetUpContainer({
               }
               color={Button.ButtonColor.brandSecondaryDefault}
               disabled={isSaveInProgress}
-              onClick={e => {
-                e.preventDefault();
+              onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
+              type="button"
             />
           </div>
         </>
