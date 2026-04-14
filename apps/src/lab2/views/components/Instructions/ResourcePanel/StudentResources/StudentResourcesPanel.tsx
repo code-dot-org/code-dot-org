@@ -6,8 +6,6 @@ import GuidedWalkthroughs from './GuidedWalkthroughs';
 
 import styles from './student-resources-panel.module.scss';
 
-import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
-
 interface StudentResourcesPanelProps {
   levelTours: ProductTourConfig[];
   otherAvailableTours: ProductTourConfig[];
