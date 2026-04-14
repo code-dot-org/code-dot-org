@@ -1,3 +1,4 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
@@ -7,11 +8,10 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../BaseDialog';
-
 import {NON_LMS_LOGIN_TYPES} from './LoginTypeConstants';
-import LoginTypePicker from './LoginTypePicker';
-import PadAndCenter from './PadAndCenter';
+import LoginTypePicker, {
+  recordLoginTypePickerCancelled,
+} from './LoginTypePicker';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import {sectionShape} from './shapes';
 import {
@@ -24,6 +24,8 @@ import {
   isAddingSection,
   assignedCourseOffering,
 } from './teacherSectionsReduxSelectors';
+
+import styles from './sectionSetup.module.scss';
 
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
@@ -80,9 +82,23 @@ const AddSectionDialog = ({
     setLoginType(loginType);
   };
 
+  const onDialogCancel = () => {
+    if (participantType && !loginType) {
+      recordLoginTypePickerCancelled();
+    }
+    handleCancel();
+  };
+
   const getDialogContent = () => {
     if (!asyncLoadComplete) {
-      return <Spinner size="large" style={{padding: 50}} />;
+      return (
+        <div className={styles.loadingState}>
+          <span id="dsco-dialog-description" className={styles.srOnly}>
+            {i18n.loading()}
+          </span>
+          <Spinner size="large" />
+        </div>
+      );
     }
     /*
     The Participant Type Picker will be skipped if someone only have permissions to create sections for one
@@ -93,7 +109,6 @@ const AddSectionDialog = ({
         <ParticipantTypePicker
           title={title}
           setParticipantType={onParticipantTypeSelection}
-          handleCancel={handleCancel}
           availableParticipantTypes={availableParticipantTypes}
         />
       );
@@ -111,20 +126,22 @@ const AddSectionDialog = ({
     }
   };
 
-  if (participantType && loginType) {
+  if (!isOpen || (participantType && loginType)) {
     return null;
   } else {
     return (
-      <BaseDialog
-        useUpdatedStyles
-        fixedWidth={1010}
-        isOpen={isOpen}
-        overflow="auto"
-        uncloseable
-        style={{overflow: 'hidden'}}
-      >
-        <PadAndCenter>{getDialogContent()}</PadAndCenter>
-      </BaseDialog>
+      <Dialog
+        aria-label={title}
+        className={styles.dialog}
+        title={title}
+        primaryButtonProps={{
+          color: 'black',
+          type: 'secondary',
+          onClick: onDialogCancel,
+          text: i18n.dialogCancel(),
+        }}
+        customContent={getDialogContent()}
+      />
     );
   }
 };
