@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   CompletedChatMessage,
-  UserActionEvent,
+  ServerChatEvent,
   WorkspaceTeacherViewTab,
 } from '@cdo/apps/aichat/types';
 import CopyChatHistoryButton from '@cdo/apps/aichat/views/aiChatHeaderButtons/CopyChatHistoryButton';
@@ -44,7 +44,7 @@ const botMessage: CompletedChatMessage = {
   requestId: 2,
 };
 
-const studentHistoryMessage: CompletedChatMessage & {id: number} = {
+const studentHistoryMessage: ServerChatEvent = {
   role: Role.USER,
   chatMessageText: 'Student message',
   status: AiInteractionStatus.OK,
@@ -53,7 +53,7 @@ const studentHistoryMessage: CompletedChatMessage & {id: number} = {
   id: 100,
 };
 
-const clearChatEvent: UserActionEvent & {id: number} = {
+const clearChatEvent: ServerChatEvent = {
   descriptionKey: 'CLEAR_CHAT',
   timestamp: 4000000,
   id: 101,
