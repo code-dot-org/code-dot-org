@@ -28074,3 +28074,127 @@ en:
         self-paced-pl-csd5-2026:
           lessons: {}
           lesson_groups: {}
+        self-paced-pl-teaching-csd-unit2-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit2-1-2026
+          title: Preparing to Teach Web Development
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+        self-paced-pl-teaching-aiml-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-1-2026
+          title: Teaching AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          student_description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+        self-paced-pl-teaching-csd-unit3-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit3-1-2026
+          title: Preparing to Teach Interactive Animations and Games
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+        elf-paced-pl-teaching-csd-unit1-2026:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-teaching-csd-unit1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit1-2026
+          title: Preparing to Teach Problem Solving and Computing
+          description_audience: ''
+          description_short: ''
+          description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          student_description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+        self-paced-pl-teaching-microbit-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-1-2026
+          title: Preparing to Teach Creating Apps for Devices (micro:bit)
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-physical-computing-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-1-2026
+          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-csd-unit4-1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit4-1-2026
+          title: Preparing to Teach the Design Process
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
