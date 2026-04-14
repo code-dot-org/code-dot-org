@@ -175,6 +175,21 @@ spec:
         runAsGroup: {{ .Values.user.gid }}
         fsGroup: {{ .Values.user.gid }}
 
+      {{- with .Values.scheduling.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- with .Values.scheduling.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- with .Values.scheduling.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
       {{- if $isJob }}
       restartPolicy: {{ .restartPolicy | default "Never" }}
       {{- end }}
