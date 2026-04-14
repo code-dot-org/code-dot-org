@@ -24,7 +24,11 @@ module Cdo
 
     # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
     def self.current_region=(region)
-      RequestStore.store[REGION_KEY] = region if region_available?(region)
+      if region.nil?
+        RequestStore.store.delete(REGION_KEY)
+      elsif region_available?(region)
+        RequestStore.store[REGION_KEY] = region
+      end
     end
 
     # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
