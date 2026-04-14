@@ -33,7 +33,7 @@ module Cdo
     end
 
     def self.configuration_for(region)
-      REGION_CONFIGS[region] || {}
+      REGION_CONFIGS[region.to_s] || {}
     end
 
     def self.target_host?(hostname)
