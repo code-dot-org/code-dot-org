@@ -40,6 +40,7 @@
 
 require 'full-name-splitter'
 require 'cdo/code_generation'
+require 'cdo/mailjet'
 require 'cdo/safe_names'
 require 'policies/lti'
 
@@ -262,9 +263,7 @@ class Section < ApplicationRecord
   after_save :add_teacher_to_mailjet_course_list
   def add_teacher_to_mailjet_course_list
     return unless saved_change_to_course_id? && course_id.present? && teacher.present?
-
     return unless unit_group
-
     MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
   rescue => exception
     Honeybadger.notify(exception)

@@ -107,12 +107,6 @@ module MailjetConstants
       production: {
         default: 0, # TODO: Replace with actual MailJet list ID
       },
-      staging: {
-        default: 0, # TODO: Replace with actual MailJet list ID
-      },
-      development: {
-        default: 0, # TODO: Replace with actual MailJet list ID
-      },
     }
   }
 
