@@ -48,6 +48,7 @@ type CodebridgeProps = {
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  enableTutorVideos?: boolean;
   secondaryBackpackAppNames?: AppName[];
 };
 
@@ -67,6 +68,7 @@ export const Codebridge = React.memo(
     aiTutorContextHelper,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
+    enableTutorVideos,
     secondaryBackpackAppNames,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
@@ -208,6 +210,7 @@ export const Codebridge = React.memo(
           aiTutorContextHelper,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
+          enableTutorVideos,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

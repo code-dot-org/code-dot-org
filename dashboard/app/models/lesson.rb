@@ -698,7 +698,8 @@ class Lesson < ApplicationRecord
         },
         name: student.name,
         locked: locked,
-        readonly_answers: readonly
+        readonly_answers: readonly,
+        is_demo_student: Policies::DemoSections.demo_student?(student.id)
       }
     end
   end

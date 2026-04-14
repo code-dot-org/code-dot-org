@@ -200,6 +200,10 @@ namespace :ci do
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
+
+  timed_task_with_logging :check_for_new_file_changes do
+    check_for_new_file_changes
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
@@ -226,10 +230,18 @@ def check_for_new_file_changes
     RakeUtils.system_stream_output('git diff -- dashboard/config/locales | cat')
     raise 'Unexpected change to dashboard/config/locales/ - Make sure you run seeding locally and include those changes in your branch.'
   end
+
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
     RakeUtils.system_stream_output('git diff -- dashboard/db/schema.rb | cat')
     raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
   else
     ChatClient.log 'No changes to schema.rb detected.'
+  end
+
+  if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/app/models/**/*'])
+    RakeUtils.system_stream_output('git diff -- dashboard/app/models | cat')
+    raise 'Unexpected change to dashboard/app/models - Make sure you run your migration locally and push those changes into your branch.'
+  else
+    ChatClient.log 'No changes to dashboard/app/models detected.'
   end
 end

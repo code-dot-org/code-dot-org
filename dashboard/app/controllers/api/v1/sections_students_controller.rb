@@ -11,9 +11,10 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
     summaries = @section.students.includes(:latest_parental_permission_request).map do |student|
       # Student depends on this section for login if student's account is
       # teacher managed and only belongs to the one section.
-      student.summarize.merge(depends_on_this_section_for_login:
-        student.teacher_managed_account? &&
-          student.sections_as_student.size == 1
+      student.summarize.merge(
+        depends_on_this_section_for_login:
+          student.teacher_managed_account? &&
+            student.sections_as_student.size == 1
       )
     end
     render json: summaries

@@ -1,15 +1,20 @@
+import {IconDropdown} from '@code-dot-org/component-library/dropdown';
+import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import PendingDivider from '@cdo/apps/weblab2/debugPanel/images/Pending.svg';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
-import {NetworkEntry} from '../redux/networkRedux';
+import {NetworkEntry, setNetworkRequestsBlocked} from '../redux/networkRedux';
 
 import DetailsBox, {DetailsField} from './DetailsBox';
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
@@ -17,9 +22,26 @@ import NetworkRequestChip from './NetworkRequestChip';
 
 import moduleStyles from './network-panel.module.scss';
 
+const SORT_OPTIONS: IconDropdownOption[] = [
+  {
+    value: 'newest',
+    label: 'Newest first',
+    icon: {iconName: 'arrow-down-wide-short'},
+  },
+  {
+    value: 'oldest',
+    label: 'Oldest first',
+    icon: {iconName: 'arrow-up-short-wide'},
+  },
+] as const;
+
 const NetworkPanel: React.FC = () => {
+  const dispatch = useAppDispatch();
   const networkRequests = useAppSelector(
     state => state.weblab2Network.requests
+  );
+  const blockNetwork = useAppSelector(
+    state => state.weblab2Network.networkRequestsBlocked
   );
   const [orderedNetworkRequests, setOrderedNetworkRequests] = useState(
     [...networkRequests].reverse()
@@ -28,6 +50,11 @@ const NetworkPanel: React.FC = () => {
     NetworkEntry | undefined
   >(orderedNetworkRequests.length > 0 ? orderedNetworkRequests[0] : undefined);
   const [newestFirst, setNewestFirst] = useState(true);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    // Unblock network requests on level change to avoid confusion.
+    dispatch(setNetworkRequestsBlocked(false));
+  });
 
   useEffect(() => {
     if (!selectedRequest && orderedNetworkRequests.length > 0) {
@@ -68,7 +95,10 @@ const NetworkPanel: React.FC = () => {
 
   const requestSuccess = useMemo(() => {
     if (selectedRequest) {
-      return selectedRequest.request.cspDirectiveViolated === undefined;
+      return (
+        selectedRequest.request.cspDirectiveViolated === undefined &&
+        !selectedRequest.request.blocked
+      );
     }
     return false;
   }, [selectedRequest]);
@@ -80,13 +110,16 @@ const NetworkPanel: React.FC = () => {
     return false;
   }, [selectedRequest]);
 
-  // A response is pending if it did not fail due to a csp violation but we don't yet have a response.
+  // A response is pending if it did not fail due to a csp violation or request blocking,
+  // but we don't yet have a response.
   const responsePending = useMemo(() => {
     return (
+      !selectedRequest?.request.blocked &&
       selectedRequest?.request.cspDirectiveViolated === undefined &&
       !selectedRequest?.response
     );
   }, [
+    selectedRequest?.request.blocked,
     selectedRequest?.request.cspDirectiveViolated,
     selectedRequest?.response,
   ]);
@@ -166,6 +199,9 @@ const NetworkPanel: React.FC = () => {
   }, [selectedRequest?.response]);
 
   const requestErrorMessage = useMemo(() => {
+    if (selectedRequest?.request.blocked) {
+      return 'Network requests are blocked.';
+    }
     if (selectedRequest?.request.cspDirectiveViolated) {
       let requestDomain = selectedRequest.request.url;
       try {
@@ -179,45 +215,85 @@ const NetworkPanel: React.FC = () => {
     }
     return undefined;
   }, [selectedRequest]);
+  const blockToggleLabel = useMemo(
+    () =>
+      blockNetwork ? 'Unblock network activity' : 'Block network activity',
+    [blockNetwork]
+  );
+
   return (
-    <>
-      {orderedNetworkRequests.length === 0 ? (
-        <EmptyPanelPlaceholder
-          iconName="globe"
-          title="No network activity"
-          description="Network requests will appear here when your app makes API calls."
-        />
-      ) : (
-        <div className={moduleStyles.networkPanelContainer}>
-          <div className={moduleStyles.networkSummary}>
-            <div className={moduleStyles.networkSummaryHeader}>
-              <Typography variant="body4" gutterBottom>
-                <Typography variant="strong">Activity</Typography>
-              </Typography>
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
+    <div className={moduleStyles.networkPanelContainer}>
+      <div className={moduleStyles.networkSummary}>
+        <div className={moduleStyles.networkSummaryHeader}>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">Activity</Typography>
+          </Typography>
+          <div className={moduleStyles.networkHeaderButtons}>
+            <WithTooltip
+              tooltipProps={{
+                text: blockToggleLabel,
+                direction: 'onBottom',
+                tooltipId: 'block-network-tooltip',
+                size: 'xs',
+              }}
+            >
+              <MuiIconButton
+                color={blockNetwork ? 'error' : 'tertiary'}
+                variant={blockNetwork ? 'contained' : 'outlined'}
                 size="extraSmall"
-                onClick={() => setNewestFirst(!newestFirst)}
+                onClick={() =>
+                  dispatch(setNetworkRequestsBlocked(!blockNetwork))
+                }
+                aria-label={blockToggleLabel}
                 type="button"
-                startIcon={<FontAwesomeV6Icon iconName="sort" />}
               >
-                {newestFirst ? 'Newest first' : 'Oldest first'}
-              </MuiButton>
-            </div>
-            <div className={moduleStyles.requestList}>
-              {orderedNetworkRequests.map(request => (
-                <NetworkRequestChip
-                  key={request.id}
-                  request={request}
-                  onChange={onInputChange}
-                  isSelected={selectedRequest?.id === request.id}
-                  newestFirst={newestFirst}
-                />
-              ))}
-            </div>
+                <FontAwesomeV6Icon iconName="ban" />
+              </MuiIconButton>
+            </WithTooltip>
+            {orderedNetworkRequests.length > 0 && (
+              <IconDropdown
+                name="sort-order"
+                // This label is hidden with CSS to save space, but IconDropdown requires it.
+                // We use aria-label for accessibility.
+                labelText={''}
+                size="xs"
+                className={moduleStyles.sortDropdown}
+                options={SORT_OPTIONS}
+                selectedOption={newestFirst ? SORT_OPTIONS[0] : SORT_OPTIONS[1]}
+                onChange={option => setNewestFirst(option.value === 'newest')}
+                aria-label={'Change sort order'}
+                color={'gray'}
+              />
+            )}
           </div>
-          <div className={moduleStyles.detailsContainer}>
+        </div>
+        <div className={moduleStyles.requestList}>
+          {orderedNetworkRequests.length === 0 ? (
+            <Typography variant="body4" className={moduleStyles.emptyText}>
+              No activity to show
+            </Typography>
+          ) : (
+            orderedNetworkRequests.map(request => (
+              <NetworkRequestChip
+                key={request.id}
+                request={request}
+                onChange={onInputChange}
+                isSelected={selectedRequest?.id === request.id}
+                newestFirst={newestFirst}
+              />
+            ))
+          )}
+        </div>
+      </div>
+      <div className={moduleStyles.detailsContainer}>
+        {orderedNetworkRequests.length === 0 ? (
+          <EmptyPanelPlaceholder
+            iconName="globe"
+            title="No network activity"
+            description="Network request details will appear here when your app makes API calls."
+          />
+        ) : (
+          <>
             <DetailsBox
               title="Request"
               status={requestSuccess ? 'success' : 'error'}
@@ -272,10 +348,10 @@ const NetworkPanel: React.FC = () => {
                 />
               </div>
             )}
-          </div>
-        </div>
-      )}
-    </>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 

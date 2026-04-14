@@ -1,6 +1,5 @@
 require_relative 'src/env'
 require 'rack'
-require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
@@ -71,7 +70,6 @@ class Documents < Sinatra::Base
     configs
   end
 
-  use Rack::Locale
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
