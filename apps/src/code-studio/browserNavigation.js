@@ -61,8 +61,6 @@ export function setupNavigationHandler(initialLevelId) {
       return;
     }
     // Notify the Lab2 system (that handles changing levels without reload) about the level change.
-    // The browser history API does not provide access to the state of the page we just came from,
-    // so we don't know the previous level ID.
     notifyLevelChange(previousLevelId || null, levelId);
     store.dispatch(setCurrentLevelId(levelId));
   });
