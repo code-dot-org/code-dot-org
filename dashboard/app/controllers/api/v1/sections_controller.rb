@@ -96,17 +96,21 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
-  # POST /api/v1/sections/demo/:section_type
+  # POST /api/v1/sections/demo/:demo_type
   # Creates a demo section with preset properties and adds demo students.
   def create_demo
     authorize! :create, Section
 
-    demo_type = params[:section_type]
+    demo_type = params[:demo_type]
     config = Policies::DemoSections.get_preset(demo_type)
     return render json: {error: "unknown demo section type: #{demo_type}"}, status: :bad_request unless config
 
     unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Honeybadger.notify("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
+    end
 
     section = ActiveRecord::Base.transaction do
       s = Section.create!(

@@ -37,7 +37,7 @@
 #  index_sections_on_code                   (code) UNIQUE
 #  index_sections_on_script_id              (script_id)
 #  index_sections_on_user_id                (user_id)
-#  index_sections_on_user_id_and_demo_type  (user_id,demo_type) UNIQUE
+#  index_sections_on_user_id_and_demo_type  (user_id,demo_type,deleted_at) UNIQUE
 #
 
 class PictureSection < Section
