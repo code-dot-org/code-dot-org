@@ -171,7 +171,7 @@ module Cdo
     #   path("fa", "/in/hi/home") => "/fa/home"
     def self.path(region, *paths, locale: nil)
       path = ::File.join('/', *paths)
-      path = match_path(path)&.dig(:main_path) || path
+      path = match_path(path)&.try(:[], :main_path) || path
 
       if regions_url_locales[region]
         locale ||= ::I18n.locale
