@@ -3,10 +3,14 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
+import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import getRejectNotification from '@cdo/apps/weblab2/helpers/getRejectNotification';
 import {
   acceptAiTutorVersion,
   rejectAiTutorVersion,
@@ -31,6 +35,10 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const [isAcceptMode, setIsAcceptMode] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+
   const dispatch = useAppDispatch();
 
   // Warn the user if they attempt to reload the page before accepting or
@@ -46,6 +54,29 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
+
+  useEffect(() => {
+    const possiblyRejectOnPageHide = async (event: PageTransitionEvent) => {
+      if (viewingAiTutorVersionFileUpdates) {
+        const notification = getRejectNotification(files);
+        const payload = {
+          newChatEvent: notification,
+          aichatContext: ChatEventLogger.getInstance().aichatContext,
+          authenticity_token: await getAuthenticityToken(),
+        };
+
+        navigator.sendBeacon(
+          '/aichat_events/log_chat_event',
+          new Blob([JSON.stringify(payload)], {type: 'application/json'})
+        );
+      }
+    };
+
+    window.addEventListener('pagehide', possiblyRejectOnPageHide);
+
+    return () =>
+      window.removeEventListener('pagehide', possiblyRejectOnPageHide);
+  }, [files, viewingAiTutorVersionFileUpdates]);
 
   const handleSaveAiTutorVersion = useCallback(async () => {
     if (isSaving) return;
