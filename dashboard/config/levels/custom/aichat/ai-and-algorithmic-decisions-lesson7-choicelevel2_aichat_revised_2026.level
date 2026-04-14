@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-13T14:20:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Brainstorm with AI Chat**\r\n\r\n#### **Do This:**\r\n\r\n1. Use AI Chat to brainstorm an app idea with a dynamic feature.\r\n\r\n2. Review the idea:\r\n\r\n   * What does the user do?\r\n   * What changes on the page?\r\n   * How does it help the user?\r\n\r\n3. Refine your idea if needed so it includes a clear interaction and change.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Help a high school student brainstorm an mini app idea with a dynamic feature that changes the page based on user interaction. The feature should use variables, functions (with parameters), and if/else, and support accessibility (POUR). Make sure the idea clearly describes what the user does and what changes on the page.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Brainstorm with AI Chat",
+    "thumbnail_url": "https://images.code.org/ebb16a4733f2be9d7b9ee4243f8266a5-action-block-ai-humanities.png",
+    "bubble_choice_description": "Use AI Chat to brainstorm an app idea that includes a dynamic feature."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-13 14:32:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-13 14:34:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-13 14:35:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>
