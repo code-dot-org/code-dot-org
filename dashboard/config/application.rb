@@ -1,4 +1,3 @@
-# make an arbitrary change to trigger unit tests
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
