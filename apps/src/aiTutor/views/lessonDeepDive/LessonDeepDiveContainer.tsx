@@ -1,5 +1,5 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 
@@ -7,8 +7,8 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#1a1a2e',
-      paper: '#25253f',
+      default: '#121212',
+      paper: '#1c1c1c',
     },
     text: {
       primary: '#e8e8f2',
@@ -17,7 +17,7 @@ const darkTheme = createTheme({
     primary: {
       main: '#6b9fd4',
     },
-    divider: '#2e2e50',
+    divider: '#242424',
   },
 });
 
@@ -27,10 +27,75 @@ import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData} from './types';
+import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
+const FizzyButton: FC<{
+  onClick: () => void;
+  ariaLabel: string;
+  children: React.ReactNode;
+}> = ({onClick, ariaLabel, children}) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const createBubble = useCallback(() => {
+    const btn = buttonRef.current;
+    if (!btn) return;
+    const rect = btn.getBoundingClientRect();
+    const size = Math.random() * 9 + 4;
+    const bubble = document.createElement('span');
+    bubble.className = styles.fizzBubble;
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${rect.left + Math.random() * rect.width}px`;
+    bubble.style.top = `${rect.bottom - size}px`;
+    bubble.style.animationDuration = `${Math.random() * 1.8 + 1.2}s`;
+    bubble.style.setProperty('--fizz-drift', `${(Math.random() - 0.5) * 50}px`);
+    const hue = Math.random() * 360;
+    bubble.style.background = `radial-gradient(circle at 30% 30%, hsl(${hue}, 100%, 88%), hsl(${hue}, 80%, 55%))`;
+    document.body.appendChild(bubble);
+    bubble.addEventListener('animationend', () => bubble.remove(), {
+      once: true,
+    });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    createBubble();
+    intervalRef.current = setInterval(createBubble, 80);
+  }, [createBubble]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
+
+  useEffect(
+    () => () => {
+      if (intervalRef.current !== null) clearInterval(intervalRef.current);
+    },
+    []
+  );
+
+  return (
+    <button
+      ref={buttonRef}
+      type="button"
+      className={`${styles.arrowButton} ${styles.fizzyButton}`}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {children}
+    </button>
+  );
+};
+
 const BOX_IDS = [
+  'welcome',
   'lesson-summary',
   'reflection',
   'intervention',
@@ -71,6 +136,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   const renderBox = () => {
     switch (BOX_IDS[currentIndex]) {
+      case 'welcome':
+        return <WelcomeBox />;
       case 'lesson-summary':
         return (
           <LessonSummaryBox
@@ -144,12 +211,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
         {!isLast && (
           <div className={styles.bottomNav}>
-            <button
-              type="button"
-              className={styles.arrowButton}
-              onClick={goToNext}
-              aria-label="Next"
-            >
+            <FizzyButton onClick={goToNext} ariaLabel="Next">
               <svg
                 width="24"
                 height="24"
@@ -165,7 +227,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </FizzyButton>
           </div>
         )}
       </div>
