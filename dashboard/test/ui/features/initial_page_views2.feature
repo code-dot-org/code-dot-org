@@ -18,6 +18,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I sign out
     Examples:
       | url                                                                            | test_name                         | user_type |
+      | http://studio.code.org/projects/applab/new                                     | new applab project                | student   |
       | http://studio.code.org/                                                        | logged in student studio homepage | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1                      | logged in script progress         | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1  | unplugged video level             | student   |
