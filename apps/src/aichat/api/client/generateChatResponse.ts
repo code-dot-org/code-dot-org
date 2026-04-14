@@ -27,16 +27,22 @@ import {isTextSafe, getImageModerationStatus} from './helpers/safetyHelpers';
 // Also, Vercel AI SDK does not always report media type accurately (seen from HoneyBadger Azure error reports).
 const convertToPng = (file: GeneratedFile): Promise<File> =>
   new Promise((resolve, reject) => {
-    const blob = new Blob([new Uint8Array(file.uint8Array)], {
-      type: file.mediaType,
-    });
+    // Omit MIME type so the browser detects format from bytes.
+    // file.mediaType can be inaccurate (observed in production);
+    const blob = new Blob([new Uint8Array(file.uint8Array)]);
     const img = new Image();
     const url = URL.createObjectURL(blob);
     img.onload = () => {
       const canvas = document.createElement('canvas');
       canvas.width = img.naturalWidth;
       canvas.height = img.naturalHeight;
-      canvas.getContext('2d')?.drawImage(img, 0, 0);
+      const context = canvas.getContext('2d');
+      if (!context) {
+        URL.revokeObjectURL(url);
+        reject(new Error('canvas 2d context creation failed'));
+        return;
+      }
+      context.drawImage(img, 0, 0);
       URL.revokeObjectURL(url);
       canvas.toBlob(pngBlob => {
         if (!pngBlob) {
@@ -122,7 +128,15 @@ export async function generateChatResponse(
     // Currently only image files are supported.
     if (file.mediaType.startsWith('image/')) {
       // Gemini API output format is not configurable, so we convert to PNG for consistent asset storage and moderation.
-      const fileToSave = await convertToPng(file);
+      let fileToSave: File;
+      try {
+        fileToSave = await convertToPng(file);
+      } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('PNG conversion failed for generated file', error as Error);
+        continue;
+      }
 
       let asset: ChatAsset;
       try {
