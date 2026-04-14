@@ -26,6 +26,8 @@ module Middleware
         *(defined?(HocLegacy::Engine) ? [HocLegacy::API_ROOT_PATH] : []),
       ].compact.freeze
 
+      class_attribute :existing_route_cache, default: {}
+
       attr_reader :app, :env, :request, :original_script_name, :original_path_info, :original_path, :original_region,
                   :original_locale
 
@@ -211,11 +213,10 @@ module Middleware
         request_method = request.POST['_method'].presence if request.post?
         request_method ||= request.request_method
 
-        @existing_route_cache ||= {}
         cache_key = [request_method, path]
-        return @existing_route_cache[cache_key] if @existing_route_cache.key?(cache_key)
+        return existing_route_cache[cache_key] if existing_route_cache.key?(cache_key)
 
-        @existing_route_cache[cache_key] = begin
+        existing_route_cache[cache_key] = begin
           Dashboard::Application.routes.recognize_path(path, method: request_method).present?
         rescue ActionController::RoutingError
           false
