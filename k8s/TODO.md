@@ -44,21 +44,21 @@ include prometheus as a helm chart dependency??
 
 ## Tofu EKS Cluster
 
-See `k8s/tofu/codeai-k8s/TODO.argocd.diskfill.bug.md` for the Argo CD
+See `k8s-gitops/bootstrap/codeai-k8s/TODO.argocd.diskfill.bug.md` for the Argo CD
 repo-server disk-fill investigation notes.
 
-Manage AWS Load Balancer Controller CRDs explicitly in `k8s/tofu/codeai-k8s/cluster/`.
+Manage AWS Load Balancer Controller CRDs explicitly in `k8s-gitops/bootstrap/codeai-k8s/cluster/`.
 Helm install creates them, but Helm upgrade does not update them, and we already hit stale
 live CRDs missing newer `IngressClassParams` fields like `certificateArn`, `targetType`,
 and `sslRedirectPort`.
 
-In `k8s/tofu/codeai-k8s/cluster-infra-argocd/`, Dex and ArgoCD are still exposed through ALB
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
 
 ### Argo CD / Dex first-boot SSO
 
-After a fresh `k8s/tofu/codeai-k8s/cluster-infra-argocd/` deploy, Dex SSO to
+After a fresh `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/` deploy, Dex SSO to
 `https://argocd.k8s.code.org` came up broken until we manually ran:
 
 `kubectl rollout restart deployment/argocd-server -n argocd`
@@ -69,7 +69,7 @@ Symptom:
 
 What happened:
 
-- Module/chart: `k8s/tofu/codeai-k8s/cluster-infra-argocd/infra/argocd`
+- Module/chart: `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd`
 - Argo CD now gets `dex.argocd.clientSecret` by ESO merging into `argocd-secret`
   from `templates/argocd-secret-external-secret.yaml`
 - Pre-reorg, the same key was present at first boot via Argo chart
@@ -96,14 +96,14 @@ OIDC-config reload path and whether there is a chart-level way to block
 
 ### Argo CD controller sizing
 
-In `k8s/tofu/codeai-k8s/cluster-infra-argocd/infra/argocd/values.yaml`,
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd/values.yaml`,
 evaluate proper CPU and memory request for `controller`. The current proposed `controller.resources` block was copied over after
 Fargate OOMs, but `argocd-application-controller` is a different workload and
 needs its own CPU / RAM profiling before we lock in requests / limits.
 
 ### Dex
 
-In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+In `k8s-gitops/bootstrap/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
 
 ## Helm / Kustomize parity
