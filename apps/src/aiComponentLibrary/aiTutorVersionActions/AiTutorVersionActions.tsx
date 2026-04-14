@@ -43,6 +43,10 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const dispatch = useAppDispatch();
   const dialogControl = useDialogControl();
 
+  const handleReject = useCallback(async () => {
+    await dispatch(rejectAiTutorVersion(files));
+  }, [dispatch, files]);
+
   useEffect(() => {
     Lab2Registry.getInstance().setLevelNavigationConfirmation(async () => {
       if (!dialogControl) {
@@ -50,19 +54,33 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       }
 
       const {type} = await dialogControl.showDialog({
-        type: DialogType.GenericConfirmation,
-        title: 'Leave this level?',
+        type: DialogType.GenericDialog,
+        title: 'Please review AI Tutor changes',
         message:
-          'You have pending AI Tutor changes. If you leave this level now, those changes will be lost. Do you want to leave this level?',
-        confirmText: 'Leave level',
+          "AI Tutor has made changes that you haven't accepted or rejected. If you exit this level, those changes will be lost. Are you sure you want to continue?",
+        icon: {iconName: 'triangle-exclamation', iconStyle: 'solid'},
+        showCloseButton: false,
+        buttons: {
+          confirm: {
+            text: 'Stay on this level',
+          },
+          cancel: {
+            text: 'Continue anyway',
+          },
+        },
       });
 
-      return type === 'confirm';
+      if (type !== 'cancel') {
+        return false;
+      }
+
+      await handleReject();
+      return true;
     });
     return () => {
       Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
     };
-  }, [dialogControl]);
+  }, [dialogControl, handleReject]);
 
   // Warn the user if they attempt to reload the page before accepting or
   // rejecting the proposed updates.
@@ -106,7 +124,6 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     setIsSaving(true);
     try {
       await dispatch(acceptAiTutorVersion({files, commitDescription}));
-      Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -118,11 +135,6 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       setIsSaving(false);
     }
   }, [dispatch, files, commitDescription, isSaving]);
-
-  const handleReject = useCallback(async () => {
-    await dispatch(rejectAiTutorVersion(files));
-    Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
-  }, [dispatch, files]);
 
   // Scroll to the bottom of the page when switching to accept mode,
   // so that the commit description input and save button are visible to the user.
