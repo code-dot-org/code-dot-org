@@ -36,7 +36,7 @@ Parameters:
   WorkerInstanceType:
     Type: String
     Description: EC2 Instance Type that Autoscaler provisions to run Builds.
-    Default: m7i.4xlarge
+    Default: m7i.8xlarge # temporarily increase from m7i.4xlarge to unblock devs while infra investigates OOM errors
   WorkerSubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Existing VPC Subnet Id where ECS EC2 Instances hosting Drone Runner ("worker") containers will be provisioned.
