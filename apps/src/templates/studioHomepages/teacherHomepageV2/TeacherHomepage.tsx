@@ -9,6 +9,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -18,6 +19,7 @@ import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
+  removeSectionOrThrow,
 } from '../../teacherDashboard/teacherSectionsRedux';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
@@ -26,6 +28,7 @@ import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import OnboardingChecklist from './OnboardingChecklist';
 import {pickDemoType} from './pickDemoType';
+import {SectionDeleteModal} from './SectionDeleteModal';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -35,6 +38,8 @@ import styles from './teacherHomepage.module.scss';
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
+const NO_SECTION_ID = -1;
+
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
@@ -80,6 +85,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const dispatch = useAppDispatch();
   const [demoSectionNotice, setDemoSectionNotice] =
     React.useState<DemoSectionNotice | null>(null);
+  const [demoSectionToDelete, setDemoSectionToDelete] =
+    React.useState<number>(NO_SECTION_ID);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -258,6 +265,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     new UserPreferences().setHasDismissedPersonalizationAlert(true);
   };
 
+  const onDeleteDemoSectionClick = (sectionId: number) => {
+    setDemoSectionToDelete(sectionId);
+  };
+
+  const onCloseDemoDeleteDialog = () => {
+    setDemoSectionToDelete(NO_SECTION_ID);
+  };
+
+  const deleteDemoSection = () => {
+    HttpClient.delete(`/dashboardapi/sections/${demoSectionToDelete}`, true)
+      .then(() => {
+        dispatch(removeSectionOrThrow(demoSectionToDelete));
+        setDemoSectionToDelete(NO_SECTION_ID);
+      })
+      .catch((error: Error) => {
+        console.error(error);
+        setDemoSectionToDelete(NO_SECTION_ID);
+      });
+  };
+
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
@@ -324,6 +351,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 <DemoSectionCard
                   demoType={demoType}
                   onNotice={setDemoSectionNotice}
+                  onDeleteClickCallback={onDeleteDemoSectionClick}
                   preset={selectedDemoPreset!}
                 />
               </ul>
@@ -340,6 +368,12 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </div>
       </div>
       <TeacherHomepagePopups />
+      {demoSectionToDelete > NO_SECTION_ID && (
+        <SectionDeleteModal
+          onCloseCallback={onCloseDemoDeleteDialog}
+          sectionDeleteCallback={deleteDemoSection}
+        />
+      )}
     </div>
   );
 };
