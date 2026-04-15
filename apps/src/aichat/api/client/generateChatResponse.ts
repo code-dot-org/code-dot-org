@@ -71,7 +71,7 @@ export async function generateChatResponse(
 
     return {
       response: `Blocked reason: ${candidate?.finishReason}. ${candidate?.finishMessage}`,
-      status: AiRequestExecutionStatus.MODEL_PROFANITY,
+      status: AiRequestExecutionStatus.MODEL_CONTENT_FILTERED,
     };
   }
 
