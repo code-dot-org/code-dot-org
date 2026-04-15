@@ -54,6 +54,24 @@ export interface Section {
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 
+export type DemoType = 'elementary' | 'middle' | 'high';
+
+export interface DemoPresetCourseRef {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetView {
+  demoType: DemoType;
+  sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  loginType: string;
+  participantType: string;
+  unit: DemoPresetCourseRef | null;
+  unitGroup: DemoPresetCourseRef | null;
+}
+
 type Course = {
   courseOfferingId: number | null;
   versionId: number | null;
@@ -141,6 +159,22 @@ export interface ServerStudent {
   sectionId: number;
   sharing_disabled: boolean;
   user_type: keyof typeof UserTypes;
+}
+
+export interface ServerDemoPresetCourseRef {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetView {
+  demo_type: DemoType;
+  section_name: string;
+  avatar_color: number;
+  avatar_emoji: number;
+  login_type: string;
+  participant_type: string;
+  unit: ServerDemoPresetCourseRef | null;
+  unit_group: ServerDemoPresetCourseRef | null;
 }
 
 //TODO: better types here
