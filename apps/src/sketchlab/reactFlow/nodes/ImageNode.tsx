@@ -11,7 +11,7 @@ import React, {memo, useCallback, useRef, useState} from 'react';
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {ImageNodeData} from '../types';
 
-import styles from './ImageNode.module.scss';
+import styles from './image-node.module.scss';
 
 function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
   const {updateNodeData} = useReactFlow();

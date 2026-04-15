@@ -11,7 +11,7 @@ import React, {memo, useCallback, useRef, useState} from 'react';
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
 
-import styles from './ShapeNode.module.scss';
+import styles from './shape-node.module.scss';
 
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';

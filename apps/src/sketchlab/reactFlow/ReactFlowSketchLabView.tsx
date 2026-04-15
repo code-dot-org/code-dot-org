@@ -41,7 +41,7 @@ import ImageNode from './nodes/ImageNode';
 import ShapeNode from './nodes/ShapeNode';
 import {ImageNodeData, ReactFlowSketchLabSources, ShapeNodeData} from './types';
 
-import styles from './ReactFlowSketchLabView.module.scss';
+import styles from './react-flow-sketch-lab-view.module.scss';
 
 export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},

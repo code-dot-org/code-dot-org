@@ -13,7 +13,7 @@ import {
 } from '../constants';
 import {ImageNodeData, ShapeNodeData, ShapeType} from '../types';
 
-import styles from './Toolbar.module.scss';
+import styles from './toolbar.module.scss';
 
 // SVG icons for each shape type.
 function RectIcon() {
