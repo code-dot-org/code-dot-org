@@ -89,7 +89,12 @@ module MailJet
     return unless contact_list_id
 
     contact = find_or_create_contact(user.email, user.name)
-    add_to_contact_list(contact, contact_list_id)
+
+    begin
+      add_to_contact_list(contact, contact_list_id)
+    rescue Mailjet::ApiError => exception
+      raise unless exception.message.include?('A duplicate ListRecipient already exists.')
+    end
   end
 
   def self.find_or_create_contact(email, name)
