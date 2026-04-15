@@ -87,13 +87,10 @@ describe Observability::Sentry::UserContext do
     # rubocop:disable Rails/ApplicationController
     @controller_class = Class.new(ActionController::Base) do
       include Observability::Sentry::UserContext
-
-      def current_user
-        raise 'current_user should not be called from Observability::Sentry::UserContext'
-      end
     end
     # rubocop:enable Rails/ApplicationController
     @controller = @controller_class.new
+    @controller.stubs(:devise_controller?).returns(false)
   end
 
   it 'registers set_user_context as a before_action' do
@@ -104,21 +101,23 @@ describe Observability::Sentry::UserContext do
     _(before_action_filters).must_include :set_user_context
   end
 
-  it 'sets the Sentry user from warden session user without callbacks' do
+  it 'sets the Sentry user from current_user on authenticated requests' do
     user = stub(id: SecureRandom.random_number(1..1000))
     warden = mock('warden')
-    warden.expects(:user).with(scope: :user, run_callbacks: false).returns(user)
+    warden.expects(:authenticated?).with(:user).returns(true)
     @controller.stubs(:request).returns(stub(env: {'warden' => warden}))
+    @controller.stubs(:current_user).returns(user)
 
     Sentry.expects(:set_user).with(id: user.id)
 
     @controller.send(:set_user_context)
   end
 
-  it 'does not set the Sentry user when no warden user is present' do
+  it 'does not set the Sentry user when the request is not authenticated' do
     warden = mock('warden')
-    warden.expects(:user).with(scope: :user, run_callbacks: false).returns(nil)
+    warden.expects(:authenticated?).with(:user).returns(false)
     @controller.stubs(:request).returns(stub(env: {'warden' => warden}))
+    @controller.expects(:current_user).never
 
     Sentry.expects(:set_user).never
 
@@ -127,6 +126,29 @@ describe Observability::Sentry::UserContext do
 
   it 'does not set the Sentry user when warden is unavailable' do
     @controller.stubs(:request).returns(stub(env: {}))
+    @controller.expects(:current_user).never
+
+    Sentry.expects(:set_user).never
+
+    @controller.send(:set_user_context)
+  end
+
+  it 'does not set the Sentry user on signed-out Devise requests' do
+    warden = mock('warden')
+    warden.expects(:authenticated?).with(:user).returns(false)
+    @controller.stubs(:request).returns(stub(env: {'warden' => warden}))
+    @controller.stubs(:devise_controller?).returns(true)
+    @controller.expects(:current_user).never
+
+    Sentry.expects(:set_user).never
+
+    @controller.send(:set_user_context)
+  end
+
+  it 'does not set the Sentry user on Devise session create' do
+    @controller.stubs(:action_name).returns('create')
+    @controller.stubs(:controller_name).returns('sessions')
+    @controller.expects(:current_user).never
 
     Sentry.expects(:set_user).never
 
