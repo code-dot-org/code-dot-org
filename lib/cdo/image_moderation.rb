@@ -21,10 +21,10 @@ module ImageModeration
     end
 
     moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
-    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if moderation_type.nil?
     if moderation_type != content_type
-      Honeybadger.notify("Actual content type differs from reported content type", context: {reported_content_type: content_type, actual_content_type: moderation_type})
+      Honeybadger.notify("Actual content type differs from reported content type in image moderation", context: {reported_content_type: content_type, actual_content_type: moderation_type})
     end
+    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if moderation_type.nil?
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key
