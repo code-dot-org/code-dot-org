@@ -18,5 +18,4 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Use human-readable variable names. Prefer names such as `newWidth` over `newW`.
 - Use constants for any magic numbers.
 - Ensure eslint passes.
-- Ensure prettier passes.
 - CSS module names should be in kebab-case.

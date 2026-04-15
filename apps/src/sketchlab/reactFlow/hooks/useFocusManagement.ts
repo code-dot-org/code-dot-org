@@ -21,20 +21,20 @@ export function useFocusManagement(
         entry.type === 'node'
           ? `.react-flow__node[data-id="${entry.id}"]`
           : `.react-flow__edge[data-id="${entry.id}"]`;
-      const el = document.querySelector<HTMLElement>(selector);
-      if (!el) return;
-      el.focus();
+      const element = document.querySelector<HTMLElement>(selector);
+      if (!element) return;
+      element.focus();
       // Pan if the element is not fully visible in the viewport.
       if (entry.type === 'node') {
-        const container = el.closest<HTMLElement>('.react-flow');
+        const container = element.closest<HTMLElement>('.react-flow');
         if (container) {
-          const cr = container.getBoundingClientRect();
-          const nr = el.getBoundingClientRect();
+          const containerRect = container.getBoundingClientRect();
+          const nodeRect = element.getBoundingClientRect();
           const notFullyVisible =
-            nr.left < cr.left ||
-            nr.right > cr.right ||
-            nr.top < cr.top ||
-            nr.bottom > cr.bottom;
+            nodeRect.left < containerRect.left ||
+            nodeRect.right > containerRect.right ||
+            nodeRect.top < containerRect.top ||
+            nodeRect.bottom > containerRect.bottom;
           if (notFullyVisible) {
             const zoom = getZoom();
             fitView({nodes: [{id: entry.id}], duration: 200, maxZoom: zoom});
@@ -46,18 +46,20 @@ export function useFocusManagement(
   );
 
   const handleFocusCapture = useCallback(
-    (e: React.FocusEvent) => {
-      const target = e.target as HTMLElement;
-      const nodeEl = target.closest('.react-flow__node');
-      const edgeEl = target.closest('.react-flow__edge');
-      const entry: TabOrderEntry | null = nodeEl
-        ? {type: 'node', id: nodeEl.getAttribute('data-id')!}
-        : edgeEl
-        ? {type: 'edge', id: edgeEl.getAttribute('data-id')!}
+    (event: React.FocusEvent) => {
+      const target = event.target as HTMLElement;
+      const nodeElement = target.closest('.react-flow__node');
+      const edgeElement = target.closest('.react-flow__edge');
+      const entry: TabOrderEntry | null = nodeElement
+        ? {type: 'node', id: nodeElement.getAttribute('data-id')!}
+        : edgeElement
+        ? {type: 'edge', id: edgeElement.getAttribute('data-id')!}
         : null;
       if (
         entry &&
-        tabOrder.some(e => e.type === entry.type && e.id === entry.id)
+        tabOrder.some(
+          tabEntry => tabEntry.type === entry.type && tabEntry.id === entry.id
+        )
       ) {
         setActiveTabEntry(entry);
       }

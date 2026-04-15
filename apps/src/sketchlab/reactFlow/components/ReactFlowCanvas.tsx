@@ -117,29 +117,32 @@ export default function ReactFlowCanvas({
 
   const onConnect: OnConnect = useCallback(
     connection =>
-      setEdges(eds =>
-        addEdge({...connection, markerEnd: {type: MarkerType.ArrowClosed}}, eds)
+      setEdges(currentEdges =>
+        addEdge(
+          {...connection, markerEnd: {type: MarkerType.ArrowClosed}},
+          currentEdges
+        )
       ),
     [setEdges]
   );
 
   const handleMoveEnd = useCallback(
-    (_event: unknown, vp: ReactFlowSource['viewport']) => {
-      setViewport(vp);
+    (_event: unknown, newViewport: ReactFlowSource['viewport']) => {
+      setViewport(newViewport);
     },
     []
   );
 
   // Apply a CSS class to the source node while in connect mode.
   useEffect(() => {
-    const prev = document.querySelector(`.${styles.connectSource}`);
-    prev?.classList.remove(styles.connectSource);
+    const previousSource = document.querySelector(`.${styles.connectSource}`);
+    previousSource?.classList.remove(styles.connectSource);
 
     if (connectingFrom) {
-      const el = document.querySelector(
+      const element = document.querySelector(
         `.react-flow__node[data-id="${connectingFrom}"]`
       );
-      el?.classList.add(styles.connectSource);
+      element?.classList.add(styles.connectSource);
     }
   }, [connectingFrom]);
 
@@ -171,15 +174,15 @@ export default function ReactFlowCanvas({
         }),
       };
 
-      setNodes(nds => [...nds, newNode]);
+      setNodes(currentNodes => [...currentNodes, newNode]);
 
       // Move focus to the new node after React Flow renders it.
       (document.activeElement as HTMLElement)?.blur();
       setTimeout(() => {
-        const nodeEl = document.querySelector<HTMLElement>(
+        const nodeElement = document.querySelector<HTMLElement>(
           `.react-flow__node[data-id="${newNodeId}"]`
         );
-        nodeEl?.focus();
+        nodeElement?.focus();
       }, 100);
     },
     [screenToFlowPosition, setNodes]

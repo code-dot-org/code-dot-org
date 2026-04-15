@@ -27,7 +27,8 @@ export function useTabOrder(
     if (
       activeTabEntry &&
       !tabOrder.some(
-        e => e.type === activeTabEntry.type && e.id === activeTabEntry.id
+        entry =>
+          entry.type === activeTabEntry.type && entry.id === activeTabEntry.id
       )
     ) {
       setActiveTabEntry(tabOrder[0] ?? null);
@@ -37,14 +38,18 @@ export function useTabOrder(
   // Sync roving tabindex to the DOM.
   useEffect(() => {
     const active = activeTabEntry ?? tabOrder[0] ?? null;
-    document.querySelectorAll<HTMLElement>('.react-flow__node').forEach(el => {
-      const id = el.getAttribute('data-id');
-      el.tabIndex = active?.type === 'node' && active.id === id ? 0 : -1;
-    });
-    document.querySelectorAll<HTMLElement>('.react-flow__edge').forEach(el => {
-      const id = el.getAttribute('data-id');
-      el.tabIndex = active?.type === 'edge' && active.id === id ? 0 : -1;
-    });
+    document
+      .querySelectorAll<HTMLElement>('.react-flow__node')
+      .forEach(element => {
+        const id = element.getAttribute('data-id');
+        element.tabIndex = active?.type === 'node' && active.id === id ? 0 : -1;
+      });
+    document
+      .querySelectorAll<HTMLElement>('.react-flow__edge')
+      .forEach(element => {
+        const id = element.getAttribute('data-id');
+        element.tabIndex = active?.type === 'edge' && active.id === id ? 0 : -1;
+      });
   }, [tabOrder, activeTabEntry]);
 
   return {tabOrder, activeTabEntry, setActiveTabEntry};

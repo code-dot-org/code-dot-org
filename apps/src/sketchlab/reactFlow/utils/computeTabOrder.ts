@@ -26,19 +26,19 @@ function findComponents(
     parent.set(id, id);
   }
 
-  function find(x: string): string {
-    while (parent.get(x) !== x) {
-      parent.set(x, parent.get(parent.get(x)!)!);
-      x = parent.get(x)!;
+  function find(nodeId: string): string {
+    while (parent.get(nodeId) !== nodeId) {
+      parent.set(nodeId, parent.get(parent.get(nodeId)!)!);
+      nodeId = parent.get(nodeId)!;
     }
-    return x;
+    return nodeId;
   }
 
-  function union(a: string, b: string) {
-    const ra = find(a);
-    const rb = find(b);
-    if (ra !== rb) {
-      parent.set(ra, rb);
+  function union(nodeA: string, nodeB: string) {
+    const rootA = find(nodeA);
+    const rootB = find(nodeB);
+    if (rootA !== rootB) {
+      parent.set(rootA, rootB);
     }
   }
 
@@ -108,9 +108,9 @@ function orderComponent(
     const newlyAvailable: string[] = [];
     for (const target of outgoing.get(current) || []) {
       if (componentIds.has(target) && !visited.has(target)) {
-        const deg = (inDegree.get(target) || 1) - 1;
-        inDegree.set(target, deg);
-        if (deg === 0) {
+        const degree = (inDegree.get(target) || 1) - 1;
+        inDegree.set(target, degree);
+        if (degree === 0) {
           newlyAvailable.push(target);
         }
       }
@@ -212,7 +212,7 @@ export function computeTabOrder(
 
   // Orphan nodes: not part of any edge.
   const orphans = nodes
-    .filter(n => !connectedIds.has(n.id))
+    .filter(node => !connectedIds.has(node.id))
     .sort(compareByPosition);
   for (const orphan of orphans) {
     result.push({type: 'node', id: orphan.id});
