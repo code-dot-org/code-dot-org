@@ -3,6 +3,7 @@ import _ from 'lodash';
 import React from 'react';
 import videojs from 'video.js';
 
+import localization from '@cdo/apps/localization';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
@@ -46,6 +47,23 @@ videos.createVideoWithFallback = function (
   return video;
 };
 
+/**
+ * Ensure that the download link is localized when it is rendered
+ * directly on the page as '.video-link' or something like that.
+ */
+videos.wrapDownloadLink = function (linkElement) {
+  const link = linkElement[0];
+  const downloadSrc = link.getAttribute('href');
+
+  localization.on('change', () => {
+    const updatedDownloadLocalizedSrc = localization.translate(downloadSrc, [
+      'video-url',
+      'fallback-video-url',
+    ]);
+    link?.setAttribute('href', updatedDownloadLocalizedSrc);
+  });
+};
+
 function onVideoEnded() {
   $(MODAL_CLASS).trigger('ended');
 }
@@ -77,14 +95,30 @@ window.onYouTubeIframeAPIReady = function () {
 };
 
 function createVideo(options) {
+  const videoSrc = options.src;
+  const [videoBase, videoQuery] = videoSrc.split('?');
+  const videoLocalizedSrc =
+    localization.translate(videoBase, ['video-url', 'youtube-url']) +
+    (videoQuery ? `?${videoQuery}` : '');
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
-    src: options.src,
+    src: videoLocalizedSrc,
     allowfullscreen: 'true',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
     videoDiv
   );
+
+  localization.on('change', () => {
+    const iframe = videoDiv[0];
+
+    if (iframe) {
+      const updatedVideoLocalizedSrc =
+        localization.translate(videoBase, ['video-url', 'youtube-url']) +
+        (videoQuery ? `?${videoQuery}` : '');
+      iframe.src = updatedVideoLocalizedSrc;
+    }
+  });
 
   return videoTabContainerDiv;
 }
@@ -208,15 +242,31 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     active: lastTab !== null ? lastTab : 0, // Set starting tab.
   });
 
+  const downloadSrc = options.download;
+  const downloadLocalizedSrc = localization.translate(downloadSrc, [
+    'video-url',
+    'fallback-video-url',
+  ]);
+
   var download = $('<a/>')
     .append($('<i class="fa-solid fa-download" />'))
     .addClass('download-video btn')
     .attr('aria-label', 'Download Video')
     .css('float', 'left')
-    .attr('href', options.download);
+    .attr('href', downloadLocalizedSrc);
   if (document.dir === 'rtl') {
     download.css('float', 'right');
   }
+
+  localization.on('change', () => {
+    const link = download[0];
+    const updatedDownloadLocalizedSrc = localization.translate(downloadSrc, [
+      'video-url',
+      'fallback-video-url',
+    ]);
+    link?.setAttribute('href', updatedDownloadLocalizedSrc);
+  });
+
   var nav = $div.find(TAB_NAV_CLASS);
   nav.append(download);
 
