@@ -231,7 +231,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -297,7 +297,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -343,7 +343,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -373,7 +373,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -434,7 +434,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -500,7 +500,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
@@ -541,7 +541,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = Level.create(
       name: level_name,
@@ -596,8 +596,8 @@ class BlocklyTest < ActiveSupport::TestCase
       },
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
-    I18n.backend.store_translations :en, behaviors: {this_sprite: "this sprite"}
+    stub_store_translations test_locale, custom_i18n
+    stub_store_translations :en, behaviors: {this_sprite: "this sprite"}
 
     level = Level.create(
       name: level_name,
@@ -635,7 +635,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -707,7 +707,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(
       :level,
@@ -768,7 +768,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = create(
       :level,
@@ -819,7 +819,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     assert_equal level.authored_hints, level.localized_authored_hints
   end
@@ -857,7 +857,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -925,7 +925,7 @@ class BlocklyTest < ActiveSupport::TestCase
       short_instructions: 'short instructions',
       game_id: Game.by_name('Maze')
     )
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
     summary = level.summarize_for_lesson_show(false)
     assert_equal 'translated long instructions', summary[:longInstructions]
     assert_equal 'translated short instructions', summary[:shortInstructions]
@@ -998,7 +998,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -1055,7 +1055,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -1121,7 +1121,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -1183,7 +1183,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Create a simple blockly level XML structure containing the
     # original string, then localize the XML structure.
@@ -1257,7 +1257,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     assert_equal 'translated long instructions', level.localized_long_instructions
   end
@@ -1280,7 +1280,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     assert_equal 'translated long instructions with [`block`](#bloc)', level.localized_long_instructions
   end
@@ -1307,7 +1307,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n_libraries
+    stub_store_translations test_locale, custom_i18n_libraries
     # Create a start_libraries JSON structure containing a translatable library and a non-translatable library.
     start_libraries = JSON.generate(
       [{name: i18n_library_name,
@@ -1355,7 +1355,7 @@ class BlocklyTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n_libraries
+    stub_store_translations test_locale, custom_i18n_libraries
     # Create a start_libraries blockly level JSON structure containing the
     # a translatable library and a non-translatable library.
     start_libraries = JSON.generate(

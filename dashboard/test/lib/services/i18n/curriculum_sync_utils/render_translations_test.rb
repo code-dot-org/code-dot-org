@@ -20,7 +20,7 @@ class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSuppor
         }
       }
     }
-    ::I18n.backend.store_translations(@test_locale, custom_i18n)
+    stub_store_translations(@test_locale, custom_i18n)
   end
 
   setup do

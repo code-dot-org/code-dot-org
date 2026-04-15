@@ -10,7 +10,7 @@ class ApplicationTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations I18n.default_locale, english_strings
+    stub_store_translations I18n.default_locale, english_strings
     assert_equal I18n.t("data.test.example"), "english"
 
     # Second, verify that we get the English string back even from another
@@ -28,7 +28,7 @@ class ApplicationTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations test_locale, translated_strings
+    stub_store_translations test_locale, translated_strings
     assert_equal I18n.t("data.test.example"), "translated"
   end
 end

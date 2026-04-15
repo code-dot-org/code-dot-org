@@ -1053,7 +1053,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         }
       }
     }
-    I18n.backend.store_translations I18n.default_locale, custom_i18n
+    stub_store_translations I18n.default_locale, custom_i18n
 
     get :show, params: {
       course_course_name: script_level.script.original_unit_group.name,

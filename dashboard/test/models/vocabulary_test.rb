@@ -123,7 +123,7 @@ class VocabularyTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations(test_locale, custom_i18n)
+    stub_store_translations(test_locale, custom_i18n)
     assert_equal("English word", vocabulary.summarize_for_lesson_show[:word])
     assert_equal("English definition", vocabulary.summarize_for_lesson_show[:definition])
     I18n.locale = test_locale

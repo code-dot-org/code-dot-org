@@ -192,7 +192,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
     test_locale = :'te-ST'
     I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # Expected summary with translations
     expected_sublevel_summary = @bubble_choice.summarize_sublevels

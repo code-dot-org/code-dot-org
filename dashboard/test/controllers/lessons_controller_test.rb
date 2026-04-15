@@ -46,7 +46,7 @@ class LessonsControllerTest < ActionController::TestCase
       }
     }
 
-    I18n.backend.store_translations 'en-US', custom_i18n
+    stub_store_translations 'en-US', custom_i18n
     assert_equal @script_title, @lesson.script.localized_title
 
     @update_params = {
@@ -325,7 +325,7 @@ class LessonsControllerTest < ActionController::TestCase
       }
     }
 
-    I18n.backend.store_translations 'en-US', custom_i18n
+    stub_store_translations 'en-US', custom_i18n
     assert_equal @lesson_name, solo_lesson_in_script.localized_name
 
     get :show, params: {

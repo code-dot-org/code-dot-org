@@ -41,7 +41,7 @@ class LocalizableTest < ActiveSupport::TestCase
 
   before do
     I18n.locale = I18n.default_locale
-    I18n.backend.store_translations(
+    stub_store_translations(
       :es, {
         data: {
           described_models: {

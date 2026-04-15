@@ -35,7 +35,7 @@ class AilabTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     options = level.non_blockly_puzzle_level_options
     # The option keys are camelized for the frontend

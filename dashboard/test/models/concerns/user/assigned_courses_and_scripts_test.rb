@@ -544,7 +544,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
     before do
       I18n.locale = locale
-      I18n.backend.store_translations(locale, custom_i18n)
+      stub_store_translations(locale, custom_i18n)
 
       create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd1')), position: 1)
       create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd2')), position: 2)

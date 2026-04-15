@@ -99,7 +99,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations(test_locale, custom_i18n)
+    stub_store_translations(test_locale, custom_i18n)
     assert_equal("English name", activity_section.summarize[:name])
     assert_equal("English description", activity_section.summarize[:description])
     I18n.locale = test_locale

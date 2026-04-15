@@ -29,7 +29,7 @@ class WidgetTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations(test_locale, translation_data)
+    stub_store_translations(test_locale, translation_data)
 
     assert @level.should_localize?
     assert_equal translated_instruction, @level.widget_app_options['longInstructions']

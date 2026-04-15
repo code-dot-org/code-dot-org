@@ -34,7 +34,7 @@ class ObjectiveTest < ActiveSupport::TestCase
         }
       }
     }
-    I18n.backend.store_translations(test_locale, custom_i18n)
+    stub_store_translations(test_locale, custom_i18n)
     assert_equal("English description", objective.summarize_for_lesson_show[:description])
     I18n.locale = test_locale
     assert_equal("Translated description", objective.summarize_for_lesson_show[:description])

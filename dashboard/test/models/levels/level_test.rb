@@ -685,7 +685,7 @@ class LevelTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = Level.create(
       name: level_name,
@@ -721,7 +721,7 @@ class LevelTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = Level.create(
       name: level_name,
@@ -740,7 +740,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'create unplugged level from level builder' do
     Unplugged.any_instance.stubs(:update_i18n).with do |name, new_strings|
-      I18n.backend.store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}
+      stub_store_translations I18n.locale, {'data' => {'unplugged' => {name => new_strings}}}
     end
 
     data = {name: 'New Unplugged Name', title: 'Test Unplugged Level', description: 'This is a test.'}
@@ -1334,7 +1334,7 @@ class LevelTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     level = Level.create(
       name: level_name,
@@ -1369,7 +1369,7 @@ class LevelTest < ActiveSupport::TestCase
       }
     }
 
-    I18n.backend.store_translations test_locale, custom_i18n
+    stub_store_translations test_locale, custom_i18n
 
     # An "External" level is a prime example of where this will generally get
     # used in a level. This is used for blocks of text, such as the preliminary
@@ -1613,7 +1613,7 @@ class LevelTest < ActiveSupport::TestCase
         let(:callout_localized_text) {'expected_callout_localized_text'}
 
         before do
-          I18n.backend.store_translations I18n.locale, {
+          stub_store_translations I18n.locale, {
             data: {
               callouts: {
                 level.name => {
