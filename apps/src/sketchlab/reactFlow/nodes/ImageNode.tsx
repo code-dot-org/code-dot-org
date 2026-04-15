@@ -41,9 +41,11 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         commitAltEdit();
+        altInputRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
       }
       if (event.key === 'Escape') {
         setIsEditingAlt(false);
+        altInputRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
       }
     },
     [commitAltEdit]
@@ -82,6 +84,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
           onClick={startEditingAlt}
           aria-label="Edit alt text"
           title="Edit alt text"
+          tabIndex={-1}
         >
           Alt
         </button>

@@ -10,7 +10,7 @@ import {
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   ReactFlowSource,
@@ -20,6 +20,7 @@ import {
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
+import {computeTabOrder} from '../computeTabOrder';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
@@ -96,6 +97,53 @@ export default function ReactFlowCanvas({
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
 
+  // Logical tab order: connected nodes first (following edges), then orphans.
+  const tabOrder = useMemo(
+    () =>
+      computeTabOrder(
+        nodes as SketchlabReactFlowNode[],
+        edges as SketchlabReactFlowEdge[]
+      ),
+    [nodes, edges]
+  );
+
+  // Roving tabindex: exactly one node has tabIndex 0, the rest get -1.
+  const [activeTabNodeId, setActiveTabNodeId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // If the active node was deleted, reset to the first in tab order.
+    if (activeTabNodeId && !tabOrder.includes(activeTabNodeId)) {
+      setActiveTabNodeId(tabOrder[0] ?? null);
+    }
+  }, [tabOrder, activeTabNodeId]);
+
+  useEffect(() => {
+    const activeId = activeTabNodeId ?? tabOrder[0] ?? null;
+    const nodeEls = document.querySelectorAll<HTMLElement>('.react-flow__node');
+    nodeEls.forEach(el => {
+      el.tabIndex = el.getAttribute('data-id') === activeId ? 0 : -1;
+    });
+  }, [tabOrder, activeTabNodeId]);
+
+  const focusNodeById = useCallback((nodeId: string) => {
+    setActiveTabNodeId(nodeId);
+    const el = document.querySelector<HTMLElement>(
+      `.react-flow__node[data-id="${nodeId}"]`
+    );
+    el?.focus();
+  }, []);
+
+  const handleFocusCapture = useCallback(
+    (e: React.FocusEvent) => {
+      const nodeEl = (e.target as HTMLElement).closest('.react-flow__node');
+      const nodeId = nodeEl?.getAttribute('data-id');
+      if (nodeId && tabOrder.includes(nodeId)) {
+        setActiveTabNodeId(nodeId);
+      }
+    },
+    [tabOrder]
+  );
+
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -140,12 +188,13 @@ export default function ReactFlowCanvas({
       if (readOnly) return;
 
       const target = e.target as HTMLElement;
-      // Don't intercept when the user is editing text content.
-      if (
+      // Don't intercept non-Tab keys when the user is editing text content.
+      // Tab still uses our logical order so the user can advance between nodes.
+      const isEditing =
         target.isContentEditable ||
         target.tagName === 'INPUT' ||
-        target.tagName === 'TEXTAREA'
-      ) {
+        target.tagName === 'TEXTAREA';
+      if (isEditing && e.key !== 'Tab') {
         return;
       }
 
@@ -177,19 +226,31 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      // In connect mode, Tab cycles between nodes (skipping internal elements).
-      if (e.key === 'Tab' && connectingFrom) {
-        const nodeEls = Array.from(
-          document.querySelectorAll<HTMLElement>('.react-flow__node')
-        );
-        if (nodeEls.length === 0) return;
-        const currentIdx = nodeEls.findIndex(el => el.contains(target));
+      // Tab uses the computed logical tab order for both connect and normal mode.
+      if (e.key === 'Tab') {
+        if (tabOrder.length === 0) return;
+        const currentIdx = focusedNodeId ? tabOrder.indexOf(focusedNodeId) : -1;
         const direction = e.shiftKey ? -1 : 1;
-        const nextIdx =
-          (currentIdx + direction + nodeEls.length) % nodeEls.length;
-        e.preventDefault();
-        nodeEls[nextIdx]?.focus();
-        return;
+        const nextIdx = currentIdx + direction;
+
+        if (connectingFrom) {
+          // Connect mode: wrap around.
+          e.preventDefault();
+          const wrapped =
+            ((nextIdx % tabOrder.length) + tabOrder.length) % tabOrder.length;
+          focusNodeById(tabOrder[wrapped]);
+          return;
+        }
+
+        // Normal mode: move through logical order; escape at boundaries.
+        if (focusedNodeId !== undefined) {
+          if (nextIdx >= 0 && nextIdx < tabOrder.length) {
+            e.preventDefault();
+            focusNodeById(tabOrder[nextIdx]);
+          }
+          // else: out of bounds -- let focus leave the canvas naturally.
+          return;
+        }
       }
 
       // Enter on a different node completes the connection.
@@ -227,9 +288,24 @@ export default function ReactFlowCanvas({
         e.preventDefault();
         setConnectingFrom(null);
         setConnectAnnouncement('Connect mode cancelled.');
+        return;
+      }
+
+      // Enter on a focused node (outside connect mode) enters edit mode.
+      if (e.key === 'Enter' && focusedNodeId) {
+        const nodeEl = document.querySelector<HTMLElement>(
+          `.react-flow__node[data-id="${focusedNodeId}"]`
+        );
+        const editable = nodeEl?.querySelector<HTMLElement>(
+          '[role="textbox"], button, input'
+        );
+        if (editable) {
+          e.preventDefault();
+          editable.focus();
+        }
       }
     },
-    [connectingFrom, nodes, readOnly, setEdges]
+    [connectingFrom, focusNodeById, nodes, readOnly, setEdges, tabOrder]
   );
 
   // Apply a CSS class to the source node while in connect mode.
@@ -294,6 +370,7 @@ export default function ReactFlowCanvas({
           [styles.connectMode]: !!connectingFrom,
         })}
         onKeyDown={handleKeyDown}
+        onFocusCapture={handleFocusCapture}
       >
         {!readOnly && <Toolbar onAddNode={handleAddNode} />}
         <div aria-live="assertive" className={styles.srOnly}>
@@ -316,7 +393,7 @@ export default function ReactFlowCanvas({
           nodesConnectable={!readOnly}
           elementsSelectable={!readOnly}
           nodesFocusable={true}
-          edgesFocusable={true}
+          edgesFocusable={false}
           disableKeyboardA11y={false}
         >
           <Background />

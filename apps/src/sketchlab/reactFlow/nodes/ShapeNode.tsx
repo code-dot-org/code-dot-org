@@ -106,12 +106,14 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
           commitEdit();
+          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
         if (event.key === 'Escape') {
           if (labelRef.current) {
             labelRef.current.textContent = label;
           }
           setIsEditing(false);
+          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
       }
     },
@@ -139,7 +141,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         <ShapeSvg shapeType={shapeType} />
       )}
 
-      {/* Text label: click or tab to start editing */}
+      {/* Text label: click or enter to start editing */}
       <div
         ref={labelRef}
         className={styles.label}
@@ -148,7 +150,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         onFocus={startEditing}
         onBlur={commitEdit}
         onKeyDown={handleLabelKeyDown}
-        tabIndex={0}
+        tabIndex={-1}
         role="textbox"
         aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
       >

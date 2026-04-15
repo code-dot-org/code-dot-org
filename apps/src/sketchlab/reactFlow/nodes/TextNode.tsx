@@ -52,12 +52,14 @@ function TextNode({id, data, selected}: TextNodeProps) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
           commitEdit();
+          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
         if (event.key === 'Escape') {
           if (textRef.current) {
             textRef.current.textContent = text;
           }
           setIsEditing(false);
+          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
       }
     },
@@ -84,7 +86,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
         onFocus={startEditing}
         onBlur={commitEdit}
         onKeyDown={handleKeyDown}
-        tabIndex={0}
+        tabIndex={-1}
         role="textbox"
         aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
       >
