@@ -152,6 +152,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
   end
 
+  # GET /api/v1/sections/demo/presets
+  def presets
+    authorize! :create, Section
+
+    preset_views = Policies::DemoSections.preset_views_for_all_types
+    return head :not_found if preset_views.empty?
+
+    render json: preset_views
+  end
+
   # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
