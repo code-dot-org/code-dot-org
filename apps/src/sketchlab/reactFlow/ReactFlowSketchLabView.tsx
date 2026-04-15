@@ -68,37 +68,35 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 
-function ReactFlowSketchLabViewInner({
-  levelProperties,
-}: LabProps<LevelProperties>) {
-  const {
-    currentSources,
-    updateSources,
-    setReinitializationHandler,
-    showStartOverDialog,
-  } = useSources<ReactFlowSketchLabSources>();
+// ---- Inner canvas component, keyed by mountKey so it fully remounts ----
+// when sources change externally (page load, version history, start over).
+// This follows the same pattern as ExcalidrawSketchLabView where the
+// Excalidraw component is keyed by excalidrawMountKey.
 
-  // Deep-clone sources so React Flow can mutate node style objects (e.g. during resize).
-  // The sources system freezes returned objects, but NodeResizer writes to node.style in place.
-  const initialSource = structuredClone(currentSources.source ?? {});
-  const [nodes, setNodes, onNodesChange] = useNodesState(
-    (initialSource.nodes as Node[]) ?? []
-  );
-  const [edges, setEdges, onEdgesChange] = useEdgesState(
-    (initialSource.edges as Edge[]) ?? []
-  );
+interface CanvasProps {
+  updateSources: ReturnType<
+    typeof useSources<ReactFlowSketchLabSources>
+  >['updateSources'];
+  initialNodes: Node[];
+  initialEdges: Edge[];
+  initialViewport: Viewport | undefined;
+  colorMode: 'light' | 'dark';
+}
+
+function ReactFlowCanvas({
+  updateSources,
+  initialNodes,
+  initialEdges,
+  initialViewport,
+  colorMode,
+}: CanvasProps) {
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] = useState<Viewport | undefined>(
-    initialSource.viewport
+    initialViewport
   );
 
   const {screenToFlowPosition} = useReactFlow();
-
-  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
-  const hasRun = useAppSelector(state => state.lab2System.hasRun);
-  const {theme} = useTheme();
-  const colorMode = theme.toLowerCase() as 'light' | 'dark';
-
-  // Track how many nodes have been added this session to stagger placement.
   const addedNodeCountRef = useRef(0);
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -120,41 +118,6 @@ function ReactFlowSketchLabViewInner({
       }
     };
   }, [nodes, edges, viewport, updateSources]);
-
-  // Since there's no run button in Sketch Lab, set hasRun to true by default
-  // to enable the Submit button on submittable levels.
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(setHasRun(true));
-    return () => {
-      dispatch(setHasRun(false));
-    };
-  }, [dispatch]);
-
-  // Mount key used to force-reset the React Flow canvas on reinitialization
-  // (e.g. when version history loads a different version).
-  const [mountKey, setMountKey] = useState(0);
-  const reinitializationHandler = useCallback(() => {
-    setNodes([]);
-    setEdges([]);
-    setViewport(undefined);
-    addedNodeCountRef.current = 0;
-    setMountKey(key => key + 1);
-  }, [setNodes, setEdges]);
-
-  useEffect(() => {
-    setReinitializationHandler(reinitializationHandler);
-  }, [setReinitializationHandler, reinitializationHandler]);
-
-  const onLoadVersion = useCallback(
-    (sources: ProjectSources) => {
-      if (sources) {
-        updateSources(sources as ReactFlowSketchLabSources);
-      }
-      reinitializationHandler();
-    },
-    [updateSources, reinitializationHandler]
-  );
 
   const onConnect: OnConnect = useCallback(
     connection => setEdges(eds => addEdge(connection, eds)),
@@ -193,7 +156,6 @@ function ReactFlowSketchLabViewInner({
       setNodes(nds => [...nds, newNode]);
 
       // Move focus to the new node after React Flow renders it.
-      // Blur the active toolbar button first, then wait for the DOM element.
       (document.activeElement as HTMLElement)?.blur();
       setTimeout(() => {
         const nodeEl = document.querySelector<HTMLElement>(
@@ -204,6 +166,78 @@ function ReactFlowSketchLabViewInner({
     },
     [screenToFlowPosition, setNodes]
   );
+
+  return (
+    <div className={styles.canvasContainer}>
+      <Toolbar onAddNode={handleAddNode} />
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+        nodeTypes={NODE_TYPES}
+        onMoveEnd={handleMoveEnd}
+        defaultViewport={initialViewport}
+        fitView={!initialViewport}
+        colorMode={colorMode}
+        deleteKeyCode="Delete"
+        proOptions={{hideAttribution: true}}
+      >
+        <Background />
+        <Controls />
+      </ReactFlow>
+    </div>
+  );
+}
+
+// ---- Outer component: layout, sources, reinitialization ----
+
+function ReactFlowSketchLabViewInner({
+  levelProperties,
+}: LabProps<LevelProperties>) {
+  const {
+    currentSources,
+    updateSources,
+    setReinitializationHandler,
+    showStartOverDialog,
+  } = useSources<ReactFlowSketchLabSources>();
+
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const {theme} = useTheme();
+  const colorMode = theme.toLowerCase() as 'light' | 'dark';
+
+  // Remount the canvas to re-read sources, same pattern as Excalidraw's
+  // key={excalidrawMountKey}.
+  const [mountKey, setMountKey] = useState(0);
+  const reinitializationHandler = useCallback(() => {
+    setMountKey(key => key + 1);
+  }, []);
+
+  useEffect(() => {
+    setReinitializationHandler(reinitializationHandler);
+  }, [setReinitializationHandler, reinitializationHandler]);
+
+  const onLoadVersion = useCallback(
+    (sources: ProjectSources) => {
+      if (sources) {
+        updateSources(sources as ReactFlowSketchLabSources);
+      }
+      reinitializationHandler();
+    },
+    [updateSources, reinitializationHandler]
+  );
+
+  // Since there's no run button in Sketch Lab, set hasRun to true by default
+  // to enable the Submit button on submittable levels.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -232,6 +266,14 @@ function ReactFlowSketchLabViewInner({
     },
     appName: 'sketchlab',
   });
+
+  // Deep-clone so React Flow can mutate node style objects during resize.
+  const source = currentSources.source;
+  const hasValidNodes = Array.isArray(source?.nodes);
+  const cloned = hasValidNodes ? structuredClone(source) : null;
+  const initialNodes = (cloned?.nodes as Node[]) ?? [];
+  const initialEdges = (cloned?.edges as Edge[]) ?? [];
+  const initialViewport = cloned?.viewport as Viewport | undefined;
 
   return (
     <div className={styles.sketchlabContainer}>
@@ -284,27 +326,14 @@ function ReactFlowSketchLabViewInner({
           {teacherViewingStudent && (
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
-          <div className={styles.canvasContainer}>
-            <Toolbar onAddNode={handleAddNode} />
-            <ReactFlow
-              key={mountKey}
-              nodes={nodes}
-              edges={edges}
-              onNodesChange={onNodesChange}
-              onEdgesChange={onEdgesChange}
-              onConnect={onConnect}
-              nodeTypes={NODE_TYPES}
-              onMoveEnd={handleMoveEnd}
-              defaultViewport={viewport}
-              fitView={!viewport}
-              colorMode={colorMode}
-              deleteKeyCode="Delete"
-              proOptions={{hideAttribution: true}}
-            >
-              <Background />
-              <Controls />
-            </ReactFlow>
-          </div>
+          <ReactFlowCanvas
+            key={mountKey}
+            updateSources={updateSources}
+            initialNodes={initialNodes}
+            initialEdges={initialEdges}
+            initialViewport={initialViewport}
+            colorMode={colorMode}
+          />
         </PanelContainer>
       </div>
     </div>
