@@ -9,7 +9,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -18,12 +17,15 @@ import i18n from '@cdo/locale';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
+  fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
+import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import OnboardingChecklist from './OnboardingChecklist';
+import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -33,7 +35,6 @@ import styles from './teacherHomepage.module.scss';
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
-
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
@@ -42,10 +43,16 @@ interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
+type DemoSectionNotice = {
+  text: string;
+  type: 'warning' | 'danger';
+};
+
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
+  const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
@@ -71,9 +78,14 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   ] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
+  const [demoSectionNotice, setDemoSectionNotice] =
+    React.useState<DemoSectionNotice | null>(null);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
+    if (isDemoSectionEnabled) {
+      dispatch(fetchDemoPresets());
+    }
     dispatch(asyncLoadCoteacherInvite());
 
     // Fetch personalization alert dismissal status
@@ -112,7 +124,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     };
 
     fetchTeachingProfileData();
-  }, [dispatch]);
+  }, [dispatch, isDemoSectionEnabled]);
 
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
@@ -200,6 +212,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     React.useState<ArchivedToggleOption>('teaching');
 
   const sections = useAppSelector(state => state.teacherSections.sections);
+  const demoPresets = useAppSelector(
+    state => state.teacherSections.demoPresets
+  );
+  const demoPresetsAreLoaded = useAppSelector(
+    state => state.teacherSections.demoPresetsAreLoaded
+  );
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
+  const totalSections = Object.keys(sections).length;
+  const demoType = React.useMemo(
+    () => pickDemoType(gradesTeaching),
+    [gradesTeaching]
+  );
+  const selectedDemoPreset = demoPresets[demoType];
+  const shouldShowDemoSectionCard =
+    isDemoSectionEnabled &&
+    totalSections === 0 &&
+    demoPresetsAreLoaded &&
+    !!selectedDemoPreset;
 
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
@@ -263,6 +295,18 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 }}
               />
             )}
+            {demoSectionNotice && (
+              <Alert
+                type={
+                  demoSectionNotice.type === 'warning'
+                    ? alertTypes.warning
+                    : alertTypes.danger
+                }
+                text={demoSectionNotice.text}
+                className={styles.notificationBanner}
+                onClose={() => setDemoSectionNotice(null)}
+              />
+            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
@@ -273,7 +317,17 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               destructiveLoad={true}
             />
             {!!isMiniTutorialEnabled && <OnboardingChecklist />}
-            {numSections === 0 ? (
+            {isDemoSectionEnabled &&
+            totalSections === 0 &&
+            !demoPresetsAreLoaded ? null : shouldShowDemoSectionCard ? (
+              <ul className={styles.sectionList}>
+                <DemoSectionCard
+                  demoType={demoType}
+                  onNotice={setDemoSectionNotice}
+                  preset={selectedDemoPreset!}
+                />
+              </ul>
+            ) : numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
               <SectionList
