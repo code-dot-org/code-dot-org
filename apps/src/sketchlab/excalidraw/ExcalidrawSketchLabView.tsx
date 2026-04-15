@@ -323,7 +323,7 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  useSketchlabTour({levelProperties: levelProperties});
+  useSketchlabTour({levelProperties});
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
