@@ -126,7 +126,7 @@ namespace :ci do
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name 'workshop_enrollment.feature' | sort`.split("\n").map {|f| f[2..]}
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       # Use --local to configure the UI tests to run against localhost and
@@ -140,6 +140,7 @@ namespace :ci do
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
+          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -208,13 +209,16 @@ end
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'iPad'
-  browsers << 'iPhone'
+  browsers << 'Chrome' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Safari' if CI::Utils.tagged?(TEST_SAFARI_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPad' if CI::Utils.tagged?(TEST_IPAD_TAG) || CI::Utils.tagged?(TEST_IOS_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPhone' if CI::Utils.tagged?(TEST_IPHONE_TAG) || CI::Utils.tagged?(TEST_IOS_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers
 end
 
 def test_eyes?
-  false
+  !CI::Utils.tagged?(SKIP_EYES)
 end
 
 def close_sauce_connect
