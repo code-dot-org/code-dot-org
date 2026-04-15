@@ -317,6 +317,25 @@ class SectionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
+    sign_in @teacher
+    unit_group = create(
+      :unit_group,
+      name: 'artificial-intelligence-foundations-2025',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    unit = create(:unit, :with_levels, name: 'aif2-2025')
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    unit.lessons.first.update!(has_lesson_plan: true)
+
+    get :retrieve_lessons_for_dropdown, params: {demo_type: 'high'}
+
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal "/teacher_dashboard/sections/:sectionId/courses/artificial-intelligence-foundations-2025/units/1", response_json.first['value']
+    assert_equal "/courses/artificial-intelligence-foundations-2025/units/1/lessons/1/levels/1", response_json.second['value']
+  end
+
   describe 'POST /sections/:id/log_in' do
     subject(:log_in_section) {post :log_in, params: {id: @picture_section.code, **section_params}}
 

@@ -192,6 +192,7 @@ Dashboard::Application.routes.draw do
         get :retrieve_lessons_for_dropdown
       end
       collection do
+        get :retrieve_lessons_for_dropdown
         post 'section_instructors_verified'
         post 'archive_all'
       end
