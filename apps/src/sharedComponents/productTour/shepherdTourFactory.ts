@@ -8,7 +8,7 @@ interface CreateShepherdTourOptions {
 }
 
 // Creates a Shepherd.js Tour instance with shared base configuration.
-// Used by useOnboardingTour and useTeacherHomepageTour.
+// Used by useOnboardingTour and useCreateSectionTour.
 export const createShepherdTour = ({
   stepClass,
   additionalStepOptions,

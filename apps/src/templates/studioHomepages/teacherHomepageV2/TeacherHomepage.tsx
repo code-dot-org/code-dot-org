@@ -27,7 +27,7 @@ import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
-import useTeacherHomepageTour from './useTeacherHomepageTour';
+import useCreateSectionTour from './useCreateSectionTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -49,7 +49,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     DCDO.get('onboarding-enabled', false);
   // TODO: replace with real data once teacher grade level is stored on the platform
   const isElementaryTeacher = false;
-  const tour = useTeacherHomepageTour(isElementaryTeacher);
+  const tour = useCreateSectionTour(isElementaryTeacher);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);

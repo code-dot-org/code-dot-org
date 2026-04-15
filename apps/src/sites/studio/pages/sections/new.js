@@ -3,7 +3,7 @@ import React from 'react';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
-import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useTeacherHomepageTour';
+import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';

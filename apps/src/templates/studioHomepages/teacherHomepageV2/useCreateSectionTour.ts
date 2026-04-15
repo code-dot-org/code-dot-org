@@ -32,7 +32,7 @@ export const resumeCreateSectionOnboardingTour = (
   tour.show(savedStepId);
 };
 
-const useTeacherHomepageTour = (isElementaryTeacher: boolean) => {
+const useCreateSectionTour = (isElementaryTeacher: boolean) => {
   const {tour} = useOnboardingTour({
     getSteps: tour =>
       createSectionOnboardingTourSteps(tour, isElementaryTeacher),
@@ -42,4 +42,4 @@ const useTeacherHomepageTour = (isElementaryTeacher: boolean) => {
   return tour;
 };
 
-export default useTeacherHomepageTour;
+export default useCreateSectionTour;
