@@ -51,6 +51,7 @@ module ImageModeration
       # ^ (minimum bounding box): scale up so both dimensions are at least MIN_MODERATION_DIMENSION,
       # preserving aspect ratio (short side hits the minimum, long side may exceed it).
       image.resize "#{MIN_MODERATION_DIMENSION}x#{MIN_MODERATION_DIMENSION}^"
+      raw_data = image.to_blob
     end
 
     if image.width > MAX_MODERATION_DIMENSION || image.height > MAX_MODERATION_DIMENSION
@@ -60,8 +61,9 @@ module ImageModeration
       # Note that if an image has an extreme aspect ratio, the smaller side may be scaled up in branch above,
       # but then scaled down here to a smaller dimension than MIN_MODERATION_DIMENSION on one side (very unlikely scenario).
       image.resize "#{MAX_MODERATION_DIMENSION}x#{MAX_MODERATION_DIMENSION}>"
+      raw_data = image.to_blob
     end
-    raw_data = image.to_blob
+
     if raw_data.bytesize > MAX_MODERATION_SIZE
       # Scale factor is approximate: file size is not strictly proportional to pixel
       # count for compressed formats, so scale conservatively to stay under the limit.
@@ -72,7 +74,7 @@ module ImageModeration
       raw_data = image.to_blob
     end
 
-    [StringIO.new(raw_data), content_type]
+    [StringIO.new(raw_data), actual_type]
   rescue MiniMagick::Invalid, MiniMagick::Error
     [StringIO.new(raw_data), actual_type]
   end
