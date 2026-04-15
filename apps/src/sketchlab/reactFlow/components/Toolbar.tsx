@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Paper, Tooltip} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import React, {ChangeEvent, useCallback, useId} from 'react';
@@ -16,72 +17,6 @@ import {
 import {ShapeType} from '../types';
 
 import styles from './toolbar.module.scss';
-
-// SVG icons for each shape type.
-function RectIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <rect x="2" y="5" width="16" height="10" fill="currentColor" />
-    </svg>
-  );
-}
-
-function TriangleIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <polygon points="10,2 18,18 2,18" fill="currentColor" />
-    </svg>
-  );
-}
-
-function CircleIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <circle cx="10" cy="10" r="8" fill="currentColor" />
-    </svg>
-  );
-}
-
-function ImageIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <rect
-        x="2"
-        y="3"
-        width="16"
-        height="14"
-        rx="1"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <circle cx="7" cy="8" r="1.5" fill="currentColor" />
-      <polyline
-        points="2,15 7,10 11,14 14,11 18,15"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-    </svg>
-  );
-}
-
-function TextIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <text
-        x="10"
-        y="15"
-        textAnchor="middle"
-        fontSize="16"
-        fontWeight="bold"
-        fill="currentColor"
-      >
-        T
-      </text>
-    </svg>
-  );
-}
 
 interface ToolbarProps {
   onAddNode: (
@@ -164,7 +99,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           color="tertiary"
           variant="outlined"
         >
-          <RectIcon />
+          <FontAwesomeV6Icon iconName="square" />
         </IconButton>
       </Tooltip>
 
@@ -177,7 +112,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           color="tertiary"
           variant="outlined"
         >
-          <TriangleIcon />
+          <FontAwesomeV6Icon iconName="triangle" />
         </IconButton>
       </Tooltip>
 
@@ -190,7 +125,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           color="tertiary"
           variant="outlined"
         >
-          <CircleIcon />
+          <FontAwesomeV6Icon iconName="circle" />
         </IconButton>
       </Tooltip>
 
@@ -203,7 +138,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           color="tertiary"
           variant="outlined"
         >
-          <TextIcon />
+          <FontAwesomeV6Icon iconName="font" />
         </IconButton>
       </Tooltip>
 
@@ -216,7 +151,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           color="tertiary"
           variant="outlined"
         >
-          <ImageIcon />
+          <FontAwesomeV6Icon iconName="image" />
         </IconButton>
       </Tooltip>
 
