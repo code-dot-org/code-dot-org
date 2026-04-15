@@ -1,14 +1,17 @@
 .textNode {
   position: relative;
+  outline: none;
   width: 100%;
   height: 100%;
-  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
   border: 1px solid transparent;
   border-radius: 4px;
   transition: border-color 0.15s;
+  // Ensure handles stay at the node boundary, not pushed by flex content.
+  box-sizing: border-box;
 
   &:hover {
     border-color: var(--borders-neutral-strong);
@@ -19,7 +22,6 @@
   text-align: center;
   cursor: default;
   user-select: none;
-  max-width: 90%;
   min-width: 40px;
   min-height: 20px;
   word-break: break-word;

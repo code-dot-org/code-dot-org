@@ -117,10 +117,13 @@ export default function ReactFlowCanvas({
         type,
         position,
         data: data as unknown as Node['data'],
-        style: {
-          width: DEFAULT_NODE_WIDTH,
-          height: DEFAULT_NODE_HEIGHT,
-        },
+        // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+        ...(type !== 'text' && {
+          style: {
+            width: DEFAULT_NODE_WIDTH,
+            height: DEFAULT_NODE_HEIGHT,
+          },
+        }),
       };
 
       setNodes(nds => [...nds, newNode]);
