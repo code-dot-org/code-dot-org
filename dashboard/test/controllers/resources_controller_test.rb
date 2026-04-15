@@ -61,7 +61,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test 'can create resource with for_jit_pl param' do
     sign_in @levelbuilder
-    unit_group = create(:unit_group, name: 'just-in-time-pl')
+    unit_group = create(:unit_group, name: CDO.jit_pl_course_name || 'just-in-time-pl')
     course_version = create(:course_version, content_root: unit_group)
     assert_creates(Resource) do
       post :create, params: {name: 'jit resource', url: 'code.org', forJitPl: true}
@@ -73,7 +73,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test 'search with forJitPl uses just-in-time-pl course version' do
     sign_in @levelbuilder
-    unit_group = create(:unit_group, name: 'just-in-time-pl')
+    unit_group = create(:unit_group, name: CDO.jit_pl_course_name || 'just-in-time-pl')
     course_version = create(:course_version, content_root: unit_group)
     jit_resource = create(:resource, name: 'jit resource', course_version: course_version)
     create(:resource, name: 'jit resource', course_version: create(:course_version))

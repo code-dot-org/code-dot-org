@@ -1,10 +1,9 @@
-import {useEffect, useMemo} from 'react';
+import {useMemo} from 'react';
 
 import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
 } from '@cdo/apps/aichat/constants';
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -12,13 +11,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface UseAiChatDisabledStateParams {
   appName?: string;
-  isPredictLevel: boolean;
-  hasSubmittedPredictResponse: boolean;
+  isPredictLevel?: boolean;
+  hasSubmittedPredictResponse?: boolean;
 }
 
 export interface AiChatDisabledState {
-  chatDisabled: boolean;
-  chatDisabledMessage?: string;
+  disabled: boolean;
+  disabledMessage?: string;
 }
 
 /**
@@ -30,10 +29,9 @@ export interface AiChatDisabledState {
  */
 export function useAiChatDisabledState({
   appName,
-  isPredictLevel,
-  hasSubmittedPredictResponse,
-}: UseAiChatDisabledStateParams) {
-  const {setChatDisabledState} = useAiChatDisabled();
+  isPredictLevel = false,
+  hasSubmittedPredictResponse = false,
+}: UseAiChatDisabledStateParams): AiChatDisabledState {
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const sectionAccessLevel = useAppSelector(
     state => selectedSectionSelector(state)?.aiChatAccessLevel
@@ -51,7 +49,7 @@ export function useAiChatDisabledState({
 
   const disabledState: AiChatDisabledState = useMemo(() => {
     if (!appName) {
-      return {chatDisabled: true};
+      return {disabled: true};
     }
 
     // Levelbuilders should always be enabled so they don't need to do extra account setup when building levels.
@@ -62,9 +60,8 @@ export function useAiChatDisabledState({
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
     if (isPredictLevel && !hasSubmittedPredictResponse && !getIsStartMode()) {
       return {
-        chatDisabled: true,
-        chatDisabledMessage:
-          'Chat is disabled until you submit your prediction.',
+        disabled: true,
+        disabledMessage: 'Chat is disabled until you submit your prediction.',
       };
     }
 
@@ -76,32 +73,29 @@ export function useAiChatDisabledState({
       if (
         enabledForUser &&
         sectionAccessLevel &&
-        !areAiChatToolsEnabled({
-          appName: appName!,
-          aiChatAccessLevel: sectionAccessLevel,
-        })
+        !areAiChatToolsEnabled({appName, aiChatAccessLevel: sectionAccessLevel})
       ) {
         return {
-          chatDisabled: true,
-          chatDisabledMessage: 'Chat is disabled for this class section.',
+          disabled: true,
+          disabledMessage: 'Chat is disabled for this class section.',
         };
       }
       // If the teacher doesn't have access, show the appropriate message to direct the teacher on how to get access.
       if (!enabledForUser) {
         return {
-          chatDisabled: true,
-          chatDisabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+          disabled: true,
+          disabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
         };
       }
-      return {chatDisabled: false};
+      return {disabled: false};
     }
 
     // User is a student.
     return enabledForUser
-      ? {chatDisabled: false}
+      ? {disabled: false}
       : {
-          chatDisabled: true,
-          chatDisabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+          disabled: true,
+          disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
         };
   }, [
     appName,
@@ -113,7 +107,5 @@ export function useAiChatDisabledState({
     isLevelbuilder,
   ]);
 
-  useEffect(() => {
-    setChatDisabledState(disabledState);
-  }, [disabledState, setChatDisabledState]);
+  return disabledState;
 }

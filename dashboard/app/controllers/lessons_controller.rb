@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -169,6 +169,7 @@ class LessonsController < ApplicationController
     standards = fetch_standards(lesson_params['standards'] || [])
     opportunity_standards = fetch_standards(lesson_params['opportunity_standards'] || [])
     programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
+    jit_pl_concepts = JitPlConcept.where(id: lesson_params['jit_pl_concept_ids'] || [])
     old_dup_level_keys = @lesson.script.duplicate_level_keys
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
@@ -176,7 +177,8 @@ class LessonsController < ApplicationController
       @lesson.standards = standards.compact
       @lesson.opportunity_standards = opportunity_standards.compact
       @lesson.programming_expressions = programming_expressions.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :opportunity_standards, :programming_expressions, :original_lesson_data))
+      @lesson.jit_pl_concepts = jit_pl_concepts
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :opportunity_standards, :programming_expressions, :jit_pl_concept_ids, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -292,12 +294,14 @@ class LessonsController < ApplicationController
       :programming_expressions,
       :objectives,
       :standards,
-      :opportunity_standards
+      :opportunity_standards,
+      :jit_pl_concept_ids
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
+    lp[:jit_pl_concept_ids] = JSON.parse(lp[:jit_pl_concept_ids]) if lp[:jit_pl_concept_ids]
     lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
     lp[:opportunity_standards] = JSON.parse(lp[:opportunity_standards]) if lp[:opportunity_standards]
     lp
