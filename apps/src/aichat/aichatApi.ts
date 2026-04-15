@@ -32,16 +32,11 @@ const paths = {
   LOG_CHAT_EVENT_URL: `${ROOT_EVENT_URL}/log_chat_event`,
   CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/chat_history`,
   SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_EVENT_URL}/submit_teacher_feedback`,
-  USER_HAS_AICHAT_LAB_ACCESS_URL: `${ROOT_GENERAL_URL}/user_has_access`,
   FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
 const MIN_POLLING_INTERVAL_MS = 1000;
 const DEFAULT_BACKOFF_RATE = 1;
-
-interface UserHasAichatLabAccessResponse {
-  userHasAccess: boolean;
-}
 
 /**
  * @param eventId
@@ -328,15 +323,4 @@ function getUpdatedMessages(
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }
-}
-
-/**
- * This function sends a GET request to the aichat's userHasAichatLabAccess backend controller action,
- * then returns true if the user has aichat lab access and false otherwise.
- */
-export async function getUserHasAichatLabAccess(): Promise<boolean> {
-  const response = await HttpClient.fetchJson<UserHasAichatLabAccessResponse>(
-    `${paths.USER_HAS_AICHAT_LAB_ACCESS_URL}`
-  );
-  return response.value.userHasAccess;
 }

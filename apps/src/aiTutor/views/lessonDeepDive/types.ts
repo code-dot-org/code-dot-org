@@ -12,6 +12,17 @@ export type LessonProgressCounts = {
   levelsCorrectCount: number;
 };
 
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+
+export type ReflectionValue =
+  (typeof LessonObjectiveReflectionValues)[keyof typeof LessonObjectiveReflectionValues];
+
+export type ReflectionData = {
+  objectiveReflections: Record<string, ReflectionValue>;
+  success: string;
+  struggle: string;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
@@ -19,15 +30,30 @@ export type LessonDeepDiveData = {
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
+  practiceProblems: PracticeProblem[];
   progressCounts: LessonProgressCounts;
 };
 
+export type MultiSolution = {
+  option: string;
+  correct: boolean;
+};
+
+export type ScrambleSolution = {
+  option: string;
+  correct: number;
+};
+
+export type MatchSolution = {
+  option: string;
+  correct: string;
+};
 export type PracticeProblem = {
   id: number;
   type: string;
   active: boolean;
   problem_text: string;
-  solution: {option: string; correct: string | number | boolean}[];
+  solution: (MultiSolution | ScrambleSolution | MatchSolution)[];
 };
 
 export const PracticeProblemTypes = {

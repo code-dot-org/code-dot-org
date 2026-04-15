@@ -6,6 +6,7 @@ export enum Tabs {
   VersionHistory = 'versionHistory',
   Validation = 'validation',
   Backpack = 'backpack',
+  StudentResources = 'studentResources',
 }
 
 export interface Setting {

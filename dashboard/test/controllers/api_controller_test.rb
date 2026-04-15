@@ -802,6 +802,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_response 403
   end
 
+  test 'update_lockable_state returns forbidden for demo students' do
+    script, level, _lesson = create_script_with_lockable_lesson
+    demo_student = @student_1
+
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    Policies::DemoSections.stubs(:demo_student?).with(demo_student.id).returns(true)
+
+    updates = [
+      {
+        user_level_data: {
+          user_id: demo_student.id,
+          level_id: level.id,
+          script_id: script.id
+        },
+        locked: false,
+        readonly_answers: false
+      }
+    ]
+
+    post :update_lockable_state, params: {updates: updates}
+    assert_response 403
+    assert_nil UserLevel.find_by(user_id: demo_student.id, level_id: level.id, script_id: script.id)
+  end
+
   test "should get signed-in user's user progress" do
     user = create(:user)
     sign_in user

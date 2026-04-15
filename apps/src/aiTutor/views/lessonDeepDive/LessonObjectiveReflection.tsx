@@ -3,12 +3,11 @@ import React, {FC} from 'react';
 
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import {LessonDeepDiveData} from './types';
+import {LessonDeepDiveData, ReflectionValue} from './types';
 
 import styles from './reflection.module.scss';
 
-const REFLECTION_VALUES = Object.values(LessonObjectiveReflectionValues);
-export type ReflectionValue = (typeof REFLECTION_VALUES)[number];
+export type {ReflectionValue};
 
 interface LessonObjectiveReflectionProps {
   objective: LessonDeepDiveData['objectives'][number];

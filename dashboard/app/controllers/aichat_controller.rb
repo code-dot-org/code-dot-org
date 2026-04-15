@@ -1,11 +1,6 @@
 class AichatController < ApplicationController
   authorize_resource class: false
 
-  # GET /aichat/user_has_access
-  def user_has_access
-    render(status: :ok, json: {userHasAccess: current_user&.has_aichat_lab_access?})
-  end
-
   # POST /aichat/find_toxicity
   # Finds toxicity in the given system prompt and retrieval contexts and returns a list of flagged fields.
   def find_toxicity

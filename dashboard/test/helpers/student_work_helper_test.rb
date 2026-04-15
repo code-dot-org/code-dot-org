@@ -334,9 +334,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     assert_equal true, entry[:correct]
   end
 
-  # ===========================================================================
   # lesson_progress_status
-  # ===========================================================================
 
   # ---------------------------------------------------------------------------
   # Zero levels / no attempts

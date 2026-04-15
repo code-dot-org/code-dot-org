@@ -1,9 +1,12 @@
-import {Typography} from '@mui/material';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
 import Alert from '@/alert';
-import {LinkButton, LinkButtonProps} from '@/button';
 import {Theme} from '@/common/contexts';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
@@ -38,8 +41,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   VideoComponent?: typeof Video;
   /** HeroBanner video */
   videoProps?: VideoProps;
-  /** HeroBanner link */
-  buttonProps?: LinkButtonProps;
+  /** HeroBanner link (MUI Button) */
+  buttonProps?: MuiButtonProps;
   /** HeroBanner announcementBanner */
   announcementBannerProps?: AnnouncementBannerProps;
   /** HeroBanner custom background color.
@@ -122,20 +125,20 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className={classNames(moduleStyles.heroBannerContainer)}>
         <div className={moduleStyles.heroBannerTextContainer}>
           <div>
-            <Typography variant="h1" gutterBottom>
+            <MuiTypography variant="h1" gutterBottom>
               {heading}
-            </Typography>
+            </MuiTypography>
 
             {subHeading && (
-              <Typography variant="body1" gutterBottom>
+              <MuiTypography variant="body1" gutterBottom>
                 {subHeading}
-              </Typography>
+              </MuiTypography>
             )}
 
             {description && (
-              <Typography variant="body2" gutterBottom>
+              <MuiTypography variant="body2" gutterBottom>
                 {description}
-              </Typography>
+              </MuiTypography>
             )}
 
             {partner && (
@@ -147,7 +150,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           </div>
           {buttonProps && (
             <div>
-              <LinkButton color="purple" type="primary" {...buttonProps} />
+              <MuiButton variant="contained" color="primary" {...buttonProps} />
             </div>
           )}
         </div>

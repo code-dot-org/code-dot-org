@@ -70,7 +70,8 @@ class DCDOBase < DynamicConfigBase
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
-      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false)
+      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
+      'launch-grades-in-sign-up': DCDO.get('launch-grades-in-sign-up', false)
     }
   end
 end
