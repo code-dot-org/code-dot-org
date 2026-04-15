@@ -140,6 +140,25 @@ describe('AddSectionDialog', () => {
       sendEventStub.restore();
     });
 
+    it('does not record login type cancel analytics while loading', () => {
+      const sendEventStub = sinon.stub(analyticsReporter, 'sendEvent');
+      const sectionWithParticipantType = _.cloneDeep(defaultProps.section);
+      sectionWithParticipantType.participantType = 'student';
+      const wrapper = shallow(
+        <AddSectionDialog
+          {...defaultProps}
+          section={sectionWithParticipantType}
+          asyncLoadComplete={false}
+        />
+      );
+
+      wrapper.prop('primaryButtonProps').onClick();
+
+      expect(sendEventStub).to.not.have.been.called;
+      expect(handleCancel).to.be.called.once;
+      sendEventStub.restore();
+    });
+
     it('redirects to new section setup with redirect to MyPL page when selecting non-student participant type', () => {
       const newSection = _.cloneDeep(defaultProps.section);
       const wrapper = shallow(
