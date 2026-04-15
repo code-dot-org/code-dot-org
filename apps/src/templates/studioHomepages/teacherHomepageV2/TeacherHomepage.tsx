@@ -1,15 +1,18 @@
-import Alert from '@code-dot-org/component-library/alert';
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import {VERIFIED_TEACHER_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -35,6 +38,10 @@ interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
 
+interface EssentialAiDependencyResponse {
+  has_assigned_essential_ai_dependency: boolean;
+}
+
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
@@ -58,6 +65,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     isLoadingPersonalizationAlertStatus,
     setIsLoadingPersonalizationAlertStatus,
   ] = React.useState<boolean>(true);
+  const [
+    hasAssignedEssentialAiDependency,
+    setHasAssignedEssentialAiDependency,
+  ] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
 
@@ -102,6 +113,36 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
     fetchTeachingProfileData();
   }, [dispatch]);
+
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
+
+  React.useEffect(() => {
+    if (aiChatAccessLevel !== AiChatAccessLevels.DISABLED) {
+      return;
+    }
+
+    const fetchEssentialAiDependency = async () => {
+      try {
+        const {value} =
+          await HttpClient.fetchJson<EssentialAiDependencyResponse>(
+            '/api/v1/sections/assigned_essential_ai_dependency'
+          );
+        setHasAssignedEssentialAiDependency(
+          value.has_assigned_essential_ai_dependency
+        );
+      } catch (error) {
+        console.error('Error fetching essential AI dependency:', error);
+      }
+    };
+
+    fetchEssentialAiDependency();
+  }, [aiChatAccessLevel]);
+
+  const shouldShowVerificationAlert =
+    aiChatAccessLevel === AiChatAccessLevels.DISABLED &&
+    hasAssignedEssentialAiDependency;
 
   const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
     // Don't show while loading
@@ -210,6 +251,16 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                   href: '/users/personalization_information',
                 }}
                 onClose={handleAlertClose}
+              />
+            )}
+            {shouldShowVerificationAlert && (
+              <Alert
+                type={alertTypes.warning}
+                text="Your students won't be able to complete some of their assigned curriculum until you verify your teacher account."
+                link={{
+                  text: 'Learn how to get verified',
+                  href: VERIFIED_TEACHER_SUPPORT_LINK,
+                }}
               />
             )}
             <Header

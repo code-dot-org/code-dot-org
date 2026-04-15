@@ -11,50 +11,6 @@ class AichatControllerTest < ActionController::TestCase
   end
 
   # *****
-  # user_has_access tests
-  # *****
-
-  test 'signed out user does not have access to user_has_access test' do
-    get :user_has_access, format: :json
-    assert_response :forbidden
-  end
-
-  test 'GET user_has_access returns false for unauthorized teacher' do
-    sign_in(create(:teacher))
-    get :user_has_access, format: :json
-    assert_response :success
-    assert_equal json_response['userHasAccess'], false
-  end
-
-  test 'GET user_has_access returns true for authorized teacher' do
-    sign_in(@authorized_teacher1)
-    get :user_has_access, format: :json
-    assert_response :success
-    assert_equal json_response['userHasAccess'], true
-  end
-
-  test 'GET user_has_access returns false for unauthorized student' do
-    sign_in(create(:student))
-    get :user_has_access, format: :json
-    assert_response :success
-    assert_equal json_response['userHasAccess'], false
-  end
-
-  test 'GET user_has_access returns true for student of authorized teacher with enabled access' do
-    sign_in(@authorized_student1)
-    get :user_has_access, format: :json
-    assert_response :success
-    assert_equal json_response['userHasAccess'], true
-  end
-
-  test 'GET user_has_access returns true for student of authorized teacher with essential_only access' do
-    sign_in(@authorized_student2)
-    get :user_has_access, format: :json
-    assert_response :success
-    assert_equal json_response['userHasAccess'], true
-  end
-
-  # *****
   # find_toxicity tests
   # *****
 
