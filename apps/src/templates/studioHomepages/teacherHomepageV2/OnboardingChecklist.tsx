@@ -6,9 +6,9 @@ import {Tour} from 'shepherd.js';
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {label: 'Review the syllabus', completed: false},
-  {label: 'Learn how to evaluate', completed: false},
-  {label: 'Create a class section', completed: true},
+  {id: 'review-syllabus', label: 'Review the syllabus', completed: false},
+  {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
+  {id: 'create-section', label: 'Create a class section', completed: true},
 ];
 
 interface OnboardingChecklistProps {
@@ -20,8 +20,8 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
-  const handleButtonClick = (label: string) => {
-    if (label === 'Create a class section') {
+  const handleButtonClick = (id: string) => {
+    if (id === 'create-section') {
       createSectionTour?.start();
     }
   };
@@ -43,13 +43,13 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           Teaching Assistant can help you get started with Code.org
         </Typography>
         <div className={styles.onboardingChecklistButtons}>
-          {CHECKLIST_ITEMS.map(({label, completed}) => (
+          {CHECKLIST_ITEMS.map(({id, label, completed}) => (
             <MuiButton
-              key={label}
+              key={id}
               variant="outlined"
               color="secondary"
               className={styles.onboardingChecklistButton}
-              onClick={() => handleButtonClick(label)}
+              onClick={() => handleButtonClick(id)}
               type="button"
             >
               {completed && (

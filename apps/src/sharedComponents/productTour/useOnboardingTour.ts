@@ -12,7 +12,6 @@ export interface UseOnboardingTourProps {
   // left off when the new page loads.
   sessionStorageKey: string;
   onComplete?: () => void;
-  onCancel?: (currentStepIndex: number) => void;
   additionalStepOptions?: Partial<StepOptions>;
 }
 
@@ -20,7 +19,6 @@ export interface UseOnboardingTourProps {
 // Unlike useProductTour, this hook:
 //   - Does not auto-start; the caller triggers tour.start() on a button click.
 //   - Resumes automatically across page navigations via sessionStorage.
-//   - Persists completion/cancellation to the backend (not localStorage).
 //   - Uses a separate CSS class for distinct onboarding styling.
 const useOnboardingTour = ({
   getSteps,
