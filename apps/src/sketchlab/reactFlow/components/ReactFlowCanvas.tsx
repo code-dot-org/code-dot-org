@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   Controls,
+  MarkerType,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -92,7 +93,10 @@ export default function ReactFlowCanvas({
   }, [nodes, edges, viewport, updateSources]);
 
   const onConnect: OnConnect = useCallback(
-    connection => setEdges(eds => addEdge(connection, eds)),
+    connection =>
+      setEdges(eds =>
+        addEdge({...connection, markerEnd: {type: MarkerType.ArrowClosed}}, eds)
+      ),
     [setEdges]
   );
 
