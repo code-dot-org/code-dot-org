@@ -119,7 +119,6 @@ class ActiveSupport::TestCase
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
-    I18n.reload!
     set_env :test
   end
 
@@ -176,6 +175,10 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
   include Curriculum::SharedCourseConstants
+
+  teardown_all do
+    I18n.reload!
+  end
 
   # Create the hourofcode unit and levels from factories, taking care to first
   # delete any conflicting objects that may have already been created in test
