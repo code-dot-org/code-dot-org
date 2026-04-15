@@ -11,7 +11,7 @@ import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
 } from '../constants';
-import {ImageNodeData, ShapeNodeData, ShapeType} from '../types';
+import {ImageNodeData, ShapeNodeData, ShapeType, TextNodeData} from '../types';
 
 import styles from './toolbar.module.scss';
 
@@ -64,10 +64,27 @@ function ImageIcon() {
   );
 }
 
+function TextIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+      <text
+        x="10"
+        y="15"
+        textAnchor="middle"
+        fontSize="16"
+        fontWeight="bold"
+        fill="currentColor"
+      >
+        T
+      </text>
+    </svg>
+  );
+}
+
 interface ToolbarProps {
   onAddNode: (
-    type: 'shape' | 'image',
-    data: ShapeNodeData | ImageNodeData
+    type: 'shape' | 'image' | 'text',
+    data: ShapeNodeData | ImageNodeData | TextNodeData
   ) => void;
 }
 
@@ -167,6 +184,17 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           size="small"
         >
           <CircleIcon />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip title="Add text" placement="right">
+        <IconButton
+          aria-label="Add text"
+          id={`${uid}-text`}
+          onClick={() => onAddNode('text', {text: ''})}
+          size="small"
+        >
+          <TextIcon />
         </IconButton>
       </Tooltip>
 

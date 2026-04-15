@@ -109,6 +109,7 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
     <div
       className={styles.shapeNode}
       aria-label={`${data.shapeType} shape: ${data.label}`}
+      onDoubleClick={startEditing}
     >
       <NodeResizer
         isVisible={selected}
@@ -133,7 +134,6 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         className={styles.label}
         contentEditable={isEditing}
         suppressContentEditableWarning
-        onDoubleClick={startEditing}
         onBlur={commitEdit}
         onKeyDown={handleLabelKeyDown}
         tabIndex={0}

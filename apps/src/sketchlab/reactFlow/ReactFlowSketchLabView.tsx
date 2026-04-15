@@ -39,7 +39,13 @@ import {
 } from './constants';
 import ImageNode from './nodes/ImageNode';
 import ShapeNode from './nodes/ShapeNode';
-import {ImageNodeData, ReactFlowSketchLabSources, ShapeNodeData} from './types';
+import TextNode from './nodes/TextNode';
+import {
+  ImageNodeData,
+  ReactFlowSketchLabSources,
+  ShapeNodeData,
+  TextNodeData,
+} from './types';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
 
@@ -50,6 +56,7 @@ export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
 const NODE_TYPES = {
   shape: ShapeNode,
   image: ImageNode,
+  text: TextNode,
 };
 
 const MIN_INFO_PANEL_WIDTH = 250;
@@ -90,6 +97,36 @@ function ReactFlowSketchLabViewInner({
 
   // Track how many nodes have been added this session to stagger placement.
   const addedNodeCountRef = useRef(0);
+  const canvasContainerRef = useRef<HTMLDivElement>(null);
+  // When set, the next render will focus this node's DOM element.
+  const pendingFocusNodeIdRef = useRef<string | null>(null);
+
+  // After a new node is added, wait for React Flow to render its DOM wrapper
+  // then focus it. React Flow renders nodes asynchronously after the React
+  // commit, so we poll briefly until the element appears.
+  useEffect(() => {
+    const nodeId = pendingFocusNodeIdRef.current;
+    if (!nodeId) {
+      return;
+    }
+    pendingFocusNodeIdRef.current = null;
+
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      const nodeEl = canvasContainerRef.current?.querySelector<HTMLElement>(
+        `.react-flow__node[data-id="${nodeId}"]`
+      );
+      if (nodeEl) {
+        clearInterval(interval);
+        nodeEl.focus();
+      } else if (++attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [nodes]);
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -152,7 +189,10 @@ function ReactFlowSketchLabViewInner({
   }, []);
 
   const handleAddNode = useCallback(
-    (type: 'shape' | 'image', data: ShapeNodeData | ImageNodeData) => {
+    (
+      type: 'shape' | 'image' | 'text',
+      data: ShapeNodeData | ImageNodeData | TextNodeData
+    ) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
@@ -161,8 +201,9 @@ function ReactFlowSketchLabViewInner({
         y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
       });
 
+      const newNodeId = crypto.randomUUID();
       const newNode: Node = {
-        id: crypto.randomUUID(),
+        id: newNodeId,
         type,
         position,
         data: data as unknown as Node['data'],
@@ -173,6 +214,7 @@ function ReactFlowSketchLabViewInner({
       };
 
       setNodes(nds => [...nds, newNode]);
+      pendingFocusNodeIdRef.current = newNodeId;
     },
     [screenToFlowPosition, setNodes]
   );
@@ -256,7 +298,7 @@ function ReactFlowSketchLabViewInner({
           {teacherViewingStudent && (
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
-          <div className={styles.canvasContainer}>
+          <div className={styles.canvasContainer} ref={canvasContainerRef}>
             <Toolbar onAddNode={handleAddNode} />
             <ReactFlow
               key={mountKey}

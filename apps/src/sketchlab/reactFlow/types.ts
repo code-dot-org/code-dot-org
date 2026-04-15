@@ -20,6 +20,11 @@ export interface ImageNodeData {
   [key: string]: unknown;
 }
 
+export interface TextNodeData {
+  text: string;
+  [key: string]: unknown;
+}
+
 // Index signature makes this assignable to BlocklySource ({[key: string]: unknown})
 // so it fits within the ProjectSources.source union type.
 export interface ReactFlowSketchLabSource {
