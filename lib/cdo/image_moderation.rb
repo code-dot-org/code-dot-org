@@ -1,4 +1,5 @@
 require 'cdo/azure_ai_content_safety'
+require 'cdo/imagemagick_guard'
 require 'honeybadger/ruby'
 require 'mini_magick'
 require 'stringio'
@@ -43,7 +44,7 @@ module ImageModeration
   # reported content_type value which may be incorrect.
   def self.scale_image_for_moderation_if_needed(image_data, content_type)
     raw_data = image_data.read
-    actual_type = get_actual_content_type(raw_data)
+    actual_type = ImageMagickGuard.actual_content_type(raw_data)
     image = MiniMagick::Image.read(raw_data)
 
     if image.width < MIN_MODERATION_DIMENSION || image.height < MIN_MODERATION_DIMENSION
@@ -77,22 +78,5 @@ module ImageModeration
     [StringIO.new(raw_data), actual_type]
   rescue MiniMagick::Invalid, MiniMagick::Error
     [StringIO.new(raw_data), actual_type]
-  end
-
-  # Returns the MIME type of image bytes by inspecting magic bytes.
-  # Returns nil only when the format is completely unrecognizable.
-  # Recognizes Azure-accepted types (png, gif, jpeg) and common
-  # unsupported ones (webp, heic, heif) so error context is informative.
-  def self.get_actual_content_type(bytes)
-    return 'image/png'  if bytes.start_with?("\x89PNG\r\n\x1a\n".b)
-    return 'image/gif'  if bytes.match?(/\AGIF8[79]a/n)
-    return 'image/jpeg' if bytes.start_with?("\xff\xd8\xff".b)
-    return 'image/webp' if bytes.start_with?('RIFF'.b) && bytes.byteslice(8, 4) == 'WEBP'
-    # HEIC/HEIF: ISO Base Media File Format — ftyp box at offset 4 with a heic/heif brand.
-    if bytes.bytesize >= 12 && bytes.byteslice(4, 4) == 'ftyp'
-      return 'image/heic' if %w[heic heix hevm hevx heim heis].include?(bytes.byteslice(8, 4))
-      return 'image/heif' if %w[mif1 msf1].include?(bytes.byteslice(8, 4))
-    end
-    nil
   end
 end
