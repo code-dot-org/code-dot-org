@@ -70,7 +70,9 @@ function ReactFlowSketchLabViewInner({
     showStartOverDialog,
   } = useSources<ReactFlowSketchLabSources>();
 
-  const initialSource = currentSources.source ?? {};
+  // Deep-clone sources so React Flow can mutate node style objects (e.g. during resize).
+  // The sources system freezes returned objects, but NodeResizer writes to node.style in place.
+  const initialSource = structuredClone(currentSources.source ?? {});
   const [nodes, setNodes, onNodesChange] = useNodesState(
     (initialSource.nodes as Node[]) ?? []
   );
