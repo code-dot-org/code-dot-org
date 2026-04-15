@@ -258,7 +258,12 @@ enable_opentelemetry: false
 
 # Sentry trace and error reporting.
 enable_sentry: false
-sentry_dsn: !Secret
+# DSN for the Dashboard Rails backend Sentry project.
+dashboard_sentry_dsn: !Secret
+# DSN for the apps/ webpack bundle Sentry project.
+frontend_apps_sentry_dsn: !Secret
+# DSN for the frontend/apps/studio Vite app Sentry project.
+frontend_studio_sentry_dsn: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -438,7 +443,7 @@ dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
-dashboard_workers: 8
+dashboard_workers:
 dashboard_web_server_name: dashboard
 dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
@@ -709,3 +714,10 @@ contentful_cs_for_all_api_url: preview.contentful.com
 
 # HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
 hoc_tracking_enabled: true
+
+# Demo student IDs for demo sections. See Policies::DemoSections for usage.
+demo_student_ids:
+
+# Dummy course for attaching resources to just-in-time PL content
+jit_pl_course_name: 'just-in-time-pl'
+

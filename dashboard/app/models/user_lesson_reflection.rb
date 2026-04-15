@@ -12,9 +12,9 @@
 #
 # Indexes
 #
-#  index_user_lesson_reflections_on_lesson_id                  (lesson_id)
-#  index_user_lesson_reflections_on_lesson_id_and_student_id   (lesson_id,student_id)
-#  index_user_lesson_reflections_on_student_id                 (student_id)
+#  index_user_lesson_reflections_on_lesson_id                 (lesson_id)
+#  index_user_lesson_reflections_on_lesson_id_and_student_id  (lesson_id,student_id)
+#  index_user_lesson_reflections_on_student_id                (student_id)
 #
 class UserLessonReflection < ApplicationRecord
   belongs_to :lesson

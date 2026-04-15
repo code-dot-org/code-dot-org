@@ -69,10 +69,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
 
   const pendingArtifactMessage = useAppSelector(
-    state => state.aichat.pendingArtifactMessage
+    state => state.aiDiffChat.pendingArtifactMessage
   );
 
-  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {

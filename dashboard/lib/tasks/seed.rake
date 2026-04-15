@@ -81,31 +81,18 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    csd3-2023
-    interactive-games-animations-2023
-    focus-on-creativity3-2023
-    focus-on-coding3-2023
-    csd3-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
     customizing-llms-2024
-    csd3-2025
     dance
     events
     flappy
     frozen
     hero
     hourofcode
-    infinity
     mc
     playlab
     starwars
-    starwarsblocks
     step
     oceans
-    sports
-    jigsaw
     mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
@@ -219,7 +206,8 @@ namespace :seed do
     :standards,
     :shared_blockly_functions,
     :libraries,
-    :course_offerings
+    :course_offerings,
+    :jit_pl_concepts
   ].freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
@@ -274,8 +262,6 @@ namespace :seed do
        alltheselfpacedplthings
        allthettsthings
        artist
-       interactive-games-animations-2023
-       interactive-games-animations-2024
        customizing-llms-2024
        dance
        events
@@ -283,19 +269,15 @@ namespace :seed do
        frozen
        hero
        hourofcode
-       infinity
        mc
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
        playlab
        starwars
-       starwarsblocks
        step
        oceans
-       jigsaw
-       mix-move-ai-2025
-       sports).each do |course_name|
+       mix-move-ai-2025).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
@@ -459,9 +441,15 @@ namespace :seed do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
-  # Courses must be seeded before JIT PL content because the resources refer
-  # to a pre-defined JIT PL course.
-  JIT_PL_DEPENDENCIES = [:environment, :courses]
+  timed_task_with_logging courses_jit_pl: :environment do
+    # seed the course that is required for just-in-time PL resources
+    course_name = CDO.jit_pl_course_name || 'just-in-time-pl'
+    path = Dir["#{CURRICULUM_CONTENT_DIR}/**/#{course_name}.course"].first
+    raise "Could not find course file for #{course_name}" unless path
+    UnitGroup.load_from_path(path)
+  end
+
+  JIT_PL_DEPENDENCIES = [:environment, :courses_jit_pl]
 
   timed_task_with_logging jit_pl_concepts: JIT_PL_DEPENDENCIES do
     JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)
@@ -569,8 +557,18 @@ namespace :seed do
     end
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
+  # Script seeding already validates rubrics (see script_seed.rb), but only
+  # when a .script_json file has changed (gated by md5). When a developer
+  # updates S3_AI_RELEASE_PATH without changing any .script_json files, script
+  # seeding is skipped and those validations never run. This task ensures AI
+  # rubric config is validated on every full seed regardless, ideally catching
+  # any issues on staging, before they reach production.
+  timed_task_with_logging validate_ai_rubrics: :environment do
+    AiRubricConfig.validate_ai_config
+  end
+
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_14_104541) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -635,6 +635,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
     t.string "is_shared_table", limit: 700
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "md5"
     t.index ["project_id"], name: "index_datablock_storage_tables_on_project_id"
   end
 
@@ -918,6 +919,18 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_02_000000) do
     t.bigint "resource_id", null: false
     t.index ["jit_pl_teaching_tip_id", "resource_id"], name: "index_teaching_tips_resources_on_tip_and_resource_ids", unique: true
     t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
+  end
+
+  create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "description"
+    t.string "s3_uri", null: false
+    t.string "lab"
+    t.integer "version", null: false
+    t.string "audience", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_json_videos_on_key", unique: true
   end
 
   create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

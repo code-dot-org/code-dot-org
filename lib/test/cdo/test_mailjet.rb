@@ -273,6 +273,48 @@ class MailJetTest < Minitest::Test
     MailJet.delete_contact(email)
   end
 
+  def test_create_contact_and_add_to_course_list
+    email = 'fake.email@test.xx'
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(true)
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(123)
+
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contact)
+
+    MailJet.stubs(:subaccount).returns('production')
+    MailJet.expects(:add_to_contact_list).with(mock_contact, MailJet::CONTACT_LISTS[:intro_web_lab][:production][:default])
+
+    MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
+  end
+
+  def test_create_contact_and_add_to_course_list_non_teacher
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:teacher?).returns(false)
+
+    MailJet.expects(:find_or_create_contact).never
+    MailJet.expects(:add_to_contact_list).never
+
+    MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
+  end
+
+  def test_create_contact_and_add_to_course_list_unmapped_unit_group
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:teacher?).returns(true)
+
+    MailJet.expects(:find_or_create_contact).never
+    MailJet.expects(:add_to_contact_list).never
+
+    MailJet.create_contact_and_add_to_course_list(user, 'some-other-course')
+  end
+
   def test_add_to_contact_list
     contact = mock('Mailjet::Contact')
     contact.stubs(:id).returns(123)

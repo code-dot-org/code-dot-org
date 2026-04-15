@@ -140,11 +140,16 @@ export const Header: React.FC<HeaderProps> = ({
                   ]
                 : []),
             ]}
+            useIconButton
             triggerButtonProps={{
-              icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
-              isIconOnly: true,
-              color: 'gray',
-              type: 'secondary',
+              children: (
+                <FontAwesomeV6Icon
+                  iconName="ellipsis-vertical"
+                  iconStyle="solid"
+                />
+              ),
+              color: 'tertiary',
+              variant: 'outlined',
             }}
           />
           {archiveAllModalOpen && (

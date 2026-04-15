@@ -63,9 +63,12 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+  lessonId?: number;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
-  lastMessagePostText?: React.ReactNode;
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
 }
 
 /**
@@ -84,7 +87,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
-  lastMessagePostText,
+  lessonId,
+  renderLastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const canDisplayAssets = !!levelName && !!channelId;
@@ -147,8 +151,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       currentLevelId: parseInt(currentLevelId || ''),
       scriptId,
       channelId,
+      lessonId,
     });
-  }, [clientType, currentLevelId, scriptId, channelId]);
+  }, [clientType, currentLevelId, scriptId, channelId, lessonId]);
 
   // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
@@ -164,6 +169,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           userId: selectedStudent.id,
           isOwnHistory: false,
           channelId,
+          lessonId,
         })
       );
     } else {
@@ -172,10 +178,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           userId: currentUserId,
           isOwnHistory: true,
           channelId,
+          lessonId,
         })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
+  }, [
+    dispatch,
+    currentUserId,
+    currentLevelId,
+    selectedStudent,
+    channelId,
+    lessonId,
+  ]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));
@@ -319,7 +333,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
-          lastMessagePostText={lastMessagePostText}
+          renderLastMessagePostText={renderLastMessagePostText}
         />
       )}
       <div className={moduleStyles.footer}>
@@ -342,6 +356,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             logLevelActivity={logLevelActivity}
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
+            lessonId={lessonId}
           />
         )}
       </div>

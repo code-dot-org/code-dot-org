@@ -8,7 +8,6 @@ import {
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer, setThreadMessages} from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
 import {
@@ -19,6 +18,8 @@ import {
   MINI_LESSON_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,
@@ -165,7 +166,7 @@ describe('AiDiffWorkspace', () => {
     registerReducers({
       currentUser,
       teacherSections,
-      aichat: aichatReducer,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({

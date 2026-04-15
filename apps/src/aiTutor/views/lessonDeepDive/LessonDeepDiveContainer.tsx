@@ -23,9 +23,10 @@ const darkTheme = createTheme({
 
 import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
+import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
 import TutorSummaryBox from './TutorSummaryBox';
-import {LessonDeepDiveData} from './types';
+import {LessonDeepDiveData, ReflectionData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
@@ -33,6 +34,7 @@ const BOX_IDS = [
   'lesson-summary',
   'reflection',
   'intervention',
+  'practice',
   'tutor-summary',
 ] as const;
 
@@ -44,6 +46,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   lessonDeepDiveData,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
+    null
+  );
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -51,6 +56,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   const goToPrev = useCallback(() => {
     setCurrentIndex(i => Math.max(i - 1, 0));
+  }, []);
+
+  const handleReflectionComplete = useCallback((data: ReflectionData) => {
+    setReflectionData(data);
   }, []);
 
   if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
@@ -74,11 +83,25 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
             objectives={lessonDeepDiveData.objectives}
+            onSubmitComplete={handleReflectionComplete}
+            initialValues={reflectionData}
           />
         );
       case 'intervention':
         return (
           <InterventionBox
+            lessonId={lessonDeepDiveData.lessonId}
+            lessonName={lessonDeepDiveData.lessonName}
+            lessonSummary={lessonDeepDiveData.lessonSummary}
+            vocabulary={lessonDeepDiveData.vocabulary}
+            assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
+            objectives={lessonDeepDiveData.objectives}
+            reflectionData={reflectionData}
+          />
+        );
+      case 'practice':
+        return (
+          <PracticeBox
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}

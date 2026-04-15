@@ -166,7 +166,7 @@ const ShareDialog: React.FunctionComponent<{
         description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
         primaryButtonProps={{
           onClick: () => dispatch(hideShareDialog()),
-          text: i18n.ok(),
+          children: i18n.ok(),
         }}
       />
     </div>

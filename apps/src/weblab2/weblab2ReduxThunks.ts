@@ -1,10 +1,15 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
+import {isEqual} from 'lodash';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
-import {Notification} from '@cdo/apps/aichat/types/chatEvents';
+import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  Notification,
+} from '@cdo/apps/aichat/types/chatEvents';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  markProjectEdited,
   setAiTutorVersionFiles,
   setProjectSourceBeforeAiTutorVersion,
   setSource,
@@ -24,6 +29,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
+import getRejectNotification from './helpers/getRejectNotification';
 import {setAiFilePathToPreview} from './weblab2Redux';
 
 /**
@@ -67,7 +73,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       timestamp: Date.now(),
       removeId: getNewRemoveId(),
       text: "You accepted AI Tutor's changes.",
-      notificationType: 'aiTutorVersionActionAccept',
+      notificationType: AI_TUTOR_VERSION_ACTION_ACCEPT,
       includeInChatHistory: true,
       files: files,
       commitDescription: commitDescription,
@@ -113,6 +119,10 @@ export const acceptAiTutorVersion = createAsyncThunk<
         /* forceNewVersion */ true
       )
     );
+    if (!isEqual(sourcesBeforeAiTutorVersion, sources)) {
+      // If the tutor made changes to the project, mark the project as edited.
+      thunkAPI.dispatch(markProjectEdited());
+    }
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
       Lab2Registry.getInstance()
@@ -166,14 +176,7 @@ export const rejectAiTutorVersion = createAsyncThunk<
   const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
   // Add reject notification.
-  const notification: Notification = {
-    timestamp: Date.now(),
-    removeId: getNewRemoveId(),
-    text: "You rejected AI Tutor's changes.",
-    notificationType: 'aiTutorVersionActionReject',
-    includeInChatHistory: true,
-    files: files,
-  };
+  const notification = getRejectNotification(files);
   thunkAPI.dispatch(addChatEvent(notification));
   sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_REJECTED, {
     numFiles: files.length.toString(),

@@ -1,4 +1,9 @@
-import {type StepOptions, type StepOptionsButton, type Tour} from 'shepherd.js';
+import Shepherd, {
+  StepOptions,
+  type StepOptions,
+  type StepOptionsButton,
+  type Tour,
+} from 'shepherd.js';
 
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -59,3 +64,22 @@ export const createCompletionStep = (
     },
   ],
 });
+
+export const createTourWithSteps = (
+  getSteps: (tour: Tour) => StepOptions[],
+  additionalStepOptions?: Partial<StepOptions>
+): Tour => {
+  const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    exitOnEsc: true,
+    keyboardNavigation: true,
+    defaultStepOptions: {
+      cancelIcon: {enabled: true},
+      scrollTo: true,
+      classes: 'custom-shepherd-step-container',
+      ...(additionalStepOptions ?? {}),
+    },
+  });
+  tour.addSteps(getSteps(tour));
+  return tour;
+};
