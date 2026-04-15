@@ -24,6 +24,7 @@ import i18n from '@cdo/locale';
 
 import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdown';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';
@@ -37,6 +38,7 @@ interface DemoSectionCardProps {
   preset: DemoPresetView;
   demoType: DemoType;
   onNotice: (notice: Notice | null) => void;
+  onDeleteClickCallback?: (sectionId: number) => void;
 }
 
 interface DemoAction {
@@ -77,10 +79,13 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
   preset,
   demoType,
   onNotice,
+  onDeleteClickCallback = () => {},
 }) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const [pendingPath, setPendingPath] = React.useState<string | null>(null);
+  const [pendingActionKey, setPendingActionKey] = React.useState<string | null>(
+    null
+  );
   const primaryActions = React.useMemo(
     () => buildPrimaryActions(preset),
     [preset]
@@ -120,11 +125,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
     eventName: string,
     pendingKey?: string
   ) => {
-    if (pendingPath) {
+    if (pendingActionKey) {
       return;
     }
 
-    setPendingPath(pendingKey || path);
+    setPendingActionKey(pendingKey || path);
     onNotice(null);
     analyticsReporter.sendEvent(eventName, {});
 
@@ -157,9 +162,50 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
         });
       }
     } finally {
-      setPendingPath(null);
+      setPendingActionKey(null);
     }
   };
+
+  const createSectionForMenuAction = React.useCallback(
+    async (
+      eventName: string,
+      actionKey:
+        | 'settings'
+        | 'roster'
+        | 'loginCards'
+        | 'certificates'
+        | 'archive'
+        | 'delete'
+    ) => {
+      if (pendingActionKey) {
+        throw new Error('Demo section creation already in progress');
+      }
+
+      setPendingActionKey(actionKey);
+      onNotice(null);
+      analyticsReporter.sendEvent(eventName, {});
+
+      try {
+        return await dispatch(createDemoSection(demoType));
+      } catch (error) {
+        if (error instanceof DemoSectionCreationError) {
+          onNotice({
+            text: error.message,
+            type: error.errorType === 'conflict' ? 'warning' : 'danger',
+          });
+        } else {
+          onNotice({
+            text: "Couldn't create your practice section.",
+            type: 'danger',
+          });
+        }
+        throw error;
+      } finally {
+        setPendingActionKey(null);
+      }
+    },
+    [demoType, dispatch, onNotice, pendingActionKey]
+  );
 
   return (
     <li
@@ -213,16 +259,12 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <MuiIconButton
-            variant="text"
-            color="tertiary"
-            size="small"
-            className={styles.dropdownButton}
-            aria-label={i18n.sectionOptionsDropdown()}
-            disabled={true}
-          >
-            <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
-          </MuiIconButton>
+          <SectionOptionsDropdown
+            disabled={!!pendingActionKey}
+            section={demoSection}
+            onDeleteClickCallback={onDeleteClickCallback}
+            resolveSectionForAction={createSectionForMenuAction}
+          />
         </div>
       </div>
       <div className={styles.sectionCardBody}>
@@ -230,7 +272,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
           <DemoSectionCourseContentDropdown
             section={demoSection}
             demoType={demoType}
-            disabled={!!pendingPath}
+            disabled={!!pendingActionKey}
             beforeNavigate={(path: string, eventName: string) =>
               handleActionClick(path, eventName, path)
             }
@@ -238,14 +280,14 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
         </div>
         <div className={styles.sectionCardBodyRight}>
           {primaryActions.map(action => {
-            const isPending = pendingPath === action.id;
+            const isPending = pendingActionKey === action.id;
             return (
               <button
                 id={`ui-test-demo-section-action-${action.id}`}
                 key={action.id}
                 type="button"
                 className={styles.demoActionButton}
-                disabled={!!pendingPath}
+                disabled={!!pendingActionKey}
                 onClick={() =>
                   handleActionClick(action.path, action.eventName, action.id)
                 }
