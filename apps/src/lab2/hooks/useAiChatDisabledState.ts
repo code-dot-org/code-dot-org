@@ -54,7 +54,7 @@ export function useAiChatDisabledState({
 
     // Levelbuilders should always be enabled so they don't need to do extra account setup when building levels.
     if (isLevelbuilder) {
-      return {chatDisabled: false};
+      return {disabled: false};
     }
 
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
