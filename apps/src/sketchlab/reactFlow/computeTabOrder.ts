@@ -131,18 +131,22 @@ function orderComponent(
   return result;
 }
 
+export type TabOrderEntry = {type: 'node' | 'edge'; id: string};
+
 /**
- * Compute a logical tab order for React Flow nodes.
+ * Compute a logical tab order for React Flow nodes and edges.
  *
  * 1. Nodes connected by edges are traversed first, following edge direction
  *    via topological sort (position breaks ties at branch points).
- * 2. Connected components are sorted by the position of their first node.
- * 3. Orphan nodes (no edges) come last, sorted top-to-bottom, left-to-right.
+ * 2. Edges are interleaved right before their target node, so the order for
+ *    A→B→C is: [NodeA, Edge(A→B), NodeB, Edge(B→C), NodeC].
+ * 3. Connected components are sorted by the position of their first node.
+ * 4. Orphan nodes (no edges) come last, sorted top-to-bottom, left-to-right.
  */
 export function computeTabOrder(
   nodes: SketchlabReactFlowNode[],
   edges: SketchlabReactFlowEdge[]
-): string[] {
+): TabOrderEntry[] {
   if (nodes.length === 0) return [];
 
   const nodeMap = new Map<string, SketchlabReactFlowNode>();
@@ -153,10 +157,12 @@ export function computeTabOrder(
   // Build outgoing adjacency list, filtering to edges whose endpoints exist.
   const outgoing = new Map<string, string[]>();
   const connectedIds = new Set<string>();
+  const validEdges: SketchlabReactFlowEdge[] = [];
   for (const edge of edges) {
     if (!nodeMap.has(edge.source) || !nodeMap.has(edge.target)) continue;
     connectedIds.add(edge.source);
     connectedIds.add(edge.target);
+    validEdges.push(edge);
     if (!outgoing.has(edge.source)) {
       outgoing.set(edge.source, []);
     }
@@ -165,7 +171,7 @@ export function computeTabOrder(
 
   // Find connected components among nodes that participate in edges.
   const connectedNodeIds = Array.from(connectedIds);
-  const components = findComponents(connectedNodeIds, edges);
+  const components = findComponents(connectedNodeIds, validEdges);
 
   // Order each component internally, then sort components by their first node.
   const componentOrders = components.map(comp =>
@@ -175,11 +181,40 @@ export function computeTabOrder(
     compareByPosition(nodeMap.get(a[0])!, nodeMap.get(b[0])!)
   );
 
+  const nodeOrder = componentOrders.flat();
+
+  // Build incoming-edge lookup: target nodeId → edges arriving at it.
+  const incomingEdges = new Map<string, SketchlabReactFlowEdge[]>();
+  for (const edge of validEdges) {
+    if (!incomingEdges.has(edge.target)) {
+      incomingEdges.set(edge.target, []);
+    }
+    incomingEdges.get(edge.target)!.push(edge);
+  }
+
+  // Interleave: for each node, insert its incoming edges right before it.
+  // Edges are sorted so those from earlier sources come first.
+  const result: TabOrderEntry[] = [];
+  for (const nodeId of nodeOrder) {
+    const incoming = incomingEdges.get(nodeId);
+    if (incoming) {
+      incoming.sort(
+        (a, b) => nodeOrder.indexOf(a.source) - nodeOrder.indexOf(b.source)
+      );
+      for (const edge of incoming) {
+        result.push({type: 'edge', id: edge.id});
+      }
+    }
+    result.push({type: 'node', id: nodeId});
+  }
+
   // Orphan nodes: not part of any edge.
   const orphans = nodes
     .filter(n => !connectedIds.has(n.id))
-    .sort(compareByPosition)
-    .map(n => n.id);
+    .sort(compareByPosition);
+  for (const orphan of orphans) {
+    result.push({type: 'node', id: orphan.id});
+  }
 
-  return [...componentOrders.flat(), ...orphans];
+  return result;
 }
