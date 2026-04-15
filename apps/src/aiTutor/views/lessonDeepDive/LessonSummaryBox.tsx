@@ -3,40 +3,44 @@ import React, {FC} from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-type LessonProgressCounts = {
-  levelsTotalCount: number;
-  levelsCompletedCount: number;
-  levelsCorrectCount: number;
-};
+import styles from './lesson-summary-box.module.scss';
 
 interface LessonSummaryBoxProps {
   lessonName: string;
   lessonSummary: string;
-  progressCounts: LessonProgressCounts;
+  levelsTotalCount: number;
 }
 
 const LessonSummaryBox: FC<LessonSummaryBoxProps> = ({
   lessonName,
   lessonSummary,
-  progressCounts,
+  levelsTotalCount,
 }) => (
-  <div>
-    <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
-      You worked on: {lessonName}
+  <div className={styles.container}>
+    <Typography
+      variant="h2"
+      sx={{fontSize: {xs: '1.5rem', sm: '2rem'}, color: '#ffffff'}}
+    >
+      {lessonName}
     </Typography>
     <br />
     <SafeMarkdown markdown={lessonSummary} />
-    <Typography variant="body1">
-      Let's take a look at your work from the lesson...
-    </Typography>
-    <Typography variant="body2">
-      Levels completed: {progressCounts.levelsCompletedCount} /{' '}
-      {progressCounts.levelsTotalCount}
-      <br />
-      Levels correct: {progressCounts.levelsCorrectCount} /{' '}
-      {progressCounts.levelsTotalCount}
-    </Typography>
-    ⚠️ COMING SOON: More screens and real content here!
+    <div className={styles.levelCountSection}>
+      <div
+        className={styles.levelNumber}
+        style={{'--target-count': levelsTotalCount} as React.CSSProperties}
+      />
+      <div className={styles.levelLabel}>levels in this lesson</div>
+      <div className={styles.bubblesRow}>
+        {Array.from({length: levelsTotalCount}, (_, i) => (
+          <div
+            key={i}
+            className={styles.bubble}
+            style={{animationDelay: `${0.8 + i * 0.05}s`}}
+          />
+        ))}
+      </div>
+    </div>
   </div>
 );
 
