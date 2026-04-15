@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-// Matches KeyCodes in studio.js: LEFT=37, UP=38, RIGHT=39, DOWN=40
+import {KeyCodes} from '@cdo/apps/constants';
+
 const ARROW_KEY_CODES = {
-  leftButton: 37,
-  upButton: 38,
-  rightButton: 39,
-  downButton: 40,
+  leftButton: KeyCodes.LEFT,
+  upButton: KeyCodes.UP,
+  rightButton: KeyCodes.RIGHT,
+  downButton: KeyCodes.DOWN,
 };
 
 /**
@@ -25,7 +26,8 @@ class ArrowButtons extends React.Component {
     const style = visible ? styles.visible : styles.hidden;
 
     const onKeyDown = e => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
+        e.preventDefault();
         const keyCode = ARROW_KEY_CODES[e.currentTarget.id];
         window.dispatchEvent(
           new KeyboardEvent('keydown', {keyCode, bubbles: true})
@@ -33,7 +35,8 @@ class ArrowButtons extends React.Component {
       }
     };
     const onKeyUp = e => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
+        e.preventDefault();
         const keyCode = ARROW_KEY_CODES[e.currentTarget.id];
         window.dispatchEvent(
           new KeyboardEvent('keyup', {keyCode, bubbles: true})
