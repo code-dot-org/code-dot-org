@@ -8,4 +8,35 @@
   position: relative;
   width: 100%;
   height: 100%;
+
+  // Light mode: white handles with black outline.
+  :global(.react-flow__handle) {
+    background-color: #ffffff;
+    border-color: #222222;
+  }
+
+  // Dark mode: override controls and toolbar backgrounds.
+  :global(.react-flow.dark) {
+    // Controls panel (zoom +/-, fit view).
+    :global(.react-flow__controls) {
+      background-color: #1e1e1e;
+      border-color: #444444;
+
+      :global(.react-flow__controls-button) {
+        background-color: #1e1e1e;
+        fill: #ffffff;
+        border-bottom-color: #444444;
+
+        &:hover {
+          background-color: #333333;
+        }
+      }
+    }
+
+    // Dark mode handles: black fill, white outline (React Flow default).
+    :global(.react-flow__handle) {
+      background-color: #222222;
+      border-color: #ffffff;
+    }
+  }
 }

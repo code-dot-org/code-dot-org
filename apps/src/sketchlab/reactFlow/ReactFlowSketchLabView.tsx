@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import {
@@ -94,6 +95,8 @@ function ReactFlowSketchLabViewInner({
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const {theme} = useTheme();
+  const colorMode = theme.toLowerCase() as 'light' | 'dark';
 
   // Track how many nodes have been added this session to stagger placement.
   const addedNodeCountRef = useRef(0);
@@ -278,7 +281,10 @@ function ReactFlowSketchLabViewInner({
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
           <div className={styles.canvasContainer}>
-            <Toolbar onAddNode={handleAddNode} />
+            <Toolbar
+              onAddNode={handleAddNode}
+              isDarkMode={colorMode === 'dark'}
+            />
             <ReactFlow
               key={mountKey}
               nodes={nodes}
@@ -290,7 +296,9 @@ function ReactFlowSketchLabViewInner({
               onMoveEnd={handleMoveEnd}
               defaultViewport={viewport}
               fitView={!viewport}
+              colorMode={colorMode}
               deleteKeyCode="Delete"
+              proOptions={{hideAttribution: true}}
             >
               <Background />
               <Controls />
