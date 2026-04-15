@@ -1,4 +1,4 @@
-import {Handle, NodeResizer, Position, useReactFlow} from '@xyflow/react';
+import {NodeResizer, useReactFlow} from '@xyflow/react';
 import React, {memo, useCallback, useRef, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
@@ -6,6 +6,7 @@ import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 
+import ConnectionHandles from './ConnectionHandles';
 import styles from './image-node.module.scss';
 
 interface ImageNodeProps {
@@ -90,15 +91,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
         </button>
       )}
 
-      {/* Connection handles — target first so source renders on top (grabbed when dragging). */}
-      <Handle type="target" position={Position.Top} id="top-target" />
-      <Handle type="source" position={Position.Top} id="top-source" />
-      <Handle type="target" position={Position.Right} id="right-target" />
-      <Handle type="source" position={Position.Right} id="right-source" />
-      <Handle type="target" position={Position.Bottom} id="bottom-target" />
-      <Handle type="source" position={Position.Bottom} id="bottom-source" />
-      <Handle type="target" position={Position.Left} id="left-target" />
-      <Handle type="source" position={Position.Left} id="left-source" />
+      <ConnectionHandles />
     </div>
   );
 }
