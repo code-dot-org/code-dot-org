@@ -39,31 +39,13 @@
 .altEditor {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 4px;
   padding: 4px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
+
+  label {
+    min-width: unset;
+    width: 120px;
+  }
 }
 
-.altLabel {
-  font-size: 11px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  color: var(--text-neutral-primary);
-}
-
-.altInput {
-  flex: 1;
-  font-size: 12px;
-  padding: 2px 4px;
-  border: 1px solid var(--borders-info-primary);
-  border-radius: 2px;
-  outline: none;
-  min-width: 0;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}

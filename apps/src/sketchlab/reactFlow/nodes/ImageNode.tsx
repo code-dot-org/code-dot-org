@@ -1,5 +1,7 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useRef, useState} from 'react';
+import React, {memo, useCallback, useEffect, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
@@ -20,34 +22,43 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
-  const altInputRef = useRef<HTMLInputElement>(null);
+  const [altValue, setAltValue] = useState('');
 
   const src = (data.src as string) ?? '';
   const altText = (data.altText as string) ?? '';
+
+  useEffect(() => {
+    if (isEditingAlt) {
+      document.getElementById(`alt-input-${id}`)?.focus();
+    }
+  }, [isEditingAlt, id]);
 
   const startEditingAlt = useCallback(() => {
     if (readOnly) {
       return;
     }
+    setAltValue(altText);
     setIsEditingAlt(true);
-    setTimeout(() => altInputRef.current?.focus(), 0);
-  }, [readOnly]);
+  }, [readOnly, altText]);
 
   const commitAltEdit = useCallback(() => {
     setIsEditingAlt(false);
-    const newAltText = altInputRef.current?.value ?? altText;
-    updateNodeData(id, {altText: newAltText});
-  }, [altText, id, updateNodeData]);
+    updateNodeData(id, {altText: altValue});
+  }, [altValue, id, updateNodeData]);
 
   const handleAltKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         commitAltEdit();
-        altInputRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+        (event.target as HTMLElement)
+          .closest<HTMLElement>('.react-flow__node')
+          ?.focus();
       }
       if (event.key === 'Escape') {
         setIsEditingAlt(false);
-        altInputRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+        (event.target as HTMLElement)
+          .closest<HTMLElement>('.react-flow__node')
+          ?.focus();
       }
     },
     [commitAltEdit]
@@ -66,30 +77,30 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
       {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
       {isEditingAlt ? (
         <div className={styles.altEditor}>
-          <label htmlFor={`alt-input-${id}`} className={styles.altLabel}>
-            Alt text
-          </label>
-          <input
+          <TextField
+            name={`alt-input-${id}`}
             id={`alt-input-${id}`}
-            ref={altInputRef}
-            type="text"
-            defaultValue={altText}
+            label="Alt text"
+            value={altValue}
+            onChange={e => setAltValue(e.target.value)}
             onBlur={commitAltEdit}
             onKeyDown={handleAltKeyDown}
-            className={styles.altInput}
+            size="s"
           />
         </div>
       ) : (
-        <button
-          type="button"
+        <MuiButton
           className={styles.editAltButton}
           onClick={startEditingAlt}
           aria-label="Edit alt text"
           title="Edit alt text"
           tabIndex={-1}
+          color="secondary"
+          variant="outlined"
+          size="small"
         >
           Alt
-        </button>
+        </MuiButton>
       )}
 
       <ConnectionHandles />
