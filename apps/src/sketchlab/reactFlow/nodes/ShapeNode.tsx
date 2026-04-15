@@ -8,6 +8,7 @@ import {useSketchLabReadOnly} from '../context';
 import {ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+
 import styles from './shape-node.module.scss';
 
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
