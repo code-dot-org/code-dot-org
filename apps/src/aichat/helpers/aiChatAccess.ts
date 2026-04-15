@@ -1,5 +1,11 @@
-import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
+import {
+  AiChatAccessLevels,
+  AiChatToolsDependency,
+} from '@cdo/generated-scripts/sharedConstants';
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)
@@ -49,4 +55,27 @@ export const areAiChatToolsEnabled = ({
     return aiChatAccessLevel !== AiChatAccessLevels.DISABLED;
   }
   return aiChatAccessLevel === AiChatAccessLevels.ENABLED;
+};
+
+/**
+ * Returns true if the AI Chat essential alert should be shown for a section
+ * in the Teacher Dashboard AI Settings.
+ * This is when a course requires essential AI tools but they are inaccessible
+ * either because the section's access level is DISABLED or because the
+ * teacher's own access level is DISABLED (unverified teacher).
+ */
+export const shouldShowAiChatEssentialAlert = ({
+  assignedAiChatToolsDependency,
+  sectionAiChatAccessLevel,
+  teacherAiChatAccessLevel,
+}: {
+  assignedAiChatToolsDependency: AiChatToolsDependencyValue | undefined;
+  sectionAiChatAccessLevel: AiChatAccessLevel;
+  teacherAiChatAccessLevel: AiChatAccessLevel;
+}): boolean => {
+  return (
+    assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+    (sectionAiChatAccessLevel === AiChatAccessLevels.DISABLED ||
+      teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED)
+  );
 };

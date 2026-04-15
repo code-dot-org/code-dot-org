@@ -21,14 +21,11 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
@@ -43,7 +40,6 @@ import {
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setUserHasAichatLabAccess,
   setViewMode,
   updateAiCustomization,
   initializeAiCustomizations,
@@ -82,8 +78,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   );
   const viewMode = useAppSelector(state => state.aichat.viewMode);
   const showModalType = useAppSelector(state => state.aichat.showModalType);
-
-  const signInState = useAppSelector(state => state.currentUser.signInState);
 
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
@@ -158,25 +152,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
-
-  useEffect(() => {
-    if (signInState === SignInState.SignedIn) {
-      getUserHasAichatLabAccess()
-        .then(hasAccess => dispatch(setUserHasAichatLabAccess(hasAccess)))
-        .catch(error => {
-          if (
-            !(error instanceof NetworkError && error.response.status === 403)
-          ) {
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError(
-                'Error in fetching user aichat lab access',
-                error as Error
-              );
-          }
-        });
-    }
-  }, [dispatch, signInState]);
 
   useEffect(() => {
     const modalToShow = () => {
