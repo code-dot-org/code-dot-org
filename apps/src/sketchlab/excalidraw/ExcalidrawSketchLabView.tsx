@@ -35,8 +35,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useDialogControl} from '../../lab2/views/dialogs';
 import {BackpackAPIContext} from '../../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../../sharedComponents/backpack/BackpackClientApi';
-
 import {SketchlabSources, SerializedExcalidrawState} from '../types';
+
 import useSketchlabTour from './introTour/useSketchlabTour';
 import {
   handleSaveToBackpack,
