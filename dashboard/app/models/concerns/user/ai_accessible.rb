@@ -21,7 +21,7 @@ module User::AiAccessible
   end
 
   def ai_chat_access_level
-    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat?
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat? || levelbuilder?
     return section_enabled_access_level
   end
 

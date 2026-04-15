@@ -78,6 +78,13 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when user is a levelbuilder' do
+      it 'returns ENABLED' do
+        allow(user).to receive(:levelbuilder?).and_return(true)
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
     context 'when student is in a section with ENABLED access' do
       it 'returns ENABLED' do
         enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
