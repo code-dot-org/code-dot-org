@@ -14,6 +14,7 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -107,7 +108,7 @@ export interface SketchlabReactFlowEdge {
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
-  markerEnd?: {type: string} | string;
+  markerEnd?: EdgeMarkerType;
 }
 
 export interface ReactFlowSource {
