@@ -104,6 +104,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
         disabled={levelIsRunning}
         color={Button.ButtonColor.neutralDark}
         icon=" fa-solid fa-play-pause"
+        aria-label={songInPreview ? 'Pause' : 'Play'}
         onClick={onPreviewBtnClick}
       />
     </div>
