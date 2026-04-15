@@ -11,9 +11,9 @@ module Cdo
   module I18n
     DEFAULT_LOCALE = SharedConstants::DEFAULT_LOCALE
 
-    LANGUAGES = CSV.read(::CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
+    LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
-    LOCALE_CONFIGS = YAML.load_file(::CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
+    LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
       data.symbolize_keys! if data.is_a?(Hash)
     end.freeze
 
@@ -31,7 +31,7 @@ module Cdo
           cdo_language = cdo_language.to_h
           next cdo_language if cdo_language[:supported_codeorg_b] == 'TRUE'
           # Enables languages available for debugging in all non-production environments
-          cdo_language if debug_language?(cdo_language) && !::CDO.rack_env?(:production)
+          cdo_language if debug_language?(cdo_language) && !CDO.rack_env?(:production)
         end.freeze
       end
 
@@ -49,7 +49,7 @@ module Cdo
 
         language_name = cdo_language[:native_name_s]
 
-        if debug_language?(cdo_language) && (cdo_language[:supported_codeorg_b] != 'TRUE' || !::CDO.rack_env?(:production))
+        if debug_language?(cdo_language) && (cdo_language[:supported_codeorg_b] != 'TRUE' || !CDO.rack_env?(:production))
           language_name = "#{language_name} DBG"
         end
 
