@@ -90,7 +90,7 @@ export default function ReactFlowCanvas({
   const [viewport, setViewport] =
     useState<ReactFlowSource['viewport']>(initialViewport);
 
-  const {screenToFlowPosition} = useReactFlow();
+  const {screenToFlowPosition, fitView, getZoom} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
   // Keyboard-only edge creation: tracks the source node while in connect mode.
@@ -125,13 +125,20 @@ export default function ReactFlowCanvas({
     });
   }, [tabOrder, activeTabNodeId]);
 
-  const focusNodeById = useCallback((nodeId: string) => {
-    setActiveTabNodeId(nodeId);
-    const el = document.querySelector<HTMLElement>(
-      `.react-flow__node[data-id="${nodeId}"]`
-    );
-    el?.focus();
-  }, []);
+  const focusNodeById = useCallback(
+    (nodeId: string) => {
+      setActiveTabNodeId(nodeId);
+      const el = document.querySelector<HTMLElement>(
+        `.react-flow__node[data-id="${nodeId}"]`
+      );
+      if (!el) return;
+      el.focus();
+      // Pan to the node (keeping current zoom) so off-screen nodes scroll in.
+      const zoom = getZoom();
+      fitView({nodes: [{id: nodeId}], duration: 200, maxZoom: zoom});
+    },
+    [fitView, getZoom]
+  );
 
   const handleFocusCapture = useCallback(
     (e: React.FocusEvent) => {
