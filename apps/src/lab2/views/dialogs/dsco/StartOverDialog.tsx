@@ -27,8 +27,8 @@ const StartOverDialog: React.FC<StartOverDialogProps> = ({
         ? commonI18n.startOverWorkspace()
         : message
     }
-    primaryButtonProps={{text: commonI18n.startOver(), onClick: onConfirm}}
-    secondaryButtonProps={{text: commonI18n.cancel(), onClick: onCancel}}
+    primaryButtonProps={{children: commonI18n.startOver(), onClick: onConfirm}}
+    secondaryButtonProps={{children: commonI18n.cancel(), onClick: onCancel}}
     onClose={onCancel}
   />
 );

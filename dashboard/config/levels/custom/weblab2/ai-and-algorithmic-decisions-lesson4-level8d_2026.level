@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-20T23:43:19.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "long_instructions": "### Wellness Coach\r\n\r\nTrack healthy habits with buttons that update your progress and messages.\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a description for each button. Include:\r\n\r\n   * Name of the button\r\n   * Event type\r\n   * What the button should do \r\n   * What on the page changes\r\n\r\n2. **Build:** Use AI to generate a named function based on your description.\r\n\r\n3. **Wire it up:** Connect each function to a button using `addEventListener`.\r\n\r\n4. **Test:** Click your buttons and confirm the page updates as expected.\r\n",
+    "long_instructions": "### Wellness Coach\r\n\r\n#### **Do This:**\r\n\r\n1. **Review the example:** Look at the completed button. Notice how the function is written as a named arrow function and how it is connected using `addEventListener`.\r\n\r\n2. Read a function description for another button in `prompt.md`.\r\n\r\n3. Highlight the button description, select **Add to AI Tutor Chat**, and ask the AI to write a named arrow function that matches the description.\r\n\r\n4. Create an event handler using `addEventListener(\"click\", functionName)` and add your function.\r\n\r\n5. Click the button and confirm that it works as expected.\r\n\r\n6. Complete the same steps for the remaining buttons.\r\n",
     "display_name": "Wellness Coach",
     "start_sources": {
       "folders": {
@@ -51,16 +50,16 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "",
+          "contents": "const logHabitButton = document.getElementById(\"logHabitButton\");\n\nconst streakDisplay = document.getElementById(\"streakDisplay\");\nconst output = document.getElementById(\"output\");\n\nlet streak = 0;\n\nconst logHabit = () => {\n  streak = streak + 1;\n\n  streakDisplay.textContent = streak;\n  output.textContent = \"Habit logged.\";\n};\n\n\nlogHabitButton.addEventListener(\"click\", logHabit);\n",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "4": {
           "id": "4",
           "name": "prompt.md",
-          "contents": "Button One\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Two\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Three\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: \n\n\nButton Four\nName of the button: \nEvent type: \nWhat the button should do: \nWhat on the page changes: ",
+          "contents": "Log Habit Button\nName of the button: Log Habit\nEvent type: click\nWhat the button should do: increase the streak\nWhat on the page changes: the streak number and the message\n\n\nBreak Streak Button\nName of the button: Break Streak\nEvent type: click\nWhat the button should do: reset the streak to 0\nWhat on the page changes: the streak number and the message\n\n\nBoost Streak Button\nName of the button: Boost\nEvent type: click\nWhat the button should do: increase the streak by 5\nWhat on the page changes: the streak number and the message\n\n\nReset Button\nName of the button: Reset\nEvent type: click\nWhat the button should do: reset everything to starting values\nWhat on the page changes: the streak number and the message\n\n",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
@@ -81,8 +80,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:19.048+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8d_2025\"},{\"changed_at\":\"2026-04-04 01:13:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:14:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:23:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:25:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:26:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:31:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:19.048+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8d_2025\"},{\"changed_at\":\"2026-04-04 01:13:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:14:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:21:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:23:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:25:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:26:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:31:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:18:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:22:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:23:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:25:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:26:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-15 01:06:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

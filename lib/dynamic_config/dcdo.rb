@@ -71,7 +71,8 @@ class DCDOBase < DynamicConfigBase
       'ai-gateway-turnstile-site-key': CDO.ai_gateway_turnstile_site_key,
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
-      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false)
+      'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
+      'launch-grades-in-sign-up': DCDO.get('launch-grades-in-sign-up', false)
     }
   end
 end
