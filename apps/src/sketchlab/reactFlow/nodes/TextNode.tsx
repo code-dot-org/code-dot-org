@@ -64,7 +64,7 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
     <div
       className={styles.textNode}
       aria-label={`Text: ${data.text}`}
-      onClick={startEditing}
+      onDoubleClick={startEditing}
     >
       <NodeResizer
         isVisible={selected}
