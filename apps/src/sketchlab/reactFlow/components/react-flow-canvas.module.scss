@@ -1,0 +1,27 @@
+.canvasContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  // Handles: use themed solid border color with primary background.
+  :global(.react-flow__handle) {
+    background-color: var(--background-neutral-primary);
+    border-color: var(--borders-neutral-solid);
+  }
+
+  // Controls panel: themed background and text.
+  :global(.react-flow__controls) {
+    background-color: var(--background-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+
+    :global(.react-flow__controls-button) {
+      background-color: var(--background-neutral-primary);
+      fill: var(--text-neutral-primary);
+      border-bottom-color: var(--borders-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-secondary);
+      }
+    }
+  }
+}
