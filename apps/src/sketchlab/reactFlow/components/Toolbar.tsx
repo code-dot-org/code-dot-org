@@ -160,6 +160,8 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           id={`${uid}-rect`}
           onClick={() => addShape('rectangle')}
           size="small"
+          color="tertiary"
+          variant="outlined"
         >
           <RectIcon />
         </IconButton>
@@ -171,6 +173,8 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           id={`${uid}-tri`}
           onClick={() => addShape('triangle')}
           size="small"
+          color="tertiary"
+          variant="outlined"
         >
           <TriangleIcon />
         </IconButton>
@@ -182,6 +186,8 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           id={`${uid}-circle`}
           onClick={() => addShape('circle')}
           size="small"
+          color="tertiary"
+          variant="outlined"
         >
           <CircleIcon />
         </IconButton>
@@ -193,6 +199,8 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           id={`${uid}-text`}
           onClick={() => onAddNode('text', {text: ''})}
           size="small"
+          color="tertiary"
+          variant="outlined"
         >
           <TextIcon />
         </IconButton>
@@ -204,6 +212,8 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           id={`${uid}-image`}
           onClick={openFileInput}
           size="small"
+          color="tertiary"
+          variant="outlined"
         >
           <ImageIcon />
         </IconButton>

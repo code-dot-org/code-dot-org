@@ -10,11 +10,4 @@
   padding: 6px;
   pointer-events: all;
   background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-
-  // MUI IconButton uses its own color for the icon; override it
-  // so the SVG icons inherit the themed text color.
-  :global(.MuiIconButton-root) {
-    color: var(--text-neutral-primary);
-  }
 }
