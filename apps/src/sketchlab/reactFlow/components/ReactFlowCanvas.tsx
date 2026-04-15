@@ -169,6 +169,9 @@ export default function ReactFlowCanvas({
           nodesDraggable={!readOnly}
           nodesConnectable={!readOnly}
           elementsSelectable={!readOnly}
+          nodesFocusable={true}
+          edgesFocusable={true}
+          disableKeyboardA11y={false}
         >
           <Background />
           <Controls />
