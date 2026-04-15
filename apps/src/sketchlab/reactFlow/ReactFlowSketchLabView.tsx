@@ -97,36 +97,6 @@ function ReactFlowSketchLabViewInner({
 
   // Track how many nodes have been added this session to stagger placement.
   const addedNodeCountRef = useRef(0);
-  const canvasContainerRef = useRef<HTMLDivElement>(null);
-  // When set, the next render will focus this node's DOM element.
-  const pendingFocusNodeIdRef = useRef<string | null>(null);
-
-  // After a new node is added, wait for React Flow to render its DOM wrapper
-  // then focus it. React Flow renders nodes asynchronously after the React
-  // commit, so we poll briefly until the element appears.
-  useEffect(() => {
-    const nodeId = pendingFocusNodeIdRef.current;
-    if (!nodeId) {
-      return;
-    }
-    pendingFocusNodeIdRef.current = null;
-
-    let attempts = 0;
-    const maxAttempts = 10;
-    const interval = setInterval(() => {
-      const nodeEl = canvasContainerRef.current?.querySelector<HTMLElement>(
-        `.react-flow__node[data-id="${nodeId}"]`
-      );
-      if (nodeEl) {
-        clearInterval(interval);
-        nodeEl.focus();
-      } else if (++attempts >= maxAttempts) {
-        clearInterval(interval);
-      }
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, [nodes]);
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -214,7 +184,16 @@ function ReactFlowSketchLabViewInner({
       };
 
       setNodes(nds => [...nds, newNode]);
-      pendingFocusNodeIdRef.current = newNodeId;
+
+      // Move focus to the new node after React Flow renders it.
+      // Blur the active toolbar button first, then wait for the DOM element.
+      (document.activeElement as HTMLElement)?.blur();
+      setTimeout(() => {
+        const nodeEl = document.querySelector<HTMLElement>(
+          `.react-flow__node[data-id="${newNodeId}"]`
+        );
+        nodeEl?.focus();
+      }, 100);
     },
     [screenToFlowPosition, setNodes]
   );
@@ -298,7 +277,7 @@ function ReactFlowSketchLabViewInner({
           {teacherViewingStudent && (
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
-          <div className={styles.canvasContainer} ref={canvasContainerRef}>
+          <div className={styles.canvasContainer}>
             <Toolbar onAddNode={handleAddNode} />
             <ReactFlow
               key={mountKey}
