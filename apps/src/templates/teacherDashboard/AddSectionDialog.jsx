@@ -133,7 +133,7 @@ const AddSectionDialog = ({
         className={styles.dialog}
         title={title}
         primaryButtonProps={{
-          // TODO: Wait till Dialog uses mui button and replace this props with MUI Button props
+          // TODO: Wait till Modal uses mui button and replace this props with MUI Button props
           color: 'black',
           type: 'secondary',
           onClick: onDialogCancel,
