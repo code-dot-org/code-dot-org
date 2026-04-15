@@ -86,10 +86,9 @@ interface ToolbarProps {
     type: 'shape' | 'image' | 'text',
     data: ShapeNodeData | ImageNodeData | TextNodeData
   ) => void;
-  isDarkMode: boolean;
 }
 
-export default function Toolbar({onAddNode, isDarkMode}: ToolbarProps) {
+export default function Toolbar({onAddNode}: ToolbarProps) {
   const {screenToFlowPosition} = useReactFlow();
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
@@ -149,7 +148,7 @@ export default function Toolbar({onAddNode, isDarkMode}: ToolbarProps) {
 
   return (
     <Paper
-      className={`${styles.toolbar} ${isDarkMode ? styles.dark : ''}`}
+      className={styles.toolbar}
       elevation={3}
       role="toolbar"
       aria-label="Add shapes and images"

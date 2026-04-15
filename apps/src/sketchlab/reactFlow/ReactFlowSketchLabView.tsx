@@ -281,10 +281,7 @@ function ReactFlowSketchLabViewInner({
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
           <div className={styles.canvasContainer}>
-            <Toolbar
-              onAddNode={handleAddNode}
-              isDarkMode={colorMode === 'dark'}
-            />
+            <Toolbar onAddNode={handleAddNode} />
             <ReactFlow
               key={mountKey}
               nodes={nodes}

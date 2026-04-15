@@ -9,9 +9,12 @@
   gap: 4px;
   padding: 6px;
   pointer-events: all;
-}
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 
-.dark {
-  background-color: #1e1e1e;
-  color: #ffffff;
+  // MUI IconButton uses its own color for the icon; override it
+  // so the SVG icons inherit the themed text color.
+  :global(.MuiIconButton-root) {
+    color: var(--text-neutral-primary);
+  }
 }

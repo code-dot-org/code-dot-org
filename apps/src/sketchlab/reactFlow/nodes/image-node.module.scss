@@ -20,11 +20,12 @@
   right: 4px;
   padding: 2px 6px;
   font-size: 11px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid #ccc;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 3px;
   cursor: pointer;
   line-height: 1.4;
+  color: var(--text-neutral-primary);
   opacity: 0;
   transition: opacity 0.15s;
 
@@ -43,22 +44,25 @@
   align-items: center;
   gap: 4px;
   padding: 4px;
-  background: rgba(255, 255, 255, 0.92);
-  border-top: 1px solid #ccc;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
 }
 
 .altLabel {
   font-size: 11px;
   white-space: nowrap;
   flex-shrink: 0;
+  color: var(--text-neutral-primary);
 }
 
 .altInput {
   flex: 1;
   font-size: 12px;
   padding: 2px 4px;
-  border: 1px solid #1976d2;
+  border: 1px solid var(--borders-info-primary);
   border-radius: 2px;
   outline: none;
   min-width: 0;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
