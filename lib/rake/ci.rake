@@ -71,7 +71,7 @@ SKIP_EYES = 'skip eyes'.freeze
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
 # Use AWS Device Farm instead of SauceLabs for remote browser testing.
-# Requires DEVICE_FARM_PROJECT_ARN to be set as a CI secret.
+# Requires DEVICE_FARM_DESKTOP_PROJECT_ARN to be set as a CI secret.
 # Note: Device Farm browsers connect to public URLs; they cannot reach localhost.
 # When this tag is present, SauceLabs browser configs are replaced with
 # browsers_device_farm.json (Chrome and Firefox only) and no Sauce Connect

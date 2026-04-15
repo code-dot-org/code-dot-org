@@ -152,7 +152,7 @@ def parse_options
         options.first_run_local = 'true'
       end
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
-                               "Requires CDO.device_farm_project_arn to be set. " \
+                               "Requires CDO.device_farm_desktop_project_arn to be set. " \
                                "Note: Device Farm browsers cannot reach localhost; use a public domain."
               ) do
         options.device_farm = true

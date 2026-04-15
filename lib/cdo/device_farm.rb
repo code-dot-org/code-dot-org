@@ -13,9 +13,9 @@ require 'aws-sdk-devicefarm'
 # Prerequisites:
 #   1. Desktop: create a Desktop Browser Testing (TestGrid) project:
 #        aws devicefarm create-test-grid-project --name cdo-ui-tests --region us-west-2
-#      Set device_farm_project_arn in locals.yml or DEVICE_FARM_PROJECT_ARN env var.
+#      Set device_farm_desktop_project_arn in locals.yml.
 #   2. Mobile: create a standard Device Farm project via the AWS console.
-#      Set device_farm_mobile_project_arn in locals.yml or DEVICE_FARM_MOBILE_PROJECT_ARN env var.
+#      Set device_farm_mobile_project_arn in locals.yml.
 #   3. Ensure AWS credentials are available (instance profile, env vars, etc.).
 
 module Cdo
@@ -50,7 +50,7 @@ module Cdo
     # Constructs a desktop TestGrid job ARN from the project ARN and the
     # Selenium session ID returned by browser.session_id.
     def self.desktop_job_arn_for(selenium_session_id)
-      arn = CDO.device_farm_project_arn
+      arn = CDO.device_farm_desktop_project_arn
       return nil if arn.blank?
 
       arn_parts = arn.split(':')
@@ -131,13 +131,13 @@ module Cdo
     # Returns the appropriate project ARN and raises if blank.
     def self.project_arn_for(mobile: false)
       if mobile
-        raise 'Please define CDO.device_farm_mobile_project_arn in locals.yml or set DEVICE_FARM_MOBILE_PROJECT_ARN' \
+        raise 'Please define CDO.device_farm_mobile_project_arn in locals.yml' \
           if CDO.device_farm_mobile_project_arn.blank?
         CDO.device_farm_mobile_project_arn
       else
-        raise 'Please define CDO.device_farm_project_arn in locals.yml or set DEVICE_FARM_PROJECT_ARN' \
-          if CDO.device_farm_project_arn.blank?
-        CDO.device_farm_project_arn
+        raise 'Please define CDO.device_farm_desktop_project_arn in locals.yml' \
+          if CDO.device_farm_desktop_project_arn.blank?
+        CDO.device_farm_desktop_project_arn
       end
     end
 
