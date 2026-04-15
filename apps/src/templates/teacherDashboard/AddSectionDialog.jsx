@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
@@ -128,7 +128,7 @@ const AddSectionDialog = ({
     return null;
   } else {
     return (
-      <Dialog
+      <Modal
         aria-label={title}
         className={styles.dialog}
         title={title}
