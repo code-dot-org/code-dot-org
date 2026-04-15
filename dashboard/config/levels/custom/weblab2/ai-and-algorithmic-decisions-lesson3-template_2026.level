@@ -52,23 +52,15 @@
           "name": "script.js",
           "contents": "const increaseButton = document.getElementById(\"increaseProgressButton\");\nconst progressBar = document.getElementById(\"progressBar\");\nconst textArea = document.getElementById(\"textArea\");\n\nlet progress = 10;\n\nincreaseButton.addEventListener(\"click\", () => {\n  progress = progress + 10;\n  progressBar.style.width = progress + \"%\";\n  textArea.textContent = \"Progress: \" + progress + \"%\";\n});",
           "folderId": "0",
-          "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "prompt.md",
-          "contents": "",
-          "folderId": "0",
           "active": true
         }
       },
       "openFiles": [
-        "4",
         "3"
       ]
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T01:29:33.438+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-template_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-template_2026\"},{\"changed_at\":\"2026-04-01 01:29:39 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:02:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:02:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:04:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:05:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T01:29:33.438+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-template_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-template_2026\"},{\"changed_at\":\"2026-04-01 01:29:39 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:02:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:02:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:04:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:05:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:02:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

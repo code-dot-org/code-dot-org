@@ -3,10 +3,9 @@ import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {FAQ_LINK, modelDescriptions} from '../constants';
+import {modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -165,15 +164,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
-          }
-          link={
-            notificationType === 'permissionsError'
-              ? {
-                  href: FAQ_LINK,
-                  text: commonI18n.learnMore(),
-                  className: styles.alertLink,
-                }
-              : undefined
           }
           size="s"
           ref={ref}
