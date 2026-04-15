@@ -1,5 +1,6 @@
 require 'cdo/config'
 require 'cdo/secrets_config'
+require 'cdo/global_edition'
 
 ####################################################################################################
 ##
