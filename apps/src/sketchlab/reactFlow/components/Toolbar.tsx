@@ -105,7 +105,6 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
       const data: SketchlabReactFlowNode['data'] = {
         shapeType,
         label: '',
-        fillColor: '#90CAF9',
       };
       onAddNode('shape', data);
       // Return position so the caller can use it — but we pass through onAddNode.

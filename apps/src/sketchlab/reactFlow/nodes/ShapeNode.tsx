@@ -10,14 +10,9 @@ import styles from './shape-node.module.scss';
 
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
+const SHAPE_BORDER_PX = 2;
 
-function ShapeSvg({
-  shapeType,
-  fillColor,
-}: {
-  shapeType: ShapeType;
-  fillColor: string;
-}) {
+function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
   if (shapeType === 'circle') {
     return (
       <svg
@@ -28,7 +23,16 @@ function ShapeSvg({
         preserveAspectRatio="none"
         className={styles.shapeSvg}
       >
-        <ellipse cx="50" cy="50" rx="50" ry="50" fill={fillColor} />
+        <ellipse
+          cx="50"
+          cy="50"
+          rx="48"
+          ry="48"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={SHAPE_BORDER_PX}
+          vectorEffect="non-scaling-stroke"
+        />
       </svg>
     );
   }
@@ -42,11 +46,17 @@ function ShapeSvg({
         preserveAspectRatio="none"
         className={styles.shapeSvg}
       >
-        <polygon points={TRIANGLE_POINTS} fill={fillColor} />
+        <polygon
+          points={TRIANGLE_POINTS}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={SHAPE_BORDER_PX}
+          vectorEffect="non-scaling-stroke"
+        />
       </svg>
     );
   }
-  // rectangle: use a styled div border instead of SVG
+  // rectangle: styled via CSS border
   return null;
 }
 
@@ -63,7 +73,6 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   const shapeType = data.shapeType as ShapeType;
   const label = (data.label as string) ?? '';
-  const fillColor = (data.fillColor as string) ?? '#90CAF9';
 
   const startEditing = useCallback(() => {
     if (isEditing) {
@@ -123,13 +132,9 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
       {/* Background shape */}
       {isRectangle ? (
-        <div
-          className={styles.rectangleBackground}
-          style={{backgroundColor: fillColor}}
-          aria-hidden="true"
-        />
+        <div className={styles.rectangleBackground} aria-hidden="true" />
       ) : (
-        <ShapeSvg shapeType={shapeType} fillColor={fillColor} />
+        <ShapeSvg shapeType={shapeType} />
       )}
 
       {/* Text label: click or tab to start editing */}
