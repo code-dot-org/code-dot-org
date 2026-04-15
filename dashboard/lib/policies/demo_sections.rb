@@ -98,18 +98,18 @@ class Policies::DemoSections
   end
 
   def self.resolve_unit(unit_name)
-    return nil unless unit_name.present?
+    return nil if unit_name.blank?
 
     Unit.get_from_cache(unit_name, raise_exceptions: false)
   end
-  private_class_method :resolve_unit
 
   def self.resolve_unit_group(unit_group_name)
-    return nil unless unit_group_name.present?
+    return nil if unit_group_name.blank?
 
     UnitGroup.get_from_cache(unit_group_name)
   rescue ActiveRecord::RecordNotFound
     nil
   end
-  private_class_method :resolve_unit_group
+
+  private_class_method :resolve_unit, :resolve_unit_group
 end
