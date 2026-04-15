@@ -124,7 +124,9 @@ function orderComponent(
   // Cycle fallback: any unvisited nodes in the component, sorted by position.
   if (visited.size < componentIds.size) {
     const remaining = Array.from(componentIds).filter(id => !visited.has(id));
-    remaining.sort((a, b) => compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!));
+    remaining.sort((a, b) =>
+      compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!)
+    );
     result.push(...remaining);
   }
 

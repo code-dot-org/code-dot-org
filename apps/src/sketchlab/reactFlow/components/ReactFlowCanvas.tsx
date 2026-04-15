@@ -20,7 +20,6 @@ import {
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
-import {computeTabOrder, type TabOrderEntry} from '../computeTabOrder';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
@@ -31,6 +30,7 @@ import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {ReactFlowSketchLabSources} from '../types';
+import {computeTabOrder, type TabOrderEntry} from '../utils/computeTabOrder';
 
 import Toolbar from './Toolbar';
 
