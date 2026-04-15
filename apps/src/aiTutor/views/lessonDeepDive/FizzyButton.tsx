@@ -28,7 +28,9 @@ const FizzyButton: FC<FizzyButtonProps> = ({onClick, ariaLabel, children}) => {
     const hue = Math.random() * 360;
     bubble.style.background = `radial-gradient(circle at 30% 30%, hsl(${hue} 100% 88%), hsl(${hue} 80% 55%))`;
     document.body.appendChild(bubble);
-    bubble.addEventListener('animationend', () => bubble.remove(), {once: true});
+    bubble.addEventListener('animationend', () => bubble.remove(), {
+      once: true,
+    });
   }, []);
 
   const handleMouseEnter = useCallback(() => {
