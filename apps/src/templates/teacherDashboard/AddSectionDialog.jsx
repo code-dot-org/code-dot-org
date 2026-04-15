@@ -130,7 +130,7 @@ const AddSectionDialog = ({
     return (
       <Modal
         aria-label={title}
-        className={`${styles.dialog} uitest-new-section-dialog`}
+        className={`${styles.modal} uitest-new-section-dialog`}
         title={title}
         primaryButtonProps={{
           // TODO: Wait till Modal uses mui button and replace this props with MUI Button props

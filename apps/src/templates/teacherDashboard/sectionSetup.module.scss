@@ -1,4 +1,4 @@
-.dialog {
+.modal {
   display: flex;
   flex-direction: column;
   width: min(1010px, calc(100vw - 40px));
@@ -10,17 +10,10 @@
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
 
   > div:nth-child(3) {
-    // Override the default max-height for the content section of the modal to allow for more content in the dialog.
+    // Override the default max-height for the content section of the modal to allow for more content in the modal.
     max-height: unset;
   }
 
-}
-
-.dialogCenteredContent {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 20px 0;
 }
 
 .loadingState {
@@ -38,10 +31,6 @@
   gap: 16px;
   width: 100%;
   max-width: 970px;
-}
-
-.screenTitle {
-  margin-bottom: 0;
 }
 
 .bodyText {
@@ -132,11 +121,6 @@
   margin-bottom: 0;
 }
 
-.footerActions {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .srOnly {
   position: absolute;
   width: 1px;
@@ -150,7 +134,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .dialog {
+  .modal {
     width: calc(100vw - 24px);
     padding: 24px 16px;
   }
