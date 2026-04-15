@@ -1,5 +1,5 @@
 import Shepherd, {
-  type StepOptions,
+  StepOptions,
   type StepOptionsButton,
   type Tour,
 } from 'shepherd.js';
