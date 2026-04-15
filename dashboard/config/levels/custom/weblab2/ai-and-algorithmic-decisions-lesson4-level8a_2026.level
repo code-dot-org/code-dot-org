@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-20T23:43:18.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "long_instructions": "### **Campus Help Desk**\r\n\r\nCreate a support dashboard where buttons update ticket status and messages.\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a description for each button. Include:\r\n\r\n   * Name of the button  \r\n   * Event type\r\n   * What the button should do\r\n   * What on the page changes\r\n\r\n2. **Build:** Use AI to generate a **named function** based on your description.\r\n\r\n3. **Wire it up:** Connect each function to a button using `addEventListener`.\r\n\r\n4. **Test:** Click your buttons and confirm the page updates as expected.\r\n",
+    "long_instructions": "### **Campus Help Desk**\r\n\r\n#### **Do This:**\r\n\r\n1. **Review the example:** Look at the completed button. Notice how the function is written as a named arrow function and how it is connected using `addEventListener`.\r\n\r\n2. Read a function description for another button in `prompt.md`.\r\n\r\n3. Highlight the button description, select **Add to AI Tutor Chat**, and ask the AI to write a named arrow function that matches the description.\r\n\r\n4. Create an event handler using `addEventListener(\"click\", functionName)` and add your function.\r\n\r\n5. Click the button and confirm that it works as expected.\r\n\r\n6. Complete the same steps for the remaining buttons.",
     "display_name": "Campus Help Desk",
     "start_sources": {
       "folders": {
@@ -51,16 +50,16 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "",
+          "contents": "const newTicketButton = document.getElementById(\"newTicketButton\");\n\nconst ticketCountDisplay = document.getElementById(\"ticketCount\");\nconst queueCountDisplay = document.getElementById(\"queueCount\");\nconst output = document.getElementById(\"output\");\n\nlet ticketCount = 0;\nlet queueCount = 0;\n\nconst createTicket = () => {\n  ticketCount = ticketCount + 1;\n  queueCount = queueCount + 1;\n\n  ticketCountDisplay.textContent = ticketCount;\n  queueCountDisplay.textContent = queueCount;\n  output.textContent = \"New ticket created.\";\n};\n\n\nnewTicketButton.addEventListener(\"click\", createTicket);",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "4": {
           "id": "4",
           "name": "prompt.md",
-          "contents": "Name of Button:\nEvent:\nWhat should happen:\nWhat on the page changes:\n\n\nName of Button:\nEvent:\nWhat should happen:\nWhat on the page changes:\n\n\nName of Button:\nEvent:\nWhat should happen:\nWhat on the page changes:\n\n\nName of Button:\nEvent:\nWhat should happen:\nWhat on the page changes:",
+          "contents": "## New Ticket Button\nName of Button: New Ticket\nEvent: click\nWhat should happen: increase the ticket count and queue\nWhat on the page changes: the number of tickets, the queue number, and the message\n\n\n## Assign Ticket Button\nName of Button: Assign Tech\nEvent: click\nWhat should happen: decrease the queue\nWhat on the page changes: the queue number and the message\n\n\n## Close Ticket Button\nName of Button: Close Ticket\nEvent: click\nWhat should happen: decrease the ticket count\nWhat on the page changes: the ticket number and the message\n\n\n## Reset Button\nName of Button: Reset\nEvent: click\nWhat should happen: reset everything to 0\nWhat on the page changes: the ticket number, the queue number, the message, and the status\n",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
@@ -81,8 +80,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:18.473+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8a_2025\"},{\"changed_at\":\"2026-04-04 00:14:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:22:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:24:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:31:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:31:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:34:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:34:50 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:36:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:40:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:30:07 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:18.473+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8a_2025\"},{\"changed_at\":\"2026-04-04 00:14:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:22:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:24:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:31:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:31:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:33:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:34:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:34:50 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:36:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:40:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:30:07 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:27:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:27:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:30:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:30:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

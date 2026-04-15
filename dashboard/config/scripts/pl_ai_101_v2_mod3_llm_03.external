@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Prompting Large Language Models
 
-#### Let's try out working with a Large Language Model. You may be familiar with one or more of the following:
+#### Before we start working with a Large Language Model (LLM) let's take a minute to review some key vocabulary and best practices.
+
+#### You may be familiar with one or more of the following:
 
 <div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
 <div style="width:20%;text-align:center;">

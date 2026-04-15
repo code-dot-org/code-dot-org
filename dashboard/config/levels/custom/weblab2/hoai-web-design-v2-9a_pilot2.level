@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-06T18:24:18.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring Headers\r\n\r\n**Do This:**\r\n1. Ask AI Tutor: \"How do headers work in HTML?\"\r\n    - You can type directly, or highlight lines of code and select **\"Add to AI Tutor\"**.\r\n2. Ask AI Tutor to add new content using headers to this page.\r\n    - Be specific - use the tag name in your prompt (e.g., *\"Add an `<h2>` header so that...\"*).\r\n\r\nOnce you've added your content, click **Continue**.",
+    "long_instructions": "## Exploring Headings\r\n\r\n**Do This:**\r\n1. Ask AI Tutor: \"How do headings work in HTML?\"\r\n    - You can type directly, or highlight lines of code and select **\"Add to AI Tutor\"**.\r\n2. Ask AI Tutor to add new content using headings to this page.\r\n    - Be specific - use the tag name in your prompt (e.g., *\"Add an `<h2>` heading so that...\"*).\r\n\r\nOnce you've added your content, click **Continue**.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -35,8 +36,8 @@
         "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
       }
     },
-    "display_name": "Headers",
-    "bubble_choice_description": "Learn about Header elements, like &lt;h1&gt;, &lt;h3&gt;, etc",
+    "display_name": "Headings",
+    "bubble_choice_description": "Learn about Heading elements, like &lt;h1&gt;, &lt;h3&gt;, etc",
     "start_sources": {
       "folders": {
       },
@@ -55,9 +56,10 @@
     },
     "thumbnail_url": "https://images.code.org/b1ebaf0d4b0a26a9cdfb654ea8293917-Frame 1 (9).png",
     "name_suffix": "_pilot2",
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "false",
+    "teacher_markdown": "**Intent:** Students are building a vocabulary of HTML elements so they can name what they want when prompting AI. The goal is not mastery of HTML or even writing any code yourself \\- it's fluency enough to direct AI precisely. \r\n\r\n**Circulation questions:**\r\n\r\n- \"What did you learn about this element? Can you explain it in your own words?\"  \r\n- \"How did you describe it in your prompt? What specific language did you use?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may use vague prompts like \"add a list\" without specifying content \\- ask them \"what should the list say?\"  \r\n- Students may not understand why the element matters for their own page \\- connect it explicitly: \"where could you use this on the page you built in Act 1?\"",
+    "require_edit_to_continue": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:18.466+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-04-06 23:17:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:05:56 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-13 03:23:28 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:18.466+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-04-06 23:17:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:05:56 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-13 03:23:28 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:21:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 09:38:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-15 02:09:41 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"require_edit_to_continue\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

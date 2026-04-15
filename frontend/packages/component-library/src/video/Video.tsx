@@ -1,11 +1,10 @@
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player';
 import {JsonLd} from 'react-schemaorg';
 import type {VideoObject} from 'schema-dts';
 
-import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import Facade from '@/video/Facade';
 import NativeVideo from '@/video/NativeVideo';
@@ -126,14 +125,14 @@ const Video: React.FC<VideoProps> = ({
               iconName="exclamation-circle"
               iconStyle="solid"
             />
-            <Typography variant="body2" gutterBottom>
-              <Typography variant="strong">
+            <MuiTypography variant="body2" gutterBottom>
+              <MuiTypography variant="strong">
                 {errorHeading || 'Video unavailable'}
-              </Typography>
-            </Typography>
-            <Typography variant="body3" gutterBottom>
+              </MuiTypography>
+            </MuiTypography>
+            <MuiTypography variant="body3" gutterBottom>
               {errorBody || 'This video is blocked on your network.'}
-            </Typography>
+            </MuiTypography>
           </div>
         );
       case 'cookie-blocked':
@@ -143,23 +142,26 @@ const Video: React.FC<VideoProps> = ({
               iconName="exclamation-circle"
               iconStyle="solid"
             />
-            <Typography variant="body2" gutterBottom>
-              <Typography variant="strong">
+            <MuiTypography variant="body2" gutterBottom>
+              <MuiTypography variant="strong">
                 {errorHeading || 'Cookie consent required'}
-              </Typography>
-            </Typography>
-            <Typography variant="body3" gutterBottom>
+              </MuiTypography>
+            </MuiTypography>
+            <MuiTypography variant="body3" gutterBottom>
               {errorBody ||
                 'Please enable "Functional Cookies" and refresh the page to play this video.'}
-            </Typography>
-            <Button
+            </MuiTypography>
+            <MuiButton
+              variant="contained"
+              color="primary"
               className={moduleStyles.cookieConsentButton}
               onClick={() => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (window as any).OneTrust.ToggleInfoDisplay();
               }}
-              text={'Cookie Settings'}
-            />
+            >
+              Cookie Settings
+            </MuiButton>
           </div>
         );
     }
@@ -171,25 +173,25 @@ const Video: React.FC<VideoProps> = ({
       <div className={moduleStyles.videoWrapper}>{getVideoPlayer()}</div>
       <div className={moduleStyles.footer}>
         {showCaption && (
-          <Typography variant="figcaption" gutterBottom>
+          <MuiTypography variant="figcaption" gutterBottom>
             {videoTitle}
-          </Typography>
+          </MuiTypography>
         )}
         {videoFallback && (
-          <LinkButton
+          <MuiButton
             className={moduleStyles.download}
-            color="gray"
+            color="tertiary"
             href={videoFallback}
-            iconLeft={{
-              iconName: 'download',
-              iconStyle: 'solid',
-            }}
-            size="xs"
-            text={downloadLabel || 'Download'}
-            type="secondary"
+            startIcon={
+              <FontAwesomeV6Icon iconName="download" iconStyle="solid" />
+            }
+            size="extraSmall"
+            variant="outlined"
             target="_blank"
             rel="noopener noreferrer"
-          />
+          >
+            {downloadLabel || 'Download'}
+          </MuiButton>
         )}
       </div>
       {/* JSON-LD for structured data. Needed for Google SEO.

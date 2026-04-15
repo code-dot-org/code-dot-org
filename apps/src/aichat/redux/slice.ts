@@ -51,7 +51,6 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
-  userHasAichatLabAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
   hasSentMessage: false,
@@ -112,9 +111,6 @@ const aichatSlice = createSlice({
       } else {
         state.chatEventsCurrent = events;
       }
-    },
-    setUserHasAichatLabAccess: (state, action: PayloadAction<boolean>) => {
-      state.userHasAichatLabAccess = action.payload;
     },
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
@@ -410,7 +406,6 @@ export const {
   setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
-  setUserHasAichatLabAccess,
   setClientType,
   setViewMode,
   addStagedFile,

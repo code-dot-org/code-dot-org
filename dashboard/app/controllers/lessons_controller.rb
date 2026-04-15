@@ -10,6 +10,7 @@ class LessonsController < ApplicationController
 
   include LevelsHelper
   include CachedUnitHelper
+  include StudentWorkHelper
 
   # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
@@ -104,7 +105,8 @@ class LessonsController < ApplicationController
       lessonName: @lesson.localized_name,
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
-      objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}}
+      objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}},
+      assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user.id)
     }
   end
 
