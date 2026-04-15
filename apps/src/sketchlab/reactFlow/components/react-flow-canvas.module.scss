@@ -3,6 +3,9 @@
   width: 100%;
   height: 100%;
 
+  // Edges: use themed stroke so they stay visible in dark mode.
+  --xy-edge-stroke-default: var(--borders-neutral-solid);
+
   // Handles: use themed solid border color with primary background.
   :global(.react-flow__handle) {
     background-color: var(--background-neutral-primary);
