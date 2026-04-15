@@ -342,7 +342,7 @@ class StudentWorkHelperTest < ActionView::TestCase
 
   test "progress: no levels returns all zeros" do
     assert_equal(
-      {levels_total_count: 0, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 0, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -352,7 +352,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_script_level(create(:multi))
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 2, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -370,7 +370,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m2, best_result: passing_result)
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 2, levels_correct_count: 2},
+      {levels_total_count: 2, levels_attempted_count: 2, levels_correct_count: 2},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -384,7 +384,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m2, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 2, levels_correct_count: 0},
+      {levels_total_count: 2, levels_attempted_count: 2, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -398,7 +398,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m2, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 2, levels_correct_count: 1},
+      {levels_total_count: 2, levels_attempted_count: 2, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -411,7 +411,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m1, best_result: passing_result)
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 2, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -427,7 +427,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m2, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 3, levels_completed_count: 2, levels_correct_count: 1},
+      {levels_total_count: 3, levels_attempted_count: 2, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -440,7 +440,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(m1, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 2, levels_completed_count: 1, levels_correct_count: 0},
+      {levels_total_count: 2, levels_attempted_count: 1, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -455,7 +455,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(ext, best_result: ActivityConstants::BEST_PASS_RESULT)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -465,7 +465,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_script_level(ext)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -481,7 +481,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_script_level(bc)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -494,7 +494,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(sub, best_result: passing_result)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -507,7 +507,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(sub, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -522,7 +522,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(sub2, best_result: passing_result)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -538,7 +538,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_script_level(lg)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -551,7 +551,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(sub, best_result: passing_result)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -566,7 +566,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_user_level(sub2, best_result: failing_result)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -581,7 +581,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     # sub2 not attempted
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -602,7 +602,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     OpenaiEvaluateHelper.expects(:evaluate_free_response).never
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -616,7 +616,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     OpenaiEvaluateHelper.expects(:evaluate_free_response).never
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -629,18 +629,41 @@ class StudentWorkHelperTest < ActionView::TestCase
     make_script_level(create(:aichat))
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
 
-  test "progress: aichat with an event is complete and correct" do
+  test "progress: aichat with event but no user_level is not attempted" do
     aichat = create(:aichat)
     make_script_level(aichat)
     create(:aichat_event, user: @student, level_id: aichat.id, script_id: @script.id)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat with user_level but no event is not attempted" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    make_user_level(aichat, best_result: 100)
+
+    assert_equal(
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat with user_level and event is attempted and correct" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    make_user_level(aichat, best_result: 100)
+    create(:aichat_event, user: @student, level_id: aichat.id, script_id: @script.id)
+
+    assert_equal(
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -652,7 +675,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     create(:aichat_event, user: @student, level_id: aichat.id, script_id: other_script.id)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 0, levels_correct_count: 0},
+      {levels_total_count: 1, levels_attempted_count: 0, levels_correct_count: 0},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end
@@ -672,7 +695,7 @@ class StudentWorkHelperTest < ActionView::TestCase
     UserLevelEvaluation.stubs(:find_by).returns(mock_eval)
 
     assert_equal(
-      {levels_total_count: 1, levels_completed_count: 1, levels_correct_count: 1},
+      {levels_total_count: 1, levels_attempted_count: 1, levels_correct_count: 1},
       lesson_progress_status(@lesson.id, @student.id)
     )
   end

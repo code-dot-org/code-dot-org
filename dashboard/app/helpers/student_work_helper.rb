@@ -84,28 +84,28 @@ module StudentWorkHelper
     end
   end
 
-  # Returns counts of levels completed and correct for
+  # Returns counts of levels attempted and correct for
   # a student's progress across all
   # levels in a lesson.
   #
-  # Completion and correctness rules per level type:
-  #   Multi    — complete: any attempt; correct: passing (best_result >= 20)
-  #   External — complete: any attempt; correct: same as complete
-  #   Aichat   — complete: at least one AichatEvent exists; correct: same as complete
-  #   BubbleChoice — complete: any sublevel attempted; correct: any sublevel passing
-  #   LevelGroup — complete: any sublevel attempted;
+  # Attempt and correctness rules per level type:
+  #   Multi    — attempted: any attempt; correct: passing (best_result >= 20)
+  #   External — attempted: any attempt; correct: same as attempted
+  #   Aichat   — attempted: UserLevel exists AND at least one AichatEvent exists; correct: same as attempted
+  #   BubbleChoice — attempted: any sublevel attempted; correct: any sublevel passing
+  #   LevelGroup — attempted: any sublevel attempted;
   #                correct: all attempted sublevels correct
   #     (Multi sublevel → passing; FreeResponse sublevel → ALL_COMPLETE_CORRECT
   #      evaluation; evaluation triggered if absent but submission exists)
   #
-  # Correctness terms in the return value refer to the completed subset only.
+  # Correctness terms in the return value refer to the attempted subset only.
   #
   # @param lesson_id [Integer]
   # @param student_id [Integer]
   # @return [Hash] with keys:
   #   :levels_total_count     [Integer]
-  #   :levels_completed_count [Integer]
-  #   :levels_correct_count   [Integer]  correct levels within the completed set
+  #   :levels_attempted_count [Integer]
+  #   :levels_correct_count   [Integer]  correct levels within the attempted set
   def lesson_progress_status(lesson_id, student_id)
     lesson = Lesson.find(lesson_id)
     script_levels = lesson.script_levels.includes(:levels)
@@ -176,7 +176,7 @@ module StudentWorkHelper
   private def level_completion_status(level, sublevels, user_levels, evaluations, aichat_event_level_ids)
     case level
     when Aichat
-      aichat_status(level, aichat_event_level_ids)
+      aichat_status(level, user_levels, aichat_event_level_ids)
     when BubbleChoice
       bubble_choice_status(sublevels, user_levels)
     when LevelGroup
@@ -186,9 +186,9 @@ module StudentWorkHelper
     end
   end
 
-  private def aichat_status(level, aichat_event_level_ids)
-    complete = aichat_event_level_ids.include?(level.id)
-    [complete, complete]
+  private def aichat_status(level, user_levels, aichat_event_level_ids)
+    attempted = user_levels[level.id]&.attempted? && aichat_event_level_ids.include?(level.id)
+    [attempted, attempted]
   end
 
   private def simple_level_status(ul)
@@ -225,7 +225,7 @@ module StudentWorkHelper
     completed = results.select {|(complete, _)| complete}
     {
       levels_total_count: results.size,
-      levels_completed_count: completed.size,
+      levels_attempted_count: completed.size,
       levels_correct_count: completed.count {|(_, correct)| correct}
     }
   end

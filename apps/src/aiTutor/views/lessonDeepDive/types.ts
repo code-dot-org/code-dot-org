@@ -8,7 +8,7 @@ export type AssessmentQuestionResult = {
 
 export type LessonProgressCounts = {
   levelsTotalCount: number;
-  levelsCompletedCount: number;
+  levelsAttemptedCount: number;
   levelsCorrectCount: number;
 };
 

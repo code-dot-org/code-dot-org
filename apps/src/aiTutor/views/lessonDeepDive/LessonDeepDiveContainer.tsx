@@ -23,7 +23,7 @@ const darkTheme = createTheme({
 
 import FizzyButton from './FizzyButton';
 import InterventionBox from './InterventionBox';
-import LessonSummaryBox from './LessonSummaryBox';
+import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
 import TutorSummaryBox from './TutorSummaryBox';
@@ -34,7 +34,7 @@ import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
   'welcome',
-  'lesson-summary',
+  'levels-attempted',
   'reflection',
   'intervention',
   'practice',
@@ -76,13 +76,12 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     switch (BOX_IDS[currentIndex]) {
       case 'welcome':
         return <WelcomeBox />;
-      case 'lesson-summary':
+      case 'levels-attempted':
         return (
-          <LessonSummaryBox
+          <LevelsAttemptedBox
             lessonName={lessonDeepDiveData.lessonName}
-            lessonSummary={lessonDeepDiveData.lessonSummary}
-            levelsTotalCount={
-              lessonDeepDiveData.progressCounts.levelsTotalCount
+            levelsAttempted={
+              lessonDeepDiveData.progressCounts.levelsAttemptedCount
             }
           />
         );

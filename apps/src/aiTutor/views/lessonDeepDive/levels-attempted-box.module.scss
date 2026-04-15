@@ -4,7 +4,7 @@
   initial-value: 0;
 }
 
-@keyframes countUp {
+@keyframes count-up {
   from {
     --lesson-summary-count: 0;
   }
@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes bubblePop {
+@keyframes bubble-pop {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -34,14 +34,26 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   height: 100%;
 
   // SafeMarkdown renders a <div> wrapping a <p>; target both
   p,
   div {
-    color: #ffffff;
+    color: #fff;
   }
+}
+
+// Matches .sentence in welcome-box.module.scss
+.lessonName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 375px;
 }
 
 .levelCountSection {
@@ -55,10 +67,10 @@
 .levelNumber {
   font-size: 5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   line-height: 1;
   counter-reset: level-count var(--lesson-summary-count);
-  animation: countUp 1.5s ease-out forwards;
+  animation: count-up 1.5s ease-out forwards;
 
   &::after {
     content: counter(level-count);
@@ -68,7 +80,7 @@
 .levelLabel {
   margin-top: 8px;
   font-size: 0.75rem;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -86,9 +98,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 2px solid #6b9fd4;
-  background-color: rgba(107, 159, 212, 0.15);
+  border: 2px solid; // color comes from inline style
   opacity: 0;
   flex-shrink: 0;
-  animation: bubblePop 0.25s ease-out forwards;
+  animation: bubble-pop 0.25s ease-out forwards;
 }
