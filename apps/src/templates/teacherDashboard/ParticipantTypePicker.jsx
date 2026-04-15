@@ -34,23 +34,19 @@ const cardInfoByAudience = {
  */
 export default class ParticipantTypePicker extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     setParticipantType: PropTypes.func.isRequired,
     availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
-    const {title, setParticipantType} = this.props;
+    const {setParticipantType} = this.props;
 
     return (
       <div className={`${styles.screen} uitest-participant-type-picker`}>
-        <Typography className={styles.screenTitle} variant="h3">
-          {title}
-        </Typography>
         <Typography
           id="dsco-dialog-description"
           className={styles.bodyText}
-          variant="body1"
+          variant="body2"
         >
           {i18n.professionalLearningParticipantQuestion()}
         </Typography>

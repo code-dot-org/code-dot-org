@@ -43,7 +43,6 @@ export const recordLoginTypePickerCancelled = () => {
  */
 class LoginTypePicker extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     handleImportOpen: PropTypes.func,
     handleCancel: PropTypes.func.isRequired,
     setRosterProvider: PropTypes.func,

@@ -107,7 +107,6 @@ const AddSectionDialog = ({
     if (!participantType) {
       return (
         <ParticipantTypePicker
-          title={title}
           setParticipantType={onParticipantTypeSelection}
           availableParticipantTypes={availableParticipantTypes}
         />
@@ -116,7 +115,6 @@ const AddSectionDialog = ({
     if (!loginType) {
       return (
         <LoginTypePicker
-          title={title}
           handleImportOpen={beginImportRosterFlow}
           setRosterProvider={setRosterProvider}
           setLoginType={onLoginTypeSelection}
