@@ -1,6 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import React from 'react';
 import {generatePath} from 'react-router-dom';
 
@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   DemoPresetView,
+  DemoType,
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
@@ -27,6 +28,7 @@ import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdo
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';
@@ -76,7 +78,9 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
-  const [pendingPath, setPendingPath] = React.useState<string | null>(null);
+  const [pendingActionKey, setPendingActionKey] = React.useState<string | null>(
+    null
+  );
   const [notice, setNotice] = React.useState<Notice | null>(null);
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
@@ -144,16 +148,16 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     eventName: string,
     pendingKey?: string
   ) => {
-    if (pendingPath) {
+    if (pendingActionKey) {
       return;
     }
 
-    setPendingPath(pendingKey || path);
+    setPendingActionKey(pendingKey || path);
     setNotice(null);
     analyticsReporter.sendEvent(eventName, {});
 
     try {
-      const section = await dispatch(createDemoSection(demoType));
+      const section = await dispatch(createDemoSection(demoType as DemoType));
       if (!section) {
         return;
       }
@@ -175,9 +179,50 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         });
       }
     } finally {
-      setPendingPath(null);
+      setPendingActionKey(null);
     }
   };
+
+  const createSectionForMenuAction = React.useCallback(
+    async (
+      eventName: string,
+      actionKey:
+        | 'settings'
+        | 'roster'
+        | 'loginCards'
+        | 'certificates'
+        | 'archive'
+        | 'delete'
+    ) => {
+      if (pendingActionKey) {
+        throw new Error('Demo section creation already in progress');
+      }
+
+      setPendingActionKey(actionKey);
+      setNotice(null);
+      analyticsReporter.sendEvent(eventName, {});
+
+      try {
+        return await dispatch(createDemoSection(demoType as DemoType));
+      } catch (error) {
+        if (error instanceof DemoSectionCreationError) {
+          setNotice({
+            text: error.message,
+            type: error.errorType === 'conflict' ? 'warning' : 'danger',
+          });
+        } else {
+          setNotice({
+            text: "Couldn't create your practice section.",
+            type: 'danger',
+          });
+        }
+        throw error;
+      } finally {
+        setPendingActionKey(null);
+      }
+    },
+    [demoType, dispatch, pendingActionKey]
+  );
 
   if (numSections !== 0) {
     return null;
@@ -187,7 +232,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     return <Spinner size="large" />;
   }
 
-  if (totalSections !== 0 || !preset) {
+  if (totalSections !== 0 || !preset || !demoSection) {
     return <EmptyHomepage showHiddenOnly={showHiddenOnly} />;
   }
 
@@ -255,27 +300,20 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
               </div>
             </div>
             <div className={styles.sectionCardHeaderRight}>
-              <MuiIconButton
-                variant="text"
-                color="tertiary"
-                size="small"
-                className={styles.dropdownButton}
-                aria-label={i18n.sectionOptionsDropdown()}
-                disabled={true}
-              >
-                <FontAwesomeV6Icon
-                  iconName="ellipsis-vertical"
-                  iconStyle="solid"
-                />
-              </MuiIconButton>
+              <SectionOptionsDropdown
+                disabled={!!pendingActionKey}
+                section={demoSection}
+                onDeleteClickCallback={() => {}}
+                resolveSectionForAction={createSectionForMenuAction}
+              />
             </div>
           </div>
           <div className={styles.sectionCardBody}>
             <div className={styles.sectionCardBodyLeft}>
               <DemoSectionCourseContentDropdown
-                section={demoSection!}
-                demoType={demoType}
-                disabled={!!pendingPath}
+                section={demoSection}
+                demoType={demoType as DemoType}
+                disabled={!!pendingActionKey}
                 beforeNavigate={(path: string, eventName: string) =>
                   handleActionClick(path, eventName, path)
                 }
@@ -283,14 +321,14 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
             </div>
             <div className={styles.sectionCardBodyRight}>
               {primaryActions.map(action => {
-                const isPending = pendingPath === action.id;
+                const isPending = pendingActionKey === action.id;
                 return (
                   <button
                     id={`ui-test-demo-section-action-${action.id}`}
                     key={action.id}
                     type="button"
                     className={styles.demoActionButton}
-                    disabled={!!pendingPath}
+                    disabled={!!pendingActionKey}
                     onClick={() =>
                       handleActionClick(
                         action.path,
