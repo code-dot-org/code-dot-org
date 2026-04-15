@@ -6,15 +6,13 @@ import {
   ProductTour,
   isTourEnabledOnLevel,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
+import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from '@cdo/apps/sketchlab/constants';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
-
-import {createSketchlabTourSteps} from '../lab2/productTours/sketchlabTourSteps';
-import {LevelProperties} from '../lab2/types';
-
-import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
 
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
