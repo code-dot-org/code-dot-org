@@ -921,6 +921,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120000) do
     t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
   end
 
+<<<<<<< HEAD
   create_table "json_video_objectives", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "json_video_id", null: false
     t.integer "objective_id", null: false
@@ -928,6 +929,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120000) do
     t.index ["objective_id"], name: "index_json_video_objectives_on_objective_id"
   end
 
+=======
+>>>>>>> staging
   create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "description"

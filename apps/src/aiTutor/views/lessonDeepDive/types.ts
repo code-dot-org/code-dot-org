@@ -1,3 +1,11 @@
+export type AssessmentQuestionResult = {
+  level_id: number;
+  script_level_id: number;
+  attempts: number;
+  correct: boolean;
+  evaluation?: string;
+};
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 export type ReflectionValue =
@@ -15,6 +23,7 @@ export type LessonDeepDiveData = {
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
+  assessmentAnalysis: AssessmentQuestionResult[];
 };
 
 export type MultiSolution = {

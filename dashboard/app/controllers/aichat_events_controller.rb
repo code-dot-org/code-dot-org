@@ -20,11 +20,11 @@ class AichatEventsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    unless can_log_aichat_events?(params[:aichatContext][:clientType])
+    context = params[:aichatContext]
+    unless can_log_aichat_events?(context[:currentLevelId], context[:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
-    context = params[:aichatContext]
     event = params[:newChatEvent]
 
     project_id = nil
@@ -131,8 +131,8 @@ class AichatEventsController < ApplicationController
     render status: :ok, json: {}
   end
 
-  private def can_log_aichat_events?(client_type)
-    current_user.has_aichat_lab_access? || current_user.trust_chat_client?(client_type)
+  private def can_log_aichat_events?(level_id, client_type)
+    current_user.has_aichat_access?(level_id) || current_user.trust_chat_client?(client_type)
   end
 
   private def can_view_chat_history?(user_id)

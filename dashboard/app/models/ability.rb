@@ -545,10 +545,8 @@ class Ability
       end
 
       can :find_toxicity, :aichat do
-        user.teacher_can_access_ai_chat_lab? || user.student_can_access_ai_chat_lab?
+        user.has_essential_aichat_access?
       end
-
-      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

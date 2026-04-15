@@ -38,8 +38,8 @@ const HoaiCongrats: React.FC<Props> = ({
       data-theme={theme}
       title="Congratulations!"
       description="You finished this Hour of AI activity. What's next?"
-      primaryButtonProps={{text: 'Finish', href: finishUrl, useAsLink: true}}
-      secondaryButtonProps={{text: 'Keep Playing', onClick: handleClose}}
+      primaryButtonProps={{children: 'Finish', href: finishUrl}}
+      secondaryButtonProps={{children: 'Keep Playing', onClick: handleClose}}
       customContent={
         shareEnabled && (
           <div className={styles.shareContainer}>
