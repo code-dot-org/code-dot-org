@@ -28,14 +28,16 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {
+  SketchlabSources,
+  SerializedExcalidrawState,
+} from '@cdo/apps/sketchlab/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useDialogControl} from '../../lab2/views/dialogs';
-import {BackpackAPIContext} from '../../sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '../../sharedComponents/backpack/BackpackClientApi';
-import {SketchlabSources, SerializedExcalidrawState} from '../types';
 
 import useSketchlabTour from './introTour/useSketchlabTour';
 import {
