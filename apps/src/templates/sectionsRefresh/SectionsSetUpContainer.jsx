@@ -340,10 +340,7 @@ export default function SectionsSetUpContainer({
     toggleIsOpen
   ) => {
     return (
-      <div
-        className={moduleStyles.withBorderBottom}
-        id={sectionId + '-container'}
-      >
+      <div className={moduleStyles.withBorderBottom}>
         <Button
           id={sectionId}
           className={moduleStyles.advancedSettingsButton}

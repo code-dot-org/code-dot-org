@@ -11,7 +11,6 @@ import i18n from '@cdo/locale';
 import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
-  console.log('[sections/new.js] document.ready fired');
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
   const userCountry = getScriptData('userCountry');
 

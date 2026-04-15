@@ -26,7 +26,6 @@ const useOnboardingTour = ({
   getSteps,
   sessionStorageKey,
   onComplete,
-  onCancel,
   additionalStepOptions,
 }: UseOnboardingTourProps) => {
   const tour = useMemo(() => {
@@ -50,22 +49,11 @@ const useOnboardingTour = ({
     });
 
     tour.on('cancel', () => {
-      const currentIndex = tour.currentStep
-        ? tour.steps.indexOf(tour.currentStep)
-        : 0;
       trySetSessionStorage(sessionStorageKey, '');
-      // TODO: persist progress to backend
-      onCancel?.(currentIndex);
     });
 
     return tour;
-  }, [
-    additionalStepOptions,
-    getSteps,
-    onCancel,
-    onComplete,
-    sessionStorageKey,
-  ]);
+  }, [additionalStepOptions, getSteps, onComplete, sessionStorageKey]);
 
   return {tour};
 };

@@ -12,17 +12,17 @@ const CHECKLIST_ITEMS = [
 ];
 
 interface OnboardingChecklistProps {
-  onboardingTour: Tour | null;
+  createSectionTour: Tour | null;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
-  onboardingTour,
+  createSectionTour,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
   const handleButtonClick = (label: string) => {
     if (label === 'Create a class section') {
-      onboardingTour?.start();
+      createSectionTour?.start();
     }
   };
 

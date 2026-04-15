@@ -10,17 +10,13 @@ export const CREATE_SECTION_ONBOARDING_STEP_KEY =
 // Call this on pages that the tour navigates to (e.g. sections/new).
 // It runs outside React so it works regardless of render mode.
 export const resumeCreateSectionOnboardingTour = (
+  // TODO: Note that this might change once we get the grade sign up started.
   isElementaryTeacher: boolean
 ) => {
-  console.log(
-    'Resuming create section onboarding tour for elementary teacher:',
-    isElementaryTeacher
-  );
   const savedStepId = tryGetSessionStorage(
     CREATE_SECTION_ONBOARDING_STEP_KEY,
     ''
   );
-  console.log('Saved step id for create section onboarding tour:', savedStepId);
   if (!savedStepId) return;
 
   const tour = createShepherdTour({
