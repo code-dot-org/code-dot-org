@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import {useLocalization} from '@cdo/apps/localization';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
@@ -26,6 +27,7 @@ export function AssignmentVersionSelector({
   disabled,
   rightJustifiedPopupMenu,
 }) {
+  const locale = useLocalization();
   const selectRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [targetPoint, setTargetPoint] = useState({top: 0, left: 0});
@@ -33,7 +35,9 @@ export function AssignmentVersionSelector({
 
   // Filter the offerings based on the filters provided
   useEffect(() => {
-    const languageFilter = courseFilters?.language;
+    const languageFilter = courseFilters?.currentLocale
+      ? locale
+      : courseFilters?.language;
 
     const data = courseVersions;
 
@@ -46,7 +50,12 @@ export function AssignmentVersionSelector({
     }
 
     setFilteredVersions(data);
-  }, [courseVersions, courseFilters?.language]);
+  }, [
+    courseVersions,
+    locale,
+    courseFilters?.currentLocale,
+    courseFilters?.language,
+  ]);
 
   const handleMouseDown = e => {
     // Prevent the native dropdown menu from opening.

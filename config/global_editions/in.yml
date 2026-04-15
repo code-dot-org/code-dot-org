@@ -133,14 +133,14 @@ pages:
         availableProjectTypes: *project_types
       CurriculumQuickAssign:
         # For section setup, truncate the 'quick access' course listing to
-        # only items that are translated to Hindi
+        # only items that are translated to the current locale
         courseFilters:
-          language: hi-IN
+          currentLocale: true
       AssignmentVersionSelector:
         # When viewing a course, only populate the version selector with
         # versions that are translated
         courseFilters:
-          language: hi-IN
+          currentLocale: true
   # Teacher dashboard
   - path: /teacher_dashboard
     components:

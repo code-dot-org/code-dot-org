@@ -11,6 +11,7 @@ import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {useLocalization} from '@cdo/apps/localization';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -58,6 +59,7 @@ export default function CurriculumQuickAssign({
   courseFilters,
   setIsEditInProgress = () => {},
 }) {
+  const locale = useLocalization();
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [filteredCourseOfferings, setFilteredCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
@@ -88,7 +90,9 @@ export default function CurriculumQuickAssign({
   useEffect(() => {
     // Filter the offerings based on the filters provided
     const filterOfferings = data => {
-      const languageFilter = courseFilters?.language;
+      const languageFilter = courseFilters?.currentLocale
+        ? locale
+        : courseFilters?.language;
 
       if (languageFilter && data) {
         // Crawl data and remove any courses / versions that are not available
@@ -144,7 +148,12 @@ export default function CurriculumQuickAssign({
     };
 
     setFilteredCourseOfferings(filterOfferings(courseOfferings));
-  }, [courseOfferings, courseFilters?.language]);
+  }, [
+    courseOfferings,
+    locale,
+    courseFilters?.currentLocale,
+    courseFilters?.language,
+  ]);
 
   const getCoursesForAudience = useCallback(
     audience => {
