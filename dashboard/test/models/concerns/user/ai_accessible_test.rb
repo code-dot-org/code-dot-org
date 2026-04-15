@@ -55,6 +55,27 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _teacher_can_access_aichat?.must_equal true
     end
 
+    it 'returns true for teacher in the preverification pilot' do
+      allow(user).to receive(:teacher?).and_return(true)
+      create(
+        :single_user_experiment,
+        min_user_id: user.id,
+        name: User::AiAccessible::TEACHER_PREVERIFICATION_PILOT
+      )
+
+      _teacher_can_access_aichat?.must_equal true
+    end
+
+    it 'returns false for student in the preverification pilot' do
+      create(
+        :single_user_experiment,
+        min_user_id: user.id,
+        name: User::AiAccessible::TEACHER_PREVERIFICATION_PILOT
+      )
+
+      _teacher_can_access_aichat?.must_equal false
+    end
+
     it 'returns false if none of the conditions are met' do
       _teacher_can_access_aichat?.must_equal false
     end
