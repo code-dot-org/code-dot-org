@@ -146,10 +146,22 @@ export default function ReactFlowCanvas({
       const el = document.querySelector<HTMLElement>(selector);
       if (!el) return;
       el.focus();
-      // Pan to keep the element visible (keeping current zoom).
+      // Pan only if the element is off-screen.
       if (entry.type === 'node') {
-        const zoom = getZoom();
-        fitView({nodes: [{id: entry.id}], duration: 200, maxZoom: zoom});
+        const container = el.closest<HTMLElement>('.react-flow');
+        if (container) {
+          const cr = container.getBoundingClientRect();
+          const nr = el.getBoundingClientRect();
+          const offScreen =
+            nr.right < cr.left ||
+            nr.left > cr.right ||
+            nr.bottom < cr.top ||
+            nr.top > cr.bottom;
+          if (offScreen) {
+            const zoom = getZoom();
+            fitView({nodes: [{id: entry.id}], duration: 200, maxZoom: zoom});
+          }
+        }
       }
     },
     [fitView, getZoom]
