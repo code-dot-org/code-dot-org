@@ -12,7 +12,7 @@ import ReactFlowSketchLabView, {
 } from './reactFlow/ReactFlowSketchLabView';
 
 export default function SketchlabView(props: LabProps<LevelProperties>) {
-  if (experiments.isEnabled('sketch2')) {
+  if (experiments.isEnabledAllowingQueryString('sketch2')) {
     return (
       <SourcesContainer
         {...props}

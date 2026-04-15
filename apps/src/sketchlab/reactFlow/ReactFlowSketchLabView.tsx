@@ -18,15 +18,15 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 
-import {DEFAULT_NODE_HEIGHT, DEFAULT_NODE_WIDTH, SAVE_DEBOUNCE_MS} from './constants';
 import Toolbar from './components/Toolbar';
+import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  SAVE_DEBOUNCE_MS,
+} from './constants';
 import ImageNode from './nodes/ImageNode';
 import ShapeNode from './nodes/ShapeNode';
-import {
-  ImageNodeData,
-  ReactFlowSketchLabSources,
-  ShapeNodeData,
-} from './types';
+import {ImageNodeData, ReactFlowSketchLabSources, ShapeNodeData} from './types';
 
 import styles from './ReactFlowSketchLabView.module.scss';
 
@@ -42,7 +42,7 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 
-function ReactFlowSketchLabViewInner({}: LabProps<LevelProperties>) {
+function ReactFlowSketchLabViewInner(_props: LabProps<LevelProperties>) {
   const {currentSources, updateSources} =
     useSources<ReactFlowSketchLabSources>();
 
@@ -139,7 +139,9 @@ function ReactFlowSketchLabViewInner({}: LabProps<LevelProperties>) {
   );
 }
 
-export default function ReactFlowSketchLabView(props: LabProps<LevelProperties>) {
+export default function ReactFlowSketchLabView(
+  props: LabProps<LevelProperties>
+) {
   return (
     <ReactFlowProvider>
       <ReactFlowSketchLabViewInner {...props} />
