@@ -16,11 +16,13 @@ const BUBBLE_COLORS = [
 interface LevelsAttemptedBoxProps {
   lessonName: string;
   levelsAttempted: number;
+  levelsTotal: number;
 }
 
 const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
   lessonName,
   levelsAttempted,
+  levelsTotal,
 }) => (
   <div className={styles.container}>
     <p className={styles.lessonName}>{lessonName}</p>
@@ -29,7 +31,10 @@ const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
         className={styles.levelNumber}
         style={{'--target-count': levelsAttempted} as React.CSSProperties}
       />
-      <div className={styles.levelLabel}>levels attempted</div>
+      <div className={styles.levelLabel}>
+        {' '}
+        out of {levelsTotal} levels attempted
+      </div>
       <div className={styles.bubblesRow}>
         {Array.from({length: levelsAttempted}, (_, i) => {
           const {border, bg} = BUBBLE_COLORS[i % BUBBLE_COLORS.length];

@@ -85,8 +85,7 @@ module StudentWorkHelper
   end
 
   # Returns counts of levels attempted and correct for
-  # a student's progress across all
-  # levels in a lesson.
+  # a student's progress across all levels in a lesson.
   #
   # Attempt and correctness rules per level type:
   #   Multi    — attempted: any attempt; correct: passing (best_result >= 20)
@@ -98,14 +97,18 @@ module StudentWorkHelper
   #     (Multi sublevel → passing; FreeResponse sublevel → ALL_COMPLETE_CORRECT
   #      evaluation; evaluation triggered if absent but submission exists)
   #
-  # Correctness terms in the return value refer to the attempted subset only.
+  # A level is "validated" when its correctness is meaningfully distinct from
+  # being merely attempted (correct ≠ attempted by definition).
+  # External and Aichat are NOT validated; all other types are.
   #
   # @param lesson_id [Integer]
   # @param student_id [Integer]
   # @return [Hash] with keys:
-  #   :levels_total_count     [Integer]
-  #   :levels_attempted_count [Integer]
-  #   :levels_correct_count   [Integer]  correct levels within the attempted set
+  #   :levels_total_count                [Integer]
+  #   :levels_attempted_count            [Integer]
+  #   :validated_levels_total_count      [Integer]  levels where correct ≠ attempted
+  #   :validated_levels_correct_count    [Integer]  validated levels the student passed
+  #   :validated_levels_incorrect_count  [Integer]  validated levels attempted but not passed
   def lesson_progress_status(lesson_id, student_id)
     lesson = Lesson.find(lesson_id)
     script_levels = lesson.script_levels.includes(:levels)
@@ -124,6 +127,26 @@ module StudentWorkHelper
     end
 
     aggregate_progress_status(results)
+  end
+
+  # Returns total seconds the student spent on all levels in a lesson.
+  # Executes a single aggregate JOIN query — no Ruby-side iteration.
+  #
+  # @param lesson_id [Integer]
+  # @param student_id [Integer]
+  # @return [Integer] sum of time_spent across all UserLevels (0 if none)
+  def lesson_time_spent(lesson_id, student_id)
+    lesson = Lesson.find(lesson_id)
+    UserLevel.
+      joins(
+        "INNER JOIN levels_script_levels ON levels_script_levels.level_id = user_levels.level_id " \
+        "INNER JOIN script_levels ON script_levels.id = levels_script_levels.script_level_id   " \
+        "AND script_levels.script_id = user_levels.script_id"
+      ).
+      where(user_id: student_id, script_id: lesson.script_id).
+      where(script_levels: {stage_id: lesson_id}).
+      sum(:time_spent).
+      to_i
   end
 
   private def build_sublevel_map(script_levels)
@@ -176,13 +199,16 @@ module StudentWorkHelper
   private def level_completion_status(level, sublevels, user_levels, evaluations, aichat_event_level_ids)
     case level
     when Aichat
-      aichat_status(level, user_levels, aichat_event_level_ids)
+      [*aichat_status(level, user_levels, aichat_event_level_ids), false]
+    when External
+      [*simple_level_status(user_levels[level.id]), false]
     when BubbleChoice
-      bubble_choice_status(sublevels, user_levels)
+      validated = sublevels.any? {|sl| !sl.is_a?(External) && !sl.is_a?(Aichat)}
+      [*bubble_choice_status(sublevels, user_levels), validated]
     when LevelGroup
-      level_group_status(sublevels, user_levels, evaluations)
+      [*level_group_status(sublevels, user_levels, evaluations), true]
     else
-      simple_level_status(user_levels[level.id])
+      [*simple_level_status(user_levels[level.id]), true]
     end
   end
 
@@ -222,11 +248,14 @@ module StudentWorkHelper
   end
 
   private def aggregate_progress_status(results)
-    completed = results.select {|(complete, _)| complete}
+    attempted = results.select {|(complete, _, _)| complete}
+    validated = results.select {|(_, _, v)| v}
     {
       levels_total_count: results.size,
-      levels_attempted_count: completed.size,
-      levels_correct_count: completed.count {|(_, correct)| correct}
+      levels_attempted_count: attempted.size,
+      validated_levels_total_count: validated.size,
+      validated_levels_correct_count: validated.count {|(_, correct, _)| correct},
+      validated_levels_incorrect_count: validated.count {|(complete, correct, _)| complete && !correct}
     }
   end
 

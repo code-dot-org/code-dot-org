@@ -9,7 +9,9 @@ export type AssessmentQuestionResult = {
 export type LessonProgressCounts = {
   levelsTotalCount: number;
   levelsAttemptedCount: number;
-  levelsCorrectCount: number;
+  validatedLevelsTotalCount: number;
+  validatedLevelsCorrectCount: number;
+  validatedLevelsIncorrectCount: number;
 };
 
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
@@ -32,6 +34,7 @@ export type LessonDeepDiveData = {
   assessmentAnalysis: AssessmentQuestionResult[];
   practiceProblems: PracticeProblem[];
   progressCounts: LessonProgressCounts;
+  timeSpentSeconds: number;
 };
 
 export type MultiSolution = {

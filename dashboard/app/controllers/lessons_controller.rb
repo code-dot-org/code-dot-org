@@ -109,7 +109,8 @@ class LessonsController < ApplicationController
       assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user.id),
       progressCounts: lesson_progress_status(@lesson.id, current_user.id).transform_keys do |k|
         k.to_s.camelize(:lower).to_sym
-      end
+      end,
+      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user.id)
     }
   end
 
