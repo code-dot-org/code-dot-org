@@ -135,8 +135,12 @@ function ReactFlowSketchLabViewInner({
   // (e.g. when version history loads a different version).
   const [mountKey, setMountKey] = useState(0);
   const reinitializationHandler = useCallback(() => {
+    setNodes([]);
+    setEdges([]);
+    setViewport(undefined);
+    addedNodeCountRef.current = 0;
     setMountKey(key => key + 1);
-  }, []);
+  }, [setNodes, setEdges]);
 
   useEffect(() => {
     setReinitializationHandler(reinitializationHandler);
