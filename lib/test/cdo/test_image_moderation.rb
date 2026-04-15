@@ -173,7 +173,7 @@ class ImageModerationTest < Minitest::Test
       true
     end.returns(sample).once
     Honeybadger.expects(:notify).once.with(
-      "Actual content type differs from reported content type",
+      "Actual content type differs from reported content type in image moderation",
       context: {reported_content_type: 'any', actual_content_type: 'image/png'}
     )
 
