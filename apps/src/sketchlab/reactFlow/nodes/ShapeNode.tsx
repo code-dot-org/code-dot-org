@@ -1,15 +1,10 @@
-import {
-  Handle,
-  NodeResizer,
-  Position,
-  useReactFlow,
-  type Node,
-  type NodeProps,
-} from '@xyflow/react';
+import {Handle, NodeResizer, Position, useReactFlow} from '@xyflow/react';
 import React, {memo, useCallback, useRef, useState} from 'react';
 
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {ShapeNodeData, ShapeType} from '../types';
+import {ShapeType} from '../types';
 
 import styles from './shape-node.module.scss';
 
@@ -55,10 +50,20 @@ function ShapeSvg({
   return null;
 }
 
-function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
+interface ShapeNodeProps {
+  id: string;
+  data: SketchlabReactFlowNode['data'];
+  selected: boolean;
+}
+
+function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
+
+  const shapeType = data.shapeType as ShapeType;
+  const label = (data.label as string) ?? '';
+  const fillColor = (data.fillColor as string) ?? '#90CAF9';
 
   const startEditing = useCallback(() => {
     if (isEditing) {
@@ -68,7 +73,6 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
     setTimeout(() => {
       if (labelRef.current) {
         labelRef.current.focus();
-        // Move cursor to end of text
         const range = document.createRange();
         const selection = window.getSelection();
         range.selectNodeContents(labelRef.current);
@@ -94,21 +98,21 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         }
         if (event.key === 'Escape') {
           if (labelRef.current) {
-            labelRef.current.textContent = data.label;
+            labelRef.current.textContent = label;
           }
           setIsEditing(false);
         }
       }
     },
-    [commitEdit, data.label, isEditing]
+    [commitEdit, label, isEditing]
   );
 
-  const isRectangle = data.shapeType === 'rectangle';
+  const isRectangle = shapeType === 'rectangle';
 
   return (
     <div
       className={styles.shapeNode}
-      aria-label={`${data.shapeType} shape: ${data.label}`}
+      aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
     >
       <NodeResizer
@@ -121,11 +125,11 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
       {isRectangle ? (
         <div
           className={styles.rectangleBackground}
-          style={{backgroundColor: data.fillColor}}
+          style={{backgroundColor: fillColor}}
           aria-hidden="true"
         />
       ) : (
-        <ShapeSvg shapeType={data.shapeType} fillColor={data.fillColor} />
+        <ShapeSvg shapeType={shapeType} fillColor={fillColor} />
       )}
 
       {/* Text label: click or tab to start editing */}
@@ -139,9 +143,9 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         onKeyDown={handleLabelKeyDown}
         tabIndex={0}
         role="textbox"
-        aria-label={`${data.shapeType} label${isEditing ? ' (editing)' : ''}`}
+        aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
       >
-        {data.label}
+        {label}
       </div>
 
       {/* Connection handles */}

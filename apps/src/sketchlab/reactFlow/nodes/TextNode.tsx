@@ -1,22 +1,24 @@
-import {
-  Handle,
-  NodeResizer,
-  Position,
-  useReactFlow,
-  type Node,
-  type NodeProps,
-} from '@xyflow/react';
+import {Handle, NodeResizer, Position, useReactFlow} from '@xyflow/react';
 import React, {memo, useCallback, useRef, useState} from 'react';
 
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {TextNodeData} from '../types';
 
 import styles from './text-node.module.scss';
 
-function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
+interface TextNodeProps {
+  id: string;
+  data: SketchlabReactFlowNode['data'];
+  selected: boolean;
+}
+
+function TextNode({id, data, selected}: TextNodeProps) {
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
+
+  const text = (data.text as string) ?? '';
 
   const startEditing = useCallback(() => {
     if (isEditing) {
@@ -51,19 +53,19 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
         }
         if (event.key === 'Escape') {
           if (textRef.current) {
-            textRef.current.textContent = data.text;
+            textRef.current.textContent = text;
           }
           setIsEditing(false);
         }
       }
     },
-    [commitEdit, data.text, isEditing]
+    [commitEdit, text, isEditing]
   );
 
   return (
     <div
       className={styles.textNode}
-      aria-label={`Text: ${data.text}`}
+      aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
     >
       <NodeResizer
@@ -84,7 +86,7 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
         role="textbox"
         aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
       >
-        {data.text}
+        {text}
       </div>
 
       {/* Connection handles */}

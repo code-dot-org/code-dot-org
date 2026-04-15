@@ -1,12 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
-import {
-  ReactFlowProvider,
-  type Edge,
-  type Node,
-  type Viewport,
-} from '@xyflow/react';
+import {ReactFlowProvider} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -116,9 +111,9 @@ function ReactFlowSketchLabViewInner({
   const source = currentSources.source;
   const hasValidNodes = Array.isArray(source?.nodes);
   const cloned = hasValidNodes ? structuredClone(source) : null;
-  const initialNodes = (cloned?.nodes as Node[]) ?? [];
-  const initialEdges = (cloned?.edges as Edge[]) ?? [];
-  const initialViewport = cloned?.viewport as Viewport | undefined;
+  const initialNodes = cloned?.nodes ?? [];
+  const initialEdges = cloned?.edges ?? [];
+  const initialViewport = cloned?.viewport;
 
   return (
     <div className={styles.sketchlabContainer}>
@@ -178,6 +173,7 @@ function ReactFlowSketchLabViewInner({
             initialEdges={initialEdges}
             initialViewport={initialViewport}
             colorMode={colorMode}
+            readOnly={readonlyWorkspace}
           />
         </PanelContainer>
       </div>

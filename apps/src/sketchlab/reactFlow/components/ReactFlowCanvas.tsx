@@ -6,13 +6,15 @@ import {
   useEdgesState,
   useNodesState,
   useReactFlow,
-  type Edge,
-  type Node,
   type OnConnect,
-  type Viewport,
 } from '@xyflow/react';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {
+  ReactFlowSource,
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+} from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 
 import {
@@ -23,12 +25,7 @@ import {
 import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {
-  ImageNodeData,
-  ReactFlowSketchLabSources,
-  ShapeNodeData,
-  TextNodeData,
-} from '../types';
+import {ReactFlowSketchLabSources} from '../types';
 
 import Toolbar from './Toolbar';
 
@@ -47,10 +44,11 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  initialNodes: Node[];
-  initialEdges: Edge[];
-  initialViewport: Viewport | undefined;
+  initialNodes: SketchlabReactFlowNode[];
+  initialEdges: SketchlabReactFlowEdge[];
+  initialViewport: ReactFlowSource['viewport'];
   colorMode: 'light' | 'dark';
+  readOnly?: boolean;
 }
 
 export default function ReactFlowCanvas({
@@ -59,12 +57,12 @@ export default function ReactFlowCanvas({
   initialEdges,
   initialViewport,
   colorMode,
+  readOnly = false,
 }: ReactFlowCanvasProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const [viewport, setViewport] = useState<Viewport | undefined>(
-    initialViewport
-  );
+  const [viewport, setViewport] =
+    useState<ReactFlowSource['viewport']>(initialViewport);
 
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
@@ -76,10 +74,12 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      updateSources(prev => ({
-        ...prev,
-        source: {nodes, edges, viewport},
-      }));
+      const source: ReactFlowSource = {
+        nodes: nodes as SketchlabReactFlowNode[],
+        edges: edges as SketchlabReactFlowEdge[],
+        viewport,
+      };
+      updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
     return () => {
@@ -94,14 +94,17 @@ export default function ReactFlowCanvas({
     [setEdges]
   );
 
-  const handleMoveEnd = useCallback((_event: unknown, vp: Viewport) => {
-    setViewport(vp);
-  }, []);
+  const handleMoveEnd = useCallback(
+    (_event: unknown, vp: ReactFlowSource['viewport']) => {
+      setViewport(vp);
+    },
+    []
+  );
 
   const handleAddNode = useCallback(
     (
       type: 'shape' | 'image' | 'text',
-      data: ShapeNodeData | ImageNodeData | TextNodeData
+      data: SketchlabReactFlowNode['data']
     ) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -112,11 +115,11 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = crypto.randomUUID();
-      const newNode: Node = {
+      const newNode: SketchlabReactFlowNode = {
         id: newNodeId,
         type,
         position,
-        data: data as unknown as Node['data'],
+        data,
         // Text nodes auto-size to fit content; shapes and images use fixed defaults.
         ...(type !== 'text' && {
           style: {
@@ -142,20 +145,23 @@ export default function ReactFlowCanvas({
 
   return (
     <div className={styles.canvasContainer}>
-      <Toolbar onAddNode={handleAddNode} />
+      {!readOnly && <Toolbar onAddNode={handleAddNode} />}
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
+        onNodesChange={readOnly ? undefined : onNodesChange}
+        onEdgesChange={readOnly ? undefined : onEdgesChange}
+        onConnect={readOnly ? undefined : onConnect}
         nodeTypes={NODE_TYPES}
-        onMoveEnd={handleMoveEnd}
+        onMoveEnd={readOnly ? undefined : handleMoveEnd}
         defaultViewport={initialViewport}
         fitView={!initialViewport}
         colorMode={colorMode}
-        deleteKeyCode="Delete"
+        deleteKeyCode={readOnly ? null : 'Delete'}
         proOptions={{hideAttribution: true}}
+        nodesDraggable={!readOnly}
+        nodesConnectable={!readOnly}
+        elementsSelectable={!readOnly}
       >
         <Background />
         <Controls />

@@ -2,6 +2,7 @@ import {IconButton, Paper, Tooltip} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -11,7 +12,7 @@ import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
 } from '../constants';
-import {ImageNodeData, ShapeNodeData, ShapeType, TextNodeData} from '../types';
+import {ShapeType} from '../types';
 
 import styles from './toolbar.module.scss';
 
@@ -84,7 +85,7 @@ function TextIcon() {
 interface ToolbarProps {
   onAddNode: (
     type: 'shape' | 'image' | 'text',
-    data: ShapeNodeData | ImageNodeData | TextNodeData
+    data: SketchlabReactFlowNode['data']
   ) => void;
 }
 
@@ -101,7 +102,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
         y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
       });
-      const data: ShapeNodeData = {
+      const data: SketchlabReactFlowNode['data'] = {
         shapeType,
         label: '',
         fillColor: '#90CAF9',
@@ -128,7 +129,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
       try {
         await HttpClient.put(uploadUrl, file);
-        const imageData: ImageNodeData = {
+        const imageData: SketchlabReactFlowNode['data'] = {
           src: uploadUrl,
           altText: file.name.replace(/\.[^.]+$/, ''),
         };

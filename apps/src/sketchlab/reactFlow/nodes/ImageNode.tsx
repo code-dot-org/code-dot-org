@@ -1,22 +1,25 @@
-import {
-  Handle,
-  NodeResizer,
-  Position,
-  useReactFlow,
-  type Node,
-  type NodeProps,
-} from '@xyflow/react';
+import {Handle, NodeResizer, Position, useReactFlow} from '@xyflow/react';
 import React, {memo, useCallback, useRef, useState} from 'react';
 
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {ImageNodeData} from '../types';
 
 import styles from './image-node.module.scss';
 
-function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
+interface ImageNodeProps {
+  id: string;
+  data: SketchlabReactFlowNode['data'];
+  selected: boolean;
+}
+
+function ImageNode({id, data, selected}: ImageNodeProps) {
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const altInputRef = useRef<HTMLInputElement>(null);
+
+  const src = (data.src as string) ?? '';
+  const altText = (data.altText as string) ?? '';
 
   const startEditingAlt = useCallback(() => {
     setIsEditingAlt(true);
@@ -25,9 +28,9 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
 
   const commitAltEdit = useCallback(() => {
     setIsEditingAlt(false);
-    const newAltText = altInputRef.current?.value ?? data.altText;
+    const newAltText = altInputRef.current?.value ?? altText;
     updateNodeData(id, {altText: newAltText});
-  }, [data.altText, id, updateNodeData]);
+  }, [altText, id, updateNodeData]);
 
   const handleAltKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -42,19 +45,14 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
   );
 
   return (
-    <div className={styles.imageNode} aria-label={data.altText || 'Image node'}>
+    <div className={styles.imageNode} aria-label={altText || 'Image node'}>
       <NodeResizer
         isVisible={selected}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <img
-        src={data.src}
-        alt={data.altText}
-        className={styles.image}
-        draggable={false}
-      />
+      <img src={src} alt={altText} className={styles.image} draggable={false} />
 
       {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
       {isEditingAlt ? (
@@ -66,7 +64,7 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
             id={`alt-input-${id}`}
             ref={altInputRef}
             type="text"
-            defaultValue={data.altText}
+            defaultValue={altText}
             onBlur={commitAltEdit}
             onKeyDown={handleAltKeyDown}
             className={styles.altInput}
