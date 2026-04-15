@@ -14,6 +14,11 @@
     max-height: unset;
   }
 
+  > div:last-child {
+    // Override the default Modal actions styles to align the buttons to the left.
+    justify-content: flex-start;
+  }
+
 }
 
 .loadingState {
