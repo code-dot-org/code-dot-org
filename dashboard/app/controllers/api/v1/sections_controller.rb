@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -247,6 +247,17 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
     render json: {key: site_key}
+  end
+
+  # GET /api/v1/sections/assigned_essential_ai_dependency
+  # Returns whether the current user has any non-hidden section assigned a
+  # course with essential AI chat tools dependency.
+  def assigned_essential_ai_dependency
+    return head :forbidden unless current_user
+    result = current_user.sections_instructed.
+      where(hidden: false).
+      any? {|section| section.assigned_ai_chat_tools_dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]}
+    render json: {has_assigned_essential_ai_dependency: result}
   end
 
   # GET /api/v1/sections/<id>/code_review_groups
