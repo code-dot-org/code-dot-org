@@ -29,7 +29,23 @@ export const resumeCreateSectionOnboardingTour = (
   tour.on('complete', clearStep);
   tour.on('cancel', clearStep);
 
-  tour.show(savedStepId);
+  // The saved step may be from a previous page (e.g. 'picture-login' belongs
+  // to the teacher homepage, not /sections/new). Resume at whichever comes
+  // later: the saved step or the first step that belongs to this page.
+  // The beforeShowPromise on each step handles waiting for its element to
+  // appear asynchronously, so no synchronous DOM check is needed here.
+  const FIRST_STEP_ID_ON_THIS_PAGE = 'name-section';
+  const savedIndex = tour.steps.findIndex(s => s.id === savedStepId);
+  const pageStartIndex = tour.steps.findIndex(
+    s => s.id === FIRST_STEP_ID_ON_THIS_PAGE
+  );
+
+  if (savedIndex === -1 || pageStartIndex === -1) {
+    clearStep();
+    return;
+  }
+
+  tour.show(tour.steps[Math.max(savedIndex, pageStartIndex)].id);
 };
 
 const useCreateSectionTour = (isElementaryTeacher: boolean) => {
