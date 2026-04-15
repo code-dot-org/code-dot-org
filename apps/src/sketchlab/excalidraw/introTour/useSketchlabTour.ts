@@ -11,7 +11,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
+import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from '../../constants';
 import {createSketchlabTourSteps} from './sketchlabTourSteps';
 
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
