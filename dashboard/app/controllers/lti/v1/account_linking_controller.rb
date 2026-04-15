@@ -33,7 +33,7 @@ module Lti
 
       # POST /lti/v1/account_linking/link_email
       def link_email
-        head :bad_request unless PartialRegistration.in_progress?(session)
+        return head :bad_request unless PartialRegistration.in_progress?(session)
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
         if existing_user&.admin?

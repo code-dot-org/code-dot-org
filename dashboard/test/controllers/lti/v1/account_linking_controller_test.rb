@@ -101,6 +101,19 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     post :link_email, params: {email: @user.email, password: 'password'}
   end
 
+  test 'returns bad request when partial registration is not in progress' do
+    PartialRegistration.stubs(:in_progress?).returns(false)
+
+    post :link_email, params: {
+      email: @user.email,
+      password: 'password',
+      lti_provider: 'test-provider',
+      lms_name: 'test-lms',
+    }
+
+    assert_response :bad_request
+  end
+
   describe '#new_account' do
     subject(:new_account_request) {post :new_account}
     let(:user) {create(:teacher, :with_lti_authentication_option)}

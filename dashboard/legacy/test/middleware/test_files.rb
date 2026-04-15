@@ -940,6 +940,14 @@ class FilesTest < FilesApiTestBase
     assert_equal({'error' => 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}, JSON.parse(last_response.body))
   end
 
+  def test_moderate_image_empty_body_returns_400
+    ImageModeration.expects(:moderate_image).never
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/moderate', ''
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
+  end
+
   private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end
