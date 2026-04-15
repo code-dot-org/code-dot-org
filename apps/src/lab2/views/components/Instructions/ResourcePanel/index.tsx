@@ -10,6 +10,7 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -215,6 +216,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const isPredictLevel =
     instructionsProps.levelProperties.predictSettings?.isPredictLevel;
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
   const dispatch = useAppDispatch();
   const setBackpackTabAsActive = useCallback(
     () => setCurrentTab(Tabs.Backpack),
@@ -237,6 +241,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     tutorLevel: levelProperties.aiTutorAvailable,
     aiChatAccessLevel: aiChatAccessLevel,
   });
+  const {disabled: aiTutorDisabled, disabledMessage: aiTutorDisabledMessage} =
+    useAiChatDisabledState({
+      appName,
+      isPredictLevel: !!isPredictLevel,
+      hasSubmittedPredictResponse,
+    });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
@@ -290,6 +300,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
         enableTutorVideos,
+        disabled: aiTutorDisabled,
+        disabledMessage: aiTutorDisabledMessage,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -392,6 +404,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     enableTutorVideos,
+    aiTutorDisabled,
+    aiTutorDisabledMessage,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,
