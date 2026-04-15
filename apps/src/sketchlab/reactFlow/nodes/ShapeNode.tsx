@@ -16,7 +16,13 @@ import styles from './ShapeNode.module.scss';
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 
-function ShapeSvg({shapeType, fillColor}: {shapeType: ShapeType; fillColor: string}) {
+function ShapeSvg({
+  shapeType,
+  fillColor,
+}: {
+  shapeType: ShapeType;
+  fillColor: string;
+}) {
   if (shapeType === 'circle') {
     return (
       <svg
@@ -56,7 +62,6 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
 
   const startEditing = useCallback(() => {
     setIsEditing(true);
-    // Focus happens in the useEffect equivalent — via autoFocus on contentEditable
     setTimeout(() => {
       if (labelRef.current) {
         labelRef.current.focus();
@@ -77,32 +82,25 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
     updateNodeData(id, {label: newLabel});
   }, [id, updateNodeData]);
 
-  const handleKeyDown = useCallback(
+  const handleLabelKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault();
-        commitEdit();
-      }
-      if (event.key === 'Escape') {
-        // Restore original text and exit edit
-        if (labelRef.current) {
-          labelRef.current.textContent = data.label;
+      if (isEditing) {
+        if (event.key === 'Enter' && !event.shiftKey) {
+          event.preventDefault();
+          commitEdit();
         }
-        setIsEditing(false);
-      }
-    },
-    [commitEdit, data.label]
-  );
-
-  // Allow activating edit via Enter or F2 when the node wrapper has keyboard focus
-  const handleNodeKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (!isEditing && (event.key === 'Enter' || event.key === 'F2')) {
+        if (event.key === 'Escape') {
+          if (labelRef.current) {
+            labelRef.current.textContent = data.label;
+          }
+          setIsEditing(false);
+        }
+      } else if (event.key === 'Enter' || event.key === 'F2') {
         event.preventDefault();
         startEditing();
       }
     },
-    [isEditing, startEditing]
+    [commitEdit, data.label, isEditing, startEditing]
   );
 
   const isRectangle = data.shapeType === 'rectangle';
@@ -111,9 +109,6 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
     <div
       className={styles.shapeNode}
       aria-label={`${data.shapeType} shape: ${data.label}`}
-      onKeyDown={handleNodeKeyDown}
-      tabIndex={0}
-      role="figure"
     >
       <NodeResizer
         isVisible={selected}
@@ -132,7 +127,7 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         <ShapeSvg shapeType={data.shapeType} fillColor={data.fillColor} />
       )}
 
-      {/* Text label overlay */}
+      {/* Text label: focusable for keyboard editing via Enter/F2 */}
       <div
         ref={labelRef}
         className={styles.label}
@@ -140,8 +135,10 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         suppressContentEditableWarning
         onDoubleClick={startEditing}
         onBlur={commitEdit}
-        onKeyDown={isEditing ? handleKeyDown : undefined}
-        aria-label={isEditing ? 'Edit shape label' : undefined}
+        onKeyDown={handleLabelKeyDown}
+        tabIndex={0}
+        role="textbox"
+        aria-label={`${data.shapeType} label${isEditing ? ' (editing)' : ''}`}
       >
         {data.label}
       </div>

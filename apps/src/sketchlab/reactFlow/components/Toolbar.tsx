@@ -2,11 +2,15 @@ import {IconButton, Paper, Tooltip} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ASSET_PATH_PREFIX, DEFAULT_NODE_HEIGHT, DEFAULT_NODE_WIDTH} from '../constants';
+import {
+  ASSET_PATH_PREFIX,
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+} from '../constants';
 import {ImageNodeData, ShapeNodeData, ShapeType} from '../types';
 
 import styles from './Toolbar.module.scss';
@@ -39,9 +43,23 @@ function CircleIcon() {
 function ImageIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-      <rect x="2" y="3" width="16" height="14" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="3"
+        width="16"
+        height="14"
+        rx="1"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <circle cx="7" cy="8" r="1.5" fill="currentColor" />
-      <polyline points="2,15 7,10 11,14 14,11 18,15" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <polyline
+        points="2,15 7,10 11,14 14,11 18,15"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   );
 }

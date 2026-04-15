@@ -41,25 +41,8 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
     [commitAltEdit]
   );
 
-  // Activate alt-text edit via F2 or Enter when node wrapper is focused
-  const handleNodeKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (!isEditingAlt && (event.key === 'F2' || event.key === 'Enter')) {
-        event.preventDefault();
-        startEditingAlt();
-      }
-    },
-    [isEditingAlt, startEditingAlt]
-  );
-
   return (
-    <div
-      className={styles.imageNode}
-      aria-label={data.altText || 'Image node'}
-      onKeyDown={handleNodeKeyDown}
-      tabIndex={0}
-      role="figure"
-    >
+    <div className={styles.imageNode} aria-label={data.altText || 'Image node'}>
       <NodeResizer
         isVisible={selected}
         minWidth={MIN_NODE_WIDTH}
@@ -73,7 +56,7 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
         draggable={false}
       />
 
-      {/* Alt-text editor, shown on double-click or F2 */}
+      {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
       {isEditingAlt ? (
         <div className={styles.altEditor}>
           <label htmlFor={`alt-input-${id}`} className={styles.altLabel}>
@@ -94,7 +77,6 @@ function ImageNode({id, data, selected}: NodeProps<Node<ImageNodeData>>) {
           type="button"
           className={styles.editAltButton}
           onClick={startEditingAlt}
-          onDoubleClick={startEditingAlt}
           aria-label="Edit alt text"
           title="Edit alt text"
         >

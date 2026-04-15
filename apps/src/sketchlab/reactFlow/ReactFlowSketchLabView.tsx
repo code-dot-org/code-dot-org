@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import {
   addEdge,
   Background,
@@ -15,8 +17,19 @@ import {
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Toolbar from './components/Toolbar';
 import {
@@ -39,12 +52,23 @@ const NODE_TYPES = {
   image: ImageNode,
 };
 
+const MIN_INFO_PANEL_WIDTH = 250;
+const INITIAL_INFO_PANEL_WIDTH = 290;
+const MIN_WORKSPACE_WIDTH = 400;
+const INITIAL_WORKSPACE_WIDTH = 800;
+
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 
-function ReactFlowSketchLabViewInner(_props: LabProps<LevelProperties>) {
-  const {currentSources, updateSources} =
-    useSources<ReactFlowSketchLabSources>();
+function ReactFlowSketchLabViewInner({
+  levelProperties,
+}: LabProps<LevelProperties>) {
+  const {
+    currentSources,
+    updateSources,
+    setReinitializationHandler,
+    showStartOverDialog,
+  } = useSources<ReactFlowSketchLabSources>();
 
   const initialSource = currentSources.source ?? {};
   const [nodes, setNodes, onNodesChange] = useNodesState(
@@ -58,6 +82,9 @@ function ReactFlowSketchLabViewInner(_props: LabProps<LevelProperties>) {
   );
 
   const {screenToFlowPosition} = useReactFlow();
+
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
   // Track how many nodes have been added this session to stagger placement.
   const addedNodeCountRef = useRef(0);
@@ -81,6 +108,37 @@ function ReactFlowSketchLabViewInner(_props: LabProps<LevelProperties>) {
       }
     };
   }, [nodes, edges, viewport, updateSources]);
+
+  // Since there's no run button in Sketch Lab, set hasRun to true by default
+  // to enable the Submit button on submittable levels.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
+
+  // Mount key used to force-reset the React Flow canvas on reinitialization
+  // (e.g. when version history loads a different version).
+  const [mountKey, setMountKey] = useState(0);
+  const reinitializationHandler = useCallback(() => {
+    setMountKey(key => key + 1);
+  }, []);
+
+  useEffect(() => {
+    setReinitializationHandler(reinitializationHandler);
+  }, [setReinitializationHandler, reinitializationHandler]);
+
+  const onLoadVersion = useCallback(
+    (sources: ProjectSources) => {
+      if (sources) {
+        updateSources(sources as ReactFlowSketchLabSources);
+      }
+      reinitializationHandler();
+    },
+    [updateSources, reinitializationHandler]
+  );
 
   const onConnect: OnConnect = useCallback(
     connection => setEdges(eds => addEdge(connection, eds)),
@@ -117,24 +175,106 @@ function ReactFlowSketchLabViewInner(_props: LabProps<LevelProperties>) {
     [screenToFlowPosition, setNodes]
   );
 
+  const onClickStartOver = useCallback(() => {
+    showStartOverDialog('custom', commonI18n.startOverGeneric());
+  }, [showStartOverDialog]);
+
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
+  );
+
+  const {
+    leftPanelWidth,
+    rightPanelWidth,
+    leftPanelSeparatorProps: panelSeparatorProps,
+    leftPanelDragging: isDragging,
+    panelClassName,
+  } = useVerticalLayout({
+    leftPanel: {
+      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      name: 'instructions',
+    },
+    rightPanel: {
+      minWidth: MIN_WORKSPACE_WIDTH,
+      initialWidth: INITIAL_WORKSPACE_WIDTH,
+      name: 'workspace',
+    },
+    appName: 'sketchlab',
+  });
+
   return (
-    <div className={styles.container}>
-      <Toolbar onAddNode={handleAddNode} />
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        nodeTypes={NODE_TYPES}
-        onMoveEnd={handleMoveEnd}
-        defaultViewport={viewport}
-        fitView={!viewport}
-        deleteKeyCode="Delete"
-      >
-        <Background />
-        <Controls />
-      </ReactFlow>
+    <div className={styles.sketchlabContainer}>
+      <div style={{width: leftPanelWidth}} className={panelClassName}>
+        <ResourcePanel
+          levelProperties={levelProperties}
+          isRunning={false}
+          hasRun={hasRun}
+          hasEdited={false}
+          settings={[useThemeSetting('sketchlab')]}
+          versionHistoryProps={{
+            startSources:
+              (levelProperties?.startSources as ProjectSources) ||
+              REACT_FLOW_DEFAULT_SOURCES,
+            onLoadVersion,
+          }}
+        />
+      </div>
+      <ResizeBar
+        isVertical={true}
+        separatorProps={panelSeparatorProps}
+        isDragging={isDragging}
+      />
+      <div style={{width: rightPanelWidth}}>
+        <PanelContainer
+          id="workspace"
+          className={panelClassName}
+          headerContent={<WorkspaceHeader />}
+          rightHeaderContent={
+            !readonlyWorkspace && (
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                onClick={onClickStartOver}
+                aria-label={commonI18n.startOver()}
+                type="button"
+                endIcon={
+                  <FontAwesomeV6Icon
+                    iconStyle="solid"
+                    iconName="arrow-rotate-left"
+                  />
+                }
+              >
+                {commonI18n.startOver()}
+              </MuiButton>
+            )
+          }
+        >
+          {teacherViewingStudent && (
+            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+          )}
+          <div className={styles.canvasContainer}>
+            <Toolbar onAddNode={handleAddNode} />
+            <ReactFlow
+              key={mountKey}
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              nodeTypes={NODE_TYPES}
+              onMoveEnd={handleMoveEnd}
+              defaultViewport={viewport}
+              fitView={!viewport}
+              deleteKeyCode="Delete"
+            >
+              <Background />
+              <Controls />
+            </ReactFlow>
+          </div>
+        </PanelContainer>
+      </div>
     </div>
   );
 }

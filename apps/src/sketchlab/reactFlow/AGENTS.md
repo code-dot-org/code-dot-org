@@ -17,3 +17,5 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - We hard-code user-facing English strings. The old way of using i18n you see in other folders is deprecated.
 - Use human-readable variable names. Prefer names such as `newWidth` over `newW`.
 - Use constants for any magic numbers.
+- Ensure eslint passes.
+- Ensure prettier passes.
