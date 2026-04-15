@@ -451,11 +451,10 @@ namespace :seed do
 
   timed_task_with_logging courses_jit_pl: :environment do
     # seed the course that is required for just-in-time PL resources
-    %w(
-      just-in-time-pl
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
-    end
+    course_name = CDO.jit_pl_course_name || 'just-in-time-pl'
+    path = Dir["#{CURRICULUM_CONTENT_DIR}/**/#{course_name}.course"].first
+    raise "Could not find course file for #{course_name}" unless path
+    UnitGroup.load_from_path(path)
   end
 
   JIT_PL_DEPENDENCIES = [:environment, :courses_jit_pl]

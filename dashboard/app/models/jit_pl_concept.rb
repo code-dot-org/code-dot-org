@@ -124,7 +124,8 @@ class JitPlConcept < ApplicationRecord
   end
 
   def self.jit_pl_course_version
-    UnitGroup.find_by(name: 'just-in-time-pl')&.course_version
+    course_name = CDO.jit_pl_course_name || 'just-in-time-pl'
+    UnitGroup.find_by(name: course_name)&.course_version
   end
 
   def self.seed_record(file_path)
