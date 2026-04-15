@@ -12,6 +12,11 @@
     border-color: var(--borders-neutral-solid);
   }
 
+  // Keyboard connect-mode: pulse the source node so the user knows it's selected.
+  &.connectMode :global(.react-flow__node) {
+    cursor: crosshair;
+  }
+
   // Controls panel: themed background and text.
   :global(.react-flow__controls) {
     background-color: var(--background-neutral-primary);
@@ -27,4 +32,25 @@
       }
     }
   }
+}
+
+// Highlight the source node during keyboard connect mode.
+// Uses box-shadow instead of outline to avoid conflicting with React Flow's
+// focus outline, so the indicator is visible even while the node has focus.
+.connectSource {
+  box-shadow: 0 0 0 4px var(--borders-neutral-solid);
+  border-radius: 4px;
+}
+
+// Visually hidden but announced by screen readers.
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
