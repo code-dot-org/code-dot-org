@@ -61,6 +61,9 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
   const labelRef = useRef<HTMLDivElement>(null);
 
   const startEditing = useCallback(() => {
+    if (isEditing) {
+      return;
+    }
     setIsEditing(true);
     setTimeout(() => {
       if (labelRef.current) {
@@ -74,7 +77,7 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, []);
+  }, [isEditing]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -95,12 +98,9 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
           }
           setIsEditing(false);
         }
-      } else if (event.key === 'Enter' || event.key === 'F2') {
-        event.preventDefault();
-        startEditing();
       }
     },
-    [commitEdit, data.label, isEditing, startEditing]
+    [commitEdit, data.label, isEditing]
   );
 
   const isRectangle = data.shapeType === 'rectangle';
@@ -128,12 +128,13 @@ function ShapeNode({id, data, selected}: NodeProps<Node<ShapeNodeData>>) {
         <ShapeSvg shapeType={data.shapeType} fillColor={data.fillColor} />
       )}
 
-      {/* Text label: focusable for keyboard editing via Enter/F2 */}
+      {/* Text label: click or tab to start editing */}
       <div
         ref={labelRef}
         className={styles.label}
         contentEditable={isEditing}
         suppressContentEditableWarning
+        onFocus={startEditing}
         onBlur={commitEdit}
         onKeyDown={handleLabelKeyDown}
         tabIndex={0}

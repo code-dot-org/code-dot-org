@@ -44,7 +44,13 @@
     outline: 2px solid #1976d2;
     border-radius: 2px;
     padding: 2px 4px;
-    background: rgba(255, 255, 255, 0.85);
     min-width: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000000;
+
+    :global(.dark) & {
+      background: rgba(30, 30, 30, 0.95);
+      color: #ffffff;
+    }
   }
 }

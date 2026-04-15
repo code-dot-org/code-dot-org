@@ -19,6 +19,9 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
   const textRef = useRef<HTMLDivElement>(null);
 
   const startEditing = useCallback(() => {
+    if (isEditing) {
+      return;
+    }
     setIsEditing(true);
     setTimeout(() => {
       if (textRef.current) {
@@ -31,7 +34,7 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, []);
+  }, [isEditing]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -52,19 +55,16 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
           }
           setIsEditing(false);
         }
-      } else if (event.key === 'Enter' || event.key === 'F2') {
-        event.preventDefault();
-        startEditing();
       }
     },
-    [commitEdit, data.text, isEditing, startEditing]
+    [commitEdit, data.text, isEditing]
   );
 
   return (
     <div
       className={styles.textNode}
       aria-label={`Text: ${data.text}`}
-      onDoubleClick={startEditing}
+      onClick={startEditing}
     >
       <NodeResizer
         isVisible={selected}
@@ -77,6 +77,7 @@ function TextNode({id, data, selected}: NodeProps<Node<TextNodeData>>) {
         className={styles.text}
         contentEditable={isEditing}
         suppressContentEditableWarning
+        onFocus={startEditing}
         onBlur={commitEdit}
         onKeyDown={handleKeyDown}
         tabIndex={0}
