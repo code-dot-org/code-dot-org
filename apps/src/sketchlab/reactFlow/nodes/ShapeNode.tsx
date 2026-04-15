@@ -4,6 +4,7 @@ import React, {memo, useCallback, useRef, useState} from 'react';
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {useSketchLabReadOnly} from '../context';
 import {ShapeType} from '../types';
 
 import styles from './shape-node.module.scss';
@@ -67,6 +68,7 @@ interface ShapeNodeProps {
 }
 
 function ShapeNode({id, data, selected}: ShapeNodeProps) {
+  const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
@@ -75,7 +77,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const label = (data.label as string) ?? '';
 
   const startEditing = useCallback(() => {
-    if (isEditing) {
+    if (isEditing || readOnly) {
       return;
     }
     setIsEditing(true);
@@ -90,7 +92,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing]);
+  }, [isEditing, readOnly]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);

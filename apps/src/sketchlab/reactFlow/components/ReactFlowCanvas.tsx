@@ -23,6 +23,7 @@ import {
   DEFAULT_NODE_WIDTH,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
+import {SketchLabReadOnlyProvider} from '../context';
 import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
@@ -145,28 +146,30 @@ export default function ReactFlowCanvas({
   );
 
   return (
-    <div className={styles.canvasContainer}>
-      {!readOnly && <Toolbar onAddNode={handleAddNode} />}
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={readOnly ? undefined : onNodesChange}
-        onEdgesChange={readOnly ? undefined : onEdgesChange}
-        onConnect={readOnly ? undefined : onConnect}
-        nodeTypes={NODE_TYPES}
-        onMoveEnd={readOnly ? undefined : handleMoveEnd}
-        defaultViewport={initialViewport}
-        fitView={!initialViewport}
-        colorMode={colorMode}
-        deleteKeyCode={readOnly ? null : 'Delete'}
-        proOptions={{hideAttribution: true}}
-        nodesDraggable={!readOnly}
-        nodesConnectable={!readOnly}
-        elementsSelectable={!readOnly}
-      >
-        <Background />
-        <Controls />
-      </ReactFlow>
-    </div>
+    <SketchLabReadOnlyProvider value={readOnly}>
+      <div className={styles.canvasContainer}>
+        {!readOnly && <Toolbar onAddNode={handleAddNode} />}
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          onNodesChange={readOnly ? undefined : onNodesChange}
+          onEdgesChange={readOnly ? undefined : onEdgesChange}
+          onConnect={readOnly ? undefined : onConnect}
+          nodeTypes={NODE_TYPES}
+          onMoveEnd={readOnly ? undefined : handleMoveEnd}
+          defaultViewport={initialViewport}
+          fitView={!initialViewport}
+          colorMode={colorMode}
+          deleteKeyCode={readOnly ? null : 'Delete'}
+          proOptions={{hideAttribution: true}}
+          nodesDraggable={!readOnly}
+          nodesConnectable={!readOnly}
+          elementsSelectable={!readOnly}
+        >
+          <Background />
+          <Controls />
+        </ReactFlow>
+      </div>
+    </SketchLabReadOnlyProvider>
   );
 }

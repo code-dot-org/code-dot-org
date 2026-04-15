@@ -4,6 +4,7 @@ import React, {memo, useCallback, useRef, useState} from 'react';
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {useSketchLabReadOnly} from '../context';
 
 import styles from './text-node.module.scss';
 
@@ -14,6 +15,7 @@ interface TextNodeProps {
 }
 
 function TextNode({id, data, selected}: TextNodeProps) {
+  const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
@@ -21,7 +23,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
   const text = (data.text as string) ?? '';
 
   const startEditing = useCallback(() => {
-    if (isEditing) {
+    if (isEditing || readOnly) {
       return;
     }
     setIsEditing(true);
@@ -36,7 +38,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing]);
+  }, [isEditing, readOnly]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);

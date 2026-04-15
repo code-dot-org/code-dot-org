@@ -4,6 +4,7 @@ import React, {memo, useCallback, useRef, useState} from 'react';
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {useSketchLabReadOnly} from '../context';
 
 import styles from './image-node.module.scss';
 
@@ -14,6 +15,7 @@ interface ImageNodeProps {
 }
 
 function ImageNode({id, data, selected}: ImageNodeProps) {
+  const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const altInputRef = useRef<HTMLInputElement>(null);
@@ -22,9 +24,12 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   const altText = (data.altText as string) ?? '';
 
   const startEditingAlt = useCallback(() => {
+    if (readOnly) {
+      return;
+    }
     setIsEditingAlt(true);
     setTimeout(() => altInputRef.current?.focus(), 0);
-  }, []);
+  }, [readOnly]);
 
   const commitAltEdit = useCallback(() => {
     setIsEditingAlt(false);
