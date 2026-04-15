@@ -6,6 +6,10 @@ require 'stringio'
 module ImageModeration
   # Azure AI Content Safety requires both dimensions to be at least this many pixels.
   MIN_MODERATION_DIMENSION = 50
+  # Downscale images when either side exceeds this (Azure and ImageMagick limits on very large rasters).
+  MAX_MODERATION_DIMENSION = 7200
+  # Azure AI Content Safety requires images to be at most 4MB.
+  MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - image/gif, image/jpeg, image/png
@@ -30,7 +34,10 @@ module ImageModeration
     nil
   end
 
+  # Scales images to meet Azure AI Content Safety dimension and size requirements.
   # Scales up images smaller than MIN_MODERATION_DIMENSION on either dimension.
+  # Scales down images larger than MAX_MODERATION_DIMENSION on either dimension.
+  # Scales down images larger than MAX_MODERATION_SIZE.
   # On errors, passes the original bytes through so Azure can still be tried.
   # Uses magic-byte sniffing to determine actual content type, overriding the
   # reported content_type value which may be incorrect.
@@ -40,15 +47,40 @@ module ImageModeration
     image = MiniMagick::Image.read(raw_data)
     width = image.width
     height = image.height
-    if width >= MIN_MODERATION_DIMENSION && height >= MIN_MODERATION_DIMENSION
-      return StringIO.new(raw_data), actual_type
+
+    if width < MIN_MODERATION_DIMENSION || height < MIN_MODERATION_DIMENSION
+      # Scale up images smaller than MIN_MODERATION_DIMENSION on either dimension using MiniMagick's
+      # ^ (minimum bounding box): scale up so both dimensions are at least MIN_MODERATION_DIMENSION,
+      # preserving aspect ratio (short side hits the minimum, long side may exceed it).
+      image.resize "#{MIN_MODERATION_DIMENSION}x#{MIN_MODERATION_DIMENSION}^"
+      raw_data = image.to_blob
+      width = image.width
+      height = image.height
     end
 
-    scale = [MIN_MODERATION_DIMENSION.to_f / width, MIN_MODERATION_DIMENSION.to_f / height].max
-    new_w = (width * scale).ceil
-    new_h = (height * scale).ceil
-    image.resize "#{new_w}x#{new_h}!"
-    [StringIO.new(image.to_blob), actual_type]
+    if width > MAX_MODERATION_DIMENSION || height > MAX_MODERATION_DIMENSION
+      # Scale down images larger than MAX_MODERATION_DIMENSION on either dimension using MiniMagick's
+      # > (maximum bounding box): scale down to fit within MAX_MODERATION_DIMENSION on each side,
+      # preserving aspect ratio (long side hits the maximum, short side may be smaller).
+      # Note that if an image has an extreme aspect ratio, the smaller side may be scaled up in branch above,
+      # but then scaled down here to a smaller dimension than MIN_MODERATION_DIMENSION on one side (very unlikely scenario).
+      image.resize "#{MAX_MODERATION_DIMENSION}x#{MAX_MODERATION_DIMENSION}>"
+      raw_data = image.to_blob
+      width = image.width
+      height = image.height
+    end
+
+    if raw_data.bytesize > MAX_MODERATION_SIZE
+      # Scale factor is approximate: file size is not strictly proportional to pixel
+      # count for compressed formats, so scale conservatively to stay under the limit.
+      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.85
+      new_w = (width * scale).floor
+      new_h = (height * scale).floor
+      image.resize "#{new_w}x#{new_h}!"
+      raw_data = image.to_blob
+    end
+
+    [StringIO.new(raw_data), content_type]
   rescue MiniMagick::Invalid, MiniMagick::Error
     [StringIO.new(raw_data), actual_type]
   end
