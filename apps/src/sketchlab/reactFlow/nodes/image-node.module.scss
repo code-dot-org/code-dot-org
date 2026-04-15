@@ -30,7 +30,8 @@
   transition: opacity 0.15s;
 
   .imageNode:hover &,
-  .imageNode:focus-within & {
+  .imageNode:focus-within &,
+  :global(.react-flow__node:focus) & {
     opacity: 1;
   }
 }

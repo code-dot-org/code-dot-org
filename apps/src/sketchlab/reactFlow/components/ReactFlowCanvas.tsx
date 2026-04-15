@@ -301,7 +301,12 @@ export default function ReactFlowCanvas({
         );
         if (editable) {
           e.preventDefault();
-          editable.focus();
+          // Buttons need a click to activate; text fields just need focus.
+          if (editable.tagName === 'BUTTON') {
+            editable.click();
+          } else {
+            editable.focus();
+          }
         }
       }
     },
