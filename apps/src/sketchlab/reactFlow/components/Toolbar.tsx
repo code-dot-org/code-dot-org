@@ -6,6 +6,7 @@ import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import {
   ASSET_PATH_PREFIX,
@@ -123,7 +124,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
       }
 
       const extension = file.name.split('.').pop() ?? 'png';
-      const filename = `${crypto.randomUUID()}.${extension}`;
+      const filename = `${createUuid()}.${extension}`;
       const uploadUrl = `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
 
       try {

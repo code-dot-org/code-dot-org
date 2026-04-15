@@ -16,6 +16,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {createUuid} from '@cdo/apps/utils';
 
 import {
   DEFAULT_NODE_HEIGHT,
@@ -114,7 +115,7 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
       });
 
-      const newNodeId = crypto.randomUUID();
+      const newNodeId = createUuid();
       const newNode: SketchlabReactFlowNode = {
         id: newNodeId,
         type,
