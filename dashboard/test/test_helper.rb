@@ -119,8 +119,8 @@ class ActiveSupport::TestCase
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
+    I18n.reload!
     set_env :test
-    Rails.cache.cleanup
   end
 
   def after_teardown
