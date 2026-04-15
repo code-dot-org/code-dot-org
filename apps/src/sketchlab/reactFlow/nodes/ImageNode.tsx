@@ -7,6 +7,7 @@ import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 
 import ConnectionHandles from './ConnectionHandles';
+
 import styles from './image-node.module.scss';
 
 interface ImageNodeProps {
