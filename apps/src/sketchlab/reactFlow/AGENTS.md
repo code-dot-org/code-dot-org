@@ -15,7 +15,7 @@ tool for making interactive diagrams, used by students in grades 6-12.
   Any colors referenced should use themed colors from the [frontend](/frontend/packages/component-library-styles/colors.css).
   Ensure color contrast always passes WCAG 2.1 AA guidelines.
 - We hard-code user-facing English strings. The old way of using i18n you see in other folders is deprecated.
-- Use human-readable variable names. Prefer names such as `newWidth` over `newW`.
+- Use human-readable variable names. Prefer names such as `newWidth` over `newW`, or `element` or `e`.
 - Use constants for any magic numbers.
 - Ensure eslint passes.
 - CSS module names should be in kebab-case.
