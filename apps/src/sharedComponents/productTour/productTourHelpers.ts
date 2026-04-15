@@ -1,5 +1,4 @@
 import Shepherd, {
-  StepOptions,
   type StepOptions,
   type StepOptionsButton,
   type Tour,
