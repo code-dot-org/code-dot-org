@@ -1084,6 +1084,10 @@ class FilesApi < Sinatra::Base
 
     # Read the raw bytes and wrap in an IO.
     raw = request.body.read
+    if raw.empty?
+      status 400
+      return {error: 'No image data provided.'}.to_json
+    end
     image_stream = StringIO.new(raw)
 
     # Determine MIME type (e.g. "image/png", "image/jpeg").
