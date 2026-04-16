@@ -56,7 +56,8 @@ function SummaryProgressRow({
   // We want to exclude the Lesson Tutor button for assessment and survey lessons.
   // These lessons don't have lesson plans, so we can use that as a proxy for
   // whether or not to show the Lesson Tutor button.
-  const showLessonTutorButton = lesson.lessonTutorPath && lesson.hasLessonPlan;
+  const showLessonTutorButton =
+    lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
 
   const handleLessonTutorClick = () => {
     analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
