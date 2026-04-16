@@ -97,10 +97,12 @@ class ApiController < ApplicationController
     course_name = params[:courseName].to_s
     section = CleverSection.find_by(code: CleverSection.code_for_section(course_id))
 
+    # If the section exists and the user isn't already an instructor,
+    # check Clever to see if they're listed as a co-teacher before
+    # fetching the student roster.
+    return head :forbidden if section.present? && !section_instructor?(section) && !clever_teacher_for_course?(course_id)
+
     query_clever_service("sections/#{course_id}/users?role=student") do |students|
-      # If the section exists and the user isn't already an instructor,
-      # check Clever to see if they're listed as a co-teacher.
-      return head :forbidden if section.present? && !section_instructor?(section) && !clever_teacher_for_course?(course_id)
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -680,9 +682,8 @@ class ApiController < ApplicationController
     clever_uid = current_user.uid_for_provider(AuthenticationOption::CLEVER).to_s
     return false if clever_uid.empty?
 
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
-    client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
-    teachers = client.get("sections/#{course_id}/users?role=teacher").fetch('data', [])
+    response = query_clever_service("sections/#{course_id}/users?role=teacher")
+    teachers = response&.fetch('data', []) || []
     teachers.any? {|teacher| teacher.dig('data', 'id').to_s == clever_uid}
   end
 
