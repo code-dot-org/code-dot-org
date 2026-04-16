@@ -103,6 +103,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     state => state.aichat.hasSetInitialCustomizations
   );
 
+  const chatWorkspaceInitialized = hasSetInitialCustomizations;
+
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
   useEffect(() => {
@@ -133,13 +135,20 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     dispatch(
       initializeAiCustomizations(studentAiCustomizations, levelAichatSettings)
     );
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'LOAD_LEVEL',
-      })
-    );
   }, [dispatch, initialSources, levelAichatSettings]);
+
+  useEffect(() => {
+    // ChatWorkspaceLogger is intialized in ChatWorkspace so we need to wait on it.
+    // Logging fronm AichatView could be cleaned up to avoid this fragile timing.
+    if (chatWorkspaceInitialized) {
+      dispatch(
+        addChatEvent({
+          timestamp: Date.now(),
+          descriptionKey: 'LOAD_LEVEL',
+        })
+      );
+    }
+  }, [dispatch, chatWorkspaceInitialized]);
 
   useEffect(() => {
     const modalToShow = () => {
@@ -352,7 +361,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={<AiChatHeaderButtons />}
             >
-              {hasSetInitialCustomizations && (
+              {chatWorkspaceInitialized && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
