@@ -223,7 +223,7 @@ When /^I press the new section button$/ do
 end
 
 Then /^I should see the new section dialog$/ do
-  steps 'Then I see ".modal"'
+  steps 'Then I see ".uitest-new-section-dialog"'
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
