@@ -149,6 +149,24 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
       end
     end
+
+    context 'when student is in a hidden (archived) section with ENABLED access' do
+      it 'returns DISABLED' do
+        hidden_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED], hidden: true)
+        allow(user).to receive(:teachers).and_return([qualified_teacher])
+        allow(user).to receive(:sections_as_student).and_return([hidden_section])
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when student is in a hidden (archived) section with ESSENTIAL_ONLY access' do
+      it 'returns DISABLED' do
+        hidden_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY], hidden: true)
+        allow(user).to receive(:teachers).and_return([qualified_teacher])
+        allow(user).to receive(:sections_as_student).and_return([hidden_section])
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
   end
 
   describe '#can_access_aichat_chat_completion?' do
