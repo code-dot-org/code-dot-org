@@ -1,0 +1,9 @@
+{
+  "key": "conditionals_v1",
+  "description": "This video introduces the concept of conditional statements in programming. It explains that a conditional is a decision point that tells the computer to execute certain code only if a specific condition is true. Using Python as an example, it covers the syntax of the if statement, the importance of the colon, and how indentation defines which lines of code belong to the conditional block.",
+  "s3_uri": "s3://PLACEHOLDER/json_videos/conditionals_v1.json",
+  "lab": "pythonlab",
+  "version": 1,
+  "audience": "student",
+  "objective_keys": []
+}

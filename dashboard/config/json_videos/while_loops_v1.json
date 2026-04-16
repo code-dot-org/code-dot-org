@@ -1,0 +1,9 @@
+{
+  "key": "while_loops_v1",
+  "description": "This video explains the While Loop, a structure used to repeat instructions to keep code clean and organized. It uses a flowchart analogy to show how a computer checks a condition: if the condition is true, the code inside the loop runs; if false, the computer exits the loop. The video also covers the Python syntax for while loops, emphasizing the keyword while, the condition, and the required indentation for the repeated steps.",
+  "s3_uri": "s3://PLACEHOLDER/json_videos/while_loops_v1.json",
+  "lab": "pythonlab",
+  "version": 1,
+  "audience": "student",
+  "objective_keys": []
+}

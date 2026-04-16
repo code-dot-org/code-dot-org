@@ -1,0 +1,9 @@
+{
+  "key": "if_else_v1",
+  "description": "This video builds upon basic conditionals by introducing two-way selection using the if-else statement. It explains that while a simple if statement is a one-way selection (it does nothing if the condition is false), the else keyword provides an alternative path. It uses a real-world analogy of finishing homework to illustrate how the program skips the if block and runs the else block when a condition is not met.",
+  "s3_uri": "s3://PLACEHOLDER/json_videos/if_else_v1.json",
+  "lab": "pythonlab",
+  "version": 1,
+  "audience": "student",
+  "objective_keys": []
+}

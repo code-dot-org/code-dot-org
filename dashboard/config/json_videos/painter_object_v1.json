@@ -1,0 +1,9 @@
+{
+  "key": "painter_object_v1",
+  "description": "This video introduces the \"Painter\" object used in certain code.org python levels. It explains the relationship between a class (the blueprint) and an object (the specific instance, like 'alice' or 'bob'). It defines attributes as things the object knows and methods as actions it can perform. Finally, it demonstrates the \"dot operator\" syntax used to call methods on a specific object.",
+  "s3_uri": "s3://PLACEHOLDER/json_videos/painter_object_v1.json",
+  "lab": "pythonlab",
+  "version": 1,
+  "audience": "student",
+  "objective_keys": []
+}

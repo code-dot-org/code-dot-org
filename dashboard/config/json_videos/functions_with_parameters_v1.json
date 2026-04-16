@@ -1,0 +1,9 @@
+{
+  "key": "functions_with_parameters_v1",
+  "description": "This video explains functions with parameters by using the analogy of a \"fill-in-the-blank\" sentence. It defines a parameter as a placeholder (the blank space) and an argument as the actual value provided to fill that space. The lesson highlights that parameters are used to make code more reusable and easier to understand by allowing the same function to work with different values.",
+  "s3_uri": "s3://PLACEHOLDER/json_videos/functions_with_parameters_v1.json",
+  "lab": "pythonlab",
+  "version": 1,
+  "audience": "student",
+  "objective_keys": []
+}
