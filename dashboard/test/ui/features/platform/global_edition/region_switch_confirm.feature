@@ -3,9 +3,8 @@
 Feature: Global Edition - Region Switch Confirm Modal
 
   Background:
-    Given I am on "http://studio.code.org"
-    And I clear session storage
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given I clear session storage
+    And Global Edition is enabled
     And I use a cookie to mock the DCDO key "global_edition_region_switch_confirm_enabled_in" as "["fa"]"
 
   Scenario: The modal is shown on studio.code.org (Studio) domain
