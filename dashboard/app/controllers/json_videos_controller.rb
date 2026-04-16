@@ -9,14 +9,12 @@ class JSONVideosController < ApplicationController
     render plain: body, content_type: 'application/json'
   rescue ActiveRecord::RecordNotFound
     head :not_found
-  rescue => e
-    CDO.log.error "Failed to fetch json video #{params[:id]} from S3: #{e.message}"
+  rescue => exception
+    CDO.log.error "Failed to fetch json video #{params[:id]} from S3: #{exception.message}"
     head :bad_gateway
   end
 
-  private
-
-  def parse_s3_uri(uri)
+  private def parse_s3_uri(uri)
     # "s3://bucket/path/to/key" → ["bucket", "path/to/key"]
     uri.sub('s3://', '').split('/', 2)
   end
