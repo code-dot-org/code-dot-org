@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Paper, Tooltip} from '@mui/material';
-import {useReactFlow} from '@xyflow/react';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
@@ -9,11 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
-import {
-  ASSET_PATH_PREFIX,
-  DEFAULT_NODE_HEIGHT,
-  DEFAULT_NODE_WIDTH,
-} from '../constants';
+import {ASSET_PATH_PREFIX} from '../constants';
 import {ShapeType} from '../types';
 
 import styles from './toolbar.module.scss';
@@ -26,29 +21,19 @@ interface ToolbarProps {
 }
 
 export default function Toolbar({onAddNode}: ToolbarProps) {
-  const {screenToFlowPosition} = useReactFlow();
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
 
   const addShape = useCallback(
     (shapeType: ShapeType) => {
-      // Place the new node near the center of the visible viewport.
-      const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
-      });
       const data: SketchlabReactFlowNode['data'] = {
         shapeType,
         label: '',
       };
       onAddNode('shape', data);
-      // Return position so the caller can use it — but we pass through onAddNode.
-      // The caller receives the position via the shape type + default sizes.
-      // (Position is computed fresh per click; small offset added per node in the view.)
-      void position;
     },
-    [onAddNode, screenToFlowPosition]
+    [onAddNode]
   );
 
   const onFileSelected = useCallback(
