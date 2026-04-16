@@ -329,6 +329,10 @@ const EVENTS = {
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
+  // Lesson Tutor
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
+  LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
+
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_TEST_PASSED: 'Javalab Test Passed',
@@ -392,7 +396,6 @@ const EVENTS = {
     'Signed In User Clicks Help Menu Option',
   HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
   HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
-  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
   HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
