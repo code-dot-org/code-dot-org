@@ -1363,7 +1363,7 @@ class LessonTest < ActiveSupport::TestCase
           }
         }
       }
-      stub_store_translations(test_locale, custom_i18n)
+      I18n.backend.store_translations(test_locale, custom_i18n)
 
       assert_equal("This is the english overview", lesson.get_localized_property(:overview))
       I18n.locale = test_locale

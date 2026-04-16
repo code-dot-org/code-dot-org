@@ -150,7 +150,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
     assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
   end
 
@@ -169,7 +169,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
     assert_equal "long instructions in another language\n", translatable_level.tts_long_instructions_text
   end
 
@@ -208,7 +208,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
     assert_equal "Contained\ntexte de la question\nréponse un\nréponse deux\nréponse troi\n", outer_level.tts_long_instructions_text
   end
 
@@ -228,7 +228,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
     assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
   end
 

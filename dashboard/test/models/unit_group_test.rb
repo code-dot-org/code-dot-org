@@ -556,7 +556,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
@@ -623,7 +623,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       }
     }
 
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     assert_equal 'unit1-title', unit_group.summarize[:scripts].first[:title]
     assert_equal 'unit1-title', unit1.summarize[:title]

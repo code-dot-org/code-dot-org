@@ -669,16 +669,6 @@ def stub_get_storage_id(user_id)
   stubs(:get_storage_id).returns fake_storage_id
 end
 
-# Mock behavior of I18n.backend.store_translations
-# https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/simple.rb#L33
-def stub_store_translations(locale, data)
-  locale = locale.to_sym
-  I18n.backend.translations[locale] ||= Concurrent::Hash.new
-  data = I18n::Utils.deep_symbolize_keys(data)
-  temp_data = I18n::Utils.deep_merge(I18n.backend.translations[locale], data)
-  I18n.backend.stubs(:translations).returns(temp_data)
-end
-
 def fake_storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
 end

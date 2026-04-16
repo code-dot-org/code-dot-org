@@ -89,7 +89,7 @@ class LevelsHelperTest < ActionView::TestCase
         }
       }
     }
-    stub_store_translations new_locale, custom_i18n
+    I18n.backend.store_translations new_locale, custom_i18n
     assert_equal new_instructions, I18n.t("data.short_instructions.#{@level.name}", locale: new_locale)
 
     options = blockly_options
@@ -898,7 +898,7 @@ class LevelsHelperTest < ActionView::TestCase
         }
       }
     }
-    stub_store_translations I18n.locale, custom_i18n
+    I18n.backend.store_translations I18n.locale, custom_i18n
 
     new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
     new_start = start.sub("details", start_translated_name)
@@ -932,7 +932,7 @@ class LevelsHelperTest < ActionView::TestCase
         }
       }
     }
-    stub_store_translations I18n.locale, custom_i18n
+    I18n.backend.store_translations I18n.locale, custom_i18n
 
     new_toolbox = toolbox.sub("length", toolbox_translated_name)
     new_start = start.sub("points", start_translated_name)
@@ -969,7 +969,7 @@ class LevelsHelperTest < ActionView::TestCase
         }
       }
     }
-    stub_store_translations I18n.locale, custom_i18n
+    I18n.backend.store_translations I18n.locale, custom_i18n
 
     new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
     new_start = start.sub("details", start_translated_name)
@@ -1005,7 +1005,7 @@ class LevelsHelperTest < ActionView::TestCase
         }
       }
     }
-    stub_store_translations I18n.locale, custom_i18n
+    I18n.backend.store_translations I18n.locale, custom_i18n
 
     new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
     new_start = start.sub("details", start_translated_name)

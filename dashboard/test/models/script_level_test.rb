@@ -276,7 +276,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
           }
         }
       }
-      stub_store_translations 'es-MX', custom_i18n
+      I18n.backend.store_translations 'es-MX', custom_i18n
 
       summary = sl.summarize
       assert_equal sl.progression, summary[:progression]

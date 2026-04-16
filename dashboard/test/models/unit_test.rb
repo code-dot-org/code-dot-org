@@ -1002,7 +1002,7 @@ class UnitTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     summary = unit.summarize
 
@@ -1072,7 +1072,7 @@ class UnitTest < ActiveSupport::TestCase
         }
       }
     }
-    stub_store_translations I18n.locale, i18n['en']
+    I18n.backend.store_translations I18n.locale, i18n['en']
 
     Unit.stubs(:unit_json_directory).returns(self.class.fixture_path)
     unit = Unit.seed_from_json_file('test-plc')
@@ -2022,7 +2022,7 @@ class UnitTest < ActiveSupport::TestCase
           }
         }
       }
-      stub_store_translations test_locale, mock_i18n
+      I18n.backend.store_translations test_locale, mock_i18n
       copied_resource = resource.copy_to_course_version(new_course_version)
       copied_vocab = vocab.copy_to_course_version(new_course_version)
       expected_i18n = {

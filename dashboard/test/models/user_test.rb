@@ -1168,7 +1168,7 @@ class UserTest < ActiveSupport::TestCase
       }
     }
     I18n.locale = test_locale
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     email = 'email@email.xx'
     create(:student, password: 'current_password', email: email)
@@ -2917,7 +2917,7 @@ class UserTest < ActiveSupport::TestCase
         }
       }
 
-      stub_store_translations test_locale, custom_i18n
+      I18n.backend.store_translations test_locale, custom_i18n
 
       @student = create(:student)
       @teacher = create(:teacher)

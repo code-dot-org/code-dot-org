@@ -198,7 +198,7 @@ class ResourceTest < ActiveSupport::TestCase
         }
       }
     }
-    stub_store_translations(test_locale, custom_i18n)
+    I18n.backend.store_translations(test_locale, custom_i18n)
     assert_equal("English name", resource.summarize_for_lesson_plan[:name])
     I18n.locale = test_locale
     assert_equal("Translated name", resource.summarize_for_lesson_plan[:name])

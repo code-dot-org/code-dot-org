@@ -24,7 +24,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
         }
       }
     }
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     level = create(
       :match,
@@ -49,7 +49,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
         }
       }
     }
-    stub_store_translations test_locale, custom_i18n
+    I18n.backend.store_translations test_locale, custom_i18n
 
     level = create(
       :match,
