@@ -45,6 +45,7 @@ class ProgressLesson extends React.Component {
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
     unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
   };
 
   constructor(props) {
@@ -87,6 +88,7 @@ class ProgressLesson extends React.Component {
       isRtl,
       unitHasUnnumberedLessons,
       isOnLevelView,
+      userId,
     } = this.props;
 
     if (!isVisible) {
@@ -107,7 +109,7 @@ class ProgressLesson extends React.Component {
     // These lessons don't have lesson plans, so we can use that as a proxy for
     // whether or not to show the Lesson Tutor button.
     const showLessonTutorButton =
-      lesson.lessonTutorPath && lesson.hasLessonPlan;
+      lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -192,21 +194,22 @@ class ProgressLesson extends React.Component {
               )}
               <span>{title}</span>
             </div>
-            {viewAs === ViewType.Participant && !isOnLevelView && (
+            {!isOnLevelView && (
               <div style={styles.buttonColumn}>
-                {lesson.student_lesson_plan_html_url && (
-                  <MuiButton
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    variant="contained"
-                    color="white"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
-                  >
-                    {i18n.lessonResources()}
-                  </MuiButton>
-                )}
+                {viewAs === ViewType.Participant &&
+                  lesson.student_lesson_plan_html_url && (
+                    <MuiButton
+                      className="ui-test-lesson-resources"
+                      href={lesson.student_lesson_plan_html_url}
+                      variant="contained"
+                      color="white"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                    >
+                      {i18n.lessonResources()}
+                    </MuiButton>
+                  )}
                 {showLessonTutorButton &&
                   experiments.isEnabledAllowingQueryString(
                     experiments.LESSON_TUTOR
@@ -365,4 +368,5 @@ export default connect((state, ownProps) => ({
     state.progress.unitProgressHasLoaded &&
     state.lessonLock.lessonsBySectionIdLoaded,
   unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
+  userId: state.currentUser.userId,
 }))(ProgressLesson);
