@@ -130,15 +130,21 @@ namespace :ci do
     end
     use_device_farm = true
     if use_device_farm
-      # AWS Device Farm: no proxy tunnel needed; browsers connect to public URLs.
-      # Tests are pointed at the public test domain rather than localhost.
-      RakeUtils.wait_for_url('http://test-studio.code.org')
+      # AWS Device Farm: no proxy tunnel needed; the browser reaches the
+      # in-container Rails via the drone worker's VPC-private IP. The browser
+      # itself still navigates to localhost-studio.code.org:3000 (so cookie
+      # scoping and redirects match existing tests) -- a Chrome
+      # --host-resolver-rules flag maps that hostname to $WORKER_IP.
+      worker_ip = ENV.fetch('WORKER_IP', nil)
+      raise 'WORKER_IP env var not set (should be exported by .drone.yml ui-tests step)' if worker_ip.nil? || worker_ip.empty?
+      RakeUtils.wait_for_url("http://#{worker_ip}:3000")
       Dir.chdir('dashboard/test/ui') do
         container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
         device_farm_browsers = device_farm_browsers_to_run
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
             "--device-farm " \
+            "--dashboard localhost-studio.code.org:3000 " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
             "--parallel #{PARALLEL_COUNT} " \

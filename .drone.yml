@@ -214,6 +214,9 @@ steps:
     # see: docker/ci/Dockerfile
     image: codedotorg/cdo-ci:1.18
     pull: always
+    # Share the worker's network namespace so puma on 0.0.0.0:3000 binds on
+    # the worker's primary ENI, reachable from the Device Farm VPC ENI.
+    network_mode: host
     volumes:
       - name: mysql
         path: /var/lib/mysql
@@ -244,6 +247,13 @@ steps:
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
+      # Worker's VPC-private IP, used as the Device Farm browser's target.
+      # Rails binds to 0.0.0.0:3000 on the worker's host net; the browser
+      # resolves localhost-studio.code.org → $WORKER_IP via a Chrome flag
+      # set in dashboard/test/ui/features/support/connect.rb.
+      - IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600")
+      - export WORKER_IP=$(curl -s -H "X-aws-ec2-metadata-token:$IMDS_TOKEN" http://169.254.169.254/latest/meta-data/local-ipv4)
+      - echo "WORKER_IP=$WORKER_IP"
       - EXIT_CODE=0
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
