@@ -23,6 +23,8 @@ interface AiTutorChatWithInstructionDrawerProps {
   isCollapsedByDefault: boolean;
   enableTutorVideos?: boolean;
   isPredictLevel?: boolean;
+  disabled?: boolean;
+  disabledMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -39,6 +41,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   isCollapsedByDefault,
   enableTutorVideos,
   isPredictLevel,
+  disabled,
+  disabledMessage,
 }) => {
   const {
     containerRef,
@@ -117,6 +121,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
             enableTutorVideos={enableTutorVideos}
+            disabled={disabled}
+            disabledMessage={disabledMessage}
           />
         </div>
       </div>
