@@ -68,6 +68,7 @@ function SummaryProgressRow({
       unitName,
       userId,
       userType,
+      view: 'summary-row',
     });
   };
 

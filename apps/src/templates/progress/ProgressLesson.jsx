@@ -8,6 +8,8 @@ import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -46,6 +48,8 @@ class ProgressLesson extends React.Component {
     lockStatusLoaded: PropTypes.bool.isRequired,
     unitHasUnnumberedLessons: PropTypes.bool.isRequired,
     userId: PropTypes.number,
+    userType: PropTypes.string,
+    unitName: PropTypes.string,
   };
 
   constructor(props) {
@@ -75,6 +79,19 @@ class ProgressLesson extends React.Component {
       collapsed: !this.state.collapsed,
     });
 
+  handleLessonTutorClick = () => {
+    const {lesson, scriptId, unitName, userId, userType} = this.props;
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId: scriptId,
+      unitName,
+      userId,
+      userType,
+      view: 'progress-lesson',
+    });
+  };
+
   render() {
     const {
       lesson,
@@ -89,6 +106,8 @@ class ProgressLesson extends React.Component {
       unitHasUnnumberedLessons,
       isOnLevelView,
       userId,
+      userType,
+      unitName,
     } = this.props;
 
     if (!isVisible) {
@@ -220,6 +239,7 @@ class ProgressLesson extends React.Component {
                       color="white"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={this.handleLessonTutorClick}
                       startIcon={
                         <FontAwesomeV6Icon
                           iconName="ai-bot-solid"
@@ -369,4 +389,6 @@ export default connect((state, ownProps) => ({
     state.lessonLock.lessonsBySectionIdLoaded,
   unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
   userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
+  unitName: state.progress.unitTitle,
 }))(ProgressLesson);
