@@ -9,16 +9,13 @@ import {computeTabOrder, type TabOrderEntry} from '../utils/computeTabOrder';
 
 /**
  * Compute a logical tab order for nodes and edges and maintain roving
- * tabindex state. Syncs tabIndex attributes to the DOM so exactly one
- * element has tabIndex 0 and the rest have -1.
- *
- * Queries are scoped to containerClassName so multiple React Flow
- * instances on the same page don't interfere with each other.
+ * tabindex state. Returns the resolved active entry so callers can
+ * apply tabIndex through React Flow's domAttributes API rather than
+ * direct DOM manipulation (which React Flow's renders can overwrite).
  */
 export function useTabOrder(
   nodes: SketchlabReactFlowNode[],
-  edges: SketchlabReactFlowEdge[],
-  containerClassName: string
+  edges: SketchlabReactFlowEdge[]
 ) {
   const tabOrder = useMemo(() => computeTabOrder(nodes, edges), [nodes, edges]);
 
@@ -39,25 +36,9 @@ export function useTabOrder(
     }
   }, [tabOrder, activeTabEntry]);
 
-  // Sync roving tabindex to the DOM.
-  useEffect(() => {
-    const container = document.querySelector(`.${containerClassName}`);
-    if (!container) return;
+  // The entry that should have tabIndex 0 (first in order when nothing
+  // has been focused yet).
+  const activeEntry = activeTabEntry ?? tabOrder[0] ?? null;
 
-    const active = activeTabEntry ?? tabOrder[0] ?? null;
-    container
-      .querySelectorAll<HTMLElement>('.react-flow__node')
-      .forEach(element => {
-        const id = element.getAttribute('data-id');
-        element.tabIndex = active?.type === 'node' && active.id === id ? 0 : -1;
-      });
-    container
-      .querySelectorAll<HTMLElement>('.react-flow__edge')
-      .forEach(element => {
-        const id = element.getAttribute('data-id');
-        element.tabIndex = active?.type === 'edge' && active.id === id ? 0 : -1;
-      });
-  }, [tabOrder, activeTabEntry, containerClassName]);
-
-  return {tabOrder, activeTabEntry, setActiveTabEntry};
+  return {tabOrder, activeEntry, setActiveTabEntry};
 }

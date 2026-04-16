@@ -10,7 +10,7 @@ import {
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   SketchlabReactFlowSource,
@@ -76,10 +76,31 @@ export default function ReactFlowCanvas({
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
-  const {tabOrder, setActiveTabEntry} = useTabOrder(
+  const {tabOrder, activeEntry, setActiveTabEntry} = useTabOrder(
     nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[],
-    SKETCHLAB_CONTAINER_CLASS
+    edges as SketchlabReactFlowEdge[]
+  );
+
+  // Apply roving tabindex through React Flow's domAttributes so it
+  // survives React Flow re-renders (direct DOM manipulation gets
+  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
+  const displayNodes = useMemo(
+    () =>
+      nodes.map(node => {
+        const isActive =
+          activeEntry?.type === 'node' && activeEntry.id === node.id;
+        return {...node, domAttributes: {tabIndex: isActive ? 0 : -1}};
+      }),
+    [nodes, activeEntry]
+  );
+  const displayEdges = useMemo(
+    () =>
+      edges.map(edge => {
+        const isActive =
+          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
+        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
+      }),
+    [edges, activeEntry]
   );
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
@@ -209,8 +230,8 @@ export default function ReactFlowCanvas({
           {connectAnnouncement}
         </div>
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={displayNodes}
+          edges={displayEdges}
           onNodesChange={readOnly ? undefined : onNodesChange}
           onEdgesChange={readOnly ? undefined : onEdgesChange}
           onConnect={readOnly ? undefined : onConnect}
@@ -226,7 +247,10 @@ export default function ReactFlowCanvas({
           elementsSelectable={!readOnly}
           nodesFocusable={true}
           edgesFocusable={true}
-          disableKeyboardA11y={false}
+          // React Flow's built-in Tab handler cycles nodes in array order,
+          // which conflicts with our computed tab order (useKeyboardEdgeCreation).
+          // Disable it so our topological/positional ordering is the only one.
+          disableKeyboardA11y={true}
         >
           <Background />
           <Controls />
