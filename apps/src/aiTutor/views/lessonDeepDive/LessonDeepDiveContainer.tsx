@@ -23,18 +23,22 @@ const darkTheme = createTheme({
 
 import FizzyButton from './FizzyButton';
 import InterventionBox from './InterventionBox';
-import LessonSummaryBox from './LessonSummaryBox';
+import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
+import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData} from './types';
+import ValidatedLevelsBox from './ValidatedLevelsBox';
 import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
   'welcome',
-  'lesson-summary',
+  'levels-attempted',
+  'time-spent',
+  'validated-levels',
   'reflection',
   'intervention',
   'practice',
@@ -76,11 +80,36 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     switch (BOX_IDS[currentIndex]) {
       case 'welcome':
         return <WelcomeBox />;
-      case 'lesson-summary':
+      case 'levels-attempted':
         return (
-          <LessonSummaryBox
+          <LevelsAttemptedBox
             lessonName={lessonDeepDiveData.lessonName}
-            lessonSummary={lessonDeepDiveData.lessonSummary}
+            levelsAttempted={
+              lessonDeepDiveData.progressCounts.levelsAttemptedCount
+            }
+            levelsTotal={lessonDeepDiveData.progressCounts.levelsTotalCount}
+          />
+        );
+      case 'time-spent':
+        return (
+          <TimeSpentBox
+            lessonName={lessonDeepDiveData.lessonName}
+            timeSpentSeconds={lessonDeepDiveData.timeSpentSeconds}
+          />
+        );
+      case 'validated-levels':
+        return (
+          <ValidatedLevelsBox
+            lessonName={lessonDeepDiveData.lessonName}
+            validatedLevelsTotalCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsTotalCount
+            }
+            validatedLevelsCorrectCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsCorrectCount
+            }
+            validatedLevelsIncorrectCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsIncorrectCount
+            }
           />
         );
       case 'reflection':
