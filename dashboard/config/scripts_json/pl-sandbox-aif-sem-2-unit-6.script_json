@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 15:15:53 UTC",
+    "serialized_at": "2026-04-16 13:50:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -126,6 +126,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-Intro-1"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -148,6 +151,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U6-class-context-2"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -170,6 +176,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-project-overview-3"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -192,6 +201,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-project-guide-4"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -214,6 +226,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-kanban-panel-5"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -236,6 +251,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-project-leader-6"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -258,6 +276,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-team-engagement-7"
+        ],
         "progression": "Introducting the Capstone"
       },
       "bonus": false,
@@ -280,6 +301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-day-by-day-8"
+        ],
         "progression": "Day-by-Day Planning"
       },
       "bonus": false,
@@ -302,6 +326,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-day-by-day-9"
+        ],
         "progression": "Day-by-Day Planning"
       },
       "bonus": false,
@@ -324,6 +351,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-day-by-day-10"
+        ],
         "progression": "Day-by-Day Planning"
       },
       "bonus": false,
@@ -346,6 +376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-warm-up-exit-tixcket-11"
+        ],
         "progression": "Managing the Capstone"
       },
       "bonus": false,
@@ -368,6 +401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-class-mgmt-12"
+        ],
         "progression": "Managing the Capstone"
       },
       "bonus": false,
@@ -390,6 +426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-tag-13"
+        ],
         "progression": "Managing the Capstone"
       },
       "bonus": false,
@@ -412,6 +451,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-guiding-showcase-panel-14"
+        ],
         "progression": "Managing the Capstone"
       },
       "bonus": false,
@@ -434,6 +476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-assesing-capstone-15"
+        ],
         "progression": "Assessing the Capstone"
       },
       "bonus": false,
@@ -456,6 +501,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-teaching-moves-assesment-16"
+        ],
         "progression": "Assessing the Capstone"
       },
       "bonus": false,
@@ -478,6 +526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-reflect-wrap-17"
+        ],
         "progression": "Wrapping-Up"
       },
       "bonus": false,
@@ -500,6 +551,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U6-final-level-18"
+        ],
         "progression": "Wrapping-Up"
       },
       "bonus": false,
@@ -763,6 +817,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
