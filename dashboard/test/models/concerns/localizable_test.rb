@@ -39,7 +39,7 @@ class LocalizableTest < ActiveSupport::TestCase
 
   let(:described_instance) {described_model_class.new(display_name: 'Test Display', description: 'Test Description', key: 'described_key')}
 
-  setup_all do
+  before do
     I18n.locale = I18n.default_locale
     I18n.backend.store_translations(
       :es, {

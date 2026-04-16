@@ -1,6 +1,8 @@
 require 'test_reporter'
 require 'faker'
 
+# make arbitrary change to trigger unit tests
+
 require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
