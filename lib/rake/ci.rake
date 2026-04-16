@@ -134,7 +134,7 @@ namespace :ci do
       # Tests are pointed at the public test domain rather than localhost.
       RakeUtils.wait_for_url('http://test-studio.code.org')
       Dir.chdir('dashboard/test/ui') do
-        container_features = `find ./features -name 'markdown_rendering.feature' | sort`.split("\n").map {|f| f[2..]}
+        container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
         device_farm_browsers = device_farm_browsers_to_run
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
@@ -260,7 +260,7 @@ def browsers_to_run
 end
 
 def test_eyes?
-  false
+  !CI::Utils.tagged?(SKIP_EYES)
 end
 
 def close_sauce_connect
