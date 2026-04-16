@@ -28,6 +28,10 @@
   width: 100%;
   max-width: 800px;
   min-width: 500px;
+
+  &:last-child {
+    max-width: none;
+  }
 }
 
 .headerButtonRow {

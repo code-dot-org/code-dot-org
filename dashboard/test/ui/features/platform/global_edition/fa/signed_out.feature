@@ -3,8 +3,7 @@
 @no_mobile
 Feature: Global Edition - Farsi Headers when Signed Out
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
     And I set the language cookie
 
   Scenario: Signed out user should see the correct header links on Dashboard

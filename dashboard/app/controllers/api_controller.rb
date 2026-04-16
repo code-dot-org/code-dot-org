@@ -96,7 +96,11 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
     section = CleverSection.find_by(code: CleverSection.code_for_section(course_id))
-    return head :forbidden if section.present? && !section_instructor?(section)
+
+    # If the section exists and the user isn't already an instructor,
+    # check Clever to see if they're listed as a co-teacher before
+    # fetching the student roster.
+    return head :forbidden if section.present? && !section_instructor?(section) && !clever_teacher_for_course?(course_id)
 
     query_clever_service("sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
@@ -117,9 +121,12 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
     section = GoogleClassroomSection.find_by(code: GoogleClassroomSection.code_for_section(course_id))
-    return head :forbidden if section.present? && !section_instructor?(section)
 
     query_google_classroom_service do |service|
+      # If the section exists and the user isn't already an instructor,
+      # check Google Classroom to see if they're listed as a co-teacher.
+      return head :forbidden if section.present? && !section_instructor?(section) && !google_teacher_for_course?(service, course_id)
+
       students = []
       next_page_token = nil
       loop do
@@ -654,6 +661,31 @@ class ApiController < ApplicationController
   private def section_instructor?(section)
     return false unless current_user
     section&.instructors&.exists?(id: current_user.id)
+  end
+
+  private def google_teacher_for_course?(service, course_id)
+    google_uid = current_user.uid_for_provider(AuthenticationOption::GOOGLE).to_s
+    return false if google_uid.empty?
+
+    next_page_token = nil
+    loop do
+      response = service.list_course_teachers(course_id, page_token: next_page_token)
+      teachers = response.teachers || []
+      return true if teachers.any? {|teacher| teacher.user_id.to_s == google_uid}
+      next_page_token = response.next_page_token
+      break unless next_page_token
+    end
+    false
+  end
+
+  private def clever_teacher_for_course?(course_id)
+    clever_uid = current_user.uid_for_provider(AuthenticationOption::CLEVER).to_s
+    return false if clever_uid.empty?
+
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
+    teachers = client.get("sections/#{course_id}/users?role=teacher").fetch('data', [])
+    teachers.any? {|teacher| teacher.dig('data', 'id').to_s == clever_uid}
   end
 
   # Gets progress-related app_options for the given script and level for the
