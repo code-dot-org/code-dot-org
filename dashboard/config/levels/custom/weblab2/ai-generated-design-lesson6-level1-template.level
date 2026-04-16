@@ -26,80 +26,30 @@
     },
     "start_sources": {
       "folders": {
-        "1": {
-          "id": "1",
-          "name": "sample_mood_boards",
-          "parentId": "0",
-          "open": false
-        },
-        "2": {
-          "id": "2",
-          "name": "sample_brand_kits",
-          "parentId": "0",
-          "open": false
-        }
       },
       "files": {
         "1": {
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Website</title>\n</head>\n<body>\n\n<header>\n  <h1>My Website</h1>\n  <p>Your brand message goes here.</p>\n  <nav>\n    <a href=\"index.html\">Home</a>\n    <a href=\"contact.html\">Contact</a>\n  </nav>\n</header>\n\n<main>\n  <section>\n    <h2>About</h2>\n    <p>This is a short description of your website.</p>\n  </section>\n\n  <section>\n    <h2>Services</h2>\n    <p>Describe what you offer here.</p>\n  </section>\n\n  <section>\n    <h2>Updates</h2>\n    <p>Share recent news or highlights.</p>\n    <p>Learn more on our <a href=\"contact.html\">contact page</a>.</p>\n  </section>\n</main>\n\n<footer>\n  <p>&copy; 2026 My Website</p>\n</footer>\n\n</body>\n</html>\n",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Solé – Home</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n\n    <header>\n      <h1>Solé</h1>\n      <nav>\n        <a href=\"index.html\">Home</a>\n        <a href=\"music.html\">Music</a>\n      </nav>\n    </header>\n\n    <main>\n\n      <section id=\"hero\">\n        <h2>Independent Artist. Oakland, CA.</h2>\n        <p>\n          Blending Afrobeats, R&B, and spoken word into music that moves\n          both body and mind.\n        </p>\n        <a href=\"music.html\">Explore the music</a>\n      </section>\n\n      <section id=\"about\">\n        <h2>About</h2>\n        <p>\n          Solé grew up between Lagos and Oakland, and you can hear both in\n          every track she makes. Her debut EP <em>Roots & Static</em> was\n          recorded entirely in her bedroom studio and released independently\n          in 2024.\n        </p>\n        <p>\n          When she's not in the studio, Solé runs free music production\n          workshops for teens in her neighborhood through her project,\n          The Static Room.\n        </p>\n      </section>\n\n      <section id=\"featured\">\n        <h2>Latest Release</h2>\n        <h3>Roots & Static – EP</h3>\n        <p>Four tracks. No features. All feeling.</p>\n        <ul>\n          <li>Golden Hour</li>\n          <li>No Signal</li>\n          <li>Carry On</li>\n          <li>Static Love</li>\n        </ul>\n        <a href=\"music.html\">See full discography</a>\n      </section>\n\n      <section id=\"shows\">\n        <h2>Upcoming Shows</h2>\n        <ul>\n          <li>July 12 – The New Parish, Oakland CA</li>\n          <li>July 26 – Café du Nord, San Francisco CA</li>\n          <li>August 3 – Lodge Room, Los Angeles CA</li>\n        </ul>\n        <p><a href=\"#\">Get tickets</a></p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>\n        <a href=\"#\">Instagram</a>\n        <a href=\"#\">SoundCloud</a>\n        <a href=\"#\">Email</a>\n      </p>\n      <p>&copy; 2025 Solé. All rights reserved.</p>\n    </footer>\n\n  </body>\n</html>",
           "active": false,
           "folderId": "0"
         },
         "2": {
           "id": "2",
-          "name": "contact.html",
+          "name": "music.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Contact</title>\n</head>\n<body>\n\n<header>\n  <h1>Contact</h1>\n  <p>Get in touch with us.</p>\n  <nav>\n    <a href=\"index.html\">Home</a>\n    <a href=\"contact.html\">Contact</a>\n  </nav>\n</header>\n\n<main>\n  <section>\n    <h2>Contact Information</h2>\n    <p>Email: hello@example.com</p>\n    <p>Phone: (555) 123-4567</p>\n    <p>Return to the <a href=\"index.html\">home page</a>.</p>\n  </section>\n</main>\n\n<footer>\n  <p>&copy; 2026 My Website</p>\n</footer>\n\n</body>\n</html>\n",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Solé – Music</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n\n    <header>\n      <h1>Solé</h1>\n      <nav>\n        <a href=\"index.html\">Home</a>\n        <a href=\"music.html\">Music</a>\n      </nav>\n    </header>\n\n    <main>\n\n      <section id=\"discography\">\n        <h2>Discography</h2>\n\n        <article>\n          <h3>Roots & Static</h3>\n          <p><strong>EP – 2024</strong></p>\n          <p>\n            Recorded over six months in a converted closet, <em>Roots & Static</em>\n            is about finding signal in the noise — figuring out who you are\n            when everything around you is pulling in different directions.\n          </p>\n          <h4>Tracklist</h4>\n          <ol>\n            <li>Golden Hour</li>\n            <li>No Signal</li>\n            <li>Carry On</li>\n            <li>Static Love</li>\n          </ol>\n        </article>\n\n        <article>\n          <h3>Drift</h3>\n          <p><strong>Single – 2023</strong></p>\n          <p>\n            A lo-fi R&B track about distance — physical and emotional.\n            <em>Drift</em> was Solé's first self-produced release and racked\n            up over 200K streams in its first month.\n          </p>\n        </article>\n\n        <article>\n          <h3>Homecoming</h3>\n          <p><strong>Single – 2022</strong></p>\n          <p>\n            Written on a flight back from Lagos, <em>Homecoming</em> explores\n            what it means to belong somewhere — and what it costs to leave.\n          </p>\n        </article>\n\n      </section>\n\n      <section id=\"contact\">\n        <h2>Booking & Press</h2>\n        <p>For inquiries, reach out at <a href=\"mailto:booking@solemusic.com\">booking@solemusic.com</a></p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>\n        <a href=\"#\">Instagram</a>\n        <a href=\"#\">SoundCloud</a>\n        <a href=\"#\">Email</a>\n      </p>\n      <p>&copy; 2025 Solé. All rights reserved.</p>\n    </footer>\n\n  </body>\n</html>",
           "folderId": "0",
-          "active": false
-        },
-        "3": {
-          "id": "3",
-          "name": "mood_board_1.png",
-          "language": "png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/6796e678-0ead-42f5-a084-ce71b7141e2c.png",
-          "type": "starter",
-          "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "mood_board_2.png",
-          "language": "png",
-          "contents": "",
-          "folderId": "1",
-          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/9b5809b0-a5a9-4b32-95cc-1bf7a83b76a7.png",
-          "type": "starter",
           "active": false
         },
         "5": {
           "id": "5",
           "name": "prompt.md",
-          "contents": "**1. What is the goal?**\n\n\n**2. What are the constraints?**\n\n\n**3. What are the edge cases?**",
+          "contents": "1. What is the goal?\nWhat should your website look and feel like after styling? What mood or tone should it communicate?\n\nAnswer:\n\n---\n\n2. What are the constraints?\n- What brand colors and fonts must be used?\n- Which sections must be styled consistently (header, nav, main content, footer)?\n- Are there any readability or usability requirements?\n\nAnswer:\n\n---\n\n3. What are the edge cases?\nWhat styling problems should be avoided? For example: low contrast text, hard-to-read fonts, inconsistent spacing, etc.\n\nAnswer:\n",
           "folderId": "0",
           "active": true
-        },
-        "6": {
-          "id": "6",
-          "name": "brand_identity_kit_2.png",
-          "contents": "",
-          "folderId": "2",
-          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-template/uuid/d86915f2-d436-4dc9-b660-0b42415c541f.png",
-          "type": "starter",
-          "active": false
-        },
-        "7": {
-          "id": "7",
-          "name": "brand_identity_kit_1.png",
-          "contents": "",
-          "folderId": "2",
-          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-template/uuid/b48b0c8f-ac7c-4086-b2e5-55b05c82ff80.png",
-          "type": "starter",
-          "active": false
         }
       },
       "openFiles": [
@@ -124,6 +74,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-17T04:45:42.345+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4-template\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4-template\"},{\"changed_at\":\"2026-03-17 04:46:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-26 11:00:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 06:08:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-17T04:45:42.345+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4-template\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4-template\"},{\"changed_at\":\"2026-03-17 04:46:23 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 05:13:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-26 11:00:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:27:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 06:08:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-16 01:23:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:27:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:30:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 02:03:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>
