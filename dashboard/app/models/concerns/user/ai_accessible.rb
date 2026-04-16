@@ -3,6 +3,8 @@ module User::AiAccessible
   extend ActiveSupport::Concern
   include SharedConstants
 
+  TEACHER_PREVERIFICATION_PILOT = 'teacher-preverification'.freeze
+
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like experiment with new
   # lab types with low friction.
@@ -17,7 +19,7 @@ module User::AiAccessible
   end
 
   def teacher_can_access_aichat?
-    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self) || SingleUserExperiment.enabled?(user: self, experiment_name: TEACHER_PREVERIFICATION_PILOT))
   end
 
   def ai_chat_access_level
@@ -57,10 +59,10 @@ module User::AiAccessible
   end
 
   private def in_section_with_ai_chat_access_enabled?
-    sections_as_student.any? {|s| s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]}
   end
 
   private def in_section_with_ai_chat_access_essential_only?
-    sections_as_student.any? {|s| s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
+    sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
   end
 end

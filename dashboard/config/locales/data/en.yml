@@ -929,6 +929,7 @@ en:
         pl-aif2-display-arrays: Display Arrays
         aif2-pl-filter-logic-U4: Filter Logic
         pl-teaching-moves-paradigm-shift: 'Teaching Moves: Navigating the Paradigm Shift'
+        pl-teaching-moves-assessment-in-the-age-of-ai: 'Teaching Moves: Assessment in the Age of AI'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
