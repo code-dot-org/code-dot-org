@@ -80,6 +80,7 @@ RUN apt-get install -y --no-install-recommends \
     gnupg \
     gzip \
     imagemagick \
+    libjemalloc2 \
     jq \
     libicu-dev \
     libmagickwand-dev \
