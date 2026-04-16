@@ -133,11 +133,10 @@ const AddSectionDialog = ({
         className={`${styles.modal} uitest-new-section-dialog`}
         title={title}
         primaryButtonProps={{
-          // TODO: Wait till Modal uses mui button and replace this props with MUI Button props
-          color: 'black',
-          type: 'secondary',
+          color: 'secondary',
+          variant: 'outlined',
           onClick: onDialogCancel,
-          text: i18n.dialogCancel(),
+          children: i18n.dialogCancel(),
         }}
         customContent={getDialogContent()}
       />
