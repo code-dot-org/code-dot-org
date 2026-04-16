@@ -67,8 +67,6 @@ export function useKeyboardEdgeCreation({
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
-      if (readOnly) return;
-
       const target = event.target as HTMLElement;
       // Don't intercept non-Tab keys when the user is editing text content.
       const isEditing =
@@ -92,6 +90,7 @@ export function useKeyboardEdgeCreation({
 
       // "c" toggles connect mode on/off (nodes only).
       if (event.key === 'c') {
+        if (readOnly) return;
         if (connectingFrom) {
           event.preventDefault();
           setConnectingFrom(null);
@@ -159,7 +158,7 @@ export function useKeyboardEdgeCreation({
       }
 
       // Enter on a different node completes the connection.
-      if (event.key === 'Enter' && connectingFrom) {
+      if (event.key === 'Enter' && !readOnly && connectingFrom) {
         if (focusedNodeId && focusedNodeId !== connectingFrom) {
           event.preventDefault();
           const sourceNode = nodes.find(node => node.id === connectingFrom);
@@ -194,7 +193,7 @@ export function useKeyboardEdgeCreation({
       }
 
       // Enter on a focused node (outside connect mode) enters edit mode.
-      if (event.key === 'Enter' && focusedNodeId) {
+      if (event.key === 'Enter' && !readOnly && focusedNodeId) {
         const focusedNodeElement = document.querySelector<HTMLElement>(
           `.react-flow__node[data-id="${focusedNodeId}"]`
         );
