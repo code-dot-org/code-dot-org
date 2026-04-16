@@ -840,7 +840,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   // various Blockly metadata that gets installed. These are used by the
   // updateLocale(), localizeVariables(), etc, functions to translate a
   // variety of both custom and built-in Blockly content.
-  blocklyWrapper.SourceMsg = {};
   blocklyWrapper.SourceVariables = {};
   blocklyWrapper.SourceCustomBlocks = {
     blockDefinitionsByName: {},
