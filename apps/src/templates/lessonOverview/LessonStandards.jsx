@@ -5,9 +5,9 @@ import React, {PureComponent} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
-import moduleStyles from './lesson-standards.module.scss';
-
 import {standardShape} from './lessonPlanShapes';
+
+import moduleStyles from './lesson-standards.module.scss';
 
 export const styles = {
   frameworkName: {
@@ -151,7 +151,12 @@ class ParentCategory extends PureComponent {
       <li key={shortcode}>
         <details open={isOpen}>
           <summary style={styles.summary}>
-            <span style={styles.categoryShortcode} className={moduleStyles.categoryShortcode}>{shortcode}</span>
+            <span
+              style={styles.categoryShortcode}
+              className={moduleStyles.categoryShortcode}
+            >
+              {shortcode}
+            </span>
             {' - '}
             {description}
           </summary>
@@ -195,7 +200,12 @@ class Category extends PureComponent {
       <li key={shortcode}>
         <details open={isOpen}>
           <summary style={styles.summary}>
-            <span style={styles.categoryShortcode} className={moduleStyles.categoryShortcode}>{shortcode}</span>
+            <span
+              style={styles.categoryShortcode}
+              className={moduleStyles.categoryShortcode}
+            >
+              {shortcode}
+            </span>
             {' - '}
             {description}
           </summary>
