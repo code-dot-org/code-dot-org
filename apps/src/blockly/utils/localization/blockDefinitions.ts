@@ -72,6 +72,14 @@ type BlockInitDefinition = (typeof BlocklyCore.Blocks)[string];
 export function localizeBlockInitDefinition(
   blockDefinition: BlockInitDefinition
 ): BlockInitDefinition {
+  // We can ensure that this function does not happen for any blocks
+  // we localize in a different way. Behaviors and other custom blocks
+  // eventually get an init() function structure, but we localize with
+  // the extra context beforehand.
+  if (blockDefinition.isLocalized) {
+    return blockDefinition;
+  }
+
   // Detect if we have already wrapped this block
   if (blockDefinition.oldInit) {
     // Reset it
@@ -92,9 +100,7 @@ export function localizeBlockInitDefinition(
 function localizeBlockInPlace(block: BlocklyCore.Block): void {
   localizeTooltipInPlace(block);
   for (const input of block.inputList) {
-    for (const field of input.fieldRow) {
-      localizeFieldInPlace(field);
-    }
+    localizeInputInPlace(block, input);
   }
 }
 
@@ -116,18 +122,152 @@ function localizeTooltipInPlace(block: BlocklyCore.Block): void {
   // localization when its init runs.
 }
 
-function localizeFieldInPlace(field: BlocklyCore.Field): void {
-  if (field instanceof BlocklyCore.FieldLabel) {
-    const text = field.getText();
-    if (text) {
-      field.setValue(translate(text, BLOCK_LABELS));
+/**
+ * Groups an input's fieldRow into a single translatable message and reshuffles
+ * the row based on where the translator places the %N placeholders.
+ *
+ * Label text runs between non-label fields are concatenated into text
+ * fragments; every non-label field becomes a %N placeholder in authored
+ * order. For value and statement inputs, the downstream connection slot is
+ * exposed as a trailing %N as well, so translators see the full sentence
+ * (e.g. `"do %1"` where %1 is the statement block that will connect).
+ *
+ * The translator receives e.g. `"repeat until %1"` and can return
+ * `"%1 まで繰り返す"` — the image/dropdown at %1 then moves accordingly.
+ * Connection slots are an exception: Blockly always renders a connection
+ * at the end of its input, so moving its %N in translation gives the
+ * translator context without actually reordering the connection.
+ *
+ * Runs during init, before the block is rendered, so fieldRow can be spliced
+ * directly without DOM teardown. Field names on the preserved non-label
+ * fields survive unchanged, so `getFieldValue('DIR')` and friends still work.
+ *
+ * Dropdown options are translated in a separate pass so their internal text
+ * gets retargeted regardless of the surrounding sentence.
+ */
+function localizeInputInPlace(
+  block: BlocklyCore.Block,
+  input: BlocklyCore.Input
+): void {
+  // Translate dropdown options up-front; this is independent of grouping.
+  for (const field of input.fieldRow) {
+    if (field instanceof BlocklyCore.FieldDropdown) {
+      localizeDropdownInPlace(field);
     }
+  }
+
+  // Bucket fields into text fragments (labels) and %N args (everything else).
+  const existingLabels: BlocklyCore.FieldLabel[] = [];
+  const args: BlocklyCore.Field[] = [];
+  const parts: string[] = [];
+  let buf = '';
+  for (const field of input.fieldRow) {
+    if (field instanceof BlocklyCore.FieldLabel) {
+      buf += field.getText();
+      existingLabels.push(field);
+    } else {
+      if (buf) {
+        parts.push(buf);
+        buf = '';
+      }
+      args.push(field);
+      parts.push(`%${args.length}`);
+    }
+  }
+  if (buf) {
+    parts.push(buf);
+  }
+
+  // Nothing translatable in this row — pure non-label fields (e.g. a lone
+  // dropdown). Dropdown options were already handled above.
+  if (existingLabels.length === 0) {
     return;
   }
-  if (field instanceof BlocklyCore.FieldDropdown) {
-    localizeDropdownInPlace(field);
+
+  // Value and statement inputs have a downstream connection slot that renders
+  // after the fieldRow. Expose it as a trailing %N placeholder so translators
+  // see the full sentence (e.g. `"do %2"` for a statement input labeled "do").
+  // Blockly renders the connection at the row's end regardless of where the
+  // translator places this %N, so on the rebuild side the connection index is
+  // simply consumed without emitting a field.
+  const connectionIndex = input.connection ? args.length : -1;
+  if (connectionIndex >= 0) {
+    parts.push(`%${connectionIndex + 1}`);
+  }
+
+  const message = parts.join(' ');
+  if (!message) {
     return;
   }
+
+  const translated = translate(message, BLOCK_LABELS);
+
+  // Walk the translated message, emitting text fragments and %N references
+  // in whatever order the translator produced.
+  type Segment = {kind: 'text'; text: string} | {kind: 'arg'; index: number};
+  const segments: Segment[] = [];
+  const consumed = new Set<number>();
+  const placeholder = /%(\d+)/g;
+  let cursor = 0;
+  let match: RegExpExecArray | null;
+  while ((match = placeholder.exec(translated)) !== null) {
+    const pre = translated.slice(cursor, match.index);
+    if (pre) segments.push({kind: 'text', text: pre});
+    const index = Number(match[1]) - 1;
+    if (index === connectionIndex) {
+      // Connection slot: consume it so it isn't backfilled, but don't emit
+      // a fieldRow entry. Blockly will render the connection at the row end.
+      consumed.add(index);
+    } else if (index >= 0 && index < args.length && !consumed.has(index)) {
+      segments.push({kind: 'arg', index});
+      consumed.add(index);
+    }
+    cursor = match.index + match[0].length;
+  }
+  const tail = translated.slice(cursor);
+  if (tail) segments.push({kind: 'text', text: tail});
+
+  // If the translator dropped any %N, tack those fields on at the end so
+  // the block never silently loses an input's dropdown or image.
+  for (let i = 0; i < args.length; i++) {
+    if (!consumed.has(i)) {
+      segments.push({kind: 'arg', index: i});
+    }
+  }
+
+  // Build the new fieldRow, reusing existing label instances where we can.
+  // This preserves FieldLabel subclass behavior (e.g. CdoFieldLabel's
+  // fixedSize) when the translated message has the same number of text
+  // segments as the original had labels — which is the common case.
+  const rebuilt: BlocklyCore.Field[] = [];
+  let labelCursor = 0;
+  for (const seg of segments) {
+    if (seg.kind === 'text') {
+      if (labelCursor < existingLabels.length) {
+        const label = existingLabels[labelCursor++];
+        label.setValue(seg.text);
+        rebuilt.push(label);
+      } else {
+        rebuilt.push(mountLabel(block, seg.text));
+      }
+    } else {
+      rebuilt.push(args[seg.index]);
+    }
+  }
+
+  // Pre-render, so direct array mutation is sufficient; no DOM teardown.
+  input.fieldRow.length = 0;
+  input.fieldRow.push(...rebuilt);
+}
+
+function mountLabel(
+  block: BlocklyCore.Block,
+  text: string
+): BlocklyCore.FieldLabel {
+  const field = new BlocklyCore.FieldLabel(text);
+  // setSourceBlock throws if already bound; this instance is freshly minted.
+  field.setSourceBlock(block);
+  return field;
 }
 
 function localizeDropdownInPlace(field: BlocklyCore.FieldDropdown): void {

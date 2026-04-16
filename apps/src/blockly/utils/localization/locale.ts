@@ -17,14 +17,6 @@ export function getBlockDefinitionsForUpdatedLocale(
   // Call into our localization engine to get the new blocks and refresh all active
   // workspaces.
 
-  // Copy over new localization keys for the normal blocks in 'Msg'
-  for (const [key, value] of Object.entries(Blockly.Msg || {})) {
-    Blockly.SourceMsg[key] ||= value;
-    Blockly.Msg[key] = localization.translate(Blockly.SourceMsg[key], [
-      'blockly-block',
-    ]);
-  }
-
   // Go through custom and shared blocks to translate the blockText there
   // This means recreating the block init() functions with updated block
   // configurations.
