@@ -1,0 +1,26 @@
+name 'pl-ai-101-V2-mod5-fictions-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tips and Tricks for Spotting AI Fictions
+
+#### Because AI-generated content can sound authoritative, it’s not always obvious when something is incorrect. Developing habits of skepticism and verification is essential.
+
+>#### **💬 Quick Reflection:** When have you spotted an AI fiction? How did you know it was a fiction?
+
+#### Look for:
+* #### Confident tone without evidence – The response sounds certain but lacks sources or explanations
+* #### Vague or overly general information – Statements that avoid specifics or detail
+* #### Inconsistencies or contradictions – Ideas that don’t logically fit together
+* #### Fabricated details – Quotes, citations, or facts that cannot be verified
+* #### Answers that seem “too perfect” – Well-written but overly simplified responses
+
+#### To check for accuracy:
+* #### Exercise healthy skepticism – Question information, especially for unfamiliar or obscure topics
+* #### Reprompt for accuracy – Ask follow-up questions like “Are you sure about this?” or request sources
+* #### Use a variety of tools – Combine AI with search engines to verify facts and find reliable sources
+* #### Cross-check information – Compare multiple sources before accepting something as true
+
+#### These strategies help ensure AI is used as a tool for thinking—not a replacement for it.
+MARKDOWN
