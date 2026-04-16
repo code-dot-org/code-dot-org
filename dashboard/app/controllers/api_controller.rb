@@ -682,8 +682,9 @@ class ApiController < ApplicationController
     clever_uid = current_user.uid_for_provider(AuthenticationOption::CLEVER).to_s
     return false if clever_uid.empty?
 
-    response = query_clever_service("sections/#{course_id}/users?role=teacher")
-    teachers = response&.fetch('data', []) || []
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
+    teachers = client.get("sections/#{course_id}/users?role=teacher").fetch('data', [])
     teachers.any? {|teacher| teacher.dig('data', 'id').to_s == clever_uid}
   end
 
