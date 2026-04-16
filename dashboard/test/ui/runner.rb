@@ -459,7 +459,7 @@ end
 
 def server_status_page_url
   return nil unless $options.with_status_page
-  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
+  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
 def status_page_filename
@@ -493,7 +493,7 @@ def generate_status_page(suite_start_time)
     haml_engine.render(
       Object.new,
       {
-        api_origin: CDO.studio_url('', scheme_for_environment),
+        api_origin: CDO.studio_url('', scheme_for_environment, ge_region: nil),
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
