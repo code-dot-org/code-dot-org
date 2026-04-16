@@ -25,11 +25,12 @@ class ImageModerationTest < Minitest::Test
   end
 
   def test_uses_azure_when_api_key_present
+    blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}
     AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io, ct|
-      io.read == 'fake-image-body' && ct == @content_type
+      io.read == blob && ct == 'image/png'
     end.returns(sample).once
-    assert_equal sample, ImageModeration.moderate_image(@image_body, @content_type)
+    assert_equal sample, ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
 
   def test_scales_small_images_before_azure
@@ -114,10 +115,37 @@ class ImageModerationTest < Minitest::Test
   end
 
   def test_returns_nil_when_moderation_fails
+    blob = tiny_png_blob(100, 100)
     test_err = AzureAiContentSafety::RequestFailed.new('Test error')
     AzureAiContentSafety.any_instance.expects(:moderate_image).raises(test_err)
-    Honeybadger.expects(:notify).once.with(test_err)
-    assert_nil ImageModeration.moderate_image(@image_body, @content_type)
+    Honeybadger.expects(:notify).once.with(
+      test_err,
+      context: {reported_content_type: 'image/png', actual_content_type: 'image/png'}
+    )
+    assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
+  end
+
+  def test_returns_nil_for_unrecognized_image_format
+    AzureAiContentSafety.expects(:new).never
+    Honeybadger.expects(:notify).once
+    assert_nil ImageModeration.moderate_image(StringIO.new('not-an-image'), 'any')
+  end
+
+  def test_sniff_overrides_wrong_content_type
+    blob = tiny_png_blob(100, 100)
+    sample = {'categoriesAnalysis' => []}
+    captured_type = nil
+    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |_io, ct|
+      captured_type = ct
+      true
+    end.returns(sample).once
+    Honeybadger.expects(:notify).once.with(
+      "Actual content type differs from reported content type in image moderation",
+      context: {reported_content_type: 'any', actual_content_type: 'image/png'}
+    )
+
+    ImageModeration.moderate_image(StringIO.new(blob), 'any')
+    assert_equal 'image/png', captured_type
   end
 
   # Tempfile is unlinked when the block returns (see Tempfile.create).
