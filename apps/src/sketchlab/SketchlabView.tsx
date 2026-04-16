@@ -12,24 +12,21 @@ import ReactFlowSketchLabView, {
 } from './reactFlow/ReactFlowSketchLabView';
 
 export default function SketchlabView(props: LabProps<LevelProperties>) {
-  if (experiments.isEnabledAllowingQueryString('sketch2')) {
-    return (
-      <SourcesContainer
-        {...props}
-        defaultSources={REACT_FLOW_DEFAULT_SOURCES}
-        key={props.levelProperties.id}
-      >
-        <ReactFlowSketchLabView levelProperties={props.levelProperties} />
-      </SourcesContainer>
-    );
-  }
+  const useReactFlow = experiments.isEnabledAllowingQueryString('sketch2');
+  const defaultSources = useReactFlow
+    ? REACT_FLOW_DEFAULT_SOURCES
+    : DEFAULT_SOURCES;
+  const InnerView = useReactFlow
+    ? ReactFlowSketchLabView
+    : ExcalidrawSketchLabView;
+
   return (
     <SourcesContainer
       {...props}
-      defaultSources={DEFAULT_SOURCES}
+      defaultSources={defaultSources}
       key={props.levelProperties.id}
     >
-      <ExcalidrawSketchLabView levelProperties={props.levelProperties} />
+      <InnerView levelProperties={props.levelProperties} />
     </SourcesContainer>
   );
 }
