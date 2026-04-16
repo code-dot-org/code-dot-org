@@ -1,18 +1,8 @@
 require 'marcel'
 
 # Security guard for ImageMagick processing.
-#
-# Prevents SVG/XML injection via ImageMagick protocol handlers (e.g.
-# text:/etc/passwd) by validating magic bytes before any MiniMagick::Image.read
-# call reaches ImageMagick. Only known-safe raster formats pass through.
-#
-# Call ImageMagickGuard.patch_mini_magick! once at boot (via the Rails
-# initializer) to gate all present and future MiniMagick::Image.read call sites
-# automatically.
 module ImageMagickGuard
   # Raster formats that are safe to process with ImageMagick.
-  # These formats do not support protocol handlers (e.g. SVG's text:, https:)
-  # that could be abused for server-side request forgery or local file reads.
   SAFE_TYPES = %w[image/png image/jpeg image/gif image/webp].freeze
 
   # Returns the MIME type inferred from magic bytes via Marcel, or nil if
