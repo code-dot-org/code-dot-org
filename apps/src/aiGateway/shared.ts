@@ -1,4 +1,4 @@
-import ChatEventLogger from '../aichat/chatEventLogger';
+import AichatContextManager from '../aichat/aichatContextManager';
 import HttpClient from '../util/HttpClient';
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
@@ -7,7 +7,7 @@ export async function fetchAccessToken() {
   const response = await HttpClient.post(
     '/ai_gateway/access_token',
     JSON.stringify({
-      aichatContext: ChatEventLogger.getInstance().aichatContext,
+      aichatContext: AichatContextManager.getContext(),
     }),
     true,
     {
