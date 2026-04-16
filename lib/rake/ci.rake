@@ -141,6 +141,7 @@ namespace :ci do
             "--device-farm " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
+            "--first_run_local " \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
