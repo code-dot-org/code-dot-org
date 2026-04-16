@@ -16,8 +16,8 @@ const VideosBox: FC<VideosBoxProps> = ({jsonVideos}) => (
     <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
       Videos
     </Typography>
-    {jsonVideos.map(({url, description}) => (
-      <div key={url} className={styles.videoWrapper}>
+    {jsonVideos.map(({key, url, description}) => (
+      <div key={key} className={styles.videoWrapper}>
         <div className={styles.videoInner}>
           <TutorVideo href={url} />
           <Typography variant="body2" sx={{mt: 1, mb: 2}}>

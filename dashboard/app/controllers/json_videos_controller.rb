@@ -1,4 +1,6 @@
 class JSONVideosController < ApplicationController
+  before_action :authenticate_user!
+
   # GET /json_videos/:id/content
   # Fetches the JSON video file from S3 and returns it directly, keeping S3
   # credentials server-side.

@@ -100,8 +100,7 @@ class LessonsController < ApplicationController
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
-    objective_ids = @lesson.objectives.map(&:id)
-    json_videos = JSONVideo.joins(:objectives).where(objectives: {id: objective_ids}).distinct
+    json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
     @lesson_deep_dive_data = {
       lessonId: @lesson.id,
       lessonName: @lesson.localized_name,

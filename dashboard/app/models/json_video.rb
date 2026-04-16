@@ -28,6 +28,8 @@ class JSONVideo < ApplicationRecord
   def self.seed_all(root_dir: Rails.root, glob: "config/json_videos/*.json")
     Dir.glob(root_dir.join(glob)).each do |path|
       seed_record(path)
+    rescue => exception
+      CDO.log.error "Failed to seed json video #{path}: #{exception.message}"
     end
   end
 
@@ -42,7 +44,7 @@ class JSONVideo < ApplicationRecord
     video = find_or_initialize_by(key: properties[:key])
     video.update!(properties)
 
-    video.objectives = Objective.where(key: objective_keys) if objective_keys.any?
+    video.objectives = Objective.where(key: objective_keys)
 
     video.key
   end
