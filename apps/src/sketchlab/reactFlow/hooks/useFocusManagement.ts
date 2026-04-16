@@ -1,15 +1,25 @@
 import {useReactFlow} from '@xyflow/react';
 import React, {useCallback} from 'react';
 
-import type {TabOrderEntry} from '../utils/computeTabOrder';
+import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
+
+import {
+  entriesMatch,
+  getEntryFromDOM,
+  type TabOrderEntry,
+} from '../utils/computeTabOrder';
 
 /**
  * Focus helpers for the React Flow canvas. Provides focusEntry (move focus
- * to a specific node or edge, panning if off-screen) and handleFocusCapture
- * (sync the roving tabindex when a node/edge receives focus by other means).
+ * to a specific node or edge) and handleFocusCapture (sync the roving
+ * tabindex when a node/edge receives focus by other means).
+ *
+ * Node auto-panning is handled by React Flow's built-in autoPanOnNodeFocus.
+ * Edge auto-panning is custom since React Flow has no built-in equivalent.
  */
 export function useFocusManagement(
   tabOrder: TabOrderEntry[],
+  edges: SketchlabReactFlowEdge[],
   setActiveTabEntry: (entry: TabOrderEntry) => void
 ) {
   const {fitView, getZoom} = useReactFlow();
@@ -24,43 +34,38 @@ export function useFocusManagement(
       const element = document.querySelector<HTMLElement>(selector);
       if (!element) return;
       element.focus();
-      // Pan if the element is not fully visible in the viewport.
-      if (entry.type === 'node') {
+      // Pan edges into view (nodes are handled by RF's autoPanOnNodeFocus).
+      if (entry.type === 'edge') {
         const container = element.closest<HTMLElement>('.react-flow');
         if (container) {
           const containerRect = container.getBoundingClientRect();
-          const nodeRect = element.getBoundingClientRect();
+          const edgeRect = element.getBoundingClientRect();
           const notFullyVisible =
-            nodeRect.left < containerRect.left ||
-            nodeRect.right > containerRect.right ||
-            nodeRect.top < containerRect.top ||
-            nodeRect.bottom > containerRect.bottom;
+            edgeRect.left < containerRect.left ||
+            edgeRect.right > containerRect.right ||
+            edgeRect.top < containerRect.top ||
+            edgeRect.bottom > containerRect.bottom;
           if (notFullyVisible) {
-            const zoom = getZoom();
-            fitView({nodes: [{id: entry.id}], duration: 200, maxZoom: zoom});
+            const edge = edges.find(e => e.id === entry.id);
+            if (edge) {
+              const zoom = getZoom();
+              fitView({
+                nodes: [{id: edge.source}, {id: edge.target}],
+                duration: 200,
+                maxZoom: zoom,
+              });
+            }
           }
         }
       }
     },
-    [fitView, getZoom, setActiveTabEntry]
+    [edges, fitView, getZoom, setActiveTabEntry]
   );
 
   const handleFocusCapture = useCallback(
     (event: React.FocusEvent) => {
-      const target = event.target as HTMLElement;
-      const nodeElement = target.closest('.react-flow__node');
-      const edgeElement = target.closest('.react-flow__edge');
-      const entry: TabOrderEntry | null = nodeElement
-        ? {type: 'node', id: nodeElement.getAttribute('data-id')!}
-        : edgeElement
-        ? {type: 'edge', id: edgeElement.getAttribute('data-id')!}
-        : null;
-      if (
-        entry &&
-        tabOrder.some(
-          tabEntry => tabEntry.type === entry.type && tabEntry.id === entry.id
-        )
-      ) {
+      const entry = getEntryFromDOM(event.target as HTMLElement);
+      if (entry && tabOrder.some(tabEntry => entriesMatch(tabEntry, entry))) {
         setActiveTabEntry(entry);
       }
     },

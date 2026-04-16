@@ -133,6 +133,23 @@ function orderComponent(
 
 export type TabOrderEntry = {type: 'node' | 'edge'; id: string};
 
+/** True when two tab order entries refer to the same element. */
+export function entriesMatch(a: TabOrderEntry, b: TabOrderEntry): boolean {
+  return a.type === b.type && a.id === b.id;
+}
+
+/**
+ * Resolve the focused React Flow node or edge from a DOM element by walking
+ * up to the nearest `.react-flow__node` or `.react-flow__edge` wrapper.
+ */
+export function getEntryFromDOM(target: HTMLElement): TabOrderEntry | null {
+  const nodeEl = target.closest('.react-flow__node');
+  if (nodeEl) return {type: 'node', id: nodeEl.getAttribute('data-id')!};
+  const edgeEl = target.closest('.react-flow__edge');
+  if (edgeEl) return {type: 'edge', id: edgeEl.getAttribute('data-id')!};
+  return null;
+}
+
 /**
  * Compute a logical tab order for React Flow nodes and edges.
  *

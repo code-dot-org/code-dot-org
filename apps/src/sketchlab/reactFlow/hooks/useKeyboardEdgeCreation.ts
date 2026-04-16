@@ -1,12 +1,16 @@
 import {addEdge, MarkerType} from '@xyflow/react';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import type {TabOrderEntry} from '../utils/computeTabOrder';
+import {
+  entriesMatch,
+  getEntryFromDOM,
+  type TabOrderEntry,
+} from '../utils/computeTabOrder';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -64,6 +68,26 @@ export function useKeyboardEdgeCreation({
 }: UseKeyboardEdgeCreationOptions) {
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
+  // Counter appended to announcements so identical consecutive strings
+  // still trigger an aria-live update.
+  const announceCountRef = useRef(0);
+
+  function announce(message: string) {
+    announceCountRef.current += 1;
+    // Append a non-visible token so React always sees a new string.
+    setConnectAnnouncement(
+      `${message}\u00A0`.repeat(1).trimEnd() +
+        '\u200B'.repeat(announceCountRef.current % 2 === 0 ? 1 : 2)
+    );
+  }
+
+  // Cancel connect mode when the source node is deleted.
+  useEffect(() => {
+    if (connectingFrom && !nodes.some(n => n.id === connectingFrom)) {
+      setConnectingFrom(null);
+      announce('Connect mode cancelled.');
+    }
+  }, [connectingFrom, nodes]);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
@@ -78,13 +102,7 @@ export function useKeyboardEdgeCreation({
       }
 
       // Determine which node or edge currently has focus.
-      const nodeElement = target.closest('.react-flow__node');
-      const edgeElement = target.closest('.react-flow__edge');
-      const focusedEntry: TabOrderEntry | null = nodeElement
-        ? {type: 'node', id: nodeElement.getAttribute('data-id')!}
-        : edgeElement
-        ? {type: 'edge', id: edgeElement.getAttribute('data-id')!}
-        : null;
+      const focusedEntry = getEntryFromDOM(target);
       const focusedNodeId =
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
 
@@ -94,14 +112,14 @@ export function useKeyboardEdgeCreation({
         if (connectingFrom) {
           event.preventDefault();
           setConnectingFrom(null);
-          setConnectAnnouncement('Connect mode cancelled.');
+          announce('Connect mode cancelled.');
           return;
         }
         if (focusedNodeId) {
           event.preventDefault();
           const node = nodes.find(candidate => candidate.id === focusedNodeId);
           setConnectingFrom(focusedNodeId);
-          setConnectAnnouncement(
+          announce(
             `Connect mode: ${
               node ? getNodeLabel(node) : focusedNodeId
             } selected as source. Tab to a target node and press Enter to connect. Press Escape or C to cancel.`
@@ -116,11 +134,7 @@ export function useKeyboardEdgeCreation({
       if (event.key === 'Tab') {
         if (tabOrder.length === 0) return;
         const currentIdx = focusedEntry
-          ? tabOrder.findIndex(
-              tabEntry =>
-                tabEntry.type === focusedEntry.type &&
-                tabEntry.id === focusedEntry.id
-            )
+          ? tabOrder.findIndex(tabEntry => entriesMatch(tabEntry, focusedEntry))
           : -1;
         const direction = event.shiftKey ? -1 : 1;
 
@@ -134,10 +148,7 @@ export function useKeyboardEdgeCreation({
             ? nodeEntries.findIndex(tabEntry => tabEntry.id === focusedNodeId)
             : -1;
           const nextNodeIdx =
-            (((curNodeIdx + direction + nodeEntries.length) %
-              nodeEntries.length) +
-              nodeEntries.length) %
-            nodeEntries.length;
+            (curNodeIdx + direction + nodeEntries.length) % nodeEntries.length;
           event.preventDefault();
           event.stopPropagation();
           focusEntry(nodeEntries[nextNodeIdx]);
@@ -164,6 +175,7 @@ export function useKeyboardEdgeCreation({
       if (event.key === 'Enter' && !readOnly && connectingFrom) {
         if (focusedNodeId && focusedNodeId !== connectingFrom) {
           event.preventDefault();
+          event.stopPropagation();
           const sourceNode = nodes.find(node => node.id === connectingFrom);
           const targetNode = nodes.find(node => node.id === focusedNodeId);
           if (sourceNode && targetNode) {
@@ -179,9 +191,7 @@ export function useKeyboardEdgeCreation({
                 currentEdges
               )
             );
-            setConnectAnnouncement(
-              `Edge created to ${getNodeLabel(targetNode)}.`
-            );
+            announce(`Edge created to ${getNodeLabel(targetNode)}.`);
           }
           setConnectingFrom(null);
         }
@@ -190,8 +200,9 @@ export function useKeyboardEdgeCreation({
 
       if (event.key === 'Escape' && connectingFrom) {
         event.preventDefault();
+        event.stopPropagation();
         setConnectingFrom(null);
-        setConnectAnnouncement('Connect mode cancelled.');
+        announce('Connect mode cancelled.');
         return;
       }
 
@@ -205,6 +216,7 @@ export function useKeyboardEdgeCreation({
         );
         if (editable) {
           event.preventDefault();
+          event.stopPropagation();
           if (editable.tagName === 'BUTTON') {
             editable.click();
           } else {

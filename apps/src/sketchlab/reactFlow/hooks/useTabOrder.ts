@@ -1,11 +1,15 @@
-import {useEffect, useMemo, useState} from 'react';
+import {useMemo, useState} from 'react';
 
 import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {computeTabOrder, type TabOrderEntry} from '../utils/computeTabOrder';
+import {
+  computeTabOrder,
+  entriesMatch,
+  type TabOrderEntry,
+} from '../utils/computeTabOrder';
 
 /**
  * Compute a logical tab order for nodes and edges and maintain roving
@@ -23,22 +27,13 @@ export function useTabOrder(
     null
   );
 
-  // If the active element was deleted, reset to the first in tab order.
-  useEffect(() => {
-    if (
-      activeTabEntry &&
-      !tabOrder.some(
-        entry =>
-          entry.type === activeTabEntry.type && entry.id === activeTabEntry.id
-      )
-    ) {
-      setActiveTabEntry(tabOrder[0] ?? null);
-    }
-  }, [tabOrder, activeTabEntry]);
-
-  // The entry that should have tabIndex 0 (first in order when nothing
-  // has been focused yet).
-  const activeEntry = activeTabEntry ?? tabOrder[0] ?? null;
+  // The entry that should have tabIndex 0. Falls back to the first in
+  // order when nothing has been focused yet or the active element was
+  // deleted (derived — no effect needed).
+  const isActiveValid =
+    activeTabEntry &&
+    tabOrder.some(entry => entriesMatch(entry, activeTabEntry));
+  const activeEntry = isActiveValid ? activeTabEntry : tabOrder[0] ?? null;
 
   return {tabOrder, activeEntry, setActiveTabEntry};
 }

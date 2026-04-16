@@ -81,30 +81,9 @@ export default function ReactFlowCanvas({
     edges as SketchlabReactFlowEdge[]
   );
 
-  // Apply roving tabindex through React Flow's domAttributes so it
-  // survives React Flow re-renders (direct DOM manipulation gets
-  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
-  const displayNodes = useMemo(
-    () =>
-      nodes.map(node => {
-        const isActive =
-          activeEntry?.type === 'node' && activeEntry.id === node.id;
-        return {...node, domAttributes: {tabIndex: isActive ? 0 : -1}};
-      }),
-    [nodes, activeEntry]
-  );
-  const displayEdges = useMemo(
-    () =>
-      edges.map(edge => {
-        const isActive =
-          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
-        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
-      }),
-    [edges, activeEntry]
-  );
-
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
+    edges as SketchlabReactFlowEdge[],
     setActiveTabEntry
   );
 
@@ -116,6 +95,40 @@ export default function ReactFlowCanvas({
       setEdges,
       readOnly,
     });
+
+  // Apply roving tabindex through React Flow's domAttributes so it
+  // survives React Flow re-renders (direct DOM manipulation gets
+  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
+  // Also applies connect-source styling and aria-selected via React
+  // rather than direct DOM classList manipulation.
+  const displayNodes = useMemo(
+    () =>
+      nodes.map(node => {
+        const isActive =
+          activeEntry?.type === 'node' && activeEntry.id === node.id;
+        const isConnectSource = connectingFrom === node.id;
+        return {
+          ...node,
+          className: isConnectSource ? styles.connectSource : undefined,
+          domAttributes: {
+            tabIndex: isActive ? 0 : -1,
+            ...(isConnectSource && {'aria-selected': true}),
+          },
+        };
+      }),
+    [nodes, activeEntry, connectingFrom]
+  );
+  // TODO: Add meaningful ariaLabel to edges using node labels instead of
+  // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
+  const displayEdges = useMemo(
+    () =>
+      edges.map(edge => {
+        const isActive =
+          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
+        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
+      }),
+    [edges, activeEntry]
+  );
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -157,19 +170,6 @@ export default function ReactFlowCanvas({
     []
   );
 
-  // Apply a CSS class to the source node while in connect mode.
-  useEffect(() => {
-    const previousSource = document.querySelector(`.${styles.connectSource}`);
-    previousSource?.classList.remove(styles.connectSource);
-
-    if (connectingFrom) {
-      const element = document.querySelector(
-        `.react-flow__node[data-id="${connectingFrom}"]`
-      );
-      element?.classList.add(styles.connectSource);
-    }
-  }, [connectingFrom]);
-
   const handleAddNode = useCallback(
     (
       type: 'shape' | 'image' | 'text',
@@ -202,14 +202,9 @@ export default function ReactFlowCanvas({
 
       // Move focus to the new node after React Flow renders it.
       (document.activeElement as HTMLElement)?.blur();
-      setTimeout(() => {
-        const nodeElement = document.querySelector<HTMLElement>(
-          `.react-flow__node[data-id="${newNodeId}"]`
-        );
-        nodeElement?.focus();
-      }, 100);
+      setTimeout(() => focusEntry({type: 'node', id: newNodeId}), 100);
     },
-    [screenToFlowPosition, setNodes]
+    [focusEntry, screenToFlowPosition, setNodes]
   );
 
   return (
