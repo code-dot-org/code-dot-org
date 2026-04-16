@@ -128,7 +128,7 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
+    use_device_farm = true
     if use_device_farm
       # AWS Device Farm: no proxy tunnel needed; browsers connect to public URLs.
       # Tests are pointed at the public test domain rather than localhost.
