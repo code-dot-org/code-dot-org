@@ -65,6 +65,7 @@ interface InterventionBoxProps {
   vocabulary: LessonDeepDiveData['vocabulary'];
   assessmentAnalysis: AssessmentQuestionResult[];
   objectives: LessonDeepDiveData['objectives'];
+  jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
 }
 
@@ -75,6 +76,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   vocabulary,
   assessmentAnalysis,
   objectives,
+  jsonVideos,
   reflectionData,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
@@ -126,7 +128,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             />
           </ThemeProvider>
         )}
-        {selected === 'videos' && <VideosBox />}
+        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && <PodcastsBox />}
       </div>
 
