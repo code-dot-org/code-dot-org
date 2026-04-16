@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {PureComponent} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+
+import moduleStyles from './lesson-standards.module.scss';
 
 import {standardShape} from './lessonPlanShapes';
 
@@ -16,9 +17,6 @@ export const styles = {
   categoryShortcode: {
     ...fontConstants['main-font-bold'],
     color: color.link_color,
-    ':hover': {
-      textDecoration: 'underline',
-    },
   },
   standardShortcode: {
     ...fontConstants['main-font-semi-bold'],
@@ -140,7 +138,7 @@ Framework.propTypes = {
   expandMode: expandModeShape,
 };
 
-class UnconnectedParentCategory extends PureComponent {
+class ParentCategory extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].parentCategoryDescription;
@@ -153,7 +151,7 @@ class UnconnectedParentCategory extends PureComponent {
       <li key={shortcode}>
         <details open={isOpen}>
           <summary style={styles.summary}>
-            <span style={styles.categoryShortcode}>{shortcode}</span>
+            <span style={styles.categoryShortcode} className={moduleStyles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
@@ -182,14 +180,13 @@ class UnconnectedParentCategory extends PureComponent {
   }
 }
 
-UnconnectedParentCategory.propTypes = {
+ParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape,
 };
-const ParentCategory = Radium(UnconnectedParentCategory);
 
-class UnconnectedCategory extends PureComponent {
+class Category extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].categoryDescription;
@@ -198,7 +195,7 @@ class UnconnectedCategory extends PureComponent {
       <li key={shortcode}>
         <details open={isOpen}>
           <summary style={styles.summary}>
-            <span style={styles.categoryShortcode}>{shortcode}</span>
+            <span style={styles.categoryShortcode} className={moduleStyles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
@@ -213,12 +210,11 @@ class UnconnectedCategory extends PureComponent {
   }
 }
 
-UnconnectedCategory.propTypes = {
+Category.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape,
 };
-const Category = Radium(UnconnectedCategory);
 
 class Standard extends PureComponent {
   render() {
