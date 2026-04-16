@@ -5,8 +5,8 @@ import React, {FC, useCallback, useState} from 'react';
 
 const lightTheme = createTheme({palette: {mode: 'light'}});
 
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
@@ -87,7 +87,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   const handleCardSelect = useCallback(
     (cardId: CardId) => {
       setSelected(cardId);
-      sendLab2AnalyticsEvent(
+      analyticsReporter.sendEvent(
         EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
         {
           modality: cardId,
