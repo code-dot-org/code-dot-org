@@ -9,11 +9,11 @@ markdown <<MARKDOWN
 
 #### 👉 Click on the title to reveal the full prompt.
 
+#### Take as much time as you'd like reviewing and trying out various prompts.
 
->#### **💬 Quick Reflection:** As you review, try to pick one of these that you could see yourself using.
-
+## Planning and Preparation
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Creating a Lesson Hook</summary>
+<summary style="font-size: 1.5em;">Creating a Lesson Hook</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and instructional designer.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I am planning a lesson on <strong>[topic]</strong>.
 My learning goal for this lesson is:
@@ -29,7 +29,7 @@ Keep the hooks realistic for a <strong>[class length]</strong> class period and 
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Generating Discussion Questions</summary>
+<summary style="font-size: 1.5em;">Generating Discussion Questions</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping me prepare for instruction.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and my students are learning about <strong>[topic/text/concept]</strong>.
 I need discussion questions that support this learning goal:
@@ -44,7 +44,7 @@ Make the questions appropriate for <strong>[grade level]</strong> students and a
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Building a Short Formative Check</summary>
+<summary style="font-size: 1.5em;">Building a Short Formative Check</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and assessment designer.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need a short formative check for a lesson on <strong>[topic]</strong>.
 My learning target is:
@@ -59,7 +59,7 @@ Keep the formative check short enough to use in <strong>[time available]</strong
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Planning and Preparation</strong>: Differentiating an assessment</summary>
+<summary style="font-size: 1.5em;">Differentiating an Assessment</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher and instructional designer.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I am creating a formative assessment on <strong>[topic/standard]</strong>.
 Here is my original assessment:
@@ -80,9 +80,9 @@ Also include:
 - Suggested supports (sentence starters, vocabulary, graphic organizers, etc.)
 </details>
 
-
+## Communication and Materials Creation
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Writing a Family Newsletter Blurb</summary>
+<summary style="font-size: 1.5em;">Writing a Family Newsletter Blurb</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping draft family communication.
 I teach <strong>[grade level]</strong> <strong>[subject or classroom]</strong>, and I need a short newsletter blurb for families about:
 <strong>[topic, unit, event, or update]</strong>
@@ -97,7 +97,7 @@ Keep it concise and easy to understand for families.
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Revising Student Directions</summary>
+<summary style="font-size: 1.5em;">Revising Student Directions</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping improve classroom materials.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I want to revise directions for this student task:
 <strong>[Paste current directions]</strong>
@@ -113,7 +113,7 @@ Keep the directions appropriate for <strong>[grade level]</strong> students and 
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Creating a Classroom Handout</summary>
+<summary style="font-size: 1.5em;">Creating a Classroom Handout</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping create classroom materials.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need a simple student-facing handout about:
 <strong>[topic/skill/process]</strong>
@@ -130,7 +130,7 @@ Keep it concise, clear, and appropriate for <strong>[grade level]</strong> stude
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Communication and Materials Creation</strong>: Writing a parent email</summary>
+<summary style="font-size: 1.5em;">Writing a Parent Email</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced teacher helping draft communication with families.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I need to write an email to a parent/guardian about:
 <strong>[purpose of the email]</strong>
@@ -150,8 +150,9 @@ Then provide:
 </div>
 </details>
 
+## Reflection and Improvement
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Analyzing a Student Misconception</summary>
+<summary style="font-size: 1.5em;">Analyzing a Student Misconception</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach helping me reflect on student understanding.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and during a lesson on <strong>[topic]</strong>, I noticed this common misconception:
 <strong>[describe the misconception]</strong>
@@ -166,7 +167,7 @@ Keep your feedback practical and appropriate for this classroom context:
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Improving a Classroom Task</summary>
+<summary style="font-size: 1.5em;">Improving a Classroom Task</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach providing feedback on task design.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I used this classroom task:
 <strong>[Paste or describe the task]</strong>
@@ -183,7 +184,7 @@ Please suggest 2 specific revisions I could make while keeping the same learning
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Planning the Next Step After a Lesson</summary>
+<summary style="font-size: 1.5em;">Planning the Next Step After a Lesson</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an experienced instructional coach helping me plan next steps.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I just taught a lesson on <strong>[topic]</strong>.
 Here is what I observed:
@@ -199,7 +200,7 @@ Keep your suggestions realistic for <strong>[class length]</strong> and aligned 
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em;"><strong>Reflection and Improvement</strong>: Getting feedback on a lesson plan</summary>
+<summary style="font-size: 1.5em;">Getting Feedback on a Lesson Plan</summary>
 <div style="font-size:1em; line-height:1.5; white-space:pre-wrap;">You are an instructional coach providing actionable feedback.
 I teach <strong>[grade level]</strong> <strong>[subject]</strong>, and I want feedback on a lesson about:
 <strong>[lesson topic]</strong>
@@ -225,5 +226,10 @@ Keep feedback practical and focused on changes I can realistically implement.
 
 <div style="clear:both;"></div>
 
+
+<br>
+
+
+>#### **💬 Quick Reflection:** Is there anything else you'd like to use an LLM for that isn't on this list?
 
 MARKDOWN

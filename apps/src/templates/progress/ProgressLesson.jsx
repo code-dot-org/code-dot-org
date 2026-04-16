@@ -208,7 +208,9 @@ class ProgressLesson extends React.Component {
                   </MuiButton>
                 )}
                 {showLessonTutorButton &&
-                  experiments.isEnabled(experiments.LESSON_TUTOR) && (
+                  experiments.isEnabledAllowingQueryString(
+                    experiments.LESSON_TUTOR
+                  ) && (
                     <MuiButton
                       href={lesson.lessonTutorPath}
                       variant="contained"

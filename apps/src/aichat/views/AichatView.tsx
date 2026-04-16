@@ -10,6 +10,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -20,14 +21,11 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
@@ -42,7 +40,6 @@ import {
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setUserHasAichatLabAccess,
   setViewMode,
   updateAiCustomization,
   initializeAiCustomizations,
@@ -82,8 +79,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const viewMode = useAppSelector(state => state.aichat.viewMode);
   const showModalType = useAppSelector(state => state.aichat.showModalType);
 
-  const signInState = useAppSelector(state => state.currentUser.signInState);
-
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
@@ -95,6 +90,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const scriptId = useAppSelector(state => state.progress.scriptId);
@@ -154,25 +152,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
-
-  useEffect(() => {
-    if (signInState === SignInState.SignedIn) {
-      getUserHasAichatLabAccess()
-        .then(hasAccess => dispatch(setUserHasAichatLabAccess(hasAccess)))
-        .catch(error => {
-          if (
-            !(error instanceof NetworkError && error.response.status === 403)
-          ) {
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError(
-                'Error in fetching user aichat lab access',
-                error as Error
-              );
-          }
-        });
-    }
-  }, [dispatch, signInState]);
 
   useEffect(() => {
     const modalToShow = () => {
@@ -298,6 +277,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     savedAiCustomizations.systemPrompt,
   ]);
 
+  const {disabled, disabledMessage} = useAiChatDisabledState({
+    appName: levelProperties.appName,
+    isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
+
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;
   }
@@ -390,6 +375,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
                   logLevelActivity={logLevelActivity}
+                  disabled={disabled}
+                  disabledMessage={disabledMessage}
                 />
               )}
             </PanelContainer>

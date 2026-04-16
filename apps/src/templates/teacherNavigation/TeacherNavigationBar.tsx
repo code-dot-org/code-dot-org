@@ -10,17 +10,14 @@ import {
   useParams,
 } from 'react-router-dom';
 
+import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  AiChatAccessLevels,
-  AiChatToolsDependency,
-  AiDiffContext,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
@@ -53,6 +50,10 @@ const TeacherNavigationBar: React.FC<{
 
   const aiDifferentiationEnabled = useAppSelector(
     state => state.currentUser.aiDifferentiationEnabled
+  );
+
+  const teacherAiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
   );
 
   useEffect(() => {
@@ -214,12 +215,16 @@ const TeacherNavigationBar: React.FC<{
     (key: string) => {
       return (
         key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
-        selectedSection?.assignedAiChatToolsDependency ===
-          AiChatToolsDependency.ESSENTIAL &&
-        selectedSection?.aiChatAccessLevel === AiChatAccessLevels.DISABLED
+        !!selectedSection &&
+        shouldShowAiChatEssentialAlert({
+          assignedAiChatToolsDependency:
+            selectedSection.assignedAiChatToolsDependency,
+          sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
+          teacherAiChatAccessLevel,
+        })
       );
     },
-    [selectedSection]
+    [selectedSection, teacherAiChatAccessLevel]
   );
 
   const getSidebarOptionsForSection = (

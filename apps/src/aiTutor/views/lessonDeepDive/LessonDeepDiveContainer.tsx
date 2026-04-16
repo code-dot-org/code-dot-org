@@ -62,7 +62,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
-  if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
+  if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
 
@@ -94,6 +94,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
+            assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
           />
