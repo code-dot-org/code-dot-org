@@ -53,7 +53,6 @@ function TextNode({id, data, selected}: TextNodeProps) {
       if (isEditing) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
-          commitEdit();
           textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
         if (event.key === 'Escape') {
@@ -65,7 +64,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
         }
       }
     },
-    [commitEdit, text, isEditing]
+    [text, isEditing]
   );
 
   return (

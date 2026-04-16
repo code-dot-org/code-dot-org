@@ -107,7 +107,6 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
       if (isEditing) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
-          commitEdit();
           labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
         }
         if (event.key === 'Escape') {
@@ -119,7 +118,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         }
       }
     },
-    [commitEdit, label, isEditing]
+    [label, isEditing]
   );
 
   const isRectangle = shapeType === 'rectangle';

@@ -49,7 +49,6 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   const handleAltKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
-        commitAltEdit();
         (event.target as HTMLElement)
           .closest<HTMLElement>('.react-flow__node')
           ?.focus();
@@ -61,7 +60,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
           ?.focus();
       }
     },
-    [commitAltEdit]
+    []
   );
 
   return (
