@@ -94,6 +94,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
+            assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
           />

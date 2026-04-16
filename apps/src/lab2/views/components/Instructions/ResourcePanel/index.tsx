@@ -10,7 +10,6 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -233,14 +232,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const aiTutorVisible =
-    shouldShowAiTutor({
-      appName,
-      tutorLevel: levelProperties.aiTutorAvailable,
-      aiChatAccessLevel: aiChatAccessLevel,
-    }) ||
-    queryParams('show-ai-tutor2') === 'true' ||
-    queryParams('show-ai-tutor') === 'true';
+  const aiTutorVisible = shouldShowAiTutor({
+    appName,
+    tutorLevel: levelProperties.aiTutorAvailable,
+    aiChatAccessLevel: aiChatAccessLevel,
+  });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
