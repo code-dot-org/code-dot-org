@@ -3,39 +3,6 @@ require 'test_helper'
 class AssignedCoursesAndScripts < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  setup_all do
-    I18n.backend.store_translations(:'te-ST',
-      {
-        'data' => {
-          'course' => {
-            'name' => {
-              'csd' => {
-                'title' => 'Computer Science Discoveries',
-                'description_short' => 'CSD short description',
-              },
-              'pl-csd' => {
-                'title' => 'Computer Science Discoveries PL Course',
-                'description_short' => 'PL CSD short description',
-              }
-            }
-          },
-          'script' => {
-            'name' => {
-              'other' => {
-                title: 'Unit Other',
-                'description_short' => 'other-description'
-              },
-              'pl-other' => {
-                title: 'PL Unit Other',
-                'description_short' => 'pl-other-description'
-              }
-            }
-          }
-        }
-      }
-     )
-  end
-
   let(:assigned_student) {create(:student)}
   let(:teacher) {create(:teacher)}
   let(:assigned_course) {create(:single_unit_course)}
@@ -530,6 +497,38 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe 'recent courses and scripts' do
+    let(:locale) {:'te-ST'}
+    let(:custom_i18n) do
+      {
+        'data' => {
+          'course' => {
+            'name' => {
+              'csd' => {
+                'title' => 'Computer Science Discoveries',
+                'description_short' => 'CSD short description',
+              },
+              'pl-csd' => {
+                'title' => 'Computer Science Discoveries PL Course',
+                'description_short' => 'PL CSD short description',
+              }
+            }
+          },
+          'script' => {
+            'name' => {
+              'other' => {
+                title: 'Unit Other',
+                'description_short' => 'other-description'
+              },
+              'pl-other' => {
+                title: 'PL Unit Other',
+                'description_short' => 'pl-other-description'
+              }
+            }
+          }
+        }
+      }
+    end
+
     let(:student) {create(:student)}
     let(:teacher) {create(:teacher)}
     let(:facilitator) {create(:facilitator)}
@@ -544,7 +543,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     let(:pl_section) {create(:section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group)}
 
     before do
-      I18n.locale = :'te-ST'
+      I18n.locale = locale
+      I18n.backend.store_translations(locale, custom_i18n)
 
       create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd1')), position: 1)
       create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd2')), position: 2)
