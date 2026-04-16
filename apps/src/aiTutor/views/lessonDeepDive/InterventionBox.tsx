@@ -1,9 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useState} from 'react';
-
-const lightTheme = createTheme({palette: {mode: 'light'}});
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
 import PodcastsBox from './PodcastsBox';
@@ -66,6 +63,8 @@ interface InterventionBoxProps {
   assessmentAnalysis: AssessmentQuestionResult[];
   objectives: LessonDeepDiveData['objectives'];
   reflectionData: ReflectionData | null;
+  welcomeMessage: string | null;
+  welcomeLoading: boolean;
 }
 
 const InterventionBox: FC<InterventionBoxProps> = ({
@@ -76,6 +75,8 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   assessmentAnalysis,
   objectives,
   reflectionData,
+  welcomeMessage,
+  welcomeLoading,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
 
@@ -114,17 +115,17 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           <VocabularyFlashcards vocabulary={vocabulary} />
         )}
         {selected === 'chat' && (
-          <ThemeProvider theme={lightTheme}>
-            <LessonDeepDiveTutorChat
-              lessonId={lessonId}
-              lessonName={lessonName}
-              lessonSummary={lessonSummary}
-              vocabulary={vocabulary}
-              assessmentAnalysis={assessmentAnalysis}
-              objectives={objectives}
-              reflectionData={reflectionData}
-            />
-          </ThemeProvider>
+          <LessonDeepDiveTutorChat
+            lessonId={lessonId}
+            lessonName={lessonName}
+            lessonSummary={lessonSummary}
+            vocabulary={vocabulary}
+            assessmentAnalysis={assessmentAnalysis}
+            objectives={objectives}
+            reflectionData={reflectionData}
+            welcomeMessage={welcomeMessage}
+            welcomeLoading={welcomeLoading}
+          />
         )}
         {selected === 'videos' && <VideosBox />}
         {selected === 'podcasts' && <PodcastsBox />}

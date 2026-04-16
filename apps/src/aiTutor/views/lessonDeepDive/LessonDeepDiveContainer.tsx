@@ -56,6 +56,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
   );
+  const [welcomeMessage, setWelcomeMessage] = useState<string | null>(null);
+  const [welcomeLoading, setWelcomeLoading] = useState(false);
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -65,9 +67,20 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
 
-  const handleReflectionComplete = useCallback((data: ReflectionData) => {
-    setReflectionData(data);
-  }, []);
+  const handleReflectionComplete = useCallback(
+    (data: ReflectionData) => {
+      setReflectionData(data);
+      setWelcomeLoading(true);
+      fetch(`/lessons/${lessonDeepDiveData.lessonId}/tutor_welcome_message`)
+        .then(r => r.json())
+        .then((res: {welcomeMessage: string | null}) =>
+          setWelcomeMessage(res.welcomeMessage ?? null)
+        )
+        .catch(() => setWelcomeMessage(null))
+        .finally(() => setWelcomeLoading(false));
+    },
+    [lessonDeepDiveData.lessonId]
+  );
 
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
@@ -131,6 +144,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
+            welcomeMessage={welcomeMessage}
+            welcomeLoading={welcomeLoading}
           />
         );
       case 'practice':

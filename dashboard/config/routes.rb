@@ -571,6 +571,7 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :tutor_welcome_message, to: 'lessons#tutor_welcome_message'
         post :clone
       end
     end

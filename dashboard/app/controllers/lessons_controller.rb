@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_welcome_message]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -112,6 +112,19 @@ class LessonsController < ApplicationController
       end,
       timeSpentSeconds: lesson_time_spent(@lesson.id, current_user.id)
     }
+  end
+
+  # GET /lessons/:id/tutor_welcome_message
+  # Returns an AI-generated welcome message personalized to the student's assessment
+  # results and lesson reflection for use at the start of the tutor chat.
+  def tutor_welcome_message
+    assessment_analysis = lesson_assessment_analysis(@lesson.id, current_user.id)
+    reflection = lesson_reflection_data(@lesson.id, current_user.id)
+    message = ::LessonDeepDiveWelcomeAgent.generate(@lesson, assessment_analysis, reflection)
+    render json: {welcomeMessage: message}
+  rescue => e
+    Rails.logger.error "tutor_welcome_message error: #{e.message}"
+    render json: {welcomeMessage: nil}, status: :internal_server_error
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit

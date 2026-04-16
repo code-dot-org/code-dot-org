@@ -149,6 +149,20 @@ module StudentWorkHelper
       to_i
   end
 
+  def lesson_reflection_data(lesson_id, student_id)
+    lesson_reflection = UserLessonReflection.find_by(lesson_id: lesson_id, student_id: student_id)
+    objective_reflections = UserLessonObjectiveReflection
+      .joins(:objective)
+      .where(objectives: {lesson_id: lesson_id}, student_id: student_id)
+      .map {|r| {objective_id: r.objective_id, description: r.objective.description, rating: r.reflection}}
+
+    {
+      success: lesson_reflection&.success,
+      struggle: lesson_reflection&.struggle,
+      objective_reflections: objective_reflections
+    }
+  end
+
   private def build_sublevel_map(script_levels)
     sublevel_map = {}
     script_levels.flat_map(&:levels).each do |level|

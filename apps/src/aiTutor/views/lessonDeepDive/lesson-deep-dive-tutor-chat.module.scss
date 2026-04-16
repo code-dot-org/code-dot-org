@@ -17,3 +17,44 @@
     }
   }
 }
+
+.welcomeLoading {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.botIconContainer {
+  flex: 0 0 32px;
+  height: 32px;
+  width: 32px;
+  background: var(--background-neutral-primary-inverse);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.welcomeMessageText {
+  margin: 0;
+  padding: 10px 14px;
+  background: var(--background-neutral-secondary);
+  border-radius: 0 12px 12px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
