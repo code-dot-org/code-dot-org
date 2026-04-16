@@ -46,6 +46,7 @@ const NODE_TYPES = {
 
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
+const FOCUS_DELAY_MS = 100;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -202,7 +203,10 @@ export default function ReactFlowCanvas({
 
       // Move focus to the new node after React Flow renders it.
       (document.activeElement as HTMLElement)?.blur();
-      setTimeout(() => focusEntry({type: 'node', id: newNodeId}), 100);
+      setTimeout(
+        () => focusEntry({type: 'node', id: newNodeId}),
+        FOCUS_DELAY_MS
+      );
     },
     [focusEntry, screenToFlowPosition, setNodes]
   );

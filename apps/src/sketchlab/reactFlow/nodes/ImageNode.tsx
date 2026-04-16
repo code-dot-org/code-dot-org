@@ -1,7 +1,7 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useEffect, useState} from 'react';
+import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
@@ -23,6 +23,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const [altValue, setAltValue] = useState('');
+  const cancelledRef = useRef(false);
 
   const src = (data.src as string) ?? '';
   const altText = (data.altText as string) ?? '';
@@ -42,6 +43,10 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   }, [readOnly, altText]);
 
   const commitAltEdit = useCallback(() => {
+    if (cancelledRef.current) {
+      cancelledRef.current = false;
+      return;
+    }
     setIsEditingAlt(false);
     updateNodeData(id, {altText: altValue});
   }, [altValue, id, updateNodeData]);
@@ -54,6 +59,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
           ?.focus();
       }
       if (event.key === 'Escape') {
+        cancelledRef.current = true;
         setIsEditingAlt(false);
         (event.target as HTMLElement)
           .closest<HTMLElement>('.react-flow__node')

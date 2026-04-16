@@ -81,7 +81,7 @@ function orderComponent(
   for (const id of componentIds) {
     for (const target of outgoing.get(id) || []) {
       if (componentIds.has(target)) {
-        inDegree.set(target, (inDegree.get(target) || 0) + 1);
+        inDegree.set(target, (inDegree.get(target) ?? 0) + 1);
       }
     }
   }
@@ -108,7 +108,7 @@ function orderComponent(
     const newlyAvailable: string[] = [];
     for (const target of outgoing.get(current) || []) {
       if (componentIds.has(target) && !visited.has(target)) {
-        const degree = (inDegree.get(target) || 1) - 1;
+        const degree = (inDegree.get(target) ?? 0) - 1;
         inDegree.set(target, degree);
         if (degree === 0) {
           newlyAvailable.push(target);

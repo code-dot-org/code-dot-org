@@ -51,7 +51,6 @@ export function useFocusManagement(
               const zoom = getZoom();
               fitView({
                 nodes: [{id: edge.source}, {id: edge.target}],
-                duration: 200,
                 maxZoom: zoom,
               });
             }
