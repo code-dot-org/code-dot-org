@@ -151,21 +151,22 @@ function SummaryProgressRow({
             )}
             {lesson.isFocusArea && <FocusAreaIndicator />}
           </div>
-          {viewAs === ViewType.Participant && !isOnLevelView && (
+          {!isOnLevelView && (
             <div style={styles.buttonColumn}>
-              {lesson.student_lesson_plan_html_url && (
-                <MuiButton
-                  className="ui-test-lesson-resources"
-                  href={lesson.student_lesson_plan_html_url}
-                  variant="contained"
-                  color="white"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
-                >
-                  {i18n.lessonResources()}
-                </MuiButton>
-              )}
+              {viewAs === ViewType.Participant &&
+                lesson.student_lesson_plan_html_url && (
+                  <MuiButton
+                    className="ui-test-lesson-resources"
+                    href={lesson.student_lesson_plan_html_url}
+                    variant="contained"
+                    color="white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                  >
+                    {i18n.lessonResources()}
+                  </MuiButton>
+                )}
               {showLessonTutorButton &&
                 experiments.isEnabledAllowingQueryString(
                   experiments.LESSON_TUTOR
