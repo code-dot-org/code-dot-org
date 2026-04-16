@@ -65,13 +65,21 @@ const LinkOption: React.FC<LinkElementProps> = ({
           }}
         >
           {labelStyle === 'b' ? (
-            <span>
+            <Typography component="span" variant="body2">
               <b>{label}</b>
-            </span>
+            </Typography>
           ) : labelStyle === 'i' ? (
-            <span style={{paddingLeft: '1em'}}>{label}</span>
+            <Typography
+              component="span"
+              variant="body2"
+              style={{paddingLeft: '1em'}}
+            >
+              {label}
+            </Typography>
           ) : (
-            <span>{label}</span>
+            <Typography component="span" variant="body2">
+              {label}
+            </Typography>
           )}
         </a>
       )}
