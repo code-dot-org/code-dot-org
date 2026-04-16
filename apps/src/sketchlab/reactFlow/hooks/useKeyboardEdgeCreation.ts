@@ -146,13 +146,16 @@ export function useKeyboardEdgeCreation({
 
         // Normal mode: move through full order; escape at boundaries.
         if (focusedEntry) {
+          // Block ReactFlow's built-in Tab handler when focus is on a
+          // node/edge (it conflicts with elementsSelectable=false in
+          // read-only mode).
+          event.stopPropagation();
           const nextIdx = currentIdx + direction;
           if (nextIdx >= 0 && nextIdx < tabOrder.length) {
             event.preventDefault();
-            event.stopPropagation();
             focusEntry(tabOrder[nextIdx]);
           }
-          // else: out of bounds -- let focus leave the canvas naturally.
+          // Boundary: no preventDefault lets the browser move focus out.
           return;
         }
       }
