@@ -31,6 +31,8 @@ class LessonProgress extends Component {
     lessonExtrasUrl: PropTypes.string,
     hasLessonPlan: PropTypes.bool,
     lessonTutorPath: PropTypes.string,
+    lessonId: PropTypes.number,
+    userId: PropTypes.number,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
@@ -151,8 +153,11 @@ class LessonProgress extends Component {
       hasLessonPlan,
       lessonTutorPath,
       lessonName,
+      lessonId,
+      userId,
       navigateToLevelId,
       currentLevel,
+      currentLevelId,
     } = this.props;
 
     const showLessonTutorBubble =
@@ -227,7 +232,13 @@ class LessonProgress extends Component {
             )}
             {showLessonTutorBubble && (
               <div>
-                <LessonTutorProgressBubble lessonTutorPath={lessonTutorPath} />
+                <LessonTutorProgressBubble
+                  lessonTutorPath={lessonTutorPath}
+                  lessonId={lessonId}
+                  levelId={currentLevelId}
+                  lessonName={lessonName}
+                  userId={userId}
+                />
               </div>
             )}
           </div>
@@ -314,6 +325,8 @@ export default connect(
       state.progress,
       state.progress.currentLessonId
     ),
+    lessonId: state.progress.currentLessonId,
+    userId: state.currentUser.userId,
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,
