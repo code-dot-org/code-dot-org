@@ -143,7 +143,9 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
             onClick={() => onDeleteClick(onDeleteClickCallback, section.id)}
           >
             <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
-            <span>{i18n.delete()}</span>
+            <Typography variant="body2" component="span">
+              {i18n.delete()}
+            </Typography>
           </button>
         </li>
       );
