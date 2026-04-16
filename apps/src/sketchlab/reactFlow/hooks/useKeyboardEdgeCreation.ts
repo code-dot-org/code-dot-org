@@ -207,6 +207,8 @@ export function useKeyboardEdgeCreation({
       }
 
       // Enter on a focused node (outside connect mode) enters edit mode.
+      // Do NOT stopPropagation here: React Flow's handler needs to fire
+      // to select the node, which enables arrow-key movement.
       if (event.key === 'Enter' && !readOnly && focusedNodeId) {
         const focusedNodeElement = document.querySelector<HTMLElement>(
           `.react-flow__node[data-id="${focusedNodeId}"]`
@@ -216,7 +218,6 @@ export function useKeyboardEdgeCreation({
         );
         if (editable) {
           event.preventDefault();
-          event.stopPropagation();
           if (editable.tagName === 'BUTTON') {
             editable.click();
           } else {
