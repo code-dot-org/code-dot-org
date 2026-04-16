@@ -1,0 +1,45 @@
+name 'pl-ai-101-V2-mod5-fictions-06'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Strategies for Teachers
+
+#### As students begin using AI tools, it’s important to explicitly teach them how to recognize and respond to AI-generated inaccuracies. This is an opportunity to strengthen digital literacy and critical thinking skills that extend beyond AI use.
+
+#### Teachers can support students by focusing on three key areas: modeling, verification, and application.
+
+---
+
+## Model Critical Use of AI
+#### Students need to see what it looks like to question AI.
+* #### Review AI-generated responses as a class and identify what seems accurate, unclear, or questionable
+* #### Demonstrate how to ask follow-up questions (e.g., “Are you sure?” or “What is your source?”)
+* #### Show how to revise or improve prompts to get better information
+
+#### Modeling helps students understand that AI outputs should be examined—not accepted at face value.
+
+## Teach Verification and Source Evaluation
+#### Students should learn to confirm information rather than rely on a single source.
+* #### Encourage students to corroborate information using multiple sources
+* #### Teach them to check for bias, credibility, and accuracy
+* #### Reinforce using different tools for different purposes (e.g., AI for brainstorming, search engines for fact-checking)
+
+#### These habits build stronger digital literacy and reduce reliance on AI as an authority.
+
+## Design Tasks That Build Critical Thinking
+#### Assignments can help students actively engage with AI-generated content.
+* #### Ask students to identify and correct inaccuracies in AI responses
+* #### Have them compare their own thinking to AI outputs
+* #### Explore how different prompts lead to different (and sometimes unreliable) results
+
+#### These activities shift the focus from using AI to thinking about AI.
+
+## Encourage Reflection and Responsibility
+#### Students should remain responsible for the content they use.
+* #### Ask students to explain how they used AI and what they accepted, changed, or rejected
+* #### Reinforce that AI is a tool—not a final source of truth
+* #### Emphasize that students are responsible for evaluating the accuracy of information
+
+>#### **💬 Quick Reflection:** Which of these strategies can you take back to your classroom tomorrow?
+MARKDOWN
