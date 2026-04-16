@@ -1,5 +1,6 @@
 import React from 'react';
 
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
@@ -105,7 +106,7 @@ const TeacherPromotions: React.FC = () => {
   );
 
   return (
-    <ul className={styles.promotions}>
+    <ul id="ui-test-teacher-promotions" className={styles.promotions}>
       {isLoading ? (
         <SkeletonTeacherPromo />
       ) : (
@@ -122,4 +123,27 @@ const TeacherPromotions: React.FC = () => {
   );
 };
 
-export default TeacherPromotions;
+/**
+ * This is a version of the curriculum catalog that is overridable by a regional
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # Home dashboards
+ *   - path: /
+ *     components:
+ *       TeacherPromotions: false
+ * ```
+ */
+const RegionalTeacherPromotions = (props: object = {}) => (
+  <GlobalEditionWrapper
+    componentId="TeacherPromotions"
+    component={TeacherPromotions}
+    props={props}
+  />
+);
+
+export default RegionalTeacherPromotions;
