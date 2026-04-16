@@ -1,0 +1,152 @@
+// Each word slot: height + margin-bottom. The clip window height matches
+// word height exactly so the gap is hidden between transitions.
+$word-h: 5rem;
+$word-gap: 2rem;
+$slot: 7rem; // $word-h + $word-gap
+
+// 7 words, 14s loop. Each word visible for 11% (~1.5s), slide takes 3% (~0.4s)
+// with a smooth cubic-bezier. The timing-function is set on the keyframe that
+// *starts* each slide so it applies only to that outgoing transition.
+// Last word gets a slightly longer hold (15.99%) before the instant snap back.
+@keyframes word-flip {
+  0% {
+    margin-top: 0;
+  }
+  11% {
+    margin-top: 0;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  14% {
+    margin-top: -#{$slot};
+  }
+  25% {
+    margin-top: -#{$slot};
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  28% {
+    margin-top: calc(#{$slot} * -2);
+  }
+  39% {
+    margin-top: calc(#{$slot} * -2);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  42% {
+    margin-top: calc(#{$slot} * -3);
+  }
+  53% {
+    margin-top: calc(#{$slot} * -3);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  56% {
+    margin-top: calc(#{$slot} * -4);
+  }
+  67% {
+    margin-top: calc(#{$slot} * -4);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  70% {
+    margin-top: calc(#{$slot} * -5);
+  }
+  81% {
+    margin-top: calc(#{$slot} * -5);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  84% {
+    margin-top: calc(#{$slot} * -6);
+  }
+  99.99% {
+    margin-top: calc(#{$slot} * -6);
+  }
+  100% {
+    margin-top: 0; // instant snap back to start
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.sentence {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35em;
+  line-height: 1.4;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 375px;
+}
+
+// Clip window — shows exactly one word at a time.
+.wordWindow {
+  display: inline-block;
+  height: $word-h;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+// Animated track — all words stacked, slides up via margin-top.
+.wordTrack {
+  display: block;
+  animation: word-flip 14s linear infinite;
+}
+
+.word {
+  display: block;
+  box-sizing: border-box;
+  height: $word-h;
+  margin-bottom: $word-gap;
+  padding: 0.05em 0.4em;
+  border-radius: 0.2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: $word-h;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.todayLine {
+  width: 100%; // forces a new row in the flex-wrap sentence
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+// Rainbow colors spaced evenly across the hue wheel (72° apart),
+// matching the random-hue bubbles in the down-nav fizzy effect.
+.wordCoded {
+  background-color: hsl(5deg 85% 58%);
+}
+
+.wordPrompted {
+  background-color: hsl(35deg 90% 52%);
+}
+
+.wordDesigned {
+  background-color: hsl(145deg 65% 42%);
+}
+
+.wordDebated {
+  background-color: hsl(215deg 85% 60%);
+}
+
+.wordCreated {
+  background-color: hsl(285deg 72% 62%);
+}
+
+.wordDebugged {
+  background-color: hsl(175deg 72% 40%);
+}
+
+.wordProblemSolved {
+  background-color: hsl(55deg 88% 45%);
+}

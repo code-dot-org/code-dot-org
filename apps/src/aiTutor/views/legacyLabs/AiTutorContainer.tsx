@@ -70,10 +70,8 @@ export const AiTutorContainer: FC<{
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
-  useAiChatDisabledState({
+  const {disabled, disabledMessage} = useAiChatDisabledState({
     appName: labState.appType,
-    isPredictLevel: false,
-    hasSubmittedPredictResponse: false,
   });
 
   const lab: CommonLab | undefined =
@@ -185,6 +183,8 @@ export const AiTutorContainer: FC<{
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}
+          disabled={disabled}
+          disabledMessage={disabledMessage}
         />
       </div>
       <div
@@ -197,6 +197,7 @@ export const AiTutorContainer: FC<{
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
+          disabled={disabled}
         />
       </div>
     </>

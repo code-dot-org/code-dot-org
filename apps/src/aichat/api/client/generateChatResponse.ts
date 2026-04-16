@@ -71,7 +71,7 @@ export async function generateChatResponse(
 
     return {
       response: `Blocked reason: ${candidate?.finishReason}. ${candidate?.finishMessage}`,
-      status: AiRequestExecutionStatus.MODEL_PROFANITY,
+      status: AiRequestExecutionStatus.MODEL_CONTENT_FILTERED,
     };
   }
 
@@ -85,6 +85,9 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
+    if (file.uint8Array.length === 0) {
+      return {response: text, status: AiRequestExecutionStatus.FAILURE};
+    }
     let asset: ChatAsset;
     try {
       asset = await generatedFileToAsset(

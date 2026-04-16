@@ -32,6 +32,8 @@ class AssetBucket < BucketHelper
     end
 
     body
+  rescue MiniMagick::Invalid, MiniMagick::Error
+    body
   end
 
   def cache_duration_seconds

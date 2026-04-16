@@ -36,6 +36,12 @@ Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.applicati
 
 require File.expand_path('../../config/environment', __FILE__)
 
+# Disable CSRF protection for unit tests. We cannot target the config layer
+# from this file because Spring may have already loaded the Rails application,
+# copying `config.action_controller` onto ActionController::Base. Set the
+# runtime attribute directly instead.
+ActionController::Base.allow_forgery_protection = false
+
 if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
   # Raise rather than silently correcting the error, because it's possible that the data in
   # dashboard_test has already been corrupted by the time we get here. If we find that we're

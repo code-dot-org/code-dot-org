@@ -1055,6 +1055,9 @@
       }
     }
   ],
+  "jit_pl_concepts_lessons": [
+
+  ],
   "rubrics": [
     {
       "level_name": "test-serialize-seeding-json_blockly_8",

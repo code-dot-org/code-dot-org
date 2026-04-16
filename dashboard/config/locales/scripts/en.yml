@@ -28021,7 +28021,9 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-ai-101-v2-mod5:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Ensuring a Responsible Approach to AI
           lesson_groups: {}
           name: self-paced-pl-ai-101-v2-mod5
           title: Module 5, Ensuring a Responsible Approach to AI
@@ -28198,3 +28200,58 @@ en:
             * Explore end-of-chapter projects.
 
             **Suggested time:** 120 minutes
+        self-paced-pl-thinking-critically-about-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-thinking-critically-about-ai-2026
+          title: 'Educator Module: Thinking Critically about AI'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+        intro-to-web-lab:
+          lessons: {}
+          lesson_groups: {}
+          name: intro-to-web-lab
+          title: Intro to Web Lab
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Intro to Web Lab introduces students to our Web Lab programming environment. Web Lab is built with AI Tutor, an AI assistant that can help build websites, answer questions, and explain topics in web design and web development. This unit has a single lesson that introduces students to this new tool and how to think like a web designer who uses AI thoughtfully and intentionally
+
+            **Access and Permissions:**
+            - Teachers can view Web Lab but cannot interact with AI Tutor unless they are a verified teacher or have logged in via Google, Microsoft, Facebook, or an LMS. [Learn how to become a verified teacher here.](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
+            - Students can view Web Lab but cannot interact with AI tutor unless they are in a teacher-led section that meets the above requirements _and_ the section has AI Tools enabled. [Learn how teachers can add students to sections here.](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
+
+            > ⚠️ AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:
+            > 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
+            > 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
+            > 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-6:
+          lessons:
+            lesson-1:
+              name: Navigating the Capstone Project
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-6
+          title: 'Teaching Unit 6: Web Apps with AI Capstone Project'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
