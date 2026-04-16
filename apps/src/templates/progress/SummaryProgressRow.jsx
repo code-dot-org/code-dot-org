@@ -9,6 +9,8 @@ import ReactTooltip from 'react-tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -32,6 +34,9 @@ function SummaryProgressRow({
   unitHasUnnumberedLessons,
   viewAs,
   isOnLevelView,
+  unitId,
+  unitName,
+  userId,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -52,6 +57,16 @@ function SummaryProgressRow({
   // These lessons don't have lesson plans, so we can use that as a proxy for
   // whether or not to show the Lesson Tutor button.
   const showLessonTutorButton = lesson.lessonTutorPath && lesson.hasLessonPlan;
+
+  const handleLessonTutorClick = () => {
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId,
+      unitName,
+      userId,
+    });
+  };
 
   const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;
 
@@ -160,6 +175,7 @@ function SummaryProgressRow({
                     color="white"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLessonTutorClick}
                     startIcon={
                       <FontAwesomeV6Icon
                         iconName="ai-bot-solid"
@@ -190,6 +206,9 @@ SummaryProgressRow.propTypes = {
   lessonIsLockedForUser: PropTypes.func.isRequired,
   lessonIsLockedForAllStudents: PropTypes.func.isRequired,
   unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+  unitId: PropTypes.number,
+  unitName: PropTypes.string,
+  userId: PropTypes.number,
 };
 
 export const styles = {
@@ -281,4 +300,7 @@ export default connect((state, ownProps) => ({
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
+  unitId: state.progress.scriptId,
+  unitName: state.progress.unitTitle,
+  userId: state.currentUser.userId,
 }))(SummaryProgressRow);

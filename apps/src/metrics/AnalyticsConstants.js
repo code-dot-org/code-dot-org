@@ -392,6 +392,7 @@ const EVENTS = {
     'Signed In User Clicks Help Menu Option',
   HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
   HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
   HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
