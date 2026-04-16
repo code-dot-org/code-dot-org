@@ -1,9 +1,0 @@
-{
-  "key": "variables_v1",
-  "description": "This video covers the basics of variables, describing them as labeled containers or boxes that store information in memory. It introduces three fundamental data types: Integers (Ints), Strings, and Booleans. The speech explains how to assign values using the equal sign and how to use the print function to output these values by referencing the variable name without quotes.",
-  "s3_uri": "s3://PLACEHOLDER/json_videos/variables_v1.json",
-  "lab": "pythonlab",
-  "version": 1,
-  "audience": "student",
-  "objective_keys": []
-}

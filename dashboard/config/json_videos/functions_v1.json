@@ -1,9 +1,0 @@
-{
-  "key": "functions_v1",
-  "description": "This video provides an overview of functions, describing them as named blocks of code designed to perform specific tasks. It walks through the steps of defining a function using the def keyword, naming it, and using proper syntax (parentheses, colons, and indentation). Finally, it explains how to call a function to execute the instructions stored inside its definition.",
-  "s3_uri": "s3://PLACEHOLDER/json_videos/functions_v1.json",
-  "lab": "pythonlab",
-  "version": 1,
-  "audience": "student",
-  "objective_keys": []
-}
