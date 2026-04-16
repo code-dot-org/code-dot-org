@@ -58,6 +58,8 @@ export interface ReactFlowCanvasProps {
   readOnly?: boolean;
 }
 
+export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
+
 export default function ReactFlowCanvas({
   updateSources,
   initialNodes,
@@ -76,7 +78,8 @@ export default function ReactFlowCanvas({
 
   const {tabOrder, setActiveTabEntry} = useTabOrder(
     nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[]
+    edges as SketchlabReactFlowEdge[],
+    SKETCHLAB_CONTAINER_CLASS
   );
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
@@ -191,9 +194,13 @@ export default function ReactFlowCanvas({
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
       <div
-        className={classNames(styles.canvasContainer, {
-          [styles.connectMode]: !!connectingFrom,
-        })}
+        className={classNames(
+          styles.canvasContainer,
+          {
+            [styles.connectMode]: !!connectingFrom,
+          },
+          SKETCHLAB_CONTAINER_CLASS
+        )}
         onKeyDown={handleKeyDown}
         onFocusCapture={handleFocusCapture}
       >

@@ -4,7 +4,7 @@ tool for making interactive diagrams, used by students in grades 6-12.
 
 ## Code Guidelines
 - The lab must be accessible, following WCAG 2.1 AA guidelines. Specifically: all components must have intuitive
- labels for a screenreader and must be both click and keyboard interactable, images must have alt text or the 
+ labels for a screen reader and must be both click and keyboard interactable, images must have alt text or the 
  ability for a user to add alt text, pop up menus must have focus traps, and there must be a logical focus order.
 - Utilize the code-dot-org component library when possible. The component library is located
   in [/frontend](/frontend/packages/component-library/). We are in the process of migrating 

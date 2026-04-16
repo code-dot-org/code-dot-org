@@ -104,7 +104,7 @@ function orderComponent(
     visited.add(current);
     result.push(current);
 
-    // Collect newly available neighbors, sort by position before enqueueing.
+    // Collect newly available neighbors and re-sort the queue by position.
     const newlyAvailable: string[] = [];
     for (const target of outgoing.get(current) || []) {
       if (componentIds.has(target) && !visited.has(target)) {
@@ -115,10 +115,8 @@ function orderComponent(
         }
       }
     }
-    newlyAvailable.sort((a, b) =>
-      compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!)
-    );
     queue.push(...newlyAvailable);
+    queue.sort((a, b) => compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!));
   }
 
   // Cycle fallback: any unvisited nodes in the component, sorted by position.
@@ -185,6 +183,12 @@ export function computeTabOrder(
 
   const nodeOrder = componentOrders.flat();
 
+  // O(1) index lookup for sorting incoming edges by source position.
+  const nodeIndex = new Map<string, number>();
+  for (let i = 0; i < nodeOrder.length; i++) {
+    nodeIndex.set(nodeOrder[i], i);
+  }
+
   // Build incoming-edge lookup: target nodeId → edges arriving at it.
   const incomingEdges = new Map<string, SketchlabReactFlowEdge[]>();
   for (const edge of validEdges) {
@@ -201,7 +205,8 @@ export function computeTabOrder(
     const incoming = incomingEdges.get(nodeId);
     if (incoming) {
       incoming.sort(
-        (a, b) => nodeOrder.indexOf(a.source) - nodeOrder.indexOf(b.source)
+        (a, b) =>
+          (nodeIndex.get(a.source) ?? 0) - (nodeIndex.get(b.source) ?? 0)
       );
       for (const edge of incoming) {
         result.push({type: 'edge', id: edge.id});
