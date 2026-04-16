@@ -1,17 +1,13 @@
 import {
-  computeTabOrder,
-  TabOrderEntry,
-} from '@cdo/apps/sketchlab/reactFlow/utils/computeTabOrder';
-import {
   SketchlabReactFlowNode,
   SketchlabReactFlowEdge,
 } from '@cdo/apps/lab2/types';
+import {
+  computeTabOrder,
+  TabOrderEntry,
+} from '@cdo/apps/sketchlab/reactFlow/utils/computeTabOrder';
 
-function makeNode(
-  id: string,
-  x: number,
-  y: number
-): SketchlabReactFlowNode {
+function makeNode(id: string, x: number, y: number): SketchlabReactFlowNode {
   return {id, position: {x, y}, data: {}};
 }
 
@@ -56,10 +52,7 @@ describe('computeTabOrder', () => {
       makeNode('b', 100, 0),
       makeNode('c', 200, 0),
     ];
-    const edges = [
-      makeEdge('e1', 'a', 'b'),
-      makeEdge('e2', 'b', 'c'),
-    ];
+    const edges = [makeEdge('e1', 'a', 'b'), makeEdge('e2', 'b', 'c')];
     expect(ids(computeTabOrder(nodes, edges))).toEqual([
       'node:a',
       'edge:e1',
@@ -71,10 +64,7 @@ describe('computeTabOrder', () => {
 
   it('uses topological sort respecting edge direction', () => {
     // B is above A visually but A->B via edge, so A comes first.
-    const nodes = [
-      makeNode('a', 0, 100),
-      makeNode('b', 0, 0),
-    ];
+    const nodes = [makeNode('a', 0, 100), makeNode('b', 0, 0)];
     const edges = [makeEdge('e1', 'a', 'b')];
     expect(ids(computeTabOrder(nodes, edges))).toEqual([
       'node:a',
@@ -93,10 +83,7 @@ describe('computeTabOrder', () => {
       makeNode('b', 0, 100),
       makeNode('c', 100, 100),
     ];
-    const edges = [
-      makeEdge('e1', 'a', 'b'),
-      makeEdge('e2', 'a', 'c'),
-    ];
+    const edges = [makeEdge('e1', 'a', 'b'), makeEdge('e2', 'a', 'c')];
     expect(ids(computeTabOrder(nodes, edges))).toEqual([
       'node:a',
       'edge:e1',
@@ -114,12 +101,7 @@ describe('computeTabOrder', () => {
     ];
     const edges = [makeEdge('e1', 'a', 'b')];
     const result = ids(computeTabOrder(nodes, edges));
-    expect(result).toEqual([
-      'node:a',
-      'edge:e1',
-      'node:b',
-      'node:orphan',
-    ]);
+    expect(result).toEqual(['node:a', 'edge:e1', 'node:b', 'node:orphan']);
   });
 
   it('sorts connected components by their first node position', () => {
@@ -130,10 +112,7 @@ describe('computeTabOrder', () => {
       makeNode('a', 0, 0),
       makeNode('b', 100, 0),
     ];
-    const edges = [
-      makeEdge('e1', 'x', 'y'),
-      makeEdge('e2', 'a', 'b'),
-    ];
+    const edges = [makeEdge('e1', 'x', 'y'), makeEdge('e2', 'a', 'b')];
     // Component {a,b} is higher so it comes first.
     expect(ids(computeTabOrder(nodes, edges))).toEqual([
       'node:a',
@@ -213,10 +192,7 @@ describe('computeTabOrder', () => {
       makeNode('b', 100, 0),
       makeNode('c', 50, 100),
     ];
-    const edges = [
-      makeEdge('ea', 'a', 'c'),
-      makeEdge('eb', 'b', 'c'),
-    ];
+    const edges = [makeEdge('ea', 'a', 'c'), makeEdge('eb', 'b', 'c')];
     const result = ids(computeTabOrder(nodes, edges));
     // A and B are both roots; A is left so it comes first.
     // Both edges appear before C.
