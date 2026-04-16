@@ -100,7 +100,7 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     # Because, that just enabled the controller cache. There's other forms of caching, including:
-    ActiveRecord::Base.connection.disable_query_cache!
+    # ActiveRecord::Base.connection.disable_query_cache!
     # we should probably use a NullStore instead of doing this
     Rails.cache.clear
 
