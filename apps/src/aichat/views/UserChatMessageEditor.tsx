@@ -1,15 +1,18 @@
 import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import supportsClientApi from '../api/supportsClientApi';
 import {
   selectIsWaitingForChatResponse,
+  sendAnalytics,
   submitChatContents,
   uploadFiles,
 } from '../redux';
@@ -36,11 +39,14 @@ interface UserChatMessageEditorProps {
   currentLevelId?: string | null;
   logLevelActivity?: () => void;
 
+  lessonId?: number;
+
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  chatDisabled?: boolean;
 }
 
 /**
@@ -58,15 +64,20 @@ const UserChatMessageEditor: React.FunctionComponent<
   responseCallback,
   currentLevelId,
   logLevelActivity,
+  lessonId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
+  chatDisabled,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
-  const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     selectIsWaitingForChatResponse
+  );
+
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
@@ -88,7 +99,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     isWaitingForChatResponse ||
     saveInProgress ||
     uploadsPending ||
-    chatDisabled;
+    viewingAiTutorVersionFileUpdates ||
+    !!chatDisabled;
 
   const clearUserMessage = () => setUserMessage('');
 
@@ -113,6 +125,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 : undefined,
             responseCallback,
             logLevelActivity,
+            lessonId,
           })
         );
         clearUserMessage();
@@ -129,6 +142,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     ]
   );
 
@@ -173,12 +187,21 @@ const UserChatMessageEditor: React.FunctionComponent<
     [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
   );
 
+  const onSpeechToTextFinished = useCallback(
+    (analytics: SpeechToTextAnalytics) => {
+      if (speechToTextEnabled) {
+        dispatch(sendAnalytics(EVENTS.AICHAT_DICTATION_COMPLETED, analytics));
+      }
+    },
+    [dispatch, speechToTextEnabled]
+  );
+
   return (
     <>
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
-            <ChatButton key={key} onClick={handleSubmit} />
+            <ChatButton key={key} onClick={handleSubmit} disabled={disabled} />
           ))}
         </div>
       )}
@@ -189,6 +212,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         speechToTextEnabled={speechToTextEnabled}
+        onSpeechToTextFinished={onSpeechToTextFinished}
         onPaste={onPaste}
         ref={inputRef}
       >

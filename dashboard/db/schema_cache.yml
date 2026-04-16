@@ -2250,6 +2250,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: md5
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_bin
+    comment: 
   delayed_jobs:
   - *9
   - &61 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3111,6 +3119,51 @@ columns:
     collation: 
     comment: 
   - *76
+  json_videos:
+  - *9
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: key
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: description
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: s3_uri
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lab
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *70
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: audience
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   learning_goal_ai_evaluation_feedbacks:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8752,6 +8805,7 @@ primary_keys:
   jit_pl_misconceptions_resources: 
   jit_pl_teaching_tips: id
   jit_pl_teaching_tips_resources: 
+  json_videos: id
   learning_goal_ai_evaluation_feedbacks: id
   learning_goal_ai_evaluations: id
   learning_goal_evidence_levels: id
@@ -8983,6 +9037,7 @@ data_sources:
   jit_pl_misconceptions_resources: true
   jit_pl_teaching_tips: true
   jit_pl_teaching_tips_resources: true
+  json_videos: true
   learning_goal_ai_evaluation_feedbacks: true
   learning_goal_ai_evaluations: true
   learning_goal_evidence_levels: true
@@ -10994,6 +11049,20 @@ indexes:
     columns:
     - resource_id
     - jit_pl_teaching_tip_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  json_videos:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: json_videos
+    name: index_json_videos_on_key
+    unique: true
+    columns:
+    - key
     lengths: {}
     orders: {}
     opclasses: {}
@@ -15576,7 +15645,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260402000000
+version: 20260414104541
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -81,6 +81,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
+  isDemoStudent: PropTypes.bool,
   secretWords: PropTypes.string,
   secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
@@ -316,6 +317,7 @@ class ManageStudentsTable extends Component {
         name={name}
         username={rowData.username}
         email={rowData.email}
+        isDemoStudent={rowData.isDemoStudent}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -352,7 +354,7 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isTeacher(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType) && !rowData.isDemoStudent}
         rowData={rowData}
         syncEnabled={this.props.syncEnabled}
       />
@@ -788,7 +790,9 @@ class ManageStudentsTable extends Component {
           {this.isMoveStudentsEnabled() && (
             <div style={styles.button}>
               <MoveStudents
-                studentData={this.studentDataMinusBlanks()}
+                studentData={this.studentDataMinusBlanks().filter(
+                  s => !s.isDemoStudent
+                )}
                 transferData={transferData}
                 transferStatus={transferStatus}
               />

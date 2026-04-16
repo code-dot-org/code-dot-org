@@ -7,8 +7,8 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#1a1a2e',
-      paper: '#25253f',
+      default: '#121212',
+      paper: '#1c1c1c',
     },
     text: {
       primary: '#e8e8f2',
@@ -17,22 +17,31 @@ const darkTheme = createTheme({
     primary: {
       main: '#6b9fd4',
     },
-    divider: '#2e2e50',
+    divider: '#242424',
   },
 });
 
+import FizzyButton from './FizzyButton';
 import InterventionBox from './InterventionBox';
-import LessonSummaryBox from './LessonSummaryBox';
+import LevelsAttemptedBox from './LevelsAttemptedBox';
+import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
+import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
-import {LessonDeepDiveData} from './types';
+import {LessonDeepDiveData, ReflectionData} from './types';
+import ValidatedLevelsBox from './ValidatedLevelsBox';
+import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
-  'lesson-summary',
+  'welcome',
+  'levels-attempted',
+  'time-spent',
+  'validated-levels',
   'reflection',
   'intervention',
+  'practice',
   'tutor-summary',
 ] as const;
 
@@ -44,6 +53,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   lessonDeepDiveData,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
+    null
+  );
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -53,7 +65,11 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
 
-  if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
+  const handleReflectionComplete = useCallback((data: ReflectionData) => {
+    setReflectionData(data);
+  }, []);
+
+  if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
 
@@ -62,11 +78,38 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   const renderBox = () => {
     switch (BOX_IDS[currentIndex]) {
-      case 'lesson-summary':
+      case 'welcome':
+        return <WelcomeBox />;
+      case 'levels-attempted':
         return (
-          <LessonSummaryBox
+          <LevelsAttemptedBox
             lessonName={lessonDeepDiveData.lessonName}
-            lessonSummary={lessonDeepDiveData.lessonSummary}
+            levelsAttempted={
+              lessonDeepDiveData.progressCounts.levelsAttemptedCount
+            }
+            levelsTotal={lessonDeepDiveData.progressCounts.levelsTotalCount}
+          />
+        );
+      case 'time-spent':
+        return (
+          <TimeSpentBox
+            lessonName={lessonDeepDiveData.lessonName}
+            timeSpentSeconds={lessonDeepDiveData.timeSpentSeconds}
+          />
+        );
+      case 'validated-levels':
+        return (
+          <ValidatedLevelsBox
+            lessonName={lessonDeepDiveData.lessonName}
+            validatedLevelsTotalCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsTotalCount
+            }
+            validatedLevelsCorrectCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsCorrectCount
+            }
+            validatedLevelsIncorrectCount={
+              lessonDeepDiveData.progressCounts.validatedLevelsIncorrectCount
+            }
           />
         );
       case 'reflection':
@@ -74,11 +117,25 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
             objectives={lessonDeepDiveData.objectives}
+            onSubmitComplete={handleReflectionComplete}
+            initialValues={reflectionData}
           />
         );
       case 'intervention':
         return (
           <InterventionBox
+            lessonId={lessonDeepDiveData.lessonId}
+            lessonName={lessonDeepDiveData.lessonName}
+            lessonSummary={lessonDeepDiveData.lessonSummary}
+            vocabulary={lessonDeepDiveData.vocabulary}
+            assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
+            objectives={lessonDeepDiveData.objectives}
+            reflectionData={reflectionData}
+          />
+        );
+      case 'practice':
+        return (
+          <PracticeBox
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
@@ -122,12 +179,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
         {!isLast && (
           <div className={styles.bottomNav}>
-            <button
-              type="button"
-              className={styles.arrowButton}
-              onClick={goToNext}
-              aria-label="Next"
-            >
+            <FizzyButton onClick={goToNext} ariaLabel="Next">
               <svg
                 width="24"
                 height="24"
@@ -143,7 +195,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </FizzyButton>
           </div>
         )}
       </div>

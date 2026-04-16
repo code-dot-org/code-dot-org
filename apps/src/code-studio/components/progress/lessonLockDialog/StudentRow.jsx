@@ -2,9 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import color from '@cdo/apps/util/color';
 
-const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
+const StudentRow = ({
+  index,
+  name,
+  lockStatus,
+  isDemoStudent,
+  handleRadioChange,
+}) => {
   const radioChangeEvent = event => {
     const modifiedIndex = parseInt(event.target.name, 10);
     const lockStatus = event.target.value;
@@ -13,7 +20,10 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
 
   return (
     <tr>
-      <td style={styles.tableCell}>{name}</td>
+      <td style={styles.tableCell}>
+        {name}
+        {isDemoStudent && <DemoStudentChip />}
+      </td>
       <td
         style={{
           ...styles.tableCell,
@@ -27,6 +37,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           value={LockStatus.Locked}
           checked={lockStatus === LockStatus.Locked}
           onChange={radioChangeEvent}
+          disabled={isDemoStudent}
         />
       </td>
       <td
@@ -42,6 +53,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           value={LockStatus.Editable}
           checked={lockStatus === LockStatus.Editable}
           onChange={radioChangeEvent}
+          disabled={isDemoStudent}
         />
       </td>
       <td
@@ -57,6 +69,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           value={LockStatus.ReadonlyAnswers}
           checked={lockStatus === LockStatus.ReadonlyAnswers}
           onChange={radioChangeEvent}
+          disabled={isDemoStudent}
         />
       </td>
     </tr>
@@ -67,6 +80,7 @@ StudentRow.propTypes = {
   index: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired,
+  isDemoStudent: PropTypes.bool,
   handleRadioChange: PropTypes.func.isRequired,
 };
 

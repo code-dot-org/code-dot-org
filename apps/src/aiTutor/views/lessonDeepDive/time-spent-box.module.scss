@@ -1,0 +1,78 @@
+@keyframes tick-pop {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+}
+
+.lessonName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 375px;
+}
+
+.timeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 0 8px;
+  text-align: center;
+}
+
+.timeNumber {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.timeLabel {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ticksRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 420px;
+}
+
+// One tick per minute, capped to avoid visual overflow.
+.tick {
+  width: 6px;
+  height: 20px;
+  border-radius: 3px;
+  opacity: 0;
+  flex-shrink: 0;
+  transform-origin: bottom center;
+  animation: tick-pop 0.2s ease-out forwards;
+}

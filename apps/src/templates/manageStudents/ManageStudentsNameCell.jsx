@@ -6,6 +6,7 @@ import {
   getSelectedCourseName,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -23,6 +24,7 @@ class ManageStudentNameCell extends Component {
     name: PropTypes.string.isRequired,
     username: PropTypes.string,
     email: PropTypes.string,
+    isDemoStudent: PropTypes.bool,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
 
@@ -59,16 +61,24 @@ class ManageStudentNameCell extends Component {
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
-              <a
-                style={tableLayoutStyles.link}
-                href={studentUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {name}
-              </a>
+              <span style={styles.nameWithChip}>
+                <a
+                  style={tableLayoutStyles.link}
+                  href={studentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {name}
+                </a>
+                {this.props.isDemoStudent && <DemoStudentChip />}
+              </span>
             )}
-            {!studentUrl && <span>{name}</span>}
+            {!studentUrl && (
+              <span style={styles.nameWithChip}>
+                {name}
+                {this.props.isDemoStudent && <DemoStudentChip />}
+              </span>
+            )}
             {username && (
               <div style={styles.details}>
                 {i18n.usernameLabel() + username}
@@ -97,6 +107,10 @@ class ManageStudentNameCell extends Component {
 }
 
 const styles = {
+  nameWithChip: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
   inputBox: {
     width: NAME_CELL_INPUT_WIDTH,
   },

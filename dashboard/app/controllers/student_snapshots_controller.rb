@@ -165,6 +165,10 @@ class StudentSnapshotsController < ApplicationController
     student = User.find_by(id: student_id)
     return render json: {error: "Can't find Student id=#{student_id}"}, status: :bad_request unless student
 
+    unless student.student_of?(current_user)
+      return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+    end
+
     script = lesson.script
     cfu_responses_data = []
 
@@ -212,6 +216,13 @@ class StudentSnapshotsController < ApplicationController
   def student_code
     lesson = Lesson.find_by(id: params[:lesson_id])
     return render json: {error: "Can't find Lesson id=#{params[:lesson_id]}"}, status: :bad_request unless lesson
+
+    student = User.find_by(id: params[:student_id])
+    return render json: {error: "Can't find Student id=#{params[:student_id]}"}, status: :bad_request unless student
+
+    unless student.student_of?(current_user)
+      return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+    end
 
     # Get the last Pythonlab level for this lesson
     level = lesson.levels.where(type: 'Pythonlab').last

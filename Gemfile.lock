@@ -18,6 +18,9 @@ GIT
     image_optim_pack (0.5.0)
       fspath (>= 2.1, < 4)
       image_optim (~> 0.19)
+    image_optim_pack (0.5.0-x86_64-linux)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
 
 GIT
   remote: https://github.com/code-dot-org/lograge.git
@@ -364,8 +367,6 @@ GEM
     crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
-    css_parser (1.21.1)
-      addressable
     csv (3.3.0)
     cucumber (3.1.1)
       builder (>= 2.1.2)
@@ -398,7 +399,7 @@ GEM
     delayed_job_active_record (4.1.7)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
-    devise (4.9.3)
+    devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -422,22 +423,14 @@ GEM
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (4.6.3)
-      colorize
-      eyes_universal (~> 3.3.3)
-      faraday
-      faraday-cookie_jar
-      faraday_middleware
+    eyes_core (6.10.1)
+      eyes_universal (= 4.59.1)
       oj
-      sorted_set
       websocket
-    eyes_selenium (4.6.3)
-      crass
-      css_parser
-      eyes_core (= 4.6.3)
-      selenium-webdriver (>= 3)
-      state_machine
-    eyes_universal (3.3.3)
+    eyes_selenium (6.12.28)
+      eyes_core (= 6.10.1)
+      selenium-webdriver (>= 3, < 5)
+    eyes_universal (4.59.1)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -460,9 +453,6 @@ GEM
       faraday-rack (~> 1.0)
       faraday-retry (~> 1.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-cookie_jar (0.0.7)
-      faraday (>= 0.8.0)
-      http-cookie (~> 1.0.0)
     faraday-em_http (1.0.0)
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
@@ -474,9 +464,9 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    faraday_middleware (1.2.1)
-      faraday (~> 1.0)
     ffi (1.17.0)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
@@ -508,6 +498,12 @@ GEM
     google-apis-youtube_v3 (0.25.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-protobuf (4.33.6)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.33.6-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.33.6-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
     google_drive (3.0.7)
@@ -593,6 +589,8 @@ GEM
       addressable (~> 2.8)
       childprocess (~> 5.0)
     libv8-node (18.16.0.0)
+    libv8-node (18.16.0.0-arm64-darwin)
+    libv8-node (18.16.0.0-x86_64-linux)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -673,6 +671,10 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.18.10-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
@@ -1128,7 +1130,6 @@ GEM
     sshkit (1.20.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machine (1.2.0)
     statsig (2.5.5)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
@@ -1216,7 +1217,9 @@ GEM
     zlib (3.1.1)
 
 PLATFORMS
+  arm64-darwin-25
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   abbrev
@@ -1279,7 +1282,7 @@ DEPENDENCIES
   dotiw
   drb
   execjs
-  eyes_selenium (~> 4.0)
+  eyes_selenium (>= 6.0.4)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   faker (~> 3.4)

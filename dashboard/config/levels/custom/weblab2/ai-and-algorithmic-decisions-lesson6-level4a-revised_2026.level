@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-11T07:54:41.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Order a Pizza",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Pizza Order</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"app\">\n    <section class=\"order-card\">\n      <p class=\"eyebrow\">Online Ordering</p>\n      <h1>Build Your Pizza</h1>\n      <p class=\"subtitle\">\n        Choose your size and topping, then place your order.\n      </p>\n\n      <div class=\"form-group\">\n        <label for=\"sizeSelect\">Choose Size</label>\n        <select id=\"sizeSelect\">\n          <option value=\"Small\">Small</option>\n          <option value=\"Medium\">Medium</option>\n          <option value=\"Large\">Large</option>\n        </select>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"toppingSelect\">Choose Topping</label>\n        <select id=\"toppingSelect\">\n          <option value=\"Pepperoni\">Pepperoni</option>\n          <option value=\"Olives\">Olives</option>\n          <option value=\"Veggies\">Veggies</option>\n        </select>\n      </div>\n\n      <button id=\"orderBtn\">Place Order</button>\n\n      <div class=\"summary-box\">\n        <p class=\"summary-label\">Order Summary</p>\n        <p id=\"output\">Your pizza order will appear here.</p>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- SELECT ELEMENTS ---\nconst sizeSelect = document.getElementById(\"sizeSelect\");\nconst toppingSelect = document.getElementById(\"toppingSelect\");\nconst orderBtn = document.getElementById(\"orderBtn\");\nconst outputElement = document.getElementById(\"output\");\n\n// --- FUNCTION WITH PARAMETERS ---\n\n\n\n\n\n// --- EVENT LISTENER ---\norderBtn.addEventListener(\"click\", () => {\n  const selectedSize = sizeSelect.value;\n  const selectedTopping = toppingSelect.value;\n  orderPizza(selectedSize, selectedTopping);\n});\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #f7f3ee;\n  color: #2b2b2b;\n}\n\n.app {\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 24px;\n}\n\n.order-card {\n  width: 100%;\n  max-width: 430px;\n  background: #ffffff;\n  border-radius: 18px;\n  padding: 28px;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);\n}\n\n.eyebrow {\n  margin: 0 0 8px;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  color: #c4572e;\n}\n\nh1 {\n  margin: 0 0 8px;\n  font-size: 32px;\n}\n\n.subtitle {\n  margin: 0 0 24px;\n  color: #666;\n  line-height: 1.5;\n}\n\n.form-group {\n  margin-bottom: 18px;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 8px;\n  font-weight: bold;\n  font-size: 14px;\n}\n\nselect {\n  width: 100%;\n  padding: 12px 14px;\n  font-size: 16px;\n  border: 1px solid #d8d8d8;\n  border-radius: 10px;\n  background: #fffdfb;\n}\n\nbutton {\n  width: 100%;\n  margin-top: 8px;\n  padding: 12px 16px;\n  font-size: 16px;\n  font-weight: bold;\n  border: none;\n  border-radius: 10px;\n  cursor: pointer;\n  background: #c4572e;\n  color: white;\n}\n\nbutton:hover {\n  background: #a94722;\n}\n\n.summary-box {\n  margin-top: 22px;\n  padding: 16px;\n  background: #fff4ec;\n  border-radius: 12px;\n}\n\n.summary-label {\n  margin: 0 0 8px;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  letter-spacing: 0.8px;\n  color: #9a4a2d;\n}\n\n#output {\n  margin: 0;\n  font-size: 18px;\n  font-weight: bold;\n  line-height: 1.4;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "# Function: <verb-first name here>\n\n# What it does\nDescribe the main purpose of this function in one sentence:\n\n# Inputs\nName each parameter:\n\n# What it changes\nWhat variables get updated? \nWhat changes appear on screen?",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "long_instructions": "## Order a Pizza\r\n\r\n1. Plan: In `documentation.md`, decide:\r\n   - your function name\r\n   - what it does\r\n   - what inputs it takes  \r\n2. Build: Write a function using your chosen name and two parameters. Use those inputs to build and display a pizza order message.\r\n\r\n3. Test: Click the button and check that your function shows the correct order on the page.\r\n\r\n4. Expand: Ask AI Tutor to add or improve one feature in your app. For example:\r\n    - add a third input\r\n    - make the message more detailed\r\n    - add a special order note\r\n    - improve how the result is displayed\r\n\r\n5. Check: Look for:\r\n    - where your function is defined\r\n    - what arguments are passed in\r\n    - how the parameters change the message\r\n    - what you changed in the AI-generated code",
+    "bubble_choice_description": "Code a function that takes in two parameters and updates the pizza order.",
+    "thumbnail_url": "https://images.code.org/6c22bc32112c1f36a24794d345486e74-Screenshot 2025-10-21 at 7.56.48 PM.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-11T07:54:41.165+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a_2026\"},{\"changed_at\":\"2026-04-11 07:57:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:14:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:14:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:15:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:15:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:15:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:16:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:17:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:17:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:17:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-11 08:31:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

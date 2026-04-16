@@ -1,0 +1,39 @@
+name 'pl-ai-101-V2-mod3-tools-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Education Specific Tools
+
+#### LLMs are powerful, general-purpose tools that can generate text, summarize information, and respond to a wide range of prompts. While they are useful for many tasks, they are not always the best fit for classroom use.
+
+#### In response, developers have created education-specific AI tools—applications built on similar technology but designed for school settings. These tools are often more focused and aligned to educator needs, often providing a safer and more structured way to integrate AI into teaching and learning.
+
+#### Education-specific AI tools may include features such as:
+* #### Built-in guardrails that limit inappropriate or unsafe use
+* #### Stronger privacy protections aligned to school requirements
+* #### Interfaces and outputs designed specifically for educator tasks
+
+#### When exploring these tools, look for ones that:
+* #### Prioritize student privacy
+* #### Provide teacher controls or visibility
+* #### Support learning and thinking—not just answer-giving
+
+#### While these tools can be helpful, they still require thoughtful use.
+
+<br>
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  "><strong>Important Disclaimer</strong> <br><br>Just because a tool was designed specifically for educational use does not mean it's okay to use in your school or classroom. <br><br><strong>When in doubt always follow school and district guidelines.</strong>
+  </p>
+</div>
+
+<br>
+MARKDOWN

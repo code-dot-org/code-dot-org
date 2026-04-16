@@ -40,6 +40,7 @@
 
 require 'full-name-splitter'
 require 'cdo/code_generation'
+require 'cdo/mailjet'
 require 'cdo/safe_names'
 require 'policies/lti'
 
@@ -252,17 +253,20 @@ class Section < ApplicationRecord
     self.code = unused_random_code unless code
   end
 
-  def update_student_sharing(sharing_disabled)
-    students.each do |student|
-      student.update!(sharing_disabled: sharing_disabled)
-    end
-  end
-
   after_save :ensure_owner_is_active_instructor
   def ensure_owner_is_active_instructor
     return if user.blank?
 
     add_instructor(user)
+  end
+
+  after_save :add_teacher_to_mailjet_course_list
+  def add_teacher_to_mailjet_course_list
+    return unless saved_change_to_course_id? && course_id.present? && teacher.present?
+    return unless unit_group
+    MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
+  rescue => exception
+    Honeybadger.notify(exception)
   end
 
   # return a version of self.students in which all students' names are
@@ -352,14 +356,14 @@ class Section < ApplicationRecord
     if follower
       if follower.deleted?
         follower.restore
-        student.update!(sharing_disabled: sharing_disabled) unless student.sharing_disabled
+        student.update!(sharing_disabled: sharing_disabled) unless student.sharing_disabled || Policies::DemoSections.demo_student?(student.id)
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
-    student.update!(sharing_disabled: true) if sharing_disabled?
+    student.update!(sharing_disabled: true) if sharing_disabled? && !Policies::DemoSections.demo_student?(student.id)
     return ADD_STUDENT_SUCCESS
   end
 
@@ -369,7 +373,7 @@ class Section < ApplicationRecord
   def remove_student(student, follower, options)
     follower.destroy
 
-    if student.sections_as_student.empty?
+    if student.sections_as_student.empty? && !Policies::DemoSections.demo_student?(student.id)
       if student.under_13?
         student.update!(sharing_disabled: true)
       else
@@ -805,8 +809,10 @@ class Section < ApplicationRecord
     # Get all students for the followers
     students_to_check = followers.where(id: follower_ids).includes(:student_user).map(&:student_user)
 
-    # Filter to only those with sharing disabled
-    students_needing_sharing = students_to_check.select(&:sharing_disabled?)
+    # Filter to only those with sharing disabled, excluding demo students
+    students_needing_sharing = students_to_check.
+      reject {|s| Policies::DemoSections.demo_student?(s.id)}.
+      select(&:sharing_disabled?)
     return [] if students_needing_sharing.empty?
 
     student_names = []

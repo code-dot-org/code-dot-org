@@ -219,6 +219,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   id: serverStudent.id,
   name: serverStudent.name,
   familyName: serverStudent.family_name,
+  isDemoStudent: !!serverStudent.is_demo_student,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPictureUrl: serverStudent.secret_picture_url,
   secretPictureName: serverStudent.secret_picture_name,

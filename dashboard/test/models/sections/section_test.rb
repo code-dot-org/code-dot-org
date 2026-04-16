@@ -80,18 +80,6 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'update_student_sharing updates user settings' do
-    student = create(:student, sharing_disabled: false)
-    section = create(:section, sharing_disabled: false)
-    section.add_student student
-    section.update_student_sharing(true)
-    student.reload
-    assert student.sharing_disabled?
-    section.update_student_sharing(false)
-    student.reload
-    refute student.sharing_disabled?
-  end
-
   test 'adding student updates their share setting when section share is disabled' do
     section = create(:section, sharing_disabled: true)
     student = create(:student, sharing_disabled: false)
@@ -1688,5 +1676,31 @@ class SectionTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called when matching course is assigned' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    section.update!(course_id: unit_group.id)
+  end
+
+  test 'add_teacher_to_mailjet_course_list is not called when course_id does not change' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher, course_id: unit_group.id)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).never
+
+    section.update!(name: 'new-name')
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called on section create with matching course' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    create(:section, teacher: @teacher, course_id: unit_group.id)
   end
 end

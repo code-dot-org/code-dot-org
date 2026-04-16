@@ -1,10 +1,18 @@
 {
   "name": "self-paced-pl-csd-2026",
   "script_names": [
-
+    "self-paced-pl-csd1-2026",
+    "self-paced-pl-csd2-2026",
+    "self-paced-pl-csd3-2026",
+    "self-paced-pl-csd4-2026",
+    "self-paced-pl-csd5-2026"
   ],
   "original_script_names": [
-
+    "self-paced-pl-csd1-2026",
+    "self-paced-pl-csd2-2026",
+    "self-paced-pl-csd3-2026",
+    "self-paced-pl-csd4-2026",
+    "self-paced-pl-csd5-2026"
   ],
   "published_state": "in_development",
   "instruction_type": "self_paced",
@@ -12,7 +20,6 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-csd",
-    "numbered_units": "auto",
     "version_year": "2026"
   },
   "resources": [

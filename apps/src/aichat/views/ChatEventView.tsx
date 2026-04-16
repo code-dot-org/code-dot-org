@@ -3,13 +3,14 @@ import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {FAQ_LINK, modelDescriptions} from '../constants';
+import {modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
   ModelUpdate,
   isChatMessage,
@@ -129,14 +130,14 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
       // Use special notification component for AI tutor version actions.
       if (
-        notificationType === 'aiTutorVersionActionAccept' ||
-        notificationType === 'aiTutorVersionActionReject'
+        notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        notificationType === AI_TUTOR_VERSION_ACTION_REJECT
       ) {
         return (
           <AiTutorVersionActionNotification
             text={text}
             type={
-              notificationType === 'aiTutorVersionActionAccept'
+              notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
                 ? 'accept'
                 : 'reject'
             }
@@ -163,15 +164,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
-          }
-          link={
-            notificationType === 'permissionsError'
-              ? {
-                  href: FAQ_LINK,
-                  text: commonI18n.learnMore(),
-                  className: styles.alertLink,
-                }
-              : undefined
           }
           size="s"
           ref={ref}

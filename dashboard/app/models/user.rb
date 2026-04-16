@@ -214,6 +214,7 @@ class User < ApplicationRecord
     educator_role
     signup_sources_tracking
     has_dismissed_personalization_alert
+    grades_teaching
   )
 
   attr_accessor(
@@ -997,6 +998,7 @@ class User < ApplicationRecord
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
+      is_demo_student: Policies::DemoSections.demo_student?(id),
     }
   end
 
