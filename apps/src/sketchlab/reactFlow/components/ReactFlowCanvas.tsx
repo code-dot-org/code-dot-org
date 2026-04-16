@@ -222,7 +222,7 @@ export default function ReactFlowCanvas({
           },
           SKETCHLAB_CONTAINER_CLASS
         )}
-        onKeyDown={handleKeyDown}
+        onKeyDownCapture={handleKeyDown}
         onFocusCapture={handleFocusCapture}
       >
         {!readOnly && <Toolbar onAddNode={handleAddNode} />}
@@ -247,10 +247,7 @@ export default function ReactFlowCanvas({
           elementsSelectable={!readOnly}
           nodesFocusable={true}
           edgesFocusable={true}
-          // React Flow's built-in Tab handler cycles nodes in array order,
-          // which conflicts with our computed tab order (useKeyboardEdgeCreation).
-          // Disable it so our topological/positional ordering is the only one.
-          disableKeyboardA11y={true}
+          disableKeyboardA11y={false}
         >
           <Background />
           <Controls />

@@ -111,7 +111,9 @@ export function useKeyboardEdgeCreation({
         return;
       }
 
-      // Tab uses the computed logical tab order.
+      // Tab uses the computed logical tab order. We stopPropagation so
+      // React Flow's built-in Tab handler (which cycles nodes in array
+      // order) never fires.
       if (event.key === 'Tab') {
         if (tabOrder.length === 0) return;
         const currentIdx = focusedEntry
@@ -138,6 +140,7 @@ export function useKeyboardEdgeCreation({
               nodeEntries.length) %
             nodeEntries.length;
           event.preventDefault();
+          event.stopPropagation();
           focusEntry(nodeEntries[nextNodeIdx]);
           return;
         }
@@ -147,6 +150,7 @@ export function useKeyboardEdgeCreation({
           const nextIdx = currentIdx + direction;
           if (nextIdx >= 0 && nextIdx < tabOrder.length) {
             event.preventDefault();
+            event.stopPropagation();
             focusEntry(tabOrder[nextIdx]);
           }
           // else: out of bounds -- let focus leave the canvas naturally.
