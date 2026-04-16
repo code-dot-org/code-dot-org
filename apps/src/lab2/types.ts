@@ -85,7 +85,7 @@ export type Source =
   | BlocklySource
   | MultiFileSource
   | ExcalidrawSourceWithExternalFiles
-  | ReactFlowSource;
+  | SketchlabReactFlowSource;
 
 // -- REACT FLOW SKETCH LAB -- //
 
@@ -111,7 +111,7 @@ export interface SketchlabReactFlowEdge {
   markerEnd?: EdgeMarkerType;
 }
 
-export interface ReactFlowSource {
+export interface SketchlabReactFlowSource {
   nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
   viewport?: {x: number; y: number; zoom: number};

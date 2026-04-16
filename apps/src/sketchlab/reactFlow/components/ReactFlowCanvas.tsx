@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
-  ReactFlowSource,
+  SketchlabReactFlowSource,
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
@@ -53,7 +53,7 @@ export interface ReactFlowCanvasProps {
   >['updateSources'];
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
-  initialViewport: ReactFlowSource['viewport'];
+  initialViewport: SketchlabReactFlowSource['viewport'];
   colorMode: 'light' | 'dark';
   readOnly?: boolean;
 }
@@ -69,7 +69,7 @@ export default function ReactFlowCanvas({
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
-    useState<ReactFlowSource['viewport']>(initialViewport);
+    useState<SketchlabReactFlowSource['viewport']>(initialViewport);
 
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
@@ -100,7 +100,7 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: ReactFlowSource = {
+      const source: SketchlabReactFlowSource = {
         nodes: nodes as SketchlabReactFlowNode[],
         edges: edges as SketchlabReactFlowEdge[],
         viewport,
@@ -127,7 +127,7 @@ export default function ReactFlowCanvas({
   );
 
   const handleMoveEnd = useCallback(
-    (_event: unknown, newViewport: ReactFlowSource['viewport']) => {
+    (_event: unknown, newViewport: SketchlabReactFlowSource['viewport']) => {
       setViewport(newViewport);
     },
     []
