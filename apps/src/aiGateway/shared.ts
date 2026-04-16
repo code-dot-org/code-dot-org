@@ -1,10 +1,12 @@
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import HttpClient from '../util/HttpClient';
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
 
 export async function fetchAccessToken() {
   const {value} = await HttpClient.fetchJson<{token: string}>(
-    '/ai_gateway/access_token',
+    `/ai_gateway/access_token?clientType=${AiChatClientTypes.FLOW_LAB}`,
     {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
