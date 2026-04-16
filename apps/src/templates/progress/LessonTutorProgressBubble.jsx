@@ -16,6 +16,7 @@ export default function LessonTutorProgressBubble({
   levelId,
   lessonName,
   userId,
+  userType,
 }) {
   const [isHovering, setIsHovering] = useState(false);
   const tooltipId = useRef(_.uniqueId()).current;
@@ -26,6 +27,7 @@ export default function LessonTutorProgressBubble({
       levelId,
       lessonName,
       userId,
+      userType,
     });
   };
 
@@ -63,4 +65,5 @@ LessonTutorProgressBubble.propTypes = {
   levelId: PropTypes.string,
   lessonName: PropTypes.string,
   userId: PropTypes.number,
+  userType: PropTypes.string,
 };

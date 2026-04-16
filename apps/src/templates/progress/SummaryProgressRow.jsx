@@ -37,6 +37,7 @@ function SummaryProgressRow({
   unitId,
   unitName,
   userId,
+  userType,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -66,6 +67,7 @@ function SummaryProgressRow({
       unitId,
       unitName,
       userId,
+      userType,
     });
   };
 
@@ -211,6 +213,7 @@ SummaryProgressRow.propTypes = {
   unitId: PropTypes.number,
   unitName: PropTypes.string,
   userId: PropTypes.number,
+  userType: PropTypes.string,
 };
 
 export const styles = {
@@ -305,4 +308,5 @@ export default connect((state, ownProps) => ({
   unitId: state.progress.scriptId,
   unitName: state.progress.unitTitle,
   userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
 }))(SummaryProgressRow);

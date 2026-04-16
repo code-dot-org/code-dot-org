@@ -33,6 +33,7 @@ class LessonProgress extends Component {
     lessonTutorPath: PropTypes.string,
     lessonId: PropTypes.number,
     userId: PropTypes.number,
+    userType: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
@@ -155,6 +156,7 @@ class LessonProgress extends Component {
       lessonName,
       lessonId,
       userId,
+      userType,
       navigateToLevelId,
       currentLevel,
       currentLevelId,
@@ -238,6 +240,7 @@ class LessonProgress extends Component {
                   levelId={currentLevelId}
                   lessonName={lessonName}
                   userId={userId}
+                  userType={userType}
                 />
               </div>
             )}
@@ -327,6 +330,7 @@ export default connect(
     ),
     lessonId: state.progress.currentLessonId,
     userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,
