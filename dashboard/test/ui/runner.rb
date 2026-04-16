@@ -248,8 +248,8 @@ def parse_options
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif CI::Utils.running_on_ci?
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
+      options.pegasus_db_access = false
+      options.dashboard_db_access = false
     elsif rack_env?(:development)
       options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
