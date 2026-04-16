@@ -17,6 +17,14 @@
     cursor: crosshair;
   }
 
+  // Focus outline for keyboard navigation, matching the component library pattern.
+  :global(.react-flow__node:focus-visible),
+  :global(.react-flow__edge:focus-visible) {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
   // Controls panel: themed background and text.
   :global(.react-flow__controls) {
     background-color: var(--background-neutral-primary);
@@ -29,6 +37,11 @@
 
       &:hover {
         background-color: var(--background-neutral-secondary);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
       }
     }
   }
