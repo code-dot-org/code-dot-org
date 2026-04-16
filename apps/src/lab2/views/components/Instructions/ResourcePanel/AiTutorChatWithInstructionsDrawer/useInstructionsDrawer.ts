@@ -236,9 +236,11 @@ export const useInstructionsDrawer = ({
       }
     };
 
-    updateMaxHeight();
-
     // Watch for size changes (e.g., when details elements expand/collapse).
+    // The initial ResizeObserver callback also drives the first height measurement:
+    // it fires after browser layout, guaranteeing accurate scrollHeight on all
+    // devices including slow ones where effects run before the browser lays out
+    // newly-mounted content (React 18 discrete-event effect timing).
     const resizeObserver = new ResizeObserver(() => {
       updateMaxHeight();
       updateScrollFade();

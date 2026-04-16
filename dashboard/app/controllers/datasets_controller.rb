@@ -6,8 +6,7 @@ class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
   authorize_resource class: false
 
-  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
-                   'Top 50 USA', 'Top 50 Worldwide', 'COVID-19 Cases per US State']
+  LIVE_DATASETS = ['Daily Weather', 'Viral 50 USA']
 
   # GET /datasets
   def index
