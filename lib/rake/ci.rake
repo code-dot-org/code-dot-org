@@ -70,7 +70,7 @@ SKIP_EYES = 'skip eyes'.freeze
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
-PARALLEL_COUNT = 24
+PARALLEL_COUNT = 5
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
