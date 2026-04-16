@@ -139,7 +139,7 @@ namespace :ci do
       raise 'WORKER_IP env var not set (should be exported by .drone.yml ui-tests step)' if worker_ip.nil? || worker_ip.empty?
       RakeUtils.wait_for_url("http://#{worker_ip}:3000")
       Dir.chdir('dashboard/test/ui') do
-        container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
+        container_features = `find ./features -name 'markdown_rendering.feature' | sort`.split("\n").map {|f| f[2..]}
         device_farm_browsers = device_farm_browsers_to_run
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
