@@ -97,7 +97,11 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
             </span>
           </TooltipOverlay>
         )}
-        {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
+        {showCopiedMsg && (
+          <Typography variant="body3" component="span">
+            {i18n.copySectionCodeSuccess()}
+          </Typography>
+        )}
       </div>
     )
   ) : (

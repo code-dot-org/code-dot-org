@@ -4,13 +4,12 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import ChatEventLogger from '../chatEventLogger';
+import AichatContextManager from '../aichatContextManager';
 import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
@@ -64,6 +63,8 @@ interface ChatWorkspaceProps {
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
+  disabled?: boolean;
+  disabledMessage?: string;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -88,9 +89,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   logLevelActivity,
   hasInstructionsDrawer,
   lessonId,
+  disabled = false,
+  disabledMessage,
   renderLastMessagePostText,
 }) => {
-  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const canDisplayAssets = !!levelName && !!channelId;
   if (multimodalEnabled && !canDisplayAssets) {
     console.warn(
@@ -146,7 +148,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
   useEffect(() => {
-    ChatEventLogger.initialize({
+    AichatContextManager.setContext({
       clientType,
       currentLevelId: parseInt(currentLevelId || ''),
       scriptId,
@@ -276,6 +278,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={studentChatHistory}
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
         />
       ),
       iconLeft: iconValue,
@@ -287,6 +291,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
         />
       ),
     },
@@ -309,7 +315,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || disabled;
 
   const isTeacherView = !!selectedStudent;
 
@@ -333,6 +339,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
           renderLastMessagePostText={renderLastMessagePostText}
         />
       )}
@@ -357,13 +365,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             uploadDisabled={uploadDisabled}
             currentLevelId={currentLevelId}
             lessonId={lessonId}
+            chatDisabled={disabled}
           />
         )}
       </div>
-      {isTeacherView && hasChatHistory && chatDisabled && (
+      {isTeacherView && hasChatHistory && disabled && (
         <Alert
           type={alertTypes.info}
-          text={chatDisabledMessage || ''}
+          text={disabledMessage || ''}
           icon={{
             className: moduleStyles.chatDisabledAlertIcon,
             iconName: 'ai-locked',

@@ -131,39 +131,6 @@ class ImageModerationTest < Minitest::Test
     assert_nil ImageModeration.moderate_image(StringIO.new('not-an-image'), 'any')
   end
 
-  def test_get_actual_content_type_png
-    bytes = "\x89PNG\r\n\x1a\nrest".b
-    assert_equal 'image/png', ImageModeration.get_actual_content_type(bytes)
-  end
-
-  def test_get_actual_content_type_jpeg
-    bytes = "\xff\xd8\xff\xe0rest".b
-    assert_equal 'image/jpeg', ImageModeration.get_actual_content_type(bytes)
-  end
-
-  def test_get_actual_content_type_gif
-    assert_equal 'image/gif', ImageModeration.get_actual_content_type("GIF87aXX".b)
-  end
-
-  def test_get_actual_content_type_webp
-    bytes = ("RIFF\x00\x00\x00\x00WEBP".b)
-    assert_equal 'image/webp', ImageModeration.get_actual_content_type(bytes)
-  end
-
-  def test_get_actual_content_type_heic
-    bytes = ("\x00\x00\x00\x18ftypheic".b)
-    assert_equal 'image/heic', ImageModeration.get_actual_content_type(bytes)
-  end
-
-  def test_get_actual_content_type_heif
-    bytes = ("\x00\x00\x00\x18ftypmif1".b)
-    assert_equal 'image/heif', ImageModeration.get_actual_content_type(bytes)
-  end
-
-  def test_get_actual_content_type_unknown_returns_nil
-    assert_nil ImageModeration.get_actual_content_type("not-an-image".b)
-  end
-
   def test_sniff_overrides_wrong_content_type
     blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}

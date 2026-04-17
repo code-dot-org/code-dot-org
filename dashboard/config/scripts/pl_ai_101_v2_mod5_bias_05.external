@@ -1,0 +1,13 @@
+name 'pl-ai-101-V2-mod5-bias-05'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Bias
+
+#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained. Bias can take on many different forms.
+
+<p style="text-align:center">
+<img src="https://images.code.org/0b00058ace5ed3aa983a65f93b2ac191-Screenshot 2025-05-14 at 11.32.24 AM.png" style="border: 2px solid black; border-radius: 8px; width: 70%" alt="Things to look out for including the following types of bias: relied on stereotype, assumed one identity, left out other persepctives, and language didn't feel inclusive.">
+</p>
+MARKDOWN

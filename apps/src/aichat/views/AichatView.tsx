@@ -10,6 +10,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -25,7 +26,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
 import {
@@ -89,9 +89,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
-  const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
@@ -100,6 +102,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const hasSetInitialCustomizations = useAppSelector(
     state => state.aichat.hasSetInitialCustomizations
   );
+
+  const chatWorkspaceInitialized = hasSetInitialCustomizations;
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
@@ -120,16 +124,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     });
   }, [projectManager, dispatch]);
 
-  // Initialize the ChatEventLogger with the current context, whenever it updates.
-  useEffect(() => {
-    ChatEventLogger.initialize({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: parseInt(currentLevelId || ''),
-      scriptId,
-      channelId,
-    });
-  }, [currentLevelId, scriptId, channelId]);
-
   useEffect(() => {
     dispatch(clearHasSetInitialCustomizations());
   }, [dispatch, currentLevelId]);
@@ -141,13 +135,20 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     dispatch(
       initializeAiCustomizations(studentAiCustomizations, levelAichatSettings)
     );
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'LOAD_LEVEL',
-      })
-    );
   }, [dispatch, initialSources, levelAichatSettings]);
+
+  useEffect(() => {
+    // ChatWorkspaceLogger is intialized in ChatWorkspace so we need to wait on it.
+    // Logging fronm AichatView could be cleaned up to avoid this fragile timing.
+    if (chatWorkspaceInitialized) {
+      dispatch(
+        addChatEvent({
+          timestamp: Date.now(),
+          descriptionKey: 'LOAD_LEVEL',
+        })
+      );
+    }
+  }, [dispatch, chatWorkspaceInitialized]);
 
   useEffect(() => {
     const modalToShow = () => {
@@ -273,6 +274,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     savedAiCustomizations.systemPrompt,
   ]);
 
+  const {disabled, disabledMessage} = useAiChatDisabledState({
+    appName: levelProperties.appName,
+    isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
+
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;
   }
@@ -354,7 +361,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={<AiChatHeaderButtons />}
             >
-              {hasSetInitialCustomizations && (
+              {chatWorkspaceInitialized && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
@@ -365,6 +372,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
                   logLevelActivity={logLevelActivity}
+                  disabled={disabled}
+                  disabledMessage={disabledMessage}
                 />
               )}
             </PanelContainer>

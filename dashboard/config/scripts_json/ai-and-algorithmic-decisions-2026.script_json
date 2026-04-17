@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-14 22:46:18 UTC",
+    "serialized_at": "2026-04-17 02:17:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -159,8 +159,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**How can I make my code cleaner and easier to reuse?**\n\nIn this lesson, students explore how writing reusable functions helps make code cleaner, easier to maintain, and more readable. They rename and refactor functions to improve clarity, then create and test arrow functions with AI support to practice abstraction and collaboration. Through peer feedback and reflection, students connect clear naming and organization to the QA Engineer lens, recognizing how readability supports both human and AI understanding of code.",
-        "student_overview": "**How can I make my code cleaner and easier to reuse?**\n\nIn this lesson, you make your code cleaner and easier to reuse by writing and renaming functions. You create arrow functions, refactor repeated code, and give clear names so your programs — and your collaborators — can easily understand what your code does."
+        "overview": "**How can I make my code cleaner and easier to reuse?**\n\nIn this lesson, students explore how writing reusable functions helps make code cleaner, easier to maintain, and more readable. They compare different ways of grouping behavior, then refactor code by moving repeated behavior into named arrow functions. Using a spec-driven process, students define the name, purpose, and page updates for each function before generating code with AI. They then connect and test their functions in an interactive app. ",
+        "student_overview": "**How can I make my code cleaner and easier to reuse?**\n\nIn this lesson, you make your code cleaner and easier to reuse by turning repeated behavior into functions. You create arrow functions, give them clear names, and use them to build interactions in an app. You plan each function by describing what it does before generating code with AI, then test and refine your work so both people and AI can understand what your code does."
       },
       "seeding_key": {
         "lesson.key": "Lesson 4: Writing Reusable Functions",
@@ -464,23 +464,10 @@
       }
     },
     {
-      "key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
+      "key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84",
       "position": 1,
       "properties": {
-        "name": "Revised Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
-        "lesson.key": "Lesson 4: Writing Reusable Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84",
-      "position": 2,
-      "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -491,14 +478,14 @@
       }
     },
     {
-      "key": "4d702af6-dcc8-42db-a505-321894080891",
-      "position": 3,
+      "key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
+      "position": 2,
       "properties": {
-        "duration": 30,
-        "name": "Activity"
+        "duration": 35,
+        "name": "Activity "
       },
       "seeding_key": {
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4",
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026"
@@ -506,7 +493,7 @@
     },
     {
       "key": "4a39bedf-e0b9-4249-a2dc-a0a079a6e059",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -684,8 +671,20 @@
       }
     },
     {
-      "key": "456fe5bb-2199-4edb-9127-15232f34397b",
+      "key": "cfb4c3af-29ee-4c43-9fd7-70ce547a452f",
       "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cfb4c3af-29ee-4c43-9fd7-70ce547a452f",
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "456fe5bb-2199-4edb-9127-15232f34397b",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -699,7 +698,7 @@
     },
     {
       "key": "d37941bf-8c39-40b6-b570-0e6a5a57c375",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -713,7 +712,7 @@
     },
     {
       "key": "141bc852-7894-47e3-be59-bbca6ebdf62a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1427,7 +1426,7 @@
       "key": "b2c3960d-a997-446f-9012-ecd02f0314f4",
       "position": 1,
       "properties": {
-        "progression_name": "Level 1 - Annotate Variables (SketchLab)"
+        "progression_name": "Annotate Variables"
       },
       "seeding_key": {
         "activity_section.key": "b2c3960d-a997-446f-9012-ecd02f0314f4",
@@ -1438,7 +1437,7 @@
       "key": "4aaf943b-29fc-4618-9a16-d427cf5a7041",
       "position": 2,
       "properties": {
-        "progression_name": "Level 2 - Explore How Values Change"
+        "progression_name": "Explore How Values Change"
       },
       "seeding_key": {
         "activity_section.key": "4aaf943b-29fc-4618-9a16-d427cf5a7041",
@@ -1460,7 +1459,7 @@
       "key": "971c319b-2f64-4460-a195-fcff98d41756",
       "position": 4,
       "properties": {
-        "progression_name": "Reflection (Assessment)"
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "971c319b-2f64-4460-a195-fcff98d41756",
@@ -1715,69 +1714,8 @@
       }
     },
     {
-      "key": "0687875c-9f4f-40a1-8e89-c3581f201ec7",
-      "position": 19,
-      "properties": {
-        "progression_name": "Predict & Trace: Difficulty Level"
-      },
-      "seeding_key": {
-        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7",
-        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
-      }
-    },
-    {
-      "key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc",
-      "position": 20,
-      "properties": {
-        "progression_name": "Generate with AI: Counter App"
-      },
-      "seeding_key": {
-        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc",
-        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
-      }
-    },
-    {
-      "key": "9b193043-115f-4155-837d-05d88d8d8826",
-      "position": 21,
-      "properties": {
-        "progression_name": "Write it Yourself: Counter App"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826",
-        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
-      }
-    },
-    {
-      "key": "0335aa36-7459-4dad-9816-b0e55b22beb6",
-      "position": 22,
-      "properties": {
-        "progression_name": "Assessment: Choice Level"
-      },
-      "seeding_key": {
-        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6",
-        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
-      }
-    },
-    {
-      "key": "2619b9a9-d492-4656-88a6-5ca396305f41",
-      "position": 23,
-      "properties": {
-        "progression_name": "Debugging Variables",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize that AI is a learning tool — it can suggest ideas or explanations, but students are responsible for confirming the logic. You might say: AI is great at spotting patterns, but you’re the one who has to decide if the pattern really fits.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2619b9a9-d492-4656-88a6-5ca396305f41",
-        "lesson_activity.key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96"
-      }
-    },
-    {
       "key": "e61577de-fcef-48dd-b503-792550cbecbb",
-      "position": 24,
+      "position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -1787,7 +1725,7 @@
     },
     {
       "key": "1dbea581-89d1-46fa-8215-729599fb2db0",
-      "position": 25,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When you were debugging, how did you figure out whether the value on the screen matched the program’s state?*\n- *How did AI help you find or fix bugs — and when did you have to step in to make your own decision?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect debugging with verifying that the program’s state (variable values) and what appears on screen are consistent. Encourage students to mention the four key debugging checks they may have practiced:\n- Name check: Did I spell the variable name right and use it consistently?\n- Value check: Does the variable have the value I expect? (Try console.log() to confirm.)\n- DOM check: Am I changing the correct element or class on the page?\n- Order check: Does the code that updates the page run after the variable’s value changes?\n\nThese checks help students reason about how and when the program updates information. Also connect this back to AI debugging: AI can help spot likely errors because it recognizes patterns, but students still need to verify the logic — especially when the pattern doesn’t quite fit.\n",
         "tips": [
@@ -1804,7 +1742,7 @@
     },
     {
       "key": "e34c2d7f-0f03-415b-91a5-f524999841a8",
-      "position": 26,
+      "position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -1814,7 +1752,7 @@
     },
     {
       "key": "d86303d3-6580-4d3e-b90f-e230e69c9a06",
-      "position": 27,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 10 and have them select one of the available projects to complete. Explain that each project uses variables differently — for example, tracking music beats, social interactions, or mood states.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask them to explain which variable they chose, how it changes, and what causes the change. Encourage them to connect their app’s feature back to a real-world example (e.g., a like counter or score tracker). As you see students using AI Chat to troubleshoot, prompt them to:\n- Describe their AI prompt out loud.\n- Evaluate whether the AI’s suggestion actually fits their goal.\n\nRemind students that AI is a tool to help them learn, not just fix problems — they should still verify and understand the reasoning behind any code changes.\n",
         "progression_name": "Build Your Own Web App",
@@ -1846,60 +1784,10 @@
       }
     },
     {
-      "key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
-      "position": 1,
-      "properties": {
-        "progression_name": "Predict & Trace"
-      },
-      "seeding_key": {
-        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
-        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
-      }
-    },
-    {
-      "key": "a076f460-0d72-4074-b9a4-8fa448035785",
-      "position": 2,
-      "properties": {
-        "progression_name": "Refactor with AI"
-      },
-      "seeding_key": {
-        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785",
-        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
-      }
-    },
-    {
-      "key": "4ee428e3-b599-4ae3-b431-307608225651",
-      "position": 3,
-      "properties": {
-        "progression_name": "Write it Yourself"
-      },
-      "seeding_key": {
-        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651",
-        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
-      }
-    },
-    {
-      "key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
-      "position": 4,
-      "properties": {
-        "progression_name": "Write Reusable Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
-        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
-      }
-    },
-    {
       "key": "dea56aaf-fe11-4141-9695-a3b9f436fdab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Working individually or with a partner, they should jot the steps down on a scrap piece of paper in the order they think makes the most sense. After ordering, students will give their set of steps a short, descriptive name and share how they decided on the order.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the slide and remind students that the steps are intentionally out of order. Instruct students to jot them down on a scrap piece of paper in the order that makes the most sense to them. Let them know that there isn’t one “right” sequence. After arranging their steps, they should give the process a short, descriptive name and share with a neighbor how they decided on the order. Then, ask a few students to share with the class. Emphasize how giving their set of steps a clear name makes it easier for others to understand what it does—this will connect directly to how programmers name and reuse functions\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students have different ideas about the first step, use that as part of the discussion. Highlight that algorithms can vary depending on context and user goals."
-          }
-        ]
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \nStudents recognize problems caused by repeated code and begin to identify qualities of clean, maintainable code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** \nClick through the animated slide to display the prompts.\n- *What problems might happen if code is repeated many times?*\n- *What would make code easier to work with?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n Students should recognize that repeating code can lead to bugs, make updates harder, and slow developers down. They should begin to identify that code is easier to work with when it is organized, readable, and reusable."
       },
       "seeding_key": {
         "activity_section.key": "dea56aaf-fe11-4141-9695-a3b9f436fdab",
@@ -1910,6 +1798,7 @@
       "key": "7f929a9d-f606-4b0a-8496-a41b9e1804cf",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \nExplain why clean, organized code matters in real-world development.\n"
       },
       "seeding_key": {
         "activity_section.key": "7f929a9d-f606-4b0a-8496-a41b9e1804cf",
@@ -1917,57 +1806,8 @@
       }
     },
     {
-      "key": "afd547dc-0a69-4ab1-b3a7-9dd98d874fe9",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "afd547dc-0a69-4ab1-b3a7-9dd98d874fe9",
-        "lesson_activity.key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84"
-      }
-    },
-    {
-      "key": "f2dd4064-ee65-42f5-a6c2-f9ced786ac51",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect their activity to the new vocabulary. Explain that what they just did — naming and reusing a set of steps — is exactly what programmers call a function. When we reuse those steps to make complex processes easier, we’re practicing abstraction.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "f2dd4064-ee65-42f5-a6c2-f9ced786ac51",
-        "lesson_activity.key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84"
-      }
-    },
-    {
-      "key": "9f394e12-dd75-4f12-8689-0948a55070df",
-      "position": 5,
-      "properties": {
-        "description": "In programming, we call a reusable set of steps a function. It lets us do something again and again without rewriting all the details. When we reuse steps to simplify a bigger task, that’s called abstraction — it helps us focus on what matters instead of every tiny detail.\n",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Let students know they’ll see the official definitions of function and abstraction in Levels 2–5, where they’ll have a chance to apply and revisit them. This slide is just meant to connect the warm-up to the coding concepts they’re about to explore.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9f394e12-dd75-4f12-8689-0948a55070df",
-        "lesson_activity.key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84"
-      }
-    },
-    {
-      "key": "3e1057ef-1581-45b3-bdb3-5074131a5bae",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3e1057ef-1581-45b3-bdb3-5074131a5bae",
-        "lesson_activity.key": "91ad2132-9e19-4a1e-88be-ebe1bf492c84"
-      }
-    },
-    {
       "key": "3f0b3c97-8106-4f6c-85a2-30b873e32e41",
-      "position": 7,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
@@ -1977,203 +1817,162 @@
       }
     },
     {
-      "key": "4d4ff0e3-e74b-458f-9e75-e80553e49943",
+      "key": "fda4b5fd-9f8b-40a8-859c-1a3255a48433",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students rename functions with descriptive, meaningful names and reinforce their understanding by adding or refining comments in their code.\n",
-        "duration": "10",
-        "name": "Exploring Functions"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** \n Students understand that code can be grouped into a single behavior and that functions are used to name and reuse that behavior.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n Display the event handler and pause so students can read it. Animate in the purple boxes one by one to highlight the curly braces and the code block inside them. Explain that this entire block works together as one behavior for the button click.",
+        "duration": "15",
+        "name": "Introduction to Functions"
       },
       "seeding_key": {
-        "activity_section.key": "4d4ff0e3-e74b-458f-9e75-e80553e49943",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "fda4b5fd-9f8b-40a8-859c-1a3255a48433",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "8444cb70-9be2-4650-adaf-cfd8a5ffe5bc",
+      "key": "81c50d17-0761-48a6-83a0-11b96290b931",
       "position": 2,
       "properties": {
-        "description": "Front-end developers create code that others can easily read and reuse. One way to make code clearer is through refactoring—cleaning up and renaming parts of the code to reduce duplication. Today, you’ll act as front-end developers by making your code more readable and useful to others.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the comparison activity. Direct students to the Unit Guide where they will see two versions of similar code: one using an event handler and one using a named function using arrow notation. Have them:\nlabel each part of both programs\nhighlight what is the same\ncircle what is different\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students annotate, ensure they are identifying where the behavior lives in each program. Watch for students focusing only on syntax differences – redirect them to compare how the behavior is grouped. Clarify that both programs perform the same behavior, but one keeps it inside the event handler while the other moves it into a named, reusable function.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "81c50d17-0761-48a6-83a0-11b96290b931",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "e6c73d9c-5d7d-45eb-ab65-be1162b57b0f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *What is the same?*\n- *What is different?*\n- *Where did the behavior move?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the same behavior is highlighted in both programs, while the structure around it changes. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6c73d9c-5d7d-45eb-ab65-be1162b57b0f",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "3cab6cd3-5f88-4d22-9a18-d12faa735cde",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reveal the expected annotations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define function. Emphasize that a function is a way to name and reuse behavior.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that const handleClick is used to create and name the function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out that () means the function does not take any input.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Clarify that => is the syntax used to define the function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show that {} contains the code that will run when the function is used.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the logic inside {} and explain that it updates the text to \"Button clicked\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that there are two common ways to write arrow functions: named and anonymous. For named arrow functions, emphasize that because it has a name, it can be reused or called later in the code. For anonymous arrow function, clarify that they are often used “in place,” such as inside an event handler or passed into another function."
+      },
+      "seeding_key": {
+        "activity_section.key": "3cab6cd3-5f88-4d22-9a18-d12faa735cde",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "835c6fef-0f36-4f87-ab7f-29b95254bdd5",
+      "position": 5,
+      "properties": {
+        "description": "Think about it like this, if someone is anonymous, you can not call their name to get their attention. But if you know someone’s name, you can call them anytime you need them. Named functions work the same way – we can call them again later.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "8444cb70-9be2-4650-adaf-cfd8a5ffe5bc",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "835c6fef-0f36-4f87-ab7f-29b95254bdd5",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "54e872f0-4ed7-46e8-8eb7-0117894d1b86",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 5.\n- Level 1: Students rename functions descriptively and add helpful comments.\n- Level 2: Students read the vocabulary definition for function.\n- Level 3: Students add their own explanation or example of function to the vocab free response.\n- Level 2: Students read the vocabulary definition for abstraction.\n- Level 3: Students add their own explanation or example of abstraction to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for the reasoning behind their renaming choices. Ask guiding questions like: “Why did you choose that name?” or “Would someone new to this code understand what that function does?”\n",
-        "progression_name": "What's in a Name?"
-      },
-      "seeding_key": {
-        "activity_section.key": "54e872f0-4ed7-46e8-8eb7-0117894d1b86",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "8d2124b0-6e8c-4f48-99ce-1fd169a44e8e",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8d2124b0-6e8c-4f48-99ce-1fd169a44e8e",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "6616c567-918f-4aa2-ac5a-8660bec4443e",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do descriptive names for functions matter?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that descriptive names make code easier to read, understand, and maintain—for both themselves and others. Help them connect this to abstraction, explaining that a good name lets programmers focus on what a function does instead of how it works.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, invite a few students to share one example of a renamed function and explain why they chose that name. Highlight the importance of clarity and collaboration—well-named functions help teams (and even AI tools) interpret code more accurately.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6616c567-918f-4aa2-ac5a-8660bec4443e",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "98dc5f4c-1233-439d-83f2-677ea17a1691",
+      "key": "a957a8b9-5271-45c3-90e9-b549cec10e5b",
       "position": 6,
       "properties": {
+        "description": "Now you're going to apply what you learned by acting like a developer—your job is to take behavior that is currently written inside an event handler and refactor it into a reusable function.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "98dc5f4c-1233-439d-83f2-677ea17a1691",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "a957a8b9-5271-45c3-90e9-b549cec10e5b",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "2b1c1866-a3db-49d9-8ed3-c5baec2919c0",
+      "key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show examples of functions and point out the similarities:\n- Both perform the same action (returning \"Hello!\").\n- The difference is mainly in syntax — arrow functions use => instead of the word function.\n- We still give them clear names and use them to reuse code.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "2b1c1866-a3db-49d9-8ed3-c5baec2919c0",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "b6bc17dd-7240-4360-9ec9-50bd00799985",
-      "position": 8,
-      "properties": {
-        "description": "In the next few levels, you’ll start seeing functions that use arrows instead of the word function. Don’t worry — they work exactly the same way. The arrow just makes the code shorter and easier to read.\n",
-        "remarks": true,
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 4, Level 1 through Level 4.\n- **Level 1:** Predict and trace how the code behaves\n- **Level 2:** Use AI to refactor an event listener to use a function\n- **Level 3:** Refactor an event listener without AI assistance\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, focus on helping students identify where the behavior is located. Check that they can distinguish between code that runs inside the event handler and behavior that could be moved into a function. Ask questions like: “Where is the behavior right now?” “What is this code doing when it runs?” In Levels 2 and 3, support students as they refactor code into functions. Watch for confusion between defining a function and calling it. Prompt students with: “Did you move the behavior into a function?”",
+        "progression_name": "Predict & Trace",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you sense hesitation, have students point to the parts that match between the two styles (name, parameters, body). Reinforce that programmers use both versions, but arrow functions are often preferred for concise, modern code.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b6bc17dd-7240-4360-9ec9-50bd00799985",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students practice creating and reusing arrow functions while naming them descriptively and commenting their purpose.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 6 through 8..\n- Level 6:Students extract an inline event handler and rewrite it as a named arrow function.\n- Level 7: With AI support, students find repeated code and refactor it into a single, reusable function.\n- Level 8: Students choose a context and create as many well-named, functional arrow functions as possible within the time limit.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, prompt them to describe what their function does and why they chose that name. Ask: “What does your function’s name tell you about its purpose?” or “How could you reuse this function in a different context?”\n",
-        "duration": "20",
-        "name": "Creating Functions",
-        "progression_name": "Creating Functions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "For Level 8, ensure students have at least 10 minutes to explore. Encourage them to use AI to brainstorm new function ideas or to test whether their function names clearly describe what the code does before implementing it.\n"
+            "markdown": "Encourage students to test frequently after making changes. If something doesn’t work, have them check:\n- Is the function defined correctly?\n- Is it being called?\n- Does the name match what it does?\n\nRemind students that AI may generate code that looks correct but still needs to be tested and verified.\n"
           },
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use Levels 6–8 to formatively assess student understanding of the lesson objectives. Look for evidence that students can:\n- Write and call arrow functions correctly.\n- Refactor repeated code into reusable functions.\n- Use clear, descriptive names and appropriate comments.\n"
+            "markdown": "Use Levels 1-3 to assess whether students can meet the lesson objectives. Look for evidence that students can write arrow functions to organize code into reusable pieces and refactor code into a function instead of keeping behavior inline.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "222f8232-3cd9-4f8a-9183-aa4fa855aa7f",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "633fd14f-ae57-43f7-b3d5-d71172875be4",
-      "position": 10,
+      "key": "a076f460-0d72-4074-b9a4-8fa448035785",
+      "position": 8,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that abstraction hides details and that using named functions helps them organize and reuse behavior when wiring up interactions in an app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define abstraction. Emphasize that abstraction means hiding the details and focusing on what something does. Use the visual to compare what’s happening inside versus using the function name, and highlight how the name helps us understand the behavior without seeing the code.",
+        "duration": "20",
+        "name": "Abstraction & Writing Reusable Functions ",
+        "progression_name": "Refactor with AI"
       },
       "seeding_key": {
-        "activity_section.key": "633fd14f-ae57-43f7-b3d5-d71172875be4",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "f63be9f9-9ec6-47b8-bc92-781f9678f579",
-      "position": 11,
+      "key": "4ee428e3-b599-4ae3-b431-307608225651",
+      "position": 9,
       "properties": {
-        "description": "Developers often review each other’s code to make sure it’s readable and understandable. Your job is to leave short, kind, and specific comments that help your peers see how clearly their code communicates its purpose.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which function is easier to understand without reading the code? Which one would AI be more confident about?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear function names improve understanding for both humans and AI, while vague names make it harder to predict what the code does.",
+        "progression_name": "Write it Yourself"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
+      }
+    },
+    {
+      "key": "dc0e09f6-b66a-466e-ad4b-e6884b76c53e",
+      "position": 10,
+      "properties": {
+        "description": "Now you're going to act like a developer building an interactive app. You’ll look at an example, then use AI to help you generate functions for new buttons, connect them, and test that they work.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f63be9f9-9ec6-47b8-bc92-781f9678f579",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "dc0e09f6-b66a-466e-ad4b-e6884b76c53e",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
-      "key": "2daeecb2-3821-4efc-b2f0-12e0b337cf84",
-      "position": 12,
+      "key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** At the end of the Mini-Hackathon, have students rotate to view 2–3 peers’ projects. Provide physical sticky notes for feedback. Their comments should focus on clarity, naming, and alignment between the function’s name, comment, and behavior.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to use descriptive language in their feedback. If they’re unsure what to say, prompt them with: “Is the name of the function clear?”, “Can you tell what this code does without reading every line?”, “Does the comment match the code’s behavior?”\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Now you're going to act like a developer building an interactive app. You’ll look at an example, then use AI to help you generate functions for new buttons, connect them, and test that they work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ensure they are following the spec → add named arrow function → add event listener → test process. Check that students are:\n- using the button description in prompt.md\n- generating a named arrow function\n- connecting it using addEventListener\n- testing each button before moving on\n\nOnce they move to code, check:\n- “What is this button supposed to do?”\n- “Does your function match that behavior?”\n- “What changes on the page when this runs?”\n- “Where is your function connected to the button?”\n",
+        "progression_name": "Write Reusable Functions",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time allows, students could update one of their functions based on peer feedback, demonstrating responsiveness to review — a nice parallel to the QA process.\n"
+            "markdown": "Remind students that AI is generating code based on their description. Clearer descriptions lead to better results. Encourage them to revise their prompt or ask AI to explain the code if something doesn’t work.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 4 to assess whether students can meet the lesson objectives. Look for evidence that students can:\n- Write arrow functions to organize code into reusable pieces\n- Refactor behavior into functions instead of writing it directly inside event handlers\n- Explain how abstraction makes code easier to maintain, including how naming and reusing functions improves clarity\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2daeecb2-3821-4efc-b2f0-12e0b337cf84",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "674e0225-0b39-4abb-9e2f-93d36abe6803",
-      "position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "674e0225-0b39-4abb-9e2f-93d36abe6803",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
-      }
-    },
-    {
-      "key": "12976600-6c7c-46df-acbe-5781fa6eb9fa",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does writing clear, well-named functions make it easier for other people—or AI—to test, debug, and reuse your code?*\n- *What did you notice when reviewing a peer’s code that made it easier (or harder) to understand?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that clear, descriptive function names support readability, reuse, and testing. Students should recognize that part of being a QA engineer or collaborator is ensuring that code is easy to understand for both humans and AI tools that analyze it.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, have students identify one specific feedback comment they gave or received that improved clarity. Reinforce that peer and AI feedback both play a role in ensuring code is maintainable and reliable.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "12976600-6c7c-46df-acbe-5781fa6eb9fa",
-        "lesson_activity.key": "4d702af6-dcc8-42db-a505-321894080891"
+        "activity_section.key": "8ff67193-8aa0-4851-a2eb-b839f9b601eb",
+        "lesson_activity.key": "5f3e2bbf-63e6-4311-bf44-0e7311fd9fd4"
       }
     },
     {
       "key": "213784da-0972-41cd-af0d-1bd61fe3fe9b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2200,7 +1999,7 @@
       "key": "a342702f-aedc-4ed9-a947-d38fcc2189fc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 9 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a342702f-aedc-4ed9-a947-d38fcc2189fc",
@@ -2812,6 +2611,39 @@
       }
     },
     {
+      "key": "1ed0117e-e191-4b93-9b62-08f029307a44",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore Nested Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ed0117e-e191-4b93-9b62-08f029307a44",
+        "lesson_activity.key": "cfb4c3af-29ee-4c43-9fd7-70ce547a452f"
+      }
+    },
+    {
+      "key": "43ebec76-f73b-4a86-b460-896713c1c68c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Plan App Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "43ebec76-f73b-4a86-b460-896713c1c68c",
+        "lesson_activity.key": "cfb4c3af-29ee-4c43-9fd7-70ce547a452f"
+      }
+    },
+    {
+      "key": "51d499ac-bbb5-4c73-9f53-3f74320edb03",
+      "position": 3,
+      "properties": {
+        "progression_name": "Build & Test Your Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "51d499ac-bbb5-4c73-9f53-3f74320edb03",
+        "lesson_activity.key": "cfb4c3af-29ee-4c43-9fd7-70ce547a452f"
+      }
+    },
+    {
       "key": "d2830d1e-0cff-4a18-b15b-39da37f7d909",
       "position": 1,
       "properties": {
@@ -2829,7 +2661,7 @@
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build foundational understanding of nested if/else statements by translating a simple flowchart into working code. They’ll learn how each decision branch connects to a UI change, define what nested conditionals are, and use AI support to debug and confirm that all paths behave as expected.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Nested Conditionals activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3, where they translate a provided flowchart into nest if/else statements with AI assistance.\n- Level 1: Students will label and map a provided flowchart into nested if/else statements.\n- Level 2: Students will read the definition nested conditional.\n- Level 3: Students will define nested conditional in their own words.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students implement their nested if/else logic, check that their code directly maps to the flowchart. Ask them to explain how each branch changes the UI and how they’re using test cases to verify correctness.\n",
         "duration": "10",
         "name": "Flowchart to Code",
-        "progression_name": "From Mini-Flowchart to Nested If/Else"
+        "progression_name": "Movie Spoiler App"
       },
       "seeding_key": {
         "activity_section.key": "ea16792b-1b3b-4a3e-8aed-c516e572a1ac",
@@ -3032,19 +2864,13 @@
       }
     },
     {
-      "key": "5dc0d803-bd15-4026-a348-eb16566fcb03",
+      "key": "c65051fd-cd04-476d-a930-f82677f6e5ea",
       "position": 5,
       "properties": {
-        "progression_name": "Code Your Rule",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Consider having students attempt the longest chained conditional (multiple && and || operators) they can create. Encourage them to feed it to AI Tutor to create edge cases for them to test.\n"
-          }
-        ]
+        "progression_name": "Code Your Rule"
       },
       "seeding_key": {
-        "activity_section.key": "5dc0d803-bd15-4026-a348-eb16566fcb03",
+        "activity_section.key": "c65051fd-cd04-476d-a930-f82677f6e5ea",
         "lesson_activity.key": "c0053cc0-33b9-46f3-95e9-a978de684b17"
       }
     },
@@ -3809,7 +3635,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Level 1 - Annotate Variables (SketchLab)"
+        "progression": "Annotate Variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -3831,7 +3657,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Level 2 - Explore How Values Change"
+        "progression": "Explore How Values Change"
       },
       "bonus": false,
       "seeding_key": {
@@ -3875,7 +3701,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection (Assessment)"
+        "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -3893,94 +3719,6 @@
     },
     {
       "chapter": 13,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict & Trace: Difficulty Level"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Generate with AI: Counter App"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Write it Yourself: Counter App"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Assessment: Choice Level"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
-      ]
-    },
-    {
-      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4002,12 +3740,12 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 14,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Refactor with AI"
+        "progression": "Predict & Trace"
       },
       "bonus": false,
       "seeding_key": {
@@ -4017,19 +3755,19 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson4-level2-revised_2026"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 15,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Write it Yourself"
+        "progression": "Predict & Trace"
       },
       "bonus": false,
       "seeding_key": {
@@ -4039,14 +3777,14 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4068,7 +3806,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4090,7 +3828,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4112,7 +3850,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4134,7 +3872,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4155,7 +3893,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4176,7 +3914,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4197,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4240,7 +3978,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4261,7 +3999,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4282,7 +4020,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -4303,7 +4041,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4325,7 +4063,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4335,7 +4073,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-choicelevel2_revised_2026"
+          "ai-and-algorithmic-decisions-lesson7-choicelevel2_aichat_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
@@ -4343,13 +4081,35 @@
         "activity_section.key": "da8e2303-cfa5-4de7-a9fe-e9bb9bf1f3af"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson7-choicelevel2_revised_2026"
+        "ai-and-algorithmic-decisions-lesson7-choicelevel2_aichat_revised_2026"
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate Dynamic Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-htmlcss_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson7-htmlcss_revised_2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Generate Dynamic Features"
@@ -4369,9 +4129,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 4,
-      "activity_section_position": 2,
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Generate Dynamic Features"
@@ -4391,9 +4151,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 5,
-      "activity_section_position": 3,
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Generate Dynamic Features"
@@ -4413,9 +4173,9 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Generate Dynamic Features"
@@ -4435,9 +4195,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 7,
-      "activity_section_position": 5,
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Generate Dynamic Features"
@@ -4457,78 +4217,34 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "From Mini-Flowchart to Nested If/Else"
+        "progression": "Explore Nested Conditionals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level1_2026"
+          "ai-and-algorithmic-decisions-lesson8-level1-revised_2026"
         ],
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea16792b-1b3b-4a3e-8aed-c516e572a1ac"
+        "activity_section.key": "1ed0117e-e191-4b93-9b62-08f029307a44"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson8-level1_2026"
+        "ai-and-algorithmic-decisions-lesson8-level1-revised_2026"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Code it Yourself: Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "93780ca2-8bde-4701-b773-3d743289cec5"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Code with AI: Nested Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "122baadc-4e1f-43dd-b058-1f2521771223"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Plan in Sketch Lab"
+        "progression": "Plan App Logic"
       },
       "bonus": false,
       "seeding_key": {
@@ -4538,58 +4254,36 @@
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a0e67753-6f1c-44c9-bf15-e9a27a5d87de"
+        "activity_section.key": "43ebec76-f73b-4a86-b460-896713c1c68c"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson8-level4_2026"
       ]
     },
     {
-      "chapter": 43,
-      "position": 5,
+      "chapter": 38,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Code and Test"
+        "progression": "Build & Test Your Logic"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level5_2026"
+          "ai-and-algorithmic-decisions-lesson8-level5_choice_2026"
         ],
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "445b8443-6e63-4d44-95ee-72d1a1c432fd"
+        "activity_section.key": "51d499ac-bbb5-4c73-9f53-3f74320edb03"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson8-level5_2026"
+        "ai-and-algorithmic-decisions-lesson8-level5_choice_2026"
       ]
     },
     {
-      "chapter": 44,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Code and Test"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level5b_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "445b8443-6e63-4d44-95ee-72d1a1c432fd"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson8-level5b_2026"
-      ]
-    },
-    {
-      "chapter": 45,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4611,7 +4305,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4633,7 +4327,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4655,7 +4349,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4665,19 +4359,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson9-level10_2026"
+          "ai-and-algorithmic-decisions-lesson9-level4-weblab-choice_2026"
         ],
         "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "5dc0d803-bd15-4026-a348-eb16566fcb03"
+        "activity_section.key": "c65051fd-cd04-476d-a930-f82677f6e5ea"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson9-level10_2026"
+        "ai-and-algorithmic-decisions-lesson9-level4-weblab-choice_2026"
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4699,7 +4393,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4721,7 +4415,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4743,7 +4437,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4765,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4787,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4809,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4831,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4853,7 +4547,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5022,54 +4716,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level1-revised_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0687875c-9f4f-40a1-8e89-c3581f201ec7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level2-revised_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level2-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ecbac31f-4da5-40ce-93d3-9b0c73aaaefc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level3-revised_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level3-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "9b193043-115f-4155-837d-05d88d8d8826"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level6-revised_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0335aa36-7459-4dad-9816-b0e55b22beb6"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson4-level1-revised_2026",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson4-level1-revised_2026"
@@ -5089,7 +4735,7 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a076f460-0d72-4074-b9a4-8fa448035785"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       }
     },
     {
@@ -5101,7 +4747,7 @@
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "4ee428e3-b599-4ae3-b431-307608225651"
+        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
       }
     },
     {
@@ -5262,14 +4908,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson7-choicelevel2_revised_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson7-choicelevel2_aichat_revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson7-choicelevel2_revised_2026"
+          "ai-and-algorithmic-decisions-lesson7-choicelevel2_aichat_revised_2026"
         ],
         "lesson.key": "Lesson 7: Building More Dynamic Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "da8e2303-cfa5-4de7-a9fe-e9bb9bf1f3af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson7-htmlcss_revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson7-htmlcss_revised_2026"
+        ],
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "24a1a559-2518-4e2e-a735-fc62a762ab0a"
       }
     },
     {
@@ -5334,38 +4992,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson8-level1_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level1-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level1_2026"
+          "ai-and-algorithmic-decisions-lesson8-level1-revised_2026"
         ],
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea16792b-1b3b-4a3e-8aed-c516e572a1ac"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level2-weblab_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "93780ca2-8bde-4701-b773-3d743289cec5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level3-weblab_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "122baadc-4e1f-43dd-b058-1f2521771223"
+        "activity_section.key": "1ed0117e-e191-4b93-9b62-08f029307a44"
       }
     },
     {
@@ -5377,31 +5011,19 @@
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "a0e67753-6f1c-44c9-bf15-e9a27a5d87de"
+        "activity_section.key": "43ebec76-f73b-4a86-b460-896713c1c68c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson8-level5_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson8-level5_choice_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level5_2026"
+          "ai-and-algorithmic-decisions-lesson8-level5_choice_2026"
         ],
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "445b8443-6e63-4d44-95ee-72d1a1c432fd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson8-level5b_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson8-level5b_2026"
-        ],
-        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "445b8443-6e63-4d44-95ee-72d1a1c432fd"
+        "activity_section.key": "51d499ac-bbb5-4c73-9f53-3f74320edb03"
       }
     },
     {
@@ -5442,14 +5064,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson9-level10_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson9-level4-weblab-choice_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson9-level10_2026"
+          "ai-and-algorithmic-decisions-lesson9-level4-weblab-choice_2026"
         ],
         "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "5dc0d803-bd15-4026-a348-eb16566fcb03"
+        "activity_section.key": "c65051fd-cd04-476d-a930-f82677f6e5ea"
       }
     },
     {
@@ -5927,7 +5549,7 @@
     },
     {
       "name": "Reusable Functions",
-      "url": "https://docs.google.com/presentation/d/17mEv4R9PaMhPkefraz1mCbTlN7B68iaATfIU0onFpJo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Tinbznitfuw4q9sV-XvR2WfWFvNl8OPsMOai9N5sS5E/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "reusable_functions",
       "properties": {
         "audience": "Teacher",
@@ -6763,80 +6385,16 @@
   "lessons_opportunity_standards": [
 
   ],
+  "jit_pl_concepts_lessons": [
+
+  ],
   "rubrics": [
-    {
-      "level_name": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
-      "s3_config_dir": null,
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goals": [
-    {
-      "key": "e0852a17-3e99-4935-9751-827f3fc97203",
-      "position": 1,
-      "learning_goal": "Track and evaluate how a value (state) changes over time in a program",
-      "ai_enabled": false,
-      "tips": "Look for whether the student can:\n- describe what should happen before running the app\n- track how the value changes step by step\n- explain what caused the change\n- verify that the displayed result matches the intended behavior",
-      "seeding_key": {
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goal_evidence_levels": [
-    {
-      "understanding": 0,
-      "teacher_description": "Does not correctly update the variable or cannot explain how the value changes. Does not compare expected vs actual behavior or relies entirely on AI without understanding.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Updates the variable with errors or incomplete logic. Shows limited understanding of how the value changes over time. Makes little or unclear comparison between expected and actual behavior.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Defines expected behavior and updates the variable correctly. Explains how the value changes, though reasoning may be partial or general. Attempts to compare expected vs actual behavior with minor gaps.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Defines expected behavior clearly, correctly updates the variable, and explains how the value (state) changes across interactions. Accurately compares expected vs actual behavior and verifies that the app works as intended using AI support appropriately.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ]
 }

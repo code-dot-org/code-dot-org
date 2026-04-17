@@ -17,6 +17,8 @@ module LevelStarterAssetsHelper
     end
 
     file
+  rescue MiniMagick::Invalid, MiniMagick::Error
+    file
   end
 
   def self.summarize(file_obj, friendly_name, uuid_name)
