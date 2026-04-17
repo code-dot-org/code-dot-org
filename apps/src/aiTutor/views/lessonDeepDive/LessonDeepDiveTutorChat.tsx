@@ -1,8 +1,6 @@
 import React, {FC, useCallback} from 'react';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
-import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
   LessonDeepDiveData,
@@ -20,8 +18,6 @@ interface LessonDeepDiveTutorChatProps {
   assessmentAnalysis: AssessmentQuestionResult[];
   objectives: LessonDeepDiveData['objectives'];
   reflectionData: ReflectionData | null;
-  welcomeMessage: string | null;
-  welcomeLoading: boolean;
 }
 
 const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
@@ -32,16 +28,14 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
   assessmentAnalysis,
   objectives,
   reflectionData,
-  welcomeMessage,
-  welcomeLoading,
 }) => {
   const hiddenContextCallback = useCallback(async () => '', []);
 
   const getSystemPrompt = () => {
-    let prompt = `You are a tutor helping a student review an Artificial Intelligence
-    or Computer Science lesson. You should reinforce the concepts in the lesson, provide
-    guidance for misunderstandings, and coach the student on how to improve their assessment question
-    answers if they were not correct. Be specific and encouraging.
+    let prompt = `You are a tutor helping a student review an Artificial Intelligence 
+    or Computer Science lesson. You should reinforce the concepts in the lesson, provide 
+    guidance for misunderstandings, and coach the student on how to improve their assessment question 
+    answers if they were not correct. Be specific and encouraging. 
     The student has just finished a lesson titled "${lessonName}".
     'Lesson summary:'${lessonSummary}.`;
 
@@ -73,27 +67,7 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
   };
 
   return (
-    <div className={styles.container} data-theme="Dark">
-      <div className={styles.welcomeMessage}>
-        <div className={styles.botIconContainer}>
-          <img src={aiBotOutlineIcon} alt="" className={styles.botIcon} />
-        </div>
-        {reflectionData === null ? (
-          <p className={styles.welcomeMessageText}>
-            {
-              'Head back and share your reflection — it helps me give you a more personalized session!'
-            }
-          </p>
-        ) : welcomeLoading ? (
-          <div className={styles.welcomeLoading}>
-            <Spinner size="medium" />
-          </div>
-        ) : (
-          welcomeMessage && (
-            <p className={styles.welcomeMessageText}>{welcomeMessage}</p>
-          )
-        )}
-      </div>
+    <div className={styles.container}>
       <AiTutorChat
         hiddenContextCallback={hiddenContextCallback}
         aiTutorSystemPrompt={getSystemPrompt()}
