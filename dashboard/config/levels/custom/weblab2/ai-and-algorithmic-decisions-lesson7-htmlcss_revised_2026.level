@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-17T00:29:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson7_revised_template_2026",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "### **User Interface**\r\n\r\n#### **Do This:**\r\n\r\n1. Prompt AI with your app idea and generate the user interface using HTML and CSS.\r\n2. Run and test the user interface.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-17 01:29:52 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-17 01:40:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

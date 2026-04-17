@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-16T16:43:44.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Practice\r\n\r\n#### Think about a situation where you might use AI (e.g., student writing support, lesson planning, or classroom activities).\r\n\r\n* #### Choose an AI tool you might use\r\n* #### Identify what safety and privacy considerations apply\r\n* #### Describe how you would \r\n\r\n> #### In the reflection box below, summarize your findings. What steps would you take to ensure safe and appropriate use?\r\n\r\n<br>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-04-16T16:43:44.331+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod5-bias-04\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod5-bias-04\"},{\"changed_at\":\"2026-04-16 16:44:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

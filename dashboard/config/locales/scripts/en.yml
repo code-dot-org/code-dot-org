@@ -10549,6 +10549,8 @@ en:
               name: Career Journeys
             lesson-17:
               name: Career Journeys B
+            lesson-18:
+              name: AID Playground
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -28231,7 +28233,7 @@ en:
           name: intro-to-web-lab
           title: Intro to Web Lab
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to Web Lab and how to think like a web designer who uses AI thoughtfully and intentionally
           description: |-
             Intro to Web Lab introduces students to our Web Lab programming environment. Web Lab is built with AI Tutor, an AI assistant that can help build websites, answer questions, and explain topics in web design and web development. This unit has a single lesson that introduces students to this new tool and how to think like a web designer who uses AI thoughtfully and intentionally
 
@@ -28243,7 +28245,10 @@ en:
             > 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
             > 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
             > 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)
-          student_description: ''
+          student_description: |-
+            Learn how to collaborate with an AI assistant to make your own webpage.
+
+            The AI features in this lesson are only available to students in a section with a verified teacher, so if you have any issues: double-check with your teacher!
         pl-sandbox-aif-sem-2-unit-6:
           lessons:
             lesson-1:
