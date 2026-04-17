@@ -1704,6 +1704,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create_demo, params: {demo_type: 'high'}
     assert_response :conflict
+    assert_equal 'demo section of type high already exists', returned_json['error']
   end
 
   private def stub_demo_preset

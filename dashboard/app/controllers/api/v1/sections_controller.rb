@@ -146,7 +146,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
     if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
-      render json: {error: "demo section of type #{params[:section_type]} already exists"}, status: :conflict
+      render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
     else
       head :bad_request
     end
