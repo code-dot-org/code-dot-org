@@ -1,0 +1,2 @@
+class AiStudentPodcastFragment < ApplicationRecord
+end
