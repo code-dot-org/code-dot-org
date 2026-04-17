@@ -27,8 +27,8 @@ class ImageModerationTest < Minitest::Test
   def test_uses_azure_when_api_key_present
     blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}
-    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io, ct|
-      io.read == blob && ct == 'image/png'
+    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io|
+      io.read == blob
     end.returns(sample).once
     assert_equal sample, ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
@@ -36,26 +36,24 @@ class ImageModerationTest < Minitest::Test
   def test_scales_small_images_before_azure
     blob = tiny_png_blob(10, 10)
     sample = {'categoriesAnalysis' => []}
-    captured = {}
-    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io, ct|
-      captured[:bytes] = io.read
-      captured[:content_type] = ct
+    captured_bytes = nil
+    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io|
+      captured_bytes = io.read
       true
     end.returns(sample).once
 
     assert_equal sample, ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
 
-    out = MiniMagick::Image.read(captured[:bytes])
+    out = MiniMagick::Image.read(captured_bytes)
     assert_operator out.width, :>=, ImageModeration::MIN_MODERATION_DIMENSION
     assert_operator out.height, :>=, ImageModeration::MIN_MODERATION_DIMENSION
-    assert_equal 'image/png', captured[:content_type]
   end
 
   def test_large_images_pass_through_unscaled
     blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}
-    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io, ct|
-      io.read == blob && ct == 'image/png'
+    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |io|
+      io.read == blob
     end.returns(sample).once
 
     assert_equal sample, ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
@@ -134,18 +132,14 @@ class ImageModerationTest < Minitest::Test
   def test_sniff_overrides_wrong_content_type
     blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}
-    captured_type = nil
-    AzureAiContentSafety.any_instance.expects(:moderate_image).with do |_io, ct|
-      captured_type = ct
-      true
-    end.returns(sample).once
+    AzureAiContentSafety.any_instance.expects(:moderate_image).returns(sample).once
     Honeybadger.expects(:notify).once.with(
       "Actual content type differs from reported content type in image moderation",
       context: {reported_content_type: 'any', actual_content_type: 'image/png'}
     )
 
-    ImageModeration.moderate_image(StringIO.new(blob), 'any')
-    assert_equal 'image/png', captured_type
+    result = ImageModeration.moderate_image(StringIO.new(blob), 'any')
+    assert_equal sample, result
   end
 
   # Tempfile is unlinked when the block returns (see Tempfile.create).
