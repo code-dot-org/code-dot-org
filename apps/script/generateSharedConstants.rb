@@ -11,6 +11,7 @@ require 'fileutils'
 require 'require_all'
 require 'ostruct'
 
+require_relative '../../deployment'
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
@@ -81,6 +82,8 @@ def main
   shared_content = generate_multiple_constants(
         %w(
       DEFAULT_LOCALE
+      LOCALE_FALLBACKS
+      LOCALIZE_TO_I18N_LOCALES
       ARTIST_AUTORUN_OPTIONS
       LEVEL_KIND
       LEVEL_STATUS

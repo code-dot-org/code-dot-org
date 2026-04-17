@@ -5,6 +5,10 @@ import React, {useState, useEffect, useRef} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import {useLocalization} from '@cdo/apps/localization';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import {
+  LocaleFallbacks,
+  LocalizeToI18nLocales,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
@@ -35,17 +39,28 @@ export function AssignmentVersionSelector({
 
   // Filter the offerings based on the filters provided
   useEffect(() => {
-    const languageFilter = courseFilters?.currentLocale
-      ? locale
-      : courseFilters?.language;
-
     const data = courseVersions;
+    if (!data) return;
 
-    if (languageFilter) {
+    const filterLocales = [];
+
+    if (courseFilters?.currentLocale) {
+      filterLocales.push(LocalizeToI18nLocales[locale] || locale);
+    } else if (courseFilters?.language) {
+      filterLocales.push(courseFilters?.language);
+    }
+
+    if (filterLocales.length) {
+      filterLocales.push(
+        ...filterLocales.map(locale => LocaleFallbacks[locale]).filter(Boolean)
+      );
+
       for (const [key, versionInfo] of Object.entries(data)) {
-        if (!versionInfo.locale_codes.includes(languageFilter)) {
-          delete data[key];
-        }
+        const includeLocale = filterLocales.some(locale =>
+          versionInfo.locale_codes.includes(locale)
+        );
+
+        if (includeLocale) delete data[key];
       }
     }
 

@@ -13,7 +13,11 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {useLocalization} from '@cdo/apps/localization';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatToolsDependency,
+  LocalizeToI18nLocales,
+  LocaleFallbacks,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
@@ -90,11 +94,23 @@ export default function CurriculumQuickAssign({
   useEffect(() => {
     // Filter the offerings based on the filters provided
     const filterOfferings = data => {
-      const languageFilter = courseFilters?.currentLocale
-        ? locale
-        : courseFilters?.language;
+      if (!data) return data;
 
-      if (languageFilter && data) {
+      const filterLocales = [];
+
+      if (courseFilters?.currentLocale) {
+        filterLocales.push(LocalizeToI18nLocales[locale] || locale);
+      } else if (courseFilters?.language) {
+        filterLocales.push(courseFilters?.language);
+      }
+
+      if (filterLocales.length) {
+        filterLocales.push(
+          ...filterLocales
+            .map(locale => LocaleFallbacks[locale])
+            .filter(Boolean)
+        );
+
         // Crawl data and remove any courses / versions that are not available
         // in the requested language.
         for (const levelInfo of Object.values(data)) {
@@ -108,7 +124,9 @@ export default function CurriculumQuickAssign({
                 // These will be the course info blocks which are a tuple of the id and then metadata.
                 courseInfo.course_versions = courseInfo.course_versions.filter(
                   ([_, versionInfo]) =>
-                    versionInfo.locale_codes.includes(languageFilter)
+                    filterLocales.some(locale =>
+                      versionInfo.locale_codes.includes(locale)
+                    )
                 );
               }
 
@@ -126,7 +144,9 @@ export default function CurriculumQuickAssign({
                   // These will be the course info blocks which are a tuple of the id and then metadata.
                   courseInfo.course_versions =
                     courseInfo.course_versions.filter(([_, versionInfo]) =>
-                      versionInfo.locale_codes.includes(languageFilter)
+                      filterLocales.some(locale =>
+                        versionInfo.locale_codes.includes(locale)
+                      )
                     );
                 }
 

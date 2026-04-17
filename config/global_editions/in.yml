@@ -7,7 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [hi-IN, ta-IN, te-IN, mr-IN, kn-IN]
+locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN]
 locale_lock: true
 countries: [IN]
 
@@ -22,33 +22,33 @@ header:
       - title: about
         id: header-about
         domain: code.org
-        url: /hi/global
+        url: /global
       - title: hour_of_code
         id: header-hoc
         domain: csforall.org
-        url: /hi/hour-of-ai
+        url: /hour-of-ai
 
     student:
       - title: my_dashboard
-        url: /in/hi/home
+        url: /in/en/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /in/hi/catalog
+        url: /in/en/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /in/hi/home
+        url: /in/en/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /in/hi/catalog
+        url: /in/en/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /in/hi/my-professional-learning
+        url: /in/en/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -57,40 +57,40 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /in/hi/catalog
+        url: /in/en/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /in/hi/catalog
+        url: /in/en/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
     # The report_bug item is special in that it only appears when appropriate
     - title: report_bug
-      url: https://support.code.org/hc/hi-in/requests/new
+      url: https://support.code.org/hc/en-us/requests/new
       id: report-bug
 
 # The navigation region found at the bottom of each page
@@ -98,26 +98,26 @@ footer:
   links:
     studio:
       - title: privacy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
     code_org:
       - title: privacy_policy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
       - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
     hour_of_code:
       - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
       - title: privacy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
       - title: cookie
-        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=hi&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
 
 # Route matching to influence properties of components
@@ -181,4 +181,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /in/hi/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global
