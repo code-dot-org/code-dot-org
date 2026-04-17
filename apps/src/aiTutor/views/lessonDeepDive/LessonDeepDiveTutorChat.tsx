@@ -80,7 +80,9 @@ const LessonDeepDiveTutorChat: FC<LessonDeepDiveTutorChatProps> = ({
         </div>
         {reflectionData === null ? (
           <p className={styles.welcomeMessageText}>
-            {'Head back and share your reflection — it helps me give you a more personalized session!'}
+            {
+              'Head back and share your reflection — it helps me give you a more personalized session!'
+            }
           </p>
         ) : welcomeLoading ? (
           <div className={styles.welcomeLoading}>
