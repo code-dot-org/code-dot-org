@@ -14,7 +14,10 @@ export const getJsonVideoPrompt = (
   const videoLines = videos
     .map(
       video =>
-        `{"url": "${video.url}", "description": "${video.description.replace(/"/g, '\\"')}"}`
+        `{"url": "${video.url}", "description": "${video.description.replace(
+          /"/g,
+          '\\"'
+        )}"}`
     )
     .join('\n');
 

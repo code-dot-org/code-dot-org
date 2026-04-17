@@ -1,8 +1,8 @@
 import {Typography} from '@mui/material';
 import React, {FC} from 'react';
 
-import {pythonLabVideoFiles} from '@cdo/apps/pythonlab/pythonLabVideos';
 import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
+import {pythonLabVideoFiles} from '@cdo/apps/pythonlab/pythonLabVideos';
 
 const VideosBox: FC = () => (
   <div>

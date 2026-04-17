@@ -1,3 +1,4 @@
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import conditionalsUrl from '@cdo/static/json/jsonVideo/pythonLab/Conditionals_V1.json';
 import functionsUrl from '@cdo/static/json/jsonVideo/pythonLab/Functions_V1.json';
 import functionsWithParametersUrl from '@cdo/static/json/jsonVideo/pythonLab/Functions_With_Parameters_V1.json';
@@ -5,8 +6,6 @@ import ifElseUrl from '@cdo/static/json/jsonVideo/pythonLab/If_Else_V1.json';
 import painterObjectUrl from '@cdo/static/json/jsonVideo/pythonLab/Painter_Object_V1.json';
 import variablesUrl from '@cdo/static/json/jsonVideo/pythonLab/Variables_V1.json';
 import whileLoopUrl from '@cdo/static/json/jsonVideo/pythonLab/While_Loops_V1.json';
-
-import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 
 /**
  *  Importing from @cdo/static/json doesn't actually import the file but rather a path to

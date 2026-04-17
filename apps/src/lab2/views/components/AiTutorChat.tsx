@@ -10,11 +10,11 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
-import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

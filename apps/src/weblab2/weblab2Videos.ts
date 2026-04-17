@@ -1,7 +1,6 @@
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import addToAiTutorUrl from '@cdo/static/json/jsonVideo/weblab2/add-ai-tutor-v2.json';
 import weblabDifferentViews from '@cdo/static/json/jsonVideo/weblab2/web-lab-different-views.json';
-
-import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 
 /**
  *  Importing from @cdo/static/json doesn't actually import the file but rather a path to
@@ -16,7 +15,7 @@ export const weblab2VideoFiles: JsonVideoFileMetadata[] = [
   },
   {
     description:
-      "This video covers how to switch between Code, Preview, and Split View within Web Lab. It demonstrates how to focus the workspace on certain areas, which can make it easier to view and edit code or see the full design of a webpage. The video is a clear walkthrough of how to navigate these view settings",
+      'This video covers how to switch between Code, Preview, and Split View within Web Lab. It demonstrates how to focus the workspace on certain areas, which can make it easier to view and edit code or see the full design of a webpage. The video is a clear walkthrough of how to navigate these view settings',
     url: weblabDifferentViews as unknown as string,
   },
 ];
