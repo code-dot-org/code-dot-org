@@ -274,8 +274,12 @@ class StudentSnapshotsController < ApplicationController
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
     section = Section.find_by(id: section_id)
-    return render json: {error: "Section not found"} unless section
+    return render json: {error: "Section not found"}, status: :bad_request unless section
     authorize! :manage, section
+    student = Student.find_by(id: student_id)
+    return render json: {error: "Student not found"}, status: :bad_request unless student
+    authorize! :read, student
+    return render json: {error: "Student not in section"}, status: :bad_request unless Follower.find_by(student_user_id: student_id, section_id: section_id)
 
     response = AiStudentSnapshotHelper.fetch_or_generate_lesson_insight(
       unit_id, lesson_id, current_user.id, student_id, section_id, refresh: refresh

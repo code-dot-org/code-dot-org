@@ -476,6 +476,45 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "lesson_insight returns forbidden when student is not in any of teacher's sections" do
+    teacher = create(:authorized_teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    # student is NOT added to the section via a follower
+
+    sign_in teacher
+
+    get :lesson_insight, params: {
+      lesson_id: @lesson1.id,
+      unit_id: @unit.id,
+      student_id: student.id,
+      section_id: section.id
+    }
+
+    assert_response :forbidden
+  end
+
+  test "lesson_insight returns error when student belongs to teacher but is not in the given section" do
+    teacher = create(:authorized_teacher)
+    student = create(:student)
+    section_a = create(:section, user: teacher)
+    section_b = create(:section, user: teacher)
+    # student is in section_a but NOT in section_b
+    create(:follower, user: teacher, student_user: student, section: section_a)
+
+    sign_in teacher
+
+    get :lesson_insight, params: {
+      lesson_id: @lesson1.id,
+      unit_id: @unit.id,
+      student_id: student.id,
+      section_id: section_b.id
+    }
+
+    response_data = JSON.parse(response.body)
+    assert_includes response_data['error'], "Student not in section"
+  end
+
   # --- lesson_insight caching tests ---
 
   test "lesson_insight returns stored insight without calling OpenAI when fresh" do
@@ -739,7 +778,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       assert_empty LessonInsight.where(student: @student, lesson: @lesson)
       sign_in @teacher
 
-      assert_queries(34) do
+      assert_queries(37) do
         get :lesson_insight, params: {
           lesson_id:  @lesson1.id,
           unit_id:    @unit.id,
@@ -765,7 +804,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       # Cache hit (not stale): auth queries + LessonInsight SELECT + authorization + UserLevel MAX query.
-      assert_queries(11) do
+      assert_queries(14) do
         get :lesson_insight, params: {
           lesson_id:  @lesson1.id,
           unit_id:    @unit.id,
@@ -799,7 +838,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       # Regeneration path: auth + LessonInsight SELECT + authorization + UserLevel MAX + prompt-building + LessonInsight UPDATE + savepoints.
-      assert_queries(36) do
+      assert_queries(39) do
         get :lesson_insight, params: {
           lesson_id:  @lesson1.id,
           unit_id:    @unit.id,
@@ -829,7 +868,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       sign_in @teacher
 
       # Should be in line with the test "lesson_insight query count with no existing lesson insight"
-      assert_queries(34) do
+      assert_queries(37) do
         get :lesson_insight, params: {
           lesson_id:  @lesson1.id,
           unit_id:    @unit.id,
