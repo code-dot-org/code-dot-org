@@ -14,7 +14,11 @@ module Middleware
 
       def set_global_cookie(key, value, high_priority: false)
         cookie_data = {
-          domain: ".#{PublicSuffix.parse(request.hostname).domain}", # the root domain (e.g., ".code.org")
+          domain: (begin
+                    ".#{PublicSuffix.parse(request.hostname).domain}" # the root domain (e.g., ".code.org")
+                  rescue PublicSuffix::Error
+                    nil # localhost or non-public domains
+                  end),
           path: '/',
           same_site: :lax,
         }
