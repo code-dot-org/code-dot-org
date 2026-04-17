@@ -125,6 +125,17 @@ export default function ReactFlowCanvas({
     setActiveTabEntry(null);
   }, [setActiveTabEntry]);
 
+  // Clear selection when focus leaves the canvas container entirely
+  // (e.g. clicking outside or tabbing out of the canvas).
+  const handleContainerBlur = useCallback(
+    (event: React.FocusEvent) => {
+      if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+        setActiveTabEntry(null);
+      }
+    },
+    [setActiveTabEntry]
+  );
+
   // Apply roving tabindex through React Flow's domAttributes so it
   // survives React Flow re-renders (direct DOM manipulation gets
   // overwritten when RF reconciles tabIndex={0} on focusable nodes).
@@ -260,6 +271,7 @@ export default function ReactFlowCanvas({
         )}
         onKeyDownCapture={handleKeyDown}
         onFocusCapture={handleFocusCapture}
+        onBlur={handleContainerBlur}
       >
         {!readOnly && <Toolbar onAddNode={handleAddNode} />}
         <div aria-live="assertive" className={styles.srOnly}>

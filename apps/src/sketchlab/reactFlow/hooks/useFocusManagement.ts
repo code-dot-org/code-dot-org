@@ -22,7 +22,7 @@ const PAN_DURATION_MS = 200;
 export function useFocusManagement(
   tabOrder: TabOrderEntry[],
   edges: SketchlabReactFlowEdge[],
-  setActiveTabEntry: (entry: TabOrderEntry) => void
+  setActiveTabEntry: (entry: TabOrderEntry | null) => void
 ) {
   const {fitView, getZoom} = useReactFlow();
 
@@ -94,6 +94,11 @@ export function useFocusManagement(
             panToEntryIfNeeded(entry, element);
           }
         });
+      } else {
+        // Focus moved to a non-node/edge element within the container
+        // (e.g. Controls buttons, toolbar). Clear selection so visual
+        // indicators like NodeResizer don't persist on the previous node.
+        setActiveTabEntry(null);
       }
     },
     [tabOrder, setActiveTabEntry, panToEntryIfNeeded]
