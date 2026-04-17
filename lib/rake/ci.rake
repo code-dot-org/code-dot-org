@@ -79,7 +79,7 @@ SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
-PARALLEL_COUNT = 5
+PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -147,6 +147,7 @@ namespace :ci do
             "--dashboard localhost-studio.code.org:3000 " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
+            "--first_run_local " \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
