@@ -98,29 +98,6 @@ export default function ReactFlowCanvas({
       readOnly,
     });
 
-  // Filter out React Flow's internal selection changes. We manage
-  // selection via lastFocusedEntry so that visual indicators (NodeResizer,
-  // edge highlight) stay in sync with keyboard/click focus.
-  const handleNodesChange = useCallback(
-    (changes: Parameters<typeof onNodesChange>[0]) => {
-      const filtered = changes.filter(change => change.type !== 'select');
-      if (filtered.length > 0) {
-        onNodesChange(filtered);
-      }
-    },
-    [onNodesChange]
-  );
-
-  const handleEdgesChange = useCallback(
-    (changes: Parameters<typeof onEdgesChange>[0]) => {
-      const filtered = changes.filter(change => change.type !== 'select');
-      if (filtered.length > 0) {
-        onEdgesChange(filtered);
-      }
-    },
-    [onEdgesChange]
-  );
-
   const handlePaneClick = useCallback(() => {
     setLastFocusedEntry(null);
   }, [setLastFocusedEntry]);
@@ -280,8 +257,8 @@ export default function ReactFlowCanvas({
         <ReactFlow
           nodes={displayNodes}
           edges={displayEdges}
-          onNodesChange={readOnly ? undefined : handleNodesChange}
-          onEdgesChange={readOnly ? undefined : handleEdgesChange}
+          onNodesChange={readOnly ? undefined : onNodesChange}
+          onEdgesChange={readOnly ? undefined : onEdgesChange}
           onConnect={readOnly ? undefined : onConnect}
           nodeTypes={NODE_TYPES}
           onPaneClick={readOnly ? undefined : handlePaneClick}
