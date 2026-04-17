@@ -328,6 +328,8 @@ const EVENTS = {
   AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION:
+    'AI Tutor Lesson Deep Dive Modality Navigation',
 
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',

@@ -1,9 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useState} from 'react';
+import React, {FC, useCallback, useState} from 'react';
 
 const lightTheme = createTheme({palette: {mode: 'light'}});
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
 import PodcastsBox from './PodcastsBox';
@@ -78,6 +82,26 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   reflectionData,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
+  const userId = useAppSelector(state => state.currentUser.userId);
+
+  const handleNavSelect = useCallback(
+    (toCardId: CardId) => {
+      if (selected && selected !== toCardId) {
+        analyticsReporter.sendEvent(
+          EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION,
+          {
+            from: selected,
+            to: toCardId,
+            lessonId,
+            lessonName,
+            userId,
+          }
+        );
+      }
+      setSelected(toCardId);
+    },
+    [selected, lessonId, lessonName, userId]
+  );
 
   return (
     <div className={styles.container}>
@@ -141,7 +165,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 className={`${styles.navItem} ${
                   isActive ? card.activeColorClass : ''
                 }`}
-                onClick={() => setSelected(card.id)}
+                onClick={() => handleNavSelect(card.id)}
                 aria-label={card.label}
                 aria-current={isActive ? 'page' : undefined}
               >
