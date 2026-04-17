@@ -56,7 +56,7 @@ export interface Section {
 
 export type DemoType = 'elementary' | 'middle' | 'high';
 
-export interface DemoPresetCourseRef {
+export interface DemoPresetObject {
   name: string;
   displayName: string;
 }
@@ -68,8 +68,8 @@ export interface DemoPresetView {
   avatarEmoji: number;
   loginType: string;
   participantType: string;
-  unit: DemoPresetCourseRef | null;
-  unitGroup: DemoPresetCourseRef | null;
+  unit: DemoPresetObject | null;
+  unitGroup: DemoPresetObject | null;
 }
 
 type Course = {
@@ -161,7 +161,7 @@ export interface ServerStudent {
   user_type: keyof typeof UserTypes;
 }
 
-export interface ServerDemoPresetCourseRef {
+export interface ServerDemoPresetObject {
   name: string;
   display_name: string;
 }
@@ -173,8 +173,8 @@ export interface ServerDemoPresetView {
   avatar_emoji: number;
   login_type: string;
   participant_type: string;
-  unit: ServerDemoPresetCourseRef | null;
-  unit_group: ServerDemoPresetCourseRef | null;
+  unit: ServerDemoPresetObject | null;
+  unit_group: ServerDemoPresetObject | null;
 }
 
 //TODO: better types here
