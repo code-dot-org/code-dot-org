@@ -89,6 +89,15 @@ module MailJet
     return unless contact_list_id
 
     contact = find_or_create_contact(user.email, user.name)
+    update_contact_fields(contact,
+      [
+        {name: 'firstname', value: user.name}, # existing templates use 'firstname'
+        {name: 'given_name', value: user.given_name},
+        {name: 'family_name', value: user.family_name},
+        {name: 'display_name', value: user.name},
+        {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339}
+      ]
+    )
 
     begin
       add_to_contact_list(contact, contact_list_id)
