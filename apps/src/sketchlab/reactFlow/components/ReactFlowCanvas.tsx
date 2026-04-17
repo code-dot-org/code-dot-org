@@ -128,7 +128,7 @@ export default function ReactFlowCanvas({
         const isConnectSource = connectingFrom === node.id;
         return {
           ...node,
-          selected: isFocused,
+          selected: isFocused && !readOnly,
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             tabIndex: isTabTarget ? 0 : -1,
@@ -136,7 +136,15 @@ export default function ReactFlowCanvas({
           },
         };
       }),
-    [nodes, activeEntry, lastFocusedEntry, connectingFrom]
+    [
+      nodes,
+      activeEntry?.type,
+      activeEntry?.id,
+      lastFocusedEntry?.type,
+      lastFocusedEntry?.id,
+      connectingFrom,
+      readOnly,
+    ]
   );
   // TODO: Add meaningful ariaLabel to edges using node labels instead of
   // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
@@ -149,11 +157,18 @@ export default function ReactFlowCanvas({
           lastFocusedEntry?.type === 'edge' && lastFocusedEntry.id === edge.id;
         return {
           ...edge,
-          selected: isFocused,
+          selected: isFocused && !readOnly,
           domAttributes: {tabIndex: isTabTarget ? 0 : -1},
         };
       }),
-    [edges, activeEntry, lastFocusedEntry]
+    [
+      edges,
+      activeEntry?.type,
+      activeEntry.id,
+      lastFocusedEntry?.type,
+      lastFocusedEntry?.id,
+      readOnly,
+    ]
   );
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -257,12 +272,12 @@ export default function ReactFlowCanvas({
         <ReactFlow
           nodes={displayNodes}
           edges={displayEdges}
-          onNodesChange={readOnly ? undefined : onNodesChange}
-          onEdgesChange={readOnly ? undefined : onEdgesChange}
-          onConnect={readOnly ? undefined : onConnect}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          onConnect={onConnect}
           nodeTypes={NODE_TYPES}
-          onPaneClick={readOnly ? undefined : handlePaneClick}
-          onMoveEnd={readOnly ? undefined : handleMoveEnd}
+          onPaneClick={handlePaneClick}
+          onMoveEnd={handleMoveEnd}
           defaultViewport={initialViewport}
           fitView={!initialViewport}
           colorMode={colorMode}
