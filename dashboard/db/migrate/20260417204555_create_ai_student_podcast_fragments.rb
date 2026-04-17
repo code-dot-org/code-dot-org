@@ -5,7 +5,7 @@ class CreateAiStudentPodcastFragments < ActiveRecord::Migration[7.0]
       t.integer :lesson_id
       t.string :fragment_type
       t.integer :objective_id
-      t.text :script
+      t.text :podcast_script
 
       t.timestamps
     end

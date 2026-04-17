@@ -66,7 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_17_204555) do
     t.integer "lesson_id"
     t.string "fragment_type"
     t.integer "objective_id"
-    t.text "script"
+    t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
