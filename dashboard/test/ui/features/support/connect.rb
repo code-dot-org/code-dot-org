@@ -84,15 +84,9 @@ def device_farm_browser(http_client: nil)
     # VPC-private IP, where the step's puma is bound (via network_mode: host).
     # Port from the URL is preserved. Host header, Origin, and cookie domain
     # stay as localhost-studio.code.org.
-    #
-    # --window-size=1234,567 is a smoke test for Chrome args passthrough; if
-    # the session video shows a non-standard window aspect ratio, we know
-    # goog:chromeOptions.args is reaching the real Chrome (and so is
-    # --host-resolver-rules). Remove once the Device Farm path is trusted.
     capabilities['goog:chromeOptions'] = {
       'args' => [
         "--host-resolver-rules=MAP localhost-studio.code.org #{ENV['WORKER_IP']}",
-        '--window-size=1234,567',
       ],
     }
   end

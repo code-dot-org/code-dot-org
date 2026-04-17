@@ -132,6 +132,10 @@ clone:
 services:
   - name: ci-tests-redis
     image: redis
+    # Match the ui-tests step's network_mode: host so puma in the step can
+    # reach redis on localhost:6379 (the bridge network's service-DNS name
+    # `ci-tests-redis` does not resolve from a host-network step).
+    network_mode: host
     ports:
       - 6379
 
@@ -254,6 +258,9 @@ steps:
       - IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600")
       - export WORKER_IP=$(curl -s -H "X-aws-ec2-metadata-token:$IMDS_TOKEN" http://169.254.169.254/latest/meta-data/local-ipv4)
       - echo "WORKER_IP=$WORKER_IP"
+      # Make the existing rails redis_url ('redis://ci-tests-redis:6379/0')
+      # resolve to the redis service that's now bound on the host's :6379.
+      - echo "127.0.0.1 ci-tests-redis" | sudo tee -a /etc/hosts
       - EXIT_CODE=0
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -354,6 +361,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 31413aa01c82e8b0c44203164a99a617336affe9f76041e7cb8b22bba92ed106
+hmac: bb204c4d1d3a85334fdc09bf6a9a0a5a92a409dda6112d2f241284a370d00c5c
 
 ...
