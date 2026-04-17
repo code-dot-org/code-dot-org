@@ -1,6 +1,5 @@
 module AiStudentSnapshotHelper
   # Minimum time between regenerations of a lesson insight.
-  # Must match LESSON_INSIGHT_COOLDOWN_MS in apps/src/templates/studentSnapshot/lessonInsightWidget/index.tsx
   LESSON_INSIGHT_COOLDOWN = 5.minutes
 
   def self.save_lesson_feedback(feedback_json, student_id, lesson_id, section_id, teacher_id)
@@ -26,21 +25,20 @@ module AiStudentSnapshotHelper
   end
 
   # Returns true when a lesson insight should be (re)generated.
-  def self.should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id, refresh: false)
+  def self.should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id)
     return true if insight.nil?
     # Never regenerate if the insight is less than 5 minutes old.
     return false if insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
-    return true if refresh
 
     current_max = max_user_level_updated_at(unit_id, lesson_id, student_id)
     # Regenerate when any UserLevel was touched after the insight was last generated.
     current_max.present? && current_max > insight.updated_at
   end
 
-  def self.fetch_or_generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id, refresh: false)
+  def self.fetch_or_generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     insight = LessonInsight.find_by(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
 
-    should_generate = should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id, refresh: refresh)
+    should_generate = should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id)
 
     if should_generate
       response = generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)

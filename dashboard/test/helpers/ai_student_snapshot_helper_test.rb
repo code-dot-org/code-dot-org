@@ -63,17 +63,6 @@ class AiStudentSnapshotHelperTest < ActiveSupport::TestCase
     refute AiStudentSnapshotHelper.should_generate_lesson_insight?(insight, @unit.id, @lesson.id, @student.id)
   end
 
-  test 'returns false when insight was updated within the cooldown window even with refresh: true' do
-    insight = build(:lesson_insight, updated_at: 1.minute.ago)
-    refute AiStudentSnapshotHelper.should_generate_lesson_insight?(insight, @unit.id, @lesson.id, @student.id, refresh: true)
-  end
-
-  test 'returns true with refresh: true when insight is older than cooldown' do
-    insight = build(:lesson_insight, updated_at: 10.minutes.ago)
-    # No user levels — without refresh this would return false, confirming refresh is what triggers it.
-    assert AiStudentSnapshotHelper.should_generate_lesson_insight?(insight, @unit.id, @lesson.id, @student.id, refresh: true)
-  end
-
   test 'returns false when insight is older than cooldown but no user levels exist' do
     insight = build(:lesson_insight, updated_at: 10.minutes.ago)
     refute AiStudentSnapshotHelper.should_generate_lesson_insight?(insight, @unit.id, @lesson.id, @student.id)

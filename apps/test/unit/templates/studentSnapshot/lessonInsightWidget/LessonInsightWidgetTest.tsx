@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
-import {act, render, screen, waitFor} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
@@ -18,7 +17,6 @@ describe('LessonInsightWidget', () => {
     selectedStudentId: 3,
   };
 
-  // Timestamp from 10 minutes ago (refresh should be enabled)
   const defaultInsightTimestamp = new Date(
     Date.now() - 10 * 60 * 1000
   ).toISOString();
@@ -145,51 +143,13 @@ describe('LessonInsightWidget', () => {
     });
   });
 
-  it('allows refreshing insight data via settings menu when insight is older than 5 minutes', async () => {
-    // Insight is 6 minutes old. We could use the default here, but as this test is testing this logic, let's make it explicit.
-    const insightTimestamp = new Date(Date.now() - 6 * 60 * 1000).toISOString();
-    const mockResponse = {
-      value: {
-        json: JSON.stringify(mockInsightData),
-        updated_at: insightTimestamp,
-      },
-      response: new Response(),
-    };
-
-    mockHttpClient.fetchJson.mockResolvedValue(mockResponse);
-
+  it('does not offer a Refresh Insight option', async () => {
     renderComponent();
 
     await waitFor(() => {
       expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(1);
     });
 
-    const refreshButton = screen.queryByLabelText('Refresh Insight');
-    if (refreshButton) {
-      await act(async () => {
-        await userEvent.click(refreshButton);
-      });
-
-      await waitFor(() => {
-        expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(2);
-      });
-
-      // Verify the refresh request includes refresh=true
-      expect(mockHttpClient.fetchJson).toHaveBeenLastCalledWith(
-        expect.stringContaining('refresh=true')
-      );
-    }
-  });
-
-  it('does not send refresh param on initial load', async () => {
-    renderComponent();
-
-    await waitFor(() => {
-      expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(1);
-    });
-
-    expect(mockHttpClient.fetchJson).toHaveBeenCalledWith(
-      expect.not.stringContaining('refresh=true')
-    );
+    expect(screen.queryByLabelText('Refresh Insight')).toBeNull();
   });
 });

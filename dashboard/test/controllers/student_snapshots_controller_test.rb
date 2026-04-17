@@ -665,79 +665,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     refute_nil response_data['updated_at']
   end
 
-  test "lesson_insight regenerates when refresh=true" do
-    teacher = create(:authorized_teacher)
-    student = create(:student)
-    section = create(:section, user: teacher)
-    create(:follower, user: teacher, student_user: student, section: section)
-
-    free_response_level = create(:free_response, name: 'FR Level Refresh')
-    create(:script_level, script: @unit, lesson: @lesson1, levels: [free_response_level])
-
-    create(:lesson_insight,
-      lesson: @lesson1,
-      student: student,
-      section: section,
-      teacher_id: teacher.id,
-      insight_response: '{"progress":"old"}',
-      updated_at: 10.minutes.ago
-    )
-
-    fake_response = mock
-    fake_response.stubs(:code).returns(200)
-    fake_response.stubs(:body).returns(
-      {'choices' => [{'message' => {'content' => '{"progress":"refreshed"}'}}]}.to_json
-    )
-    AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_insight).returns(fake_response)
-
-    sign_in teacher
-
-    get :lesson_insight, params: {
-      lesson_id: @lesson1.id,
-      unit_id: @unit.id,
-      student_id: student.id,
-      section_id: section.id,
-      refresh: 'true'
-    }
-
-    assert_response :success
-    response_data = JSON.parse(response.body)
-    assert_equal '{"progress":"refreshed"}', response_data['json']
-  end
-
-  test "lesson_insight does not regenerate when refresh=true but insight is newer than cooldown" do
-    teacher = create(:authorized_teacher)
-    student = create(:student)
-    section = create(:section, user: teacher)
-    create(:follower, user: teacher, student_user: student, section: section)
-
-    create(:lesson_insight,
-      lesson: @lesson1,
-      student: student,
-      section: section,
-      teacher_id: teacher.id,
-      insight_response: '{"progress":"fresh"}',
-      updated_at: 2.minutes.ago
-    )
-
-    AiStudentSnapshotHelper::Client.any_instance.expects(:request_lesson_insight).never
-
-    sign_in teacher
-
-    get :lesson_insight, params: {
-      lesson_id: @lesson1.id,
-      unit_id: @unit.id,
-      student_id: student.id,
-      section_id: section.id,
-      refresh: 'true'
-    }
-
-    assert_response :success
-    response_data = JSON.parse(response.body)
-    assert_equal '{"progress":"fresh"}', response_data['json']
-    refute_nil response_data['updated_at']
-  end
-
   describe('lesson insight query tests') do
     setup do
       @teacher = create(:authorized_teacher)
@@ -849,36 +776,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
       assert_response :success
       assert_equal '{"progress":"new"}', JSON.parse(response.body)['json']
-    end
-
-    # Lesson insight is regenerated because refresh=true
-    test "lesson_insight refresh param query count" do
-      # Fresh cached insight — would be a cache hit without refresh=true.
-      create(:lesson_insight, lesson: @lesson1, student: @student, section: @section,
-        teacher_id: @teacher.id, insight_response: '{"progress":"cached"}', updated_at: 10.minutes.ago
-      )
-
-      fake_response = mock
-      fake_response.stubs(:code).returns(200)
-      fake_response.stubs(:body).returns(
-        {'choices' => [{'message' => {'content' => '{}'}}]}.to_json
-      )
-      AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_insight).returns(fake_response)
-
-      sign_in @teacher
-
-      # Should be in line with the test "lesson_insight query count with no existing lesson insight"
-      assert_queries(37) do
-        get :lesson_insight, params: {
-          lesson_id:  @lesson1.id,
-          unit_id:    @unit.id,
-          student_id: @student.id,
-          section_id: @section.id,
-          refresh:    'true'
-        }
-      end
-
-      assert_response :success
     end
   end
 

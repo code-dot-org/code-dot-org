@@ -269,7 +269,6 @@ class StudentSnapshotsController < ApplicationController
     unit_id = params[:unit_id]
     student_id = params[:student_id]
     section_id = params[:section_id]
-    refresh = ActiveModel::Type::Boolean.new.cast(params[:refresh])
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
@@ -282,7 +281,7 @@ class StudentSnapshotsController < ApplicationController
     return render json: {error: "Student not in section"}, status: :bad_request unless Follower.find_by(student_user_id: student_id, section_id: section_id)
 
     response = AiStudentSnapshotHelper.fetch_or_generate_lesson_insight(
-      unit_id, lesson_id, current_user.id, student_id, section_id, refresh: refresh
+      unit_id, lesson_id, current_user.id, student_id, section_id
     )
 
     render json: response
