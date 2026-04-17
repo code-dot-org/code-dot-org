@@ -1,21 +1,23 @@
 {
   "key": "intro-to-web-lab",
-  "display_name": "intro-to-web-lab",
+  "display_name": "Intro to Web Lab",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
-  "image": null,
-  "cs_topic": null,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": "HOAI",
+  "grade_levels": "7,8,9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/494ba07abd5963a2397733a32007d7fd-weblab-intro-cover.jpg",
+  "cs_topic": "art_and_design,artificial_intelligence,web_design",
   "school_subject": null,
-  "device_compatibility": null,
-  "description": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Students learn how to think like a web designer who uses AI thoughtfully and intentionally, using our Web Lab environment built with AI Tutor - an AI assistant that can build websites, answer questions, and explain topics.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2026-04-16 07:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }
