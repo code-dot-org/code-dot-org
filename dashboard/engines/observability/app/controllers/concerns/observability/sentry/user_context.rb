@@ -19,9 +19,9 @@ module Observability
       # Also skip for Devise session controller actions, since calling current_user in those methods
       # can cause unintended side effects with the Rails session and CSRF tokens.
       private def skip_sentry_user_context?
-        return true if unauthenticated_request?
+        return true if controller_name == 'sessions' && %w[new create destroy reset].include?(action_name)
 
-        controller_name == 'sessions' && %w[new create destroy reset].include?(action_name)
+        unauthenticated_request?
       end
 
       # This method intentionally checks using the Warden authenticated? method rather than relying
