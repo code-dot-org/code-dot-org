@@ -14,7 +14,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
 ];
 
-const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
+const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
