@@ -1,2 +1,0 @@
-class AiStudentPodcastFragment < ApplicationRecord
-end
