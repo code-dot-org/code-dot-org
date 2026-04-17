@@ -13,7 +13,7 @@ module ImageModeration
   MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png
+  # @param [String] content_type - image/gif, image/jpeg, image/png, image/webp
   # @return [Hash, nil] categoriesAnalysis response from Azure, or nil on error
   def self.moderate_image(image_data, content_type)
     unless CDO.azure_ai_content_safety_key
@@ -22,17 +22,22 @@ module ImageModeration
     end
 
     moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
-    if !moderation_type.nil? && moderation_type != content_type
-      Honeybadger.notify("Actual content type differs from reported content type in image moderation", context: {reported_content_type: content_type, actual_content_type: moderation_type})
-    end
-    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if moderation_type.nil?
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key
-    ).moderate_image(moderation_io, moderation_type)
+    ).moderate_image(moderation_io)
   rescue AzureAiContentSafety::AzureError => exception
     Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
+  end
+
+  def self.extract_and_validate_actual_content_type(image_data, content_type)
+    raw_data = image_data.read
+    actual_type = ImageMagickGuard.actual_content_type(raw_data)
+    # This is the list of types that Azure AI Content Safety supports.
+    supported_types = %w(image/gif image/jpeg image/png image/webp).freeze
+    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if actual_type.nil? || !supported_types.include?(actual_type)
+    [raw_data, actual_type]
   end
 
   # Scales images to meet Azure AI Content Safety dimension and size requirements.
@@ -43,8 +48,7 @@ module ImageModeration
   # Uses magic-byte sniffing to determine actual content type, overriding the
   # reported content_type value which may be incorrect.
   def self.scale_image_for_moderation_if_needed(image_data, content_type)
-    raw_data = image_data.read
-    actual_type = ImageMagickGuard.actual_content_type(raw_data)
+    raw_data, actual_type = extract_and_validate_actual_content_type(image_data, content_type)
     image = MiniMagick::Image.read(raw_data)
 
     if image.width < MIN_MODERATION_DIMENSION || image.height < MIN_MODERATION_DIMENSION
