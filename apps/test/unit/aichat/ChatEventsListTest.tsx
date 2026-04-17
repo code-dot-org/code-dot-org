@@ -2,7 +2,6 @@ import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {CompletedChatMessage} from '@cdo/apps/aichat/types';
 import ChatEventsList from '@cdo/apps/aichat/views/ChatEventsList';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -29,11 +28,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 describe('ChatEventsList', () => {
   it('renders general disabled state message when disabled', () => {
-    render(
-      <AiChatDisabledProvider chatDisabled>
-        <ChatEventsList events={[]} />
-      </AiChatDisabledProvider>
-    );
+    render(<ChatEventsList events={[]} chatDisabled={true} />);
 
     expect(
       screen.getByText('AI chat is currently disabled')
@@ -48,9 +43,11 @@ describe('ChatEventsList', () => {
   it('renders a custom disabled state message when provided', () => {
     const customMessage = 'Ai chat is disabled for this student';
     render(
-      <AiChatDisabledProvider chatDisabled chatDisabledMessage={customMessage}>
-        <ChatEventsList events={[]} />
-      </AiChatDisabledProvider>
+      <ChatEventsList
+        events={[]}
+        chatDisabled={true}
+        chatDisabledMessage={customMessage}
+      />
     );
 
     expect(screen.getByText(customMessage)).toBeInTheDocument();
