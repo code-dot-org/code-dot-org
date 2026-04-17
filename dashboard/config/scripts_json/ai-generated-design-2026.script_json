@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-04 02:33:53 UTC",
+    "serialized_at": "2026-04-16 15:46:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2122,7 +2122,7 @@
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze website design choices to identify strengths and weaknesses, using criteria like clarity, cohesion, and audience fit.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Style Critique activity guide.",
         "duration": "10",
         "name": "Style Critique",
-        "progression_name": "Style Critique Activity Guide"
+        "progression_name": "Style Critique"
       },
       "seeding_key": {
         "activity_section.key": "66170931-9e27-4aa5-aa89-af34fbb25305",
@@ -2328,8 +2328,19 @@
       }
     },
     {
-      "key": "666b4c67-273a-4226-9489-2b3a6887e2ff",
+      "key": "dda528c2-c202-45a7-ba89-84aafc4ba509",
       "position": 18,
+      "properties": {
+        "progression_name": "Apply Styles From Your Mood Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "dda528c2-c202-45a7-ba89-84aafc4ba509",
+        "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
+      }
+    },
+    {
+      "key": "666b4c67-273a-4226-9489-2b3a6887e2ff",
+      "position": 19,
       "properties": {
         "progression_name": "Vocab: Mood Boarding",
         "tips": [
@@ -2350,7 +2361,7 @@
     },
     {
       "key": "c1264cad-c2b7-4001-9456-6eb07f09d44f",
-      "position": 19,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that professional designers share work before it’s finished. Emphasize that feedback helps them test whether their message is clear and whether the design works for its intended audience. Connect this back to students’ mood boards—they are still drafts, not final products.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that good feedback helps someone improve their design — it points to a specific element and explains why it works or what could be stronger. Briefly model the difference between helpful and vague feedback using the examples on the slide. Emphasize that helpful feedback focuses on the design choices, not personal preference."
       },
@@ -2361,7 +2372,7 @@
     },
     {
       "key": "c6f31f55-9758-4e7e-8e9c-140e3d87460d",
-      "position": 20,
+      "position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -2371,7 +2382,7 @@
     },
     {
       "key": "66f24e0b-15aa-48be-b71c-dc53a306fcf7",
-      "position": 21,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students walk around and review mood boards created for the same use case. Each student leaves at least one sticky note using one of the sentence frames. Remind students this is practice giving specific, focused, actionable feedback to improve a design — not judging whether they personally like it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Circulate and listen for vague praise (“Looks good”). Pause and push for specificity by asking:\n- “What exactly communicates the style?”\n- “What design choice are you referring to?”\n- “What could they change to improve clarity or audience fit?”\nEncourage feedback that names a specific element (color, font, layout, imagery).\n"
       },
@@ -3587,7 +3598,7 @@
       "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
       "position": 18,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
@@ -4973,6 +4984,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level1_2026-cfu"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5093,8 +5107,33 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Use AI to Create a Web Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level3-cfu_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level3-cfu_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_2026"
+        ],
         "progression": "Use AI to Create a Web Page"
       },
       "bonus": false,
@@ -5112,20 +5151,17 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson4-level1_v3_2026"
-        ],
-        "progression": "Style Critique Activity Guide"
+        "progression": "Style Critique"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level1_v3_2026"
+          "ai-generated-design-lesson4-level1_stylecritiquemain_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -5133,11 +5169,11 @@
         "activity_section.key": "66170931-9e27-4aa5-aa89-af34fbb25305"
       },
       "level_keys": [
-        "ai-generated-design-lesson4-level1_v3_2026"
+        "ai-generated-design-lesson4-level1_stylecritiquemain_2026"
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5162,20 +5198,17 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson4-level3-v2_2026"
-        ],
         "progression": "Mood Board Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level3-v2_2026"
+          "ai-generated-design-lesson4-level3_cfu_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -5183,11 +5216,33 @@
         "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       },
       "level_keys": [
-        "ai-generated-design-lesson4-level3-v2_2026"
+        "ai-generated-design-lesson4-level3_cfu_2026"
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Apply Styles From Your Mood Board"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson4-level4-createstyles_2026"
+        ],
+        "lesson.key": "Lesson 4: Finding Your Style",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dda528c2-c202-45a7-ba89-84aafc4ba509"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson4-level4-createstyles_2026"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5212,7 +5267,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5237,7 +5292,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5262,7 +5317,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5287,7 +5342,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5312,7 +5367,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5337,7 +5392,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5362,7 +5417,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5387,7 +5442,29 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "User Persona and Problem Statement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level2_cfu_2026"
+        ],
+        "lesson.key": "Lesson 7: Meet Your User",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson7-level2_cfu_2026"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5412,11 +5489,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level2_2026"
+        ],
         "progression": "Trace the User Flow"
       },
       "bonus": false,
@@ -5434,7 +5514,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5442,7 +5522,7 @@
         "level_keys": [
           "ai-generated-design-lesson8-level7_2026"
         ],
-        "progression": "Check for Understanding"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5459,7 +5539,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5484,7 +5564,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5509,7 +5589,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5534,7 +5614,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5559,7 +5639,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5584,7 +5664,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5609,7 +5689,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5634,11 +5714,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level1-v2"
+        ],
         "progression": "Web App Responsiveness"
       },
       "bonus": false,
@@ -5656,7 +5739,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5681,7 +5764,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5789,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5731,7 +5814,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5756,7 +5839,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5781,7 +5864,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5881,6 +5964,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level3-cfu_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level3-cfu_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson3-level2-challenges_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson3-level2-challenges_2026"
@@ -5893,9 +5988,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level1_v3_2026",
+        "level.key": "ai-generated-design-lesson4-level1_stylecritiquemain_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level1_v3_2026"
+          "ai-generated-design-lesson4-level1_stylecritiquemain_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -5917,14 +6012,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level3-v2_2026",
+        "level.key": "ai-generated-design-lesson4-level3_cfu_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level3-v2_2026"
+          "ai-generated-design-lesson4-level3_cfu_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson4-level4-createstyles_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson4-level4-createstyles_2026"
+        ],
+        "lesson.key": "Lesson 4: Finding Your Style",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dda528c2-c202-45a7-ba89-84aafc4ba509"
       }
     },
     {
@@ -6016,6 +6123,18 @@
         "level.key": "ai-generated-design-lesson7-level1_choice_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson7-level1_choice_2026"
+        ],
+        "lesson.key": "Lesson 7: Meet Your User",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson7-level2_cfu_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level2_cfu_2026"
         ],
         "lesson.key": "Lesson 7: Meet Your User",
         "lesson_group.key": "lessonGroup-3",
@@ -7564,6 +7683,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

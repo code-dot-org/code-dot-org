@@ -13,7 +13,7 @@ class AiGatewayAuthController < ApplicationController
   # ----------------------------
 
   def get_access_token
-    unless can_access_aichat_lab_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
+    unless current_user.can_access_aichat_chat_completion?(params[:clientType], params[:currentLevelId])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
@@ -38,15 +38,5 @@ class AiGatewayAuthController < ApplicationController
       'RS256'
     )
     render json: {token: token}
-  end
-
-  private def can_access_ai_tutor_chat_completion?(client_type)
-    return false if DCDO.get("block_ai_tutor_chat_completion", false)
-    current_user.trust_chat_client?(client_type)
-  end
-
-  private def can_access_aichat_lab_chat_completion?
-    return false if DCDO.get("block_aichat_lab_chat_completion", false)
-    current_user.has_aichat_lab_access?
   end
 end

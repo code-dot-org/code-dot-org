@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-06 22:58:24 UTC",
+    "serialized_at": "2026-04-16 16:52:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "This self-paced lesson introduces students to building webpages in Web Lab by working with AI tutor as an AI assistant and collaborative partner. Students work independently through different activities where they explore Web Lab, collaborate with AI tutor, and begin to discover their preferred patterns for working with an AI assistant. By the end, students will have built a complete webpage that reflects their own creative decisions and a developed working relationship with AI."
       },
       "seeding_key": {
         "lesson.key": "Web Design",
@@ -50,12 +51,14 @@
   ],
   "lesson_activities": [
     {
-      "key": "2ee69f98-c425-41b8-ae35-cc66a2840c47",
+      "key": "9940f497-75f2-4a6b-b1f1-b8daefff4407",
       "position": 1,
       "properties": {
+        "duration": 60,
+        "name": "Intro to Web Lab"
       },
       "seeding_key": {
-        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407",
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2"
@@ -64,47 +67,129 @@
   ],
   "activity_sections": [
     {
-      "key": "07041948-c286-4e48-a54a-c0b7a3b3576c",
+      "key": "00621947-32fe-446a-92ca-4d9b88e26fd0",
       "position": 1,
       "properties": {
-        "progression_name": "Act 1"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n> ⚠️ **Make sure AI Tutor is enabled:** AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:\n> 1) Become a verified teacher\n>2) Assign the course to a section\n>3) Make sure AI Tools are enabled for that section\n\n",
+        "name": "Setup the Classroom"
       },
       "seeding_key": {
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c",
-        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+        "activity_section.key": "00621947-32fe-446a-92ca-4d9b88e26fd0",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
       }
     },
     {
-      "key": "683bb53d-6ede-44ec-9de3-b1d1298ac137",
+      "key": "8b3630b4-2570-4ee1-89f9-556c8c8833c3",
       "position": 2,
       "properties": {
-        "progression_name": "Act 2"
+        "description": "This self-paced lesson introduces students to building webpages in Web Lab by working with AI tutor as an AI assistant and collaborative partner. The progression has three parts:\n\n- **Part 1:** Students write a vision and use AI Tutor to generate a first draft \\- quickly discovering that AI output doesn't always match what they had in mind.  \n- **Part 2:** Students develop HTML and CSS conceptual understanding through investigation, prompting, and debugging challenges that mirror real design problems. AI Tutor is still generating most of the code, but students are learning the foundational concepts that improve its accuracy.  \n- **Part 3:** Students return to their original page and iterate freely, using everything they've learned to bring their vision closer to reality.\n\nThe lesson has no slides or dedicated warm up / wrap up - the goal is to jump into the lesson right away. By the end, students will have built a complete webpage that reflects their own creative decisions and a developed working relationship with AI.",
+        "name": "Lesson Overview"
       },
       "seeding_key": {
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137",
-        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+        "activity_section.key": "8b3630b4-2570-4ee1-89f9-556c8c8833c3",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
       }
     },
     {
-      "key": "89fcbef0-9fa3-4da7-af07-071197da132a",
+      "key": "7934a560-6274-4b98-98ad-e0e3274eef1f",
       "position": 3,
       "properties": {
-        "progression_name": "Act 3"
+        "description": "Students build something real, fast. The goal is to give them a page they care about before the Essential Question is introduced.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 1 | Introduction to Part 1 | Students view an interactive slideshow introducing the Big Idea of the lesson: **designers communicate a vision**. Students are prompted to think of their vision for a webpage they want to make. |\n| 2 | Exploring Web Lab | Students make their first interaction with AI tutor using a pre-built otter webpage. They highlight an example prompt, send it to AI Tutor, and use the Accept/Reject mechanic for the first time. |\n| 3 | Create Your Own Vision | Students fill in a `vision.md` template for a topic of their own choosing, then prompt AI Tutor to generate an HTML page from it. They see the power of AI for generating content, but also the gaps between their vision and what's on the page. |\n| 4 | Reflection: Your First Version | Students respond to: *\"What's one example of a mismatch between what you can imagine and what was generated? What do you think caused the gap?\"* |",
+        "name": "Part 1: Establish the Vision"
       },
       "seeding_key": {
-        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a",
-        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+        "activity_section.key": "7934a560-6274-4b98-98ad-e0e3274eef1f",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
       }
     },
     {
-      "key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd",
+      "key": "6eeb9139-d538-4095-9ef8-9473054035b7",
       "position": 4,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6eeb9139-d538-4095-9ef8-9473054035b7",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "69c8068b-abc7-44f4-8ed1-494f99cf725e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Part 1: Establish a Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "051df020-9553-4b53-9f31-274dcc2da9b1",
+      "position": 6,
+      "properties": {
+        "description": "Students build vocabulary and conceptual understanding to close the gap they felt in Act 1\\. The Essential Question has now been introduced.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 5 | Introduction to Part 2 | Students interact with another slideshow, introducing the idea that there is usually a gap between what AI generates and what we imagined. It introduces a new essential question for students: **How do designers close the gap between vision and reality?** |\n| 6 | Inspecting Web Pages | Students use the Tag Inspector to hover over elements of the otter example site and identify the HTML tags and CSS rules responsible for each element. They then ask AI Tutor to explain at least one element they found. |\n| 7 | HTML Choice Levels | Students choose one HTML feature to investigate (headers, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 8 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 9 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 10 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n| 11 | Reflection: What Changed? | Students respond to: *\"After fixing someone else's site, what do you notice about how you think about prompting now? What would you do differently on your own page?\"* |",
+        "name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "activity_section.key": "051df020-9553-4b53-9f31-274dcc2da9b1",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "c3a1591d-ca52-47ea-a9eb-9878beaec028",
+      "position": 7,
+      "properties": {
+        "progression_name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "82c27203-6d9d-4969-9ea1-0c5c6dd225fa",
+      "position": 9,
+      "properties": {
+        "description": "Students return to their own page from Act 1 with new vocabulary, new strategies for prompting AI, and a genuine choice about how to use them.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 12 | Introduction to Part 3 | Students interact with the final slideshow. They see a few examples for how students may want to work with AI, and reassure students that any option is fine. Using what they've learned so far, they are ready to revisit their webpage from part 1\\. |\n| 13 | Revisiting Your Vision | Students reload their page from Level 3 and have full choice about how to continue. Students can also use Version History to reset to their initial version, and Share or Remix to save or share their work. They can spend as much time as they want tinkering with their webpage. |",
+        "name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "activity_section.key": "82c27203-6d9d-4969-9ea1-0c5c6dd225fa",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "b8479677-1fa1-4464-b083-1215be09d698",
+      "position": 10,
+      "properties": {
+        "progression_name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8479677-1fa1-4464-b083-1215be09d698",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "59932347-359f-486f-ac83-6ccd13211f91",
+      "position": 11,
+      "properties": {
+        "name": "For the Pilot",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
-        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd",
-        "lesson_activity.key": "2ee69f98-c425-41b8-ae35-cc66a2840c47"
+        "activity_section.key": "59932347-359f-486f-ac83-6ccd13211f91",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
       }
     }
   ],
@@ -115,7 +200,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Act 1"
+        "progression": "Part 1: Establish a Vision"
       },
       "bonus": false,
       "seeding_key": {
@@ -125,7 +210,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       },
       "level_keys": [
         "hoai-web-design-v2-1_pilot2"
@@ -137,7 +222,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Act 1"
+        "progression": "Part 1: Establish a Vision"
       },
       "bonus": false,
       "seeding_key": {
@@ -147,7 +232,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       },
       "level_keys": [
         "hoai-web-design-v2-2_pilot2"
@@ -159,7 +244,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Act 1"
+        "progression": "Part 1: Establish a Vision"
       },
       "bonus": false,
       "seeding_key": {
@@ -169,7 +254,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       },
       "level_keys": [
         "hoai-web-design-v2-3_pilot2"
@@ -181,7 +266,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Act 1"
+        "progression": "Part 1: Establish a Vision"
       },
       "bonus": false,
       "seeding_key": {
@@ -191,7 +276,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       },
       "level_keys": [
         "hoai-web-design-v2-6_pilot2"
@@ -203,7 +288,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -213,7 +298,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-7_pilot2"
@@ -225,7 +310,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -235,7 +320,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-8_pilot2"
@@ -247,7 +332,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -257,7 +342,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-9_pilot2"
@@ -269,7 +354,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -279,7 +364,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-10_pilot2"
@@ -291,7 +376,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -301,7 +386,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-11_pilot2"
@@ -313,7 +398,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Part 2: Close the Gap"
       },
       "bonus": false,
       "seeding_key": {
@@ -323,7 +408,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       },
       "level_keys": [
         "hoai-web-design-v2-12_pilot2"
@@ -332,10 +417,10 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 7,
-      "assessment": false,
+      "activity_section_position": 1,
+      "assessment": true,
       "properties": {
-        "progression": "Act 2"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -345,7 +430,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb"
       },
       "level_keys": [
         "hoai-web-design-v2-13_pilot2"
@@ -357,7 +442,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Act 3"
+        "progression": "Part 3: Iterate for Real"
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +452,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+        "activity_section.key": "b8479677-1fa1-4464-b083-1215be09d698"
       },
       "level_keys": [
         "hoai-web-design-v2-14_pilot2"
@@ -377,9 +462,9 @@
       "chapter": 13,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Act 3"
+        "progression": "Part 3: Iterate for Real"
       },
       "bonus": false,
       "seeding_key": {
@@ -389,7 +474,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+        "activity_section.key": "b8479677-1fa1-4464-b083-1215be09d698"
       },
       "level_keys": [
         "hoai-web-design-v2-15_pilot2"
@@ -411,7 +496,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd"
+        "activity_section.key": "59932347-359f-486f-ac83-6ccd13211f91"
       },
       "level_keys": [
         "hoai-web-design-v2-pilot-survey_pilot2"
@@ -428,7 +513,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       }
     },
     {
@@ -440,7 +525,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       }
     },
     {
@@ -452,7 +537,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       }
     },
     {
@@ -464,7 +549,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "07041948-c286-4e48-a54a-c0b7a3b3576c"
+        "activity_section.key": "69c8068b-abc7-44f4-8ed1-494f99cf725e"
       }
     },
     {
@@ -476,7 +561,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -488,7 +573,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -500,7 +585,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -512,7 +597,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -524,7 +609,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -536,7 +621,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
       }
     },
     {
@@ -548,7 +633,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "683bb53d-6ede-44ec-9de3-b1d1298ac137"
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb"
       }
     },
     {
@@ -560,7 +645,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+        "activity_section.key": "b8479677-1fa1-4464-b083-1215be09d698"
       }
     },
     {
@@ -572,7 +657,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "89fcbef0-9fa3-4da7-af07-071197da132a"
+        "activity_section.key": "b8479677-1fa1-4464-b083-1215be09d698"
       }
     },
     {
@@ -584,15 +669,33 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "38215e1e-eadb-47ec-814b-bbd5bac83ebd"
+        "activity_section.key": "59932347-359f-486f-ac83-6ccd13211f91"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "Printable Level Guide",
+      "url": "https://docs.google.com/presentation/d/1UdXG6bKkc5ztSgviLfusU2EdxEeCB366IWzfx9mEhZ4/edit",
+      "key": "printable_level_guide",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "printable_level_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "resource.key": "printable_level_guide"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -610,12 +713,44 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "690bea6b-54b5-4c32-bc84-d476cfcc974c",
+      "properties": {
+        "description": "Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "690bea6b-54b5-4c32-bc84-d476cfcc974c"
+      }
+    },
+    {
+      "key": "a40ebf57-d223-4fdd-8f1f-6037204d0b03",
+      "properties": {
+        "description": "Understand the difference between HTML for structure and CSS for styling."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "a40ebf57-d223-4fdd-8f1f-6037204d0b03"
+      }
+    },
+    {
+      "key": "e6023455-fc2f-47d3-acb1-a890efa92682",
+      "properties": {
+        "description": "Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "e6023455-fc2f-47d3-acb1-a890efa92682"
+      }
+    }
   ],
   "lessons_standards": [
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

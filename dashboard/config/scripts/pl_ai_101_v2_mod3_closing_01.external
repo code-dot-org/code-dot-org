@@ -6,12 +6,11 @@ markdown <<MARKDOWN
 # Don't stop here, keep learning!
 
 ## Additional Resources
+* #### <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy " target="_blank">Large Language Model Prompts for Educators</a> from Code.org. 
+* #### <a href="https://www.aiforeducation.io/prompt-library " target="_blank">Educator's Prompt Library</a> from AI for Education.
 * #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
 * #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
-* #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
-* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
-* #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
-
+* #### <a href="https://iste-ascd.org/ai" target="_blank">Artificial Intelligence in Education</a> from ISTE.
 
 ## Take it Further Activities
 
@@ -20,14 +19,14 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Learn More About AI
+	Google AI in K12 Education
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">A TED Talk is a short, powerful presentation, typically 18 minutes or less, given by experts on a wide range of topics including technology, entertainment, and design, aimed at spreading innovative ideas and sparking discussion. <br> Learn some more about AI on your own. Watch one or more AI-themed Ted Talks. 
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">If your school uses Google AI, take one of their online courses to learn how to make the most of those systems.
 </p>
 
-<a href="https://www.ted.com/playlists/310/artificial_intelligence" 
+<a href="https://edu.exceedlms.com/student/path/1725537" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
@@ -40,14 +39,28 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	AI Literacy Activities for the Classroom
+	Tool Comparison Activity
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and choose one to implement in your classroom.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Every LLM responds slightly differently and users often develop preferences for one over the other. Take the time to try out the same prompt in multiple LLMs and see how the responses differ. <br><br>Reflect on which set of responses do you prefer and try to articulate why.
+</p>
+</div>
+
+</details>
+
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	In Depth Look at Prompting
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">This module introduces prompting and one possible prompting framework, but prompt engineering goes way deeper. OpenAI publishes clear explanation of how prompts affect outputs and examples of improving prompts with structure and detail.
 </p>
 
-<a href="https://www.teachai.org/media/learningscenarios_deck_final-j9gmue" 
+  <a href="https://developers.openai.com/api/docs/guides/prompt-guidance" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out

@@ -1,0 +1,35 @@
+name 'pl-ai-101-V2-mod5-opening-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Considerations When Using AI
+
+#### As AI tools become more integrated into education, it’s important to recognize that their use raises important ethical questions. While AI can support teaching and learning, it also introduces risks that educators should consider when deciding how and when to use these tools.
+
+## Key Ethical Considerations
+
+#### **Bias, Fairness, and Representation**
+#### AI systems are trained on large datasets that may contain bias. As a result, they can reinforce or amplify inequities in language, representation, or perspective, making it important to critically evaluate outputs.
+
+#### **Transparency, Accuracy, and Accountability**
+#### AI systems do not always show how they generate responses, and their outputs may be incomplete or incorrect. Educators remain responsible for evaluating accuracy and ensuring that AI-generated content is appropriate for use.
+
+#### **Privacy and Data Protection**
+#### AI tools may collect or process user data. It is essential to protect student information and follow school or district policies when using these tools.
+
+#### **Safety, Security, and Appropriate Use**
+#### AI can be misused—for example, to generate misleading content or deepfakes. Ensuring safe, ethical use is an important part of integrating AI into teaching practice.
+
+#### **Human Oversight and Professional Judgment**
+#### AI should support—not replace—human decision-making. Maintaining teacher oversight and professional judgment is critical when using AI tools.
+
+#### **Broader Impacts**
+#### AI also raises broader considerations, including environmental impact, questions about ownership and copyright, and changes to the job market. While these may be less immediate in classroom use, they are important in understanding the full impact of AI.
+
+## Focus Areas in This Module
+#### While all of these considerations are important, this module will focus more deeply on three key areas that directly impact classroom practice:
+* #### Misinformation and AI Fiction
+* #### Algorithmic Bias
+* #### Data Privacy
+MARKDOWN

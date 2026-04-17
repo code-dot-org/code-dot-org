@@ -814,6 +814,8 @@ module SharedConstants
     MODEL_IMAGE_FLAGGED: 1007,
     # The model is currently rate-limited (HTTP 429).
     MODEL_RATE_LIMITED: 1008,
+    # The model's internal content filter blocked its output.
+    MODEL_CONTENT_FILTERED: 1009,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {
@@ -953,6 +955,8 @@ module SharedConstants
   BUBBLE_CHOICE_CUSTOM_MODES = {
     MUSIC_DANCE_AI: 'music_dance_ai',
   }.freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS = 3
 
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',

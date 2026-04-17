@@ -5,10 +5,11 @@ import React, {FC, useCallback, useState} from 'react';
 // import matchJson from '@cdo/static/tutor/match_example.json';
 import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
 import multiMultiJson from '@cdo/static/tutor/multiple_choice_multi_select.json';
-// import scrambleJson from '@cdo/static/tutor/scramble_example.json';
+import scrambleJson from '@cdo/static/tutor/scramble_example.json';
 // import sortJson from '@cdo/static/tutor/sort_example.json';
 
 import PracticeMultipleChoice from './PracticeMultipleChoice';
+import PracticeScramble from './PracticeScramble';
 import {LessonDeepDiveData, PracticeProblem} from './types';
 
 import styles from './practice-problems.module.scss';
@@ -16,7 +17,7 @@ import styles from './practice-problems.module.scss';
 const PracticeProblems: PracticeProblem[] = [
   multiMultiJson as PracticeProblem,
   multiSingleJson as PracticeProblem,
-  // scrambleJson as PracticeProblem,
+  scrambleJson as PracticeProblem,
   // matchJson as PracticeProblem,
   // sortJson as PracticeProblem,
 ];
@@ -59,6 +60,16 @@ const PracticeBox: FC<PracticeBoxProps> = ({
       case 'multiple_choice_multi_select':
         return (
           <PracticeMultipleChoice
+            problem={PracticeProblems[index]}
+            key={PracticeProblems[index].id}
+            submitted={isSubmitted}
+            submitCallback={setIsSubmitted}
+            correctCallback={setIsCorrect}
+          />
+        );
+      case 'scramble':
+        return (
+          <PracticeScramble
             problem={PracticeProblems[index]}
             key={PracticeProblems[index].id}
             submitted={isSubmitted}

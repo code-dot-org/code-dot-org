@@ -10,7 +10,6 @@ import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -121,14 +120,11 @@ const PythonlabView: React.FunctionComponent<
 
   const hasSource = !!source;
 
-  const isAiTutorEnabled =
-    shouldShowAiTutor({
-      appName: levelProperties.appName,
-      tutorLevel: levelProperties.aiTutorAvailable,
-      aiChatAccessLevel: aiChatAccessLevel,
-    }) ||
-    queryParams('show-ai-tutor2') === 'true' ||
-    queryParams('show-ai-tutor') === 'true';
+  const isAiTutorVisible = shouldShowAiTutor({
+    appName: levelProperties.appName,
+    tutorLevel: levelProperties.aiTutorAvailable,
+    aiChatAccessLevel: aiChatAccessLevel,
+  });
 
   const dispatch = useAppDispatch();
 
@@ -205,7 +201,7 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (isAiTutorEnabled) {
+    if (isAiTutorVisible) {
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
@@ -220,7 +216,7 @@ const PythonlabView: React.FunctionComponent<
     source,
     validationFile,
     miniAppName,
-    isAiTutorEnabled,
+    isAiTutorVisible,
     hasRun,
     hasEdited,
   ]);

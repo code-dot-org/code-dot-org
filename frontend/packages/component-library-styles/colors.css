@@ -37,7 +37,7 @@
   --background-brand-purple-strong: var(--brand-purple-70);
   --background-brand-teal-extra-light: var(--brand-teal-5);
   --background-brand-teal-light: var(--brand-teal-10);
-  --background-brand-teal-primary: var(--brand-teal-50);
+  --background-brand-teal-primary: var(--brand-teal-60);
   --background-brand-teal-strong: var(--brand-teal-70);
   --background-error-extra-light: var(--sentiment-error-10);
   --background-error-light: var(--sentiment-error-20);
@@ -379,7 +379,7 @@
   --background-brand-purple-strong: var(--brand-purple-40);
   --background-brand-teal-extra-light: var(--brand-teal-90);
   --background-brand-teal-light: var(--brand-teal-80);
-  --background-brand-teal-primary: var(--brand-teal-50);
+  --background-brand-teal-primary: var(--brand-teal-60);
   --background-brand-teal-strong: var(--brand-teal-40);
   --background-error-extra-light: var(--sentiment-error-90);
   --background-error-light: var(--sentiment-error-80);

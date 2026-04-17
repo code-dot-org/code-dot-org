@@ -120,6 +120,7 @@ export interface ServerSection {
 export interface Student {
   familyName: string;
   id: number;
+  isDemoStudent: boolean;
   name: string;
   secretPictureName: string;
   secretPictureUrl: string;
@@ -132,6 +133,7 @@ export interface Student {
 export interface ServerStudent {
   family_name: string;
   id: number;
+  is_demo_student: boolean;
   name: string;
   secret_picture_name: string;
   secret_picture_url: string;

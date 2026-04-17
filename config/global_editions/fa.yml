@@ -26,23 +26,23 @@ header:
       - title: teach
         id: header-teach
         domain: code.org
-        url: /fa/teacher
+        url: /global/fa/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /fa/about
+        url: /global/fa/about
       - title: csf
         id: header-csf
         domain: code.org
-        url: /fa/csf
+        url: /global/fa/csf
       - title: hour_of_code
         id: header-hoc
         domain: code.org
-        url: /fa/hourofcode
+        url: /global/fa/hourofcode
       - title: videos
         id: header-videos
         domain: code.org
-        url: /fa/videos
+        url: /global/fa/videos
 
     student:
       - title: my_dashboard
@@ -157,6 +157,8 @@ pages:
         # versions that are translated
         courseFilters:
           language: fa-IR
+      # Hide the right panel with "New Features", "Announcements", etc.
+      TeacherPromotions: false
   # Teacher dashboard
   - path: /teacher_dashboard
     components:

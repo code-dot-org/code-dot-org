@@ -7,7 +7,11 @@ const lightTheme = createTheme({palette: {mode: 'light'}});
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
 import PodcastsBox from './PodcastsBox';
-import {LessonDeepDiveData} from './types';
+import {
+  LessonDeepDiveData,
+  ReflectionData,
+  AssessmentQuestionResult,
+} from './types';
 import VideosBox from './VideosBox';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
@@ -59,6 +63,9 @@ interface InterventionBoxProps {
   lessonName: string;
   lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
+  assessmentAnalysis: AssessmentQuestionResult[];
+  objectives: LessonDeepDiveData['objectives'];
+  reflectionData: ReflectionData | null;
 }
 
 const InterventionBox: FC<InterventionBoxProps> = ({
@@ -66,6 +73,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   lessonName,
   lessonSummary,
   vocabulary,
+  assessmentAnalysis,
+  objectives,
+  reflectionData,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
 
@@ -110,6 +120,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
               lessonName={lessonName}
               lessonSummary={lessonSummary}
               vocabulary={vocabulary}
+              assessmentAnalysis={assessmentAnalysis}
+              objectives={objectives}
+              reflectionData={reflectionData}
             />
           </ThemeProvider>
         )}

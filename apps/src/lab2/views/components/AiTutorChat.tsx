@@ -40,6 +40,8 @@ interface AiTutorChatProps {
   tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
+  disabled?: boolean;
+  disabledMessage?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -55,6 +57,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   tutorVideos,
   isLessonDeepDive = false,
   lessonId,
+  disabled,
+  disabledMessage,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -148,6 +152,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
+        disabled={disabled}
+        disabledMessage={disabledMessage}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>
