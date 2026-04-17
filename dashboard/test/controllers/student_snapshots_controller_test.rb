@@ -2,7 +2,9 @@ require 'test_helper'
 
 class StudentSnapshotsControllerTest < ActionController::TestCase
   setup do
-    sign_in(create(:teacher))
+    @teacher = create(:teacher)
+    sign_in(@teacher)
+    @section = create(:section, user: @teacher)
     @unit = create(:unit, name: 'test-unit')
     @lesson_group = create(:lesson_group, script: @unit)
     @lesson1 = create(:lesson,
@@ -308,6 +310,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
     # Create a student and a UserLevel with a LevelSource (student answer)
     student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
     script = @unit
     level_source = create(:level_source, data: '1')
     create(:user_level, user: student, script: script, level: cfu_level, level_source: level_source, submitted: true)
@@ -343,6 +346,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [level_group])
 
     student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
     script = @unit
 
     # Student submitted the LevelGroup and answered the sublevel.
@@ -394,11 +398,13 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [free_res_cfu_level])
 
     student_with_submitted_levels = create(:student)
+    create(:follower, user: @teacher, student_user: student_with_submitted_levels, section: @section)
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: multi_cfu_level, level_source: create(:level_source, data: '1'))
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: match_cfu_level, level_source: create(:level_source, data: '0,2,1'))
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: free_res_cfu_level, level_source: create(:level_source, data: 'Sample free response text'))
 
     student_with_unsubmitted_levels = create(:student)
+    create(:follower, user: @teacher, student_user: student_with_unsubmitted_levels, section: @section)
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: multi_cfu_level, level_source: create(:level_source, data: '-1'))
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: match_cfu_level, level_source: create(:level_source, data: ''))
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: free_res_cfu_level, level_source: create(:level_source, data: ''))
@@ -510,6 +516,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [level_group], assessment: true)
 
     student_with_submitted_levels = create(:student)
+    create(:follower, user: @teacher, student_user: student_with_submitted_levels, section: @section)
     # Even if the LevelGroup has a 'submitted' value of 'false', if the student has submitted each sublevel the response will return 'submitted' as 'true'
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: level_group, submitted: false)
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: multi_cfu_sublevel, level_source: create(:level_source, data: '1'))
@@ -517,6 +524,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     create(:user_level, user: student_with_submitted_levels, script: @unit, level: free_res_cfu_sublevel, level_source: create(:level_source, data: 'Sample free response text'))
 
     student_with_unsubmitted_levels = create(:student)
+    create(:follower, user: @teacher, student_user: student_with_unsubmitted_levels, section: @section)
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: level_group, submitted: false)
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: multi_cfu_sublevel, level_source: create(:level_source, data: '-1'))
     create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: match_cfu_sublevel, level_source: create(:level_source, data: ''))
@@ -535,5 +543,49 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     student_response = response_data['cfu_responses'].first
 
     assert_equal false, student_response['submitted']
+  end
+
+  test "cfu_responses endpoint returns forbidden when student does not belong to current teacher" do
+    other_teacher = create(:teacher)
+    student = create(:student)
+    other_section = create(:section, user: other_teacher)
+    create(:follower, user: other_teacher, student_user: student, section: other_section)
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student.id}
+
+    assert_response :forbidden
+    response_data = JSON.parse(response.body)
+    assert_includes response_data['error'], "Unauthorized access to student data"
+  end
+
+  test "student_code endpoint returns 200 with studentCode shape when student belongs to current teacher" do
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level')
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    student = create(:student)
+    create(:follower, user: @teacher, student_user: student, section: @section)
+
+    fake_code = {'main.py' => 'print("hello")'}
+    @controller.stubs(:get_student_code).returns({student_code: fake_code})
+
+    get :student_code, params: {lesson_id: @lesson1.id, student_id: student.id, unit_id: @unit.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    assert response_data.key?('studentCode'), "response should include 'studentCode' key"
+    assert_equal fake_code, response_data['studentCode']
+  end
+
+  test "student_code endpoint returns forbidden when student does not belong to current teacher" do
+    other_teacher = create(:teacher)
+    student = create(:student)
+    other_section = create(:section, user: other_teacher)
+    create(:follower, user: other_teacher, student_user: student, section: other_section)
+
+    get :student_code, params: {lesson_id: @lesson1.id, student_id: student.id, unit_id: @unit.id}
+
+    assert_response :forbidden
+    response_data = JSON.parse(response.body)
+    assert_includes response_data['error'], "Unauthorized access to student data"
   end
 end

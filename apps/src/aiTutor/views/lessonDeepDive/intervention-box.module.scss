@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  border-top: 1px solid #2e2e50;
+  border-top: 1px solid #242424;
   flex-shrink: 0;
 }
 
@@ -97,7 +97,7 @@
   transition: background-color 0.15s ease, color 0.15s ease;
 
   &:hover {
-    background-color: #2a2a48;
+    background-color: #1e1e1e;
     color: #e8e8f2;
   }
 
@@ -135,21 +135,21 @@
 // ── Active nav item colors (dark-theme tints, all pass WCAG AA) ───────────────
 
 .activeCardTeal {
-  background-color: #0d2620;
+  background-color: #0a1a10;
   color: #6dd4b4; // 5.4:1 on bg
 }
 
 .activeCardPurple {
-  background-color: #1e1435;
+  background-color: #120c20;
   color: #c09ee0; // 8:1 on bg
 }
 
 .activeCardOrange {
-  background-color: #2b1600;
+  background-color: #180d00;
   color: #f09850; // 6.3:1 on bg
 }
 
 .activeCardBlue {
-  background-color: #0c1e38;
+  background-color: #0a1628;
   color: #7ab3e8; // 5.2:1 on bg
 }

@@ -13,7 +13,7 @@ class AiGatewayAuthController < ApplicationController
   # ----------------------------
 
   def get_access_token
-    unless current_user.can_access_aichat_chat_completion?(params[:aichatContext][:clientType], params[:aichatContext][:currentLevelId])
+    unless current_user.can_access_aichat_chat_completion?(params[:clientType], params[:currentLevelId])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
