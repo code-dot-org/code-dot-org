@@ -27,7 +27,7 @@ module Observability
       # This method intentionally checks using the Warden authenticated? method rather than relying
       # on the Devise current_user helper, which calls warden.authenticate under certain circumstances.
       private def unauthenticated_request?
-        !request.env['warden']&.authenticated?(:user)
+        request.env['warden']&.authenticated?(:user) != true
       end
     end
   end
