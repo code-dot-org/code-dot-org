@@ -247,6 +247,7 @@ export default function ReactFlowCanvas({
           nodesFocusable={true}
           edgesFocusable={true}
           disableKeyboardA11y={false}
+          autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
         >
           <Background />
           <Controls />
