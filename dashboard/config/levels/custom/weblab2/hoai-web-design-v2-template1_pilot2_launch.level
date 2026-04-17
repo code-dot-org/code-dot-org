@@ -1,0 +1,76 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "template",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "tips",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <p>This is a blank webpage</p>\n    <p>You can update the text on the left to generate a new webpage based on your vision!</p>\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "4": {
+          "id": "4",
+          "name": "vision.md",
+          "contents": "[Edit the text below to describe the website you want to make!]\n\nI want a website about: [FILL IN HERE]\nMake sure to include:\n- [FILL IN HERE]\n- [FILL IN HERE]\n- [FILL IN HERE - YOU CAN ADD MORE BULLETS]\n\nI want the tone of my website to be: [FILL IN HERE]\n\nI want the colors of my website to be: [FILL IN HERE]\n\nI want the layout of my website to feel: [FILL IN HERE - use words like \"Airy\" or \"Dense\" or \"Tight\" or \"Loose\" ]\n\nI'm making this website because: [FILL IN HERE]",
+          "folderId": "0",
+          "active": true
+        },
+        "5": {
+          "id": "5",
+          "name": "example-vision.md",
+          "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI want the colors of my website to be: bright and pastel with blues and greens\n\nI want the layout of my website to feel: spacy and loose\n\nI'm making this website because: I love otters and I want everyone to know",
+          "folderId": "1",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "4",
+        "5"
+      ]
+    },
+    "name_suffix": "_launch"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-16T16:17:05.353+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-template1_pilot2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-template1_pilot2\"}]"
+}]]></config>
+</Weblab2>
