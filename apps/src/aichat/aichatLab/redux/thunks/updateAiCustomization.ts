@@ -10,12 +10,12 @@ import {saveAiCustomization} from './helpers/saveAiCustomization';
 
 // output a message to the chat window with the list of customizations that were updated.
 export const updateAiCustomization = createAsyncThunk(
-  'aichat/updateAiCustomization',
+  'aichatLab/updateAiCustomization',
   async (_, {dispatch, getState}) => {
     const state = getState() as RootState;
 
     await saveAiCustomization(
-      state.aichat.currentAiCustomizations,
+      state.aichatLab.currentAiCustomizations,
       'updateChatbot',
       dispatch as AppDispatch,
       parseInt(state.progress.currentLevelId || '')

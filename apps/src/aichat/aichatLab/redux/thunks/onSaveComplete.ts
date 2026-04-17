@@ -1,21 +1,20 @@
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {saveTypeToAnalyticsEvent} from '../../constants';
-import {ViewMode} from '../../types';
+import {saveTypeToAnalyticsEvent} from '../../../constants';
+import {ViewMode} from '../../../types';
 import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
 import {findChangedProperties} from '../utils';
-
-import {sendAnalytics} from './sendAnalytics';
 
 // Thunk called after a save has completed successfully.
 // Updates the chat window and reports analytics as necessary.
 export const onSaveComplete =
   () => (dispatch: AppDispatch, getState: () => RootState) => {
     const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
-      getState().aichat;
+      getState().aichatLab;
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,

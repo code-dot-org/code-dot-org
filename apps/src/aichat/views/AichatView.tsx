@@ -26,24 +26,22 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import ChatEventLogger from '../chatEventLogger';
-import {ModalTypes} from '../constants';
-import {LevelPropertiesContext} from '../levelPropertiesContext';
 import {
-  addChatEvent,
-  clearChatMessages,
+  clearHasSetInitialCustomizations,
+  initializeAiCustomizations,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
-  clearHasSetInitialCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
-  sendAnalytics,
   setShowModalType,
   setViewMode,
   updateAiCustomization,
-  initializeAiCustomizations,
-} from '../redux';
+} from '../aichatLab/redux';
+import ChatEventLogger from '../chatEventLogger';
+import {ModalTypes} from '../constants';
+import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {addChatEvent, clearChatMessages, sendAnalytics} from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
 import AiChatHeaderButtons from './aiChatHeaderButtons/AiChatHeaderButtons';
@@ -71,21 +69,23 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   } = levelProperties;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const currentAiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
   const savedAiCustomizations = useAppSelector(
-    state => state.aichat.savedAiCustomizations
+    state => state.aichatLab.savedAiCustomizations
   );
-  const viewMode = useAppSelector(state => state.aichat.viewMode);
-  const showModalType = useAppSelector(state => state.aichat.showModalType);
+  const viewMode = useAppSelector(state => state.aichatLab.viewMode);
+  const showModalType = useAppSelector(state => state.aichatLab.showModalType);
 
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
 
-  const hasSentMessage = useAppSelector(state => state.aichat.hasSentMessage);
+  const hasSentMessage = useAppSelector(
+    state => state.aichatLab.hasSentMessage
+  );
   const hasUpdatedCustomizations = useAppSelector(
-    state => state.aichat.hasUpdatedCustomizations
+    state => state.aichatLab.hasUpdatedCustomizations
   );
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -102,7 +102,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   );
 
   const hasSetInitialCustomizations = useAppSelector(
-    state => state.aichat.hasSetInitialCustomizations
+    state => state.aichatLab.hasSetInitialCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();

@@ -17,7 +17,7 @@ import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.
 
 const PresentationView: React.FunctionComponent = () => {
   const savedAiCustomizations = useAppSelector(
-    state => state.aichat.savedAiCustomizations
+    state => state.aichatLab.savedAiCustomizations
   );
   const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
     savedAiCustomizations;

@@ -1,5 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
+import {AichatLabState} from '@cdo/apps/aichat/aichatLab/redux';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {AiDiffChatState} from '@cdo/apps/aiDifferentiation/redux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
@@ -39,6 +40,7 @@ import {LegacyLabsState} from '../redux/legacyLabs';
 export interface RootState {
   manageStudents: ManageStudentsState;
   aichat: AichatState;
+  aichatLab: AichatLabState;
   aiDiffChat: AiDiffChatState;
   blockly: BlocklyState;
   calendar: CalendarState;

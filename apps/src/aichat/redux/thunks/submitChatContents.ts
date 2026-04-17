@@ -1,11 +1,11 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {setChatMessageSent} from '@cdo/apps/aichat/aichatLab/redux/slice';
 import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
-  setChatMessageSent,
   updateChatMessageStatus,
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';

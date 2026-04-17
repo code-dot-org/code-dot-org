@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
 
+import {AichatLabState} from '@cdo/apps/aichat/aichatLab/redux';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -20,15 +21,18 @@ const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
 let mockState: {
   aichat: Partial<AichatState>;
+  aichatLab: Partial<AichatLabState>;
   pageConstants?: {
     locale: string;
   };
 } = {
   aichat: {
     chatEventsCurrent: [],
-    saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  aichatLab: {
+    saveInProgress: false,
   },
   pageConstants: {
     locale: 'en_us',
@@ -65,9 +69,11 @@ describe('UserChatMessageEditor', () => {
     mockState = {
       aichat: {
         chatEventsCurrent: [],
-        saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
+      },
+      aichatLab: {
+        saveInProgress: false,
       },
     };
   });

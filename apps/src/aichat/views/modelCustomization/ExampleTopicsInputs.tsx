@@ -3,7 +3,7 @@ import React, {useCallback, useMemo} from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {setModelCardProperty} from '../../redux';
+import {setModelCardProperty} from '../../aichatLab/redux';
 import {Visibility} from '../../types';
 
 import MultiInputCustomization from './MultiInputCustomization';

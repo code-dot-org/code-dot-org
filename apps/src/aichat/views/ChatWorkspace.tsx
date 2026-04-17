@@ -9,6 +9,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {findChangedProperties} from '../aichatLab/redux/utils';
 import ChatEventLogger from '../chatEventLogger';
 import {
   modelDescriptions,
@@ -25,7 +26,7 @@ import {
   setChatWorkspaceSelectedTab,
 } from '../redux';
 import {clearUserAddedSelectionContext} from '../redux/slice';
-import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
   ChatAsset,

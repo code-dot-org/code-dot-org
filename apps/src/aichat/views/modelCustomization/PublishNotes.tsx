@@ -10,7 +10,7 @@ import {
   publishModelCard,
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
-} from '@cdo/apps/aichat/redux';
+} from '@cdo/apps/aichat/aichatLab/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -28,16 +28,20 @@ const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const visibility = useAppSelector(
-    state => state.aichat.fieldVisibilities.modelCardInfo
+    state => state.aichatLab.fieldVisibilities.modelCardInfo
   );
   const {modelCardInfo} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
+  );
+  const currentSaveType = useAppSelector(
+    state => state.aichatLab.currentSaveType
+  );
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
   const onSave = useCallback(() => {

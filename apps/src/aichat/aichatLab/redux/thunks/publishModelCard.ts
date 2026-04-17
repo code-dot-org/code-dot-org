@@ -11,7 +11,7 @@ import {saveAiCustomization} from './helpers/saveAiCustomization';
 // enabling access to a "presentation view" where they can interact with their model
 // and view its details (temperature, system prompt, etc) in a summary view.
 export const publishModelCard = createAsyncThunk(
-  'aichat/publishModelCard',
+  'aichatLab/publishModelCard',
   async (_, {dispatch, getState}) => {
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
@@ -19,7 +19,7 @@ export const publishModelCard = createAsyncThunk(
     // Otherwise, there's no state change detected and the updated published state won't be saved.
     const state = getState() as RootState;
     await saveAiCustomization(
-      state.aichat.currentAiCustomizations,
+      state.aichatLab.currentAiCustomizations,
       'publishModelCard',
       dispatch as AppDispatch,
       parseInt(state.progress.currentLevelId || '')
