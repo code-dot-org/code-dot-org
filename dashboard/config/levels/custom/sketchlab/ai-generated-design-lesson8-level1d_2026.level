@@ -1,5 +1,6 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-02-24T18:11:49.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "City Explorer",
-    "long_instructions": "## Do This:\r\n\r\nCreate a site map for a web app that helps people discover local events, restaurants, and activities.\r\n\r\nYour site map must include:\r\n\r\n- A Homepage\r\n\r\n- At least 3 main sections (for example: Events, Food, Outdoors)\r\n\r\n- At least 2 levels of hierarchy (for example: Home → Events → Concert Details)",
+    "long_instructions": "## Do This:\r\n\r\nCreate a site map for a web app that helps people discover local events, restaurants, and activities.\r\n\r\nYour site map must include:\r\n- A home page\r\n- At least 3 main sections (for example: Events, Food, Outdoors)\r\n- At least 2 levels of hierarchy (for example: Home → Events → Concert Details)\r\n\r\n**Save your site map to your Backpack.**",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -676,7 +677,7 @@
     "thumbnail_url": "https://images.code.org/7b74500d81323648dd19ca248e0ddb79-Pasted Graphic 14.png",
     "project_template_level_name": "ai-generated-design-lesson8-level1-level1d-template_2026",
     "name_suffix": "_2026",
-    "teacher_markdown": "## Teaching Tips:\r\n\r\nSince students are filling out a site map, the goal is to ensure their page titles actually reflect the user experience.\r\n\r\nHave students pretend to navigate the site as if they are a user.\r\n\r\nAsk: \"Can a user find a specific event or restaurant, view the details, and get back to the Home page in three clicks or less?\" This helps them identify if their sublevel pages (like Concert Details or Menu) are too buried.",
+    "teacher_markdown": "Since students are filling out a site map, the goal is to ensure their page titles actually reflect the user experience.\r\n\r\nHave students pretend to navigate the site as if they are a user.\r\n\r\nAsk: \"Can a user find a specific event or restaurant, view the details, and get back to the Home page in three clicks or less?\" This helps them identify if their sublevel pages (like Concert Details or Menu) are too buried.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -1384,7 +1385,6 @@
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:49.852+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1d_2025\"},{\"changed_at\":\"2026-03-12 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:26:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:49.852+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1d_2025\"},{\"changed_at\":\"2026-03-12 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:26:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:52:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

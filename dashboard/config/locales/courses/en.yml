@@ -6991,7 +6991,20 @@ en:
           version_title: "'26-'27"
         intro-to-web-lab:
           title: Intro to Web Lab
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: An introduction to Web Lab and how to think like a web designer who uses AI thoughtfully and intentionally
+          description_student: |-
+            Learn how to collaborate with an AI assistant to make your own webpage.
+
+            The AI features in this lesson are only available to students in a section with a verified teacher, so if you have any issues: double-check with your teacher!
+          description_teacher: |-
+            Intro to Web Lab introduces students to our Web Lab programming environment. Web Lab is built with AI Tutor, an AI assistant that can help build websites, answer questions, and explain topics in web design and web development. This unit has a single lesson that introduces students to this new tool and how to think like a web designer who uses AI thoughtfully and intentionally
+
+            **Access and Permissions:**
+            - Teachers can view Web Lab but cannot interact with AI Tutor unless they are a verified teacher or have logged in via Google, Microsoft, Facebook, or an LMS. [Learn how to become a verified teacher here.](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
+            - Students can view Web Lab but cannot interact with AI tutor unless they are in a teacher-led section that meets the above requirements _and_ the section has AI Tools enabled. [Learn how teachers can add students to sections here.](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
+
+            > ⚠️ AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:
+            > 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
+            > 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
+            > 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)
           version_title: ''
