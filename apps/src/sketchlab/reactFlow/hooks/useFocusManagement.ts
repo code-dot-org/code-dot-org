@@ -22,7 +22,7 @@ const PAN_DURATION_MS = 200;
 export function useFocusManagement(
   tabOrder: TabOrderEntry[],
   edges: SketchlabReactFlowEdge[],
-  setActiveTabEntry: (entry: TabOrderEntry | null) => void
+  setLastFocusedEntry: (entry: TabOrderEntry | null) => void
 ) {
   const {fitView, getZoom} = useReactFlow();
 
@@ -62,7 +62,7 @@ export function useFocusManagement(
 
   const focusEntry = useCallback(
     (entry: TabOrderEntry) => {
-      setActiveTabEntry(entry);
+      setLastFocusedEntry(entry);
       const selector =
         entry.type === 'node'
           ? `.react-flow__node[data-id="${entry.id}"]`
@@ -72,14 +72,14 @@ export function useFocusManagement(
       element.focus();
       panToEntryIfNeeded(entry, element);
     },
-    [panToEntryIfNeeded, setActiveTabEntry]
+    [panToEntryIfNeeded, setLastFocusedEntry]
   );
 
   const handleFocusCapture = useCallback(
     (event: React.FocusEvent) => {
       const entry = getEntryFromDOM(event.target as HTMLElement);
       if (entry && tabOrder.some(tabEntry => entriesMatch(tabEntry, entry))) {
-        setActiveTabEntry(entry);
+        setLastFocusedEntry(entry);
         // Pan the focused element into view when it is off-screen.
         // Deferred so it runs after React Flow finishes processing the
         // focus event internally; calling fitView synchronously here
@@ -98,10 +98,10 @@ export function useFocusManagement(
         // Focus moved to a non-node/edge element within the container
         // (e.g. Controls buttons, toolbar). Clear selection so visual
         // indicators like NodeResizer don't persist on the previous node.
-        setActiveTabEntry(null);
+        setLastFocusedEntry(null);
       }
     },
-    [tabOrder, setActiveTabEntry, panToEntryIfNeeded]
+    [tabOrder, setLastFocusedEntry, panToEntryIfNeeded]
   );
 
   return {focusEntry, handleFocusCapture};

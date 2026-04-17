@@ -23,17 +23,16 @@ export function useTabOrder(
 ) {
   const tabOrder = useMemo(() => computeTabOrder(nodes, edges), [nodes, edges]);
 
-  const [activeTabEntry, setActiveTabEntry] = useState<TabOrderEntry | null>(
-    null
-  );
+  const [lastFocusedEntry, setLastFocusedEntry] =
+    useState<TabOrderEntry | null>(null);
 
   // The entry that should have tabIndex 0. Falls back to the first in
   // order when nothing has been focused yet or the active element was
   // deleted (derived — no effect needed).
   const isActiveValid =
-    activeTabEntry &&
-    tabOrder.some(entry => entriesMatch(entry, activeTabEntry));
-  const activeEntry = isActiveValid ? activeTabEntry : tabOrder[0] ?? null;
+    lastFocusedEntry &&
+    tabOrder.some(entry => entriesMatch(entry, lastFocusedEntry));
+  const activeEntry = isActiveValid ? lastFocusedEntry : tabOrder[0] ?? null;
 
-  return {tabOrder, activeEntry, activeTabEntry, setActiveTabEntry};
+  return {tabOrder, activeEntry, lastFocusedEntry, setLastFocusedEntry};
 }

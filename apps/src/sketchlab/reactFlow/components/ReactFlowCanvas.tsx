@@ -77,7 +77,7 @@ export default function ReactFlowCanvas({
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
-  const {tabOrder, activeEntry, activeTabEntry, setActiveTabEntry} =
+  const {tabOrder, activeEntry, lastFocusedEntry, setLastFocusedEntry} =
     useTabOrder(
       nodes as SketchlabReactFlowNode[],
       edges as SketchlabReactFlowEdge[]
@@ -86,7 +86,7 @@ export default function ReactFlowCanvas({
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
     edges as SketchlabReactFlowEdge[],
-    setActiveTabEntry
+    setLastFocusedEntry
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
@@ -99,7 +99,7 @@ export default function ReactFlowCanvas({
     });
 
   // Filter out React Flow's internal selection changes. We manage
-  // selection via activeTabEntry so that visual indicators (NodeResizer,
+  // selection via lastFocusedEntry so that visual indicators (NodeResizer,
   // edge highlight) stay in sync with keyboard/click focus.
   const handleNodesChange = useCallback(
     (changes: Parameters<typeof onNodesChange>[0]) => {
@@ -122,18 +122,18 @@ export default function ReactFlowCanvas({
   );
 
   const handlePaneClick = useCallback(() => {
-    setActiveTabEntry(null);
-  }, [setActiveTabEntry]);
+    setLastFocusedEntry(null);
+  }, [setLastFocusedEntry]);
 
   // Clear selection when focus leaves the canvas container entirely
   // (e.g. clicking outside or tabbing out of the canvas).
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
       if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-        setActiveTabEntry(null);
+        setLastFocusedEntry(null);
       }
     },
-    [setActiveTabEntry]
+    [setLastFocusedEntry]
   );
 
   // Apply roving tabindex through React Flow's domAttributes so it
@@ -147,7 +147,7 @@ export default function ReactFlowCanvas({
         const isTabTarget =
           activeEntry?.type === 'node' && activeEntry.id === node.id;
         const isFocused =
-          activeTabEntry?.type === 'node' && activeTabEntry.id === node.id;
+          lastFocusedEntry?.type === 'node' && lastFocusedEntry.id === node.id;
         const isConnectSource = connectingFrom === node.id;
         return {
           ...node,
@@ -159,7 +159,7 @@ export default function ReactFlowCanvas({
           },
         };
       }),
-    [nodes, activeEntry, activeTabEntry, connectingFrom]
+    [nodes, activeEntry, lastFocusedEntry, connectingFrom]
   );
   // TODO: Add meaningful ariaLabel to edges using node labels instead of
   // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
@@ -169,14 +169,14 @@ export default function ReactFlowCanvas({
         const isTabTarget =
           activeEntry?.type === 'edge' && activeEntry.id === edge.id;
         const isFocused =
-          activeTabEntry?.type === 'edge' && activeTabEntry.id === edge.id;
+          lastFocusedEntry?.type === 'edge' && lastFocusedEntry.id === edge.id;
         return {
           ...edge,
           selected: isFocused,
           domAttributes: {tabIndex: isTabTarget ? 0 : -1},
         };
       }),
-    [edges, activeEntry, activeTabEntry]
+    [edges, activeEntry, lastFocusedEntry]
   );
 
   // Debounced save: sync ReactFlow state back to project sources.
