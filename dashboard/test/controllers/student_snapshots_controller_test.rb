@@ -702,7 +702,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       )
       AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_insight).returns(fake_response)
 
-      assert_empty LessonInsight.where(student: @student, lesson: @lesson)
+      assert_empty LessonInsight.where(student: @student, lesson: @lesson1)
       sign_in @teacher
 
       assert_queries(37) do
