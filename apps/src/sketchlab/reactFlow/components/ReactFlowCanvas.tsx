@@ -77,16 +77,23 @@ export default function ReactFlowCanvas({
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
-  const {tabOrder, activeEntry, lastFocusedEntry, setLastFocusedEntry} =
-    useTabOrder(
-      nodes as SketchlabReactFlowNode[],
-      edges as SketchlabReactFlowEdge[]
-    );
+  const {
+    tabOrder,
+    activeEntry,
+    lastFocusedEntry,
+    setLastFocusedEntry,
+    nodeOrEdgeFocused,
+    setNodeOrEdgeFocused,
+  } = useTabOrder(
+    nodes as SketchlabReactFlowNode[],
+    edges as SketchlabReactFlowEdge[]
+  );
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
     edges as SketchlabReactFlowEdge[],
-    setLastFocusedEntry
+    setLastFocusedEntry,
+    setNodeOrEdgeFocused
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
@@ -108,9 +115,10 @@ export default function ReactFlowCanvas({
     (event: React.FocusEvent) => {
       if (!event.currentTarget.contains(event.relatedTarget as Node)) {
         setLastFocusedEntry(null);
+        setNodeOrEdgeFocused(false);
       }
     },
-    [setLastFocusedEntry]
+    [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
   // Apply roving tabindex through React Flow's domAttributes so it
@@ -123,12 +131,14 @@ export default function ReactFlowCanvas({
       nodes.map(node => {
         const isTabTarget =
           activeEntry?.type === 'node' && activeEntry.id === node.id;
-        const isFocused =
-          lastFocusedEntry?.type === 'node' && lastFocusedEntry.id === node.id;
+        const isSelected =
+          nodeOrEdgeFocused &&
+          lastFocusedEntry?.type === 'node' &&
+          lastFocusedEntry.id === node.id;
         const isConnectSource = connectingFrom === node.id;
         return {
           ...node,
-          selected: isFocused && !readOnly,
+          selected: isSelected && !readOnly,
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             tabIndex: isTabTarget ? 0 : -1,
@@ -140,6 +150,7 @@ export default function ReactFlowCanvas({
       nodes,
       activeEntry?.type,
       activeEntry?.id,
+      nodeOrEdgeFocused,
       lastFocusedEntry?.type,
       lastFocusedEntry?.id,
       connectingFrom,
@@ -153,18 +164,21 @@ export default function ReactFlowCanvas({
       edges.map(edge => {
         const isTabTarget =
           activeEntry?.type === 'edge' && activeEntry.id === edge.id;
-        const isFocused =
-          lastFocusedEntry?.type === 'edge' && lastFocusedEntry.id === edge.id;
+        const isSelected =
+          nodeOrEdgeFocused &&
+          lastFocusedEntry?.type === 'edge' &&
+          lastFocusedEntry.id === edge.id;
         return {
           ...edge,
-          selected: isFocused && !readOnly,
+          selected: isSelected && !readOnly,
           domAttributes: {tabIndex: isTabTarget ? 0 : -1},
         };
       }),
     [
       edges,
       activeEntry?.type,
-      activeEntry.id,
+      activeEntry?.id,
+      nodeOrEdgeFocused,
       lastFocusedEntry?.type,
       lastFocusedEntry?.id,
       readOnly,
