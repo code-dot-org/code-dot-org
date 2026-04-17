@@ -7,7 +7,6 @@ const EVENTS = {
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_STARTED_EVENT: 'Sign Up Started',
   SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
-  SIGN_UP_SSO_SHOW_MORE_OPTIONS: 'SSO Show More Options Clicked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
@@ -71,7 +70,6 @@ const EVENTS = {
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
   ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
-  SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
   SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
   ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
   DO_NOT_TEACH_AT_SCHOOL_CLICKED:
@@ -123,27 +121,12 @@ const EVENTS = {
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
 
-  // Marketing site pages
-  ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
-
   // Amazon future engineer
-  AFE_START: 'AFE Start',
-  AFE_SIGN_IN_BUTTON_PRESS: 'AFE Sign In Button Press',
-  AFE_SIGN_UP_BUTTON_PRESS: 'AFE Sign Up Button Press',
-  AFE_SUBMIT_SCHOOL_INFO: 'AFE Submit School Info',
-  AFE_INELIGIBLE: 'AFE Ineligible',
-  AFE_CONTINUE: 'AFE Continue',
-  AFE_SUBMIT: 'AFE Submit',
   AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
   SECTION_SETUP_COMPLETED: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
-  PROGRESS_VIEWED: 'Section Progress Viewed',
-  PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
-  PROGRESS_TOGGLE: 'Section Progress Toggled',
-  PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
@@ -190,11 +173,6 @@ const EVENTS = {
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
-  PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
-  PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
-  PROGRESS_V2_DELAY_INVITATION:
-    'Section Progress Invitation Modal Remind Later',
-  PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
   PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
   PROGRESS_V2_ALL_ROWS_EXPANDED:
     'Section New Progress All Student Rows Expanded',
@@ -268,9 +246,6 @@ const EVENTS = {
   TA_RUBRIC_INDIVIDUAL_AI_EVAL: 'TA Rubric Individual AI Eval Requested',
   TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
   TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
-  TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
-  TA_RUBRIC_AI_EVAL_FROM_SECTION:
-    'TA Rubric AI Eval started from section request',
   TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
   TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
   TA_RUBRIC_TOUR_STARTED: 'First view of TA Rubric product tour',
@@ -336,9 +311,6 @@ const EVENTS = {
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
-  HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
-  GUIDE_SENT_EVENT: 'Guide Sent',
-
   // Hour of Code - Dance Party
   DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
   DANCE_PARTY_LEVEL_COMPLETED: 'Dance Party Level Completed',
@@ -452,9 +424,6 @@ const EVENTS = {
   LTI_DYNAMIC_REGISTRATION_COMPLETED: 'lti_dynamic_registration_completed',
   LTI_NEW_ACCOUNT_CLICK: 'lti_new_account_click',
 
-  // Teacher Homepage
-  TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
-
   // New Teacher Homepage
   NEW_TEACHER_HOMEPAGE_VISITED: 'New Teacher Homepage Visited',
   SECTION_LIST_TEACHING_TOGGLE_CLICKED:
@@ -472,8 +441,6 @@ const EVENTS = {
   SECTION_CARD_SETTINGS_CLICKED: 'Section Card Settings Clicked',
   SECTION_CARD_ROSTER_CLICKED: 'Section Card Roster Clicked',
   SECTION_CARD_LOGIN_CARDS_CLICKED: 'Section Card Login Cards Clicked',
-  SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
-    'Section Card Print Certificates Clicked',
   SECTION_CARD_ARCHIVE_CLICKED: 'Section Card Archive Clicked',
   SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
   SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
@@ -483,7 +450,6 @@ const EVENTS = {
 
   // Aichat
   UPDATE_CHATBOT: 'Student updates their aichat bot',
-  AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
@@ -529,17 +495,12 @@ const EVENTS = {
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
-  CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
-  CODEBRIDGE_POP_OUT_IMAGE: 'Image popped out of console on codebridge',
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
   CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
-  BLOCKLY_SETTING_KEYBOARD_NAVIGATION: 'keyboardNavigation',
   BLOCKLY_SETTING_THEME: 'theme',
-  BLOCKLY_SETTING_ON: 'on',
-  BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
   BLOCKLY_SLASH_KEY_PRESSED: 'Blockly Slash Key Pressed',
 
@@ -553,7 +514,6 @@ const EVENTS = {
   // Lesson Materials page
   VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
   LESSON_MATERIALS_LESSON_CHANGE: 'Local Nav Lesson Materials Lesson Change',
-  LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
   LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS:
     'Local Nav Download All Lesson Plans',
   LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS: 'Local Nav Download All Handouts',
@@ -587,9 +547,6 @@ const EVENTS = {
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
     'Global Edition Region Switch Confirm Rejected',
 
-  // Sign in callout on CSF and CSC levels
-  LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
-
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
   LAB2_VERSION_RESTORED: 'Version restored on lab2',
@@ -599,7 +556,6 @@ const EVENTS = {
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
   RESOURCE_PANEL_SETTINGS_PANEL_OPENED: 'Resource Panel Settings Panel Opened',
-  RESOURCE_PANEL_SETTINGS_CHANGED: 'Resource Panel Settings Changed',
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
@@ -626,12 +582,8 @@ const EVENTS = {
 
   // Dance Party (Lab2)
   DANCE_PARTY_SESSION_END: 'Dance Party Session End',
-  GENERATE_DANCER_CLICKED: 'Generate Dancer Clicked',
-  REGENERATE_DANCER_CLICKED: 'Regenerate Dancer Clicked',
   GENERATE_DANCER_BACK_TO_PROMPT_CLICKED:
     'Generate Dancer Back To Prompt Clicked',
-  DANCE_PARTY_GENERATE_CODE_CLICKED: 'Dance Party Generate Code Clicked',
-  DANCE_PARTY_REGENERATE_CODE_CLICKED: 'Dance Party Regenerate Code Clicked',
   DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
     'Dance Party Generate Code Back To Prompt Clicked',
   DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED:
@@ -640,8 +592,6 @@ const EVENTS = {
   // Music Lab
   // Note that some Music Lab events are already sent through the Music Lab-specific {@link AnalyticsReporter.ts}.
   // Reporting will be consolidated once Amplitude support has been removed.
-  MUSIC_LAB_GENERATE_CODE_CLICKED: 'Music Lab Generate Code Clicked',
-  MUSIC_LAB_REGENERATE_CODE_CLICKED: 'Music Lab Regenerate Code Clicked',
   MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
     'Music Lab Generate Code Back To Prompt Clicked',
   MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
@@ -683,38 +633,4 @@ const EVENTS = {
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 };
 
-const EVENT_GROUP_NAMES = {
-  VIDEO_EVENTS: 'video-events',
-  DANCE_PARTY: 'dance-party-events',
-  PROJECT_SHARING: 'project-sharing-events',
-  FINISH_PROJECT_SHARING: 'finish-project-sharing-events',
-};
-
-const EVENT_GROUPS = {
-  // Hour of Code - Dance Party
-  [EVENTS.DANCE_PARTY_ACTIVITY_STARTED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_LEVEL_COMPLETED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_BACKGROUND_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_AI_EMOJI_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
-  [EVENTS.DANCE_PARTY_SONG_UNAVAILABLE]: EVENT_GROUP_NAMES.DANCE_PARTY,
-
-  // Project sharing via 'Share' button
-  [EVENTS.SHARING_PUBLISH]: EVENT_GROUP_NAMES.PROJECT_SHARING,
-  [EVENTS.SHARING_FB]: EVENT_GROUP_NAMES.PROJECT_SHARING,
-  [EVENTS.SHARING_TWITTER]: EVENT_GROUP_NAMES.PROJECT_SHARING,
-  [EVENTS.SHARING_LINK_SEND_TO_PHONE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
-
-  // Project sharing via 'Finish' button
-  [EVENTS.FINISH_SHARING_LINK_COPY]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_PUBLISH]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_FB]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_TWITTER]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE]:
-    EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-};
-
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};
+export {EVENTS};
