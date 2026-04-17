@@ -106,8 +106,6 @@ class ProgressLesson extends React.Component {
       unitHasUnnumberedLessons,
       isOnLevelView,
       userId,
-      userType,
-      unitName,
     } = this.props;
 
     if (!isVisible) {
