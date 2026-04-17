@@ -63,14 +63,14 @@ export function useFocusManagement(
 
   const focusEntry = useCallback(
     (entry: TabOrderEntry) => {
-      setLastFocusedEntry(entry);
-      setNodeOrEdgeFocused(true);
       const selector =
         entry.type === 'node'
           ? `.react-flow__node[data-id="${entry.id}"]`
           : `.react-flow__edge[data-id="${entry.id}"]`;
       const element = document.querySelector<HTMLElement>(selector);
       if (!element) return;
+      setLastFocusedEntry(entry);
+      setNodeOrEdgeFocused(true);
       element.focus();
       panToEntryIfNeeded(entry, element);
     },
