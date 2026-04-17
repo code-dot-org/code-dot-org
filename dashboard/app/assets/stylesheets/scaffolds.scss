@@ -1,7 +1,7 @@
 @import "color";
 
 body {
-  background-color: $white;
+  background-color: var(--background-neutral-primary, $white);
   color: $default_text;
   font-size: 13px;
   line-height: 18px;

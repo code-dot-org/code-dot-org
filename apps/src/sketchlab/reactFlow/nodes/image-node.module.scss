@@ -1,0 +1,56 @@
+.imageNode {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.editAltButton {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.4;
+  color: var(--text-neutral-primary);
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  .imageNode:hover &,
+  .imageNode:focus-within &,
+  :global(.react-flow__node:focus) & {
+    opacity: 1;
+  }
+}
+
+.altEditor {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 4px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
+
+  label {
+    min-width: unset;
+    width: 120px;
+
+    input {
+      width: 120px;
+    }
+  }
+}
+

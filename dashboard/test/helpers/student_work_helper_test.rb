@@ -25,12 +25,34 @@ class StudentWorkHelperTest < ActionView::TestCase
     )
   end
 
+  def make_script_level(level)
+    create(
+      :script_level,
+      levels: [level],
+      lesson: @lesson,
+      script: @script,
+      activity_section: @lesson.activity_sections.first
+    )
+  end
+
   def passing_result
     ActivityConstants::MINIMUM_PASS_RESULT
   end
 
   def failing_result
     ActivityConstants::MINIMUM_PASS_RESULT - 1
+  end
+
+  def make_user_level(level, best_result:, attempts: 1, level_source: nil)
+    create(
+      :user_level,
+      user: @student,
+      level: level,
+      script: @script,
+      attempts: attempts,
+      best_result: best_result,
+      level_source: level_source
+    )
   end
 
   # ---------------------------------------------------------------------------
@@ -310,5 +332,609 @@ class StudentWorkHelperTest < ActionView::TestCase
     entry = lesson_assessment_analysis(@lesson.id, @student.id).first
 
     assert_equal true, entry[:correct]
+  end
+
+  # lesson_progress_status
+
+  # ---------------------------------------------------------------------------
+  # Zero levels / no attempts
+  # ---------------------------------------------------------------------------
+
+  test "progress: no levels returns all zeros" do
+    assert_equal(
+      {
+        levels_total_count: 0, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: levels present but no user_levels returns completed and correct as 0" do
+    make_script_level(create(:multi))
+    make_script_level(create(:multi))
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 0,
+        validated_levels_total_count: 2, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Multi
+  # ---------------------------------------------------------------------------
+
+  test "progress: all multi attempted and passing" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_user_level(m1, best_result: passing_result)
+    make_user_level(m2, best_result: passing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 2,
+        validated_levels_total_count: 2, validated_levels_correct_count: 2,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: all multi attempted, none passing" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_user_level(m1, best_result: failing_result)
+    make_user_level(m2, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 2,
+        validated_levels_total_count: 2, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 2
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: all multi attempted, mix of passing and failing" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_user_level(m1, best_result: passing_result)
+    make_user_level(m2, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 2,
+        validated_levels_total_count: 2, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: one of two multi attempted and passing" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_user_level(m1, best_result: passing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 1,
+        validated_levels_total_count: 2, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: two of three multi attempted with mix of results" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    m3 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_script_level(m3)
+    make_user_level(m1, best_result: passing_result)
+    make_user_level(m2, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 3, levels_attempted_count: 2,
+        validated_levels_total_count: 3, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: one of two multi attempted but failing" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    make_user_level(m1, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 2, levels_attempted_count: 1,
+        validated_levels_total_count: 2, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # External level — not validated (correct = attempted by definition)
+  # ---------------------------------------------------------------------------
+
+  test "progress: external level clicked counts as completed but not validated" do
+    ext = create(:external)
+    make_script_level(ext)
+    make_user_level(ext, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: external level not clicked counts as not completed" do
+    ext = create(:external)
+    make_script_level(ext)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # BubbleChoice
+  # ---------------------------------------------------------------------------
+
+  test "progress: bubble_choice with no sublevels attempted" do
+    bc = create(:bubble_choice_level)
+    sub = create(:level)
+    bc.setup_sublevels([sub.name])
+    make_script_level(bc)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 1, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: bubble_choice with one sublevel attempted and passing" do
+    bc = create(:bubble_choice_level)
+    sub = create(:level)
+    bc.setup_sublevels([sub.name])
+    make_script_level(bc)
+    make_user_level(sub, best_result: passing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: bubble_choice with one sublevel attempted but failing" do
+    bc = create(:bubble_choice_level)
+    sub = create(:level)
+    bc.setup_sublevels([sub.name])
+    make_script_level(bc)
+    make_user_level(sub, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: bubble_choice with two sublevels attempted, one passing" do
+    bc = create(:bubble_choice_level)
+    sub1 = create(:level)
+    sub2 = create(:level)
+    bc.setup_sublevels([sub1.name, sub2.name])
+    make_script_level(bc)
+    make_user_level(sub1, best_result: failing_result)
+    make_user_level(sub2, best_result: passing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: bubble_choice with all aichat sublevels is not validated" do
+    bc = create(:bubble_choice_level)
+    aichat1 = create(:aichat)
+    aichat2 = create(:aichat)
+    bc.setup_sublevels([aichat1.name, aichat2.name])
+    make_script_level(bc)
+    make_user_level(aichat1, best_result: passing_result)
+    create(:aichat_event, user: @student, level_id: aichat1.id, script_id: @script.id)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # LevelGroup
+  # ---------------------------------------------------------------------------
+
+  test "progress: level_group with no sublevels attempted" do
+    lg = create(:level_group)
+    sub = create(:multi)
+    lg.update_levels_and_texts_by_page([[sub]])
+    make_script_level(lg)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 1, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group with one multi sublevel passing" do
+    lg = create(:level_group)
+    sub = create(:multi)
+    lg.update_levels_and_texts_by_page([[sub]])
+    make_script_level(lg)
+    make_user_level(sub, best_result: passing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group with two sublevels attempted, one failing" do
+    lg = create(:level_group)
+    sub1 = create(:multi)
+    sub2 = create(:multi)
+    lg.update_levels_and_texts_by_page([[sub1, sub2]])
+    make_script_level(lg)
+    make_user_level(sub1, best_result: passing_result)
+    make_user_level(sub2, best_result: failing_result)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group unattempted sublevel does not count as incorrect" do
+    lg = create(:level_group)
+    sub1 = create(:multi)
+    sub2 = create(:multi)
+    lg.update_levels_and_texts_by_page([[sub1, sub2]])
+    make_script_level(lg)
+    make_user_level(sub1, best_result: passing_result)
+    # sub2 not attempted
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group free_response sublevel with ALL_COMPLETE_CORRECT eval" do
+    lg = create(:level_group)
+    fr = create(:free_response)
+    lg.update_levels_and_texts_by_page([[fr]])
+    make_script_level(lg)
+    ls = create(:level_source, level: fr, data: 'my answer')
+    make_user_level(fr, best_result: failing_result, level_source: ls)
+    create(:user_level_evaluation,
+      student_id: @student.id,
+      level_id: fr.id,
+      unit_id: @script.id,
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
+    )
+    OpenaiEvaluateHelper.expects(:evaluate_free_response).never
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group free_response sublevel no evaluation and no submission" do
+    lg = create(:level_group)
+    fr = create(:free_response)
+    lg.update_levels_and_texts_by_page([[fr]])
+    make_script_level(lg)
+    make_user_level(fr, best_result: failing_result)
+    OpenaiEvaluateHelper.expects(:evaluate_free_response).never
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 1
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Aichat — not validated (correct = attempted by definition)
+  # ---------------------------------------------------------------------------
+
+  test "progress: aichat with no events is not complete" do
+    make_script_level(create(:aichat))
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat with event but no user_level is not attempted" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    create(:aichat_event, user: @student, level_id: aichat.id, script_id: @script.id)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat with user_level but no event is not attempted" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    make_user_level(aichat, best_result: 100)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat with user_level and event is attempted but not validated" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    make_user_level(aichat, best_result: 100)
+    create(:aichat_event, user: @student, level_id: aichat.id, script_id: @script.id)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: aichat event for a different script does not count" do
+    aichat = create(:aichat)
+    make_script_level(aichat)
+    other_script = create(:script, :in_single_unit_course)
+    create(:aichat_event, user: @student, level_id: aichat.id, script_id: other_script.id)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 0,
+        validated_levels_total_count: 0, validated_levels_correct_count: 0,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  test "progress: level_group free_response sublevel no evaluation but has submission triggers eval" do
+    lg = create(:level_group)
+    fr = create(:free_response)
+    lg.update_levels_and_texts_by_page([[fr]])
+    make_script_level(lg)
+    ls = create(:level_source, level: fr, data: 'my answer')
+    make_user_level(fr, best_result: failing_result, level_source: ls)
+
+    OpenaiEvaluateHelper.expects(:evaluate_free_response).with(instance_of(UserLevel), instance_of(Unit)).once
+    mock_eval = stub(
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
+    )
+    UserLevelEvaluation.stubs(:find_by).returns(mock_eval)
+
+    assert_equal(
+      {
+        levels_total_count: 1, levels_attempted_count: 1,
+        validated_levels_total_count: 1, validated_levels_correct_count: 1,
+        validated_levels_incorrect_count: 0
+      },
+      lesson_progress_status(@lesson.id, @student.id)
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # lesson_time_spent
+  # ---------------------------------------------------------------------------
+
+  test "time_spent: no user_levels returns 0" do
+    make_script_level(create(:multi))
+
+    assert_equal 0, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: single level with time_spent returns that value" do
+    level = create(:multi)
+    make_script_level(level)
+    create(:user_level, user: @student, level: level, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 90
+    )
+
+    assert_equal 90, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: sums time_spent across multiple levels" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    create(:user_level, user: @student, level: m1, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 60
+    )
+    create(:user_level, user: @student, level: m2, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 45
+    )
+
+    assert_equal 105, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: nil time_spent on a user_level is treated as 0" do
+    m1 = create(:multi)
+    m2 = create(:multi)
+    make_script_level(m1)
+    make_script_level(m2)
+    create(:user_level, user: @student, level: m1, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 30
+    )
+    create(:user_level, user: @student, level: m2, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: nil
+    )
+
+    assert_equal 30, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: excludes user_levels from a different lesson in the same script" do
+    other_lesson_group = create(:lesson_group, script: @script)
+    other_lesson = create(:lesson, :with_activity_section,
+      lesson_group: other_lesson_group, script: @script
+    )
+    level_this = create(:multi)
+    level_other = create(:multi)
+    create(:script_level, levels: [level_this], lesson: @lesson, script: @script,
+      activity_section: @lesson.activity_sections.first
+    )
+    create(:script_level, levels: [level_other], lesson: other_lesson, script: @script,
+      activity_section: other_lesson.activity_sections.first
+    )
+    create(:user_level, user: @student, level: level_this, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 50
+    )
+    create(:user_level, user: @student, level: level_other, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 200
+    )
+
+    assert_equal 50, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: excludes user_levels from a different student" do
+    other_student = create(:student)
+    level = create(:multi)
+    make_script_level(level)
+    create(:user_level, user: @student, level: level, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 40
+    )
+    create(:user_level, user: other_student, level: level, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 999
+    )
+
+    assert_equal 40, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: excludes user_levels from a different script" do
+    other_script = create(:script, :in_single_unit_course)
+    other_lg = create(:lesson_group, script: other_script)
+    create(:lesson, :with_activity_section,
+      lesson_group: other_lg, script: other_script
+    )
+    level = create(:multi)
+    make_script_level(level)
+    create(:user_level, user: @student, level: level, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: 70
+    )
+    create(:user_level, user: @student, level: level, script: other_script,
+      attempts: 1, best_result: passing_result, time_spent: 999
+    )
+
+    assert_equal 70, lesson_time_spent(@lesson.id, @student.id)
+  end
+
+  test "time_spent: all nil time_spent returns 0" do
+    level = create(:multi)
+    make_script_level(level)
+    create(:user_level, user: @student, level: level, script: @script,
+      attempts: 1, best_result: passing_result, time_spent: nil
+    )
+
+    assert_equal 0, lesson_time_spent(@lesson.id, @student.id)
   end
 end

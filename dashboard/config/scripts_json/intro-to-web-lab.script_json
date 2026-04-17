@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
       "has_verified_resources": true,
       "is_migrated": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 02:55:06 UTC",
+    "serialized_at": "2026-04-16 23:37:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -36,25 +39,724 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Web Design",
+      "name": "Intro to Web Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This self-paced lesson introduces students to building webpages in Web Lab by working with AI tutor as an AI assistant and collaborative partner. Students work independently through different activities where they explore Web Lab, collaborate with AI tutor, and begin to discover their preferred patterns for working with an AI assistant. By the end, students will have built a complete webpage that reflects their own creative decisions and a developed working relationship with AI."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "26c2fb93-9fac-48ae-9455-5ce968d678ce",
+      "position": 1,
+      "properties": {
+        "name": "Preparing"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26c2fb93-9fac-48ae-9455-5ce968d678ce",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    },
+    {
+      "key": "97933068-9fe8-44f4-9dda-84862537e27e",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Part 1: Establish the Vision"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97933068-9fe8-44f4-9dda-84862537e27e",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    },
+    {
+      "key": "b40db922-ee81-47cd-9f71-afee8fb25bbe",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b40db922-ee81-47cd-9f71-afee8fb25bbe",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    },
+    {
+      "key": "74f2c87c-ec22-4a7c-896b-480103ed948a",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74f2c87c-ec22-4a7c-896b-480103ed948a",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    },
+    {
+      "key": "26d222c1-1979-4053-a99a-daa99b802a96",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26d222c1-1979-4053-a99a-daa99b802a96",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "c2b853b6-c0d2-4a47-b69d-1c711d9e4760",
+      "position": 1,
+      "properties": {
+        "description": "This self-paced lesson introduces students to building webpages in Web Lab by working with AI tutor as an AI assistant and collaborative partner. The progression has three parts:\n\n- **Part 1:** Students write a vision and use AI Tutor to generate a first draft \\- quickly discovering that AI output doesn't always match what they had in mind.  \n- **Part 2:** Students develop HTML and CSS conceptual understanding through investigation, prompting, and debugging challenges that mirror real design problems. At no point do students need to write any HTML or CSS themselves - AI Tutor is still generating most of the code, but students are learning the foundational concepts that improve its accuracy.  \n- **Part 3:** Students return to their original page and iterate freely, using everything they've learned to bring their vision closer to reality.\n\n**In order to get students started right away, the lesson has no slides and no dedicated warm up / wrap up** - instead, we recommend adapting any of your existing classroom routines to this lesson. By the end, students will have built a complete webpage that reflects their own creative decisions and developed a working relationship with AI.",
+        "name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2b853b6-c0d2-4a47-b69d-1c711d9e4760",
+        "lesson_activity.key": "26c2fb93-9fac-48ae-9455-5ce968d678ce"
+      }
+    },
+    {
+      "key": "04db3def-f602-4cc3-9eee-07e099ebe6dc",
+      "position": 2,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n> ⚠️ **Make sure AI Tutor is enabled:** AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:\n> 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)\n> 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)\n> 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)\n\n",
+        "name": "Setup the Classroom"
+      },
+      "seeding_key": {
+        "activity_section.key": "04db3def-f602-4cc3-9eee-07e099ebe6dc",
+        "lesson_activity.key": "26c2fb93-9fac-48ae-9455-5ce968d678ce"
+      }
+    },
+    {
+      "key": "5a7cf533-67ae-46a0-8e82-b2d056bc2bab",
+      "position": 3,
+      "properties": {
+        "description": "We recommend attempting each level in the progression before running this activity for students so you are familiar with the user interface and the general tasks on each level. Verified teachers can also access the Teaching Tips in each level:\n\n| | |\n| :---- | :---- |\n| **Viewing Teaching Tips in Levels:** Every Web Lab level has a _Teaching Tips_ area of the left sidebar which only appears for verified teachers. Open it to see more details about the level itself, questions to ask while circulating, and potential misconceptions. | ![](https://images.code.org/61180218998bcfab2fca0a28f00afa9a-teaching-tips-panel.png) |\n\n",
+        "name": "Preview the Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a7cf533-67ae-46a0-8e82-b2d056bc2bab",
+        "lesson_activity.key": "26c2fb93-9fac-48ae-9455-5ce968d678ce"
+      }
+    },
+    {
+      "key": "7f15eed8-956f-4131-a38e-7aaadd1ba1ed",
+      "position": 1,
+      "properties": {
+        "description": "Students build something real, fast. The goal is to give them a page they care about before the Essential Question is introduced. Expect students to spend between 20-30 minutes just in this first few levels as they get familiar with Web Lab and interacting with AI tutor, and spend time writing their initial vision and tweaking the first draft of their website.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 1 | Introduction to Part 1 | Students view an interactive slideshow introducing the Big Idea of the lesson: **designers communicate a vision**. Students are prompted to think of their vision for a webpage they want to make. |\n| 2 | Exploring Web Lab | Students make their first interaction with AI tutor using a pre-built otter webpage. They highlight an example prompt, send it to AI Tutor, and use the Accept/Reject mechanic for the first time. |\n| 3 | Create Your Own Vision | Students fill in a `vision.md` template for a topic of their own choosing, then prompt AI Tutor to generate an HTML page from it. They see the power of AI for generating content, but also the gaps between their vision and what's on the page. |\n| 4 | Reflection: Your First Version | Students respond to: *\"What's one example of a mismatch between what you can imagine and what was generated? What do you think caused the gap?\"* |"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f15eed8-956f-4131-a38e-7aaadd1ba1ed",
+        "lesson_activity.key": "97933068-9fe8-44f4-9dda-84862537e27e"
+      }
+    },
+    {
+      "key": "123ed1b4-3997-491e-b4b0-9800da607c5b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 1: Establish a Vision",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Staying in Early Levels:** While the goal of the lesson is to create just a first draft and return to your webpage later in the progression, you may notice some students continue to build and develop their webpage in these early levels much longer than the lesson intends. If you notice students are lingering because they feel \"stuck\", encourage them to continue with the promise that they will learn more in the next levels that will help them get unstuck. However, you may also have students who are already fluent in prompting AI to build their webpage, and you can decide whether or not to let them continue in these early levels.\n\nIn our playtests and feedback from students, we've found that students who linger and continue to develop their website are students who may already have some familiarity with web design or HTML/CSS, and so already feel comfortable prompting AI Tutor to make their webpage. Or, for students who may already have experience with AI tools, they may find themselves wanting to \"experiment\" or \"explore\" and push the boundaries of the AI (similar to the Adapt dimension of the [4A's AI Literacy Framework for Families](https://wip.mitpress.mit.edu/pub/the-4as/release/1#adapt-dimension---trick-the-ai)). In both cases, students are still developing and applying their skills to build with AI, and so it may be reasonable to let them continue iterating in these early levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b",
+        "lesson_activity.key": "97933068-9fe8-44f4-9dda-84862537e27e"
+      }
+    },
+    {
+      "key": "fa0465e3-6555-4e48-ba2c-3cbb1f401327",
+      "position": 1,
+      "properties": {
+        "description": "Students build vocabulary and conceptual understanding to close the gap they felt in Act 1. The Essential Question has now been introduced. \n\nExpect students to spend between 10-20 minutes in this part of the lesson. This section takes less time than Part 1 because the levels are more goal-oriented and focused.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 5 | Introduction to Part 2 | Students interact with another slideshow, introducing the idea that there is usually a gap between what AI generates and what we imagined. It introduces a new essential question for students: **How do designers close the gap between vision and reality?** |\n| 6 | Inspecting Web Pages | Students use the Tag Inspector to hover over elements of the otter example site and identify the HTML tags and CSS rules responsible for each element. They then ask AI Tutor to explain at least one element they found. |\n| 7 | HTML Choice Levels | Students choose one HTML feature to investigate (headings, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 8 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 9 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 10 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n| 11 | Reflection: What Changed? | Students respond to: *\"After fixing someone else's site, what do you notice about how you think about prompting now? What would you do differently on your own page?\"* |"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa0465e3-6555-4e48-ba2c-3cbb1f401327",
+        "lesson_activity.key": "b40db922-ee81-47cd-9f71-afee8fb25bbe"
+      }
+    },
+    {
+      "key": "d9bdb442-c845-4790-8457-fc29ed6983c5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5",
+        "lesson_activity.key": "b40db922-ee81-47cd-9f71-afee8fb25bbe"
+      }
+    },
+    {
+      "key": "7be21b4b-0441-45b3-bd38-f63802c49242",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This reflection can be an appropriate place to gauge how well students are internalizing the concepts from this lesson. Look for responses that suggest \"being more specific\" is important for prompting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7be21b4b-0441-45b3-bd38-f63802c49242",
+        "lesson_activity.key": "b40db922-ee81-47cd-9f71-afee8fb25bbe"
+      }
+    },
+    {
+      "key": "e484d1da-330a-4e88-a191-1877803c15a2",
+      "position": 1,
+      "properties": {
+        "description": "Students return to their own page from Act 1 with new vocabulary, new strategies for prompting AI, and a genuine choice about how to use them. Expect students to spend the remainder of class iterating on their webpage. They may still need to ask AI Tutor questions to help them add new elements to the webpage.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 12 | Introduction to Part 3 | Students interact with the final slideshow. They see a few examples for how students may want to work with AI, and reassure students that any option is fine. Using what they've learned so far, they are ready to revisit their webpage from part 1\\. |\n| 13 | Revisiting Your Vision | Students reload their page from Level 3 and have full choice about how to continue. Students can also use Version History to reset to their initial version, and Share or Remix to save or share their work. They can spend as much time as they want tinkering with their webpage. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "e484d1da-330a-4e88-a191-1877803c15a2",
+        "lesson_activity.key": "74f2c87c-ec22-4a7c-896b-480103ed948a"
+      }
+    },
+    {
+      "key": "fcb47bae-1cec-4d92-b425-848d88b627bd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcb47bae-1cec-4d92-b425-848d88b627bd",
+        "lesson_activity.key": "74f2c87c-ec22-4a7c-896b-480103ed948a"
+      }
+    },
+    {
+      "key": "2e3771b7-dc66-4e14-94a8-95c3347ab3dc",
+      "position": 1,
+      "properties": {
+        "description": "**More Projects in Web Lab:** Web Lab is a tool that can be used for standalone projects outside of this lesson - [click here to learn more about Web Lab and standalone projects](https://code.org/en-US/tools/web-lab). Now that students understand how to use Web Lab and interact with AI tutor, you may decide to use Web Lab for other projects.\n\n**Learn More about Web Development and AI:** If your students want to continue learning how to make webpages and even jump into interactive websites with Javascript programming, then consider exploring our [AI Foundations Semester 2 course](https://code.org/en-US/incubator). This course covers many additional topics that aren't included in this lesson (ie: multi-page websites, wireframes, accessibility, Javascript programming, etc).\n\nThis link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. The full version of this course will be released this summer.",
+        "name": "What Comes Next?"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e3771b7-dc66-4e14-94a8-95c3347ab3dc",
+        "lesson_activity.key": "26d222c1-1979-4053-a99a-daa99b802a96"
+      }
+    },
+    {
+      "key": "e6570caf-125a-4546-a305-b103395c3e6b",
+      "position": 2,
+      "properties": {
+        "description": "[**Artificial Intelligence Foundations - Semester 1:**](https://studio.code.org/courses/artificial-intelligence-foundations?viewAs=Instructor) AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions.",
+        "name": "Explore More Activities"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6570caf-125a-4546-a305-b103395c3e6b",
+        "lesson_activity.key": "26d222c1-1979-4053-a99a-daa99b802a96"
+      }
+    },
+    {
+      "key": "936bf647-4b18-4d5e-95c1-ebe17e35eb90",
+      "position": 3,
+      "properties": {
+        "description": "[**Artificial Intelligence Foundations - Semester 2 (Preview):**](https://code.org/en-US/incubator) Try the second semester of AIF, where students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.\n\nThis link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. The full version of this course will be released this summer."
+      },
+      "seeding_key": {
+        "activity_section.key": "936bf647-4b18-4d5e-95c1-ebe17e35eb90",
+        "lesson_activity.key": "26d222c1-1979-4053-a99a-daa99b802a96"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-1_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-1_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-2_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-3_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-3_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-6_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-6_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-7_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-7_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-8_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-8_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-9_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-9_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-10_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-10_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-11_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-11_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-12_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-12_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-13_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "7be21b4b-0441-45b3-bd38-f63802c49242"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-13_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 3: Iterate for Real"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-14_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "fcb47bae-1cec-4d92-b425-848d88b627bd"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-14_pilot2_launch"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 3: Iterate for Real"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-15_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "fcb47bae-1cec-4d92-b425-848d88b627bd"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-15_pilot2_launch"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-1_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-1_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-2_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-2_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-3_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-3_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-6_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-6_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "123ed1b4-3997-491e-b4b0-9800da607c5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-7_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-7_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-8_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-8_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-9_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-9_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-10_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-10_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-11_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-11_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-12_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-12_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "d9bdb442-c845-4790-8457-fc29ed6983c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-13_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-13_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "7be21b4b-0441-45b3-bd38-f63802c49242"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-14_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-14_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "fcb47bae-1cec-4d92-b425-848d88b627bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-15_pilot2_launch",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-15_pilot2_launch"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab",
+        "activity_section.key": "fcb47bae-1cec-4d92-b425-848d88b627bd"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Printable Level Guide",
+      "url": "https://docs.google.com/presentation/d/1UdXG6bKkc5ztSgviLfusU2EdxEeCB366IWzfx9mEhZ4/edit",
+      "key": "printable_level_guide",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "printable_level_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "resource.key": "printable_level_guide"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -72,12 +774,44 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "194c1127-17c0-4cd9-8e68-a8b7e1bf8f69",
+      "properties": {
+        "description": "Understand the difference between HTML for structure and CSS for styling."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "194c1127-17c0-4cd9-8e68-a8b7e1bf8f69"
+      }
+    },
+    {
+      "key": "2aa3004f-6b50-4667-b7b6-779f97903171",
+      "properties": {
+        "description": "Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "2aa3004f-6b50-4667-b7b6-779f97903171"
+      }
+    },
+    {
+      "key": "e0b740f0-d458-4c02-bec1-8c24446799b4",
+      "properties": {
+        "description": "Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "e0b740f0-d458-4c02-bec1-8c24446799b4"
+      }
+    }
   ],
   "lessons_standards": [
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

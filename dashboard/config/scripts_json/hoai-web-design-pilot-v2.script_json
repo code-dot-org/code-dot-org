@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 03:24:18 UTC",
+    "serialized_at": "2026-04-16 16:52:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -70,7 +70,7 @@
       "key": "00621947-32fe-446a-92ca-4d9b88e26fd0",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Make sure AI Tutor is enabled:** AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:\n1) Become a verified teacher\n2) Assign the course to a section\n3) Make sure AI Tools are enabled for that section\n\n",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n> ⚠️ **Make sure AI Tutor is enabled:** AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:\n> 1) Become a verified teacher\n>2) Assign the course to a section\n>3) Make sure AI Tools are enabled for that section\n\n",
         "name": "Setup the Classroom"
       },
       "seeding_key": {
@@ -147,8 +147,19 @@
       }
     },
     {
-      "key": "82c27203-6d9d-4969-9ea1-0c5c6dd225fa",
+      "key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb",
       "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb",
+        "lesson_activity.key": "9940f497-75f2-4a6b-b1f1-b8daefff4407"
+      }
+    },
+    {
+      "key": "82c27203-6d9d-4969-9ea1-0c5c6dd225fa",
+      "position": 9,
       "properties": {
         "description": "Students return to their own page from Act 1 with new vocabulary, new strategies for prompting AI, and a genuine choice about how to use them.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 12 | Introduction to Part 3 | Students interact with the final slideshow. They see a few examples for how students may want to work with AI, and reassure students that any option is fine. Using what they've learned so far, they are ready to revisit their webpage from part 1\\. |\n| 13 | Revisiting Your Vision | Students reload their page from Level 3 and have full choice about how to continue. Students can also use Version History to reset to their initial version, and Share or Remix to save or share their work. They can spend as much time as they want tinkering with their webpage. |",
         "name": "Part 3: Iterate for Real"
@@ -160,7 +171,7 @@
     },
     {
       "key": "b8479677-1fa1-4464-b083-1215be09d698",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Part 3: Iterate for Real"
       },
@@ -171,7 +182,7 @@
     },
     {
       "key": "59932347-359f-486f-ac83-6ccd13211f91",
-      "position": 10,
+      "position": 11,
       "properties": {
         "name": "For the Pilot",
         "progression_name": "Student Survey"
@@ -406,10 +417,10 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Part 2: Close the Gap"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +430,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb"
       },
       "level_keys": [
         "hoai-web-design-v2-13_pilot2"
@@ -451,7 +462,7 @@
       "chapter": 13,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Part 3: Iterate for Real"
       },
@@ -622,7 +633,7 @@
         "lesson.key": "Web Design",
         "lesson_group.key": "",
         "script.name": "hoai-web-design-pilot-v2",
-        "activity_section.key": "c3a1591d-ca52-47ea-a9eb-9878beaec028"
+        "activity_section.key": "6697826e-cf0a-47f7-9a76-8b9ec5a5a2fb"
       }
     },
     {
@@ -737,6 +748,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

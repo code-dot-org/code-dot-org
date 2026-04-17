@@ -1,5 +1,6 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
@@ -109,7 +110,9 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
           onClick={onClickPrintCerts}
         >
           <FontAwesomeV6Icon iconName="file-certificate" iconStyle="solid" />
-          <span>{i18n.certificates()}</span>
+          <Typography variant="body2" component="span">
+            {i18n.certificates()}
+          </Typography>
         </button>
       </li>,
       <li key={'archive'}>
@@ -123,9 +126,9 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
             iconName={section.hidden ? 'window-restore' : 'box-archive'}
             iconStyle="solid"
           />
-          <span>
+          <Typography variant="body2" component="span">
             {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
-          </span>
+          </Typography>
         </button>
       </li>,
     ];
@@ -140,7 +143,9 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
             onClick={() => onDeleteClick(onDeleteClickCallback, section.id)}
           >
             <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
-            <span>{i18n.delete()}</span>
+            <Typography variant="body2" component="span">
+              {i18n.delete()}
+            </Typography>
           </button>
         </li>
       );
