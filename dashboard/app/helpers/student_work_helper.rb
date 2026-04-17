@@ -151,10 +151,10 @@ module StudentWorkHelper
 
   def lesson_reflection_data(lesson_id, student_id)
     lesson_reflection = UserLessonReflection.find_by(lesson_id: lesson_id, student_id: student_id)
-    objective_reflections = UserLessonObjectiveReflection
-      .joins(:objective)
-      .where(objectives: {lesson_id: lesson_id}, student_id: student_id)
-      .map {|r| {objective_id: r.objective_id, description: r.objective.description, rating: r.reflection}}
+    objective_reflections = UserLessonObjectiveReflection.
+      joins(:objective).
+      where(objectives: {lesson_id: lesson_id}, student_id: student_id).
+      map {|r| {objective_id: r.objective_id, description: r.objective.description, rating: r.reflection}}
 
     {
       success: lesson_reflection&.success,

@@ -122,8 +122,8 @@ class LessonsController < ApplicationController
     reflection = lesson_reflection_data(@lesson.id, current_user.id)
     message = ::LessonDeepDiveWelcomeAgent.generate(@lesson, assessment_analysis, reflection)
     render json: {welcomeMessage: message}
-  rescue => e
-    Rails.logger.error "tutor_welcome_message error: #{e.message}"
+  rescue => exception
+    Rails.logger.error "tutor_welcome_message error: #{exception.message}"
     render json: {welcomeMessage: nil}, status: :internal_server_error
   end
 
