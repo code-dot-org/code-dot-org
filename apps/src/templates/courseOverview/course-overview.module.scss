@@ -1,3 +1,26 @@
+.main {
+  width: 100%;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  display: inline-block;
+  color: var(--text-brand-purple-primary);
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.notificationBanner {
+  margin-bottom: 20px;
+}
+
 .actionRow {
   display: flex;
   flex-direction: row;
