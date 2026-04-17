@@ -77,10 +77,11 @@ export default function ReactFlowCanvas({
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
-  const {tabOrder, activeEntry, setActiveTabEntry} = useTabOrder(
-    nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[]
-  );
+  const {tabOrder, activeEntry, activeTabEntry, setActiveTabEntry} =
+    useTabOrder(
+      nodes as SketchlabReactFlowNode[],
+      edges as SketchlabReactFlowEdge[]
+    );
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
@@ -97,6 +98,33 @@ export default function ReactFlowCanvas({
       readOnly,
     });
 
+  // Filter out React Flow's internal selection changes. We manage
+  // selection via activeTabEntry so that visual indicators (NodeResizer,
+  // edge highlight) stay in sync with keyboard/click focus.
+  const handleNodesChange = useCallback(
+    (changes: Parameters<typeof onNodesChange>[0]) => {
+      const filtered = changes.filter(change => change.type !== 'select');
+      if (filtered.length > 0) {
+        onNodesChange(filtered);
+      }
+    },
+    [onNodesChange]
+  );
+
+  const handleEdgesChange = useCallback(
+    (changes: Parameters<typeof onEdgesChange>[0]) => {
+      const filtered = changes.filter(change => change.type !== 'select');
+      if (filtered.length > 0) {
+        onEdgesChange(filtered);
+      }
+    },
+    [onEdgesChange]
+  );
+
+  const handlePaneClick = useCallback(() => {
+    setActiveTabEntry(null);
+  }, [setActiveTabEntry]);
+
   // Apply roving tabindex through React Flow's domAttributes so it
   // survives React Flow re-renders (direct DOM manipulation gets
   // overwritten when RF reconciles tabIndex={0} on focusable nodes).
@@ -105,30 +133,39 @@ export default function ReactFlowCanvas({
   const displayNodes = useMemo(
     () =>
       nodes.map(node => {
-        const isActive =
+        const isTabTarget =
           activeEntry?.type === 'node' && activeEntry.id === node.id;
+        const isFocused =
+          activeTabEntry?.type === 'node' && activeTabEntry.id === node.id;
         const isConnectSource = connectingFrom === node.id;
         return {
           ...node,
+          selected: isFocused,
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
-            tabIndex: isActive ? 0 : -1,
+            tabIndex: isTabTarget ? 0 : -1,
             ...(isConnectSource && {'aria-selected': true}),
           },
         };
       }),
-    [nodes, activeEntry, connectingFrom]
+    [nodes, activeEntry, activeTabEntry, connectingFrom]
   );
   // TODO: Add meaningful ariaLabel to edges using node labels instead of
   // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
   const displayEdges = useMemo(
     () =>
       edges.map(edge => {
-        const isActive =
+        const isTabTarget =
           activeEntry?.type === 'edge' && activeEntry.id === edge.id;
-        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
+        const isFocused =
+          activeTabEntry?.type === 'edge' && activeTabEntry.id === edge.id;
+        return {
+          ...edge,
+          selected: isFocused,
+          domAttributes: {tabIndex: isTabTarget ? 0 : -1},
+        };
       }),
-    [edges, activeEntry]
+    [edges, activeEntry, activeTabEntry]
   );
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -231,10 +268,11 @@ export default function ReactFlowCanvas({
         <ReactFlow
           nodes={displayNodes}
           edges={displayEdges}
-          onNodesChange={readOnly ? undefined : onNodesChange}
-          onEdgesChange={readOnly ? undefined : onEdgesChange}
+          onNodesChange={readOnly ? undefined : handleNodesChange}
+          onEdgesChange={readOnly ? undefined : handleEdgesChange}
           onConnect={readOnly ? undefined : onConnect}
           nodeTypes={NODE_TYPES}
+          onPaneClick={readOnly ? undefined : handlePaneClick}
           onMoveEnd={readOnly ? undefined : handleMoveEnd}
           defaultViewport={initialViewport}
           fitView={!initialViewport}

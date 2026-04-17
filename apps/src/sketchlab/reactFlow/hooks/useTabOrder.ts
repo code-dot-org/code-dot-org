@@ -35,5 +35,5 @@ export function useTabOrder(
     tabOrder.some(entry => entriesMatch(entry, activeTabEntry));
   const activeEntry = isActiveValid ? activeTabEntry : tabOrder[0] ?? null;
 
-  return {tabOrder, activeEntry, setActiveTabEntry};
+  return {tabOrder, activeEntry, activeTabEntry, setActiveTabEntry};
 }
