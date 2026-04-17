@@ -9,7 +9,7 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 
-const PAN_DURATION_MS = 00;
+const PAN_DURATION_MS = 200;
 
 /**
  * Focus helpers for the React Flow canvas. Provides focusEntry (move focus
