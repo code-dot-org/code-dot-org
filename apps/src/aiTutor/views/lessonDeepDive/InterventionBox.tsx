@@ -162,7 +162,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 className={`${styles.navItem} ${
                   isActive ? card.activeColorClass : ''
                 }`}
-                onClick={() => handleCardSelect(card.id)}
+                onClick={() => setSelected(card.id)}
                 aria-label={card.label}
                 aria-current={isActive ? 'page' : undefined}
               >
