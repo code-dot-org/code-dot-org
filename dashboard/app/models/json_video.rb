@@ -2,15 +2,15 @@
 #
 # Table name: json_videos
 #
-#  id          :bigint           not null, primary key
-#  key         :string(255)      not null
-#  description :text(65535)
-#  s3_uri      :string(255)      not null
-#  lab         :string(255)
-#  version     :integer          not null
-#  audience    :string(255)      not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id                  :bigint           not null, primary key
+#  key                 :string(255)      not null
+#  description         :text(65535)
+#  s3_uri              :string(255)      not null
+#  labs                :json
+#  json_schema_version :integer          not null
+#  audience            :string(255)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
 #
 # Indexes
 #
