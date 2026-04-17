@@ -17,10 +17,6 @@ describe('LessonInsightWidget', () => {
     selectedStudentId: 3,
   };
 
-  const defaultInsightTimestamp = new Date(
-    Date.now() - 10 * 60 * 1000
-  ).toISOString();
-
   const mockInsightData = {
     progress: 'Student has made good progress',
     misconceptions: 'No major misconceptions found',
@@ -55,7 +51,6 @@ describe('LessonInsightWidget', () => {
     const defaultMockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
-        updated_at: defaultInsightTimestamp,
       },
       response: new Response(),
     };
@@ -76,7 +71,6 @@ describe('LessonInsightWidget', () => {
     const mockResponse = {
       value: {
         json: JSON.stringify(mockInsightData),
-        updated_at: defaultInsightTimestamp,
       },
       response: new Response(),
     };
@@ -128,7 +122,6 @@ describe('LessonInsightWidget', () => {
     const mockResponse = {
       value: {
         json: 'invalid json',
-        updated_at: null,
       },
       response: new Response(),
     };
