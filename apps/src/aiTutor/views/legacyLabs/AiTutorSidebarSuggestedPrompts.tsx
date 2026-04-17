@@ -5,7 +5,6 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {submitChatContents} from '@cdo/apps/aichat/redux';
 import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -25,6 +24,7 @@ interface AiTutorSidebarSuggestedPromptsProps {
   hiddenContextCallback: () => Promise<string>;
   toggleAiChat: () => void;
   analyticsData: AnalyticsData;
+  chatDisabled?: boolean;
 }
 
 const AiTutorSidebarSuggestedPrompts: React.FC<
@@ -35,9 +35,9 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
   className = '',
   suggestedPrompts = [],
   analyticsData,
+  chatDisabled,
 }) => {
   const dispatch = useAppDispatch();
-  const {chatDisabled} = useAiChatDisabled();
   const teacherViewingStudentChatHistory = useAppSelector(
     state => state.progress.viewAsUserId
   );

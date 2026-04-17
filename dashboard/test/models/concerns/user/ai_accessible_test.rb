@@ -55,6 +55,27 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _teacher_can_access_aichat?.must_equal true
     end
 
+    it 'returns true for teacher in the preverification pilot' do
+      allow(user).to receive(:teacher?).and_return(true)
+      create(
+        :single_user_experiment,
+        min_user_id: user.id,
+        name: User::AiAccessible::TEACHER_PREVERIFICATION_PILOT
+      )
+
+      _teacher_can_access_aichat?.must_equal true
+    end
+
+    it 'returns false for student in the preverification pilot' do
+      create(
+        :single_user_experiment,
+        min_user_id: user.id,
+        name: User::AiAccessible::TEACHER_PREVERIFICATION_PILOT
+      )
+
+      _teacher_can_access_aichat?.must_equal false
+    end
+
     it 'returns false if none of the conditions are met' do
       _teacher_can_access_aichat?.must_equal false
     end
@@ -126,6 +147,24 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teachers).and_return([qualified_teacher])
         allow(user).to receive(:sections_as_student).and_return([disabled_section, enabled_section])
         _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
+    context 'when student is in a hidden (archived) section with ENABLED access' do
+      it 'returns DISABLED' do
+        hidden_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED], hidden: true)
+        allow(user).to receive(:teachers).and_return([qualified_teacher])
+        allow(user).to receive(:sections_as_student).and_return([hidden_section])
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when student is in a hidden (archived) section with ESSENTIAL_ONLY access' do
+      it 'returns DISABLED' do
+        hidden_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY], hidden: true)
+        allow(user).to receive(:teachers).and_return([qualified_teacher])
+        allow(user).to receive(:sections_as_student).and_return([hidden_section])
+        _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
       end
     end
   end
