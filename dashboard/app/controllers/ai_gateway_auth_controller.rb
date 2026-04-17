@@ -9,11 +9,11 @@ class AiGatewayAuthController < ApplicationController
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
-  # GET /ai_gateway/access_token
+  # POST /ai_gateway/access_token
   # ----------------------------
 
   def get_access_token
-    unless current_user.can_access_aichat_chat_completion?(params[:clientType], params[:currentLevelId])
+    unless current_user.can_access_aichat_chat_completion?(params[:aichatContext][:clientType], params[:aichatContext][:currentLevelId])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
