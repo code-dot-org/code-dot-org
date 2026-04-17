@@ -6389,15 +6389,7 @@
 
   ],
   "rubrics": [
-    {
-      "level_name": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
-      "s3_config_dir": null,
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goals": [
     {
