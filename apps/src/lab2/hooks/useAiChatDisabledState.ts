@@ -39,6 +39,10 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
+  const isLevelbuilder = useAppSelector(
+    state => state.currentUser.isLevelbuilder
+  );
+
   const enabledForUser = appName
     ? areAiChatToolsEnabled({appName, aiChatAccessLevel: userAccessLevel})
     : false;
@@ -46,6 +50,11 @@ export function useAiChatDisabledState({
   const disabledState: AiChatDisabledState = useMemo(() => {
     if (!appName) {
       return {disabled: true};
+    }
+
+    // Levelbuilders should always be enabled so they don't need to do extra account setup when building levels.
+    if (isLevelbuilder) {
+      return {disabled: false};
     }
 
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
@@ -95,6 +104,7 @@ export function useAiChatDisabledState({
     isTeacher,
     enabledForUser,
     sectionAccessLevel,
+    isLevelbuilder,
   ]);
 
   return disabledState;

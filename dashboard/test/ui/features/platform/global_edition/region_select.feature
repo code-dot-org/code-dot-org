@@ -2,8 +2,7 @@
 Feature: Global Edition - Region Select
 
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
 
   Scenario: User can switch between the international and regional versions using the language selector on a Studio page
     Given I am on "http://studio.code.org/users/sign_in"
