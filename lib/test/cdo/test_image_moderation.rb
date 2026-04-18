@@ -124,20 +124,17 @@ class ImageModerationTest < Minitest::Test
     assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
 
-  def test_returns_nil_for_unrecognized_image_format
+  def test_raises_for_unrecognized_image_format
     AzureAiContentSafety.expects(:new).never
-    Honeybadger.expects(:notify).once
-    assert_nil ImageModeration.moderate_image(StringIO.new('not-an-image'), 'any')
+    assert_raises AzureAiContentSafety::UnsupportedContentType do
+      ImageModeration.moderate_image(StringIO.new('not-an-image'), 'any')
+    end
   end
 
   def test_sniff_overrides_wrong_content_type
     blob = tiny_png_blob(100, 100)
     sample = {'categoriesAnalysis' => []}
     AzureAiContentSafety.any_instance.expects(:moderate_image).returns(sample).once
-    Honeybadger.expects(:notify).once.with(
-      "Actual content type differs from reported content type in image moderation",
-      context: {reported_content_type: 'any', actual_content_type: 'image/png'}
-    )
 
     result = ImageModeration.moderate_image(StringIO.new(blob), 'any')
     assert_equal sample, result
