@@ -1095,6 +1095,9 @@ class FilesApi < Sinatra::Base
 
     result = ImageModeration.moderate_image(image_stream, content_type_header)
     result.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    {error: 'Unsupported image type. Only PNG, JPEG, GIF, and WEBP files are allowed.'}.to_json
   end
 
   #
