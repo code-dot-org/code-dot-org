@@ -60,7 +60,7 @@ export function AssignmentVersionSelector({
           versionInfo.locale_codes.includes(locale)
         );
 
-        if (includeLocale) delete data[key];
+        if (!includeLocale) delete data[key];
       }
     }
 
