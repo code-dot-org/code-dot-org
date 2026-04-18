@@ -79,7 +79,7 @@ SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
-PARALLEL_COUNT = 24
+PARALLEL_COUNT = 5
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -144,12 +144,9 @@ namespace :ci do
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
             "--device-farm " \
-            "--dashboard localhost-studio.code.org:3000 " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
-            "--first_run_local " \
             "--parallel #{PARALLEL_COUNT} " \
-            "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
             "--output-synopsis " \
             "--with-status-page " \
@@ -250,8 +247,7 @@ end
 # filtered to only those supported by Device Farm (Chrome and Firefox).
 def device_farm_browsers_to_run
   browsers = []
-  browsers << 'Chrome' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Firefox'
   browsers
 end
 
