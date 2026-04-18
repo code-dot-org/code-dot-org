@@ -26,7 +26,7 @@ module Cdo
     # Mapping LocalizeJS locale codes to normalized I18n locale codes (e.g., 'zh-Hans' => 'zh-CN').
     LOCALIZE_TO_I18N_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
       locales[cdo_language[:localize_code_s]] = cdo_language[:locale_s] if cdo_language[:localize_code_s]
-    end
+    end.freeze
 
     TEXT_DIRECTIONS = Set[
       TEXT_DIRECTION_LTR = 'ltr', # the left-to-right text direction
