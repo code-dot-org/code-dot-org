@@ -18,12 +18,15 @@ module ImageModeration
   # @raise [AzureAiContentSafety::UnsupportedContentType] when magic-byte sniffing
   #   determines the image format is not supported; callers should map this to a 400.
   def self.moderate_image(image_data, content_type)
+    # Validate and prepare the image before checking the API key so that
+    # UnsupportedContentType is always raised for bad formats.
+    moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
+
     unless CDO.azure_ai_content_safety_key
       Honeybadger.notify("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
       return nil
     end
 
-    moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key

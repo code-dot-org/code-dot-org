@@ -21,7 +21,8 @@ class ImageModerationTest < Minitest::Test
       "Azure AI Content Safety API key is missing",
       context: {endpoint: CDO.azure_ai_content_safety_endpoint}
     )
-    assert_nil ImageModeration.moderate_image(@image_body, @content_type)
+    blob = tiny_png_blob(100, 100)
+    assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
   end
 
   def test_uses_azure_when_api_key_present
