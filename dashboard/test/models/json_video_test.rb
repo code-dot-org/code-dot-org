@@ -11,7 +11,7 @@ class JSONVideoTest < ActiveSupport::TestCase
       key: 'test-video',
       description: 'A test video',
       s3_uri: 's3://bucket/test.json',
-      version: 1,
+      json_schema_version: 1,
       audience: 'student',
     }.merge(overrides)
   end
@@ -25,7 +25,7 @@ class JSONVideoTest < ActiveSupport::TestCase
     assert_equal 'test-video', key
     assert_equal 'A test video', video.description
     assert_equal 's3://bucket/test.json', video.s3_uri
-    assert_equal 1, video.version
+    assert_equal 1, video.json_schema_version
     assert_equal 'student', video.audience
   end
 

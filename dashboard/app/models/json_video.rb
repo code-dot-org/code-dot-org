@@ -22,7 +22,7 @@ class JSONVideo < ApplicationRecord
 
   validates :key, presence: true, uniqueness: true
   validates :s3_uri, presence: true
-  validates :version, presence: true
+  validates :json_schema_version, presence: true
   validates :audience, presence: true
 
   def self.seed_all(root_dir: Rails.root, glob: "config/json_videos/*.json")

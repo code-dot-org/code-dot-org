@@ -1455,7 +1455,7 @@ FactoryBot.define do
     sequence(:key) {|n| "json-video-#{n}"}
     description {'fake description'}
     s3_uri {'s3://fake-bucket/fake-path/video.json'}
-    version {1}
+    json_schema_version {1}
     audience {'student'}
   end
 
