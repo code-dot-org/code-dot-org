@@ -103,6 +103,22 @@ const InterventionBox: FC<InterventionBoxProps> = ({
     [selected, lessonId, lessonName, userId]
   );
 
+  const handleCardSelect = useCallback(
+    (cardId: CardId) => {
+      setSelected(cardId);
+      analyticsReporter.sendEvent(
+        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+        {
+          modality: cardId,
+          lessonId,
+          lessonName,
+          userId,
+        }
+      );
+    },
+    [lessonId, lessonName, userId]
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -124,7 +140,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                   key={card.id}
                   type="button"
                   className={`${styles.card} ${card.colorClass}`}
-                  onClick={() => setSelected(card.id)}
+                  onClick={() => handleCardSelect(card.id)}
                   aria-label={card.label}
                 >
                   <FontAwesomeV6Icon iconName={card.icon} />

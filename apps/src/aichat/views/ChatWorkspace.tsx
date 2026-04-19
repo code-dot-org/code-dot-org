@@ -9,7 +9,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import ChatEventLogger from '../chatEventLogger';
+import AichatContextManager from '../aichatContextManager';
 import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
@@ -148,7 +148,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
   useEffect(() => {
-    ChatEventLogger.initialize({
+    AichatContextManager.setContext({
       clientType,
       currentLevelId: parseInt(currentLevelId || ''),
       scriptId,

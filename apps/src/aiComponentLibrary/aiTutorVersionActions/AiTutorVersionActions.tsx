@@ -3,7 +3,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
-import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -61,7 +61,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
         const notification = getRejectNotification(files);
         const payload = {
           newChatEvent: notification,
-          aichatContext: ChatEventLogger.getInstance().aichatContext,
+          aichatContext: AichatContextManager.getContext(),
           authenticity_token: await getAuthenticityToken(),
         };
 
