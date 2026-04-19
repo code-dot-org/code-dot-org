@@ -11,6 +11,16 @@ const TOOLTIP_LABELS = ['blockly-block', 'blockly-tooltip'];
  * we add a prefix to them so they can be translated with context.
  */
 function translate(text: string, labels: string[]) {
+  // Ignore things that are effectively numbers
+  if (isFinite(+(text || NaN))) {
+    return text;
+  }
+
+  // Ignore hex colors
+  if (text.match(/^#[0-9a-fA-F]{6}$/)) {
+    return text;
+  }
+
   if (text.length < 4) {
     const result = localization.translate(`[block] ${text}`, labels);
     if (result.startsWith('[block]')) {
@@ -157,12 +167,18 @@ function localizeInputInPlace(
   }
 
   // Bucket fields into text fragments (labels) and %N args (everything else).
+  // A *named* FieldLabel (e.g. NAME on a procedures_callnoreturn, PARAMS on a
+  // procedures_defnoreturn) holds dynamic block state that the block's own
+  // deserialize/mutator path writes into later — its initial text is a
+  // placeholder (often `%{BKY_UNNAMED_KEY}` → "unnamed"), not authored copy.
+  // Those must flow through as %N args so we neither translate the placeholder
+  // nor clobber the field's value, and so the rebuild can't drop them.
   const existingLabels: BlocklyCore.FieldLabel[] = [];
   const args: BlocklyCore.Field[] = [];
   const parts: string[] = [];
   let buf = '';
   for (const field of input.fieldRow) {
-    if (field instanceof BlocklyCore.FieldLabel) {
+    if (field instanceof BlocklyCore.FieldLabel && !field.name) {
       buf += field.getText();
       existingLabels.push(field);
     } else {
@@ -248,6 +264,7 @@ function localizeInputInPlace(
         label.setValue(seg.text);
         rebuilt.push(label);
       } else {
+        console.log('creating new label', seg.text);
         rebuilt.push(mountLabel(block, seg.text));
       }
     } else {
