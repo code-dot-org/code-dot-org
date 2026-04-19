@@ -3148,7 +3148,7 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: description
-    sql_type_metadata: *3
+    sql_type_metadata: *11
     'null': true
     default: 
     default_function: 
@@ -3163,14 +3163,21 @@ columns:
     collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: lab
-    sql_type_metadata: *3
+    name: labs
+    sql_type_metadata: *20
     'null': true
     default: 
     default_function: 
-    collation: utf8mb4_unicode_ci
+    collation: 
     comment: 
-  - *70
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: json_schema_version
+    sql_type_metadata: *2
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: audience
     sql_type_metadata: *3
@@ -15685,7 +15692,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260414120000
+version: 20260416141328
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
