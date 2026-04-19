@@ -1851,7 +1851,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_16_141328) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
-
   create_table "potential_teachers", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
