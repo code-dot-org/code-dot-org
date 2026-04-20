@@ -70,11 +70,6 @@
   &:hover {
     border-color: var(--text-neutral-primary);
   }
-
-  &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-  }
 }
 
 .swatchSelected {
@@ -112,11 +107,6 @@
 
   &:hover {
     background-color: var(--background-neutral-secondary);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
   }
 }
 
