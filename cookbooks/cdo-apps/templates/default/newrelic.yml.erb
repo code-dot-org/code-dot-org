@@ -191,6 +191,12 @@ common: &default_settings
   distributed_tracing:
     enabled: false
 
+  # Log forwarding is enabled by default in newrelic_rpm 8.x; disable it to
+  # avoid sending application logs to New Relic.
+  application_logging:
+    forwarding:
+      enabled: false
+
 # Application Environments
 # ------------------------------------------
 # Environment-specific settings are in this section.
