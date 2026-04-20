@@ -69,6 +69,7 @@ interface InterventionBoxProps {
   vocabulary: LessonDeepDiveData['vocabulary'];
   assessmentAnalysis: AssessmentQuestionResult[];
   objectives: LessonDeepDiveData['objectives'];
+  jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
 }
 
@@ -79,10 +80,30 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   vocabulary,
   assessmentAnalysis,
   objectives,
+  jsonVideos,
   reflectionData,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
   const userId = useAppSelector(state => state.currentUser.userId);
+
+  const handleNavSelect = useCallback(
+    (toCardId: CardId) => {
+      if (selected && selected !== toCardId) {
+        analyticsReporter.sendEvent(
+          EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION,
+          {
+            from: selected,
+            to: toCardId,
+            lessonId,
+            lessonName,
+            userId,
+          }
+        );
+      }
+      setSelected(toCardId);
+    },
+    [selected, lessonId, lessonName, userId]
+  );
 
   const handleCardSelect = useCallback(
     (cardId: CardId) => {
@@ -147,7 +168,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             />
           </ThemeProvider>
         )}
-        {selected === 'videos' && <VideosBox />}
+        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && <PodcastsBox />}
       </div>
 
@@ -162,7 +183,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 className={`${styles.navItem} ${
                   isActive ? card.activeColorClass : ''
                 }`}
-                onClick={() => setSelected(card.id)}
+                onClick={() => handleNavSelect(card.id)}
                 aria-label={card.label}
                 aria-current={isActive ? 'page' : undefined}
               >

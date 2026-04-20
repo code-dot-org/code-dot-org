@@ -1647,6 +1647,79 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
   end
 
+  # create_demo
+
+  test 'create_demo: returns forbidden when not signed in' do
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns bad_request for invalid section type' do
+    sign_in @teacher
+    post :create_demo, params: {demo_type: 'invalid'}
+    assert_response :bad_request
+  end
+
+  test 'create_demo: creates section with preset config' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_equal 'My first AIF section', section.name
+    assert_equal 'email', section.login_type
+    assert_equal 'student', section.participant_type
+    assert_equal ['9', '10'], section.grades
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+    assert_equal 'high', section.demo_type
+  end
+
+  test 'create_demo: adds demo students to the section' do
+    sign_in @teacher
+    stub_demo_preset
+    demo_student = create(:student)
+    CDO.stubs(:demo_student_ids).returns({'high' => [demo_student.id.to_s]})
+    Policies::DemoSections.reset_cache!
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_includes section.students.map(&:id), demo_student.id
+  end
+
+  test 'create_demo: students cannot create demo sections' do
+    sign_in @student
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns conflict when teacher already has a demo section of that type' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :conflict
+    assert_equal 'demo section of type high already exists', returned_json['error']
+  end
+
+  private def stub_demo_preset
+    Policies::DemoSections.stubs(:get_preset).with('high').returns(
+      {
+        section_name: 'My first AIF section',
+        login_type: 'email',
+        participant_type: 'student',
+        grades: ['9', '10'],
+        unit_name: @csp_script.name,
+        unit_group_name: @csp_unit_group.name,
+      }
+    )
+  end
+
   private def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')

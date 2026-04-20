@@ -119,6 +119,11 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [] do
+      member do
+        get 'content'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -217,6 +222,7 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
         end
       end

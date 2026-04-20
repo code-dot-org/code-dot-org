@@ -4,13 +4,32 @@ import PropTypes from 'prop-types';
 import React, {useState, useRef} from 'react';
 import ReactTooltip from 'react-tooltip';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 
 const ICON_SIZE = 16;
 
-export default function LessonTutorProgressBubble({lessonTutorPath}) {
+export default function LessonTutorProgressBubble({
+  lessonTutorPath,
+  lessonId,
+  levelId,
+  lessonName,
+  userId,
+  userType,
+}) {
   const [isHovering, setIsHovering] = useState(false);
   const tooltipId = useRef(_.uniqueId()).current;
+
+  const handleClick = () => {
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_PROGRESS_BUBBLE_CLICK, {
+      lessonId,
+      levelId,
+      lessonName,
+      userId,
+      userType,
+    });
+  };
 
   return (
     <a
@@ -21,6 +40,7 @@ export default function LessonTutorProgressBubble({lessonTutorPath}) {
       title="Lesson Tutor"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -41,4 +61,9 @@ export default function LessonTutorProgressBubble({lessonTutorPath}) {
 
 LessonTutorProgressBubble.propTypes = {
   lessonTutorPath: PropTypes.string.isRequired,
+  lessonId: PropTypes.number,
+  levelId: PropTypes.string,
+  lessonName: PropTypes.string,
+  userId: PropTypes.number,
+  userType: PropTypes.string,
 };
