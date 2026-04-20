@@ -82,10 +82,42 @@
 // Chaining `:global(.MuiIconButton-root)` gives this rule 3-class
 // specificity, outranking MUI's own 2-class focus-visible box-shadow
 // that would otherwise suppress the ring while the button has focus.
-.swatch.swatchSelected:global(.MuiIconButton-root) {
+.swatch.swatchSelected:global(.MuiIconButton-root),
+.swatch.swatchSelected.customSwatch {
   box-shadow:
     0 0 0 1px var(--background-neutral-primary),
     0 0 0 3px var(--text-neutral-primary);
+}
+
+// Swatch-shaped label wraps the native color input. Clicking or focusing
+// the label activates the visually-hidden input, which opens the picker.
+.customSwatch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  &:focus-within {
+    border-color: var(--text-neutral-primary);
+  }
+}
+
+.customSwatchIcon {
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.customSwatchInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .swatchTransparent {

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -5,6 +6,12 @@ import React from 'react';
 import {ColorSwatch} from './toolbarPalettes';
 
 import styles from './node-toolbar.module.scss';
+
+const CUSTOM_COLOR_DEFAULT = '#000000';
+
+function isCustomHex(value: string | undefined): value is string {
+  return typeof value === 'string' && value.startsWith('#');
+}
 
 export interface SwatchGroupProps {
   groupLabel: string;
@@ -19,6 +26,9 @@ export default function SwatchGroup({
   selectedValue,
   onSelect,
 }: SwatchGroupProps) {
+  const customSelected = isCustomHex(selectedValue);
+  const customValue = customSelected ? selectedValue : CUSTOM_COLOR_DEFAULT;
+  const customLabel = `${groupLabel}: Custom color`;
   return (
     <div className={styles.group} role="group" aria-label={groupLabel}>
       <span className={styles.groupLabel} aria-hidden="true">
@@ -48,6 +58,28 @@ export default function SwatchGroup({
             </Tooltip>
           );
         })}
+        <Tooltip title="Custom color" placement="top">
+          <label
+            className={classNames(styles.swatch, styles.customSwatch, {
+              [styles.swatchSelected]: customSelected,
+            })}
+            style={customSelected ? {backgroundColor: customValue} : undefined}
+          >
+            {!customSelected && (
+              <FontAwesomeV6Icon
+                iconName="palette"
+                className={styles.customSwatchIcon}
+              />
+            )}
+            <input
+              type="color"
+              value={customValue}
+              onChange={event => onSelect(event.target.value)}
+              className={styles.customSwatchInput}
+              aria-label={customLabel}
+            />
+          </label>
+        </Tooltip>
       </div>
     </div>
   );
