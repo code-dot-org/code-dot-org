@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-20T07:07:57.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Flowchart Chatbot\r\n\r\nUse this chatbot to help plan your app’s logic.\r\n\r\nIt can help you:\r\n- identify the steps your app should follow\r\n- define conditions and decision points\r\n- think through how user inputs lead to different outcomes\r\n- determine what values your app needs to track\r\n\r\nUse your wireframe and project idea to guide your thinking.\r\n\r\nCome away with a clear plan for how your app should behave.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a logic and design planning coach helping students prepare to create flowcharts and wireframes for their interactive web apps.\nYour goals are to:\n\t•\tGuide students in identifying clear steps, decision points, and outcomes for their logic.\n\t•\tHelp them plan how user inputs connect to visual results on the screen.\n\t•\tSuggest how to structure or label regions of a wireframe (e.g., controls, display, results, summary).\n\t•\tKeep the focus on conceptual design, not code.\nUse simple, supportive language and help students think visually about how their app will work.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use the chatbot to plan your app’s logic. Identify steps, conditions, and how inputs lead to outcomes.",
+    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
+    "display_name": "Flowchart Bot",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T07:07:57.687+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level2b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level2b_2026\"},{\"changed_at\":\"2026-04-20 07:09:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:11:39 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 19:02:28 UTC",
+    "serialized_at": "2026-04-16 22:57:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -290,6 +290,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "AID Playground",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -606,6 +621,18 @@
       "seeding_key": {
         "lesson_activity.key": "438a6419-4e85-47d0-b3b1-55757d4b07f4",
         "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "22be12ea-e247-4f0c-80f9-730aa2a21d76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22be12ea-e247-4f0c-80f9-730aa2a21d76",
+        "lesson.key": "lesson-18",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1395,6 +1422,16 @@
       "seeding_key": {
         "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7",
         "lesson_activity.key": "438a6419-4e85-47d0-b3b1-55757d4b07f4"
+      }
+    },
+    {
+      "key": "1dc2b72e-e881-490a-af82-a1838305d86f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f",
+        "lesson_activity.key": "22be12ea-e247-4f0c-80f9-730aa2a21d76"
       }
     }
   ],
@@ -5246,6 +5283,111 @@
       "level_keys": [
         "Version B Survey"
       ]
+    },
+    {
+      "chapter": 159,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "use_ai_test"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      },
+      "level_keys": [
+        "use_ai_test"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "use_ai_test_choicea"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      },
+      "level_keys": [
+        "use_ai_test_choicea"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "use_ai_test_choiceb"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      },
+      "level_keys": [
+        "use_ai_test_choiceb"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "use_ai_test_choicec"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      },
+      "level_keys": [
+        "use_ai_test_choicec"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "use_ai_test_choiced"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      },
+      "level_keys": [
+        "use_ai_test_choiced"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7144,6 +7286,66 @@
         "script.name": "katies-playground",
         "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "use_ai_test",
+        "script_level.level_keys": [
+          "use_ai_test"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "use_ai_test_choicea",
+        "script_level.level_keys": [
+          "use_ai_test_choicea"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "use_ai_test_choiceb",
+        "script_level.level_keys": [
+          "use_ai_test_choiceb"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "use_ai_test_choicec",
+        "script_level.level_keys": [
+          "use_ai_test_choicec"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "use_ai_test_choiced",
+        "script_level.level_keys": [
+          "use_ai_test_choiced"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "1dc2b72e-e881-490a-af82-a1838305d86f"
+      }
     }
   ],
   "resources": [
@@ -7297,6 +7499,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

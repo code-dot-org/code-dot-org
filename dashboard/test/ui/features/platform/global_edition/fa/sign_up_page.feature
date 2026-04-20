@@ -2,9 +2,8 @@
 Feature: Global Edition - Farsi MVP - Sign Up page
 
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
-    And I select the "فارسی" option in dropdown "locale" to load a new page
+    Given Global Edition is enabled
+    And I switch to the Global Edition region "fa"
 
   @eyes
   Scenario: I see the Farsi MVP Sign In page
