@@ -107,8 +107,6 @@ class Policies::DemoSections
     return nil if unit_group_name.blank?
 
     UnitGroup.get_from_cache(unit_group_name)
-  rescue ActiveRecord::RecordNotFound
-    nil
   end
 
   private_class_method :resolve_unit, :resolve_unit_group
