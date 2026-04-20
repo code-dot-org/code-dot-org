@@ -1,4 +1,4 @@
-import {useReactFlow} from '@xyflow/react';
+import {useOnSelectionChange, useReactFlow} from '@xyflow/react';
 import React, {useCallback} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
@@ -97,6 +97,32 @@ export function useFocusManagement(
 ) {
   const {fitView, getZoom} = useReactFlow();
 
+  // Pan when a node becomes selected. Focus-driven panning in
+  // handleFocusCapture can fire before React Flow commits the selection
+  // and mounts the node's toolbar (e.g., clicking a shape's text label
+  // focuses the label first). Running off useOnSelectionChange is the
+  // reliable signal — the toolbar is guaranteed to be in the DOM by the
+  // time this fires.
+  useOnSelectionChange({
+    onChange: ({nodes}) => {
+      if (nodes.length !== 1) return;
+      const nodeId = nodes[0].id;
+      requestAnimationFrame(() => {
+        const nodeElement = document.querySelector<HTMLElement>(
+          `.react-flow__node[data-id="${nodeId}"]`
+        );
+        if (!nodeElement) return;
+        panIfClipped({
+          element: nodeElement,
+          fitView,
+          getZoom,
+          fitNodes: [{id: nodeId}],
+          margins: computeNodeToolbarMargins(nodeElement, nodeId),
+        });
+      });
+    },
+  });
+
   const focusEntry = useCallback(
     (entry: TabOrderEntry) => {
       setActiveTabEntry(entry);
@@ -130,16 +156,23 @@ export function useFocusManagement(
       }
       setActiveTabEntry(entry);
       if (entry.type !== 'node') return;
-      const nodeElement = document.querySelector<HTMLElement>(
-        `.react-flow__node[data-id="${entry.id}"]`
-      );
-      if (!nodeElement) return;
-      panIfClipped({
-        element: nodeElement,
-        fitView,
-        getZoom,
-        fitNodes: [{id: entry.id}],
-        margins: computeNodeToolbarMargins(nodeElement, entry.id),
+      const nodeId = entry.id;
+      // Defer to the next frame: focusing a child (e.g., a shape's text
+      // label) fires before React Flow commits the selection state and
+      // mounts the node's toolbar, so measuring synchronously would miss
+      // the toolbar's margins.
+      requestAnimationFrame(() => {
+        const nodeElement = document.querySelector<HTMLElement>(
+          `.react-flow__node[data-id="${nodeId}"]`
+        );
+        if (!nodeElement) return;
+        panIfClipped({
+          element: nodeElement,
+          fitView,
+          getZoom,
+          fitNodes: [{id: nodeId}],
+          margins: computeNodeToolbarMargins(nodeElement, nodeId),
+        });
       });
     },
     [tabOrder, setActiveTabEntry, fitView, getZoom]
