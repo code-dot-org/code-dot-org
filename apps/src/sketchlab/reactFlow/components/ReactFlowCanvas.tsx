@@ -125,13 +125,13 @@ export default function ReactFlowCanvas({
   const {displayNodes, displayEdges} = useMemo(() => {
     const applyDisplayProps = (
       item: SketchlabReactFlowEdge | SketchlabReactFlowNode,
-      kind: 'node' | 'edge'
+      type: 'node' | 'edge'
     ) => {
       const isTabTarget =
-        activeEntry?.type === kind && activeEntry.id === item.id;
+        activeEntry?.type === type && activeEntry.id === item.id;
       const isSelected =
         nodeOrEdgeFocused &&
-        lastFocusedEntry?.type === kind &&
+        lastFocusedEntry?.type === type &&
         lastFocusedEntry.id === item.id;
       return {
         selected: isSelected && !readOnly,
