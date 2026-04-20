@@ -22,9 +22,6 @@ Feature: AI Tutor happy paths across legacy labs and Lab2 resource panels
 
   Scenario: Chat works in the resource panel AI Tutor tab without the instructions drawer
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true"
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
-    And I dismiss the teacher panel
     And I wait until element "#resource-panel-tab-button-aiTutor" is visible
 
     When I click selector "#resource-panel-tab-button-aiTutor"
@@ -39,9 +36,6 @@ Feature: AI Tutor happy paths across legacy labs and Lab2 resource panels
 
   Scenario: Chat works in the resource panel AI Tutor tab with the instructions drawer
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true"
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
-    And I dismiss the teacher panel
     And I wait until element "#instructions-drawer" is visible
     And I wait until element "#resource-panel-tab-button-aiTutor" is visible
 
