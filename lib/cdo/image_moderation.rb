@@ -41,9 +41,7 @@ module ImageModeration
   def self.extract_and_validate_actual_content_type(image_data, content_type)
     raw_data = image_data.read
     actual_type = ImageMagickGuard.actual_content_type(raw_data)
-    # This is the list of types that Azure AI Content Safety supports.
-    supported_types = %w(image/gif image/jpeg image/png image/webp).freeze
-    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if actual_type.nil? || !supported_types.include?(actual_type)
+    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if actual_type.nil? || !SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(actual_type)
     [raw_data, actual_type]
   end
 
