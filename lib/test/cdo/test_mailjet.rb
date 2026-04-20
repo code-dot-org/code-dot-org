@@ -294,7 +294,6 @@ class MailJetTest < Minitest::Test
 
     mock_contactdata = mock('Mailjet::Contactdata')
     Mailjet::Contactdata.expects(:find).with(mock_contact_id).returns(mock_contactdata)
-    mock_contactdata.expects(:update_attributes).with(data: [{name: 'firstname', value: 'Fake Name'}])
     mock_contactdata.expects(:update_attributes).with(data: [{name: 'given_name', value: 'Fake'}])
     mock_contactdata.expects(:update_attributes).with(data: [{name: 'family_name', value: 'Name'}])
     mock_contactdata.expects(:update_attributes).with(data: [{name: 'display_name', value: 'Fake Name'}])
