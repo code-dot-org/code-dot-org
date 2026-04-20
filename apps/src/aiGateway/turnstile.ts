@@ -1,7 +1,7 @@
 const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
-const SITE_KEY = '0x4AAAAAACva3yXFGIuj6pR8';
+const TURNSTILE_SITE_KEY = '0x4AAAAAACva3yXFGIuj6pR8';
 const CHALLENGE_TIMEOUT_MS = 30_000;
 // How long to wait for the probe Worker to respond before concluding it was
 // paused by the DevTools debugger. The Worker posts a message in microseconds
@@ -328,7 +328,7 @@ class TurnstileManager {
       let widgetId: string;
       try {
         widgetId = window.turnstile.render(this.container, {
-          sitekey: SITE_KEY,
+          sitekey: TURNSTILE_SITE_KEY,
           callback: (token: string) => {
             if (settled) {
               console.warn(
