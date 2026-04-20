@@ -9,6 +9,10 @@ import {useSketchLabReadOnly} from '../context';
 import {
   BACKGROUND_PALETTE,
   ColorSwatch,
+  DEFAULT_BACKGROUND_COLOR,
+  DEFAULT_FONT_COLOR,
+  DEFAULT_FONT_SIZE,
+  DEFAULT_STROKE_COLOR,
   FONT_SIZE_OPTIONS,
   STROKE_FONT_PALETTE,
 } from './shapePalettes';
@@ -60,23 +64,23 @@ export default function ShapeNodeToolbar({
         <SwatchGroup
           groupLabel="Background"
           swatches={BACKGROUND_PALETTE}
-          selectedValue={backgroundColor}
+          selectedValue={backgroundColor ?? DEFAULT_BACKGROUND_COLOR}
           onSelect={value => setPatch({backgroundColor: value})}
         />
         <SwatchGroup
           groupLabel="Stroke"
           swatches={STROKE_FONT_PALETTE}
-          selectedValue={strokeColor}
+          selectedValue={strokeColor ?? DEFAULT_STROKE_COLOR}
           onSelect={value => setPatch({strokeColor: value})}
         />
         <FontSizeGroup
-          selectedValue={fontSize}
+          selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
           onSelect={value => setPatch({fontSize: value})}
         />
         <SwatchGroup
           groupLabel="Font color"
           swatches={STROKE_FONT_PALETTE}
-          selectedValue={fontColor}
+          selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
           onSelect={value => setPatch({fontColor: value})}
         />
       </Paper>

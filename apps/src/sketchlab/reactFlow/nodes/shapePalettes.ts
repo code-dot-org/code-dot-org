@@ -30,6 +30,11 @@ export const FONT_SIZE_OPTIONS = [
 
 export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 
+export const DEFAULT_BACKGROUND_COLOR = 'transparent';
+export const DEFAULT_STROKE_COLOR = '#000000';
+export const DEFAULT_FONT_COLOR = '#000000';
+export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
+
 export function fontSizePx(value: string | undefined): number | undefined {
   const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
   return match?.px;
