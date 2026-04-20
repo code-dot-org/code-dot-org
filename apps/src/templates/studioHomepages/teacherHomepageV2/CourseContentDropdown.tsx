@@ -42,10 +42,9 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 
   useEffect(() => {
     const fetchLessonList = async () => {
+      const sectionIdOrDemoPreset = demoType || section.id;
       HttpClient.fetchJson<UnitLessonOptions[]>(
-        demoType
-          ? `/sections/retrieve_lessons_for_dropdown?demo_type=${demoType}`
-          : `/sections/${section.id}/retrieve_lessons_for_dropdown`
+        `/sections/${sectionIdOrDemoPreset}/retrieve_lessons_for_dropdown`
       )
         .then(response => setLessonList(response.value))
         .catch(error => console.error(error));

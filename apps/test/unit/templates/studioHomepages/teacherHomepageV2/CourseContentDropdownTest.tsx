@@ -171,7 +171,9 @@ describe('CourseContentDropdown', () => {
   it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
-    expect(fetchSpy).toHaveBeenCalled();
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/sections/11/retrieve_lessons_for_dropdown'
+    );
     const lesson = screen.getByText('4: Shapes and Parameters');
     fireEvent.click(lesson);
     expect(sendEventSpy).toHaveBeenCalledWith(
@@ -190,6 +192,20 @@ describe('CourseContentDropdown', () => {
       {
         lesson: '/teacher_dashboard/sections/11/courses/csd-2024/units/3',
       }
+    );
+  });
+
+  it('uses the demo preset path when demoType is provided', async () => {
+    render(
+      <Provider store={store}>
+        <CourseContentDropdown section={nonUnitSection} demoType="high" />
+      </Provider>
+    );
+
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/sections/high/retrieve_lessons_for_dropdown'
     );
   });
 });

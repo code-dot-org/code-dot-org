@@ -328,7 +328,7 @@ class SectionsControllerTest < ActionController::TestCase
     create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
     unit.lessons.first.update!(has_lesson_plan: true)
 
-    get :retrieve_lessons_for_dropdown, params: {demo_type: 'high'}
+    get :retrieve_lessons_for_dropdown, params: {id: 'high'}
 
     assert_response :success
     response_json = JSON.parse(@response.body)

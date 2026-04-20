@@ -64,11 +64,10 @@ class SectionsController < ApplicationController
   end
 
   def retrieve_lessons_for_dropdown
-    if params[:demo_type].present?
-      return head :forbidden unless current_user
+    preset = Policies::DemoSections.get_preset(params[:id])
 
-      preset = Policies::DemoSections.get_preset(params[:demo_type])
-      return head :bad_request unless preset
+    if preset
+      return head :forbidden unless current_user
 
       unit = Unit.get_from_cache(preset[:unit_name], raise_exceptions: false) if preset[:unit_name].present?
       unit_group = UnitGroup.get_from_cache(preset[:unit_group_name]) if preset[:unit_group_name].present?
