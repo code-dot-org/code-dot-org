@@ -1,4 +1,5 @@
 import {IconButton, Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {ColorSwatch} from './shapePalettes';
@@ -31,9 +32,10 @@ export default function SwatchGroup({
             <Tooltip key={swatch.value} title={swatch.label} placement="top">
               <IconButton
                 size="small"
-                className={`${styles.swatch} ${
-                  isSelected ? styles.swatchSelected : ''
-                } ${swatch.transparent ? styles.swatchTransparent : ''}`}
+                className={classNames(styles.swatch, {
+                  [styles.swatchSelected]: isSelected,
+                  [styles.swatchTransparent]: swatch.transparent,
+                })}
                 style={
                   swatch.transparent
                     ? undefined

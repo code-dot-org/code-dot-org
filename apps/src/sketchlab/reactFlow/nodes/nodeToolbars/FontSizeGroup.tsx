@@ -1,4 +1,5 @@
 import {IconButton, Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {FONT_SIZE_OPTIONS} from './shapePalettes';
@@ -26,9 +27,9 @@ export default function FontSizeGroup({
             <Tooltip key={option.value} title={option.label} placement="top">
               <IconButton
                 size="small"
-                className={`${styles.fontSizeButton} ${
-                  isSelected ? styles.fontSizeButtonSelected : ''
-                }`}
+                className={classNames(styles.fontSizeButton, {
+                  [styles.fontSizeButtonSelected]: isSelected,
+                })}
                 aria-label={`Font size: ${option.label}`}
                 aria-pressed={isSelected}
                 onClick={() => onSelect(option.value)}
