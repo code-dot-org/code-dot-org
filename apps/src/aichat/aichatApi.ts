@@ -1,3 +1,4 @@
+import {AiCustomizations} from '@cdo/apps/aichatLab/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
@@ -10,7 +11,6 @@ import {ValueOf} from '../types/utils';
 
 import {chatHistoryValidator} from './api/validators';
 import {
-  AiCustomizations,
   AichatContext,
   ModelParameters,
   ChatEvent,

@@ -4,7 +4,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 
 export const MIN_TEMPERATURE = 0.1;
 export const MAX_TEMPERATURE = 1;

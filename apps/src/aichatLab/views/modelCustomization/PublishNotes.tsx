@@ -11,7 +11,7 @@ import {
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
 } from '@cdo/apps/aichat/redux';
-import {ModelCardInfo} from '@cdo/apps/aichat/types';
+import {ModelCardInfo} from '@cdo/apps/aichatLab/types';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
