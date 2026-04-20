@@ -5,55 +5,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Facilitating Ethical Discussions
 
-#### Teaching students about ethical issues in computer systems goes beyond understanding how they function — it’s about **thinking critically** and **questioning how technology affects people and communities**.
-#### As students examine more complex and potentially controversial systems — such as surveillance networks, AI-powered recommendation engines, and biometric security — discussions may surface strong opinions and raise important questions about fairness, privacy, and accountability.
+#### As AI becomes more common in education, it’s important not only to understand its ethical implications, but also to create space for students to explore and discuss them. These conversations go beyond learning how AI works—they help students think critically about how technology impacts people, communities, and decision-making.
 
-#### These topics can spark strong opinions and have no easy answers.
+#### AI-related topics can raise complex and sometimes controversial questions about fairness, bias, privacy, and responsibility. Students may have strong opinions, and in many cases, there are no simple or universally agreed-upon answers. This makes it especially important to approach these discussions with intention and care.
 
-## When guiding students, consider:
+#### When facilitating conversations about AI and ethics, consider the following strategies:
 
+* #### **Encourage multiple perspectives.**
+#### Help students explore who benefits from a system and who might be impacted negatively. Framing discussions around trade-offs, rather than “right” or “wrong” answers, can lead to deeper and more thoughtful engagement.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Encourage Multiple Perspectives
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+* #### **Use “what-if” scenarios.**
+#### Present hypothetical situations that require students to think through the implications of AI decisions. These scenarios encourage students to consider different viewpoints and explore how outcomes might affect different groups.
 
+* #### **Acknowledge uncertainty and complexity.**
+#### Reinforce that ethical questions around AI are often complex and evolving. It’s okay not to have a clear answer. Emphasizing inquiry, questioning, and reflection helps students build confidence in navigating uncertainty.
 
-#### Ask: “Who benefits from this computer system? Who might be harmed?”
+<br>
 
-#### Frame debates around trade-offs rather than “right vs. wrong.”
-
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">❓ Use ‘What-If’ Scenarios</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Example: “What if a self-driving car had to choose between protecting its passenger or a pedestrian?”
-
-#### Let students explore different viewpoints before giving definitive answer
-
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Acknowledge Uncertainty</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Ethical decisions in AI are complex. Reinforce that even experts debate these topics.
-#### Help students see that questioning and critical thinking are valuable skills.
-
-
-</p></div>
-</details>
-
----
+>#### **💬 Quick Reflection:** Which of these stratagies fit best with your teaching style?
 
 #### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
 MARKDOWN
