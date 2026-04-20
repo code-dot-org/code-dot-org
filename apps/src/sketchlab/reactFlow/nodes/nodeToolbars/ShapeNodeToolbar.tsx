@@ -7,6 +7,7 @@ import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import {useSketchLabReadOnly} from '../../context';
 
 import FontSizeGroup from './FontSizeGroup';
+import HandleVisibilityToggle from './HandleVisibilityToggle';
 import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
@@ -37,9 +38,10 @@ export default function ShapeNodeToolbar({
   const strokeColor = data.strokeColor as string | undefined;
   const fontSize = data.fontSize as string | undefined;
   const fontColor = data.fontColor as string | undefined;
+  const handlesVisible = data.showHandles !== false;
 
   const patchNodeData = useCallback(
-    (patch: Record<string, string>) => {
+    (patch: Record<string, string | boolean>) => {
       updateNodeData(nodeId, patch);
     },
     [nodeId, updateNodeData]
@@ -82,6 +84,10 @@ export default function ShapeNodeToolbar({
           swatches={STROKE_FONT_PALETTE}
           selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
           onSelect={value => patchNodeData({fontColor: value})}
+        />
+        <HandleVisibilityToggle
+          visible={handlesVisible}
+          onToggle={() => patchNodeData({showHandles: !handlesVisible})}
         />
       </Paper>
     </NodeToolbar>

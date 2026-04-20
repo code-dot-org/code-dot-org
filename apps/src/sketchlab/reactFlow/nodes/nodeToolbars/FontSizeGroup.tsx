@@ -5,10 +5,6 @@ import {FONT_SIZE_OPTIONS} from './shapePalettes';
 
 import styles from './shape-node-toolbar.module.scss';
 
-// IconButton size="small" still pads ~5 px and forces a 50 % border
-// radius; override both so the CSS module's 24 px rounded-rect wins.
-const BUTTON_SX = {padding: 0, borderRadius: '4px'};
-
 export interface FontSizeGroupProps {
   selectedValue: string | undefined;
   onSelect: (value: string) => void;
@@ -36,7 +32,6 @@ export default function FontSizeGroup({
                 aria-label={`Font size: ${option.label}`}
                 aria-pressed={isSelected}
                 onClick={() => onSelect(option.value)}
-                sx={BUTTON_SX}
               >
                 {option.label.charAt(0)}
               </IconButton>

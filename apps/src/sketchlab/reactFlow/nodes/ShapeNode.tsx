@@ -148,6 +148,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const strokeColor = data.strokeColor as string | undefined;
   const fontColor = data.fontColor as string | undefined;
   const fontSize = fontSizePx(data.fontSize as string | undefined);
+  const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {
@@ -257,7 +258,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         {label}
       </div>
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }
