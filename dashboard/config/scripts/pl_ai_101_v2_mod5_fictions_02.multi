@@ -1,10 +1,10 @@
 name 'pl-ai-101-V2-mod5-fictions-02'
 title 'Check For Understanding: AI Fictions'
 description ''
-question 'What are AI fictions?'
+question 'Why can AI-generated misinformation be difficult to identify?'
 
-wrong 'The physical breakdown of AI hardware components due to overheating.'
-right 'The phenomenon where an AI system generates false or nonsensical information despite receiving correct inputs.'
-wrong 'A state where AI systems begin to develop their own consciousness and start hallucinating.'
-wrong 'The process of AI systems dreaming or imagining scenarios when they are not processing data.'
+wrong 'AI systems intentionally try to mislead users.'
+right 'AI produces confident, well-structured answers that may include incomplete or incorrect information.'
+wrong 'AI responses often include technical language that is hard to understand.'
+wrong 'AI makes mistakes when given unclear or poorly written prompts.'
 allow_multiple_attempts true

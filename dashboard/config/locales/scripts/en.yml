@@ -26533,7 +26533,9 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
           student_description: Learn to customize chatbots using AI Chat Lab
         teaching-ps-with-ai-v2-2025:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction
           lesson_groups: {}
           name: teaching-ps-with-ai-v2-2025
           title: Teaching Problem-Solving with AI (v2)
@@ -28042,8 +28044,8 @@ en:
           title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
-          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and AI Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and AI Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2026:
           lessons: {}
           lesson_groups:
@@ -28239,16 +28241,18 @@ en:
 
             **Access and Permissions:**
             - Teachers can view Web Lab but cannot interact with AI Tutor unless they are a verified teacher or have logged in via Google, Microsoft, Facebook, or an LMS. [Learn how to become a verified teacher here.](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
-            - Students can view Web Lab but cannot interact with AI tutor unless they are in a teacher-led section that meets the above requirements _and_ the section has AI Tools enabled. [Learn how teachers can add students to sections here.](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
+            - Students can view Web Lab but cannot interact with AI tutor unless they are age 13+ and in a teacher-led section that meets the above requirements _and_ the section has AI Tools enabled. [Learn how teachers can add students to sections here.](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
 
             > ⚠️ AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:
             > 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)
             > 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
             > 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)
+
+            You can view additional information about AI tutor in our [AI Tutor FAQ support article](https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ)
           student_description: |-
             Learn how to collaborate with an AI assistant to make your own webpage.
 
-            The AI features in this lesson are only available to students in a section with a verified teacher, so if you have any issues: double-check with your teacher!
+            The AI features in this lesson are only available to students age 13+ in a section with a verified teacher, so if you have any issues: double-check with your teacher!
         pl-sandbox-aif-sem-2-unit-6:
           lessons:
             lesson-1:
