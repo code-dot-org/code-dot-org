@@ -21,6 +21,8 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  DEFAULT_LINE_HEIGHT,
+  DEFAULT_LINE_WIDTH,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   SAVE_DEBOUNCE_MS,
@@ -30,6 +32,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardEdgeCreation} from '../hooks/useKeyboardEdgeCreation';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
+import LineNode from '../nodes/LineNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {ReactFlowSketchLabSources} from '../types';
@@ -42,13 +45,12 @@ const NODE_TYPES = {
   shape: ShapeNode,
   image: ImageNode,
   text: TextNode,
+  line: LineNode,
 };
 
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
-const LINE_DEFAULT_LENGTH_PX = 220;
-const LINE_ANCHOR_SIZE_PX = 1;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -176,87 +178,19 @@ export default function ReactFlowCanvas({
   const handleAddNode = useCallback(
     (
       type: 'shape' | 'image' | 'text' | 'line',
-      data?: SketchlabReactFlowNode['data']
+      data: SketchlabReactFlowNode['data']
     ) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
-      const centerPosition = screenToFlowPosition({
-        x: window.innerWidth / 2 + stagger,
-        y: window.innerHeight / 2 + stagger,
-      });
-
-      if (type === 'line') {
-        const sourceAnchorId = createUuid();
-        const targetAnchorId = createUuid();
-        const lineEdgeId = createUuid();
-
-        const anchorBaseData: SketchlabReactFlowNode['data'] = {
-          isLineAnchor: true,
-          shapeType: 'rectangle',
-          label: '',
-        };
-
-        const sourceAnchor: SketchlabReactFlowNode = {
-          id: sourceAnchorId,
-          type: 'shape',
-          position: {
-            x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
-            y: centerPosition.y,
-          },
-          data: anchorBaseData,
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-            opacity: 0,
-            pointerEvents: 'none',
-            border: 'none',
-          },
-        };
-
-        const targetAnchor: SketchlabReactFlowNode = {
-          id: targetAnchorId,
-          type: 'shape',
-          position: {
-            x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
-            y: centerPosition.y,
-          },
-          data: anchorBaseData,
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-            opacity: 0,
-            pointerEvents: 'none',
-            border: 'none',
-          },
-        };
-
-        const newLine: SketchlabReactFlowEdge = {
-          id: lineEdgeId,
-          source: sourceAnchorId,
-          target: targetAnchorId,
-          type: 'straight',
-        };
-
-        setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
-        setEdges(currentEdges => [...currentEdges, newLine]);
-
-        // Move focus to the new line after React Flow renders it.
-        (document.activeElement as HTMLElement)?.blur();
-        setTimeout(
-          () => focusEntry({type: 'edge', id: lineEdgeId}),
-          FOCUS_DELAY_MS
-        );
-        return;
-      }
-
-      if (!data) {
-        return;
-      }
+      const nodeWidth =
+        type === 'line' ? DEFAULT_LINE_WIDTH : DEFAULT_NODE_WIDTH;
+      const nodeHeight =
+        type === 'line' ? DEFAULT_LINE_HEIGHT : DEFAULT_NODE_HEIGHT;
 
       const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
+        x: window.innerWidth / 2 - nodeWidth / 2 + stagger,
+        y: window.innerHeight / 2 - nodeHeight / 2 + stagger,
       });
 
       const newNodeId = createUuid();
@@ -265,11 +199,11 @@ export default function ReactFlowCanvas({
         type,
         position,
         data,
-        // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+        // Text nodes auto-size to fit content; other node types use fixed defaults.
         ...(type !== 'text' && {
           style: {
-            width: DEFAULT_NODE_WIDTH,
-            height: DEFAULT_NODE_HEIGHT,
+            width: nodeWidth,
+            height: nodeHeight,
           },
         }),
       };
@@ -283,7 +217,7 @@ export default function ReactFlowCanvas({
         FOCUS_DELAY_MS
       );
     },
-    [focusEntry, screenToFlowPosition, setNodes, setEdges]
+    [focusEntry, screenToFlowPosition, setNodes]
   );
 
   return (

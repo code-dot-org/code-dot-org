@@ -16,7 +16,7 @@ import styles from './toolbar.module.scss';
 interface ToolbarProps {
   onAddNode: (
     type: 'shape' | 'image' | 'text' | 'line',
-    data?: SketchlabReactFlowNode['data']
+    data: SketchlabReactFlowNode['data']
   ) => void;
 }
 
@@ -131,7 +131,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         <IconButton
           aria-label="Add line"
           id={`${uid}-line`}
-          onClick={() => onAddNode('line')}
+          onClick={() => onAddNode('line', {})}
           size="small"
           color="tertiary"
           variant="outlined"
