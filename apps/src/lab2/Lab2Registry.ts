@@ -4,10 +4,8 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
-import {AppName} from './types';
+import {AppName, LevelNavigationConfirmation} from './types';
 import LifecycleNotifier from './utils/LifecycleNotifier';
-
-export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;

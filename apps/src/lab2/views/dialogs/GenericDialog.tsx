@@ -47,7 +47,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
     useModal?: boolean;
     icon?: FontAwesomeV6IconProps;
     /**
-     * Controls whether the dialog close affordance (top-right X and escape key close)
+     * Controls whether the dialog close button (top-right X, as well as escape key close)
      * is enabled. Defaults to true.
      */
     showCloseButton?: boolean;

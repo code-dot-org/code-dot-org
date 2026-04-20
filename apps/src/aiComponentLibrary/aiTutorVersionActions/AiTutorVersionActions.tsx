@@ -47,6 +47,8 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     await dispatch(rejectAiTutorVersion(files));
   }, [dispatch, files]);
 
+  // Presents a confirmation dialog if the user attempts to navigate to another lab2 level with unsaved AI Tutor changes.
+  // If the user confirms they want to navigate away, we log a "reject" event and reject the proposed changes.
   useEffect(() => {
     Lab2Registry.getInstance().setLevelNavigationConfirmation(async () => {
       if (!dialogControl) {
@@ -96,6 +98,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     };
   }, []);
 
+  // Logs a "reject" event if the user navigates away from the page without accepting or rejecting AI Tutor's proposed changes.
   useEffect(() => {
     const possiblyRejectOnPageHide = async (event: PageTransitionEvent) => {
       if (viewingAiTutorVersionFileUpdates) {
