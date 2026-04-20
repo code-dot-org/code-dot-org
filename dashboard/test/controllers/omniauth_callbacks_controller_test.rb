@@ -425,6 +425,68 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
+  test 'clever: verifies unverified teacher on sign in with Clever teacher role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_difference('UserPermission.count', 1) do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: does not duplicate verification for already verified teacher on sign in' do
+    user = create(:authorized_teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_no_difference('UserPermission.count') do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: does not verify unverified teacher on sign in with Clever staff role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_no_difference('UserPermission.count') do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    refute User.find(user.id).verified_teacher?
+  end
+
   test 'clever: signs in user and updates auth option if user is found by legacy_id' do
     legacy_id = SecureRandom.alphanumeric(10)
     user = create(:teacher, :with_clever_authentication_option)

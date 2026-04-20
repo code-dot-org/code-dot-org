@@ -8,6 +8,8 @@ require 'policies/devise/email_domains'
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
+  CLEVER_AUTO_VERIFICATION_SESSION_KEY = :clever_teacher_auto_verification
+
   skip_before_action :clear_sign_up_session_vars
 
   before_action :check_account_linking_lock
@@ -287,6 +289,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    verify_clever_teacher! user
     sign_in_user user
   end
 
@@ -317,6 +320,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       u.user_type = user_type
       prepare_locale_cookie u
     end
+
+    session[CLEVER_AUTO_VERIFICATION_SESSION_KEY] =
+      Policies::User.clever_verified_teacher_candidate?(user, auth_hash)
 
     register_new_user(user, AuthenticationOption::CLEVER)
   end
@@ -456,6 +462,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender, user_type: user_type)
     auth.info&.merge!(clever_data)
     auth
+  end
+
+  private def verify_clever_teacher!(user)
+    user.verify_teacher! if Policies::User.clever_verified_teacher_candidate?(user, auth_hash)
   end
 
   # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we

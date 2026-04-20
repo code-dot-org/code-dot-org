@@ -34,6 +34,19 @@ class Policies::User
     !is_google_email
   end
 
+  # Determines if a user should be auto-verified from a Clever OAuth callback.
+  # In order to be a Clever verification candidate, the user must:
+  # - Be a teacher
+  # - Not already be verified
+  # - Have an explicit Clever teacher role in the auth payload
+  def self.clever_verified_teacher_candidate?(user, auth)
+    return false unless user.teacher?
+    return false if user.verified_teacher?
+
+    roles = auth&.dig(:extra, :raw_info, :canonical, :data, :roles)
+    roles.respond_to?(:key?) && (roles.key?(:teacher) || roles.key?('teacher'))
+  end
+
   def self.in_usa?(country_code)
     %w[US RD].include?(country_code)
   end

@@ -58,6 +58,34 @@ class Policies::UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'clever_verified_teacher_candidate? returns true for unverified teacher with Clever teacher role' do
+    teacher = create(:teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+
+    assert Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+  end
+
+  test 'clever_verified_teacher_candidate? returns false for Clever staff role' do
+    teacher = create(:teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {staff: {}}}}}})
+
+    refute Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+  end
+
+  test 'clever_verified_teacher_candidate? returns false for student' do
+    student = create(:student)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+
+    refute Policies::User.clever_verified_teacher_candidate?(student, auth)
+  end
+
+  test 'clever_verified_teacher_candidate? returns false for already verified teacher' do
+    teacher = create(:authorized_teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+
+    refute Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+  end
+
   describe '.personal_account?' do
     subject(:personal_account?) {Policies::User.personal_account?(user)}
 

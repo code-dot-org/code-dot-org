@@ -112,6 +112,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
+    session.delete(OmniauthCallbacksController::CLEVER_AUTO_VERIFICATION_SESSION_KEY)
     PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
@@ -165,6 +166,13 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     if current_user && current_user.errors.blank?
+      if session[:sign_up_type] == AuthenticationOption::CLEVER &&
+          session.delete(OmniauthCallbacksController::CLEVER_AUTO_VERIFICATION_SESSION_KEY)
+        current_user.verify_teacher! if current_user.teacher? && !current_user.verified_teacher?
+      else
+        session.delete(OmniauthCallbacksController::CLEVER_AUTO_VERIFICATION_SESSION_KEY)
+      end
+
       if current_user.teacher?
         begin
           MailJet.create_contact_and_add_to_welcome_series(current_user, I18n.locale.to_s)
