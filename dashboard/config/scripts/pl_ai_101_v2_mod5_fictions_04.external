@@ -5,22 +5,71 @@ description 'description here'
 markdown <<MARKDOWN
 # Tips and Tricks for Spotting AI Fictions
 
-#### Because AI-generated content can sound authoritative, it’s not always obvious when something is incorrect. Developing habits of skepticism and verification is essential.
+#### AI-generated responses often sound clear, confident, and well-structured—but that doesn’t always mean they are accurate. In many cases, the issues are subtle, such as missing context, oversimplified explanations, or unverified claims.
 
->#### **💬 Quick Reflection:** When have you spotted an AI fiction? How did you know it was a fiction?
+#### Developing habits of skepticism and verification helps ensure AI is used as a tool for thinking—not a replacement for it.
 
-#### Look for:
-* #### Confident tone without evidence – The response sounds certain but lacks sources or explanations
-* #### Vague or overly general information – Statements that avoid specifics or detail
-* #### Inconsistencies or contradictions – Ideas that don’t logically fit together
-* #### Fabricated details – Quotes, citations, or facts that cannot be verified
-* #### Answers that seem “too perfect” – Well-written but overly simplified responses
+>#### **💬 Quick Reflection:** When have you encountered an AI response that didn’t seem quite right? What made you question it?
 
-#### To check for accuracy:
-* #### Exercise healthy skepticism – Question information, especially for unfamiliar or obscure topics
-* #### Reprompt for accuracy – Ask follow-up questions like “Are you sure about this?” or request sources
-* #### Use a variety of tools – Combine AI with search engines to verify facts and find reliable sources
-* #### Cross-check information – Compare multiple sources before accepting something as true
+#### Use the guide below to identify common signs of AI fiction and strategies you can use to respond.
 
-#### These strategies help ensure AI is used as a tool for thinking—not a replacement for it.
+<div style="max-width:90%; margin:0 auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#2f2f2f;">
+
+<div style="border:2px solid #000; border-radius:14px; overflow:hidden;">
+
+<div style="display:grid; grid-template-columns:1fr 1fr;">
+<div style="background:#FDF4F2; padding:12px; font-weight:700; font-size:20px; border-right:1px solid #ddd;">🚩 Red Flags to Watch For</div>
+<div style="background:#F2FBF8; padding:12px; font-weight:700; font-size:20px;">🛠 What to Do Next</div>
+</div>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:10px;">
+
+<div style="background:#F8F6F6; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Confident tone without evidence</strong><br>
+<span style="color:#555; font-size:15px;">The response sounds certain but lacks sources or explanations</span>
+</div>
+<div style="background:#FAFBFC; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Reprompt or ask for sources</strong><br>
+<span style="color:#555; font-size:15px;">Ask follow-up questions like “Are you sure?” or request evidence</span>
+</div>
+
+<div style="background:#F8F6F6; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Vague or overly general information</strong><br>
+<span style="color:#555; font-size:15px;">Statements avoid specifics or meaningful detail</span>
+</div>
+<div style="background:#FAFBFC; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Ask for specifics</strong><br>
+<span style="color:#555; font-size:15px;">Prompt for examples, details, or clearer explanations</span>
+</div>
+
+<div style="background:#F8F6F6; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Inconsistencies or contradictions</strong><br>
+<span style="color:#555; font-size:15px;">Ideas don’t logically fit together</span>
+</div>
+<div style="background:#FAFBFC; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Cross-check information</strong><br>
+<span style="color:#555; font-size:15px;">Compare multiple sources before accepting something as true</span>
+</div>
+
+<div style="background:#F8F6F6; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Fabricated details</strong><br>
+<span style="color:#555; font-size:15px;">Quotes, citations, or facts that cannot be verified</span>
+</div>
+<div style="background:#FAFBFC; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Use a variety of tools</strong><br>
+<span style="color:#555; font-size:15px;">Combine AI with search engines to verify facts</span>
+</div>
+
+<div style="background:#F8F6F6; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Answers that seem “too perfect”</strong><br>
+<span style="color:#555; font-size:15px;">Well-written but overly simplified responses</span>
+</div>
+<div style="background:#FAFBFC; border-radius:10px; padding:8px; min-height:80px;">
+<strong style="font-size:17px;">Exercise healthy skepticism</strong><br>
+<span style="color:#555; font-size:15px;">Question information, especially for unfamiliar topics</span>
+</div>
+
+</div>
+</div>
+</div>
 MARKDOWN

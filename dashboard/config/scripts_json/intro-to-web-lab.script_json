@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-16 23:37:04 UTC",
+    "serialized_at": "2026-04-19 02:50:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -256,7 +256,7 @@
       "key": "2e3771b7-dc66-4e14-94a8-95c3347ab3dc",
       "position": 1,
       "properties": {
-        "description": "**More Projects in Web Lab:** Web Lab is a tool that can be used for standalone projects outside of this lesson - [click here to learn more about Web Lab and standalone projects](https://code.org/en-US/tools/web-lab). Now that students understand how to use Web Lab and interact with AI tutor, you may decide to use Web Lab for other projects.\n\n**Learn More about Web Development and AI:** If your students want to continue learning how to make webpages and even jump into interactive websites with Javascript programming, then consider exploring our [AI Foundations Semester 2 course](https://code.org/en-US/incubator). This course covers many additional topics that aren't included in this lesson (ie: multi-page websites, wireframes, accessibility, Javascript programming, etc).\n\nThis link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. The full version of this course will be released this summer.",
+        "description": "**More Projects in Web Lab:** Web Lab is a tool that can be used for standalone projects outside of this lesson. Now that students understand how to use Web Lab and interact with AI tutor, you may decide to use Web Lab for other projects. You can find Web Lab in the \"New projects+\" menu in the header to get started with projects outside of curriculum progressions.  [Click here to learn more about Web Lab and standalone projects](https://code.org/en-US/tools/web-lab). \n\n**Learn More about Web Development and AI:** If your students want to continue learning how to make webpages and even jump into interactive websites with Javascript programming, then consider exploring our [AI Foundations Semester 2 course\\*](https://code.org/en-US/incubator). This course covers many additional topics that aren't included in this lesson (ie: multi-page websites, wireframes, accessibility, Javascript programming, etc).\n\n\\* *This link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. No commitment required when joining the pilot. The full version of this course will be released this summer.*",
         "name": "What Comes Next?"
       },
       "seeding_key": {
@@ -280,7 +280,7 @@
       "key": "936bf647-4b18-4d5e-95c1-ebe17e35eb90",
       "position": 3,
       "properties": {
-        "description": "[**Artificial Intelligence Foundations - Semester 2 (Preview):**](https://code.org/en-US/incubator) Try the second semester of AIF, where students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.\n\nThis link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. The full version of this course will be released this summer."
+        "description": "[**Artificial Intelligence Foundations - Semester 2 (Preview)\\*:**](https://code.org/en-US/incubator) Try the second semester of AIF, where students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.\n\n\\* *This link takes you to the Code.org Incubator, where you can join the pilot and then access the curriculum. No commitment required when joining the pilot. The full version of this course will be released this summer.*"
       },
       "seeding_key": {
         "activity_section.key": "936bf647-4b18-4d5e-95c1-ebe17e35eb90",
