@@ -77,14 +77,15 @@
   }
 }
 
-.swatchSelected {
-  // 1px gap (in toolbar background) between the swatch edge and the
-  // selection ring, so black/transparent swatches remain distinguishable.
-  // `!important` beats MUI IconButton's focus-visible shadow so the
-  // selection ring is visible immediately, not only after focus moves.
+// 1px gap (in toolbar background) between the swatch edge and the
+// selection ring, so black/transparent swatches remain distinguishable.
+// Chaining `:global(.MuiIconButton-root)` gives this rule 3-class
+// specificity, outranking MUI's own 2-class focus-visible box-shadow
+// that would otherwise suppress the ring while the button has focus.
+.swatch.swatchSelected:global(.MuiIconButton-root) {
   box-shadow:
     0 0 0 1px var(--background-neutral-primary),
-    0 0 0 3px var(--text-neutral-primary) !important;
+    0 0 0 3px var(--text-neutral-primary);
 }
 
 .swatchTransparent {
