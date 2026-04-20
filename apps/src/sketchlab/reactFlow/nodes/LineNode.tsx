@@ -14,6 +14,7 @@ interface LineNodeProps {
 
 type DragEndpoint = 'start' | 'end';
 const MIN_DIMENSION_PX = 1;
+type LinePoint = {x: number; y: number};
 
 function getNumberOrFallback(
   value: string | number | undefined,
@@ -29,12 +30,43 @@ function getNumberOrFallback(
   return fallback;
 }
 
-function getEndpointRatios(data: Record<string, string | number | boolean>) {
-  const startX = getNumberOrFallback(data.startRatioX as string | number, 0);
-  const startY = getNumberOrFallback(data.startRatioY as string | number, 0.5);
-  const endX = getNumberOrFallback(data.endRatioX as string | number, 1);
-  const endY = getNumberOrFallback(data.endRatioY as string | number, 0.5);
-  return {startX, startY, endX, endY};
+function getEndpointPixels(
+  data: Record<string, string | number | boolean>,
+  width: number,
+  height: number
+) {
+  const hasPixelEndpoints =
+    typeof data.startX !== 'undefined' &&
+    typeof data.startY !== 'undefined' &&
+    typeof data.endX !== 'undefined' &&
+    typeof data.endY !== 'undefined';
+
+  if (hasPixelEndpoints) {
+    return {
+      startX: getNumberOrFallback(data.startX as string | number, 0),
+      startY: getNumberOrFallback(data.startY as string | number, height / 2),
+      endX: getNumberOrFallback(data.endX as string | number, width),
+      endY: getNumberOrFallback(data.endY as string | number, height / 2),
+    };
+  }
+
+  // Backward compatibility for already-saved ratio-based lines.
+  const startRatioX = getNumberOrFallback(
+    data.startRatioX as string | number,
+    0
+  );
+  const startRatioY = getNumberOrFallback(
+    data.startRatioY as string | number,
+    0.5
+  );
+  const endRatioX = getNumberOrFallback(data.endRatioX as string | number, 1);
+  const endRatioY = getNumberOrFallback(data.endRatioY as string | number, 0.5);
+  return {
+    startX: startRatioX * width,
+    startY: startRatioY * height,
+    endX: endRatioX * width,
+    endY: endRatioY * height,
+  };
 }
 
 function LineNode({id, data, selected}: LineNodeProps) {
@@ -74,10 +106,10 @@ function LineNode({id, data, selected}: LineNodeProps) {
         Math.abs(endPoint.y - startPoint.y),
         MIN_DIMENSION_PX
       );
-      const startRatioX = (startPoint.x - newX) / newWidth;
-      const startRatioY = (startPoint.y - newY) / newHeight;
-      const endRatioX = (endPoint.x - newX) / newWidth;
-      const endRatioY = (endPoint.y - newY) / newHeight;
+      const startLocalX = startPoint.x - newX;
+      const startLocalY = startPoint.y - newY;
+      const endLocalX = endPoint.x - newX;
+      const endLocalY = endPoint.y - newY;
 
       setNodes(currentNodes =>
         currentNodes.map(node =>
@@ -92,10 +124,10 @@ function LineNode({id, data, selected}: LineNodeProps) {
                 },
                 data: {
                   ...node.data,
-                  startRatioX,
-                  startRatioY,
-                  endRatioX,
-                  endRatioY,
+                  startX: startLocalX,
+                  startY: startLocalY,
+                  endX: endLocalX,
+                  endY: endLocalY,
                 },
               }
             : node
@@ -141,16 +173,18 @@ function LineNode({id, data, selected}: LineNodeProps) {
 
       const width = getNumberOrFallback(node.style?.width, MIN_LINE_WIDTH);
       const height = getNumberOrFallback(node.style?.height, MIN_LINE_HEIGHT);
-      const ratios = getEndpointRatios(
-        (node.data || {}) as Record<string, string | number | boolean>
+      const endpoints = getEndpointPixels(
+        (node.data || {}) as Record<string, string | number | boolean>,
+        width,
+        height
       );
-      const startPoint = {
-        x: node.position.x + width * ratios.startX,
-        y: node.position.y + height * ratios.startY,
+      const startPoint: LinePoint = {
+        x: node.position.x + endpoints.startX,
+        y: node.position.y + endpoints.startY,
       };
-      const endPoint = {
-        x: node.position.x + width * ratios.endX,
-        y: node.position.y + height * ratios.endY,
+      const endPoint: LinePoint = {
+        x: node.position.x + endpoints.endX,
+        y: node.position.y + endpoints.endY,
       };
 
       dragEndpointRef.current = endpoint;
@@ -165,21 +199,26 @@ function LineNode({id, data, selected}: LineNodeProps) {
     [getNode, handlePointerMove, id, readOnly, stopDragging]
   );
 
-  const ratios = getEndpointRatios(data);
+  const node = getNode(id);
+  const width = getNumberOrFallback(node?.style?.width, MIN_LINE_WIDTH);
+  const height = getNumberOrFallback(node?.style?.height, MIN_LINE_HEIGHT);
+  const endpoints = getEndpointPixels(data, width, height);
+  const lineWidth = Math.max(width, MIN_DIMENSION_PX);
+  const lineHeight = Math.max(height, MIN_DIMENSION_PX);
 
   return (
     <div className={styles.lineNode} aria-label="Line">
       <svg
         className={styles.line}
-        viewBox="0 0 100 100"
+        viewBox={`0 0 ${lineWidth} ${lineHeight}`}
         preserveAspectRatio="none"
         aria-hidden="true"
       >
         <line
-          x1={ratios.startX * 100}
-          y1={ratios.startY * 100}
-          x2={ratios.endX * 100}
-          y2={ratios.endY * 100}
+          x1={endpoints.startX}
+          y1={endpoints.startY}
+          x2={endpoints.endX}
+          y2={endpoints.endY}
           className={styles.lineStroke}
         />
       </svg>
@@ -189,8 +228,8 @@ function LineNode({id, data, selected}: LineNodeProps) {
             className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('start', event)}
             style={{
-              left: `${ratios.startX * 100}%`,
-              top: `${ratios.startY * 100}%`,
+              left: `${endpoints.startX}px`,
+              top: `${endpoints.startY}px`,
             }}
             aria-hidden="true"
           />
@@ -198,8 +237,8 @@ function LineNode({id, data, selected}: LineNodeProps) {
             className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('end', event)}
             style={{
-              left: `${ratios.endX * 100}%`,
-              top: `${ratios.endY * 100}%`,
+              left: `${endpoints.endX}px`,
+              top: `${endpoints.endY}px`,
             }}
             aria-hidden="true"
           />
