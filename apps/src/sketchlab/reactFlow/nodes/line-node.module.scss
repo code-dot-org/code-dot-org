@@ -21,13 +21,24 @@
 }
 
 .lineHandle {
+  all: unset;
   position: absolute;
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
   width: 10px;
   height: 10px;
+  padding: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid var(--borders-brand-teal-primary);
   background-color: var(--background-neutral-primary);
   cursor: nwse-resize;
   z-index: 1;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
 }

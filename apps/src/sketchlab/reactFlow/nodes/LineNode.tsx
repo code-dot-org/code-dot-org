@@ -14,6 +14,7 @@ interface LineNodeProps {
 
 type DragEndpoint = 'start' | 'end';
 const MIN_DIMENSION_PX = 1;
+const ENDPOINT_KEYBOARD_STEP_PX = 8;
 type LinePoint = {x: number; y: number};
 
 function getNumberOrFallback(
@@ -76,26 +77,8 @@ function LineNode({id, data, selected}: LineNodeProps) {
   const fixedPointRef = useRef<{x: number; y: number} | null>(null);
   const activePointerIdRef = useRef<number | null>(null);
 
-  const handlePointerMove = useCallback(
-    (event: PointerEvent) => {
-      const dragging = dragEndpointRef.current;
-      const fixedPoint = fixedPointRef.current;
-      if (
-        !dragging ||
-        !fixedPoint ||
-        activePointerIdRef.current !== event.pointerId
-      ) {
-        return;
-      }
-
-      const movingPoint = screenToFlowPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-
-      const startPoint = dragging === 'start' ? movingPoint : fixedPoint;
-      const endPoint = dragging === 'end' ? movingPoint : fixedPoint;
-
+  const applyLinePoints = useCallback(
+    (startPoint: LinePoint, endPoint: LinePoint) => {
       const newX = Math.min(startPoint.x, endPoint.x);
       const newY = Math.min(startPoint.y, endPoint.y);
       const newWidth = Math.max(
@@ -134,7 +117,31 @@ function LineNode({id, data, selected}: LineNodeProps) {
         )
       );
     },
-    [id, screenToFlowPosition, setNodes]
+    [id, setNodes]
+  );
+
+  const handlePointerMove = useCallback(
+    (event: PointerEvent) => {
+      const dragging = dragEndpointRef.current;
+      const fixedPoint = fixedPointRef.current;
+      if (
+        !dragging ||
+        !fixedPoint ||
+        activePointerIdRef.current !== event.pointerId
+      ) {
+        return;
+      }
+
+      const movingPoint = screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+
+      const startPoint = dragging === 'start' ? movingPoint : fixedPoint;
+      const endPoint = dragging === 'end' ? movingPoint : fixedPoint;
+      applyLinePoints(startPoint, endPoint);
+    },
+    [applyLinePoints, screenToFlowPosition]
   );
 
   const stopDragging = useCallback(() => {
@@ -155,7 +162,7 @@ function LineNode({id, data, selected}: LineNodeProps) {
   }, [handlePointerMove, stopDragging]);
 
   const startDragging = useCallback(
-    (endpoint: DragEndpoint, event: React.PointerEvent<HTMLDivElement>) => {
+    (endpoint: DragEndpoint, event: React.PointerEvent<HTMLButtonElement>) => {
       if (readOnly) {
         return;
       }
@@ -199,6 +206,64 @@ function LineNode({id, data, selected}: LineNodeProps) {
     [getNode, handlePointerMove, id, readOnly, stopDragging]
   );
 
+  const nudgeEndpointWithKeyboard = useCallback(
+    (endpoint: DragEndpoint, event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (readOnly) {
+        return;
+      }
+
+      let deltaX = 0;
+      let deltaY = 0;
+      const step = event.shiftKey
+        ? ENDPOINT_KEYBOARD_STEP_PX * 2
+        : ENDPOINT_KEYBOARD_STEP_PX;
+      if (event.key === 'ArrowLeft') deltaX = -step;
+      if (event.key === 'ArrowRight') deltaX = step;
+      if (event.key === 'ArrowUp') deltaY = -step;
+      if (event.key === 'ArrowDown') deltaY = step;
+
+      if (!deltaX && !deltaY) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      const node = getNode(id);
+      if (!node) {
+        return;
+      }
+
+      const width = getNumberOrFallback(node.style?.width, MIN_LINE_WIDTH);
+      const height = getNumberOrFallback(node.style?.height, MIN_LINE_HEIGHT);
+      const endpoints = getEndpointPixels(
+        (node.data || {}) as Record<string, string | number | boolean>,
+        width,
+        height
+      );
+
+      const startPoint: LinePoint = {
+        x: node.position.x + endpoints.startX,
+        y: node.position.y + endpoints.startY,
+      };
+      const endPoint: LinePoint = {
+        x: node.position.x + endpoints.endX,
+        y: node.position.y + endpoints.endY,
+      };
+
+      if (endpoint === 'start') {
+        startPoint.x += deltaX;
+        startPoint.y += deltaY;
+      } else {
+        endPoint.x += deltaX;
+        endPoint.y += deltaY;
+      }
+
+      applyLinePoints(startPoint, endPoint);
+    },
+    [applyLinePoints, getNode, id, readOnly]
+  );
+
   const node = getNode(id);
   const width = getNumberOrFallback(node?.style?.width, MIN_LINE_WIDTH);
   const height = getNumberOrFallback(node?.style?.height, MIN_LINE_HEIGHT);
@@ -224,23 +289,31 @@ function LineNode({id, data, selected}: LineNodeProps) {
       </svg>
       {selected && !readOnly && (
         <>
-          <div
+          <button
+            type="button"
             className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('start', event)}
+            onKeyDown={event => nudgeEndpointWithKeyboard('start', event)}
+            data-line-endpoint="true"
+            data-focus-on-enter="true"
+            aria-label="Line start point"
             style={{
               left: `${endpoints.startX}px`,
               top: `${endpoints.startY}px`,
             }}
-            aria-hidden="true"
           />
-          <div
+          <button
+            type="button"
             className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('end', event)}
+            onKeyDown={event => nudgeEndpointWithKeyboard('end', event)}
+            data-line-endpoint="true"
+            data-focus-on-enter="true"
+            aria-label="Line end point"
             style={{
               left: `${endpoints.endX}px`,
               top: `${endpoints.endY}px`,
             }}
-            aria-hidden="true"
           />
         </>
       )}

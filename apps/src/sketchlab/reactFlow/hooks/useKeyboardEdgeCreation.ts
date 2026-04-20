@@ -92,6 +92,11 @@ export function useKeyboardEdgeCreation({
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       const target = event.target as HTMLElement;
+      const isLineEndpointControl =
+        target.closest('[data-line-endpoint="true"]') !== null;
+      if (isLineEndpointControl) {
+        return;
+      }
       // Don't intercept non-Tab keys when the user is editing text content.
       const isEditing =
         target.isContentEditable ||
@@ -218,7 +223,9 @@ export function useKeyboardEdgeCreation({
         );
         if (editable) {
           event.preventDefault();
-          if (editable.tagName === 'BUTTON') {
+          if (editable.dataset.focusOnEnter === 'true') {
+            editable.focus();
+          } else if (editable.tagName === 'BUTTON') {
             editable.click();
           } else {
             editable.focus();
