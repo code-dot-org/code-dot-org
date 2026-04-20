@@ -174,6 +174,8 @@ module Cdo
     # @example Replace an existing Global Edition prefix
     #   path("fa", "/in/hi/home") => "/fa/home"
     def self.path(region, *paths, locale: ::I18n.locale)
+      region = region.to_s
+
       path = ::File.join('/', *paths)
       path = match_path(path)&.try(:[], :main_path) || path
 

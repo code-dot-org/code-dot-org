@@ -183,7 +183,7 @@ class Hamburger
 
       link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
       if link[:domain] == 'studio.code.org'
-        link[:url] = CDO.studio_url(link[:url])
+        link[:url] = CDO.studio_url(link[:url], ge_region:)
       elsif link[:domain] == 'code.org'
         link[:url] = CDO.code_org_url(link[:url])
       end
@@ -193,7 +193,7 @@ class Hamburger
         link[:subentries] = link[:subentries].filter_map do |sublink|
           sublink = sublink.dup
           if sublink[:domain] == 'studio.code.org'
-            sublink[:url] = CDO.studio_url(sublink[:url])
+            sublink[:url] = CDO.studio_url(sublink[:url], ge_region:)
           elsif sublink[:domain] == 'code.org'
             sublink[:url] = CDO.code_org_url(sublink[:url])
           end
@@ -244,13 +244,10 @@ class Hamburger
         info[:key] = info[:title]
         i18n_prefix = info[:loc_prefix] || loc_prefix
         info[:title] = I18n.t("#{i18n_prefix}#{info[:title]}")
-        case info[:domain]
-        when 'studio.code.org'
-          info[:url] = CDO.studio_url(info[:url])
-        when 'code.org'
+        if info[:domain] == 'studio.code.org'
+          info[:url] = CDO.studio_url(info[:url], ge_region:)
+        elsif info[:domain] == 'code.org'
           info[:url] = CDO.code_org_url(info[:url])
-        when CDO.csforall_domain
-          info[:url] = CDO.csforall_url(info[:url])
         end
       end
 

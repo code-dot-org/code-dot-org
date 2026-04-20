@@ -89,7 +89,6 @@ module Cdo
       # Allow hostname overrides
       return override_dashboard if override_dashboard && domain == 'studio.code.org'
       return override_pegasus if override_pegasus && domain == 'code.org'
-      return csforall_hostname if domain == csforall_domain
 
       return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
       return domain if rack_env?(:production)
@@ -119,14 +118,6 @@ module Cdo
 
     def preview_codeprojects_hostname
       "preview.#{codeprojects_hostname}"
-    end
-
-    def csforall_domain
-      'csforall.org'.freeze
-    end
-
-    def csforall_hostname
-      csforall_domain
     end
 
     def hostedzone_id(domain)
@@ -173,10 +164,6 @@ module Cdo
 
     def code_org_url(path = '', scheme = '', ge_region: nil)
       site_url('code.org', path, scheme, ge_region: ge_region)
-    end
-
-    def csforall_url(*paths)
-      File.join("https://#{csforall_hostname}", *paths)
     end
 
     def hourofcode_url(path = '', scheme = '', locale: nil)
