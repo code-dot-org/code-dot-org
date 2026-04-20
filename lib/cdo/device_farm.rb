@@ -13,9 +13,9 @@ require 'aws-sdk-devicefarm'
 # Prerequisites:
 #   1. Desktop: create a Desktop Browser Testing (TestGrid) project:
 #        aws devicefarm create-test-grid-project --name cdo-ui-tests --region us-west-2
-#      Set device_farm_desktop_project_arn in locals.yml.
+#      Set device_farm_desktop_project_arn in AWS Secrets Manager or locals.yml.
 #   2. Mobile: create a standard Device Farm project via the AWS console.
-#      Set device_farm_mobile_project_arn in locals.yml.
+#      Set device_farm_mobile_project_arn in AWS Secrets Manager or locals.yml.
 #   3. Ensure AWS credentials are available (instance profile, env vars, etc.).
 
 module Cdo
@@ -36,7 +36,7 @@ module Cdo
     MOBILE_CONNECT_RETRY_SLEEP = 10 # seconds
 
     # AWS region where Device Farm projects live.
-    # Desktop Browser Testing is only available in us-west-2.
+    # As of April 2026, Device Farm only available in us-west-2.
     REGION = 'us-west-2'.freeze
 
     # Internal keys in browser configs that are not Selenium capabilities.
@@ -159,11 +159,11 @@ module Cdo
     # Returns the appropriate project ARN and raises if blank.
     def self.project_arn_for(mobile: false)
       if mobile
-        raise 'Please define CDO.device_farm_mobile_project_arn in locals.yml' \
+        raise 'Please define CDO.device_farm_mobile_project_arn AWS Secrets Manager or locals.yml' \
           if CDO.device_farm_mobile_project_arn.blank?
         CDO.device_farm_mobile_project_arn
       else
-        raise 'Please define CDO.device_farm_desktop_project_arn in locals.yml' \
+        raise 'Please define CDO.device_farm_desktop_project_arn AWS Secrets Manager or locals.yml' \
           if CDO.device_farm_desktop_project_arn.blank?
         CDO.device_farm_desktop_project_arn
       end

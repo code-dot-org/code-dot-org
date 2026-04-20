@@ -1,9 +1,8 @@
 /* AWS Device Farm browser configurations.
-   Desktop entries use a Desktop Browser Testing (TestGrid) project.
-   Mobile entries use a standard Device Farm project with real devices;
-   "device_arn" selects the exact device from the fleet and should match
-   a device in the project's static device pool ("ios device pool").
-   The runner routes each entry to the correct project ARN based on "mobile". */
+   - Desktop entries use a Desktop Browser Testing (TestGrid) project.
+   - Mobile entries use a standard Device Farm project with real devices, and
+   "device_arn" selects the exact device from the fleet. The runner routes
+   each entry to the correct project ARN based on the "mobile" flag. */
 
 [
   {
