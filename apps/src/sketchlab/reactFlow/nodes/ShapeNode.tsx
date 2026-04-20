@@ -13,8 +13,8 @@ import {useSketchLabReadOnly} from '../context';
 import {ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
-import ShapeNodeToolbar from './ShapeNodeToolbar';
-import {fontSizePx} from './shapePalettes';
+import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
+import {fontSizePx} from './nodeToolbars/shapePalettes';
 
 import styles from './shape-node.module.scss';
 

@@ -1,0 +1,44 @@
+import {Tooltip} from '@mui/material';
+import React from 'react';
+
+import {FONT_SIZE_OPTIONS} from './shapePalettes';
+
+import styles from './shape-node-toolbar.module.scss';
+
+export interface FontSizeGroupProps {
+  selectedValue: string | undefined;
+  onSelect: (value: string) => void;
+}
+
+export default function FontSizeGroup({
+  selectedValue,
+  onSelect,
+}: FontSizeGroupProps) {
+  return (
+    <div className={styles.group} role="group" aria-label="Font size">
+      <span className={styles.groupLabel} aria-hidden="true">
+        Font size
+      </span>
+      <div className={styles.fontSizeButtons}>
+        {FONT_SIZE_OPTIONS.map(option => {
+          const isSelected = selectedValue === option.value;
+          return (
+            <Tooltip key={option.value} title={option.label} placement="top">
+              <button
+                type="button"
+                className={`${styles.fontSizeButton} ${
+                  isSelected ? styles.fontSizeButtonSelected : ''
+                }`}
+                aria-label={`Font size: ${option.label}`}
+                aria-pressed={isSelected}
+                onClick={() => onSelect(option.value)}
+              >
+                {option.label.charAt(0)}
+              </button>
+            </Tooltip>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
