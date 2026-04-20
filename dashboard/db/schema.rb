@@ -940,10 +940,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_17_204555) do
 
   create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
-    t.string "description"
+    t.text "description"
     t.string "s3_uri", null: false
-    t.string "lab"
-    t.integer "version", null: false
+    t.json "labs"
+    t.integer "json_schema_version", null: false
     t.string "audience", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -130,6 +130,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             vocabulary={lessonDeepDiveData.vocabulary}
             assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
             objectives={lessonDeepDiveData.objectives}
+            jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
           />
         );

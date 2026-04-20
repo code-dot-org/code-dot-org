@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-07 14:51:26 UTC",
+    "serialized_at": "2026-04-17 19:29:02 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1720,6 +1720,17 @@
       }
     },
     {
+      "key": "875998f2-6361-4b99-8cdc-629440586bc5",
+      "position": 4,
+      "properties": {
+        "progression_name": "Mini-Lessons: AI's Ethical Impact"
+      },
+      "seeding_key": {
+        "activity_section.key": "875998f2-6361-4b99-8cdc-629440586bc5",
+        "lesson_activity.key": "eb147d2a-5f52-4b0b-87e0-420243289f6e"
+      }
+    },
+    {
       "key": "3038387f-4206-4c06-aab0-ef42954f796c",
       "position": 1,
       "properties": {
@@ -1751,7 +1762,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is sounding confident the same as being correct?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between confidence and accuracy, recognizing that the way information is presented — including by AI — can create a false sense of credibility even when the content is incomplete or wrong.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to choose a question they are interested in investigating.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist student in following the station Exploration Guide.",
-        "progression_name": "Testing Truth and Credibility",
+        "progression_name": "OLD_Testing Truth and Credibility",
         "tips": [
           {
             "type": "teachingTip",
@@ -1779,7 +1790,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do most of the responses AI gives you have in common?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to recognize that AI consistently generates answers and images that sound confident and complete, even when information is missing or uncertain. They notice that confidence is part of the pattern AI produces — not proof of accuracy or understanding.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use Sketch Lab to design their own 5-level Trust Meter that ranges from \"Highly Trustworthy\" to \"Falls Apart.\" Each level should include a short description explaining what makes an AI output land there (e.g., evidence included, missing details, assumptions, real-world accuracy).\n- Level 3: Students select between 'AI's Environmental Footprint,' 'Human Skill & AI Symbiosis,' or 'Training Data & Artist Rights.'\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with using Sketch Lab as needed. Push their thinking with questions such as:\n- What makes something move from Level 4 to Level 3?\n- How would you know if it’s missing important details?\n\nFor Level 3, ask students what surprised them. For the environment lesson, check if they understood the cooling requirements for server farms. For the skill lesson, ask them to define 'atrophy' in their own words. For artist rights, ask how they would feel if an AI learned from their work.",
-        "progression_name": "Judge Truth and Credibility"
+        "progression_name": "OLD_Judge Truth and Credibility"
       },
       "seeding_key": {
         "activity_section.key": "7dc99949-bf4b-4f40-b1fc-03fe7dd40aa5",
@@ -1790,7 +1801,7 @@
       "key": "48b64f09-3172-4c5d-89a2-84d43aed0067",
       "position": 6,
       "properties": {
-        "progression_name": "Mini-Lessons: Testing Truth and Credibility",
+        "progression_name": "OLD_Mini-Lessons: Testing Truth and Credibility",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1913,7 +1924,7 @@
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "progression_name": "OLD_End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "5902b409-6ac3-41ad-a5c5-b39280018cf1",
@@ -3568,7 +3579,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Testing Truth and Credibility"
+        "progression": "Mini-Lessons: AI's Ethical Impact"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thinking_critically_lesson5_level1_2026"
+        ],
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "875998f2-6361-4b99-8cdc-629440586bc5"
+      },
+      "level_keys": [
+        "thinking_critically_lesson5_level1_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "OLD_Testing Truth and Credibility"
       },
       "bonus": false,
       "seeding_key": {
@@ -3585,12 +3618,12 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 2,
+      "chapter": 18,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Judge Truth and Credibility"
+        "progression": "OLD_Judge Truth and Credibility"
       },
       "bonus": false,
       "seeding_key": {
@@ -3607,12 +3640,12 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 3,
+      "chapter": 19,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Lessons: Testing Truth and Credibility"
+        "progression": "OLD_Mini-Lessons: Testing Truth and Credibility"
       },
       "bonus": false,
       "seeding_key": {
@@ -3629,12 +3662,12 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 4,
+      "chapter": 20,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "End of Lesson Survey"
+        "progression": "OLD_End of Lesson Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -3651,7 +3684,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3673,7 +3706,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3695,7 +3728,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3717,7 +3750,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3739,7 +3772,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3761,7 +3794,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3783,7 +3816,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3805,7 +3838,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3827,7 +3860,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3849,7 +3882,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3871,7 +3904,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3893,7 +3926,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3915,7 +3948,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3937,7 +3970,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3958,7 +3991,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3980,7 +4013,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4002,7 +4035,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4203,6 +4236,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
         "activity_section.key": "5f9ab2b1-a1f3-4c55-9723-2ab88fa69868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thinking_critically_lesson5_level1_2026",
+        "script_level.level_keys": [
+          "thinking_critically_lesson5_level1_2026"
+        ],
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "875998f2-6361-4b99-8cdc-629440586bc5"
       }
     },
     {
@@ -5520,6 +5565,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
