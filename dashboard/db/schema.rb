@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_14_104541) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_14_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -919,6 +919,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_104541) do
     t.bigint "resource_id", null: false
     t.index ["jit_pl_teaching_tip_id", "resource_id"], name: "index_teaching_tips_resources_on_tip_and_resource_ids", unique: true
     t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
+  end
+
+  create_table "json_video_objectives", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "json_video_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["json_video_id", "objective_id"], name: "index_json_video_objectives_on_json_video_id_and_objective_id", unique: true
+    t.index ["objective_id"], name: "index_json_video_objectives_on_objective_id"
   end
 
   create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
