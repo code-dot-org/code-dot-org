@@ -5,11 +5,6 @@ import {ColorSwatch} from './shapePalettes';
 
 import styles from './shape-node-toolbar.module.scss';
 
-// MUI IconButton's theme sets a larger min size that beats CSS-module
-// and `sx` classes. Set size via inline `style` — highest specificity
-// short of !important, so a 24 px swatch actually renders.
-const SWATCH_PX = 24;
-
 export interface SwatchGroupProps {
   groupLabel: string;
   swatches: ColorSwatch[];
@@ -39,16 +34,11 @@ export default function SwatchGroup({
                 className={`${styles.swatch} ${
                   isSelected ? styles.swatchSelected : ''
                 } ${swatch.transparent ? styles.swatchTransparent : ''}`}
-                style={{
-                  width: SWATCH_PX,
-                  height: SWATCH_PX,
-                  minWidth: SWATCH_PX,
-                  minHeight: SWATCH_PX,
-                  padding: 0,
-                  backgroundColor: swatch.transparent
+                style={
+                  swatch.transparent
                     ? undefined
-                    : swatch.value,
-                }}
+                    : {backgroundColor: swatch.value}
+                }
                 aria-label={ariaLabel}
                 aria-pressed={isSelected}
                 onClick={() => onSelect(swatch.value)}

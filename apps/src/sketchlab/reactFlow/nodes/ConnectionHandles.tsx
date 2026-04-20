@@ -1,16 +1,13 @@
 import {Handle, Position} from '@xyflow/react';
 import React from 'react';
 
+import styles from './connection-handles.module.scss';
+
 interface ConnectionHandlesProps {
   /** When false, handles stay in the DOM (so edges keep their anchors)
    *  but are visually hidden and non-interactive. */
   visible?: boolean;
 }
-
-const HIDDEN_STYLE: React.CSSProperties = {
-  opacity: 0,
-  pointerEvents: 'none',
-};
 
 /**
  * Paired source + target handles on all four sides of a node.
@@ -19,56 +16,56 @@ const HIDDEN_STYLE: React.CSSProperties = {
 export default function ConnectionHandles({
   visible = true,
 }: ConnectionHandlesProps) {
-  const style = visible ? undefined : HIDDEN_STYLE;
+  const className = visible ? undefined : styles.hidden;
   return (
     <>
       <Handle
         type="target"
         position={Position.Top}
         id="top-target"
-        style={style}
+        className={className}
       />
       <Handle
         type="source"
         position={Position.Top}
         id="top-source"
-        style={style}
+        className={className}
       />
       <Handle
         type="target"
         position={Position.Right}
         id="right-target"
-        style={style}
+        className={className}
       />
       <Handle
         type="source"
         position={Position.Right}
         id="right-source"
-        style={style}
+        className={className}
       />
       <Handle
         type="target"
         position={Position.Bottom}
         id="bottom-target"
-        style={style}
+        className={className}
       />
       <Handle
         type="source"
         position={Position.Bottom}
         id="bottom-source"
-        style={style}
+        className={className}
       />
       <Handle
         type="target"
         position={Position.Left}
         id="left-target"
-        style={style}
+        className={className}
       />
       <Handle
         type="source"
         position={Position.Left}
         id="left-source"
-        style={style}
+        className={className}
       />
     </>
   );
