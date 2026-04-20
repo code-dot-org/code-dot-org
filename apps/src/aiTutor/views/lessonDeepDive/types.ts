@@ -6,6 +6,14 @@ export type AssessmentQuestionResult = {
   evaluation?: string;
 };
 
+export type LessonProgressCounts = {
+  levelsTotalCount: number;
+  levelsAttemptedCount: number;
+  validatedLevelsTotalCount: number;
+  validatedLevelsCorrectCount: number;
+  validatedLevelsIncorrectCount: number;
+};
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 export type ReflectionValue =
@@ -17,6 +25,12 @@ export type ReflectionData = {
   struggle: string;
 };
 
+export type JsonVideoData = {
+  key: string;
+  url: string;
+  description: string;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
@@ -24,6 +38,10 @@ export type LessonDeepDiveData = {
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
+  jsonVideos: JsonVideoData[];
+  practiceProblems: PracticeProblem[];
+  progressCounts: LessonProgressCounts;
+  timeSpentSeconds: number;
 };
 
 export type MultiSolution = {
@@ -40,7 +58,6 @@ export type MatchSolution = {
   option: string;
   correct: string;
 };
-
 export type PracticeProblem = {
   id: number;
   type: string;

@@ -1,18 +1,20 @@
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
+import AichatContextManager from '../aichat/aichatContextManager';
 import HttpClient from '../util/HttpClient';
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
 
 export async function fetchAccessToken() {
-  const {value} = await HttpClient.fetchJson<{token: string}>(
-    `/ai_gateway/access_token?clientType=${AiChatClientTypes.FLOW_LAB}`,
+  const response = await HttpClient.post(
+    '/ai_gateway/access_token',
+    JSON.stringify({
+      aichatContext: AichatContextManager.getContext(),
+    }),
+    true,
     {
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
+      'Content-Type': 'application/json; charset=UTF-8',
     }
   );
+  const value = (await response.json()) as {token: string};
   return value.token;
 }
 

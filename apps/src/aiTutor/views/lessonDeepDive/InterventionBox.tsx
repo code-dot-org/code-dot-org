@@ -1,9 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useState} from 'react';
+import React, {FC, useCallback, useState} from 'react';
 
 const lightTheme = createTheme({palette: {mode: 'light'}});
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
 import PodcastsBox from './PodcastsBox';
@@ -65,6 +69,7 @@ interface InterventionBoxProps {
   vocabulary: LessonDeepDiveData['vocabulary'];
   assessmentAnalysis: AssessmentQuestionResult[];
   objectives: LessonDeepDiveData['objectives'];
+  jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
 }
 
@@ -75,9 +80,27 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   vocabulary,
   assessmentAnalysis,
   objectives,
+  jsonVideos,
   reflectionData,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
+  const userId = useAppSelector(state => state.currentUser.userId);
+
+  const handleCardSelect = useCallback(
+    (cardId: CardId) => {
+      setSelected(cardId);
+      analyticsReporter.sendEvent(
+        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
+        {
+          modality: cardId,
+          lessonId,
+          lessonName,
+          userId,
+        }
+      );
+    },
+    [lessonId, lessonName, userId]
+  );
 
   return (
     <div className={styles.container}>
@@ -100,7 +123,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                   key={card.id}
                   type="button"
                   className={`${styles.card} ${card.colorClass}`}
-                  onClick={() => setSelected(card.id)}
+                  onClick={() => handleCardSelect(card.id)}
                   aria-label={card.label}
                 >
                   <FontAwesomeV6Icon iconName={card.icon} />
@@ -126,7 +149,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             />
           </ThemeProvider>
         )}
-        {selected === 'videos' && <VideosBox />}
+        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && <PodcastsBox />}
       </div>
 

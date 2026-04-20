@@ -13,6 +13,7 @@ let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
+    isLevelbuilder: false,
   },
 };
 
@@ -55,6 +56,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
+        isLevelbuilder: false,
       },
     };
     mockSelectedSectionAccessLevel = undefined;
@@ -86,6 +88,21 @@ describe('useAiChatDisabledState', () => {
       disabled: true,
       disabledMessage: 'Chat is disabled until you submit your prediction.',
     });
+  });
+
+  it('returns enabled for levelbuilders even when chat would otherwise be disabled', () => {
+    mockState.currentUser.isLevelbuilder = true;
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'pythonlab',
+        isPredictLevel: true,
+        hasSubmittedPredictResponse: false,
+      })
+    );
+
+    expect(result.current).toEqual({disabled: false});
   });
 
   it('returns the student authorization message when access is denied', () => {

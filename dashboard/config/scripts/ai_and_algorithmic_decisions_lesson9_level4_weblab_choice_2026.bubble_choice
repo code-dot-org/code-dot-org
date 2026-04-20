@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson9-level4-weblab-choice_2026'
+display_name 'Bring Your Flowchart to Life!'
+description 'Choose the same letter you did in Level 3. Then use AI to turn your flowchart into working code.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson9-level4a_2026'
+level 'ai-and-algorithmic-decisions-lesson9-level4b_2026'
+level 'ai-and-algorithmic-decisions-lesson9-level4c_2026'
+level 'ai-and-algorithmic-decisions-lesson9-level4d_2026'
+
+uses_lab2
