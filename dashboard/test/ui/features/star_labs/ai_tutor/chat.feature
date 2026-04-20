@@ -43,9 +43,11 @@ Feature: AI Tutor happy paths across legacy labs and Lab2 resource panels
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
     And I wait until element "#instructions-drawer" is visible
-    And I wait until element "#uitest-chat-textarea" is visible
+    And I wait until element "#resource-panel-tab-button-aiTutor" is visible
 
-    When I press keys "Hello" for element "#uitest-chat-textarea"
+    When I click selector "#resource-panel-tab-button-aiTutor"
+    And I wait until element "#uitest-chat-textarea" is visible
+    And I press keys "Hello" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
 
