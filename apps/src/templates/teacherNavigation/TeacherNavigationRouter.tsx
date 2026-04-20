@@ -298,7 +298,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 <DashboardSectionSettings
                   redirectUrl={
                     sectionId
-                      ? '/teacher_dashboard' +
+                      ? TEACHER_NAVIGATION_BASE_URL +
                         generatePath(
                           LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,
                           {sectionId: sectionId}

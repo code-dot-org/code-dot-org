@@ -71,8 +71,8 @@ export interface DemoPresetView {
   sectionName: string;
   avatarColor: number;
   avatarEmoji: number;
-  loginType: string;
-  participantType: string;
+  loginType: NonNullable<Section['loginType']>;
+  participantType: NonNullable<Section['participantType']>;
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
 }
@@ -181,8 +181,8 @@ export interface ServerDemoPresetView {
   section_name: string;
   avatar_color: number;
   avatar_emoji: number;
-  login_type: string;
-  participant_type: string;
+  login_type: NonNullable<Section['loginType']>;
+  participant_type: NonNullable<Section['participantType']>;
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
 }
