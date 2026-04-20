@@ -1,5 +1,6 @@
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -175,7 +176,10 @@ class CourseOverview extends Component {
             description={i18n.redirectCourseVersionWarningDetails()}
             icon={WARNING_ICON}
             onClose={() => onDismissRedirectWarning(name)}
-            className={styles.notificationBanner}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {showVersionWarning && (
@@ -185,7 +189,10 @@ class CourseOverview extends Component {
             description={i18n.wrongCourseVersionWarningDetails()}
             icon={WARNING_ICON}
             onClose={this.onDismissVersionWarning}
-            className={styles.notificationBanner}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {isSignedIn && (

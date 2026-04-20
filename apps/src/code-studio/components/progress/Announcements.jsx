@@ -95,6 +95,7 @@ export default class Announcements extends Component {
           return (
             <NotificationBanner
               key={key}
+              className="announcement-notification"
               variant={
                 NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
               }

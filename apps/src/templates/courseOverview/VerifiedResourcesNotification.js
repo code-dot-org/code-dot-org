@@ -1,5 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
 
@@ -16,7 +17,10 @@ export default class VerifiedResourcesNotification extends PureComponent {
       <NotificationBanner
         variant="warning"
         title={i18n.verifiedResourcesNotice()}
-        className={styles.verifiedResourcesNotification}
+        className={classNames(
+          styles.verifiedResourcesNotification,
+          'announcement-notification'
+        )}
         description={
           this.props.inLesson
             ? i18n.verifiedResourcesLessonDetails()
