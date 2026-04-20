@@ -1,5 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {registerReducers} from '@cdo/apps/redux';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -30,11 +35,6 @@ import {
   isPendingOrCompletedChatMessage,
   CompletedChatMessage,
 } from '../types';
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
-import {validateModelId} from '../views/modelCustomization/utils';
 
 import {AichatState} from './state';
 

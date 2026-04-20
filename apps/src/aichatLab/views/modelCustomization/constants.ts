@@ -1,11 +1,10 @@
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '../../types';
+} from '@cdo/apps/aichat/types';
 
 export const MIN_TEMPERATURE = 0.1;
 export const MAX_TEMPERATURE = 1;

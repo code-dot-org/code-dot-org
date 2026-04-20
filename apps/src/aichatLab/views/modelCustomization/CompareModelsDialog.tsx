@@ -1,10 +1,9 @@
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
+import {ModelDescription} from '@cdo/apps/aichat/types';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {ModelDescription} from '../../types';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
 

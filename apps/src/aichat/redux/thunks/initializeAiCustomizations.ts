@@ -1,13 +1,13 @@
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {AiCustomizations, LevelAichatSettings, Visibility} from '../../types';
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../../views/modelCustomization/constants';
-import {validateModelId} from '../../views/modelCustomization/utils';
 import {setInitialConfiguration} from '../slice';
 
 import {sendAnalytics} from './sendAnalytics';

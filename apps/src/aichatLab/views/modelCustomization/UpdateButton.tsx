@@ -2,9 +2,11 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
+import {
+  selectHavePropertiesChanged,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {selectHavePropertiesChanged, updateAiCustomization} from '../../redux';
 
 import styles from '../model-customization-workspace.module.scss';
 

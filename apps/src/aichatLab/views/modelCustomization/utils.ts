@@ -1,9 +1,8 @@
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+import {Visibility} from '@cdo/apps/aichat/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
-
-import {modelDescriptions} from '../../constants';
-import {Visibility} from '../../types';
 
 type ModelId = ValueOf<typeof AiChatModelIds>;
 

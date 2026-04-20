@@ -2,7 +2,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import {ModelDescription} from '../../types';
+import {ModelDescription} from '@cdo/apps/aichat/types';
 
 import styles from './compare-models-dialog.module.scss';
 

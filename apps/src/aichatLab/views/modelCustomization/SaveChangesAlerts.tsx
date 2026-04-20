@@ -1,6 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
+import {FAQ_LINK, modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
   selectCurrentCustomizationsMatchInitial,
   selectHavePropertiesChanged,
@@ -8,8 +9,6 @@ import {
 } from '@cdo/apps/aichat/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {FAQ_LINK, modelDescriptions} from '../../constants';
 
 import styles from '../model-customization-workspace.module.scss';
 
