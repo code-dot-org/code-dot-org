@@ -14,13 +14,7 @@ import styles from './teacherHomepage.module.scss';
 
 interface CourseContentDropdownProps {
   section: Section;
-<<<<<<< HEAD
   disabled?: boolean;
-=======
-  demoType?: DemoType;
-  disabled?: boolean;
-  onNavigateToPath?: (path: string, eventName: string) => void;
->>>>>>> befac7035d0 (Add dropdown disabled state for demo card actions)
 }
 
 export interface CourseContentDropdownBaseProps {
@@ -46,17 +40,11 @@ export const CourseContentDropdownBase: React.FC<
   CourseContentDropdownBaseProps
 > = ({
   section,
-<<<<<<< HEAD
   disabled,
   shouldShowLessonDropdown,
   lessonSource,
   renderLessonOption,
   renderCourseAction,
-=======
-  demoType,
-  disabled = false,
-  onNavigateToPath,
->>>>>>> befac7035d0 (Add dropdown disabled state for demo card actions)
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOption[]>([]);
 
@@ -72,51 +60,7 @@ export const CourseContentDropdownBase: React.FC<
     if (shouldShowLessonDropdown && lessonList.length === 0) {
       fetchLessonList();
     }
-<<<<<<< HEAD
   }, [lessonList, lessonSource, shouldShowLessonDropdown]);
-=======
-  }, [section, lessonList, demoType]);
-
-  const dropdownOptions = useMemo(
-    () =>
-      lessonList.map(lesson =>
-        onNavigateToPath ? (
-          <li key={lesson.value}>
-            <button
-              type="button"
-              className={styles.dropdownMenuItem}
-              disabled={disabled}
-              onClick={() =>
-                onNavigateToPath(
-                  lesson.value,
-                  lesson.value.includes('/lessons/')
-                    ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
-                    : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
-                )
-              }
-            >
-              <span>{lesson.text}</span>
-            </button>
-          </li>
-        ) : (
-          <LinkOption
-            key={lesson.value}
-            value={lesson.value}
-            label={lesson.text}
-            labelStyle={lesson.value.includes('/lessons/') ? 'i' : 'b'}
-            url={lesson.value}
-            eventName={
-              lesson.value.includes('/lessons/')
-                ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
-                : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
-            }
-            eventOptions={{lesson: lesson.value}}
-          />
-        )
-      ),
-    [lessonList, onNavigateToPath, disabled]
-  );
->>>>>>> befac7035d0 (Add dropdown disabled state for demo card actions)
 
   return (
     <div className={styles.courseContentDropdownContainer}>
@@ -140,37 +84,6 @@ export const CourseContentDropdownBase: React.FC<
         >
           <ul>{lessonList.map(renderLessonOption)}</ul>
         </CustomDropdown>
-<<<<<<< HEAD
-=======
-      ) : onNavigateToPath ? (
-        <button
-          type="button"
-          className={styles.demoActionButton}
-          disabled={disabled}
-          onClick={() =>
-            onNavigateToPath(
-              `courses/${section.courseVersionName}`,
-              EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED
-            )
-          }
-        >
-          <div className={styles.taskButtonLeft}>
-            <FontAwesomeV6Icon
-              className={styles.taskButtonIcons}
-              iconName="desktop"
-              iconStyle="solid"
-            />
-            <Typography variant="body3" gutterBottom>
-              {i18n.goToCourse()}
-            </Typography>
-          </div>
-          <FontAwesomeV6Icon
-            className={styles.taskButtonArrow}
-            iconName="arrow-right"
-            iconStyle="solid"
-          />
-        </button>
->>>>>>> befac7035d0 (Add dropdown disabled state for demo card actions)
       ) : (
         renderCourseAction()
       )}

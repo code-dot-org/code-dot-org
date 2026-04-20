@@ -22,6 +22,7 @@ import {
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+<<<<<<< HEAD
 import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdown';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
 import SectionOptionsDropdown from './SectionOptionsDropdown';
