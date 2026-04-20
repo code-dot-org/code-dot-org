@@ -1543,36 +1543,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  test 'can toggle ai_tutor_enabled by the section teacher' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :success
-    @section.reload
-    assert @section.ai_tutor_enabled
-
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
-    assert_response :success
-    @section.reload
-    refute @section.ai_tutor_enabled
-  end
-
-  test 'cannot set ai_tutor_enabled by a different teacher' do
-    sign_in @following_teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled returns 403 for unauthorized access' do
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled fails when section does not exist' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
   test 'can set ai_chat_access_level by the section teacher' do
     sign_in @teacher
     post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}

@@ -1,17 +1,3 @@
-export interface StudentServerData {
-  id: number;
-  name: string;
-  ai_tutor_access_denied: boolean;
-  is_demo_student: boolean;
-}
-
-export interface StudentAccessData {
-  id: number;
-  name: string;
-  aiTutorAccessDenied: boolean;
-  isDemoStudent: boolean;
-}
-
 export interface AiTutorContext {
   sourceCode?: string;
   hiddenSourceCode?: string;
