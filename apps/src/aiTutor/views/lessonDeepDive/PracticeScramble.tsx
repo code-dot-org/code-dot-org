@@ -18,7 +18,7 @@ import {
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
-import {DraggableOptionCard} from './DraggableOptionCard';
+import {SortableOptionCard} from './SortableOptionCard';
 import {PracticeProblem, ScrambleSolution} from './types';
 
 import styles from './practice-problems.module.scss';
@@ -79,11 +79,11 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
     (event: DragEndEvent) => {
       const {active, over} = event;
 
-      if (over && active.id !== over.id) {
+      if (over && active.id !== over.id && !submitted) {
         setSortableOptions(moveOption(active, over));
       }
     },
-    [setSortableOptions]
+    [setSortableOptions, submitted]
   );
 
   return (
@@ -105,7 +105,7 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
               >
                 <ol className={styles.optionsContainer}>
                   {sortableOptions.map((option, index) => (
-                    <DraggableOptionCard
+                    <SortableOptionCard
                       key={option}
                       option={option}
                       id={option}
