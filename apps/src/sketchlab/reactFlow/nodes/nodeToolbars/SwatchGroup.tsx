@@ -2,7 +2,7 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {ColorSwatch} from './shapePalettes';
+import {ColorSwatch} from './toolbarPalettes';
 
 import styles from './node-toolbar.module.scss';
 

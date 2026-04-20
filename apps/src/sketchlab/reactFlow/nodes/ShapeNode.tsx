@@ -9,7 +9,7 @@ import {ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
-import {fontSizePx} from './nodeToolbars/shapePalettes';
+import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './shape-node.module.scss';
 

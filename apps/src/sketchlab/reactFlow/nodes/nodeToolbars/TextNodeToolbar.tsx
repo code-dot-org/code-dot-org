@@ -3,12 +3,12 @@ import React from 'react';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
+import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
   STROKE_FONT_PALETTE,
-} from './shapePalettes';
-import SwatchGroup from './SwatchGroup';
+} from './toolbarPalettes';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface TextNodeToolbarProps {

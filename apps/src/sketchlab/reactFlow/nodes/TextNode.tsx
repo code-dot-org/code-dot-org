@@ -7,8 +7,8 @@ import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 
 import ConnectionHandles from './ConnectionHandles';
-import {fontSizePx} from './nodeToolbars/shapePalettes';
 import TextNodeToolbar from './nodeToolbars/TextNodeToolbar';
+import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './text-node.module.scss';
 

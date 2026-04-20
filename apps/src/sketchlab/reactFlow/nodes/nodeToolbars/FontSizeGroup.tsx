@@ -2,7 +2,7 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {FONT_SIZE_OPTIONS} from './shapePalettes';
+import {FONT_SIZE_OPTIONS} from './toolbarPalettes';
 
 import styles from './node-toolbar.module.scss';
 
