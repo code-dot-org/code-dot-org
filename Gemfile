@@ -119,6 +119,7 @@ group :development, :test do
   gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
+  gem 'aws-sdk-devicefarm'
   gem 'cucumber'
   gem 'eyes_selenium', '>= 6.0.4' # required for Ruby 3.2 support
   gem 'fakefs', '~> 2.5.0', require: false
@@ -272,7 +273,6 @@ gem 'aws-sdk-cloudwatchlogs'
 gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core', '>= 3.239.2'
 gem 'aws-sdk-databasemigrationservice'
-gem 'aws-sdk-devicefarm'
 gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2'
 gem 'aws-sdk-firehose'
