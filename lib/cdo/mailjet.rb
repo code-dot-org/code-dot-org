@@ -91,7 +91,6 @@ module MailJet
     contact = find_or_create_contact(user.email, user.name)
     update_contact_fields(contact,
       [
-        {name: 'firstname', value: user.name}, # existing templates use 'firstname'
         {name: 'given_name', value: user.given_name},
         {name: 'family_name', value: user.family_name},
         {name: 'display_name', value: user.name},
