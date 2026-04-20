@@ -8,6 +8,8 @@ import {useSketchLabReadOnly} from '../context';
 import {ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import ShapeNodeToolbar from './ShapeNodeToolbar';
+import {fontSizePx} from './shapePalettes';
 
 import styles from './shape-node.module.scss';
 
@@ -15,7 +17,15 @@ import styles from './shape-node.module.scss';
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 const SHAPE_BORDER_PX = 2;
 
-function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
+interface ShapeSvgProps {
+  shapeType: ShapeType;
+  strokeColor?: string;
+  backgroundColor?: string;
+}
+
+function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
+  const stroke = strokeColor ?? 'currentColor';
+  const fill = backgroundColor ?? 'none';
   if (shapeType === 'circle') {
     return (
       <svg
@@ -31,8 +41,8 @@ function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
           cy="50"
           rx="48"
           ry="48"
-          fill="none"
-          stroke="currentColor"
+          fill={fill}
+          stroke={stroke}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
@@ -51,8 +61,8 @@ function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
       >
         <polygon
           points={TRIANGLE_POINTS}
-          fill="none"
-          stroke="currentColor"
+          fill={fill}
+          stroke={stroke}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
@@ -77,6 +87,10 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   const shapeType = data.shapeType as ShapeType;
   const label = (data.label as string) ?? '';
+  const backgroundColor = data.backgroundColor as string | undefined;
+  const strokeColor = data.strokeColor as string | undefined;
+  const fontColor = data.fontColor as string | undefined;
+  const fontSize = fontSizePx(data.fontSize as string | undefined);
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {
@@ -123,6 +137,22 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   const isRectangle = shapeType === 'rectangle';
 
+  const rectangleStyle: React.CSSProperties = {};
+  if (strokeColor) {
+    rectangleStyle.borderColor = strokeColor;
+  }
+  if (backgroundColor) {
+    rectangleStyle.backgroundColor = backgroundColor;
+  }
+
+  const labelStyle: React.CSSProperties = {};
+  if (fontColor) {
+    labelStyle.color = fontColor;
+  }
+  if (fontSize !== undefined) {
+    labelStyle.fontSize = fontSize;
+  }
+
   return (
     <div
       className={styles.shapeNode}
@@ -135,17 +165,28 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
+      <ShapeNodeToolbar nodeId={id} data={data} />
+
       {/* Background shape */}
       {isRectangle ? (
-        <div className={styles.rectangleBackground} aria-hidden="true" />
+        <div
+          className={styles.rectangleBackground}
+          style={rectangleStyle}
+          aria-hidden="true"
+        />
       ) : (
-        <ShapeSvg shapeType={shapeType} />
+        <ShapeSvg
+          shapeType={shapeType}
+          strokeColor={strokeColor}
+          backgroundColor={backgroundColor}
+        />
       )}
 
       {/* Text label: click or enter to start editing */}
       <div
         ref={labelRef}
         className={styles.label}
+        style={labelStyle}
         contentEditable={isEditing}
         suppressContentEditableWarning
         onFocus={startEditing}
