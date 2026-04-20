@@ -1,9 +1,13 @@
-import {Tooltip} from '@mui/material';
+import {IconButton, Tooltip} from '@mui/material';
 import React from 'react';
 
 import {ColorSwatch} from './shapePalettes';
 
 import styles from './shape-node-toolbar.module.scss';
+
+// IconButton size="small" still applies ~5 px padding; zero it out so
+// the 20 px circle sized by the CSS module is what renders.
+const BUTTON_SX = {padding: 0};
 
 export interface SwatchGroupProps {
   groupLabel: string;
@@ -29,8 +33,8 @@ export default function SwatchGroup({
           const ariaLabel = `${groupLabel}: ${swatch.label}`;
           return (
             <Tooltip key={swatch.value} title={swatch.label} placement="top">
-              <button
-                type="button"
+              <IconButton
+                size="small"
                 className={`${styles.swatch} ${
                   isSelected ? styles.swatchSelected : ''
                 } ${swatch.transparent ? styles.swatchTransparent : ''}`}
@@ -42,6 +46,7 @@ export default function SwatchGroup({
                 aria-label={ariaLabel}
                 aria-pressed={isSelected}
                 onClick={() => onSelect(swatch.value)}
+                sx={BUTTON_SX}
               />
             </Tooltip>
           );
