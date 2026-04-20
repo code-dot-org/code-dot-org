@@ -107,12 +107,12 @@ class LessonsController < ApplicationController
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
       objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}},
-      assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user.id),
+      assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user&.id),
       jsonVideos: json_videos.map {|v| {key: v.key, url: content_json_video_url(v.key), description: v.description}},
-      progressCounts: lesson_progress_status(@lesson.id, current_user.id).transform_keys do |k|
+      progressCounts: lesson_progress_status(@lesson.id, current_user&.id).transform_keys do |k|
         k.to_s.camelize(:lower).to_sym
       end,
-      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user.id)
+      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id)
     }
   end
 
