@@ -5,9 +5,10 @@ import {ColorSwatch} from './shapePalettes';
 
 import styles from './shape-node-toolbar.module.scss';
 
-// IconButton size="small" still applies ~5 px padding; zero it out so
-// the 20 px circle sized by the CSS module is what renders.
-const BUTTON_SX = {padding: 0};
+// MUI IconButton's theme sets a larger min size that beats CSS-module
+// and `sx` classes. Set size via inline `style` — highest specificity
+// short of !important, so a 24 px swatch actually renders.
+const SWATCH_PX = 24;
 
 export interface SwatchGroupProps {
   groupLabel: string;
@@ -38,15 +39,19 @@ export default function SwatchGroup({
                 className={`${styles.swatch} ${
                   isSelected ? styles.swatchSelected : ''
                 } ${swatch.transparent ? styles.swatchTransparent : ''}`}
-                style={
-                  swatch.transparent
+                style={{
+                  width: SWATCH_PX,
+                  height: SWATCH_PX,
+                  minWidth: SWATCH_PX,
+                  minHeight: SWATCH_PX,
+                  padding: 0,
+                  backgroundColor: swatch.transparent
                     ? undefined
-                    : {backgroundColor: swatch.value}
-                }
+                    : swatch.value,
+                }}
                 aria-label={ariaLabel}
                 aria-pressed={isSelected}
                 onClick={() => onSelect(swatch.value)}
-                sx={BUTTON_SX}
               />
             </Tooltip>
           );
