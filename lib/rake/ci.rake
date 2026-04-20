@@ -241,6 +241,9 @@ end
 # Returns an empty array to use all browsers defined in browsers_device_farm.json.
 # Individual browsers can be selected using the same commit tags as SauceLabs,
 # filtered to only those supported by Device Farm (Chrome and Firefox).
+# Note: mobile Device Farm configs (iPhone, iPad) exist in browsers_device_farm.json
+# but are not routed from CI tags today; use them locally via
+# `runner.rb --device-farm --config iPhone`.
 def device_farm_browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CI::Utils.tagged?(SKIP_CHROME_TAG)

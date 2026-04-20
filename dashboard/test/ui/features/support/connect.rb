@@ -68,10 +68,9 @@ def saucelabs_browser(test_run_name, http_client: nil)
   return browser
 end
 
-def device_farm_browser(http_client: nil)
-  # Desktop: one-shot TestGrid URL, ready immediately.
+def device_farm_desktop_browser(http_client: nil)
+  # One-shot TestGrid URL, ready immediately.
   url = Cdo::DeviceFarm.create_test_grid_url
-  $device_farm_mobile_session_arn = nil
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
     $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
@@ -96,7 +95,10 @@ def device_farm_mobile_browser(http_client: nil)
     $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
   )
 
-  Retryable.retryable(tries: 6, sleep: 10) do
+  Retryable.retryable(
+    tries: Cdo::DeviceFarm::MOBILE_CONNECT_TRIES,
+    sleep: Cdo::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+  ) do
     SeleniumBrowser.remote(
       session[:url],
       capabilities: capabilities,
@@ -123,6 +125,32 @@ def change_orientation(orientation)
   )
 end
 
+# Connects via Device Farm, sets $session_id and $device_farm_job_arn, and
+# logs a session descriptor. Assumes test_device_farm? and $selenium_http_client
+# have been established by the caller.
+def get_device_farm_browser
+  is_mobile = $browser_config['mobile']
+  browser =
+    if is_mobile
+      # Provision once, then retry the Selenium connection (Appium server
+      # may need a few seconds after the session reaches RUNNING).
+      device_farm_mobile_browser(http_client: $selenium_http_client)
+    else
+      Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+        device_farm_desktop_browser(http_client: $selenium_http_client)
+      end
+    end
+  $session_id = browser.session_id
+  # Mobile sessions already have an ARN from create_remote_access_session;
+  # desktop sessions construct one from the project ARN + session ID.
+  $device_farm_job_arn =
+    is_mobile ? $device_farm_mobile_session_arn : Cdo::DeviceFarm.desktop_job_arn_for($session_id)
+  kind = is_mobile ? 'mobile session' : 'session'
+  sub_kind = is_mobile ? 'session' : 'job'
+  puts "AWS Device Farm #{kind}: #{$session_id} (#{sub_kind}: #{$device_farm_job_arn})"
+  browser
+end
+
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
@@ -130,21 +158,7 @@ def get_browser(test_run_name)
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   elsif test_device_farm?
-    is_mobile = $browser_config['mobile']
-    browser = if is_mobile
-                # Provision once, then retry the Selenium connection (Appium server
-                # may need a few seconds after the session reaches RUNNING).
-                device_farm_mobile_browser(http_client: $selenium_http_client)
-              else
-                Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-                  device_farm_browser(http_client: $selenium_http_client)
-                end
-              end
-    $session_id = browser.session_id
-    # Mobile sessions already have an ARN from create_remote_access_session;
-    # desktop sessions construct one from the project ARN + session ID.
-    $device_farm_job_arn = is_mobile ? $device_farm_mobile_session_arn : Cdo::DeviceFarm.desktop_job_arn_for($session_id)
-    puts "AWS Device Farm #{is_mobile ? 'mobile session' : 'session'}: #{$session_id} (#{is_mobile ? 'session' : 'job'}: #{$device_farm_job_arn})"
+    browser = get_device_farm_browser
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)

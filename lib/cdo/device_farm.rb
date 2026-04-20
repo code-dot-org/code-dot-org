@@ -28,6 +28,13 @@ module Cdo
     MOBILE_CONCURRENCY_TIMEOUT = 300 # 5 minutes -- time waiting for a free slot
     MOBILE_SESSION_POLL_INTERVAL = 10 # seconds
 
+    # Retry budget for the WebDriver connect (not the session provisioning)
+    # after a mobile session reaches RUNNING. The Appium endpoint can return
+    # 400 briefly while the server finishes binding to the device;
+    # 6 tries * 10s covers roughly 1 minute.
+    MOBILE_CONNECT_TRIES = 6
+    MOBILE_CONNECT_RETRY_SLEEP = 10 # seconds
+
     # AWS region where Device Farm projects live.
     # Desktop Browser Testing is only available in us-west-2.
     REGION = 'us-west-2'.freeze
