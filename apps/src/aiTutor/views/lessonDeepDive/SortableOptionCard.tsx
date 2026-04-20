@@ -6,14 +6,14 @@ import React from 'react';
 
 import styles from './practice-problems.module.scss';
 
-interface DraggableOptionProps {
+interface SortableOptionProps {
   option: string;
   id: string;
   correct: boolean;
   showAnswer: boolean;
 }
 
-export const DraggableOptionCard: React.FC<DraggableOptionProps> = ({
+export const SortableOptionCard: React.FC<SortableOptionProps> = ({
   option,
   id,
   correct,

@@ -19,5 +19,5 @@ Feature: Global Edition - Farsi Headers when Signed Out
     And element "#header-csf" has "fa-IR" text from key "nav.header.csf"
     And I see "#header-videos"
     And element "#header-videos" has "fa-IR" text from key "nav.header.videos"
-    And I see "#header-hoc"
-    And element "#header-hoc" has "fa-IR" text from key "nav.header.hour_of_code"
+    And I see "#header-hoa"
+    And element "#header-hoa" has "fa-IR" text from key "nav.header.hour_of_ai"
