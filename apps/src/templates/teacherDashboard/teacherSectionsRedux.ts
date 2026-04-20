@@ -400,6 +400,12 @@ const sectionSlice = createSlice({
     setAvailableParticipantTypes(state, action: PayloadAction<string[]>) {
       state.availableParticipantTypes = action.payload;
     },
+    setDemoPresets(state, action: PayloadAction<DemoPresetMap>) {
+      state.demoPresets = action.payload;
+    },
+    setDemoPresetsLoaded(state, action: PayloadAction<boolean>) {
+      state.demoPresetsAreLoaded = action.payload;
+    },
     setSectionCodeReviewExpiresAt: {
       reducer(
         state,
@@ -872,6 +878,91 @@ export const asyncLoadTeacherHomepageSectionData =
       });
   };
 
+export const fetchDemoPresets =
+  () =>
+  async (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState
+  ): Promise<DemoPresetMap> => {
+    const {
+      teacherSections: {demoPresets, demoPresetsAreLoaded},
+    } = getState();
+
+    if (demoPresetsAreLoaded) {
+      return demoPresets;
+    }
+
+    try {
+      const response = await HttpClient.fetchJson<DemoPresetsResponse>(
+        '/api/v1/sections/demo/presets'
+      );
+      const demoPresets = Object.entries(response.value).reduce<DemoPresetMap>(
+        (presets, [demoType, demoPreset]) => {
+          if (demoPreset) {
+            presets[demoType as DemoType] =
+              demoPresetFromServerDemoPreset(demoPreset);
+          }
+          return presets;
+        },
+        {}
+      );
+      dispatch(setDemoPresets(demoPresets));
+      dispatch(setDemoPresetsLoaded(true));
+      return demoPresets;
+    } catch (error) {
+      console.error('Error fetching demo section presets:', error);
+      return {};
+    }
+  };
+
+export const createDemoSection =
+  (demoType: DemoType) =>
+  async (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState
+  ): Promise<Section | void> => {
+    if (getState().teacherSections.demoSectionCreationInProgress) {
+      return;
+    }
+
+    dispatch(startDemoSectionCreation());
+
+    try {
+      const response = await HttpClient.post(
+        `/api/v1/sections/demo/${demoType}`,
+        undefined,
+        true
+      );
+      const serverSection = (await response.json()) as ServerSection;
+      dispatch(setSections([serverSection], false));
+      return sectionFromServerSection(serverSection);
+    } catch (error) {
+      if (error instanceof NetworkError) {
+        if (error.response?.status === 409) {
+          throw new DemoSectionCreationError(
+            'conflict',
+            'You already have a practice section.'
+          );
+        }
+
+        if (error.response?.status === 403) {
+          console.error('Unauthorized to create demo section:', error);
+          throw new DemoSectionCreationError(
+            'generic',
+            "Couldn't create your practice section."
+          );
+        }
+      }
+
+      console.error('Error creating demo section:', error);
+      throw new DemoSectionCreationError(
+        'generic',
+        "Couldn't create your practice section."
+      );
+    } finally {
+      dispatch(finishDemoSectionCreation());
+    }
+  };
 export const asyncLoadSectionData =
   (id: number | void, destructive: boolean | void): SectionThunkAction =>
   dispatch => {
@@ -1198,6 +1289,10 @@ export const {
   setCoteacherInvite,
   setCoteacherInviteForPl,
   setCourseOfferings,
+  setDemoPresets,
+  setDemoPresetsLoaded,
+  startDemoSectionCreation,
+  finishDemoSectionCreation,
   setPageType,
   setRosterProvider,
   setRosterProviderName,
