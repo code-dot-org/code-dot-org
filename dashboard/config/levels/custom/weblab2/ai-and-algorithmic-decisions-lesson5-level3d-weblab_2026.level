@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-14T23:03:35.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "display_name": "Choose Your Own Scenario",
+    "bubble_choice_description": "Use AI to turn your flowchart into working code.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "buildHTML",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "",
+        "buildHTML": "Generate both the HTML and CSS at the same time."
+      }
+    },
+    "long_instructions": "## Turn Your Flowchart Into Code\r\n\r\n#### Do This:\r\n\r\n1. Import your flowchart from your Backpack. Prompt the AI to generate the HTML/CSS for your interface based on your flowchart's logic. \r\n\r\n2. Write a second prompt asking the AI for the JavaScript that powers your logic.\r\n\r\n3. Interact with your new interface using different values to ensure it works correctly.\r\n\r\n4. Compare the JavaScript to your flowchart:\r\n    * Does the condition match your diamond?\r\n    * Do the `if` and `else` paths show the correct outcomes?\r\n    * Did the AI miss or add anything unexpected?",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n <head>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    Content goes here!\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/a5456d8beee8ed9c200ad267345a62a4-Screenshot 2026-04-14 at 5.21.08 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-14T23:03:35.650+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level3c-weblab_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level3c-weblab_2026\"},{\"changed_at\":\"2026-04-14 23:03:38 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:03:53 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:02 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:06:20 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:08:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:09:48 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:10:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:10:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:11:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 23:02:29 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 23:03:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 23:04:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

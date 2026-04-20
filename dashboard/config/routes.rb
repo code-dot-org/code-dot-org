@@ -119,6 +119,11 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [] do
+      member do
+        get 'content'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -218,6 +223,7 @@ Dashboard::Application.routes.draw do
           get 'available_participant_types'
           get 'require_captcha'
           post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
+          get 'assigned_essential_ai_dependency'
         end
       end
     end
@@ -1277,7 +1283,7 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
@@ -1387,7 +1393,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
-    get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]

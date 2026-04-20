@@ -158,7 +158,7 @@ class LessonProgress extends Component {
     const showLessonTutorBubble =
       lessonTutorPath &&
       hasLessonPlan &&
-      experiments.isEnabled(experiments.LESSON_TUTOR);
+      experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR);
 
     let levels = this.props.levels;
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_09_183405) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_17_204555) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -59,6 +59,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_09_183405) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "script"
+  end
+
+  create_table "ai_student_podcast_fragments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "lesson_id"
+    t.string "fragment_type"
+    t.integer "objective_id"
+    t.text "podcast_script"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -919,6 +929,25 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_09_183405) do
     t.bigint "resource_id", null: false
     t.index ["jit_pl_teaching_tip_id", "resource_id"], name: "index_teaching_tips_resources_on_tip_and_resource_ids", unique: true
     t.index ["resource_id", "jit_pl_teaching_tip_id"], name: "index_teaching_tips_resources_on_resource_and_tip_ids", unique: true
+  end
+
+  create_table "json_video_objectives", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "json_video_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["json_video_id", "objective_id"], name: "index_json_video_objectives_on_json_video_id_and_objective_id", unique: true
+    t.index ["objective_id"], name: "index_json_video_objectives_on_objective_id"
+  end
+
+  create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.text "description"
+    t.string "s3_uri", null: false
+    t.json "labs"
+    t.integer "json_schema_version", null: false
+    t.string "audience", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_json_videos_on_key", unique: true
   end
 
   create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
