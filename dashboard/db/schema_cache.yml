@@ -6972,6 +6972,14 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: demo_type
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   seed_info:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -14491,6 +14499,21 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
+    name: index_sections_on_user_id_and_demo_type
+    unique: true
+    columns:
+    - user_id
+    - demo_type
+    - deleted_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: sections
     name: fk_rails_20b1e5de46
     unique: false
     columns:
@@ -15732,7 +15755,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260417204555
+version: 20260420120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
