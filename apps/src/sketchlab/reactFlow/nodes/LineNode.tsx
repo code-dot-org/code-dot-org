@@ -8,10 +8,12 @@ import styles from './line-node.module.scss';
 
 interface LineNodeProps {
   id: string;
+  data: Record<string, string | number | boolean>;
   selected: boolean;
 }
 
 type DragEndpoint = 'start' | 'end';
+const MIN_DIMENSION_PX = 1;
 
 function getNumberOrFallback(
   value: string | number | undefined,
@@ -27,17 +29,30 @@ function getNumberOrFallback(
   return fallback;
 }
 
-function LineNode({id, selected}: LineNodeProps) {
+function getEndpointRatios(data: Record<string, string | number | boolean>) {
+  const startX = getNumberOrFallback(data.startRatioX as string | number, 0);
+  const startY = getNumberOrFallback(data.startRatioY as string | number, 0.5);
+  const endX = getNumberOrFallback(data.endRatioX as string | number, 1);
+  const endY = getNumberOrFallback(data.endRatioY as string | number, 0.5);
+  return {startX, startY, endX, endY};
+}
+
+function LineNode({id, data, selected}: LineNodeProps) {
   const readOnly = useSketchLabReadOnly();
   const {getNode, setNodes, screenToFlowPosition} = useReactFlow();
   const dragEndpointRef = useRef<DragEndpoint | null>(null);
   const fixedPointRef = useRef<{x: number; y: number} | null>(null);
+  const activePointerIdRef = useRef<number | null>(null);
 
   const handlePointerMove = useCallback(
     (event: PointerEvent) => {
       const dragging = dragEndpointRef.current;
       const fixedPoint = fixedPointRef.current;
-      if (!dragging || !fixedPoint) {
+      if (
+        !dragging ||
+        !fixedPoint ||
+        activePointerIdRef.current !== event.pointerId
+      ) {
         return;
       }
 
@@ -46,32 +61,23 @@ function LineNode({id, selected}: LineNodeProps) {
         y: event.clientY,
       });
 
-      let newX: number;
-      let newY: number;
-      let newWidth: number;
-      let newHeight: number;
+      const startPoint = dragging === 'start' ? movingPoint : fixedPoint;
+      const endPoint = dragging === 'end' ? movingPoint : fixedPoint;
 
-      if (dragging === 'start') {
-        const clampedX = Math.min(movingPoint.x, fixedPoint.x - MIN_LINE_WIDTH);
-        const clampedY = Math.min(
-          movingPoint.y,
-          fixedPoint.y - MIN_LINE_HEIGHT
-        );
-        newX = clampedX;
-        newY = clampedY;
-        newWidth = fixedPoint.x - clampedX;
-        newHeight = fixedPoint.y - clampedY;
-      } else {
-        const clampedX = Math.max(movingPoint.x, fixedPoint.x + MIN_LINE_WIDTH);
-        const clampedY = Math.max(
-          movingPoint.y,
-          fixedPoint.y + MIN_LINE_HEIGHT
-        );
-        newX = fixedPoint.x;
-        newY = fixedPoint.y;
-        newWidth = clampedX - fixedPoint.x;
-        newHeight = clampedY - fixedPoint.y;
-      }
+      const newX = Math.min(startPoint.x, endPoint.x);
+      const newY = Math.min(startPoint.y, endPoint.y);
+      const newWidth = Math.max(
+        Math.abs(endPoint.x - startPoint.x),
+        MIN_DIMENSION_PX
+      );
+      const newHeight = Math.max(
+        Math.abs(endPoint.y - startPoint.y),
+        MIN_DIMENSION_PX
+      );
+      const startRatioX = (startPoint.x - newX) / newWidth;
+      const startRatioY = (startPoint.y - newY) / newHeight;
+      const endRatioX = (endPoint.x - newX) / newWidth;
+      const endRatioY = (endPoint.y - newY) / newHeight;
 
       setNodes(currentNodes =>
         currentNodes.map(node =>
@@ -79,7 +85,18 @@ function LineNode({id, selected}: LineNodeProps) {
             ? {
                 ...node,
                 position: {x: newX, y: newY},
-                style: {...node.style, width: newWidth, height: newHeight},
+                style: {
+                  ...node.style,
+                  width: newWidth,
+                  height: newHeight,
+                },
+                data: {
+                  ...node.data,
+                  startRatioX,
+                  startRatioY,
+                  endRatioX,
+                  endRatioY,
+                },
               }
             : node
         )
@@ -91,20 +108,26 @@ function LineNode({id, selected}: LineNodeProps) {
   const stopDragging = useCallback(() => {
     dragEndpointRef.current = null;
     fixedPointRef.current = null;
+    activePointerIdRef.current = null;
     window.removeEventListener('pointermove', handlePointerMove);
     window.removeEventListener('pointerup', stopDragging);
+    window.removeEventListener('pointercancel', stopDragging);
   }, [handlePointerMove]);
 
   useEffect(() => {
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
       window.removeEventListener('pointerup', stopDragging);
+      window.removeEventListener('pointercancel', stopDragging);
     };
   }, [handlePointerMove, stopDragging]);
 
   const startDragging = useCallback(
     (endpoint: DragEndpoint, event: React.PointerEvent<HTMLDivElement>) => {
       if (readOnly) {
+        return;
+      }
+      if (dragEndpointRef.current) {
         return;
       }
 
@@ -118,20 +141,31 @@ function LineNode({id, selected}: LineNodeProps) {
 
       const width = getNumberOrFallback(node.style?.width, MIN_LINE_WIDTH);
       const height = getNumberOrFallback(node.style?.height, MIN_LINE_HEIGHT);
-      const startPoint = {x: node.position.x, y: node.position.y};
+      const ratios = getEndpointRatios(
+        (node.data || {}) as Record<string, string | number | boolean>
+      );
+      const startPoint = {
+        x: node.position.x + width * ratios.startX,
+        y: node.position.y + height * ratios.startY,
+      };
       const endPoint = {
-        x: node.position.x + width,
-        y: node.position.y + height,
+        x: node.position.x + width * ratios.endX,
+        y: node.position.y + height * ratios.endY,
       };
 
       dragEndpointRef.current = endpoint;
       fixedPointRef.current = endpoint === 'start' ? endPoint : startPoint;
+      activePointerIdRef.current = event.pointerId;
+      event.currentTarget.setPointerCapture(event.pointerId);
 
       window.addEventListener('pointermove', handlePointerMove);
       window.addEventListener('pointerup', stopDragging);
+      window.addEventListener('pointercancel', stopDragging);
     },
     [getNode, handlePointerMove, id, readOnly, stopDragging]
   );
+
+  const ratios = getEndpointRatios(data);
 
   return (
     <div className={styles.lineNode} aria-label="Line">
@@ -141,18 +175,32 @@ function LineNode({id, selected}: LineNodeProps) {
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <line x1="0" y1="0" x2="100" y2="100" className={styles.lineStroke} />
+        <line
+          x1={ratios.startX * 100}
+          y1={ratios.startY * 100}
+          x2={ratios.endX * 100}
+          y2={ratios.endY * 100}
+          className={styles.lineStroke}
+        />
       </svg>
       {selected && !readOnly && (
         <>
           <div
-            className={`${styles.lineHandle} ${styles.startHandle} nodrag nopan`}
+            className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('start', event)}
+            style={{
+              left: `${ratios.startX * 100}%`,
+              top: `${ratios.startY * 100}%`,
+            }}
             aria-hidden="true"
           />
           <div
-            className={`${styles.lineHandle} ${styles.endHandle} nodrag nopan`}
+            className={`${styles.lineHandle} nodrag nopan`}
             onPointerDown={event => startDragging('end', event)}
+            style={{
+              left: `${ratios.endX * 100}%`,
+              top: `${ratios.endY * 100}%`,
+            }}
             aria-hidden="true"
           />
         </>

@@ -24,21 +24,10 @@
   position: absolute;
   width: 10px;
   height: 10px;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid var(--borders-brand-teal-primary);
   background-color: var(--background-neutral-primary);
   cursor: nwse-resize;
   z-index: 1;
-}
-
-.startHandle {
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-
-.endHandle {
-  right: 0;
-  bottom: 0;
-  transform: translate(50%, 50%);
 }
