@@ -13,6 +13,10 @@ function compareByPosition(
   return a.position.y - b.position.y || a.position.x - b.position.x;
 }
 
+function isLineAnchorNode(node: SketchlabReactFlowNode): boolean {
+  return node.data?.isLineAnchor === true;
+}
+
 /**
  * Find connected components in the undirected version of the graph.
  * Returns an array of Sets, each containing the node IDs in one component.
@@ -166,8 +170,15 @@ export function computeTabOrder(
 ): TabOrderEntry[] {
   if (nodes.length === 0) return [];
 
+  const allNodeMap = new Map<string, SketchlabReactFlowNode>();
   const nodeMap = new Map<string, SketchlabReactFlowNode>();
+  const lineAnchorIds = new Set<string>();
   for (const node of nodes) {
+    allNodeMap.set(node.id, node);
+    if (isLineAnchorNode(node)) {
+      lineAnchorIds.add(node.id);
+      continue;
+    }
     nodeMap.set(node.id, node);
   }
 
@@ -175,8 +186,15 @@ export function computeTabOrder(
   const outgoing = new Map<string, string[]>();
   const connectedIds = new Set<string>();
   const validEdges: SketchlabReactFlowEdge[] = [];
+  const standaloneLineEdges: SketchlabReactFlowEdge[] = [];
   for (const edge of edges) {
-    if (!nodeMap.has(edge.source) || !nodeMap.has(edge.target)) continue;
+    if (lineAnchorIds.has(edge.source) && lineAnchorIds.has(edge.target)) {
+      standaloneLineEdges.push(edge);
+      continue;
+    }
+    if (!nodeMap.has(edge.source) || !nodeMap.has(edge.target)) {
+      continue;
+    }
     connectedIds.add(edge.source);
     connectedIds.add(edge.target);
     validEdges.push(edge);
@@ -232,9 +250,23 @@ export function computeTabOrder(
     result.push({type: 'node', id: nodeId});
   }
 
+  // Standalone line edges are backed by internal anchor nodes, so include
+  // the edge itself in tab order and skip the anchors.
+  standaloneLineEdges
+    .slice()
+    .sort((edgeA, edgeB) => {
+      const sourceA = allNodeMap.get(edgeA.source);
+      const sourceB = allNodeMap.get(edgeB.source);
+      if (!sourceA || !sourceB) return 0;
+      return compareByPosition(sourceA, sourceB);
+    })
+    .forEach(edge => {
+      result.push({type: 'edge', id: edge.id});
+    });
+
   // Orphan nodes: not part of any edge.
   const orphans = nodes
-    .filter(node => !connectedIds.has(node.id))
+    .filter(node => !isLineAnchorNode(node) && !connectedIds.has(node.id))
     .sort(compareByPosition);
   for (const orphan of orphans) {
     result.push({type: 'node', id: orphan.id});

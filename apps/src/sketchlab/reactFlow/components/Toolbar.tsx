@@ -15,8 +15,8 @@ import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
   onAddNode: (
-    type: 'shape' | 'image' | 'text',
-    data: SketchlabReactFlowNode['data']
+    type: 'shape' | 'image' | 'text' | 'line',
+    data?: SketchlabReactFlowNode['data']
   ) => void;
 }
 
@@ -72,7 +72,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
       className={styles.toolbar}
       elevation={3}
       role="toolbar"
-      aria-label="Add shapes and images"
+      aria-label="Add shapes, lines, and images"
       aria-orientation="vertical"
     >
       <Tooltip title="Add rectangle" placement="right">
@@ -124,6 +124,19 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           variant="outlined"
         >
           <FontAwesomeV6Icon iconName="font" />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip title="Add line" placement="right">
+        <IconButton
+          aria-label="Add line"
+          id={`${uid}-line`}
+          onClick={() => onAddNode('line')}
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          <FontAwesomeV6Icon iconName="minus" />
         </IconButton>
       </Tooltip>
 
