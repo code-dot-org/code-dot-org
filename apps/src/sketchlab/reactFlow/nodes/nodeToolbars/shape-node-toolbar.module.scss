@@ -64,13 +64,8 @@
 }
 
 .swatch {
-  width: 10px;
-  height: 10px;
-  padding: 0;
   border-radius: 50%;
   border: 1px solid var(--borders-neutral-primary);
-  cursor: pointer;
-  background-clip: padding-box;
 
   &:hover {
     border-color: var(--text-neutral-primary);
@@ -109,15 +104,11 @@
 
 .fontSizeButton {
   min-width: 24px;
-  height: 24px;
-  padding: 0 6px;
-  border-radius: 4px;
   border: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-size: 12px;
   font-weight: 600;
-  cursor: pointer;
 
   &:hover {
     background-color: var(--background-neutral-secondary);
