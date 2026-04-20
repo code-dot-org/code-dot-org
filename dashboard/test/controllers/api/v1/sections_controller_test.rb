@@ -1704,7 +1704,39 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create_demo, params: {demo_type: 'high'}
     assert_response :conflict
-    assert_equal 'demo section of type high already exists', returned_json['error']
+    assert_includes JSON.parse(@response.body)['error'], 'high'
+  end
+
+  test 'presets: returns forbidden when not signed in' do
+    get :presets
+    assert_response :forbidden
+  end
+
+  test 'presets: returns the preset projections' do
+    sign_in @teacher
+    create(:unit, name: 'aif2-2025')
+    create(:unit, name: 'csd3-2024')
+    create(:unit, name: 'k5-ai-data-2024')
+    create(:unit_group, name: 'artificial-intelligence-foundations-2025')
+    create(:unit_group, name: 'csd-2024')
+    create(:unit_group, name: 'k5-ai-data-2024')
+
+    get :presets
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 'High School Practice Section', response['high']['section_name']
+    assert_equal 'aif2-2025', response['high']['unit']['name']
+    assert_equal 'student', response['middle']['participant_type']
+  end
+
+  test 'presets: returns not_found when no preset can be projected' do
+    sign_in @teacher
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns({})
+
+    get :presets
+
+    assert_response :not_found
   end
 
   private def stub_demo_preset

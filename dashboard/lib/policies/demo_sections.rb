@@ -35,8 +35,8 @@ class Policies::DemoSections
       login_type: 'email',
       participant_type: 'student',
       grades: %w[9 10 11 12],
-      unit_name: 'aif-foundations-2026',
-      unit_group_name: 'ai-foundations-exploring-ai-and-cs-2026',
+      unit_name: 'aif2-2025',
+      unit_group_name: 'artificial-intelligence-foundations-2025',
       # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
       avatar_color: 8,
       avatar_emoji: 5,
@@ -54,6 +54,37 @@ class Policies::DemoSections
     (ids&.dig(demo_type.to_s) || []).map(&:to_i)
   end
 
+  def self.preset_view(demo_type)
+    preset = get_preset(demo_type)
+    return nil unless preset
+
+    unit = resolve_unit(preset[:unit_name])
+    unit_group = resolve_unit_group(preset[:unit_group_name])
+    return nil if preset[:unit_name].present? && unit.nil?
+    return nil if preset[:unit_group_name].present? && unit_group.nil?
+
+    {
+      demo_type: demo_type.to_s,
+      section_name: preset[:section_name],
+      avatar_color: preset[:avatar_color],
+      avatar_emoji: preset[:avatar_emoji],
+      login_type: preset[:login_type],
+      participant_type: preset[:participant_type],
+      unit: unit && {name: unit.name, display_name: unit.localized_title},
+      unit_group: unit_group && {
+        name: unit_group.name,
+        display_name: unit_group.localized_title,
+      },
+    }
+  end
+
+  def self.preset_views_for_all_types
+    DEMO_TYPES.each_with_object({}) do |demo_type, views|
+      view = preset_view(demo_type)
+      views[demo_type] = view if view
+    end
+  end
+
   def self.all_demo_student_ids
     @all_demo_student_ids ||= DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.to_set
   end
@@ -65,4 +96,18 @@ class Policies::DemoSections
   def self.reset_cache!
     @all_demo_student_ids = nil
   end
+
+  def self.resolve_unit(unit_name)
+    return nil if unit_name.blank?
+
+    Unit.get_from_cache(unit_name, raise_exceptions: false)
+  end
+
+  def self.resolve_unit_group(unit_group_name)
+    return nil if unit_group_name.blank?
+
+    UnitGroup.get_from_cache(unit_group_name)
+  end
+
+  private_class_method :resolve_unit, :resolve_unit_group
 end
