@@ -101,6 +101,10 @@ class ScaryChangeDetector
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("add_index") || @changed_lines.include?("change_column"))
 
+    # list of tables with more than 10M rows as of April 2026
+    big_tables = %w(users followers projects user_levels user_scripts)
+    return unless big_tables.any? {|table| @changed_lines.include?(":#{table}")}
+
     puts red <<-WARNING
 
         Looks like you are adding a column, changing a column or adding an index in this migration:
