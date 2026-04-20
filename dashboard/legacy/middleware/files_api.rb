@@ -1097,7 +1097,7 @@ class FilesApi < Sinatra::Base
     result.to_json
   rescue AzureAiContentSafety::UnsupportedContentType
     status 400
-    allowed = ImageMagickGuard::SAFE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
   end
 
