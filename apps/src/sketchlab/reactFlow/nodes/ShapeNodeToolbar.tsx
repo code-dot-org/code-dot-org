@@ -48,7 +48,7 @@ export default function ShapeNodeToolbar({
   return (
     <NodeToolbar
       nodeId={nodeId}
-      position={Position.Top}
+      position={Position.Left}
       offset={TOOLBAR_OFFSET_PX}
     >
       <Paper
