@@ -23,6 +23,7 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
+  teacherFeedback?: string;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>

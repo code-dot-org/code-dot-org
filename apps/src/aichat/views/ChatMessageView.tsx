@@ -54,7 +54,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     chatMessageDisplayText,
     assets,
     userAddedSelectionContext,
+    teacherFeedback,
   } = chatMessage;
+  console.log('teacherFeedback', teacherFeedback);
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
@@ -184,6 +186,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   return (
     <ChatMessage
+      teacherFeedback={teacherFeedback}
       text={displayText}
       postText={postText}
       role={role}

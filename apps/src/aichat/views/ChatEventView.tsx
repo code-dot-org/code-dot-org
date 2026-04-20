@@ -43,6 +43,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   clientType?: string;
   modelParameters?: ModelParameters;
   postText?: React.ReactNode;
+  teacherFeedback?: string;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -82,9 +83,11 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       clientType,
       modelParameters,
       postText,
+      teacherFeedback,
     },
     ref
   ) => {
+    console.log('teacherFeedback', teacherFeedback);
     const dispatch = useAppDispatch();
 
     const chatEventDescriptions = isTeacherView
