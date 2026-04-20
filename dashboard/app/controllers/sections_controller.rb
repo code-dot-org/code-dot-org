@@ -71,12 +71,7 @@ class SectionsController < ApplicationController
       return head :bad_request unless preset
 
       unit = Unit.get_from_cache(preset[:unit_name], raise_exceptions: false) if preset[:unit_name].present?
-      unit_group =
-        begin
-          UnitGroup.get_from_cache(preset[:unit_group_name]) if preset[:unit_group_name].present?
-        rescue ActiveRecord::RecordNotFound
-          nil
-        end
+      unit_group = UnitGroup.get_from_cache(preset[:unit_group_name]) if preset[:unit_group_name].present?
       section_id = ':sectionId'
     else
       section = Section.find(params[:id])
