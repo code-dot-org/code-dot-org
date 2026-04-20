@@ -2,9 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTooltipIcon';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-
-import InfoTooltipIcon from '../InfoTooltipIcon';
 
 import moduleStyles from './model-card-row.module.scss';
 

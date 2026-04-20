@@ -6,13 +6,12 @@ import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux';
 import {ModelDescription} from '@cdo/apps/aichat/types';
+import {useLevelProperties} from '@cdo/apps/aichatLab/levelPropertiesContext';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {modelDescriptions} from '../../constants';
-import {useLevelProperties} from '../../levelPropertiesContext';
-import {setAiCustomizationProperty} from '../../redux';
 
 import CompareModelsDialog from './CompareModelsDialog';
 import {

@@ -1,6 +1,6 @@
 import {createContext, useContext} from 'react';
 
-import {AichatLevelProperties} from './types';
+import {AichatLevelProperties} from '../aichat/types';
 
 export const LevelPropertiesContext =
   createContext<AichatLevelProperties | null>(null);

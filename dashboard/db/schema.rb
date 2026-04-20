@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_16_141328) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -59,6 +59,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_16_141328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "script"
+  end
+
+  create_table "ai_student_podcast_fragments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "lesson_id"
+    t.string "fragment_type"
+    t.integer "objective_id"
+    t.text "podcast_script"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2297,10 +2307,12 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_16_141328) do
     t.integer "avatar_color"
     t.integer "avatar_emoji"
     t.string "ai_chat_access_level", default: "disabled"
+    t.string "demo_type"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
     t.index ["script_id"], name: "index_sections_on_script_id"
+    t.index ["user_id", "demo_type", "deleted_at"], name: "index_sections_on_user_id_and_demo_type", unique: true
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
 

@@ -2,18 +2,17 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
   MODEL_CARD_FIELDS_LABELS_ICONS,
   TECHNICAL_INFO_FIELDS,
-} from '@cdo/apps/aichat/views/modelCustomization/constants';
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {modelDescriptions} from '../../constants';
 
 import ModelCardRow from './ModelCardRow';
 
 import moduleStyles from './presentation-view.module.scss';
-import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
+import styles from '@cdo/apps/aichatLab/views/model-customization-workspace.module.scss';
 
 const PresentationView: React.FunctionComponent = () => {
   const savedAiCustomizations = useAppSelector(
