@@ -1,8 +1,6 @@
 import {Paper} from '@mui/material';
-import {NodeToolbar, Position, useReactFlow} from '@xyflow/react';
+import {NodeToolbar, Position, useNodesData, useReactFlow} from '@xyflow/react';
 import React, {useCallback} from 'react';
-
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {useSketchLabReadOnly} from '../../context';
 
@@ -24,15 +22,15 @@ const TOOLBAR_OFFSET_PX = 8;
 
 interface ShapeNodeToolbarProps {
   nodeId: string;
-  data: SketchlabReactFlowNode['data'];
 }
 
-export default function ShapeNodeToolbar({
-  nodeId,
-  data,
-}: ShapeNodeToolbarProps) {
+export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
+  // Subscribe directly to the store so selection state reflects the
+  // latest data even when a memo-ized ancestor skips re-rendering.
+  const nodeData = useNodesData(nodeId);
+  const data = nodeData?.data ?? {};
 
   const backgroundColor = data.backgroundColor as string | undefined;
   const strokeColor = data.strokeColor as string | undefined;

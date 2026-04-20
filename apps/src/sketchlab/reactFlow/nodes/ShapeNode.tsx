@@ -224,7 +224,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <ShapeNodeToolbar nodeId={id} data={data} />
+      <ShapeNodeToolbar nodeId={id} />
 
       {/* Background shape */}
       {isRectangle ? (

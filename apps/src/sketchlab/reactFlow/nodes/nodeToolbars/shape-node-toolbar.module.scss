@@ -80,9 +80,11 @@
 .swatchSelected {
   // 1px gap (in toolbar background) between the swatch edge and the
   // selection ring, so black/transparent swatches remain distinguishable.
+  // `!important` beats MUI IconButton's focus-visible shadow so the
+  // selection ring is visible immediately, not only after focus moves.
   box-shadow:
     0 0 0 1px var(--background-neutral-primary),
-    0 0 0 3px var(--text-neutral-primary);
+    0 0 0 3px var(--text-neutral-primary) !important;
 }
 
 .swatchTransparent {
