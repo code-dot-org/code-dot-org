@@ -335,6 +335,10 @@ const EVENTS = {
   AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED:
     'AI Tutor Lesson Deep Dive Modality Clicked',
 
+  // Lesson Tutor
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
+  LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
+
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_TEST_PASSED: 'Javalab Test Passed',
