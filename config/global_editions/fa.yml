@@ -35,10 +35,9 @@ header:
         id: header-csf
         domain: code.org
         url: /global/fa/csf
-      - title: hour_of_code
-        id: header-hoc
-        domain: code.org
-        url: /global/fa/hourofcode
+      - title: hour_of_ai
+        id: header-hoa
+        url: https://csforall.org/fa/hour-of-ai
       - title: videos
         id: header-videos
         domain: code.org
@@ -157,6 +156,8 @@ pages:
         # versions that are translated
         courseFilters:
           language: fa-IR
+      # Hide the right panel with "New Features", "Announcements", etc.
+      TeacherPromotions: false
   # Teacher dashboard
   - path: /teacher_dashboard
     components:

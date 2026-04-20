@@ -4,8 +4,8 @@
 Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
   Background:
-    Given I create a teacher-associated student named "Lillian"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
+    And I create a teacher-associated student named "Lillian"
 
   Scenario: The student sees only the projects available in Farsi MVP
     Given I am on "http://studio.code.org/projects"

@@ -1,7 +1,53 @@
 # frozen_string_literal: true
 
 class Policies::DemoSections
-  DEMO_TYPES = %i[aif csd].freeze
+  DEMO_TYPES = %i[high middle elementary].freeze
+
+  DEMO_SECTION_PRESETS = {
+    elementary: {
+      section_name: 'Elementary School Practice Section',
+      login_type: 'picture',
+      participant_type: 'student',
+      grades: %w[K 1 2 3 4 5],
+      unit_name: 'k5-ai-data-2024',
+      unit_group_name: 'k5-ai-data-2024',
+      # Purple cat: COLORS[2] = Purple, EMOJIS[10] = 😺
+      avatar_color: 2,
+      avatar_emoji: 10,
+      ai_chat_access_level: 'essential_only',
+      ai_tutor_enabled: false,
+    }.freeze,
+    middle: {
+      section_name: 'Middle School Practice Section',
+      login_type: 'word',
+      participant_type: 'student',
+      grades: %w[6 7 8],
+      unit_name: 'csd3-2024',
+      unit_group_name: 'csd-2024',
+      # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
+      avatar_color: 1,
+      avatar_emoji: 0,
+      ai_chat_access_level: 'enabled',
+      ai_tutor_enabled: true,
+    }.freeze,
+    high: {
+      section_name: 'High School Practice Section',
+      login_type: 'email',
+      participant_type: 'student',
+      grades: %w[9 10 11 12],
+      unit_name: 'aif-foundations-2026',
+      unit_group_name: 'ai-foundations-exploring-ai-and-cs-2026',
+      # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
+      avatar_color: 8,
+      avatar_emoji: 5,
+      ai_chat_access_level: 'enabled',
+      ai_tutor_enabled: true,
+    }.freeze,
+  }.freeze
+
+  def self.get_preset(demo_type)
+    DEMO_SECTION_PRESETS[demo_type.to_sym]
+  end
 
   def self.demo_student_ids(demo_type)
     ids = CDO.demo_student_ids

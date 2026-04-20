@@ -814,6 +814,8 @@ module SharedConstants
     MODEL_IMAGE_FLAGGED: 1007,
     # The model is currently rate-limited (HTTP 429).
     MODEL_RATE_LIMITED: 1008,
+    # The model's internal content filter blocked its output.
+    MODEL_CONTENT_FILTERED: 1009,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {

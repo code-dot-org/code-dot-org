@@ -14,6 +14,7 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -83,7 +84,38 @@ export type LabConfig = {[key: string]: {[key: string]: string}};
 export type Source =
   | BlocklySource
   | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+  | ExcalidrawSourceWithExternalFiles
+  | SketchlabReactFlowSource;
+
+// -- REACT FLOW SKETCH LAB -- //
+
+// Serializable node/edge types for project storage. These mirror the
+// @xyflow/react Node/Edge fields we persist, without the complex DOM
+// types that are incompatible with Immer's WritableDraft. Cast to/from
+// the full React Flow types at the read/write boundary.
+export interface SketchlabReactFlowNode {
+  id: string;
+  type?: string;
+  position: {x: number; y: number};
+  data: Record<string, string | number | boolean>;
+  style?: Record<string, string | number>;
+}
+
+export interface SketchlabReactFlowEdge {
+  id: string;
+  source: string;
+  target: string;
+  sourceHandle?: string;
+  targetHandle?: string;
+  type?: string;
+  markerEnd?: EdgeMarkerType;
+}
+
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 export interface SaveSourceOptions {
   projectType?: string;
