@@ -1,9 +1,8 @@
-import {extension as mimeToExtension} from 'mime-types';
-
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const LABS_WITH_IMAGE_MODERATION = [
   'weblab2',
@@ -13,8 +12,6 @@ const LABS_WITH_IMAGE_MODERATION = [
   'poetry',
   'game_design',
 ];
-
-const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
@@ -46,10 +43,10 @@ export const moderateImage = async (
     assetUrl,
   }: AnalyticsData
 ): Promise<'safe' | 'flagged' | 'error'> => {
-  const fileExtension = mimeToExtension(file.type) || '';
+  const imageType = file.type || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
-    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
+    !(SafeAndSupportedImageTypes as readonly string[]).includes(imageType)
   ) {
     return 'error';
   }
