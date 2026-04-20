@@ -19,6 +19,7 @@ import styles from './teacherHomepage.module.scss';
 interface CourseContentDropdownProps {
   section: Section;
   demoType?: DemoType;
+  disabled?: boolean;
   onNavigateToPath?: (path: string, eventName: string) => void;
 }
 
@@ -36,6 +37,7 @@ interface UnitLessonOptions {
 export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
   demoType,
+  disabled = false,
   onNavigateToPath,
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
@@ -63,6 +65,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
             <button
               type="button"
               className={styles.dropdownMenuItem}
+              disabled={disabled}
               onClick={() =>
                 onNavigateToPath(
                   lesson.value,
@@ -91,7 +94,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           />
         )
       ),
-    [lessonList, onNavigateToPath]
+    [lessonList, onNavigateToPath, disabled]
   );
 
   return (
@@ -111,7 +114,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           name="go-to-lesson"
           labelText={i18n.jumpTo()}
           labelType="thin"
-          disabled={lessonList.length === 0}
+          disabled={disabled || lessonList.length === 0}
           size="m"
         >
           <ul>{dropdownOptions}</ul>
@@ -120,6 +123,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         <button
           type="button"
           className={styles.demoActionButton}
+          disabled={disabled}
           onClick={() =>
             onNavigateToPath(
               `courses/${section.courseVersionName}`,
