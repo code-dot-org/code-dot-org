@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :update, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
