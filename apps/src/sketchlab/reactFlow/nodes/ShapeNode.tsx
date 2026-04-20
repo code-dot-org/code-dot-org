@@ -1,5 +1,5 @@
 import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useRef, useState} from 'react';
+import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
@@ -87,8 +87,6 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const label = (data.label as string) ?? '';
   const backgroundColor = data.backgroundColor as string | undefined;
   const strokeColor = data.strokeColor as string | undefined;
-  const fontColor = data.fontColor as string | undefined;
-  const fontSize = fontSizePx(data.fontSize as string | undefined);
   const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
@@ -136,21 +134,25 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   const isRectangle = shapeType === 'rectangle';
 
-  const rectangleStyle: React.CSSProperties = {};
-  if (strokeColor) {
-    rectangleStyle.borderColor = strokeColor;
-  }
-  if (backgroundColor) {
-    rectangleStyle.backgroundColor = backgroundColor;
-  }
+  const rectangleStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (strokeColor) {
+      style.borderColor = strokeColor;
+    }
+    if (backgroundColor) {
+      style.backgroundColor = backgroundColor;
+    }
+    return style;
+  }, [strokeColor, backgroundColor]);
 
-  const labelStyle: React.CSSProperties = {};
-  if (fontColor) {
-    labelStyle.color = fontColor;
-  }
-  if (fontSize !== undefined) {
-    labelStyle.fontSize = fontSize;
-  }
+  const labelStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (data.fontColor) {
+      style.color = data.fontColor as string | undefined;
+    }
+    style.fontSize = fontSizePx(data.fontSize as string | undefined);
+    return style;
+  }, [data.fontColor, data.fontSize]);
 
   return (
     <div

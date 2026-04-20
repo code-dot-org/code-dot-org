@@ -1,5 +1,5 @@
 import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useRef, useState} from 'react';
+import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
@@ -25,17 +25,16 @@ function TextNode({id, data, selected}: TextNodeProps) {
   const textRef = useRef<HTMLDivElement>(null);
 
   const text = (data.text as string) ?? '';
-  const fontColor = data.fontColor as string | undefined;
-  const fontSize = fontSizePx(data.fontSize as string | undefined);
   const showHandles = data.showHandles !== false;
 
-  const textStyle: React.CSSProperties = {};
-  if (fontColor) {
-    textStyle.color = fontColor;
-  }
-  if (fontSize !== undefined) {
-    textStyle.fontSize = fontSize;
-  }
+  const textStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (data.fontColor) {
+      style.color = data.fontColor as string | undefined;
+    }
+    style.fontSize = fontSizePx(data.fontSize as string | undefined);
+    return style;
+  }, [data.fontColor, data.fontSize]);
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {

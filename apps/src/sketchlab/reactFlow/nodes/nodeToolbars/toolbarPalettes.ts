@@ -37,5 +37,8 @@ export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
 
 export function fontSizePx(value: string | undefined): number | undefined {
   const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
-  return match?.px;
+  return (
+    match?.px ||
+    FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)?.px
+  );
 }
