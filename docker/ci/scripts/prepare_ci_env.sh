@@ -17,7 +17,8 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # Enable jemalloc to prevent runaway memory growth during dashboard unit tests.
 # Configuration options based on the defaults used in chef (see
 # cookbooks/cdo-jemalloc/attributes/default.rb), with the notable exception of
-# `background_thread:true` since that breaks chromedriver.
+# `background_thread:true` since that breaks chromedriver (see
+# https://issues.chromium.org/issues/378077860).
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 export MALLOC_CONF=narenas:2,thp:never,dirty_decay_ms:1000,muzzy_decay_ms:0
 
