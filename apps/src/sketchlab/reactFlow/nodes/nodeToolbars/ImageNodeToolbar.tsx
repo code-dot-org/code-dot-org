@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {ImageNodeType} from '../../types';
+
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -9,7 +11,7 @@ interface ImageNodeToolbarProps {
 }
 
 export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
-  const {data, patchNodeData} = useNodeToolbarData(nodeId);
+  const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
   const handlesVisible = data.showHandles !== false;
 
   return (

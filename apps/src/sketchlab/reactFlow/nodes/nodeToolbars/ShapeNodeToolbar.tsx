@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {ShapeNodeType} from '../../types';
+
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
@@ -19,12 +21,9 @@ interface ShapeNodeToolbarProps {
 }
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
-  const {data, patchNodeData} = useNodeToolbarData(nodeId);
+  const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
-  const backgroundColor = data.backgroundColor as string | undefined;
-  const strokeColor = data.strokeColor as string | undefined;
-  const fontSize = data.fontSize as string | undefined;
-  const fontColor = data.fontColor as string | undefined;
+  const {backgroundColor, strokeColor, fontSize, fontColor} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (

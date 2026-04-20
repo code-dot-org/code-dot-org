@@ -1,33 +1,25 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
-import {NodeResizer, useReactFlow} from '@xyflow/react';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
-
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 import ImageNodeToolbar from './nodeToolbars/ImageNodeToolbar';
 
 import styles from './image-node.module.scss';
 
-interface ImageNodeProps {
-  id: string;
-  data: SketchlabReactFlowNode['data'];
-  selected: boolean;
-}
-
-function ImageNode({id, data, selected}: ImageNodeProps) {
+function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const [altValue, setAltValue] = useState('');
   const cancelledRef = useRef(false);
 
-  const src = (data.src as string) ?? '';
-  const altText = (data.altText as string) ?? '';
+  const {src, altText} = data;
   const showHandles = data.showHandles !== false;
 
   useEffect(() => {

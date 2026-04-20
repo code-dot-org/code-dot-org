@@ -32,7 +32,13 @@ import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {ReactFlowSketchLabSources} from '../types';
+import {
+  ImageNodeData,
+  ReactFlowSketchLabSources,
+  ShapeNodeData,
+  SketchLabNode,
+  TextNodeData,
+} from '../types';
 
 import Toolbar from './Toolbar';
 
@@ -69,7 +75,9 @@ export default function ReactFlowCanvas({
   colorMode,
   readOnly = false,
 }: ReactFlowCanvasProps) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, setNodes, onNodesChange] = useNodesState<SketchLabNode>(
+    initialNodes as SketchLabNode[]
+  );
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
@@ -174,7 +182,7 @@ export default function ReactFlowCanvas({
   const handleAddNode = useCallback(
     (
       type: 'shape' | 'image' | 'text',
-      data: SketchlabReactFlowNode['data']
+      data: ShapeNodeData | ImageNodeData | TextNodeData
     ) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -185,7 +193,7 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = createUuid();
-      const newNode: SketchlabReactFlowNode = {
+      const newNode = {
         id: newNodeId,
         type,
         position,
@@ -197,7 +205,7 @@ export default function ReactFlowCanvas({
             height: DEFAULT_NODE_HEIGHT,
           },
         }),
-      };
+      } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 

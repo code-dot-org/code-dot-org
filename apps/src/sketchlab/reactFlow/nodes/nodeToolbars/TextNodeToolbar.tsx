@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {TextNodeType} from '../../types';
+
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
@@ -16,10 +18,9 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
-  const {data, patchNodeData} = useNodeToolbarData(nodeId);
+  const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
-  const fontSize = data.fontSize as string | undefined;
-  const fontColor = data.fontColor as string | undefined;
+  const {fontSize, fontColor} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (

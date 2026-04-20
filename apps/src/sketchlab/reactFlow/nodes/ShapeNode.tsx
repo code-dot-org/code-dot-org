@@ -1,11 +1,9 @@
-import {NodeResizer, useReactFlow} from '@xyflow/react';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
-
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import {ShapeType} from '../types';
+import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
@@ -71,22 +69,13 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
   return null;
 }
 
-interface ShapeNodeProps {
-  id: string;
-  data: SketchlabReactFlowNode['data'];
-  selected: boolean;
-}
-
-function ShapeNode({id, data, selected}: ShapeNodeProps) {
+function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
 
-  const shapeType = data.shapeType as ShapeType;
-  const label = (data.label as string) ?? '';
-  const backgroundColor = data.backgroundColor as string | undefined;
-  const strokeColor = data.strokeColor as string | undefined;
+  const {shapeType, label, backgroundColor, strokeColor} = data;
   const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
@@ -148,9 +137,9 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const labelStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
     if (data.fontColor) {
-      style.color = data.fontColor as string | undefined;
+      style.color = data.fontColor;
     }
-    style.fontSize = fontSizePx(data.fontSize as string | undefined);
+    style.fontSize = fontSizePx(data.fontSize);
     return style;
   }, [data.fontColor, data.fontSize]);
 
