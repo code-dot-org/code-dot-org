@@ -1,5 +1,7 @@
+import {Button, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 
 import {
@@ -7,13 +9,10 @@ import {
   toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -21,7 +20,9 @@ import MultipleAssignButton from '../MultipleAssignButton';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
-class CourseScript extends Component {
+import styles from './courseScript.module.scss';
+
+class CourseScript extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     name: PropTypes.string,
@@ -117,45 +118,47 @@ class CourseScript extends Component {
     }
     return (
       <div
-        style={{
-          ...styles.main,
-          ...(isHidden && styles.hidden),
-        }}
-        className="uitest-CourseScript"
+        className={classNames(
+          styles.main,
+          isHidden && styles.hidden,
+          'uitest-CourseScript'
+        )}
         data-visibility={isHidden ? 'hidden' : 'visible'}
       >
-        <div style={styles.content}>
-          <div style={styles.title}>{title}</div>
-          <div style={styles.description}>
+        <div className={styles.content}>
+          <Typography variant="h5" componen="h5">
+            {title}
+          </Typography>
+          <div className={styles.description}>
             <SafeMarkdown markdown={description} />
           </div>
-          <span style={styles.flex}>
+          <span className={styles.flex}>
             <Button
-              __useDeprecatedTag
-              text={i18n.goToUnit()}
               href={unitPath}
-              color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
-            />
+              variant="outlined"
+              color="secondary"
+              size="small"
+            >
+              {i18n.goToUnit()}
+            </Button>
             {isAssigned && viewAs === ViewType.Participant && <Assigned />}
             {confirmationMessageOpen && (
-              <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
+              <span className={styles.confirmText}>{i18n.assignSuccess()}</span>
             )}
             {viewAs === ViewType.Instructor && showAssignButton && (
-              <div className={styles.assignButton}>
-                <MultipleAssignButton
-                  courseOfferingId={courseOfferingId}
-                  courseVersionId={courseVersionId}
-                  courseId={courseId}
-                  scriptId={id}
-                  assignmentName={title}
-                  reassignConfirm={this.onReassignConfirm}
-                  isAssigningCourseOnly={false}
-                  isSingleUnitCourse={false}
-                  participantAudience={participantAudience}
-                  aiChatToolsDependency={aiChatToolsDependency}
-                />
-              </div>
+              <MultipleAssignButton
+                courseOfferingId={courseOfferingId}
+                courseVersionId={courseVersionId}
+                courseId={courseId}
+                scriptId={id}
+                assignmentName={title}
+                reassignConfirm={this.onReassignConfirm}
+                isAssigningCourseOnly={false}
+                isSingleUnitCourse={false}
+                participantAudience={participantAudience}
+                aiChatToolsDependency={aiChatToolsDependency}
+              />
             )}
           </span>
         </div>
@@ -171,47 +174,6 @@ class CourseScript extends Component {
   }
 }
 
-const styles = {
-  main: {
-    display: 'table',
-    width: '100%',
-    height: '100%',
-    background: color.background_gray,
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    borderStyle: 'solid',
-    borderRadius: 2,
-    marginBottom: 12,
-  },
-  content: {
-    padding: 20,
-  },
-  description: {
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  // TODO: share better with ProgressLesson
-  hidden: {
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    marginTop: 0,
-    marginBottom: 12,
-    marginLeft: 0,
-    marginRight: 0,
-  },
-  flex: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  confirmText: {
-    marginLeft: 5,
-    marginRight: 5,
-  },
-};
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(
