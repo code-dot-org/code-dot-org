@@ -1,7 +1,7 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import InfoTooltipIcon from '../InfoTooltipIcon';
+import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTooltipIcon';
 
 import styles from '../model-customization-workspace.module.scss';
 

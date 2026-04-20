@@ -11,10 +11,9 @@ import {
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
 } from '@cdo/apps/aichat/redux';
+import {ModelCardInfo} from '@cdo/apps/aichat/types';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';

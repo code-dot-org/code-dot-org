@@ -5,6 +5,29 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
+import {ModalTypes} from '@cdo/apps/aichat/constants';
+import {
+  addChatEvent,
+  clearChatMessages,
+  onSaveComplete,
+  onSaveFail,
+  onSaveNoop,
+  clearHasSetInitialCustomizations,
+  resetToDefaultAiCustomizations,
+  selectAllFieldsHidden,
+  sendAnalytics,
+  setShowModalType,
+  setViewMode,
+  updateAiCustomization,
+  initializeAiCustomizations,
+} from '@cdo/apps/aichat/redux';
+import {
+  AichatLevelProperties,
+  ModelParameters,
+  ViewMode,
+} from '@cdo/apps/aichat/types';
+import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
+import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -26,27 +49,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
-import {
-  addChatEvent,
-  clearChatMessages,
-  onSaveComplete,
-  onSaveFail,
-  onSaveNoop,
-  clearHasSetInitialCustomizations,
-  resetToDefaultAiCustomizations,
-  selectAllFieldsHidden,
-  sendAnalytics,
-  setShowModalType,
-  setViewMode,
-  updateAiCustomization,
-  initializeAiCustomizations,
-} from '../redux';
-import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
-import AiChatHeaderButtons from './aiChatHeaderButtons/AiChatHeaderButtons';
-import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
