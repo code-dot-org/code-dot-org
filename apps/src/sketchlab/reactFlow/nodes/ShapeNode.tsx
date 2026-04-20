@@ -1,14 +1,9 @@
 import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
+import React, {memo, useCallback, useRef, useState} from 'react';
 
 import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
-import {
-  DEFAULT_NODE_HEIGHT,
-  DEFAULT_NODE_WIDTH,
-  MIN_NODE_HEIGHT,
-  MIN_NODE_WIDTH,
-} from '../constants';
+import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import {ShapeType} from '../types';
 
@@ -21,12 +16,6 @@ import styles from './shape-node.module.scss';
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 const SHAPE_BORDER_PX = 2;
-
-// Approximate horizontal room the style toolbar occupies to the left of
-// the node (in screen px). Used to decide whether to pan the view so the
-// toolbar is fully on-screen when a shape is selected.
-const TOOLBAR_VIEW_BUFFER_PX = 200;
-const PAN_DURATION_MS = 250;
 
 interface ShapeSvgProps {
   shapeType: ShapeType;
@@ -90,57 +79,9 @@ interface ShapeNodeProps {
 
 function ShapeNode({id, data, selected}: ShapeNodeProps) {
   const readOnly = useSketchLabReadOnly();
-  const {updateNodeData, getNode, getViewport, setCenter} = useReactFlow();
+  const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
-  const outerRef = useRef<HTMLDivElement>(null);
-
-  // When a shape is selected, ensure the node plus its left-side style
-  // toolbar are in view. Pan without changing zoom when clipped.
-  useEffect(() => {
-    if (!selected || readOnly) {
-      return;
-    }
-    const outer = outerRef.current;
-    if (!outer) {
-      return;
-    }
-    const container = outer.closest<HTMLElement>('.react-flow');
-    if (!container) {
-      return;
-    }
-    const node = getNode(id);
-    if (!node) {
-      return;
-    }
-
-    const containerRect = container.getBoundingClientRect();
-    const viewport = getViewport();
-    const {zoom} = viewport;
-    const width = node.measured?.width ?? DEFAULT_NODE_WIDTH;
-    const height = node.measured?.height ?? DEFAULT_NODE_HEIGHT;
-
-    const nodeLeft = node.position.x * zoom + viewport.x;
-    const nodeTop = node.position.y * zoom + viewport.y;
-    const nodeRight = nodeLeft + width * zoom;
-    const nodeBottom = nodeTop + height * zoom;
-    const toolbarAreaLeft = nodeLeft - TOOLBAR_VIEW_BUFFER_PX;
-
-    const fullyVisible =
-      toolbarAreaLeft >= 0 &&
-      nodeRight <= containerRect.width &&
-      nodeTop >= 0 &&
-      nodeBottom <= containerRect.height;
-    if (fullyVisible) {
-      return;
-    }
-
-    // Shift the viewport so the toolbar fits to the left of the node.
-    const centerX =
-      node.position.x + width / 2 - TOOLBAR_VIEW_BUFFER_PX / (2 * zoom);
-    const centerY = node.position.y + height / 2;
-    setCenter(centerX, centerY, {zoom, duration: PAN_DURATION_MS});
-  }, [selected, readOnly, id, getNode, getViewport, setCenter]);
 
   const shapeType = data.shapeType as ShapeType;
   const label = (data.label as string) ?? '';
@@ -213,7 +154,6 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   return (
     <div
-      ref={outerRef}
       className={styles.shapeNode}
       aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
