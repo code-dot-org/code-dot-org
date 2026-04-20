@@ -2,7 +2,6 @@ import {Typography} from '@mui/material';
 import React, {FC} from 'react';
 
 import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
-import {pythonLabVideoFiles} from '@cdo/apps/pythonlab/pythonLabVideos';
 
 import {JsonVideoData} from './types';
 
@@ -17,7 +16,7 @@ const VideosBox: FC<VideosBoxProps> = ({jsonVideos}) => (
     <Typography variant="h2" sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}}>
       Videos
     </Typography>
-    {pythonLabVideoFiles.map(({key, url, description}) => (
+    {jsonVideos.map(({key, url, description}) => (
       <div key={key} className={styles.videoWrapper}>
         <div className={styles.videoInner}>
           <TutorVideo href={url} />
