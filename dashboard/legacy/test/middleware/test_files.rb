@@ -937,7 +937,8 @@ class FilesTest < FilesApiTestBase
     header 'CONTENT_TYPE', 'image/bmp'
     post '/v3/images/moderate', 'fake-bmp-bytes'
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Unsupported image type. Only PNG, JPEG, GIF, and WEBP files are allowed.'}, JSON.parse(last_response.body))
+    allowed = ImageMagickGuard::SAFE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    assert_equal({'error' => "Unsupported image type. Only #{allowed} files are allowed."}, JSON.parse(last_response.body))
   end
 
   def test_moderate_image_empty_body_returns_400

@@ -13,7 +13,7 @@ module ImageModeration
   MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png, image/webp
+  # @param [String] content_type - image/gif, image/jpeg, image/png, etc
   # @return [Hash, nil] categoriesAnalysis response from Azure, or nil on error
   # @raise [AzureAiContentSafety::UnsupportedContentType] when magic-byte sniffing
   #   determines the image format is not supported; callers should map this to a 400.
@@ -32,7 +32,7 @@ module ImageModeration
       api_key: CDO.azure_ai_content_safety_key
     ).moderate_image(moderation_io)
   rescue AzureAiContentSafety::UnsupportedContentType
-    raise
+    raise # This is a client error, not a service failure — let callers map to 400.
   rescue AzureAiContentSafety::AzureError => exception
     Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
