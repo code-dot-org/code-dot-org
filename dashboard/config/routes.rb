@@ -119,6 +119,11 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [] do
+      member do
+        get 'content'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -1278,7 +1283,7 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do

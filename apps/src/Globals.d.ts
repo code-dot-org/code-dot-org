@@ -11,6 +11,9 @@ declare module '*.module.scss' {
 // Type definition for plain SCSS files imported in TypeScript files
 declare module '*.scss';
 
+// Type definition for plain CSS files imported in TypeScript files
+declare module '*.css';
+
 // Declaring dashboard as 'any' because it is not well documented.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const dashboard: any;

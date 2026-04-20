@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_14_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_16_141328) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -930,10 +930,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120000) do
 
   create_table "json_videos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
-    t.string "description"
+    t.text "description"
     t.string "s3_uri", null: false
-    t.string "lab"
-    t.integer "version", null: false
+    t.json "labs"
+    t.integer "json_schema_version", null: false
     t.string "audience", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,6 +1,3 @@
-@use '@code-dot-org/component-library-styles/typography.module.scss' as
-  typography;
-@import 'color';
 @import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // TeacherHomepage
@@ -61,9 +58,9 @@
 
 // SectionCard
 .sectionCardWrapper {
-  border: 1px solid var(--neutral-gray-20);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
-  background-color: var(--neutral-gray-5);
+  background-color: var(--background-neutral-secondary);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -72,7 +69,7 @@
 
 .sectionCardHeader {
   padding: 16px;
-  border-bottom: 1px solid var(--neutral-gray-20);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,7 +138,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
 
   padding: 0.5rem 1rem 0.5rem 0.75rem;
   gap: 0.75rem;
@@ -151,7 +148,7 @@
   }
 
   &:hover {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-secondary);
     text-decoration: none;
   }
 
@@ -160,12 +157,6 @@
     line-height: 125%;
     width: 1.5rem;
     text-align: center;
-  }
-
-  span {
-    @include typography.body-two;
-    color: inherit;
-    margin-bottom: 0;
   }
 }
 
@@ -179,7 +170,7 @@
 
   a:hover {
     text-decoration: none;
-    background-color: var(--neutral-gray-10);
+    background-color: var(--background-neutral-tertiary);
   }
 }
 
@@ -211,19 +202,19 @@
   justify-content: space-between;
   margin: 0;
   border-radius: 4px;
-  background-color: var(--sentiment-success-10);
+  background-color: var(--background-success-extra-light);
 }
 
 .studentAddedAlertIcon {
-  color: var(--sentiment-success-50);
+  color: var(--background-success-primary);
 }
 
 // Task Button
 .taskButtons {
-  border: 1px solid var(--neutral-gray-40);
+  border: 1px solid var(--borders-neutral-strong);
   display: flex;
   flex-direction: row;
-  background-color: var(--neutral-base-white);
+  background-color: var(--background-neutral-primary);
   gap: 8px;
   height: 38px;
   padding: 0 12px;
@@ -246,19 +237,19 @@
 }
 
 .taskButtonIcons {
-  color: var(--brand-teal-50);
+  color: var(--text-brand-teal-primary);
 }
 
 .taskButtonArrow {
-  color: var(--neutral-gray-80);
+  color: var(--text-neutral-quaternary);
 }
 
 // CourseContentDropdown
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
-  background-color: var(--neutral-base-white);
-  border: 1px solid var(--neutral-gray-20);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
@@ -293,13 +284,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  border: 1px dashed var(--brand-purple-50);
+  border: 1px dashed var(--borders-brand-purple-primary);
   border-radius: 4px;
-  background-color: var(--neutral-gray-5);
+  background-color: var(--background-neutral-secondary);
 }
 
 .emptyStateButtonIcon {
-  color: var(--brand-purple-50);
+  color: var(--text-brand-purple-primary);
 }
 
 .emptyImage {
@@ -447,7 +438,7 @@
   gap: 16px;
   border-width: 3px;
   border-style: solid;
-  border-color: var(--brand-purple-50);
+  border-color: var(--borders-brand-purple-primary);
   text-align: center;
 }
 
@@ -463,7 +454,7 @@
 }
 
 .onboardingChecklistCheckIcon {
-  color: var(--sentiment-success-50);
+  color: var(--text-success-primary);
   font-size: 16px;
   display: flex;
   align-items: center;

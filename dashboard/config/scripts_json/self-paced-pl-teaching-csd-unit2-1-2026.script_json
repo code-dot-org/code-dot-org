@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-13 14:57:25 UTC",
+    "serialized_at": "2026-04-17 20:04:45 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -796,7 +796,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L1_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -804,7 +804,7 @@
         "activity_section.key": "e2691123-3b55-4852-bb08-447c322df57d"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_may2025_2026"
+        "CSD U2L2-L1_2026_PL"
       ]
     },
     {
@@ -818,7 +818,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -826,7 +826,7 @@
         "activity_section.key": "e2691123-3b55-4852-bb08-447c322df57d"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_may2025_2026"
+        "CSD U2L2-L2_2026_PL"
       ]
     },
     {
@@ -840,7 +840,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L3_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -848,7 +848,7 @@
         "activity_section.key": "3015cd34-095e-4064-a17f-6e94f8731863"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_may2025_2026"
+        "CSD U2L2-L3_2026_PL"
       ]
     },
     {
@@ -862,7 +862,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_may2025_2026"
+          "CSD U2L3-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -870,7 +870,7 @@
         "activity_section.key": "3015cd34-095e-4064-a17f-6e94f8731863"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_may2025_2026"
+        "CSD U2L3-L2_2026_PL"
       ]
     },
     {
@@ -906,7 +906,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_may2025_2026"
+          "CSD U2L3-L5_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -914,7 +914,7 @@
         "activity_section.key": "3015cd34-095e-4064-a17f-6e94f8731863"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_may2025_2026"
+        "CSD U2L3-L5_2026_PL"
       ]
     },
     {
@@ -928,7 +928,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_may2025_2026"
+          "CSD U2L8-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -936,7 +936,7 @@
         "activity_section.key": "17d000b3-a6b8-497b-93c8-c288c6253e64"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_may2025_2026"
+        "CSD U2L8-L2_2026_PL"
       ]
     },
     {
@@ -972,7 +972,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-P_ma_2026"
+          "CSD U2L8-L7d_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -980,7 +980,7 @@
         "activity_section.key": "17d000b3-a6b8-497b-93c8-c288c6253e64"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-P_ma_2026"
+        "CSD U2L8-L7d_2026_PL"
       ]
     },
     {
@@ -1082,7 +1082,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1090,7 +1090,7 @@
         "activity_section.key": "764d1593-097c-4782-82e0-e1880e4ce1b4"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_may2025_2026"
+        "CSD U2L6-L3_2026_PL"
       ]
     },
     {
@@ -1104,7 +1104,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1112,7 +1112,7 @@
         "activity_section.key": "764d1593-097c-4782-82e0-e1880e4ce1b4"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_may2025_2026"
+        "CSD U2L6-L4_2026_PL"
       ]
     },
     {
@@ -1126,7 +1126,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L7_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1134,7 +1134,7 @@
         "activity_section.key": "764d1593-097c-4782-82e0-e1880e4ce1b4"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_may2025_2026"
+        "CSD U2L6-L7_2026_PL"
       ]
     },
     {
@@ -1148,7 +1148,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-P_ma_2026"
+          "CSD U2L6-L9c_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1156,7 +1156,7 @@
         "activity_section.key": "764d1593-097c-4782-82e0-e1880e4ce1b4"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-P_ma_2026"
+        "CSD U2L6-L9c_2026_PL"
       ]
     },
     {
@@ -1192,7 +1192,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L8_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1200,7 +1200,7 @@
         "activity_section.key": "764d1593-097c-4782-82e0-e1880e4ce1b4"
       },
       "level_keys": [
-        "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_may2025_2026"
+        "CSD U2L6-L8_2026_PL"
       ]
     },
     {
@@ -1236,7 +1236,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_may2025_2026"
+          "CSD U2L9-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1244,7 +1244,7 @@
         "activity_section.key": "3f3f4a11-806a-4a00-a3c6-ebc0feb18530"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_may2025_2026"
+        "CSD U2L9-L2_2026_PL"
       ]
     },
     {
@@ -1324,7 +1324,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1332,7 +1332,7 @@
         "activity_section.key": "e875a606-6774-41a3-bf73-2e749ba8668f"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_may2025_2026"
+        "CSD U2L12-L2_2026_PL"
       ]
     },
     {
@@ -1346,7 +1346,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1354,7 +1354,7 @@
         "activity_section.key": "e875a606-6774-41a3-bf73-2e749ba8668f"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_may2025_2026"
+        "CSD U2L12-L3_2026_PL"
       ]
     },
     {
@@ -1368,7 +1368,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1376,7 +1376,7 @@
         "activity_section.key": "e875a606-6774-41a3-bf73-2e749ba8668f"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_may2025_2026"
+        "CSD U2L12-L4_2026_PL"
       ]
     },
     {
@@ -1390,7 +1390,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L5_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1398,7 +1398,7 @@
         "activity_section.key": "e875a606-6774-41a3-bf73-2e749ba8668f"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_may2025_2026"
+        "CSD U2L12-L5_2026_PL"
       ]
     },
     {
@@ -1434,7 +1434,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1442,7 +1442,7 @@
         "activity_section.key": "fd22da98-0a68-4210-946b-c59299eea74d"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_may2025_2026"
+        "CSD U2L13-L2_2026_PL"
       ]
     },
     {
@@ -1456,7 +1456,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1464,7 +1464,7 @@
         "activity_section.key": "fd22da98-0a68-4210-946b-c59299eea74d"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_may2025_2026"
+        "CSD U2L13-L3_2026_PL"
       ]
     },
     {
@@ -1478,7 +1478,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1486,7 +1486,7 @@
         "activity_section.key": "fd22da98-0a68-4210-946b-c59299eea74d"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_may2025_2026"
+        "CSD U2L13-L4_2026_PL"
       ]
     },
     {
@@ -1500,7 +1500,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L5_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -1508,7 +1508,7 @@
         "activity_section.key": "fd22da98-0a68-4210-946b-c59299eea74d"
       },
       "level_keys": [
-        "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_may2025_2026"
+        "CSD U2L13-L5_2026_PL"
       ]
     },
     {
@@ -2025,9 +2025,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L2-L1_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L1_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2037,9 +2037,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L2-L2_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2049,9 +2049,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L2-L3_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_may2025_2026"
+          "CSD U2L2-L3_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2061,9 +2061,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L3-L2_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_may2025_2026"
+          "CSD U2L3-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2085,9 +2085,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L3-L5_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_may2025_2026"
+          "CSD U2L3-L5_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2097,9 +2097,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L8-L2_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_may2025_2026"
+          "CSD U2L8-L2_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2121,9 +2121,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-P_ma_2026",
+        "level.key": "CSD U2L8-L7d_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-P_ma_2026"
+          "CSD U2L8-L7d_2026_PL"
         ],
         "lesson.key": "Build a Website with HTML",
         "lesson_group.key": "",
@@ -2181,9 +2181,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L6-L3_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2193,9 +2193,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L6-L4_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2205,9 +2205,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L6-L7_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L7_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2217,9 +2217,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-P_ma_2026",
+        "level.key": "CSD U2L6-L9c_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-P_ma_2026"
+          "CSD U2L6-L9c_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2241,9 +2241,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L6-L8_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_may2025_2026"
+          "CSD U2L6-L8_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2265,9 +2265,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L9-L2_2026_PL",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_may2025_2026"
+          "CSD U2L9-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2313,9 +2313,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L12-L2_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2325,9 +2325,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L12-L3_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2337,9 +2337,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L12-L4_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2349,9 +2349,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L12-L5_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_may2025_2026"
+          "CSD U2L12-L5_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2373,9 +2373,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L13-L2_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L2_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2385,9 +2385,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L13-L3_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L3_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2397,9 +2397,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L13-L4_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L4_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2409,9 +2409,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_may2025_2026",
+        "level.key": "CSD U2L13-L5_2026_PL",
         "script_level.level_keys": [
-          "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_may2025_2026"
+          "CSD U2L13-L5_2026_PL"
         ],
         "lesson.key": "Style a Website with CSS",
         "lesson_group.key": "",
@@ -2628,6 +2628,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
