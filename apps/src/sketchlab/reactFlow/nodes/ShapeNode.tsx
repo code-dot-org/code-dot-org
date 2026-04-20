@@ -52,8 +52,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
           cy="50"
           rx="48"
           ry="48"
-          fill={fill}
-          stroke={stroke}
+          style={{fill, stroke}}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
@@ -72,8 +71,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
       >
         <polygon
           points={TRIANGLE_POINTS}
-          fill={fill}
-          stroke={stroke}
+          style={{fill, stroke}}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />

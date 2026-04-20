@@ -5,21 +5,21 @@ export interface ColorSwatch {
 }
 
 export const STROKE_FONT_PALETTE: ColorSwatch[] = [
-  {value: '#000000', label: 'Black'},
-  {value: '#B42318', label: 'Red'},
-  {value: '#15803D', label: 'Green'},
-  {value: '#1D4ED8', label: 'Blue'},
-  {value: '#C2410C', label: 'Orange'},
-  {value: '#6D28D9', label: 'Purple'},
+  {value: 'var(--sketchlab-stroke-black)', label: 'Black'},
+  {value: 'var(--sketchlab-stroke-red)', label: 'Red'},
+  {value: 'var(--sketchlab-stroke-green)', label: 'Green'},
+  {value: 'var(--sketchlab-stroke-blue)', label: 'Blue'},
+  {value: 'var(--sketchlab-stroke-orange)', label: 'Orange'},
+  {value: 'var(--sketchlab-stroke-purple)', label: 'Purple'},
 ];
 
 export const BACKGROUND_PALETTE: ColorSwatch[] = [
   {value: 'transparent', label: 'Transparent', transparent: true},
-  {value: '#FECDD3', label: 'Pink'},
-  {value: '#BBF7D0', label: 'Light green'},
-  {value: '#BFDBFE', label: 'Light blue'},
-  {value: '#FEF08A', label: 'Yellow'},
-  {value: '#DDD6FE', label: 'Light purple'},
+  {value: 'var(--sketchlab-bg-red)', label: 'Red'},
+  {value: 'var(--sketchlab-bg-green)', label: 'Green'},
+  {value: 'var(--sketchlab-bg-blue)', label: 'Blue'},
+  {value: 'var(--sketchlab-bg-orange)', label: 'Orange'},
+  {value: 'var(--sketchlab-bg-purple)', label: 'Purple'},
 ];
 
 export const FONT_SIZE_OPTIONS = [
@@ -31,8 +31,8 @@ export const FONT_SIZE_OPTIONS = [
 export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 
 export const DEFAULT_BACKGROUND_COLOR = 'transparent';
-export const DEFAULT_STROKE_COLOR = '#000000';
-export const DEFAULT_FONT_COLOR = '#000000';
+export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-black)';
+export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-black)';
 export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
 
 export function fontSizePx(value: string | undefined): number | undefined {

@@ -1,3 +1,31 @@
+:global([data-theme='Light']) {
+  --sketchlab-stroke-black: #000;
+  --sketchlab-stroke-red: #b42318;
+  --sketchlab-stroke-green: #15803d;
+  --sketchlab-stroke-blue: #1d4ed8;
+  --sketchlab-stroke-orange: #c2410c;
+  --sketchlab-stroke-purple: #6d28d9;
+  --sketchlab-bg-red: #fecdd3;
+  --sketchlab-bg-green: #bbf7d0;
+  --sketchlab-bg-blue: #bfdbfe;
+  --sketchlab-bg-orange: #fef08a;
+  --sketchlab-bg-purple: #ddd6fe;
+}
+
+:global([data-theme='Dark']) {
+  --sketchlab-stroke-black: #fff;
+  --sketchlab-stroke-red: #fca5a5;
+  --sketchlab-stroke-green: #86efac;
+  --sketchlab-stroke-blue: #93c5fd;
+  --sketchlab-stroke-orange: #fdba74;
+  --sketchlab-stroke-purple: #c4b5fd;
+  --sketchlab-bg-red: #7f1d1d;
+  --sketchlab-bg-green: #14532d;
+  --sketchlab-bg-blue: #1e3a8a;
+  --sketchlab-bg-orange: #78350f;
+  --sketchlab-bg-purple: #4c1d95;
+}
+
 .toolbar {
   display: flex;
   flex-direction: column;
