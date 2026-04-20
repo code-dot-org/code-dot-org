@@ -18,6 +18,8 @@
 #
 
 class JSONVideo < ApplicationRecord
+  has_and_belongs_to_many :objectives, join_table: :json_video_objectives
+
   validates :key, presence: true, uniqueness: true
   validates :s3_uri, presence: true
   validates :version, presence: true
