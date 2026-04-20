@@ -3,7 +3,7 @@ import React from 'react';
 
 import {FONT_SIZE_OPTIONS} from './shapePalettes';
 
-import styles from './shape-node-toolbar.module.scss';
+import styles from './node-toolbar.module.scss';
 
 export interface FontSizeGroupProps {
   selectedValue: string | undefined;

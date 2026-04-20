@@ -9,6 +9,7 @@ import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 
 import ConnectionHandles from './ConnectionHandles';
+import ImageNodeToolbar from './nodeToolbars/ImageNodeToolbar';
 
 import styles from './image-node.module.scss';
 
@@ -27,6 +28,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
 
   const src = (data.src as string) ?? '';
   const altText = (data.altText as string) ?? '';
+  const showHandles = data.showHandles !== false;
 
   useEffect(() => {
     if (isEditingAlt) {
@@ -77,6 +79,8 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
+      <ImageNodeToolbar nodeId={id} />
+
       <img src={src} alt={altText} className={styles.image} draggable={false} />
 
       {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
@@ -108,7 +112,7 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
         </MuiButton>
       )}
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }

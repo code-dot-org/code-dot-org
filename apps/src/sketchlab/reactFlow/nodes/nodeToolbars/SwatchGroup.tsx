@@ -3,7 +3,7 @@ import React from 'react';
 
 import {ColorSwatch} from './shapePalettes';
 
-import styles from './shape-node-toolbar.module.scss';
+import styles from './node-toolbar.module.scss';
 
 export interface SwatchGroupProps {
   groupLabel: string;

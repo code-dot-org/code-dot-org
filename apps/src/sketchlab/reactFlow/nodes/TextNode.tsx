@@ -7,6 +7,8 @@ import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 
 import ConnectionHandles from './ConnectionHandles';
+import {fontSizePx} from './nodeToolbars/shapePalettes';
+import TextNodeToolbar from './nodeToolbars/TextNodeToolbar';
 
 import styles from './text-node.module.scss';
 
@@ -23,6 +25,17 @@ function TextNode({id, data, selected}: TextNodeProps) {
   const textRef = useRef<HTMLDivElement>(null);
 
   const text = (data.text as string) ?? '';
+  const fontColor = data.fontColor as string | undefined;
+  const fontSize = fontSizePx(data.fontSize as string | undefined);
+  const showHandles = data.showHandles !== false;
+
+  const textStyle: React.CSSProperties = {};
+  if (fontColor) {
+    textStyle.color = fontColor;
+  }
+  if (fontSize !== undefined) {
+    textStyle.fontSize = fontSize;
+  }
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {
@@ -79,9 +92,12 @@ function TextNode({id, data, selected}: TextNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
+      <TextNodeToolbar nodeId={id} />
+
       <div
         ref={textRef}
         className={styles.text}
+        style={textStyle}
         contentEditable={isEditing}
         suppressContentEditableWarning
         onFocus={startEditing}
@@ -94,7 +110,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
         {text}
       </div>
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }

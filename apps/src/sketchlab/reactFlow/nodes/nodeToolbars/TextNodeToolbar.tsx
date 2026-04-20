@@ -4,43 +4,26 @@ import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
 import {
-  BACKGROUND_PALETTE,
-  DEFAULT_BACKGROUND_COLOR,
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
-  DEFAULT_STROKE_COLOR,
   STROKE_FONT_PALETTE,
 } from './shapePalettes';
 import SwatchGroup from './SwatchGroup';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
-interface ShapeNodeToolbarProps {
+interface TextNodeToolbarProps {
   nodeId: string;
 }
 
-export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
+export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData(nodeId);
 
-  const backgroundColor = data.backgroundColor as string | undefined;
-  const strokeColor = data.strokeColor as string | undefined;
   const fontSize = data.fontSize as string | undefined;
   const fontColor = data.fontColor as string | undefined;
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Shape style">
-      <SwatchGroup
-        groupLabel="Background"
-        swatches={BACKGROUND_PALETTE}
-        selectedValue={backgroundColor ?? DEFAULT_BACKGROUND_COLOR}
-        onSelect={value => patchNodeData({backgroundColor: value})}
-      />
-      <SwatchGroup
-        groupLabel="Stroke"
-        swatches={STROKE_FONT_PALETTE}
-        selectedValue={strokeColor ?? DEFAULT_STROKE_COLOR}
-        onSelect={value => patchNodeData({strokeColor: value})}
-      />
+    <NodeToolbarShell nodeId={nodeId} ariaLabel="Text style">
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
         onSelect={value => patchNodeData({fontSize: value})}
