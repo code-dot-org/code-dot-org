@@ -61,8 +61,18 @@ class CourseScript extends React.Component {
   };
 
   onClickHiddenToggle = value => {
-    const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
-    toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+    const {name, selectedSectionId, id, hiddenLessonState, toggleHiddenScript} =
+      this.props;
+    const nextHidden = value === 'hidden';
+    const currentHidden = isScriptHiddenForSection(
+      hiddenLessonState,
+      selectedSectionId,
+      id
+    );
+    if (nextHidden === currentHidden) {
+      return;
+    }
+    toggleHiddenScript(name, selectedSectionId, id, nextHidden);
   };
 
   render() {
