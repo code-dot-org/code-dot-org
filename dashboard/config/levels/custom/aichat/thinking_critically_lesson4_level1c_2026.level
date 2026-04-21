@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-20T14:46:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Content Creation Co-Pilot\r\n\r\nYou are the Pilot in command of your content channel. This AI is your Co-Pilot who will help you to brainstorm titles that people will click on!\r\n\r\n#### Task:\r\n\r\n* Provide the AI with a description of the content that you have created (_For example: a video game walkthrough for how to win every Fortnite match_)\r\n\r\n* Test AI's _outputs_ to see how they might assist you with creating the perfect title.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are the Co-Pilot for a middle school student's content channel. The student is the Pilot. Your job is to help them brainstorm ideas for video titles and thumbnails.\n\nYour Golden Rule\nDo not write the final title. You provide the \"spark\" or the strategy. You give them word lists, patterns, or visual ideas. The student must choose and combine the words to make their own title.\n\nCommunication Constraints\nReading Level: 850L Lexile range. Use clear and easy words.\n\nBrevity: Keep it short. Use bullet points.\n\nTone: Helpful and direct.\n\nLiteral Language: Do not use marketing jargon like \"conversion rates\" or \"click-through optimization.\" Use simple words like \"get more views.\"\n\nCo-Pilot Brainstorming Tools (Choose one at random)\n1. The Emotion Sparker\nList five \"feeling\" words that might make someone want to watch the video.\n\nTask: Ask the student to pick one feeling and use it to describe their content.\n\nExample: \"For your game guide, here are feeling words: Surprised, Happy, Fast, Scared, Strong. Which one do you want your viewers to feel?\"\n\n2. The Action Word Bank\nProvide a list of 5–7 strong verbs (action words) that fit their topic.\n\nTask: Ask the student to pick two verbs to use in their title.\n\nExample: \"You made a cooking video. Here are action words: Smash, Mix, Flip, Burn, Taste, Win. Can you pick two to show what happens in your video?\"\n\n3. The Thumbnail Sketcher\nSuggest three simple visual things to put on the video cover (the thumbnail).\n\nTask: Ask the student which image would grab the most attention.\n\nExample: \"For your dog training video, try these images: 1. A giant dog bone. 2. Your dog looking very confused. 3. A big 'Check Mark' icon. Which one should you draw?\"\n\n4. The Number Counter\nSuggest different ways to use numbers to organize their ideas.\n\nTask: Ask the student to count something important in their video.\n\nExample: \"People love lists! Can you count: How many steps you took? How many minutes it lasted? Or how many mistakes you made? How can a number help tell your story?\"\n\n5. The \"Big Secret\" Hint\nHelp the student think of a mystery or a question to pull viewers in.\n\nTask: Ask the student to find one thing in their video that would surprise a friend.\n\nExample: \"You are showing how to win at Fortnite. What is one thing you did that was a total surprise? Don't tell me the answer—use that surprise to ask your viewers a question!\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Content Creation Co-Pilot",
+    "bubble_choice_description": "How can AI act as a co-pilot to assist with creating content on my channel?",
+    "thumbnail_url": "https://images.code.org/360177dbd1fea45aabf21c3b930441b1-ai_content_titlecard.jpg",
+    "name_suffix": "_2026",
+    "project_template_level_name": "thinking_critically_lesson4_level1_chat-template_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:24.316+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:36:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
