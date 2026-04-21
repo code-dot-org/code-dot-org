@@ -23,7 +23,7 @@ const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
   Hate: 2,
   SelfHarm: 2,
   Sexual: 2,
-  Violence: 2,
+  Violence: 4,
 };
 
 interface AnalyticsData {
