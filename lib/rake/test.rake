@@ -57,6 +57,42 @@ namespace :test do
     end
   end
 
+  # Runs UI tests against AWS Device Farm. Kept separate from regular_ui and
+  # intentionally not wired into ui_all -- currently used for manual trial runs
+  # against the test machine (bundle exec rake test:devicefarm_ui).
+  timed_task_with_logging :devicefarm_ui do
+    ChatClient.log 'Running <b>dashboard</b> UI tests on AWS Device Farm...'
+    # Desktop and mobile each have their own 20-concurrency quota on Device
+    # Farm; run the two groups in parallel threads so they don't share slots.
+    browser_configs = ['Chrome,Firefox', 'iPhone,iPad']
+    failed_browser_counts = Parallel.map(browser_configs, in_threads: browser_configs.size) do |config|
+      RakeUtils.system_with_chat_logging(
+        "cd #{dashboard_dir('test/ui')} &&",
+        'bundle', 'exec', './runner.rb',
+        '--device-farm',
+        '-c', config,
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--parallel', '20',
+        '--magic_retry',
+        '--with-status-page',
+        '--fail_fast'
+      )
+    end
+    failed_browser_count = failed_browser_counts.sum
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Device Farm UI tests for <b>dashboard</b> succeeded.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ Device Farm UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Device Farm UI tests failed"
+    end
+  end
+
   timed_task_with_logging :eyes_ui do
     ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
     eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
