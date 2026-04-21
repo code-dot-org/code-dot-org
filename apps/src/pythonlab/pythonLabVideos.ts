@@ -1,22 +1,18 @@
-import conditionalsUrl from '@cdo/static/json/jsonVideo/examples/Conditionals_V1.json';
-import functionsUrl from '@cdo/static/json/jsonVideo/examples/Functions_V1.json';
-import functionsWithParametersUrl from '@cdo/static/json/jsonVideo/examples/Functions_With_Parameters_V1.json';
-import ifElseUrl from '@cdo/static/json/jsonVideo/examples/If_Else_V1.json';
-import painterObjectUrl from '@cdo/static/json/jsonVideo/examples/Painter_Object_V1.json';
-import variablesUrl from '@cdo/static/json/jsonVideo/examples/Variables_V1.json';
-import whileLoopUrl from '@cdo/static/json/jsonVideo/examples/While_Loops_V1.json';
-
-type JsonVideoFileObject = {
-  description: string;
-  url: string;
-};
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import conditionalsUrl from '@cdo/static/json/jsonVideo/pythonLab/Conditionals_V1.json';
+import functionsUrl from '@cdo/static/json/jsonVideo/pythonLab/Functions_V1.json';
+import functionsWithParametersUrl from '@cdo/static/json/jsonVideo/pythonLab/Functions_With_Parameters_V1.json';
+import ifElseUrl from '@cdo/static/json/jsonVideo/pythonLab/If_Else_V1.json';
+import painterObjectUrl from '@cdo/static/json/jsonVideo/pythonLab/Painter_Object_V1.json';
+import variablesUrl from '@cdo/static/json/jsonVideo/pythonLab/Variables_V1.json';
+import whileLoopUrl from '@cdo/static/json/jsonVideo/pythonLab/While_Loops_V1.json';
 
 /**
  *  Importing from @cdo/static/json doesn't actually import the file but rather a path to
  *  the file. We need to assert the result is a string.
  **/
 
-export const jsonVideoFiles: JsonVideoFileObject[] = [
+export const pythonLabVideoFiles: JsonVideoFileMetadata[] = [
   {
     description:
       'This video covers the basics of variables, describing them as labeled containers or boxes that store information in memory. It introduces three fundamental data types: Integers (Ints), Strings, and Booleans. The speech explains how to assign values using the equal sign and how to use the print function to output these values by referencing the variable name without quotes.',

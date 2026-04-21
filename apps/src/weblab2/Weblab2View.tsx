@@ -34,6 +34,7 @@ import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
+import {weblab2VideoFiles} from './weblab2Videos';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
@@ -187,6 +188,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
+          tutorVideos={weblab2VideoFiles}
         />
       )}
     </div>
