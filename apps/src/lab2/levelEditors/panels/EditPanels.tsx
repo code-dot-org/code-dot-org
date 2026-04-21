@@ -35,6 +35,7 @@ function sanitizePanels(panels: Panel[], levelName: string) {
 
 interface EditPanelsProps {
   initialPanels: Panel[];
+  initialUseLinks?: boolean;
   levelName: string;
 }
 
@@ -43,11 +44,13 @@ interface EditPanelsProps {
  */
 const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
   initialPanels,
+  initialUseLinks = false,
   levelName,
 }) => {
   const [panels, setPanels] = useState<Panel[]>(
     sanitizePanels(initialPanels, levelName)
   );
+  const [useLinks, setUseLinks] = useState<boolean>(initialUseLinks);
   const [toastMessage, setToastMessage] = useState('');
   const [toastIndex, setToastIndex] = useState(0);
 
@@ -131,6 +134,12 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         name="level[level_data]"
         value={JSON.stringify({})}
       />
+      <input
+        type="hidden"
+        id="level_use_links"
+        name="level[use_links]"
+        value={useLinks ? 'true' : 'false'}
+      />
       <Typography variant="h3" gutterBottom>
         Preview
       </Typography>
@@ -146,9 +155,21 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
               offerBrowserTts={false}
               resetOnChange={false}
               levelId={null}
+              useLinks={useLinks}
             />
           </ThemeProvider>
         </div>
+      </div>
+      <div className={moduleStyles.fieldRow}>
+        <ThemeProvider>
+          <Checkbox
+            checked={useLinks}
+            name="use_links"
+            label="Use links for navigation"
+            size="s"
+            onChange={event => setUseLinks(event.target.checked)}
+          />
+        </ThemeProvider>
       </div>
       {panels.length > 0 && (
         <div className={moduleStyles.addButtonContainer}>
@@ -168,6 +189,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             panel={panel}
             index={index}
             allPanels={panels}
+            useLinks={useLinks}
             updatePanel={updatePanel}
             movePanel={movePanel}
             deletePanel={deletePanel}
@@ -192,6 +214,7 @@ interface EditPanelProps {
   panel: Panel;
   index: number;
   allPanels: Panel[];
+  useLinks: boolean;
   updatePanel: (panel: Panel) => void;
   movePanel: (key: string, direction: 'up' | 'down') => void;
   deletePanel: (key: string) => void;
@@ -202,6 +225,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   panel,
   index,
   allPanels,
+  useLinks,
   updatePanel,
   movePanel,
   deletePanel,
@@ -335,100 +359,121 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           }
         />
       </div>
-      <div className={moduleStyles.linksSection}>
-        <Typography variant="h6" gutterBottom>
-          Links
-        </Typography>
-        {links.map((link, linkIndex) => (
-          <div
-            key={linkIndex}
-            className={classNames(moduleStyles.fieldRow, moduleStyles.linkRow)}
-          >
-            <label>
-              Text
-              <textarea
-                value={link.text}
-                onChange={e =>
-                  updateLink(linkIndex, {...link, text: e.target.value})
-                }
-              />
-            </label>
-            <label className={moduleStyles.linkSliderHorizontal}>
-              X: {link.x}%
-              <input
-                type="range"
-                min={0}
-                max={100}
-                value={link.x}
-                onChange={e =>
-                  updateLink(linkIndex, {
-                    ...link,
-                    x: Number(e.target.value),
-                  })
-                }
-              />
-            </label>
-            <label className={moduleStyles.linkSliderVertical}>
-              Y: {link.y}%
-              <input
-                type="range"
-                min={0}
-                max={100}
-                value={link.y}
-                onChange={e =>
-                  updateLink(linkIndex, {
-                    ...link,
-                    y: Number(e.target.value),
-                  })
-                }
-              />
-            </label>
-            <label className={moduleStyles.linkSliderHorizontal}>
-              Width: {link.width ?? DEFAULT_PANEL_LINK_WIDTH}%
-              <input
-                type="range"
-                min={1}
-                max={100}
-                value={link.width ?? DEFAULT_PANEL_LINK_WIDTH}
-                onChange={e =>
-                  updateLink(linkIndex, {
-                    ...link,
-                    width: Number(e.target.value),
-                  })
-                }
-              />
-            </label>
-            <SimpleDropdown
-              labelText="Target panel"
-              name={`link-target-${linkIndex}`}
-              size="s"
-              selectedValue={link.key}
-              onChange={e =>
-                updateLink(linkIndex, {...link, key: e.target.value})
-              }
-              items={allPanels.map((p, i) => ({
-                value: p.key,
-                text: `Panel ${i + 1}${p.key === panel.key ? ' (self)' : ''}`,
-              }))}
-            />
-            <button
-              type="button"
-              className={moduleStyles.deleteButton}
-              onClick={() => deleteLink(linkIndex)}
-              aria-label="Delete link"
+      {useLinks && (
+        <div className={moduleStyles.fieldRow}>
+          <Checkbox
+            checked={!!panel.showContinueButton}
+            name="showContinueButton"
+            label="Show Continue button on this panel"
+            size="s"
+            onChange={event =>
+              updatePanel({
+                ...panel,
+                showContinueButton: event.target.checked,
+              })
+            }
+          />
+        </div>
+      )}
+      {useLinks && (
+        <div className={moduleStyles.linksSection}>
+          <Typography variant="h6" gutterBottom>
+            Links
+          </Typography>
+          {links.map((link, linkIndex) => (
+            <div
+              key={linkIndex}
+              className={classNames(
+                moduleStyles.fieldRow,
+                moduleStyles.linkRow
+              )}
             >
-              <FontAwesomeV6Icon iconName="trash" />
-            </button>
-          </div>
-        ))}
-        <Button
-          type="button"
-          onClick={addLink}
-          text="Add Link"
-          color="gray"
-          icon="plus"
-        />
-      </div>
+              <label>
+                Text
+                <textarea
+                  value={link.text}
+                  onChange={e =>
+                    updateLink(linkIndex, {...link, text: e.target.value})
+                  }
+                />
+              </label>
+              <label className={moduleStyles.linkSliderHorizontal}>
+                X: {link.x}%
+                <input
+                  type="range"
+                  min={0}
+                  max={100}
+                  value={link.x}
+                  onChange={e =>
+                    updateLink(linkIndex, {
+                      ...link,
+                      x: Number(e.target.value),
+                    })
+                  }
+                />
+              </label>
+              <label className={moduleStyles.linkSliderVertical}>
+                Y: {link.y}%
+                <input
+                  type="range"
+                  min={0}
+                  max={100}
+                  value={link.y}
+                  onChange={e =>
+                    updateLink(linkIndex, {
+                      ...link,
+                      y: Number(e.target.value),
+                    })
+                  }
+                />
+              </label>
+              <label className={moduleStyles.linkSliderHorizontal}>
+                Width: {link.width ?? DEFAULT_PANEL_LINK_WIDTH}%
+                <input
+                  type="range"
+                  min={1}
+                  max={100}
+                  value={link.width ?? DEFAULT_PANEL_LINK_WIDTH}
+                  onChange={e =>
+                    updateLink(linkIndex, {
+                      ...link,
+                      width: Number(e.target.value),
+                    })
+                  }
+                />
+              </label>
+              <SimpleDropdown
+                labelText="Target panel"
+                name={`link-target-${linkIndex}`}
+                size="s"
+                selectedValue={link.key}
+                onChange={e =>
+                  updateLink(linkIndex, {...link, key: e.target.value})
+                }
+                items={allPanels.map((p, i) => ({
+                  value: p.key,
+                  text: `Panel ${i + 1}${p.key === panel.key ? ' (self)' : ''}`,
+                }))}
+              />
+              <button
+                type="button"
+                className={moduleStyles.deleteButton}
+                onClick={() => deleteLink(linkIndex)}
+                aria-label="Delete link"
+              >
+                <FontAwesomeV6Icon iconName="trash" />
+              </button>
+            </div>
+          ))}
+          <Button
+            type="button"
+            onClick={addLink}
+            text="Add Link"
+            color="gray"
+            icon="plus"
+          />
+        </div>
+      )}
       {last && (
         <div className={moduleStyles.fieldRow}>
           <label htmlFor={panel.nextUrl}>

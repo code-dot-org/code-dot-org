@@ -2,6 +2,9 @@ import {LevelProperties} from '../lab2/types';
 
 export interface PanelsLevelProperties extends LevelProperties {
   panels?: Panel[];
+  // Rails serializes boolean properties as the string "true" or "false", so
+  // callers must coerce before passing to PanelsView.
+  useLinks?: boolean | string;
 }
 
 export type PanelLayout =
@@ -19,6 +22,9 @@ export interface Panel {
   nextUrl?: string;
   layout?: PanelLayout;
   links?: PanelLink[];
+  // Only honored when the level is in links mode. When true, the Continue
+  // button is shown on this panel.
+  showContinueButton?: boolean;
 
   // The following fields are exploratory and not yet exposed in levelbuilder.
   dark?: boolean;

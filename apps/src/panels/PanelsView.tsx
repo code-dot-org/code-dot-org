@@ -45,6 +45,10 @@ interface PanelsProps {
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
+  // When true, the level uses links for navigation: bubbles are hidden and
+  // the Next/Continue button is only shown on panels that opt in via
+  // `showContinueButton`.
+  useLinks?: boolean;
   onChangePanel?: (
     source: 'button' | 'bubble',
     currentPanel: number,
@@ -69,6 +73,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerBrowserTts,
   levelId,
   resetOnChange = true,
+  useLinks = false,
   onChangePanel,
   onClickContinue,
 }) => {
@@ -120,7 +125,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
-    if (currentPanelIndex < panels.length - 1) {
+    // In link mode the button always continues past the level — within-level
+    // navigation is handled by the links themselves.
+    if (!useLinks && currentPanelIndex < panels.length - 1) {
       changePanel(currentPanelIndex + 1, 'button');
     } else {
       if (onClickContinue) {
@@ -131,7 +138,14 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       }
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
+  }, [
+    useLinks,
+    changePanel,
+    panels,
+    currentPanelIndex,
+    onContinue,
+    onClickContinue,
+  ]);
 
   const handleBubbleClick = useCallback(
     (index: number) => {
@@ -148,13 +162,6 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       }
     },
     [panels, changePanel]
-  );
-
-  // When any panel has links, navigation happens through links and the
-  // bottom bubbles are suppressed.
-  const hasLinks = useMemo(
-    () => panels.some(p => p.links && p.links.length > 0),
-    [panels]
   );
 
   // Reset to first panel whenever panels content changes if specified.
@@ -190,12 +197,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const showTyping =
     panel?.typing || queryParams('panels-show-typing') === 'true';
 
-  // When the current panel has its own links, the user navigates through the
-  // links instead of the Next/Continue button, so hide it.
-  const hasOwnLinks = !!panel?.links && panel.links.length > 0;
+  // In legacy (non-link) mode the button is always eligible. In link mode, a
+  // panel opts in to the Continue button via `showContinueButton`.
+  const buttonEligible = useLinks ? !!panel?.showContinueButton : true;
 
   // When typing, only show the button when the typing is done.
-  const showButton = (!showTyping || typingDone) && !hasOwnLinks;
+  const showButton = (!showTyping || typingDone) && buttonEligible;
 
   useEffect(() => {
     if (showButton) {
@@ -229,7 +236,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     : styles.textTopRight;
 
   const buttonText =
-    currentPanelIndex < panels.length - 1
+    !useLinks && currentPanelIndex < panels.length - 1
       ? commonI18n.next()
       : commonI18n.continue();
 
@@ -272,21 +279,22 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             }}
           />
         )}
-        {panel.links?.map((link, index) => (
-          <button
-            type="button"
-            key={`link-${index}`}
-            className={classNames(styles.link, panel.dark && styles.linkDark)}
-            style={{
-              left: `${link.x}%`,
-              top: `${link.y}%`,
-              width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
-            }}
-            onClick={() => handleLinkClick(link)}
-          >
-            <EnhancedSafeMarkdown markdown={link.text} />
-          </button>
-        ))}
+        {useLinks &&
+          panel.links?.map((link, index) => (
+            <button
+              type="button"
+              key={`link-${index}`}
+              className={classNames(styles.link, panel.dark && styles.linkDark)}
+              style={{
+                left: `${link.x}%`,
+                top: `${link.y}%`,
+                width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
+              }}
+              onClick={() => handleLinkClick(link)}
+            >
+              <EnhancedSafeMarkdown markdown={link.text} />
+            </button>
+          ))}
         {panel.text && (
           <div
             ref={contentRef}
@@ -347,7 +355,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </MuiButton>
         )}
 
-        {panels.length > 1 && !hasLinks && (
+        {panels.length > 1 && !useLinks && (
           <div id="panels-bubbles">
             {Array.from(Array(panels.length).keys()).map(index => {
               return (
