@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -30,6 +31,7 @@ import teacherSections, {
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 // 6 seconds
 const FLASH_DURATION = 6 * 1000;
@@ -93,15 +95,17 @@ $(document).ready(function () {
 
   createReactRoot(
     <Provider store={store}>
-      {sections.length === 0 ? (
-        // If a teacher has no sections, we will send them directly to the homepage to bypass
-        // all of the section loading logic in the TeacherNavigationRouter.
+      {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
         <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
         <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
       )}
       <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
-    document.getElementById('teacher-dashboard')
+    document.getElementById('teacher-dashboard'),
+    {
+      legacyReactDomRender: true,
+    }
   );
+  displayDifferentiationChat();
 });

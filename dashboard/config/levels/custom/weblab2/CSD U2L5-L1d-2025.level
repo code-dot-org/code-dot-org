@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-06T20:25:03.000Z",
   "level_num": "custom",
@@ -44,9 +45,21 @@
         "1"
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjYEX2rqV9kb\nX9iRglIeF9zLtjQmbBZEG2kuKruS5HJwBLkmq34JrMvB1Xk/AgC/w1o4FPzS\nd4+tSCsM04tIELNsjfPuWOXBTiaKhjpHFIaE7/1CEby96wYwL0FhSvYdZekR\nTXn/HKw2OZEq/3PAhkEJ1GuNWYTgHxhJppV2m1gtSS44FLkc4i9N2UWnGJJ9\nJg6YWEKdiNGvZsjmHibSz+PnjoHIIeAep08XQ3uOYV5IYdNJqzg0FsOYOO02\nRZKd3im1IBsoY3VOJkPIYfDjkinAhAGNZYcIBU83RExeP9v2N7CMcftT2JJJ\nUQLjXWoX1GMafwU5ooQ7t9Zhs/y5XHx6Lgl9eH/nFphaWkc9lO0G3UhmBNId\nBZmtDV5Gx5JmCMXRxdoMTFw1lN8+zhIxJ3qv4tTuC4T90A5oHpYpThDsy8Vc\neT7TacJxarOm95hkgSCRmQ6V+kXTYgufXEt2yBNyyE5lTLcMd2tn37UAq6rQ\n8IMqWShCDlnZN4oTn0PbKPsjAGQDrbPDskDZ2Wd+vc+UkytGNyVcV8Xo7fNv\n65Qaknux9KMpjsB5UI3/KZOePra7vcy+q/mBlBuBwgOpKGqcUEu6rDb4dJj8\nWNQFRTlqSG319k1ygG80L+igKXmEY0pCeezF/yqUraM2lM+eLwSgiqSzQYIL\nM1P8n0cv7Dv6p+c5p7J+RyACNrYTHCyNX37JZZgdp8smCk3jwCleA3DwKZJO\nPrD5Dbu9Y57aHuSu86huIWqpzR3eGpenoxGlSZcgcuQQvl7rXkkPJpBaHLnP\nw2hVxH8YlsdeCM+d3GY1z1zr2uroch+RRmZRbGnh3hoqqQZHnXDHista0aNe\noxdXTSq96o4b2ezyNsT6RxR2Cm0e/i7IvDlSXafTrb4qhLxE6q04og6pV11J\naigzlnm5kF+eqSYF2xGHj8w8ijLeoj3VbLR8Ch3nRubPIU/AhXPjvnvxWIOc\nkgV2HzH7MHMe+CSPEMIu8grYAwfT5h3/2H0TlHIgJppnGEH4EJ+rgvsL+aDC\nuZZiRYKN7N95Kz9wP8R93JDQL81N4YpHeDOtnvlS9wIaoJdQ2TDT+zjMc4sN\nN2844X2LYFanNmUWHvX/ro5fZ6dzw95yRRmhdkd23fCTgVD6KsLVTIozoL6Y\nT4UoHfWnKomAuGOMrU/nNI/1HIy4LXYNmXgMnc3OeEzO3cTQbwrMNs6lnlDu\ng5tClRnZEKWy6eElarC4TnIGvpbWFOHtdLXLcxIHBwSgr8EdrQVJZCyQOxnI\ndNog8LcSwbBL8EW3d242JcHRyd67AlKk\n"
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjYEX2rqV9kb\nX9iRglIeF9zLtjQmbBZEG2kuKruS5HJwBLkmq34JrMvB1Xk/AgC/w1o4FPzS\nd4+tSCsM04tIELNsjfPuWOXBTiaKhjpHFIaE7/1CEby96wYwL0FhSvYdZekR\nTXn/HKw2OZEq/3PAhkEJ1GuNWYTgHxhJppV2m1gtSS44FLkc4i9N2UWnGJJ9\nJg6YWEKdiNGvZsjmHibSz+PnjoHIIeAep08XQ3uOYV5IYdNJqzg0FsOYOO02\nRZKd3im1IBsoY3VOJkPIYfDjkinAhAGNZYcIBU83RExeP9v2N7CMcftT2JJJ\nUQLjXWoX1GMafwU5ooQ7t9Zhs/y5XHx6Lgl9eH/nFphaWkc9lO0G3UhmBNId\nBZmtDV5Gx5JmCMXRxdoMTFw1lN8+zhIxJ3qv4tTuC4T90A5oHpYpThDsy8Vc\neT7TacJxarOm95hkgSCRmQ6V+kXTYgufXEt2yBNyyE5lTLcMd2tn37UAq6rQ\n8IMqWShCDlnZN4oTn0PbKPsjAGQDrbPDskDZ2Wd+vc+UkytGNyVcV8Xo7fNv\n65Qaknux9KMpjsB5UI3/KZOePra7vcy+q/mBlBuBwgOpKGqcUEu6rDb4dJj8\nWNQFRTlqSG319k1ygG80L+igKXmEY0pCeezF/yqUraM2lM+eLwSgiqSzQYIL\nM1P8n0cv7Dv6p+c5p7J+RyACNrYTHCyNX37JZZgdp8smCk3jwCleA3DwKZJO\nPrD5Dbu9Y57aHuSu86huIWqpzR3eGpenoxGlSZcgcuQQvl7rXkkPJpBaHLnP\nw2hVxH8YlsdeCM+d3GY1z1zr2uroch+RRmZRbGnh3hoqqQZHnXDHista0aNe\noxdXTSq96o4b2ezyNsT6RxR2Cm0e/i7IvDlSXafTrb4qhLxE6q04og6pV11J\naigzlnm5kF+eqSYF2xGHj8w8ijLeoj3VbLR8Ch3nRubPIU/AhXPjvnvxWIOc\nkgV2HzH7MHMe+CSPEMIu8grYAwfT5h3/2H0TlHIgJppnGEH4EJ+rgvsL+aDC\nuZZiRYKN7N95Kz9wP8R93JDQL81N4YpHeDOtnvlS9wIaoJdQ2TDT+zjMc4sN\nN2844X2LYFanNmUWHvX/ro5fZ6dzw95yRRmhdkd23fCTgVD6KsLVTIozoL6Y\nT4UoHfWnKomAuGOMrU/nNI/1HIy4LXYNmXgMnc3OeEzO3cTQbwrMNs6lnlDu\ng5tClRnZEKWy6eElarC4TnIGvpbWFOHtdLXLcxIHBwSgr8EdrQVJZCyQOxnI\ndNog8LcSwbBL8EW3d242JcHRyd67AlKk\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-01-06 20:25:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-06 20:25:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-06 20:25:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-06 20:25:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-24 21:50:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

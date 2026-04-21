@@ -43,8 +43,9 @@ Dashboard::Application.configure do
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true
 
-  # Disable request forgery protection in test environment.
-  config.action_controller.allow_forgery_protection = false
+  # Enable request forgery protection in the test environment. Unit tests
+  # disable it at the runtime layer in test_helper.rb.
+  config.action_controller.allow_forgery_protection = true
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -68,7 +69,7 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  if CDO.running_web_application?
+  if CDO.test_system? && !ENV['UNIT_TEST']
     # Use default logging formatter so that PID and timestamp are not suppressed.
     config.log_formatter = Logger::Formatter.new
 

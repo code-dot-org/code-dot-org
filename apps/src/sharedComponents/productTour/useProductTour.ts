@@ -1,8 +1,10 @@
-import {useMemo} from 'react';
-import Shepherd, {StepOptions, Tour} from 'shepherd.js';
+import {useMemo, useRef} from 'react';
+import {StepOptions, Tour} from 'shepherd.js';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
+import {createTourWithSteps} from './productTourHelpers';
 
 export interface UseProductTourProps {
   getSteps: (tour: Tour) => StepOptions[];
@@ -21,7 +23,6 @@ const TOUR_HIDDEN_FLAG = 'hideProductTours';
 // Sets up a product tour using Shepherd.js: https://docs.shepherdjs.dev/guides/usage/
 // A tour will only be returned if the localStorageKey is not set to 'yes' and tourAvailable is true,
 // otherwise we return null for the tour.
-// FOR DEMO PURPOSES ONLY: ONLY USE BEHIND AN EXPERIMENT FLAG FOR NOW
 const useProductTour = ({
   getSteps,
   localStorageKey,
@@ -31,6 +32,15 @@ const useProductTour = ({
   onCancel,
   additionalStepOptions,
 }: UseProductTourProps) => {
+  // Store callbacks in refs so the tour instance doesn't need to be recreated
+  // when callback identity changes between renders.
+  const onStartRef = useRef(onStart);
+  onStartRef.current = onStart;
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
+  const onCancelRef = useRef(onCancel);
+  onCancelRef.current = onCancel;
+
   const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
     const urlParams = new URLSearchParams(window.location.search);
@@ -38,26 +48,13 @@ const useProductTour = ({
     if (!tourAvailable || tourSeen === 'yes' || allToursHidden) {
       return null;
     }
-    const tour = new Shepherd.Tour({
-      useModalOverlay: true,
-      exitOnEsc: true,
-      keyboardNavigation: true,
-      defaultStepOptions: {
-        cancelIcon: {enabled: true},
-        scrollTo: true,
-        classes: 'custom-shepherd-step-container',
-        ...(additionalStepOptions ?? {}),
-      },
-    });
-    tour.addSteps(getSteps(tour));
+    const tour = createTourWithSteps(getSteps, additionalStepOptions);
 
-    if (onStart) {
-      tour.on('start', onStart);
-    }
+    tour.on('start', () => onStartRef.current && onStartRef.current());
 
     tour.on('complete', () => {
       trySetLocalStorage(localStorageKey, 'yes');
-      onComplete && onComplete();
+      onCompleteRef.current && onCompleteRef.current();
     });
 
     tour.on('cancel', () => {
@@ -65,18 +62,10 @@ const useProductTour = ({
         ? tour.steps.indexOf(tour.currentStep)
         : 0;
       trySetLocalStorage(localStorageKey, 'yes');
-      onCancel && onCancel(currentIndex);
+      onCancelRef.current && onCancelRef.current(currentIndex);
     });
     return tour;
-  }, [
-    additionalStepOptions,
-    getSteps,
-    localStorageKey,
-    onCancel,
-    onComplete,
-    onStart,
-    tourAvailable,
-  ]);
+  }, [additionalStepOptions, getSteps, localStorageKey, tourAvailable]);
 
   return {tour};
 };

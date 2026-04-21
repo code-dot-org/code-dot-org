@@ -33,6 +33,20 @@ var msg = require('@cdo/locale');
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
 
+let cachedSelectedAnimationsByUrl = null;
+let cachedSelectedAnimationsList = [];
+
+function getSelectedAnimations(state) {
+  const selectedAnimationsByUrl = state.animationPicker.selectedAnimations;
+  if (selectedAnimationsByUrl === cachedSelectedAnimationsByUrl) {
+    return cachedSelectedAnimationsList;
+  }
+
+  cachedSelectedAnimationsByUrl = selectedAnimationsByUrl;
+  cachedSelectedAnimationsList = Object.values(selectedAnimationsByUrl);
+  return cachedSelectedAnimationsList;
+}
+
 export const PICKER_TYPE = makeEnum(
   'spritelab',
   'gamelab',
@@ -92,7 +106,24 @@ class AnimationPicker extends React.Component {
     showFlaggedModal: false,
     pendingUploadData: null,
     flaggedModalError: null,
+    // Stable for the duration of one open cycle; regenerated on each
+    // visible false ->true transition so subsequent opens get a fresh URL.
+    uploadUrl:
+      '/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png',
   };
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.visible && this.props.visible) {
+      this.setState({
+        uploadUrl:
+          '/v3/animations/' +
+          this.props.channelId +
+          '/' +
+          createUuid() +
+          '.png',
+      });
+    }
+  }
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
 
@@ -198,13 +229,12 @@ class AnimationPicker extends React.Component {
     this.setState({pendingUploadData: data});
 
     try {
-      const ext = file.name.split('.').pop()?.toLowerCase() || '';
       const moderationStatus = await moderateImage(
         file,
-        ext,
         this.props.projectType,
         {
           uploaderType: 'AnimationPicker',
+          assetUrl: this.state.uploadUrl,
         }
       );
       if (moderationStatus === 'flagged') {
@@ -280,14 +310,9 @@ class AnimationPicker extends React.Component {
         style={styles.dialog}
       >
         <HiddenUploader
+          key={this.state.uploadUrl}
           ref="uploader"
-          toUrl={
-            '/v3/animations/' +
-            this.props.channelId +
-            '/' +
-            createUuid() +
-            '.png'
-          }
+          toUrl={this.state.uploadUrl}
           allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
@@ -316,7 +341,7 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    selectedAnimations: getSelectedAnimations(state),
     uploadWarningShowing: state.animationPicker.uploadWarningShowing,
     uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),

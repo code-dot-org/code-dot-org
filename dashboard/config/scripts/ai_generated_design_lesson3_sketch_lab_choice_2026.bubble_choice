@@ -1,6 +1,6 @@
 name 'ai-generated-design-lesson3-sketch-lab-choice_2026'
-display_name 'Plan Your AI Prompt'
-description 'Plan your prompt for AI Tutor in a markdown file. Choose from one of the personas below and design a web app to meet their needs.'
+display_name 'Build Your Web Page with AI'
+description 'Choose from one of the personas below and design a web page to meet their needs.'
 
 sublevels
 level 'ai-generated-design-lesson3-level1-prompting_2026'

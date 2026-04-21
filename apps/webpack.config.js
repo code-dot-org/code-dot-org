@@ -210,7 +210,6 @@ const APPLICATION_ALIASES = {
 const LOCALE_ALIASES = {
   '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
   ...Object.fromEntries([
-    localeDoNotImport('@cdo/aichat/locale'),
     localeDoNotImport('@cdo/applab/locale'),
     localeDoNotImport('@cdo/codebridge/locale'),
     localeDoNotImport('@cdo/javalab/locale'),
@@ -220,7 +219,6 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
-    localeDoNotImport('@cdo/sketchlab/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
     localeDoNotImport('@cdo/weblab2/locale'),
@@ -258,6 +256,11 @@ const WEBPACK_BASE_CONFIG = {
     alias: {
       ...WEBPACK_ALIASES,
       serialport: false,
+      // Force a single @mui/material instance so that the MUI ThemeProvider
+      // context from createReactRoot reaches component-library components.
+      // Without this, the portal-linked component-library resolves to its
+      // own node_modules/@mui/material (a different React context).
+      '@mui/material': p('node_modules/@mui/material'),
     },
   },
   module: {
@@ -621,6 +624,7 @@ function createWebpackConfig({
                 test(module) {
                   return [
                     '@babel/polyfill/noConflict',
+                    '@mui',
                     'immutable',
                     'lodash',
                     'moment',

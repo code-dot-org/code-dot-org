@@ -28,7 +28,7 @@ export default class DownloadParentLetter extends Component {
           target="_blank"
           color={Button.ButtonColor.gray}
           text={i18n.downloadParentLetter()}
-          icon="file-text"
+          icon="file-lines"
         />
       </div>
     );

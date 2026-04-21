@@ -21,6 +21,7 @@ class ProgressTable extends React.Component {
     isSummaryView: PropTypes.bool.isRequired,
     groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     minimal: PropTypes.bool,
+    isOnLevelView: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -39,7 +40,8 @@ class ProgressTable extends React.Component {
   }
 
   render() {
-    const {isSummaryView, isPlc, groupedLessons, minimal} = this.props;
+    const {isSummaryView, isPlc, groupedLessons, minimal, isOnLevelView} =
+      this.props;
 
     if (
       groupedLessons.length === 1 &&
@@ -53,6 +55,7 @@ class ProgressTable extends React.Component {
             <SummaryProgressTable
               groupedLesson={groupedLessons[0]}
               minimal={minimal}
+              isOnLevelView={isOnLevelView}
             />
           </div>
           <div style={isSummaryView ? styles.hidden : {}}>
@@ -69,6 +72,7 @@ class ProgressTable extends React.Component {
               isPlc={isPlc}
               groupedLesson={group}
               isSummaryView={isSummaryView}
+              isOnLevelView={isOnLevelView}
             />
           ))}
         </div>

@@ -12,7 +12,7 @@ function Spinner() {
 function ExclamationTriangle() {
   return (
     <FontAwesome
-      icon="exclamation-triangle"
+      icon="triangle-exclamation"
       className="fa-2x"
       title={i18n.loadingError()}
     />

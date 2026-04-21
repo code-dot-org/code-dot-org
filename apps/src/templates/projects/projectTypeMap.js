@@ -21,7 +21,7 @@ export const PROJECT_TYPE_MAP = {
   game_design: i18n.projectTypeGameDesign(),
   gamelab: i18n.projectTypeGamelab(),
   playlab: i18n.projectTypePlaylab(),
-  weblab: i18n.projectTypeWeblab(),
+  weblab: 'Web Lab (legacy)',
   bounce: i18n.projectTypeBounce(),
   flappy: i18n.projectTypeFlappy(),
   starwars: i18n.projectTypeStarwars(),
@@ -46,7 +46,7 @@ export const PROJECT_TYPE_MAP = {
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),
   music_dance_ai: 'Mix & Move with AI',
-  weblab2: 'Web Lab 2',
+  weblab2: i18n.projectTypeWeblab(),
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {

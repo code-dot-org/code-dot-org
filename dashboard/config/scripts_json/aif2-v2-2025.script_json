@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-12 16:34:42 UTC",
+    "serialized_at": "2026-03-26 19:54:41 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11053,6 +11053,17 @@
       }
     },
     {
+      "name": "Facilitating AI-Assisted Coding",
+      "url": "https://docs.google.com/document/d/1Kpb43xsoG0AoWxOCwSFkO8nBhr86lutPynaUTxyl8nY/edit?usp=sharing",
+      "key": "facilitating_ai-assisted_coding",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "facilitating_ai-assisted_coding"
+      }
+    },
+    {
       "name": "Foundations of AI Programming Unit Guide",
       "url": "https://docs.google.com/document/d/1m6dHtb5PClNJWkmQb-ZWhcfDbCV1ibiJq7ehd2-QkGg/edit?usp=drivesdk",
       "key": "foundations_of_ai_programming_unit_guide",
@@ -11100,6 +11111,17 @@
       },
       "seeding_key": {
         "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "name": "Getting Unstuck with AI Tutor",
+      "url": "https://docs.google.com/document/d/1XIqU8e0gC1ANOlANdMnqlLZQar0fd1ZritRTsmw4m5k/edit?usp=sharing",
+      "key": "getting_unstuck_with_ai_tutor",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "getting_unstuck_with_ai_tutor"
       }
     },
     {
@@ -11162,6 +11184,17 @@
       },
       "seeding_key": {
         "resource.key": "planning_a_school_event"
+      }
+    },
+    {
+      "name": "Prompting Guides",
+      "url": "https://docs.google.com/document/d/1Wawk2bmHazLBnT-q7U4W0GuW8tFO2XOcyUWMQmF5pO8/edit?usp=sharing",
+      "key": "prompting_guides",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "prompting_guides"
       }
     },
     {
@@ -11592,7 +11625,25 @@
     },
     {
       "seeding_key": {
+        "resource.key": "facilitating_ai-assisted_coding",
+        "script.name": "aif2-v2-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "foundations_of_ai_programming_unit_guide",
+        "script.name": "aif2-v2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "getting_unstuck_with_ai_tutor",
+        "script.name": "aif2-v2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "prompting_guides",
         "script.name": "aif2-v2-2025"
       }
     },

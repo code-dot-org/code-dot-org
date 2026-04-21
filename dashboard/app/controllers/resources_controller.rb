@@ -5,7 +5,13 @@ class ResourcesController < ApplicationController
 
   # GET /resources/search
   def search
-    render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
+    course_version_id =
+      if params[:forJitPl]
+        JitPlConcept.jit_pl_course_version.id
+      else
+        params[:courseVersionId]
+      end
+    render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], course_version_id)
   end
 
   # PUT /resources
@@ -22,13 +28,20 @@ class ResourcesController < ApplicationController
       curriculum_category: new_resource_params[:curriculum_category],
       include_in_pdf: new_resource_params[:include_in_pdf]
     )
-    if new_resource_params[:course_version_id]
+    if params[:forJitPl]
+      course_version = JitPlConcept.jit_pl_course_version
+      unless course_version
+        render status: :bad_request, json: {error: "JIT PL course version not found"}
+        return
+      end
+      resource.course_version = course_version
+    elsif new_resource_params[:course_version_id]
       course_version = CourseVersion.find_by_id(new_resource_params[:course_version_id])
       unless course_version
         render status: :bad_request, json: {error: "course version not found"}
         return
       end
-      resource.course_version = course_version if course_version
+      resource.course_version = course_version
     end
     if resource.save
       resource.serialize_scripts

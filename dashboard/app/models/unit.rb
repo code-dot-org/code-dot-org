@@ -84,7 +84,7 @@ class Unit < ApplicationRecord
               :levels_child_levels
             ]
           },
-          :lesson,
+          {lesson: :rubrics},
           :callouts
         ],
         lessons: [
@@ -112,7 +112,8 @@ class Unit < ApplicationRecord
           :objectives,
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
-          :opportunity_standards
+          :opportunity_standards,
+          :jit_pl_concepts
         ],
         unit_group_units: {
           unit_group: :course_version
@@ -351,6 +352,12 @@ class Unit < ApplicationRecord
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
+    # Unit caching is designed for use within the running web application, but we
+    # can't easily limit it to that scenario until the CDO.running_web_application?
+    # helper is fixed (see https://github.com/code-dot-org/code-dot-org/pull/71525).
+    # In the interim, make sure we skip caching during rake seed tasks, which
+    # sometimes break when caching is enabled.
+    return false if File.basename($0) == 'rake'
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -1607,7 +1614,7 @@ class Unit < ApplicationRecord
       :curriculum_umbrella,
       :weekly_instructional_minutes,
       :content_area,
-      :topic_tags
+      :topic_tags,
     ]
     boolean_keys = [
       :has_unnumbered_lessons,

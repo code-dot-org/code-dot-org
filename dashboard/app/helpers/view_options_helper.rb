@@ -42,6 +42,7 @@ module ViewOptionsHelper
     :azure_speech_service_voices,
     :authenticity_token,
     :disallowed_html_tags,
+    :disallowed_html_attrs,
     :backpack_channel,
     :backpack_enabled,
     :level_requires_channel,

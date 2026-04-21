@@ -1,0 +1,12 @@
+{
+  "key": "lesson-tutor-test-lesson-1-part-1-html-v2",
+  "description": "Dan generated this video for testing AI Tutor+ videos",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/lesson-tutor-test-lesson-1-part-1-html-v2.json",
+  "labs": [],
+  "json_schema_version": 1,
+  "audience": "student",
+  "objective_keys": [
+    "0aea3d8e-1d5d-4a31-b3c5-fd3ac1377dbd",
+    "d7a43662-a068-4211-9847-57553f3db2bf"
+  ]
+}

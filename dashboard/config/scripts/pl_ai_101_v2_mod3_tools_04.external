@@ -1,0 +1,23 @@
+name 'pl-ai-101-V2-mod3-tools-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Tools Integrated into Everyday Platforms
+
+#### In addition to standalone AI tools designed for education, AI is increasingly being built directly into the platforms educators already use—such as Google Docs, Microsoft Word, email tools, and learning management systems.
+
+#### Because these tools are embedded in familiar platforms, they are often:
+* #### Easier to access and use during everyday tasks
+* #### More seamlessly integrated into lesson planning, communication, and feedback
+* #### Used more frequently, sometimes without intentional planning
+
+#### However, unlike education-specific tools, these features may not always include the same guardrails, visibility, or controls. As a result, it’s especially important to apply the same principles you’ve explored in this module:
+* #### Use AI intentionally
+* #### Review and revise outputs
+* #### Protect student privacy
+* #### Maintain professional judgment
+
+>#### **💬 Quick Reflection:** Where have you notice AI being integrated into an existing tool you use?
+
+MARKDOWN

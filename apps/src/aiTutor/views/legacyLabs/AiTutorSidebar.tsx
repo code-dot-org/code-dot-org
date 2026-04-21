@@ -18,6 +18,7 @@ interface AiTutorSidebarProps {
   suggestedPrompts?: Array<AiTutorSuggestedPrompt>;
   hiddenContextCallback: () => Promise<string>;
   analyticsData: AnalyticsData;
+  disabled?: boolean;
 }
 
 const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
@@ -25,6 +26,7 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
   suggestedPrompts = defaultPrompts,
   hiddenContextCallback,
   analyticsData,
+  disabled,
 }) => {
   const openTutor = () => {
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_SIDEBAR_OPEN, {
@@ -64,6 +66,7 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
           hiddenContextCallback={hiddenContextCallback}
           toggleAiChat={toggleAiChat}
           analyticsData={analyticsData}
+          chatDisabled={disabled}
         />
       </div>
     </div>

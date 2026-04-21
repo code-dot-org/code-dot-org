@@ -1,5 +1,6 @@
 require 'cdo/cdo_cli'
 require 'cdo/rack/cookie_dcdo'
+require 'public_suffix'
 
 module DashboardHelpers
   include CdoCli

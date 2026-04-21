@@ -260,6 +260,7 @@ class InlineAudio extends React.Component {
           style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
           type="button"
+          aria-label={this.state.playing ? 'Pause audio' : 'Play audio'}
         >
           <div
             style={
@@ -277,7 +278,7 @@ class InlineAudio extends React.Component {
           >
             <i
               className={classNames(
-                'fa fa-volume-up',
+                'fa-solid fa-volume-high',
                 moduleStyles.buttonImg,
                 moduleStyles.buttonImgVolume
               )}
@@ -302,7 +303,7 @@ class InlineAudio extends React.Component {
           >
             <i
               className={classNames(
-                this.state.playing ? 'fa fa-pause' : 'fa fa-play',
+                this.state.playing ? 'fa-solid fa-pause' : 'fa-solid fa-play',
                 moduleStyles.buttonImg
               )}
               style={

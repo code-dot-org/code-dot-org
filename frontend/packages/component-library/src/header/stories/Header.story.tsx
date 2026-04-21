@@ -20,7 +20,6 @@ export default {
         ],
       },
     },
-    useMui: true,
   },
 } as Meta;
 
@@ -30,7 +29,7 @@ const Template: StoryFn<HeaderProps> = (args: HeaderProps) => (
 
 export const Default = Template.bind({});
 
-const SIGNED_OUT_MENU_ITEMS = [
+const MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
   {label: 'Teach', href: '/teach'},
   {label: 'Districts', href: '/administrators'},
@@ -42,5 +41,20 @@ const SIGNED_OUT_MENU_ITEMS = [
 
 Default.args = {
   logoImageUrl: logoImage,
-  menuItems: SIGNED_OUT_MENU_ITEMS,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: true, firstName: 'Coder'},
+};
+
+export const SignedInLongName = Template.bind({});
+SignedInLongName.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: true, firstName: 'Bartholomew-Maximilian'},
+};
+
+export const SignedOut = Template.bind({});
+SignedOut.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: false},
 };

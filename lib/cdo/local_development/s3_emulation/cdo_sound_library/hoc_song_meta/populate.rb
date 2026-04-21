@@ -69,7 +69,7 @@ class CdoSoundLibrary::HocSongMeta::Populate
 
   # Hook into the populate call to produce the appropriate mp3 as well.
   def populate(path = nil)
-    data = super(path)
+    data = super
 
     unless path.nil? || path.include?('songManifest') || path.include?('testManifest')
       # This is song metadata so we want some song as well

@@ -6,7 +6,7 @@ import {
   SaveType,
 } from '@cdo/apps/aichat/types';
 import {extractFieldsToCheckForToxicity} from '@cdo/apps/aichat/utils';
-import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 

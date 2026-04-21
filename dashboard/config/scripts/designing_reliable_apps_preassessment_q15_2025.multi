@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q15_2025'
+
+question 'A developer is building a sports app that displays live game scores (which update every minute) and a fixed list of supported sports — basketball, soccer, tennis — that never changes. Which data strategy is most appropriate?'
+
+wrong 'Fetch both the live scores and the sports list from external APIs, since all app data should stay current'
+wrong 'Store both the live scores and the sports list as local data in the app for maximum performance'
+wrong 'Store the live scores locally and fetch the fixed sports list from an external API each time'
+right 'Fetch the live scores from an external API and store the fixed sports list as local data in the app'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN

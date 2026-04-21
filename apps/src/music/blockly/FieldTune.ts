@@ -242,7 +242,10 @@ export default class FieldTune extends BlocklyCore.Field {
         onChange: this.onValueChange,
         lengthMeasures: 1,
       }),
-      this.newDiv
+      this.newDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

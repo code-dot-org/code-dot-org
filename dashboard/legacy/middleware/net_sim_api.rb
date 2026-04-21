@@ -62,7 +62,7 @@ class NetSimApi < Sinatra::Base
   @@overridden_redis = nil
 
   def initialize(app = nil)
-    super(app)
+    super
   end
 
   # Return a new RedisTable instance for the given shard_id and table_name.

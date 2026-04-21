@@ -4,6 +4,7 @@ import * as Table from 'reactabular-table';
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -32,6 +33,7 @@ interface StudentRowData {
   id: number;
   name: string;
   aiTutorAccessDenied: boolean;
+  isDemoStudent: boolean;
 }
 
 const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
@@ -88,7 +90,14 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
         },
       },
       cell: {
-        formatters: [(name: string) => <span>{name}</span>],
+        formatters: [
+          (name: string, {rowData}: {rowData: StudentRowData}) => (
+            <span>
+              {name}
+              {rowData?.isDemoStudent && <DemoStudentChip />}
+            </span>
+          ),
+        ],
         props: {style: {...tableStyles.cell, minWidth: '150px'}},
       },
     },
@@ -115,6 +124,7 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
               aiTutorAccessDenied={aiTutorAccessDenied}
               displayGlobalError={displayGlobalError}
               studentId={rowData?.id}
+              disabled={rowData?.isDemoStudent}
             />
           ),
         ],
@@ -143,6 +153,7 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
                   id: student.id,
                   name: student.name,
                   aiTutorAccessDenied: student.aiTutorAccessDenied,
+                  isDemoStudent: student.isDemoStudent,
                 }))}
                 rowKey="id"
               />

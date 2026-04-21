@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
@@ -100,13 +101,14 @@ class StudentTable extends React.Component {
                   )}
                   <div className={styles.name}>
                     {`${student.name} ${student.familyName || ''}`}
+                    {student.isDemoStudent && <DemoStudentChip />}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.linkIcon}
                     >
-                      <FontAwesome icon="external-link" />
+                      <FontAwesome icon="arrow-up-right-from-square" />
                     </a>
                   </div>
                 </div>

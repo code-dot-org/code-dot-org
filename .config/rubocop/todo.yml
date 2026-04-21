@@ -34,20 +34,6 @@ Layout/HashAlignment:
 Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 
-# Offense count: 9
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator, EnforcedStyleForRationalLiterals.
-# SupportedStylesForExponentOperator: space, no_space
-# SupportedStylesForRationalLiterals: space, no_space
-Layout/SpaceAroundOperators:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowForAlignment.
-Layout/SpaceBeforeFirstArg:
-  Enabled: false
-
 # Offense count: 885
 # This cop supports safe autocorrection (--autocorrect).
 Lint/AmbiguousRegexpLiteral:
@@ -417,23 +403,6 @@ Style/RescueStandardError:
 Style/StringConcatenation:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
-  Enabled: false
-
-# Offense count: 30
-# This cop supports safe autocorrection (--autocorrect).
-Style/SuperArguments:
-  Enabled: false
-
-# Offense count: 9
-# This cop supports safe autocorrection (--autocorrect).
-Style/SuperWithArgsParentheses:
-  Enabled: false
-
 # Offense count: 31
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, AllowSafeAssignment.
@@ -445,13 +414,6 @@ Style/TernaryParentheses:
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 38
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ExplicitOnly.
-# SupportedStyles: create_list, n_times
-FactoryBot/CreateList:
   Enabled: false
 
 # Offense count: 55

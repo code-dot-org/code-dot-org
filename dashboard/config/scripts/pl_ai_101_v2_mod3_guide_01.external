@@ -1,0 +1,18 @@
+name 'pl-ai-101-V2-mod3-guide-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Principles for AI in Education
+
+#### Take a look at the graphic below that highlights seven **Principles for AI in Education**. Keep these in mind as we explore ways to use AI in your teaching practice.
+
+<br>
+<p style="text-align:center;"><img src="https://images.code.org/18fa5a89b18e779fadb3a109f82806a8-Screenshot 2026-02-04 at 3.11.56 PM.png" alt="Potential benefits and risks of AI in education."></p>
+
+*Image: TeachAI*
+
+<br>
+
+>#### **💬 Quick Reflection:** Pick one principle to focus on when completing this module.
+MARKDOWN

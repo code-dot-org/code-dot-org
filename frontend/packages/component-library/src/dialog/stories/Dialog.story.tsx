@@ -77,7 +77,7 @@ DefaultDialog.args = {
   title: 'Default Dialog',
   description: 'This is the content of the default dialog.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   onClose: () => console.log('Dialog closed'),
@@ -89,7 +89,7 @@ DialogWithIcon.args = {
   description: 'This dialog has an icon.',
   icon: {iconName: 'smile'},
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   onClose: () => console.log('Dialog with icon closed'),
@@ -101,7 +101,7 @@ DialogWithImage.args = {
   description: 'This dialog displays an image.',
   imageUrl: 'https://code.org/images/courses-6-12.png',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   onClose: () => console.log('Dialog with icon closed'),
@@ -112,7 +112,7 @@ DialogWithoutCloseButton.args = {
   title: 'Dialog without Close Button',
   description: 'This dialog does not have a close button.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
 };
@@ -122,11 +122,11 @@ DialogWithSecondaryButton.args = {
   title: 'Dialog with Secondary Button',
   description: 'This dialog includes a secondary button.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => alert('Secondary button clicked!'),
   },
   onClose: () => console.log('Dialog with secondary button closed'),
@@ -147,7 +147,7 @@ DialogWithCustomContent.args = {
     </div>
   ),
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   onClose: () => console.log('Dialog with custom content closed'),
@@ -158,7 +158,7 @@ DialogWithCustomBottomContent.args = {
   title: 'Dialog with Custom Bottom Content',
   description: 'This dialog has custom content at the bottom.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => alert('Primary button clicked!'),
   },
   customBottomContent: (
@@ -179,7 +179,7 @@ MultipleDialogs.args = {
       title: 'Dialog 1',
       description: 'Content for dialog 1',
       primaryButtonProps: {
-        text: 'Primary Action 1',
+        children: 'Primary Action 1',
         onClick: () => alert('Primary button 1 clicked!'),
       },
       onClose: () => console.log('Dialog 1 closed'),
@@ -189,7 +189,7 @@ MultipleDialogs.args = {
       description: 'Content for dialog 2',
       icon: {iconName: 'circle-check'},
       primaryButtonProps: {
-        text: 'Primary Action 2',
+        children: 'Primary Action 2',
         onClick: () => alert('Primary button 2 clicked!'),
       },
       onClose: () => console.log('Dialog 2 closed'),
@@ -198,11 +198,11 @@ MultipleDialogs.args = {
       title: 'Dialog 3 with Secondary Button',
       description: 'Content for dialog 3',
       primaryButtonProps: {
-        text: 'Primary Action 3',
+        children: 'Primary Action 3',
         onClick: () => alert('Primary button 3 clicked!'),
       },
       secondaryButtonProps: {
-        text: 'Secondary Action',
+        children: 'Secondary Action',
         onClick: () => alert('Secondary button clicked!'),
       },
       onClose: () => console.log('Dialog 3 closed'),

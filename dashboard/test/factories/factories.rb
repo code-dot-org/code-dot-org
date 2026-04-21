@@ -132,7 +132,7 @@ FactoryBot.define do
 
     trait :with_units do
       transient do
-        units {[create(:unit), create(:unit)]}
+        units {create_list(:unit, 2)}
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
@@ -1451,6 +1451,20 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :json_video do
+    sequence(:key) {|n| "json-video-#{n}"}
+    description {'fake description'}
+    s3_uri {'s3://fake-bucket/fake-path/video.json'}
+    json_schema_version {1}
+    audience {'student'}
+  end
+
+  factory :user_lesson_objective_reflection do
+    association(:student, factory: :student)
+    objective
+    reflection {"confident"}
+  end
+
   factory :vocabulary do
     association :course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
@@ -1499,6 +1513,13 @@ FactoryBot.define do
     lesson
   end
 
+  factory :user_lesson_reflection do
+    association(:student, factory: :student)
+    lesson
+    success {"It went well"}
+    struggle {"This was hard"}
+  end
+
   factory :lesson_feedback do
     association(:teacher, factory: :teacher)
     association(:student, factory: :student)
@@ -1507,6 +1528,14 @@ FactoryBot.define do
     submitted_feedback {nil}
     submitted_at {nil}
     resources {nil}
+  end
+
+  factory :lesson_insight do
+    lesson
+    association(:student, factory: :student)
+    section
+    teacher_id {nil}
+    insight_response {'{"progress":"test","misconceptions":"none","assessment":"good","next_steps":"continue"}'}
   end
 
   factory :activity_section do
@@ -1636,7 +1665,7 @@ FactoryBot.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        levels_and_texts_by_page = [create_list(:sublevel, 2), [create(:sublevel)]]
         lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end

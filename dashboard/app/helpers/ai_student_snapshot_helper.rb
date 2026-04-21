@@ -1,4 +1,7 @@
 module AiStudentSnapshotHelper
+  # Minimum time between regenerations of a lesson insight.
+  LESSON_INSIGHT_COOLDOWN = 5.minutes
+
   def self.save_lesson_feedback(feedback_json, student_id, lesson_id, section_id, teacher_id)
     feedback_record = LessonFeedback.find_or_initialize_by(
       lesson_id: lesson_id,
@@ -11,12 +14,58 @@ module AiStudentSnapshotHelper
     feedback_record
   end
 
-  API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY
+  # Returns the max updated_at across all UserLevels this student has in this lesson/unit.
+  # Uses Unit.get_from_cache so lesson/level data comes from memory, not extra DB queries.
+  def self.max_user_level_updated_at(unit_id, lesson_id, student_id)
+    unit = Unit.get_from_cache(unit_id)
+    lesson = unit.lessons.find {|l| l.id == lesson_id.to_i}
+    level_ids = lesson.script_levels.map(&:level_id)
+    UserLevel.where(user_id: student_id, script_id: unit_id, level_id: level_ids).
+              maximum(:updated_at)
+  end
+
+  # Returns true when a lesson insight should be (re)generated.
+  def self.should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id)
+    return true if insight.nil?
+    # Never regenerate if the insight is less than 5 minutes old.
+    return false if insight.updated_at >= LESSON_INSIGHT_COOLDOWN.ago
+
+    current_max = max_user_level_updated_at(unit_id, lesson_id, student_id)
+    # Regenerate when any UserLevel was touched after the insight was last generated.
+    current_max.present? && current_max > insight.updated_at
+  end
+
+  def self.fetch_or_generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+    insight = LessonInsight.find_by(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
+
+    should_generate = should_generate_lesson_insight?(insight, unit_id, lesson_id, student_id)
+
+    if should_generate
+      response = generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+      if response[:status] == 200
+        insight = LessonInsight.find_or_initialize_by(
+          section_id: section_id,
+          lesson_id: lesson_id,
+          student_id: student_id
+        )
+        insight.teacher_id = teacher_id
+        insight.insight_response = response[:json]
+        insight.save!
+      end
+      {status: response[:status], json: response[:json], updated_at: insight&.updated_at}
+    else
+      {status: 200, json: insight.insight_response, updated_at: insight.updated_at}
+    end
+  rescue ActiveRecord::RecordNotUnique
+    insight = LessonInsight.find_by!(section_id: section_id, lesson_id: lesson_id, student_id: student_id)
+    {status: 200, json: insight.insight_response, updated_at: insight.updated_at}
+  end
+
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
+    start_time = Time.now
 
     begin
       response = client.request_lesson_insight(system_prompt)
@@ -25,11 +74,29 @@ module AiStudentSnapshotHelper
     rescue StandardError => exception
       raise StandardError.new("Error processing AI lesson insight: #{exception.message}")
     end
+
     if response.code == 200
       response_body = JSON.parse(response.body)
-      response_body = response_body['choices'][0]['message']['content']
-      evaluation =  {status: response.code, json: response_body}
-      return {status: evaluation[:status], json: evaluation[:json]}
+      content = response_body['choices'][0]['message']['content']
+      end_time = Time.now
+
+      LangfuseHelper.trace_lesson_insight(
+        model: MODEL,
+        teacher_id: teacher_id,
+        lesson_id: lesson_id,
+        lesson_name: Lesson.find(lesson_id).name,
+        unit_id: unit_id,
+        unit_name: Unit.find(unit_id).name,
+        section_id: section_id,
+        student_id: student_id,
+        system_prompt: system_prompt,
+        output: content,
+        usage: response_body['usage'],
+        start_time: start_time,
+        end_time: end_time,
+      )
+
+      return {status: response.code, json: content}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
     end
@@ -37,7 +104,6 @@ module AiStudentSnapshotHelper
 
   def self.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    client = Client.new(API_KEY, MODEL)
 
     begin
       response = client.request_lesson_feedback(system_prompt)
@@ -147,5 +213,9 @@ module AiStudentSnapshotHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end

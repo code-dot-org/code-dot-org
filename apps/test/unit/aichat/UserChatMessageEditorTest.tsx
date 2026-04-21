@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -37,7 +36,7 @@ let mockState: {
 };
 
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  __esModule: true,
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppSelector: (selector: (s: unknown) => unknown) => selector(mockState),
   useAppDispatch: () => mockDispatch,
 }));
@@ -74,11 +73,7 @@ describe('UserChatMessageEditor', () => {
   });
 
   it('disables editor when disabled via context', async () => {
-    render(
-      <AiChatDisabledProvider chatDisabled>
-        <UserChatMessageEditor {...baseProps} />
-      </AiChatDisabledProvider>
-    );
+    render(<UserChatMessageEditor {...baseProps} chatDisabled={true} />);
 
     const textarea = screen.getByPlaceholderText(
       commonI18n.aiUserMessagePlaceholder()

@@ -163,7 +163,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       it 'should NOT redirect to landing path for allow listed paths' do
         get destroy_user_session_path
 
-        assert_redirected_to '//test.code.org'
+        assert_redirected_to root_path
       end
     end
   end
@@ -201,6 +201,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     it 'does not set cookie when no brand param present' do
       get root_path
       assert_nil cookies[cookie_key]
+    end
+  end
+
+  describe 'exception handling' do
+    it 'gracefully handles UnsafeRedirectErrors' do
+      Rails.logger.expects(:warn).once
+      get home_set_locale_path, params: {locale: 'ar-SA', user_return_to: '../invalid/path'}
+      assert_response :not_found
     end
   end
 

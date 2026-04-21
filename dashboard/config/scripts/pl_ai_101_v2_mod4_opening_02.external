@@ -3,67 +3,184 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Bringing AI to Students
+# Application to All Classrooms
 
-#### Whe we talk about bringing AI to the students in your school and classroom we can talk about teaching WITH AI or teaching ABOUT AI. 
+#### AI is becoming part of how students learn, communicate, and make decisions across all subjects. Students are already using AI for writing, research, and problem-solving, and it shapes the information and content they see every day. However, many students are using these tools without fully understanding how they work or their limitations.
 
+#### AI connects to every subject across all grade levels.
 
-<br>
-<p style="text-align:center;"><img src="https://images.code.org/b83679a5c60b1c90831a4b35461b5103-Screenshot 2026-03-11 at 1.06.25 PM.png" alt="Potential benefits and risks of AI in education."></p>
+#### 👉 Click on the cards below to learn more about how AI connects to your subject area(s).
 
-*Image: TeachAI*
+<div style="max-width:1200px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
 
+<div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;">
 
-#### Take a look at the chart below to explore some examples of these two concepts and to preview what you'll be learning about in this module.
+<!-- English -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">English Language Arts</div>
+<img src="https://images.code.org/48b2b90b61641cea37c5c1964fe6d142-Screenshot 2026-04-01 at 11.32.19 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to reading, writing, speaking, and media literacy. Students can compare AI and human writing, examine voice and authorship, and evaluate when AI supports or weakens original thinking.
+</div>
+</details>
 
-<body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
-<div style="max-width:980px; margin:0 auto;">
-<div style="display:flex; flex-wrap:wrap; gap:16px;">
+<!-- Social Studies -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Social Studies</div>
+<img src="https://images.code.org/70f3a03bedace16c9af9afa35e6b2e40-Screenshot 2026-04-01 at 11.32.24 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to history, civics, and society through bias, misinformation, and decision-making. Students can analyze how AI shapes information and impacts fairness in real-world systems.
+</div>
+</details>
 
-<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">WITH</span> AI</div>
-<div style="padding:14px 16px 16px 16px;">
+<!-- Mathematics -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Mathematics</div>
+<img src="https://images.code.org/6eaacd75c2b37e90bd177f1f4ddb962d-Screenshot 2026-04-01 at 11.32.28 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to math through patterns, probability, and data. Students can explore how AI makes predictions and why results depend on assumptions and data quality.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">💬</div><div style="font-size:16px; color:#333333;"><strong>Asking AI questions</strong> to clarify concepts and explore examples</div></div>
+<!-- Science -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Science</div>
+<img src="https://images.code.org/b50c19a81c997c69d0395143cde67dee-Screenshot 2026-04-01 at 11.32.33 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to science through models, evidence, classification, and prediction. Students can study how AI uses data to recognize patterns and generate predictions while considering limitations and the role of human judgment.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔁</div><div style="font-size:16px; color:#333333;"><strong>Iterating on work</strong> by comparing, critiquing, and improving AI suggestions</div></div>
+<!-- Computer Science & Engineering -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Computer Science & Engineering</div>
+<img src="https://images.code.org/f3868a13e3f0772b1f287a57bd7d6ce4-Screenshot 2026-04-01 at 11.32.39 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects through algorithms, machine learning, and system design. Students can explore how AI systems are built and how design choices and data impact accuracy, behavior, and fairness.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧩</div><div style="font-size:16px; color:#333333;"><strong>Getting scaffolded support</strong> such as hints, step-by-step guidance, or examples</div></div>
+<!-- Arts -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Arts</div>
+<img src="https://images.code.org/3d21f04c76649ad0cc5cbd14bbea7482-Screenshot 2026-04-01 at 11.32.43 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to the arts through creativity, style, and originality. Students can compare AI-generated content with human work and explore authorship, expression, and meaning.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📊</div><div style="font-size:16px; color:#333333;"><strong>Checking understanding</strong> through practice questions and self-quizzing</div></div>
+<!-- World Languages -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">World Languages</div>
+<img src="https://images.code.org/17df06c18ea40cd6136eeb64d1186de6-Screenshot 2026-04-01 at 11.32.47 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects through translation and communication. Students can evaluate AI translations, compare tone and meaning, and discuss where human understanding is needed for nuance.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🎯</div><div style="font-size:16px; color:#333333;"><strong>Using AI purposefully</strong> to enhance — not replace — their own thinking</div></div>
+<!-- Health & PE -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Health & Physical Education</div>
+<img src="https://images.code.org/db65d835931c90f255ae65b7a1840fb9-Screenshot 2026-04-01 at 11.32.51 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects through fitness tracking and health tools. Students can evaluate AI-generated advice and consider privacy, accuracy, and the need for human judgment in health decisions.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📝</div><div style="font-size:16px; color:#333333;"><strong>Documenting and reflecting</strong> on how AI contributed to their learning</div></div>
+<!-- CTE -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Career & Technical Education</div>
+<img src="https://images.code.org/fba9b9762ddf3783fed64d1e4fc12fbb-Screenshot 2026-04-01 at 11.32.56 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects to workplace tools and automation. Students can explore how AI changes job tasks and what skills remain uniquely human.
+</div>
+</details>
 
-<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div><div style="font-size:16px; color:#333333;"><strong>Maintaining ownership</strong> of ideas, decisions, and final work</div></div>
+<!-- Library / Media Literacy -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Library & Media Literacy</div>
+<img src="https://images.code.org/94c65bae04c08603a3b44c7bd6208baa-Screenshot 2026-04-01 at 11.33.00 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects through search and credibility. Students can compare AI responses with trusted sources and practice verifying information.
+</div>
+</details>
+
+<!-- Business & Economics -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Business & Economics</div>
+<img src="https://images.code.org/fec2aa817442365e163467eee6601d72-Screenshot 2026-04-01 at 11.33.04 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects through automation and decision-making. Students can examine how AI affects pricing, labor, and consumer behavior.
+</div>
+</details>
+
+<!-- Elementary -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:12px; text-align:center;">
+<div style="font-size:16px; font-weight:700; margin-bottom:10px;">Elementary General Classroom</div>
+<img src="https://images.code.org/7dc229cb0cef3e921340d7738f5b5156-Screenshot 2026-04-01 at 11.33.10 AM.png" style="width:100px; height:100px; object-fit:contain;">
+</div>
+</summary>
+<div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
+AI connects across reading, writing, math, science, and digital citizenship. Students can identify AI in everyday tools and practice questioning and evaluating outputs.
+</div>
+</details>
 
 </div>
 </div>
 
-<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">ABOUT</span> AI</div>
-<div style="padding:14px 16px 16px 16px;">
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div><div style="font-size:16px; color:#333333;"><strong>Explaining core ideas</strong> (data, models, training, prediction, limitations)</div></div>
+#### Teaching about and with AI reinforces skills teachers already prioritize, including:
+* #### Critical thinking and evaluation
+* #### Ethical and responsible decision-making
+* #### Problem solving and communication
+* #### Creativity and collaboration
+* #### Reflection and adaptability
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧪</div><div style="font-size:16px; color:#333333;"><strong>Building skills to evaluate AI</strong> (accuracy, evidence, bias, hallucinations)</div></div>
-
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🗣️</div><div style="font-size:16px; color:#333333;"><strong>Practicing effective prompting and iteration</strong> with reflection and documentation</div></div>
-
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧑‍⚖️</div><div style="font-size:16px; color:#333333;"><strong>Discussing ethics and impacts</strong> (privacy, fairness, labor, misinformation)</div></div>
-
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🛡️</div><div style="font-size:16px; color:#333333;"><strong>Teaching safe and responsible use</strong> (policies, citation, transparency)</div></div>
-
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔬</div><div style="font-size:16px; color:#333333;"><strong>Hands-on exploration</strong> with simple models, datasets, and real examples</div></div>
-
-<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🌍</div><div style="font-size:16px; color:#333333;"><strong>Preparing students for an AI-shaped future</strong> as informed users and creators</div></div>
-
-</div>
-</div>
-
-</div>
-</div>
-</body>
-
+>#### **💬 Quick Reflection:** What's one connection to AI in your classroom?
 MARKDOWN

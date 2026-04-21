@@ -42,6 +42,13 @@
   .chatActionsContainer {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    // Ensure chat actions container background hides chat content when pinned
+    background: var(--background-neutral-primary);
+    margin: -10px;
+    padding: 10px;
+    border-radius: 0.25rem;
 
     // If there's only one child element, align it to the right
     & > *:only-child {

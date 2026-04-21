@@ -14,11 +14,13 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 
@@ -82,7 +84,38 @@ export type LabConfig = {[key: string]: {[key: string]: string}};
 export type Source =
   | BlocklySource
   | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+  | ExcalidrawSourceWithExternalFiles
+  | SketchlabReactFlowSource;
+
+// -- REACT FLOW SKETCH LAB -- //
+
+// Serializable node/edge types for project storage. These mirror the
+// @xyflow/react Node/Edge fields we persist, without the complex DOM
+// types that are incompatible with Immer's WritableDraft. Cast to/from
+// the full React Flow types at the read/write boundary.
+export interface SketchlabReactFlowNode {
+  id: string;
+  type?: string;
+  position: {x: number; y: number};
+  data: Record<string, string | number | boolean>;
+  style?: Record<string, string | number>;
+}
+
+export interface SketchlabReactFlowEdge {
+  id: string;
+  source: string;
+  target: string;
+  sourceHandle?: string;
+  targetHandle?: string;
+  type?: string;
+  markerEnd?: EdgeMarkerType;
+}
+
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -233,6 +266,7 @@ export interface LevelProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  productTours?: string[];
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
@@ -248,6 +282,7 @@ export interface LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
+  aiTutorPromptSettings?: AiTutorPromptSettings;
   levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
@@ -259,6 +294,7 @@ export interface LevelProperties {
   validationCode?: string;
   hideVersionHistory?: boolean;
   parentLevelName?: string;
+  requireEditToContinue?: boolean;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
@@ -458,3 +494,5 @@ export interface LabProps<
 }
 
 export type ShareDialogId = 'hoc2024' | 'hoai2025';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

@@ -1,0 +1,36 @@
+{
+  "name": "ai-foundations-designing-and-building-with-ai-2026",
+  "script_names": [
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
+  ],
+  "unit_prefixes": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "original_script_names": [
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-foundations-designing-and-building-with-ai",
+    "numbered_units": "custom",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
