@@ -41,7 +41,8 @@ export const moderateImage = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
-  }: AnalyticsData
+  }: AnalyticsData,
+  isModelOutput?: boolean
 ): Promise<'safe' | 'flagged' | 'error'> => {
   const imageType = file.type || '';
   if (
@@ -71,12 +72,15 @@ export const moderateImage = async (
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
+    const categorySeverityLevelBlocked: Record<string, number> = {
+      ...CATEGORY_SEVERITY_LEVEL_BLOCKED,
+      ...(isModelOutput && {Violence: 2}),
+    };
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
         (category: {severity: number; category: string}) =>
-          category?.severity <
-          CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
+          category?.severity < categorySeverityLevelBlocked[category?.category]
       )
     ) {
       return 'safe';
