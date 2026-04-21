@@ -121,7 +121,7 @@ export default function UnitCalendarGrid({
                     }}
                     className={styles.keyIcon}
                   />
-                  <Typography variant="body2">
+                  <Typography variant="body2" component="span">
                     {i18n.instructionalLesson()}
                   </Typography>
                 </div>
@@ -133,14 +133,19 @@ export default function UnitCalendarGrid({
                     }}
                     className={styles.keyIcon}
                   />
-                  <Typography variant="body2">{i18n.assessment()}</Typography>
+                  <Typography variant="body2" component="span">
+                    {i18n.assessment()}
+                  </Typography>
                 </div>
                 <div className={styles.keyCell}>
                   <FontAwesomeV6Icon
                     iconName="scissors"
+                    style={{
+                      color: 'var(--text-neutral-primary)',
+                    }}
                     className={styles.keyIcon}
                   />
-                  <Typography variant="body2">
+                  <Typography variant="body2" component="span">
                     {i18n.unpluggedLesson()}
                   </Typography>
                 </div>
