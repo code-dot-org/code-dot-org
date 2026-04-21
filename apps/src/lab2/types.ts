@@ -23,7 +23,7 @@ import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
-import {
+import type {
   ImageNodeData,
   ShapeNodeData,
   TextNodeData,

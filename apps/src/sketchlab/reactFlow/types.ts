@@ -2,7 +2,7 @@ import type {Node} from '@xyflow/react';
 
 import {ProjectSources, SketchlabReactFlowSource} from '@cdo/apps/lab2/types';
 
-import {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
+import type {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
 
 export type ShapeType = 'rectangle' | 'triangle' | 'circle';
 
