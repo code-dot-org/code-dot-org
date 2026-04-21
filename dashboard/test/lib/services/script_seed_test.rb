@@ -76,6 +76,13 @@ module Services
       script_to_destroy = Unit.find(script.id)
       script_to_destroy.original_unit_group.course_version.resources.destroy_all
       script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
+      # Check for rubrics connected to script_to_destroy
+      rubrics = script_to_destroy.lessons.map(&:rubric).compact
+      rubrics.each_with_index do |rubric, _index|
+        rubric.destroy!
+      end
+
+      # Destroy all rubrics connected to all lessons in the script, to avoid validation errors when destroying lesson groups and lessons.
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
@@ -111,6 +118,11 @@ module Services
       script_to_destroy = Unit.find(script.id)
       unit_group_to_destroy = script_to_destroy.get_original_unit_group
       script_to_destroy.original_unit_group.course_version.destroy!
+      # Check for rubrics connected to script_to_destroy
+      rubrics = script_to_destroy.lessons.map(&:rubric).compact
+      rubrics.each_with_index do |rubric, _index|
+        rubric.destroy!
+      end
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!
 
@@ -1173,6 +1185,11 @@ module Services
       script_to_destroy = Unit.find(script.id)
       unit_group_to_destroy = script_to_destroy.get_original_unit_group
       script_to_destroy.original_unit_group.course_version.destroy!
+      # destroy all rubrics connected to the script's lessons, since they will be re-created during seeding and need to be removed to avoid duplication.
+      rubrics = script_to_destroy.lessons.map(&:rubric).compact
+      rubrics.each_with_index do |rubric, _index|
+        rubric.destroy!
+      end
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!
 
@@ -1200,6 +1217,10 @@ module Services
       script_to_destroy = Unit.find(script.id)
       unit_group_to_destroy = script_to_destroy.get_original_unit_group
       script_to_destroy.original_unit_group.course_version.destroy!
+      rubrics = script_to_destroy.lessons.map(&:rubric).compact
+      rubrics.each_with_index do |rubric, _index|
+        rubric.destroy!
+      end
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!
 
