@@ -557,13 +557,13 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'create does not verify non-Clever sign up when Clever auto-verification marker is present' do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
-    session[OmniauthCallbacksController::CLEVER_AUTO_VERIFICATION_SESSION_KEY] = true
+    session[OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY] = true
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
     post :create, params: {user: teacher_params}
 
     refute assigns(:user).verified_teacher?
-    assert_nil session[OmniauthCallbacksController::CLEVER_AUTO_VERIFICATION_SESSION_KEY]
+    assert_nil session[OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY]
   end
 
   test 'adds LtiUserIdentity to LtiDeployment if LTI user' do

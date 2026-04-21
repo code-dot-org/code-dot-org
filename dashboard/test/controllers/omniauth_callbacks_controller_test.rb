@@ -1693,6 +1693,59 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         classlink_req
         _(existing_user.id).must_equal signed_in_user_id
       end
+
+      it 'verifies an unverified teacher' do
+        refute existing_user.verified_teacher?
+
+        assert_difference('UserPermission.count', 1) do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when authorizing with existing verified teacher' do
+      subject(:existing_user) {create(:authorized_teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not duplicate verification' do
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when authorizing with existing student' do
+      subject(:existing_user) {create(:student, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:student_auth_hash) do
+        auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
+        auth_hash.extra.raw_info.role = 'Student'
+        auth_hash
+      end
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = student_auth_hash
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not verify the student' do
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        refute User.find(existing_user.id).verified_teacher?
+      end
     end
   end
 

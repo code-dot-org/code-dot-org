@@ -35,55 +35,76 @@ class Policies::UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'verified_teacher_candidate? should return true when criteria is met' do
+  test 'google_verified_teacher_candidate? should return true when criteria is met' do
     # Google Authentication Option present, and has non-gmail/non-googlemail email,
     # criteria met
     teacher = create(:teacher, :with_google_authentication_option)
-    assert_equal true, Policies::User.verified_teacher_candidate?(teacher)
+    assert_equal true, Policies::User.google_verified_teacher_candidate?(teacher)
   end
 
-  test 'verified_teacher_candidate? should return false when criteria is not met' do
+  test 'google_verified_teacher_candidate? should return false when criteria is not met' do
     teacher = create(:teacher)
     # Google Authentication Option not present, criteria not met
-    assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
+    assert_equal false, Policies::User.google_verified_teacher_candidate?(teacher)
     # Google Authentication Option has a gmail email, criteria not met
     create(:google_authentication_option, user: teacher, email: 'test@gmail.com')
-    assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
+    assert_equal false, Policies::User.google_verified_teacher_candidate?(teacher)
   end
 
-  test 'verified_teacher_candidate? should return false when teacher is already verified' do
+  test 'google_verified_teacher_candidate? should return false when teacher is already verified' do
     teacher = create(:teacher, :with_google_authentication_option)
-    assert_changes -> {Policies::User.verified_teacher_candidate?(teacher)}, from: true, to: false do
+    assert_changes -> {Policies::User.google_verified_teacher_candidate?(teacher)}, from: true, to: false do
       teacher.verify_teacher!
     end
   end
 
-  test 'clever_verified_teacher_candidate? returns true for unverified teacher with Clever teacher role' do
+  test 'oauth_verified_teacher_candidate? returns true for unverified Clever teacher' do
     teacher = create(:teacher)
     auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    assert Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+    assert Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
   end
 
-  test 'clever_verified_teacher_candidate? returns false for Clever staff role' do
+  test 'oauth_verified_teacher_candidate? returns false for Clever staff role' do
     teacher = create(:teacher)
     auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {staff: {}}}}}})
 
-    refute Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
   end
 
-  test 'clever_verified_teacher_candidate? returns false for student' do
+  test 'oauth_verified_teacher_candidate? returns false for Clever student' do
     student = create(:student)
     auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    refute Policies::User.clever_verified_teacher_candidate?(student, auth)
+    refute Policies::User.oauth_verified_teacher_candidate?(student, auth, provider: AuthenticationOption::CLEVER)
   end
 
-  test 'clever_verified_teacher_candidate? returns false for already verified teacher' do
+  test 'oauth_verified_teacher_candidate? returns false for already verified Clever teacher' do
     teacher = create(:authorized_teacher)
     auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    refute Policies::User.clever_verified_teacher_candidate?(teacher, auth)
+    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
+  end
+
+  test 'oauth_verified_teacher_candidate? returns true for unverified ClassLink teacher' do
+    teacher = create(:teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
+
+    assert Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
+  end
+
+  test 'oauth_verified_teacher_candidate? returns false for ClassLink student' do
+    teacher = create(:teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Student'}})
+
+    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
+  end
+
+  test 'oauth_verified_teacher_candidate? returns false for already verified ClassLink teacher' do
+    teacher = create(:authorized_teacher)
+    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
+
+    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
   end
 
   describe '.personal_account?' do

@@ -20,12 +20,12 @@ class Policies::User
     attributes.merge('authentication_options_attributes' => authentication_options).compact
   end
 
-  # Determines if a user passes some of the criteria to be a verified teacher.
+  # Determines if a Google user passes the criteria to be a verified teacher.
   # In order to be a verified teacher candidate, the user must:
   # - Successfully sync a Google Classroom
   # - Have a google_oauth2 Authentication Option
   # - Have a non-google/non-gmail email domain attached to that googele_oauth2 authentication option
-  def self.verified_teacher_candidate?(user)
+  def self.google_verified_teacher_candidate?(user)
     return false if user.verified_teacher?
     google_ao = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     return false unless google_ao
@@ -34,17 +34,24 @@ class Policies::User
     !is_google_email
   end
 
-  # Determines if a user should be auto-verified from a Clever OAuth callback.
-  # In order to be a Clever verification candidate, the user must:
+  # Determines if a user should be auto-verified when authenticated via a school-owned provider.
+  # In order to be an OAuth verification candidate, the user must:
   # - Be a teacher
   # - Not already be verified
-  # - Have an explicit Clever teacher role in the auth payload
-  def self.clever_verified_teacher_candidate?(user, auth)
+  # - Have the provider-specific teacher role in the auth payload
+  def self.oauth_verified_teacher_candidate?(user, auth, provider:)
     return false unless user.teacher?
     return false if user.verified_teacher?
 
-    roles = auth&.dig(:extra, :raw_info, :canonical, :data, :roles)
-    roles.respond_to?(:key?) && (roles.key?(:teacher) || roles.key?('teacher'))
+    case provider
+    when AuthenticationOption::CLEVER
+      roles = auth&.dig(:extra, :raw_info, :canonical, :data, :roles)
+      roles.respond_to?(:key?) && (roles.key?(:teacher) || roles.key?('teacher'))
+    when AuthenticationOption::CLASSLINK
+      auth&.dig(:extra, :raw_info, :role).to_s.casecmp?(User::TYPE_TEACHER)
+    else
+      false
+    end
   end
 
   def self.in_usa?(country_code)
