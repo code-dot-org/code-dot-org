@@ -37,8 +37,9 @@ const VerifiedResourcesNotification = ({inLesson}) => {
           href={VERIFIED_RESOURCES_URL}
           variant="outlined"
           color="secondary"
-          size="s"
+          size="small"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {i18n.learnMore()}
         </Button>
