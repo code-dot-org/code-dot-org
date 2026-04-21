@@ -494,3 +494,5 @@ export interface LabProps<
 }
 
 export type ShareDialogId = 'hoc2024' | 'hoai2025';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;
