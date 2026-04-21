@@ -208,7 +208,7 @@ class CourseOverview extends Component {
         )}
         {showNotification && <VerifiedResourcesNotification />}
         <div className={styles.titleWrapper}>
-          <Typography variant="h2" component="h1" className={styles.title}>
+          <Typography variant="h2" component="h2" className={styles.title}>
             {assignmentFamilyTitle}
           </Typography>
         </div>
