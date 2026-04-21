@@ -114,13 +114,20 @@ export default function ReactFlowCanvas({
     });
 
   // Clear selection when focus leaves the canvas container entirely
-  // (e.g. clicking outside or tabbing out of the canvas).
+  // (e.g. clicking outside or tabbing out of the canvas). Skip when the
+  // blur originates from a NodeToolbar control — e.g. a native color
+  // picker steals focus to an OS dialog (relatedTarget null), and
+  // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
-      if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-        setLastFocusedEntry(null);
-        setNodeOrEdgeFocused(false);
+      if (
+        event.currentTarget.contains(event.relatedTarget as Node) ||
+        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        return;
       }
+      setLastFocusedEntry(null);
+      setNodeOrEdgeFocused(false);
     },
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );

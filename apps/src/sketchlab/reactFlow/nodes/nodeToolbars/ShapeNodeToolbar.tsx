@@ -36,7 +36,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
         onSelect={value => patchNodeData({backgroundColor: value})}
       />
       <SwatchGroup
-        groupLabel="Stroke"
+        groupLabel="Border"
         swatches={STROKE_FONT_PALETTE}
         selectedValue={strokeColor ?? DEFAULT_STROKE_COLOR}
         onSelect={value => patchNodeData({strokeColor: value})}
