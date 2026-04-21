@@ -25,6 +25,12 @@ export type ReflectionData = {
   struggle: string;
 };
 
+export type JsonVideoData = {
+  key: string;
+  url: string;
+  description: string;
+};
+
 export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
@@ -32,6 +38,7 @@ export type LessonDeepDiveData = {
   vocabulary: {id: string; word: string; definition: string}[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
+  jsonVideos: JsonVideoData[];
   practiceProblems: PracticeProblem[];
   progressCounts: LessonProgressCounts;
   timeSpentSeconds: number;
