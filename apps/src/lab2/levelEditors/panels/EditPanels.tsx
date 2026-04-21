@@ -9,7 +9,12 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
-import {Panel, PanelLayout} from '@cdo/apps/panels/types';
+import {
+  DEFAULT_PANEL_LINK_WIDTH,
+  Panel,
+  PanelLayout,
+  PanelLink,
+} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './edit-panels.module.scss';
@@ -162,6 +167,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             key={panel.key}
             panel={panel}
             index={index}
+            allPanels={panels}
             updatePanel={updatePanel}
             movePanel={movePanel}
             deletePanel={deletePanel}
@@ -185,6 +191,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
 interface EditPanelProps {
   panel: Panel;
   index: number;
+  allPanels: Panel[];
   updatePanel: (panel: Panel) => void;
   movePanel: (key: string, direction: 'up' | 'down') => void;
   deletePanel: (key: string) => void;
@@ -194,11 +201,37 @@ interface EditPanelProps {
 const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   panel,
   index,
+  allPanels,
   updatePanel,
   movePanel,
   deletePanel,
   last = false,
 }) => {
+  const links = panel.links || [];
+
+  const updateLink = (linkIndex: number, newLink: PanelLink) => {
+    const newLinks = [...links];
+    newLinks[linkIndex] = newLink;
+    updatePanel({...panel, links: newLinks});
+  };
+
+  const addLink = () => {
+    const firstOtherKey =
+      allPanels.find(p => p.key !== panel.key)?.key || panel.key;
+    const newLink: PanelLink = {
+      text: '',
+      x: 50,
+      y: 50,
+      key: firstOtherKey,
+    };
+    updatePanel({...panel, links: [...links, newLink]});
+  };
+
+  const deleteLink = (linkIndex: number) => {
+    const newLinks = links.filter((_, i) => i !== linkIndex);
+    updatePanel({...panel, links: newLinks.length > 0 ? newLinks : undefined});
+  };
+
   return (
     <div className={moduleStyles.panelEditor}>
       <div className={moduleStyles.fieldRow}>
@@ -300,6 +333,100 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
               fadeInOverPrevious: event.target.checked,
             })
           }
+        />
+      </div>
+      <div className={moduleStyles.linksSection}>
+        <Typography variant="h6" gutterBottom>
+          Links
+        </Typography>
+        {links.map((link, linkIndex) => (
+          <div
+            key={linkIndex}
+            className={classNames(moduleStyles.fieldRow, moduleStyles.linkRow)}
+          >
+            <label>
+              Text
+              <textarea
+                value={link.text}
+                onChange={e =>
+                  updateLink(linkIndex, {...link, text: e.target.value})
+                }
+              />
+            </label>
+            <label className={moduleStyles.linkSliderHorizontal}>
+              X: {link.x}%
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={link.x}
+                onChange={e =>
+                  updateLink(linkIndex, {
+                    ...link,
+                    x: Number(e.target.value),
+                  })
+                }
+              />
+            </label>
+            <label className={moduleStyles.linkSliderVertical}>
+              Y: {link.y}%
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={link.y}
+                onChange={e =>
+                  updateLink(linkIndex, {
+                    ...link,
+                    y: Number(e.target.value),
+                  })
+                }
+              />
+            </label>
+            <label className={moduleStyles.linkSliderHorizontal}>
+              Width: {link.width ?? DEFAULT_PANEL_LINK_WIDTH}%
+              <input
+                type="range"
+                min={1}
+                max={100}
+                value={link.width ?? DEFAULT_PANEL_LINK_WIDTH}
+                onChange={e =>
+                  updateLink(linkIndex, {
+                    ...link,
+                    width: Number(e.target.value),
+                  })
+                }
+              />
+            </label>
+            <SimpleDropdown
+              labelText="Target panel"
+              name={`link-target-${linkIndex}`}
+              size="s"
+              selectedValue={link.key}
+              onChange={e =>
+                updateLink(linkIndex, {...link, key: e.target.value})
+              }
+              items={allPanels.map((p, i) => ({
+                value: p.key,
+                text: `Panel ${i + 1}${p.key === panel.key ? ' (self)' : ''}`,
+              }))}
+            />
+            <button
+              type="button"
+              className={moduleStyles.deleteButton}
+              onClick={() => deleteLink(linkIndex)}
+              aria-label="Delete link"
+            >
+              <FontAwesomeV6Icon iconName="trash" />
+            </button>
+          </div>
+        ))}
+        <Button
+          type="button"
+          onClick={addLink}
+          text="Add Link"
+          color="gray"
+          icon="plus"
         />
       </div>
       {last && (

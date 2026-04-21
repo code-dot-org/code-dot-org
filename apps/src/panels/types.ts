@@ -18,9 +18,25 @@ export interface Panel {
   key: string;
   nextUrl?: string;
   layout?: PanelLayout;
+  links?: PanelLink[];
 
   // The following fields are exploratory and not yet exposed in levelbuilder.
   dark?: boolean;
   typing?: boolean;
   fadeInOverPrevious?: boolean;
 }
+
+// A clickable box rendered inside a panel that navigates to another panel.
+// x and y are percentages (0-100) of the panel, describing the link's center.
+// width is the link box width as a percentage (0-100) of the panel, defaulting
+// to DEFAULT_PANEL_LINK_WIDTH when not specified.
+// key is the target panel's key.
+export interface PanelLink {
+  text: string;
+  x: number;
+  y: number;
+  width?: number;
+  key: string;
+}
+
+export const DEFAULT_PANEL_LINK_WIDTH = 40;

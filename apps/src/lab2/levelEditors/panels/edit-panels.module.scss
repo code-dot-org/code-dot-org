@@ -87,6 +87,44 @@ $full-height: 1080px;
   margin: auto;
 }
 
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.linkRow {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+
+  textarea {
+    min-width: 240px;
+  }
+}
+
+.linkSliderHorizontal {
+  input[type='range'] {
+    width: 140px;
+  }
+}
+
+.linkSliderVertical {
+  align-items: center;
+
+  input[type='range'] {
+    writing-mode: vertical-lr;
+    height: 100px;
+    width: auto;
+  }
+}
+
 @keyframes fade-out-toast {
   0% {
     opacity: 1;
