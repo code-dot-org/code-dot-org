@@ -143,7 +143,21 @@ export default function NodeToolbarShell({
               size="small"
               className={styles['close-button']}
               aria-label="Close toolbar"
-              onClick={handleClose}
+              onClick={event => {
+                event.stopPropagation();
+                handleClose();
+              }}
+              onKeyDown={event => {
+                // Drive Enter/Space directly instead of letting the
+                // browser synthesize a click: the synthesized click
+                // races with the focus move in handleClose and the
+                // toolbar can end up reopened.
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  handleClose();
+                }
+              }}
             >
               <FontAwesomeV6Icon
                 iconName="xmark"
