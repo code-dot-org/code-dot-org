@@ -15,6 +15,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
+import localization from '@cdo/apps/localization';
+
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
 import externalLinks from './plugins/externalLinks';
@@ -143,6 +145,13 @@ const localizationComponentWrappers = {
   },
   p: function (props) {
     return <p {...props} data-isolate="true" />;
+  },
+  code: function ({children, ...props}) {
+    return (
+      <code {...props} data-notranslate="true">
+        {localization.translate(children)}
+      </code>
+    );
   },
 };
 
