@@ -172,7 +172,7 @@ class ScaryChangeDetector
     return if changes.empty?
     return unless @changed_lines.include?('S3_AI_RELEASE_PATH')
 
-    puts red <<-EOS
+    puts red <<-WARNING
 
         You changed S3_AI_RELEASE_PATH. Before merging, please validate
         the new release path against all AI-enabled rubrics:
@@ -184,7 +184,7 @@ class ScaryChangeDetector
         (params.json, system_prompt.txt, standard_rubric.csv) for every
         rubric with an s3_config_dir or AI-enabled learning goals.
 
-    EOS
+    WARNING
   end
 end
 
