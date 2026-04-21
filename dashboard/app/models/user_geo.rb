@@ -24,6 +24,8 @@
 class UserGeo < ApplicationRecord
   belongs_to :user, optional: true
 
+  PII_FIELDS = %w[ip_address city postal_code latitude longitude].freeze
+
   def clear_user_geo
     self.ip_address = nil
     self.city = nil
@@ -32,5 +34,9 @@ class UserGeo < ApplicationRecord
     self.longitude = nil
 
     save!
+  end
+
+  def cleared?
+    PII_FIELDS.all? {|field| send(field).nil?}
   end
 end

@@ -1,9 +1,10 @@
 import {createSelector} from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import type {RootState} from '@cdo/apps/types/redux';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {modelDescriptions} from '../../constants';
-import type {AichatLevelProperties} from '../../types';
+import {isChatMessage} from '../../types';
 import {
   allFieldsHidden,
   anyFieldsChanged,
@@ -33,29 +34,34 @@ export const selectSavedCustomizationsMatchInitial = createSelector(
   anyFieldsChanged
 );
 
-export const selectAllVisibleMessages = (state: RootState) => {
-  const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
-  const messages = [...chatEventsPast, ...chatEventsCurrent];
-  if (chatMessagePending) {
-    messages.push(chatMessagePending);
+export const selectIsWaitingForChatResponse = (state: RootState) => {
+  let lastChatEvent;
+  for (let i = state.aichat.chatEventsCurrent.length - 1; i >= 0; i--) {
+    const event = state.aichat.chatEventsCurrent[i];
+    if (isChatMessage(event)) {
+      lastChatEvent = event;
+      break;
+    }
   }
-  return messages;
+
+  return (
+    !!lastChatEvent &&
+    lastChatEvent.role === Role.USER &&
+    lastChatEvent.status === AiInteractionStatus.UNKNOWN
+  );
 };
+
+export const selectAllVisibleMessages = createSelector(
+  (state: RootState) => state.aichat.chatEventsPast,
+  (state: RootState) => state.aichat.chatEventsCurrent,
+  (chatEventsPast, chatEventsCurrent) => [
+    ...chatEventsPast,
+    ...chatEventsCurrent,
+  ]
+);
 
 export const selectHavePropertiesChanged = (state: RootState) =>
   findChangedProperties(
     state.aichat.savedAiCustomizations,
     state.aichat.currentAiCustomizations
   ).length > 0;
-
-export const selectMultimodalEnabled = ({aichat, lab}: RootState) => {
-  const multimodalSupported = modelDescriptions.find(
-    model => model.id === aichat.savedAiCustomizations.selectedModelId
-  )?.multimodal;
-
-  const multimodalEnabled = (
-    lab.levelProperties as AichatLevelProperties | undefined
-  )?.aichatSettings?.multimodalEnabled;
-
-  return multimodalSupported && multimodalEnabled;
-};

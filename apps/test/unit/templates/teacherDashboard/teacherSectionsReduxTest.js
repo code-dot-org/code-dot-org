@@ -83,7 +83,6 @@ const sections = [
     unitName: null,
     unitPosition: null,
     unit_id: null,
-    isAssignedStandaloneCourse: false,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -125,14 +124,13 @@ const sections = [
       lesson_extras_available: true,
       text_to_speech_enabled: false,
       course_offering_id: 1,
-      unit_id: null,
+      unit_id: 12,
       version_id: 2017,
     },
     unitName: 'coursea-2017',
     unitPosition: 1,
-    unit_id: null,
-    isAssignedStandaloneCourse: true,
-    script: {name: null},
+    unit_id: 12,
+    script: {name: 'coursea-2017'},
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -186,7 +184,6 @@ const sections = [
     unitName: 'Single Unit 2026',
     unitPosition: 1,
     unit_id: 18,
-    isAssignedStandaloneCourse: false,
     is_assigned_single_unit_course: true,
     script: {id: 18, name: 'Single Unit 2026'},
     createdAt: createdAt,
@@ -229,7 +226,6 @@ const sections = [
     unitName: null,
     unitPosition: null,
     unit_id: 7,
-    isAssignedStandaloneCourse: false,
     script: {name: null},
     createdAt: createdAt,
     studentCount: 0,
@@ -274,6 +270,12 @@ const students = [
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
   let store;
+
+  const successResponse = (body = {}) => [
+    200,
+    {'Content-Type': 'application/json'},
+    JSON.stringify(body),
+  ];
 
   beforeEach(() => {
     stubRedux();
@@ -473,7 +475,6 @@ describe('teacherSectionsRedux', () => {
         unitName: null,
         unitPosition: null,
         unitId: null,
-        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -509,7 +510,6 @@ describe('teacherSectionsRedux', () => {
         unitName: null,
         unitPosition: null,
         unitId: unitId,
-        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -540,7 +540,6 @@ describe('teacherSectionsRedux', () => {
         unitName: null,
         unitPosition: null,
         unitId: null,
-        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -570,15 +569,14 @@ describe('teacherSectionsRedux', () => {
         courseDisplayName: 'Course A',
         course: {
           courseOfferingId: 1,
-          unitId: null,
+          unitId: 12,
           versionId: 2017,
           lessonExtrasAvailable: true,
           textToSpeechEnabled: false,
         },
         unitName: 'coursea-2017',
         unitPosition: 1,
-        unitId: null,
-        isAssignedStandaloneCourse: true,
+        unitId: 12,
         isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
@@ -614,6 +612,8 @@ describe('teacherSectionsRedux', () => {
         atRiskAgeGatedUsState: undefined,
         avatar_color: 1,
         avatar_emoji: 1,
+        assignedAiChatToolsDependency: undefined,
+        aiChatAccessLevel: undefined,
       });
     });
   });
@@ -944,7 +944,6 @@ describe('teacherSectionsRedux', () => {
           unitPosition: undefined,
           unitId: undefined,
           course: null,
-          isAssignedStandaloneCourse: undefined,
           isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
@@ -973,6 +972,8 @@ describe('teacherSectionsRedux', () => {
           atRiskAgeGatedUsState: undefined,
           avatar_color: undefined,
           avatar_emoji: undefined,
+          assignedAiChatToolsDependency: undefined,
+          aiChatAccessLevel: undefined,
         },
       });
     });
@@ -1352,7 +1353,10 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
+      assert.deepEqual(paths, [
+        '/courses/csa-2022',
+        '/courses/csa-2022/units/1',
+      ]);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1545,11 +1549,16 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the importOrUpdateRoster action', () => {
-    let server;
+    let server, fetchSpy;
     const TEST_COURSE_ID = 'test-course-id';
     const TEST_COURSE_NAME = 'test-course-name';
 
     beforeEach(() => {
+      fetchSpy = sinon
+        .stub(HttpClient, 'fetchJson')
+        .returns(
+          Promise.resolve({response: new Response(), value: {aif: false}})
+        );
       server = sinon.fakeServer.create();
       // We have chained server requests separated by promises in these
       // tests, so have the fake server respond immediately becaue it's
@@ -1583,13 +1592,10 @@ describe('teacherSectionsRedux', () => {
         successResponse({availableParticipantTypes: ['student']})
       );
     });
-    afterEach(() => server.restore());
-
-    const successResponse = (body = {}) => [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(body),
-    ];
+    afterEach(() => {
+      server.restore();
+      fetchSpy.restore();
+    });
 
     const withGoogle = () =>
       store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
@@ -1908,7 +1914,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],
-          assignmentPaths: ['/s/coursea-2017'],
+          assignmentPaths: ['/courses/coursea-2017'],
           isAssignedSingleUnitCourse: undefined,
         },
         {
@@ -1989,7 +1995,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy, jqueryStub;
+    let analyticsSpy, jqueryStub, fetchSpy;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
@@ -1997,11 +2003,16 @@ describe('teacherSectionsRedux', () => {
 
       jqueryStub = sinon.stub($, 'ajax');
       jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
+      fetchSpy = sinon.stub(HttpClient, 'fetchJson');
+      fetchSpy.returns(
+        Promise.resolve({response: new Response(), value: {aif: false}})
+      );
     });
 
     afterEach(() => {
       analyticsSpy.restore();
       jqueryStub.restore();
+      fetchSpy.restore();
     });
 
     it('sends an event when course offering is assigned', () => {

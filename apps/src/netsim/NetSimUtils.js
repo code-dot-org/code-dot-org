@@ -396,7 +396,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
  */
 exports.makeContinueButton = function (onPanel) {
   onPanel.addButton(
-    i18n.continueButton({caret: '<i class="fa fa-caret-right"></i>'}),
+    i18n.continueButton({caret: '<i class="fa-solid fa-caret-right"></i>'}),
     function (jQueryEvent) {
       if (!$(jQueryEvent.target).is(':disabled')) {
         NetSimGlobals.completeLevelAndContinue();

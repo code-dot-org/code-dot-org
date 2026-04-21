@@ -17,7 +17,7 @@ class AccountPurgerIntegrationTest < ActionDispatch::IntegrationTest
     # that assume that a user is always valid. A deleted user,
     # however, can be both attached via foreign key to an object
     # but not be usable (essentially acts as nil)
-    user = create :young_student_with_teacher
+    user = create(:young_student_with_teacher)
 
     # Delete the user
     user.destroy!
@@ -34,7 +34,7 @@ class AccountPurgerIntegrationTest < ActionDispatch::IntegrationTest
   test 'can purge a student account with a family name that is in a section' do
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
-    user = create :young_student_with_teacher
+    user = create(:young_student_with_teacher)
 
     # Delete the user
     user.destroy!

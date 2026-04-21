@@ -4,8 +4,8 @@ import {useSelector} from 'react-redux';
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
-import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {PROJECT_TYPES_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -17,6 +17,8 @@ import {
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {ShareDialogId} from '../types';
 
 import ShareDialog from './dialogs/ShareDialog';
 
@@ -48,11 +50,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const thumbnailUrl = null;
   // TODO: support abuse reporting.
   const exceedsAbuseThreshold = false;
-  // TODO: When we support publishing, we can use this logic to determine if we can publish
-  // const canPublish = isSignedIn && projectType && AllPublishableProjectTypes.includes(projectType);
-  const canPublish = false;
-  // TODO: this should come from labRedux once we support publishing.
-  const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -100,21 +97,17 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onSubmitClick = () => {
     setDialogPanel('submit');
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   };
 
   if (!isDialogOpen || !channelId || !projectType) {
     return null;
   }
 
-  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
+  if (PROJECT_TYPES_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     return dialogPanel === 'share' ? (
       <ShareDialog
         dialogId={shareDialogId}
@@ -123,7 +116,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         projectType={projectType}
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
-        channelId={channelId}
         userSharingDisabled={userSharingDisabled}
       />
     ) : (
@@ -145,8 +137,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
       thumbnailUrl={thumbnailUrl}
       isAbusive={exceedsAbuseThreshold}
       canPrint={projectType === 'artist'}
-      canPublish={canPublish}
-      isPublished={isPublished}
       channelId={channelId}
       appType={projectType}
       onClickPopup={popupWindow}
@@ -157,7 +147,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 };
 
 interface Lab2ShareDialogWrapperProps {
-  shareDialogId?: string;
+  shareDialogId?: ShareDialogId;
   shareUrl: string;
   finishUrl?: string;
 }

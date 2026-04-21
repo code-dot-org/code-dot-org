@@ -1,0 +1,23 @@
+{
+  "key": "artificial-intelligence-foundations-semester2",
+  "display_name": "AIF Semester 2 2025 Pilot",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": null,
+  "cs_topic": "app_design,artificial_intelligence,web_design,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": "https://code.org/apply",
+  "video": null,
+  "published_date": "2025-10-27 05:00:00 UTC",
+  "self_paced_pl_course_offering_key": "teaching-ai-foundations-semester2",
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

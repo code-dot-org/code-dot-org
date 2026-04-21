@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:00:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "**Streamer Stacy**\n\n**Job/Hobby:** Lifestyle vlogger and content creator\n\n**Purpose:** Video editing, streaming, and managing social media.",
+        "imageUrl": "https://images.code.org/f5a77d87356c2836c2cb631f757bd72c-attractive-young-woman-pointing-at-make-up-palette-2023-11-27-05-23-55-utc.jpg",
+        "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "**Budget:** $1,800",
+        "imageUrl": "https://images.code.org/98e7e633cc24e9b806417de924946a01-piggy-bank-savings-investment-and-hand-with-money-2023-11-27-05-12-13-utc.jpg",
+        "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
+      },
+      {
+        "text": "**Important Info:** Needs high-speed internet capability and external capture card compatibility.\n\n**Preferences:**\n* Large SSD for video storage and editing.\n* Dual monitors for managing streams and editing timelines.\n* Aesthetic build with customizable lighting.",
+        "imageUrl": "https://images.code.org/09b5dc04eacfe2b649586d24cefe8dd2-empty-video-editing-tools-and-a-color-wheel-runnin-2025-01-08-16-39-41-utc.jpg",
+        "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "display_name": "Streamer Stacy",
+    "bubble_choice_description": "Lifestyle vlogger and content creator",
+    "thumbnail_url": "https://images.code.org/6ef9fe03cd1d66bbf2770e95ccd8322b-Streamer Stacie.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:01.928+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level2a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level2a_2025\"}]"
+}]]></config>
+</Panels>

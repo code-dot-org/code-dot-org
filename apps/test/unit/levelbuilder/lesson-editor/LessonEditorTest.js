@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -27,6 +28,10 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -51,6 +56,7 @@ describe('LessonEditor', () => {
       programmingExpressions: programmingExpressionsEditor,
       standards: createStandardsReducer('standard'),
       opportunityStandards: createStandardsReducer('opportunityStandard'),
+      teacherSections,
     });
 
     store = getStore();
@@ -61,6 +67,21 @@ describe('LessonEditor', () => {
         programmingEnvironments: [],
       })
     );
+    store.dispatch(
+      setSections([
+        {
+          id: 1,
+          name: 'Period 2',
+          course_offering_id: 123,
+          courseVersionId: 2023,
+          unitName: 'csd1-2024',
+          unitSelection: {
+            unitName: 'csd1-2024',
+          },
+        },
+      ])
+    );
+    store.dispatch(selectSection(1));
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));
@@ -71,7 +92,7 @@ describe('LessonEditor', () => {
       unitInfo: {
         allowMajorCurriculumChanges: true,
         courseVersionId: 1,
-        unitPath: '/s/my-script/',
+        unitPath: '/courses/my-course/units/1/',
         isProfessionalLearningCourse: false,
       },
       initialLessonData: {
@@ -128,11 +149,12 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').at(1).props().disabled).to.equal(false);
     expect(wrapper.find('input').at(2).props().disabled).to.equal(false);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(12);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(13);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
     expect(wrapper.find('ProgrammingExpressionsEditor').length).to.equal(1);
     expect(wrapper.find('StandardsEditor').length).to.equal(2);
+    expect(wrapper.find('JitPlConceptsEditor').length).to.equal(1);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
@@ -172,7 +194,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').length).to.equal(8);
     expect(wrapper.find('select').length).to.equal(2);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(4);
     expect(wrapper.find('ResourcesEditor').length).to.equal(0);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
@@ -208,7 +230,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.add-activity-section').length).to.equal(4);
   });
 
-  it('can save and keep editing', () => {
+  it('can save and keep editing', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -233,7 +255,9 @@ describe('LessonEditor', () => {
 
     clock = sinon.useFakeTimers(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
     clock.tick(50);
 
     lessonEditor.update();
@@ -246,7 +270,7 @@ describe('LessonEditor', () => {
     server.restore();
   });
 
-  it('shows error when save and keep editing has error saving', () => {
+  it('shows error when save and keep editing has error saving', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -269,7 +293,9 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;
     expect(lessonEditor.state().isSaving).to.equal(false);
@@ -339,13 +365,13 @@ describe('LessonEditor', () => {
     lessonEditor.update();
     // navigates to the script overview page
     expect(utils.navigateToHref).to.have.been.calledWith(
-      `/s/my-script/${window.location.search}`
+      `/courses/my-course/units/1/${window.location.search}`
     );
 
     server.restore();
   });
 
-  it('shows error when save and keep editing has error saving', () => {
+  it('shows error when save and keep editing has error saving', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -367,7 +393,9 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
 
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;

@@ -1,0 +1,117 @@
+name 'self-paced-TCaAI-L4-Lesson5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 3 Lesson Overviews
+
+## Lesson 5: Trust & Credibility
+
+#### Lesson 5 is a **Building Knowledge** lesson. Students investigate why AI-generated outputs can feel convincing even when they contain missing context, assumptions, or bias. They will use this knowledge to make progress toward building a Trust Meter in Lesson 6.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/5" target="blank" rel="noopener noreferrer">
+Access Lesson 5: Trust & Credibility
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students examine two realistic-looking advertisements or images and decide which seems credible. They are prompted to zoom in on specific details such as text clarity, hands, faces, and background elements.
+</p>
+<p style="font-size: 13pt">
+Introduce the vocabulary <strong>credible</strong> and <strong>bias</strong> and establish the lesson goal: learning to pause and verify rather than trusting polished presentation.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (35 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 14pt"><b>🔎 Station Explorations</b></p>
+<p style="font-size: 13pt">
+Students choose one of three credibility investigations and complete repeated AI testing to identify patterns that create a false sense of believability.
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 15px auto;">
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/5c5387006f411cc9703f19d7574368c5-image-1773182287362.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+Is AI Always Right?
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+Can something sound trustworthy… but still be wrong?
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/a7af46eeabe8c32f50d324de6954be1f-image-1773182291562.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+Can AI Make Images That Look Real?
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+Can you trust your eyes?
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/d44d422ea3995e654087c19444adf82c-image-1773182289720.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+What Is AI Assuming?
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+What happens when important details are missing?
+</p>
+</div>
+
+</div>
+
+<p style="font-size: 13pt">
+Students use AI Chat and Sketch Lab to test outputs repeatedly and create a 5-level Trust Meter draft that ranges from “Highly Trustworthy” to “Falls Apart.”
+</p>
+<p style="font-size: 13pt">
+They identify what details increase credibility and what signals (missing evidence, vague language, visual errors) lower trust.
+</p>
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students draft their personal “Truth & Credibility Guidelines” in their Milestone 3 Learning Log using sentence stems such as: “When AI sounds confident, I will…before I decide to trust it.”
+</p>
+<p style="font-size: 13pt">
+Close by revisiting the guiding question: <em>Why does AI sound believable, and how do I know when to trust it?</em>
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Print multiple copies of each Exploration Guide and set them up as stations around the room.
+* #### Ensure students bring their Milestone 3 Learning Log.
+* #### Preview the Trust Meter Sketch Lab level so you can model expectations.
+* #### Plan group timing to allow for synthesis discussion.
+
+### 💡 **Tips for Teaching**:
+* #### Push students to separate confidence from accuracy.
+* #### Ask students to name the exact detail that changed their trust level.
+* #### Encourage repeated testing to reveal patterns in AI outputs.
+
+___
+
+#### **Up Next**: Preview *only* the AI Chat Lab levels for Lesson 5 to get an idea of what students will create.
+MARKDOWN

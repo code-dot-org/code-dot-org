@@ -105,6 +105,7 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "start_blocks": "//Create your sprites and set their animations\r\n\r\n\r\n//Set any needed sprite properties\r\n\r\n\r\n\r\n\r\nfunction draw() {\r\n  //Draw your background\r\n  \r\n  \r\n  //Animate your sprites with the counter pattern\r\n  \r\n  \r\n  //Use conditionals to change your sprites based on their locations\r\n  \r\n  \r\n  //Draw your sprites to the screen\r\n}\r\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

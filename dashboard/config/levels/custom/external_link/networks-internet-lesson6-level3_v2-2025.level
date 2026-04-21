@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-09-25T20:05:08.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## HTTP Requests Exploration with the Simulator\r\n\r\n### Do This:\r\n1. Open the **HTTP Explorer Simulator** to begin the activity.\r\n2. Follow the steps in the **Scavenger Hunt Activity Guide** to:\r\n   - Open Developer Tools in the simulator.\r\n   - Inspect how the browser requests files like HTML, images, and CSS.\r\n3. Observe each file’s:\r\n    - **Method**\r\n    - **Status Code**\r\n    - **File Type**\r\n    - **Load Time**\r\n3. Fill in the fields for each task and answer the reflection questions in your activity guide.",
+    "link_title": "HTTP Request Simulator",
+    "url": "https://docs.google.com/presentation/d/167Rqj73r2Pu9-ovxYj2UZxy4PJNxxzCR8RszaBI25xM/edit?usp=sharing",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:08.536+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level3_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level3_2025\"}]"
+}]]></config>
+</ExternalLink>

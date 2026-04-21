@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import announcementsReducer, {
@@ -11,6 +10,7 @@ import {registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -36,11 +36,14 @@ async function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <StudentLessonOverview lesson={lessonData} />
     </Provider>,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -56,10 +59,13 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,
-    container
+    container,
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

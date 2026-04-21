@@ -70,6 +70,7 @@
     "bubble_choice_description": "Prevent your player from going off the side of the screen.",
     "thumbnail_url": "https://images.code.org/14d133db384e5e45ee7f25dfad3c1241-image-1589991471283.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

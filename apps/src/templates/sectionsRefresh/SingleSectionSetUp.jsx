@@ -1,16 +1,13 @@
-import Button from '@code-dot-org/component-library/button';
 import Chips from '@code-dot-org/component-library/chips';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
-import experiments from '@cdo/apps/util/experiments';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -45,7 +42,9 @@ export default function SingleSectionSetUp({
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Heading2>{i18n.classSection()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.classSection()}
+        </Typography>
         <label className={moduleStyles.typographyLabelTwo}>
           {i18n.className()}
 
@@ -64,40 +63,39 @@ export default function SingleSectionSetUp({
               className={moduleStyles.classNameTextField}
               value={section.name}
               onChange={e => updateSection('name', e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
               disabled={isLoading}
             />
           )}
         </label>
       </div>
-      {(experiments.isEnabled('teacher-homepage-v2') ||
-        DCDO.get('teacher-homepage-v2', false)) && (
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.avatar()}
-
-          <div className={styles.avatarContainer}>
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              <>
-                <SectionAvatar
-                  color={section.avatar_color || 0}
-                  emoji={section.avatar_emoji || 0}
-                  size={'m'}
-                />
-                <Button
-                  className={styles.avatarButton}
-                  text={i18n.editAvatar()}
-                  aria-label={i18n.editAvatar()}
-                  type={'secondary'}
-                  color={'gray'}
-                  size={'s'}
-                  onClick={() => setShowAvatarDialog(true)}
-                />
-              </>
-            )}
-          </div>
-        </label>
-      )}
+      <label className={moduleStyles.typographyLabelTwo}>
+        {i18n.avatar()}
+        <div className={styles.avatarContainer}>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <>
+              <SectionAvatar
+                color={section.avatar_color || 0}
+                emoji={section.avatar_emoji || 0}
+                size={'m'}
+              />
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                className={styles.avatarButton}
+                onClick={() => setShowAvatarDialog(true)}
+                aria-label={i18n.editAvatar()}
+                type="button"
+              >
+                {i18n.editAvatar()}
+              </MuiButton>
+            </>
+          )}
+        </div>
+      </label>
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips

@@ -1,17 +1,9 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyOneText,
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
-
-import aichatI18n from '../locale';
 
 import moduleStyles from './onboarding-modal.module.scss';
 
@@ -31,62 +23,82 @@ const TeacherOnboardingModal: React.FunctionComponent<
       className={moduleStyles.teacherOnboardingModal}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>{aichatI18n.welcomeToAichatLab()}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {'Welcome to AI Chat Lab'}
+        </Typography>
       </div>
       <hr />
       <div className={moduleStyles.contentContainer}>
         <div className={moduleStyles.warning}>
-          <BodyTwoText>
-            {aichatI18n.teacherOnboardingModal_warning()}
-          </BodyTwoText>
+          <Typography variant="body2" gutterBottom>
+            {
+              "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption."
+            }
+          </Typography>
         </div>
         <div className={moduleStyles.textContainer}>
-          <BodyOneText>{aichatI18n.chatComponentsHeader()}</BodyOneText>
+          <Typography variant="body1" gutterBottom>
+            {'AI Chat Components'}
+          </Typography>
           <ul>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={aichatI18n.teacherOnboardingModal_instructionsBullet()}
+                  markdown={
+                    '**Instructions**: Clear directions and goals for each level.'
+                  }
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={aichatI18n.teacherOnboardingModal_modelCustomizationBullet()}
+                  markdown={
+                    '**Model Customizations** *(optional)*:  Clear directions and goals for each level.'
+                  }
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={aichatI18n.teacherOnboardingModal_aiChatBullet()}
+                  markdown={
+                    "**AI Chat**: The area where students can interact directly with the chatbot they've created."
+                  }
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
-                  markdown={aichatI18n.teacherOnboardingModal_userViewBullet()}
+                  markdown={
+                    '**User View** *(optional)*: Allows students to use the chatbot as a user, without the instructions or customization visible.'
+                  }
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
           </ul>
-          <BodyTwoText>
-            {aichatI18n.teacherOnboardingModal_chatHistoryAccess()}
+          <Typography variant="body2" gutterBottom>
+            {
+              "As a teacher, you have access to all of your students' chat customizations and history (retained for 90 days). "
+            }
             <Link href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher">
-              {aichatI18n.learnMoreHereInBrackets()}
+              {'[Learn more here.]'}
             </Link>
-          </BodyTwoText>
+          </Typography>
         </div>
       </div>
       <hr />
       <div className={moduleStyles.bottomSection}>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={onClose}
-          color={buttonColors.purple}
-          text={i18n.aiWarningModalOk()}
-        />
+          type="button"
+        >
+          {'Ok'}
+        </MuiButton>
       </div>
     </AccessibleDialog>
   );

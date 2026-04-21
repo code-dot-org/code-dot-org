@@ -355,7 +355,7 @@
       }
     },
     "long_instructions": "##Welcome to The Neighborhood!",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-15T14:46:43.375+00:00\",\"changed\":[\"cloned from \\\"CSA 2022 Neighborhood Sandbox\\\"\"],\"cloned_from\":\"CSA 2022 Neighborhood Sandbox\"},{\"changed_at\":\"2023-08-15 14:47:13 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -108,6 +108,7 @@
     "starter_assets": {
       "Seaside-Sunrise.png": "fb443314-4d22-4dc4-97dd-a5d7715e7759.png"
     },
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

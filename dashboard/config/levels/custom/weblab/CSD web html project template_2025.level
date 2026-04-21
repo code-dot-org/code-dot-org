@@ -12,7 +12,8 @@
     "name_suffix": "_2025",
     "encrypted": "false",
     "mini_rubric": "false",
-    "submittable": "false"
+    "submittable": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

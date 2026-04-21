@@ -1,0 +1,76 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
+import React from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+
+import {AiTutorSuggestedPrompt, defaultPrompts} from '../../suggestedPrompts';
+import {AnalyticsData} from '../../types';
+
+import AiTutorSidebarSuggestedPrompts from './AiTutorSidebarSuggestedPrompts';
+
+import styles from './AiTutorSidebar.module.scss';
+
+interface AiTutorSidebarProps {
+  toggleAiChat: () => void;
+  suggestedPrompts?: Array<AiTutorSuggestedPrompt>;
+  hiddenContextCallback: () => Promise<string>;
+  analyticsData: AnalyticsData;
+  disabled?: boolean;
+}
+
+const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
+  toggleAiChat,
+  suggestedPrompts = defaultPrompts,
+  hiddenContextCallback,
+  analyticsData,
+  disabled,
+}) => {
+  const openTutor = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_TUTOR_SIDEBAR_OPEN, {
+      labType: analyticsData.labType,
+      levelId: analyticsData.levelId,
+      unitId: analyticsData.unitId,
+      channelId: analyticsData.channelId,
+      url: analyticsData.location,
+    });
+    toggleAiChat();
+  };
+
+  return (
+    <div className={styles['ai-tutor-sidebar']}>
+      <div
+        role="button"
+        onClick={openTutor}
+        tabIndex={-1}
+        className={styles['ai-tutor-sidebar-header']}
+      >
+        <img src={aiBotOutlineIcon} alt="" className={styles['bot-icon']} />
+      </div>
+      <div className={styles['ai-tutor-sidebar-content']}>
+        <MuiIconButton
+          variant="contained"
+          color="white"
+          size="medium"
+          className={styles['ai-tutor-suggested-prompt-item']}
+          onClick={openTutor}
+          aria-label="Open AI tutor"
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="arrow-from-right" />
+        </MuiIconButton>
+        <AiTutorSidebarSuggestedPrompts
+          suggestedPrompts={suggestedPrompts}
+          hiddenContextCallback={hiddenContextCallback}
+          toggleAiChat={toggleAiChat}
+          analyticsData={analyticsData}
+          chatDisabled={disabled}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default AiTutorSidebar;

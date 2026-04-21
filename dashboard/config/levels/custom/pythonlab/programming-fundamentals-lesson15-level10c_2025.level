@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Give your character more actions\r\n\r\nDo this: \r\n- Use a function with parameters to perform a new action like clearing an obstacle, collecting an item, or marking their trail.\r\n- User parameters like `obstacle`, `item` or `trailmarker` to customize the types of items your character can interact with. ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

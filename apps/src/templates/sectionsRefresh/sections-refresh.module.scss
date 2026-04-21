@@ -90,12 +90,22 @@ label.typographyLabelTwo {
     // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
     border: none !important;
   }
+
+  &:focus-visible {
+    outline: 2px solid $brand_primary_default;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 .buttonsInRow .buttonStyle.activeMarketingAudienceButton {
   color: $brand_primary_default;
   border-bottom: 2px solid $brand_primary_default;
   border-radius: 0;
+
+  &:focus-visible {
+    border-radius: 2px;
+  }
 }
 
 .buttonsInRow .buttonStyle:hover {
@@ -179,6 +189,10 @@ label.typographyLabelTwo {
   padding: 0.3em;
 }
 
+.unitDropdownLabel {
+  margin-bottom: 7px;
+}
+
 button.advancedSettingsButton {
   margin: 5px;
   font-size: unset;
@@ -192,11 +206,17 @@ button.advancedSettingsButton {
     display: inline-block;
     margin-top: 0.5em;
   }
+
+  &:focus-visible {
+    outline: 2px solid $brand_primary_default;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 .celebrationDialogBody {
   padding: 36px;
-  font: $barlowSemiCondensed-medium;
+  font-family: var(--font-family-barlow-semi-condensed-medium);
 
   h1 {
     margin-bottom: 0;

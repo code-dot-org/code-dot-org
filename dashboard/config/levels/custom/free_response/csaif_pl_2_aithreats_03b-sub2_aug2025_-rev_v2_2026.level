@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-01-12T16:41:12.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### **Says**\r\n#### What might Jordan say out loud?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026",
+    "stay_on_level_after_submit": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-12T16:41:12.551+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_aithreats_03b-sub2_aug2025_-rev_v2\\\"\"],\"cloned_from\":\"csaif_pl_2_aithreats_03b-sub2_aug2025_-rev_v2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

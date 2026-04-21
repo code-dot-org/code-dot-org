@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
@@ -14,6 +12,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -322,7 +321,7 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <BackpackAPIContext.Provider value={backpackApi}>
         <JavalabView
@@ -343,7 +342,10 @@ Javalab.prototype.init = function (config) {
         />
       </BackpackAPIContext.Provider>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
@@ -374,11 +376,7 @@ Javalab.prototype.onRun = function () {
     scriptId: this.scriptIdForAnalytics,
     interaction: UserLevelInteractions.click_run,
   });
-  analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
-    levelId: this.levelIdForAnalytics,
-  });
   this.executeJavabuilder(ExecutionType.RUN);
-  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.onTest = function () {
@@ -394,7 +392,6 @@ Javalab.prototype.onTest = function () {
     validated: validated,
   });
   this.executeJavabuilder(ExecutionType.TEST);
-  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.executeJavabuilder = function (executionType) {

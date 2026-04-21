@@ -182,8 +182,8 @@ module Services
     end
 
     def self.generate_metadata_for_ai(script, lesson)
-      course_name = script.unit_group ? script.unit_group.name : script.name
-      metadata ={
+      course_name = script.get_original_unit_group ? script.get_original_unit_group.name : script.name
+      metadata = {
         course: course_name,
         unit_fullname: script.name,
         unit: script.unit_number ? format("U%02d", script.unit_number) : "U01",

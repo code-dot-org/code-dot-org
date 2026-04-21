@@ -42,7 +42,6 @@ const LoadingSectionsSetUpContainer: React.FC<
     <SectionsSetUpContainer
       isUsersFirstSection={false}
       sectionToBeEdited={defaultSection}
-      canEnableAITutor={false}
       defaultRedirectUrl={defaultRedirectUrl}
       setIsEditInProgress={() => {}}
       isLoading={true}

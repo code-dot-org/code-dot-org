@@ -17,7 +17,8 @@
     "parent_level_id": 20662,
     "name_suffix": "_2025",
     "allow_multiple_attempts": "false",
-    "teacher_markdown": "Use this reflection as an opportunity to gain insight into how the students completed the assessment level and the choices they made with adding HTML files and hyperlinks as well as identify any misconceptions that should be cleared up."
+    "teacher_markdown": "Use this reflection as an opportunity to gain insight into how the students completed the assessment level and the choices they made with adding HTML files and hyperlinks as well as identify any misconceptions that should be cleared up.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -98,7 +98,9 @@ export class WorkshopAttendance extends React.Component {
   };
 
   handleBackClick = () => {
-    this.context.router.push(`/workshops/${this.props.params.workshopId}`);
+    this.context.router.push(
+      `/workshops/${this.props.params.workshopId}/attendance`
+    );
   };
 
   handleDownloadCsvClick = () => {

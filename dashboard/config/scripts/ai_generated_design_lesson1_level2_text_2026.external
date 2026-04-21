@@ -1,0 +1,9 @@
+name 'ai-generated-design-lesson1-level2_text_2026'
+title 'title'
+description 'Think of one web app you use often'
+
+markdown <<MARKDOWN
+## Think of one web app you use often.
+
+
+MARKDOWN

@@ -1,10 +1,12 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ProjectFile} from '@cdo/apps/lab2/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
-import {AiCustomizations} from './customizations';
+import {ModelParameters} from './customizations';
 import {FeedbackValue} from './toxicity';
+import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 
 export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
@@ -16,11 +18,26 @@ interface BaseChatEvent {
 
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
+  /**
+   * Message text to send to the model. This is also used for display if
+   * `chatMessageDisplayText` is `undefined`.
+   * */
   chatMessageText: string;
+
+  /**
+   * Message text for display in the UI (in message history), if this differs from
+   *  what is sent to the model. If `undefined`, chatMessageText will be displayed.
+   **/
+  chatMessageDisplayText?: string;
+
+  hiddenContext?: string;
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  userAddedSelectionContext?: UserAddedSelectionContextItem[];
+  /** Necessary to update a pending message to completed or to update chatMessageText */
+  updateId?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
@@ -62,17 +79,27 @@ export interface UserActionEvent extends BaseChatEvent {
 export interface ModelUpdate extends BaseChatEvent {
   /** ID used for removing from this event from the student's chat workspace. */
   removeId: number;
-  updatedField: keyof AiCustomizations;
-  updatedValue: AiCustomizations[keyof AiCustomizations];
+  updatedField: keyof ModelParameters;
+  updatedValue: ModelParameters[keyof ModelParameters];
 }
+
+export const AI_TUTOR_VERSION_ACTION_ACCEPT = 'aiTutorVersionActionAccept';
+export const AI_TUTOR_VERSION_ACTION_REJECT = 'aiTutorVersionActionReject';
 
 /** Any other general type of notification in the chat workspace. */
 export interface Notification extends BaseChatEvent {
   /** ID used for removing from this event from the student's chat workspace. */
   removeId: number;
   text: string;
-  notificationType: 'permissionsError' | 'error' | 'success';
+  notificationType:
+    | 'permissionsError'
+    | 'error'
+    | 'success'
+    | typeof AI_TUTOR_VERSION_ACTION_ACCEPT
+    | typeof AI_TUTOR_VERSION_ACTION_REJECT;
   includeInChatHistory?: boolean;
+  files?: ProjectFile[];
+  commitDescription?: string;
 }
 
 /** All chat events displayed in the chat workspace must be one of these types. */
@@ -100,6 +127,14 @@ export function isCompletedChatMessage(
   event: ChatEvent
 ): event is CompletedChatMessage {
   return (event as CompletedChatMessage).requestId !== undefined;
+}
+
+export function isPendingOrCompletedChatMessage(
+  event: ChatEvent
+): event is CompletedChatMessage | PendingChatMessage {
+  return (
+    (event as CompletedChatMessage | PendingChatMessage).updateId !== undefined
+  );
 }
 
 export function isModelUpdate(event: ChatEvent): event is ModelUpdate {

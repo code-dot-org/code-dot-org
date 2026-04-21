@@ -8,13 +8,16 @@
   "grade_levels": "9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/21a5140e24b70fcb784995ae3a47563f-FCS-min.png",
-  "cs_topic": "artificial_intelligence,cybersecurity,data,internet,programming",
+  "cs_topic": "artificial_intelligence,cybersecurity,data,hardware,internet,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems.",
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": "self-paced-pl-ai-foundations",
-  "ai_teaching_assistant_available": false
+  "self_paced_pl_course_offering_key": "teaching-ai-foundations",
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

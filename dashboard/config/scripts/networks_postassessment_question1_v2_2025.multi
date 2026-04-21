@@ -1,0 +1,19 @@
+name 'networks-postassessment-question1_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 1'
+
+wrong 'Switch'
+wrong 'Server'
+right 'Router'
+wrong 'Modem'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Your school is setting up a new Wi-Fi network. To ensure devices can connect and communicate with each other and the Internet, which network device is essential?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Introduction to the Internet
+
+Lesson 4: Routers and Redundancy
+MARKDOWN

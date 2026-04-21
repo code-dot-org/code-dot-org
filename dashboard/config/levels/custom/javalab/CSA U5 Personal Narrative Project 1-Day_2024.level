@@ -24,7 +24,7 @@
       }
     },
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:02:14.908+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative Project 1-Day_2023\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative Project 1-Day_2023\"},{\"changed_at\":\"2025-02-18 15:55:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 15:57:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 15:57:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 16:01:40 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

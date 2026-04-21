@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -5,7 +6,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import * as imageUtils from '@cdo/apps/imageUtils';
-import PendingButton from '@cdo/apps/legacySharedComponents/PendingButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import msg from '@cdo/locale';
@@ -158,20 +158,38 @@ class Snapshot extends React.Component {
             </p>
             <p>{this.props.selectedOptions}</p>
           </div>
-          <PendingButton
-            isPending={this.state.isCopyPending}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isCopyPending}
+            className={classNames(
+              dataStyles.button,
+              dataStyles.buttonText,
+              dataStyles.buttonRightMargin
+            )}
             onClick={this.copy}
-            pendingText="Please Wait"
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text="Copy"
-          />
-          <PendingButton
-            isPending={this.state.isSavePending}
+            aria-label={msg.copy()}
+            type="button"
+          >
+            {msg.copy()}
+          </MuiButton>
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isSavePending}
+            className={classNames(
+              dataStyles.button,
+              dataStyles.buttonText,
+              dataStyles.buttonRightMargin
+            )}
             onClick={this.save}
-            pendingText="Please Wait"
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text="Save"
-          />
+            aria-label={msg.save()}
+            type="button"
+          >
+            {msg.save()}
+          </MuiButton>
         </BaseDialog>
       </div>
     );

@@ -1,4 +1,5 @@
 class SectionsController < ApplicationController
+  include LevelsHelper
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
   load_and_authorize_resource :section, only: [:edit]
@@ -13,34 +14,8 @@ class SectionsController < ApplicationController
   end
 
   def edit
-    existing_section = Section.find_by(
-      id: params[:id]
-    )
-
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
-      redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
-      return
-    end
-
-    @section = existing_section.attributes
-
-    @section['course'] = {
-      course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
-      version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
-      unit_id: existing_section.unit_group ? existing_section.script_id : nil,
-      lesson_extras_available: existing_section.script.try(:lesson_extras_available),
-      text_to_speech_enabled: existing_section.script.try(:text_to_speech_enabled?),
-    }
-
-    @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
-
-    @section['primaryInstructor'] = {
-      email: existing_section.teacher.email,
-      name: existing_section.teacher.name,
-      lti_roster_sync_enabled: existing_section.teacher&.properties&.[]("lti_roster_sync_enabled")
-    }
-
-    @section = @section.to_json.camelize
+    redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
+    return
   end
 
   def show
@@ -49,8 +24,11 @@ class SectionsController < ApplicationController
 
   def log_in
     if user = User.authenticate_with_section(section: @section, params: params)
-      bypass_sign_in user
-      user.update_tracked_fields!(request)
+      unless user == current_user
+        bypass_sign_in user
+        user.update_tracked_fields!(request)
+      end
+
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
       redirect_to_section_script_or_course
     else
@@ -92,15 +70,26 @@ class SectionsController < ApplicationController
       unit = Unit.get_from_cache(section.script_id)
       unit_group = UnitGroup.get_from_cache(section.course_id)
       unit_group_unit = Queries::Courses.unit_group_unit(unit, unit_group)
-      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit.link(unit_group_unit: unit_group_unit)}
+      unit_path = if unit_group_unit && unit_group
+                    "/teacher_dashboard/sections/#{section.id}/courses/#{unit_group.name}/units/#{unit_group_unit.position}"
+                  else
+                    "/teacher_dashboard/sections/#{section.id}/courses"
+                  end
+      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit_path}
       unit.lesson_groups.each do |lesson_group|
         lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map do |lesson|
-          path = script_lesson_script_level_path(unit, lesson, 1)
-          if Policies::Courses.modularity_enabled? && unit_group_unit && unit_group
-            path = course_unit_lesson_script_level_path(unit_group, unit_group_unit.position, lesson, 1)
-          end
+          path =
+            if lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_path(unit_group, unit_group_unit.position, lesson)
+            elsif !lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_script_level_path(unit_group, unit_group_unit.position, lesson, 1)
+            elsif !lesson.script_levels.nil_or_empty?
+              script_lesson_script_level_path(unit, lesson, 1)
+            else
+              script_lesson_path(unit, lesson)
+            end
           {
-            text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name,
+            text: lesson.localized_title,
             value: path,
           }
         end
@@ -112,7 +101,8 @@ class SectionsController < ApplicationController
 
   private def redirect_to_section_script_or_course
     if @section.script
-      redirect_to script_path(@section.script)
+      unit_group_unit = Queries::Courses.unit_group_unit(@section.script, @section.unit_group)
+      redirect_to course_unit_path(@section.unit_group, unit_group_unit.position)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

@@ -1,0 +1,88 @@
+name 'self-paced-TCaAI-L5-Lesson8'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 4 Lesson Overviews
+
+## Lesson 8: Defending Your Data
+
+#### Lesson 8 is a **Develop & Critique** lesson. Students synthesize their safety investigations and draft clear, evidence-based Safety & Privacy Guidelines for their Responsible AI Use Guide.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/8" target="blank" rel="noopener noreferrer">
+Access Lesson 8: Defending Your Data
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students recap their Lesson 7 explorations and identify patterns across shopping data, public profiles, and social media scenarios.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (35 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 14pt"><b>🔄 Jigsaw Synthesis</b></p>
+
+<p style="font-size: 13pt">
+Students meet in Expert Groups to solidify findings, then transition into Jigsaw Groups to identify cross-cutting risks and strategies.
+</p>
+
+<p style="font-size: 14pt"><b>🛡️ Project Work</b></p>
+
+<p style="font-size: 13pt">
+Students draft the <strong>Safety & Privacy</strong> section of their Responsible AI Use Guide.
+</p>
+
+<p style="font-size: 13pt">
+Each guideline must:
+</p>
+
+<ul style="font-size: 13pt; margin-top: 5px;">
+<li>Be actionable and realistic</li>
+<li>Reference specific evidence from explorations</li>
+<li>Balance AI usefulness with human safety</li>
+</ul>
+
+<p style="font-size: 13pt">
+Students focus on building a “Privacy Shield” that prioritizes human agency and critical skepticism.
+</p>
+
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students add a new question to the Want to Know column of their KWL Chart and reflect on one strategy they will personally use moving forward.
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Ensure students bring their Milestone 4 Learning Log.
+* #### Preview the Safety & Security project level.
+* #### Prepare instructions for Expert and Jigsaw group transitions.
+* #### Review expectations for evidence-based guidelines.
+
+### 💡 **Tips for Teaching**:
+* #### Push for nuanced recommendations rather than “never” or “always” rules.
+* #### Require students to tie at least one guideline to a concrete exploration example.
+* #### Encourage reflection on long-term digital habits, not just classroom scenarios.
+MARKDOWN

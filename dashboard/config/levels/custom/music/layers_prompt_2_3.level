@@ -1,0 +1,105 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-10-01T18:10:28.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": {
+        "id": "layers",
+        "template": "Please code a short song that layers {type1} and {type2} together.",
+        "options": {
+          "type1": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ],
+          "type2": [
+            "bass",
+            "leads",
+            "beats",
+            "vocals"
+          ]
+        },
+        "variantCount": 3
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "packId": "kenya_grace_strangers",
+      "sounds": {
+        "kenya_grace_strangers": [
+          "drums_verse_beat",
+          "drums_chorus_beat",
+          "drums_snare_hit",
+          "drum_fill",
+          "drum_long_filter",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "bass_chorus_3",
+          "bass_chorus_4",
+          "acoustic_guitar_1",
+          "acoustic_guitar_2",
+          "acoustic_guitar_3",
+          "acoustic_guitar_4",
+          "synth_lead",
+          "synth_pad_verse_1",
+          "synth_pad_verse_2",
+          "synth_pad_verse_3",
+          "synth_pad_verse_4",
+          "synth_pad_verse_4_alt",
+          "synth_pad_chorus_1",
+          "synth_pad_chorus_2",
+          "synth_pad_chorus_3",
+          "synth_pad_chorus_4",
+          "vocals_verse_always_echo",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_verse_8",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_5",
+          "vocals_chorus_6",
+          "vocals_chorus_4_harmony_v2",
+          "vocals_chorus_5_harmony",
+          "vocal_distant_1",
+          "vocal_distant_2",
+          "vocal_warble_1",
+          "vocal_warble_2",
+          "vocal_uh_huh"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "name_suffix": "_3",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-01T18:10:28.592+00:00\",\"changed\":[\"cloned from \\\"layers_prompt_2\\\"\"],\"cloned_from\":\"layers_prompt_2\"},{\"changed_at\":\"2025-10-02 05:57:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 05:59:03 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 06:01:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 06:02:00 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 06:02:59 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 06:04:43 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-02 06:07:46 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,10 +1,3 @@
-Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  steps <<~GHERKIN
-    And I am a workshop administrator
-    And I create some fake applications of each type and status
-  GHERKIN
-end
-
 Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps <<~GHERKIN
@@ -59,25 +52,16 @@ Given(/^I have a regional partner named "([^"]*)" in the zip code "([^"]*)"$/) d
   regional_partner.mappings.find_or_create_by!(zip_code: zip_code.to_s)
 end
 
-Given(/^I have a regional partner with a teacher application$/) do
-  response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
-  data = JSON.parse(response)
-  @rp_id = data['rp_id']
-  @teacher_id = data['teacher_id']
-  @application_id = data['application_id']
-end
-
-Given(/^I delete the program manager, regional partner, teacher, and application$/) do
-  browser_request(
-    url: '/api/test/delete_rp_pm_teacher_application',
-    method: 'POST',
-    body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
-  )
-end
-
 Given(/^I get the workshop id from the current url$/) do
   @workshop_id = @browser.current_url.split('/').last
   track_record_for_deletion('Pd::Workshop', @workshop_id)
+end
+
+Given(/^I create a workshop under the regional partner named "([^"]+)"$/) do |partner_name|
+  require_rails_env
+
+  regional_partner = RegionalPartner.find_by(name: partner_name, is_active: true)
+  FactoryBot.create(:summer_workshop, regional_partner_id: regional_partner.id)
 end
 
 Given(/^I delete the workshop$/) do
@@ -119,14 +103,20 @@ Given /^I open the new workshop form$/ do
   GHERKIN
 end
 
+Given /^I am viewing a workshop in the workshop dashboard$/ do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/pd/workshop_dashboard/workshops/#{@workshop_id}"
+  GHERKIN
+end
+
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people
+    And I make the teacher named "#{random_name}" a facilitator for course "Build Your Own Workshop"
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people
   GHERKIN
 end
 
@@ -135,9 +125,18 @@ Given(/^I am an organizer with started and completed courses$/) do
   steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people
+  GHERKIN
+end
+
+Given(/^I am an organizer with a (started|completed) course$/) do |workshop_state|
+  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop organizer
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and "#{workshop_state == 'started' ? 'start' : 'end'}" it
   GHERKIN
 end
 
@@ -145,8 +144,22 @@ Given(/^I am a program manager with a started course$/) do
   random_name = "TestProgramManager" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I am a program manager named "#{random_name}" for regional partner "Test Partner"
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
   GHERKIN
+end
+
+Given(/^I submit post byo workshop surveys$/) do
+  require_rails_env
+
+  form = Foorm::Form.find_by(name: 'surveys/pd/build_your_own_workshop_teachers_post_survey_test') || FactoryBot.create(:foorm_form_build_your_own_workshop_post_survey)
+  track_record_for_deletion('Foorm::Form', form.id)
+
+  low_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 2, :answers_low, pd_workshop_id: @workshop_id)
+  high_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop_id)
+  all_submissions = low_submissions + high_submissions
+  all_submissions.each do |submission|
+    track_record_for_deletion('Pd::WorkshopSurveyFoormSubmission', submission.id)
+  end
 end
 
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
@@ -155,7 +168,7 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
 
   steps <<~GHERKIN
     And I create a teacher named "#{test_teacher_name}"
-    And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
+    And I create a workshop for course "Build Your Own Workshop" attended by "#{test_teacher_name}" with 3 facilitators and end it
   GHERKIN
 
   enrollment = FactoryBot.create(
@@ -165,18 +178,6 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
     user: find_test_user_by_name(test_teacher_name)
   )
   steps "And I am on \"http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}\""
-end
-
-Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
-  require_rails_env
-
-  user = find_test_user_by_name(name)
-  application = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.find_by(user: user)
-
-  # TODO(Andrew) ensure regional partner in the original application, and remove this:
-  application.update!(regional_partner: RegionalPartner.first)
-
-  steps "And I am on \"http://studio.code.org/pd/application/principal_approval/#{application.application_guid}\""
 end
 
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
@@ -198,83 +199,16 @@ And(/^I make the teacher a workshop admin$/) do
   browser_request(url: '/api/test/workshop_admin_access', method: 'POST')
 end
 
-And(/^I complete Section 2 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 2: Find Your Region"
-    And I press the first "input[name='country']" element
-    And I press keys "nonexistent" for element "#school input"
-    Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-    Then I wait until element "input#schoolName" is visible
-    And I press keys "Code.org" for element "input#schoolName"
-    And I press keys "Code.org District" for element "input#schoolDistrictName"
-    And I press keys "1501 4th Ave" for element "input#schoolAddress"
-    And I press keys "Seattle" for element "input#schoolCity"
-    And I select the "Washington" option in dropdown "schoolState"
-    And I press keys "98101" for element "input#schoolZipCode"
-    And I press the first "input[name='schoolType'][value='Other']" element
-  GHERKIN
-end
-
-And(/^I complete Section 3 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 3: About You"
-    And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
-    And I press keys "Severus" for element "input#firstName"
-    And I press keys "Snape" for element "input#lastName"
-    And I press keys "5558675309" for element "input#phone"
-    And I press keys "1501 4th Ave" for element "input#streetAddress"
-    And I press keys "Seattle" for element "input#city"
-    And I select the "Washington" option in dropdown "state"
-    And I press keys "98101" for element "input#zipCode"
-    And I press the first "input[name='howHeard']" element
-  GHERKIN
-end
-
-And(/^I complete Section 4 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 4: Additional Demographic Information"
-    And I press the first "input[name='currentRole']" element
-    And I press the first "input[name='previousYearlongCdoPd']" element
-    And I press "input[name='genderIdentity']:first" using jQuery
-    And I press the first "input[name='race']" element
-  GHERKIN
-end
-
-And(/^I complete Section 5 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 5: Administrator/School Leader Information"
-    And I press keys "Headmaster" for element "input#principalRole"
-    And I press keys "Albus" for element "input#principalFirstName"
-    And I press keys "Dumbledore" for element "input#principalLastName"
-    And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
-    And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
-    And I press keys "5555882300" for element "input#principalPhoneNumber"
-  GHERKIN
-end
-
-And(/^I complete Section 7 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
-    Then I wait until element "input[name='committed']" is visible
-    And I press "input[name='committed']:first" using jQuery
-    And I click selector "input[name='payFee']" if I see it
-    And I press the first "input#agree" element
-  GHERKIN
-end
-
-And(/^I create some fake applications of each type and status$/) do
-  browser_request(url: '/api/test/create_applications', method: 'POST')
-end
-
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryBot.create :summer_workshop,
+  workshop = FactoryBot.create(
+    :summer_workshop,
     :ended,
     num_sessions: 5,
     enrolled_and_attending_users: 10,
     num_facilitators: 2
+  )
 
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop
@@ -282,35 +216,72 @@ And(/^I am viewing a workshop with fake survey results$/) do
   steps "And I am on \"http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}\""
 end
 
-Given(/^I am a teacher enrolling in "([^"]*)"$/) do |course|
-  workshop = FactoryBot.create(:workshop, course: course)
+Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do |user_type, status|
+  require_rails_env
+
+  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
+  user = case user_type
+         when "student"
+           steps <<~GHERKIN
+             And I create a student named "#{random_name}"
+             And I sign in as "#{random_name}"
+           GHERKIN
+           find_test_user_by_name(random_name)
+         when "teacher"
+           steps <<~GHERKIN
+             And I create a teacher named "#{random_name}"
+             And I sign in as "#{random_name}"
+           GHERKIN
+
+           school_info = FactoryBot.create(:school_info)
+           teacher = find_test_user_by_name(random_name)
+           teacher.update!(educator_role: 'classroom_teacher', school_info: school_info)
+           teacher
+         else
+           nil
+         end
+
+  workshop = case status
+             when "closed"
+               FactoryBot.create(:workshop, :ended)
+             when "full"
+               FactoryBot.create(:workshop, capacity: 1, num_enrollments: 1)
+             when "own"
+               FactoryBot.create(:workshop, organizer: user)
+             else
+               FactoryBot.create(:workshop)
+             end
+  if status == "duplicate"
+    FactoryBot.create :pd_enrollment, workshop: workshop, user: user
+  end
   @workshop_id = workshop.id
-  random_teacher_name = "Test Teacher" + SecureRandom.hex[0..9]
-  steps <<~GHERKIN
-    And I create a teacher named "#{random_teacher_name}"
-    And I am on "http://studio.code.org/pd/workshops/#{@workshop_id}/enroll"
-  GHERKIN
+
+  steps "Then I am on \"http://studio.code.org/pd/workshops/#{@workshop_id}/join\""
 end
 
 Given 'I start a self-paced PL course' do
   steps <<~GHERKIN
     Given I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/1"
-    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
-    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    And I wait until element "a[title='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[title='Level 3 Lesson Instructor In Training Levels']"
     When I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
-    Then I wait until element "a:contains(Submit)" is visible
-    When I click selector "a:contains(Submit)"
+    Then I wait until element "button:contains(Submit)" is visible
+    When I click selector "button:contains(Submit)"
     Then I wait until I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/4"
-    And I wait until element "a:contains(Submit)" is visible
+    And I wait until element "button:contains(Submit)" is visible
   GHERKIN
 end
 
-And 'I see Farsi version of Professional Learning Lending page' do
+And 'I visit Farsi version of Professional Learning Lending page' do
   steps <<~GHERKIN
-    And element "a:contains(Learn about professional learning)" is not visible
+    When I am on "http://studio.code.org/my-professional-learning"
+    And I switch to the Global Edition region "fa"
+    Then I wait until current URL contains "http://studio.code.org/fa/my-professional-learning"
+    And element "h1:contains(یادگیری پیشرفته)" is visible
+    And element "a[href*='/educate/professional-learning']" is not visible
     And element "button.ui-test-join-section" is not visible
-    And element "a:contains(Learn more about workshops)" is not visible
-    And the href of selector "a:contains(Start professional learning courses)" contains "/global/fa/teacher"
+    And element "a[href*='/professional-learning/workshops']" is not visible
+    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/fa/teacher"
   GHERKIN
 end
 
@@ -534,7 +505,7 @@ def create_enrollment(workshop, name = nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryBot.create :teacher
+    FactoryBot.create(:teacher)
   end
   Pd::Enrollment.create!(
     first_name: first_name,
@@ -573,8 +544,12 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       )
     end
 
+  track_record_for_deletion('User', organizer.id)
+
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryBot.create(:workshop, :funded,
+    FactoryBot.create(
+      :workshop,
+      :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,
@@ -582,9 +557,13 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       session_location_name: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
-      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
+      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0,
+      participant_group_type: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? 'Regional' : nil,
+      course_offerings: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? [CourseOffering.first || FactoryBot.create(:course_offering)] : nil,
     )
   end
+
+  track_record_for_deletion('Pd::Workshop', workshop.id)
 
   @workshop_id = workshop.id
 
@@ -598,6 +577,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.facilitators << facilitator
   end
 
+  workshop.facilitators.each do |fac|
+    track_record_for_deletion('User', fac.id)
+  end
+
   # Attendees
   if number_type == 'people'
     number.to_i.times do
@@ -607,6 +590,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     if role == 'attended'
       create_enrollment(workshop, name)
     end
+  end
+
+  workshop.enrollments.each do |enrollment|
+    track_record_for_deletion('Pd::Enrollment', enrollment.id)
   end
 
   if post_create_actions.include?('and end it')

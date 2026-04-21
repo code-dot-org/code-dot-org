@@ -71,6 +71,8 @@
     "bubble_choice_description": "Build an app that helps users come up with activities to support their mental health. ",
     "thumbnail_url": "https://images.code.org/d814294ba14dc8722323e1634b08f1f5-MindEase Logo 2024-03-06.webp",
     "name_suffix": "_2025",
+    "skill_keys": "[\"variables_declare\",\"variables_name\",\"variables_assignment_operator\"]",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

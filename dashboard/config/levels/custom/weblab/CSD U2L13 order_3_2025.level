@@ -32,7 +32,8 @@
     ],
     "map_reference": "/courses/csd-2024/guides/flex-children",
     "encrypted_examples": "RupecahgLCxlNZXN058/cccMrwuleNRQHyDpOPE6TVEn9Fg7QrNbv3UwoeUN\nEMuZXXQu/vR2KvjuxiUVLm9k3Q==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:48.226+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 order_3\\\"\"],\"cloned_from\":\"CSD U2L13 order_3\"}]"

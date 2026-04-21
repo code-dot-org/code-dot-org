@@ -116,10 +116,10 @@ Then(/^check that level (\d+) on this lesson is not done$/) do |level|
   undone
 end
 
-And(/^I complete unit (.+)/) do |unit_name|
+And(/^I complete course "([^"]*)" unit (\d+)/) do |course_name, unit_position|
   browser_request(
     url: '/api/test/complete_unit',
     method: 'POST',
-    body: {unit_name: unit_name}
+    body: {course_name: course_name, unit_position: unit_position}
   )
 end

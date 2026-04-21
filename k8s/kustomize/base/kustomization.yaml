@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - dashboard-deployment.yaml
+  - dashboard-ingress.yaml
+  - dashboard-service.yaml
+  - locals.yml.yaml
+  - cdo-local-secrets.yaml
+secretGenerator:
+  - name: cdo-local-secrets
+    behavior: merge
+    type: Opaque
+    envs:
+      - cdo-local-secret-overrides.env

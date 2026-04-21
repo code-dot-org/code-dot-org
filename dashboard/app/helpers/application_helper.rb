@@ -121,11 +121,6 @@ module ApplicationHelper
     CDO.code_org_url
   end
 
-  # used by sign-up to retrieve the user return_to URL from the session and delete it.
-  def get_and_clear_session_user_return_to
-    return session.delete(:user_return_to) if session[:user_return_to]
-  end
-
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if resource_or_scope.is_a?(User) && resource_or_scope.teacher?
@@ -174,6 +169,9 @@ module ApplicationHelper
       else
         asset_url "bounce_sharing_drawing.png"
       end
+    elsif opts[:level].is_a?(BubbleChoice)
+      project_type = opts[:level].try(:project_type)
+      asset_url "#{project_type}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
     end

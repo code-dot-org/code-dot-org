@@ -9,10 +9,14 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
  * @returns A new array containing the sorted files.
  */
 export const sortFilesByName = (
-  files: MultiFileSource['files'],
+  source: MultiFileSource,
   options = {mustBeOpen: true}
 ) => {
-  return Object.values(files)
-    .filter(f => !options.mustBeOpen || (f.open && options.mustBeOpen))
+  return Object.values(source.files)
+    .filter(
+      f =>
+        !options.mustBeOpen ||
+        (source.openFiles?.includes(f.id) && options.mustBeOpen)
+    )
     .sort((a, b) => a.name.localeCompare(b.name));
 };

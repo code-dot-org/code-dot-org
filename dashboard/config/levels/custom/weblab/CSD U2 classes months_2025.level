@@ -33,7 +33,8 @@
     "bubble_choice_description": "Choose a month and add in a class to make it stand out on this web page.",
     "thumbnail_url": "https://images.code.org/5678572c7dc31fe5d76977d83148bc53-image-1588247237492.47.04 AM.png",
     "encrypted_examples": "LgR/8dBQoJ76JdZKla8FY3KpQyXf/AzXgDjE1QCX+SFFeEmOlTsNOyq160rQ\nCEHZW1tdN4GbWrdVD5nYdOGngA==\n",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

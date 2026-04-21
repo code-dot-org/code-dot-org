@@ -7,12 +7,12 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
   end
 
   test "census submission with bad email is invalid" do
-    submission = build :census_submission, submitter_email_address: "email"
+    submission = build(:census_submission, submitter_email_address: "email")
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission with blank email is invalid" do
-    submission = build :census_submission, submitter_email_address: "   "
+    submission = build(:census_submission, submitter_email_address: "   ")
     refute submission.valid?, submission.errors.full_messages
   end
 

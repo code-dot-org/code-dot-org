@@ -90,6 +90,7 @@
     "bubble_choice_description": "Rewrite a function so that one of the global variables is no longer necessary.",
     "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sign_language_A.svg/91px-Sign_language_A.svg.png",
     "encrypted_examples": "7fnJ2akzx0JOzUIM50lC+jia1Ijie2n6lRPK5lxDbqpAF0AdlwrRPsZmicIs\nz+s4zAZtqQX/asjKmP6/PKfrNw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

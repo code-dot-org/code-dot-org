@@ -4,12 +4,10 @@ import {
 } from '@cdo/apps/aichat/aichatApi';
 import {
   AichatContext,
-  AichatModelCustomizations,
-  AiCustomizations,
+  ModelParameters,
   CompletedChatMessage,
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
-import {EMPTY_MODEL_CARD_INFO} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
@@ -17,6 +15,7 @@ import {
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
@@ -25,8 +24,7 @@ import {
 describe('aichatApi', () => {
   let chatMessage: PendingChatMessage,
     storedMessages: CompletedChatMessage[],
-    aiCustomizations: AiCustomizations,
-    aichatModelCustomizations: AichatModelCustomizations,
+    modelParameters: ModelParameters,
     aichatContext: AichatContext,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
@@ -54,22 +52,16 @@ describe('aichatApi', () => {
         requestId: 1,
       },
     ];
-    aiCustomizations = {
-      selectedModelId: AiChatModelIds.ARITHMO,
+
+    modelParameters = {
+      selectedModelId: AiChatModelIds.MISTRAL,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
-      modelCardInfo: EMPTY_MODEL_CARD_INFO,
-    };
-
-    aichatModelCustomizations = {
-      selectedModelId: aiCustomizations.selectedModelId,
-      temperature: aiCustomizations.temperature,
-      retrievalContexts: aiCustomizations.retrievalContexts,
-      systemPrompt: aiCustomizations.systemPrompt,
     };
 
     aichatContext = {
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
@@ -120,7 +112,7 @@ describe('aichatApi', () => {
       return await postAichatCompletionMessage(
         chatMessage,
         storedMessages,
-        aiCustomizations,
+        modelParameters,
         aichatContext,
         maxPollingTime
       );
@@ -151,7 +143,7 @@ describe('aichatApi', () => {
         JSON.stringify({
           newMessage: chatMessage,
           storedMessages,
-          aichatModelCustomizations,
+          modelParameters,
           aichatContext,
         })
       );
@@ -244,6 +236,16 @@ describe('aichatApi', () => {
       expect(messages[0].status).toBe(AiInteractionStatus.ERROR);
       expect(messages[1].status).toBe(AiInteractionStatus.PROFANITY_VIOLATION);
       expect(messages[1].chatMessageText).toBe(modelResponse);
+    });
+
+    it('returns user and bot message with MODEL_RATE_LIMITED if status is MODEL_RATE_LIMITED', async () => {
+      fetchJson.mockResolvedValue(
+        createResponse(AiRequestExecutionStatus.MODEL_RATE_LIMITED, '')
+      );
+      const messages = await callApiGetMessages();
+      expect(messages.length).toBe(2);
+      expect(messages[0].status).toBe(AiInteractionStatus.MODEL_RATE_LIMITED);
+      expect(messages[1].status).toBe(AiInteractionStatus.MODEL_RATE_LIMITED);
     });
 
     it('throws an error if an unknown status is returned', async () => {

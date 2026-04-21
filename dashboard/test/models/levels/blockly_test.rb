@@ -620,7 +620,7 @@ class BlocklyTest < ActiveSupport::TestCase
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
-    level = create :level, :blockly
+    level = create(:level, :blockly)
 
     # Add translation mapping to the I18n backend
     custom_i18n = {

@@ -22,22 +22,14 @@ class AichatRequestChatCompletionJob < ApplicationJob
     report_job_finish(request)
   end
 
-  # Catch any exceptions that occur during the job and update the request status accordingly
+  # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
-    if rack_env?(:development)
-      puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
-    end
-
     request = arguments.first[:request]
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
-    Honeybadger.notify(
-      "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
-      context: {
-        request: request.to_json
-      }
-    )
+    locale = arguments.first[:locale]
 
-    # Report metrics for the failed job (after_perform doesn't run on failure)
+    AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception, request, locale)
+
+    # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
 
     # Re-raise error to notify our system of the failed job.
@@ -49,20 +41,35 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  # Determine if one of the models handled by  `aichat_ai_client.rb`.
+  private def openai_or_gemini?(model_id)
+    [
+      SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+    ].include? model_id
+  end
+
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity('user', request.new_message['chatMessageText'], locale, request.level_id)
+    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
-    if request.model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+    if openai_or_gemini?(request.model_customizations['selectedModelId'])
       begin
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
+      rescue AichatAiHelper::ModelRateLimitedError => exception
+        Honeybadger.notify(exception, context: {request_id: request.id, model: request.model_customizations['selectedModelId'], client_type: request.model_customizations['clientType'], level_id: request.level_id})
+        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], nil]
       end
     else
       begin
@@ -78,7 +85,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     # Moderate model output for toxicity.
-    model_toxicity = AichatSafetyHelper.find_toxicity('assistant', response, locale, request.level_id)
+    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)
@@ -88,7 +95,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def make_openai_request(request)
-    AichatOpenaiHelper.get_openai_assistant_response(
+    AichatAiHelper.get_openai_assistant_response(
       request.model_customizations,
       request.stored_messages,
       request.new_message,
@@ -118,6 +125,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_start(request)
     @start_time = Time.now
+
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
         {
@@ -137,30 +145,47 @@ class AichatRequestChatCompletionJob < ApplicationJob
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
-    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "#{self.class.name}.Finish",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-            {name: 'ExecutionStatus', value: status_name},
-          ],
-        },
-        {
-          metric_name: "#{self.class.name}.ExecutionTime",
-          value: execution_time,
-          unit: 'Seconds',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-          ],
-        }
-      ]
-    )
+
+    execution_time_metric_base = {
+      metric_name: "#{self.class.name}.ExecutionTime",
+      value: execution_time,
+      unit: 'Seconds',
+      timestamp: Time.now,
+      dimensions: [],
+    }
+
+    execution_time_dimensions_base = [
+      {name: 'Environment', value: CDO.rack_env},
+      {name: 'ModelId', value: get_model_id(request)},
+    ]
+
+    metrics = [
+      {
+        metric_name: "#{self.class.name}.Finish",
+        value: 1,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env},
+          {name: 'ModelId', value: get_model_id(request)},
+          {name: 'ExecutionStatus', value: status_name},
+        ],
+      },
+      execution_time_metric_base.merge({dimensions: execution_time_dimensions_base}),
+    ]
+
+    model_id = get_model_id(request)
+    if openai_or_gemini?(model_id)
+      multimodal_dimension = {name: 'Multimodal', value: request_multimodal?(request).to_s}
+      execution_time_metric_multimodal = execution_time_metric_base.merge({dimensions: execution_time_dimensions_base + [multimodal_dimension]})
+      metrics.push(execution_time_metric_multimodal)
+    end
+
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+  end
+
+  private def request_multimodal?(request)
+    (request.new_message['assets']&.length || 0) > 0 ||
+      request.stored_messages.any? {|message| (message['assets']&.length || 0) > 0}
   end
 end

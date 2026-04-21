@@ -1,4 +1,4 @@
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
@@ -30,12 +30,15 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   const {aichatSettings, setPropertyValue} = useContext(UpdateContext);
   const InputTag = inputType === 'textarea' ? 'textarea' : 'input';
   const {initialCustomizations, visibilities} = aichatSettings;
+  if (!fieldName) {
+    return null;
+  }
   return (
     <>
       {description && (
-        <BodyFourText>
+        <Typography variant="body4" gutterBottom>
           <i>{description}</i>
-        </BodyFourText>
+        </Typography>
       )}
       <div className={moduleStyles.fieldRow}>
         <div className={moduleStyles['field-value']}>
@@ -63,7 +66,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
           )}
         </div>
         <VisibilityDropdown
-          value={visibilities[fieldName]}
+          value={visibilities[fieldName]!}
           property={fieldName}
         />
       </div>

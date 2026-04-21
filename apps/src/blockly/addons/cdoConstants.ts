@@ -36,7 +36,7 @@ export default function initializeCdoConstants(
     LOCATION: 'Location',
   };
 
-  // Google Blockly defaults to 28, but Cdo Blockly defaults to 15. Some labs set the snap radius
+  // Blockly defaults to 28, but Cdo Blockly defaults to 15. Some labs set the snap radius
   // by multiplying a scale factor, so it's important that the default value matches what it was on our fork
   blocklyWrapper.SNAP_RADIUS = 15;
 }

@@ -14,6 +14,13 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     test_user_to_delete&.destroy
   end
 
+  # Based on https://github.com/rails/rails/blob/v7.0.8.7/actionpack/test/dispatch/request/session_test.rb#L134-L140
+  class MockSessionStore
+    def load_session(env); [1, {}]; end
+    def session_exists?(env); true; end
+    def delete_session(env, id, options); 123; end
+  end
+
   def user_params(override_params = {})
     default_params = {
       user_type: override_params[:user_type] || 'student',
@@ -33,6 +40,7 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
   def setup_partial_user(override_params = {})
     env = Rack::MockRequest.env_for("test-env", 'HTTP_X_FORWARDED_FOR' => TEST_IP, :params => {user: user_params(override_params)})
     @request = ActionDispatch::Request.new env
+    @request.session = ActionDispatch::Request::Session.create(MockSessionStore.new, @request, {})
 
     partial_user = User.new({email: TEST_USER_EMAIL, password: 'fake-pass', password_confirmation: 'fake-pass'})
     partial_user.validate_for_finish_sign_up
@@ -134,12 +142,16 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
 
   # Teacher tests
   test 'builds teacher user with default values' do
-    setup_partial_user({user_type: 'teacher'})
+    TEST_GIVEN_NAME = 'Firstname'
+    TEST_FAMILY_NAME = 'Lastname'
+    setup_partial_user({user_type: 'teacher', given_name: TEST_GIVEN_NAME, family_name: TEST_FAMILY_NAME})
 
     assert_creates(User) do
       @user = Services::PartialRegistration::UserBuilder.call(request: @request)
     end
 
+    assert_equal TEST_GIVEN_NAME, @user.given_name
+    assert_equal TEST_FAMILY_NAME, @user.family_name
     assert_equal TEST_USER_NAME, @user.name
     assert_equal TEST_USER_EMAIL, @user.email
     assert_equal '21+', @user.age.to_s
@@ -167,8 +179,8 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
   end
 
   test 'builds teacher with nces school in our database' do
-    fake_school = create :school
-    fake_school_info = create :school_info, school_id: fake_school.id
+    fake_school = create(:school)
+    fake_school_info = create(:school_info, school_id: fake_school.id)
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
         school_id: fake_school.id,

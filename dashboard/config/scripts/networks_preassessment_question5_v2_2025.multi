@@ -1,0 +1,17 @@
+name 'networks-preassessment-question5_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 5'
+
+wrong 'To block websites from being accessed'
+wrong 'To monitor the speed of an Internet connection'
+wrong 'To store all website content on local computers'
+right 'To translate human-friendly domain names into IP addresses'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the role of the Domain Name System (DNS)?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: HTTP and DNS
+MARKDOWN

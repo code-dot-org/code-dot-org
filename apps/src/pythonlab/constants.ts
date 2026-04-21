@@ -9,14 +9,13 @@ export const DEFAULT_PROJECT: ProjectSources = {
       '0': {
         id: '0',
         name: MAIN_PYTHON_FILE,
-        language: 'py',
         contents: 'print("Hello world!")',
         folderId: '0',
         active: true,
-        open: true,
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
 };
 
@@ -26,14 +25,13 @@ export const STANDALONE_CONSOLE_PROJECT: ProjectSources = {
       '0': {
         id: '0',
         name: MAIN_PYTHON_FILE,
-        language: 'py',
         contents: 'print("Hello world!")',
         folderId: '0',
         active: true,
-        open: true,
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
   labConfig: {
     standaloneSettings: {projectType: 'console'},
@@ -46,11 +44,9 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
       '0': {
         id: '0',
         name: MAIN_PYTHON_FILE,
-        language: 'py',
         contents: 'from neighborhood import Painter',
         folderId: '0',
         active: true,
-        open: true,
       },
       '1': {
         id: '1',
@@ -59,11 +55,11 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
         contents:
           '[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}]]',
         type: ProjectFileType.SYSTEM_SUPPORT,
-        language: 'txt',
         folderId: '0',
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
   labConfig: {
     miniApp: {name: 'neighborhood'},
@@ -71,4 +67,6 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
   },
 };
 
-export const PYTHONLAB_VALID_FILE_TYPES = ['py', 'csv', 'txt'];
+export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt', 'json'];
+
+export const PYTHONLAB_SUPPORTED_FILE_TYPES = PYTHONLAB_EDITABLE_FILE_TYPES;

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import PairingDialog from './components/pairing/PairingDialog.jsx';
 
@@ -14,12 +15,22 @@ export default {
         container.id = 'pairing';
         document.body.appendChild(container);
 
-        pairingDialog = ReactDOM.render(
-          <PairingDialog source={pairingUrl} />,
-          container
+        createReactRoot(
+          <PairingDialog
+            source={pairingUrl}
+            ref={dialog => {
+              pairingDialog = dialog;
+            }}
+          />,
+          container,
+          {
+            legacyReactDomRender: true,
+          }
         );
       }
-      pairingDialog.open();
+      if (pairingDialog) {
+        pairingDialog.open();
+      }
     }
 
     if (showPairingDialog) {

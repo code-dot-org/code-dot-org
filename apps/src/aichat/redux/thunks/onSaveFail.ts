@@ -8,8 +8,5 @@ export const onSaveFail = () => (dispatch: AppDispatch) => {
   Lab2Registry.getInstance()
     .getMetricsReporter()
     .incrementCounter('Aichat.SaveFailError');
-  // Default save error message.
-  const errorMessage =
-    'There was an error saving your project. Please try again.';
-  dispatchSaveFailNotification(dispatch, errorMessage);
+  dispatchSaveFailNotification(dispatch, 'genericError');
 };

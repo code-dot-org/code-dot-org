@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import {forwardRef, HTMLAttributes} from 'react';
 
+import {Theme} from '@/common/contexts';
 import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
@@ -28,6 +29,13 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   style?: React.CSSProperties;
   /** Hides the tooltip's tail (arrow). Defaults to false. */
   hideTail?: boolean;
+  /**
+   *  Theme to set `data-theme` directly on the tooltip's outer div
+   *  since `WithTooltip` renders the `Tooltip` in a portal and otherwise
+   *  will not have `data-theme` set on an ancester element even when it
+   *  is "logically" within a theme provider.
+   **/
+  'data-theme'?: Theme;
 }
 
 export interface TooltipOverlayProps {

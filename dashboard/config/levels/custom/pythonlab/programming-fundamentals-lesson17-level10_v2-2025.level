@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:15.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Use dice rolls to randomly determine how many villagers are healed with each potion.\r\n\r\n## Do This: \r\n- Run the code to see how villagers are healed with each potion.\r\n- Modify the code so that each potion heals between 2 and 5 villagers.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import random\n\npotions = 5\nvillagers_healed = 0\n\n# Use a potion to heal 1 to 3 villagers (random)\nwhile potions > 0:\n    heal = random.randint(1, 3)  # Randomly heal 1 to 3 villagers\n    villagers_healed += heal\n    potions -= 1\n    print(\"You healed\", heal, \"villagers! Total villagers healed:\", villagers_healed)\n\nprint(\"You ran out of potions!\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestPotionHealing(unittest.TestCase):\n\n    def test_modify_healing_range(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the random range is updated to `random.randint(2, 5)`\n            if 'random.randint(2, 5)' not in content:\n                self.fail(\n                    \"The healing range has not been updated to 2 to 5 villagers. \"\n                    \"Please change the line `random.randint(1, 3)` to `random.randint(2, 5)` \"\n                    \"so that each potion heals between 2 and 5 villagers.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3R1RZeuUOlHJEiArUUs1b+fZCeUjtRtl\n0Vy6SMAl6XYuzsl4iLl6Ikt0GcnWlrChvWvfaGtirPYpYzxwuaxwT1gidckx\njRHkmv6t3E6Yc2KFsko+IYRrYFVekC0YY3EjgYpyIQtxsAwbSeSzejaTjtId\nB0nfd1UhMm3D3KHfAVHSLEbqnuuznz2zkrFAezwV1Bjx21O2uei4Iw0YOXp5\nxEh9Bcez3J4ktkwuPjFgArW2SSO/1gZzlgBQgYnydLLYx8kscW4ByUw+kKKX\n51V7RWKxylmSCpGEbPXnEmuKdbzH1dzN0MsvFv/k/jHEciwLx+VRlUPYIvvZ\nsKjDcRwHPaEvXMOQPhRA1y3QycZ1PKT0sdFJrb6rwraLv0S5qC8fzRAv2cS/\npA5jUFYNihCwFXdEYm9xj4UOS71qfPPvgAPQAGHocxR/zHHZ0xnehQ+rWnVO\nOg5hTb/Wy/u0ziy51S6qRTw6u3b6N8jZprUrkRgQRVqdQnqKZov47OE3tK5h\npCkMpyUebqoIGlvClGHKOAh/VLluePVrHbvtPFSI8KdxRgGWNfvnaxq9YO1Y\ncCyHTC8zqzDDpA+H/CS1VdsDNYA=\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:15.698+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level10_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level10_2025\"}]"
+}]]></config>
+</Pythonlab>

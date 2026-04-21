@@ -1,10 +1,16 @@
 import React, {useEffect, useRef} from 'react';
 
+const clamp = (number: number, min: number, max: number) => {
+  return Math.min(Math.max(number, min), max);
+};
+
 const animationFramesPerSecond = 60;
 
 // EaseIntoView: This component does an eased scroll of the container's content,
 // starting from a distance below the top, and scrolling to the top.  It's useful
-// to show the user that some new content is scrollable.
+// to show the user that some new content is scrollable. It also creates an enter/
+// escape paradigm for keyboard users to navigate into and out of the container and
+// access the children (marked with the 'showing' class) within.
 
 interface EaseIntoViewProps {
   id?: string;
@@ -19,7 +25,12 @@ interface EaseIntoViewProps {
   scrollStart: number;
   /** Scroll position to stop scrolling at */
   scrollEnd?: number;
+  /** Aria label for the container */
+  ariaLabel?: string;
+  /** Child elements to be rendered within the container */
   children: React.ReactNode;
+  /** An array of refs for direct a11y reference */
+  focusableChildren: Array<HTMLButtonElement | null>;
 }
 
 const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
@@ -30,7 +41,9 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   frames,
   scrollStart,
   scrollEnd = 0,
+  ariaLabel = 'Scrollable content',
   children,
+  focusableChildren = [],
 }) => {
   const scrollStep = useRef<number | undefined>(0);
   const lastScrollPosition = useRef<number | undefined>(undefined);
@@ -72,12 +85,28 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
             0,
             (scrollStep.current - delayFrames) / frames
           );
-          const scrollPosition =
+          const desiredScrollPosition =
             scrollStart - (scrollStart - scrollEnd) * easeOutSine(progress);
 
-          containerRef.current?.scroll(0, scrollPosition);
+          const maxScrollPosition =
+            containerRef.current?.scrollHeight -
+            containerRef.current?.clientHeight;
 
-          lastScrollPosition.current = scrollPosition;
+          // Avoid attempting to over-scroll, which will be misinterpeted as the user scrolling
+          // manually by a check above.
+          const clampedScrollPosition = clamp(
+            desiredScrollPosition,
+            -maxScrollPosition,
+            maxScrollPosition
+          );
+
+          containerRef.current?.scroll({
+            top: clampedScrollPosition,
+            left: 0,
+            behavior: 'instant',
+          });
+
+          lastScrollPosition.current = clampedScrollPosition;
 
           scrollStep.current++;
 
@@ -91,8 +120,40 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     }, 1000 / animationFramesPerSecond);
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
+  // View instrumentGrid/index.tsx for an example of this component in use.
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const firstFocusable = focusableChildren.find(child => child);
+
+    switch (event.key) {
+      case 'Enter':
+        event.preventDefault();
+        // Make children that should be showing focusable and focus the first child.
+        focusableChildren.forEach(ref => ref?.setAttribute('tabindex', '0'));
+        firstFocusable?.focus();
+        break;
+
+      case 'Tab':
+        // Make all children unfocusable.
+        focusableChildren.forEach(ref => ref?.setAttribute('tabindex', '-1'));
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
-    <div id={id} className={className} ref={containerRefCallback}>
+    <div
+      id={id}
+      role="tablist"
+      tabIndex={0}
+      aria-label={ariaLabel}
+      className={className}
+      ref={containerRefCallback}
+      onKeyDown={handleKeyDown}
+    >
       {children}
     </div>
   );

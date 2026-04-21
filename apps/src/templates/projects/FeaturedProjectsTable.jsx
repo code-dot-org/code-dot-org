@@ -368,7 +368,7 @@ class FeaturedProjectsTable extends React.Component {
       {
         property: 'publishedAt',
         header: {
-          label: i18n.published(),
+          label: i18n.submitted(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -459,13 +459,13 @@ class FeaturedProjectsTable extends React.Component {
       sort: orderBy,
     })(this.getProjectList());
 
-    const mustBePulishedMessage =
-      '* Featured projects must be published in order to be displayed in the public featured projects gallery.';
+    const mustBeSubmittedMessage =
+      '* Featured projects must be submitted (published) in order to be displayed in the public featured projects gallery.';
 
     return (
       <div>
         {this.renderStatusFilterDropdown()}
-        <span style={styles.tableMessage}>{mustBePulishedMessage}</span>
+        <span style={styles.tableMessage}>{mustBeSubmittedMessage}</span>
         <Table.Provider columns={columns} style={tableLayoutStyles.table}>
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="channel" />

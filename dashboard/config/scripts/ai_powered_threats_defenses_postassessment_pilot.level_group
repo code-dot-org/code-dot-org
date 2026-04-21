@@ -1,0 +1,27 @@
+name 'ai-powered-threats-defenses-postassessment-pilot'
+title 'AI Powered Threats and Defenses End of Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-powered-threats-defenses-postassessment-intro_2025'
+level 'ai-powered-threats-defenses-postassessment-q1_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q2_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q3_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q4_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q5_2025-pilot'
+
+page
+level 'ai-powered-threats-defenses-postassessment-q6_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q7_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q8_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q9_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q10_2025-pilot'
+
+page
+level 'ai-powered-threats-defenses-postassessment-q11_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q12_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q13_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q14_2025-pilot'
+level 'ai-powered-threats-defenses-postassessment-q15_2025-pilot'

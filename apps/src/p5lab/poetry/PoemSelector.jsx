@@ -1,9 +1,8 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 
-import 'react-select/dist/react-select.css';
 import project from '@cdo/apps/code-studio/initApp/project';
 import fontConstants from '@cdo/apps/fontConstants';
 import StylizedBaseDialog, {
@@ -161,7 +160,7 @@ function PoemSelector(props) {
   };
 
   const onChange = e => {
-    const poemKey = e.value;
+    const poemKey = e.target.value;
     if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
       return;
@@ -195,11 +194,11 @@ function PoemSelector(props) {
     if (shouldAlphabetizePoems()) {
       options.sort((a, b) => (a.title > b.title ? 1 : -1));
     }
-    options = options.map(poem => ({value: poem.key, label: poem.title}));
+    options = options.map(poem => ({value: poem.key, text: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
-    options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    options.unshift({value: msg.enterMyOwn(), text: msg.enterMyOwn()});
     // Add blank option that just says "Choose a Poem" to the top of the dropdown.
-    options.unshift({value: msg.chooseAPoem(), label: msg.chooseAPoem()});
+    options.unshift({value: msg.chooseAPoem(), text: msg.chooseAPoem()});
     return options;
   };
 
@@ -216,17 +215,15 @@ function PoemSelector(props) {
         handleClose={handleClose}
         initialPoem={initialEditorPoem()}
       />
-      <label>
-        <b>{msg.selectPoem()}</b>
-      </label>
-      <div style={styles.selector}>
-        <Select
-          value={props.selectedPoem.key}
-          clearable={false}
-          searchable={false}
+      <div style={styles.dropdownWrapper}>
+        <SimpleDropdown
+          name="poem-selector"
+          labelText={msg.selectPoem()}
+          items={getPoemOptions()}
+          selectedValue={props.selectedPoem.key}
           onChange={onChange}
-          options={getPoemOptions()}
           disabled={props.isRunning}
+          dropdownTextThickness="thin"
         />
       </div>
     </div>
@@ -245,8 +242,7 @@ const styles = {
   container: {
     maxWidth: APP_WIDTH,
   },
-  selector: {
-    width: '100%',
+  dropdownWrapper: {
     marginBottom: 10,
   },
   label: {

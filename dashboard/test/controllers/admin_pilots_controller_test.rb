@@ -79,10 +79,10 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'piloter shows up in list of piloters' do
-    pilot1 = create :pilot
-    pilot2 = create :pilot
-    create :teacher, pilot_experiment: pilot1.name, email: 'csp@example.com'
-    create :teacher, pilot_experiment: pilot2.name, email: 'cspnot@example.com'
+    pilot1 = create(:pilot)
+    pilot2 = create(:pilot)
+    create(:teacher, pilot_experiment: pilot1.name, email: 'csp@example.com')
+    create(:teacher, pilot_experiment: pilot2.name, email: 'cspnot@example.com')
     get :show, params: {pilot_name: pilot1.name}
     assert_response :success
     assert_select 'table tr td.email', {count: 1, text: "csp@example.com"}
@@ -94,7 +94,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
   #
 
   test 'can add and remove teacher from pilot' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: teacher.email, pilot_name: pilot_name}
 
@@ -106,8 +106,8 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'can add multiple teachers to pilot' do
-    teacher = create :teacher
-    teacher2 = create :teacher
+    teacher = create(:teacher)
+    teacher2 = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: teacher.email + "\n" + teacher2.email, pilot_name: pilot_name}
 
@@ -116,8 +116,8 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'can add multiple teachers to pilot with extra spaces' do
-    teacher = create :teacher
-    teacher2 = create :teacher
+    teacher = create(:teacher)
+    teacher2 = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: teacher.email + " \n" + teacher2.email, pilot_name: pilot_name}
 
@@ -126,8 +126,8 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'can add multiple teachers to pilot with extra commas' do
-    teacher = create :teacher
-    teacher2 = create :teacher
+    teacher = create(:teacher)
+    teacher2 = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: teacher.email + ",\n" + teacher2.email, pilot_name: pilot_name}
 
@@ -136,8 +136,8 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'if first email fails, second given will work successfully' do
-    student = create :student
-    teacher = create :teacher
+    student = create(:student)
+    teacher = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {email: student.email + "\n" + teacher.email, pilot_name: pilot_name}
 
@@ -146,8 +146,8 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'if middle user is not found, first and third still work successfully' do
-    teacher = create :teacher
-    teacher2 = create :teacher
+    teacher = create(:teacher)
+    teacher2 = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {
       email: teacher.email + "\nfake@fakey1.fake\n" + teacher2.email, pilot_name: pilot_name
@@ -158,17 +158,17 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'longer list of emails works correctly' do
-    teacher = create :teacher
-    teacher2 = create :teacher
-    teacher3 = create :teacher
-    teacher4 = create :teacher
-    teacher5 = create :teacher
-    teacher6 = create :teacher
-    teacher7 = create :teacher
-    teacher8 = create :teacher
-    teacher9 = create :teacher
-    teacher10 = create :teacher
-    teacher11 = create :teacher
+    teacher = create(:teacher)
+    teacher2 = create(:teacher)
+    teacher3 = create(:teacher)
+    teacher4 = create(:teacher)
+    teacher5 = create(:teacher)
+    teacher6 = create(:teacher)
+    teacher7 = create(:teacher)
+    teacher8 = create(:teacher)
+    teacher9 = create(:teacher)
+    teacher10 = create(:teacher)
+    teacher11 = create(:teacher)
     pilot_name = create(:pilot).name
     post :add_to_pilot, params: {
       email: teacher.email + "\n" + teacher2.email + "\n" + teacher3.email + "\n" +
@@ -187,7 +187,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'cannot add student to pilot' do
-    student = create :student
+    student = create(:student)
     pilot_name = 'csp-piloters'
     post :add_to_pilot, params: {email: student.email, pilot_name: pilot_name}
 
@@ -195,7 +195,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'non-admin cannot add teacher to pilot' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     pilot_name = 'csp-piloters'
 
     sign_in @not_admin

@@ -1,8 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyThreeText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -36,10 +33,13 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
       className="copyrightDialog"
       onClose={closeModal}
       closeOnClickBackdrop={true}
+      ariaLabel={i18n.copyright()}
     >
       <div>
         <div>
-          <Heading3>{i18n.copyright()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.copyright()}
+          </Typography>
         </div>
         <hr aria-hidden="true" />
         <div className="modalBody">
@@ -50,7 +50,9 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
               team_link: pegasus('/about/team'),
             })}
           />
-          <BodyThreeText>{i18n.copyright_specialRecognition()}</BodyThreeText>
+          <Typography variant="body3" gutterBottom>
+            {i18n.copyright_specialRecognition()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.copyright_artFrom({
               current_year: new Date().getFullYear(),
@@ -62,10 +64,10 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
                 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
             })}
           />
-          {extraCopyrightContent && (
-            <div className="extraCopyrightContent">{extraCopyrightContent}</div>
-          )}
-          <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
+          {extraCopyrightContent && <div>{extraCopyrightContent}</div>}
+          <Typography variant="body3" gutterBottom>
+            {i18n.copyright_builtOnGithub()}
+          </Typography>
           <Link
             href="https://aws.amazon.com/what-is-cloud-computing"
             className="awsLogoContainer"

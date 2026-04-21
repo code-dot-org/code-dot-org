@@ -1,5 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
@@ -42,7 +42,7 @@ function RubricSubmitFooter({
 
   // When the rubric opens, we should get the current feedback, if any
   useEffect(() => {
-    if (open && studentLevelInfo) {
+    if (open && studentLevelInfo?.user_id) {
       // Get the teacher feedback
       const studentId = studentLevelInfo.user_id;
       const levelId = rubric.level.id;
@@ -71,7 +71,7 @@ function RubricSubmitFooter({
     rubric.id,
     rubric.level.id,
     rubric.script.id,
-    studentLevelInfo,
+    studentLevelInfo?.user_id,
   ]);
 
   // The first stage of submission is the progress state submission
@@ -167,19 +167,23 @@ function RubricSubmitFooter({
         />
         {errorSubmitting && (
           <div id="ui-feedback-submitted-error">
-            <BodyFourText className={style.errorMessage}>
+            <Typography
+              className={style.errorMessage}
+              variant="body4"
+              gutterBottom
+            >
               {i18n.errorSubmittingFeedback()}
-            </BodyFourText>
+            </Typography>
           </div>
         )}
         {!errorSubmitting && (
           <div id="ui-feedback-submitted-timestamp">
-            <BodyFourText>
+            <Typography variant="body4" gutterBottom>
               {!!lastSubmittedTimestamp &&
                 i18n.feedbackSubmittedAt({
                   timestamp: lastSubmittedTimestamp,
                 })}
-            </BodyFourText>
+            </Typography>
           </div>
         )}
       </div>

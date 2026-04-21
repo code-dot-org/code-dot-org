@@ -141,7 +141,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "",
-      "freeResponseHeight": 100,
+      "freeResponseHeight": null,
       "codeEditableAfterSubmit": false
     },
     "exemplar_settings": {
@@ -170,10 +170,11 @@
       }
     ],
     "name_suffix": "_v2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.526+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-predict\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.526+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-predict\"},{\"changed_at\":\"2025-06-09 23:05:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

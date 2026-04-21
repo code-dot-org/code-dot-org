@@ -1,4 +1,8 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {
+  registerCustomAdvancedProcedureBlocks,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
 
 import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
 
@@ -71,14 +75,14 @@ export const isBlockInsideWhenRun = block => {
 // Override default function block implementation for the current block mode.
 export function installFunctionBlocks(blockMode) {
   if (blockMode === BlockMode.ADVANCED) {
-    Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
+    registerCustomAdvancedProcedureBlocks();
     // Re-define blocks from core, in case they were deleted for Simple2 mode.
     restoreBlockDefinitions();
     // Copies the generator function for variables to our function argument reporters.
     Blockly.JavaScript.forBlock.argument_reporter =
       Blockly.JavaScript.forBlock.variables_get;
   } else {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Remove two advanced blocks in the toolbox's Functions category that
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
@@ -176,69 +180,6 @@ export function findParentStatementInputTypes(id) {
   addParentBlockTypes(block);
 
   return parentTypes;
-}
-
-/**
- * Adds a warning to blocks that are not positioned under a static category block,
- * except when there are no categories at all. If warnings are ignored, we will
- * still save the blocks into a "DEFAULT" category.
- */
-export function validateBlockCategories(workspace) {
-  const topBlocks = workspace.getTopBlocks(true);
-
-  const noCategoryBlocks =
-    !workspace.getBlocksByType(BlockTypes.CATEGORY).length &&
-    !workspace.getBlocksByType(BlockTypes.CUSTOM_CATEGORY).length;
-
-  let currentCategoryBlock = null;
-  let warningText = 'This block is not positioned under a category.';
-
-  topBlocks.forEach(block => {
-    // If there are no categories, remove all warnings.
-    if (noCategoryBlocks) {
-      block.setWarningText(null);
-      return;
-    }
-    if (block.type === BlockTypes.CATEGORY) {
-      // Update the current category to this block
-      currentCategoryBlock = block;
-    } else if (block.type === BlockTypes.CUSTOM_CATEGORY) {
-      // Reset the current category since dynamic categories can't include static blocks
-      currentCategoryBlock = null;
-      warningText = 'Auto-populated categories cannot include static blocks.';
-    } else {
-      // All non-category blocks
-      if (!currentCategoryBlock) {
-        // No static category block above this block
-        block.setWarningText(warningText);
-      } else {
-        // Valid placement under a static category block
-        block.setWarningText(null);
-      }
-    }
-  });
-}
-
-export function applyBlockIdOverrides(workspaceJson, overrides) {
-  function walkBlocks(block) {
-    if (block.id && overrides[block.id]) {
-      block.id = overrides[block.id];
-    }
-    if (block.next?.block) {
-      walkBlocks(block.next.block);
-    }
-    if (block.inputs) {
-      for (const stmt of Object.values(block.inputs)) {
-        if (stmt?.block) {
-          walkBlocks(stmt.block);
-        }
-      }
-    }
-  }
-
-  if (Array.isArray(workspaceJson.blocks?.blocks)) {
-    workspaceJson.blocks.blocks.forEach(walkBlocks);
-  }
 }
 
 /**

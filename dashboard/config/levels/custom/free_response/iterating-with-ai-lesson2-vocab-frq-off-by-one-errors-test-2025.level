@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-19T17:54:02.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Off-By-One Error",
+    "display_name": "HTML",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "thumbnail_url": "https://images.code.org/2090bb70949e5ba75ac26877ecb140ed-html-icon.png",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T17:54:02.262+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025\"},{\"changed_at\":\"2025-11-19 17:54:17 +0000\",\"changed\":[\"title\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 17:55:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-19 18:03:27 +0000\",\"changed\":[\"title\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

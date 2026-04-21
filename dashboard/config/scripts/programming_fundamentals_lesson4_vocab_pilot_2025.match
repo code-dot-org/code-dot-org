@@ -1,0 +1,15 @@
+name 'programming-fundamentals-lesson4-vocab_pilot-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'snake_case'
+answer 'a naming style where all letters are lowercase and words are separated by underscores'
+
+question 'variable'
+answer 'a container that stores a value in memory'
+
+question 'data type'
+answer 'the format of the data that can be stored in a variable'
+
+allow_multiple_attempts true

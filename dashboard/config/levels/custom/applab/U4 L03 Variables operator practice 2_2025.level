@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:27.000Z",
   "level_num": "custom",
@@ -52,8 +51,10 @@
     "encrypted_examples": "OmxwXBHdwnSitGsW4x3Wo1g8IoICRySzZ+jgz23H56nYZVF6CW3IGGO37YPu\n+M1PzybLNWslPXJhMBB8AX2dKg==\n",
     "name_suffix": "_2025",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:27.478+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice 2_2024\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice 2_2024\"},{\"changed_at\":\"2025-05-21 19:23:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

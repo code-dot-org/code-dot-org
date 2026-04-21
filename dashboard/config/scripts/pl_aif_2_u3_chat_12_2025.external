@@ -1,0 +1,80 @@
+name 'pl-aif-2-U3-CHAT-12_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# CHAT Framework
+#### The CHAT framework gives you a clear, repeatable way to plan, improve, test, and reuse code while working with AI.
+
+ 
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- c -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/96e429722e4a63feae5fd5ce6e9c0324-image-1766176537283.png" alt="c" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Clarify</b></h3>
+      <p style="font-size: 14pt;">Clearly state what you want to build, name the inputs and outputs, and use AI to restate the plan and provide starter code so the goal and success check are explicit.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        ➡️ “I want to build a feature that shows information from a data set when a button is clicked.”
+      </p>
+    </div>
+  </div>
+
+  <!-- H -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/b86b54fc92932e1f8d7620d3fb6b9de5-image-1766176588734.png" alt="Letter H" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Hone</b></h3>
+      <p style="font-size: 14pt;">Improve one specific thing at a time and ask AI to update only that part of the code, focusing on small, intentional changes and why they matter.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        💡 “Make one change: update the text so it shows a different property from the object.”
+      </p> 
+      
+    </div>
+  </div>
+
+  <!-- A -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/baa332c705603c0a171c629788704353-image-1766176628410.png" alt="Code Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Apply</b></h3>
+      <p style="font-size: 14pt;">Run the code to verify the change, confirm the correct behavior updated, and use AI to identify and fix errors with the smallest possible edit.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🧠 “When I click the button, nothing shows up. Here’s my code—what’s the smallest fix?”
+      </p>
+    </div>
+  </div>
+
+  <!-- T -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/7bf70dabc658e118603d8f6b8d966278-image-1766176671629.png" alt="Version Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Transfer</b></h3>
+      <p style="font-size: 14pt;">Turn the finished solution into a reusable template with placeholders and notes, using AI to clean and generalize the code for future use.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔁“Rewrite this code as a template that works with any data set.”
+      </p>
+    </div>
+  </div>
+
+
+## Applying the CHAT Framework 
+
+#### After learning about objects and data sets, students will build a web app step by step in Lesson 6 using the CHAT framework. 
+
+#### This process helps students keep track of what they’re trying to build, document prompts that worked well, and make intentional changes to your code instead of guessing. 
+
+#### As apps and code become more advanced, having a structured way to plan, test, and refine how you work with AI will help you use it efficiently and stay in control of your ideas.
+
+
+
+
+
+
+
+
+MARKDOWN

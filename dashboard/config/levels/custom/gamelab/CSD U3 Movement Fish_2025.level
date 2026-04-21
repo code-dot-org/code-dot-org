@@ -116,6 +116,7 @@
     "rubric_performance_level_2": "The fish all move across the screen in the order indicated by the instructions.",
     "rubric_performance_level_3": "The counter pattern is used inside the draw loop to decrement the x position of the blue and green fish. The fish all move left across the screen, but not necessarily at the instructed speeds.",
     "rubric_performance_level_4": "The counter pattern has been used outside the draw loop, or not at all.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

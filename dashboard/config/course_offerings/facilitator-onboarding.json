@@ -1,0 +1,23 @@
+{
+  "key": "facilitator-onboarding",
+  "display_name": "Facilitator Onboarding",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null,
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null,
+  "description": null,
+  "professional_learning_program": "https://code.org/apply",
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

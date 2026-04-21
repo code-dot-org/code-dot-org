@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +9,10 @@ import ReactTooltip from 'react-tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import FocusAreaIndicator from './FocusAreaIndicator';
@@ -26,7 +31,13 @@ function SummaryProgressRow({
   lessonIsHiddenForStudents,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
+  unitHasUnnumberedLessons,
   viewAs,
+  isOnLevelView,
+  unitId,
+  unitName,
+  userId,
+  userType,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -39,9 +50,27 @@ function SummaryProgressRow({
   const showAsLocked = isLockedForUser || isLockedForSection;
 
   let lessonTitle = lesson.name;
-  if (lesson.lessonNumber) {
+  if (lesson.lessonNumber && !unitHasUnnumberedLessons) {
     lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
   }
+
+  // We want to exclude the Lesson Tutor button for assessment and survey lessons.
+  // These lessons don't have lesson plans, so we can use that as a proxy for
+  // whether or not to show the Lesson Tutor button.
+  const showLessonTutorButton =
+    lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
+
+  const handleLessonTutorClick = () => {
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId,
+      unitName,
+      userId,
+      userType,
+      view: 'summary-row',
+    });
+  };
 
   const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;
 
@@ -111,17 +140,60 @@ function SummaryProgressRow({
           ...(isLockedForUser && styles.fadedCol),
         }}
       >
-        {levels.length === 0 ? (
-          i18n.lessonContainsNoLevels()
-        ) : (
-          <ProgressBubbleSet
-            levels={levels}
-            disabled={isLockedForUser}
-            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
-            lessonName={lesson.name}
-          />
-        )}
-        {lesson.isFocusArea && <FocusAreaIndicator />}
+        <div style={styles.col2Content}>
+          <div style={styles.col2Left}>
+            {levels.length === 0 ? (
+              i18n.lessonContainsNoLevels()
+            ) : (
+              <ProgressBubbleSet
+                levels={levels}
+                disabled={isLockedForUser}
+                style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+                lessonName={lesson.name}
+              />
+            )}
+            {lesson.isFocusArea && <FocusAreaIndicator />}
+          </div>
+          {!isOnLevelView && (
+            <div style={styles.buttonColumn}>
+              {viewAs === ViewType.Participant &&
+                lesson.student_lesson_plan_html_url && (
+                  <MuiButton
+                    className="ui-test-lesson-resources"
+                    href={lesson.student_lesson_plan_html_url}
+                    variant="contained"
+                    color="white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                  >
+                    {i18n.lessonResources()}
+                  </MuiButton>
+                )}
+              {showLessonTutorButton &&
+                experiments.isEnabledAllowingQueryString(
+                  experiments.LESSON_TUTOR
+                ) && (
+                  <MuiButton
+                    href={lesson.lessonTutorPath}
+                    variant="contained"
+                    color="white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleLessonTutorClick}
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="ai-bot-solid"
+                        iconFamily="kit"
+                      />
+                    }
+                  >
+                    {'Lesson Tutor'}
+                  </MuiButton>
+                )}
+            </div>
+          )}
+        </div>
       </td>
     </tr>
   );
@@ -131,12 +203,18 @@ SummaryProgressRow.propTypes = {
   dark: PropTypes.bool.isRequired,
   lesson: lessonType.isRequired,
   levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+  isOnLevelView: PropTypes.bool,
 
   // from redux
   viewAs: PropTypes.oneOf(Object.keys(ViewType)),
   lessonIsHiddenForStudents: PropTypes.bool.isRequired,
   lessonIsLockedForUser: PropTypes.func.isRequired,
   lessonIsLockedForAllStudents: PropTypes.func.isRequired,
+  unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+  unitId: PropTypes.number,
+  unitName: PropTypes.string,
+  userId: PropTypes.number,
+  userType: PropTypes.string,
 };
 
 export const styles = {
@@ -169,6 +247,20 @@ export const styles = {
     width: '100%',
     paddingLeft: 20,
     paddingRight: 20,
+  },
+  col2Content: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+  },
+  col2Left: {
+    flex: 1,
+  },
+  buttonColumn: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 8,
+    marginLeft: 10,
   },
   // When we set our opacity on the row element instead of on individual tds,
   // there are weird interactions with our tooltips in Chrome, and borders end
@@ -209,8 +301,13 @@ export default connect((state, ownProps) => ({
     state,
     ViewType.Participant
   ),
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
+  unitId: state.progress.scriptId,
+  unitName: state.progress.unitTitle,
+  userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
 }))(SummaryProgressRow);

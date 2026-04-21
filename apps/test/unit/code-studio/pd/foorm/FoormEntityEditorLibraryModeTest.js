@@ -2,6 +2,7 @@ import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -104,31 +105,42 @@ describe('FoormEntityEditor in Library editing mode', () => {
   const fakeSurveysAppearedIn = ['surveys/pd/a_form.0'];
 
   it('can save existing library question in existing library', () => {
-    store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
-    store.dispatch(setLibraryData(sampleExistingLibraryData));
+    act(() => {
+      store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
+      store.dispatch(setLibraryData(sampleExistingLibraryData));
 
-    server.respondWith('PUT', '/foorm/library_questions/0', [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveResponseData),
-    ]);
+      server.respondWith('PUT', '/foorm/library_questions/0', [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(sampleSaveResponseData),
+      ]);
+    });
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    saveButton.simulate('click');
+    act(() => {
+      saveButton.simulate('click');
+    });
+    wrapper.update();
 
-    // expect first response checking whether library question appears in any published forms
-    server.respond();
+    act(() => {
+      // expect first response checking whether library question appears in any published forms
+      server.respond();
+    });
+    wrapper.update();
 
     // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
     // expect second response (upon successful save of the library question)
-    server.respond();
-    saveBar.update();
+    act(() => {
+      server.respond();
+      saveBar.update();
+    });
+    wrapper.update();
 
     expect(saveBar.find('FontAwesome').length).to.equal(0);
     expect(saveBar.state().isSaving).to.equal(false);
@@ -215,28 +227,35 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('save published form pops up warning message', () => {
-    store.dispatch(setLibraryData(sampleExistingLibraryData));
-    store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
+    act(() => {
+      store.dispatch(setLibraryData(sampleExistingLibraryData));
+      store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
 
-    // Response with non-zero length triggers warning
-    server.respondWith(
-      'GET',
-      /foorm\/library_questions\/[0-9]+\/published_forms_appeared_in/,
-      [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(fakeSurveysAppearedIn),
-      ]
-    );
+      // Response with non-zero length triggers warning
+      server.respondWith(
+        'GET',
+        /foorm\/library_questions\/[0-9]+\/published_forms_appeared_in/,
+        [
+          200,
+          {'Content-Type': 'application/json'},
+          JSON.stringify(fakeSurveysAppearedIn),
+        ]
+      );
+    });
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    saveButton.simulate('click');
+    act(() => {
+      saveButton.simulate('click');
+    });
+    wrapper.update();
 
     // server tells us that library question appears in a published form
-    server.respond();
+    act(() => {
+      server.respond();
+    });
     saveBar.update();
 
     // check that modal pops up
@@ -247,30 +266,38 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('shows save error', () => {
-    store.dispatch(setLibraryData(sampleExistingLibraryData));
-    store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
+    act(() => {
+      store.dispatch(setLibraryData(sampleExistingLibraryData));
+      store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
 
-    server.respondWith('PUT', `/foorm/library_questions/0`, [
-      500,
-      {'Content-Type': 'application/json'},
-      'Save error',
-    ]);
+      server.respondWith('PUT', `/foorm/library_questions/0`, [
+        500,
+        {'Content-Type': 'application/json'},
+        'Save error',
+      ]);
+    });
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    saveButton.simulate('click');
+    act(() => {
+      saveButton.simulate('click');
 
-    // expect first response checking whether library question appears in any published forms
-    server.respond();
+      // expect first response checking whether library question appears in any published forms
+      server.respond();
+    });
+    wrapper.update();
 
     // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
-    server.respond();
+    act(() => {
+      server.respond();
+    });
     saveBar.update();
+    wrapper.update();
 
     expect(saveBar.find('FontAwesome').length).to.equal(0);
     expect(saveBar.state().isSaving).to.equal(false);
@@ -283,17 +310,22 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('can cancel save new survey', () => {
-    store.dispatch(setLibraryData(sampleExistingLibraryData));
+    act(() => {
+      store.dispatch(setLibraryData(sampleExistingLibraryData));
+    });
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     // click save button
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    saveButton.simulate('click');
+    act(() => {
+      saveButton.simulate('click');
 
-    // expect first response checking whether library question appears in any published forms
-    server.respond();
+      // expect first response checking whether library question appears in any published forms
+      server.respond();
+    });
+    wrapper.update();
 
     // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
@@ -307,9 +339,12 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    saveBar.instance().handleNewLibraryQuestionSaveCancel();
+    act(() => {
+      saveBar.instance().handleNewLibraryQuestionSaveCancel();
 
-    saveBar.update();
+      saveBar.update();
+    });
+    wrapper.update();
 
     expect(saveBar.find('FontAwesome').length).to.equal(0);
     expect(saveBar.state().isSaving).to.equal(false);

@@ -1,9 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {
-  BodyTwoText,
-  Heading3,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -24,24 +19,36 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
     <div className={moduleStyles.headerContainer}>
-      <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
+      <Typography variant="h3" gutterBottom>
+        {i18n.aiWarningModalHeader()}
+      </Typography>
     </div>
     <hr />
     <div className={moduleStyles.warningModuleTextContainer}>
-      <BodyTwoText>
-        <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
-      </BodyTwoText>
-      <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
-      <BodyTwoText>{i18n.aiWarningUnsaved()}</BodyTwoText>
-      <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
+      <Typography variant="body2" gutterBottom>
+        <strong>{i18n.aiWarningModalMessagesAreRecorded()}</strong>
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningModalInappropriateFlagged()}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningUnsaved()}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningModalPersonalNotSubmitted()}
+      </Typography>
     </div>
     <hr />
     <div className={moduleStyles.bottomSection}>
-      <Button
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
         onClick={onClose}
-        color={buttonColors.purple}
-        text={i18n.aiWarningModalOk()}
-      />
+        type="button"
+      >
+        {i18n.aiWarningModalOk()}
+      </MuiButton>
     </div>
   </AccessibleDialog>
 );

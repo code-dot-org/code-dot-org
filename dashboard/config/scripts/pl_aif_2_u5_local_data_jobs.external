@@ -1,0 +1,63 @@
+name 'pl-aif-2-U5-local-data-jobs'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Jobs of Data
+
+<p style="font-size:16px;">
+When we build professional apps, we don’t just use live data. We also use <strong>local data</strong> for two very specific jobs.
+</p>
+
+<p style="font-size:16px;">
+APIs are powerful, but they are also fragile. A server might go down, or a user’s Wi-Fi might drop—so <strong>backup data</strong> is our “safety net” that keeps the app functional even when things go wrong.
+</p>
+
+<!-- TWO SIDE-BY-SIDE DIV BOXES -->
+<div style="width:90%; margin:30px auto; text-align:center;">
+
+<!-- CARD 1 -->
+<div style="display:inline-block; vertical-align:top; width:360px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:left;">
+<p style="font-size:16pt; font-weight:bold; margin:0 0 10px 0; text-align:center;">Job 1: Static Constants</p>
+
+<!-- Optional image (use if you upload/crop the left half) -->
+<!-- <img src="PASTE_LEFT_CARD_IMAGE_URL_HERE" alt="Job 1: Static Constants" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:12px;"> -->
+
+<ul style="font-size:14pt; line-height:1.25; margin:0; padding-left:22px;">
+      <li>Defines the app’s structure (name, labels, layout)</li>
+      <li>Renders the UI instantly</li>
+      <li><strong>Example:</strong> The app title or navigation menu text</li>
+    </ul>
+  </div>
+
+  <!-- CARD 2 -->
+<div style="display:inline-block; vertical-align:top; width:360px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:left;">
+<p style="font-size:16pt; font-weight:bold; margin:0 0 10px 0; text-align:center;">Job 2: Backup Data</p>
+
+<!-- Optional image (use if you upload/crop the right half) -->
+<!-- <img src="PASTE_RIGHT_CARD_IMAGE_URL_HERE" alt="Job 2: Backup Data" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:12px;"> -->
+
+<ul style="font-size:14pt; line-height:1.25; margin:0; padding-left:22px;">
+      <li>Matches the API response</li>
+      <li>Used if live data fails to load</li>
+      <li><strong>Example:</strong> Sample list shown when the API is offline</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- TEACHER TIP BOX -->
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin: 10px auto;">
+  <p style="line-height: 1.5; margin: 10px; font-size: 18px;">
+    <b> 💡 Teaching Tip: </b>
+    Emphasize that backup data must have the <strong>exact same structure</strong> (the same keys like <code>title</code> or <code>image</code>) as the real API data.
+    If they don’t match, the code will break when it switches to the backup.
+  </p>
+</div>
+
+## Up Next 
+
+<p style="font-size:16px;">
+In the next activity, you will create an <strong>app shell</strong> so the screen is not blank while waiting for an API.
+</p>
+MARKDOWN

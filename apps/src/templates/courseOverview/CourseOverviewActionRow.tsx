@@ -1,14 +1,13 @@
 import React from 'react';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 
 import * as utils from '../../utils';
 import MultipleAssignButton from '../MultipleAssignButton';
 import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import styles from './course-overview.module.scss';
 
@@ -30,6 +29,7 @@ interface CourseOverviewActionRowProps {
   showAssignButton: boolean;
   title: string;
   participantAudience: string;
+  aiChatToolsDependency: AiChatToolsDependencyValue;
 }
 
 const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
@@ -44,6 +44,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
   showAssignButton,
   title,
   participantAudience,
+  aiChatToolsDependency,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
@@ -52,14 +53,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
     (versionId: number) => {
       const version = versions[versionId];
       if (versionId !== courseVersionId && version) {
-        const sectionId = queryParams('section_id');
-
-        if (showV2TeacherDashboard()) {
-          utils.navigateToHref(version.path);
-        } else {
-          const queryString = sectionId ? `?section_id=${sectionId}` : '';
-          utils.navigateToHref(`${version.path}${queryString}`);
-        }
+        utils.navigateToHref(version.path);
       }
     },
     [courseVersionId, versions]
@@ -104,8 +98,9 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
             assignmentName={title}
             reassignConfirm={() => setConfirmationMessageOpen(true)}
             isAssigningCourseOnly={true}
-            isAssigningUnitOnly={false}
+            isSingleUnitCourse={false}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         </div>
       )}

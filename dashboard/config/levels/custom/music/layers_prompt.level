@@ -1,0 +1,86 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-09-19T21:20:20.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "level_data": {
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": "layers",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "packId": "kenya_grace_strangers",
+      "sounds": {
+        "kenya_grace_strangers": [
+          "drums_verse_beat",
+          "drums_chorus_beat",
+          "drums_snare_hit",
+          "drum_fill",
+          "drum_long_filter",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "bass_chorus_3",
+          "bass_chorus_4",
+          "acoustic_guitar_1",
+          "acoustic_guitar_2",
+          "acoustic_guitar_3",
+          "acoustic_guitar_4",
+          "synth_lead",
+          "synth_pad_verse_1",
+          "synth_pad_verse_2",
+          "synth_pad_verse_3",
+          "synth_pad_verse_4",
+          "synth_pad_verse_4_alt",
+          "synth_pad_chorus_1",
+          "synth_pad_chorus_2",
+          "synth_pad_chorus_3",
+          "synth_pad_chorus_4",
+          "vocals_verse_always_echo",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_verse_8",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_5",
+          "vocals_chorus_6",
+          "vocals_chorus_4_harmony_v2",
+          "vocals_chorus_5_harmony",
+          "vocal_distant_1",
+          "vocal_distant_2",
+          "vocal_warble_1",
+          "vocal_warble_2",
+          "vocal_uh_huh"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-19T21:20:20.839+00:00\",\"changed\":[\"cloned from \\\"simple_prompt\\\"\"],\"cloned_from\":\"simple_prompt\"},{\"changed_at\":\"2025-09-19 21:38:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-19 21:38:44 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-19 21:40:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:51:02 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:33:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:33:52 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

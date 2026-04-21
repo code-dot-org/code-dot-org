@@ -6,23 +6,32 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import SortByNameDropdown from '../SortByNameDropdown';
+
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
-} from '../sectionProgress/sectionProgressRedux';
-import SortByNameDropdown from '../SortByNameDropdown';
+} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
-const skeletonCell = key => (
-  <div className={classNames(styles.gridBox, styles.gridBoxStudent)} key={key}>
+const skeletonCell = index => (
+  <div
+    className={classNames(
+      styles.gridBox,
+      styles.gridBoxStudent,
+      index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+    )}
+    key={index}
+  >
     <span
       className={classNames(
         skeletonizeContent.skeletonizeContent,
@@ -60,7 +69,10 @@ function StudentColumn({
 
   const getUnexpandedRow = (student, ind) => (
     <button
-      className={styles.studentColumnName}
+      className={classNames(
+        styles.studentColumnName,
+        ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
       key={ind}
       onClick={() => expandRow(student.id)}
       type="button"
@@ -72,14 +84,20 @@ function StudentColumn({
         title="caret"
         className={styles.studentColumnNameCaret}
       />
-      {getFullName(student)}
+      <span className={styles.studentColumnNameText}>
+        {getFullName(student)}
+      </span>
+      {student.isDemoStudent && <DemoStudentChip />}
     </button>
   );
 
   const getExpandedRow = (student, ind) => (
     <div className={styles.studentColumnExpandedHeader} key={ind}>
       <button
-        className={styles.studentColumnName}
+        className={classNames(
+          styles.studentColumnName,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
@@ -89,12 +107,16 @@ function StudentColumn({
           icon="caret-down"
           className={styles.studentColumnNameCaret}
         />
-        {getFullName(student)}
+        <span className={styles.studentColumnNameText}>
+          {getFullName(student)}
+        </span>
+        {student.isDemoStudent && <DemoStudentChip />}
       </button>
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.timeSpentMins()}
@@ -102,7 +124,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.lastUpdatedTitle()}

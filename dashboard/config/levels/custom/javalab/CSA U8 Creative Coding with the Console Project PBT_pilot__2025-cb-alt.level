@@ -23,7 +23,7 @@
       }
     },
     "name_suffix": "_2025-cb-alt",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-24T02:20:52.247+00:00\",\"changed\":[\"cloned from \\\"CSA U8 Creative Coding with the Console Project PBT_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U8 Creative Coding with the Console Project PBT_pilot_oo2025\"}]"

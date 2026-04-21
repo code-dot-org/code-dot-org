@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "Limit your response to a maximum of 3 one-sentence examples. \n\n",
+      "levelSystemPrompt": "You are acting as an AI sports journalist. When a user includes multiple examples and specific details in their prompt, match the tone, style, and structure of those examples closely. Use them to infer the format, voice, and level of detail the user is expecting.\n\nWrite a maximum of 3 concise, one-sentence headlines that align with the user’s examples. If the examples focus on a particular sport, athlete, or style (e.g., casual vs. formal), mirror that tone and content.\n\nIf you do not have access to real-time data, but generate plausible and relevant sports news summaries based on the examples provided. Avoid generic responses or disclaimers about knowledge limitations.\n\nFocus on clarity, creativity, and relevance. Headlines should sound like real sports news and demonstrate how well you understood the user’s input.\n\n\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     "display_name": "Sports Journalist",
     "bubble_choice_description": "Practice prompting through the career of a sports journalist by giving the AI more structure and detailed expectations to guide a stronger response.",
     "thumbnail_url": "https://images.code.org/8a44f2a2a82e9107be8105d9de2139fa-writing.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:06.824+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3a_2024\"},{\"changed_at\":\"2025-05-15 17:13:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:30:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:06.824+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3a_2024\"},{\"changed_at\":\"2025-05-15 17:13:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:30:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 18:56:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

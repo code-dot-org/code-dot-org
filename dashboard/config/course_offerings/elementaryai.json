@@ -5,16 +5,19 @@
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "3,4,5",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/37803df5b64e673d9bb8669e181d15ea-action-block-ai-decisions.avif",
+  "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2024-07-16 04:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

@@ -1,4 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
 @import '@cdo/apps/mixins.scss';
 
 .teacherFeedbackContainer {
@@ -7,15 +6,15 @@
   justify-content: flex-end;
 
   button.icon-button-affirmative {
-    @include icon-button(var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
+    @include icon-button(transparent, var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
   }
 
   button.icon-button-negative {
-    @include icon-button(var(--background-error-light), var(--text-error-primary), var(--text-error-secondary));
+    @include icon-button(transparent, var(--background-error-light), var(--text-error-primary), var(--text-error-secondary));
   }
 
   button.icon-button-gray {
-    @include icon-button(var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
+    @include icon-button(transparent, var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
   }
 }
 
@@ -39,4 +38,3 @@
 .flaggedText {
   margin-right: 4px;
 }
-

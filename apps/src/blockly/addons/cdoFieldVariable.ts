@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -13,7 +13,7 @@ interface VariableNamePromptOptions {
   defaultText: string; // Default input text for window prompt
   callback: (newName: string) => void; // Callback with text of new variable name
 }
-export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
+export default class CdoFieldVariable extends BlocklyCore.FieldVariable {
   /**
    * Handle the selection of an item in the variable dropdown menu.
    * Special case the 'Rename all' and 'Rename this' options to prompt the user
@@ -22,7 +22,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
    * @param {!Blockly.MenuItem} menuItem The MenuItem selected within menu.
    * @protected
    */
-  onItemSelected_(menu: GoogleBlockly.Menu, menuItem: GoogleBlockly.MenuItem) {
+  onItemSelected_(menu: BlocklyCore.Menu, menuItem: BlocklyCore.MenuItem) {
     const oldVar = this.getText();
     const id = menuItem.getValue();
     if (this.sourceBlock_ && this.sourceBlock_.workspace) {
@@ -36,7 +36,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
             callback: newName =>
               this.sourceBlock_?.workspace.renameVariableById(
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                ((this as any).variable as GoogleBlockly.VariableModel).getId(),
+                ((this as any).variable as BlocklyCore.VariableModel).getId(),
                 newName
               ),
           });
@@ -64,58 +64,6 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
   }
 
   /**
-   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
-   *
-   * Additionally, we need fix the arrow position on Safari, but only until
-   * upgrading to Blockly v11. After this, we should be able to just call
-   * super.createTextArrow_() after the early return.
-   *  @override */
-  createTextArrow_() {
-    /**
-     * Begin CDO customization
-     */
-    if (
-      Blockly.disableVariableEditing ||
-      !this.getSourceBlock()?.isEditable()
-    ) {
-      return;
-    }
-    /**
-     * End CDO customization
-     */
-
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
-    }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
-  }
-
-  /**
    * Create a dropdown menu under the text.
    *
    * @param e Optional mouse event that triggered the field to open, or
@@ -129,24 +77,25 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
   }
 
   menuGenerator_ = function (
-    this: GoogleBlockly.FieldDropdown
-  ): GoogleBlockly.MenuOption[] {
+    this: BlocklyCore.FieldDropdown
+  ): BlocklyCore.MenuOption[] {
     const options = CdoFieldVariable.dropdownCreate.call(
-      this as GoogleBlockly.FieldVariable
+      this as BlocklyCore.FieldVariable
     );
+
+    const workspace = this.getSourceBlock()?.workspace;
+    // Embedded workspaces are read-only, so we don't need to modify the dropdown options.
+    if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
+      return options;
+    }
 
     // Remove the last two options (Delete and Rename)
     options.pop();
     options.pop();
 
+    // Filter out variables that are function parameters (Music Lab advanced functions)
+    const nonParamVarIds = getNonFunctionVariableIds(workspace);
     const filteredOptions = options.filter(option => {
-      const workspace = this.getSourceBlock()?.workspace;
-      // Embedded workspaces are read-only, so we don't need to modify the dropdown options.
-      if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
-        return true;
-      }
-
-      const nonParamVarIds = getNonFunctionVariableIds(workspace);
       const optionValue = option[1] as string;
       return nonParamVarIds.includes(optionValue);
     });

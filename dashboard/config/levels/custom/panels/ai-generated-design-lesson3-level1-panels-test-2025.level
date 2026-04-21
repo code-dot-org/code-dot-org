@@ -1,0 +1,55 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-22T14:59:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Prompting Strategies\n\nUse the following as a template: \n>Generate **[HTML/CSS]** code for a **[description of element/layout]**.\n\nLet's try it out!",
+        "imageUrl": "https://images.code.org/d0d640191f6f760db295ce0b16c02a4a-Screenshot 2025-10-22 at 11.42.55 AM.png",
+        "key": "undefined-90113ce4-74f1-4526-80e8-ef55aa169761",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Add Relevant Details\n\nStart your prompt by clarifying the purpose of the element or page layout. \n\nFor example:\n> This is a website for a children's art and painting studio. Create the CSS for a colorful and responsive navigation bar for a website header.\n\nOr\n> Code the HTML for a doctor's office website that features a contact form with input fields for name, email, and message.\n\n\n\n\n\n",
+        "imageUrl": "https://images.code.org/5fb34fd7d4b28de9c14edce208230b89-Screenshot 2025-10-22 at 11.54.36 AM.png",
+        "key": "undefined-58cb06d9-0204-44a2-a976-81208295972a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Specify Key Features\n\nList specific elements or content to include.\n\nFor example:\n> On the Contact form, add a \"Send Message\" button at the bottom of the page.\n\nOr\n> Include links in the nav bar to Home, About, Services, Contact.\n",
+        "imageUrl": "https://images.code.org/e95b784a2f9adec0c8e0fdfe1c897a48-Screenshot 2025-10-22 at 12.05.03 PM.png",
+        "key": "undefined-82ae26a2-6d08-4dea-8d3a-dfd24b676e32",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Detail Styling Requirements\n\nWhen generating CSS code, describe visual aspects that should appear on the site.\n\nFor example:\n>Set the background color: #f5dfef and the font-family: Arial, sans-serif. Add hover effects for links.\n\nOr\n>Center all the text in the cards and make them responsive for mobile and desktop.\n\n",
+        "imageUrl": "https://images.code.org/71b29f83b03a78ba6fb3db5043026f78-Screenshot 2025-10-22 at 12.09.03 PM.png",
+        "key": "undefined-380af436-eac7-4545-a4f9-1981de622ecc",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# List Constraints and Preferences\n\nMention any specific limitations or preferences for the code generated. \n\nFor example:\n> Refactor the CSS code to make it more concise. And avoid inline styles.\n\nOr\n> Use semantic HTML5 tags.",
+        "imageUrl": "https://images.code.org/ffba4f7cae223e61501eb3097dcd7c1c-Screenshot 2025-10-22 at 12.15.47 PM.png",
+        "key": "undefined-1a4a543e-4f17-4634-88fa-8127c92616c0"
+      },
+      {
+        "text": "# Save Version\n\nTo save the current version of your program, navigate to the Version History tab. Give your changes a descriptive name and click \"Save version\".",
+        "imageUrl": "https://images.code.org/d7705422a1ce74b83429d3267cd4e027-save_version.gif",
+        "key": "undefined-205a9cb6-4e78-4814-929e-fec9c89b847c"
+      },
+      {
+        "text": "# Restore a Previous Version\n\nTo restore a previous version of your program, navigate to the Version History tab. Select the version you want to restore and click \"Restore\".",
+        "imageUrl": "https://images.code.org/a95a774bee9a473fd18bc45a163a143d-revert.gif",
+        "key": "ai-generated-design-lesson3-level1-panels-test-2025-649bd13d-64f8-4b90-bede-e0ef37621fe0"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22 15:00:00 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:20:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:25:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:26:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:28:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:40:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 17:49:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 18:09:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 18:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 18:23:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 18:37:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

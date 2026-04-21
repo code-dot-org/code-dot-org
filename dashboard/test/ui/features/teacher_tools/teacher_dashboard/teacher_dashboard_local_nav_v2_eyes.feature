@@ -3,14 +3,12 @@
 Feature: Using the V2 teacher dashboard local navigation - Eyes
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   @properties_encryption_key
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
 
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
@@ -23,18 +21,18 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "ui-test-single-unit-course-2026" unit 1 and save the section
     Given I create a student named "Talia"
     And I join the section
 
     When I sign in as "Teacher_Sally" and go home
 
-    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+    When I click selector "#task-button-View-progress-New-Section" once I see it
     Then I wait until element "#ui-test-teacher-sidebar" is visible
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
-    And I scroll to "#ui-test-lesson-header-10"
+    And I scroll to "#ui-test-lesson-header-1"
     Then I see no difference for "progress v2 - first section"
 
     Then I select the "New Section" option in dropdown "uitest-sidebar-section-dropdown"
@@ -50,12 +48,12 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    When I click selector "a:contains(New Section)" once I see it to load a new page
+    When I click selector "#task-button-View-progress-New-Section" once I see it
     Given I wait until element "#ui-test-teacher-sidebar" is visible
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
     And I wait until element "h1:contains('All the Things!')" is visible

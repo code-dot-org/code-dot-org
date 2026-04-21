@@ -1,23 +1,22 @@
 // My Professional Learning landing page
 // studio.code.org/my-professional-learning
-
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
 
+import ActionBlocksWrapper from '@cdo/apps/code-studio/pd/professional_learning/ActionBlocksWrapper';
+import SetUpSections from '@cdo/apps/code-studio/pd/professional_learning/SetUpSections';
 import DCDO from '@cdo/apps/dcdo';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
@@ -29,6 +28,11 @@ import {
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+import teacherImg from '@cdo/static/misc/teacher-540x300.png';
+import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
+import plBannerBooksWithBackgroundImg from '@cdo/static/professional-learning/banner-books-with-background-540x300.png';
+import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
+import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
 
 import {
   COURSE_CSF,
@@ -102,7 +106,6 @@ function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   showDeeperLearning,
-  currentYearApplicationId,
   hasEnrolledInWorkshop,
   plCoursesStarted,
   userPermissions,
@@ -306,13 +309,17 @@ function LandingPage({
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop id': sessionStorage.getItem('workshopId', null),
       'workshop course': workshopCourse,
       'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      'workshop format': sessionStorage.getItem('workshopFormat', null),
     });
     [
+      'workshopId',
       'workshopCourse',
       'workshopSubject',
       'workshopName',
+      'workshopFormat',
       'sessionTimeInfo',
       'rpName',
     ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
@@ -324,7 +331,7 @@ function LandingPage({
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
-      imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
+      imageUrl={teacherImg}
       subHeading={i18n.plLandingSubheading()}
       description={i18n.plLandingDescription({
         course: lastWorkshopSurveyCourse,
@@ -345,16 +352,12 @@ function LandingPage({
   // - else, render either nothing or an announcement banner
   const RenderBanner = () => {
     const showGettingStartedBanner =
-      !currentYearApplicationId &&
-      !hasEnrolledInWorkshop &&
-      plCoursesStarted?.length === 0;
+      !hasEnrolledInWorkshop && plCoursesStarted?.length === 0;
 
     if (showGettingStartedBanner) {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-          )}
+          imageUrl={plSuperheroGirlCropImg}
           heading={i18n.plLandingGettingStartedHeading()}
           subHeading={i18n.plLandingGettingStartedSubHeading()}
           description={i18n.plLandingGettingStartedDescription()}
@@ -372,9 +375,7 @@ function LandingPage({
       // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
-          )}
+          imageUrl={plBannerBooksWithBackgroundImg}
           subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
           description={i18n.plLandingCurriculumLaunchBannerDescription()}
           buttons={[
@@ -392,7 +393,9 @@ function LandingPage({
   const RenderSelfPacedPL = () => {
     return (
       <section id={'self-paced-pl'}>
-        <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plLandingSelfPacedProgressHeading()}
+        </Typography>
         <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />
       </section>
     );
@@ -404,13 +407,13 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLMidHighBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLMidHighOverline(),
-        imageUrl: pegasus('/images/pl-page-educator-support.png'),
+        imageUrl: plPageEducatorSupportImg,
         heading: i18n.plLandingStaticPLMidHighHeading(),
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
           {
-            color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            color: 'primary',
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
@@ -420,12 +423,12 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLSelfPacedBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLSelfPacedOverline(),
-        imageUrl: pegasus('/images/fill-448x280/admins-page-pl.png'),
+        imageUrl: plAdminsPageImg,
         heading: i18n.plLandingStaticPLSelfPacedHeading(),
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [
           {
-            color: 'purple',
+            color: 'primary',
             url: pegasus(
               myPLStaticRecommendedPLSelfPacedBlockButtonUrl ||
                 '/educate/professional-development-online'
@@ -442,7 +445,9 @@ function LandingPage({
   const RenderOwnedPlSections = () => {
     return (
       <section>
-        <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plSectionsInstructorTitle()}
+        </Typography>
         <SetUpSections
           headingText={i18n.newSectionCreate()}
           descriptionText={i18n.newSectionMyPlAdd()}
@@ -543,12 +548,6 @@ function LandingPage({
   const RenderRegionalPartnerResources = () => {
     const resources = [
       {
-        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
-        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
-        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
-        buttonUrl: '/pd/application_dashboard',
-      },
-      {
         headingText: i18n.plSectionsWorkshopTitle(),
         descriptionText: i18n.plSectionsWorkshopDesc(),
         buttonText: i18n.plSectionsWorkshopButton(),
@@ -612,7 +611,9 @@ function LandingPage({
         )}
         {!hideMyPLStaticRecommendedPL && (
           <section>
-            <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+            <Typography variant="h2" gutterBottom>
+              {i18n.plLandingRecommendedHeading()}
+            </Typography>
             {RenderStaticRecommendedPL()}
           </section>
         )}
@@ -625,7 +626,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsFacilitatorResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsFacilitatorResources()}
+          </Typography>
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
@@ -648,7 +651,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsRegionalPartnerResources()}
+          </Typography>
           {RenderRegionalPartnerResources()}
         </section>
         <LandingPageWorkshopsTable
@@ -666,7 +671,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsWorkshopResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsWorkshopResources()}
+          </Typography>
           <BorderedCallToAction
             key={4}
             headingText={i18n.plSectionsWorkshopTitle()}
@@ -731,13 +738,12 @@ LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   showDeeperLearning: PropTypes.bool,
-  currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),

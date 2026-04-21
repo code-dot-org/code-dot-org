@@ -22,7 +22,6 @@ typography styles, and more to ensure visual consistency and a unified design la
 - [Best Practices](#best-practices)
 - [Theming](#theming)
 - [Testing](#testing)
-- [Updating FontAwesome Files](#updating-fontawesome-files)
 - [Contributing](#contributing)
 - [FAQ / Troubleshooting](#faq--troubleshooting)
 - [Changelog](#changelog)
@@ -54,9 +53,17 @@ yarn link @code-dot-org/component-library-styles
 To use it in your project:
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
+```
+
+For CSS variables (colors and fonts), import them globally in your application root:
+
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 ```
 
 ## Development
@@ -75,9 +82,9 @@ You can import styles directly into your components:
 
 ### Example with Colors
 
-```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
+Colors are defined as CSS variables in `colors.css` and `primitiveColors.css`. These files should be imported globally in your application root (see [Installation](#installation)). Once imported, you can use the CSS variables directly in your SCSS or CSS files:
 
+```scss
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -98,15 +105,25 @@ h1 {
 
 ### Colors
 
-The `colors.scss` file defines semantic colors, which adapt to different themes (light and dark).
+The `colors.css` file defines semantic colors as CSS variables, which adapt to different themes (light and dark).
 Semantic colors map to underlying **primitive colors** and are intended to remain consistent across the design system.
 To view the latest color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33933&m=dev).
 
+**Important:** `colors.css` depends on `primitiveColors.css`, so make sure to import `primitiveColors.css` before `colors.css` in your application root.
+
 #### ✅ Example:
 
-```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
+First, import the CSS files globally in your application root:
 
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+```
+
+Then use the CSS variables in your SCSS or CSS files:
+
+```scss
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -141,11 +158,9 @@ The dark theme is defined using `[data-theme="Dark"]`.
 
 #### ✅ Usage Example:
 
-You can use semantic colors directly in your SCSS files:
+You can use semantic colors directly in your SCSS or CSS files (after importing the CSS files globally):
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
-
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -186,18 +201,27 @@ Example SCSS:
 
 ### Primitive Colors
 
-The `primitiveColors.scss` file defines the **base colors** used throughout the design system. Unlike semantic colors,
+The `primitiveColors.css` file defines the **base colors** as CSS variables used throughout the design system. Unlike semantic colors,
 primitive colors are **fixed** and do **not change** across light and dark themes.
 
 Primitive colors are meant to be used as the foundation for building semantic colors. They define a consistent color.
 To view the latest primitive color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-10156&m=dev).
 palette and ensure a unified visual language across all Code.org components.
 
+**Important:** `primitiveColors.css` should be imported before `colors.css` in your application root, as semantic colors depend on primitive colors.
+
 #### ✅ Example:
 
-```scss
-@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+First, import the CSS file globally in your application root:
 
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+```
+
+Then use the CSS variables in your SCSS or CSS files:
+
+```scss
 .myComponent {
   background-color: var(--brand-aqua-50);
   color: var(--neutral-gray-90);
@@ -234,15 +258,26 @@ palette and ensure a unified visual language across all Code.org components.
 
 ### Fonts
 
-The `fonts.scss` file defines the fonts used throughout the Code.org design system.  
+The `font.scss` file provides SCSS mixins for fonts, while `fontVariables.css` defines CSS variables for font families and weights used throughout the Code.org design system.
 We use a combination of **Figtree** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
 
-We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.  
-All fonts are available globally through CSS variables and SCSS mixins.
+**Important:** `fontVariables.css` should be imported globally in your application root to make font CSS variables available throughout your application.
+
+We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.
+All fonts are available globally through CSS variables (defined in `fontVariables.css`) and SCSS mixins (defined in `font.scss`).
 
 ---
 
 #### ✅ Example:
+
+First, import the font CSS variables globally in your application root:
+
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/fontVariables.css';
+```
+
+Then use font mixins in your SCSS files:
 
 ```scss
 @use '@code-dot-org/component-library-styles/font.scss';
@@ -252,31 +287,48 @@ All fonts are available globally through CSS variables and SCSS mixins.
 }
 ```
 
+Or use CSS variables directly in your SCSS or CSS files:
+
+```scss
+.myComponent {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+}
+```
+
+Or in JSX/TSX inline styles:
+
+```jsx
+<div
+  style={{
+    fontFamily: 'var(--font-family-main)',
+    fontWeight: 'var(--font-weight-bold)',
+  }}
+>
+  Text content
+</div>
+```
+
 ---
 
-#### ✅ Available Fonts
+#### ✅ Available Font CSS Variables
 
-| Variable           | Description                               | Value                                                    |
-| ------------------ | ----------------------------------------- | -------------------------------------------------------- |
-| `$figtree-font`    | Primary font for headings and body text   | `'Figtree'`                                              |
-| `$noto-sans-fonts` | Fallback fonts for multi-language support | `'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', ...` |
-| `$main-font`       | Combined main font (Figtree + Noto Sans)  | `$figtree-font, $noto-sans-fonts, sans-serif`            |
+Font families and weights are available as CSS variables (defined in `fontVariables.css`):
 
----
-
-#### ✅ Font Weights
-
-| Variable                   | Description             | Value |
-| -------------------------- | ----------------------- | ----- |
-| `$thin-font-weight`        | Thin font weight        | `100` |
-| `$extra-light-font-weight` | Extra light font weight | `200` |
-| `$light-font-weight`       | Light font weight       | `300` |
-| `$regular-font-weight`     | Regular font weight     | `400` |
-| `$medium-font-weight`      | Medium font weight      | `500` |
-| `$semi-bold-font-weight`   | Semi-bold font weight   | `600` |
-| `$bold-font-weight`        | Bold font weight        | `700` |
-| `$extra-bold-font-weight`  | Extra bold font weight  | `800` |
-| `$black-font-weight`       | Black font weight       | `900` |
+| CSS Variable                                   | Description                              | Value                                                            |
+| ---------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
+| `--font-family-main`                           | Combined main font (Figtree + Noto Sans) | `'Figtree', 'Noto Sans', 'Noto Sans Math', ..., sans-serif`      |
+| `--font-family-barlow-semi-condensed-semibold` | Barlow Semi Condensed Semibold font      | `'Barlow Semi Condensed Semibold', 'Noto Sans', ..., sans-serif` |
+| `--font-family-barlow-semi-condensed-medium`   | Barlow Semi Condensed Medium font        | `'Barlow Semi Condensed Medium', 'Noto Sans', ..., sans-serif`   |
+| `--font-weight-thin`                           | Thin font weight                         | `100`                                                            |
+| `--font-weight-extra-light`                    | Extra light font weight                  | `200`                                                            |
+| `--font-weight-light`                          | Light font weight                        | `300`                                                            |
+| `--font-weight-regular`                        | Regular font weight                      | `400`                                                            |
+| `--font-weight-medium`                         | Medium font weight                       | `500`                                                            |
+| `--font-weight-semi-bold`                      | Semi-bold font weight                    | `600`                                                            |
+| `--font-weight-bold`                           | Bold font weight                         | `700`                                                            |
+| `--font-weight-extra-bold`                     | Extra bold font weight                   | `800`                                                            |
+| `--font-weight-black`                          | Black font weight                        | `900`                                                            |
 
 ---
 
@@ -310,9 +362,6 @@ All fonts are available globally through CSS variables and SCSS mixins.
 You can override or extend font styles by combining mixins and custom properties:
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
-@use '@code-dot-org/component-library-styles/font.scss';
-
 .customHeader {
   @include main-font-semi-bold;
   font-size: 24px;
@@ -324,10 +373,11 @@ You can override or extend font styles by combining mixins and custom properties
 
 #### 💡 Best Practices for Fonts:
 
-- ✅ Use `main-font` mixins instead of direct font-family definitions.
-- ✅ Use the provided mixins for font weights instead of hard-coded values.
+- ✅ Import `fontVariables.css` globally in your application root to make font CSS variables available.
+- ✅ Use `main-font` mixins (from `font.scss`) or CSS variables (from `fontVariables.css`) instead of direct font-family definitions.
+- ✅ Use the provided CSS variables or mixins for font weights instead of hard-coded values.
 - ✅ Figtree should be the primary font; Noto Sans is used for fallback and internationalization.
-- ⛔️ Avoid using inline styles for font definitions.
+- ✅ CSS variables can be used in inline styles (JSX/TSX) when needed, but prefer SCSS mixins when possible.
 
 ---
 
@@ -348,27 +398,7 @@ We use **Font Awesome** for icons, loaded from the Code.org CDN.
 
 #### ✅ Best Practices for Font Awesome:
 
-- ✅ Use CDN links provided in `fonts.scss`.
 - ⛔️ Avoid loading Font Awesome directly from npm to prevent conflicts with existing styles.
-
-### Font Awesome
-
-The `font-awesome.scss` file defines the CDN links and setup for **Font Awesome Pro** icons used across the Code.org
-sites.  
-We rely on the **Font Awesome Pro Kit** to provide a consistent set of icons that can be accessed globally via
-CSS imports.
-
-Once you connect font-awesome.scss to your project, you can use Font Awesome icons directly in your components by simply setting the needed classNames.
-
-Font Awesome allows us to include a wide variety of icon types such as:
-
-- **Solid** – Common action-based icons.
-- **Brands** – Logos of major brands.
-- **Regular** – Outlined icons.
-- **Duotone** – Dual-color icons.
-- **Custom Icons** – Custom icons specific to Code.org.
-
----
 
 #### ✅ Example:
 
@@ -406,14 +436,6 @@ const Example = () => (
 );
 ```
 
----
-
-#### 🔄 Updating Font Awesome Files
-
-To update Font Awesome files in `font.scss`, see [Updating FontAwesome Files](#updating-fontawesome-files) section.
-
----
-
 #### ✅ Best Practices for Font Awesome:
 
 - ✅ Use the **CDN links** for faster loading and caching.
@@ -440,7 +462,7 @@ const Example = () => (
 
 ### Typography
 
-The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.  
+The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.
 It includes mixins and utility classes for consistent heading, paragraph, and label styles. You can also find some
 additional documentation in [typography.module.scss](./typography.module.scss) file itslef.
 
@@ -501,12 +523,11 @@ h1 {
 
 #### ✅ Additional Typography Mixins
 
-| Mixin          | Description     |
-| -------------- | --------------- |
-| `strong`       | Bold text       |
-| `extra-strong` | Extra bold text |
-| `em`           | Italic text     |
-| `figcaption`   | Caption text    |
+| Mixin        | Description  |
+| ------------ | ------------ |
+| `strong`     | Bold text    |
+| `em`         | Italic text  |
+| `figcaption` | Caption text |
 
 ---
 
@@ -545,7 +566,7 @@ We also provide utility classes that you can apply directly in the markup:
 
 ### Variables
 
-The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.  
+The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.
 These variables cover consistent sizing, spacing, border radius, and other common design properties.
 
 Variables in this file are intended to be used **consistently** across the design system components to ensure a
@@ -598,7 +619,7 @@ With time there'll be more variables added to this file, so make sure to check i
 
 The `mixins.scss` file defines reusable patterns and logic to simplify consistent styling across Code.org components.
 
-Mixins help avoid repetition and keep the SCSS code clean and organized.  
+Mixins help avoid repetition and keep the SCSS code clean and organized.
 They allow you to define a set of styles that can be reused throughout your project.
 
 ---
@@ -639,8 +660,9 @@ They allow you to define a set of styles that can be reused throughout your proj
 
 ## Best Practices
 
-- ✅ Use **semantic colors** from `colors.scss`, unless it's necessary to use `primitiveColors.scss`
+- ✅ Use **semantic colors** from `colors.css`, unless it's necessary to use `primitiveColors.css`
   or any other colors.
+- ✅ Import `primitiveColors.css` before `colors.css` in your application root to ensure proper variable resolution.
 - ✅ Keep typography and spacing consistent with design tokens.
 - ⛔️ Avoid defining hard-coded colors — rely on CSS variables.
 
@@ -682,43 +704,13 @@ yarn lint:fix
 yarn prettier:fix
 ```
 
-## Updating FontAwesome Files
-
-If you are looking to update the FontAwesome files in `font.scss`, you'll need to do the following:
-
-1. **Download css and webfont files from FontAwesome.**
-   Sign in with our shared dev account, find our "Code.org Kit", then click "Download Web Files" from the "Self-Host on the Web" option.
-   This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
-2. **Use "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts).
-   Supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
-3. Once you've downloaded the kit, **updated relative paths**
-   for font files listed in CSS to be absolute paths to URLs storing font files, and uploaded them to a S3 bucket where we can access them.
-   I've timestamped the folder location in S3 such that a developer can upload an updated set of files without affecting production.
-4. **Updated CORS configuration on `cdo-dsco` bucket**
-   to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
-   More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
-
-At time of writing, these files were referenced in the following places:
-
-**Hard coded strings**
-
-- Applab Exporter: apps/src/applab/Exporter.js
-- hourofcode.com: pegasus/sites.v3/hourofcode.com/styles/030-font-awesome-min.css
-- shared: shared/css/font.scss (shared strings defined here)
-
-**Usages of shared strings**
-
-- pegasus: pegasus/sites.v3/code.org/public/css/font-awesome.min.scss
-- dashboard: dashboard/app/stylesheets/application.scss
-
 ## Contributing
 
 For information on how to contribute to this package, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## FAQ / Troubleshooting
 
-- **Why aren't my styles being applied?**  
-  Ensure the component imports `colors.scss` and `typography.scss`.  
+- **Why aren't my styles being applied?**
   Check for conflicting styles or CSS specificity issues. You may need to add additional selectors to the element you'd like to style.
 
 ## Changelog

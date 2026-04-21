@@ -8,8 +8,8 @@ on:
       - staging
       - staging-next
     paths:
-      - 'frontend/**'
-      - '.github/**'
+      - "frontend/**"
+      - ".github/**"
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
+      studio-changed: ${{ steps.changes.outputs.studio }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -35,11 +36,17 @@ jobs:
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
+              - '.github/**'
+            studio:
+              - 'frontend/apps/studio/**'
+              - 'frontend/*'
+              - '.github/**'
 
-  # Start the marketing app CI workflow
-  marketing:
+  # Start the studio app CI workflow
+  studio:
+    if: ${{ needs.setup.outputs.studio-changed == 'true' }}
     needs: setup
-    uses: ./.github/workflows/marketing-app-ci.yml
+    uses: ./.github/workflows/studio-ci.yml
     secrets: inherit
 
   # Start the component library CI workflow
@@ -52,7 +59,7 @@ jobs:
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, marketing, component-library]
+    needs: [setup, component-library]
     if: always()
     runs-on: ubuntu-24.04
     steps:

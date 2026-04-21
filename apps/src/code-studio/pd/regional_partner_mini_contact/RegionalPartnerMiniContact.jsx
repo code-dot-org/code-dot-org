@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -103,11 +103,22 @@ export class RegionalPartnerMiniContact extends React.Component {
           errors: results.responseJSON.errors.form_data,
           submitting: false,
         });
+
+        if (
+          results.responseJSON.errors.form_data.length === 1 &&
+          results.responseJSON.errors.form_data.includes('regionalPartner')
+        ) {
+          analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
+            'source page id': this.props.sourcePageId,
+            'regional partner': null,
+          });
+        }
       }
     } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
       analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
         'source page id': this.props.sourcePageId,
+        'regional partner': results.responseJSON['regional_partner_name'],
       });
     } else {
       this.setState({submitted: false, submitting: false});
@@ -243,16 +254,20 @@ export class RegionalPartnerMiniContact extends React.Component {
           )}
           <div className={style.submitContainer}>
             {!this.state.submitting && (
-              <Button
-                id="submit"
-                text="Send"
-                color="purple"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 className={style.submitButton}
+                id="submit"
                 onClick={this.submit}
-              />
+                type="button"
+              >
+                {'Send'}
+              </MuiButton>
             )}
             {this.state.submitting && (
-              <span className="fa fa-spin fa-spinner" />
+              <span className="fa-solid fa-spin fa-spinner" />
             )}{' '}
           </div>
         </FormGroup>

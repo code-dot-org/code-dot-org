@@ -3,10 +3,11 @@ require 'test_helper'
 class UserLevelInteractionsControllerTest < ActionController::TestCase
   include LevelsHelper
   setup do
-    @student = create :student
+    @student = create(:student)
     sign_in @student
-    @csp_2024_script = create(:csp_script, :with_levels, version_year: '2024', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@csp_2024_script)
+    @csp_2024_script = create(:csp_script, :with_levels)
+    @csp_2024_course = create(:single_unit_course, unit: @csp_2024_script, name: 'csp-2024', family_name: 'csp', version_year: '2024')
+    CourseOffering.add_course_offering(@csp_2024_course)
     @csp_2024_level = @csp_2024_script.levels.first
   end
 
@@ -19,7 +20,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
 
   test "create User Level Interaction for project level" do
     @lesson = create(:lesson, :with_lesson_group, script: @csp_2024_script)
-    @script_level = create :script_level, script: @csp_2024_script, lesson: @lesson, levels: [@csp_2024_level]
+    @script_level = create(:script_level, script: @csp_2024_script, lesson: @lesson, levels: [@csp_2024_level])
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
     channel_token = ChannelToken.find_or_create_channel_token(@csp_2024_level, @fake_ip, @storage_id, @csp_2024_script)
@@ -28,7 +29,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
     stub_project_source_data(@channel_id)
-    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    _, @project_id = get_storage_id_and_project_id(@channel_id)
     fake_version_id = "fake-version-id"
 
     uli, metadata = check_created_uli(@csp_2024_script, @csp_2024_level)
@@ -59,8 +60,9 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
   end
 
   test "do not create User Level Interaction for units before 2024" do
-    @csp_2017_script = create(:csp_script, :with_levels, version_year: '2017', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@csp_2017_script)
+    @csp_2017_script = create(:csp_script, :with_levels)
+    @csp_2017_course = create(:single_unit_course, unit: @csp_2017_script, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    CourseOffering.add_course_offering(@csp_2017_course)
     @csp_2017_level = @csp_2017_script.levels.first
     refute_creates_uli(@csp_2017_script, @csp_2017_level)
   end

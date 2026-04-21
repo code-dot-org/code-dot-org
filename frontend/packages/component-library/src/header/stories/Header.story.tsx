@@ -1,0 +1,60 @@
+import logoImage from '@public/images/cdo-logo-inverse.svg';
+import {Meta, StoryFn} from '@storybook/react-vite';
+
+import Header, {HeaderProps} from '../Header';
+
+export default {
+  title: 'DesignSystem/Header',
+  component: Header,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for the Header.
+            // Header component has one a11y issue, and it's related to the background and link colors.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
+} as Meta;
+
+const Template: StoryFn<HeaderProps> = (args: HeaderProps) => (
+  <Header {...args} />
+);
+
+export const Default = Template.bind({});
+
+const MENU_ITEMS = [
+  {label: 'Learn', href: '/students'},
+  {label: 'Teach', href: '/teach'},
+  {label: 'Districts', href: '/administrators'},
+  {label: 'Stats', href: '/promote'},
+  {label: 'Donate', href: '/donate'},
+  {label: 'Incubator', href: '/incubator'},
+  {label: 'About', href: '/about'},
+];
+
+Default.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: true, firstName: 'Coder'},
+};
+
+export const SignedInLongName = Template.bind({});
+SignedInLongName.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: true, firstName: 'Bartholomew-Maximilian'},
+};
+
+export const SignedOut = Template.bind({});
+SignedOut.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {isSignedIn: false},
+};

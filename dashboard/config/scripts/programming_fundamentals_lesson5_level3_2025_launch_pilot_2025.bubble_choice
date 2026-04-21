@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson5-level3_2025-launch_pilot-2025'
+display_name 'Help the Painter!'
+description 'Choose **ONE** of these scenarios, and finish the program so the `Painter` reaches the traffic cone.'
+
+sublevels
+level 'programming-fundamentals-lesson5-level3a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level3b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level3c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level3d_2025-launch_pilot-2025'

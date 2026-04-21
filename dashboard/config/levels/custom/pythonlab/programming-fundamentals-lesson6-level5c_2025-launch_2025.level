@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're bringing a pack of cookies to share with your friends. You want your program to show how many cookies each person gets. The code already shows how many cookies you brought. Now you just need to show how they'll be split.\r\n\r\n1. Inside the function, create a new variable called `friends` and assign it a number (for example, `4`).\r\n\r\n   Make sure your new lines are indented to stay inside the function.\r\n\r\n2. Create another variable called `cookies_per_person` and calculate how many cookies each person gets by dividing `cookies` by `friends`.\r\n\r\n3. Add a `print()` line that uses the `cookies_per_person` variable to display how the cookies are shared.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -227,7 +227,7 @@
       "key": "529245c0-b1fc-416b-aee4-77f322d85c58",
       "position": 3,
       "properties": {
-        "description": "In this set of activities students will use two different versions of a simple widget in Code Studio to \"crack\" a messages encoded with substitution ciphers, including an alphabetic shift and random substitution.\n\n![](https://code.org/curriculum/docs/csp/code-studio-icon.png) **Transition to Code Studio**: [Encryption Widgets on Code Studio](https://studio.code.org/s/hoc-encryption)"
+        "description": "In this set of activities students will use two different versions of a simple widget in Code Studio to \"crack\" a messages encoded with substitution ciphers, including an alphabetic shift and random substitution.\n\n![](/blockly/media/curriculum/docs/csp/code-studio-icon.png) **Transition to Code Studio**: [Encryption Widgets on Code Studio](https://studio.code.org/s/hoc-encryption)"
       },
       "seeding_key": {
         "activity_section.key": "529245c0-b1fc-416b-aee4-77f322d85c58",

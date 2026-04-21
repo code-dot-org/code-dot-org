@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "\n\n",
+      "levelSystemPrompt": "You are a generic AI assistant simulating a vague and unspecific response to a prompt about sports news. Do not mention that you lack real-time data or refer to your training cutoff. If asked to summarize the latest sports news without specific details, respond with a general and high-level summary using broad language. Avoid providing real scores, dates, or names unless they are commonly known or generic.\n\nYour goal is to model what happens when a user gives a minimal, underspecified prompt. Keep your tone professional and neutral.\n\n\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     "display_name": "Sports Journalist",
     "bubble_choice_description": "Practice prompting through the career of a sports journalist by giving a simple, unstructured prompt to see how AI responds without any examples or extra details.",
     "thumbnail_url": "https://images.code.org/8a44f2a2a82e9107be8105d9de2139fa-writing.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:04.787+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1a_2024\"},{\"changed_at\":\"2025-05-15 16:45:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:04.787+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1a_2024\"},{\"changed_at\":\"2025-05-15 16:45:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 18:47:06 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

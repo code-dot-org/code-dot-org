@@ -1,8 +1,12 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
   let userChatMessage: CompletedChatMessage;
@@ -19,11 +23,13 @@ describe('ChatEventLogger', () => {
       timestamp: Date.now(),
     };
     aichatContext = {
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
     };
-    chatEventLogger = new ChatEventLogger();
+    AichatContextManager.setContext(aichatContext);
+    chatEventLogger = ChatEventLogger.getInstance();
   });
 
   afterEach(() => {
@@ -35,7 +41,7 @@ describe('ChatEventLogger', () => {
       .spyOn(aichatApi, 'postLogChatEvent')
       .mockResolvedValue(userChatMessage);
 
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
+    chatEventLogger.logChatEvent(userChatMessage);
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
   });
 
@@ -50,8 +56,8 @@ describe('ChatEventLogger', () => {
         });
       });
 
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
+    chatEventLogger.logChatEvent(userChatMessage);
+    chatEventLogger.logChatEvent(userChatMessage);
     // Because the first postLogChatEvent call is not yet resolved, the second logChatEvent
     // does not call on sendChatEvent.
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);

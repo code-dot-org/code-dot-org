@@ -2,6 +2,10 @@
 
 $container-width: 309px;
 
+:global(#curriculum-catalog-container) {
+  background-color: var(--background-neutral-secondary);
+}
+
 .catalogContentContainer {
   max-width: 60em;
   margin: 0 auto 1em auto;
@@ -12,30 +16,6 @@ $container-width: 309px;
   grid-template-columns: repeat(auto-fill, $container-width);
   justify-content: center;
   grid-gap: 1em;
-}
-
-.catalogContentNoResults {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
-  margin: 3em auto;
-  text-align: justify;
-
-  img {
-    display: block;
-    margin: auto;
-    width: 5em;
-  }
-
-  h5 {
-    color: color.$teal;
-    margin: 1em 0 0 0;
-  }
-
-  p {
-    margin: 1em;
-  }
 }
 
 .assignSuccessMessageContainer {
@@ -62,6 +42,12 @@ $container-width: 309px;
     margin: 16px;
     color: color.$bootstrap_success_text;
   }
+}
+
+.curriculumCatalogHeroBanner {
+ figure img {
+   height: 185px;
+ }
 }
 
 .assignSuccessMessageCenter {

@@ -90,6 +90,7 @@
     "display_name": "Sleep In",
     "bubble_choice_description": "Create a program that determines if it is okay to sleep in or not.",
     "thumbnail_url": "https://images.code.org/3d3dccfd041c26d073739d9a62c5df1c-image-1649712716171.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

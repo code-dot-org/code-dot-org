@@ -1,3 +1,6 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
+import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 
@@ -17,6 +20,15 @@ const CHECK_CAN_REPORT_INTERVAL_MS =
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
+
+const observabilityLoggerByLevel: Record<
+  LogLevel,
+  (message: string, context: Record<string, unknown>) => void
+> = {
+  INFO: (message, context) => Observability.logger.info(message, context),
+  WARNING: (message, context) => Observability.logger.warn(message, context),
+  SEVERE: (message, context) => Observability.logger.error(message, context),
+};
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing
@@ -100,6 +112,16 @@ class MetricsReporter {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
     }
+
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      const dimensionAttributes = Object.fromEntries(
+        metric.dimensions
+          .filter(d => d?.name && d?.value)
+          .map(d => [d.name, d.value])
+      );
+      Observability.metrics.count(name, value, {unit, ...dimensionAttributes});
+    }
+
     // Send a version of the metric with and without the browser version dimension
     this.sendMetrics([
       metric,
@@ -117,6 +139,10 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      this.sendToObservabilityLogger(level, message);
+    }
+
     if (!this.isReportingEnabled()) {
       this.fallbackLog(payload);
       return;
@@ -127,6 +153,34 @@ class MetricsReporter {
     } catch (error) {
       this.fallbackLog(payload);
       this.handleError(error as Error);
+    }
+  }
+
+  private sendToObservabilityLogger(level: LogLevel, message: string | object) {
+    // TODO: Refactor all log entrypoints (logInfo, logWarning, logError) to
+    // accept explicit (msg: string, context: object) signatures once we fully
+    // migrate to publishing directly to the log provider. Until then, we feel
+    // for known string fields to use as the Sentry log message.
+    if (typeof message === 'string') {
+      observabilityLoggerByLevel[level](message, this.getDeviceInfo());
+    } else {
+      const {
+        message: msgField,
+        errorMessage,
+        ...rest
+      } = message as Record<string, unknown>;
+      let msgStr: string;
+      if (typeof msgField === 'string') {
+        msgStr = msgField;
+      } else if (typeof errorMessage === 'string') {
+        msgStr = errorMessage;
+      } else {
+        msgStr = level;
+      }
+      observabilityLoggerByLevel[level](msgStr, {
+        ...this.getDeviceInfo(),
+        ...rest,
+      });
     }
   }
 
@@ -154,7 +208,7 @@ class MetricsReporter {
     }
   }
 
-  private getDeviceInfo(): object {
+  private getDeviceInfo(): Record<string, unknown> {
     return {
       user_agent: window.navigator.userAgent,
       window_width: window.innerWidth,

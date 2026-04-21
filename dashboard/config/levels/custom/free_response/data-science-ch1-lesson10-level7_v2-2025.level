@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:34.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Using Scatter Plots\r\nWhen trying to analyze our data, scatter plots can help us gain insight into relationships between attributes.\r\n\r\n[Google Sheets Link](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=1782593835#gid=1782593835) \r\n\r\n**Do This**\r\n1. Make a scatter plot to answer the question: *Are coasters getting faster over time?*\r\n\r\n    :::details [**Show Me How**]\r\n    - Select the \"Top＿Speed\" and \"Year＿Opened\" columns \r\n    - Insert --> Chart --> Scatter Plot\r\n    :::\r\n\r\n2. Make a scatter plot to answer the question: *Are taller coasters faster?*\r\n\r\n    :::details [**Show Me How**]\r\n    - Select the \"Top＿Speed\" and \"Max＿Height\" columns\r\n    - Insert --> Chart --> Scatter Plot\r\n    :::\r\n\r\n3. What other questions or attributes are you interested in investigating relationships between?\r\n\r\n\r\n\r\n",
+    "teacher_markdown": "![](https://images.code.org/9a204b20b525e4f5272d2f49d9207cfd-image-1721836085919.png)\r\n\r\nExample student response:\r\n- California and Pennsylvania have the most roller coasters at 18.\r\n\r\nOther questions students may wonder about and investigate include:\r\n- What is the average age of roller coasters in states with the most versus the least roller coasters? Or Do states with more roller coasters have a wider variety of coaster types? Or How does the intensity of roller coasters (as measured by speed, height, or inversions) compare across states with different numbers of coasters?\r\n- Whatever questions students investigate, they should be relevant to the dataset and its attributes. The insights they gain from any new graphs created should be directly related to the questions posed and supported by the data analysis conducted. They should be clear, concise, and logically derived from the data. Teachers should value insights that show unique thinking or new connections.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "GqNVaXO8oI+kx+GerVgtVm3hd/6Ot7OIYNRzCOW28aEQL7DFa7Ydx4obj/OM\n8cr/SkvUKljrzf7iYDddSioQbWsdiys7Ks4/FAPL9zvXDiQJGDcW+nZts1do\n5z07JofhVvsyIIxR6SxAMXQo2HoLqX2YVFO9fVulitGa+fxgzCqXspEjx+VF\nqG1FrLq1fan4qmoc6sdqZW9WJdwM+mH/4ApaiwtFU4v4GzoRsBQVvXyN97l8\nGdGmANu6/8VEv5DsWO0nTxOeM0xW+4/U95X7IhVbMAnTCDCjuFlbraUiTbvf\n/mW8jjVOnqNRUW9gr4MiN9dUm7arF9vcMDHkV9fkAGK+YNbaiEtKiQCCR8qC\n4yQrr1GHd5uCSbDMQhdjFoQjzkUCdbJy5KFx/s1dj6d9WTP4XH+EnKk4KBqj\n4edNmzgZAJ39IZ5NPRLLpgsoBSUvimyER5XzeJHzQ0RgE5P/Nr16PH2Nb0jI\nKDZQ2zEzIi23Mabja6FxqESwah4vVgN31LqzpFdjfx56g9bVOwQXb7JFDMf9\n3fKN7eYVjh+xbCVoJFHuAgfXtl7Y5maeV6zgM55EduHKe2RlGTNRo1JR9VFZ\nr4fO0mwmUWVkcMAadGpfjPtMGmHHX7GP4hMV565g6QJq2z0HC+3Hcxnge1tZ\np7lX36xkkrSwIg/nLAx5t/IEp5Dg5IY7B3jE5AQhIrQgTv9iQlpcwjd5U7hq\n4lP9ep81CPQmxPFPMMZELrTEStyNwn1REInN8HO+SneQoRZ4xtr2VagA5qrM\nmJ96ZLv3sQowJ+ks2Ty3zyPfUZIItCVVndbsIR/rfsQHbTsDgAetFYZ1qKR8\nER6lJ5j7gANEaKf+9VbG/czw9vdQMJI9e1mEczX68DKEA1VRLaNf2cDWTw7I\n6x1s5172XkPG1jwHj8JiLlWbwWjJSwKe3od2PiTsCt89/vZ4rUtnfCt69Dty\n/uCR3CWtbAc/VawhKmCQIsg9UF9G/0/akbQhNPOF4wYIw3VMZoBdYKnaH/A4\ndMZ6eMZYg+rNTcrs2exMBZmBz5HVnsOiMYbDPMN3AnuUCUM+DOEKHfxAmsNs\ng8iybatsWukcwF6Argez7n7iMrWezVHI7HUmDn4rMam2MPl5ewXDK1/TluqM\nKyaSX3BA+4ZA1S0snmhz/4wi2GYyexrnJeO8DsLomoPUNVGPaUtBZ34f9zNg\nBPSWwsQyBREigDIq\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:34.376+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level7_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level7_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

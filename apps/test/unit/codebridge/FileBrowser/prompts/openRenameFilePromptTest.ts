@@ -19,7 +19,7 @@ const getRenameFileMock = (): [ProjectFolder, RenameFileFunction] => {
 
 describe('openRenameFilePrompt', function () {
   it('can successfully rename a file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = 'valid_file_name.txt';
 
@@ -30,9 +30,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -41,7 +42,7 @@ describe('openRenameFilePrompt', function () {
   });
 
   it('can rename a file to itself', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = testProject.files[fileId].name;
 
@@ -52,9 +53,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -63,7 +65,7 @@ describe('openRenameFilePrompt', function () {
   });
 
   it('can rename a file to nothing', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = '';
 
@@ -74,9 +76,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -85,7 +88,7 @@ describe('openRenameFilePrompt', function () {
   });
 
   it('can refuse to rename a file to a duplicate name', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = 'testFile3.txt';
 
@@ -96,9 +99,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);
@@ -106,7 +110,7 @@ describe('openRenameFilePrompt', function () {
   });
 
   it('can refuse to rename a file to an invalid name', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = 'testfolder!';
 
@@ -117,9 +121,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);
@@ -127,7 +132,7 @@ describe('openRenameFilePrompt', function () {
   });
 
   it('can refuse to rename a file to not have an extension', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const newFileName = 'invalidFile';
 
@@ -138,9 +143,10 @@ describe('openRenameFilePrompt', function () {
       dialogControl: getDialogControlMock(newFileName),
       renameFile: renameFileDataMock,
       projectFiles: testProject.files,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);

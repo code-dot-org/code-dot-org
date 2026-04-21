@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'stringio'
 require 'nokogiri'
 
 class FilesApi < Sinatra::Base
@@ -19,15 +20,6 @@ class FilesApi < Sinatra::Base
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
-
-  # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
-
-  # These file types are not used in Applab, so they are safe to skip during the
-  # profanity check for libraries in put_file.
-  BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
-
-  DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -46,18 +38,18 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_view_abusive_assets?(encrypted_channel_id)
+  def can_view_flagged_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
 
   def codeprojects_can_view?(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
 
     # Attempt to find active project in database. This will raise Projects::NotFound if
     # no active project exists, which is handled below.
@@ -69,10 +61,6 @@ class FilesApi < Sinatra::Base
   # Default to cannot view if there is an error
   rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
-  end
-
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -107,7 +95,7 @@ class FilesApi < Sinatra::Base
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
     return unless CDO.newrelic_logging
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
@@ -249,28 +237,50 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    content_type type
+    type_params = {}
+    # Sinatra does not have a content type for markdown files, so we
+    # add it here.
+    if type == '.md'
+      type_params = {default: 'text/markdown'}
+    end
+    content_type(type, type_params)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
+    #
+    # Use Sinatra's attachment helper to set Content-Disposition header
+    #  NOTE: this protects against header injection attacks by escaping the filename
+    #  See Jira task: BC-72
     unless code_projects_domain_root_route || safely_viewable_file_type?(type)
-      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+      attachment(filename)
     end
 
-    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    project = Projects.new(get_storage_id).get(encrypted_channel_id) if valid_encrypted_channel_id(encrypted_channel_id)
+    project_type = project[:projectType]&.downcase if project
+
+    # we always fetch weblab1 html files to ensure they still pass our latest no-js validations
+    if_modified_since = html_file?(filename) && project_type == 'weblab' ? nil : env['HTTP_IF_MODIFIED_SINCE']
+
+    result = buckets.get(encrypted_channel_id, filename, if_modified_since, request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
-    last_modified result[:last_modified]
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
+    not_found if html_file?(filename) && !valid_html_file?(encrypted_channel_id, filename, result[:body].string)
+
+    # clients still get a 304 Not Modified from us if their cache is fresh,
+    # even if we had to fetch html from s3 to validate it
+    last_modified result[:last_modified]
 
     if code_projects_domain_root_route && html?(response.headers)
+      response.headers['Content-Security-Policy'] = "connect-src 'self'"
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
     end
 
@@ -288,7 +298,7 @@ class FilesApi < Sinatra::Base
   def should_sanitize_for_under_13?(encrypted_channel_id)
     return false if owns_channel?(encrypted_channel_id)
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_id = user_id_for_storage_id(owner_storage_id)
     under_13?(owner_id)
   end
@@ -362,7 +372,13 @@ class FilesApi < Sinatra::Base
       '//' + tag_dup
     end
 
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
+    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+
+    Nokogiri::HTML(body).xpath(
+      *disallowed_tag_selectors,
+      disallow_on_attrs_selector,
+    ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
@@ -420,20 +436,24 @@ class FilesApi < Sinatra::Base
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
 
-    # Block libraries with PII/profanity from being published.
-    # Block main.json file from aichat lab flagged with profanity from being saved.
-    #
-    # The "backpack" feature uses libraries to allow students to share code
-    # between their own projects -- skip this check for .java and .py files, since in this use case
-    # the files are only being used by a single user.
-    if (endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)) || profanity_project_type?(project_type)
+    unless project_type
+      project = Projects.new(get_storage_id).get(encrypted_channel_id)
+      project_type = project[:projectType]&.downcase if project
+    end
+
+    # Block non-backpack files (e.g., App Lab libraries) with PII/profanity from being published
+    # or shared with other users.
+    # The "backpack" feature uses the libraries endpoint to allow users to share code
+    # between their own projects -- skip this check for backpack files since the files are
+    # only being used by a single user.
+    # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
+    if endpoint == 'libraries' && project_type != 'backpack'
       begin
-        if profanity_project_type?(project_type)
-          locale_code = request.locale.to_s.split('-').first
-          share_failure = find_project_profanity(project_type, body, locale_code)
-        else
-          share_failure = ShareFiltering.find_failure(body, request.locale)
-        end
+        # For App Lab libraries (JSON format), extract only name, description and source (user-created text)
+        # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
+        # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
+        text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
+        share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
@@ -505,7 +525,14 @@ class FilesApi < Sinatra::Base
           # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
           # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
           source[key].each_key do |file|
-            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+            contents = source[key][file]["contents"]
+
+            # Sketch Lab sources are managed by a third party (Excalidraw)
+            # but also have a "files" attribute (with a different property structure),
+            # so we skip encoding checks there.
+            if contents && !contents&.force_encoding("UTF-8")&.valid_encoding?
+              return false
+            end
           end
         end
         # TODO: do we need to validate folders?
@@ -683,7 +710,7 @@ class FilesApi < Sinatra::Base
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
       return versions.to_json if owns_channel?(encrypted_channel_id)
 
-      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
       owner_user_id = user_id_for_storage_id(owner_storage_id)
       return versions.to_json if teaches_student?(owner_user_id)
 
@@ -1016,11 +1043,6 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
-  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
-    applab
-    gamelab
-  )
-
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -1029,38 +1051,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
-
-    if filename == THUMBNAIL_FILENAME
-      project = Projects.new(get_storage_id)
-      project_type = project.project_type_from_channel_id(encrypted_channel_id)
-      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
-        file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-
-        case rating
-        when :adult, :racy
-          # Incrementing abuse score by 15 to differentiate from manually reported projects.
-          new_score = project.increment_abuse(encrypted_channel_id, 15, true) # Automatic moderation can be applied to frozen projects.
-          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-          response.headers['x-cdo-content-rating'] = rating.to_s
-          cache_for 1.hour
-          not_found
-          return
-        when :unknown
-          # Content moderation was unable to scan the image, usually because we've exceeded
-          # the moderation service's request limit.  Return the default image for now and
-          # cache for 1-2 minutes to spread out future requests to the moderation service.
-          cache_for rand(60..120).seconds
-          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
-          return
-        end
-      end
-    end
-
     cache_for 1.hour
-    # Because we _might_ have already read from this IO object during image
-    # moderation, rewind to the start of the file before responding with it.
-    file.seek(0, IO::SEEK_SET)
     file
   end
 
@@ -1082,44 +1073,38 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # POST /v3/images/moderate
+  #
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
+  # moderation result as JSON. Returns null if the moderation service is unavailable.
+  #
+  post %r{/v3/images/moderate$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    if raw.empty?
+      status 400
+      return {error: 'No image data provided.'}.to_json
+    end
+    image_stream = StringIO.new(raw)
+
+    # Determine reported MIME type (e.g. "image/png", "image/jpeg", "image/webp", "image/gif").
+    content_type_header = request.content_type
+
+    result = ImageModeration.moderate_image(image_stream, content_type_header)
+    result.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
   private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
-  end
-
-  private def moderate_type?(project_type)
-    MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
-  end
-
-  private def moderate_channel?(encrypted_channel_id)
-    project = Projects.new(get_storage_id)
-    !project.content_moderation_disabled?(encrypted_channel_id)
-  end
-
-  private def profanity_project_type?(project_type)
-    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
-  end
-
-  private def get_toxicity_threshold_user_sources
-    DCDO.get("aichat_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
-  end
-
-  private def find_project_profanity(project_type, body, locale_code)
-    # Currently, only AI Chat is checked for profanity
-    if project_type == 'aichat'
-      source = JSON.parse(body)['source']
-      source_json = JSON.parse(source)
-      text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
-      # Nothing to check if there is no system prompt or retrieval
-      return nil if text.blank?
-      # Use AWS Comprehend to check AI Chat contents for toxicity.
-      # get_toxicity returns an object with the following fields:
-      # text: string, toxicity: number, and max_category {name: string, score: number}
-      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale_code)
-      if comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
-        return ShareFailure.new(ShareFiltering::FailureType::PROFANITY, comprehend_response)
-      end
-    end
   end
 end

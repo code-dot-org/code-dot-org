@@ -1,20 +1,21 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import RegionalWorkshopCatalog from '@cdo/apps/code-studio/pd/professional_learning/RegionalWorkshopCatalog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
-  const availableNationalWorkshops = getScriptData(
-    'availableNationalWorkshops'
-  );
+  const nationalWorkshops = getScriptData('nationalWorkshops');
   const zipFromSchoolInfo = getScriptData('zipFromSchoolInfo');
-  ReactDOM.render(
+  createReactRoot(
     <RegionalWorkshopCatalog
-      availableNationalWorkshops={availableNationalWorkshops}
+      nationalWorkshops={nationalWorkshops}
       zipFromSchoolInfo={zipFromSchoolInfo}
     />,
-    document.getElementById('regional-workshop-catalog')
+    document.getElementById('regional-workshop-catalog'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

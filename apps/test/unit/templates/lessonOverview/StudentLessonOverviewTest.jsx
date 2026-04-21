@@ -18,7 +18,7 @@ describe('StudentLessonOverview', () => {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1',
+          link: '/courses/course/units/1',
           lessonGroups: [
             {
               key: 'lg-1',
@@ -91,7 +91,7 @@ describe('StudentLessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).toContain('/s/unit-1');
+    expect(navLink.props().href).toContain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1')).toBe(true);
 
     expect(wrapper.find('LessonNavigationDropdown').length).toBe(1);

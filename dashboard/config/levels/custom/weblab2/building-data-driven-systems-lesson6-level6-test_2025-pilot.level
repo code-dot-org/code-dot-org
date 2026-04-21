@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:08:13.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Building Reusable Prompts with CHAT, Part 3\r\n\r\n**Context:** The renderer works, but the app is static. You will now **Hone** your prompt to add an interactive feature that modifies the data and updates the screen.\r\n\r\n**Step 1: Choose an Additional Feature**:\r\n\r\n* **Option A: Expand Capacity** (Add to End) -> Uses `push()`\r\n* **Option B: Close Down** (Remove Last) -> Uses `pop()`\r\n* **Option C: Priority Opening** (Add to Start) -> Uses `unshift()`\r\n\r\n**Step 2: Hone (Refine the Prompt)**.\r\nIn `CHAT-Prompt.md`, write a draft for your specific feature.\r\n\r\n\r\n**Step 3: Apply**.\r\nGenerate the code and add it to the appropriate place in your code. Check that the functionality works are you intended. Converse with AI Tutor to debug any issues that might arise.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson6-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:08:13.405+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level6-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level6-test-2025\"}]"
+}]]></config>
+</Weblab2>

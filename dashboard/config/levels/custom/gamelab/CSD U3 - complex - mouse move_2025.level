@@ -138,6 +138,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Make the salt shaker shake as you move the mouse.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

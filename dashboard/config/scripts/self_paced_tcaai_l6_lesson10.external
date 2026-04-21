@@ -1,0 +1,97 @@
+name 'self-paced-TCaAI-L6-Lesson10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 5 Lesson Overviews
+
+## Lesson 10: The Final Verdict
+
+#### Lesson 10 is the culminating lesson of the unit. Students defend a clear claim about how humans should interact with AI systems using evidence from across their investigations. They reflect on how their thinking evolved and finalize their Responsible AI Use Guides.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/10" target="blank" rel="noopener noreferrer">
+Access Lesson 10: The Final Verdict
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (10 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt; margin-top: 0;">
+Students open their AI guidance projects and use the checklist and rubric to make final, targeted edits. Emphasize strengthening claims with clear evidence, naming AI limitations (bias, hallucinations, missing context), and clarifying mitigation strategies.
+</p>
+<p style="font-size: 13pt; margin-bottom: 0;">
+Encourage students to prioritize one high-impact improvement if time is limited.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (25 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+
+<p style="font-size: 14pt"><b>⚖️ Mini Mock Trial</b></p>
+
+<p style="font-size: 13pt; margin-top: 0;">
+Students participate in a structured mini debate about how humans should interact with AI. Each group prepares and presents a claim supported by evidence from the unit’s investigations.
+</p>
+
+<p style="font-size: 13pt;">
+Students engage in short rounds:
+</p>
+
+<ul style="font-size: 13pt; margin-top: 5px;">
+<li>Opening claim</li>
+<li>Evidence presentation</li>
+<li>Cross-examination</li>
+<li>Jury deliberation</li>
+</ul>
+
+<p style="font-size: 13pt;">
+During the debate, circulate and prompt students to cite specific investigations (credibility testing, bias examples, privacy inference, co-creation experiments) rather than relying on opinion.
+</p>
+
+<p style="font-size: 13pt; margin-bottom: 0;">
+Reinforce the concept of <strong>human oversight</strong> - active human judgment and review applied to AI outputs to ensure safety, fairness, and accuracy.
+</p>
+
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (10 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt; margin-top: 0;">
+Students complete a short written reflection: state a claim about how humans should use AI and cite one specific piece of evidence from the unit that supports that claim.
+</p>
+<p style="font-size: 13pt;">
+Discuss: How did your thinking about AI’s capabilities, limitations, or risks change throughout the unit?
+</p>
+<p style="font-size: 13pt; margin-bottom: 0;">
+Close by emphasizing nuance - AI offers speed and scale, but responsible use depends on thoughtful human decision-making.
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Ensure students have access to their final AI guidance projects.
+* #### Prepare the project checklist and rubric for final edits.
+* #### Print or distribute the mock trial activity guide.
+* #### Plan clear timing for debate phases.
+
+### 💡 **Tips for Teaching**:
+* #### Push for evidence-based claims — require students to name a specific investigation.
+* #### Encourage qualifiers such as “in cases where…” to avoid oversimplification.
+* #### Model concise, defensible arguments rather than broad statements.
+MARKDOWN

@@ -10,6 +10,7 @@ import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {setValidationState} from '../lab2Redux';
+import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
 interface ProgressContainerProps {
   children: React.ReactNode;
@@ -25,6 +26,7 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   children,
   appType,
 }) => {
+  const {levelProperties} = useLevelProperties();
   const dispatch = useAppDispatch();
   const isScriptLevel = useSelector(
     state => getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
@@ -44,17 +46,14 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     new ProgressManager(onProgressChange)
   );
 
-  const levelValidations = useAppSelector(
-    state => state.lab.levelProperties?.validations
-  );
-  const levelExemplarSettings = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSettings
-  );
+  const {
+    validations: levelValidations,
+    exemplarSettings: levelExemplarSettings,
+    id: levelId,
+  } = levelProperties;
   const overrideValidations = useAppSelector(
     state => state.lab.overrideValidations
   );
-
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   useEffect(() => {
     // The levelValidations may be the same between two different levels,

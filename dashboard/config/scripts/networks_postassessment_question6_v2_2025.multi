@@ -1,0 +1,19 @@
+name 'networks-postassessment-question6_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 6'
+
+wrong 'Firewalls'
+right 'Network redundancy'
+wrong 'Packet loss'
+wrong 'DNS blocking'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+During a thunderstorm, a main Internet connection in a city goes offline, but users can still access the Internet because an alternative route is available. What networking feature allows this?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Routers and Redundancy
+
+Lesson 5: Packets
+MARKDOWN

@@ -17,4 +17,8 @@
 class LtiDeployment < ApplicationRecord
   belongs_to :lti_integration
   has_and_belongs_to_many :lti_user_identities
+
+  def restricted?
+    Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(id)
+  end
 end

@@ -34,14 +34,13 @@ export type SideBarItem = {
 export type ConfigType = {
   defaultTheme?: EditorTheme;
   editableFileTypes: string[];
-  previewFileTypes?: string[];
+  supportedFileTypes: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
-  showFileBrowser: boolean;
   validMimeTypes?: string[];
   layoutComponents: {
-    horizontal: React.FunctionComponent<LayoutProps>;
+    horizontal?: React.FunctionComponent<LayoutProps>;
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
     widget?: React.FunctionComponent<LayoutProps>;

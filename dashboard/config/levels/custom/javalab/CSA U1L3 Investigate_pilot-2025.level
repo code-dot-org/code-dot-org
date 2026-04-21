@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U1L3 Classes PBT_pilot-2025",
     "video_key": "csa_object_oriented_programming",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:43:22.808+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3 Investigate_2025\\\"\"],\"cloned_from\":\"CSA U1L3 Investigate_2025\"}]"

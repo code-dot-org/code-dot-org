@@ -1,0 +1,5 @@
+@use '../../../mixins.scss' as mixins;
+
+.centerHeaderContent {
+  @include mixins.center-header-content(true);
+}

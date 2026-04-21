@@ -2,7 +2,7 @@ import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -19,7 +19,7 @@ interface ParameterPromptOptions {
   isDeleteDialog: boolean; // True for delete dialog; False for rename dialog
   defaultText?: string; // Default input text for window prompt
 }
-export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
+export default class CdoFieldParameter extends BlocklyCore.FieldVariable {
   /**
    * Handle the selection of an item in the parameter dropdown menu.
    * Special case the 'Rename' and 'Delete' options to prompt the user.
@@ -27,7 +27,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
    * @param {!Blockly.MenuItem} menuItem The MenuItem selected within menu.
    * @protected
    */
-  onItemSelected_(menu: GoogleBlockly.Menu, menuItem: GoogleBlockly.MenuItem) {
+  onItemSelected_(menu: BlocklyCore.Menu, menuItem: BlocklyCore.MenuItem) {
     const oldVar = this.getText();
     const id = menuItem.getValue();
     if (this.sourceBlock_ && this.sourceBlock_.workspace) {
@@ -94,13 +94,11 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
 
       const parameterBlocks = workspace
         .getAllBlocks()
-        .filter(
-          (block: GoogleBlockly.Block) => block.type === 'parameters_get'
-        );
-      parameterBlocks.forEach((paramBlock: GoogleBlockly.Block) => {
+        .filter((block: BlocklyCore.Block) => block.type === 'parameters_get');
+      parameterBlocks.forEach((paramBlock: BlocklyCore.Block) => {
         const varField = paramBlock?.getField(
           'VAR'
-        ) as GoogleBlockly.FieldVariable | null;
+        ) as BlocklyCore.FieldVariable | null;
         if (
           varField &&
           varField.getVariable()?.getName() === variable.getName()
@@ -157,17 +155,17 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
    *   - `workspace`: The workspace that the parameter block belongs to.
    */
   protected findDefinitionBlockAndWorkspace(): {
-    definitionBlock: GoogleBlockly.Block | null;
-    workspace: GoogleBlockly.WorkspaceSvg;
+    definitionBlock: BlocklyCore.Block | null;
+    workspace: BlocklyCore.WorkspaceSvg;
   } {
-    const parameterBlock = this.getSourceBlock() as GoogleBlockly.Block;
-    let definitionBlock: GoogleBlockly.Block | null;
-    let workspace = parameterBlock.workspace as GoogleBlockly.WorkspaceSvg;
+    const parameterBlock = this.getSourceBlock() as BlocklyCore.Block;
+    let definitionBlock: BlocklyCore.Block | null;
+    let workspace = parameterBlock.workspace as BlocklyCore.WorkspaceSvg;
 
     if (parameterBlock.isInFlyout) {
       definitionBlock = (workspace as ExtendedWorkspaceSvg).flyoutParentBlock;
-      workspace = (workspace as GoogleBlockly.WorkspaceSvg)
-        .targetWorkspace as GoogleBlockly.WorkspaceSvg;
+      workspace = (workspace as BlocklyCore.WorkspaceSvg)
+        .targetWorkspace as BlocklyCore.WorkspaceSvg;
     } else {
       definitionBlock = parameterBlock.getRootBlock();
     }
@@ -202,58 +200,10 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     }
     return {definitionBlock, workspace};
   }
-  /**
-   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
-   *
-   * Additionally, we need fix the arrow position on Safari, but only until
-   * upgrading to Blockly v11. After this, we should be able to just call
-   * super.createTextArrow_() after the early return.
-   *  @override */
-  createTextArrow_() {
-    /**
-     * Begin CDO customization
-     */
-    if (!this.getSourceBlock()?.isEditable()) {
-      return;
-    }
-    /**
-     * End CDO customization
-     */
-
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
-    }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
-  }
 
   menuGenerator_ = function (
-    this: GoogleBlockly.FieldDropdown
-  ): GoogleBlockly.MenuOption[] {
+    this: BlocklyCore.FieldDropdown
+  ): BlocklyCore.MenuOption[] {
     // Parameter field dropdowns only have options to rename or delete.
     return [
       [commonI18n.renameParameter(), RENAME_PARAMETER_ID],
@@ -281,7 +231,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
 }
 
 export const getAddParameterButtonWithCallback = (
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   procedure: ObservableProcedureModel
 ) => {
   const addParameterCallbackKey = 'addParameterCallback';
@@ -305,6 +255,6 @@ export const getAddParameterButtonWithCallback = (
   return {
     kind: 'button',
     text: '+',
-    callbackKey: addParameterCallbackKey,
+    callbackkey: addParameterCallbackKey,
   };
 };

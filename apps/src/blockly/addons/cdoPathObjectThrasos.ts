@@ -1,7 +1,7 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import experiments from '@cdo/apps/util/experiments';
-export default class CdoPathObject extends GoogleBlockly.blockRendering
+export default class CdoPathObject extends BlocklyCore.blockRendering
   .PathObject {
   // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.
   // Overrriding the function here so we can just set the class but not add the fill pattern.

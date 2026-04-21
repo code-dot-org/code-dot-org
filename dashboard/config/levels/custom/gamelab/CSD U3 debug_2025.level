@@ -82,6 +82,7 @@
     "rubric_performance_level_3": "The square has been moved, is purple, and appears in front of the circles.",
     "rubric_performance_level_4": "The picture is either the same, or any changes appear to be unrelated to the assignment.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

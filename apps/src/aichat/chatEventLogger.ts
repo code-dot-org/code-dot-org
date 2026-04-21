@@ -2,14 +2,11 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 import {postLogChatEvent} from './aichatApi';
-import {ChatEvent, AichatContext} from './types';
+import AichatContextManager from './aichatContextManager';
+import {ChatEvent} from './types';
 
-interface LoggerPayload {
-  chatEvent: ChatEvent;
-  aichatContext: AichatContext;
-}
 export default class ChatEventLogger {
-  private queue: LoggerPayload[];
+  private queue: ChatEvent[];
   private sendingInProgress: boolean;
 
   private static instance: ChatEventLogger;
@@ -21,28 +18,24 @@ export default class ChatEventLogger {
 
   public static getInstance(): ChatEventLogger {
     if (ChatEventLogger.instance === undefined) {
-      ChatEventLogger.create();
+      ChatEventLogger.instance = new ChatEventLogger();
     }
     return ChatEventLogger.instance;
   }
 
-  public static create(): void {
-    ChatEventLogger.instance = new ChatEventLogger();
-  }
-
-  public logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
-    this.queue.push({chatEvent, aichatContext});
+  public logChatEvent(chatEvent: ChatEvent) {
+    this.queue.push(chatEvent);
     if (!this.sendingInProgress) {
       this.sendChatEvent();
     }
   }
 
   private async sendChatEvent() {
+    const aichatContext = AichatContextManager.getContext();
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
-      const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
-      if (loggerPayload) {
-        const {chatEvent, aichatContext} = loggerPayload;
+      const chatEvent = this.queue.shift(); // Remove the first element from the queue.
+      if (chatEvent) {
         this.sendingInProgress = true;
         try {
           await postLogChatEvent(chatEvent, aichatContext);

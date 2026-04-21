@@ -3,11 +3,16 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
+import DCDO from '@cdo/apps/dcdo';
+import FinishTeacherAccount, {
+  NAME_TYPES,
+} from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  GIVEN_NAME_SESSION_KEY,
+  FAMILY_NAME_SESSION_KEY,
   MAX_DISPLAY_NAME_LENGTH,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -34,8 +39,31 @@ jest.mock('@cdo/apps/utils', () => ({
   navigateToHref: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/dcdo', () => ({
+  get: jest.fn().mockReturnValue(false),
+}));
+
 const navigateToHrefMock = navigateToHref as jest.Mock;
 const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
+
+const FINISH_SIGN_UP_PARAMS = {
+  user: {
+    user_type: UserTypes.TEACHER,
+    email: 'fake@email.com',
+    given_name: 'Firstname',
+    family_name: 'Lastname',
+    name: 'Ms. DisplayName',
+    email_preference_opt_in: true,
+    school_info_attributes: {
+      country: 'AU',
+      school_name: 'Test School',
+    },
+    country_code: 'US',
+    educator_role: 'classroom_teacher',
+    signup_sources_tracking: ['search'],
+    grades_teaching: [],
+  },
+};
 
 describe('FinishTeacherAccount', () => {
   let fetchStub: sinon.SinonStub;
@@ -70,6 +98,47 @@ describe('FinishTeacherAccount', () => {
     render(<FinishTeacherAccount usIp={usIp} countryCode={'US'} />);
   }
 
+  function fillInFormFields(
+    fillInNameFields: boolean = true,
+    fillInRoleField: boolean = true,
+    fillInSourceField: boolean = true
+  ) {
+    if (fillInNameFields) {
+      fireEvent.change(screen.getByLabelText(locale.first_name()), {
+        target: {value: FINISH_SIGN_UP_PARAMS.user.given_name},
+      });
+      fireEvent.change(screen.getByLabelText(locale.last_name()), {
+        target: {value: FINISH_SIGN_UP_PARAMS.user.family_name},
+      });
+      fireEvent.change(
+        screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+        {target: {value: FINISH_SIGN_UP_PARAMS.user.name}}
+      );
+    }
+    if (fillInRoleField) {
+      fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+        target: {value: FINISH_SIGN_UP_PARAMS.user.educator_role},
+      });
+    }
+    if (fillInSourceField) {
+      fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+      fireEvent.click(screen.getByText(locale.found_on_search()));
+    }
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {
+        value: FINISH_SIGN_UP_PARAMS.user.school_info_attributes.country,
+      },
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {
+        value: FINISH_SIGN_UP_PARAMS.user.school_info_attributes.school_name,
+      },
+    });
+    fireEvent.click(
+      screen.getByRole('checkbox', {name: locale.get_informational_emails()})
+    );
+  }
+
   it('redirects user back to account type page if they have not selected account type', async () => {
     await waitFor(() => {
       renderDefault(true, false, false);
@@ -102,6 +171,17 @@ describe('FinishTeacherAccount', () => {
     );
   });
 
+  it('prepopulates first and last names from sessionStorage if available from SSO or LTI provider', async () => {
+    const givenName = 'FakeGivenName';
+    const familyName = 'FakeFamilyName';
+    sessionStorage.setItem(GIVEN_NAME_SESSION_KEY, givenName);
+    sessionStorage.setItem(FAMILY_NAME_SESSION_KEY, familyName);
+    await waitFor(renderDefault);
+
+    screen.getByDisplayValue(givenName);
+    screen.getByDisplayValue(familyName);
+  });
+
   it('renders finish teacher account page with school zip when usIp is true', async () => {
     await waitFor(renderDefault);
 
@@ -119,7 +199,7 @@ describe('FinishTeacherAccount', () => {
     expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBe(null);
 
     // Renders email preference opt-in checkbox
-    screen.getByRole('checkbox');
+    screen.getByRole('checkbox', {name: locale.get_informational_emails()});
     screen.getByText(locale.get_informational_emails());
 
     // Renders button that finishes sign-up
@@ -181,68 +261,239 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
   });
 
-  it('leaving the displayName field empty shows error message', async () => {
+  it('leaving the name fields empty shows error message for each', async () => {
     await waitFor(renderDefault);
-    const displayNameInput = screen.getAllByDisplayValue('')[0];
-
-    // Error message doesn't show and button is disabled by default
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-
-    // Enter display name
-    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
-
-    // Error does not show when display name is entered
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-
-    // Clear display name
-    fireEvent.change(displayNameInput, {target: {value: ''}});
-
-    // Error shows with empty display name
-    screen.getByText(locale.display_name_error_message());
-  });
-
-  it('only whitespace in the displayName field shows error message', async () => {
-    await waitFor(renderDefault);
-    const displayNameInput = screen.getAllByDisplayValue('')[0];
-
-    // Error message doesn't show and button is disabled by default
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-
-    // Enter display name
-    fireEvent.change(displayNameInput, {target: {value: ' '}});
-
-    // Error shows with whitespace display name
-    screen.getByText(locale.display_name_error_message());
-
+    const givenNameInput = screen.getByLabelText(locale.first_name());
+    const familyNameInput = screen.getByLabelText(locale.last_name());
+    const displayNameInput = screen.getByLabelText(
+      locale.what_do_you_want_to_be_called()
+    );
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
+
+    // Errors don't show and button is disabled by default
+    Object.values(NAME_TYPES).forEach(nameType =>
+      expect(
+        screen.queryByText(
+          locale.name_error_message({
+            nameType: `${nameType}`.toLowerCase(),
+          })
+        )
+      ).toBe(null)
+    );
+    expect(finishSignUpButton).toBeDisabled();
+
+    fillInFormFields();
+
+    // Errors don't show and button is enabled when names are entered
+    Object.values(NAME_TYPES).forEach(nameType =>
+      expect(
+        screen.queryByText(
+          locale.name_error_message({
+            nameType: `${nameType}`.toLowerCase(),
+          })
+        )
+      ).toBe(null)
+    );
+    expect(finishSignUpButton).toBeEnabled();
+
+    // Clear names
+    fireEvent.change(givenNameInput, {target: {value: ''}});
+    fireEvent.change(familyNameInput, {target: {value: ''}});
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    // Errors show for each name field and button is disabled
+    Object.values(NAME_TYPES).forEach(nameType =>
+      screen.getByText(
+        locale.name_error_message({
+          nameType: `${nameType}`.toLowerCase(),
+        })
+      )
+    );
     expect(finishSignUpButton).toBeDisabled();
   });
 
-  it('adding a long display name shows error message', async () => {
+  it('only whitespace in the name fields shows error message for each', async () => {
     await waitFor(renderDefault);
-    const displayNameInput = screen.getAllByDisplayValue('')[0];
+    const givenNameInput = screen.getByLabelText(locale.first_name());
+    const familyNameInput = screen.getByLabelText(locale.last_name());
+    const displayNameInput = screen.getByLabelText(
+      locale.what_do_you_want_to_be_called()
+    );
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
 
-    // Error message doesn't show and button is disabled by default
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    // Errors don't show and button is disabled by default
+    Object.values(NAME_TYPES).forEach(nameType =>
+      expect(
+        screen.queryByText(
+          locale.name_error_message({
+            nameType: `${nameType}`.toLowerCase(),
+          })
+        )
+      ).toBe(null)
+    );
+    expect(finishSignUpButton).toBeDisabled();
 
-    // Enter display name
+    // Enter whitespace names
+    fillInFormFields(false, true);
+    fireEvent.change(givenNameInput, {target: {value: '     '}});
+    fireEvent.change(familyNameInput, {target: {value: '   '}});
+    fireEvent.change(displayNameInput, {target: {value: ' '}});
+
+    // Errors show for each name field and button is disabled
+    Object.values(NAME_TYPES).forEach(nameType =>
+      screen.getByText(
+        locale.name_error_message({
+          nameType: `${nameType}`.toLowerCase(),
+        })
+      )
+    );
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('adding a long name in the name fields shows error message for each', async () => {
+    await waitFor(renderDefault);
+    const givenNameInput = screen.getByLabelText(locale.first_name());
+    const familyNameInput = screen.getByLabelText(locale.last_name());
+    const displayNameInput = screen.getByLabelText(
+      locale.what_do_you_want_to_be_called()
+    );
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Errors don't show and button is disabled by default
+    Object.values(NAME_TYPES).forEach(nameType =>
+      expect(
+        screen.queryByText(
+          locale.name_error_message({
+            nameType: `${nameType}`.toLowerCase(),
+          })
+        )
+      ).toBe(null)
+    );
+    expect(finishSignUpButton).toBeDisabled();
+
+    // Enter long names
+    fillInFormFields(false, true);
+    fireEvent.change(givenNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
+    fireEvent.change(familyNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
     fireEvent.change(displayNameInput, {
       target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
     });
 
-    // Error shows with long display name
-    screen.getByText(
-      locale.display_name_too_long_error_message({
-        maxLength: MAX_DISPLAY_NAME_LENGTH,
-      })
+    // Errors show for each name field and button is disabled
+    Object.values(NAME_TYPES).forEach(nameType =>
+      screen.getByText(
+        locale.name_too_long_error_message({
+          nameType: nameType,
+          maxLength: MAX_DISPLAY_NAME_LENGTH,
+        })
+      )
     );
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('requires educator role', async () => {
+    await waitFor(renderDefault);
+
+    const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
+    expect(roleDropdown).toBeInTheDocument();
+
+    fillInFormFields(true, false);
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
     expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
+
+    expect(finishSignUpButton).toBeEnabled();
+  });
+
+  it('requires signup sources', async () => {
+    await waitFor(renderDefault);
+
+    fillInFormFields(true, true, false);
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+    fireEvent.click(
+      screen.getByText(locale.recommended_by_colleague_or_school())
+    );
+    fireEvent.click(
+      screen.getByText(locale.learned_via_state_district_curriculum())
+    );
+
+    expect(finishSignUpButton).toBeEnabled();
+  });
+
+  it('alphabetizes signup sources', async () => {
+    fetchStub.callsFake(url => {
+      if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+        } as Response);
+      } else {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({success: true}),
+        } as Response);
+      }
+    });
+
+    await waitFor(renderDefault);
+
+    fillInFormFields();
+
+    // Check 3 new options in non-alphabetical order
+    fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+    fireEvent.click(
+      screen.getByText(locale.learned_via_state_district_curriculum())
+    );
+    fireEvent.click(screen.getByText(locale.heard_at_conference()));
+    fireEvent.click(screen.getByText(locale.attended_pl()));
+
+    // Uncheck selected option
+    fireEvent.click(screen.getByText(locale.found_on_search()));
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      })
+    );
+
+    const expectedSelectedSources = [
+      'attended_pl',
+      'conference',
+      'via_state_district_curriculum',
+    ];
+    const expectedParams = {
+      user: {
+        ...FINISH_SIGN_UP_PARAMS.user,
+        signup_sources_tracking: expectedSelectedSources,
+      },
+    };
+    await waitFor(() => {
+      expect(fetchStub.getCall(1).args[1]?.body).toEqual(
+        JSON.stringify(expectedParams)
+      );
+    });
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {
@@ -258,28 +509,22 @@ describe('FinishTeacherAccount', () => {
     await screen.findByText(locale.data_transfer_notice());
 
     // Check that button is disabled until GDPR is checked (and other required fields are filled)
-    const displayNameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
-    );
-    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
+    fillInFormFields();
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
     expect(finishSignUpButton).toBeDisabled();
-    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    fireEvent.click(
+      screen.getByRole('checkbox', {
+        name: locale.data_transfer_agreement_teacher(),
+      })
+    );
+
     expect(finishSignUpButton).not.toBeDisabled();
   });
 
-  it('clicking finish sign up button triggers fetch call and shows generic error if 500 error response', async () => {
+  it('clicking finish sign up button triggers fetch call and shows response error message if present in 500 error response', async () => {
     const errorMessage = 'SAMPLE ERROR MESSAGE';
 
     fetchStub.callsFake(() =>
@@ -289,25 +534,7 @@ describe('FinishTeacherAccount', () => {
         json: () => Promise.resolve({error: errorMessage}),
       } as Response)
     );
-
-    // Declare parameter values and set sessionStorage variables
-    const name = 'FirstName';
-    const email = 'fake@email.com';
-    const finishSignUpParams = {
-      user: {
-        user_type: UserTypes.TEACHER,
-        email: email,
-        name: name,
-        email_preference_opt_in: true,
-        school_info_attributes: {
-          country: 'AU',
-          school_name: 'Test School',
-        },
-        country_code: 'US',
-        educator_role: 'classroom_teacher',
-      },
-    };
-    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('email', FINISH_SIGN_UP_PARAMS.user.email);
 
     await waitFor(() => {
       renderDefault();
@@ -321,20 +548,7 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
-    fireEvent.click(screen.getByRole('checkbox'));
+    fillInFormFields();
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -351,7 +565,7 @@ describe('FinishTeacherAccount', () => {
       const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
-        JSON.stringify(finishSignUpParams)
+        JSON.stringify(FINISH_SIGN_UP_PARAMS)
       );
 
       // Verify the user is NOT redirected to the finish sign up page
@@ -362,7 +576,7 @@ describe('FinishTeacherAccount', () => {
     });
   });
 
-  it('clicking finish sign up button triggers fetch call and shows generic error if 500 error response', async () => {
+  it('clicking finish sign up button triggers fetch call and shows generic error if no error message in 500 error response', async () => {
     fetchStub.callsFake(() =>
       Promise.resolve({
         ok: false,
@@ -370,25 +584,7 @@ describe('FinishTeacherAccount', () => {
         json: () => Promise.resolve({success: false}),
       } as Response)
     );
-
-    // Declare parameter values and set sessionStorage variables
-    const name = 'FirstName';
-    const email = 'fake@email.com';
-    const finishSignUpParams = {
-      user: {
-        user_type: UserTypes.TEACHER,
-        email: email,
-        name: name,
-        email_preference_opt_in: true,
-        school_info_attributes: {
-          country: 'AU',
-          school_name: 'Test School',
-        },
-        country_code: 'US',
-        educator_role: 'classroom_teacher',
-      },
-    };
-    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('email', FINISH_SIGN_UP_PARAMS.user.email);
 
     await waitFor(() => {
       renderDefault();
@@ -402,20 +598,7 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
-    fireEvent.click(screen.getByRole('checkbox'));
+    fillInFormFields();
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -432,7 +615,7 @@ describe('FinishTeacherAccount', () => {
       const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
-        JSON.stringify(finishSignUpParams)
+        JSON.stringify(FINISH_SIGN_UP_PARAMS)
       );
 
       // Verify the user is NOT redirected to the finish sign up page
@@ -443,7 +626,7 @@ describe('FinishTeacherAccount', () => {
     });
   });
 
-  it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
+  it('clicking finish sign up button triggers fetch call and redirects user to home page upon success', async () => {
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -459,25 +642,7 @@ describe('FinishTeacherAccount', () => {
         } as Response);
       }
     });
-
-    // Declare parameter values and set sessionStorage variables
-    const name = 'FirstName';
-    const email = 'fake@email.com';
-    const finishSignUpParams = {
-      user: {
-        user_type: UserTypes.TEACHER,
-        email: email,
-        name: name,
-        email_preference_opt_in: true,
-        school_info_attributes: {
-          country: 'AU',
-          school_name: 'Test School',
-        },
-        country_code: 'US',
-        educator_role: 'classroom_teacher',
-      },
-    };
-    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('email', FINISH_SIGN_UP_PARAMS.user.email);
 
     await waitFor(renderDefault);
 
@@ -489,20 +654,7 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
-    fireEvent.click(screen.getByRole('checkbox'));
+    fillInFormFields();
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -519,7 +671,7 @@ describe('FinishTeacherAccount', () => {
       const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
-        JSON.stringify(finishSignUpParams)
+        JSON.stringify(FINISH_SIGN_UP_PARAMS)
       );
 
       // Verify the user is redirected to the finish sign up page
@@ -527,7 +679,76 @@ describe('FinishTeacherAccount', () => {
     });
   });
 
+  describe('launch-grades-in-sign-up DCDO flag', () => {
+    const dcdoGetMock = DCDO.get as jest.Mock;
+
+    beforeEach(() => {
+      dcdoGetMock.mockReturnValue(true);
+    });
+
+    afterEach(() => {
+      dcdoGetMock.mockReturnValue(false);
+    });
+
+    it('renders grade chips when flag is enabled', async () => {
+      await waitFor(renderDefault);
+
+      screen.getByText(locale.grades_taught());
+    });
+
+    it('button stays disabled until at least one grade is selected when flag is enabled', async () => {
+      await waitFor(renderDefault);
+
+      fillInFormFields();
+
+      const finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeDisabled();
+
+      fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
+
+      expect(finishSignUpButton).toBeEnabled();
+    });
+
+    it('sends selected grades in payload when flag is enabled', async () => {
+      fetchStub.callsFake(url => {
+        if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+          } as Response);
+        } else {
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({success: true}),
+          } as Response);
+        }
+      });
+
+      await waitFor(renderDefault);
+
+      fillInFormFields();
+      fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
+      fireEvent.click(screen.getByRole('checkbox', {name: '5'}));
+
+      fireEvent.click(
+        screen.getByRole('button', {name: locale.go_to_my_account()})
+      );
+
+      await waitFor(() => {
+        const fetchCall = fetchStub.getCall(1);
+        const body = JSON.parse(fetchCall.args[1]?.body);
+        expect(body.user.grades_teaching).toEqual(['K', '5']);
+      });
+    });
+  });
+
   it('setting redirect url in sessionStorage then clicking finish sign up button triggers fetch call and redirects user to redirect page', async () => {
+    const userReturnToUrl = '/sample/url';
+
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -544,25 +765,8 @@ describe('FinishTeacherAccount', () => {
       }
     });
 
-    // Declare parameter values and set sessionStorage variables
-    const name = 'FirstName';
-    const email = 'fake@email.com';
-    const userReturnToUrl = '/sample/url';
-    const finishSignUpParams = {
-      user: {
-        user_type: UserTypes.TEACHER,
-        email: email,
-        name: name,
-        email_preference_opt_in: true,
-        school_info_attributes: {
-          country: 'AU',
-          school_name: 'Test School',
-        },
-        country_code: 'US',
-        educator_role: 'classroom_teacher',
-      },
-    };
-    sessionStorage.setItem('email', email);
+    // Set sessionStorage variables
+    sessionStorage.setItem('email', FINISH_SIGN_UP_PARAMS.user.email);
     sessionStorage.setItem(USER_RETURN_TO_SESSION_KEY, userReturnToUrl);
 
     await waitFor(() => {
@@ -577,20 +781,7 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
-    fireEvent.click(screen.getByRole('checkbox'));
+    fillInFormFields();
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -607,42 +798,11 @@ describe('FinishTeacherAccount', () => {
       const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
-        JSON.stringify(finishSignUpParams)
+        JSON.stringify(FINISH_SIGN_UP_PARAMS)
       );
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(userReturnToUrl);
     });
-  });
-
-  it('requires educator role', async () => {
-    await waitFor(renderDefault);
-
-    const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
-    expect(roleDropdown).toBeInTheDocument();
-
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
-    });
-
-    let finishSignUpButton = screen.getByRole('button', {
-      name: locale.go_to_my_account(),
-    });
-    expect(finishSignUpButton).toBeDisabled();
-
-    fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
-
-    finishSignUpButton = screen.getByRole('button', {
-      name: locale.go_to_my_account(),
-    });
-
-    expect(finishSignUpButton).toBeEnabled();
   });
 });

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Use conditionals to simulate feeding villagers different meals.\r\n\r\n## Do This: \r\n- Change meal effects (e.g., \"The villager shares the bread with others.\").\r\n- Add a new meal option, like \"vegetables\". ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -46,6 +46,7 @@
     "parent_level_id": 15810,
     "name_suffix": "_2025",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

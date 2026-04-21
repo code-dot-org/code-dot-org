@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-24T16:14:46.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Threshold\n\nA **threshold** is a cutoff value used to include or exclude data. \n\n**Example:** An art site only features artists on the homepage who have at least 500 followers. The threshold is 500 followers.\n",
+        "imageUrl": "https://images.code.org/e255198e3be67d3001de7395ecafdd00-Screenshot 2025-11-24 135933.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:14:46.498+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson7-vocab-side-effect-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson7-vocab-side-effect-test-2025\"},{\"changed_at\":\"2025-11-24 16:15:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 22:00:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 17:35:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 20:17:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

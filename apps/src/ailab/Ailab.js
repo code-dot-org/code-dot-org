@@ -1,11 +1,11 @@
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
-import firehoseClient from '@cdo/apps/metrics/firehose';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from '../redux';
 import {
@@ -128,11 +128,14 @@ Ailab.prototype.init = function (config) {
     setDynamicInstructionsDefaults(getInstructionsDefaults())
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -183,15 +186,9 @@ Ailab.prototype.initMLActivities = function () {
   };
 
   const logMetric = (eventName, details) => {
-    firehoseClient.putRecord(
-      {
-        study: 'ai-ml',
-        study_group: 'ai-lab',
-        event: eventName,
-        data_json: JSON.stringify(details),
-      },
-      {includeUserId: true}
-    );
+    analyticsReporter.sendEvent(eventName, {
+      details,
+    });
   };
 
   setAssetPath('/blockly/media/skins/ailab/');

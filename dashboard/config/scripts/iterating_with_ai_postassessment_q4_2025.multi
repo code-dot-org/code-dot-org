@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q4_2025'
+
+question 'Which of the following scenarios is the best use case for a `while` loop rather than a `for` loop?'
+
+wrong 'Printing the names of exactly 12 months in a year.'
+right 'Repeating a data-refresh task until the app receives a "Success" message from a server.'
+wrong 'Creating a countdown from 10 to 1.'
+wrong 'Multiplying every number in a 5-item array by two.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+
+`while` loops are ideal for "open-ended" repetition where the number of cycles depends on a dynamic condition (like a server message) rather than a fixed count.
+MARKDOWN

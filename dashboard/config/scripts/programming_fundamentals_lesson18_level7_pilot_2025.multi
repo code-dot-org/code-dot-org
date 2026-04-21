@@ -1,0 +1,19 @@
+name 'programming-fundamentals-lesson18-level7_pilot-2025'
+title 'Functions and Parameters'
+
+wrong 'It will print `You found a rare magical herb!`'
+right 'It will print `You found a common herb.`'
+wrong 'The dice will roll again.'
+wrong 'Nothing will happen.'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What will happen if the user rolls a 4?
+
+```
+if dice_roll >= 5:
+    print("You found a rare magical herb!")
+else:
+    print("You found a common herb.")
+```
+MARKDOWN

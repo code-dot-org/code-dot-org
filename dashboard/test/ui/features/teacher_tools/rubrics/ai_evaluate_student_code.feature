@@ -4,6 +4,11 @@
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
+  #
+  # Note that this only covers units which we are seeding in our ui tests, no
+  # longer includes all production courses. Full validation of production
+  # courses is done by the `rake seed:validate_ai_rubrics` task during the
+  # deploy to staging.
   @chrome
   Scenario: Validate Rubric AI Config
     Given I validate rubric ai config for all lessons
@@ -24,8 +29,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -70,8 +75,8 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -121,8 +126,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
@@ -179,8 +184,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views floating action button on assessment level
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -194,7 +199,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-dismissible-alert" is visible
 
     # Teacher dismisses alert
-    When I click selector ".uitest-dismissible-alert .fa-close"
+    When I click selector ".uitest-dismissible-alert .fa-xmark"
     And I wait until element ".uitest-dismiss-confirmed" is visible
     And element ".uitest-dismissible-alert" is not visible
 
@@ -210,7 +215,7 @@ Feature: Evaluate student code against rubrics using AI
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
@@ -221,10 +226,10 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views floating action button on assessment level
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the lab page to fully load

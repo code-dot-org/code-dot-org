@@ -12,7 +12,7 @@ const jestAliases = {
   uuid: require.resolve('uuid'),
   // Pin react to use the apps version of react when used in conjunction with linked npm packages
   '^react$': require.resolve('react'),
-  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
   '^firmata$': 'mock-firmata/mock-firmata',
@@ -23,7 +23,8 @@ const jestAliases = {
  * Imports the application level aliases from webpack
  */
 Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
-  jestAliases[`${alias}/(.*)`] = `${localPath}/$1`;
+  // Anchor to avoid matching unrelated packages that merely contain `${alias}/`
+  jestAliases[`^${alias}/(.*)$`] = `${localPath}/$1`;
 });
 
 /**
@@ -222,6 +223,7 @@ const config = {
     ],
     '^.+\\.scss$': '<rootDir>/test/jest-scss.transformer.js',
     '\\.(ejs)$': '<rootDir>/test/jest-ejs.transformer.js',
+    '\\.md$': '<rootDir>/test/jest-md.transformer.js',
     '^.+\\.tsx?$': [
       'ts-jest',
       {

@@ -4,18 +4,24 @@
   # use default credentials and hostname.
   MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
+  MYSQL_DAEMON_PORT = '3306'.freeze
   DATABASE_CONFIGURATION = {
     db_cluster_id: '!Ref AuroraCluster',
     db_endpoint_writer: '!GetAtt AuroraCluster.Endpoint.Address',
+    db_endpoint_writer_port: '!GetAtt AuroraCluster.Endpoint.Port',
     db_endpoint_proxy_writer: '!GetAtt DBProxy.Endpoint',
+    db_endpoint_proxy_writer_port: '3306', # RDS Proxy MySQL Endpoints only use 3306
     db_endpoint_proxy_reader: '!GetAtt ReaderDBProxyEndpoint.Endpoint',
-    db_endpoint_proxy_reporting: '!GetAtt ReportingDBProxyEndpoint.Endpoint'
+    db_endpoint_proxy_reader_port: '3306', # RDS Proxy MySQL Endpoints only use 3306
+    db_endpoint_proxy_reporting: '!GetAtt ReportingDBProxyEndpoint.Endpoint',
+    db_endpoint_proxy_reporting_port: '3306' # RDS Proxy MySQL Endpoints only use 3306
   }.tap do |hash|
     if rack_env?(:production)
       hash[:db_cluster_id] = PRODUCTION_DB_CLUSTER_ID
       # Use a placeholder string for production db cluster endpoint to avoid placing a slightly sensitive value
       # in source code. We set the value of the Secret manually in production.
       hash[:db_endpoint_writer] = 'PLACEHOLDER'
+      hash[:db_endpoint_writer_port] = '3306'
       # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
       hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
       hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
@@ -23,6 +29,7 @@
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_writer] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_writer_port] = MYSQL_DAEMON_PORT
       hash[:db_endpoint_proxy_writer] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reader] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reporting] = MYSQL_DAEMON_HOSTNAME
@@ -91,25 +98,48 @@
       Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer]%>
+  DBWriterEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster Writer Endpoint Port to application configuration setting CDO.db_endpoint_writer_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer_port]%>
   DBProxyWriterEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer]%>
+  DBProxyWriterEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Writer Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_writer_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer_port]%>
   DBProxyReaderEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader]%>
+  DBProxyReaderEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reader Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_reader_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader_port]%>
   DBProxyReportingEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
-
+  DBProxyReportingEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reporting Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_reporting_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting_port]%>
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
@@ -198,7 +228,7 @@
 <%   if rack_env?(:production) -%>
         - Name: !Sub "db-reporting.${BaseDomainName}"
 <%   else -%>
-        - Name: !Sub "${PegasusSubdomainName}-db-reporting.${BaseDomainName}"
+        - Name: !Sub "${AWS::StackName}-db-reporting.${BaseDomainName}"
 <%   end -%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
@@ -283,11 +313,27 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
-
-# We don't provision these in production via CloudFormation ... yet!
-<%  unless rack_env?(:production)%>
+<% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
+  ZeroETLIntegration:
+    Type: AWS::RDS::Integration
+    Properties:
+      IntegrationName: !Sub "${AWS::StackName}-zero-etl"
+      Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
+      SourceArn: !Sub
+        - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
+        - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
+      TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
+      Tags:
+        - Key: environment
+          Value: "<%=rack_env %>"
+<% end -%>
+<% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
+  unless rack_env?(:production)
+-%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Snapshot" %> # Don't take a final Snapshot when deleting adhoc clusters.
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
@@ -295,19 +341,22 @@
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 8.0.mysql_aurora.3.08.0
+      EngineVersion: 8.0.mysql_aurora.3.12.0
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      CopyTagsToSnapshot: true
       EnableCloudwatchLogsExports:
         - general
         - audit
         - error
         - slowquery
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
+<%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance

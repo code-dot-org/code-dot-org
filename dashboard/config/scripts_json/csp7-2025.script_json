@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:22:15 UTC",
+    "serialized_at": "2026-03-10 17:25:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -138,7 +138,7 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Rock-Paper-Scissors app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
         "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12em1bSUXefv_5SW-40ywMAYU9hyhscI1TjNJHxep7As/edit?usp=sharing)",
         "student_overview": "Make an app that uses functions with parameters and return."
       },

@@ -62,13 +62,13 @@ def generate_multiple_constants(shared_const_names, **options)
   end.join("\n\n")
 end
 
-# @param raw [Hash|Array|OpenStruct|String] A hash, array, OpenStruct, or
+# @param raw [Hash|Array|OpenStruct|String|Integer] A hash, array, OpenStruct, integer, or
 # JSON-encoded string representing an object or array.
 # @returns [Hash|Array] A hash or array representation of the input.
 def parse_raw(raw)
   if raw.is_a?(OpenStruct)
     raw.marshal_dump
-  elsif raw.is_a?(Hash) || raw.is_a?(Array)
+  elsif raw.is_a?(Hash) || raw.is_a?(Array) || raw.is_a?(Integer)
     raw
   elsif raw.is_a?(String)
     JSON.parse(raw)
@@ -100,15 +100,20 @@ def main
       RUBRIC_AI_EVALUATION_LIMITS
       EMAIL_LINKS
       CHILD_ACCOUNT_COMPLIANCE_STATES
-      CENSUS_CONSTANTS
       DANCE_SONG_MANIFEST_FILENAME
       AI_EVALUATION_TYPES
       AI_INTERACTION_STATUS
       AI_TUTOR_INTERACTION_STATUS
+      LESSON_OBJECTIVE_REFLECTION_VALUES
       AI_TUTOR_TYPES
       AI_REQUEST_EXECUTION_STATUS
+      STUDENT_WORK_EVALUATION_STATUS
       AI_CHAT_MODEL_IDS
+      AI_CHAT_CLIENT_TYPES
+      AI_CHAT_READ_TIMEOUTS
       AI_CHAT_TEACHER_FEEDBACK
+      AI_CHAT_ACCESS_LEVELS
+      AI_CHAT_TOOLS_DEPENDENCY
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
       CAP_LINKS
@@ -118,8 +123,17 @@ def main
       US_STATES
       PROJECT_SUBMISSION_STATUS
       EDUCATOR_ROLES
+      RESOURCE_EMBEDDABILITY_OPTIONS
       AI_DIFF_CONTEXT
+      AI_DIFF_ASSOCIATION
+      AI_DIFF_ARTIFACT_TYPE
       DISALLOWED_ROUTES
+      BUBBLE_CHOICE_CUSTOM_MODES
+      BUBBLE_CHOICE_NAVIGATION_TYPES
+      ALLOWED_HOSTNAME_SUFFIXES
+      ALLOWED_IMAGE_HOSTNAME_SUFFIXES
+      ALLOWED_FONT_HOSTNAMES
+      SAFE_AND_SUPPORTED_IMAGE_TYPES
     ),
     file_type: 'ts'
   )
@@ -150,6 +164,7 @@ def main
       DEVICE_TYPES
       DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
+      NUMBERED_UNITS_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),
@@ -162,6 +177,7 @@ def main
         COURSES
         ACTIVE_COURSES
         ARCHIVED_COURSES
+        ACTIVE_PERMISSION_COURSES
         COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
@@ -184,6 +200,8 @@ def main
         PD_SESSION_FORMATS
         WORKSHOP_FORMATS
         WORKSHOP_COURSE_CONFIGS
+        COURSE_BUILD_YOUR_OWN
+        MIN_SURVEY_RESPONSE_COUNT
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

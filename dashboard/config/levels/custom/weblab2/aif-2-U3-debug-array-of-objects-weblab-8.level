@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-17T21:52:14.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Inventory Check</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Supply Inspector</h1>\n    \n    <div class=\"display-box\">\n      <h2>Item Inspection</h2>\n      <div class=\"info-row\">\n        <strong>Name:</strong> <span id=\"name-display\"></span>\n      </div>\n      <div class=\"info-row\">\n        <strong>Category:</strong> <span id=\"cat-display\"></span>\n      </div>\n      <div class=\"info-row\">\n        <strong>Location:</strong> <span id=\"loc-display\"></span>\n      </div>\n    </div>\n\n    <script src=\"script.js\" defer></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style.css */\nbody {\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  background-color: #f4f4f9;\n  color: #333;\n  text-align: center;\n  padding: 20px;\n}\n\nh1 {\n  color: #2c3e50;\n  margin-bottom: 30px;\n}\n\n.display-box {\n  background-color: white;\n  width: 300px;\n  margin: 0 auto;\n  padding: 20px;\n  border-radius: 8px;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n  text-align: left;\n  border-left: 5px solid #3498db;\n}\n\nh2 {\n  margin-top: 0;\n  color: #3498db;\n  border-bottom: 1px solid #eee;\n  padding-bottom: 10px;\n}\n\n.info-row {\n  margin: 15px 0;\n  font-size: 1.1em;\n}\n\nstrong {\n  color: #555;\n  display: inline-block;\n  width: 90px;\n}\n\nspan {\n  color: #e74c3c; /* Red color to highlight the data (or lack thereof) */\n  font-weight: bold;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "\nconst supplies = [\n  { id: 1, name: \"Markers\", category: \"Art\", location: \"Cabinet A\" },\n  { id: 2, name: \"Microscopes\", category: \"Science\", location: \"Under Lab Bench\" },\n  { id: 3, name: \"Soccer Balls\", location: \"Gym Closet\" }, // missing category\n  { id: 4, category: \"Art\", location: \"Cabinet B\" } // missing name\n];\n\n// --- Retrieval functions: get an item by index, id, and name ---\nconst getItemByIndex = (index) => {\n  return supplies[index];\n}\n\nconst getItemById = (id) => {\n  \n};\n\nconst getItemByName = (name) => {\n  \n}\n\n//DOM elements\nconst nameDisplay = document.getElementById(\"name-display\");\nconst catDisplay = document.getElementById(\"cat-display\");\nconst locDisplay = document.getElementById(\"loc-display\");\n\n// Calls to retrieval functions\nconst myItem = getItemByIndex(2);\n\n// Display its details on the screen\nnameDisplay.textContent = myItem.name;\ncatDisplay.textContent = myItem.category;\nlocDisplay.textContent = myItem.location;",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nObPaqWcREqCxpg==\n",
+    "long_instructions": "## Spot Checking the Data\r\n\r\nWe have a list of supplies, but the data is messy. Some items are missing information. Before we build a full display, we need to \"spot check\" specific items to see what the data looks like.\r\n\r\n**Do This:**\r\n1.  **Retrieve Data:** Use the `getItemByIndex(1)` function to retrieve the microscope object and save it to a variable (e.g., `const myItem = ...`).\r\n2.  **Update Display:** Update the `textContent` for the **Name**, **Category**, and **Location** spans using the properties from your `myItem` variable.\r\n3.  **Observe:** Run the code. What text appears on the screen for the **Location**?\r\n4.  **Test Another:** Change your code to retrieve **index: 3** instead. What happens to the **Name** field?\r\n5.  **Extend:** Ask AI to help write the other retrieval functions `getItemById` and `getItemByName` and then replace your calls to `getItemByIndex` with these new functions."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-17T21:52:14.377+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level2-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level2-test-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -3,7 +3,7 @@ require 'test_helper'
 class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe 'validations' do
     context 'when user is a teacher' do
-      let(:teacher) {build :user, email: 'teacher@example.com', user_type: 'teacher'}
+      let(:teacher) {build(:user, email: 'teacher@example.com', user_type: 'teacher')}
       before do
         teacher.email_preference_opt_in = 'yes'
       end
@@ -25,7 +25,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
     end
 
     context 'when user is a student' do
-      let(:student) {build :user, user_type: 'student', parent_email_preference_opt_in_required: '1'}
+      let(:student) {build(:user, user_type: 'student', parent_email_preference_opt_in_required: '1')}
 
       before do
         student.parent_email_preference_opt_in = 'yes'
@@ -71,7 +71,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe '#save_parent_email_preference' do
     subject(:save_parent_email_preference) {student.save_parent_email_preference}
 
-    let(:student) {create :student}
+    let(:student) {create(:student)}
     before do
       student.parent_email = 'parent@example.com'
       student.parent_email_preference_opt_in = 'no'
@@ -91,7 +91,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe '#save_email_reg_partner_preference' do
     subject(:save_email_reg_partner_preference) {user.save_email_reg_partner_preference}
 
-    let(:user) {create :teacher}
+    let(:user) {create(:teacher)}
     before do
       user.email = 'partner-optin@example.com'
       user.save!
@@ -111,7 +111,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe '#parent_email_preference_setup' do
     subject(:parent_email_preference_setup) {student.parent_email_preference_setup}
 
-    let(:student) {create :student}
+    let(:student) {create(:student)}
     before do
       student.parent_email_preference_email = 'setup@example.com'
     end
@@ -125,7 +125,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe '#parent_email_update_only?' do
     subject(:parent_email_update_only?) {student.parent_email_update_only?}
 
-    let(:student) {create :student}
+    let(:student) {create(:student)}
     it 'returns true when parent_email_update_only is 1 and user is student' do
       student.parent_email_update_only = '1'
       _parent_email_update_only?.must_equal true
@@ -140,7 +140,7 @@ class User::EmailPreferencesTest < ActiveSupport::TestCase
   describe '#parent_email_preference_opt_in_required?' do
     subject(:parent_email_preference_opt_in_required?) {student.parent_email_preference_opt_in_required?}
 
-    let(:student) {create :student}
+    let(:student) {create(:student)}
     it 'returns true when checkbox is 1 and user is student' do
       student.parent_email_preference_opt_in_required = '1'
       _parent_email_preference_opt_in_required?.must_equal true

@@ -1,23 +1,22 @@
 'use strict';
+const env = require('env.json');
 
-// This variable is injected via CloudFormation string substitution. This file must be used
-// in conjunction with the CloudFormation Sub function to set the value of MarketingDomainName.
-const marketingDomain = '${InternalMarketingDomainName}'
+// This variable is set via Ruby code in cloud_formation_stack.yml.erb and passed in when the function is built.
+// It should contain the environment-specific domain of the marketing site Cloudfront distribution
+const marketingDomain = env.marketingDomain
 
-const marketingPaths = {
-  // Add key-value pairs for each path that should be served by the CMS
+const pegasusPaths = {
+  // Add key-value pairs for each path that should be served by Pegasus
   // e.g. '/videos': true,
 }
-
-const nextJsAssetsPath = '/_next/static/';
 
 module.exports.handler = (event, context, callback) => {
   try {
     const request = event?.Records?.[0]?.cf?.request;
     const uri = request?.uri;
-  
-    // Set CMS origin if the requested path matches
-    if (marketingPaths[uri] || (uri && uri.startsWith(nextJsAssetsPath))) {
+
+    // Set CMS origin if the path is not in the pegasusPaths allow list
+    if (!pegasusPaths[uri]) {
       request.origin = {
         custom: {
           domainName: marketingDomain,

@@ -11,12 +11,14 @@ module Cdo
   module I18n
     DEFAULT_LOCALE = SharedConstants::DEFAULT_LOCALE
 
-    # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0
-    CDO_LANGUAGES = CSV.read(CDO.dir('pegasus/data/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
+    LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
     LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
       data.symbolize_keys! if data.is_a?(Hash)
     end.freeze
+
+    # Mapping of short locale codes to normalized I18n locale codes (e.g., 'en' => 'en-US').
+    LOCALE_ALIASES = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v if v.is_a?(String)}.freeze
 
     TEXT_DIRECTIONS = Set[
       TEXT_DIRECTION_LTR = 'ltr', # the left-to-right text direction
@@ -25,7 +27,8 @@ module Cdo
 
     class << self
       def available_languages
-        @available_languages ||= CDO_LANGUAGES.filter_map do |cdo_language|
+        @available_languages ||= LANGUAGES.filter_map do |cdo_language|
+          cdo_language = cdo_language.to_h
           next cdo_language if cdo_language[:supported_codeorg_b] == 'TRUE'
           # Enables languages available for debugging in all non-production environments
           cdo_language if debug_language?(cdo_language) && !CDO.rack_env?(:production)

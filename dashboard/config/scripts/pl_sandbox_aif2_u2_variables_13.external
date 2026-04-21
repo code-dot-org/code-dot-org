@@ -1,0 +1,44 @@
+name 'pl-sandbox-aif2-u2-variables-13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+## Let's see what this looks like in code:
+
+#### This code defines the variables using the keyword `let`.
+
+#### In JavaScript, a variable must be declared, or defined, before it can be used. 
+
+<p style="text-align:center;">
+  <img src="https://images.code.org/3fc90531df0a250a6d4d032641296c12-image-1762197748560.png" 
+       alt="JavaScript variable example" 
+       style="width:600px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
+</p>
+
+
+### Here, an **event listener** increases the `strength` variable by 2 each time the **strength-up** button is clicked.
+
+
+<p style="text-align:center;">
+  <img src="https://images.code.org/642d6e6839a3abde291b95a4ae7258f1-image-1771971228529.png" 
+       alt="Event handler example" 
+       style="width:600px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
+</p>
+
+## Remember:
+
+#### There are always two steps when working with variables:
+
+- #### 1. Define the variable (give it a name and a starting value).
+
+- #### 2. Use or update the variable within the program’s actions or logic.
+
+
+## Let's practice! 
+
+
+
+
+MARKDOWN

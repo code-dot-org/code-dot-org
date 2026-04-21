@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U8L6-Merge Sort PBT_alt-2025",
     "teacher_markdown": "If the array is already sorted, the merge sort algorithm still performs the same number of comparisons as it would on an unsorted array.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:57:13.889+00:00\",\"changed\":[\"cloned from \\\"CSA U8L6-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L6-L2_pilot-2025\"}]"

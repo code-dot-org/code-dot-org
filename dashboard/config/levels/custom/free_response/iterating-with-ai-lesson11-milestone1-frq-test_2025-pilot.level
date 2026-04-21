@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-22T17:42:21.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Data Choices and Visibility",
+    "long_instructions": "Reflect on how you chose the specific data for your dataset. Which fields did you keep or remove, and why?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "thumbnail_url": "https://images.code.org/464e75ae884ae65e09f919f71795b8a8-thought-leadership.png",
+    "display_name": "Data Choices & Visibility Reflection",
+    "bubble_choice_description": "Reflect on which fields you kept or removed and how these choices affect what users can see in your dashboard ***(supports completing Milestone 1)***.\n",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:21.750+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone1-frq-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone1-frq-test-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

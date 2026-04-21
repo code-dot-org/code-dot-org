@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Create your own story\r\n\r\nTry receiving at least 5 inputs! ",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",

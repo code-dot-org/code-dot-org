@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This: \r\n- Run the code and observe the output for the predefined values of num1 and num2.\r\n- Modify the values of num1 and num2 and run the program again to see how the results change.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

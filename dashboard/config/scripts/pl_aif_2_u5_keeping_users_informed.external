@@ -1,0 +1,139 @@
+name 'pl-aif-2-U5-keeping-users-informed'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Keeping Users Informed
+
+<p style="font-size:14px;">
+When designing apps, it’s important to keep users informed about what’s happening—especially when something is loading or doesn’t go as planned. Let’s explore how different design choices affect user trust and experience.
+</p>
+
+<br/>
+
+<div style="display:flex; gap:24px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;">
+
+  <!-- Screen A -->
+<div style="flex:1; min-width:220px;">
+
+<div style="width:100%; height:160px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+  <img src="https://images.code.org/6dc6d8303903ddc9a3e80fb5c23b8831-image-1772734224917.png" alt="Screen A loading state example" style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+</div>
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Screen A</strong></div>
+
+<div style="margin-top:14px; border:1px solid #999; padding:12px; text-align:center; font-size:16px;">
+      <strong>Question</strong><br/>
+      What do you think is loading here?
+    </div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        🔎 Reveal Answer
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc;font-size:14px;">
+        The shape and layout of the gray boxes (the “skeleton”) mimics the layout of a social media profile. Even without text, certain shapes suggest specific types of content. Because the gray boxes tell your brain what to expect, you aren’t staring at a blank screen—you’re looking at a layout that’s about to be filled.
+      </div>
+    </details>
+
+  </div>
+
+  <!-- Screen B -->
+<div style="flex:1; min-width:220px;">
+
+<div style="width:100%; height:160px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+  <img src="https://images.code.org/1c1d6efe32f2a7777f1601e38a2011f7-image-1772734396961.png" alt="Screen B text and loading bar loading state example" style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+</div>
+
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Screen B</strong></div>
+
+<div style="margin-top:14px; border:1px solid #999; padding:12px; text-align:center; font-size:16px;">
+<strong>Question</strong><br/>
+      Why include text and a progress bar?
+    </div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        🔎 Reveal Answer
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc;font-size:14px;">
+        The progress bar helps manage patience by showing that time is passing and giving a sense of progress, while the text communicates that the app is actively working on something specific behind the scenes. Without the bar, you don’t know how long it will take. Without the text, you don’t know if the app is actually doing anything useful.
+      </div>
+    </details>
+
+  </div>
+
+  <!-- Screen C -->
+<div style="flex:1; min-width:220px;">
+
+<div style="width:100%; height:160px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+  <img src="https://images.code.org/8756081d0f3053e5f7ad80f75772cad4-image-1772734458348.png" alt="Screen c loading state example" style = "position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+</div>
+
+    
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Screen C</strong></div>
+
+<div style="margin-top:14px; border:1px solid #999; padding:12px; text-align:center; font-size:16px;">
+<strong>Question</strong><br/>
+      Why does this represent poor design?
+    </div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;font-size:14px;">
+        🔎 Reveal Answer
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc;">
+        Poor design can lead to low user trust. Without context, the user has no clue what is happening behind the scenes, how long it will take, or what to expect when the page loads. It’s best to communicate clearly so users aren’t left guessing.
+      </div>
+    </details>
+
+  </div>
+
+</div>
+
+<br/>
+
+<!-- Vocab Box -->
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
+📖 <strong>Human-Centered Reliability</strong> is the design practice of making sure an application is helpful and transparent to the user even when technical errors occur.
+</p>
+</div>
+
+## Different States
+
+<img src="https://images.code.org/abe7409544e61552fc76f7f141a86e13-image-1772733806258.png" alt="Iwebpage loading symbol" width="300px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+
+
+- #### **Loading State:** The app is fetching data. 
+#### *(Show a spinner, empty layout, or simple loading message.)*
+
+- #### **Empty State:** No results were found
+#### *(Show a helpful message or "Try Again" button.)*
+
+- #### **Error State:** Something went wrong. 
+#### (Briefly explain the issue and what the user should do.)
+
+<div style="clear:both;"></div>
+
+##Handeling States
+
+#### Every time your app makes a request to an API, it needs to handle these three scenarios. You never want to leave a user looking at a blank screen or a broken page. Handling these states is what makes an app feel professional and reliable.
+
+#### **Remember:** loading the page perfectly (the “Happy Path”) is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.
+
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<b> 💡Teacher Tip: </b>An empty state isn’t the same as an error state. A good empty state tells the user why there is no data being displayed. An error state communicates that something went wrong and the user will need to try again.
+</p>
+
+</div>
+
+![]()
+MARKDOWN

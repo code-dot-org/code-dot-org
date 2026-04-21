@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:05:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "##Social Engineering Attack Detected!\r\n> **Scenario:** A student receives a direct message on a messaging app from someone claiming to be their teacher, asking for their school login credentials to \"fix a grading issue.\" The AI system flags this interaction as a potential social engineering attack, warning the student before they respond.\r\n\r\n**Check for Understanding Question:**\r\n- How might AI detect that this message is part of a social engineering attack?\r\n- Compare how this attack would traditionally be detected versus how AI improves response time and accuracy in preventing students from falling for these scams.\r\n\r\nNote: You can use the chatbot in the previous level to help you answer these questions.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "*Question 1: How might AI detect that this message is part of a social engineering attack?*\r\n\r\n**AI Detection Methods:**\r\n\r\n- Language Analysis – AI scans the message for urgent or manipulative language (e.g., \"immediate action required,\" \"don’t tell anyone,\" \"click this link now\").\r\n- Sender Verification – AI checks if the sender's account matches the actual teacher's verified email or phone number on school records.\r\n- Behavioral Anomalies – AI compares this message against previous teacher-student interactions to identify inconsistencies (e.g., Does this teacher normally request login credentials?).\r\n- External Database Checks – AI may cross-check known phishing attempts to see if the scam has been reported elsewhere.\r\n- Warning and Automated Response – AI can flag the message, alert the student, and suggest verifying directly with the teacher in person or via official school channels.\r\n\r\n*Question 2: Compare how this attack would traditionally be detected versus how AI improves response time and accuracy in preventing students from falling for these scams.*\r\n\r\n**Traditional Detection:** \r\n- The student must notice suspicious wording or compare sender details manually.\r\n- Schools rely on cybersecurity awareness training to teach students how to recognize social engineering.\r\n- If a student falls for the scam, IT staff must manually reset credentials and investigate damage.\r\n- Phishing attempts may go unnoticed until multiple students are affected.\r\n\r\n**Summary Answer:**\r\nAI proactively scans, flags, and alerts students before they fall for social engineering attacks, whereas traditional methods rely on human awareness and manual intervention—which can be slow and inconsistent. AI improves response time, reduces risk, and minimizes damage by stopping threats before credentials are stolen.",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:22.922+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson10-level2_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson10-level2_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

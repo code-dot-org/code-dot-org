@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-27T15:02:21.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Event Handler\n\nAn **event handler** defines the reaction that a program takes based on a specific action, like a button click. \n\n\n",
+        "imageUrl": "https://images.code.org/c0865b4e908e4b8f75772e85dd0673a1-eventhandler.gif",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-27T15:02:21.033+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-panel-DOM-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-panel-DOM-test-2025\"},{\"changed_at\":\"2025-10-27 15:03:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

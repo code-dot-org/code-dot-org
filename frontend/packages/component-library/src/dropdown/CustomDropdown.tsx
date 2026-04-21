@@ -1,3 +1,9 @@
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  IconButton as MuiIconButton,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
@@ -9,7 +15,7 @@ import {
   memo,
 } from 'react';
 
-import {Button, ButtonProps} from '@/button';
+import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
 import {dropdownColors} from '@/common/constants';
 import {
   DropdownProviderWrapper,
@@ -36,6 +42,9 @@ export interface CustomDropdownOption {
   isOptionDisabled?: boolean;
 }
 
+export type CustomDropdownMenuPlacement = 'left' | 'right';
+export type CustomDropdownMenuVerticalPlacement = 'top' | 'bottom';
+
 export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
@@ -47,7 +56,9 @@ export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown size */
   size: ComponentSizeXSToL;
   /** CustomDropdown menu placement */
-  menuPlacement?: 'left' | 'right';
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** CustomDropdown vertical menu placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
   /** CustomDropdown disabled state */
   disabled?: boolean;
   /** CustomDropdown readOnly state */
@@ -61,10 +72,14 @@ export interface CustomDropdownProps extends AriaAttributes {
   isSomeValueSelected?: boolean;
   /** Custom icon to show for the dropdown button*/
   icon?: FontAwesomeV6IconProps;
-  /** Whether to use DSCO (Design System) Button component as DropdownTrigger or not */
+  /** Whether to use MUI Button component as DropdownTrigger or not */
+  useMuiButtonAsTrigger?: boolean;
+  /** Whether to use MUI IconButton component as DropdownTrigger or not */
+  useMuiIconButtonAsTrigger?: boolean;
+  /** @deprecated Use useMuiButtonAsTrigger instead */
   useDSCOButtonAsTrigger?: boolean;
-  /** Dropdown Trigger DSCO (Design System) Button Props */
-  triggerButtonProps?: ButtonProps;
+  /** Dropdown Trigger MUI Button Props (or IconButton props when useMuiIconButtonAsTrigger is true) */
+  triggerButtonProps?: MuiButtonProps | MuiIconButtonProps;
   /** Children */
   children: React.ReactNode;
   /** CustomDropdown helper message */
@@ -105,8 +120,11 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   color = dropdownColors.black,
   size = 'm',
   menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
+  useMuiButtonAsTrigger = false,
+  useMuiIconButtonAsTrigger = false,
   useDSCOButtonAsTrigger = false,
-  triggerButtonProps = {},
+  triggerButtonProps = {} as MuiButtonProps | MuiIconButtonProps,
   helperMessage,
   helperIcon,
   errorMessage,
@@ -141,13 +159,26 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     };
   }, [handleClickOutside]);
 
+  const useButtonTrigger =
+    useMuiButtonAsTrigger ||
+    useMuiIconButtonAsTrigger ||
+    useDSCOButtonAsTrigger;
+
   useEffect(() => {
-    if (useDSCOButtonAsTrigger && !triggerButtonProps) {
+    if (useButtonTrigger && !triggerButtonProps) {
       console.warn(
-        'Warning: `triggerButtonProps` must be defined when `useDSCOButtonAsTrigger` is true.',
+        'Warning: `triggerButtonProps` must be defined when `useMuiButtonAsTrigger` or `useMuiIconButtonAsTrigger` is true.',
       );
     }
-  }, [useDSCOButtonAsTrigger, triggerButtonProps]);
+  }, [useButtonTrigger, triggerButtonProps]);
+
+  useEffect(() => {
+    if (color === dropdownColors.white) {
+      console.warn(
+        'CustomDropdown: `white` variant is deprecated. Use `black` or `gray` and define theme context for light or dark.',
+      );
+    }
+  }, [color]);
 
   const toggleDropdown = useCallback(() => {
     if (activeDropdownName !== name) {
@@ -192,6 +223,9 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
+        moduleStyles[
+          `dropdownContainer-${menuVerticalPlacement}-menuVerticalPlacement`
+        ],
         moduleStyles[`dropdownContainer-${color}`],
         moduleStyles[`dropdownContainer-${size}`],
         className,
@@ -205,19 +239,42 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <span>{labelText}</span>
         </div>
       )}
-      {useDSCOButtonAsTrigger ? (
-        <Button
-          {...triggerComponentProps}
-          {...triggerButtonProps}
-          size={size}
-          forceHover={isOpen}
-          aria-label={
-            triggerButtonProps?.isIconOnly
-              ? labelText
-              : triggerButtonProps['aria-label'] ||
-                triggerComponentProps['aria-label']
-          }
-        />
+      {useButtonTrigger ? (
+        (() => {
+          const muiSize = buttonSizeToMuiSizeMap[size] || 'medium';
+          const sharedTriggerProps = {
+            id: triggerComponentProps.id,
+            onClick: triggerComponentProps.onClick,
+            disabled: triggerComponentProps.disabled,
+            'aria-haspopup': triggerComponentProps['aria-haspopup'] as true,
+            'data-toggle': triggerComponentProps['data-toggle'],
+            className: classNames(
+              isOpen && 'force-hover',
+              triggerButtonProps?.className,
+            ),
+            'data-force-hover': isOpen || undefined,
+            'aria-label':
+              triggerButtonProps?.['aria-label'] ||
+              (useMuiIconButtonAsTrigger ? labelText : undefined) ||
+              triggerComponentProps['aria-label'],
+          };
+
+          return useMuiIconButtonAsTrigger ? (
+            <MuiIconButton
+              size={muiSize}
+              {...sharedTriggerProps}
+              {...(triggerButtonProps as MuiIconButtonProps)}
+              className={sharedTriggerProps.className}
+            />
+          ) : (
+            <MuiButton
+              size={muiSize}
+              {...sharedTriggerProps}
+              {...(triggerButtonProps as MuiButtonProps)}
+              className={sharedTriggerProps.className}
+            />
+          );
+        })()
       ) : (
         <button
           {...triggerComponentProps}

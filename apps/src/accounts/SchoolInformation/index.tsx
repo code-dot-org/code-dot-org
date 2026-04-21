@@ -1,13 +1,19 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+import {
+  AccountSettingsSectionUrlParams,
+  handleUpdateUrlOnSettingsSave,
+} from '../accountUpdateConstants';
 
 import commonStyles from '../common/common.styles.module.scss';
 
@@ -57,6 +63,20 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
         country: schoolDataInfoProps.country,
       });
       setSuccess(true);
+
+      // If sent here with a user_return_to param and there are no
+      // more Accoutn Settings sections the user is meant to update
+      // (tracked in the URL params), then redirect the user to
+      // user_return_to, otherwise handle reload.
+      const returnToHref = decodeURIComponent(
+        (queryParams('user_return_to') || '') as string
+      );
+      const hasFinishedAccountUpdates = handleUpdateUrlOnSettingsSave(
+        AccountSettingsSectionUrlParams.SchoolInformation
+      );
+      if (returnToHref && hasFinishedAccountUpdates) {
+        navigateToHref(returnToHref);
+      }
     } catch (error) {
       setFailure(true);
     }
@@ -92,12 +112,14 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
   return (
     <>
       <hr />
-      <Heading2
-        visualAppearance="heading-sm"
+      <Typography
         className={commonStyles.sectionHeader}
+        component="h2"
+        variant="h5"
+        gutterBottom
       >
         {i18n.schoolInformation_schoolInformation()}
-      </Heading2>
+      </Typography>
       <form name="school-information-form">
         <div className={commonStyles.inputContainer}>
           <SchoolDataInputs {...schoolDataInfoProps} includeHeaders={false} />
@@ -119,12 +141,17 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
           )}
         </div>
         <div>
-          <Button
-            className={commonStyles.submit}
-            text={i18n.schoolInformation_updateSchoolInformation()}
-            onClick={handleSchoolInformationUpdate}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={saveDisabled}
-          />
+            className={commonStyles.submit}
+            onClick={handleSchoolInformationUpdate}
+            type="button"
+          >
+            {i18n.schoolInformation_updateSchoolInformation()}
+          </MuiButton>
         </div>
       </form>
     </>

@@ -7,7 +7,7 @@ import {
 } from '../alarmHelpers';
 import {SL_HANDBOOK_LINK, SNS_TOPIC} from "../../constants";
 
-export const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b', 'gen-ai-mistral-pirate-7b', 'gen-ai-karen-creative-mistral-7b', 'gen-ai-arithmo2-mistral-7b'];
+export const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01'];
 
 const failureMetrics = createFailureMetricsConfig(sagemakerModelIds);
 const startMetrics = createStartMetricsConfig(sagemakerModelIds);
@@ -20,6 +20,7 @@ export const chatCompletionJobExecutionHighFailureRateSagemakerConfiguration: Pu
 *Next Steps*:
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
 - Check HoneyBadger for **AichatRequestChatCompletionJob** errors
+- You can set the DCDO flag \`aichat_verbose_honeybadger_reporting\` to true to get more detailed error reports in HoneyBadger, which may help with debugging.
 - Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
         ActionsEnabled: true,
         OKActions: [],

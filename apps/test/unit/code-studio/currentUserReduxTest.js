@@ -2,7 +2,8 @@ import currentUser, {
   SignInState,
   setUserSignedIn,
   setUserType,
-  setCurrentUserHasSeenStandardsReportInfo,
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
   setCurrentUserName,
   setInitialData,
   setUserRoleInCourse,
@@ -62,12 +63,21 @@ describe('currentUserRedux', () => {
     });
   });
 
-  describe('setCurrentUserHasSeenStandardsReportInfo', () => {
-    it('can set the standards info dialog to seen', () => {
-      const action = setCurrentUserHasSeenStandardsReportInfo(true);
+  describe('setShowAITALessonSummary', () => {
+    it('can set if a user can see the AI TA lesson summary tool', () => {
+      const action = setShowAITALessonSummary(true);
       const nextState = currentUser(initialState, action);
 
-      expect(nextState.hasSeenStandardsReportInfo).toEqual(true);
+      expect(nextState.showAITALessonSummary).toEqual(true);
+    });
+  });
+
+  describe('setHasCompletedPersonalizationQuiz', () => {
+    it('can set if the user has completed their personalization quiz', () => {
+      const action = setHasCompletedPersonalizationQuiz(true);
+      const nextState = currentUser(initialState, action);
+
+      expect(nextState.hasCompletedPersonalizationQuiz).toEqual(true);
     });
   });
 

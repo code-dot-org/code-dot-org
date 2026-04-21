@@ -105,6 +105,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Use the draw loop to make your sprite from last lesson move.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

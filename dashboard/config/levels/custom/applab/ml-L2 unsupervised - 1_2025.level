@@ -38,6 +38,7 @@
     "long_instructions": "## Looking for Patterns\r\n\r\nEach box on the screen has 3 numbers in them. You can click-and-drag each box to move them around the screen.\r\n\r\nTry to group boxes together in any way that makes sense to you. You could compare individual rows of numbers to other boxes, or compare numbers within the box itself - whatever makes sense to you.\r\n\r\n# Do This\r\n- Drag the boxes around the screen so you have at least 3 different groups (you can have more if you'd like!)\r\n- Once you have your groups, click the \"Next\" button to reveal what each box represents.\r\n- Once you've revealed the boxes, see if you can summarize your groups to another person.",
     "ai_enabled": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

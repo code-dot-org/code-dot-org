@@ -74,7 +74,7 @@
   },
   "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/11": {
     "short_instructions": "Write a program to change the size of each sprite when it is clicked.",
-    "long_instructions": "**Events with Sprite Groups**\n\n<img src=\"https://images.code.org/d6f63b693844071ec6cd9e32587171e3-image-1715705071588.gif\" style=\"margin-right: 10%; float: right; width: 25%\">\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag the `clicked sprite` block into the `change size` block below\n\n3.  Click on each sprite to change their size after pressing Run. ",
+    "long_instructions": "**Events with Sprite Groups**\n\n<img src=\"https://images.code.org/d6f63b693844071ec6cd9e32587171e3-image-1715705071588.gif\" style=\"margin-right: 10%; float: right; width: 25%\">\n\n1.  Click the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag the `clicked sprite` block into the `change size` block below\n\n3.  Click on each sprite to change their size after pressing Run. ",
     "authored_hints": {
       "expand_click_event": "Click the `+` button on the event block. Use the block inside to finish the program.\n\n[blockly block][0]"
     },

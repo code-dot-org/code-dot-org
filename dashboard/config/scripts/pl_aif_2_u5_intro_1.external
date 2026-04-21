@@ -1,0 +1,86 @@
+name 'pl-aif-2-U5-Intro-1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/f732984c74d50c60424df2b3ef81ed17-image-1770398155108.png" alt="Banner image that says, Welcome to Teaching Designing Reliable Apps and APIs" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+#### This professional learning module prepares you to teach a unit where students expand their understanding of web apps by connecting them to external data sources through APIs. They learn that modern applications rarely operate in isolation; instead, they depend on information and services provided by larger systems.
+
+#### An **API (Application Programming Interface)** is a set of rules that allow software applications to communicate and use data from another server. 
+
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+#### **By the end of this professional learning module, you will be able to:**
+
+* #### Use JavaScript to get data from an external API and show it in a web app.
+
+* #### Write asynchronous code with `async/await` to load data without freezing the page.
+
+* #### Compare using local data versus API data and explain when each makes sense.
+
+* #### Get a solid introduction of APIs to prepare you to teach Unit 5.
+
+
+
+
+
+---
+
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
+
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey — it takes fewer than five minutes to complete.
+    </div>
+  </div>
+</div>
+
+---
+
+### **Suggested total time for this module:** 90 minutes
+
+![]()
+MARKDOWN

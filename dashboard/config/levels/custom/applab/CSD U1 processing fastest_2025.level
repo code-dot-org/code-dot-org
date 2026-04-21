@@ -221,6 +221,7 @@
     "parent_level_id": 23177,
     "teacher_markdown": "[key]\r\n\r\nThis app uses counting and comparing.\r\n\r\n* The app counts how many times each key has been clicked.\r\n* The app compares the two numbers.\r\n\r\n[/key]",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

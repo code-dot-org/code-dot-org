@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson5-level6_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+question 'Which line of code correctly tells a `Painter` named `alice` to move?'
+
+wrong '`move.alice()`'
+wrong '`alice move()`'
+right '`alice.move()`'
+wrong '`Painter.move(alice)`'
+
+allow_multiple_attempts false

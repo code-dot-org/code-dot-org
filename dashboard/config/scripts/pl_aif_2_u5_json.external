@@ -1,0 +1,73 @@
+name 'pl-aif-2-U5-JSON'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# APIs, JSON, and System Awareness
+
+#### When an app uses an API, it becomes part of a bigger system.
+#### That system includes the app, the API, and the server providing the data.
+#### This can make apps more powerful, but it also comes with tradeoffs.
+
+---
+
+## External Data Integration
+
+<img src="https://images.code.org/fe80ffcaf242fd209bba74e944c7b139-image-1770744758950.png" alt="icon of map with location pin" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### **External data integration** is the process of pulling live data from **outside** your app into your app.
+#### Instead of hard-coding information, the app retrieves it when needed.
+
+#### **Examples:**
+- #### A weather app showing today’s forecast  
+- #### A map app displaying real-time traffic  
+- #### A fitness app pulling step data from a device  
+
+<div style="clear:both;"></div>
+
+---
+
+
+## What Data Often Looks Like: JSON
+
+#### When apps receive data from an API, it’s often in a format called **JSON**.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
+📖 <strong>JSON (JavaScript Object Notation)</strong> is a lightweight format for storing and transporting data, often returned by APIs.
+</p>
+</div>
+
+#### JSON is designed to be:
+- #### Easy for humans to read
+- #### Easy for computers to generate
+
+#### **Example (Weather Data):**
+
+<div style="background-color: #f2f2f2; border-radius: 8px; padding: 16px; margin: 20px auto; max-width: 85%; font-family: monospace;">
+<p style="font-size: 14pt; margin: 0; line-height: 1.4;">
+{<br>
+&nbsp;&nbsp;"city": "Chicago",<br>
+&nbsp;&nbsp;"temperature": 72,<br>
+&nbsp;&nbsp;"condition": "Cloudy"<br>
+}
+</p>
+</div>
+
+
+ <p style="font-size: 14pt;">
+Look closely at the JSON example above. <strong>If an app only wanted to show the temperature</strong>, which part of the data would it need to look for?
+<br><br></p>
+
+<div style="clear:both;"></div>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;"><p style="font-size: 14pt;">
+In JSON, data is organized using <strong>key–value pairs</strong>. The app can look for the key <strong>"temperature"</strong> and then use the value associated with it (<strong>72</strong>). This structure makes it easier for apps to pull out just the specific pieces of data they need.
+</p>
+</div>
+</details>
+
+
+MARKDOWN

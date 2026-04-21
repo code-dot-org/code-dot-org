@@ -1,4 +1,3 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
 import {useMemo} from 'react';
 
@@ -7,6 +6,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
 import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setFileTypeThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -33,7 +33,6 @@ export const useStartModeFileRowOptions = (
   projectHasValidationFile: boolean
 ) => {
   const dispatch = useAppDispatch();
-  const {setFileType} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   // setFileType only gets called in start mode. If we are setting a file to
   // validation or changing a validation file to a non-validation file, also
@@ -59,9 +58,9 @@ export const useStartModeFileRowOptions = (
         dispatch(setShowLockedFilesBanner(true));
         setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
-      setFileType(file.id, type);
+      dispatch(setFileTypeThunk({fileId: file.id, type}));
     },
-    [dispatch, setFileType, file]
+    [dispatch, file]
   );
 
   const dropdownOptions = useMemo(

@@ -10,6 +10,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 class MultipleAssignButton extends React.Component {
@@ -21,8 +22,10 @@ class MultipleAssignButton extends React.Component {
     assignmentName: PropTypes.string,
     reassignConfirm: PropTypes.func,
     isAssigningCourseOnly: PropTypes.bool,
-    isAssigningUnitOnly: PropTypes.bool,
+    isSingleUnitCourse: PropTypes.bool,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
@@ -53,11 +56,12 @@ class MultipleAssignButton extends React.Component {
       courseVersionId,
       scriptId,
       assignmentName,
-      isAssigningUnitOnly,
+      isSingleUnitCourse,
       sectionsForDropdown,
       participantAudience,
       isAssigningCourseOnly,
       reassignConfirm,
+      aiChatToolsDependency,
     } = this.props;
 
     return (
@@ -67,7 +71,7 @@ class MultipleAssignButton extends React.Component {
           text={i18n.assignToMultipleSections()}
           icon="plus"
           onClick={this.handleClick}
-          className={'uitest-assign-button'}
+          id="uitest-multi-assign-button"
         />
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
@@ -80,8 +84,9 @@ class MultipleAssignButton extends React.Component {
             courseVersionId={courseVersionId}
             reassignConfirm={reassignConfirm}
             isAssigningCourseOnly={isAssigningCourseOnly}
-            isAssigningUnitOnly={isAssigningUnitOnly}
+            isSingleUnitCourse={isSingleUnitCourse}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         )}
       </div>

@@ -1,0 +1,51 @@
+name 'csaif_pl_collaboration-L4_cyber'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Collaboration & Pair Coding
+
+#### Collaboration is a key skill in coding and problem-solving.
+
+#### While the final project is an individual assignment, students will still engage in peer review and structured feedback, making effective collaboration strategies essential.
+
+## Why Use Peer Collaboration in Coding?
+
+
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: space-between;">
+  
+  <div style="flex: 1;">
+       <ul style="font-size: 14pt; line-height: 1.5; padding-left: 20px;">
+      <li> <b>Encourages Peer Learning –</b>Explaining code to others deepens understanding.
+</li><br>
+      <li><b>Improves Debugging Skills –</b>Fresh perspectives help identify errors and inefficiencies.
+</li><br>
+      <li><b>Builds Real-World Coding Practices -</b>Professional developers regularly review and refine each other’s work.
+</li>
+    </ul>
+  </div>
+ 
+</div>
+
+---
+## Strategies for Keeping Students Engaged & Accountable in Peer Review
+
+#### **Teach Constructive Feedback Techniques:**
+- #### Use the TAG Method (Tell something you like, Ask a question, Give a suggestion).
+- #### Model examples of specific, actionable feedback.
+
+#### **Encourage Structured Communication:**
+- #### Use sentence starters like "I noticed that..." or "Have you considered...?"
+- #### Reinforce active listening and respectful discussions.
+
+#### **Use Checkpoints for Accountability:**
+- #### Have students complete small milestones before peer review.
+- #### Encourage reflection: “What feedback was most useful? How can you apply it?”
+
+---
+
+#### By setting clear expectations for giving and receiving feedback, students will strengthen their coding skills and learn how to refine their work based on peer insights.
+
+
+
+MARKDOWN

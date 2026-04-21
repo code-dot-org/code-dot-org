@@ -99,6 +99,7 @@
     "rubric_performance_level_3": "At least one sprite has been created and drawn to the screen.  There may be problems with the animation or conflicts from using the same variable name for multiple sprites.",
     "rubric_performance_level_4": "No sprites are created.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

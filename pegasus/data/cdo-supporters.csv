@@ -1,60 +1,41 @@
 institutional_3m_s,individual_3m_s,institutional_1m_s,individual_1m_s,institutional_500k_s,individual_500k_s,institutional_250k_s,individual_250k_s,institutional_100k_s,individual_100k_s,institutional_50k_s,individual_50k_s,institutional_25k_s,individual_25k_s,institutional_10k_s,individual_10k_s,institutional_5k_s,individual_5k_s,institutional_1k_s,individual_1k_s,in_kind_s,employee_giving_s
-Amazon,Anonymous,Atlassian Foundation International,Anonymous,Cisco Systems Foundation,Anonymous,Adobe Foundation,"F. Francis and Dionne Najafi, Pivotal Foundation",Accenture,Arash Ferdowsi,Accel Partners,Ali and Melissa Partovi,Aramco Americas,Alex and Susie Algard,ACI Worldwide,Amir and Sara Handjani,Alaska Airlines,Adam and Linda Fuller,"Ad Astra Foundation",Alan Zerbini,Adobe,Adobe Employee Giving
-Google,Kenneth C. Griffin,Cognizant Foundation,Rebecca and Alfred Lin,Infosys Foundation USA,Dara Khosrowshahi and Bita Daryabari,Caterpillar Foundation,,AMD,Devin and Cindy Wenig,GlobalLogic,Daniel Yates,Cloud Software Group,Craig Silverstein and Mary Obelnicki,HackVC,Aydin Senkut,Amalgamated Compassion Fund,Allen Kaplun,Espinoza Family Fund,Anonymous,"Asana","Apple Inc. Employee Program"
-Microsoft,,Salesforce,The Iranian American Community,,Jeff and Liesl Wilke,Danaher Foundation,,Ernst & Young,Eric and Merriman Mathewson,Paramount Pictures,Jeffrey Huber and Angel Vossough,Dalio Philanthropies,Diane Greene and Mendel Rosenblum,Jones Family Foundation,Bryan and Eva Schreier,Blue Sentry Cloud,Anonymous,Foundation for California's Technology & Innovation Economy,April Chu,GitHub,Atlassian Foundation International
-Musk Foundation,,Schmidt Futures,,,,expa.org,,Humanitix,Golnar Khosrowshahi,Santander Group,Joe and Sarah Kiani,Infor,Jonathan Perlow,Nick and Leslie Hanauer Foundation,Chris and Kylisa Howard,DeepMusic.ai,Brad Silverberg ,Iowa Governer's STEM Advisory Council,Ashkan and Nansi Marsh,Hadi and Negar Partovi,Bain Capital
-The Ballmer Group,,The Gates Foundation,,,,Fortive Foundation,,Kaphan Foundation,Homan Igehy and Sepideh Pashaie,Motorola Solutions Foundation,Jon Sakoda ,The Greycroft Foundation,Kaveh Khosrowshahi,Salesloft Accounting,Daniel Millington,Goldman Sachs Gives,Cameron Poetzscher,Lawrence and Sherian Washington Family Foundation,Bobby Schnabel,OpenAI,Ball Aerospace & Technologies
-,,,,,,Humble Bundle,,Northrop Grumman Foundation,Sid and Karen Sijbrandij,,Ken Fox ,,Misha Kordestani and Dara Rahimzadeh,The Perkins Charitable Foundation,Dinesh Gupta,"Greenway Health, LLC",David Risher ,N-able HR Department,Boris Jerkunica,Sauce Labs,Bright Funds Foundation
-,,,,,,Screaming Comet Foundation,,Squarepoint Capital,Zod Nazem and Noosheen Hashemi,,Sameer Gandhi and Monika Lopez ,,,,Emily White and Brian Kelly,Intellectual Ventures,Erin Ayala,PricewaterhouseCoopers,Brad and Kristine Porter,Trello,CCC Intelligent Solutions
-,,,,,,,,Visa Foundation,,,,,,,Farhad Massoudi,Springbrook National User Group,Galex Yen,Stantec Consulting Services,Brandon Isaac,,"Cisco Employee Giving"
-,,,,,,,,"Vista Equity Partners",,,,,,,Nushin and Farhad Mohit,The Kind Foundation,Greg and Ginny Badros,Sysdig,Casey Rounseville,,Crowdstrike
-,,,,,,,,,,,,,,,Farshid Maghami Asl,The Smang Family Foundation,Greg Kahn ,The Giving Back Fund,Chandrika Sridharamurthy,,F5
-,,,,,,,,,,,,,,,Garrett Camp,Thrivent Financial,J. Nicholas Jitkoff & Ty R. Ashford,,Connor Parsons,,"Gilead"
-,,,,,,,,,,,,,,,John Bevans,Tides Foundation,John and Jen Pleasants ,,Craig Dickinson,,GitHub
-,,,,,,,,,,,,,,,Martin Chavez,,Lottie and Jon Rezneck,,Daniel Carpenter,,Google Inc. Employee Program
-,,,,,,,,,,,,,,,Michael and Rachelle Lopp,,Nikki Pechet,,Darcie Brossart,,"Liberty Mutual Foundation"
-,,,,,,,,,,,,,,,Mostafa Ronaghi,,,,Darren Herman,,Microsoft Matching Gifts Program
-,,,,,,,,,,,,,,,Ned and Haleh Clapp,,,,David Donahue,,N1234
-,,,,,,,,,,,,,,,Orion and Jackie Hindawi,,,,Emaan Haseem,,"National Instruments"
-,,,,,,,,,,,,,,,Sharmin and Bijan Mossavar-Rahmani,,,,Erica Spurrier,,"Paypal Giving Fund"
-,,,,,,,,,,,,,,,Stanley Tang,,,,Fatemeh Moussavi,,Salesforce Employee Program
-,,,,,,,,,,,,,,,Sujay and Eleni Jaswa,,,,Frank Jania,,UK Online Giving Foundation
-,,,,,,,,,,,,,,,,,,,Greg Harrison,,USAA
-,,,,,,,,,,,,,,,,,,,Hasan Giving Fund,,VISA Foundation
-,,,,,,,,,,,,,,,,,,,Jacob Crosmer,,Workiva
-,,,,,,,,,,,,,,,,,,,Janet Whitaker,,
-,,,,,,,,,,,,,,,,,,,Jeanette Wright ,,
-,,,,,,,,,,,,,,,,,,,Jeffrey Burge,,
-,,,,,,,,,,,,,,,,,,,Jhone Ebert ,,
-,,,,,,,,,,,,,,,,,,,Joel and Melissa Conaway,,
-,,,,,,,,,,,,,,,,,,,Jonathan Rosenberg,,
-,,,,,,,,,,,,,,,,,,,Karl Chen,,
+Amazon,Anonymous,Atlassian Foundation International,Anonymous,Cisco Systems Foundation,,Adobe,Jeff and Liesl Wilke,Accenture,Arash Ferdowsi,Dalio Philanthropies,Ali and Melissa Partovi,Algard Family Fund,Jeffrey Huber and Angel Vossough,ACI Worldwide,Amir and Sara Handjani,Anonymous,Anonymous,Amalgamated Compassion Fund,Alberto Fung,Adobe,Adobe Employee Giving
+Google,Kenneth C. Griffin,Cognizant Foundation,Charlie Lee,,,Danaher Foundation,,AMD,Devin and Cindy Wenig,Motorola Solutions Foundation,Daniel Yates,Aramco Americas,Jonathan Perlow,Anonymous,Dinesh Gupta,Alaska Airlines,Daniel Millington,Anonymous,Amir Khandani,"Asana","Apple Inc. Employee Program"
+Microsoft,,Musk Foundation,Rebecca and Alfred Lin,,,Fortive Foundation,,Ernst & Young,Golnar Khosrowshahi,Paramount Pictures,Jeffrey Huber and Angel Vossough,Infor,Kaveh Khosrowshahi,Digg,Emily White and Brian Kelly,"Greenway Health, LLC",Galex Yen,Black Box CorpMktg,Anonymous,GitHub,Atlassian Foundation International
+The Ballmer Group,,Salesforce,The Iranian American Community,,,Humble Bundle,,Kaphan Foundation,Homan Igehy and Sepideh Pashaie,Santander Group,Joe and Sarah Kiani,National Philanthropic Trust,,,Farshid Maghami Asl,OpenAI,Garrett Camp,Charities Aid Foundation of America,Bastiaan Brekelmans,Hadi and Negar Partovi,Bain Capital
+,,,,,,Infosys Foundation USA,,Northrop Grumman Foundation,,Squarepoint Capital,Jon Sakoda ,,,,Glenn and Sylvia Kelman,Springbrook National User Group,,easySAAS GmbH,Bobby Schnabel,OpenAI,Ball Aerospace & Technologies
+,,,,,,Screaming Comet Foundation,,VISA Foundation,,,Ken Fox ,,,,Jeff Atwood and Betsy Burton,Sysdig,,Elno Family Foundation,Byron Rader,Sauce Labs,Bright Funds Foundation
+,,,,,,,,Vista Equity Partners,,,Sameer Gandhi and Monika Lopez ,,,,John Bevans,Thrivent Financial,,Foundation for the Carolinas,Carla and John Stratfold,Trello,CCC Intelligent Solutions
+,,,,,,,,,,,,,,,Jones Family Foundation,Goldman Sachs Gives,,Freestar,Carlos and Isabel Picoto,,"Cisco Employee Giving"
+,,,,,,,,,,,,,,,Michael and Rachelle Lopp,Tides Foundation,,Iowa Governer's STEM Advisory Council,Caroline Tien-Spalding,,Crowdstrike
+,,,,,,,,,,,,,,,Mostafa Ronaghi,,,PricewaterhouseCoopers,Connor Parsons,,F5
+,,,,,,,,,,,,,,,Ned and Haleh Clapp,,,,Craig Dickinson,,"Gilead"
+,,,,,,,,,,,,,,,Nushin and Farhad Mohit,,,,Cynthia Argani,,GitHub
+,,,,,,,,,,,,,,,Sharmin and Bijan Mossavar-Rahmani,,,,Daniel and Kristi Sheeran,,Google Inc. Employee Program
+,,,,,,,,,,,,,,,,,,,Daniel Carpenter,,"Liberty Mutual Foundation"
+,,,,,,,,,,,,,,,,,,,Dillon Tellier,,Microsoft Matching Gifts Program
+,,,,,,,,,,,,,,,,,,,Douglas Phillips,,N1234
+,,,,,,,,,,,,,,,,,,,Ed Lazowska,,"National Instruments"
+,,,,,,,,,,,,,,,,,,,Fati and Mehrad Khosrowshahi,,"Paypal Giving Fund"
+,,,,,,,,,,,,,,,,,,,Gavin Lazarow,,Salesforce Employee Program
+,,,,,,,,,,,,,,,,,,,Girish Joshi,,UK Online Giving Foundation
+,,,,,,,,,,,,,,,,,,,Ilya Bukshteyn,,USAA
+,,,,,,,,,,,,,,,,,,,Jacob Crosmer,,VISA Foundation
+,,,,,,,,,,,,,,,,,,,Jason Mikel McWreath,,Workiva
+,,,,,,,,,,,,,,,,,,,Johnson Daniel,,
+,,,,,,,,,,,,,,,,,,,Jonathan Bates,,
 ,,,,,,,,,,,,,,,,,,,Kristin Yeoman,,
-,,,,,,,,,,,,,,,,,,,Lauriane Glessner ,,
-,,,,,,,,,,,,,,,,,,,Leila Allahyari ,,
-,,,,,,,,,,,,,,,,,,,"Marvin and Joanne McIntyre Family Fund",,
-,,,,,,,,,,,,,,,,,,,Mérouane Gautier,,
 ,,,,,,,,,,,,,,,,,,,Michael Daum,,
-,,,,,,,,,,,,,,,,,,,Michael Denkowski,,
 ,,,,,,,,,,,,,,,,,,,Michael Lehenbauer,,
+,,,,,,,,,,,,,,,,,,,Mohammad Shabaz LNU,,
 ,,,,,,,,,,,,,,,,,,,Nariman and Hoveida Farvardin,,
-,,,,,,,,,,,,,,,,,,,Nazgol Moussavi and Reza Hajebi,,
-,,,,,,,,,,,,,,,,,,,Nellwyn Thomas,,
 ,,,,,,,,,,,,,,,,,,,Nicholas Schneider,,
-,,,,,,,,,,,,,,,,,,,Olsonfive Fund,,
-,,,,,,,,,,,,,,,,,,,Phillip Pham,,
-,,,,,,,,,,,,,,,,,,,Poorya Sabounchi and Newsha Sharifzadeh,,
-,,,,,,,,,,,,,,,,,,,Preetika Jain,,
-,,,,,,,,,,,,,,,,,,,Rebecca and Tyler Shaddix,,
-,,,,,,,,,,,,,,,,,,,Rebecca Dodgen,,
-,,,,,,,,,,,,,,,,,,,Russell and Jennifer Schaaf,,
-,,,,,,,,,,,,,,,,,,,Sam Reilley ,,
-,,,,,,,,,,,,,,,,,,,Scott Smith,,
-,,,,,,,,,,,,,,,,,,,Sean Snyder and Leigh Momii,,
+,,,,,,,,,,,,,,,,,,,Richard Gelhausen,,
 ,,,,,,,,,,,,,,,,,,,Shima Safaei and Saman Teimouri,,
 ,,,,,,,,,,,,,,,,,,,Siddharth Sundararajan,,
-,,,,,,,,,,,,,,,,,,,Spencer Rascoff,,
-,,,,,,,,,,,,,,,,,,,Stephen Jonany,,
+,,,,,,,,,,,,,,,,,,,Stephen Williams,,
 ,,,,,,,,,,,,,,,,,,,Terry Cole,,
-,,,,,,,,,,,,,,,,,,,Weider Chang,,
-,,,,,,,,,,,,,,,,,,,Zahra Tashakorinia,,
+,,,,,,,,,,,,,,,,,,,Thomas Dohmke,,
+,,,,,,,,,,,,,,,,,,,Thuy Nguyen,,
+,,,,,,,,,,,,,,,,,,,Tracy and Susan Baker,,
+,,,,,,,,,,,,,,,,,,,Veera Reddy Mamilla,,

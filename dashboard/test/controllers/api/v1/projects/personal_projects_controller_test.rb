@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V1::Projects::PersonalProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @project_owner = create :user
+    @project_owner = create(:user)
 
     personal_project_value = {
       name: 'Tetris',

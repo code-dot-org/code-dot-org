@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,7 +6,6 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../legacySharedComponents/PendingButton';
 import {storageBackend} from '../storage';
 
 import {castValue} from './dataUtils';
@@ -88,13 +88,20 @@ class AddTableRow extends React.Component {
         <td className={dataStyles.cell} />
 
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isAdding}
+            disabled={this.state.isAdding}
+            className={classNames(dataStyles.buttonText)}
+            id="addTableRowButton"
             onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text={msg.addRowToTable()}
-          />
+            aria-label={msg.addRowToTable()}
+            type="button"
+          >
+            {msg.addRowToTable()}
+          </MuiButton>
         </td>
       </tr>
     );

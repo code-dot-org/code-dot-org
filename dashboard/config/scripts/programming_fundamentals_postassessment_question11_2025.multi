@@ -9,7 +9,7 @@ wrong '`while x == 0:`'
 allow_multiple_attempts true
 
 markdown <<MARKDOWN
-Which of the following conditions could cause an infinite loop?
+Which of the following loop conditions is most likely to result in an infinite loop if no additional logic is added to stop it?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

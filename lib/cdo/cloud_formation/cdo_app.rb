@@ -51,7 +51,7 @@ module Cdo::CloudFormation
     def initialize(**options)
       options[:stack_name]  ||= CDO.stack_name
       options[:filename]    ||= 'cloud_formation_stack.yml.erb'
-      super(**options)
+      super
       options = @options = OpenStruct.new(options)
 
       # For adhoc stacks only (for now), preserve initial options via 'Op:' CloudFormation tags
@@ -118,20 +118,49 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       subdomain nil, 'studio'
     end
 
+    # Returns the reverse domain parts to serve as a namespace for S3 buckets.
+    # The convention is `org.code.<subdomain>`.
+    #
+    # Examples:
+    #   studio.code.org -> org.code.studio
+    #   test-studio.code.org -> org.code.test-studio
+    def s3_bucket_namespace
+      studio_subdomain.split('.').reverse.join('.')
+    end
+
     # Lookup ACM certificate for ELB and CloudFront SSL.
     # Choose latest expiration among multiple active matching certificates.
     ACM_REGION = 'us-east-1'.freeze
     def certificate_arn
       acm = Aws::ACM::Client.new(region: ACM_REGION)
       wildcard = "*.#{domain}"
-      acm.
-        list_certificates(certificate_statuses: ['ISSUED']).
-        certificate_summary_list.
+      all_certificates = []
+      next_token = nil
+
+      # Paginate through all certificate pages
+      loop do
+        response = acm.list_certificates(
+          certificate_statuses: ['ISSUED'],
+          next_token: next_token
+        )
+
+        all_certificates.concat(response.certificate_summary_list)
+
+        # Break if there are no more pages
+        break unless response.next_token
+        next_token = response.next_token
+      end
+
+      # Process all certificates to find the best match
+      selected = all_certificates.
         select {|cert| cert.domain_name == wildcard || cert.domain_name == domain}.
         map {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate}.
         select {|cert| cert.subject_alternative_names.include? wildcard}.
-        max_by(&:not_after).
-        certificate_arn
+        max_by(&:not_after)
+
+      raise "No valid ACM certificate found for domain #{domain}" unless selected
+
+      selected.certificate_arn
     end
 
     # S3 path to bootstrap script.

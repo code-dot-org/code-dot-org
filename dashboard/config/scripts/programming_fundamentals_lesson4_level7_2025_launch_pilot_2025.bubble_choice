@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson4-level7_2025-launch_pilot-2025'
+display_name 'Find and Fix the Bugs'
+description 'Choose **ONE** of these buggy programs! Your job is to spot the bugs, fix the code, and get the program running again. Don\'t worry — debugging is a normal (and important!) part of being a programmer.'
+
+sublevels
+level 'programming-fundamentals-lesson4-level7a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level7b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level7c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level7d_2025-launch_pilot-2025'

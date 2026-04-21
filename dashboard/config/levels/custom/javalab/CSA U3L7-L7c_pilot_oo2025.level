@@ -53,7 +53,7 @@
     },
     "video_key": "csa_enhanced_for_loops",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:10:18.381+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L7-L7c_pilot-2025\"}]"

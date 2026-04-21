@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:40:43.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#### Project Manager Perspective\n\n\"Our data showed that people with more experience apply faster, so we focused on full-time jobs that need 5 or more years of experience. \n\nIt makes the job list look more professional and helps people find strong matches quickly. The goal was to make the app feel fast and easy to use. \n\nHere is a mockup of the app I had in mind.\"\n\n",
+        "imageUrl": "https://images.code.org/b6bf86d31d850b91d52ef2a44fc89dce-Pasted Graphic 7.png",
+        "key": "iterating-with-ai-lesson6-level1-test-2025-ac90ca67-1096-499f-9035-1d74ef902268",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#### Designer Perspective\n\n\"When we reviewed real personas (new grads, caregivers, and career-changers), we realized our defaults quietly excluded them. \n\nWe added clear, adjustable filters (experience level, job type) and a short explanation so users know what’s being shown and what’s hidden. \n\nThis keeps the interface simple while making access and intent visible, so people can broaden results with one tap without guessing.\"\n\n**In your activity guide:** Compare the two app screens and analyze the design choices.",
+        "imageUrl": "https://images.code.org/81fb0121135086430ea0858e31a491fc-Pasted Graphic 9.png",
+        "key": "iterating-with-ai-lesson6-level1-test-2025-e1da5223-49ba-452c-8158-6d590436f4cb",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:43.568+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-level1-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-level1-test-2025\"}]"
+}]]></config>
+</Panels>

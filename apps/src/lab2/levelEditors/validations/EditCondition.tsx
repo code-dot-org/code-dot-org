@@ -1,10 +1,30 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {CSSObject} from '@emotion/serialize';
 import React, {useEffect} from 'react';
+import Select, {
+  components,
+  SingleValueProps,
+  OptionProps,
+} from 'react-select-5';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
+
+const SingleValue = (props: SingleValueProps<{value: string}>) => (
+  <components.SingleValue {...props}>{props.data.value}</components.SingleValue>
+);
+
+const Option = (props: OptionProps<{value: string; description: string}>) => {
+  return (
+    <components.Option {...props}>
+      <b>{props.data.value}</b> &mdash; {props.data.description}
+    </components.Option>
+  );
+};
 
 function getConditionPart(
   value: string | number,
@@ -84,36 +104,48 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
     useDropdown,
   ]);
 
+  const conditionDescription = conditionTypes.find(
+    type => type.name === condition.name
+  )?.description;
+
+  const options = conditionTypes.map(conditionType => ({
+    value: conditionType.name,
+    description: conditionType.description,
+  }));
+
   return (
     <div className={moduleStyles.row}>
-      <label htmlFor="conditionName" className={moduleStyles.label}>
-        {'Condition ' + (index + 1) + ':'}
-      </label>
-      <select
-        className={moduleStyles.conditionNameDropdown}
-        name="conditionName"
-        id="conditionName"
-        value={condition.name}
-        onChange={e => {
-          condition.name = e.target.value;
+      <Select
+        styles={{
+          container: (baseStyles: CSSObject) => ({
+            ...baseStyles,
+            width: 220,
+          }),
+          menu: (baseStyles: CSSObject) => ({
+            ...baseStyles,
+            width: 600,
+            border: 'solid 1px #000',
+            boxShadow:
+              'rgba(0, 0, 0, 0.3) 0px 20px 40px, rgba(0, 0, 0, 0.2) 0px 15px 15px',
+          }),
+        }}
+        options={options}
+        components={{SingleValue, Option}}
+        defaultValue={options.find(option => option.value === condition.name)}
+        onChange={(option: {value: string}) => {
+          condition.name = option.value;
           condition.value = undefined;
           if (!hasValueType) {
             condition.value = undefined;
           }
           onConditionChange(condition, index);
         }}
-      >
-        {conditionTypes.map((conditionType, index) => {
-          return (
-            <option key={index} value={conditionType.name}>
-              {conditionType.name}
-            </option>
-          );
-        })}
-      </select>
+      />
+      <Tooltip text={conditionDescription} place="bottom">
+        <FontAwesomeV6Icon iconName="circle-info" iconStyle="regular" />
+      </Tooltip>
       {hasValueType && (
         <>
-          <label className={moduleStyles.label}>Value:</label>
           <div className={moduleStyles.valueInputsWrapper}>
             {valueTypes.map((type, i) => {
               const currentConditionValue = condition.value!;

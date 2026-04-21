@@ -72,6 +72,7 @@
     "bubble_choice_description": "Build an app that helps a user to browse national parks and select/save favorites.",
     "thumbnail_url": "https://images.code.org/cc030865a6480efbe0d2c14a978ee541-NationalParks.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

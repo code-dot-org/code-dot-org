@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {
   darkMode,
   lightMode,
@@ -432,6 +432,12 @@ class JavalabEditor extends React.Component {
     } else if (filename.endsWith('.java') && /\s/g.test(filename)) {
       // Java file names cannot contains spaces
       errorMessage = javalabMsg.invalidJavaFilename();
+    } else if (
+      filename.endsWith('.java') &&
+      filename.substring(0, filename.indexOf('.java')).includes('.')
+    ) {
+      // Java class names cannot contain periods
+      errorMessage = 'Java file names cannot contain periods.';
     }
 
     if (errorMessage) {

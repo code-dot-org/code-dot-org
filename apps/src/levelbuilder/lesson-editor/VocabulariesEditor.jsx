@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addVocabulary,
   updateVocabulary,
@@ -13,6 +12,7 @@ import {vocabularyShape} from '@cdo/apps/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 
 import AddVocabularyDialog from './AddVocabularyDialog';
+import DeleteVocabularyDialog from './DeleteVocabularyDialog';
 import SearchBox from './SearchBox';
 import {lessonEditorTableStyles} from './TableConstants';
 
@@ -49,7 +49,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-edit" />
+          <i className="fa-solid fa-pen-to-square" />
         </div>
         <div
           style={styles.remove}
@@ -61,7 +61,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -177,21 +177,18 @@ class VocabulariesEditor extends Component {
           />
         )}
         {this.state.confirmRemovalDialogOpen && (
-          <Dialog
-            body={`Are you sure you want to remove the vocabulary "${this.state.vocabularyForRemoval.word}" from this lesson?`}
-            cancelText="Cancel"
-            confirmText="Delete"
-            confirmType="danger"
-            isOpen={this.state.confirmRemovalDialogOpen}
-            handleClose={this.handleRemoveVocabularyDialogClose}
-            onCancel={this.handleRemoveVocabularyDialogClose}
-            onConfirm={this.handleRemoveVocabularyConfirm}
+          <DeleteVocabularyDialog
+            vocabularyForDeletion={this.state.vocabularyForRemoval}
+            handleDeleteVocabularyConfirm={this.handleDeleteVocabularyConfirm}
+            handleDeleteVocabularyDialogClose={
+              this.handleDeleteVocabularyDialogClose
+            }
           />
         )}
         <div style={styles.search}>
-          <label>
+          <div style={styles.sectionLabel}>
             <strong>Select a vocabulary word to add</strong>
-          </label>
+          </div>
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
@@ -209,8 +206,9 @@ class VocabulariesEditor extends Component {
           onClick={this.handleAddVocabularyClick}
           style={styles.addButton}
           type="button"
+          className="unit-test-add-vocabulary"
         >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          <i className="fa-solid fa-plus" style={{marginRight: 7}} /> Create New
           Vocabulary
         </button>
       </div>
@@ -219,6 +217,9 @@ class VocabulariesEditor extends Component {
 }
 
 const styles = {
+  sectionLabel: {
+    marginBottom: 5,
+  },
   search: {
     paddingBottom: 10,
   },

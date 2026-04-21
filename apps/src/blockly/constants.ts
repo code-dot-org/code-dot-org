@@ -2,11 +2,6 @@ import {makeEnum} from '@cdo/apps/utils';
 
 import {parseElement as parseXmlElement} from '../xml';
 
-export enum BlocklyVersion {
-  CDO = 'CDO',
-  GOOGLE = 'Google',
-}
-
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
 export const BLOCKLY_CURSOR = 'blocklyCursor';
@@ -45,6 +40,7 @@ export enum BlockStyles {
   TEXT = 'text_blocks',
   COLOR = 'colour_blocks',
   BEHAVIOR = 'behavior_blocks',
+  LAB_BLOCKS = 'lab_blocks',
 }
 
 export const BlockColors = {
@@ -184,7 +180,7 @@ export const READ_ONLY_PROPERTIES = [
   'Connection',
   'ConnectionType',
   'ContextMenu',
-  'contractEditor',
+  'ContextMenuRegistry',
   'createBlockDefinitionsFromJsonArray',
   'Css',
   'Cursor',
@@ -233,13 +229,12 @@ export const READ_ONLY_PROPERTIES = [
   'RTL',
   'Scrollbar',
   'serialization',
+  'ShortcutRegistry',
   'SPRITE',
   'svgResize',
   'thrasos',
   'Toolbox',
   'Touch',
-  'Trashcan',
-  'tutorialExplorer_locale',
   'useContractEditor',
   'utils',
   'VARIABLE_CATEGORY_NAME',
@@ -269,6 +264,8 @@ export const SETTABLE_PROPERTIES = [
   'JavaScript',
   'readOnly',
   'showUnusedBlocks',
+  'SNAP_RADIUS',
+  'Trashcan',
   'typeHints',
   'valueTypeTabShapeMap',
 ];
@@ -350,3 +347,8 @@ export const COLOURS: string[] = [
   '#663366',
   '#330033',
 ];
+
+export const DYNAMIC_CATEGORY_OPTIONS: {[key: string]: string} = {
+  Functions: 'PROCEDURE',
+  Variables: 'VARIABLE',
+};

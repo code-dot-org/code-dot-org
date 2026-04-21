@@ -8,6 +8,12 @@ declare module '*.module.scss' {
   export default classes;
 }
 
+// Type definition for plain SCSS files imported in TypeScript files
+declare module '*.scss';
+
+// Type definition for plain CSS files imported in TypeScript files
+declare module '*.css';
+
 // Declaring dashboard as 'any' because it is not well documented.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const dashboard: any;
@@ -21,6 +27,12 @@ declare const DEBUG_MINIFIED: number;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const stylelint: any;
 
+// Imported markdown files are treated as raw strings
+declare module '*.md' {
+  const content: string;
+  export = content;
+}
+
 // Imported static files are treated as strings
 declare module '*.png' {
   const value: string;
@@ -32,11 +44,32 @@ declare module '*.svg' {
   export = value;
 }
 
+declare module '*.gif' {
+  const value: string;
+  export = value;
+}
+
+type WebLabInstance = {
+  getCode: () => Promise<string>;
+  channel?: string;
+};
+
+interface Window {
+  getWebLab?: () => WebLabInstance | undefined;
+  appOptions?: {
+    level?: {
+      aiTutorAvailable?: boolean;
+    };
+  };
+}
+
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
-declare module '@blockly/keyboard-experiment';
+declare module '@blockly/keyboard-navigation';
 declare module '@blockly/field-angle';
 declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';
 declare module '@cdo/locale';
 declare module '@code-dot-org/maze';
+declare module 'eslint-linter-browserify';
+declare module '@replit/codemirror-css-color-picker';

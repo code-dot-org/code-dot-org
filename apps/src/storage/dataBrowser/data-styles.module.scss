@@ -54,14 +54,14 @@ $max-cell-width: 350px;
   text-align: center;
   vertical-align: middle;
 
+  &RightMargin {
+    margin-right: 10px;
+    min-width: 60px;
+  }
+
   &White {
     background-color: white;
     color: black;
-
-    &Edit {
-      margin-right: 10px;
-      min-width: 60px;
-    }
   }
 
   &Red {
@@ -91,4 +91,10 @@ $max-cell-width: 350px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 4px 6px;
+}
+
+.buttonText {
+  & span {
+    font-weight: 400 !important;
+  }
 }

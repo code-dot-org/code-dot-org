@@ -53,6 +53,6 @@
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:34.372+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level6_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level6_2024\"},{\"changed_at\":\"2025-05-14 21:18:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:34.372+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level6_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level6_2024\"},{\"changed_at\":\"2025-05-14 21:18:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 17:39:19 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Panels>

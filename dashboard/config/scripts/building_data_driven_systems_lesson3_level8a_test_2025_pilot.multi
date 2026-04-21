@@ -1,0 +1,26 @@
+name 'building-data-driven-systems-lesson3-level8a-test_2025-pilot'
+title 'Helper Functions'
+question 'Think about the helper functions you created in the Social Media Story Scheduler. Why is it important to group these updates inside a single helper function?'
+wrong 'It makes the code run significantly faster because the computer processes functions more quickly than individual commands.'
+right 'It ensures that every array is updated together, preventing data at the same index from becoming mismatched.'
+wrong 'JavaScript requires all array methods (like .push() or .pop()) to be written inside a function; they will cause an error if written otherwise'
+wrong 'It automatically updates the HTML on the screen without needing to call a separate render() function.'
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+### **Question**
+In your "Social Media Story Scheduler," you wrote helper functions like `addUrgentAlert()` that updated multiple arrays (e.g., `titles`, `dates`, and `views`) at the same time.
+
+**Why is it important to group these updates inside a single helper function?**
+
+#### **Answers**
+
+* **A.** It ensures that every array is updated together, preventing data at the same index from becoming mismatched. (Correct)
+    * *Feedback:* Correct! If you update one array but forget another, the data at index 0 in the first array might not match the data at index 0 in the second array anymore.
+* **B.** It makes the code run significantly faster because the computer processes functions more quickly than individual commands.
+    * *Feedback:* Incorrect. While functions help organize code, they don't necessarily make the computer run the logic faster. The main benefit here is organizing your data logic.
+* **C.** JavaScript requires all array methods (like `.push()` or `.pop()`) to be written inside a function; they will cause an error if written globally.
+    * *Feedback:* Incorrect. Array methods can be used anywhere in your code. We chose to put them in a function to keep our data safe and organized.
+* **D.** It automatically updates the HTML on the screen without needing to call a separate `render()` function.
+    * *Feedback:* Incorrect. The helper function updates the *data* in the arrays, but you still usually need to call a `render()` function afterwards to show those changes on the screen.
+MARKDOWN

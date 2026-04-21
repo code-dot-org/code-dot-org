@@ -1,8 +1,7 @@
 import {RenameFolderFunction} from '@codebridge/codebridgeContext/types';
 import {FolderId} from '@codebridge/types';
-import {validateFolderName} from '@codebridge/utils';
+import {validateFolderNameForModal} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -16,7 +15,7 @@ type RenameNewFilePromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   renameFolder: RenameFolderFunction;
   projectFolders: MultiFileSource['folders'];
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openRenameFolderPrompt = async ({
@@ -24,24 +23,30 @@ export const openRenameFolderPrompt = async ({
   dialogControl,
   renameFolder,
   projectFolders,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 }: RenameNewFilePromptArgsType) => {
   const folder = projectFolders[folderId];
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.renameFolder(),
+    title: 'Rename folder',
+    message: 'Give your folder a new name.',
+    textFieldProps: {
+      label: 'New folder name',
+    },
+    confirmButtonText: 'Rename folder',
     value: folder.name,
     validateInput: (newName: string) => {
       if (!newName.length || newName === folder.name) {
         return;
       }
 
-      return validateFolderName({
+      return validateFolderNameForModal({
         folderName: newName,
         parentId: folder.parentId,
         projectFolders,
       });
     },
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
@@ -50,5 +55,5 @@ export const openRenameFolderPrompt = async ({
 
   const newName = extractUserInput(results);
   renameFolder(folderId, newName);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER);
 };

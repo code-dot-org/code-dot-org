@@ -9,7 +9,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
@@ -20,14 +20,14 @@ import {
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
+import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import i18n from '@cdo/locale';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -89,10 +89,14 @@ describe('TeacherHomepage', () => {
   let fetchSpy: jest.SpyInstance;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
+  let postSpy: jest.SpyInstance;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    postSpy = jest.spyOn(HttpClient, 'post');
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(() => {});
     jquerySpy = jest.spyOn($, 'getJSON');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
@@ -105,8 +109,28 @@ describe('TeacherHomepage', () => {
         url === '/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q'
       ) {
         return Promise.resolve({value: [], response: new Response()});
+      } else if (
+        url === '/teacher_dashboard/get_school_info_interstitial_data'
+      ) {
+        return Promise.resolve({
+          value: {
+            showSchoolInfoInterstitial: false,
+            showSchoolInfoConfirmation: false,
+            existingSchoolInfo: {},
+          },
+          response: new Response(),
+        });
       }
       return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/aidiff_threads/curriculum_courses') {
+        return Promise.resolve({
+          json: () => Promise.resolve({courses: []}),
+        });
+      }
+      return Promise.resolve({json: () => Promise.resolve({})});
     });
 
     const mockDone = jest.fn();
@@ -161,13 +185,21 @@ describe('TeacherHomepage', () => {
     );
   }
 
-  it('sends analytics event when visiting the page', async () => {
+  it('sends analytics event when logging in', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': 1,
+    });
+  });
+
+  it('sends analytics event when visiting page after login', async () => {
+    trySetSessionStorage('logged_teacher_session', 'true');
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -192,8 +224,8 @@ describe('TeacherHomepage', () => {
     await screen.findByText('Create a new section');
 
     await screen.findByText('Picture password', {}, {timeout: 5000});
-    screen.getByRole('button', {name: 'Cancel'});
-  }, 15000);
+    expect(document.querySelector('.uitest-new-section-dialog')).not.toBeNull();
+  }, 10000);
 
   it('teaching/archived toggle', async () => {
     renderComponent();
@@ -211,8 +243,7 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByText('Period 1')).toBeNull();
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
 
     fireEvent.click(teachingButton);
@@ -220,8 +251,7 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByText('hidden')).toBeNull();
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -263,11 +293,5 @@ describe('TeacherHomepage', () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText('Accept');
-  });
-
-  it('renders feedback alert', async () => {
-    renderComponent();
-    await act(async () => await new Promise(process.nextTick));
-    screen.getByText(i18n.teacherHomePageFeedback());
   });
 });

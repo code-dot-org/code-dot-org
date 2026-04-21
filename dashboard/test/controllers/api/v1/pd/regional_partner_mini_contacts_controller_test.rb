@@ -6,7 +6,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
     state = 'OH'
     zip = '45242'
 
-    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner = create(:regional_partner, name: "partner_OH_45242")
     regional_partner.mappings.find_or_create_by!(state: state)
     regional_partner.mappings.find_or_create_by!(zip_code: zip)
 
@@ -15,7 +15,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
 
   test 'create returns error if email is missing' do
     zip = '12345'
-    regional_partner = create :regional_partner
+    regional_partner = create(:regional_partner)
     regional_partner.mappings.find_or_create_by!(zip_code: zip)
     form_data = build(:pd_regional_partner_mini_contact_hash).
       merge("email" => "", "zip" => zip)

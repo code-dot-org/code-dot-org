@@ -1,7 +1,10 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import {DEFAULT_KEY} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {
   InstrumentEventValue,
@@ -10,8 +13,9 @@ import {
 import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
-  isNoteAvailableInScaleMode,
+  getNoteColorInfo,
   TuneGraphEvent,
+  getDisplayNotes,
 } from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
@@ -31,8 +35,8 @@ interface FieldTuneOptions {
  * A custom field that renders the tune selection UI, used in the
  * "play_tune" block. The UI is rendered by {@link InstrumentGrid}.
  */
-export default class FieldTune extends GoogleBlockly.Field {
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+export default class FieldTune extends BlocklyCore.Field {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as FieldTuneOptions;
     return new FieldTune(options);
   }
@@ -66,7 +70,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     }
 
     this.backgroundElement =
-      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+      BlocklyCore.utils.dom.createSvgElement<SVGGraphicsElement>(
         'g',
         {
           transform: 'translate(1,1)',
@@ -78,7 +82,7 @@ export default class FieldTune extends GoogleBlockly.Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -104,10 +108,10 @@ export default class FieldTune extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
-        fill: color.neutral_dark90,
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -118,7 +122,13 @@ export default class FieldTune extends GoogleBlockly.Field {
     );
 
     const {events, scaleMode, relative} = this.getValue();
-    const key = MusicRegistry.player.getKey();
+    const workspace = this.getSourceBlock()?.workspace;
+
+    // Embedded workspaces do not use a player, so we use the default key.
+    let key = DEFAULT_KEY;
+    if (workspace && !Blockly.isEmbeddedWorkspace(workspace)) {
+      key = MusicRegistry.player.getKey();
+    }
 
     const mapFn = relative
       ? (event: InstrumentTickEvent) => ({
@@ -127,10 +137,20 @@ export default class FieldTune extends GoogleBlockly.Field {
         })
       : (event: InstrumentTickEvent) => event;
 
+    const displayNotes = getDisplayNotes(
+      'notes',
+      scaleMode,
+      this.getValue().instrument,
+      key
+    );
+
     const notes = events
       .map(mapFn)
-      .filter((event: InstrumentTickEvent) =>
-        isNoteAvailableInScaleMode(key, event.note, scaleMode)
+      .filter(
+        (event: InstrumentTickEvent) =>
+          displayNotes.findIndex(
+            displayNote => displayNote.note === event.note
+          ) !== -1
       );
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
@@ -144,15 +164,21 @@ export default class FieldTune extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      const {selectedColor} = getNoteColorInfo(
+        scaleMode,
+        displayNotes.findIndex(
+          displayNote => displayNote.note === graphNote.note
+        )
+      );
+
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#68d1f7',
+          fill: selectedColor,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
           height: graphNote.height,
-          rx: 1,
         },
         this.backgroundElement
       );
@@ -176,15 +202,15 @@ export default class FieldTune extends GoogleBlockly.Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    GoogleBlockly.DropDownDiv.getContentDiv().appendChild(editor);
+    BlocklyCore.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
-    GoogleBlockly.DropDownDiv.setColour(
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
+    BlocklyCore.DropDownDiv.setColour(
       style.colourPrimary,
       style.colourTertiary
     );
 
-    GoogleBlockly.DropDownDiv.showPositionedByField(
+    BlocklyCore.DropDownDiv.showPositionedByField(
       this,
       this.disposeDropdown.bind(this)
     );
@@ -208,7 +234,7 @@ export default class FieldTune extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(InstrumentGrid, {
         // Make a copy of the value object so that we don't overwrite Blockly's data.
         initialValue: JSON.parse(JSON.stringify(this.getValue())),
@@ -216,7 +242,10 @@ export default class FieldTune extends GoogleBlockly.Field {
         onChange: this.onValueChange,
         lengthMeasures: 1,
       }),
-      this.newDiv
+      this.newDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

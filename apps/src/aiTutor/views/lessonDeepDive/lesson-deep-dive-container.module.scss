@@ -1,0 +1,105 @@
+// 50px = .header-wrapper height (application.scss .header-wrapper)
+$header-height: 50px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$header-height});
+  width: 100%;
+  overflow: hidden;
+  background-color: #121212;
+  color: #e8e8f2;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 40px;
+
+  @media (max-width: 480px) {
+    padding: 20px 16px;
+  }
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #242424;
+  flex-shrink: 0;
+}
+
+.bottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-top: 1px solid #242424;
+  flex-shrink: 0;
+}
+
+@keyframes fizz-rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 0.35;
+  }
+  100% {
+    /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+    transform: translateY(-95vh) translateX(var(--fizz-drift, 0)) scale(0.1);
+    opacity: 0;
+  }
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #c8c8e0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  @media (max-width: 480px) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    background-color: #1e1e1e;
+    color: #e8e8f2;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #6b9fd4;
+    outline-offset: 2px;
+  }
+}
+
+.fizzyButton {
+  position: relative;
+}
+
+.fizzBubble {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fizz-rise ease-out forwards;
+}
+
+.pageIndicator {
+  font-size: 14px;
+  color: #9898b8;
+  min-width: 48px;
+  text-align: center;
+}

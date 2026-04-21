@@ -1,6 +1,6 @@
 name 'computer-systems-lesson1-level10c_2025'
 title 'Hardware Engineer'
-description 'Explore how these engineers design and build the physical components of computers and other devices.'
+bubble_choice_description 'Explore how these engineers design and build the physical components of computers and other devices.'
 display_name 'Hardware Engineer'
 thumbnail_url 'https://images.code.org/2e18b79a9b212429ffc4f6ed9c425b49-Pasted%20Graphic.png'
 

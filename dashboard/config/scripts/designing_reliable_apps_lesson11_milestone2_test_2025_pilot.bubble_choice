@@ -1,0 +1,12 @@
+name 'designing-reliable-apps-lesson11-milestone2-test_2025-pilot'
+display_name 'Milestone Two Hub'
+description 'Transform your static list into an interactive experience where user clicks reveal additional information without reloading the page.'
+
+sublevels
+level 'designing-reliable-apps-lesson11-milestone2-level1-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone2-level2b-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone2-level2c-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone2-level2d-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-milestone2-level2e-test_2025-pilot'
+
+uses_lab2

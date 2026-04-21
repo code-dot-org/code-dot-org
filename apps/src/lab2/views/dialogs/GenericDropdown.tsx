@@ -2,13 +2,16 @@ import {
   SimpleDropdown,
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useEffect} from 'react';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
-export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
+export type GenericDropdownProps = Pick<
+  GenericDialogProps,
+  'title' | 'useModal'
+> & {
   dropdownLabel: string;
   handleConfirm?: (Dropdown: string) => void;
   handleCancel?: () => void;
@@ -34,7 +37,11 @@ const GenericDropdownBody: React.FunctionComponent<
 > = ({message, dropdownLabel, handleInputChange, items, selectedValue}) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
+      {message && (
+        <Typography variant="body2" gutterBottom>
+          {message}
+        </Typography>
+      )}
       <SimpleDropdown
         name="dialog-dropdown"
         items={items}
@@ -60,6 +67,7 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
   confirmText,
   neutralText,
   neutralDestructive,
+  useModal = false,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
 
@@ -106,6 +114,7 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
         />
       }
       buttons={buttons}
+      useModal={useModal}
     />
   );
 };

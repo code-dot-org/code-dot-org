@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
@@ -90,7 +91,7 @@ describe('SessionAttendance', () => {
     server.restore();
   });
 
-  it('renders', () => {
+  it('renders', async () => {
     const wrapper = mount(<SessionAttendance {...DEFAULT_PROPS} />);
 
     // Displays a spinner at first while it waits for the server to provide
@@ -99,7 +100,9 @@ describe('SessionAttendance', () => {
     expect(server.requests).to.have.length(1);
 
     // After the server responds
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
     wrapper.update();
     // Has expected columns:
     expect(
@@ -122,13 +125,15 @@ describe('SessionAttendance', () => {
     wrapper.unmount();
   });
 
-  it('includes "Attended" column if course is CSF', () => {
+  it('includes "Attended" column if course is CSF', async () => {
     const wrapper = mount(
       <SessionAttendance {...DEFAULT_PROPS} course={COURSE_CSF} />
     );
 
     // After the server responds
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
     wrapper.update();
     // Has expected columns:
     expect(
@@ -148,13 +153,13 @@ describe('SessionAttendance', () => {
     wrapper.unmount();
   });
 
-  it('includes scholarship columns for scholarship workshops', () => {
+  it('includes scholarship columns for scholarship workshops', async () => {
     const wrapper = mount(
       <SessionAttendance {...DEFAULT_PROPS} scholarshipWorkshop={true} />
     );
 
     // After the server responds
-    server.respond();
+    await act(() => server.respond());
     wrapper.update();
     // Has expected columns:
     expect(

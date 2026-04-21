@@ -12,7 +12,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     @good_image_jpg = File.read('test/fixtures/playlab_image.jpg', binmode: true)
     @bad_image = "xjxgaiks"
 
-    @level_source = create :level_source
+    @level_source = create(:level_source)
   end
 
   test "save to s3" do
@@ -33,7 +33,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     expect_s3_upload.twice # once for the original image, 2nd time for framed image
 
     artist_level = create(:artist)
-    level_source = create :level_source, level: artist_level
+    level_source = create(:level_source, level: artist_level)
     level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
     assert level_source_image.save_to_s3(@good_image_png)
   end
@@ -42,7 +42,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     expect_s3_upload.twice # once for the original image, 2nd time for framed image
 
     artist_level = create(:artist)
-    level_source = create :level_source, level: artist_level
+    level_source = create(:level_source, level: artist_level)
     level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
     assert level_source_image.save_to_s3(@good_image_jpg)
   end
@@ -51,7 +51,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     expect_no_s3_upload
 
     artist_level = create(:artist)
-    level_source = create :level_source, level: artist_level
+    level_source = create(:level_source, level: artist_level)
     level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
     refute level_source_image.save_to_s3(@bad_image)
   end

@@ -38,7 +38,8 @@
     "bubble_choice_description": "Turn your images into links.",
     "thumbnail_url": "https://images.code.org/fcc5f5dfd9ccefb83cd36a645126d255-image-1587970473527.54.18 PM.png",
     "encrypted_examples": "jhJ2RvtXMg6HaSXBIB9jc1REqLmWRa+nemJCkx8RPBDfVyD7qTYVindeZJVE\n2gM4TtPqZi9jIfox47n6wwYvYw==\n",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

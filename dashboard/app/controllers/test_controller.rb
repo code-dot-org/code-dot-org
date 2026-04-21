@@ -71,13 +71,22 @@ class TestController < ApplicationController
     )
   end
 
-  def create_student_section_assigned_to_script
+  def create_student_section_assigned_to_course_and_unit
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    unit_group = UnitGroup.find_by_name!(params.require(:course_name))
+    unit_position = params.require(:unit_position).to_i
+    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    unit = unit_group_unit.script
 
-    section = script.unit_group&.single_unit_course? ?
-                Section.create!(name: "New Section", user: user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-                Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    ai_chat_access_level = AichatAccessHelper.compute_ai_chat_access_level(unit_group)
+    section = Section.create!(name: "New Section",
+                              user: user,
+                              script: unit,
+                              unit_group: unit_group,
+                              participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+                              ai_chat_access_level: ai_chat_access_level
+)
 
     render json: {section_code: section.code}
   end
@@ -90,8 +99,12 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
-    course = UnitGroup.find_by_name(params.require(:course_name))
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
 
     teacher_email = params[:teacher_email]
     if teacher_email
@@ -110,7 +123,7 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -138,39 +151,32 @@ class TestController < ApplicationController
     end
 
     section_name = params[:section_name] || "New Section"
-    section = Section.create(name: section_name, user: teacher_user, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    unit = course.single_unit_course? ? course.default_unit_group_units.first.script : nil
+    section = Section.create!(name: section_name, user: teacher_user, course_id: course.id, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
+
+    user.assign_script(unit, course) if unit
+
     head :ok
   end
 
-  def assign_script_as_student
-    return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+  def assign_section_to_course_and_unit
+    return unless (teacher = current_user)
 
-    teacher_email = params[:teacher_email]
-    if teacher_email
-      teacher_user = User.find_by_email(teacher_email)
-    else
-      name = "Fake User"
-      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-      password = name + "password"
-      attributes = {
-        name: name,
-        email: email,
-        password: password,
-        user_type: "teacher",
-        age: "21+"
-      }
-      teacher_user = User.create!(attributes)
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position)
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
+
+    section = teacher.sections[params.require(:section_position).to_i - 1]
+    section.update!(unit_group: unit_group, script: unit)
+    section.students.each do |student|
+      student.assign_script(unit, unit_group)
     end
 
-    # Need to also assign the course if the script is a part of a single-unit course
-    section = script.unit_group&.single_unit_course? ?
-                Section.create(name: "New Section", user: teacher_user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-                Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    section.students << user
-    section.save!
     head :ok
   end
 
@@ -420,9 +426,18 @@ class TestController < ApplicationController
   end
 
   def complete_unit
-    unit_name = params.require(:unit_name)
-    unit = Unit.find_by!(name: unit_name)
-    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    course_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    unit_group = course_context[:unit_group]
+    unit_group_unit = course_context[:unit_group_unit]
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    UserScript.create!(
+      user: current_user,
+      script: unit_group_unit.script,
+      unit_group: unit_group,
+      completed_at: Time.now
+    )
     head :ok
   end
 
@@ -434,6 +449,8 @@ class TestController < ApplicationController
       :email,
       :password,
       :password_confirmation,
+      :given_name,
+      :family_name,
       :name,
       :age,
       :username,
@@ -461,7 +478,7 @@ class TestController < ApplicationController
     )
     if user_params[:sso]
       user = User.new(**user_opts)
-      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name]}}), user_params)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name], given_name: user_params[:given_name], family_name: user_params[:family_name]}}), user_params)
       user.save!
     else
       user = User.create!(**user_opts)
@@ -475,5 +492,16 @@ class TestController < ApplicationController
     permission_request = ParentalPermissionRequest.find_by(user: current_user)
     Services::ChildAccount.grant_permission_request!(permission_request)
     head :ok
+  end
+
+  # Endpoint for testing DCDO mocking.
+  # @see /dashboard/test/ui/features/dcdo_mocking.feature
+  def get_dcdo
+    render json: {
+      fetched: DCDO.get('dcdo_mocking_test', nil),
+      stored: DCDO.instance_variable_get(:@datastore_cache)&.
+        instance_variable_get(:@datastore)&.
+        get('dcdo_mocking_test'),
+    }
   end
 end

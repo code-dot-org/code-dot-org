@@ -3,6 +3,7 @@
   "name": "Play Tune",
   "category": "Sounds",
   "category_key": "play",
+  "block_name": "play_tune_at_current_location_simple2",
   "content": "Create a melody of notes for different instruments",
   "palette_params": [
     {

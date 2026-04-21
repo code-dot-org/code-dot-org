@@ -3,7 +3,6 @@
 // A translucent overlay that covers the entire container.
 %full-container-overlay {
   background-color: rgba(0 0 0 / 0.5);
-  color: $neutral_dark;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -16,7 +15,6 @@
 }
 
 %dialog {
-  background-color: $neutral_light;
   border-radius: 5px;
   padding: 7px 20px;
   width: 80%;
@@ -38,9 +36,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: $neutral_dark90;
-    color: $neutral_light;
-    border: solid 1px $neutral_dark60;
+    background-color: var(--neutral-gray-95);
+    color: var(--neutral-gray-5);
+    border: solid 1px var(--neutral-gray-60);
     top: -15px;
 
     &FullWidth {
@@ -48,7 +46,7 @@
     }
 
     .heading {
-      color: $neutral_light;
+      color: var(--neutral-gray-5);
       margin: 0;
     }
 
@@ -82,6 +80,14 @@
       flex-direction: row;
       align-items: center;
       margin-top: 7px;
+
+      .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 14px;
+        width: 100%;
+      }
     }
 
     .packsContainer {
@@ -89,8 +95,8 @@
       height: 100%;
       overflow-y: auto;
       flex: 1;
-      background-color: $neutral_dark;
-      border: solid $neutral_dark 2px;
+      background-color: var(--neutral-base-black);
+      border: solid var(--neutral-base-black) 2px;
       box-sizing: border-box;
       border-radius: 5px;
 
@@ -105,7 +111,7 @@
           align-items: center;
 
           &Alternate {
-            background-color: #31373d;
+            background-color: #363E48;
           }
 
           &Selected {
@@ -177,50 +183,3 @@
   }
 }
 
-%button {
-  border: 2px solid;
-  transition: background-color 0.1s ease;
-  margin: 5px 0;
-
-  &:hover, &:active {
-    box-shadow: none;
-    border: 2px solid !important;
-  }
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 14px;
-  width: 100%;
-
-  .skip {
-    @extend %button;
-    background-color: initial;
-    color: $neutral_light;
-    border-color: $neutral_light;
-
-    &:hover, &:active {
-      background-color: $neutral_dark70;
-      border-color: $neutral_light !important;
-    }
-  }
-
-  .continue {
-    @extend %button;
-    background-color: $neutral_light;
-    border-color: $neutral_light;
-    color: $neutral_dark;
-
-    &:hover {
-      background-color: $neutral_light;
-      border-color: $neutral_light !important;
-    }
-
-    &Disabled {
-      opacity: 30%;
-      cursor: default;
-    }
-  }
-}

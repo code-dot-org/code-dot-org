@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:59:47.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/c79d5d876d7624f36fea0c5b92ba2d15-scenario1_a.png",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/2f6f17835aa7fec53215d2100c8fbd71-scenario1_b.png",
+        "key": "computer-systems-lesson3-onlineresources-1-c4575f2c-89c4-4fea-9958-6e355e5676f0"
+      },
+      {
+        "text": "**Subject**: “Z35 not logging steps – stops at random!”\n**Username**: FitTechFan220\n\n**Message**:\n\n“Has anyone else noticed that if your battery is too low, the Z35 tracker pretty much stops counting steps? It happened to me three times until I realized that I was down to 70% battery.\nAlso, if you haven’t cleared the stored data in over a week, you’ll hit the 20 MB cap and it won’t track new workouts. Plugging into your PC to offload the data fixes the issue.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-6f520c00-abc2-4c6f-83cb-59fc2fee94bf",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Excerpt from “*Quick Start Guide – Model Z35 Health Wearable*”\n\n**Content**:\n\n“This device requires frequent recharging. For best results, maintain a battery level above 80% during monitoring periods.”\n\n“If the device’s charge falls below 80%, its step-count feature and notification system may operate intermittently.”\n\n“Regularly transfer data to a computer to prevent storage from reaching the 20 MB limit.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-cdf9bada-48d5-443f-8edb-b133acbf4dd2",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**Platform**: MicroBloggers\n\n**User**: *@WearableGuru*\n\n**Post**:\n\n“Pro Tip for #Z35 users: \n\nIf you’re not hitting your milestones or seeing those celebratory messages, check two things:\n\n* Battery above 80% (the device conserves power aggressively and may not record steps if lower).\n* Sync your data at least once every few days—filling up that 20 MB limit = no new logs!\n\n## #FitnessTech #Troubleshooting #WearableWednesday”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "##FAQ Excerpt:\n\n**Q**: “My device stopped sending me celebratory texts and audio cues; what do I do?”\n\n**A**: “First, verify your wearable’s battery is fully charged (recommended minimum 80%). Then, confirm there is available memory (under 20 MB used). Clear old workout logs via your computer or the Z35 companion app if near capacity.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-9989f337-5219-42f9-86d6-9204105e8673"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:47.334+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson3-level1_2025\"}]"
+}]]></config>
+</Panels>

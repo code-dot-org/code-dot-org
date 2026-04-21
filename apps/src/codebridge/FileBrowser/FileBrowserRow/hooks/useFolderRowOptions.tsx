@@ -1,10 +1,11 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {useFileUploader, usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFolder} from '@codebridge/types';
 import {getPossibleDestinationFoldersForFolder} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Generates options for the context menu displayed for a folder row in the file browser.
@@ -21,9 +22,10 @@ export const useFolderRowOptions = (
   folder: ProjectFolder,
   startFileUpload: ReturnType<typeof useFileUploader>['startFileUpload']
 ) => {
-  const {
-    source: {folders: projectFolders},
-  } = useCodebridgeContext();
+  const projectFolders = useAppSelector(
+    state =>
+      (state.lab2Project.projectSources?.source as MultiFileSource).folders
+  );
 
   const {
     openConfirmDeleteFolder,

@@ -1,8 +1,4 @@
-import {
-  BodyThreeText,
-  Heading5,
-  OverlineTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -18,18 +14,22 @@ export const SkeletonTeacherPromo: React.FC = () => {
       aria-label={i18n.loading()}
       key="skeleton"
     >
-      <OverlineTwoText className={styles.promotionType}>
+      <Typography
+        className={styles.promotionType}
+        variant="overline2"
+        gutterBottom
+      >
         <Skeleton />
-      </OverlineTwoText>
-      <Heading5 className={styles.promotionTitle}>
+      </Typography>
+      <Typography className={styles.promotionTitle} variant="h5" gutterBottom>
         <Skeleton />
-      </Heading5>
+      </Typography>
       <div className={classNames(styles.promotionImage, styles.imageSkeleton)}>
         <Skeleton />
       </div>
-      <BodyThreeText>
+      <Typography variant="body3" gutterBottom>
         <Skeleton count={4} />
-      </BodyThreeText>
+      </Typography>
     </li>
   );
 };

@@ -1,8 +1,4 @@
-import Button, {LinkButton} from '@code-dot-org/component-library/button';
-import {
-  Heading3,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {useNavigate, NavLink} from 'react-router-dom';
 
@@ -15,7 +11,6 @@ import i18n from '@cdo/locale';
 import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 interface ElementOrEmptyPageProps {
   showNoStudents: boolean;
@@ -68,10 +63,27 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
         </NavLink>
       );
     } else if (showNoCurriculumAssigned) {
-      return <LinkButton href="/catalog" text={i18n.browseCurriculum()} />;
+      return (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          href="/catalog"
+        >
+          {i18n.browseCurriculum()}
+        </MuiButton>
+      );
     } else {
       return (
-        <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={navigateToCoursePage}
+          type="button"
+        >
+          {i18n.assignAUnit()}
+        </MuiButton>
       );
     }
   };
@@ -97,12 +109,14 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     return element;
   } else {
     return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        <div className={dashboardStyles.emptyClassroomImage}>
-          {displayedImage()}
-        </div>
-        <Heading3 className={styles.topPadding}>{heading}</Heading3>
-        <BodyTwoText>{textDescription()}</BodyTwoText>
+      <div className={styles.emptyClassroomDiv}>
+        <div className={styles.emptyClassroomImage}>{displayedImage()}</div>
+        <Typography className={styles.topPadding} variant="h3" gutterBottom>
+          {heading}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {textDescription()}
+        </Typography>
         {link()}
       </div>
     );

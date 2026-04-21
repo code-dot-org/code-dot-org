@@ -22,7 +22,7 @@
     "csppostap-2018",
     "csp-post-survey-2018"
   ],
-  "published_state": "stable",
+  "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

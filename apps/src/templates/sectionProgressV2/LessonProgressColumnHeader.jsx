@@ -7,9 +7,9 @@ import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
-import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {addExpandedLesson} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';

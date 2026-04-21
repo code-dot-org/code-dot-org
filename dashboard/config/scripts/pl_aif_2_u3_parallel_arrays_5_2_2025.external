@@ -1,0 +1,56 @@
+name 'pl-aif-2-U3-parallel-arrays-5-2_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Parallel Arrays
+
+#### Once you have a schema, one way to store the data in JavaScript is with **parallel arrays**. Each array represents one “column” from the schema, and the same index across arrays refers to the same item.
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"> 📖
+<strong>Parallel arrays-</strong> multiple arrays that stay “in sync” with each other
+</p>
+</div>
+
+---
+## Parallel Arrays in a Music App
+
+<img src="https://images.code.org/e3815e7ed54603e735e4cfb18bdef643-image-1765393090426.png" alt="code for arrays for the shcema in a music app- title, artist, length, favorite" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+#### **Here’s how to read this:**
+
+#### All of the values at index 0 describe the first song:
+
+- #### songTitles[0] → "Golden Hour"
+
+- #### songArtists[0] → "JVKE"
+
+- #### songLengths[0] → 210
+
+- #### songIsFavorite[0] → true
+
+#### All of the values at index 1 describe the second song, and so on.
+
+#### We call these **parallel arrays** because they run side-by-side and stay lined up by index. Each index acts like a “row” in a table.
+
+---
+
+## Why Schema and Parallel Arrays Matter in Your Teaching
+
+<div style="background-color:#f7f8fa; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 95%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"">
+  <img 
+    src="https://images.code.org/fe4fef3adb3a958ff0fc5afe01bdccc1-image-1765393562055.png" 
+    alt="icon of hand with hovering lightbulb" 
+    width="120px"
+    style="border-radius:10px; float:left; margin: 10px 30px 40px 20px;"
+  >
+
+  <h4>Using schema and parallel arrays helps students see data as organized and meaningful, not just a list of random values.</h4>
+
+  <h4>It also connects their work to real apps they recognize and gives them practice keeping data aligned across arrays.</h4>
+</div>
+
+
+MARKDOWN

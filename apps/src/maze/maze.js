@@ -1,9 +1,11 @@
+import {getCode, getAllGeneratedCode} from '@cdo/apps/blockly/utils';
+
 import {TestResults, ResultType} from '../constants';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 
 const maze = require('@code-dot-org/maze');
 const React = require('react');
-const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
 const containedLevels = require('../containedLevels');
@@ -151,8 +153,6 @@ module.exports = class Maze {
         // This prevents students from overriding these with their own
         // functions/variables.
         Blockly.JavaScript.addReservedWords('Maze,code');
-
-        Blockly.setInfiniteLoopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
@@ -214,14 +214,17 @@ module.exports = class Maze {
       />
     );
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={studioApp().init.bind(studioApp(), config)}
         />
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -290,9 +293,6 @@ module.exports = class Maze {
       resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
     studioApp().toggleRunReset('reset');
-    if (studioApp().isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
-    }
     studioApp().reset(false);
     studioApp().attempts++;
   }
@@ -317,9 +317,7 @@ module.exports = class Maze {
 
     let code = '';
     if (studioApp().isUsingBlockly()) {
-      code = Blockly.cdoUtils.getAllGeneratedCode(
-        studioApp().initializationCode
-      );
+      code = getAllGeneratedCode(studioApp().initializationCode);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();
@@ -478,7 +476,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      program = getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;

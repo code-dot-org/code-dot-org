@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question13_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 13'
+
+wrong 'Parameters are values that functions return; arguments are used to call functions'
+wrong 'Arguments must always be strings, while parameters must be numbers'
+right 'Parameters define what input a function expects; arguments are actual values passed when calling the function'
+wrong 'There is no difference'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the difference between a **parameter** and an **argument** in Python?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Functions with Parameters
+MARKDOWN

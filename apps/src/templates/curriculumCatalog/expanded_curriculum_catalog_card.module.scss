@@ -131,21 +131,26 @@ $container-width: 960px;
 
 .iconWithDescription {
   display: flex;
+  align-items: center;
   column-gap: 8px;
   white-space: nowrap;
 
   > p {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     margin: 0;
     color: $neutral_dark;
   }
 
   i {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     color: $neutral_dark80;
-    align-self: flex-start;
-    padding-top: 4px;
+    line-height: 1.48;
   }
+}
+
+.aiBotIcon.aiBotIcon {
+  color: $light_aqua_700;
+  font-size: 1rem;
 }
 
 p.subjectsText {
@@ -169,7 +174,8 @@ p.subjectsText {
   }
 }
 
-.professionalLearningContainer, .relatedContainer {
+.professionalLearningContainer,
+.relatedContainer {
   a {
     color: $brand_secondary_default !important;
     text-decoration: underline !important;
@@ -195,7 +201,7 @@ p.subjectsText {
   }
 
   .relatedCurriculaLink:hover {
-    color: $brand_secondary_dark
+    color: $brand_secondary_dark;
   }
 
   h4 {

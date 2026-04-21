@@ -1,0 +1,48 @@
+name 'csaif_pl_ai_01_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat Lab
+
+#### The LLM you and your students will use throughout this Unit and the Foundations of AI course is called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
+</div>
+
+#### When you try out the AI Chat Lab, you’ll see how the AI uses your prompts to generate its replies. As you experiment, you'll how how the AI responds and how the wording of your prompt shapes what it says.
+
+<br>
+
+<img src="https://images.code.org/4fdd0f05f507d43b70c1665874ac2d18-Screenshot 2024-10-17 at 10.27.22 AM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
+<br>
+
+#### While there is much more happening under the hood, a simple way to think about it is this: *The AI looks at your prompt and tries to choose the next word that best fits, much like how we can often predict the next word in a familiar sentence.*
+
+#### It does this using probability: based on patterns it has learned from large amounts of text, the AI estimates which words are most likely to come next and selects from those possibilities.
+
+---
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<h2>Introducing AI Chat Lab</h2>
+
+<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
+
+<p style = "font-size:14pt;">Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the curriculum. This allows students to explore generative AI in an authentic and secure way without leaving the platform.</p>
+
+<p style = "font-size:14pt;">AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>
+
+<ul style = "font-size:14pt;">
+	<li>The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.</li><br>
+    <li>Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.</li>
+</ul>
+
+<p style = "font-size:14pt;">You'll get a chance to try out AI Chat Lab on the next level.</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ Support Article</a>.
+</p>
+
+</div>
+MARKDOWN

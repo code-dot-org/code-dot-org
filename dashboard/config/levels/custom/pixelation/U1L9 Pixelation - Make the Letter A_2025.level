@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "short_instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. You'll need to use the sliders to set the correct dimensions before you start entering the pixel data.",
-    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Task 1: Make a 3x5 letter 'A'\r\nStart by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. You'll need to use the sliders to set the correct dimensions before you start entering the pixel data.\r\n",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"/blockly/media/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Task 1: Make a 3x5 letter 'A'\r\nStart by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. You'll need to use the sliders to set the correct dimensions before you start entering the pixel data.\r\n",
     "version": "1",
     "href": "pixelation/pixelation.html",
     "skip_dialog": true,
@@ -18,7 +18,8 @@
     "name_suffix": "_2025",
     "encrypted": "false",
     "v1_initial_width": "10",
-    "v1_initial_height": "10"
+    "v1_initial_height": "10",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

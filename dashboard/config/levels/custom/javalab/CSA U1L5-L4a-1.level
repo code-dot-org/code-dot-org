@@ -359,7 +359,7 @@
     "parent_level_id": 29352,
     "bubble_choice_description": "Create a new Painter using the parameterized constructor to navigate around The Neighborhood.",
     "thumbnail_url": "https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-07-30T13:50:11.079+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4a\\\"\"],\"cloned_from\":\"CSA U1L5-L4a\"},{\"changed_at\":\"2021-07-30 13:50:19 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:23:42 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:25:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-02 17:33:02 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

@@ -114,7 +114,21 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<div class="tooltip-x-close"/>'),
+          button: $(
+            '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"/>'
+          )
+            .on('keydown', function (e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); // Prevent default behavior for Enter
+                $(this).trigger('click'); // Trigger click on Enter key
+              }
+            })
+            .on('keyup', function (e) {
+              if (e.key === ' ' || e.code === 'Space') {
+                e.preventDefault(); // Prevent page scrolling
+                $(this).trigger('click'); // Trigger click on Space key
+              }
+            }),
         },
       },
       style: {
@@ -175,7 +189,7 @@ export function addCallouts(callouts) {
     }
 
     // If the callout is in #codeWorkspace and is not currently visible,
-    // we don't want to show it on page load. This is because Google Blockly
+    // we don't want to show it on page load. This is becauses Blockly
     // labs can have a hidden (on start) function editor workspace that we don't
     // want to show callouts for.
     const container = $('#codeWorkspace');

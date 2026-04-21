@@ -46,7 +46,8 @@
     },
     "name_suffix": "_2025",
     "display_name": "Troubleshooting Bot",
-    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-22T01:54:56.520+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson13-level2-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson13-level2-2024\"}]"

@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import {
   blankStudentTransfer,
@@ -51,7 +52,7 @@ describe('MoveStudents', () => {
     expect(dropdownOptions[1].name).toBe('Other teacher');
   });
 
-  it('renders additional inputs if other teacher is selected', () => {
+  it('renders additional inputs if other teacher is selected', async () => {
     const transferData = {
       ...blankStudentTransfer,
       otherTeacher: true,
@@ -60,7 +61,9 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    wrapper.instance().openDialog();
+    await act(async () => {
+      wrapper.instance().openDialog();
+    });
     wrapper.update();
     expect(wrapper.find('#uitest-other-teacher').exists()).toBe(true);
   });

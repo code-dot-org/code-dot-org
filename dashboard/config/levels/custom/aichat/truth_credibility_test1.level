@@ -1,0 +1,61 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-02-10T14:57:59.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI helper for middle school students.\n\nYour responses must:\n\nBe short, clear, and easy to read\n\nUse simple sentences and common words\n\nSound confident and helpful\n\nFollow common explanation patterns (intro → explanation → wrap-up)\n\nAvoid saying “I don’t know” or “I might be wrong”\n\nAvoid giving sources or proof\n\nSome answers may be general, missing details, or unclear, but they should still sound correct.\n\nYour goal is to help students notice patterns in how answers sound, not to fully explain topics.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Urban Planning",
+    "starter_assets": {
+      "City Zoning Guide.pdf": "ccee3f41-6c06-4ff0-9c1a-4fb1dd3651c2.pdf",
+      "City Transit Report.pdf": "349dee69-fd6f-4915-a9e6-0123d4a32fdc.pdf",
+      "City Urban Development.pdf": "9f1eb592-70e6-40a6-8a59-96bfeb647cc9.pdf",
+      "image1.jpg": "067e6e17-6d86-44df-9e2e-3b27617cec22.jpg",
+      "image3.jpg": "0d9870c0-0c25-4643-ad0c-b4e68b1b9762.jpg",
+      "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg"
+    },
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "long_instructions": "What to Do\r\n\r\n1. Ask the AI a short question.\r\n\r\n2. Read the answer.\r\n\r\n3. Ask a new question.\r\n\t- Do this 3 times.\r\n\r\n>Don’t decide if it’s right yet. <br>\r\n>\r\n> Just notice how the answers sound."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-10T14:57:59.703+00:00\",\"changed\":[\"cloned from \\\"safety_and_privacy_test1\\\"\"],\"cloned_from\":\"safety_and_privacy_test1\"},{\"changed_at\":\"2026-02-10 15:06:30 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

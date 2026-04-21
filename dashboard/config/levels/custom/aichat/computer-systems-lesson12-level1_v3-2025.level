@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-25T21:50:47.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a student-friendly AI assistant helping high school students explore AI authorship and ownership through creative generation.\nStart every interaction by asking the student which scenario they are working on (e.g., “Admissions,” “Predictive Policing,” or “Smart Sensors in Classrooms”).\n\nOnce the student selects a scenario, help them generate a short artifact (such as a letter, dialogue, message, or short description) that connects to the ethical theme of that scenario.\nProvide sample prompts they can choose from or adapt, and encourage creativity and variety in tone or perspective.\n\nAfter the artifact is generated, ask short reflective questions such as:\n\n“Who do you think should get credit for this piece—you, the AI, or both?”\n\n“Would this count as student work?”\n\n“How could someone label this to show AI helped create it?”\n\nKeep your responses concise, clear, and friendly.\nUse accessible language and connect ideas to fairness, creativity, and responsibility when discussing authorship.\nEnd each chat by inviting the student to explore or review another scenario.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "## AI Artifact Station\r\n\r\nThis chatbot helps you explore the idea of **authorship and ownership** in AI-generated work.  \r\nYou’ll use the AI chat to create a short artifact inspired by one of the ethical scenarios below.\r\n\r\n### Instructions\r\n1. **Choose a scenario** from the list below.  \r\n2. **Open** its pane to see sample prompts.  \r\n3. **Ask the chatbot** to generate your artifact.  \r\n4. **Discuss** with your group who deserves credit for the work — you, the AI, or both.\r\n\r\n---\r\n\r\n<details>\r\n<summary>🎓 AI Artifact Station: Admissions and Artifacts (Scenario 1)</summary>\r\n\r\nUse the chatbot to generate a short artifact inspired by this scenario.  \r\n\r\n**Try one of these prompts, or make your own:**  \r\n- Write a short acceptance letter from an AI admissions tool.  \r\n- Generate a short conversation between a student and an AI system about what “fairness” means in admissions.  \r\n- Write a student essay that might confuse an AI admissions tool.  \r\n\r\n*Paste your artifact, or a snippet of it, in the space on the next slide.*  \r\n</details>\r\n\r\n---\r\n\r\n<details>\r\n<summary>🏙️ AI Artifact Station: Predictive Policing (Scenario 2)</summary>\r\n\r\nUse the chatbot to generate a short artifact inspired by this scenario.  \r\n\r\n**Try one of these prompts, or make your own:**  \r\n- Write a city announcement introducing an AI policing system.  \r\n- Create a short dialogue between a police chief and a civil rights advocate.  \r\n- Write a message from the AI system explaining how it makes predictions.  \r\n\r\n*Paste your artifact, or a snippet of it, in the space on the next slide.*  \r\n</details>\r\n\r\n---\r\n\r\n<details>\r\n<summary>🏫 AI Artifact Station: Smart Sensors in Classrooms (Scenario 3)</summary>\r\n\r\nUse the chatbot to generate a short artifact inspired by this scenario.  \r\n\r\n**Try one of these prompts, or make your own:**  \r\n- Write a note from a smart sensor about what it observes in class.  \r\n- Create a short dialogue between a student and teacher about being monitored.  \r\n- Write a school announcement introducing the new classroom sensors.  \r\n\r\n*Paste your artifact, or a snippet of it, in the space on the next slide.*  \r\n</details>",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-25T21:50:47.018+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson9-level3_v2-2025\\\"\"],\"cloned_from\":\"computer-systems-lesson9-level3_v2-2025\"},{\"changed_at\":\"2025-10-25 22:00:39 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

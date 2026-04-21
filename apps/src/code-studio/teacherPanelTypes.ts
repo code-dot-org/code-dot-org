@@ -4,6 +4,9 @@
 export interface LevelWithProgress {
   userId: number;
   status: string;
+  attempts?: number;
+  timeSpent?: number;
+  updatedAt?: string;
 }
 
 export interface TeacherPanelState {

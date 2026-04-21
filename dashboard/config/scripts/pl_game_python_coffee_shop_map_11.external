@@ -1,0 +1,24 @@
+name 'pl-game-python-coffee-shop-map-11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Start your Quest for the Cup of Logic
+
+####  You’re nearing the Neighborhood Café, weaving around construction cones and detour signs. Just as you reach the corner, a gust of wind scatters a stack of newspapers—and from beneath the pile, something flutters to your feet.
+
+#### It’s a Café Challenge Card—a mysterious guide outlining five signature coding tasks. Complete them all, and you just might earn the coveted Cup of Logic.
+
+
+
+
+<img 
+  src="https://images.code.org/bb5ffd44445eb05cfc90ec82311ee02f-image-1749136138885.png" 
+  alt="List of tasks: Dodge the Detour, Organize the Order Board, Tame the Till, The Donut Dilemma, and The Perfect Stir" 
+  width="850px" 
+  style="display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+
+
+
+## ☕Let the challenge begin—your Python journey is brewing!
+MARKDOWN

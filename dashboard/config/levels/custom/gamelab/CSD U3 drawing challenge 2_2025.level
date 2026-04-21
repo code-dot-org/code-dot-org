@@ -84,6 +84,7 @@
     "bubble_choice_description": "Learn how to draw points on the screen and use them to draw a ladybug",
     "libraries_enabled": "false",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

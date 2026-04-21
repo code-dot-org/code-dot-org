@@ -12,7 +12,6 @@ import {
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
@@ -41,32 +40,12 @@ class ProgressLessonTeacherInfo extends React.Component {
   constructor(props) {
     super(props);
     this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
-    this.firehoseData = this.firehoseData.bind(this);
   }
 
   onClickHiddenToggle(value) {
     const {unitName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
     toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-lessons',
-        study_group: 'v0',
-        event: value,
-        data_json: JSON.stringify(this.firehoseData()),
-      },
-      {includeUserId: true}
-    );
-  }
-
-  firehoseData() {
-    const {unitName, section, lesson} = this.props;
-    return {
-      script_name: unitName,
-      section_id: section && section.id,
-      lesson_id: lesson.id,
-      lesson_name: lesson.name,
-    };
   }
 
   render() {
@@ -108,7 +87,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
-              icon="file-text"
+              icon="file-lines"
               color="blue"
               target="_blank"
               style={styles.button}
@@ -122,7 +101,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
-              icon="file-text"
+              icon="file-lines"
               color="purple"
               target="_blank"
               style={styles.button}
@@ -143,7 +122,6 @@ class ProgressLessonTeacherInfo extends React.Component {
               lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
             />
           </div>
@@ -159,7 +137,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               __useDeprecatedTag
               href={lesson.lesson_feedback_url}
               text={i18n.rateThisLesson()}
-              icon="bar-chart"
+              icon="chart-column"
               color={Button.ButtonColor.gray}
               target="_blank"
               style={styles.button}

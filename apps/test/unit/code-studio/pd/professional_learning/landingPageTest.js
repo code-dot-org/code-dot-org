@@ -69,7 +69,6 @@ const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
   showDeeperLearning: true,
-  currentYearApplicationId: 2024,
   hasEnrorolledInWorkshop: true,
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
@@ -126,12 +125,11 @@ describe('LandingPage', () => {
     );
   }
 
-  it('page shows a getting started banner for a new teacher without an existing application, upcoming workshop, self-paced courses, or pl course', async () => {
+  it('page shows a getting started banner for a new teacher without an upcoming workshop, self-paced courses, or pl course', async () => {
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
       deeperLearningCourseData: null,
-      currentYearApplicationId: null,
       hasEnrolledInWorkshop: false,
       plCoursesStarted: [],
     });
@@ -413,7 +411,6 @@ describe('LandingPage', () => {
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
     // Regional Partner resource center
-    screen.getByText(i18n.plSectionsRegionalPartnerApplicationTitle());
     screen.getByText(i18n.plSectionsWorkshopTitle());
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
@@ -1223,7 +1220,6 @@ describe('LandingPage', () => {
 
     describe('hideMyPLBanner', () => {
       let props = {
-        currentYearApplicationId: null,
         hasEnrorolledInWorkshop: false,
         plCoursesStarted: [],
       };

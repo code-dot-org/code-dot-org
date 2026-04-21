@@ -31,6 +31,7 @@ class Pythonlab < Level
     hide_share_and_remix
     is_project_level
     submittable
+    disable_edit_run_for_submission
     starter_assets
     predict_settings
     validation_file

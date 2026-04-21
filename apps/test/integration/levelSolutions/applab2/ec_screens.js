@@ -328,7 +328,7 @@ module.exports = {
       editCode: true,
       xml:
         'button("my_button", "my_button_text");' +
-        'image("my_image", "http://code.org/images/logo.png");' +
+        'image("my_image", "https://studio.code.org/blockly/media/logo.png");' +
         'createCanvas("my_canvas", 320, 450);' +
         'container("my_container", "<div>FOO</div>");' +
         'write("<div id=\'my_write\'>FOO</div>");' +

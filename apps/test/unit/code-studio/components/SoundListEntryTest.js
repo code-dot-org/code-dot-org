@@ -3,7 +3,8 @@ import React from 'react';
 
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
-import color from '@cdo/apps/util/color';
+
+import styles from '@cdo/apps/code-studio/components/SoundListEntry.module.scss';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
@@ -22,14 +23,14 @@ describe('SoundListEntry', () => {
 
   it('renders with purple background when selected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    expect(wrapper.props().style.backgroundColor).toEqual(color.lighter_purple);
+    expect(wrapper.hasClass(styles.selected)).toBe(true);
   });
 
   it('renders with no background when not selected', () => {
     const wrapper = shallow(
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
-    expect(wrapper.props().style.backgroundColor).toEqual(color.white);
+    expect(wrapper.hasClass(styles.notSelected)).toBe(true);
   });
 
   it('renders a play button when not playing', () => {
@@ -38,7 +39,7 @@ describe('SoundListEntry', () => {
     );
     // First child is a icon control for pause and play
     expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa fa-play-circle fa-2x'
+      'fa-solid fa-circle-play fa-2x'
     );
   });
 
@@ -49,7 +50,7 @@ describe('SoundListEntry', () => {
     wrapper.setState({isPlaying: true});
     // First child is a icon control for pause and play
     expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa fa-pause-circle fa-2x'
+      'fa-solid fa-circle-pause fa-2x'
     );
   });
 

@@ -40,7 +40,7 @@
       "space.jpg": "01fbfa9f-5253-4f13-8338-78287cf89c95.jpg"
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T18:21:36.766+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-Manipulations PBT_2025\\\"\"],\"cloned_from\":\"CSA U5L9-Manipulations PBT_2025\"}]"

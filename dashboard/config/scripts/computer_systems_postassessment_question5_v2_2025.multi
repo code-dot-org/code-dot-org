@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question5_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 5'
+
+wrong 'AI never makes mistakes'
+wrong 'AI always provides unbiased results'
+wrong 'AI does not require human input'
+right 'AI can analyze large amounts of data faster than humans'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following describes a key advantage of AI in data analysis?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: How AI Uses Data
+
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

@@ -8,7 +8,7 @@ $container-width: 309px;
 .curriculumCatalogCardContainer {
   display: flex;
   flex-flow: column;
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-primary);
   border-radius: $border-radius;
   width: $container-width;
 

@@ -1,16 +1,32 @@
-import Button from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useState} from 'react';
 
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import style from './copy-button.module.scss';
 
 const CONFIRM_TIMEOUT_MS = 1500;
 
-const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
+const CopyButton: React.FC<{copyText: string; usage: string}> = ({
+  copyText,
+  usage,
+}) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
+
+  /**
+   * Get the theme, if available.  If not within a `ThemeProvider`, theme will be `undefined`
+   *  which will then be ignored by `Tooltip`.
+   **/
+  const {theme} = useTheme(true);
+
+  const dispatch = useAppDispatch();
 
   return (
     <WithTooltip
@@ -21,24 +37,23 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
         text: showCopyConfirmation ? i18n.copied() : i18n.copy(),
         className: style.tooltip,
         iconLeft: showCopyConfirmation ? {iconName: 'check'} : undefined,
+        'data-theme': theme,
       }}
     >
-      <Button
+      <MuiIconButton
+        variant="text"
+        color="tertiary"
+        size="extraSmall"
         onClick={() => {
           copyToClipboard(copyText);
           setShowCopyConfirmation(true);
           setTimeout(() => setShowCopyConfirmation(false), CONFIRM_TIMEOUT_MS);
+          dispatch(sendAnalytics(EVENTS.CHAT_COPIED, {usage: usage}));
         }}
-        color="white"
-        size="xs"
-        isIconOnly
-        icon={{
-          iconStyle: 'regular',
-          iconName: 'copy',
-        }}
-        type="primary"
-        className={style['copy-button']}
-      />
+        type="button"
+      >
+        <FontAwesomeV6Icon iconStyle="solid" iconName="copy" />
+      </MuiIconButton>
     </WithTooltip>
   );
 };

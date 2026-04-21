@@ -3,18 +3,18 @@ require 'testing/includes_metrics'
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
-    @student = create :student
-    @teacher = create :teacher
-    @script_level = create :script_level
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @script_level = create(:script_level)
     assert_equal @script_level.script, @script_level.lesson.script
 
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
 
-    @rubric = create :rubric, level: @script_level.level, lesson: @script_level.lesson
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3'
+    @rubric = create(:rubric, level: @script_level.level, lesson: @script_level.lesson)
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3')
     assert_equal 3, @rubric.learning_goals.count
 
     # Don't actually talk to S3 when running SourceBucket.new
@@ -210,12 +210,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'rate-limit' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'rate-limit' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -260,12 +260,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'timeout-error' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'timeout-error' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -313,12 +313,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'service-unavailable' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'service-unavailable' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)
@@ -366,12 +366,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'gateway-timeout' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'gateway-timeout' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)
@@ -679,7 +679,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     version_id: 'fake-version-id',
     include_exact_confidence: true
   )
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    _owner_id, project_id = get_storage_id_and_project_id(channel_id)
     rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
     assert_equal project_id, rubric_ai_eval.project_id
     assert_equal version_id, rubric_ai_eval.project_version

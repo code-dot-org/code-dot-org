@@ -1,27 +1,20 @@
-import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
-import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 
 import AgeDialog from '../templates/AgeDialog';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import GameButtons from '../templates/GameButtons';
-import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 import DanceAiModal from './ai/DanceAiModal';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import danceMsg from './locale';
-
-const isHocEmailTimeOfYear = ['soon-hoc', 'actual-hoc'].includes(
-  DCDO.get('hoc_mode', false)
-);
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -70,22 +63,11 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
-    const isSignedIn =
-      this.props.userType === 'teacher' || this.props.userType === 'student';
-
     return (
       <div>
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {(this.props.over21 || this.props.userType === 'teacher') &&
-          isHocEmailTimeOfYear &&
-          cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
-            <HourOfCodeGuideEmailDialog
-              isSignedIn={isSignedIn}
-              unitId={this.props.unitId}
-            />
-          )}
         <div
           style={
             experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)

@@ -56,6 +56,10 @@ module Forms
       end
 
       private def parent_email_is_not_own
+        # Allow the parent email if the parent created the account, as they
+        # would generally want to email themselves to give permission.
+        return if child_account.parent_created_account?
+
         # Removes any subaddressing from the email to prevent abuse
         sanitized_parent_email = parent_email.sub(/\+[^@]+@/, '@')
         return unless child_account.hashed_email == Digest::MD5.hexdigest(sanitized_parent_email)

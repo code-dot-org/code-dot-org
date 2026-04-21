@@ -1,0 +1,9 @@
+name 'music-lab-walkup-examples-choice_bash'
+display_name 'Walkup Song Examples'
+description 'Walkup Song Examples'
+
+sublevels
+level 'music-lab-walkup-example-1_bash'
+level 'music-lab-walkup-example-2_bash'
+level 'music-lab-walkup-example-3_bash'
+level 'music-lab-walkup-example-4_bash'

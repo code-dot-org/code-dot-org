@@ -16,7 +16,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-19T19:25:06.549+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l2cfu_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l2cfu_2024\"}]",

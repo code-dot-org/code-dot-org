@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
@@ -124,7 +125,7 @@ describe('CloneFormDialog', () => {
 });
 
 describe('CloneProgrammingExpressionDialog integration test', () => {
-  it('clones expression then shows success message', () => {
+  it('clones expression then shows success message', async () => {
     const wrapper = mount(
       <CloneProgrammingExpressionDialog
         itemToClone={{
@@ -169,10 +170,13 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
       />
     );
     expect(wrapper.find('select').length).toBe(1);
-    wrapper
-      .find('select')
-      .at(0)
-      .simulate('change', {target: {value: 'applab'}});
+    await act(async () => {
+      wrapper
+        .find('select')
+        .at(0)
+        .simulate('change', {target: {value: 'applab'}});
+    });
+    wrapper.update();
     const returnData = {editUrl: '/programming_expressions/100/edit'};
     const fetchStub = jest
       .spyOn(window, 'fetch')
@@ -183,14 +187,17 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
         return Promise.resolve({ok: true, json: () => returnData});
       }
     });
-    wrapper.find('Button').last().simulate('click');
-    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      wrapper.update();
-      expect(wrapper.find('FooterButton').length).toBe(1);
-      expect(wrapper.find('TextLink').props().href).toBe(
-        '/programming_expressions/100/edit'
-      );
-      fetchStub.mockRestore();
+    await act(async () => {
+      wrapper.find('Button').last().simulate('click');
     });
+    await act(async () => {
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    wrapper.update();
+    expect(wrapper.find('FooterButton').length).toBe(1);
+    expect(wrapper.find('TextLink').props().href).toBe(
+      '/programming_expressions/100/edit'
+    );
+    fetchStub.mockRestore();
   });
 });

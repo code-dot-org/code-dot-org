@@ -8,8 +8,8 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: destroys the AuthenticationOption if it exists and is not primary' do
-    user = create :user
-    auth_option = create :authentication_option, user: user
+    user = create(:user)
+    auth_option = create(:authentication_option, user: user)
     sign_in user
 
     assert_destroys(AuthenticationOption) do
@@ -24,9 +24,9 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'disconnect: if the removed AuthenticationOption was primary and a replacement is available, replaces it' do
     email = 'example@gmail.com'
-    teacher = create :teacher
-    google_option = create :google_authentication_option, user: teacher, email: email
-    facebook_option = create :facebook_authentication_option, user: teacher, email: email
+    teacher = create(:teacher)
+    google_option = create(:google_authentication_option, user: teacher, email: email)
+    facebook_option = create(:facebook_authentication_option, user: teacher, email: email)
     teacher.update(primary_contact_info: google_option)
     teacher.reload
 
@@ -50,8 +50,8 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'disconnect: if the removed AuthenticationOption was primary and no replacement is available, creates one' do
     email = 'example@gmail.com'
-    teacher = create :teacher
-    google_option = create :google_authentication_option, user: teacher, email: email
+    teacher = create(:teacher)
+    google_option = create(:google_authentication_option, user: teacher, email: email)
     teacher.update(primary_contact_info: google_option)
     teacher.reload
 
@@ -78,7 +78,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: returns not_found if the AuthenticationOption does not exist' do
-    user = create :user
+    user = create(:user)
     sign_in user
 
     assert_does_not_destroy(AuthenticationOption) do
@@ -88,8 +88,8 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: returns not_found if the AuthenticationOption does not belong to the current user' do
-    user = create :user
-    auth_option = create :authentication_option
+    user = create(:user)
+    auth_option = create(:authentication_option)
     sign_in user
 
     assert_does_not_destroy(AuthenticationOption) do

@@ -14,6 +14,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import teacherRubric, {
   setLoadedStudentStatusForTest,
@@ -56,6 +57,9 @@ const defaultProps = {
   rubric: defaultRubric,
   currentLevelName: 'test_level',
   studentLevelInfo: null,
+  aiEnabled: true,
+  parentLevelName: null,
+  levelType: 'Gamelab',
 };
 
 describe('RubricFloatingActionButton', () => {
@@ -68,6 +72,7 @@ describe('RubricFloatingActionButton', () => {
       teacherRubric,
       teacherSections,
       teacherPanel,
+      currentUser,
     });
     store = getStore();
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');

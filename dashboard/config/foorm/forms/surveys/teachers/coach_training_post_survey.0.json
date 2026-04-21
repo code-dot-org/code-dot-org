@@ -1,0 +1,172 @@
+{
+  "title": "Code.org Coach Training: Post-Workshop Survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "variable_panel",
+          "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
+          "visible": "false",
+          "elements": [
+            {
+              "type": "text",
+              "name": "cohort",
+              "startWithNewLine": false,
+              "defaultValueExpression": "{cohort_name}",
+              "readOnly": true
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Code.org Professional Learning for Coaches</h1><h2><strong>Well done, you've completed Code.org's professional development workshop for coaches!</h2><p><h3>Post-Workshop Survey</strong></h3>\n\n<p>This survey asks questions about your experience today and your plans as a Code.org coach. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p>\n<p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Post-Workshop Survey</h2>"
+        },
+        {
+          "type": "rating",
+          "name": "nps_pd_coaches",
+          "title": "How likely are you to recommend this Code.org Coach Training to a colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "comment",
+          "name": "primary_reason_nps",
+          "title": "What’s the primary reason for your score above?",
+          "rows": 2
+        },
+        {
+          "type": "rating",
+          "name": "confidence_ability_support_teachers",
+          "title": "How confident do you feel in your ability to support teachers using Code.org curriculum?",
+          "rateCount": 7,
+          "rateMin": 1,
+          "rateMax": 7,
+          "minRateDescription": "Not confident at all",
+          "maxRateDescription": "Extremely confident"
+        },
+        {
+          "type": "rating",
+          "name": "clarity_responsibilities_coach_network",
+          "title": "Do you feel clear on your responsibilities as part of Code.org's Coach Network?",
+          "rateCount": 7,
+          "rateMin": 1,
+          "rateMax": 7,
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "Yes, definitely"
+        },
+        {
+          "type": "checkbox",
+          "name": "coaches_next_steps",
+          "title": "What are your next steps as a Code.org Coach?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "curriculum_selection",
+              "text": "Support a teacher with curriculum selection"
+            },
+            {
+              "value": "share_self_paced_pl",
+              "text": "Share self-paced PL modules with teachers"
+            },
+            {
+              "value": "facilitate_training",
+              "text": "Facilitate or co-facilitate a training"
+            },
+            {
+              "value": "lead_collaborative_learning",
+              "text": "Organize or lead a small group for collaborative learning"
+            },
+            {
+              "value": "additional_self_paced_pl",
+              "text": "Complete additional self-paced PL"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "comment",
+          "name": "barriers_pd_coaches",
+          "title": "Do you anticipate any barriers in taking your next steps as a Code.org Coach?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "additional_support_pd_coaches",
+          "description": "(Skip if you don't anticipate any barriers)",
+          "title": "How can Code.org better support you overcome this barrier as you take your next steps as a Code.org Coach?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "most_helpful_pd_coaches",
+          "title": "Which part of today’s training was MOST helpful to you and why?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "least_helpful_pd_coaches",
+          "title": "Which part of today’s training was LEAST helpful to you and why?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_pd_coaches",
+          "title": "What feedback or ideas do you have for improving this training experience for future coaches?",
+          "rows": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_quote",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes_with_name",
+              "text": "Yes, I give permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give permission to quote me."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about your experience in this professional learning workshop?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "contact_email",
+          "visibleIf": "{can_contact} = 'yes'",
+          "title": "Please enter the email address where we can contact you to gather additional feedback about your experience in this professional learning workshop."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

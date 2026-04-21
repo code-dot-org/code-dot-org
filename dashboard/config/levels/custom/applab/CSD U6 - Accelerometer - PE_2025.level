@@ -107,6 +107,7 @@
     "bubble_choice_description": "Shake the circuit playground to simulate a confetti app",
     "thumbnail_url": "https://images.code.org/ffc5cc3cf4b9d3a3065658d8b172445d-image-1648866032636.gif",
     "encrypted_examples": "swSc0RTcj3l2LpdGefmgZQTTZoKmbHuxs4VF5vPJGRRzRY5XnSGvVAhdCpfR\nZA6c1pwlNXtyfv8xz1AsDrVeRA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

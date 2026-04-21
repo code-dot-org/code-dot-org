@@ -12,7 +12,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-data-science-pilot",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "teaching-data-science-pl-pilot",
     "version_year": "unversioned"
   },

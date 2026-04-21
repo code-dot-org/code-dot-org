@@ -1,8 +1,9 @@
-import {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 
@@ -10,19 +11,25 @@ import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
-  const canEnableAITutor = getScriptData('canEnableAITutor');
   const userCountry = getScriptData('userCountry');
 
-  ReactDOM.render(
+  const defaultRedirectUrl = '/teacher_dashboard/home';
+
+  createReactRoot(
     <div className={moduleStyles.containerWithMarginTop}>
-      <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
+      <Typography variant="h1" gutterBottom>
+        {i18n.setUpClassSectionsHeader()}
+      </Typography>
       <SectionsSetUpContainer
         isUsersFirstSection={isUsersFirstSection}
-        canEnableAITutor={canEnableAITutor}
         userCountry={userCountry}
-        defaultRedirectUrl="/home"
+        defaultRedirectUrl={defaultRedirectUrl}
       />
     </div>,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
+  displayDifferentiationChat();
 });

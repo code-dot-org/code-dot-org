@@ -1,4 +1,3 @@
-import {ButtonType} from '@code-dot-org/component-library/button';
 import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -13,7 +12,7 @@ describe('AccountCard', () => {
     title: 'Test Title',
     content: 'This is the content of the card.',
     buttonText: 'Click Me',
-    buttonType: 'primary' as ButtonType,
+    variant: 'contained' as const,
     onClick: onClickMock,
   };
 
@@ -55,8 +54,8 @@ describe('AccountCard', () => {
     });
   });
 
-  it('renders different button types based on buttonType prop', () => {
-    render(<AccountCard {...defaultProps} buttonType="secondary" />);
+  it('renders different button variants based on variant prop', () => {
+    render(<AccountCard {...defaultProps} variant="outlined" />);
     const button = screen.getByRole('button', {name: defaultProps.buttonText});
     expect(button).toBeInTheDocument();
   });

@@ -114,6 +114,7 @@
     "bubble_choice_description": "Create an app that asks the user a trivia question, then uses the micro:bit to celebrate when they get the answer correct",
     "encrypted_examples": "FejU+Q9c9vE+RSLl4U9+LVOliJTwXLxLIU+W2K+KMhr8TkNaSdKDSQ/z4l7h\ns5zjReLsZuyBV3iXZcGh37m+0Q==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

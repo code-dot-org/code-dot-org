@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question3_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 3'
+
+wrong 'Monitor'
+wrong 'Printer'
+right 'Keyboard'
+wrong 'Speaker'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an **input device**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Hardware
+MARKDOWN

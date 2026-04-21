@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:19:15.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa_scanner_class_methods",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "#### The **Scanner** class is a **library** in the `java.util package` that can be used for obtaining user input.\r\n\r\n\r\n#### To use it in our programs we write **import java.util.Scanner** at the top of our programs.\r\n\r\n## Steps to use the Scanner class \r\n\r\n   <table border=\"1\" width=\"100%\" cellpadding=\"10\">\r\n        <tr>\r\n            <td width=\"40%\">\r\n                <img src=\"https://images.code.org/e5a3dd1ad792c4714158189d76384d87-image-1747840287043.png\" alt=\"import java.util.Scanner;\" width=\"150%\">\r\n            </td>\r\n            <td width=\"60%\" style=\"font-size:14pt;\">\r\n            Import the Scanner class on the top of your program. \r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td width=\"40%\">\r\n                <img src=\"https://images.code.org/affd6b0adb7cdfd7b66512e472277969-image-1747840349329.png\" alt=\"Scanner input = new Scanner(System.in);\" width=\"150%\">\r\n            </td>\r\n            <td width=\"60%\" style=\"font-size:14pt;\">\r\n              Create a new Scanner object using this line. Here, the Scanner is named 'input', but you can name it anything, like a variable. Input is a standard name. \r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td width=\"40%\">\r\n                <img src=\"https://images.code.org/e34336866efa0d07a60cd0af94df507d-image-1747840647508.png\" alt=\"System.out.print('Enter the first number: '); \" width=\"150%\">\r\n            </td>\r\n            <td width=\"60%\" style=\"font-size:14pt;\">\r\n                Create a print statement to collect information from the user. \r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td width=\"40%\">\r\n                <img src=\"https://images.code.org/f3ba10af2edbfbab8d7ac1d1a0a5169e-image-1747840790734.png\" alt=\"int first = input.nextInt() \" width=\"150%\">\r\n            </td>\r\n            <td width=\"60%\" style=\"font-size:14pt;\">\r\n                Make a variable to store the input from the user. Use the Scanner name dot method name to indicate the type of user input. \r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td width=\"40%\">\r\n                <img src=\"https://images.code.org/84a01be1c14c5b3bb9a19bdb77c965a1-image-1747840967481.png\" alt=\"input.close()\" width=\"150%\">\r\n            </td>\r\n            <td width=\"60%\" style=\"font-size:14pt;\">\r\n                You can use a Scanner as many times as you need in a program. When you are done collecting user input, close the Scanner. \r\n            </td>\r\n        </tr>\r\n    </table>\r\n\r\n\r\n## Scanner Methods \r\n\r\n<img src=\"https://images.code.org/50d5d23fb6465b7e09326b71cd361406-image-1747841584347.png\" alt=\"Scanner Class methods: nextInt(), nextDouble(), nextLine()\" width=\"300px\" style=\"border-radius:10px; float:right; margin: 0 0 0px 40px;\">\r\n\r\n#### The following methods can be used to collect user input with the scanner class: \r\n\r\n- #### **nextInt()** is used for integers\r\n- #### **nextDouble()** is used for doubles, or decimal numbers\r\n- #### **nextLine()** is used for strings\r\n\r\n<br><br>\r\n\r\n#### Watch the video below to see how to use the Scanner class. \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:15.768+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-scanner-video-19-2\\\"\"],\"cloned_from\":\"pl-java-class-design-scanner-video-19-2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

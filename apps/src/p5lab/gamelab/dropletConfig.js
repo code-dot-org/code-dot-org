@@ -698,14 +698,6 @@ module.exports.blocks = [
     type: 'value',
   },
   {
-    func: 'getFrame',
-    blockPrefix: spriteBlockPrefix,
-    category: 'Sprites',
-    tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.getFrame',
-    type: 'value',
-  },
-  {
     func: 'getSpeed',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
@@ -1493,7 +1485,7 @@ draw() - USEFUL?
     func: 'loadImage',
     category: 'Drawing',
     paletteParams: ['url'],
-    params: ['"https://code.org/images/logo.png"'],
+    params: ['"https://studio.code.org/blockly/media/logo.png"'],
     type: 'either',
     dropdown: {
       0: function () {
@@ -1506,7 +1498,7 @@ draw() - USEFUL?
     func: 'var img = loadImage',
     category: 'Drawing',
     paletteParams: ['url'],
-    params: ['"https://code.org/images/logo.png"'],
+    params: ['"https://studio.code.org/blockly/media/logo.png"'],
     noAutocomplete: true,
   },
   {

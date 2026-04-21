@@ -1,6 +1,7 @@
+import {Button as MuiButton} from '@mui/material';
 import {AriaAttributes} from 'react';
 
-import Button, {buttonColors} from '@/button';
+import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
 import Checkbox from '@/checkbox';
 import {dropdownColors} from '@/common/constants';
 import {
@@ -9,7 +10,11 @@ import {
   DropdownFormFieldRelatedProps,
 } from '@/common/types';
 
-import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
@@ -42,6 +47,10 @@ interface BaseCheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  /** CheckboxDropdown menu placement */
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** CheckboxDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
 }
 
 interface CheckboxDropdownWithoutControlProps
@@ -98,6 +107,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   ...rest
 }) => {
   return (
@@ -118,6 +129,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       selectedValueText={checkedOptions
         ?.map(str => allOptions.find(opt => opt.value === str)?.label)
         .join(', ')}
+      menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       {...rest}
     >
       <ul>
@@ -137,20 +150,22 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       </ul>
       {!rest.hideControls && (
         <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={rest.selectAllText}
+          <MuiButton
+            variant="text"
+            color="secondary"
             onClick={rest.onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={rest.clearAllText}
+            size={buttonSizeToMuiSizeMap[size] || 'medium'}
+          >
+            {rest.selectAllText}
+          </MuiButton>
+          <MuiButton
+            variant="text"
+            color="secondary"
             onClick={rest.onClearAll}
-            size={size}
-          />
+            size={buttonSizeToMuiSizeMap[size] || 'medium'}
+          >
+            {rest.clearAllText}
+          </MuiButton>
         </div>
       )}
     </CustomDropdown>

@@ -1,12 +1,19 @@
+import {
+  ButtonProps as MuiButtonProps,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import classNames from 'classnames';
 import {useCallback, AriaAttributes} from 'react';
 
-import {ButtonProps} from '@/button';
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
@@ -25,7 +32,9 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown size */
   size?: ComponentSizeXSToL;
   /** ActionDropdown Menu placement */
-  menuPlacement?: 'left' | 'right';
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** ActionDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
   /** ActionDropdown disabled state */
   disabled?: boolean;
   /** ActionDropdown label
@@ -34,7 +43,10 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown options */
   options: ActionDropdownOption[];
   /** ActionDropdown trigger button props */
-  triggerButtonProps?: ButtonProps;
+  triggerButtonProps?: MuiButtonProps | MuiIconButtonProps;
+  /** Whether to use MUI IconButton (true, default) or MUI Button (false) as trigger
+   * @default true */
+  useIconButton?: boolean;
 }
 
 /**
@@ -57,8 +69,10 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   options,
   disabled = false,
   menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   size = 'm',
   triggerButtonProps,
+  useIconButton = true,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -74,14 +88,16 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
 
   return (
     <CustomDropdown
+      useMuiButtonAsTrigger={!useIconButton}
+      useMuiIconButtonAsTrigger={useIconButton}
       name={name}
       className={className}
       labelText={labelText}
       disabled={disabled}
       menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       size={size}
       {...rest}
-      useDSCOButtonAsTrigger
       triggerButtonProps={triggerButtonProps}
     >
       <ul>

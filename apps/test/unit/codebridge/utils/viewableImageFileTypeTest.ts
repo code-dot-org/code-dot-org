@@ -15,10 +15,11 @@ describe('viewableImageFileType', () => {
   });
 
   it('should use default viewable image file types if not provided', () => {
-    // Assuming defaultViewableImageFileTypesArray includes 'png', 'jpg', and 'gif'
+    // Assuming defaultViewableImageFileTypesArray includes 'png', 'jpg', and 'gif'.
     expect(viewableImageFileType('png')).toBe(true);
     expect(viewableImageFileType('jpg')).toBe(true);
     expect(viewableImageFileType('gif')).toBe(true);
     expect(viewableImageFileType('txt')).toBe(false);
+    expect(viewableImageFileType('pdf')).toBe(false);
   });
 });

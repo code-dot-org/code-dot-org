@@ -89,6 +89,7 @@
     "bubble_choice_description": "Create an app that lets you respond with a rating",
     "encrypted_examples": "C3YsbbGSPhAsFMAeG/TrZ3Wo+hSMd1M8g2wLx/e2PuaH3Vya8Q5CR4CYMsjK\nPAcjUZvlrdVdEFukxydGrtYTeg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-21T15:27:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# User Experience\n\n**User Experience (UX)** is the overall experience a person has when interacting with a product, system, or service. Good UX means the product is easy to use, efficient, and enjoyable.\n",
+        "imageUrl": "https://images.code.org/227977e4993401f582aebfe331c0ac51-clipboard-image-1761138387 (1).png",
+        "key": "ai-generated-design-lesson2-vocab-panel-ux-test-2025-d283d8d8-1690-43f7-8f80-b84146166342",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-21 15:29:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 13:07:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,10 +1,4 @@
-import {
-  Heading4,
-  BodyThreeText,
-  BodyTwoText,
-  EmText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -42,15 +36,29 @@ const permissionGrantedMessage = (date: Date) => {
   });
   return (
     <div id="permission_granted_container">
-      <Heading4>{i18n.childAccountConsentValidHeader()}</Heading4>
-      <BodyTwoText className="permission-granted-date">
-        <StrongText>{i18n.childAccountConsentValidPermission()} </StrongText>
-        <StrongText className="date">{grantedDateString}</StrongText>
-      </BodyTwoText>
-      <BodyThreeText>{i18n.childAccountConsentValidMessage()}</BodyThreeText>
-      <BodyThreeText>
-        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyThreeText>
+      <Typography variant="h4" gutterBottom>
+        {i18n.childAccountConsentValidHeader()}
+      </Typography>
+      <Typography
+        className="permission-granted-date"
+        variant="body2"
+        gutterBottom
+      >
+        <Typography variant="strong">
+          {i18n.childAccountConsentValidPermission()}{' '}
+        </Typography>
+        <Typography className="date" variant="strong">
+          {grantedDateString}
+        </Typography>
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        {i18n.childAccountConsentValidMessage()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        <Typography variant="em">
+          {i18n.childAccountConsentEmailUnknown()}
+        </Typography>
+      </Typography>
       {returnToCdoButton()}
     </div>
   );
@@ -59,11 +67,17 @@ const permissionGrantedMessage = (date: Date) => {
 const expiredTokenMessage = () => {
   return (
     <div id="expired_token_container">
-      <Heading4>{i18n.childAccountConsentExpiredHeader()}</Heading4>
-      <BodyThreeText>{i18n.childAccountConsentExpiredMessage()}</BodyThreeText>
-      <BodyThreeText>
-        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyThreeText>
+      <Typography variant="h4" gutterBottom>
+        {i18n.childAccountConsentExpiredHeader()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        {i18n.childAccountConsentExpiredMessage()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        <Typography variant="em">
+          {i18n.childAccountConsentEmailUnknown()}
+        </Typography>
+      </Typography>
       {returnToCdoButton()}
     </div>
   );

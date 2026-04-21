@@ -44,7 +44,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
 
   setup do
     stub_firehose
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     @example_curriculum_url = '/csf-18/pre-express/11/'
     @example_curriculum_url_with_locale = '/es-mx/csf-1718/coursec/10/'
   end

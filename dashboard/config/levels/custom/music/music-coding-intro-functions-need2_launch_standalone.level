@@ -34,7 +34,7 @@
                   "type": "procedures_callnoreturn",
                   "id": "8Bb[IV38`R6Vq7n,t4|O",
                   "extraState": {
-                    "name": "my function"
+                    "name": "chorus"
                   },
                   "next": {
                     "block": {
@@ -51,7 +51,7 @@
                           "type": "procedures_callnoreturn",
                           "id": "M8(f;0#AweAkrzN?E;%^",
                           "extraState": {
-                            "name": "my function"
+                            "name": "chorus"
                           },
                           "next": {
                             "block": {
@@ -68,7 +68,7 @@
                                   "type": "procedures_callnoreturn",
                                   "id": "!K`a,+7z9Z6/|j*AFokz",
                                   "extraState": {
-                                    "name": "my function"
+                                    "name": "chorus"
                                   }
                                 }
                               }
@@ -93,7 +93,7 @@
                 "initialMoveConfig": true
               },
               "fields": {
-                "NAME": "my function"
+                "NAME": "chorus"
               },
               "inputs": {
                 "STACK": {
@@ -150,7 +150,7 @@
         "procedures": [
           {
             "id": "k1UW=vojHa`-::nT!ANh",
-            "name": "my function",
+            "name": "chorus",
             "returnTypes": null
           }
         ]
@@ -166,7 +166,7 @@
         ]
       }
     },
-    "long_instructions": "###<i class=\"fa-solid fa-head-side-gear\"></i> Introducing, functions!\r\n\r\nThis is the same song but now it uses a [function](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)! \r\n\r\nLook closely at the code. \r\n\r\nPredict what sounds will play first, then try it out.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n",
+    "long_instructions": "####<i class=\"fa-solid fa-head-side-gear\"></i> Introducing, functions!\r\n\r\nThis is the same song but now it uses a [function](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)! \r\n\r\nLook closely at the code. \r\n\r\nPredict what sounds will play first, then try it out.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-functions-need_4e41262d-17d3-46b7-9d4d-2404f9fc902e",
@@ -199,10 +199,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "submittable": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.601+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need2_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.601+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need2_launch\"},{\"changed_at\":\"2025-07-10 19:30:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-10 19:31:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 
 import {Button} from '@/button';
@@ -83,11 +83,11 @@ DefaultModal.args = {
     'This is a longer description for the default modal. It is designed to test how the modal handles large' +
     ' amounts of text and ensures proper display and scrolling behaviors.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
@@ -100,7 +100,7 @@ ModalWithoutSecondaryButton.args = {
     'This modal provides only a primary button for user interaction. It is useful for scenarios where only one' +
     ' action is required or desired.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   onClose: () => null,
@@ -113,11 +113,11 @@ ModalWithoutCloseButton.args = {
     'This modal provides both a primary and a secondary button for user interaction, enabling multiple actions without' +
     ' a dedicated close button. Users can still dismiss the modal through other contextual actions.',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
 };
@@ -132,11 +132,11 @@ ModalWithImageTopPlacement.args = {
   imageAlt: 'Example image placed on top of the modal',
   imagePlacement: 'top',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
@@ -152,11 +152,11 @@ ModalWithImageInlinePlacement.args = {
   imageAlt: 'Example image placed alongside modal description',
   imagePlacement: 'inline',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
@@ -164,16 +164,17 @@ ModalWithImageInlinePlacement.args = {
 
 export const DarkModal = SingleTemplate.bind({});
 DarkModal.args = {
-  title: 'Dark Mode Modal',
+  title: 'Dark Mode Modal (Deprecated)',
   description:
-    'This modal uses the dark color theme to create a visually distinct and focused experience for the user.',
+    'DEPRECATED: This modal uses the deprecated "mode" prop. Use the theme provider instead. ' +
+    'This story demonstrates the deprecated functionality that will be removed in a future version.',
   mode: 'dark',
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary action clicked'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
@@ -194,7 +195,7 @@ ModalWithCustomContent.args = {
     </div>
   ),
   primaryButtonProps: {
-    text: 'Primary Action',
+    children: 'Primary Action',
     onClick: () => console.log('Primary button clicked!'),
   },
   onClose: () => null,
@@ -212,11 +213,11 @@ ModalWithCustomBottomContent.args = {
     </div>
   ),
   primaryButtonProps: {
-    text: 'Close',
+    children: 'Close',
     onClick: () => console.log('Modal with custom bottom content closed'),
   },
   secondaryButtonProps: {
-    text: 'Secondary Action',
+    children: 'Secondary Action',
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
@@ -230,11 +231,11 @@ MultipleModals.args = {
       description:
         'Description for modal 1. It includes text content to showcase the structure and behavior of a modal.',
       primaryButtonProps: {
-        text: 'Primary Action',
+        children: 'Primary Action',
         onClick: () => console.log('Primary action for modal 1'),
       },
       secondaryButtonProps: {
-        text: 'Secondary Action',
+        children: 'Secondary Action',
         onClick: () => console.log('Secondary action for modal 1'),
       },
       onClose: () => null,
@@ -249,26 +250,27 @@ MultipleModals.args = {
       imageAlt: 'Example image placed on top of the modal',
       imagePlacement: 'top',
       primaryButtonProps: {
-        text: 'Primary Action',
+        children: 'Primary Action',
         onClick: () => console.log('Primary action for modal 2'),
       },
       secondaryButtonProps: {
-        text: 'Secondary Action',
+        children: 'Secondary Action',
         onClick: () => console.log('Secondary action for modal 2'),
       },
       onClose: () => null,
     },
     {
-      title: 'Modal 3 with Dark Theme',
+      title: 'Modal 3 with Dark Theme (Deprecated)',
       description:
-        'Content for modal 3 with dark theme. This modal uses the dark color mode to enhance readability and focus.',
+        '⚠️ DEPRECATED: This modal uses the deprecated "mode" prop. Use the theme provider instead. ' +
+        'This demonstrates the deprecated functionality that will be removed in a future version.',
       mode: 'dark',
       primaryButtonProps: {
-        text: 'Primary Action',
+        children: 'Primary Action',
         onClick: () => console.log('Primary action for modal 3'),
       },
       secondaryButtonProps: {
-        text: 'Secondary Action',
+        children: 'Secondary Action',
         onClick: () => console.log('Secondary action for modal 3'),
       },
       onClose: () => null,

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "You found a critter. Try to catch it! Use dice rolls and conditionals to simulate capturing it. \r\n\r\n## Do This: \r\n- Run the code and observe the outputs for different dice rolls.\r\n- **Modify**: Add another condition that captures a common critter if the dice rolls a 2 or higher. \r\n\r\n\r\n**Hint**: \r\n\r\n    elif dice_roll >=2:\r\n        common_critter()",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

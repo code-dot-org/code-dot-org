@@ -11,6 +11,7 @@ import {
   mapActivityDataForEditor,
   initActivities,
 } from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import JitPlConceptsEditor from '@cdo/apps/levelbuilder/lesson-editor/JitPlConceptsEditor';
 import ObjectivesEditor from '@cdo/apps/levelbuilder/lesson-editor/ObjectivesEditor';
 import ProgrammingExpressionsEditor from '@cdo/apps/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
@@ -58,6 +59,9 @@ class LessonEditor extends Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      jitPlConceptIds: (this.props.initialLessonData.jitPlConcepts || []).map(
+        c => c.id
+      ),
       displayName: this.props.initialLessonData.name,
       overview: this.props.initialLessonData.overview || '',
       studentOverview: this.props.initialLessonData.studentOverview || '',
@@ -110,6 +114,7 @@ class LessonEditor extends Component {
         ),
         standards: JSON.stringify(this.props.standards),
         opportunityStandards: JSON.stringify(this.props.opportunityStandards),
+        jitPlConceptIds: JSON.stringify(this.state.jitPlConceptIds),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData),
       }),
@@ -404,9 +409,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add resources.
+                  A unit must belong to a course in order to add resources.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -422,9 +425,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add vocabulary.
+                  A unit must belong to a course in order to add vocabulary.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -488,6 +489,13 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
           </div>
         )}
+        <CollapsibleEditorSection title="JIT PL Concepts" collapsed={true}>
+          <JitPlConceptsEditor
+            allConcepts={this.props.initialLessonData.allJitPlConcepts || []}
+            selectedConceptIds={this.state.jitPlConceptIds}
+            onChange={ids => this.setState({jitPlConceptIds: ids})}
+          />
+        </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
           <ActivitiesEditor
             hasLessonPlan={hasLessonPlan}
@@ -500,7 +508,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/new?lessonId=' + this.getLessonId()}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Add Rubric
           </a>
         )}
@@ -510,7 +518,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/' + rubricId + '/edit'}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Edit Rubric
           </a>
         )}

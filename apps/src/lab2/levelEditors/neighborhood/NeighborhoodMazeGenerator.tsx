@@ -1,6 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -157,6 +157,7 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
                   selectedCell[1] === columnIndex) ||
                 false;
               return (
+                /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
                 <img
                   src={imageTiles[cell.assetId]}
                   alt="neighborhood cell"
@@ -186,6 +187,7 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
             }}
           >
             {categoryTiles.map((tile, index) => (
+              /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
               <img
                 src={imageTiles[tile]}
                 alt="neighborhood tile"
@@ -197,22 +199,32 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
               />
             ))}
           </div>
-          <Button
-            text="Unselect Asset"
-            onClick={() => setSelectedAsset(undefined)}
-            type={'secondary'}
-            color={'black'}
-            className={moduleStyles.unselectButton}
-            size={'xs'}
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
             disabled={selectedAsset === undefined}
-          />
+            className={moduleStyles.unselectButton}
+            onClick={() => setSelectedAsset(undefined)}
+            type="button"
+          >
+            {'Unselect Asset'}
+          </MuiButton>
         </div>
       </div>
       {selectedPaintAmount !== undefined && (
         <p>Selected paint can amount: {selectedPaintAmount}</p>
       )}
       <div className={moduleStyles.saveButtonContainer}>
-        <Button text="Save Maze" onClick={save} />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={save}
+          type="button"
+        >
+          {'Save Maze'}
+        </MuiButton>
         {showSaveConfirmation && (
           <div className={moduleStyles.saveConfirmation}>
             <FontAwesomeV6Icon

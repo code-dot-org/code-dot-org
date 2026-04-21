@@ -1,0 +1,9 @@
+name 'Lab2 BubbleChoice Showcase_cs50'
+display_name 'Lab2 Bubble Choice'
+description 'This Bubble Choice level and all sublevels use Lab2.'
+
+sublevels
+level 'AI Chat Sublevel_cs50'
+level 'Music Sublevel_cs50'
+level 'Python Lab Sublevel_cs50'
+level 'Weblab2 Sublevel_cs50'

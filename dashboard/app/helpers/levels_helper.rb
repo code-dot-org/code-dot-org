@@ -60,7 +60,7 @@ module LevelsHelper
         puzzle_page_course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       end
     elsif params[:sublevel_position]
-      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position], params)
       # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
       # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
@@ -128,7 +128,7 @@ module LevelsHelper
     channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     return result unless channel_token
 
-    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
+    _owner_id, result[:project_id] = get_storage_id_and_project_id(channel_token.channel)
     source_data = SourceBucket.new.get(channel_token.channel, "main.json")
 
     if source_data[:status] == 'FOUND'
@@ -422,6 +422,7 @@ module LevelsHelper
 
     # Sets video and additional reference options for this level
     if @app_options[:level]
+      @app_options[:level][:name] = @level.try(:name)
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
@@ -458,6 +459,7 @@ module LevelsHelper
       @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
+      @app_options[:isSignedIn] = current_user.present?
     end
 
     @app_options
@@ -481,7 +483,6 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_javalab: use_javalab,
@@ -494,17 +495,6 @@ module LevelsHelper
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
-  end
-
-  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
-  # In priority order they are:
-  # 1. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
-  # 2. All Blockly levels now default to using Google Blockly.
-
-  def use_google_blockly
-    return true if view_options[:blocklyVersion]&.downcase == 'google'
-    return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return true
   end
 
   # Options hash for Widget
@@ -636,6 +626,12 @@ module LevelsHelper
     DCDO.get('disallowed_html_tags', [])
   end
 
+  def disallowed_html_attrs
+    @disallowed_html_attrs ||= JSON.parse(
+      File.read(CDO.dir('apps', 'src', 'weblab', 'disallowed-html-attrs.json'))
+    )
+  end
+
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -756,7 +752,8 @@ module LevelsHelper
 
   def lab2_options
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
-    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options = {level_id: @level.id}
+    app_options[:channel] = view_options[:channel] if @level.try(:is_project_level)
     level_options = level_view_options(@level.id)
     # Add edit_blocks to app_options if it exists in level_options
     if level_options[:edit_blocks]
@@ -771,7 +768,7 @@ module LevelsHelper
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
-    elsif @level.is_a?(Pythonlab) && current_user
+    elsif @level.uses_theme_preference? && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
       app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
     end
@@ -1053,5 +1050,49 @@ module LevelsHelper
     else
       nil
     end
+  end
+
+  # Returns student code for a given level
+  def get_student_code(user_id, level, unit_id, code_version = nil)
+    s3 = AWS::S3.create_client
+    bucket = CDO.sources_s3_bucket
+    base_dir = CDO.sources_s3_directory
+
+    storage_id = storage_id_for_user_id(user_id)
+    # For project-template-backed levels, we need to use the channel_token for the associated project template level.
+    level_id_for_channel_token = level.project_template_level ? level.project_template_level.id : level.id
+    channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
+    if channel_token
+      storage_app_id = channel_token.storage_app_id
+      channel_id = get_project_channel_id(storage_id, storage_app_id)
+      s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
+      s3_args = {bucket: bucket, key: s3_filename}
+      s3_args[:version_id] = code_version if code_version
+      begin
+        body = s3.get_object(s3_args)[:body].read
+      rescue => exception
+        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        return
+      end
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
+    end
+    {
+      project_id: channel_id,
+      code_version: code_version,
+      student_code: student_code,
+    }
   end
 end

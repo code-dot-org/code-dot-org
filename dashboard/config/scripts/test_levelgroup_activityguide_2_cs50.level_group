@@ -1,0 +1,11 @@
+name 'test-levelgroup-activityguide-2_cs50'
+title 'Activity Guide Levelgroup'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-single-multi-retriable-in-levelgroup_copy1_cs50'
+level 'test-free-response-retriable-in-levelgroup_copy1_cs50'
+level 'K-1 Plant a Seed Multi 1_copy1_cs50'
+level 'K-1 Plant a Seed Multi 2_copy1_cs50'

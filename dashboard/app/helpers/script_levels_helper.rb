@@ -1,4 +1,8 @@
 module ScriptLevelsHelper
+  # The TA scores alert will be shown at most once for each lesson. This
+  # is the maximum number of times it will be shown across all lessons.
+  MAX_SHOW_TA_SCORES_ALERT = 3
+
   def script_level_solved_response(response, script_level, unit_group_unit: nil)
     next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson, unit_group_unit: unit_group_unit)
 
@@ -63,9 +67,16 @@ module ScriptLevelsHelper
 
   def tracking_pixel_url(script)
     if script.name == Unit::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/begin_codeorg.png'
+      CDO.studio_url('/api/hour/begin_codeorg.png')
     else
-      CDO.code_org_url "/api/hour/begin_#{script.name}.png"
+      CDO.studio_url("/api/hour/begin_#{script.name}.png")
     end
+  end
+
+  def can_show_ta_scores_alert?(lesson)
+    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
+    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
+    return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
+    !seen_ta_scores_map[lesson.id.to_s]
   end
 end

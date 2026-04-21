@@ -63,6 +63,7 @@ class Game < ApplicationRecord
   PYTHONLAB = 'pythonlab'.freeze
   PANELS = 'panels'.freeze
   WEBLAB2 = 'weblab2'.freeze
+  SKETCHLAB = 'sketchlab'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -204,6 +205,14 @@ class Game < ApplicationRecord
     @@game_weblab2 ||= find_by_name("Weblab2")
   end
 
+  def self.sketchlab
+    @@game_sketchlab ||= find_by_name("Sketchlab")
+  end
+
+  def self.bubble_choice
+    @@game_bubble_choice ||= find_by_name("BubbleChoice")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -251,7 +260,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB, WEBLAB2].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB, WEBLAB2, SKETCHLAB].include? app
   end
 
   def no_footer?
@@ -272,7 +281,7 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT, SKETCHLAB].include? app
   end
 
   def use_restricted_songs?
@@ -361,6 +370,7 @@ class Game < ApplicationRecord
     Pythonlab:pythonlab
     Panels:panels
     Weblab2:weblab2
+    Sketchlab:sketchlab
   )
 
   def self.setup

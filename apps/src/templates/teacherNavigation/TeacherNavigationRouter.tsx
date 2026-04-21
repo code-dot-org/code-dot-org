@@ -14,20 +14,23 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
-import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import {TeacherHomepage} from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
+import SectionProgressV2 from '../sectionProgressV2/SectionProgressV2';
+import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
+import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
+import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
   sectionProviderName,
@@ -74,7 +77,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  showAITutorTab: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -83,7 +85,6 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  showAITutorTab,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -95,12 +96,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
-  const sectionHasAITutor = React.useMemo(
-    () =>
-      selectedSection
-        ? selectedSection.courseVersionName?.includes('csa') ||
-          selectedSection.courseVersionName?.includes('aitutor')
-        : false,
+  const showAiChatSettings = React.useMemo(
+    () => !!selectedSection,
     [selectedSection]
   );
 
@@ -141,7 +138,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div className={styles.pageAndSidebar}>
-                <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                <TeacherNavigationBar showAiChatSettings={showAiChatSettings} />
                 <ScrollRestoration />
                 <Outlet />
               </div>
@@ -181,16 +178,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               )}
             />
             <Route
-              path={TEACHER_NAVIGATION_PATHS.standardsReport}
-              element={
-                <ElementOrEmptyPage
-                  showNoStudents={studentCount === 0}
-                  showNoCurriculumAssigned={!anyStudentHasProgress}
-                  element={applyV1TeacherDashboardWidth(<StandardsReport />)}
-                />
-              }
-            />
-            <Route
               path={TEACHER_NAVIGATION_PATHS.projects}
               element={
                 <ElementOrEmptyPage
@@ -223,11 +210,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   showNoCurriculumAssigned={!anyStudentHasProgress}
                   element={
                     <GlobalEditionWrapper
-                      component={SectionProgressSelector}
-                      componentId="SectionProgressSelector"
-                      props={{
-                        isInV1Navigaton: false,
-                      }}
+                      component={SectionProgressV2}
+                      componentId="SectionProgressV2"
+                      props={{}}
                     />
                   }
                 />
@@ -295,16 +280,30 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
+            {experiments.isEnabled('student-snapshot') && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+                element={
+                  <ElementOrEmptyPage
+                    showNoStudents={studentCount === 0}
+                    showNoCurriculumAssigned={!anyStudentHasProgress}
+                    element={<StudentSnapshot />}
+                  />
+                }
+              />
+            )}
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
               element={
                 <DashboardSectionSettings
                   redirectUrl={
-                    '/teacher_dashboard' +
-                    generatePath(
-                      LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,
-                      {sectionId: sectionId}
-                    )
+                    sectionId
+                      ? TEACHER_NAVIGATION_BASE_URL +
+                        generatePath(
+                          LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,
+                          {sectionId: sectionId}
+                        )
+                      : `${TEACHER_NAVIGATION_BASE_URL}/${TEACHER_NAVIGATION_PATHS.home}`
                   }
                 />
               }
@@ -320,16 +319,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               }
             />
             <Route
-              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              path={TEACHER_NAVIGATION_PATHS.aiChatSettings}
               element={
-                showAITutorTab && sectionHasAITutor ? (
-                  <ElementOrEmptyPage
-                    showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={false}
-                    element={applyV1TeacherDashboardWidth(
-                      <TutorTab sectionId={sectionId || 0} />
-                    )}
-                  />
+                showAiChatSettings ? (
+                  <AiChatAccessControls />
                 ) : (
                   <Navigate
                     to={TEACHER_NAVIGATION_PATHS.progress}
@@ -338,6 +331,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 )
               }
             />
+            {DCDO.get('skills-dashboard', false) && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.skills}
+                element={<SkillsDashboard />}
+              />
+            )}
           </Route>
         </Route>
       </Route>
@@ -348,10 +347,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       studentCount,
       providerName,
       anyStudentHasProgress,
-      showAITutorTab,
+      showAiChatSettings,
       selectedSection,
       studioUrlPrefix,
-      sectionHasAITutor,
     ]
   );
 

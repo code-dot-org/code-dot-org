@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U3L7-Enhanced PBT_alt-2025",
     "teacher_markdown": "The `toString()` method in the `Forbes` class uses a different type of `for` loop to traverse the 1D array of `Company` objects. Students should notice that this is similar to the way they have traversed 1D arrays before because it allows them to access elements, but it is different because it does not use the `arrayName[index]` syntax to access elements.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:48:33.479+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L7-L2_pilot-2025\"}]"

@@ -1,18 +1,18 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
@@ -27,6 +27,7 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
+  HOAI: 'hoai',
   PL: 'pl',
 };
 const CURRICULUM_TYPES_FOR_AUDIENCE = {
@@ -45,6 +46,7 @@ const CURRICULUM_TYPES_FOR_AUDIENCE = {
     curriculumTypes.module,
   ],
   [MARKETING_AUDIENCE.HOC]: null,
+  [MARKETING_AUDIENCE.HOAI]: null,
   [MARKETING_AUDIENCE.PL]: null,
 };
 
@@ -232,21 +234,14 @@ export default function CurriculumQuickAssign({
 
       const courseVersionId = sectionCourse.versionId;
       const courseVersion = courseVersions[courseVersionId];
-      const isStandaloneUnit = courseVersion.type === 'Unit';
 
-      let targetUnit;
-
-      if (isStandaloneUnit) {
-        targetUnit = Object.values(courseVersion.units)[0];
-      } else if (sectionCourse.unitId) {
-        targetUnit = courseVersion.units[sectionCourse.unitId];
-      }
+      let targetUnit = courseVersion.units[sectionCourse.unitId];
 
       const updateSectionData = {
         displayName: course.display_name,
         courseOfferingId: course.id,
         versionId: courseVersionId,
-        unitId: isStandaloneUnit ? null : sectionCourse.unitId,
+        unitId: sectionCourse.unitId,
         lessonExtrasAvailable: targetUnit?.lesson_extras_available,
         textToSpeechEnabled: targetUnit?.text_to_speech_enabled,
       };
@@ -280,15 +275,22 @@ export default function CurriculumQuickAssign({
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const SelectedQuickAssignTable =
     marketingAudience === MARKETING_AUDIENCE.HOC ||
+    marketingAudience === MARKETING_AUDIENCE.HOAI ||
     marketingAudience === MARKETING_AUDIENCE.PL
       ? QuickAssignTableHocPl
       : QuickAssignTable;
+
+  const aiChatToolsDependency = selectedCourseOffering
+    ? selectedCourseOffering.ai_chat_tools_dependency
+    : AiChatToolsDependency.NONE;
 
   return (
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>
@@ -317,8 +319,12 @@ export default function CurriculumQuickAssign({
               id="decide-later"
               onChange={toggleDecideLater}
             />
-            <Heading3>{i18n.assignCurriculum()}</Heading3>
-            <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
+            <Typography variant="h3" gutterBottom>
+              {i18n.assignCurriculum()}
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {i18n.useDropdownMessage()}
+            </Typography>
           </div>
           <CurriculumQuickAssignTopRow
             showPlOfferings={showPlOfferings}
@@ -351,6 +357,12 @@ export default function CurriculumQuickAssign({
               sectionCourse={sectionCourse}
               isNewSection={isNewSection}
             />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
           )}
         </>
       )}

@@ -1,0 +1,9 @@
+name 'pl-sandbox-aif2-U1-wireframe-webapp-27'
+display_name 'Web App Wireframe'
+description '#### First, use AI Chat to help shape your ideas for your website. Then, use **Sketch Lab** to design a wireframe for your web pages.'
+
+sublevels
+level 'pl-sandbox-aif2-U1-wireframe-webapp-27b'
+level 'pl-sandbox-aif2-U1-wireframe-webapp-27a'
+
+

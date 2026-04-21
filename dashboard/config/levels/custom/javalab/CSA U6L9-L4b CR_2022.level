@@ -15,7 +15,7 @@
     "display_name": "Change Words or Phrases",
     "bubble_choice_description": "Determine if a text contains a specific word or phrase.",
     "thumbnail_url": "https://images.code.org/86fa56d5dabfb90a0d884d161e70570b-book.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:40:49.412+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4a CR_2022\"},{\"changed_at\":\"2022-04-14 19:40:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:29:38 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 21:14:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

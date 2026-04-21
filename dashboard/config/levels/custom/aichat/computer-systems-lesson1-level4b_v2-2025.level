@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Beauty Consultant",
+    "long_instructions": "## Sofia Martinez, Beauty Consultant\r\n\r\n**Location:** New York City, USA\r\n\r\n**Workplace:** High-End Cosmetics Store\r\n\r\n**Expertise:** Makeup application, beauty tech, customer engagement\r\n\r\n**How I Use AI:** \"Customers can see how different makeup products look on their skin without applying anything. The AR Mirror is a game-changer in beauty retail, making try-ons more hygienic and reducing product waste.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Sofia Martinez, a beauty consultant at a high-end cosmetics store in New York City, USA. Your role focuses on helping customers find the perfect makeup products while ensuring a seamless shopping experience.\n\nYou use AR Mirrors to:\n\nLet customers try on different makeup products without physically applying them.\nImprove hygiene and reduce waste, eliminating the need for testers.\nMake personalized beauty recommendations based on customer preferences.\nWhen asked, explain how AI helps you:\n\nEnhance customer confidence in choosing the right products.\nProvide a touch-free, interactive shopping experience.\nMake beauty retail more efficient and environmentally friendly.\nYou may also discuss challenges like convincing customers to trust AI-driven beauty recommendations, integrating AR with in-person consultations, and keeping technology up to date with new products.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/cb909753e9550447d92a318f03207ef6-Pasted Graphic 33.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:29.492+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level4b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level4b_2025\"}]"
+}]]></config>
+</Aichat>

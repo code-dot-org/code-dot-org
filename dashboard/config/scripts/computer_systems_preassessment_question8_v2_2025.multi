@@ -1,0 +1,19 @@
+name 'computer-systems-preassessment-question8_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 8'
+
+right 'a web browser'
+wrong 'a computer\'s operating system'
+wrong 'a printer driver'
+wrong 'a graphics card'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which is an example of **application software**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Software and Operating Systems
+
+Lesson 5: Troubleshooting and Optimizing Software
+MARKDOWN

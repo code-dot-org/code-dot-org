@@ -16,7 +16,7 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
+    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(235, 255, 254)"
 
     # Note that it's important that we use the word "Damn" here, as our stubbed version of our content moderation service
     # used in Drone is configured to flag this word.
@@ -32,9 +32,8 @@ Feature: Model customizations and interactions in AI Chat Lab
     Then I wait until element ".uitest-aichat-chat-alert" contains text "System prompt has been updated"
 
     Given I reload the page
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
+    And I wait until element "#system-prompt" is visible
     Then element "#system-prompt" has text "You are a safe chatbot"
 
   Scenario: Publishing model enables published view and saves
@@ -50,7 +49,7 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I click selector "#uitest-add-example-topic"
     And I wait until element "#uitest-publish-notes-save" is enabled
     And I click selector "#uitest-publish-notes-save"
-    Then I wait until element ".uitest-aichat-chat-alert" contains text "Model card information has been updated"
+    Then I wait until element "#uitest-aichat-save-alert" contains text "Saved"
 
     Given element "#uitest-view-mode-toggle-container" is not visible
     And element "#uitest-presentation-view-container" is not visible
@@ -60,8 +59,6 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I wait until element "#uitest-presentation-view-header" contains text "Jeeves"
 
     Given I reload the page
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
     When I click selector "#uitest-user-view-button" once I see it
     Then I wait until element "#uitest-presentation-view-header" contains text "Jeeves"

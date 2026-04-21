@@ -65,6 +65,7 @@
     "rubric_performance_level_2": "All screens from each team member are included in the project, and most buttons link to the appropriate screen, but there may be minor errors that prevent all buttons from working.",
     "rubric_performance_level_3": "Screens from multiple team members have been incorporated into the project, and at least one button links to another screen.",
     "rubric_performance_level_4": "No buttons link to other screens in the project.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

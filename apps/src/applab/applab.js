@@ -7,17 +7,16 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
@@ -231,7 +230,7 @@ function renderFooterInSharedGame() {
 
   const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
-  ReactDOM.render(
+  createReactRoot(
     <SmallFooter
       i18nDropdownInBase={false}
       privacyPolicyInBase={false}
@@ -247,7 +246,10 @@ function renderFooterInSharedGame() {
       menuItems={menuItems}
       phoneFooter={true}
     />,
-    footerDiv
+    footerDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 
@@ -288,17 +290,21 @@ function handleExecutionError(err, lineNumber, outputString, libraryName) {
   outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
   const analyticsData = studioApp().analyticsData();
-  logUserLevelInteraction({
-    levelId: analyticsData.levelId,
-    scriptId: analyticsData.scriptId,
-    interaction: UserLevelInteractions.code_execution_error,
-    metadata: JSON.stringify({
-      error: err,
-      lineNumber: lineNumber,
-      outputString: outputString,
-      libraryName: libraryName,
-    }),
-  });
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.code_execution_error,
+      metadata: JSON.stringify({
+        error: err,
+        lineNumber: lineNumber,
+        outputString: outputString,
+        libraryName: libraryName,
+      }),
+    });
+  }
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
 
@@ -934,11 +940,14 @@ Applab.render = function () {
     handleVersionHistory: Applab.handleVersionHistory,
     autogenerateML: autogenerateML,
   });
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
-    Applab.reactMountPoint_
+    Applab.reactMountPoint_,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -995,11 +1004,11 @@ Applab.isRunning = function () {
  */
 Applab.toggleDivApplab = function (isVisible) {
   if (isVisible) {
-    $('#divApplab').show();
-    $('#designModeViz').hide();
+    $('#divApplab').css('display', 'block');
+    $('#designModeViz').css('display', 'none');
   } else {
-    $('#divApplab').hide();
-    $('#designModeViz').show();
+    $('#divApplab').css('display', 'none');
+    $('#designModeViz').css('display', 'block');
   }
 };
 
@@ -1116,40 +1125,16 @@ Applab.serializeAndSave = function (callback) {
 Applab.runButtonClick = function () {
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
   Applab.execute();
   const analyticsData = studioApp().analyticsData();
-  logUserLevelInteraction({
-    levelId: analyticsData.levelId,
-    scriptId: analyticsData.scriptId,
-    interaction: UserLevelInteractions.click_run,
-  });
-
-  const config = studioApp().config;
-  const levelUrl = config.currentScriptLevelUrl;
-  // These are the hand-selected levels that are eligible for AI code analysis
-  // as part of the initial Evaluate Student Learning pilot. We want to tightly
-  // scope which levels we run AI code analysis on in for early testing. If we
-  // gain confidence in the approach and accuracy of AI evaluations, we'll expand,
-  // and ultimately likely store this information as a property of the level itself.
-  const aiEvaluationLevels = [
-    '/s/csp4-2024/lessons/3/levels/2',
-    '/s/csp4-2024/lessons/3/levels/6',
-  ];
-  const shouldEvaluateStudentCode = aiEvaluationLevels.includes(levelUrl);
-  if (shouldEvaluateStudentCode) {
-    evaluateStudentWork(
-      {
-        studentId: config.userId,
-        studentDisplayName: config.codeOwnersName,
-        studentWork: config.getCode(),
-        codeVersion: project.getCurrentSourceVersionId(),
-      },
-      analyticsData.levelId,
-      analyticsData.scriptId
-    );
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_run,
+    });
   }
 
   // Enable the Finish button if is present:
@@ -1336,11 +1321,15 @@ function onInterfaceModeChange(mode) {
 
 Applab.onPuzzleFinish = function () {
   const analyticsData = studioApp().analyticsData();
-  logUserLevelInteraction({
-    levelId: analyticsData.levelId,
-    scriptId: analyticsData.scriptId,
-    interaction: UserLevelInteractions.click_finish,
-  });
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_finish,
+    });
+  }
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 

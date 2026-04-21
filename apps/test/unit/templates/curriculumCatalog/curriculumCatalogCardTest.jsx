@@ -60,7 +60,7 @@ describe('CurriculumCatalogCard', () => {
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
-      pathToCourse: '/s/course',
+      pathToCourse: '/courses/oceans',
       scriptId: 1,
       isSignedOut: true,
       onQuickViewClick: () => {},

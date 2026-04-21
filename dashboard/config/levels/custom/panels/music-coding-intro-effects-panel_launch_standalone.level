@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-05-19T21:15:29.000Z",
   "level_num": "custom",
@@ -31,7 +32,7 @@
       },
       {
         "text": "Click on the block to choose which drums to play and when.",
-        "imageUrl": "https://images.code.org/939e27d20c68b4ef92f100a674c28e35-Lesson 3 Level 7d.png",
+        "imageUrl": "https://images.code.org/fc101af721c8617d7f27b78bbc6e0445-Lesson 3 Level 7d (1).png",
         "key": "music-coding-intro-effects-panel-419eec8f-c8c5-4242-b6bc-edc9d4ace123",
         "fadeInOverPrevious": true,
         "layout": "text-top-center"
@@ -39,7 +40,6 @@
     ],
     "name_suffix": "_standalone"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:29.191+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-effects-panel_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:29.191+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-effects-panel_launch\"},{\"changed_at\":\"2025-08-15 16:49:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-15 16:52:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-15 16:59:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

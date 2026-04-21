@@ -1,66 +1,122 @@
-import {Button} from '@code-dot-org/component-library/button';
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
+import markdownToTxt from 'markdown-to-txt';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
-import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
-import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  isLevelbuilderEnvironment,
-  tryGetLocalStorage,
-  trySetLocalStorage,
-} from '@cdo/apps/utils';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {ModalTypes} from '../constants';
-import aichatI18n from '../locale';
+import AichatContextManager from '../aichatContextManager';
 import {
+  modelDescriptions,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
+import {
+  addChatEvent,
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
-  selectMultimodalEnabled,
-  setShowModalType,
+  setClientType,
+  setNewChatSession,
+  setChatWorkspaceSelectedTab,
 } from '../redux';
-import {getShortName} from '../utils';
+import {clearUserAddedSelectionContext} from '../redux/slice';
+import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {
+  AiChatClientType,
+  ChatAsset,
+  ChatButtonAndKey,
+  ModelParameters,
+} from '../types';
+import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
-import UploadButton from './assets/UploadButton';
+import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
-import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
-  onClear: () => void;
-}
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  hideModelChangeMessage?: boolean;
 
-enum WorkspaceTeacherViewTab {
-  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
-  TEST_STUDENT_MODEL = 'testStudentModel',
-}
+  // Multimodal support
+  multimodalEnabled?: boolean;
+  channelId?: string;
+  levelName?: string;
+  hasStarterAssets?: boolean;
 
-const eraserIcon: FontAwesomeV6IconProps = {
-  iconName: 'eraser',
-};
+  // Optional callback to process the model's response before it is recorded in chat
+  // history (useful for structured outputs).
+  responseCallback?: (response: string) => string;
+
+  // Optional callback to log level activity
+  logLevelActivity?: () => void;
+
+  hasInstructionsDrawer?: boolean;
+  lessonId?: number;
+  disabled?: boolean;
+  disabledMessage?: string;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
+}
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
-  onClear,
+  modelParameters,
+  clientType,
+  chatButtons,
+  hiddenContextCallback,
+  multimodalEnabled = false,
+  levelName,
+  channelId,
+  hasStarterAssets = false,
+  hideModelChangeMessage = false,
+  responseCallback,
+  logLevelActivity,
+  hasInstructionsDrawer,
+  lessonId,
+  disabled = false,
+  disabledMessage,
+  renderLastMessagePostText,
 }) => {
-  const [selectedTab, setSelectedTab] =
-    useState<WorkspaceTeacherViewTab | null>(null);
+  const canDisplayAssets = !!levelName && !!channelId;
+  if (multimodalEnabled && !canDisplayAssets) {
+    console.warn(
+      'Multimodal support requires level name and channel ID. Asset uploads will not be available.'
+    );
+    multimodalEnabled = false;
+  }
 
-  const {showModalType, studentChatHistory} = useAppSelector(
-    state => state.aichat
+  const selectedTab = useAppSelector(
+    state => state.aichat.chatWorkspaceSelectedTab
+  );
+
+  const studentChatHistory = useAppSelector(
+    state => state.aichat.studentChatHistory
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const visibleItems = useSelector(selectAllVisibleMessages);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+  const unfilteredVisibleItems = useAppSelector(selectAllVisibleMessages);
+  const visibleItems = useMemo(() => {
+    if (hideModelChangeMessage) {
+      return unfilteredVisibleItems.filter(message => !isModelUpdate(message));
+    }
+    return unfilteredVisibleItems;
+  }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
@@ -72,25 +128,74 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
 
+  const supportsMultimodalInput = useMemo(() => {
+    return modelDescriptions.find(
+      model => model.id === modelParameters.selectedModelId
+    )?.multimodal;
+  }, [modelParameters.selectedModelId]);
+
+  const canUploadAssets =
+    supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
+
+  const buildAssetUrl = useCallback(
+    (asset: ChatAsset) => {
+      return getAssetUrl(asset, channelId, levelName);
+    },
+    [channelId, levelName]
+  );
+
   const dispatch = useAppDispatch();
 
-  // This effect resets chat history and any staged uploads when:
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    AichatContextManager.setContext({
+      clientType,
+      currentLevelId: parseInt(currentLevelId || ''),
+      scriptId,
+      channelId,
+      lessonId,
+    });
+  }, [clientType, currentLevelId, scriptId, channelId, lessonId]);
+
+  // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
   // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
     dispatch(clearChatMessages());
     dispatch(clearStagedFiles());
+    dispatch(clearUserAddedSelectionContext());
 
     if (selectedStudent) {
       dispatch(
-        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+          lessonId,
+        })
       );
     } else {
       dispatch(
-        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
+          lessonId,
+        })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
+  }, [
+    dispatch,
+    currentUserId,
+    currentLevelId,
+    selectedStudent,
+    channelId,
+    lessonId,
+  ]);
+
+  useEffect(() => {
+    dispatch(setClientType(clientType));
+  }, [dispatch, clientType]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);
@@ -102,66 +207,102 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
-    // Skip showing the modal on levelbuilder
-    if (isLevelbuilderEnvironment()) {
-      return;
-    }
-
-    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-      'teacherSawAichatOnboarding',
-      'no'
-    );
-    const modalToShow =
-      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
-        ? ModalTypes.TEACHER_ONBOARDING
-        : ModalTypes.WARNING;
-    dispatch(setShowModalType(modalToShow));
-  }, [isUserTeacher, dispatch]);
-
-  useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (selectedStudent && !selectedTab) {
-      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
+      dispatch(
+        setChatWorkspaceSelectedTab(
+          WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+        )
+      );
     } else if (!selectedStudent) {
-      setSelectedTab(null);
+      dispatch(setChatWorkspaceSelectedTab(null));
     }
-  }, [selectedStudent, selectedTab]);
+  }, [dispatch, selectedStudent, selectedTab]);
+
+  // Whenever model parameters change, 1) reset the chat session if necessary,
+  // and 2) log the changed properties to the chat history.
+  const previousParameters: ModelParameters = usePrevious(modelParameters);
+  useEffect(() => {
+    const changedProperties = findChangedProperties(
+      previousParameters,
+      modelParameters
+    );
+    if (
+      changedProperties.some(property =>
+        RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
+      )
+    ) {
+      dispatch(setNewChatSession());
+    }
+
+    changedProperties.forEach(property => {
+      dispatch(
+        addChatEvent({
+          removeId: getNewRemoveId(),
+          updatedField: property,
+          updatedValue: modelParameters[property],
+          timestamp: Date.now(),
+        })
+      );
+    });
+  }, [dispatch, previousParameters, modelParameters]);
+
+  const [liveAnnouncement, setLiveAnnouncement] = useState('');
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  const hasChatHistory = chatEvents.length > 0;
+  useEffect(() => {
+    if (hasChatHistory) {
+      const last = chatEvents[chatEvents.length - 1];
+      if ('chatMessageText' in last && last.chatMessageText) {
+        setLiveAnnouncement(markdownToTxt(last.chatMessageText));
+      }
+    }
+  }, [hasChatHistory, chatEvents]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
   };
 
+  const buildAssetUrlValue = canDisplayAssets ? buildAssetUrl : undefined;
+
   const tabs = [
     {
       value: 'viewStudentChatHistory',
       text:
         selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? aichatI18n.viewOnlyTabLabel({
-              fieldLabel: aichatI18n.viewStudentChatHistory({
-                selectedStudentName: selectedStudentName ?? '',
-              }),
-            })
-          : aichatI18n.viewStudentChatHistory({
-              selectedStudentName: selectedStudentName ?? '',
-            }),
+          ? `${selectedStudentName ?? ''}'s chat history (view only)`
+          : `${selectedStudentName ?? ''}'s chat history`,
       tabContent: (
-        <ChatEventsList events={studentChatHistory} isTeacherView={true} />
+        <ChatEventsList
+          events={studentChatHistory}
+          isTeacherView={true}
+          buildAssetUrl={buildAssetUrlValue}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
+        />
       ),
       iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
-      text: aichatI18n.testStudentModel(),
-      tabContent: <ChatEventsList events={visibleItems} />,
+      text: 'Test student model',
+      tabContent: (
+        <ChatEventsList
+          events={visibleItems}
+          buildAssetUrl={buildAssetUrlValue}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
+        />
+      ),
     },
   ];
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value as WorkspaceTeacherViewTab);
+      dispatch(setChatWorkspaceSelectedTab(value as WorkspaceTeacherViewTab));
     },
-    [setSelectedTab]
+    [dispatch]
   );
 
   const tabArgs: TabsProps = {
@@ -174,65 +315,72 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const ChatModal = useMemo(
-    () =>
-      showModalType === ModalTypes.TEACHER_ONBOARDING
-        ? TeacherOnboardingModal
-        : showModalType === ModalTypes.WARNING
-        ? ChatWarningModal
-        : undefined,
-    [showModalType]
-  );
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || disabled;
 
-  const onCloseModal = useCallback(() => {
-    // We only want to show the teacher onboarding modal the first time a teacher user
-    // interacts with the aichat tool. Thus, we store a value in local storage when
-    // closing the modal. After the first time viewing the modal, the teacher user
-    // sees the warning modal on page load from then on.
-    if (
-      isUserTeacher &&
-      showModalType === ModalTypes.TEACHER_ONBOARDING &&
-      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
-    ) {
-      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
-    }
-    dispatch(setShowModalType(undefined));
-  }, [dispatch, isUserTeacher, showModalType]);
+  const isTeacherView = !!selectedStudent;
 
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+  const showTabs =
+    selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
 
   return (
-    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {ChatModal && <ChatModal onClose={onCloseModal} />}
-      {selectedStudent ? (
+    <div
+      id="chat-workspace-area"
+      className={moduleStyles.chatWorkspace}
+      aria-live="polite"
+    >
+      <div className={moduleStyles.accessibilityHidden}>{liveAnnouncement}</div>
+      {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList events={visibleItems} />
+        <ChatEventsList
+          events={chatEvents}
+          isTeacherView={isTeacherView}
+          buildAssetUrl={buildAssetUrlValue}
+          clientType={clientType}
+          modelParameters={modelParameters}
+          hasInstructionsDrawer={hasInstructionsDrawer}
+          chatDisabled={disabled}
+          chatDisabledMessage={disabledMessage}
+          renderLastMessagePostText={renderLastMessagePostText}
+        />
       )}
-
       <div className={moduleStyles.footer}>
-        {multimodalEnabled && <StagedFilesPreview />}
+        {canUploadAssets && (
+          <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+        )}
+        <UserAddedSelectionContextPreview />
         {canChatWithModel && (
           <UserChatMessageEditor
+            clientType={clientType}
+            modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContextCallback={hiddenContextCallback}
+            multimodalAvailable={canUploadAssets}
+            responseCallback={responseCallback}
+            levelName={levelName}
+            hasStarterAssets={hasStarterAssets}
+            buildAssetUrl={buildAssetUrlValue}
+            logLevelActivity={logLevelActivity}
+            uploadDisabled={uploadDisabled}
+            currentLevelId={currentLevelId}
+            lessonId={lessonId}
+            chatDisabled={disabled}
           />
         )}
-        <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && (
-            <UploadButton isDisabled={!canChatWithModel || !!selectedStudent} />
-          )}
-          <Button
-            text={aichatI18n.clearChatButtonText()}
-            disabled={!canChatWithModel}
-            iconLeft={eraserIcon}
-            size="s"
-            type="secondary"
-            color="gray"
-            onClick={onClear}
-          />
-          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
-        </div>
       </div>
+      {isTeacherView && hasChatHistory && disabled && (
+        <Alert
+          type={alertTypes.info}
+          text={disabledMessage || ''}
+          icon={{
+            className: moduleStyles.chatDisabledAlertIcon,
+            iconName: 'ai-locked',
+            iconFamily: 'kit',
+          }}
+          className={moduleStyles.chatDisabledAlert}
+        />
+      )}
     </div>
   );
 };

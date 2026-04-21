@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:41:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class represents an image that can be modified with filters and effects. It is a subclass of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class and has an instance variable pixels for a 2D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> objects in the image.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixelsFromImage()</code> method to return a 2D array of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> objects from the image.\r\n\r\n* The number of rows is equivalent to the height of the image.\r\n\r\n* The number of columns is equivalent to the width of the image.\r\n\r\n* Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class to get the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object at the current location.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class,\r\n\r\n1. Instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> object with an image in the Asset Manager. You can also upload and use your own image.\r\n\r\n2. Draw the image in the scene and add a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> after the image is drawn.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel()</code> method.\r\n</div>",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class represents an image that can be modified with filters and effects. It is a subclass of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class and has an instance variable pixels for a 2D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> objects in the image.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixelsFromImage()</code> method to return a 2D array of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> objects from the image.\r\n\r\n* The number of rows is equivalent to the height of the image.\r\n\r\n* The number of columns is equivalent to the width of the image.\r\n\r\n* Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class to get the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object at the current location.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class,\r\n\r\n1. Instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> object with an image in the Asset Manager.\r\n\r\n2. Draw the image in the scene and add a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> after the image is drawn.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Image</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -33,9 +34,11 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:58.158+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L6_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L6-L6_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:58.158+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L6_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L6-L6_pilot-2025\"},{\"changed_at\":\"2026-02-04 22:38:37 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

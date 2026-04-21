@@ -69,6 +69,10 @@ export const RecordingFileType = {
   WAV: '.wav',
 };
 
+/**
+ * Recorder for MP3/WAV file recording.
+ * For native browser recording, use {@link AudioRecorder.ts}
+ */
 const getRecorder = extension => {
   if (extension === RecordingFileType.WAV) {
     return new WavRecorder();

@@ -136,6 +136,7 @@
     "map_reference": "/courses/csd-2022/guides/if-else-statements",
     "bubble_choice_description": "Make the bee follow the mouse as it moves.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

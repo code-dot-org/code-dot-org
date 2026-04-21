@@ -1,0 +1,59 @@
+name 'pl-aif-2-U4-display-intro-movie'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What Should an App Show? Making Results Clear and Trustworthy
+
+#### When you search for something in an app, you expect the results to make sense.
+#### Too little information can make it feel broken. Too much information can feel overwhelming.
+
+#### Below are three versions of a movie search for a 7:00 pm showtime. Each one makes different choices about what results to display. As you explore them, focus not just on what is shown, but how those choices affect your confidence in the results.
+
+---
+## Movie Times
+
+<img src="https://images.code.org/7d57afeca63698b5ed2a4d26f03e039f-image-1768601417811.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+
+#### **Think about:**
+
+- #### Which version feels most helpful or realistic?
+
+- #### Which one feels confusing or overwhelming?
+
+
+ #### 👉 **How does each version affect your trust that the app is working correctly?**
+
+
+
+<div style="clear:both;"></div>
+
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p style = "font-size: 14pt;">
+  You may notice that clear messages and the right amount of information increase trust, while either missing information or information overload can feel confusing or suspicious. Designers and programmers make choices about what to show, what to hide, and how to explain what is happening.
+</p>
+</div>
+</details>
+
+
+---
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>Transparency Cue</strong> is  information your app shows that helps users understand what's happening with the data and trust the results.</p>
+</div>
+
+
+
+## Next up
+
+#### Let's practice adding transparency to a web app.
+
+
+MARKDOWN

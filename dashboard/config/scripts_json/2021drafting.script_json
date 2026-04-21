@@ -10,7 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:28:47 UTC",
+    "serialized_at": "2025-07-14 12:29:58 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -626,31 +627,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak_library"
-        ],
-        "progression": "New library"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "outbreak_library"
-        ],
-        "lesson.key": "Outbreaklab",
-        "lesson_group.key": "outbreak",
-        "script.name": "2021drafting",
-        "activity_section.key": "916a6a36-640c-4bfb-b419-7fed3bb2bdd6"
-      },
-      "level_keys": [
-        "outbreak_library"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "outbreak_virus_v2"
         ],
         "progression": "New library"
@@ -667,6 +643,28 @@
       },
       "level_keys": [
         "outbreak_virus_v2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "New library"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting",
+        "activity_section.key": "916a6a36-640c-4bfb-b419-7fed3bb2bdd6"
+      },
+      "level_keys": [
+        "outbreak_library"
       ]
     },
     {
@@ -1509,9 +1507,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak_library",
+        "level.key": "outbreak_virus_v2",
         "script_level.level_keys": [
-          "outbreak_library"
+          "outbreak_virus_v2"
         ],
         "lesson.key": "Outbreaklab",
         "lesson_group.key": "outbreak",
@@ -1521,9 +1519,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak_virus_v2",
+        "level.key": "outbreak_library",
         "script_level.level_keys": [
-          "outbreak_virus_v2"
+          "outbreak_library"
         ],
         "lesson.key": "Outbreaklab",
         "lesson_group.key": "outbreak",

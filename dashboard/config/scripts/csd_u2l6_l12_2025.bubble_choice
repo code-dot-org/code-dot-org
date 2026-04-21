@@ -1,0 +1,13 @@
+name 'CSD U2L6-L12-2025'
+display_name 'Challenges and Extra Code'
+description 'There are lots of different ways to style text.  Use the challenges below to get new ideas for your web page.'
+
+sublevels
+level 'CSD U2L6-L12a-2025'
+level 'CSD U2L6-L12b-2025'
+level 'CSD U2L6-L12c-2025'
+level 'CSD U2L6-L12d-2025'
+level 'CSD U2L6-L12e-2025'
+level 'CSD U2L6-L12f-2025'
+
+uses_lab2

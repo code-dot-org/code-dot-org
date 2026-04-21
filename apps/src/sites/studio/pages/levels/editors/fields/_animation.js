@@ -1,7 +1,10 @@
 import $ from 'jquery';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
+import {
+  throwIfDisallowedAnimationSourceUrl,
+  throwIfSerializedAnimationListIsInvalid,
+} from '@cdo/apps/p5lab/shapes';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -17,6 +20,7 @@ $(document).ready(function () {
       if (json.length > 0) {
         const animationList = JSON.parse(json);
         throwIfSerializedAnimationListIsInvalid(animationList);
+        throwIfDisallowedAnimationSourceUrl(animationList);
       }
       levelStartAnimationsValidationDiv.text('Animations JSON appears valid.');
       levelStartAnimationsValidationDiv.css('color', VALID_COLOR);
@@ -29,13 +33,9 @@ $(document).ready(function () {
   validateAnimationJSON(
     document.getElementById('level_start_animations').value
   );
-  initializeCodeMirror('level_start_animations', 'application/json', {
+  initializeCodeMirror6('level_start_animations', 'json', {
     callback: codeMirror => {
       validateAnimationJSON(codeMirror.getValue());
     },
   });
-
-  if (document.getElementById('level_custom_helper_library')) {
-    initializeCodeMirror('level_custom_helper_library', 'javascript');
-  }
 });

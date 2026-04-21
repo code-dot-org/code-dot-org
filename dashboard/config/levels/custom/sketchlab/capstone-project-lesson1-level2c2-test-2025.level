@@ -1,0 +1,41 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-02-04T21:01:19.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# System Flow Sketch (Milestone 2)\r\n\r\n**Goal:** Use the Milestone 2 space on the board to explain how your app works as a system.\r\n\r\nIn this milestone, you will build on the sketch you started in Milestone 1. Instead of just listing pages or actions, you will now show how a user interaction flows through the app—from action, to decision, to result.\r\n\r\n### How to use this space\r\nFor each important user interaction:\r\n1. Start with the page or state where the user is.\r\n2. Show the action the user takes.\r\n3. Explain what the app checks or decides (logic or rules).\r\n4. Show what the user sees as a result.\r\n\r\nFocus on **one interaction at a time**. If your app has multiple important interactions, decide which one(s) you will focus on first. You can come back and add more flow rows as you continue developing your app.\r\n\r\nYou do not need to design a final interface or write code. Use simple boxes, arrows, and labels to make the system behavior clear.\r\n\r\n\r\n### Optional Focus Areas\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **If you are working on your capstone project *after Unit 3*, your sketch may help explain:**]\r\n- how local data structures (arrays or objects) are used\r\n- how user input affects behavior\r\n- how data moves through the app from input → processing → display\r\n:::\r\n\r\n<br>\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **If you are working on your capstone project *after Unit 5*, your sketch may help explain:**]\r\n- where external data is requested\r\n- what happens while the app waits\r\n- what happens if the request fails or returns no results\r\n:::\r\n",
+    "bubble_choice_description": "Build on your Milestone 1 sketch to show how users move through your app, what the app checks or decides, and what users see as a result. ***(useful for Milestone 2)***.",
+    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
+    "display_name": "System Flow Sketch",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 0,
+          "scrollY": -432,
+          "zoom": {
+            "value": 1
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "project_template_level_name": "capstone-sketlab-template"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-04T21:01:19.223+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level1c-test-2025\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level1c-test-2025\"},{\"changed_at\":\"2026-02-04 21:02:54 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 21:04:34 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 22:06:46 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

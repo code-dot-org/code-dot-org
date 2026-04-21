@@ -29,7 +29,8 @@
     "bubble_choice_description": "Put lines under, over, or through your text.",
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <!-- content on boba tea -->\\n  <h1>How to make boba</h1> \\n \\n  <h3>\\n    Do you enjoy delicious boba tea?\\n  </h3>\\n\\n  <h3>\\n    Did you know you can make boba at home?\\n  </h3>\\n \\n  <p>\\n    Making boba is easy.  I always get the quick style that you can boil in just a few minutes. \\n  </p>\\n  \\n  <h4>Important!!!!!</h4>\\n  <p>These instructions are for the quick style boba.  If you get the regular boba, they WILL NOT WORK!</p>\\n  \\n  <h2>Step 1</h2>\\n \\n  <p> \\n    Boil your water and pour the boba in.  Stir until they float to the top, then let them boil for 2-3 minutes\\n  </p> \\n\\n  <h2>Step 2</h2>\\n  \\n  <p>\\n    Turn off the heat and let it sit in the water for another 2-3 minutes, then drain it and rinse it with cold water\\n  </p> \\n  \\n  <h2>Step 3</h2>\\n  \\n  <p>Pour brown sugar syrup or just brown sugar on top of your boba and let them sit for a long time so they can get very sweet.</p>\\n  \\n</body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* 2) Change the text decoration for the h4 tag to something else */\\n/* 3) Add a text decoration property for the paragraph, h1, h2, or h3 tag */\\nh1 {\\n  color: green;\\n  font-size: 24px;\\n}\\nh4 {\\n  color: red;\\n  text-decoration: underline double;\\n}\\np {\\n    font-size: 14px;\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "thumbnail_url": "https://images.code.org/b7bd7169e59bc50e732cfb8474bda904-image-1565646948500.54.56 PM.png",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

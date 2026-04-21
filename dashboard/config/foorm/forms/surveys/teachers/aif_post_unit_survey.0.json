@@ -1,0 +1,183 @@
+{
+  "title": "Code.org Teacher Survey - AIF, {unit_name}",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "testing_panel",
+          "visible": false,
+          "title": " ",
+          "elements": [
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing</P> (hide before shipping and set readOnly = True)</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "unit_name",
+              "defaultValueExpression": "{unit_number}",
+              "startWithNewLine": false,
+              "readOnly": true,
+              "visible": true,
+              "choices": [
+                {
+                  "value": "unit_1",
+                  "text": "Unit 1: Problem Solving with AI"
+                },
+                {
+                  "value": "unit_2",
+                  "text": "Unit 2: Foundations of AI Programming"
+                },
+                {
+                  "value": "unit_3",
+                  "text": "Unit 3: AI and the Systems that Power It"
+                },
+                {
+                  "value": "unit_4",
+                  "text": "Unit 4: The Fabric of the Internet and AI"
+                },
+                {
+                  "value": "unit_5",
+                  "text": "Unit 5: Cybersecurity and Global Impacts"
+                },
+                {
+                  "value": "unit_6",
+                  "text": "Unit 6: Insights from Data and AI"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "variable_testing",
+              "visible": true,
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>unit_name = {unit_name}</p>"
+            },
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<h1>Welcome to Code.org's AI Foundations\n<p><h2>{unit_name}</h2><h3>Post-Unit Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's AI Foundations, {unit_name}.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "html",
+          "name": "curriculum_perceptions",
+          "html": "<h2>Your Perceptions About Code.org's AIF, {unit_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of {unit_name} of the AI Foundations curriculum.</span></p>"
+        },
+        {
+          "type": "rating",
+          "name": "student_engagement",
+          "title": "Were most students engaged and interested in the topics covered in {unit_name}?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Most Students Were Not Engaged",
+          "maxRateDescription": "Most Students Were Very Engaged"
+        },
+        {
+          "type": "rating",
+          "name": "confident_to_teach",
+          "title": "How confident did you feel in your ablity to effectively teach the concepts in {unit_name}?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Confident At All",
+          "maxRateDescription": "Very Confident"
+        },
+        {
+          "type": "rating",
+          "name": "supported_to_teach",
+          "title": "Were the teaching resources provided effective in supporting you to teach the concepts in {unit_name}?",
+          "description": "Teaching resources include lesson plans, slides, self-paced professional learning modules, etc.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Supported at all",
+          "maxRateDescription": "Very Supported"
+        },
+        {
+          "type": "rating",
+          "name": "nps_value",
+          "title": "How likely are you to recommend this unit to other teachers? ",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not At All Likely",
+          "maxRateDescription": "Extremely Likely"
+        },
+        {
+          "type": "checkbox",
+          "name": "challenges_teaching",
+          "title": "What challenges did you encounter while teaching this unit?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_engagement",
+              "text": "Lack of student engagement or motivation"
+            },
+            {
+              "value": "difficult_explain_concepts",
+              "text": "Difficulty in explaining complex concepts"
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints in covering all the material"
+            },
+            {
+              "value": "integrate_curriculum_requirements",
+              "text": "Integrating the unit with other curriculum requirements"
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles"
+            },
+            {
+              "value": "none",
+              "text": "None of these"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you would like to share about your teaching experience with the Code.org team? Your constructive feedback is essential for us to improve our curriculum, and we appreciate you sharing it with us.",
+          "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "aif_participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about your experience teaching AIF, {unit_name}? We are really interested in hearing from teachers to help us improve this unit.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "aif_email_focus_group",
+          "title": "Great! Please share an email address where we may contact you.",
+          "visibleIf": "{aif_participate_focus_group}='yes'"
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

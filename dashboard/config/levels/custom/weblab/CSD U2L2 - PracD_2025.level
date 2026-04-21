@@ -20,7 +20,8 @@
     "display_name": "* Pyramid",
     "bubble_choice_description": "Use paragraph tags to create a sideways pyramid out of * symbols.",
     "thumbnail_url": "https://images.code.org/f46513c66a55ea4f41b18b361b593247-image-1665177535123.png",
-    "encrypted_examples": "mxXIfCrh1ltkaK0RyvvBrteufIZwKMrrZ6QBZnG/3kkTXuI63pgE4n6tdMMC\nbtfZaZJ6z2itznuCDeX27c/9OQ==\n"
+    "encrypted_examples": "mxXIfCrh1ltkaK0RyvvBrteufIZwKMrrZ6QBZnG/3kkTXuI63pgE4n6tdMMC\nbtfZaZJ6z2itznuCDeX27c/9OQ==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

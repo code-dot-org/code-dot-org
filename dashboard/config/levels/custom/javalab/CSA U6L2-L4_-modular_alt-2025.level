@@ -25,7 +25,7 @@
     },
     "teacher_markdown": "In this instance, a single character `\"u\"` is returned. This is because the `substring()` method is returning a `String` composed of the single character at index `5` (inclusive) to index `6` (exclusive).",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-19T20:19:47.219+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L4_-modular\\\"\"],\"cloned_from\":\"CSA U6L2-L4_-modular\"}]"

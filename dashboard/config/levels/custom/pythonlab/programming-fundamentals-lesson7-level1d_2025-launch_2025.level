@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're helping a civic engagement nonprofit build a personalized text bot. It needs to send reminders to register that include both the person's name and their registration deadline.\r\n\r\n1. Add **two parameters** to the function: one for the name and one for the deadline.\r\n\r\n2. Update the message to say something like:\r\n\r\n   ```\r\n   Samira, your voter registration deadline is April 15!\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA **parameter** is a placeholder in the function definition. When you call the function, you pass in an argument that fills that placeholder.\r\n\r\nTo include a variable like a name in your message, you can combine strings using the `+` operator. Here's an example:\r\n\r\n```\r\nprint(\"Hi, \" + name + \"!\")\r\n```\r\n\r\nMake sure to include spaces **inside the quotes**, like `\"Hi, \"` and `\"!\"`, or the message will get squished together.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

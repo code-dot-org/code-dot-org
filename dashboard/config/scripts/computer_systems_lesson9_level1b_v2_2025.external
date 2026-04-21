@@ -1,0 +1,22 @@
+name 'computer-systems-lesson9-level1b_v2-2025'
+title 'Self-Driving Car'
+description ''
+display_name 'Self-Driving Car'
+thumbnail_url 'https://images.code.org/7710bc4b46b3804d96de8db666d24d7b-car.png'
+
+markdown <<MARKDOWN
+## Self-Driving Car
+
+Watch the video and respond to the questions in your activity guide. 
+
+**Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g34c237e3bf7_0_13#slide=id.g34c237e3bf7_0_13" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/8c807bc4ba4111c319ff19866eb59fa7-How do.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

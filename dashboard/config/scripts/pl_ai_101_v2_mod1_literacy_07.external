@@ -1,0 +1,19 @@
+name 'pl-ai-101-V2-mod1-literacy-07'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding
+
+## Answer: D
+
+#### Options A, B, C, and E cover AI literacy skills. Programming is not required! 
+
+#### **(A) Understanding basic AI concepts and terminology.** Students should be familiar with foundational terms such as Generative AI, data, and models in order to make sense of how AI systems work at a high level. This shared vocabulary enables clearer communication, more informed decision-making, and more confident engagement with AI-related discussions and tools.
+
+#### **(B) Identifying real-world applications of AI technology.** Students should be able to recognize how AI is already used in everyday tools such as recommendation systems, voice assistants, and automated grading platforms. Understanding these examples helps teachers connect AI concepts to familiar contexts and classroom discussions.
+
+#### **(C) Thinking critically about the ethical implications of AI use.** Students need to consider issues such as data privacy, transparency, and the impact of AI on agency and decision-making. This critical perspective helps ensure AI is used responsibly and ethically.
+
+#### **(E) Recognizing biases in AI systems.** Students should understand that AI systems can reflect and amplify biases present in their training data or design. Recognizing these biases is essential for evaluating AI tools fairly and teaching students to question AI outputs rather than accept them at face value.
+MARKDOWN

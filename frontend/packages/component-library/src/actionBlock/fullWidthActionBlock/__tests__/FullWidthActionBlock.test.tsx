@@ -1,35 +1,29 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {ReactPlayerProps} from 'react-player';
-import ReactPlayer from 'react-player/file';
+import {MouseEventHandler} from 'react';
+import ReactPlayer from 'react-player';
+import {defaultProps} from 'react-player/props';
 
 import Video from '@/video';
 
 import FullWidthActionBlock, {ActionBlockProps} from '../index';
 
+type ReactPlayerProps = typeof defaultProps;
+
 ReactPlayer.canPlay = jest.fn();
 
-jest.mock('react-player/youtube', () => ({
+jest.mock('react-player', () => ({
   __esModule: true,
   default: ({light, playIcon, onError}: ReactPlayerProps) => (
     <div>
       YouTube Player
       {light}
       {playIcon}
-      <button onClick={onError}>Trigger Error</button>
-    </div>
-  ),
-  canPlay: jest.fn(),
-}));
-
-jest.mock('react-player/file', () => ({
-  __esModule: true,
-  default: ({light, playIcon, onError}: ReactPlayerProps) => (
-    <div>
-      Fallback Player
-      {light}
-      {playIcon}
-      <button onClick={onError}>Trigger Error</button>
+      <button
+        onClick={onError as MouseEventHandler<HTMLButtonElement> | undefined}
+      >
+        Trigger Error
+      </button>
     </div>
   ),
   canPlay: jest.fn(),
@@ -43,17 +37,17 @@ describe('FullWidthActionBlock', () => {
 
   const primaryButtonProps = {
     primaryButton: {
-      text: 'Full Width Primary Button',
+      children: 'Full Width Primary Button',
       href: 'https://code.org',
-      ariaLabel: 'Full Width Primary Button aria label',
+      'aria-label': 'Full Width Primary Button aria label',
     },
   };
 
   const secondaryButtonProps = {
     secondaryButton: {
-      text: 'Full Width Secondary Button',
+      children: 'Full Width Secondary Button',
       href: 'https://hourofcode.com',
-      ariaLabel: 'Full Width Secondary Button aria label',
+      'aria-label': 'Full Width Secondary Button aria label',
     },
   };
 

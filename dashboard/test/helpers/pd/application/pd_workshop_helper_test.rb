@@ -5,9 +5,8 @@ module Pd::Application
     include PdWorkshopHelper
     include ActiveApplicationModels
 
-    self.use_transactional_test_case = true
     setup_all do
-      @workshop = create :workshop
+      @workshop = create(:workshop)
       @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
 
       @application_no_workshop = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: nil
@@ -27,7 +26,7 @@ module Pd::Application
     end
 
     test 'registered_workshop? returns true when the applicant is enrolled in the assigned workshop' do
-      create :pd_enrollment, workshop: @workshop, user: @user
+      create(:pd_enrollment, workshop: @workshop, user: @user)
       assert @application.registered_workshop?
     end
 
@@ -40,9 +39,9 @@ module Pd::Application
     end
 
     test 'registered_workshop? handles deleted workshops gracefully' do
-      deleted_workshop = create :workshop
+      deleted_workshop = create(:workshop)
       application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: deleted_workshop.id
-      create :pd_enrollment, workshop: deleted_workshop, user: application.user
+      create(:pd_enrollment, workshop: deleted_workshop, user: application.user)
       deleted_workshop.destroy
       refute application.registered_workshop?
     end
@@ -56,7 +55,7 @@ module Pd::Application
     end
 
     test 'workshop cache' do
-      create :pd_enrollment, workshop: @workshop, user: @application.user
+      create(:pd_enrollment, workshop: @workshop, user: @application.user)
 
       # Original query: Workshop, Sessions, Enrollments
       assert_queries 3 do
@@ -82,17 +81,19 @@ module Pd::Application
     end
 
     test 'cache expires in 30 seconds' do
-      TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
+      ActiveRecord::Base.connection.uncached do
+        TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
 
-      Timecop.travel(30.seconds) do
-        assert_queries 3 do
-          assert_equal @workshop, @application.workshop
+        Timecop.travel(30.seconds) do
+          assert_queries 3 do
+            assert_equal @workshop, @application.workshop
+          end
         end
       end
     end
 
     test 'prefetch scales without additional queries' do
-      workshops = create_list :workshop, 10
+      workshops = create_list(:workshop, 10)
       applications = Array.new(10) do |i|
         create TEACHER_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
       end

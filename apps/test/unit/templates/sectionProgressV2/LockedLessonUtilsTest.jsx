@@ -111,6 +111,77 @@ describe('LockedLessonUtils', () => {
       );
       expect(result).toEqual({1: false});
     });
+
+    it('is false when levelProgressByStudent is undefined', () => {
+      const lesson = {lockable: true, levels: [{id: 1}]};
+      const result = getLockedStatusPerStudent(undefined, [STUDENT_1], lesson);
+      expect(result).toEqual({1: false});
+    });
+
+    it('doesnt exist when student has no id', () => {
+      const lesson = {lockable: true, levels: [{id: 1}]};
+      const studentNoId = {name: 'Student No ID'};
+      const levelProgressByStudent = {
+        1: {1: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [studentNoId],
+        lesson
+      );
+      expect(result).toEqual({});
+    });
+
+    it('is false when student is undefined', () => {
+      const lesson = {lockable: true, levels: [{id: 1}]};
+      const levelProgressByStudent = {
+        1: {1: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [undefined],
+        lesson
+      );
+      expect(result).toEqual({});
+    });
+
+    it('is false when lesson has no lockable property', () => {
+      const lesson = {levels: [{id: 1}]};
+      const levelProgressByStudent = {
+        1: {1: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [STUDENT_1],
+        lesson
+      );
+      expect(result).toEqual({1: false});
+    });
+
+    it('is false when lesson has no levels property', () => {
+      const lesson = {lockable: true};
+      const levelProgressByStudent = {
+        1: {1: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [STUDENT_1],
+        lesson
+      );
+      expect(result).toEqual({1: false});
+    });
+
+    it('is false when lesson is undefined', () => {
+      const levelProgressByStudent = {
+        1: {1: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [STUDENT_1],
+        undefined
+      );
+      expect(result).toEqual({1: false});
+    });
   });
 
   describe('areAllLevelsLocks', () => {

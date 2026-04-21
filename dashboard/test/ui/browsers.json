@@ -2,6 +2,30 @@
 
 [
   {
+    "name": "iPhone",
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:platformVersion": "17.0",
+    "appium:deviceName": "iPhone Simulator",
+    "appium:automationName": "XCUITest",
+    "appium:mobile": true,
+    "sauce:options": {
+      "deviceOrientation": "LANDSCAPE"
+    }
+  },
+  {
+    "name": "iPad",
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:platformVersion": "17.0",
+    "appium:deviceName": "iPad Simulator",
+    "appium:mobile": true,
+    "appium:automationName": "XCUITest",
+    "sauce:options": {
+      "deviceOrientation": "LANDSCAPE"
+    }
+  },
+  {
     "name": "Chrome",
     "browserName": "chrome",
     "browserVersion": "109",
@@ -14,37 +38,13 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "browserVersion": "14",
-    "platformName": "macOS 11.00"
+    "browserVersion": "17",
+    "platformName": "macOS 13"
   },
   {
     "name": "Firefox",
     "browserName": "firefox",
     "browserVersion": "115",
     "platformName": "Windows 11"
-  },
-  {
-    "name": "iPhone",
-    "platformName": "iOS",
-    "appium:platformVersion": "16.2",
-    "browserName": "safari",
-    "appium:deviceName": "iPhone Simulator",
-    "appium:automationName": "XCUITest",
-    "appium:mobile": true,
-    "sauce:options": {
-      "deviceOrientation": "LANDSCAPE"
-    }
-  },
-  {
-    "name": "iPad",
-    "platformName": "iOS",
-    "appium:platformVersion": "14.5",
-    "browserName": "safari",
-    "appium:deviceName": "iPad Simulator",
-    "appium:mobile": true,
-    "appium:automationName": "XCUITest",
-    "sauce:options": {
-      "deviceOrientation": "LANDSCAPE"
-    }
   }
 ]

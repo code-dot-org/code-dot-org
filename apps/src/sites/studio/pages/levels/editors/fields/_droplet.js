@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
@@ -16,7 +16,7 @@ const fieldConfig = {
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript',
+    codemirrorMode: 'json',
   },
 };
 
@@ -25,19 +25,21 @@ Object.keys(fieldConfig).forEach(key => {
   if (config.hideWhen) {
     return;
   }
-  const mode =
-    config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
-  config.editor = initializeCodeMirror(config.codemirror, mode);
+  const mode = config.codemirrorMode;
+  config.editor = initializeCodeMirror6(config.codemirror, mode);
 });
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
-  ReactDOM.render(
+  createReactRoot(
     <DropletPaletteSelector
       palette={data.original_palette}
       editor={fieldConfig.codeFunctions.editor}
     />,
     $('<div></div>')
       .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
-      .get(0)
+      .get(0),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

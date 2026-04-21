@@ -35,7 +35,8 @@
     "display_name": "User: Angelina",
     "bubble_choice_description": "Angelina would like you to style her page on creating comic books.",
     "thumbnail_url": "https://images.code.org/577556f991f281676dee76e8420e6195-comic-book.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:54.023+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14 Option 1-1\\\"\"],\"cloned_from\":\"CSD U2L14 Option 1-1\"}]"

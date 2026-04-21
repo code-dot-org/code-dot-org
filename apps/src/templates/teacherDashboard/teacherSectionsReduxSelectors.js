@@ -153,7 +153,6 @@ export const sectionFromServerSection = serverSection => ({
     ? serverSection.script.name
     : serverSection.unitName,
   unitPosition: serverSection.unitPosition,
-  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
@@ -206,6 +205,9 @@ export const sectionFromServerSection = serverSection => ({
   atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
   avatar_color: serverSection.avatar_color,
   avatar_emoji: serverSection.avatar_emoji,
+  assignedAiChatToolsDependency:
+    serverSection.assigned_ai_chat_tools_dependency,
+  aiChatAccessLevel: serverSection.ai_chat_access_level,
 });
 
 /**
@@ -217,8 +219,9 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   id: serverStudent.id,
   name: serverStudent.name,
   familyName: serverStudent.family_name,
+  isDemoStudent: !!serverStudent.is_demo_student,
   sharingDisabled: serverStudent.sharing_disabled,
-  secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureUrl: serverStudent.secret_picture_url,
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
   userType: serverStudent.user_type,
@@ -272,7 +275,6 @@ export function newSectionData(participantType) {
     unitId: null,
     unitName: null,
     unitPosition: null,
-    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
@@ -288,7 +290,7 @@ const assignmentsForSection = (courseOfferings, section) => {
       ];
     if (courseVersion) {
       assignments.push(courseVersion);
-      if (section.unitId && courseVersion.type === 'UnitGroup') {
+      if (section.unitId) {
         if (courseVersion.units[section.unitId]) {
           assignments.push(courseVersion.units[section.unitId]);
         }
@@ -414,22 +416,6 @@ export const studentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   familyName: PropTypes.string,
   sharingDisabled: PropTypes.bool,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
 });
-
-/**
- * @param {object} state - state.teacherSections in redux tree
- * @return {array} A list of sections which have students at risk of being age
- * gated by CAP.
- */
-export function atRiskAgeGatedSections(state) {
-  state = getRoot(state);
-  // Convert from a Map to an Array.
-  const sections = Object.values(state.sections || {});
-  // Only non-archived sections can be at risk.
-  // Select only the sections which have students at risk.
-  return sections.filter(
-    section => !section.hidden && section.atRiskAgeGatedDate
-  );
-}

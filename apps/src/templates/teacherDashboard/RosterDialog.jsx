@@ -3,14 +3,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
 
+import ReauthorizeGoogleClassroom from './ReauthorizeGoogleClassroom';
 import {classroomShape, loadErrorShape} from './shapes';
 import {
   cancelImportRosterFlow,
@@ -144,19 +143,6 @@ LoadError.propTypes = {
   loginType: PropTypes.string,
 };
 
-const REAUTHORIZE_URL =
-  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
-function ReauthorizeGoogleClassroom() {
-  return (
-    <form method="POST" action={REAUTHORIZE_URL}>
-      <RailsAuthenticityToken />
-      <button type="submit" style={ctaButtonStyle}>
-        {locale.authorizeGoogleClassrooms()}
-      </button>
-    </form>
-  );
-}
-
 class RosterDialog extends React.Component {
   static propTypes = {
     // Provided by Redux
@@ -238,13 +224,9 @@ class RosterDialog extends React.Component {
   recordSectionSetupExitEvent = eventName => {
     const {rosterProvider} = this.props;
 
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        oauthSource: rosterProvider,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(eventName, {
+      oauthSource: rosterProvider,
+    });
   };
 
   render() {

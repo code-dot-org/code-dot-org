@@ -16,5 +16,6 @@
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": "self-paced-pl-csd-unit4",
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

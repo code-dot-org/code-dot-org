@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
@@ -42,7 +42,6 @@ describe('SectionCard', () => {
     createdAt: '2024-10-04T18:19:41.000Z',
     grades: [],
     isAssignedCSA: false,
-    isAssignedStandaloneCourse: false,
     lessonExtras: false,
     loginType: 'picture',
     loginTypeName: 'Picture Password',
@@ -112,8 +111,7 @@ describe('SectionCard', () => {
     );
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: 'teacherHomepage'},
-      PLATFORMS.BOTH
+      {source: 'teacherHomepage'}
     );
   });
 

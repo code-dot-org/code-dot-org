@@ -359,7 +359,7 @@
     ],
     "teacher_markdown": "The `takePaint()` method takes a single unit of paint from a paint bucket.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T23:23:33.149+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5 Investigate_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5 Investigate_pilot-2025\"}]"

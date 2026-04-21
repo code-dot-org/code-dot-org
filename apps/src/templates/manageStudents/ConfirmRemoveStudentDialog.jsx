@@ -1,4 +1,4 @@
-import LinkButton, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -78,23 +78,24 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
               {dependsOnThisSectionForLogin && (
                 <div>
                   <p>{i18n.removeStudentBody2()}</p>
-                  <LinkButton
-                    useAsLink={true}
-                    text={i18n.removeStudentSendHomeInstructions()}
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    style={styles.sendHomeInstructionsButton}
+                    href={ADD_A_PERSONAL_LOGIN_HELP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                    color={buttonColors.purple}
-                    size="m"
-                    style={styles.sendHomeInstructionsButton}
-                  />
+                  >
+                    {i18n.removeStudentSendHomeInstructions()}
+                  </MuiButton>
                 </div>
               )}
             </div>
           )}
           <ConfirmCancelFooter
             confirmText={i18n.removeStudent()}
-            confirmColor={buttonColors.destructive}
+            confirmColor="error"
             onConfirm={onConfirm}
             onCancel={onCancel}
             disableConfirm={!!disabled}

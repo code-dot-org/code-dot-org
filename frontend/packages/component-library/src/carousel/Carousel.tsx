@@ -5,13 +5,9 @@ import {HTMLAttributes, ReactNode, useId} from 'react';
 import {Navigation, Pagination, A11y} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
+import './swiper.css';
 import moduleStyles from './carousel.module.scss';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
@@ -85,6 +81,11 @@ const Carousel: React.FC<CarouselProps> = ({
             el: `#${carouselId}-pagination`,
           }}
           breakpoints={{
+            // when window width is mobile, show 10% of the following slide
+            [0]: {
+              slidesPerView: 1.1,
+              slidesPerGroup: 1,
+            },
             // when window width is tablet
             [breakpointTablet]: {
               slidesPerView: 2,

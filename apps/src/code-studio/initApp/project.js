@@ -1,6 +1,12 @@
 import $ from 'jquery';
 
+import {
+  OPEN_ENDED_LEGACY_PROJECT_TYPES,
+  OPEN_ENDED_PROJECTS_YOUNG_AGE,
+} from '@cdo/apps/constants';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
@@ -17,6 +23,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
+  refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
@@ -24,7 +31,6 @@ import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 var showProjectAdmin = require('../showProjectAdmin');
 
 var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
@@ -99,6 +105,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var isTeacherOfProjectOwner = false;
 var currentShareFailureEnglish = '';
 var currentShareFailureIntl = '';
 var intlLanguage = false;
@@ -324,6 +331,12 @@ var projects = (module.exports = {
   },
 
   getSharingDisabled() {
+    // Return false if current user is a project validator and pageAction is 'view'.
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
+      return false;
+    }
+    // sharingDisabled is set to true if the project owner's sharing_disabled is true
+    // AND the current user is neither the owner nor the teacher of the owner.
     return sharingDisabled;
   },
 
@@ -343,30 +356,6 @@ var projects = (module.exports = {
     return currentSourceVersionId;
   },
 
-  disableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/disable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
-  enableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/enable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
   /**
    * Allows admin user to reset abuse score to 0 and then saves the project.
    */
@@ -376,17 +365,6 @@ var projects = (module.exports = {
       return;
     }
     HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
-    assets.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-    });
-    files.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-      $('.admin-abuse-score').text(0);
-    });
   },
 
   /**
@@ -409,6 +387,14 @@ var projects = (module.exports = {
    */
   isOwner() {
     return !!(current && current.isOwner);
+  },
+
+  /**
+   * @returns {boolean} true if the current user is a teacher of the owner of the project or
+   * a project validator.
+   */
+  canViewFlaggedProject() {
+    return !!isTeacherOfProjectOwner || appOptions.canResetAbuse;
   },
 
   isPublished() {
@@ -456,7 +442,7 @@ var projects = (module.exports = {
    *   of showing the project.
    */
   hideBecausePrivacyViolationOrProfane() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.hasPrivacyProfanityViolation();
@@ -467,7 +453,7 @@ var projects = (module.exports = {
    *   the project.
    */
   hideBecauseAbusive() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.exceedsAbuseThreshold();
@@ -475,9 +461,9 @@ var projects = (module.exports = {
 
   /**
    * @returns {boolean} true if we should show a project regardless of its
-   * profanity, policy violations or abuse rating level.
+   * profanity, policy violations, abuse rating level, or if sharing is disabled.
    */
-  showEvenIfPolicyViolatingOrAbusiveProject() {
+  showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled() {
     if (appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
@@ -491,10 +477,13 @@ var projects = (module.exports = {
     // NOTE: appOptions.canResetAbuse is not a security setting as it can be
     // manipulated by the user. In this case that's okay, since all that does
     // is allow them to view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
+    // If current user is teacher of project's owner, then allow them to view as well.
+    const hasViewPermissions =
+      appOptions.canResetAbuse || isTeacherOfProjectOwner;
+
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return hasEditPermissions && isEditOrViewPage;
+    return (this.isOwner() || hasViewPermissions) && isEditOrViewPage;
   },
 
   channelNotFound() {
@@ -918,6 +907,12 @@ var projects = (module.exports = {
     }
   },
 
+  // Metrics logging requires a non-null value, so we return 'unknown' if
+  // there is no known standalone app for this project.
+  getStandaloneAppForMetrics() {
+    return this.getStandaloneApp() || 'unknown';
+  },
+
   isWebLab() {
     return this.getStandaloneApp() === 'weblab';
   },
@@ -1136,18 +1131,48 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              this.logError_(
-                'unauthorized-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'unauthorized-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'unauthorized'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
-              this.logError_(
-                'conflict-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'conflict-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'conflict'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();
@@ -1156,6 +1181,10 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+                {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+                {name: 'SaveType', value: 'sources'},
+              ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
@@ -1330,7 +1359,15 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
+        .catch(error => {
+          MetricsReporter.logError({
+            event: 'Error in getUpdatedSourceAndHtml_',
+            error: repackageError(error),
+            appType: this.getStandaloneAppForMetrics(),
+            channelId: this.getCurrentId(),
+          });
+          callback({error});
+        })
     );
   },
 
@@ -1407,7 +1444,20 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    return firehoseClient.putRecord(
+    // Log to CloudWatch via MetricsReporter. This is the primary logging system for project saving.
+    const metricsPromise = Promise.resolve(
+      MetricsReporter.logError({
+        event: errorType,
+        errorMessage: errorText,
+        errorCount: errorCount,
+        appType: this.getStandaloneAppForMetrics(),
+        channelId: this.getCurrentId(),
+      })
+    );
+
+    // Although Firehose is being deprecated, we continue to log for project data integrity errors so that
+    // we can still search for project saving errors over multiple years and compare with MetricsReporter.
+    const firehosePromise = firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1429,6 +1479,15 @@ var projects = (module.exports = {
       },
       {includeUserId: true}
     );
+
+    // Wait for both logging systems to complete before allowing page reload.
+    return Promise.all([metricsPromise, firehosePromise]).catch(err => {
+      // Log the error but don't throw - we don't want to break the user flow.
+      MetricsReporter.logError({
+        event: 'Error logging to metrics and/or firehose systems',
+        error: repackageError(err),
+      });
+    });
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;
@@ -1439,6 +1498,10 @@ var projects = (module.exports = {
       if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
         header.showTryAgainDialog();
       }
+      MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+        {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+        {name: 'SaveType', value: 'channel'},
+      ]);
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1467,6 +1530,9 @@ var projects = (module.exports = {
 
     current = current || {};
     Object.assign(current, data);
+    MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
+      {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+    ]);
 
     if (shouldNavigate) {
       // If we are at a /projects/<appname> link, we can display the project
@@ -1596,11 +1662,9 @@ var projects = (module.exports = {
    * @param {string} newName
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
-   * @param {boolean} options.shouldPublish Whether to publish the new project.
    * @returns {Promise} Promise which resolves when the operation is complete.
    */
   copy(newName, options = {}) {
-    const {shouldPublish} = options;
     current = current || {};
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
@@ -1608,9 +1672,6 @@ var projects = (module.exports = {
     delete current.libraryName;
     delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
-    if (shouldPublish) {
-      current.shouldPublish = true;
-    }
     this.setName(newName);
     return new Promise((resolve, reject) => {
       channels.create(
@@ -1969,6 +2030,36 @@ function fetchShareFailure(resolve) {
   });
 }
 
+function fetchIsTeacherOfProjectOwner(resolve) {
+  channels.fetch(current.id + '/is_teacher_of_project_owner', (err, data) => {
+    isTeacherOfProjectOwner =
+      (data && !!data.is_teacher_of_project_owner) || isTeacherOfProjectOwner;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
+function fetchPrivacyProfanityViolations(resolve) {
+  channels.fetch(current.id + '/privacy-profanity', (err, data) => {
+    // data.has_violation is 0 or true, coerce to a boolean.
+    currentHasPrivacyProfanityViolation =
+      (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
+    if (currentHasPrivacyProfanityViolation) {
+      getStore().dispatch(refreshHasPrivacyProfanityViolation());
+    }
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
 /**
  * @param project
  * @returns {Promise} A Promise which resolves when all network calls complete.
@@ -1977,13 +2068,15 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure),
+    new Promise(fetchIsTeacherOfProjectOwner),
   ];
 
-  if (
-    project.getStandaloneApp() === 'applab' ||
-    project.getStandaloneApp() === 'gamelab' ||
-    project.isWebLab()
-  ) {
+  if (OPEN_ENDED_PROJECTS_YOUNG_AGE.includes(project.getStandaloneApp())) {
+    promises.push(new Promise(fetchPrivacyProfanityViolations));
+  }
+
+  // If open-ended project type, check if project owner's sharing is disabled.
+  if (OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(project.getStandaloneApp())) {
     promises.push(new Promise(fetchSharingDisabled));
   }
   return Promise.all(promises);
@@ -2102,7 +2195,7 @@ function parsePath() {
 
   const geRegion = getGlobalEditionRegion();
   if (geRegion) {
-    pathname = pathname.replace(`/global/${geRegion}/`, '/');
+    pathname = pathname.replace(`/${geRegion}/`, '/');
   }
 
   // We have a hash based route. Replace the hash with a slash, and append to

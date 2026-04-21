@@ -1,0 +1,19 @@
+name 'programming-fundamentals-lesson9-level7_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+wrong '`isabel` moves south and paints blue, but only if she can move south.'
+wrong '`isabel` paints blue only if she can move south.'
+wrong '`isabel` moves and paints blue no matter what.'
+right '`isabel` moves only if she can move south, but paints blue no matter what.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Look at the code below. What will happen when this program runs?
+
+```
+if isabel.can_move("south"):
+   isabel.move()
+isabel.paint("blue")
+```
+MARKDOWN

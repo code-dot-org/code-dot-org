@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question7_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 7'
+
+wrong '`y = "10" + "5"`'
+wrong '`z = 10 + 5.5`'
+wrong '`is_raining = True`'
+right '`x = "10" + 5`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following statements will produce an error in Python?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Variables and Data Flow
+MARKDOWN

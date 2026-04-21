@@ -7746,7 +7746,7 @@
     },
     {
       "name": "Problem Solving Process with Empathy",
-      "url": "https://code.org/curriculum/docs/csd/PSPE.png",
+      "url": "/blockly/media/curriculum/docs/csd/PSPE.png",
       "key": "pspe-image",
       "properties": {
         "audience": "Student",

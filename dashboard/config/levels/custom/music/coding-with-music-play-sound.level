@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-19T20:59:04.000Z",
   "level_num": "custom",
@@ -80,10 +81,12 @@
     "predict_settings": {
       "isPredictLevel": false
     },
+    "teacher_markdown": "<i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** Foster computational thinking by encouraging students to take time to explore the code and experiment with different dropdown options. This supports the **Use** phase of the pedagogy by allowing students to engage with existing code, observe how it functions, and build a foundational understanding of programming concepts.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-19T20:59:04.069+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-sound_launch\\\"\"],\"cloned_from\":\"music-coding-intro-play-sound_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T20:59:04.069+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-sound_launch\\\"\"],\"cloned_from\":\"music-coding-intro-play-sound_launch\"},{\"changed_at\":\"2025-08-27 16:16:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-08-27 16:17:57 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

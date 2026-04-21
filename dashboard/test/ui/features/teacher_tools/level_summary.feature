@@ -104,16 +104,18 @@ Scenario: Check for Understanding summaries
   And element "p:contains('Sally')" does not exist
   And I wait until element "a:contains('Show hidden responses')" is visible
 
+@skip
+# Skipping 7-2-25 due to flakiness
 Scenario: Check free response AI
   Given I am on "http://studio.code.org"
 
   Given I create an authorized teacher-associated student named "Sally"
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/"
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   When I sign in as "Teacher_Sally"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/summary"
 
   And I wait until element "#summary-container" is visible
   And I dismiss the teacher panel
@@ -124,7 +126,14 @@ Scenario: Check free response AI
 
   And I click selector "a:contains('View detailed analysis')" once I see it
 
-  And I wait until element "p:contains('Ok. Dummy data returned for testing purposes.')" is visible
+  And I wait until element "p:contains('Dummy data returned for testing purposes.')" is visible
+
+  # Check that a non-assessment level doesn't show AI analysis
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/2/summary"
+  And I wait until element "#summary-container" is visible
+  And I dismiss the teacher panel
+
+  And element "label:contains('Show AI Insights')" does not exist
 
 @eyes
 Scenario: Check for Understanding summaries eyes

@@ -1,0 +1,15 @@
+{
+  "name": "scrape-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrapePage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "puppeteer": "23.6.1",
+    "yargs": "^14.2.0"
+  }
+}

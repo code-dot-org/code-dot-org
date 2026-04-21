@@ -15,9 +15,11 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
+#  uuid                    :string(255)
 #
 # Indexes
 #
+#  index_projects_on_uuid               (uuid) UNIQUE
 #  storage_apps_project_type_index      (project_type)
 #  storage_apps_published_at_index      (published_at)
 #  storage_apps_standalone_index        (standalone)
@@ -25,17 +27,24 @@
 #  storage_apps_storage_id_state_index  (storage_id,state)
 #
 class Project < ApplicationRecord
+  # NOTE: skip_content_moderation is currently not used in the codebase.
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
   has_one :channel_token
+
+  before_save :ensure_uuid
+
+  def ensure_uuid
+    self.uuid ||= SecureRandom.uuid
+  end
 
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
   def self.find_by_channel_id(channel_id)
     begin
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = get_storage_id_and_project_id(channel_id)
     rescue
       raise ActiveRecord::RecordNotFound.new("Invalid channel_id: #{channel_id}")
     end
@@ -44,7 +53,7 @@ class Project < ApplicationRecord
   end
 
   def channel_id
-    storage_encrypt_channel_id(storage_id, id)
+    get_project_channel_id(storage_id, id)
   end
 
   # Returns the user_id of the owner of this project. Returns nil if the project
@@ -60,7 +69,7 @@ class Project < ApplicationRecord
     # 2) admin who has project validator permissions
     # 3) user teaches a section with followers added within the past year
     # 4) user is in a section, and was added within past year
-    return false if channel_token&.script&.hoc?
+    return false if channel_token&.script&.hoc_or_hoai?
     return false if owner&.permission?(UserPermission::PROJECT_VALIDATOR)
     return false if owner&.followers&.any? {|follower| follower.created_at > Time.now - 1.year}
     return false if owner&.followeds&.any? {|followed| followed.created_at > Time.now - 1.year}

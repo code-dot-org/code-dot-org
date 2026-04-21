@@ -10,14 +10,11 @@ module MysqlCheckIndexUsed
   class NoIndexUsedException < StandardError; end
 
   # Copy/extend logic in AbstractMySQLAdapter#execute, and AbstractAdapter#log.
-  def execute(sql, name = nil)
-    # Rails 6 added both the materialize_transactions method and a call to it
-    # right here, so to preserve compatibility between 5 and 6 we call the
-    # method if and only if it exists. The if clause can be removed once we've
-    # fully upgraded to Rails 6.
-    #
-    # See https://github.com/rails/rails/pull/32647/files#diff-868f1dccfcbed26a288bf9f3fd8a39c863a4413ab0075e12b6805d9798f556d1
-    materialize_transactions if respond_to?(:materialize_transactions)
+  # See https://github.com/rails/rails/blob/v7.0.10/activerecord/lib/active_record/connection_adapters/abstract_mysql_adapter.rb#L639-L648
+  # and https://github.com/rails/rails/blob/v7.0.10/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb#L742-L756
+  def execute(sql, name = nil, async: false)
+    materialize_transactions
+    mark_transaction_written_if_write(sql)
 
     options = {
       sql:               sql,
@@ -25,6 +22,7 @@ module MysqlCheckIndexUsed
       binds:             [],
       type_casted_binds: [],
       statement_name:    nil,
+      async:             async,
       connection_id:     object_id
     }
     @instrumenter.instrument("sql.active_record", options) do

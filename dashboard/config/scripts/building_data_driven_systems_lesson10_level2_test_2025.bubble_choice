@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson10-level2-test-2025'
+display_name 'Design a Filter → Sort → Render Pipeline with CHAT'
+description 'Pick one scenario. Use the CHAT framework to design, debug, and validate a pipeline'
+
+sublevels
+level 'building-data-driven-systems-lesson10-level2b-test-2025'
+level 'building-data-driven-systems-lesson10-level2a-test-2025'
+level 'building-data-driven-systems-lesson10-level2c-test-2025'
+
+uses_lab2

@@ -1,9 +1,9 @@
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {Resource} from './LessonMaterialTypes';
+import {CUSTOM_RESOURCE_TYPES, Resource} from './LessonMaterialTypes';
 import ResourceIcon from './ResourceIcon';
 import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 
@@ -12,9 +12,14 @@ import styles from './lesson-materials.module.scss';
 type ResourceRowProps = {
   unitNumber: number | null;
   resource: Resource;
+  callback?: () => void;
 };
 
-const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
+const ResourceRow: React.FC<ResourceRowProps> = ({
+  unitNumber,
+  resource,
+  callback = () => {},
+}) => {
   const resourceDisplayText = () => {
     if (!resource.type) {
       return resource.name;
@@ -30,6 +35,8 @@ const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
       } else {
         return i18n.unitVocabulary();
       }
+    } else if (CUSTOM_RESOURCE_TYPES.includes(resource.type)) {
+      return resource.title;
     } else {
       return `${resource.type}: ${resource.name}`;
     }
@@ -40,11 +47,20 @@ const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
     <div className={styles.rowContainer} data-testid="resource-row">
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />
-        <BodyTwoText className={styles.resourceLabel}>
-          <a href={resource.url} target="_blank" rel="noopener noreferrer">
+        <Typography
+          className={styles.resourceLabel}
+          variant="body2"
+          gutterBottom
+        >
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={callback}
+          >
             {resourceDisplayText()}
           </a>
-        </BodyTwoText>
+        </Typography>
       </div>
       <ResourceViewOptionsDropdown resource={resource} />
     </div>

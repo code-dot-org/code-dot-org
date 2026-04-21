@@ -91,6 +91,7 @@
     "display_name": "Populations",
     "bubble_choice_description": "Write a function that returns the state or country with the largest population.",
     "thumbnail_url": "https://images.code.org/b34b430d9c5229f796d620867b76c828-image-1649368508403.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Task\r\n\r\nUse AI Chat to plan a trip to Disney World. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You’re a travel agent, give me information about Disney World.\r\n\r\n2. Check out this list of **tasks** AI can help with:\r\n    - Planning an itinerary\r\n    - Creating a To Do list\r\n    - Making a budget\r\n3. Revise your prompt to AI Chat by adding in a specific **Task**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Task\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what task to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You’re a travel agent helping me plan a 5-day trip to Disney World for a family with two young kids. Give me an itinerary for the first day.\r\n:::\r\n\r\n",
+    "long_instructions": "## Task\r\n\r\nUse AI Chat to help you clean your room. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>Help me clean my room.\r\n\r\n2. Check out this list of **tasks** AI can help with:\r\n    - Creating a To Do list\r\n    - Writing an email\r\n    - Making a budget\r\n3. Revise your prompt to AI Chat by adding in a specific **Task**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Task\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what task to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You’re a professional organizer. Come up with a detailed to do list of how to tidy up my room, with the most important steps first.\r\n:::\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -46,6 +46,6 @@
     "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:32.134+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level1_2024\"},{\"changed_at\":\"2025-05-14 21:28:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:32.134+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level1_2024\"},{\"changed_at\":\"2025-05-14 21:28:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:22:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

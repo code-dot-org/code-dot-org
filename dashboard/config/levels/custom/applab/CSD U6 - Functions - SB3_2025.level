@@ -95,6 +95,7 @@
     "project_template_level_name": "CSD U6 - Functions - SB34_template_2025",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L5.14B - define\",\r\n  \"callout_text\": \"Add your function here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"define\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Define your moveAliens function here!\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "encrypted_examples": "e1jginS3LaAl2VjxyG2JbJ8vmWVKoNAL1H8bd3BOaAwk1UK/rghtyvPydXqd\niHoE6Klh8iKGzbj7D7BUr6Gi4Q==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

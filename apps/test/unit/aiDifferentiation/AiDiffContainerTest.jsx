@@ -4,10 +4,15 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@react-pdf/renderer', () => {
@@ -21,20 +26,35 @@ jest.mock('@react-pdf/renderer', () => {
 
 const DEFAULT_PROPS = {
   closeTutor: () => {},
-  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
   },
-  scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
   curriculumCourses: [],
+  scriptName: 'test_lesson',
 };
 
+const defaultThreadListResponse = [
+  {
+    id: 1,
+    title: 'blah thread one',
+    updatedAt: Date(),
+    contextType: 'lesson',
+  },
+];
+
 describe('AiDiffContainer', () => {
+  let fetchJsonStub;
+
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
+    fetchJsonStub = jest.fn();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
+    HttpClient.fetchJson = fetchJsonStub;
   });
 
   afterEach(() => {
@@ -47,6 +67,8 @@ describe('AiDiffContainer', () => {
 
     registerReducers({
       currentUser,
+      teacherSections,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -55,6 +77,7 @@ describe('AiDiffContainer', () => {
         has_completed_ai_differentiation_welcome: hasCompletedAiDiffWelcome,
       })
     );
+    store.dispatch(setSections([]));
 
     render(
       <Provider store={store}>
@@ -63,10 +86,12 @@ describe('AiDiffContainer', () => {
     );
   }
 
-  it('visible when open', () => {
+  it('visible when open', async () => {
     renderDefault();
-    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
-    screen.getByText('Experiment');
+    await waitFor(() => {
+      screen.getByText('AI Teaching Assistant');
+      screen.getByText('Experiment');
+    });
   });
 
   it('moves TA container when user clicks and drags component', async () => {
@@ -99,21 +124,54 @@ describe('AiDiffContainer', () => {
 
     userEvent.pointer([
       {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: 5000, y: -5000}},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: -50000}},
       '[/MouseLeft]',
     ]);
 
     await waitFor(() => {
       const newPosition = element.style.transform;
-      const expectedX = window.innerWidth - 100;
-      const expectedY = 760 - window.innerHeight;
-      expect(newPosition).toEqual(`translate(${expectedX}px,${expectedY}px)`);
+      expect(newPosition).toEqual(`translate(1000px,0px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: 50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(1000px,1000px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: -50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(0px,0px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: 50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(0px,1000px)`);
     });
   });
 
-  it('Shows the welcome experience when user property is false', () => {
-    renderDefault({disableWelcome: false}, false);
+  // Was asked to disable the AITA welcome experience without removing any code.
+  // Commenting out this test until further notice.
+  // it('Shows the welcome experience when user property is false', () => {
+  //   renderDefault({disableWelcome: false}, false);
 
-    screen.getByText('Empowering teachers. Enhancing learning.');
-  });
+  //   screen.getByText('Empowering teachers. Enhancing learning.');
+  // });
 });

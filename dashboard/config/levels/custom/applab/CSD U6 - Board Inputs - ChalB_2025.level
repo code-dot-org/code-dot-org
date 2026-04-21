@@ -96,6 +96,7 @@
     "bubble_choice_description": "Switch between a day and night environment using the toggle switch",
     "encrypted_examples": "JHP7uXzjJwRyh6aXFtWagAWCRb0yTcYiWM/QCDi/QYTMf7o8nJdAgst/vFEY\n1lgFDXL/wU9jghhKyD2LlKD4eQ==\n",
     "start_blocks": "//3) When the toggle switch is open, display the daytime scene\r\n\r\n//4) When the toggle switch is closed, display the nighttime scene",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

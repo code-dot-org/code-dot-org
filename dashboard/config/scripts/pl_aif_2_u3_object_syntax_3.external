@@ -1,0 +1,45 @@
+name 'pl-aif-2-U3-object-syntax-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Arrays in Objects
+
+#### Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
+
+#### This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
+
+---
+
+<img src="https://images.code.org/8199feaed9f8c4f10129474b22065366-image-1765990868244.png" alt="example arrays" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+## Example
+
+#### With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
+
+#### In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
+
+
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    Instead of keeping track of several arrays and ensuring their indexes stay synchronized, an object allows all related properties to live together in one place.
+  </p>
+</div>
+
+
+
+## Next up
+
+#### In the next level, you will practice creating an object out of three parallel arrays. 
+
+MARKDOWN

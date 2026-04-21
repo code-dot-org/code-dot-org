@@ -87,6 +87,7 @@
     "video_key": "csd_applab_parameters",
     "encrypted_examples": "B8KXM9EFCil9C33t76DBCTgjQTDAk0v5nU/VYJL9fDcV+umGoZ2CQ45n0W7/\nR2+2ncOWP/HYS4pDyg8Hhh38/w==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

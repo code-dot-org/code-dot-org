@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
@@ -17,7 +17,6 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
@@ -80,14 +79,8 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl;
-    if (showV2TeacherDashboard()) {
-      editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
-    } else {
-      editSectionUrl = '/sections/' + sectionId + '/edit';
-    }
-    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
-    return editSectionUrl;
+    const append = isPl ? '?redirectToPage=my-professional-learning' : '';
+    return teacherDashboardUrl(sectionId, '/settings') + append;
   };
 
   /**
@@ -101,7 +94,7 @@ class SectionActionDropdown extends Component {
     const hideShowEvent = this.props.sectionData.hidden
       ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
       : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
-    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(hideShowEvent, {});
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
@@ -112,15 +105,13 @@ class SectionActionDropdown extends Component {
       case OAuthSectionTypes.google_classroom:
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED,
-          {},
-          PLATFORMS.BOTH
+          {}
         );
         break;
       case OAuthSectionTypes.clever:
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
-          {},
-          PLATFORMS.BOTH
+          {}
         );
         break;
     }
@@ -132,8 +123,7 @@ class SectionActionDropdown extends Component {
   onRequestDelete = () => {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
     this.setState({deleting: true});
   };
@@ -157,8 +147,7 @@ class SectionActionDropdown extends Component {
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
-                {},
-                PLATFORMS.BOTH
+                {}
               );
             }}
           >
@@ -170,25 +159,19 @@ class SectionActionDropdown extends Component {
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
-                {},
-                PLATFORMS.BOTH
+                {}
               );
             }}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={
-              showV2TeacherDashboard()
-                ? teacherDashboardUrl(sectionData.id, '/roster')
-                : teacherDashboardUrl(sectionData.id, '/manage_students')
-            }
+            href={teacherDashboardUrl(sectionData.id, '/roster')}
             className="manage-students-link"
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
-                {},
-                PLATFORMS.BOTH
+                {}
               );
             }}
           >
@@ -204,11 +187,7 @@ class SectionActionDropdown extends Component {
                     sectionData.loginType === SectionLoginType.email
                       ? EVENTS.SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED
                       : EVENTS.SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED;
-                  analyticsReporter.sendEvent(
-                    loginInstructionsEvent,
-                    {},
-                    PLATFORMS.BOTH
-                  );
+                  analyticsReporter.sendEvent(loginInstructionsEvent, {});
                 }}
               >
                 {sectionData.loginType === SectionLoginType.email
@@ -237,7 +216,7 @@ class SectionActionDropdown extends Component {
           </PopUpMenu.Item>
           {sectionData.studentCount === 0 && (
             <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
-              <FontAwesome icon=" fa-times-circle" style={styles.xIcon} />
+              <FontAwesome icon="circle-xmark" style={styles.xIcon} />
               {i18n.deleteSection()}
             </PopUpMenu.Item>
           )}

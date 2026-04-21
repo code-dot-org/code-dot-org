@@ -39,11 +39,6 @@
           {
             "kind": "category",
             "name": "Play",
-            "cssconfig": {
-              "container": "GtAbV2bOTcTKUDwyedpP",
-              "row": "oGCscp28l4owodgJDcsu blocklyTreeRow",
-              "label": "mNoLqgO14m89RaRarwAz"
-            },
             "contents": [
               {
                 "kind": "block",
@@ -95,11 +90,6 @@
           {
             "kind": "category",
             "name": "Control",
-            "cssconfig": {
-              "container": "GtAbV2bOTcTKUDwyedpP",
-              "row": "oGCscp28l4owodgJDcsu blocklyTreeRow",
-              "label": "mNoLqgO14m89RaRarwAz"
-            },
             "contents": [
               {
                 "kind": "block",
@@ -146,11 +136,6 @@
           {
             "kind": "category",
             "name": "Effects",
-            "cssconfig": {
-              "container": "GtAbV2bOTcTKUDwyedpP",
-              "row": "oGCscp28l4owodgJDcsu blocklyTreeRow",
-              "label": "mNoLqgO14m89RaRarwAz"
-            },
             "contents": [
               {
                 "kind": "block",

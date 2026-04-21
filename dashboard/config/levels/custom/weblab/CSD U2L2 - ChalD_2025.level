@@ -19,7 +19,8 @@
     "validation_enabled": "true",
     "display_name": "Write a Poem",
     "bubble_choice_description": "Use paragraph tags to write your own poetry, with each line separated by paragraph tags!",
-    "thumbnail_url": "https://images.code.org/f4fe6889cc77a1a01edb9b865d2c6931-image-1665178064418.png"
+    "thumbnail_url": "https://images.code.org/f4fe6889cc77a1a01edb9b865d2c6931-image-1665178064418.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

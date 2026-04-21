@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q15_2025-pilot_v2-2025'
+
+question 'Which example best shows a positive environmental strategy for managing AI\'s energy use?'
+
+wrong 'Training large AI models during peak energy hours.'
+wrong 'Relocating data centers to areas with high pollution.'
+right 'Powering AI data centers using renewable energy sources.'
+wrong 'Encouraging people to avoid using AI altogether.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 12: AI's Role in Society
+MARKDOWN

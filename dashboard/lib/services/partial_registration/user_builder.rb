@@ -27,6 +27,7 @@ module Services
           user_params[:email_preference_request_ip] = request.ip
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
+          user_params.delete(:grades_teaching) unless DCDO.get('launch-grades-in-sign-up', false)
 
           if user_params[:school_info_attributes].present?
             user_params[:school_info_attributes].permit(:school_id, :school_name, :school_type, :zip, :country)
@@ -58,6 +59,8 @@ module Services
           :user_type,
           :email,
           :hashed_email,
+          :given_name,
+          :family_name,
           :name,
           :educator_role,
           :email_preference_opt_in_required,
@@ -80,7 +83,9 @@ module Services
           :data_transfer_agreement_source,
           :data_transfer_agreement_kind,
           :data_transfer_agreement_at,
-          :terms_of_service_version
+          :terms_of_service_version,
+          {:signup_sources_tracking => []},
+          {grades_teaching: []}
         ]
       end
     end

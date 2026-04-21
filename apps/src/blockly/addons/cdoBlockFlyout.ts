@@ -1,16 +1,16 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 
-const svgPaths = GoogleBlockly.utils.svgPaths;
-interface CdoBlockFlyoutOptions extends GoogleBlockly.Options {
+const svgPaths = BlocklyCore.utils.svgPaths;
+interface CdoBlockFlyoutOptions extends BlocklyCore.Options {
   minWidth: number;
   maxWidth: number;
-  parentBlock: GoogleBlockly.Block | null;
+  parentBlock: BlocklyCore.Block | null;
 }
-export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
+export default class CdoBlockFlyout extends BlocklyCore.HorizontalFlyout {
   private svgClipPath_: SVGElement | undefined;
-  parentBlock: GoogleBlockly.Block | null;
+  parentBlock: BlocklyCore.Block | null;
 
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -53,8 +53,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   createDom(
     tagName:
       | string
-      | GoogleBlockly.utils.Svg<SVGSVGElement>
-      | GoogleBlockly.utils.Svg<SVGGElement>
+      | BlocklyCore.utils.Svg<SVGSVGElement>
+      | BlocklyCore.utils.Svg<SVGGElement>
   ) {
     // super.createDom returns this.svgGroup_. Explicitly setting it here
     // so that TypeScript knows it is not null.
@@ -198,7 +198,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *     area.
    * @override
    */
-  wouldDelete(_element: GoogleBlockly.IDraggable) {
+  wouldDelete(_element: BlocklyCore.IDraggable) {
     return false;
   }
 }

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Import your `custom.py` into your project.\r\n\r\n2. In `custom.py`, write the `paint_lines(this_painter, color)` function. While the `Painter` `has_paint()`:\r\n   \r\n   * If the `Painter` `can_move(\"east\")`, move forward\r\n      \r\n   * Then, paint the space\r\n      \r\n   * If the `Painter` `can_move()` forward (in its current direction), move again\r\n\r\n3. Save `custom.py` to your Backpack.\r\n\r\n4. In `main.py`, import your functions.\r\n\r\n5. Help the `Painter` repaint the traffic lines next to the taxis!\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/f4d236e7b985284ae4fccaa9ab2fcf32-u1l9-l4a.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

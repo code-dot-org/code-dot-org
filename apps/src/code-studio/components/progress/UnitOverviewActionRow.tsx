@@ -2,19 +2,15 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getStore} from '@cdo/apps/redux';
 import {Version} from '@cdo/apps/templates/courseOverview/TeacherCourseOverview';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {
-  isOnTeacherDashboard,
-  showV2TeacherDashboard,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -46,13 +42,14 @@ interface UnitOverviewActionRowProps {
   showAssignButton: boolean;
   currentCourseId: number;
   courseOfferingId: number;
-  courseLink: string;
+  isSingleUnitCourse: boolean;
   participantAudience: string;
   isMigrated: boolean;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
   publishedState: string;
   teacherResources: TeacherResource[];
+  aiChatToolsDependency: AiChatToolsDependencyValue;
 }
 
 const compilePdfDropdownOptions = (
@@ -77,30 +74,9 @@ const compilePdfDropdownOptions = (
   return options;
 };
 
-const recordAndNavigateToPdf = (
-  e: React.MouseEvent,
-  firehoseKey: string,
-  url: string,
-  scriptName: string
-) => {
+const navigateToPdf = (e: React.MouseEvent, url: string) => {
   e.preventDefault();
-  firehoseClient.putRecord(
-    {
-      study: 'pdf-click',
-      study_group: 'script',
-      event: 'open-pdf',
-      data_json: JSON.stringify({
-        name: scriptName,
-        pdfType: firehoseKey,
-      }),
-    },
-    {
-      includeUserId: true,
-      callback: () => {
-        window.location.href = url;
-      },
-    }
-  );
+  window.location.href = url;
 };
 
 const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
@@ -109,25 +85,24 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   showAssignButton,
   currentCourseId,
   courseOfferingId,
-  courseLink,
+  isSingleUnitCourse,
   participantAudience,
   isMigrated,
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
   publishedState,
   teacherResources,
+  aiChatToolsDependency,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
 
-  const {unitTitle, unitName, scriptId, deeperLearningCourse} = useAppSelector(
-    state => ({
-      unitTitle: state.progress.unitTitle,
-      unitName: state.progress.scriptName,
-      scriptId: state.progress.scriptId,
-      deeperLearningCourse: state.progress.deeperLearningCourse,
-    })
-  );
+  const {unitTitle, scriptId, deeperLearningCourse} = useAppSelector(state => ({
+    unitTitle: state.progress.unitTitle,
+    unitName: state.progress.scriptName,
+    scriptId: state.progress.scriptId,
+    deeperLearningCourse: state.progress.deeperLearningCourse,
+  }));
   const viewAs = useSelector(
     (state: {viewAs: keyof typeof ViewType}) => state.viewAs
   ) as string;
@@ -157,7 +132,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   };
 
   const viewAsToggleAction = (viewType: string) => {
-    if (!isOnTeacherDashboard()) {
+    if (!location.pathname.includes('teacher_dashboard')) {
       updateQueryParam('viewAs', viewType);
     }
 
@@ -220,14 +195,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                   <a
                     key={option.key}
                     href={option.url}
-                    onClick={e =>
-                      recordAndNavigateToPdf(
-                        e,
-                        option.key,
-                        option.url,
-                        unitName || ''
-                      )
-                    }
+                    onClick={e => navigateToPdf(e, option.url)}
                   >
                     {option.name}
                   </a>
@@ -246,14 +214,15 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 assignmentName={unitTitle}
                 reassignConfirm={onReassignConfirm}
                 isAssigningCourseOnly={false}
-                isAssigningUnitOnly={courseLink === null}
+                isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
+                aiChatToolsDependency={aiChatToolsDependency}
               />
             </div>
           )}
         </div>
 
-        {showV2TeacherDashboard() && isTeacher && (
+        {isTeacher && (
           <div className={styles.viewAs}>
             {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
             <SegmentedButtons

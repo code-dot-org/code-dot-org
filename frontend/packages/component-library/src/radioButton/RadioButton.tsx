@@ -1,13 +1,17 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
-import {memo, ChangeEvent} from 'react';
+import {memo, ChangeEvent, InputHTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
 
 import moduleStyles from './radioButton.module.scss';
 
-export interface RadioButtonProps {
+export interface RadioButtonProps
+  extends Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'size' | 'type' | 'onChange' | 'checked' | 'name' | 'value'
+  > {
   /** Radio Button checked state */
   checked: boolean;
   /** Radio Button onChange handler*/
@@ -25,6 +29,10 @@ export interface RadioButtonProps {
   disabled?: boolean;
   /** Size of Radio Button */
   size?: ComponentSizeXSToL;
+  /** Optional aria-label for the radio input (consistency with Button) */
+  ariaLabel?: string;
+  /** Text thickness styling */
+  textThickness?: 'thick' | 'thin';
   /** Custom className */
   className?: string;
   /** Children (Radio Button custom content) */
@@ -41,6 +49,9 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   size = 'm',
   className,
   children,
+  ariaLabel,
+  textThickness = 'thin',
+  ...HTMLAttributes
 }) => {
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
@@ -59,13 +70,18 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
         checked={checked}
         disabled={disabled}
         onChange={onChange}
+        aria-label={ariaLabel || HTMLAttributes['aria-label']}
+        {...HTMLAttributes}
       />
       <i className={moduleStyles.radioIcon} />
       {label && (
         <Typography
-          semanticTag="span"
-          className={moduleStyles.radioButtonLabel}
-          visualAppearance={bodyTextSize}
+          className={classnames(
+            moduleStyles.radioButtonLabel,
+            moduleStyles[`radioButtonLabel-${textThickness}`],
+          )}
+          variant={bodyTextSize}
+          component="span"
         >
           {label}
         </Typography>

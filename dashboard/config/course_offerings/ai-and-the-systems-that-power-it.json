@@ -8,7 +8,7 @@
   "grade_levels": "9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/334911d7fb405589505fdeee15c276b0-systems.jpg",
-  "cs_topic": "artificial_intelligence",
+  "cs_topic": "artificial_intelligence,hardware",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Explore how AI connects with computing systems, IoT, and robotics while designing and troubleshooting real-world solutions with a focus on ethics, equity, and impact.",
@@ -16,5 +16,8 @@
   "video": null,
   "published_date": "2025-05-29 06:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

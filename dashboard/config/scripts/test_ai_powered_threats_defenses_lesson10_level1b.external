@@ -1,0 +1,19 @@
+name 'test-ai-powered-threats-defenses-lesson10-level1b'
+title 'Transportation App'
+bubble_choice_description 'Explore a Transportation App and get to know its users!'
+display_name 'Transportation App'
+thumbnail_url 'https://images.code.org/9e12684d5ee392373f8212d89a281978-image-1754684887221.27.38 PM.png'
+
+markdown <<MARKDOWN
+## Transportation App
+
+Explore the <a href="https://docs.google.com/presentation/d/1WegkbIkQ4tKgVLRRPw20ie9z6RtaHCQVNvF6wxAMKPM/edit?slide=id.p#slide=id.p" target="_blank"> Transportation app</a> by familiarizing yourself with the app interface and the app users.
+
+**Note:** This slide deck opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+    <img src="https://images.code.org/9e12684d5ee392373f8212d89a281978-image-1754684887221.27.38 PM.png"
+         alt="" 
+         style="width: 80%; max-width: 100px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+</div>
+MARKDOWN

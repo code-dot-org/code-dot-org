@@ -7,13 +7,16 @@ import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {getStore} from '@cdo/apps/redux';
 import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
 import ProjectContainer from '../projects/ProjectContainer';
+import {getStandaloneProjectId} from '../projects/utils';
 
+import RubricFABContainer from './components/rubrics/RubricFABContainer';
+import RubricWrapper from './components/rubrics/RubricWrapper';
 import DialogManager from './dialogs/DialogManager';
+import Lab2IdleTimer from './Lab2IdleTimer';
 import Lab2Wrapper from './Lab2Wrapper';
 import LabViewsRenderer from './LabViewsRenderer';
 import MetricsAdapter from './MetricsAdapter';
@@ -22,15 +25,19 @@ const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
       <BrowserTextToSpeechWrapper>
+        <Lab2IdleTimer />
         <ThemeProvider>
-          <Lab2Wrapper>
-            <DialogManager>
-              <MetricsAdapter />
-              <ProjectContainer channelId={getStandaloneProjectId()}>
-                <LabViewsRenderer />
-              </ProjectContainer>
-            </DialogManager>
-          </Lab2Wrapper>
+          <DialogManager>
+            <Lab2Wrapper>
+              <RubricWrapper>
+                <MetricsAdapter />
+                <ProjectContainer channelId={getStandaloneProjectId()}>
+                  <LabViewsRenderer />
+                </ProjectContainer>
+                <RubricFABContainer />
+              </RubricWrapper>
+            </Lab2Wrapper>
+          </DialogManager>
         </ThemeProvider>
       </BrowserTextToSpeechWrapper>
     </Provider>

@@ -1,0 +1,20 @@
+{
+  "addressBar": "Address Bar",
+  "code": "Code",
+  "desktop": "Desktop",
+  "desktopView": "Desktop View",
+  "guide": "Guide",
+  "maximizePreview": "Maximize preview",
+  "minimizePreview": "Minimize preview",
+  "mobile": "Mobile",
+  "mobileView": "Mobile View",
+  "navigateBack": "Navigate back",
+  "navigateForward": "Navigate forward",
+  "outline": "Outline",
+  "preview": "Preview",
+  "produce": "Produce",
+  "refresh": "Refresh",
+  "splitView": "Split View",
+  "suggest": "Suggest",
+  "workspace": "Workspace"
+}

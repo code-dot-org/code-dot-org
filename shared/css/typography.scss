@@ -101,7 +101,7 @@
   @include heading-common;
   @include main-font-semi-bold;
   font-size: 1.25rem;
-  line-height: 1.40;
+  line-height: 1.4;
 }
 
 @mixin heading-xs {
@@ -173,20 +173,12 @@
   @include main-font-semi-bold;
 }
 
-@mixin extra-strong {
-  @include main-font-bold;
-}
-
 @mixin em {
   @include main-font-regular-italic;
 }
 
 @mixin strong-em {
   @include main-font-semi-bold-italic;
-}
-
-@mixin extra-strong-em {
-  @include main-font-bold-italic;
 }
 
 // Caption styles
@@ -275,10 +267,6 @@ strong,
   @include strong;
 }
 
-.extra-strong {
-  @include extra-strong;
-}
-
 // Use in paragraphs to italicize text
 em,
 .em {
@@ -290,11 +278,6 @@ em strong,
 em.strong,
 .strong em {
   @include strong-em;
-}
-
-em.extra-strong,
-.extra-strong em {
-  @include extra-strong-em;
 }
 
 // Captions

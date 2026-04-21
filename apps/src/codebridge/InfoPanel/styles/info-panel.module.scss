@@ -1,5 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-
 .infoPanel {
   white-space: pre-wrap;
   width: 100%;
@@ -11,6 +9,10 @@
 .infoPanelHeader {
   border-bottom: 1px solid var(--borders-neutral-primary);
   margin-bottom: 0;
+}
+
+.instructionsContainer {
+  margin-bottom: 45px; // space for copyright footer
 }
 
 // This is adapted from customDropdown.module.scss in the component library.

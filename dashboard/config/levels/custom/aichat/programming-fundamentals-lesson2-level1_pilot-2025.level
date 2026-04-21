@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-10-14T18:45:57.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computational Thinking \r\n## (Part 1)\r\n\r\nUse this chatbot to help you with **decomposition** or breaking down your event planning into smaller tasks.\r\n\r\n### Do This:\r\n\r\n- Tell the chatbot what event you're planning.\r\n- Ask it to help you brainstorm or clarify what tasks are needed, see examples below.\r\n\r\n**Example Prompts:**\r\n- **Brainstorm:** I'm planning a **school spirit week**. Help me come up with tasks I need to complete.\r\n-  **Clarify:** I know that I will need to **sell tickets for prom**. Help me clarify how to accomplish this task, by giving me 3 subtasks with a one-sentence explanation for each.\r\n\r\n**Tips**:\r\n- To get more ideas, simply ask the chatbot to **\"Come up with 3 more ideas\"**\r\n- If the chatbot's response is too wordy, ask it to **\"Only give a one sentence explanation\"**",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "Your job is to help people brainstorm and clarify tasks they will need to accomplish in order to host a specific kind of event. Respond only to questions about planning the event. \n\nProvide only 3 possible subtasks based on the answer to the questions above. Give a very short explanation for each.\n",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Brainstorm Bot",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Troubleshooting Bot",
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:45:57.964+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson2-level1_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson2-level1_2025\"}]"
+}]]></config>
+</Aichat>

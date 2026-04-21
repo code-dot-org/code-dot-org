@@ -1,10 +1,11 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/aws/s3_packaging'
+require 'cdo/aws/turbo_s3_packaging'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
-# Rake tasks for asset packages (currently only 'apps').
+# Rake tasks for asset packages (currently only 'apps' and 'studio').
 namespace :package do
   BUILD_PACKAGE = %i[staging test adhoc].include?(rack_env) && !ENV['CI']
 
@@ -67,6 +68,65 @@ namespace :package do
   end
   desc 'Update apps package and create Dashboard symlink.'
   timed_task_with_logging apps: ['apps:update', 'apps:symlink']
+
+  namespace :studio do
+    def studio_packager
+      TurboS3Packaging.new('studio', vite_dir, dashboard_dir('public/studio-package'), frontend_dir, '@code-dot-org/studio')
+    end
+
+    desc 'Update studio static asset package.'
+    timed_task_with_logging 'update' do
+      # temporarily skip if levelbuilder or production
+      next if rack_env?(:levelbuilder) || rack_env?(:production)
+
+      # never download if we build our own and we're not building a package ourselves.
+      next if CDO.use_my_studio && !BUILD_PACKAGE
+
+      unless studio_packager.update_from_s3
+        if BUILD_PACKAGE
+          Rake::Task['package:studio:build'].invoke
+        else
+          raise 'No valid studio package found'
+        end
+      end
+    end
+
+    desc 'Build and test studio package and upload to S3.'
+    timed_task_with_logging 'build' do
+      # temporarily skip if levelbuilder or production
+      next if rack_env?(:levelbuilder) || rack_env?(:production)
+
+      # Store initial turbo hash to make sure inputs don't change during the build.
+      # Turborepo's hash covers all source inputs, replacing the git-tree-hash
+      # approach used for apps.
+      packager = studio_packager
+      expected_commit_hash = packager.commit_hash
+
+      ChatClient.wrap('Building studio') {Rake::Task['build:studio'].invoke}
+
+      unless rack_env?(:adhoc)
+        ChatClient.wrap('Testing studio') {Rake::Task['test:studio'].invoke}
+      end
+
+      # upload to s3
+      package = packager.create_package('/dist/frontend-studio', expected_commit_hash: expected_commit_hash)
+
+      unless rack_env?(:adhoc)
+        packager.upload_package_to_s3(package)
+        ChatClient.log "Uploaded studio package to S3: #{packager.commit_hash}"
+      end
+
+      packager.decompress_package(package)
+    end
+
+    desc 'Update Dashboard symlink for studio package.'
+    timed_task_with_logging 'symlink' do
+      target = CDO.use_my_studio ? vite_dir('dist', 'frontend-studio') : dashboard_dir('public', 'studio-package')
+      RakeUtils.ln_s target, dashboard_dir('public', 'frontend-studio')
+    end
+  end
+  desc 'Update studio package and create Dashboard symlink.'
+  timed_task_with_logging studio: ['studio:update', 'studio:symlink']
 end
-desc 'Update all packages (apps).'
-timed_task_with_logging package: ['package:apps']
+desc 'Update all packages (apps, studio).'
+timed_task_with_logging package: ['package:apps', 'package:studio']

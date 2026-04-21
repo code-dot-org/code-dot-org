@@ -54,7 +54,7 @@
     "libraries_enabled": "false",
     "display_name": "Create a new project",
     "bubble_choice_description": "Make anything you like. Share it with your family, friends and teacher!",
-    "thumbnail_url": "https://code.org/images/app-lab/applab-tool.png"
+    "thumbnail_url": "/blockly/media/applab/tool.png"
   },
   "published": true,
   "notes": "",

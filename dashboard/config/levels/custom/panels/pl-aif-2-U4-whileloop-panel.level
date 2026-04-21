@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-01-16T15:14:47.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#While Loop\nA **while loop** is a loop that repeats a set of steps as long as a condition is true. \n\n#### Let's break it down! ",
+        "imageUrl": "https://images.code.org/1a927c5b5bb4b416308c9ae15b77ff91-whileloop.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Start Variable\nA **start variable** keeps track of the value of the condition. \nThis is the value that changes each time the loop runs. \n\nIn this example, **count** is the variable. ",
+        "imageUrl": "https://images.code.org/b87366452dc4f03c3d3fdf620893abf7-whileloop (1).png",
+        "key": "pl-aif-2-U4-whileloop-panel-2cf64aba-ce13-4a5a-89c7-726e19daaea1",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Start Value\nThe **start value** is the value where the loop begins. It sets the initial value of the loop variable.\n\nHere, the loop starts with count set to 0. \n\nThis happens *before* the loop checks the condition.",
+        "imageUrl": "https://images.code.org/1278a91ee15659919ec8ed6938fa8cef-whileloop (2).png",
+        "key": "pl-aif-2-U4-whileloop-panel-a14364d4-3759-41b1-9db1-2ba5eb781d06",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Condition\nThe **condition** is a true/false expression that determines whether the loop continues running or stops.\nThe loop keeps running as long as this is **true**. \n\nIn this example, the loop stops when count is no longer less than 5\n",
+        "imageUrl": "https://images.code.org/6f1e3b771c4929d4e9e4b80da1787cf8-whileloop (4).png",
+        "key": "pl-aif-2-U4-whileloop-panel-c64cf9e3-ea9a-4474-97e4-b5fe96de7806",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Update\nThe **update** changes the loop variable each time the loop runs so the condition will eventually become false.\n\n***Note:***  **++** *is a shortcut that increases a value by 1.*\n*It could also be written as `count =count+1;` or `count +=1;`*\n\n*Increasing by 2 would look like `count = count +2;` or `count +=2;`*",
+        "imageUrl": "https://images.code.org/1c4feecfe03d31b1b26d21d1d2f30c3d-whileloop (5).png",
+        "key": "pl-aif-2-U4-whileloop-panel-19cb4767-ceb8-4ca3-82ba-6592911b1a93",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Big Idea\nA while loop needs three things to work correctly:\n-A starting value\n-A condition that will eventually become false\n-A change that moves the variable toward stopping\n\nIf any one of these is missing, the loop may run forever.\n\n#### Let's debug a while loop in Web Lab!",
+        "imageUrl": "https://images.code.org/81c0e2720733fa5e95f51f192a968113-whileloop (6).png",
+        "key": "pl-aif-2-U4-whileloop-panel-44e42358-412c-4303-8e86-fd50f96e8ddb",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-16T15:14:47.290+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-01-16 16:13:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 16:15:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

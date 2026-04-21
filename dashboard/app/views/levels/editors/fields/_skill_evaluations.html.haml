@@ -1,0 +1,13 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#skills-evaluations-settings-container"}}
+  AI Evaluation and Skills
+
+#skills-evaluations-settings-container.in.collapse
+  #skill-evaluation-settings-editor
+  = f.text_field :additional_ai_evaluation_instructions, type: 'hidden'
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_skill_evaluations.js'),
+        data: {skillevaluationdata: {skills: @skills, levelId: @level.id, levelType: @level.type, systemPrompt: AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      @level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    ), additionalAiEvaluationInstructions: @level.additional_ai_evaluation_instructions}.to_json}}
+

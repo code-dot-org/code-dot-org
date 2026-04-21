@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 interface BaseFetchState<T> {
   loading: boolean;
@@ -7,6 +7,10 @@ interface BaseFetchState<T> {
   error: Error | null;
   status: number | null;
 }
+
+export type UseFetchResult<T> = BaseFetchState<T> & {
+  refetch: () => void;
+};
 
 const baseFetchState: BaseFetchState<null> = {
   loading: false,
@@ -41,16 +45,24 @@ const EMPTY_OPTIONS: RequestInit = {};
  * use useMemo() if needed to ensure that the same options object is passed in
  * when the options have not changed.
  *
+ * The 'refetch' method can be called to manually trigger a new fetch request
+ * with the same url and options, useful for refreshing data on user actions.
+ *
  * @param {string} url - URL of resource to fetch
  * @param {RequestInit} options - options to pass to fetch
- * @returns {BaseFetchState}
+ * @returns {UseFetchResult}
  */
 export const useFetch = <T>(
   url: string,
   options: RequestInit = EMPTY_OPTIONS
-): BaseFetchState<T> => {
+): UseFetchResult<T> => {
   const [fetchState, setFetchState] =
     useState<BaseFetchState<null>>(baseFetchState);
+  const [refetchCounter, setRefetchCounter] = useState(0);
+
+  const refetch = useCallback(() => {
+    setRefetchCounter(prev => prev + 1);
+  }, []);
 
   useEffect(() => {
     if (!url) return;
@@ -76,7 +88,11 @@ export const useFetch = <T>(
     // setFetchState calls are asynchronous so state that is set here isn't
     // returned to the caller until (at least) the next render cycle.
     (async () => {
-      setFetchState({...baseFetchState, loading: true});
+      setFetchState(prevState => ({
+        ...baseFetchState,
+        data: prevState.data,
+        loading: true,
+      }));
       let status = null;
       try {
         const response = await fetch(url, calculatedOptions);
@@ -110,7 +126,7 @@ export const useFetch = <T>(
         abortController.abort();
       }
     };
-  }, [url, options]);
+  }, [url, options, refetchCounter]);
 
   return {
     loading: fetchState.loading,
@@ -118,5 +134,6 @@ export const useFetch = <T>(
     response: fetchState.response,
     error: fetchState.error,
     status: fetchState.status,
+    refetch,
   };
 };

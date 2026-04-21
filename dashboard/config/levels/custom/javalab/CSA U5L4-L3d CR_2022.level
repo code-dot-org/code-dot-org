@@ -15,7 +15,7 @@
     "display_name": "Basketball Teams",
     "bubble_choice_description": "A sports enthusiastic wants to create an animation displaying each basketball team and their information. They want to reverse the order of basketball teams in each division.",
     "thumbnail_url": "https://images.code.org/9b769201630c6b9dc16091d15151b641-image-1651097859135.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:15:02.870+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3c CR_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L3c CR_2022\"},{\"changed_at\":\"2022-04-12 19:15:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 19:57:44 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 22:18:19 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:05:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

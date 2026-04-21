@@ -1,0 +1,20 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-09-25T20:00:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario A\r\n\r\nA new library visitor wants to know the hottest books to start reading.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Work with the data to help achieve the goal.\r\n* Complete template in your Processing Library Data activity guide.",
+    "link_title": "Library Books Dataset",
+    "url": "https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?usp=sharing",
+    "display_name": "Scenario A",
+    "bubble_choice_description": "A library visitor wants to know the hottest books to start reading.",
+    "thumbnail_url": "https://images.code.org/303a4de9711d8b66d55095179693181b-DALL·E 2025-02-03 17.34.07 - A minimalist, flat icon representing trending books. The icon features a flame on top of an open book, symbolizing popularity and high demand. The des.webp",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:08.493+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1a_2025\"}]"
+}]]></config>
+</ExternalLink>

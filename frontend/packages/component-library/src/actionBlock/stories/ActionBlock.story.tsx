@@ -1,8 +1,8 @@
 import image1 from '@public/images/action-block-01.png';
 import image2 from '@public/images/action-block-02.png';
 import image3 from '@public/images/action-block-03.png';
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-vite';
+import {within, expect} from 'storybook/test';
 
 import Video from '@/video';
 
@@ -43,14 +43,14 @@ const defaultArgs: ActionBlockProps = {
   overline: 'Overline Text',
   background: 'primary',
   primaryButton: {
-    text: 'Primary Button',
+    children: 'Primary Button',
     href: '#',
-    ariaLabel: 'Primary Button aria label',
+    'aria-label': 'Primary Button aria label',
   },
   secondaryButton: {
-    text: 'Secondary Button',
+    children: 'Secondary Button',
     href: '#',
-    ariaLabel: 'Secondary Button aria label',
+    'aria-label': 'Secondary Button aria label',
   },
 };
 

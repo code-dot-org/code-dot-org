@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,7 +6,6 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
-import {Heading1, Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import {getStore} from '@cdo/apps/redux';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
@@ -89,7 +89,8 @@ class LibraryCreationDialog extends React.Component {
     };
 
     try {
-      const profaneWords = await findProfanity(libraryDetails.librarySource);
+      const userCode = libraryDetails.librarySource;
+      const profaneWords = await findProfanity(userCode, undefined, null, true);
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
@@ -231,7 +232,9 @@ class LibraryCreationDialog extends React.Component {
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>{title}</Heading1>
+              <Typography variant="h1" gutterBottom>
+                {title}
+              </Typography>
               {subtitleContent}
               {bodyContent}
             </div>
@@ -265,9 +268,9 @@ export class UnpublishSuccessDisplay extends React.Component {
   render() {
     return (
       <div>
-        <Heading2>
+        <Typography variant="h2" gutterBottom>
           <b>{i18n.libraryUnPublishTitle()}</b>
-        </Heading2>
+        </Typography>
         <p>{i18n.libraryUnPublishExplanation()}</p>
       </div>
     );

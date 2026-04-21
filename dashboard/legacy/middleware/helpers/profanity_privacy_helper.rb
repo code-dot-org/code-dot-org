@@ -16,16 +16,18 @@ end
 # Check whether it is defined—helpers can be double-included during test running.
 BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILENAME
 
-def profanity_privacy_violation?(filename, body)
+def profanity_privacy_violation?(filename, body, project_type)
   return false unless filename == BLOCKLY_SOURCE_FILENAME
-  share_failure = share_failure_from_body body, request.locale
+  share_failure = share_failure_from_body body, request.locale, project_type
   !!share_failure
 end
 
 def channel_policy_violation?(channel_id)
   body = channel_main_json_body channel_id
   return false unless body
-  profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
+  project = Projects.new(get_storage_id).get(channel_id)
+  project_type = project[:projectType]&.downcase
+  profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body, project_type)
 end
 
 def title_profanity_privacy_violation(name, locale)
@@ -64,7 +66,9 @@ end
 #
 def explain_share_failure(channel_id, locale = 'en')
   body = channel_main_json_body channel_id
-  share_failure_from_body body, locale
+  project = Projects.new(get_storage_id).get(channel_id)
+  project_type = project[:projectType]&.downcase
+  share_failure_from_body body, locale, project_type
 end
 
 # Effectively private
@@ -76,7 +80,7 @@ def channel_main_json_body(channel_id)
 end
 
 # Effectively private
-def share_failure_from_body(body, locale)
+def share_failure_from_body(body, locale, project_type)
   return false unless body
   body_string = body.string
 
@@ -97,7 +101,7 @@ def share_failure_from_body(body, locale)
   return false unless blockly_source.is_a? String
 
   begin
-    ShareFiltering.find_share_failure(blockly_source, locale)
+    ShareFiltering.find_share_failure(blockly_source, locale, project_type)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false

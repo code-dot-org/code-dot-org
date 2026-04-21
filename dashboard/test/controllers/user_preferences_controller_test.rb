@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserPreferencesControllerTest < ActionController::TestCase
   setup do
-    @user = create :user
+    @user = create(:user)
     sign_in @user
   end
 
@@ -68,16 +68,16 @@ class UserPreferencesControllerTest < ActionController::TestCase
 
   test 'updates existing preference for editor_font_size without creating a new record and merges successfully' do
     initial_editor_font_size = {
-      'pythonlab'=> 'small'
+      'pythonlab' => 'small'
     }
     preference = UserPreference.create!(user_id: @user.id, editor_font_size: initial_editor_font_size)
 
     new_editor_font_size = {
-      'weblab2'=> 'medium'
+      'weblab2' => 'medium'
     }
     merged_editor_font_size = {
-      'pythonlab'=> 'small',
-      'weblab2'=> 'medium'
+      'pythonlab' => 'small',
+      'weblab2' => 'medium'
     }
 
     assert_no_difference 'UserPreference.count' do
@@ -92,16 +92,16 @@ class UserPreferencesControllerTest < ActionController::TestCase
 
   test 'updates existing preference for theme without creating a new record and merges successfully' do
     initial_theme = {
-      'global'=> 'Dark'
+      'global' => 'Dark'
     }
     preference = UserPreference.create!(user_id: @user.id, theme: initial_theme)
 
     new_theme = {
-      'Blockly' => 'cdohighcontrast'
+      'blockly' => 'cdohighcontrast'
     }
     merged_theme = {
-      'global'=> 'Dark',
-      'Blockly' => 'cdohighcontrast'
+      'global' => 'Dark',
+      'blockly' => 'cdohighcontrast'
     }
 
     assert_no_difference 'UserPreference.count' do

@@ -14,7 +14,7 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-09-07T21:36:23.668+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-CV-SC2L1-06\\\"\"],\"cloned_from\":\"CSA-SE-CV-SC2L1-06\"},{\"changed_at\":\"2023-09-07 21:36:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",

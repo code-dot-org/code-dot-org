@@ -35,9 +35,9 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
       issuer: Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:issuer],
       lms_account_name: name,
     }
-    CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
+    Clients::CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
     response = {client_id: client_id}
-    LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).returns(response)
+    Clients::LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).returns(response)
 
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :created
@@ -54,7 +54,7 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
     post :create_registration, params: {registration_id: SecureRandom.uuid}
     assert_response :bad_request
     # missing registration_id
-    CacheClient.any_instance.stubs(:read).with(nil).returns(nil)
+    Clients::CacheClient.any_instance.stubs(:read).with(nil).returns(nil)
 
     post :create_registration, params: {email: 'example@test.com'}
     assert_response :unauthorized
@@ -66,7 +66,7 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
     registration_data = {
       issuer: 'fake'
     }
-    CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
+    Clients::CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
 
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :unprocessable_entity
@@ -82,8 +82,8 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
       issuer: Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:issuer],
       lms_account_name: name,
     }
-    CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
-    LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).raises RuntimeError
+    Clients::CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
+    Clients::LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).raises RuntimeError
 
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :internal_server_error

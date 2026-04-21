@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question1_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 1'
+
+wrong 'Only the physical parts'
+wrong 'Only the programs running on a device'
+right 'A combination of hardware and software working together'
+wrong 'Just the internet connection'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What makes up a **computer system**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Introduction to Computer Systems
+MARKDOWN

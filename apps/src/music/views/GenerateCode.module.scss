@@ -1,0 +1,62 @@
+.heading {
+  margin-bottom: 0;
+}
+
+.textArea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  gap: 12px;
+  background: var(--neutral-base-black);
+  color: var(--neutral-base-white);
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  padding: 16px;
+}
+
+.buttonWide {
+  flex: 1;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.navigationButton {
+  height: 35px;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+.hiddenButton {
+  opacity: 0;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  width: 0;
+  height: 0;
+}

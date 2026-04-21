@@ -40,7 +40,7 @@ class Services::CoursesTest < ActiveSupport::TestCase
       end
 
       context 'unit_name_or_id is defined' do
-        let!(:unit) {create :unit, name: unit_name}
+        let!(:unit) {create(:unit, name: unit_name)}
 
         before do
           unit.reload
@@ -53,9 +53,9 @@ class Services::CoursesTest < ActiveSupport::TestCase
         end
 
         context 'unit_group is found' do
-          let(:unit_group) {create :unit_group, name: 'cool-course'}
+          let(:unit_group) {create(:unit_group, name: 'cool-course')}
           let(:position) {2}
-          let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position}
+          let!(:unit_group_unit) {create(:unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position)}
 
           it 'returns the modified path with /courses/.../units/.../' do
             _(subject).must_equal '/courses/cool-course/units/2/some-path'

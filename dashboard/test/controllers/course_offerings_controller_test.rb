@@ -9,9 +9,9 @@ class CourseOfferingsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
 
-    @course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: false
+    @course_offering = create(:course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: false)
 
     @update_params = {
       key: @course_offering.key,
@@ -36,7 +36,7 @@ class CourseOfferingsControllerTest < ActionController::TestCase
   test 'update course offering updates fields' do
     sign_in @levelbuilder
 
-    course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true
+    course_offering = create(:course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true)
 
     put :update, params: {
       key: course_offering.key,
@@ -57,7 +57,7 @@ class CourseOfferingsControllerTest < ActionController::TestCase
   test 'update course offering updates fields with nested strong parameters' do
     sign_in @levelbuilder
 
-    course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true
+    course_offering = create(:course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true)
 
     put :update, params: {
       key: course_offering.key,

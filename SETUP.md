@@ -21,7 +21,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.0.5
+     ruby --version     # --> ruby 3.1.7
      node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
@@ -29,8 +29,17 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `git lfs pull`
 
+1. `bundle config --local without staging test production levelbuilder`
+    - This step prevents installation of gems that are not needed for local development, some of which can break during the next step.
+    
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
+
+1. `cp locals.yml.default locals.yml`
+    - This step is necessary to enable javascript builds. It also provides further options for customizing your local environment.
+
+1. `bundle exec rake package:apps:symlink`
+    - Another step necessary to enable javascript builds.
 
 1. `bundle exec rake install:hooks`
     <details>
@@ -68,10 +77,8 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset, collation, and timezone to match our servers
+1. fix your database timezone to match our servers
     - `bin/mysql-client-admin`
-    - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
     - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
     - `SELECT @@global.time_zone;` Verify the setting
@@ -83,7 +90,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
 
-After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), our [apps build](./apps/README.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## Configure AWS Access or Secrets
 
@@ -194,6 +201,14 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+
+1. If you are on an M-series Mac, you will need to install Rosetta if you have not done so already, otherwise the apps build may fail:
+    ```sh
+    softwareupdate --install-rosetta
+    ```
+    ```sh
+    arch -x86_64 /bin/bash -c 'echo "Rosetta is working!"'
+    ```
 
 1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
     ```
@@ -315,16 +330,17 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
-     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 1: Choose AMI**: Select Ubuntu Server 22.04
+     * **Step 2: Choose instance type**: Choose at least 32 GiB memory (e.g. `t3.2xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
-     * **Step 4: Storage**: Increase storage to 100GiB
+     * **Step 4: Storage**: Increase storage to 100GiB of type `gp3`
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
      * move your private key to `~/.ssh/<keyname>.pem`
+     * fix key permissions with `chmod 600 ~/.ssh/<keyname>.pem`
      * add the following lines to ~/.ssh/config:     
        ```
        Host yourname-ec2
@@ -518,9 +534,16 @@ Where [VERSION] is the current version of eventmachine in Gemfile.lock. For exam
 
 - `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
+#### mini_racer and libv8-node
+
+If `bundle install` fails while installing `mini_racer` or `libv8-node`, try running this first:
+```
+bundle config --local without staging test production levelbuilder
+```
+
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, `rake build` will not run correctly. In that case run the following command in the Terminal (found from
   <https://github.com/nodejs/node-gyp/issues/569>): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 ### Recommended hardware

@@ -10,7 +10,8 @@
     "parent_level_id": 18808,
     "name_suffix": "_2025",
     "encrypted": "false",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

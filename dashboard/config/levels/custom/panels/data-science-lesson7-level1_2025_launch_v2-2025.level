@@ -1,0 +1,62 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Copy the Dataset\n\n- Click **File** -> **Make a copy**\n- Save it to your personal account",
+        "imageUrl": "https://images.code.org/ad43329735b1e43ede650eaf5389c516-makeacopy.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Make a Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
+        "imageUrl": "https://images.code.org/44778b4404fc113f75440e871b9bbdb7-makechart.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Create a Bar Chart\n- Click **Chart type**\n- Select **Column chart**",
+        "imageUrl": "https://images.code.org/d650c3e18f066f7e67060ec11b4eceac-barchart 4.40.52 PM.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Change Title and Axis Label\n\nDouble click on the title to rename it",
+        "imageUrl": "https://images.code.org/3bbe429e0905a46178ed06f9a29c71fc-title 4.40.48 PM.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose a Font\n- Switch to the **Customize** tab\n- Click **Chart style** and select a **Font**",
+        "imageUrl": "https://images.code.org/8a0b44ba97e8e2d0d6b1d554d61f47d6-font.gif",
+        "key": "data-science-lesson7-level1_2025_launch_2025-86c87f15-c469-42b5-9711-28db92f2e5c9"
+      },
+      {
+        "text": "### Adding Data Labels\n- Open the **Series** toggle\n- Select **Data labels**",
+        "imageUrl": "https://images.code.org/755426ecb76bc952721f1bfc9a7f68da-Datalabel.gif",
+        "key": "data-science-lesson7-level1_2025_launch_2025-57f3c518-65d5-47d5-875c-bf0ecba64f32"
+      },
+      {
+        "text": "### Adding Bar Color\n- **Double click a bar** to change its color\n- Select a **Fill color** ",
+        "imageUrl": "https://images.code.org/d3701d69cdce3592c3c02976f90fa9ad-barcolor.gif",
+        "key": "data-science-lesson7-level1_2025_launch_2025-153cad2a-72f2-4a65-98a4-ff8c5f09bbd0"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:20.899+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch_2025\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch_2025\"}]"
+}]]></config>
+</Panels>

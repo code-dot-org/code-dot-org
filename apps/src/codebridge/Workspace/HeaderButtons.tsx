@@ -1,21 +1,15 @@
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -23,10 +17,8 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import moduleStyles from './workspace.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources, levelProperties, projectPickerSettings} =
-    useCodebridgeContext();
-  const {appName, enableMicroBit, skipUrl} = levelProperties;
-  const isWidgetView = levelProperties.widgetView;
+  const {levelProperties, projectPickerSettings} = useCodebridgeContext();
+  const {enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -34,39 +26,19 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
 
-  const feedbackTooltipProps: TooltipProps = {
-    text: commonI18n.feedback(),
-    direction: 'onBottom',
-    tooltipId: 'feedback-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
-
-  const documentationTooltipProps: TooltipProps = {
-    text: commonI18n.documentation(),
-    direction: 'onBottom',
-    tooltipId: 'documentation-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
-
-  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
-
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName, {
-              levelPath: window.location.pathname,
-            });
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT);
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [appName, dialogControl, skipUrl]);
+  }, [dialogControl, skipUrl]);
 
   const onClickFlash = async () => {
     let pythonCode = '';
@@ -88,70 +60,49 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.rightHeaderButtons}>
       {projectPickerSettings && (
-        <Button
-          iconRight={{iconName: 'rotate'}}
-          size={'xs'}
-          text={projectPickerSettings.currentType}
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="extraSmall"
           onClick={projectPickerSettings.showProjectTypePicker}
-          type={'primary'}
           aria-label={codebridgeI18n.projectPickerAriaLabel()}
-          color={'black'}
-        />
+          type="button"
+          endIcon={<FontAwesomeV6Icon iconName="rotate" />}
+        >
+          {projectPickerSettings.currentType}
+        </MuiButton>
       )}
-      <SettingsButton />
       {enableMicroBit && (
-        <Button
-          iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onClickFlash}
-          size={'xs'}
-          type={'tertiary'}
-          text={codebridgeI18n.sendToMicroBit()}
-          color={'black'}
-        />
-      )}
-      {!isWidgetView && (
-        <VersionHistoryButton startSources={startSources} appName={appName} />
-      )}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
-            ariaLabel={commonI18n.feedback()}
-            size={'xs'}
-            type={'tertiary'}
-            color={'black'}
-            target="_blank"
-          />
-        </WithTooltip>
-      )}
-      {/* For now, only python lab supports documentation */}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={documentationTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'book'}}
-            href={documentationUrl}
-            size={'xs'}
-            type={'tertiary'}
-            target="_blank"
-            color={'black'}
-          />
-        </WithTooltip>
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName="arrow-right-from-arc"
+            />
+          }
+        >
+          {codebridgeI18n.sendToMicroBit()}
+        </MuiButton>
       )}
       {skipUrl && (
-        <Button
-          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
-          onClick={onClickSkip}
-          size={'xs'}
-          type={'tertiary'}
-          text={commonI18n.skipToProject()}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           className={moduleStyles.buttonSkip}
-          color={'black'}
+          onClick={onClickSkip}
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="arrow-right" />
+          }
         >
-          <span>{commonI18n.skipToProject()}</span>
-        </Button>
+          {commonI18n.skipToProject()}
+        </MuiButton>
       )}
     </div>
   );

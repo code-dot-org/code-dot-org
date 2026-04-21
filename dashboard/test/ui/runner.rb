@@ -102,7 +102,6 @@ def parse_options
     options.features = nil
     options.pegasus_domain = 'test.code.org'
     options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.local_headless = true
@@ -143,7 +142,6 @@ def parse_options
         options.local = 'true'
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
@@ -165,9 +163,6 @@ def parse_options
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
-      end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
-        options.hourofcode = d
       end
       opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
         options.csedweek = d
@@ -448,7 +443,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? "*❌ FAILED*" : "*✅ PASSED*"}\n"
+  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
@@ -457,7 +452,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
   test_report += "\n"
-  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? "FAILED" : "PASSED"}\n\n"
+  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
 
   ChatClient.log test_report, color: 'purple'
 end

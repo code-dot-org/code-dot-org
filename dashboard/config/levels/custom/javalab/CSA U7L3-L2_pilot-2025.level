@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U7L3-L1 Overloaded PBT_pilot-2025",
     "teacher_markdown": "Students should notice that the `MusicPlayer` uses the `play()` method that matches the argument that the method is called with. So when the `play()` method is called with a `Song` object, the method with the `Song` parameter is called.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:40:38.778+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L2_2025\\\"\"],\"cloned_from\":\"CSA U7L3-L2_2025\"}]"

@@ -1,20 +1,11 @@
-@import 'color.scss';
 @import '../../../mixins.scss';
 
 .playButton {
   @include remove-button-styles;
-  display: flex;
-  position: absolute;
-  bottom: 7px;
-  inset-inline-end: 7px;
   opacity: 35%;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  color: $neutral_dark;
-
-  &HigherPosition {
-    bottom: 58px;
-  }
+  color: var(--text-neutral-primary);
 
   &Playing {
     opacity: 100%;

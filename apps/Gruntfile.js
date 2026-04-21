@@ -16,6 +16,11 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const MEM_PER_TEST_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
+  // Enable time-grunt for detailed task timing if profiling is enabled
+  if (envConstants.PROFILE_APPS_BUILD) {
+    require('time-grunt')(grunt);
+  }
+
   var config = {};
 
   /**
@@ -115,8 +120,8 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
-          src: ['**'],
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist',
+          src: ['assets/**'],
           dest: 'build/package/media/skins/fish',
         },
         {
@@ -509,12 +514,7 @@ module.exports = function (grunt) {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
-      .concat(
-        'common',
-        'tutorialExplorer',
-        'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
-      )
+      .concat('common', 'regionalPartnerSearch', 'regionalPartnerMiniContact')
       .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =

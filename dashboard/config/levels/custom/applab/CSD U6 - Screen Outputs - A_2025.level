@@ -71,6 +71,7 @@
     "display_name": "Recreate an App",
     "bubble_choice_description": "Without using Design Mode, recreate the design of an app using setProperty and setText blocks",
     "thumbnail_url": "https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

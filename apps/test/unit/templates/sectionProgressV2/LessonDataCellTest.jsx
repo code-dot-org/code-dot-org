@@ -8,7 +8,6 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   studentLessonProgress: {
     incompletePercent: 20,
-    imperfectPercent: 20,
     completedPercent: 60,
     timeSpent: 300,
     lastTimestamp: 1614841198,
@@ -51,7 +50,6 @@ describe('LevelDataCell', () => {
     renderDefault({
       studentLessonProgress: {
         incompletePercent: 0,
-        imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 300,
         lastTimestamp: 1614841198,
@@ -72,7 +70,6 @@ describe('LevelDataCell', () => {
       metadataExpanded: true,
       studentLessonProgress: {
         incompletePercent: 20,
-        imperfectPercent: 20,
         completedPercent: 60,
         timeSpent: 300,
         lastTimestamp: 1614991198,
@@ -92,7 +89,6 @@ describe('LevelDataCell', () => {
       metadataExpanded: true,
       studentLessonProgress: {
         incompletePercent: 20,
-        imperfectPercent: 20,
         completedPercent: 60,
         timeSpent: 621,
         lastTimestamp: 1614841198,

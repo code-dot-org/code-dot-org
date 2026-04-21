@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U8L6-Merge Sort PBT_2023",
     "teacher_markdown": "If the array is already sorted, the merge sort algorithm still performs the same number of comparisons as it would on an unsorted array.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-14T14:04:46.420+00:00\",\"changed\":[\"cloned from \\\"CSA U8L6-L1_2023\\\"\"],\"cloned_from\":\"CSA U8L6-L1_2023\"},{\"changed_at\":\"2023-04-14 14:04:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 23:52:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 23:54:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 00:16:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

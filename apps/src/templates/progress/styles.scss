@@ -1,10 +1,8 @@
-@import "color.scss";
+@import 'color.scss';
 
 .progress-bubble {
   &.enabled {
-    transition:
-      background-color 0.2s ease-out,
-      border-color 0.2s ease-out,
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
       color 0.2s ease-out;
     &:hover {
       text-decoration: none;
@@ -13,6 +11,10 @@
       background-color: $level_current !important;
     }
   }
+}
+
+.uitest-ProgressPill:focus-visible {
+  outline-offset: 1px;
 }
 
 a.progress-bubble-link {
@@ -24,6 +26,16 @@ a.progress-bubble-link {
 
   &:hover {
     text-decoration: none;
+  }
+
+  &:focus {
+    // Override the default focus style to prevent outline
+    outline: none;
+  }
+
+  &:focus-visible {
+    // Use revert to allow browser default focus styles
+    outline: revert;
   }
 }
 

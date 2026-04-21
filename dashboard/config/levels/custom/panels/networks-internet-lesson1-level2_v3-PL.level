@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-08T20:56:42.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# Verifying AI Information: How Devices Transmit Data\n\nWhen using AI to generate information — especially in areas where you’re not yet an expert — it’s important to **verify** what it says with another reliable source.  \n<br>\nLet’s check what’s accurate about how devices connect and move data across the Internet.\n\n---",
+        "imageUrl": "https://images.code.org/6244a7154b652731243c9805dedaf2c3-Circuit Background Image.png",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Internet Tower\n\nTransmits data **wirelessly** over long distances, connecting your router or local network to the wider Internet.\n<br>\n<br>\nYour router sends requests to the tower, which passes them along to other networks or servers around the world.\n<br>\n<br>\nThink about it like this:  \n> _An internet tower is like a relay station. It catches your data signal and passes it along to the next station on its way to the destination._\n\n---",
+        "imageUrl": "https://images.code.org/5363b27e2e6f2f8184820aa30f7e451c-internet tower (4).png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "# Router\n\nDirects data between your device and the Internet, finding the **best path** for your request.  \n<br>\nWhen you use WiFi, your device sends packets to the router, which forwards them to an Internet tower or directly to a server through a wired connection.  \n<br>\nThink about it like this:  \n> _A router is like a post office. It checks where your message should go and sends it through the most efficient route._\n---",
+        "imageUrl": "https://images.code.org/2ed4caa30e3cb77c2b5b3a9f438d5376-router.png",
+        "key": "networks-internet-lesson1-level2_v3-2025-e8d4274e-9d63-4e43-afad-5cc09b3646e7",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Server\n\n**Stores and delivers** websites, emails, or files when you request them.  \n<br>\nWhen your data request reaches a server, it processes the request and sends the information back through the same network path — to the tower, router, and finally your device.  \n<br>\nThink about it like this:  \n> _A server is like a library. When you make a request, it retrieves the book (data) and sends it back through the delivery system._\n---",
+        "imageUrl": "https://images.code.org/1f3ddf5be77bd4f207c3cc53ff146b53-server.png",
+        "key": "networks-internet-lesson1-level2_v3-2025-31ec257b-52fb-48ed-a292-817b4d3488f2",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Switch\n\nSends data within a **local network**, making sure it reaches the **right device** (like your computer instead of your printer).  \n<br>\nIt connects all the devices inside your network so they can communicate with each other before the router sends data out to the Internet.  \n<br>\nThink about it like this:  \n> _A switch is like an office assistant. It knows everyone in the building and delivers mail to the correct desk._\n---",
+        "imageUrl": "https://images.code.org/d9adaee9b1ce8a8af11e308ba6032cf2-switch.png",
+        "key": "networks-internet-lesson1-level2_v3-2025-a80064bd-1d9a-4abe-9384-18d67029b659"
+      },
+      {
+        "text": "# Ethernet and WiFi Connections\n\n**WiFi** connects devices wirelessly to a router, while **Ethernet** uses cables for a direct, stable link.  \n<br>\nBoth carry the same data — WiFi sends it through radio waves, Ethernet through wires — but they connect to the same router that manages where the data goes next.  \n<br>\nThink about it like this:  \n> _WiFi is like sending mail through the air with a drone — fast and flexible, but sometimes affected by weather._  \n> _Ethernet is like a direct delivery truck — steady, reliable, and unaffected by interference._\n---",
+        "imageUrl": "https://images.code.org/bc15f37945eea1fcf4b891359604a0a8-wifi v ethernet (3).png",
+        "key": "networks-internet-lesson1-level2_v3-2025-f95e06ce-0b61-4a61-a337-48cfb6cce705",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-08T20:56:42.421+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson1-level2_v3-2025\\\"\"],\"cloned_from\":\"networks-internet-lesson1-level2_v3-2025\"}]"
+}]]></config>
+</Panels>

@@ -8,11 +8,14 @@ import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
+import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -61,7 +64,7 @@ export async function handleRunClick(
     }
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+      setProjectThumbnail();
     }
   }
 }
@@ -116,7 +119,14 @@ export async function runAllTests(
     consoleManager?.writeConsoleMessage(
       getTimestampMessage(RunType.VALIDATION)
     );
+    // We do a bit of a hack around the progress manager system here.
+    // We reset validation to set all tests to pending, then updateProgress to propagate
+    // the pending status into the progress state (only on updateProgress does the progress manager
+    // check the validation state). After running we will update progress again to get the test results.
+    // This makes it so we can show the test names with a pending status while the tests are running after the
+    // first run for a level, which is a cleaner UI than wiping the tests completely.
     progressManager?.resetValidation();
+    progressManager?.updateProgress();
     // We only send the separate validation file, because otherwise the
     // source already has the validation file.
     const result = await runPythonCode(
@@ -166,5 +176,20 @@ function handleRunEndedUnexpectedly(
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
+  }
+}
+
+async function setProjectThumbnail() {
+  const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+  neighborhood?.onClose();
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  const shouldCapture = projectManager?.getShouldCaptureThumbnail();
+  if (!shouldCapture) return;
+  await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
+  const svg = document.getElementById(SVG_ID);
+  const svgArg = svg instanceof SVGSVGElement ? svg : null;
+  if (svgArg) {
+    const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(svgArg);
+    projectManager?.setThumbnail(pngBlob);
   }
 }

@@ -2,7 +2,6 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
 require 'timecop'
-require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
 COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', 'fixtures', 'comment-block-sources.json')
@@ -182,10 +181,86 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
+  def test_get_source_blocks_profanity_violations
+    # Given a Play Lab program with a privacy violation
+    filename = MAIN_JSON
+    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Given a program with profanity
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+
+    assert_newrelic_metrics []
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_get_source_blocks_privacy_violations
+    filename = MAIN_JSON
+    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Given a program with profanity or PII
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # admin can view
+    with_session(:admin) do
+      admin_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      FilesApi.any_instance.stubs(:admin?).returns(true)
+      admin_api.get_object(filename)
+      assert successful?
+      FilesApi.any_instance.unstub(:admin?)
+    end
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+
+    # teacher can view
+    with_session(:teacher) do
+      teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+      teacher_api.get_object(filename)
+      assert successful?
+      FilesApi.any_instance.unstub(:teaches_student?)
+    end
+
+    assert_newrelic_metrics []
+
+    delete_all_source_versions(filename)
+  end
+
   def test_policy_channel_api
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation
@@ -200,7 +275,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
-    FirehoseClient.instance.expects(:put_record).never
+    CDO.expects(:log).never
 
     # Upload a source file.
     filename = MAIN_JSON
@@ -252,13 +327,13 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data_json_data = JSON.parse(data[:data_json])
-      data[:study] == 'project-data-integrity' &&
-        data[:event] == 'reject-comparing-older-main-json' &&
-        data[:project_id] == @channel &&
-        data_json_data['currentVersionId'] == version1 &&
-        stream == :analysis
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data_json_data = data['data_json']
+      data['study'] == 'project-data-integrity' &&
+        data['event'] == 'reject-comparing-older-main-json' &&
+        data['project_id'] == @channel &&
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = '{"source":"version 3"}'

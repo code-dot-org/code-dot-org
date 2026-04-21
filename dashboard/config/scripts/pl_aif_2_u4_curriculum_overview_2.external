@@ -1,0 +1,44 @@
+name 'pl=aif-2-U4-curriculum-overview-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 4: Iterating with AI
+
+## What is Iterating with AI all about?
+ 
+#### In **Iterating with AI**, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and view. 
+
+#### Building on their earlier work with arrays and objects, they design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust.
+
+
+---
+
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Iterating with AI is the 4th unit in the course.***
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
+
+</li> <br>
+      <li>Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.</li><br>
+      <li>Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
+</li><br>
+      <li>Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
+</li><br>
+    </ul>
+  </div>
+  
+  <div>
+    <img src="https://images.code.org/cc0cb6dc862dad283380d1a653d9b3f1-image-1768411041153.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+MARKDOWN

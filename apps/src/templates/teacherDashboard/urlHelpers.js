@@ -1,5 +1,3 @@
-import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
-
 const dashboardPrefix = '/teacher_dashboard/sections/';
 
 /**
@@ -14,21 +12,52 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   return dashboardPrefix + sectionId + path;
 };
 
-export const getUnitUrl = (
+const getNestedUnitUrl = (
   sectionId,
-  unitName,
-  studentId = null,
-  unassignedUnitUrl
+  courseVersionName,
+  unitPosition,
+  studentId = null
 ) => {
-  if (showV2TeacherDashboard() && sectionId && unitName) {
-    if (studentId) {
-      return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}?user_id=${studentId}`;
-    } else {
-      return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}`;
-    }
+  if (
+    !courseVersionName ||
+    unitPosition === null ||
+    unitPosition === undefined
+  ) {
+    return null;
   }
 
-  return unassignedUnitUrl;
+  const baseUrl = `/teacher_dashboard/sections/${sectionId}/courses/${courseVersionName}/units/${unitPosition}`;
+  return studentId ? `${baseUrl}?user_id=${studentId}` : baseUrl;
+};
+
+export const nestedUnitUrlForStudent = (
+  sectionId,
+  courseVersionName,
+  unitPosition,
+  studentId
+) => {
+  if (
+    !courseVersionName ||
+    unitPosition === null ||
+    unitPosition === undefined
+  ) {
+    return null;
+  }
+
+  return getNestedUnitUrl(
+    sectionId,
+    courseVersionName,
+    unitPosition,
+    studentId
+  );
+};
+
+export const getUnitUrl = (sectionId, unitName, studentId = null) => {
+  if (studentId) {
+    return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}?user_id=${studentId}`;
+  } else {
+    return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}`;
+  }
 };
 
 export const unitUrlForStudent = (sectionId, unitName, studentId) => {
@@ -36,10 +65,5 @@ export const unitUrlForStudent = (sectionId, unitName, studentId) => {
     return null;
   }
 
-  return getUnitUrl(
-    sectionId,
-    unitName,
-    studentId,
-    `/s/${unitName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Instructor`
-  );
+  return getUnitUrl(sectionId, unitName, studentId);
 };

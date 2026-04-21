@@ -4,10 +4,8 @@ require 'testing/projects_test_utils'
 class BackpackTest < ActiveSupport::TestCase
   include ProjectsTestUtils
 
-  self.use_transactional_test_case = true
-
   setup_all do
-    @user = create :user
+    @user = create(:user)
     @storage_id = fake_storage_id_for_user_id(@user.id)
     @game_id = 68
   end

@@ -222,6 +222,7 @@
     "teacher_markdown": "[key]\r\n\r\nThe processing used in this app is searching or finding a match.   \r\n\r\n* Find a match for the user's birthday in the calendar, and use the day of the week.\r\n* Find a match for the day of the week in the list of authors and the days they were born.\r\n\r\nThere is, of course, some more processing that happens in this app, but the focus in this exercise is on the searching/finding a match part of the process.\r\n\r\n[/key]",
     "validation_enabled": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

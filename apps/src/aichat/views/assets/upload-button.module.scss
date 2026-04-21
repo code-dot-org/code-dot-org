@@ -1,6 +1,0 @@
-// Using multiple classnames to override ActionDropdown CSS specificity
-// so that the dropdown menu appears above the button.
-// TODO: Probably better if ActionDropdown supports this natively.
-div.upload.dropdown > div {
-  bottom: 35px;
-}

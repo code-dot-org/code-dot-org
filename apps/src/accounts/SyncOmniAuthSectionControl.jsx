@@ -1,16 +1,17 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
 import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
@@ -65,25 +66,13 @@ class SyncOmniAuthSectionControl extends React.Component {
     isDialogOpen: false,
     syncFailErrorLog: '',
     isLtiDialogOpen: false,
+    needsGoogleReauth: false,
   };
 
   onClick = () => {
-    const {sectionId, sectionCode, sectionName, updateRoster, sectionProvider} =
+    const {sectionCode, sectionName, updateRoster, sectionProvider} =
       this.props;
     const {buttonState} = this.state;
-
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'sync-oauth-button-click',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          loginType: sectionProvider,
-        }),
-      },
-      {includeUserId: true}
-    );
 
     if ([IN_PROGRESS, SUCCESS, DISABLED].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
@@ -109,23 +98,16 @@ class SyncOmniAuthSectionControl extends React.Component {
         }
       })
       .catch(sync_error => {
+        const errorText = '' + sync_error;
+        // Show reauthorize CTA when Google Classroom returns 403
+        const isGoogle =
+          this.props.sectionProvider === OAuthSectionTypes.google_classroom;
+        const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         this.setState({
-          syncFailErrorLog: '' + sync_error,
+          syncFailErrorLog: errorText,
+          needsGoogleReauth: needsGoogleReauth,
         });
         this.openDialog();
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'sync-oauth-button-error',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              loginType: sectionProvider,
-              error_message: sync_error,
-            }),
-          },
-          {includeUserId: true}
-        );
       });
   };
 
@@ -182,8 +164,16 @@ class SyncOmniAuthSectionControl extends React.Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
+          <Typography variant="h1" gutterBottom>
+            {i18n.loginTypeSyncButtonDialogHeader()}
+          </Typography>
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
+          {this.state.needsGoogleReauth && (
+            <div style={{margin: '12px 0'}}>
+              <p>{i18n.authorizeGoogleClassroomsText()}</p>
+              <ReauthorizeGoogleClassroom />
+            </div>
+          )}
           <div style={styles.scroll}>
             <pre>
               <code>{this.state.syncFailErrorLog}</code>
@@ -233,26 +223,34 @@ export function SyncOmniAuthSectionButton({
   buttonState,
   onClick,
 }) {
+  const tooltipId = `sync-button-tooltip`;
   return (
-    <Button
-      text={buttonText(buttonState, provider, providerName)}
-      color={Button.ButtonColor.gray}
-      size={Button.ButtonSize.default}
-      disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
-      onClick={onClick}
-      {...iconProps(buttonState)}
-      style={{float: 'left', margin: '0'}}
-      title={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
-      aria-label={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
-    />
+    <span data-for={tooltipId} data-tip style={{float: 'left'}}>
+      <Button
+        text={buttonText(buttonState, provider, providerName)}
+        color={Button.ButtonColor.gray}
+        size={Button.ButtonSize.default}
+        disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
+        onClick={onClick}
+        {...iconProps(buttonState)}
+        style={{margin: '0'}}
+        title={
+          buttonState === DISABLED
+            ? i18n.ltiSectionSyncButtonDisabledAltText()
+            : undefined
+        }
+        aria-label={
+          buttonState === DISABLED
+            ? i18n.ltiSectionSyncButtonDisabledAltText()
+            : undefined
+        }
+      />
+      {buttonState === DISABLED && (
+        <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+          <div> {i18n.ltiSectionSyncButtonDisabledAltText()} </div>
+        </ReactTooltip>
+      )}
+    </span>
   );
 }
 SyncOmniAuthSectionButton.propTypes = {

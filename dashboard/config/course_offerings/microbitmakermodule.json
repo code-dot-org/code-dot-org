@@ -7,14 +7,17 @@
   "marketing_initiative": "CSF",
   "grade_levels": "2,3,4,5",
   "header": "self_paced",
-  "image": null,
+  "image": "https://images.code.org/6290756f09a1b21bcced3e7145d37e29-self-paced-pl-tile-micro-bit-maker.avif",
   "cs_topic": "physical_computing",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "After completing this professional learning experience, you'll be comfortable with basic coding and maker concepts.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2024-07-03 07:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

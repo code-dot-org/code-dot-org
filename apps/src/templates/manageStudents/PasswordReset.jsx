@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 // This min length is configured in user.rb with validates_length_of :password
@@ -70,7 +69,6 @@ class PasswordReset extends Component {
             isResetting: false,
             input: '',
           });
-          this.recordResetSecret();
           this.hidePasswordLengthFailure();
         } else {
           const err = new Error('HTTP status code: ' + res.status);
@@ -84,23 +82,6 @@ class PasswordReset extends Component {
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
       });
-  };
-
-  recordResetSecret = () => {
-    const {sectionId, studentId} = this.props;
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'reset-secret',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: studentId,
-          loginType: 'email',
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   updateInput = event => {

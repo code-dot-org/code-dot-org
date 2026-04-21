@@ -49,7 +49,7 @@
       "playstation.png": "6180e9bd-972b-4849-92a5-3b59e0a533f0.png"
     },
     "name_suffix": "_2025-cb-alt",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-24T02:11:18.356+00:00\",\"changed\":[\"cloned from \\\"CSA U4 Abstract Data Art Project_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4 Abstract Data Art Project_pilot_oo2025\"}]"

@@ -1,0 +1,102 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.enrollmentsTable {
+  .tableRow {
+    border-bottom: 1px solid var(--borders-neutral-primary);
+    background-color: var(--background-neutral-primary);
+
+    &:last-of-type {
+      border: none;
+    }
+
+    &.headerRow {
+      background-color: var(--background-neutral-secondary);
+      border-bottom: 1px solid var(--borders-neutral-primary);
+    }
+
+    &.selected {
+      background-color: var(--background-brand-teal-extra-light);
+    }
+
+    td,
+    th {
+      border: none;
+      background: none;
+      padding: 1rem;
+      width: unset;
+
+      &:first-of-type {
+        padding-right: 0;
+      }
+
+      label {
+        margin: 0;
+        display: inline;
+        position: relative;
+      }
+    }
+  }
+}
+
+.tableFooter {
+  background-color: var(--background-neutral-secondary);
+
+  p,
+  div[role='combobox'] {
+    @include typography.body-three;
+    margin: 0;
+  }
+
+  p:first-of-type {
+    color: var(--text-neutral-secondary);
+  }
+
+  div[role='combobox'] {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.checkbox {
+  margin: 0;
+  inset: 0;
+}
+
+.bulkActionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 0.5rem;
+
+  .actionDivider {
+    margin: 0.5rem;
+  }
+
+  .numSelectedText {
+    color: var(--text-neutral-quaternary);
+    margin-right: 0.5rem;
+  }
+}
+
+.enrollmentList {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  li.enrollmentListItem {
+    margin: 0;
+  }
+}
+
+.workshopIdField {
+  margin-top: 0.5rem;
+
+  input {
+    width: 100%;
+  }
+}
+
+.dialogErrorMessage {
+  margin-top: 1.5rem;
+}

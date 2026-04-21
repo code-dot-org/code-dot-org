@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Read the existing code -- notice that the `Painter` doesn't turn when it should.\r\n\r\n2. Modify the `if` statement that checks whether the `Painter` `can_move(\"south\")`\r\n\r\n3. Run the program to see if the `Painter` turns right through the opening in the wall.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

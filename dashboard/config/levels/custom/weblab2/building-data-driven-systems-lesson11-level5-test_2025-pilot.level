@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:11:03.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Milestone Three: Add Search / Filter / Sort Features\r\n\r\n**Goal:** Extend functionality of your app by adding interactive features (search, filter, sort, and optional details or images) that let users explore the dataset.\r\n\r\nChoose two of the following to implement within your app:\r\n\r\n* **Search:** Allow the user to search for keywords or values within specified data fields.\r\n* **Sort:** Based on an algorithm that you design, determine and implement a sorting strategy for your data.\r\n* **Filter:** Create a filter that excludes or includes subsets of data based on user input.\r\n\r\n\r\n**Debug with AI:** Ask an AI: *\"What are 3 test cases to check if my (search, sort, filter) logic is handled correctly?\"*",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:11:03.918+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level5-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level5-test-2025\"}]"
+}]]></config>
+</Weblab2>

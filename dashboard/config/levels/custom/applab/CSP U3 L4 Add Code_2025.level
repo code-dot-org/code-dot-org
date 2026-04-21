@@ -52,6 +52,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "video_key": "csd_pair_programming",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

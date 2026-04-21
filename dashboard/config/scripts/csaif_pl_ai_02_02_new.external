@@ -1,0 +1,65 @@
+name 'csaif_pl_ai_02_02-new'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Overview
+
+## What is Foundations of AI Programming about?
+ 
+#### This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. 
+
+#### You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+
+#### **This is the second unit in the six unit <a href='https://code.org/en-US/curriculum/artificial-intelligence-foundations' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Foundations</a> semester 1 course. This professional learning module prepares you to teach it!**
+
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li> Define, analyze, and improve algorithms using sequence, selection, and iteration.</li>&#8201;
+    <li> Use variables, conditionals, loops, and functions to create, test, and refine modular programs.</li>&#8201;
+    <li> Assess AI technologies for biases and privacy concerns, proposing strategies to mitigate risks.</li>&#8201;
+    <li> Connect programming skills to real-world opportunities in computing and related industries.</li><br>
+    <li> Use abstraction, decomposition, and pattern recognition to design and troubleshoot programs effectively.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/c9ef17b0eed0db0e23be62631eb1da16-Screenshot 2025-12-17 at 11.11.50 AM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+## Classroom Context
+
+#### This content has been developed for high school students with little or no coding experience who are comfortable with technology and curious about AI and computer science.
+
+#### This unit can be implemented on it's own or part of the AI Foundations Semester or year-long course.
+
+#### All lessons within the unit are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Learn more about the AI Foundations Curriculum by taking the <a href='https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025/units/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Introductory Module</a>.
+</p>
+
+
+## Unit Length and Format
+
+
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit 2: Foundations of AI Programming</a>.
+</p>
+
+
+MARKDOWN

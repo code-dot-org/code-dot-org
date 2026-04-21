@@ -1,14 +1,14 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
@@ -20,7 +20,6 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
@@ -33,8 +32,9 @@ import moduleStyles from './console.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const isPredictLevel = predictSettings?.isPredictLevel;
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -55,7 +55,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  const miniApp = labConfig?.miniApp?.name;
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
 
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
@@ -70,7 +72,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -85,7 +86,7 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
-      dispatch(setShowSuggestedPrompts(true));
+      logLevelActivity();
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
@@ -128,20 +129,23 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
   const disabledCodeActionsIcon = !hasLoadedEnvironment
-    ? 'fa-spinner fa-spin'
-    : 'fa-question-circle-o';
+    ? 'fa-spinner fa-spin fa-solid'
+    : 'fa-circle-question fa-regular';
 
   return (
     <div className={moduleStyles.controlButtons}>
       {isRunning ? (
-        <Button
-          text={codebridgeI18n.stop()}
-          onClick={handleStop}
-          color={'destructive'}
-          iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-          size={'xs'}
+        <MuiButton
+          variant="contained"
+          color="error"
+          size="extraSmall"
           className={moduleStyles.controlButton}
-        />
+          onClick={handleStop}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="square" />}
+        >
+          {codebridgeI18n.stop()}
+        </MuiButton>
       ) : (
         <WithConditionalTooltip
           iconName={disabledCodeActionsIcon}
@@ -154,16 +158,19 @@ const ControlButtons: React.FunctionComponent = () => {
             tooltipId: 'code-actions-tooltip',
           }}
         >
-          <Button
-            id="uitest-codebridge-run"
-            text={codebridgeI18n.run()}
-            onClick={handleRun}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="extraSmall"
             disabled={!!disabledCodeActionsTooltip}
-            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            size={'xs'}
-            type={'primary'}
             className={moduleStyles.controlButton}
-          />
+            id="uitest-codebridge-run"
+            onClick={handleRun}
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
+          >
+            {codebridgeI18n.run()}
+          </MuiButton>
         </WithConditionalTooltip>
       )}
     </div>

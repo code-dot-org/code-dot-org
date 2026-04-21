@@ -1,7 +1,0 @@
-{
-  "category": "Poetry - Text",
-  "config": {
-    "func": "showText",
-    "blockText": "show text"
-  }
-}

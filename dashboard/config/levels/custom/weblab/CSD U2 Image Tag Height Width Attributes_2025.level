@@ -29,7 +29,8 @@
     "display_name": "Sizing Images in CSS",
     "bubble_choice_description": "Learn how to customize the height and width of images.",
     "thumbnail_url": "https://images.code.org/ced4f6389bd2efcf29c35830ec3d663c-image-1564701914524.jpg",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

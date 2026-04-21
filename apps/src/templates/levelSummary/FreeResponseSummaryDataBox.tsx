@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -37,12 +37,12 @@ const FreeResponseSummaryDataBox: React.FC<FreeResponseSummaryDataBoxProps> = ({
           iconName={icon}
           className={classNames(styles.icon, classname)}
         />
-        <BodyThreeText className={styles.labelText}>
+        <Typography className={styles.labelText} variant="body3" gutterBottom>
           {`${label}: ${studentCount}`}
-        </BodyThreeText>
-        <BodyThreeText className={styles.labelText}>
+        </Typography>
+        <Typography className={styles.labelText} variant="body3" gutterBottom>
           <strong>{`(${percent}%)`}</strong>
-        </BodyThreeText>
+        </Typography>
       </div>
     );
   };

@@ -69,6 +69,7 @@
     "project_template_level_name": "AppLab Intro 6 - thisOrThatAddButton Template_2025",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -25,7 +25,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
   end
 
   test 'records user id' do
-    user = create :student
+    user = create(:student)
     log_obj = PurgedAccountLog.new user,
       reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
     log = JSON.parse log_obj.to_json
@@ -33,7 +33,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
   end
 
   test 'records hashed email' do
-    user = create :student
+    user = create(:student)
     refute_nil user.hashed_email
     log_obj = PurgedAccountLog.new user,
       reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
@@ -42,7 +42,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
   end
 
   test 'does not record hashed email if delete was requested manually' do
-    user = create :student
+    user = create(:student)
     refute_nil user.hashed_email
     log_obj = PurgedAccountLog.new user,
       reason: PurgedAccountLog::REQUESTED_BY_USER
@@ -87,7 +87,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
   end
 
   test 'uploads to S3 under dated folder' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     purge_time = Time.parse '2018-08-08'
 
     log_obj = PurgedAccountLog.new teacher,
@@ -113,7 +113,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
   end
 
   test 'refuses to upload if purged_at is not set' do
-    teacher = create :teacher
+    teacher = create(:teacher)
 
     log_obj = PurgedAccountLog.new teacher,
       reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO

@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-10-14T20:38:04.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\nLet’s make your program more personal!\r\n\r\nChange it so it:\r\n* asks someone for their **name** _or_ their **favorite food**, and\r\n* includes that response in the greeting.\r\n\r\n* **\r\n**Use the AI Tutor to GET HINTS or EXAMPLES for how to do this.**\r\n\r\nYou can click the \"Give an Example\" or \"Give a Hint\" button or ask questions like:\r\n* How do I ask someone for their name in Python?\r\n* Can you show me an example of a program that asks for input and prints it in a sentence?\r\n* How can I ask for someone's favorite food and include it in my greeting?\r\n* Can you explain what the `input()` function does?\r\n\r\n***Tip: Pick one idea from the Tutor and try it! You can always ask it to explain the code line-by-line.***",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "teacher_markdown": "This is the first time students see `input()`, but they don’t need to memorize it — the AI Tutor provides scaffolding.\r\n\r\nEncourage curiosity: “Try both versions — one for name, one for food!”\r\n\r\nReinforce that asking the Tutor for examples and explanations is normal developer behavior.",
+    "additional_ai_evaluation_instructions": "The goal of this level is for students to practice using the AI Tutor to get hints and examples for new code features. \r\nIf the student’s code runs and correctly asks for input and includes it in a greeting, consider it correct even if formatting or punctuation is not perfect. \r\nPrioritize whether the student applied the new idea with the AI Tutor’s help rather than how advanced the code is.\r\n",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello world!\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T20:38:04.429+00:00\",\"changed\":[\"cloned from \\\"ai-tutor-foundations-of-ai-programming-L4-2025\\\"\"],\"cloned_from\":\"ai-tutor-foundations-of-ai-programming-L4-2025\"},{\"changed_at\":\"2025-10-14 20:38:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:59:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:59:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 02:00:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-12-11T21:08:03.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Changing the Restriction\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit restriction or limitation** to focus what it responds to.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so it can also answer questions about driving laws in other states, but still redirects back to the laws and regulations in Arizona.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": "0.8",
+        "systemPrompt": "Eres un chatbot creado para ayudar a las personas a entender cómo conducir en Arizona. \n\nUsa metáforas o analogías para explicar conceptos tan a menudo como sea posible. \n\nUtiliza un tono amistoso y cálido. \n\nNo respondas ninguna pregunta que no esté relacionada con conducir en Arizona. Si te hacen una pregunta que no sea sobre conducir en Arizona, simplemente repite tu propósito.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol. "
+    },
+    "display_name": "Changing the Restriction",
+    "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit restriction or limitation** to focus what it responds to.",
+    "thumbnail_url": "https://images.code.org/64267d63da36ea74d4043faf24be365f-Lesson 3 - Level 5D - Changing the Restriction.png",
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:08:03.132+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L5D_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L5D_latm\"},{\"changed_at\":\"2026-01-22 21:28:30 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Aichat>

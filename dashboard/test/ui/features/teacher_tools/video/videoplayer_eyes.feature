@@ -15,7 +15,7 @@ Scenario: Fallback player
 @eyes
 Scenario: Fallback player for unplugged
   When I open my eyes to test "fallback player for unplugged"
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/1/levels/1?force_youtube_fallback"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/55/levels/1?force_youtube_fallback"
   When I wait to see ".vjs-big-play-button"
   And I see no difference for "fallback video player for unplugged"
   And I close my eyes

@@ -1,4 +1,4 @@
-# This is the configuration for /global/en
+# This is the configuration for /en
 # (which is mirroring the main site at the moment)
 
 locales: [en-US]
@@ -29,7 +29,7 @@ header:
         id: header-donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
       - title: about
         url: /about
@@ -51,7 +51,7 @@ header:
         id: header-student-projects
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
 
     teacher:
@@ -73,7 +73,7 @@ header:
         id: header-teacher-professional-learning
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-teacher-incubator
 
   # The three-bar "hamburger" menu
@@ -131,7 +131,7 @@ header:
         id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -232,7 +232,7 @@ header:
         id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -317,11 +317,6 @@ header:
       level: Weblab
       url: /docs/ide/weblab
       id: weblab-docs
-    - title: music_lab_documentation
-      domain: studio.code.org
-      level: Music
-      url: /docs/ide/music
-      id: musiclab-docs
     - title: help_support
       url: https://support.code.org
       id: support
@@ -413,7 +408,7 @@ footer:
         target: _blank
 # These override specially wrapped components in particular pages.
 #
-# When we navigate to such a page that matches /global/:region<your mask>
+# When we navigate to such a page that matches /:region<your mask>
 # the specifically wrapped components will check this table. Their properties
 # will get overriden with those specified here.
 #
@@ -440,7 +435,7 @@ footer:
 #           image: /shared/images/teacher-announcement/incubator-announcement.png
 #           title: foo
 #
-# When we navigate to the /global/foo/home page, any MarketingAnnouncement will
+# When we navigate to the /foo/home page, any MarketingAnnouncement will
 # have its normal announcement replaced with the configured one. Whereas, on any
 # other page, the '/' would match, and the `false` indicates the component should
 # be removed.

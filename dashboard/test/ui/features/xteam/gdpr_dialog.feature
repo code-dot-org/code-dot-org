@@ -6,10 +6,6 @@ Feature: GDPR Dialog - data transfer agreement
     And I am a teacher
     And I am on "http://studio.code.org/home"
     When element ".ui-test-gdpr-dialog" is visible
-    Then I click selector ".ui-test-gdpr-dialog-logout"
-    Then I wait until I am on "http://code.org/"
-    And I wait to see ".header_user"
-    Then element ".ui-test-gdpr-dialog" is not visible
 
   Scenario: EU user sees the GDPR Dialog on dashboard, opt in, don't show again
     Given I am in Europe
@@ -29,15 +25,12 @@ Feature: GDPR Dialog - data transfer agreement
     And I am on "http://studio.code.org/home"
     Then element ".ui-test-gdpr-dialog" is not visible
 
-  # Broken during the marketing-sites cutover
-  @skip
   Scenario: GDPR Dialog privacy link works from dashboard
     Given I am in Europe
     And I am a teacher
     And I am on "http://studio.code.org/home"
-    When element ".ui-test-gdpr-dialog" is visible
-    Then I press the first ".ui-test-gdpr-dialog-privacy-link" element to load a new tab
-    Then check that I am on "http://code.org/privacy"
+    When element "#gdpr-dialog" is visible
+    And the link reading "Visit Code.org" within element "#gdpr-dialog" goes to "http://code.org/privacy"
 
   Scenario: Accept, sign out, sign in again, no dialog
     Given I am in Europe

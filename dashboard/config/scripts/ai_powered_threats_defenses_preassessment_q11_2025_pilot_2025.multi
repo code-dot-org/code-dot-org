@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q11_2025-pilot_2025'
+
+question ‘Which statement best describes asymmetric encryption?’
+
+wrong ‘It uses one shared key, keeping encryption quick and simple’
+right ‘It requires two different keys—one public and one private’
+wrong ‘It encrypts data randomly, making it completely unbreakable’
+wrong ‘It scrambles data without any keys, relying only on secret patterns’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Encryption
+MARKDOWN

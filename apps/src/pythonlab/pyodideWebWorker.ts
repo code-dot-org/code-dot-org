@@ -28,9 +28,21 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
+    // explicitly add them.
+    jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Freeze the module object and its properties
+  Object.freeze(pythonlabInputModule);
+  Object.defineProperty(pythonlabInputModule.getInput, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(pythonlabInputModule.getInput);
+
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
@@ -99,7 +111,9 @@ onmessage = async event => {
   }
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    postMessage({type: 'loading_packages'});
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    postMessage({type: 'loaded_packages'});
     await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
@@ -168,11 +182,27 @@ async function patchInput(id: number) {
 
 async function loadPackages() {
   const loadErrors: string[] = [];
+  // We explicitly load all dependencies of the packages we want to be available to users,
+  // matplotlib and numpy, as well as our custom packages. We do this so that on retry
+  // if the top-level package was loaded successfully, but a dependency
+  // failed, we will still try to reload the dependency.
   await pyodide.loadPackage(
     [
-      'numpy',
+      // Main packages
       'matplotlib',
-      // These are custom packages that we have built. They are defined in the
+      'numpy',
+      // Dependencies of main packages
+      'contourpy',
+      'cycler',
+      'fonttools',
+      'kiwisolver',
+      'packaging',
+      'pillow',
+      'pyparsing',
+      'python-dateutil',
+      'pytz',
+      'six',
+      // Custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,

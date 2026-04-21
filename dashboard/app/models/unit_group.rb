@@ -42,20 +42,16 @@ class UnitGroup < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
-  has_one :course_version, as: :content_root, dependent: :destroy
+  has_one :course_version, foreign_key: 'content_root_id', dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
       includes(
-        [
-          :plc_course,
-          :default_unit_group_units,
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
-          }
-        ]
+        :plc_course,
+        :default_unit_group_units,
+        course_version: {
+          course_offering: :course_versions
+        }
       )
     end
   )
@@ -67,6 +63,42 @@ class UnitGroup < ApplicationRecord
 
   validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validate :validate_family_name_and_version_year
+  validate :prevent_unlaunch_stable_courses
+
+  def validate_family_name_and_version_year
+    unless plc_course || (family_name.present? && version_year.present?)
+      errors.add(:base, 'non-plc course must have family_name and version_year set')
+    end
+  end
+
+  validate :plc_courses_cannot_be_launched
+
+  def plc_courses_cannot_be_launched
+    if plc_course && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a plc course.')
+    end
+  end
+
+  # Prevent changing a stable course back to in_development. We've had this
+  # happen accidentally as part of a levelbuilder content scoop, and it led to a
+  # major course becoming unavailable to end users. This validation is here as a
+  # debugging tactic to try to track down how this is happening. Once the bug is
+  # understood, we may want to remove this validation and/or add a more
+  # comprehensive protection against unlaunching stable courses.
+  #
+  # In the case where you really do want to unpublish a course, such as to allow
+  # curriculum writers to make edits to the course on levelbuilder, you can work
+  # around this validation by first changing the published_state to another
+  # state before changing it to in_development.
+  def prevent_unlaunch_stable_courses
+    return unless published_state_changed?
+
+    if published_state_was == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable &&
+        published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+      errors.add(:published_state, 'cannot change from stable to in_development')
+    end
+  end
 
   def skip_name_format_validation
     !!plc_course
@@ -77,7 +109,7 @@ class UnitGroup < ApplicationRecord
 
   serialized_attrs %w(
     has_verified_resources
-    has_numbered_units
+    numbered_units
     family_name
     version_year
     pilot_experiment
@@ -110,8 +142,21 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
+  # Subdirectory paths for course files, relative to root_path
+  COURSE_DIRECTORY = 'config/courses'.freeze
+  UI_TEST_COURSE_DIRECTORY = 'test/ui/config/courses'.freeze
+
+  # Returns the filepath for a unit group's .course file.
+  # UI test courses (those with names starting with 'ui-test-') are stored in
+  # test/ui/config/courses/, while normal courses are stored in config/courses/.
+  # The root_path parameter can be customized for different environments or testing.
+  #
+  # @param [String] name - the name of the course
+  # @param [Pathname, String] root_path - the root directory path (defaults to Rails.root)
+  # @return [Pathname] - the absolute filepath to the .course file
   def self.file_path(name, root_path = Rails.root)
-    root_path.join("config/courses/#{name}.course")
+    subdirectory = name.start_with?('ui-test-') ? UI_TEST_COURSE_DIRECTORY : COURSE_DIRECTORY
+    root_path.join(subdirectory, "#{name}.course")
   end
 
   def self.load_from_path(path)
@@ -130,10 +175,13 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.seed_from_hash(hash)
-    unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group = UnitGroup.find_or_initialize_by(name: hash['name'])
+    # set required family_name and version_year fields before running validations
+    unit_group.properties = hash['properties']
+    unit_group.save!
     unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
-    unit_group.properties = hash['properties']
+    unit_group.update_unit_prefixes(hash['unit_prefixes']) if hash['unit_prefixes']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     unit_group.instructor_audience = hash['instructor_audience'] || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
@@ -173,6 +221,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
+        unit_prefixes: default_unit_group_units.all? {|ugu| ugu.unit_prefix.nil?} ? nil : default_unit_group_units.map(&:unit_prefix),
         original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
@@ -203,7 +252,7 @@ class UnitGroup < ApplicationRecord
 
   def update_original_scripts(original_scripts)
     return if original_scripts.nil?
-    original_scripts  = original_scripts.reject(&:empty?)
+    original_scripts = original_scripts.reject(&:empty?)
     original_units_objects = original_scripts.map {|s| Unit.find_by_name!(s)}
 
     # Treat the seed as the source of truth
@@ -234,9 +283,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
-        unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
         unit.reload
         unit.write_script_json
@@ -246,14 +293,7 @@ class UnitGroup < ApplicationRecord
 
     units_to_remove.each do |unit|
       if unit.unit_group_units.count == 1
-        # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
-        # If this is the last unit group unit, then we need to set those fields and set the original_unit_group_id to nil
-        unit.update!(
-          published_state: (unit.published_state ? unit.published_state : published_state),
-          instruction_type: instruction_type,
-          participant_audience: participant_audience,
-          instructor_audience: instructor_audience
-        )
+        # If this is the last unit group unit, then we need to set the original_unit_group_id to nil
         unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
       end
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
@@ -267,13 +307,20 @@ class UnitGroup < ApplicationRecord
     transaction {reload}
   end
 
+  def update_unit_prefixes(unit_prefixes)
+    return if unit_prefixes.nil?
+    default_unit_group_units.each do |unit_group_unit|
+      unit_group_unit.update!(unit_prefix: unit_prefixes[unit_group_unit.position - 1])
+    end
+  end
+
   def self.all_courses
     return all.to_a unless should_cache?
     @@all_courses ||= course_cache.values.uniq.compact.freeze
   end
 
   def self.family_names
-    CourseVersion.course_offering_keys('UnitGroup')
+    CourseVersion.course_offering_keys
   end
 
   # A course that the general public can assign. Has been soft or
@@ -305,18 +352,19 @@ class UnitGroup < ApplicationRecord
           unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
           unit.summarize(include_lessons, user, unit_group_unit: unit_group_unit).merge!(unit.summarize_i18n_for_display(unit_group_unit: unit_group_unit))
         end,
-        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        teacher_resources: resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        student_resources: student_resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
-        has_numbered_units: has_numbered_units?,
+        numbered_units: numbered_units,
         course_versions: summarize_course_versions(user, locale_code),
         show_assign_button: course_assignable?(user),
         announcements: announcements,
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
+        ai_chat_tools_dependency: ai_chat_tools_dependency,
       }
     end
   end
@@ -330,7 +378,7 @@ class UnitGroup < ApplicationRecord
         unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
         unit.summarize_for_rollup(user, unit_group_unit: unit_group_unit)
       end,
-      has_numbered_units: has_numbered_units?
+      numbered_units: numbered_units,
     }
   end
 
@@ -616,12 +664,12 @@ class UnitGroup < ApplicationRecord
 
   # rubocop:disable Naming/PredicateName
   def is_course?
-    return !!family_name && !!version_year
+    return family_name.present? && version_year.present?
   end
   # rubocop:enable Naming/PredicateName
 
   def single_unit_course?
-    default_unit_group_units.one?
+    cached.default_unit_group_units.one?
   end
 
   def first_unit
@@ -645,5 +693,19 @@ class UnitGroup < ApplicationRecord
 
   def duration_in_minutes
     default_units.sum(&:duration_in_minutes)
+  end
+
+  def has_ai_chat_tools?
+    default_units.with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    default_units.with_essential_ai_chat_tools.exists?
+  end
+
+  def ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 end

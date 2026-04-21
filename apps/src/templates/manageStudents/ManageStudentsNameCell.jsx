@@ -2,8 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
-import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {
@@ -20,12 +24,14 @@ class ManageStudentNameCell extends Component {
     name: PropTypes.string.isRequired,
     username: PropTypes.string,
     email: PropTypes.string,
+    isDemoStudent: PropTypes.bool,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   onChangeName = e => {
@@ -33,25 +39,46 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {id, sectionId, name, username, email, editedValue, scriptName} =
-      this.props;
-    const studentUrl = unitUrlForStudent(sectionId, scriptName, id);
+    const {
+      id,
+      sectionId,
+      name,
+      username,
+      email,
+      editedValue,
+      courseVersionName,
+      unitPosition,
+    } = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
+      sectionId,
+      courseVersionName,
+      unitPosition,
+      id
+    );
 
     return (
       <div style={tableLayoutStyles.tableNameText}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
-              <a
-                style={tableLayoutStyles.link}
-                href={studentUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {name}
-              </a>
+              <span style={styles.nameWithChip}>
+                <a
+                  style={tableLayoutStyles.link}
+                  href={studentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {name}
+                </a>
+                {this.props.isDemoStudent && <DemoStudentChip />}
+              </span>
             )}
-            {!studentUrl && <span>{name}</span>}
+            {!studentUrl && (
+              <span style={styles.nameWithChip}>
+                {name}
+                {this.props.isDemoStudent && <DemoStudentChip />}
+              </span>
+            )}
             {username && (
               <div style={styles.details}>
                 {i18n.usernameLabel() + username}
@@ -80,6 +107,10 @@ class ManageStudentNameCell extends Component {
 }
 
 const styles = {
+  nameWithChip: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
   inputBox: {
     width: NAME_CELL_INPUT_WIDTH,
   },
@@ -90,7 +121,8 @@ const styles = {
 
 export default connect(
   state => ({
-    scriptName: getSelectedUnitName(state),
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
     editStudent(id, studentInfo) {

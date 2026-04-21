@@ -767,7 +767,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "ZjJrcfk%Q@P(;xd9/8E(",
-              "x": 790,
+              "x": 750,
               "y": 90,
               "extraState": {
                 "procedureId": "t=rA6ym~|zutqSqe}!xL",
@@ -782,7 +782,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "uB[KH`xZK(stRP!q@u4;",
-              "x": 1010,
+              "x": 910,
               "y": 90,
               "extraState": {
                 "procedureId": "F#j;Kk{+$3:%sgS)a_O=",
@@ -800,7 +800,8 @@
               "x": 590,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "bass_verse"
@@ -809,10 +810,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "uOI!:S[39|vCvG{y(1Xk",
-              "x": 790,
+              "x": 758,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "synth_verse"
@@ -821,10 +823,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "ysPwrSfP1+k*-9H.6Hx7",
-              "x": 1010,
+              "x": 910,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "vocals_verse"
@@ -851,7 +854,8 @@
               "x": 370,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "drums_verse"
@@ -890,7 +894,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "VkYP8s8P_;__zOI0c_+e",
-              "x": 850,
+              "x": 790,
               "y": 390,
               "extraState": {
                 "procedureId": "PN]WrmNyhbD96;-f5~3Z",
@@ -905,7 +909,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "Oz+;s3@=2w;N{XBdbQj[",
-              "x": 1190,
+              "x": 970,
               "y": 390,
               "extraState": {
                 "procedureId": "-`dCdKP3am_bR:Nj+:lB",
@@ -923,7 +927,8 @@
               "x": 370,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "drums_prechorus"
@@ -935,7 +940,8 @@
               "x": 610,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "bass_prechorus"
@@ -944,10 +950,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "_!So5S{B/Itm?#)e-@}7",
-              "x": 850,
+              "x": 770,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "synth_prechorus"
@@ -956,10 +963,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "eHC$ca*^1$UWw%DkRCAV",
-              "x": 1190,
+              "x": 970,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "vocals_prechorus"
@@ -1026,7 +1034,7 @@
       "isPredictLevel": false
     },
     "display_name": "Amarillo",
-    "long_instructions": "### Amarillo\r\n\r\nA record producer has sent you the raw tracks for Amarillo by Shakira. They've asked you to organize it into functions to make the song easier to remix in the future.\r\n\r\nThe functions are already in the workspace - your task is to decide which code to move into each function and then replace the original code with the function. Not all of the original code will go into functions!\r\n\r\nWhen you're finished, the song should sound the same but be easier to read thanks to the functions.",
+    "long_instructions": "### Amarillo\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Amarillo* by Shakira. Your job is to organize the code using functions so it's easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and identify which parts should be grouped into functions. Think about repeated patterns or sections that make sense to organize together. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/3a0b9af0999a1f13a3f6875de4162704-image-1750880745657.png)\r\n\r\n**Try:** Use the provided functions in the workspace. Move the correct code into each function, then replace the original code with a call to the function. Not all of the original code will go into functions!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Play your remix. Does it sound the same as the original? Are the functions clearly named and organized? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace original code\r\n- Code organized into the correct functions\r\n- A final song that sounds the same as before",
     "bubble_choice_description": "A record producer has sent you the raw tracks for Amarillo by Shakira. They've asked you to organize it into functions to make the song easier to remix in the future.",
     "validations": [
       {
@@ -1061,10 +1069,12 @@
       }
     ],
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"},{\"changed_at\":\"2025-06-10 23:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:46:43 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:46:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:52 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

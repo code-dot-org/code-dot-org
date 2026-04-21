@@ -5,7 +5,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {AIResponse, StudentAnswer} from './aiEvaluationApi';
 import {UserLevelEvaluation, UserLevelSkillEvaluation} from './types';
 
-export async function logStudentWorkEvaluations(
+export async function logUserLevelEvaluation(
   studentWorkSample: StudentAnswer,
   parsedResponse: AIResponse,
   levelId: number,
@@ -22,11 +22,19 @@ export async function logStudentWorkEvaluations(
     evaluation: parsedResponse.aiEvaluation,
     reasoning: parsedResponse.aiReasoning,
   });
-  // For each specific skill-based evaluation, log a UserLevelSkillEvaluation
-  if (parsedResponse.skillEvaluations) {
-    await Promise.all(
-      parsedResponse.skillEvaluations.map(async skillEvaluation => {
-        const ulse = await logStudentWorkEvaluation({
+  return ule;
+}
+
+export async function logUserLevelSkillEvaluations(
+  skillEvaluations: UserLevelSkillEvaluation[],
+  studentWorkSample: StudentAnswer,
+  levelId: number,
+  unitId: number
+) {
+  await Promise.all(
+    skillEvaluations.map(async skillEvaluation => {
+      try {
+        await logStudentWorkEvaluation({
           type: 'UserLevelSkillEvaluation',
           studentId: studentWorkSample.studentId,
           codeVersion: studentWorkSample.codeVersion,
@@ -35,18 +43,19 @@ export async function logStudentWorkEvaluations(
           skillId: skillEvaluation.skillId,
           evaluator: 'AI',
           evaluationCriteria: skillEvaluation.evaluationCriteria,
-          evaluation: skillEvaluation.aiEvaluation,
-          reasoning: skillEvaluation.aiReasoning,
+          evaluation: skillEvaluation.evaluation,
+          reasoning: skillEvaluation.reasoning,
         });
-        logStudentWorkEvaluationSummary({
-          studentWorkEvaluationId: ulse.id,
-          studentWorkEvaluationSummaryId: ule.id,
+      } catch (error) {
+        MetricsReporter.logError({
+          event: MetricEvent.STUDENT_WORK_EVALUATION_SAVE_FAIL,
+          errorMessage:
+            (error as Error).message ||
+            `Failed to save UserLevelSkillEvaluation for student ${studentWorkSample.studentId}, level ${levelId}, unit ${unitId}, skill ${skillEvaluation.skillId}`,
         });
-      })
-    );
-  }
-
-  return ule.id;
+      }
+    })
+  );
 }
 
 type StudentWorkEvaluation = UserLevelEvaluation | UserLevelSkillEvaluation;
@@ -79,32 +88,34 @@ export async function logStudentWorkEvaluation(
     });
   }
 }
-type SummaryIds = {
-  studentWorkEvaluationId: number;
-  studentWorkEvaluationSummaryId: number;
-};
 
-export async function logStudentWorkEvaluationSummary(summaryData: SummaryIds) {
-  try {
-    const response = await fetch('/student_work_evaluation_summaries', {
-      method: 'POST',
+/**
+ * Fetches existing StudentWorkEvaluations for a given user, level, and unit.
+ * @param userId - The ID of the user/student.
+ * @param levelId - The ID of the level.
+ * @param unitId - The ID of the unit.
+ * @returns A promise resolving to the most recent UserLevelEvaluation.
+ */
+export async function fetchMostRecentUserLevelEvaluation(
+  userId: number,
+  levelId: number,
+  unitId: number
+) {
+  const response = await fetch(
+    `/student_work_evaluations/${userId}/${levelId}/${unitId}`,
+    {
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        Accept: 'application/json',
         'X-CSRF-Token': await getAuthenticityToken(),
       },
-      body: JSON.stringify(summaryData),
-    });
-    if (!response.ok) {
-      throw new Error('Failed to save StudentWorkEvaluationSummary');
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    MetricsReporter.logError({
-      event: MetricEvent.STUDENT_WORK_EVALUATION_SAVE_FAIL,
-      errorMessage:
-        (error as Error).message ||
-        'Failed to save StudentWorkEvaluationSummary',
-    });
+  );
+  if (!response.ok) {
+    console.info(
+      `No StudentWorkEvaluations found for user ${userId}, level ${levelId}, unit ${unitId}.`
+    );
+    return;
   }
+  return await response.json();
 }

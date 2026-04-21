@@ -1,0 +1,47 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-06T18:54:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n  <title>List View Pipeline — Movies</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"card\">\n    <h1>Movie Night – List View</h1>\n\n    <section class=\"controls\">\n      <label for=\"filter\">Filter:</label>\n      <select id=\"filter\">\n        <option value=\"all\">All movies</option>\n        <option value=\"short\">Short movies (&lt; 120 min)</option>\n        <option value=\"high\">Highly rated (≥ 8.0)</option>\n        <option value=\"after6\">Showtimes after 6:00 PM</option>\n      </select>\n\n      <button id=\"show\">Show Results</button>\n\n      <label class=\"inline\">\n        <input type=\"checkbox\" id=\"useEmpty\" />\n        Use empty dataset\n      </label>\n    </section>\n\n    <section class=\"meta\">\n      <p id=\"rule\" class=\"rule\"></p>\n      <p id=\"count\" class=\"count\"></p>\n    </section>\n\n    <ul id=\"list\" class=\"list\"></ul>\n    <p id=\"empty\" class=\"empty\"></p>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  color: #222222;\n  background-color: #f6f9fc;\n  display: grid;\n  place-items: center;\n  min-height: 100vh;\n}\n\n.card {\n  background-color: white;\n  width: 90%;\n  max-width: 700px;\n  padding: 20px;\n  border-radius: 12px;\n  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\n}\n\nh1 {\n  margin-top: 0;\n  margin-bottom: 14px;\n  font-size: 1.25rem;\n}\n\n.controls {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  align-items: center;\n  background-color: #f3f4f6;\n  padding: 12px;\n  border-radius: 10px;\n}\n\n.controls label {\n  font-size: 1rem;\n}\n\nselect,\nbutton {\n  padding: 8px 10px;\n  border-radius: 6px;\n  border: 1px solid #cccccc;\n  background-color: white;\n  font-size: 0.95rem;\n}\n\nbutton {\n  background-color: #2563eb;\n  color: white;\n  border: 1px solid #2563eb;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #1e50b8;\n}\n\n.inline {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n}\n\n.meta {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  flex-wrap: wrap;\n  gap: 10px;\n  margin-top: 14px;\n  margin-bottom: 10px;\n}\n\n.rule {\n  color: #666666;\n}\n\n.count {\n  color: #444444;\n  font-weight: bold;\n}\n\n.list {\n  list-style: none;\n  padding: 0;\n  margin-top: 10px;\n  display: grid;\n  gap: 8px;\n}\n\n.list li {\n  background-color: white;\n  border: 1px solid #e0e0e0;\n  border-radius: 8px;\n  padding: 12px;\n}\n\n.empty {\n  margin-top: 14px;\n  color: #666666;\n  background-color: #f3f4f6;\n  border: 1px dashed #cccccc;\n  padding: 12px;\n  border-radius: 8px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- READ: sample dataset (8 movies). Flip to empty via checkbox in UI ---\n// 'after6' is a simple true/false flag. No time parsing needed.\nconst MOVIES = [\n  { title: \"Arrival\",        rating: 8.5, runtimeMin: 116, startTime: \"5:30 PM\", after6: false, where: \"HBO\"     },\n  { title: \"Interstellar\",   rating: 8.6, runtimeMin: 169, startTime: \"7:45 PM\", after6: true,  where: \"Netflix\" },\n  { title: \"Dune\",           rating: 8.0, runtimeMin: 155, startTime: \"6:15 PM\", after6: true,  where: \"Max\"     },\n  { title: \"Barbie\",         rating: 7.0, runtimeMin: 114, startTime: \"4:10 PM\", after6: false, where: \"Hulu\"    },\n  { title: \"Spider-Verse\",   rating: 8.9, runtimeMin: 117, startTime: \"8:20 PM\", after6: true,  where: \"Prime\"   },\n  { title: \"Inside Out 2\",   rating: 7.7, runtimeMin: 96,  startTime: \"3:00 PM\", after6: false, where: \"Disney\"  },\n  { title: \"Oppenheimer\",    rating: 8.3, runtimeMin: 180, startTime: \"9:30 PM\", after6: true,  where: \"Peacock\" },\n  { title: \"Past Lives\",     rating: 7.9, runtimeMin: 106, startTime: \"6:55 PM\", after6: true,  where: \"A24+\"    }\n];\n\n// --- DOM refs ---\nconst showBtn = document.getElementById(\"show\");\nconst filterSelect = document.getElementById(\"filter\");\nconst useEmpty = document.getElementById(\"useEmpty\");\nconst list = document.getElementById(\"list\");\nconst count = document.getElementById(\"count\");\nconst empty = document.getElementById(\"empty\");\nconst rule = document.getElementById(\"rule\");\n\n// --- TRANSFORM: loop + simple conditions (no array methods) ---\nconst transform = (data, filterValue) => {\n  const selected = [];\n  for (let i = 0; i < data.length; i++) {\n    const movie = data[i];\n    let include = true;\n\n    if (filterValue === \"short\") {\n      include = movie.runtimeMin < 120;\n    } else if (filterValue === \"high\") {\n      include = movie.rating >= 8.0;\n    } else if (filterValue === \"after6\") {\n      include = movie.after6 === true;\n    }\n\n    if (include === true) {\n      selected.push({\n        title: movie.title,\n        rating: movie.rating,\n        runtimeMin: movie.runtimeMin,\n        startTime: movie.startTime,\n        where: movie.where\n      });\n    }\n  }\n  return selected;\n};\n\n// --- RENDER: counts, rule label, empty-state, then list items ---\nconst render = (items, total, filterValue) => {\n  list.innerHTML = \"\";\n  empty.textContent = \"\";\n  count.textContent = \"Showing \" + items.length + \" of \" + total + \" result(s).\";\n\n  let ruleText = \"Filter: \";\n  if (filterValue === \"all\") {\n    ruleText += \"none (all movies)\";\n  } else if (filterValue === \"short\") {\n    ruleText += \"runtime < 120 min\";\n  } else if (filterValue === \"high\") {\n    ruleText += \"rating >= 8.0\";\n  } else if (filterValue === \"after6\") {\n    ruleText += \"start time >= 6:00 PM\";\n  }\n  rule.textContent = ruleText;\n\n  if (items.length === 0) {\n    empty.textContent = \"No results match your filter.\";\n    return;\n  }\n\n  let html = \"\";\n  for (let i = 0; i < items.length; i++) {\n    const m = items[i];\n    html += \"<li><strong>\" + m.title + \"</strong> — Rating: \" + m.rating +\n            \" • \" + m.runtimeMin + \" min • \" + m.startTime + \" • \" + m.where + \"</li>\";\n  }\n  list.innerHTML = html;\n};\n\n// --- PIPELINE: read → transform → render ---\nconst runPipeline = () => {\n  let data;\n  if (useEmpty.checked === true) {\n    data = [];\n  } else {\n    data = MOVIES;\n  }\n\n  const filterValue = filterSelect.value;\n  const items = transform(data, filterValue);\n  render(items, data.length, filterValue);\n};\n\n// wire up\nshowBtn.addEventListener(\"click\", runPipeline);\n\n// initial render\nrunPipeline();",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-07 02:37:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-07 02:39:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

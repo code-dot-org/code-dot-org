@@ -33,7 +33,7 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
   end
 
   def enrollment_url
-    CDO.studio_url("/pd/workshops/#{object.id}/enroll", 'https:')
+    CDO.studio_url("/professional-learning/workshops/#{object.id}", 'https:')
   end
 
   def enrolled_teacher_count

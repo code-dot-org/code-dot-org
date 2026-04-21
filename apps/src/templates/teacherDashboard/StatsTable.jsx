@@ -5,8 +5,11 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
-import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -19,7 +22,8 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
     participantType: PropTypes.string,
   };
 
@@ -34,8 +38,13 @@ class StatsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptName} = this.props;
-    const studentUrl = unitUrlForStudent(sectionId, scriptName, rowData.id);
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
+      sectionId,
+      courseVersionName,
+      unitPosition,
+      rowData.id
+    );
 
     if (studentUrl) {
       return (
@@ -203,7 +212,8 @@ const styles = {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptName: getSelectedUnitName(state),
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
   participantType:
     state.teacherSections.sections[state.teacherSections.selectedSectionId]
       .participantType,

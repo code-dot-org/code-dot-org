@@ -20,7 +20,8 @@
     "optional": "false",
     "encrypted": "false",
     "teacher_markdown": "* Select the most limiting Boolean expression and put that first in the `If-Else-If` statement\r\n* Then select the next most limiting and add that to the next statement, etc.\r\n* An example may be the easiest way to understand how this works. The [If-Else-If Statements](https://curriculum.code.org/docs/concepts/patterns/checking-multiple-conditions-with-if-else-if/) pattern explains the process of selecting the most specific case first.",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

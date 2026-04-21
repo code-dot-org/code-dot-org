@@ -254,3 +254,19 @@ export function throwIfSerializedAnimationListIsInvalid(
     knownNames[name] = true;
   }
 }
+
+/**
+ * @param {!SerializedAnimationList} serializedAnimationList
+ * @throws {Error} if the includes an unsupported sourceUrl.
+ */
+export function throwIfDisallowedAnimationSourceUrl(serializedAnimationList) {
+  const {propsByKey} = serializedAnimationList;
+  for (const animationKey in propsByKey) {
+    const sourceUrl = propsByKey[animationKey]['sourceUrl'];
+    if (sourceUrl?.startsWith('https://levelbuilder-studio.code.org/')) {
+      throw new Error(
+        `levelbuilder sourceUrl for "${propsByKey[animationKey]['name']}" is not allowed.`
+      );
+    }
+  }
+}

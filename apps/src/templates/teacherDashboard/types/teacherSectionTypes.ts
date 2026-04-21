@@ -1,5 +1,9 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
+import {
   SectionLoginType,
   UserTypes,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -27,7 +31,6 @@ export interface Section {
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
-  isAssignedStandaloneCourse: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
@@ -47,6 +50,31 @@ export interface Section {
   unitPosition: string | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
+  assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  aiChatAccessLevel?: AiChatAccessLevel;
+}
+
+export type DemoType = 'elementary' | 'middle' | 'high';
+
+export interface DemoPresetUnit {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetCourse {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetView {
+  demoType: DemoType;
+  sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  loginType: NonNullable<Section['loginType']>;
+  participantType: NonNullable<Section['participantType']>;
+  unit: DemoPresetUnit | null;
+  unitGroup: DemoPresetCourse | null;
 }
 
 type Course = {
@@ -87,11 +115,11 @@ export interface ServerSection {
   course_id: number | null;
   course_offering_id?: number | null;
   course_version_id?: number | null;
+  courseVersionName?: string | null;
   createdAt?: string;
   grades?: string[];
   hidden: boolean;
   id: number;
-  isAssignedStandaloneCourse: boolean;
   lesson_extras: boolean;
   login_type: string;
   name: string;
@@ -106,6 +134,7 @@ export interface ServerSection {
   sync_enabled?: boolean;
   tts_autoplay_enabled?: boolean;
   unit_id?: number | null;
+  unitName?: string | null;
   unitPosition?: number | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
@@ -114,9 +143,10 @@ export interface ServerSection {
 export interface Student {
   familyName: string;
   id: number;
+  isDemoStudent: boolean;
   name: string;
   secretPictureName: string;
-  secretPicturePath: string;
+  secretPictureUrl: string;
   secretWords: string;
   sectionId: number;
   sharingDisabled: boolean;
@@ -126,13 +156,35 @@ export interface Student {
 export interface ServerStudent {
   family_name: string;
   id: number;
+  is_demo_student: boolean;
   name: string;
   secret_picture_name: string;
-  secret_picture_path: string;
+  secret_picture_url: string;
   secret_words: string;
   sectionId: number;
   sharing_disabled: boolean;
   user_type: keyof typeof UserTypes;
+}
+
+export interface ServerDemoPresetUnit {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetCourse {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetView {
+  demo_type: DemoType;
+  section_name: string;
+  avatar_color: number;
+  avatar_emoji: number;
+  login_type: NonNullable<Section['loginType']>;
+  participant_type: NonNullable<Section['participantType']>;
+  unit: ServerDemoPresetUnit | null;
+  unit_group: ServerDemoPresetCourse | null;
 }
 
 //TODO: better types here
@@ -141,6 +193,30 @@ export interface AssignmentCourseOffering {
   high: object;
   hoc: object;
   middle: object;
+}
+
+export interface CourseOffering {
+  id: number;
+  display_name: string;
+  is_featured: boolean;
+  participant_audience: string;
+  course_versions: {
+    [courseVersionId: number]: CourseVersion;
+  };
+}
+
+export interface CourseVersion {
+  id: number;
+  content_root_id: number;
+  is_recommended: boolean;
+  is_stable: boolean;
+  key: string;
+  locale_codes: [string];
+  locale: [string];
+  name: string;
+  path: string;
+  units: object;
+  version_year: string;
 }
 
 export type SectionInstructor = {

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-20T17:45:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Pipeline\n\nA **pipeline** is a *read → transform → render* sequence your code uses to process data. It starts with raw data, reshapes it for a purpose, and then displays the result to the user.",
+        "imageUrl": "https://images.code.org/17c59a633eb9ff9114e79bef7cd9ca04-Pasted Graphic 2.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T17:45:36.793+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test-2025\"},{\"changed_at\":\"2025-11-20 18:02:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

@@ -15,7 +15,6 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {isOnTeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -41,8 +40,10 @@ class UnitOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
+    courseId: PropTypes.number,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
+    isOnTeacherDashboard: PropTypes.bool,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -69,15 +70,24 @@ class UnitOverviewHeader extends Component {
   }
 
   onDismissVersionWarning = () => {
-    // Fire and forget. If this fails, we'll have another chance to
-    // succeed the next time the warning is dismissed.
-    $.ajax({
-      method: 'PATCH',
-      url: `/api/v1/user_scripts/${this.props.scriptId}`,
-      type: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true}),
-    });
+    const {scriptId, courseId} = this.props;
+    // Do nothing when courseId is missing, because UserScript objects now require courseId.
+    // This is safe because:
+    // 1. all user-facing units are now in courses, so this won't affect any end users
+    // 2. units without courses don't have versioning anyway, so we'll never show these warnings
+    //    even for internal users.
+    if (courseId) {
+      // Fire and forget. If this fails, we'll have another chance to
+      // succeed the next time the warning is dismissed.
+      const url = `/api/v1/user_scripts/course/${courseId}/unit/${scriptId}`;
+      $.ajax({
+        method: 'PATCH',
+        url,
+        type: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({version_warning_dismissed: true}),
+      });
+    }
   };
 
   render() {
@@ -99,6 +109,7 @@ class UnitOverviewHeader extends Component {
       isVerifiedInstructor,
       hasVerifiedResources,
       children,
+      isOnTeacherDashboard,
     } = this.props;
 
     const displayVerifiedResources =
@@ -189,7 +200,7 @@ class UnitOverviewHeader extends Component {
               />
             )}
           </div>
-          {!isOnTeacherDashboard() && (
+          {!isOnTeacherDashboard && (
             <ProtectedStatefulDiv ref={element => (this.protected = element)} />
           )}
         </div>

@@ -26,7 +26,8 @@
         "key": "python-intro-console-lesson10-conditionalSlides-3d36ad0b-e928-48cb-a270-2467c4dda5d0"
       }
     ],
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-22T01:58:52.537+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson18-level1-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson18-level1-2024\"}]"

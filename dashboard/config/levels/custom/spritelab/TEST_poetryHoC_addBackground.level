@@ -39,7 +39,7 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "instructions_icon": "poet",
-    "callout_json": "[{\"localization_key\":\"poetry_background\",\"callout_text\":\"Find code blocks here. \",\"element_id\":\"[id=':1.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-0.label']\",\"localization_key\":\"poetry_background\",\"callout_text\":\"Find code blocks here. \",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
+    "callout_json": "[{\"localization_key\":\"poetry_background\",\"callout_text\":\"Find code blocks here. \",\"element_id\":\"[id=':1.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"poetry_background\",\"callout_text\":\"Find code blocks here. \",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "parent_level_id": 29611,
     "preload_asset_list": null
   },

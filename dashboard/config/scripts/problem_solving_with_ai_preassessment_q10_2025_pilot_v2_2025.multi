@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q10_2025-pilot_v2-2025'
+
+question 'How is debugging an AI prompt similar to debugging computer code?'
+
+wrong 'It requires rewriting the entire AI model each time a small mistake occurs.'
+right 'It involves refining or adjusting instructions until the output behaves as intended.'
+wrong 'It means checking for syntax errors in the AI\'s internal programming language.'
+wrong 'It ensures the AI\'s response is always 100% free of factual mistakes.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Debugging and Refining Outputs
+MARKDOWN

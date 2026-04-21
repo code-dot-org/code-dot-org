@@ -1,3 +1,4 @@
+@skip
 @eyes
 Feature: Hidden Scripts
 

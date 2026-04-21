@@ -6,7 +6,9 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
-    @laurel_section_script = create(:section, user: @laurel, script: Unit.find_by_name('course1'))
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    @laurel_section_script = create(:section, user: @laurel, script: unit)
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)
@@ -47,8 +49,8 @@ class FollowersControllerTest < ActionController::TestCase
   test "student_user_new when signed out with section code shows link account view" do
     get :student_user_new, params: {section_code: @chris_section.code}
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin%2F#{@chris_section.code}"
 
     refute assigns(:user)
   end
@@ -56,8 +58,8 @@ class FollowersControllerTest < ActionController::TestCase
   test "student_user_new when signed out without section code shows link account view" do
     get :student_user_new
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin"
 
     refute assigns(:user)
   end
@@ -136,9 +138,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: section.code}
@@ -277,8 +277,8 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: @chris_section.code}
     end
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin%2F#{@chris_section.code}"
   end
 
   test "student_register with no section when signed in" do
@@ -296,8 +296,8 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: ''}
     end
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin"
   end
 
   test "student_register in section with script" do
@@ -317,7 +317,8 @@ class FollowersControllerTest < ActionController::TestCase
     user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
     assert user_script
     assert user_script.assigned_at
-    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_student_unit(assigns(:user))
+    context = Queries::ScriptActivity.primary_student_unit_context(assigns(:user))
+    assert_equal @laurel_section_script.script, context[:unit]
   end
 
   test "student_register with a picture/word section redirects to section login" do
@@ -354,13 +355,14 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
-  test 'student_register renders students_cannot_join page when a student tries to join a teacher section' do
+  test 'student_register sends user to Teacher Account Required page when a student tries to join a teacher section' do
     sign_in @student
     section = create(:section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"])
 
     get :student_register, params: {section_code: section.code}
 
-    assert_template 'followers/students_cannot_join'
+    assert_response :redirect
+    assert_redirected_to "/teacher_account_required?source_page=join%20section&return_to=%2Fjoin%2F#{section.code}"
   end
 
   test 'student_register redirects admins to admin_directory' do

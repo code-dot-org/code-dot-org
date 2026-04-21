@@ -1,16 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import NewUnitForm from '@cdo/apps/levelbuilder/unit-editor/NewUnitForm';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  ReactDOM.render(
-    <NewUnitForm
-      families={getScriptData('families')}
-      versionYearOptions={getScriptData('versionYearOptions')}
-      familiesCourseTypes={getScriptData('familiesCourseTypes')}
-    />,
-    document.getElementById('form')
-  );
+  createReactRoot(<NewUnitForm />, document.getElementById('form'), {
+    legacyReactDomRender: true,
+  });
 });

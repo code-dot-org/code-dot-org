@@ -1,0 +1,38 @@
+name 'pl-ai-101-V2-mod4-asses-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Grading AI-Supported Work
+
+#### Once expectations are clear, the next step is designing and grading work in ways that reflect those expectations.
+
+#### In an AI-supported classroom, strong assessment design is the most effective way to support learning and reduce misuse. Rather than focusing only on what students produce, the goal is to understand how they think, make decisions, and improve their work.
+
+## Design for Visible Thinking
+
+#### Create tasks that require students to show their thinking throughout the process:
+
+* #### **Emphasize Process Over Product** Include drafts, revisions, annotations, or checkpoints that capture how students’ ideas develop over time.
+* #### **Incorporate Explanation and Reflection** Ask students to explain their reasoning, describe how they approached the task, or reflect on what they learned and what challenged them.
+* #### **Use In-Class Components and Check-Ins** Writing, discussion, or brief conferences help you see students’ thinking in real time and clarify their understanding.
+* #### **Incorporate Personalization** Connect assignments to students’ experiences, perspectives, or local context to encourage authentic, original responses.
+
+## Grade What Matters Most
+
+#### When AI is part of the learning process, grading should prioritize:
+
+* #### **Student Thinking** How clearly students explain their ideas, justify decisions, and demonstrate understanding
+* #### **Revision and Improvement** How students use feedback—whether from AI or other sources—to refine their work
+* #### **Critical Use of AI** How well students evaluate AI-generated content, identify inaccuracies, and make thoughtful choices about what to keep or change
+
+#### Clear grading criteria should reinforce that thinking, effort, and decision-making are more important than producing a perfect final answer.
+
+## Focus on Design Over Detection
+
+#### When assessments are designed to make thinking visible, it becomes less necessary—and less effective—to rely on AI detection tools.
+
+#### AI detection tools are often unreliable and can incorrectly flag student work, especially for multilingual learners or students using structured writing. Over-reliance on these tools can undermine trust without meaningfully supporting learning.
+
+#### Instead, focus on creating opportunities for students to demonstrate their understanding through their process, reasoning, and decisions.
+MARKDOWN

@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question8_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 8'
+
+right '`object.move()`'
+wrong '`object = move`'
+wrong '`move.object()`'
+wrong '`method.object()`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an example of accessing an object’s method?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Working with Objects
+MARKDOWN

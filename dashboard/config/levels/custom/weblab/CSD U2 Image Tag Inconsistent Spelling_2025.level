@@ -30,7 +30,8 @@
     "display_name": "Debug the missing image 3",
     "bubble_choice_description": "Use your debugging skills to figure out why the image is not appearing.",
     "thumbnail_url": "https://images.code.org/e818708286a179a7177388243f1043f1-image-1564093852930.jpg",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

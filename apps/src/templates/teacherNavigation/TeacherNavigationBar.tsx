@@ -1,6 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import Tags from '@code-dot-org/component-library/tags';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -11,8 +10,8 @@ import {
   useParams,
 } from 'react-router-dom';
 
+import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -33,8 +32,8 @@ import {
 import styles from './teacher-navigation.module.scss';
 
 const TeacherNavigationBar: React.FC<{
-  showAITutorTab: boolean;
-}> = showAITutorTab => {
+  showAiChatSettings: boolean;
+}> = ({showAiChatSettings}) => {
   const {sections, sectionOrder} = useAppSelector(
     state => state.teacherSections
   );
@@ -49,11 +48,25 @@ const TeacherNavigationBar: React.FC<{
     state => state.teacherSections.isLoadingSectionData
   );
 
+  const aiDifferentiationEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
+
+  const teacherAiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
+
   useEffect(() => {
-    const updatedSectionArray = sectionOrder
+    const sectionIds =
+      !selectedSection || _.includes(sectionOrder, selectedSection.id)
+        ? sectionOrder
+        : [selectedSection.id, ...sectionOrder];
+    const updatedSectionArray = sectionIds
       .map(sectionId => sections[sectionId] || null)
       .filter(section => section !== null)
-      .filter(section => !section.hidden)
+      .filter(section => {
+        return !(section.hidden && section.id !== selectedSection?.id);
+      })
       .map(section => ({
         value: section.id.toString(),
         text: section.name,
@@ -65,9 +78,10 @@ const TeacherNavigationBar: React.FC<{
   const getSectionHeader = (label: string) => {
     return (
       <Typography
-        semanticTag={'h2'}
-        visualAppearance={'overline-two'}
         className={styles.sectionHeader}
+        component="h2"
+        variant="overline2"
+        gutterBottom
       >
         {label}
       </Typography>
@@ -108,44 +122,33 @@ const TeacherNavigationBar: React.FC<{
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
+  const defaultPerformanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    showAITutorTab &&
-    (selectedSection?.courseVersionName?.includes('csa') ||
-      selectedSection?.courseVersionName?.includes(
-        'programming-fundamentals-aitutor-2024'
-      )) &&
-    DCDO.get('ai-tutor-teacher-nav-v2', false)
-      ? [
-          'progress',
-          'assessments',
-          'projects',
-          'stats',
-          'textResponses',
-          'aiTutorChatMessages',
-        ]
-      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+    experiments.isEnabled('student-snapshot')
+      ? [...defaultPerformanceContentKeys, 'studentSnapshot']
+      : defaultPerformanceContentKeys;
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
-  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+  const defaultClassroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['roster', 'settings'];
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    showAiChatSettings
+      ? [...defaultClassroomContentKeys, 'aiChatSettings']
+      : defaultClassroomContentKeys;
 
   const teacherNavigationBarContent = [
     {
       title: coursecontentSectionTitle,
       keys: courseContentKeys,
-      sectionTag: (
-        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
-      ),
     },
     {
       title: performanceSectionTitle,
       keys: performanceContentKeys,
-      sectionTag: null,
     },
     {
       title: classroomContentSectionTitle,
       keys: classroomContentKeys,
-      sectionTag: null,
     },
   ];
 
@@ -208,6 +211,22 @@ const TeacherNavigationBar: React.FC<{
     [currentPathName]
   );
 
+  const shouldShowErrorIcon = React.useCallback(
+    (key: string) => {
+      return (
+        key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
+        !!selectedSection &&
+        shouldShowAiChatEssentialAlert({
+          assignedAiChatToolsDependency:
+            selectedSection.assignedAiChatToolsDependency,
+          sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
+          teacherAiChatAccessLevel,
+        })
+      );
+    },
+    [selectedSection, teacherAiChatAccessLevel]
+  );
+
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
@@ -223,20 +242,18 @@ const TeacherNavigationBar: React.FC<{
         unitPosition={selectedSection.unitPosition}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
+        showErrorIcon={shouldShowErrorIcon(key)}
       />
     ));
   };
 
   const navbarComponents = teacherNavigationBarContent.map(
-    ({title, keys, sectionTag}, index) => {
+    ({title, keys}, index) => {
       const sidebarOptions = getSidebarOptionsForSection(keys);
 
       return (
         <div key={`section-${index}`}>
-          <div className={styles.sidebarSectionHeader}>
-            {title}
-            {sectionTag}
-          </div>
+          <div className={styles.sidebarSectionHeader}>{title}</div>
           {sidebarOptions}
         </div>
       );
@@ -244,21 +261,27 @@ const TeacherNavigationBar: React.FC<{
   );
 
   const aiContext = () => {
+    const onProgressPage =
+      currentPathObject?.absoluteUrl &&
+      currentPathObject.url === TEACHER_NAVIGATION_PATHS.progress;
     if (selectedSection?.courseId && selectedSection?.unitId)
       return {
-        type: AiDiffContext.COURSE,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.UNIT,
         courseId: selectedSection.courseId,
         unitId: selectedSection.unitId,
+        sectionId: selectedSection.id,
       };
     if (selectedSection?.courseId)
       return {
-        type: AiDiffContext.COURSE,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.COURSE,
         courseId: selectedSection.courseId,
+        sectionId: selectedSection.id,
       };
     if (selectedSection?.unitId)
       return {
-        type: AiDiffContext.UNIT,
+        type: onProgressPage ? AiDiffContext.PROGRESS : AiDiffContext.UNIT,
         unitId: selectedSection.unitId,
+        sectionId: selectedSection.id,
       };
     return {
       type: AiDiffContext.GENERAL,
@@ -269,9 +292,10 @@ const TeacherNavigationBar: React.FC<{
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
         <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
           className={styles.sectionHeader}
+          component="h2"
+          variant="overline2"
+          gutterBottom
         >
           {i18n.classSections()}
         </Typography>
@@ -291,13 +315,13 @@ const TeacherNavigationBar: React.FC<{
         />
         {navbarComponents.map(component => component)}
       </div>
-      {experiments.isEnabled('ai-differentiation') && (
-        <AiDiffFloatingActionButton
-          context={aiContext()}
-          scriptName={selectedSection?.courseVersionName}
-          unitDisplayName={selectedSection?.courseDisplayName}
-        />
-      )}
+      {aiDifferentiationEnabled &&
+        experiments.isEnabled('ai-differentiation') && (
+          <AiDiffFloatingActionButton
+            context={aiContext()}
+            scriptName={selectedSection?.courseVersionName}
+          />
+        )}
     </nav>
   );
 };

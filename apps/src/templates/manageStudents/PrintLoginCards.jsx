@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
@@ -16,19 +15,6 @@ export default class PrintLoginCards extends Component {
   };
 
   onClick = () => {
-    const {sectionId, entryPointForMetrics} = this.props;
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'print-login-cards-button-click',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          entryPoint: entryPointForMetrics,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.props.onPrintLoginCards();
   };
 

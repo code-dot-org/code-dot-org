@@ -14,7 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:18 UTC",
+    "serialized_at": "2025-10-21 19:59:25 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1137,7 +1138,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"https://studio.code.org/courses/coursef-2025/units/1/lessons/5\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
           }
         ]
       },

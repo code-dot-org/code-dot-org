@@ -1,5 +1,6 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
@@ -7,7 +8,6 @@ import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import aichatI18n from '../../locale';
 import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
@@ -40,7 +40,13 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     );
   };
 
-  const copyButton = <CopyButton copyText={chatMessageText} />;
+  const copyButton = (
+    <CopyButton
+      key="copy"
+      copyText={chatMessageText}
+      usage={'teacher-feedback-footer'}
+    />
+  );
   const flagButton = (
     <WithTooltip
       key={`flag-tooltip-${teacherFlagged}`}
@@ -49,30 +55,29 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         direction: isAssistant ? 'onRight' : 'onLeft',
         size: 'xs',
         text: teacherFlagged
-          ? aichatI18n.chatMessage_flaggedAsInappropriate()
-          : aichatI18n.chatMessage_flagAsInappropriate(),
+          ? 'Flagged as inappropriate'
+          : 'Flag message as inappropriate',
         className: moduleStyles.tooltip,
         iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
       }}
     >
-      <Button
-        color={buttonColors.black}
-        icon={{
-          iconName: 'flag-pennant',
-          iconStyle: teacherFlagged ? 'solid' : 'regular',
-        }}
-        isIconOnly={true}
-        onClick={handleFlagClick}
-        size="xs"
-        type={'tertiary'}
+      <MuiIconButton
+        variant="text"
+        color="secondary"
+        size="extraSmall"
         className={classNames(
           moduleStyles[`icon-button-negative`],
           teacherFlagged && moduleStyles.selected
         )}
-        ariaLabel={
-          teacherFlagged ? aichatI18n.aria_unflag() : aichatI18n.aria_flag()
-        }
-      />
+        onClick={handleFlagClick}
+        aria-label={teacherFlagged ? 'unflag' : 'flag'}
+        type="button"
+      >
+        <FontAwesomeV6Icon
+          iconName="flag-pennant"
+          iconStyle={teacherFlagged ? 'solid' : 'regular'}
+        />
+      </MuiIconButton>
     </WithTooltip>
   );
 

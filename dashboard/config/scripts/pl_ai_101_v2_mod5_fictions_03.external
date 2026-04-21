@@ -1,0 +1,26 @@
+name 'pl-ai-101-V2-mod5-fictions-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding
+
+## Answer: C
+
+#### AI-generated responses are often difficult to evaluate because they are designed to sound fluent, organized, and authoritative. Even when information is incorrect or incomplete, it is presented with the same level of confidence as accurate content. This makes it easy to assume the response is trustworthy, especially when it aligns with what we expect to hear.
+
+#### Writing better prompts can improve the quality of AI responses—but it does not eliminate the risk of AI fiction.
+
+#### For example, you might:
+* #### Ask for sources
+* #### Request more detail or clarification
+* #### Provide more context in your prompt
+
+#### These strategies can lead to more useful responses, but they do not guarantee accuracy. AI may still generate incorrect information, even when prompted carefully.
+
+#### This is because:
+* #### AI does not check its answers against reliable sources in real time
+* #### It cannot independently verify whether information is true
+* #### It may generate plausible-sounding but inaccurate content when information is uncertain or incomplete
+
+MARKDOWN

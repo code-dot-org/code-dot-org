@@ -1,0 +1,63 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-18T18:16:13.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Unit 1 - AI Time Capsule Project\nIn this project, students work with AI to develop a future prediction and create a presentation that explains their process. ",
+        "imageUrl": "https://images.code.org/bda54282022f622bad6cb2ea85994fff-Screenshot 2025-12-17 at 12.54.25 PM.png",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-center",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "# Unit 2 - Pixels of Me Project\nIn this project, students design and code a pixel image that represents some aspect of them. The project culminates in a gallery walk in which students show off their work.",
+        "imageUrl": "https://images.code.org/2c3428d5562ef826f933113e7d0cc5a9-Screenshot 2025-12-17 at 12.57.55 PM.png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "# Unit 3 - Sustainable Systems Project\nIn this project, students propose and design an AI-infused computer system and demonstrate how it would contribute to achieving one of the United Nations Sustainable Development Goals.",
+        "imageUrl": "https://images.code.org/54aa17dc2c6438f37d40b8be6d6343b1-Screenshot 2025-12-17 at 12.59.37 PM.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "# Unit 4 - Internet Access Advocacy Campaign Project\nThis project guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. \n\n*Unit 4 has two projects, this is the first one.*",
+        "imageUrl": "https://images.code.org/df967f43b278fa6b25f8e6ab32a964e6-Screenshot 2025-12-17 at 1.11.06 PM.png",
+        "key": "csaif_pl_ai_rev_ai_units-44b1b0f9-b766-4ac4-aca1-bb5f66f93c50",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Unit 4 - Network Security Risk Assessment Project\nThis project guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions.\n\n*Unit 4 has two projects, this is the second one.*",
+        "imageUrl": "https://images.code.org/797c95455ecb2f8ea1bfccf42e886033-Screenshot 2025-12-17 at 1.02.11 PM.png",
+        "key": "csaif_pl_ai_rev_ai_units-2072d1d7-0d75-4105-aab3-bb9f24d854f3"
+      },
+      {
+        "text": "# Unit 5 - Designing Secure Systems Project\nIn this project, students investigate a real-world digital system by analyzing how different users experience potential risks and frustrations.",
+        "imageUrl": "https://images.code.org/a089ccba2353675e799f0801fff8612d-Screenshot 2025-12-17 at 1.05.17 PM.png",
+        "key": "csaif_pl_ai_rev_ai_units-65ff7dd2-8e89-4199-b372-7a1ec7ba455e",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "# Unit 6 - Crafting Stories with Data Project\nIn this project, students are a data scientist tasked with answering questions and telling a data story.",
+        "imageUrl": "https://images.code.org/ba54d58160e942d9108caf9c8d7f4000-Screenshot 2025-12-17 at 1.07.49 PM.png",
+        "key": "csaif_pl_ai_rev_ai_units-0f01a70a-8626-442a-8e1d-7b30bb904a0b",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_-rev"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-18T18:16:12.999+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_rev_ai_units\\\"\"],\"cloned_from\":\"csaif_pl_ai_rev_ai_units\"}]"
+}]]></config>
+</Panels>

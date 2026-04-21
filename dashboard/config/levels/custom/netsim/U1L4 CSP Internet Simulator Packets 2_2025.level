@@ -71,6 +71,7 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "show_type_hints": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

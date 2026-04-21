@@ -139,9 +139,10 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
 
     @controller.filter_workshops @workshop_query
 
-    virtual_workshop = create :workshop,
+    virtual_workshop = create(:workshop,
       virtual: true,
       suppress_email: true
+)
 
     @workshop_query.expects(:joins).with(:sessions).returns(@workshop_query)
     @workshop_query.expects(:where).with(sessions: {session_format: 'virtual'}).returns([virtual_workshop])
@@ -163,14 +164,14 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with teacher_email' do
-    teacher = create :teacher, email: "test@example.net"
+    teacher = create(:teacher, email: "test@example.net")
     expects(:enrolled_in_by).with(teacher)
     params teacher_email: teacher.email
     @controller.filter_workshops @workshop_query
   end
 
   test 'filter_workshops with teacher_email and only_attended' do
-    teacher = create :teacher, email: "test@example.net"
+    teacher = create(:teacher, email: "test@example.net")
     expects(:attended_by).with(teacher)
     params teacher_email: teacher.email
     params only_attended: true

@@ -5,12 +5,15 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 */
 
 /* eslint-disable react/jsx-no-target-blank */
-import {Button} from '@code-dot-org/component-library/button';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import _ from 'lodash';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import localization from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
@@ -61,6 +64,8 @@ export default class SmallFooter extends React.Component {
     menuState: MenuState.MINIMIZED,
     baseWidth: 0,
     baseHeight: 0,
+    currentLocale: this.props.currentLocale,
+    localeOptions: this.props.localeOptions,
   };
 
   componentDidMount() {
@@ -69,13 +74,22 @@ export default class SmallFooter extends React.Component {
       'resize',
       debounce(this.captureBaseElementDimensions, 100)
     );
+
+    localization.on('change', info => {
+      debounce(() => {
+        this.setState({
+          localeOptions: localization.locales,
+          currentLocale: info.locale,
+        });
+      }, 100);
+    });
   }
 
   captureBaseElementDimensions = () => {
     const base = this.refs.base;
     this.setState({
-      baseWidth: base.offsetWidth,
-      baseHeight: base.offsetHeight,
+      baseWidth: base?.offsetWidth || 0,
+      baseHeight: base?.offsetHeight || 0,
     });
   };
 
@@ -179,8 +193,8 @@ export default class SmallFooter extends React.Component {
           {this.props.i18nDropdownInBase && (
             <I18nDropdown
               localeUrl={this.props.localeUrl}
-              selected={this.props.currentLocale}
-              options={this.props.localeOptions}
+              selected={this.state.currentLocale}
+              options={this.state.localeOptions}
             />
           )}
           {this.props.copyrightInBase && this.renderCopyright()}
@@ -203,19 +217,17 @@ export default class SmallFooter extends React.Component {
 
   renderCopyright() {
     return (
-      <Button
-        aria-label={i18n.copyrightInfoButton()}
+      <MuiIconButton
+        variant="outlined"
+        color="tertiary"
+        size="extraSmall"
         className="copyright-button no-mc"
-        color="gray"
-        icon={{
-          iconName: 'copyright',
-          iconStyle: 'light',
-        }}
-        isIconOnly
         onClick={this.clickBaseCopyright}
-        size="xs"
-        type="secondary"
-      />
+        aria-label={i18n.copyrightInfoButton()}
+        type="button"
+      >
+        <FontAwesomeV6Icon iconName="copyright" iconStyle="light" />
+      </MuiIconButton>
     );
   }
 
@@ -224,8 +236,8 @@ export default class SmallFooter extends React.Component {
     if (menuItems && menuItems.length > 0) {
       const caretIcon =
         this.state.menuState === MenuState.EXPANDED
-          ? 'fa fa-caret-down'
-          : 'fa fa-caret-up';
+          ? 'fa-solid fa-caret-down'
+          : 'fa-solid fa-caret-up';
       // FND-1169: Copyright should be a <button>, not a <a>
       return (
         <button

@@ -1,9 +1,8 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -29,11 +28,7 @@ const LtiContinueAccountCard = () => {
       lms_name: ltiProviderName,
       user_type: userType,
     };
-    analyticsReporter.sendEvent(
-      'lti_continue_account_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_continue_account_click', eventPayload);
 
     navigateToHref(continueAccountUrl);
   };
@@ -70,15 +65,18 @@ const LtiContinueAccountCard = () => {
         {i18n.ltiLinkAccountContinueAccountCardContent()}
       </CardContent>
       <CardActions>
-        <Button
-          className={classNames(styles.button, styles.cardSecondaryButton)}
-          color={buttonColors.white}
-          size="m"
-          isPending={isSaving}
+        <MuiButton
+          variant="contained"
+          color="white"
+          size="medium"
+          loading={isSaving}
           disabled={isSaving}
-          text={i18n.ltiIframeCallToAction()}
+          className={classNames(styles.button, styles.cardSecondaryButton)}
           onClick={handleSubmit}
-        />
+          type="button"
+        >
+          {i18n.ltiIframeCallToAction()}
+        </MuiButton>
       </CardActions>
     </Card>
   );

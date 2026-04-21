@@ -1,5 +1,6 @@
 <Craft>
   <config><![CDATA[{
+  "published": true,
   "game_id": 49,
   "created_at": "2025-04-06T19:55:50.000Z",
   "level_num": "custom",
@@ -47,7 +48,7 @@
     "boat": "false",
     "video_key": "mc_2018_conditionals",
     "short_instructions": "Search these underwater ruins for a chest.",
-    "long_instructions": "**Try this student lesson level from Course E - Lesson 12, Level 10:  Conditionals in Minecraft: Voyage Aquatic.**\r\n\r\nYou found the underwater ruins. Search the sandstone for a **chest** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) containing **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) treasure.\r\n\r\n",
+    "long_instructions": "**Try this student lesson level from Course E - Lesson 15, Level 10:  Conditionals in Minecraft: Voyage Aquatic.**\r\n\r\nYou found the underwater ruins. Search the sandstone for a **chest** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) containing **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) treasure.\r\n\r\n",
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the if path block to help you make the right turns.\",\"hint_id\":\"aquatic7\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c4196b1d3b9c88377a2e3cd214d6c48/HOC 2018 Level_7a.mp3\"}]",
     "name_suffix": "_2025",
@@ -55,9 +56,8 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-06T19:55:50.895+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-ConditionalE_2024\\\"\"],\"cloned_from\":\"OPD-K5-ConditionalE_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:55:50.895+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-ConditionalE_2024\\\"\"],\"cloned_from\":\"OPD-K5-ConditionalE_2024\"},{\"changed_at\":\"2025-06-23 17:42:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

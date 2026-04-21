@@ -39,11 +39,12 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
 }
 
 export const ExpandableImagesWrapper = connect(null, dispatch => ({
-  showImageDialog(imgUrl) {
+  showImageDialog(imgUrl, imgAlt) {
     dispatch(
       openDialog({
         imgOnly: true,
         imgUrl,
+        imgAlt,
       })
     );
   },

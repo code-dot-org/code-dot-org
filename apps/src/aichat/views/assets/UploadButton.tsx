@@ -1,45 +1,40 @@
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {ChangeEvent, useState} from 'react';
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
 import {AssetData} from '@cdo/apps/lab2/views/components/starterAssetsDialog/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
-import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {
-  ACCEPTED_FILE_TYPES,
-  MAX_FILE_SIZE_MB,
-  MAX_NUM_FILES,
-} from '../../constants';
-import aichatI18n from '../../locale';
-import {
-  addStagedFile,
-  clearStagedFilesAlert,
-  sendAnalytics,
-  stagedFilesLimitExceeded,
-  stagedFileUploadFinished,
-} from '../../redux';
-import {AssetSource} from '../../types';
+import {MAX_NUM_FILES} from '../../constants';
+import {addStagedFile, sendAnalytics, uploadFiles} from '../../redux';
+import {AssetSource, ChatAsset} from '../../types';
 
-import styles from './upload-button.module.scss';
+export interface UploadButtonProps {
+  isDisabled: boolean;
+  levelName: string;
+  buildAssetUrl: (asset: ChatAsset) => string;
+  acceptedFileTypes: string[];
+  hasStarterAssets?: boolean;
+  showLabel?: boolean;
+}
 
-const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
+const UploadButton: React.FC<UploadButtonProps> = ({
+  isDisabled,
+  levelName,
+  buildAssetUrl,
+  acceptedFileTypes,
+  hasStarterAssets = false,
+  showLabel = true,
+}) => {
   const dispatch = useAppDispatch();
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
   const numStagedFiles = useAppSelector(
     state => state.aichat.stagedFiles.length
   );
   const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
-  const hasStarterAssets = useAppSelector(state => {
-    const starterAssets = state.lab.levelProperties?.starterAssets;
-    return starterAssets && Object.keys(starterAssets).length > 0;
-  });
   const [showAssetManager, setShowAssetManager] = useState(false);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -47,87 +42,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     if (!files) {
       return;
     }
-
-    // Clear the alert, if any
-    dispatch(clearStagedFilesAlert());
-
-    const excessFileCount = files.length - numAllowedFiles;
-    if (excessFileCount > 0) {
-      dispatch(stagedFilesLimitExceeded());
-    }
-
-    const allowedFiles = Array.from(files)
-      .slice(0, numAllowedFiles)
-      .map<[string, string, File]>(file => [
-        // Create a unique key for each upload in case the same file is uploaded more than once.
-        `${file.name}-${Date.now()}`,
-        file.name,
-        file,
-      ]);
-
-    for (const [key, filename] of allowedFiles) {
-      dispatch(
-        addStagedFile({key, asset: {filename, source: AssetSource.PROJECT}})
-      );
-    }
-
-    let uploadSuccessCount = 0;
-    let sizeLimitExceededCount = 0;
-    let uploadFailureCount = 0;
-    for (const [key, filename, file] of allowedFiles) {
-      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
-        sizeLimitExceededCount += 1;
-        dispatch(
-          stagedFileUploadFinished({
-            key,
-            status: 'sizeLimitExceeded',
-          })
-        );
-        continue; // Skip uploading this file if it exceeds the size limit
-      }
-
-      try {
-        await HttpClient.put(
-          `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
-          file
-        );
-        uploadSuccessCount += 1;
-
-        dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));
-      } catch (error) {
-        let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
-        if (error instanceof NetworkError && error.response.status === 413) {
-          sizeLimitExceededCount += 1;
-          status = 'sizeLimitExceeded';
-        } else {
-          uploadFailureCount += 1;
-          status = 'uploadFailed';
-          // Only log if not a size limit exceeded error
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError('Error uploading asset', error as Error, {
-              filename: file.name,
-            });
-        }
-
-        dispatch(
-          stagedFileUploadFinished({
-            key,
-            status,
-          })
-        );
-      }
-    }
-
-    dispatch(
-      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
-        source: AssetSource.PROJECT,
-        fileCountSuccess: uploadSuccessCount,
-        fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
-        fileCountFailureUnknownCause: uploadFailureCount,
-        fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
-      })
-    );
+    dispatch(uploadFiles({files: Array.from(files), buildAssetUrl}));
   };
 
   const onSelectStarterAssets = (assets: AssetData[]) => {
@@ -143,18 +58,24 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         })
       );
     }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
         source: AssetSource.LEVEL,
-        fileCountSuccess: assets.length,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     onUploadFiles,
-    ACCEPTED_FILE_TYPES.join(','),
+    acceptedFileTypes.join(','),
     true
   );
 
@@ -167,29 +88,35 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     );
   };
 
-  if (!currentChannelId) {
-    return null;
-  }
-
-  const buttonProps: ButtonProps = {
-    type: 'secondary',
-    color: 'gray',
-    iconLeft: {iconName: 'upload'},
-    text: aichatI18n.upload(),
+  const buttonPropsCommon = {
+    variant: 'outlined' as const,
+    color: 'tertiary' as const,
   };
 
-  const commonProps = {
-    size: 's',
-    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
-  } as const;
+  const buttonPropsWithLabel = {
+    ...buttonPropsCommon,
+    children: 'Add file',
+    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+  };
+
+  const buttonPropsIconOnly = {
+    ...buttonPropsCommon,
+    children: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+  };
+
+  const isButtonDisabled = numStagedFiles >= MAX_NUM_FILES || isDisabled;
 
   const uploadButton = hasStarterAssets ? (
     <ActionDropdown
-      {...commonProps}
+      size="xs"
+      disabled={isButtonDisabled}
       name="uploadDropdown"
-      labelText={aichatI18n.upload()}
-      triggerButtonProps={buttonProps}
-      className={classNames(styles.upload, styles.dropdown)}
+      labelText={'Upload'}
+      useIconButton={!showLabel}
+      triggerButtonProps={
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
+      }
+      menuVerticalPlacement="top"
       options={[
         {
           value: 'fromLibrary',
@@ -212,8 +139,27 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         },
       ]}
     />
+  ) : showLabel ? (
+    <MuiButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+      startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+    >
+      Add file
+    </MuiButton>
   ) : (
-    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+    <MuiIconButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+    >
+      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+    </MuiIconButton>
   );
 
   return (

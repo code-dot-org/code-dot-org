@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question1_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 1'
+
+wrong 'Repeating a process multiple times'
+right 'Breaking a complex problem into smaller, more manageable parts'
+wrong 'Writing a program without any errors'
+wrong 'Using AI to solve problems automatically'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following best describes **decomposition** in computational thinking?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Computational Thinking
+MARKDOWN

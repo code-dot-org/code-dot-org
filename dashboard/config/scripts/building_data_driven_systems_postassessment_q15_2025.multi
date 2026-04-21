@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q15_2025'
+
+question 'What does "Al Accountability" refer to?'
+
+wrong 'Blaming the AI tool whenever there is a bug in the code.'
+wrong 'Paying a monthly subscription for AI tools'
+right 'The developer\'s responsibility to understand, verify, and explain any code or data decisions influenced by AI.'
+wrong 'Replacing all human developers with AI agents to ensure accountability.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11
+
+Accountability means that even if an AI assisted in writing the code or organizing the data, the human developer is ultimately responsible for ensuring the final product is safe, fair, and functional.
+MARKDOWN

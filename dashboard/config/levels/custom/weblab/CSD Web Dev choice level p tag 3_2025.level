@@ -25,7 +25,8 @@
     "thumbnail_url": "https://images.code.org/83b9723f9f3389674374366a73e59d06-image-1585676172131.png",
     "name_suffix": "_2025",
     "validation_enabled": "false",
-    "map_reference": "/courses/csd-2022/guides/web-lab"
+    "map_reference": "/courses/csd-2022/guides/web-lab",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "Need to change the exemplar",

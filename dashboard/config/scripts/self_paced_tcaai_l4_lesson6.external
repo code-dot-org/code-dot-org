@@ -1,0 +1,98 @@
+name 'self-paced-TCaAI-L4-Lesson6'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 3 Lesson Overviews
+
+## Lesson 6: The AI Credibility Guide
+
+#### Lesson 6 is a **Develop & Critique** lesson. Students synthesize their investigations into AI-generated outputs and transform their findings into a clear, visual **Trust Meter** for their **Responsible AI Use Guide**.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/6" target="blank" rel="noopener noreferrer">
+Access Lesson 6: The AI Credibility Guide
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students revisit their previous explorations and mini-lessons, sharing one surprising pattern they noticed about AI credibility.
+</p>
+<p style="font-size: 13pt">
+This discussion prepares students to move from isolated observations to shared, actionable guidance about when to trust AI and when to verify.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (35 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 14pt"><b>🔄 Jigsaw Synthesis</b></p>
+
+<p style="font-size: 13pt">
+Students first meet in <strong>Expert Groups</strong> based on their Lesson 5 exploration (Claim Checkers, Image Investigators, or Context Detectives). They identify moments where AI felt trustworthy and moments where confidence masked gaps or assumptions.
+</p>
+
+<p style="font-size: 13pt">
+Students then reorganize into <strong>Jigsaw Groups</strong> to compare findings across explorations and identify universal credibility signals. The focus is on patterns and rules, not retelling steps.
+</p>
+
+<p style="font-size: 14pt"><b>🧾 Project Work</b></p>
+
+<p style="font-size: 13pt">
+Using evidence from their explorations and discussions, students design a visual <strong>Trust Meter</strong> that defines multiple levels of credibility (for example, “Highly Trustworthy” to “Falls Apart”).
+</p>
+
+<p style="font-size: 13pt">
+Each level must clearly explain:
+</p>
+
+<ul style="font-size: 13pt; margin-top: 5px;">
+<li>What makes an AI output land there</li>
+<li>What evidence is present or missing</li>
+<li>What specific user actions increase responsible use</li>
+</ul>
+
+<p style="font-size: 13pt">
+Students then add their completed Trust Meter to their Responsible AI Use Guide project.
+</p>
+
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students reflect on how training data and representation affect credibility by discussing what happens when AI is trained on limited or unrepresentative examples.
+</p>
+<p style="font-size: 13pt">
+Close by revisiting the guiding question: <em>How do you decide when to trust AI?</em> and reinforce that responsible use requires deliberate verification strategies.
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Ensure students bring their Milestone 3 Learning Log.
+* #### Preview the Trust Meter project level and Sketch Lab tools.
+* #### Prepare instructions for Expert and Jigsaw group transitions.
+* #### Review expectations for including evidence-based reasoning in the Trust Meter.
+
+### 💡 **Tips for Teaching**:
+* #### Push students beyond vague advice like “check it.” Ask what specifically to look for.
+* #### Encourage conditional thinking rather than absolute rules.
+* #### Require that each Trust Meter level references a concrete example from testing.
+MARKDOWN

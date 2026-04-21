@@ -543,7 +543,7 @@
     "parent_level_id": 29353,
     "bubble_choice_description": "Create a new Painter using the parameterized constructor and paint the mural inside the wall.",
     "thumbnail_url": "https://images.code.org/9c6982c71d25231249c169d31ea57b56-image-1625247661978.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-07-30T13:50:57.940+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4b\\\"\"],\"cloned_from\":\"CSA U1L5-L4b\"},{\"changed_at\":\"2021-07-30 13:51:00 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:27:13 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:27:47 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-02 17:33:18 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

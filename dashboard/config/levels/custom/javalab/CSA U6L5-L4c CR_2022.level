@@ -15,7 +15,7 @@
     "display_name": "Social Media Posts",
     "bubble_choice_description": "Find the number of social media posts that are greater than or equal to a target length.",
     "thumbnail_url": "https://images.code.org/7ca28c0960c2b130745673f3180cb99c-social-media.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:29:13.915+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L4b CR_2022\"},{\"changed_at\":\"2022-04-14 19:29:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:09:54 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:33:51 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

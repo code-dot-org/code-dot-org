@@ -93,6 +93,7 @@
     "display_name": "Air Quality Tracker",
     "bubble_choice_description": "Add code to the program to allow a user to look up Air Quality data from their state.",
     "thumbnail_url": "https://images.code.org/43966edb26a6ea3ebd892f78b9f6b453-image-1649997286216.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

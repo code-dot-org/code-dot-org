@@ -19,10 +19,11 @@ const STUDENTS: ServerStudent[] = [
   {
     id: 1,
     family_name: 'hill',
+    is_demo_student: false,
     name: 'bobby',
     user_type: 'STUDENT',
     secret_picture_name: '',
-    secret_picture_path: '',
+    secret_picture_url: '',
     secret_words: '',
     sectionId: 1,
     sharing_disabled: true,
@@ -30,10 +31,11 @@ const STUDENTS: ServerStudent[] = [
   {
     id: 2,
     family_name: 'morgendorffer',
+    is_demo_student: false,
     name: 'daria',
     user_type: 'STUDENT',
     secret_picture_name: '',
-    secret_picture_path: '',
+    secret_picture_url: '',
     secret_words: '',
     sectionId: 1,
     sharing_disabled: true,
@@ -64,6 +66,7 @@ const PROGRESS: InitProgressPayload = {
   },
   isFullProgress: false,
   currentPageNumber: 1,
+  courseName: 'csd',
 };
 
 const UNIT_SUMMARY = {

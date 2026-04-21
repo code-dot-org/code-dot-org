@@ -1,0 +1,45 @@
+name 'self-paced-TCaAI-L1-LearningTools'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Student Learning Tools
+
+## AI Chat Lab
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding-right: 12px; height: 150px; clear: both; margin: 0 10px 10px 0;">
+
+#### Throughout Thinking Critically with AI, students will have the opportunity to interact with an AI Chatbot.
+
+#### Code.org has created an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
+
+#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab:
+
+<div style="background-color: #FFFFFF; color: #000000; padding: 15px; border-radius: 5px; width: 70%; margin: 20px auto; border: 4px solid #000000; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); position: relative;">
+    
+    <!-- Close Button -->
+    <span style="position: absolute; top: 10px; right: 10px; font-size: 20pt; font-weight: bold; border: 2px solid black; border-radius: 2px; padding: 0 10px; cursor: pointer; line-height: 1;">X</span>
+    
+<h4><b>Remember to chat responsibly!</b></h4>
+    <hr>
+
+<div style="font-size: 12pt; line-height: 1.2; margin-top: 10px; padding-left: 10px;">
+        <p style="font-size: 12pt;"><b>All messages you send will be visible to your teacher, including blocked messages.</b></p>
+        <p style="font-size: 12pt;">Inappropriate messages will be flagged by our content moderation policy.</p>
+        <p style="font-size: 12pt;">All unsaved changes will be lost.</p>
+        <p style="font-size: 12pt;">In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</p>
+    </div>
+
+<hr>
+
+<!-- Start Chatting Button -->
+<div align="right">
+  <a href="#start" style="background-color: #8c52ba; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 12pt; border-radius: 8px; display: inline-block;">
+    Start Chatting
+  </a>
+</div>
+
+</div>
+
+#### **Up Next**: Try out AI Lab!
+MARKDOWN

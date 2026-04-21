@@ -1,0 +1,164 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Hallelujah\r\n\r\n**Define:** You've been hired to remix *Hallelujah* by Rosa Linn for a community music showcase. Your challenge is to combine tracks from this song with sounds from the *Acoustic Arcade* pack to create a new emotional vibe.  To do this, you'll need to think carefully about when and how different sounds play together or one after another since they have different lengths and rhythms!\r\n\r\n**Prepare:** Listen to the original song and explore the *Acoustic Arcade* pack. Plan how you want your remix to sound and which tracks fit well together. Listen to the example below for what this could sound like!\r\n\r\n**Try:** Build your remix using the code blocks. Use `play together` and `play sequential` to combine sounds in the same moment. Try different combinations and tweak the timing to get the vibe just right!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- At least 2 vocal tracks\r\n- At least 4 unique tracks from the *Acoustic Arcade* pack",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "rosa_linn_hallelujah": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "rosa_linn_hallelujah",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Layering Sounds",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_hallelujah/rosa_linn_hallelujah.jpg",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "",
+      "validationFailureMessage": "",
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\naRSezVVpSlRy9rUcl4bI62sk76xSKYNjRnrzkXU=\n",
+    "bubble_choice_description": "Try to match the long vocals from Hallelujah to the shorter tracks from the Acoustic Arcade pack",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-choice-b_069553a4-264a-46fd-bf27-715ce7ec6044",
+        "message": "It looks like your song is on the right track! Make sure you're met all the other requirements before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:2"
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-b_86253497-8de2-4d8f-a016-200bfbaa3847",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ✅ At least 2 vocal tracks\n- ❌ At least 4 unique tracks from the Acoustic Arcade pack",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:2"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequences-challenge-choice-c_e326b158-9169-4805-8d79-9466c75330d2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ❌ At least 2 vocal tracks\n- ✅ At least 4 unique tracks from the Acoustic Arcade pack",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequences-challenge-choice-c_3ed57c97-8713-407e-a6b9-004938ddd545",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ❌ At least 2 vocal tracks\n- ❌ At least 4 unique tracks from the Acoustic Arcade pack",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:55.500+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequences-challenge-choice-c_v2\\\"\"],\"cloned_from\":\"music-lab-sequences-challenge-choice-c_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

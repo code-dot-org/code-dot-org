@@ -1,6 +1,7 @@
+import {INFINITE_LOOP_TRAP} from '@cdo/apps/blockly/utils';
+
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
-var BlockColors = require('../blockly/constants').BlockColors;
 
 var msg = require('./locale');
 
@@ -37,11 +38,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.collector_ifCollectible = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
         msg.ifCode() + ' ' + msg.collectiblePresent()
       );
@@ -64,11 +61,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.collector_whileCollectible = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
         msg.whileMsg() + ' ' + msg.collectiblePresent()
       );
@@ -82,7 +75,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.collector_whileCollectible = function () {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return `while (${argument}) {\n${branch}}\n`;
   };
 };

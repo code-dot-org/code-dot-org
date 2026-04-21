@@ -30,6 +30,8 @@ export default class Neighborhood {
   private nextSignalIndex: number;
   private speedTracker: NeighborhoodSpeedTracker;
   private isProcessingSignals: boolean;
+  private resolveOnDone?: () => void;
+  private donePromise: Promise<void> | null = null;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -120,6 +122,9 @@ export default class Neighborhood {
         // Set isRunning to false, add a blank line to the console, and return
         this.setIsRunning(false);
         this.onNewlineMessage();
+        if (this.resolveOnDone) {
+          this.resolveOnDone();
+        }
         return;
       }
       const timeForSignal =
@@ -284,5 +289,25 @@ export default class Neighborhood {
         }
       });
     }
+  }
+
+  // Returns a promise that resolves when all neighborhood signals have finished processing.
+  waitUntilDone(): Promise<void> {
+    if (!this.isRunning()) {
+      return Promise.resolve();
+    }
+
+    if (this.donePromise) {
+      return this.donePromise;
+    }
+
+    this.donePromise = new Promise(resolve => {
+      this.resolveOnDone = () => {
+        resolve();
+        this.donePromise = null;
+        this.resolveOnDone = undefined;
+      };
+    });
+    return this.donePromise;
   }
 }

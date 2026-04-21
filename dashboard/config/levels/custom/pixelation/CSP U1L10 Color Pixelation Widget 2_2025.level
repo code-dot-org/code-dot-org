@@ -18,7 +18,8 @@
     "hex": "false",
     "hide_encoding_controls": "false",
     "v1_hide_sliders": "false",
-    "encrypted": "false"
+    "encrypted": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

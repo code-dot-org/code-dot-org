@@ -16,6 +16,7 @@ class ContentDSL < LevelDSL
   def hide_reference_area(text) @hash[:hide_reference_area] = text end
   def video_key(text) @hash[:video_key] = text end
   def uses_lab2() @hash[:uses_lab2] = true end
+  def hide_letters_lab2() @hash[:hide_letters_lab2] = true end
 
   # legacy
   def description(text) @hash[:content1] = text end

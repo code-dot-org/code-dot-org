@@ -1,0 +1,19 @@
+name 'networks-postassessment-question8_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 8'
+
+right 'Ethernet (wired)'
+wrong 'Wi-Fi'
+wrong 'Bluetooth'
+wrong 'Satellite'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A university campus wants to set up high-speed Internet connections for research labs. Which type of connection should they choose for the best reliability and speed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Sending Bits
+
+Lesson 4: Routers and Redundancy
+MARKDOWN

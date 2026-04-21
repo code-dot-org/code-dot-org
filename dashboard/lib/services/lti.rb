@@ -83,11 +83,16 @@ module Services
     end
 
     def self.lti_user_type(current_user, lti_integration, nrps_section)
-      lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
-      member_roles = lti_user_roles(nrps_section, lti_user_id)
+      lti_user_ids = Queries::Lti.lti_user_ids(current_user, lti_integration)
 
-      if Policies::Lti.lti_teacher?(member_roles)
-        return ::User::TYPE_TEACHER
+      return ::User::TYPE_STUDENT unless lti_user_ids
+
+      # Check if any of the user's LTI IDs have teacher roles
+      lti_user_ids.each do |lti_user_id|
+        member_roles = lti_user_roles(nrps_section, lti_user_id)
+        if Policies::Lti.lti_teacher?(member_roles)
+          return ::User::TYPE_TEACHER
+        end
       end
 
       return ::User::TYPE_STUDENT
@@ -102,13 +107,14 @@ module Services
       user.provider = ::User::PROVIDER_MIGRATED
       user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
+      user.family_name = get_claim(nrps_member_message, :family_name)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
+        user.given_name = get_claim(nrps_member_message, :given_name)
         user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
-        user.family_name = get_claim(nrps_member_message, :family_name)
       end
 
       id_token = {
@@ -335,11 +341,12 @@ module Services
 
     def self.assign_user_name(user, nrps_member)
       if user.teacher?
+        user.given_name = get_claim(nrps_member, :given_name)
         user.name = get_claim_from_list(nrps_member, Policies::Lti::TEACHER_NAME_KEYS)
       else
         user.name = get_claim_from_list(nrps_member, Policies::Lti::STUDENT_NAME_KEYS)
-        user.family_name = get_claim(nrps_member, :family_name)
       end
+      user.family_name = get_claim(nrps_member, :family_name)
     end
   end
 end

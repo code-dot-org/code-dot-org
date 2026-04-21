@@ -1,6 +1,5 @@
 @import 'color.scss';
 @import 'style-constants';
-@import '@code-dot-org/component-library-styles/colors';
 
 @media print {
   .sidebarContainer {
@@ -53,18 +52,6 @@
   margin-bottom: 2px;
 }
 
-.sidebarNewTags {
-  margin-inline-start: 10px;
-}
-
-.sidebarSectionHeader .sidebarNewTags div {
-  background-color: var(--background-brand-teal-primary);
-}
-
-.sidebarSectionHeader .sidebarNewTags div span {
-  color: white;
-}
-
 .sectionDropdown {
   padding-left: 16px;
   width: 210px;
@@ -84,6 +71,13 @@
   }
 }
 
+.errorIcon {
+  margin-left: auto;
+  margin-right: 10px;
+  color: var(--text-error-primary-fixed);
+  font-size: 1rem;
+}
+
 .sidebarOption {
   display: flex;
   height: 32px;
@@ -96,7 +90,7 @@
 
   &.selected {
     border-left: 4px solid var(--borders-brand-teal-primary);
-    background-color: var(--background-neutral-tertiary);
+    background-color: var(--background-neutral-quaternary);
     padding-left: 28px;
     text-decoration: none;
     color: var(--text-neutral-primary);
@@ -191,4 +185,16 @@ h2.skeletonHeaderSectionName {
 .calendarDropdownDescription {
   font-weight: bold;
   margin-right: 10px;
+}
+
+.emptyClassroomDiv {
+  margin: 24px 64px 82px 64px;
+  text-align: center;
+}
+
+.emptyClassroomImage {
+  height: 200px;
+  align-items: end;
+  display: flex;
+  justify-content: center;
 }

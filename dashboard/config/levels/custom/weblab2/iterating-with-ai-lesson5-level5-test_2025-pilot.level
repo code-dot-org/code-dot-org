@@ -1,0 +1,129 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-22T17:40:24.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Movie Cards</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>Movie Collection</h1>\n    \n    <div id=\"cards-container\"></div>\n\n    <script src=\"script.js\" defer></script>\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background-color: #f4f4f9;\n  padding: 20px;\n}\n\nh1 {\n  text-align: center;\n  color: #333;\n}\n\n/* Container to hold all cards */\n#cards-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n}\n\n/* Individual Card Styling */\n.card {\n  background: white;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  width: 250px;\n  overflow: hidden; /* Keeps image corners rounded */\n  box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n  display: flex;\n  flex-direction: column;\n}\n\n.card-image {\n  width: 100%;\n  height: 150px;\n  object-fit: cover; /* Ensures placeholder/image fills area nicely */\n  background-color: #eee;\n}\n\n.card-content {\n  padding: 15px;\n}\n\n.card-title {\n  margin-top: 0;\n  font-size: 1.2em;\n  color: #222;\n}\n\n.card-meta {\n  font-size: 0.9em;\n  color: #666;\n  margin-bottom: 10px;\n  font-style: italic;\n}\n\n.card-rating {\n  font-weight: bold;\n  color: #007bff; /* Blue for emphasis */\n  margin-bottom: 10px;\n}\n\n.card-summary {\n  font-size: 0.9em;\n  line-height: 1.4;\n  color: #444;\n}\n\n.read-more-btn {\n  display: inline-block;\n  margin-top: 10px;\n  padding: 8px 12px;\n  background-color: transparent;\n  border: 1px solid #333;\n  border-radius: 20px;\n  text-decoration: none;\n  color: #333;\n  font-size: 0.85em;\n  width: fit-content;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DATASET\n// Includes records with valid data and records with nulls to test fallbacks\nconst movies = [\n  {\n    title: \"Galaxy Quest\",\n    genre: \"Sci-Fi\",\n    runtimeMinutes: 102,\n    rating: 4.5,\n    imageURL: \"galaxy_quest.jpg\",\n    summary: \"A washed-up TV crew is mistaken for real heroes.\"\n  },\n  {\n    title: \"The Lost City\",\n    genre: \"Adventure\",\n    runtimeMinutes: 112,\n    rating: null, \n    imageURL: \"lost_city.jpg\",\n    summary: \"An author gets kidnapped in the jungle.\"\n  },\n  {\n    title: \"Mystery of the Deep\",\n    genre: \"Documentary\",\n    runtimeMinutes: 45,\n    rating: 3.8,\n    imageURL: null,\n    summary: \"Exploring the bottom of the Mariana Trench.\"\n  },\n  {\n    title: \"Speed Racer\",\n    genre: \"Action\",\n    runtimeMinutes: 120,\n    rating: 2.5,\n    imageURL: \"speed_racer.jpg\",\n    summary: null\n  },\n  {\n    title: \"Cooking 101\",\n    genre: \"Educational\",\n    runtimeMinutes: null,\n    rating: 5.0,\n    imageURL: null,\n    summary: \"Learn to cook basic meals in under 30 minutes.\"\n  },\n  {\n    title: \"The Silent Forest\",\n    genre: \"Horror\",\n    runtimeMinutes: 95,\n    rating: null,\n    imageURL: null,\n    summary: \"Something lurks in the trees behind the cabin.\"\n  },\n  {\n    title: \"Code Warriors\",\n    genre: \"Sci-Fi\",\n    runtimeMinutes: 140,\n    rating: 4.9,\n    imageURL: \"\",\n    summary: \"Hackers fight to save the digital world.\"\n  },\n  {\n    title: \"Midnight Jazz\",\n    genre: \"Music\",\n    runtimeMinutes: 180,\n    rating: null,\n    imageURL: \"jazz.jpg\",\n    summary: null\n  },\n  {\n    title: \"Sunny Days\",\n    genre: \"Comedy\",\n    runtimeMinutes: 88,\n    rating: 3.2,\n    imageURL: \"sunny_days.jpg\",\n    summary: \"A family vacation goes wrong in hilarious ways.\"\n  },\n  {\n    title: \"Untitled Project\",\n    genre: \"Unknown\",\n    runtimeMinutes: 0,\n    rating: null,\n    imageURL: null,\n    summary: null\n  }\n];\n\n// Select the container\nconst container = document.querySelector(\"#cards-container\");\n\n// LOOP THROUGH THE DATA\n\n\n\n\n  // --- FALLBACK LOGIC ---\n\n\n\n\n  // --- CREATE CARD ---\n\n\n\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "galaxy_quest.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/926550bc-1b4f-4922-9a6d-623842f6d456.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "speed_racer.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/dff656bc-76d2-4af2-88f5-86f052a63026.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "sunny_days.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/a5203f9e-9f0d-416c-a7c2-cd5fa408b577.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "lost_city.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/8c16c434-e3c0-4d5e-9c46-153b5a6579fd.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "jazz.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/33d74034-4386-468d-aa72-ef9c06fa2edc.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "placeholder.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/iterating-with-ai-lesson5-level5-test-2025/uuid/f0697ef3-fb6f-40f0-9c15-4233776cb341.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Rendering Data with Fallbacks\r\n\r\n1. **Create the Loop:** Write a `for` loop that iterates through the `movies` array. Inside the loop, create a variable to store the current movie object (e.g., `const movie = movies[i]`).\r\n2. **Set Fallbacks:** Inside the loop, write conditional checks for your data. If `imageURL` is `null`, set it to `\"placeholder.png\"`. If `runtimeMinutes` is `null` or `0`, set it to `\"N/A\"`.\r\n3. **Build the Card:** Create a new `div` element, add the `\"card\"` class, and set its `innerHTML` to display the movie's title, image, runtime, and rating. Append the new card to the `container`.\r\n4. **Test:** Run the code. Verify that every movie appears as a card and that missing images or runtimes show your fallback values instead of errors.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:24.950+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level5-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level5-test-2025\"},{\"changed_at\":\"2026-01-06 00:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-06 00:27:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

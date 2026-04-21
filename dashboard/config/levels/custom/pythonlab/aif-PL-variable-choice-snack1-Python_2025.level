@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-23T18:58:06.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "You're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!\r\n\r\n## Do This:\r\n\r\n1. Look at the original value stored in `favorite_snack`\r\n\r\n2. Change the value to a **different** snack.\r\n\r\n3. Run the program to see the **before** and **after**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "long_instructions": "You're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!\r\n\r\n## Do This:\r\n\r\n1. Look at the original value stored in `favorite_snack`\r\n\r\n2. Add code on line 7 that will update the value of `favorite_snack` to something else.\r\n\r\n3. Run the program to see the **before** and **after**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -32,9 +33,10 @@
       }
     },
     "thumbnail_url": "https://images.code.org/36670926f59f7d6a183a4a81a15e6332-snack.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-23T18:58:06.844+00:00\",\"changed\":[\"cloned from \\\"aif-PL-variable-choice-snack1-Python\\\"\"],\"cloned_from\":\"aif-PL-variable-choice-snack1-Python\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-23T18:58:06.844+00:00\",\"changed\":[\"cloned from \\\"aif-PL-variable-choice-snack1-Python\\\"\"],\"cloned_from\":\"aif-PL-variable-choice-snack1-Python\"},{\"changed_at\":\"2025-07-17 14:52:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

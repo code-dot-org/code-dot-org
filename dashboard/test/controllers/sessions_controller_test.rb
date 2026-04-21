@@ -51,12 +51,19 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
-  test "teachers go to specified return to url after signing in" do
+  test 'teachers go to specified return to path after signing in' do
     teacher = create(:teacher)
-    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+    session[:user_return_to] = user_return_to = '/the-return-to-url'
     create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
+  end
+
+  test 'teachers will not return to a url on a different host after signing in' do
+    teacher = create(:teacher)
+    session[:user_return_to] = 'https://some-other-site.com/the-return-to-url'
+    create_session_for_user(teacher)
+    assert_response :not_found
   end
 
   test 'signing in as user via username' do
@@ -112,7 +119,7 @@ class SessionsControllerTest < ActionController::TestCase
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
-    user = create :user, sign_in_count: 2
+    user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
       create_session_for_user(user)
     end
@@ -123,7 +130,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'failed signin does not create SignIn' do
-    user = create :user
+    user = create(:user)
     assert_does_not_create(SignIn) do
       post :create, params: {
         user: {
@@ -141,13 +148,13 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "facebook users go to generic oauth sign out page after logging out" do

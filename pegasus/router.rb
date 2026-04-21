@@ -1,6 +1,5 @@
 require_relative 'src/env'
 require 'rack'
-require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
@@ -35,9 +34,8 @@ require 'honeybadger'
 require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
-require src_dir 'curriculum_router'
-require src_dir 'homepage'
 require 'cdo/hamburger'
+require 'cdo/brand'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
 
@@ -72,7 +70,6 @@ class Documents < Sinatra::Base
     configs
   end
 
-  use Rack::Locale
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
@@ -88,7 +85,7 @@ class Documents < Sinatra::Base
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
-    set :configs, load_configs_in(dir)
+    set :configs, load_configs_in(pegasus_dir('config/sites'))
     set :views, dir
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :exclude_extnames, ['.collate']
@@ -240,19 +237,6 @@ class Documents < Sinatra::Base
 
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
-    end
-    layout = @header['layout'] || 'default'
-    unless ['', 'none'].include?(layout)
-      template = resolve_template('layouts', settings.template_extnames, layout)
-      raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join.html_safe})
-    end
-
-    theme = @header['theme'] || 'default'
-    unless ['', 'none'].include?(theme)
-      template = resolve_template('themes', settings.template_extnames, theme)
-      raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join.html_safe})
     end
   end
 
@@ -474,6 +458,8 @@ class Documents < Sinatra::Base
       # Also look for shared items.
       found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
       return found.first unless found.empty?
+    rescue Errno::ENAMETOOLONG
+      # Just return nothing when the URL is malformed by being too long
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.
@@ -655,6 +641,4 @@ class Documents < Sinatra::Base
     # Load helpers
     load pegasus_dir('helpers.rb')
   end
-
-  use CurriculumRouter
 end

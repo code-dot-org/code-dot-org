@@ -30,7 +30,7 @@ describe('VisualizationResizeBar', function () {
   it('is configured to display a font-awesome vertical ellipsis', () => {
     expect(wrapper.find('div').props()).toHaveProperty(
       'className',
-      'fa fa-ellipsis-v'
+      'fa-solid fa-ellipsis-vertical'
     );
   });
 

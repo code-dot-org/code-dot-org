@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-10-14T20:35:45.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nRun the program, find and fix the bug.\r\n* **\r\n**Use the _AI Tutor_ to help you DEBUG and fix the code.**\r\n\r\nYou can type things like:\r\n* _What does this error message mean?_\r\n* _Can you show me the correct way to write this line?_\r\n* _Why is my code not running?_\r\n* _Explain what's wrong and how to fix it in simple steps._\r\n",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "teacher_markdown": "The missing quote introduces a gentle syntax error for a clear “debugging moment.”\r\n\r\nStudents should experience the feedback loop: run → error → ask Tutor → fix → success.\r\n\r\nEncourage them to explain what changed after the fix (“What did you learn from the Tutor’s response?”).",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello world!)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "additional_ai_evaluation_instructions": "The goal of this level is for students to practice using the AI Tutor to debug code. \r\nIf the student’s code runs and prints a greeting (for example “Hello world!”), it is correct even if the formatting or punctuation is not perfect. \r\nPrioritize whether the student fixed the syntax error and understood the correction, not code style details.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14T20:35:45.702+00:00\",\"changed\":[\"cloned from \\\"ai-tutor-foundations-of-ai-programming-L2-2025\\\"\"],\"cloned_from\":\"ai-tutor-foundations-of-ai-programming-L2-2025\"},{\"changed_at\":\"2025-10-14 20:36:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:48:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:56:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-19 21:57:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 01:42:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

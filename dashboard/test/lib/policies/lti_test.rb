@@ -3,6 +3,8 @@ require 'user'
 require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   setup do
     @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
@@ -23,7 +25,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
       }
     }
 
-    @user = create :user
+    @user = create(:user)
     @user.authentication_options.create(
       authentication_id: Services::Lti::AuthIdGenerator.new(@id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
@@ -48,10 +50,10 @@ class Policies::LtiTest < ActiveSupport::TestCase
     # false if student
     refute Policies::Lti.unverified_teacher?(@user)
     # true if unverified teacher
-    teacher = create :teacher
+    teacher = create(:teacher)
     assert Policies::Lti.unverified_teacher?(teacher)
     # false if verified teacher
-    teacher = create :authorized_teacher
+    teacher = create(:authorized_teacher)
     refute Policies::Lti.unverified_teacher?(teacher)
   end
 
@@ -77,12 +79,12 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     assert_equal user.email, Policies::Lti.lti_provided_email(user)
   end
 
   test 'lti_provided_email should NOT return an email given a non-LTI user' do
-    user = create :teacher
+    user = create(:teacher)
     assert_nil Policies::Lti.lti_provided_email(user)
   end
 
@@ -99,7 +101,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   def create_opted_out_user
-    user = create :student, :with_lti_auth
+    user = create(:student, :with_lti_auth)
     user.lms_landing_opted_out = false
     user.save
 
@@ -166,37 +168,11 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
   end
 
-  class FeedbackAvailabilityTest < ActiveSupport::TestCase
-    test 'returns true when user is a teacher, LTI user and created more than 2 days ago' do
-      user = create(:teacher, :with_lti_auth, created_at: 3.days.ago)
-
-      assert Policies::Lti.feedback_available?(user)
-    end
-
-    test 'returns false when user is not a teacher' do
-      user = create(:student, :with_lti_auth, created_at: 3.days.ago)
-
-      refute Policies::Lti.feedback_available?(user)
-    end
-
-    test 'returns false when user is not an LTI user' do
-      user = create(:teacher, created_at: 3.days.ago)
-
-      refute Policies::Lti.feedback_available?(user)
-    end
-
-    test 'returns false when user is created less than 2 days ago' do
-      user = create(:teacher, :with_lti_auth, created_at: 1.day.ago)
-
-      refute Policies::Lti.feedback_available?(user)
-    end
-  end
-
   class InProgressRegistrationTest < ActiveSupport::TestCase
     test 'returns true for a partial LTI registration' do
       session = {}
-      partial_lti_teacher = create :teacher
-      lti_integration = create :lti_integration
+      partial_lti_teacher = create(:teacher)
+      lti_integration = create(:lti_integration)
       fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
       auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
       ao = AuthenticationOption.new(
@@ -212,10 +188,32 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     test 'returns false for a partial non-LTI registration' do
       session = {}
-      partial_teacher = create :teacher, :with_google_authentication_option
+      partial_teacher = create(:teacher, :with_google_authentication_option)
       ::PartialRegistration.persist_attributes session, partial_teacher
 
       refute Policies::Lti.lti_registration_in_progress?(session)
+    end
+  end
+
+  describe '.restricted_user?' do
+    let(:user) {create(:user)}
+    let(:deployment) {create(:lti_deployment)}
+    let(:restricted_user?) {described_class.restricted_user?(user)}
+    let(:lti_user_identity) {create(:lti_user_identity, user: user, attach_deployments: [deployment])}
+
+    it 'returns false for normal users' do
+      _(restricted_user?).must_equal false
+    end
+
+    context 'when user is associated with a restricted LTI deployment' do
+      before do
+        lti_user_identity
+        stub_const('Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS', [deployment.id])
+      end
+
+      it 'returns true' do
+        _(restricted_user?).must_equal true
+      end
     end
   end
 end

@@ -7,7 +7,6 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -78,6 +77,7 @@ export default class AssetManager extends React.Component {
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
+      projectType: '',
     };
   }
 
@@ -103,6 +103,10 @@ export default class AssetManager extends React.Component {
       api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
     } else {
       this.setState({assets: []});
+    }
+    const projectType = api.getProjectType();
+    if (projectType) {
+      this.setState({projectType: api.getProjectType()});
     }
   }
 
@@ -148,7 +152,17 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  /**
+   * Called when user initiates an upload.
+   * @param data - Upload data from jquery.fileupload
+   */
   onUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      this.setState({statusMessage: 'Error: No file selected for upload.'});
+      return;
+    }
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
   };
@@ -175,13 +189,6 @@ export default class AssetManager extends React.Component {
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
-    firehoseClient.putRecord({
-      study: 'project-data-integrity',
-      study_group: 'v4',
-      event: 'asset-upload-error',
-      project_id: this.props.projectId,
-      data_int: status,
-    });
   };
 
   onSelectRecord = () => {
@@ -193,19 +200,6 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group:
-        this.props.assetChosen && typeof this.props.assetChosen === 'function'
-          ? 'choose-assets'
-          : 'manage-assets',
-      event: 'confirm',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: name,
-        elementId: this.props.elementId,
-      }),
-    });
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
@@ -332,6 +326,7 @@ export default class AssetManager extends React.Component {
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
           hideAudioRecording={this.props.disableAudioRecording}
+          projectType={this.state.projectType}
         />
       </div>
     );
@@ -343,7 +338,10 @@ export default class AssetManager extends React.Component {
     if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          <i
+            className="fa-solid fa-spinner fa-spin"
+            style={{fontSize: '32px'}}
+          />
         </div>
       );
     } else if (

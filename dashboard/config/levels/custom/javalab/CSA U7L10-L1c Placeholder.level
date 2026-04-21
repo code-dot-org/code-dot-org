@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-10T01:39:50.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Explore and test this program using the questions on the Testing Software activity guide.",
@@ -46,12 +50,9 @@
         "text": "import org.code.playground.*;\nimport java.io.FileNotFoundException;\n\n// Use this class to create images that cannot be clicked.\npublic class Pokemon extends ImageItem {\n\n  private int health;\n  private int attack;\n\n\tpublic Pokemon(String image, int x, int y, int width, int height, int health, int attack) throws FileNotFoundException {\n    super(image, x, y, width, height);\n    this.health = health;\n    this.attack = attack;\n  }\n\n  public int getHealth() {\n    return health;\n  }\n\n  public void setHealth(int health) {\n    this.health = health;\n  }\n\n  public int getAttack() {\n    return attack;\n  }\n\n  public void setAttack(int attack) {\n    this.attack = attack;\n  }\n\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-12-10T01:39:50.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-10T01:39:50.827+00:00\",\"changed\":[\"cloned from \\\"CSA U7L10-L1c\\\"\"],\"cloned_from\":\"CSA U7L10-L1c\"},{\"changed_at\":\"2021-12-10 01:39:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:04:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:43:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:43:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

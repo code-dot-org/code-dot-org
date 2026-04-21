@@ -29,7 +29,8 @@
     "mini_rubric": "false",
     "bubble_choice_description": "Make the corners of your images rounded.",
     "thumbnail_url": "https://images.code.org/2dc42da0de3eec242c9bc38ba5a5deca-image-1565669528582.11.45 PM.png",
-    "encrypted_examples": "EZBBWjSdsov3HGUIJxdcbaT6R8DeaS3GsVaZReEpz/krS4b369jo39xqCVWi\n7BlHrSKGR4g41+N6Z6nkTh9TGw==\n"
+    "encrypted_examples": "EZBBWjSdsov3HGUIJxdcbaT6R8DeaS3GsVaZReEpz/krS4b369jo39xqCVWi\n7BlHrSKGR4g41+N6Z6nkTh9TGw==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

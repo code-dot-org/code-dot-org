@@ -1,0 +1,189 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1c-pl_aug2025'
+title 'Jordan P. - User Profile'
+
+display_name 'Sofia Hernandez'
+bubble_choice_description 'Sofia is a 14 year old student from Miami, FL'
+thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-1755184977472.png'
+
+markdown <<MARKDOWN
+#Sofia Hernandez
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Phishing</strong> is when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers.</p>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>. Optionally, you can reference the <a href='https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?tab=t.0#heading=h.45vdw05yjci0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a> while you work through this activity.
+</p>
+
+##User Profiles
+
+#### Look through Sofia's social media posts for important information that might be used for a phishing attack..
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/1bdc76a688fdcf98b7503ddd9e2db568-image-1755120435689.png" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/26e3548ec2a4cdcca4b4f1174ed6fc39-image-1755120442548.png" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiMoves_15</h3>
+    Day 47 of waiting for the concert… at least the living room tour is free 
+    <br>
+    #BTSARMY #DanceChallenge #BTSConcert #FandomLife
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiHndz</h3>
+    Family business, fresh every day! Stop by for some sunshine in a cup!
+    <br>
+    #MiamiEats #SupportLocal #JuiceBarLove #MangoMadness
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/e9268b7813d9aaaf65859e7d3a4a9b3c-image-1755120448471.png" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/919c1bc5cf142bfc53a2ad352aba1e8b-image-1755120452779.png" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@SofiBeachBeats</h3> 
+     Miami weather = main character energy 
+     <br>
+     #BeachDay #MiamiLife #SmoothieVibes #SunAndSand
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiBeachBeats</h3>
+    Not that I’m counting or anything…
+    <br>
+    #BTSCountdown #FandomFeels
+    </td>
+  </tr>
+</table>
+
+##Phishing Attacks
+
+#### Look through Sofia's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Sofia — it’s Jada from dance club!<br><br>
+    We’re putting together a BTS medley for the showcase and need everyone’s shirt sizes.<br><br>
+    Can you send yours so we can order matching tops?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>BTS Fan Box Shipping Confirmation</strong></p>
+  <p>
+    Hi Sofia,<br><br>
+    You’re receiving this email because you signed up for BTS fan rewards through one of our partners.<br>
+    Your VIP Fan Box includes exclusive merch and early livestream access.<br><br>
+    To confirm shipping, please verify your name, birthdate, and mailing address:<br>
+    <a href="#">fanportal.bts-box.com</a><br><br>
+    If we don’t hear from you in 24 hours, your spot may be reassigned.<br><br>
+    Thanks,<br>
+    <em>The Fan Box Team</em>
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @miamijuiceguide</strong><br><br>
+    Hey Sofia! We saw your post about your family’s juice bar!<br>
+    We’re featuring small Miami businesses on our food blog this month.<br><br>
+    If you’re the owner or a family member, reply with your contact number, email, and home address so we can arrange an interview & feature you!
+  </p>
+
+</div>
+
+##Breach Reports 
+#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+#### Look through Sofia's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> School Email Portal<br>
+     <strong>Login Location:</strong> IP masked via VPN (region unknown)<br>
+     <strong>Time of Access:</strong> 6:58 a.m.<br>
+     <strong>AI Analysis:</strong> Normal login activity for this account begins after 8:15 a.m.
+  </p>
+
+  <p>Multiple student accounts were targeted in a short time frame.<br>
+     Several short sessions were initiated across different usernames.<br>
+     Sofia’s account was accessed using the password: <strong>BTS123</strong><br>
+     There was no prior login history from the device used.
+  </p>
+
+  <p><strong>AI Analysis:</strong> Password matched a set of interest-themed patterns attempted across multiple accounts.<br>
+     The attacker viewed calendar events but did not send or delete any messages.<br>
+     <strong>AI Analysis:</strong> Browser language settings during login were set to Spanish, which differs from the account default.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN

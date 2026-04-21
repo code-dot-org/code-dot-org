@@ -353,7 +353,7 @@
       ]
     ],
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T23:25:31.576+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L7-L1_pilot-2025\"}]"

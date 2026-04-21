@@ -1,0 +1,24 @@
+{
+  "name": "hoai-dance-5",
+  "script_names": [
+    "hoai-dance-5"
+  ],
+  "original_script_names": [
+    "hoai-dance-5"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai-dance-5",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

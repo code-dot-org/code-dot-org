@@ -1,20 +1,3 @@
-programming_expression_1:
-  key: "playSound-1"
-  name: "playSound"
-  category: "UI controls"
-  programming_environment: programming_environment_1
-programming_expression_2:
-  key: "stopSound"
-  name: "stopSound"
-  category: "UI controls"
-  programming_environment: programming_environment_1
-programming_expression_3:
-  key: "background"
-  name: "background"
-  category: "Drawing"
-  programming_environment: programming_environment_2
-programming_expression_4:
-  key: "playSound-2"
-  name: "playSound"
-  category: "World"
-  programming_environment: programming_environment_2
+version https://git-lfs.github.com/spec/v1
+oid sha256:e22591917380302b01f59600a5ed5c7e964238237e81cf261cc24bcda18b103b
+size 572

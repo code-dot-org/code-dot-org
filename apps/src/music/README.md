@@ -8,7 +8,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 
 **Music Lab** is a powerful lab for creating music using code. It includes the following features:
 
-- Uses Google Blockly for editing user code.
+- Uses Blockly for editing user code.
 - The user code generates a timeline of audio events, which is rendered.
 - Uses WebAudio to play back the audio events.
 - The rendered timeline of audio events reflects code changes instantly.
@@ -100,4 +100,4 @@ The contents of a user's project are represented as various types corresponding 
 - There are a few view components rendered by custom Blockly fields. These include:
   - [SoundsPanel](./views/SoundsPanel.tsx) which represents the sound picker UI.
   - [ChordPanel](./views/ChordPanel.tsx) which represents the "play notes" keyboard/chord selection UI.
-  - [PatternPanel](./views/PatternPanel.tsx) which represents the "play drums" grid drum editor.
+  - [InstrumentGrid](./views/InstrumentGrid/index.tsx) which represents the "play tunes" and "play drums" grid editor.

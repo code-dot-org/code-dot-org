@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 require_relative '../../../lib/cdo/redshift'
 require_relative '../../../dashboard/config/environment'
 require_relative './translation_service'
@@ -22,7 +24,7 @@ module I18n
       # @param [TranslationService] translation_service Get information about translations.
       def update_translation_status(
         day_count = 7,
-        locales = PegasusLanguages.get_locale.map {|lang| lang[:locale_s]},
+        locales = Cdo::I18n.available_languages.map {|lang| lang[:locale_s]},
         current_time = Time.now.utc.strftime("%Y-%m-%d %H:%M:%S"),
         redshift_client = RedshiftClient.instance,
         translation_service = TranslationService.new

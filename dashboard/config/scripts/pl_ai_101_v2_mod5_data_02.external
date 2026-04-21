@@ -1,0 +1,33 @@
+name 'pl-ai-101-V2-mod5-data-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Evaluating AI Tools for Classroom Use
+
+#### Not all AI tools are designed for education. Before using any AI tool with students—or as part of your teaching practice—it’s important to evaluate whether it meets safety, privacy, and instructional needs.
+
+#### **Look for an Educational Focus** Start by determining whether the tool is specifically designed for use in schools. Tools built for education are more likely to include safeguards, teacher controls, and alignment to classroom needs.
+
+#### **Review Documentation and Support Materials** Explore the tool’s help articles, guides, or support pages. These resources often explain:
+* #### How the tool is intended to be used
+* #### What safety features are included
+* #### How data is handled
+
+#### Clear and transparent documentation is a good sign that a tool is designed responsibly.
+
+#### **Examine the Privacy Policy** Review the tool’s privacy policy carefully, especially for:
+* #### References to educational use
+* #### Compliance with laws such as FERPA, COPPA, or other regional regulations
+* #### How user data is collected, stored, and used
+
+#### If this information is unclear or missing, the tool may not be appropriate for school use.
+
+#### **Adjust Privacy Settings** Before using an AI tool, review and configure its settings to maximize data protection. This may include:
+* #### Limiting data sharing
+* #### Turning off optional features
+* #### Restricting access where possible
+* #### Follow Local Policies and Guidance
+
+#### Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved tools, and any guidance provided by your administration.
+MARKDOWN

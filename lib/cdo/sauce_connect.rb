@@ -9,15 +9,15 @@ module Cdo
     SC_START_TIMEOUT_S = 120
     SC_START_MESSAGE = "you may start your tests"
     SC_STDOUT_PREFIX = "Sauce Connect Proxy"
+    LOG_FILE_PATH = deploy_dir('log/sc.log')
 
     @pid = nil
 
     class << self
       # Starts the Sauce Connect Proxy, which allows tunneling connections from our local server to Sauce Labs
-      # This method blocks until sc prints the "you may start your tests" message to log/sc.log
-      #
-      # @param [Boolean] daemonize - if true, sc will continue running in the bg even when ruby exits
-      def start_sauce_connect(daemonize: false)
+      # This method blocks until sc prints the "you may start your tests" message to log/sc.log.
+      # sc will continue running in the bg even when ruby exits.
+      def start_sauce_connect(dump_logs: false, verbose: false)
         log_file = open_log_file
 
         # Verify that required parameters are set in locals.yml
@@ -40,6 +40,8 @@ module Cdo
           "--tunnel-name", CDO.saucelabs_tunnel_name,
         ]
 
+        cmd += ["--log-level", "info"] if verbose
+
         env = {
           "SAUCE_USERNAME" => CDO.saucelabs_username,
           "SAUCE_ACCESS_KEY" => CDO.saucelabs_authkey
@@ -52,9 +54,9 @@ module Cdo
         tests_started, log_lines = tests_started?(log_file)
 
         if tests_started == :success
-          log "SUCCESS, sc is running#{" in the background, you can stop it with `killall sc`" if daemonize}"
+          log "SUCCESS, sc is running in the background, you can stop it with `killall sc`"
 
-          at_exit {stop_sauce_connect} unless daemonize
+          at_exit {dump_log_file} if dump_logs
 
           return @pid
         else
@@ -79,9 +81,13 @@ module Cdo
       end
 
       private def open_log_file
-        log_file_path = deploy_dir('log/sc.log')
-        FileUtils.mkdir_p File.dirname(log_file_path) # create log dir if it doesn't exist
-        File.open(log_file_path, 'a+') # open log file, create if it doesn't exist, seek to the end
+        FileUtils.mkdir_p File.dirname(LOG_FILE_PATH) # create log dir if it doesn't exist
+        File.open(LOG_FILE_PATH, 'a+') # open log file, create if it doesn't exist, seek to the end
+      end
+
+      # make log file contents visible in drone output
+      private def dump_log_file
+        puts File.read(LOG_FILE_PATH)
       end
 
       private def process_exited?
@@ -98,7 +104,7 @@ module Cdo
             sleep 0.1
             while (line = log_file.gets)
               lines << line
-              if line.strip.end_with?(SC_START_MESSAGE)
+              if line.strip.include?(SC_START_MESSAGE)
                 return :success, lines
               end
             end

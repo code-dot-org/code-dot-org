@@ -189,6 +189,9 @@ class ProjectsController < ApplicationController
     },
     weblab2: {
       name: 'New Web Lab 2 Project',
+    },
+    music_dance_ai: {
+      name: "New Music Dance AI Project"
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
@@ -249,7 +252,7 @@ class ProjectsController < ApplicationController
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
-      channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      channel = get_project_channel_id(project_details[:storage_id], project_details[:id])
       status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
@@ -316,10 +319,29 @@ class ProjectsController < ApplicationController
 
   def create_new
     return if redirect_under_13_without_tos_teacher(@level)
+    project_data = initial_data
+
+    # Bubble Choice standalone project types allow multiple sub-projects to be associated with one parent project.
+    # Create new projects for each sublevel
+    if @level.is_a?(BubbleChoice)
+      project_data[:subprojects] = @level.sublevels.map do |sublevel|
+        {
+          level_id: sublevel.id,
+          channel_id: ChannelToken.create_channel(
+            request.ip,
+            Projects.new(get_storage_id),
+            data: {hidden: true},
+            level: sublevel.host_level,
+            standalone: false
+          )
+        }
+      end
+    end
+
     channel = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
-      data: initial_data,
+      data: project_data,
       type: params[:key]
     )
     redirect_to(
@@ -339,7 +361,6 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
-    script_level_id = params[:script_level_id]
     level = Level.find(params[:level_id])
     user_id = params[:user_id]
 
@@ -348,17 +369,8 @@ class ProjectsController < ApplicationController
 
     # If viewing another user's work, ensure that we have permission.
     if user_id
-      # If a script level ID was provided, ensure it matches the level ID.
-      if script_level_id
-        script_level = ScriptLevel.cache_find(script_level_id.to_i)
-        same_level = script_level.oldest_active_level.id == level.id
-        is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level.id, parent_level_id: script_level.oldest_active_level.id)
-        return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
-      else
-        script_level = level.script_levels.find_by_script_id(script_id)
-      end
       user = User.find(user_id)
-      unless can?(:view_as_user, script_level, user)
+      unless user&.student_of?(current_user)
         return render(status: :forbidden, json: {error: "Access denied."})
       end
 
@@ -451,12 +463,12 @@ class ProjectsController < ApplicationController
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags,
-      blocklyVersion: params[:blocklyVersion]
+      disallowed_html_attrs: disallowed_html_attrs
     )
 
     @body_classes = @level.properties['background']
 
-    if @level.is_a?(Pythonlab)
+    if @level.uses_theme_preference?
       user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
       theme_preference = user_theme['global'] if user_theme
       if theme_preference
@@ -474,7 +486,7 @@ class ProjectsController < ApplicationController
     end
 
     begin
-      _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+      _, project_id = get_storage_id_and_project_id(params[:channel_id]) if params[:channel_id]
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       # continue as normal, as we only use this value for stats.
     end
@@ -507,32 +519,48 @@ class ProjectsController < ApplicationController
   def remix
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
-    begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      return head :bad_request
-    end
     project_type = params[:key]
     return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
 
-    new_channel_id = ChannelToken.create_channel(
-      request.ip,
-      Projects.new(get_storage_id),
-      src: src_channel_id,
-      type: project_type,
-      remix_parent_id: remix_parent_id,
-    )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
-    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
-    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
-    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
+    new_channel_id = remix_project(src_channel_id, project_type)
+
+    project = Projects.new(get_storage_id)
+    src_project = project.get(src_channel_id)
+
+    if src_project["subprojects"]
+      if @level.is_a?(BubbleChoice)
+        # Only process a reasonable number of subprojects.
+        sub_projects = src_project["subprojects"].first(SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
+        # Remix each subproject and update the parent channel.
+        new_subprojects = sub_projects.map do |entry|
+          subproject_src_channel_id = entry['channel_id']
+          subproject = project.get(subproject_src_channel_id)
+          subproject_type = subproject["projectType"]
+          return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
+          new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
+          {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
+        end
+        value = project.get(new_channel_id)
+        project.update(
+          new_channel_id,
+          value.merge("subprojects" => new_subprojects),
+          request.ip
+        )
+      else
+        # Remove subprojects entirely for non-music_dance_ai project types.
+        value = project.get(new_channel_id)
+        value.delete("subprojects")
+        project.update(new_channel_id, value, request.ip)
+      end
+    end
     redirect_to action: 'edit', channel_id: new_channel_id
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    return head :bad_request
   end
 
   # GET /projects/:project_type/:channel_id/submission_status
   def submission_status
-    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    _, project_id = get_storage_id_and_project_id(params[:channel_id])
     project = Project.find_by(id: project_id)
     begin
       authorize! :submission_status, project
@@ -549,7 +577,7 @@ class ProjectsController < ApplicationController
     channel_id = params[:channel_id]
     project_type = params[:project_type]
     return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
-    _, project_id = storage_decrypt_channel_id(channel_id)
+    _, project_id = get_storage_id_and_project_id(channel_id)
     project = Project.find_by(id: project_id)
     begin
       authorize! :submit, project
@@ -564,18 +592,9 @@ class ProjectsController < ApplicationController
     end
     # Publish the project, i.e., make it public.
     begin
-      storage_id, _ = storage_decrypt_channel_id(channel_id)
+      storage_id, _ = get_storage_id_and_project_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
-    rescue Projects::PublishError => exception
-      Honeybadger.notify(
-        exception.message,
-        context: {
-          message: "Project publish failed - user unexpectedly bypassed submission_status restriction in the share dialog and project submit authorization restrictions and attempted to publish project."
-        }
-      )
-      return render(status: :forbidden, json: {error: exception.message})
     end
-    # TODO: Store submission_description in our database.
     # Send ZenDesk ticket with user/project info and submission description.
     send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end
@@ -599,7 +618,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+      _, remix_parent_id = get_storage_id_and_project_id(src_channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
@@ -648,7 +667,7 @@ class ProjectsController < ApplicationController
     end
     project_info = {}
     owner_info = {}
-    owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)
+    owner_info['storage_id'], project_info['id'] = get_storage_id_and_project_id(src_channel_id)
     project_info['sources_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
     # For legacy labs, other links are displayed.
     # App Lab includes assets, Gamelab includes animations, and Weblab includes files.
@@ -800,6 +819,29 @@ class ProjectsController < ApplicationController
       )
       raise ZendeskError.new(response.code, response.body) unless response.success?
     end
+  end
+
+  # Creates a remix of the given project. Creates a new channel and copies over all project data.
+  private def remix_project(src_channel_id, project_type, is_subproject: false)
+    _, remix_parent_id = get_storage_id_and_project_id(src_channel_id)
+    project = Projects.new(get_storage_id)
+    new_channel_id = ChannelToken.create_channel(
+      request.ip,
+      project,
+      src: src_channel_id,
+      type: project_type,
+      remix_parent_id: remix_parent_id,
+      standalone: !is_subproject,
+      hidden: is_subproject
+    )
+
+    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
+    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
+    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
+
+    new_channel_id
   end
 end
 

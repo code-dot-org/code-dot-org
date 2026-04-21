@@ -1,0 +1,6 @@
+{
+  "key": "musiclab-sequencing-basic",
+  "concept": "musiclab_sequencing",
+  "description": "Play sounds together",
+  "evaluation_criteria": "{\"all_complete_correct\":\"The workspace contains multiple play_together blocks with multiple play blocks. Each play block has a unique sound selected.\\n\\nExample:\\n```\\nplay_together\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/bass_track_1\\\"\\nplay_together\\n  play \\\"pack/drums_track_2\\\"\\n  play \\\"pack/bass_track_2\\\"\\n```\",\"partial_complete_correct\":\"The workspace contains exactly one play_together block with multiple play blocks. Each play block has a unique sound selected.\\n\\nExample:\\n```\\nplay_together\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/bass_track_1\\\"\\n```\",\"incomplete_incorrect\":\"The workspace contains at least one play_together block with multiple play blocks, but some blocks have duplicated sounds selected\\n\\nExample:\\n```\\nplay_together\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/drums_track_1\\\"\\n```}"
+}

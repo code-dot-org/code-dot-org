@@ -46,6 +46,12 @@ en:
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
             lockout_flow: "cannot be updated because you need parent or guardian permission first."
+        user/facilitator_info:
+          attributes:
+            bio:
+              has_profanity: contains profanity
+            user:
+              not_facilitator: must have the facilitator permission
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -85,7 +91,9 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
-
+      user/facilitator_info:
+        user: User
+        bio: Biography
   beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
@@ -149,6 +157,7 @@ en:
     windowslive: 'Microsoft'
     microsoft_v2_auth: 'Microsoft'
     clever: 'Clever'
+    classlink: 'ClassLink'
     powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
     migration_success: 'Success! You have updated to our new account experience.'
@@ -164,6 +173,9 @@ en:
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent."
+    token_expired: >
+      Your sign-in with %{provider} has expired.
+      Please sign out of Code.org and sign back in using your %{provider} account to continue.
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
@@ -273,6 +285,7 @@ en:
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
     login: 'Sign in'
+    signing_in: 'Signing in...'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
     student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
@@ -302,6 +315,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  inactive_user_purge_mailer:
+    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
@@ -431,6 +446,7 @@ en:
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
       videos: "Videos"
+      hour_of_ai: Hour of AI
       hour_of_code: "Hour of Code"
       csf: "CS Fundamentals"
 
@@ -467,10 +483,12 @@ en:
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Game Lab'
+      game_design: 'Sprite Lab (Game Design)'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'Infinity'
+      javalab: 'Java Lab'
       makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Adventurer'
       minecraft_aquatic: 'Minecraft Aquatic'
@@ -478,6 +496,7 @@ en:
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       music: 'Music Lab'
+      music_dance_ai: 'Mix & Move with AI'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
@@ -492,6 +511,7 @@ en:
       thebadguys: 'The Bad Guys'
       loading: 'Loading...'
       weblab: 'Web Lab'
+      weblab2: 'Web Lab (new)'
       view_all: 'View all projects...'
 
     popup:
@@ -1245,10 +1265,13 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        albania: 'Albania'
         antigua_and_barbuda: 'Antigua and Barbuda'
+        austria: 'Austria'
         australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        bolivia: 'Bolivia'
         botswana: 'Botswana'
         brazil: 'Brazil'
         cambodia: 'Cambodia'
@@ -1284,9 +1307,12 @@ en:
         sri_lanka: 'Sri Lanka'
         thailand: 'Thailand'
         trinidad_and_tobago: 'Trinidad and Tobago'
+        turkey: 'Turkey'
+        united_kingdom: 'United Kingdom'
         uruguay: 'Uruguay'
         uzbekistan: 'Uzbekistan'
         vietnam: 'Vietnam'
+        venezuela: 'Venezuela'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1440,6 +1466,11 @@ en:
     project_type: "project type"
     button: "View alternative courses"
     projects_button: "Go to Projects"
+    course1_retired: We’re sorry! Course 1 has been retired. We recommend [Course A](%{coursea_url}) or [Pre-reader Express](%{pre_reader_express_url}) as a replacement.
+    course2_retired: We’re sorry! Course 2 has been retired. We recommend [Course C](%{coursec_url}) as a replacement, or [Course D](%{course_d_url}) for older/more experienced students.
+    course3_retired: We’re sorry! Course 3 has been retired. We recommend [Course E](%{course_e_url}) as a replacement, or [Course F](%{course_f_url}) for older/more experienced students.
+    course4_retired: We’re sorry! Course 4 has been retired. We recommend [Course F](%{course_f_url}) as a replacement.
+    accelerated_course_retired: We’re sorry! The Accelerated Course has been retired. We recommend [Express Course](%{express_course_url}) as a replacement.
   hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"
@@ -1469,6 +1500,7 @@ en:
       launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      linking_page_description_restricted: "Choose the sign-in method allowed by your school"
       sign_in_and_connect: "Sign in and connect"
       successfully_linked: "You have successfully linked your Code.org account!"
       successfully_unlinked: "You have successfully unlinked your Code.org account."
@@ -1535,3 +1567,6 @@ en:
   global_edition:
     regions:
       fa: Farsi
+  roster:
+    sync:
+      has_started: Sync started. It will complete in a few minutes

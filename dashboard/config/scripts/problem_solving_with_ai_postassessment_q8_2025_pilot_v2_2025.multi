@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q8_2025-pilot_v2-2025'
+
+question 'A student asks an AI chatbot for bike helmet laws in their city, and the AI generates a law that doesn\'t actually exist. What is the MOST likely impact of this hallucination?'
+
+wrong 'The student realizes AI is unreliable and stops using it for research.'
+wrong 'The AI automatically corrects itself when new data becomes available.'
+wrong 'The AI prevents misinformation by only sharing laws that it is 100% sure are correct.'
+right 'The student believes the false law and shares it on social media, spreading misinformation.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7: AI's Wild Imagination
+MARKDOWN

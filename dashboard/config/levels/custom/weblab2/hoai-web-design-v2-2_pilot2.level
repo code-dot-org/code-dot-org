@@ -1,0 +1,87 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-06T18:24:16.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Web Lab\r\n\r\nThis is Web Lab - the tool you'll use to build websites. It includes AI Tutor, a built-in AI assistant you can chat with below these instructions.\r\n\r\nThis level is all about exploring Web Lab and having your first interaction with AI Tutor, referencing the otter webpage that's already been built for you.\r\n\r\n**Do This:**\r\n1. In the center panel, find the example prompts. Highlight one, then tap **\"Add to AI Tutor\"** in the menu that appears.\r\n2. In the chat box below, tell AI Tutor to make that change to the webpage. For example, say \"Make this update to the otter website\"\r\n3. Once AI Tutor finishes, check the preview on the far right. If it looks good, click **\"Accept\"** to keep the change and write a short message summarizing what AI tutor did.\r\n\r\n> **Tip:** Click **\"Hide Instructions\"** to give more room to AI Tutor.\r\n\r\nOnce AI tutor has made a change to the webpage, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript.",
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- You should generate both HTML and CSS at the same time\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works.\n- If the student has already made at least one accepted change (i.e., a status message shows 'You accepted AI Tutor's changes'), then also include the following in your response: 'Great job! You've already made a change to the page. Go ahead and click Continue to move on!'",
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT link a style.css file\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works.\n- If the student has already made at least one accepted change (i.e., a status message shows 'You accepted AI Tutor's changes'), then also include the following in your response: 'Great job! You've already made a change to the page. Go ahead and click Continue to move on!'"
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>All About Otters!</title>\n    <style>\n        body {\n            font-family: 'Open Sans', sans-serif;\n            color: #333333;\n            margin: 0;\n            line-height: 1.6;\n        }\n\n        header, footer {\n            background-color: #f0f8ff;\n            padding: 1rem;\n            text-align: center;\n            border: 2px solid #a7d9f7;\n            color: #005f99;\n        }\n\n        main {\n            padding: 1rem;\n            max-width: 960px;\n            margin: 0 auto;\n        }\n\n        section {\n            margin-bottom: 1rem;\n            padding: 1rem;\n            border-radius: 8px;\n        }\n\n        #otter-facts {\n            background-color: #fff5e1;\n            border: 3px solid #ffd700;\n            font-family: 'Lato', sans-serif;\n            color: #8b4513;\n        }\n\n        #otter-swimmers {\n            background-color: #e0f8e0;\n            border: 3px solid #8bc34a;\n            font-family: 'Georgia', serif;\n            color: #33691e;\n        }\n\n        #otter-locations {\n            background-color: #ffe0b2;\n            border: 3px solid #ff9800;\n            font-family: 'Merriweather', serif;\n            color: #e65100;\n        }\n\n        #otter-predators {\n            background-color: #ffcccc;\n            border-color: #cc0000;\n            font-family: 'Verdana', sans-serif;\n            color: #660000;\n        }\n\n        .two-column-layout {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 1rem;\n        }\n\n        .two-column-layout section {\n            flex: 1;\n            min-width: 300px;\n        }\n\n        img {\n            max-width: 100%;\n            height: auto;\n            border-radius: 15px;\n            border: 5px solid #a7d9f7;\n        }\n\n        h1 {\n            text-decoration: underline;\n        }\n\n        #image-credit {\n            font-size: 10px;\n            color: #6699bb;\n        }\n\n        hr#otter-divider {\n            border: 3px dashed #a7d9f7;\n            background-color: transparent;\n            color: #a7d9f7;\n        }\n\n    </style>\n</head>\n\n<body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n    </header>\n\n    <main>\n      <div class=\"two-column-layout\">\n        <section id=\"otter-facts\">\n          <h2>Cool Otter Facts!</h2>\n          <ul>\n            <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n            <li>They can also hold their breath for a loooong time underwater!</li>\n          </ul>\n        </section>\n\n        <section id=\"otter-swimmers\">\n          <h2>Otterly Amazing Swimmers!</h2>\n          <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n          <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n        </section>\n      </div>\n\n      <hr id=\"otter-divider\">\n\n      <section id=\"otter-locations\">\n        <h2>Where in the World are Otters?</h2>\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n\n</body>\n\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "otter.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-2/uuid/de7dca6a-8250-448e-91ba-3507de49029a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "vision.md",
+          "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI'm making this website because: I love otters and I want everyone to know",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "example-prompts.md",
+          "contents": "Choose one of the examples below to highlight, then select \"Add to AI Tutor\" to add it to the AI Tutor textbox.\n\nThen tell AI tutor to complete this task.\n\n- Add a new section to the webpage about what foods otters eat\n\nOR\n\n- Change the background color to an orange and red gradient\n\nOR\n\n- I downloaded an image called \"otter.jpg\" and uploaded it to my project. Add the image to the webpage with a credit \"From Michael Baird Photography\".",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5"
+      ]
+    },
+    "product_tours": [
+      "resource_panel_onboarding"
+    ],
+    "name_suffix": "_pilot2",
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** This level is about getting used to the Web Lab editor, and using a common \"Add to AI tutor\" workflow that continues throughout this progression. Students should leave knowing how to highlight code, send it to AI Tutor, and make a decision about the output.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What did you highlight and send to AI Tutor? What did it do?\"  \r\n- \"Did you accept the change? Why or why not?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may click Accept without looking at the preview \\- redirect them: \"before you accept, check the preview. Does it look the way you expected?\"  \r\n- Students may not know what to write in the chat after highlighting \\- suggest they describe what they want to happen: \"just tell AI Tutor to make the change you highlighted\"  \r\n- Students may try to make many changes at once or continue to iterate on this page \\- encourage them to just make one change and continue",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:16.565+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-2\"},{\"changed_at\":\"2026-04-06 22:27:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:27:48 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:28:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:28:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:31:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:32:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:33:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-06 22:38:08 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 02:47:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:38:41 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 13:37:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 13:39:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-13 02:55:51 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 09:32:44 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 20:45:46 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

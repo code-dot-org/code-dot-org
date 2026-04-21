@@ -80,6 +80,7 @@ class ScriptLevel < ApplicationRecord
     challenge
     level_keys
     instructor_in_training
+    show_ai_analysis
   )
 
   def script
@@ -197,7 +198,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
       end
-    elsif bubble_choice? && !bubble_choice_parent
+    elsif bubble_choice? && !bubble_choice_parent && level.try(:navigation_type) != SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:NEXT_LEVEL]
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus
@@ -398,7 +399,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       if bubble_choice?
-        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
+        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end
 
       if for_edit
@@ -410,6 +411,7 @@ class ScriptLevel < ApplicationRecord
         summary[:assessment] = !!assessment
         summary[:challenge] = !!challenge
         summary[:instructor_in_training] = !!instructor_in_training
+        summary[:show_ai_analysis] = !!show_ai_analysis
       end
 
       if include_prev_next
@@ -587,6 +589,8 @@ class ScriptLevel < ApplicationRecord
     if user_level
       teacher_panel_summary[:userLevelId] = user_level.id
       teacher_panel_summary[:updatedAt] = user_level.updated_at
+      teacher_panel_summary[:attempts] = user_level.attempts
+      teacher_panel_summary[:timeSpent] = user_level.time_spent
     end
 
     teacher_panel_summary
@@ -734,7 +738,9 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions.
+    # This should not be used for modular script levels, as it will always return the exemplar link for the
+    # "home course". This can lead to confusing permissions issues.
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -747,7 +753,7 @@ class ScriptLevel < ApplicationRecord
       else
         # Otherwise, exemplar link should look like
         # csa1/lessons/2/levels/1?exemplar=true
-        path = build_script_level_path(self)
+        path = build_script_level_path(self, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
@@ -778,7 +784,8 @@ class ScriptLevel < ApplicationRecord
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
       unless ScriptConfig.allows_public_caching_for_script(script.name)
-        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {})))
+        sublevel_position = (oldest_active_level.is_a? BubbleChoice) ? oldest_active_level.sublevel_position(level) : nil
+        level_example_links.push(build_script_level_url(self, **{sublevel_position: sublevel_position, solution: true}.merge(section_id ? {section_id: section_id} : {}), unit_group_unit: unit_group_unit))
       end
     end
 
@@ -787,25 +794,6 @@ class ScriptLevel < ApplicationRecord
 
   def level_deprecated?
     level&.deprecated?
-  end
-
-  # WARNING: Do NOT reuse this trashy little method. It is fragile English-only string comparison
-  # written for a very specific use case - logging analytics for the CSA '24-'25 AI Tutor pilot,
-  # in which the level progression naming conventions follow a very specific pattern aligned
-  # with the PRIMM pedagogical approach.
-  #
-  # If the concept of a "progression type" becomes more general, or you're tempted to use this method,
-  # consider a more robust solution such as creating a new property that can be designated by a
-  # Levelbuilder, similar to how we designate assessment levels.
-  def primm_progression_type
-    progression_name = properties["progression"]
-    substring = progression_name.split(":").first if progression_name
-    return "predict_and_run" if substring&.include?("Predict and Run")
-    return "investigate_and_modify" if substring&.include?("Investigate and Modify")
-    return "practice" if substring&.include?("Practice")
-    return "project" if substring&.include?("Project")
-    return "assessment" if substring&.include?("Check for Understanding")
-    return "other"
   end
 
   private def kind

@@ -20,7 +20,7 @@ class SecretsConfigTest < Minitest::Test
   def test_load
     secrets_file = CDO.dir('config/secrets.yml.template')
     secrets = Cdo::SecretsConfig.load(secrets_file)
-    assert_equal '123ABC', secrets['staging/cdo/acme_api_key']
+    assert_equal '456DEF', secrets['staging/cdo/acme_api_key']
     complex_secret = secrets['development/cdo/wile_e_coyote_credentials']
     assert_equal 'dev@code.org', complex_secret["username"]
     assert_equal 'Q3rt^', complex_secret["password"]

@@ -5,17 +5,15 @@
     "login_required": false,
     "properties": {
       "curriculum_path": "my_curriculum_path",
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "1999"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "test-serialize-seeding-json-family",
+    "family_name": null,
     "hide_within_course": false,
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
@@ -1057,9 +1055,13 @@
       }
     }
   ],
+  "jit_pl_concepts_lessons": [
+
+  ],
   "rubrics": [
     {
       "level_name": "test-serialize-seeding-json_blockly_8",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
@@ -1068,6 +1070,7 @@
     },
     {
       "level_name": "test-serialize-seeding-json_blockly_16",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",

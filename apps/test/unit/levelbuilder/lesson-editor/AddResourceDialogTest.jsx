@@ -1,7 +1,9 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import AddResourceDialog from '@cdo/apps/levelbuilder/lesson-editor/AddResourceDialog';
+import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
 
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;
@@ -21,7 +23,7 @@ describe('AddResourceDialog', () => {
     const wrapper = shallow(<AddResourceDialog {...defaultProps} />);
     expect(wrapper.contains('Add Resource')).toBe(true);
     expect(wrapper.find('input').length).toBe(6);
-    expect(wrapper.find('select').length).toBe(2);
+    expect(wrapper.find('select').length).toBe(4);
   });
 
   it('has an extra input with course version id if one is provided', () => {
@@ -30,7 +32,7 @@ describe('AddResourceDialog', () => {
     );
     expect(wrapper.contains('Add Resource')).toBe(true);
     expect(wrapper.find('input').length).toBe(7);
-    expect(wrapper.find('select').length).toBe(2);
+    expect(wrapper.find('select').length).toBe(4);
   });
 
   it('validates key, name, and url on submit', () => {
@@ -41,19 +43,22 @@ describe('AddResourceDialog', () => {
     expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
-  it('saves if input is valid', () => {
+  it('saves if input is valid', async () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     const instance = wrapper.instance();
-    instance.setState({
-      name: 'my resource name',
-      url: 'code.org',
-    });
+
     const saveResourceSpy = jest
       .spyOn(instance, 'saveResource')
       .mockClear()
       .mockImplementation();
-    instance.forceUpdate();
-    wrapper.update();
+
+    await act(() => {
+      instance.setState({
+        name: 'my resource name',
+        url: 'code.org',
+      });
+    });
+
     wrapper.find('#submit-button').simulate('submit');
     expect(saveResourceSpy).toHaveBeenCalledTimes(1);
   });
@@ -68,6 +73,9 @@ describe('AddResourceDialog', () => {
       downloadUrl: '',
       type: 'Handout',
       audience: 'Teacher',
+      embeddabilityType:
+        ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value,
+      curriculumCategory: '',
     };
     const wrapper = mount(
       <AddResourceDialog
@@ -82,5 +90,9 @@ describe('AddResourceDialog', () => {
     expect(wrapper.find('[name="includeInPdf"]').props().checked).toBe(true);
     expect(wrapper.find('[name="type"]').props().value).toBe('Handout');
     expect(wrapper.find('[name="audience"]').props().value).toBe('Teacher');
+    expect(wrapper.find('[name="embeddabilityType"]').props().value).toBe(
+      ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value
+    );
+    expect(wrapper.find('[name="curriculumCategory"]').props().value).toBe('');
   });
 });

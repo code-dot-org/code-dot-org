@@ -1,16 +1,13 @@
-import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
@@ -74,7 +71,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
 
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
-      <BodyTwoText>
+      <Typography variant="body2" gutterBottom>
         <strong>{`${i18n.reasoning()}: `}</strong>
         {proficiencyCount >= proficiencyStudentGoal
           ? '75% or more of the students demonstrated proficiency in their responses. '
@@ -87,7 +84,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         >
           {i18n.viewDetailedAnalysis()}
         </Link>
-      </BodyTwoText>
+      </Typography>
     </>
   );
 
@@ -100,22 +97,41 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ).length;
   };
 
+  const countEvaluationsByReason = (
+    evaluations: StudentWorkEvaluation[],
+    types: StudentWorkEvaluation['aiReasoning'][]
+  ): number => {
+    return evaluations.filter(evaluation =>
+      types.includes(evaluation.aiReasoning)
+    ).length;
+  };
+
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.ALL_COMPLETE_CORRECT,
+        StudentWorkEvaluationStatus.PARTIAL_COMPLETE_CORRECT,
+      ])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.INCOMPLETE_INCORRECT,
+      ])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
+    ? countEvaluationsByReason(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.STUDENT_PII,
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY,
+      ])
     : 0;
 
   // A student can have "no response" if they have not started the level yet OR
   // if they have submitted a response but it is empty.
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt']) +
+    ? countEvaluationsByReason(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.NO_ATTEMPT,
+      ]) +
       (totalNumberOfStudents - studentWorkEvaluations.length)
     : 0;
 
@@ -140,9 +156,13 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         <div className={styles.summaryBoxHeader}>
           {aiSummaryTag(proficientStudentCount)}
           <div className={styles.feedbackQuestion}>
-            <BodyThreeText className={styles.feedbackText}>
+            <Typography
+              className={styles.feedbackText}
+              variant="body3"
+              gutterBottom
+            >
               {i18n.aiFeedbackQuestion()}
-            </BodyThreeText>
+            </Typography>
             <FeedbackToggle
               onThumbsUpClick={() => {
                 handleIconClick(true);
@@ -150,7 +170,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
               onThumbsDownClick={() => {
                 handleIconClick(false);
               }}
-              size="xs"
+              size="extraSmall"
               color="gray"
             />
           </div>
@@ -171,16 +191,18 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     <div className={styles.aiSummaryContainer}>
       <div className={styles.leftSide}>
         <img src={aiBot} alt="Ai Bot" className={styles.botImage} />
-        <Button
-          text={i18n.evaluateStudentResponses()}
-          onClick={aiEvaluationHandler}
-          size={'s'}
-          color={'gray'}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          loading={isPending}
           disabled={disabled}
-          type="secondary"
-          isPending={isPending}
           className={styles.evaluateButton}
-        />
+          onClick={aiEvaluationHandler}
+          type="button"
+        >
+          {i18n.evaluateStudentResponses()}
+        </MuiButton>
       </div>
       <div className={styles.rightSide}>
         {showEvaluationSummary && aiSummaryContent()}

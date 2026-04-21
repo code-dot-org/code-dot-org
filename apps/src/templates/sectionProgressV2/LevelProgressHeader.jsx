@@ -4,9 +4,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import {toggleExpandedChoiceLevel} from '../sectionProgress/sectionProgressRedux';
 
 import {getLevelColumnHeaderId} from './LevelDataCell';
+import {toggleExpandedChoiceLevel} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 

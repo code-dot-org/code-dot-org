@@ -1,7 +1,6 @@
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */
-import codemirror from 'codemirror';
 import $ from 'jquery';
 import _ from 'lodash';
 
@@ -9,6 +8,8 @@ import {
   getProjectXml,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
@@ -29,7 +30,7 @@ function initPage() {
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeCodeMirror: require('@cdo/apps/code-studio/initializeCodeMirror'),
+  initializeCodeMirror6: initializeCodeMirror6,
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
   acapela: require('@cdo/apps/code-studio/acapela'),
@@ -74,11 +75,8 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
     return;
   }
 
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
-
-// TODO: Remove when global `CodeMirror` is no longer required.
-window.CodeMirror = codemirror;
 
 // TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;

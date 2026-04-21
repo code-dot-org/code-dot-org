@@ -1,0 +1,74 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:34.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/4d5fcbe2fe7860394d778400df4537e3-Panel Levels Slide Deck (1).png",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-792cbca6-98d6-48e9-b16f-c71ec6499310"
+      },
+      {
+        "text": "### What Are Formulas?\nRather than do calculations by hand, Google Sheets has countless built-in formulas we can use to analyze the data.",
+        "imageUrl": "https://images.code.org/f9d078486567002533d5118009c047e2-formulas.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Sum\nWhen we want the **sum total** of elements in a given range we can use the `=SUM` function.\n",
+        "imageUrl": "https://images.code.org/5a868969fa2d4d92dcaab25b0bd74129-Sum.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### How to use =SUM\nLet's say we want to find the total number of inversions in Ohio:\n- Sort the data by state\n- Use the sum function and specify the range `=SUM(N78:N88)`\n- Press **Enter** to escape out of the cell and run your formula",
+        "imageUrl": "https://images.code.org/101767d502fd79601b1f3cc503153eb1-sumohio.gif",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-4342e1cd-90f7-4f8e-9415-72e83c812088",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Another Way to Calculate Sum\nWe can also highlight those cells and use the \"Sum\" feature at the bottom right",
+        "imageUrl": "https://images.code.org/0df392455504146ed33188fe0144b114-sumbottom.gif",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-80896949-e025-41a3-bff3-276a5979305d",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Count If\nWhen we want to **count** the number of elements that fit a specific criteria we can use the `=COUNTIF` function. \n\nThis is how to set up the formula:\n `=COUNTIF(range, criteria)`.\n\n",
+        "imageUrl": "https://images.code.org/60b5410f117867fe9d268c248b7cfa70-COUNTIFcali.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### How to use =COUNTIF\nWe want to know how many roller coasters go faster than 60 mph:\n- First, specify the range: `=COUNTIF(D2:D158, criteria)`\n- Then, specific the criteria of greater than 60 mph: `=COUNTIF(D2:D158, \">60\")`\n- Press **Enter** to escape out of the cell and run your formula",
+        "imageUrl": "https://images.code.org/19741d6e8179fa4878302e782af91c2c-greaterthan60.gif",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-23e257fa-ba98-4eaf-84d4-e58c1d4a9c79",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### How to use =AVERAGE\nWhen we want the **average value** of elements in a given range we can use the `=AVERAGE` function.\n- Specify the range by typing it in `=AVERAGE(D2:D126)`\n- Press **Enter** to escape out of the cell and run your formula\n",
+        "imageUrl": "https://images.code.org/e0a6cdc69a437c9cf5ea9d120dbfea0e-avgspedd.gif",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-8482159f-0e02-4de6-a6bb-209364d96693",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Another Way to Calculate Average\nWe can also highlight those cells and use the \"Average\" feature at the bottom right",
+        "imageUrl": "https://images.code.org/6cc676a580bd1df413018bded2b29dbc-averagebottom.gif",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-b6b58321-7c8c-41e9-b9ef-5f1df2c028f9",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:34.607+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-formulas-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-formulas-panel_2025_launch\"}]"
+}]]></config>
+</Panels>

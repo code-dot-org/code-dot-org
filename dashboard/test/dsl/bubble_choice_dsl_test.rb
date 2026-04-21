@@ -2,8 +2,8 @@ require 'test_helper'
 
 class BubbleChoiceDslTest < ActiveSupport::TestCase
   setup do
-    create :level, name: 'bubble choice level 1'
-    create :level, name: 'bubble choice level 2'
+    create(:level, name: 'bubble choice level 1')
+    create(:level, name: 'bubble choice level 2')
   end
 
   test 'create then serialize simple level returns original DSL' do
@@ -81,6 +81,36 @@ class BubbleChoiceDslTest < ActiveSupport::TestCase
 
     bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
     assert_equal output_dsl, BubbleChoiceDSL.serialize(bubble_choice)
+  end
+
+  test 'create then serialize with all lab2 properties returns original DSL' do
+    input_dsl = <<~DSL
+      name 'bubble choice'
+      display_name 'My Level'
+      description 'My Description'
+
+      sublevels
+      level 'bubble choice level 1'
+      level 'bubble choice level 2'
+
+      custom_mode 'music_dance_ai'
+      uses_lab2
+      hide_letters_lab2
+      standalone
+      navigation_type 'next_level'
+      finish_dialog 'hoai2025'
+      hide_share_and_remix 'false'
+    DSL
+
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
+    assert bubble_choice.uses_lab2
+    assert bubble_choice.hide_letters_lab2
+    assert bubble_choice.is_project_level
+    assert_equal 'music_dance_ai', bubble_choice.custom_mode
+    assert_equal 'next_level', bubble_choice.navigation_type
+    assert_equal 'hoai2025', bubble_choice.finish_dialog
+    assert_equal 'false', bubble_choice.hide_share_and_remix
+    assert_equal input_dsl, BubbleChoiceDSL.serialize(bubble_choice)
   end
 
   test 'escape method escapes single quotes' do

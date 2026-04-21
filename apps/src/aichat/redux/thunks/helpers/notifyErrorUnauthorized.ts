@@ -1,3 +1,7 @@
+import {
+  AI_CHAT_NOT_AUTHORIZED_STUDENT,
+  AI_CHAT_NOT_AUTHORIZED_TEACHER,
+} from '@cdo/apps/aichat/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -12,12 +16,18 @@ export async function notifyErrorUnauthorized(
   userAction: string,
   dispatch: AppDispatch
 ) {
-  const responseBody = await error.response.json();
-  const userType = responseBody?.user_type;
+  let userType;
+  try {
+    const responseBody = await error.response.json();
+    userType = responseBody?.user_type;
+  } catch (error) {
+    // This can happen if the 403 response is not JSON.
+    console.warn(error);
+  }
 
   const userTypeToMessageText: {[key: string]: string} = {
-    teacher: commonI18n.aiChatNotAuthorizedTeacher(),
-    student: commonI18n.aiChatNotAuthorizedStudent(),
+    teacher: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+    student: AI_CHAT_NOT_AUTHORIZED_STUDENT,
   };
   const messageText =
     userTypeToMessageText[userType] ||
@@ -32,14 +42,9 @@ export async function notifyErrorUnauthorized(
     })
   );
   dispatch(
-    sendAnalytics(
-      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
-      {
-        levelPath: window.location.pathname,
-        userType,
-        userAction,
-      },
-      true
-    )
+    sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED, {
+      userType,
+      userAction,
+    })
   );
 }

@@ -1,13 +1,11 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -17,6 +15,7 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -27,10 +26,11 @@ const MultipleSectionsAssigner = ({
   onClose,
   courseOfferingId,
   courseVersionId,
+  aiChatToolsDependency,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
-  isAssigningUnitOnly,
+  isSingleUnitCourse,
   participantAudience,
   onAssignSuccess,
   sectionDirections = i18n.chooseSectionsDirections(),
@@ -47,7 +47,7 @@ const MultipleSectionsAssigner = ({
     let initialSectionsAssigned = [];
     // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
     if (!isAssigningCourseOnly) {
-      if (isAssigningUnitOnly) {
+      if (isSingleUnitCourse) {
         for (let i = 0; i < sections.length; i++) {
           if (courseVersionId === sections[i].courseVersionId) {
             initialSectionsAssigned.push(sections[i]);
@@ -72,7 +72,7 @@ const MultipleSectionsAssigner = ({
     return initialSectionsAssigned;
   }, [
     isAssigningCourseOnly,
-    isAssigningUnitOnly,
+    isSingleUnitCourse,
     sections,
     courseId,
     scriptId,
@@ -125,8 +125,8 @@ const MultipleSectionsAssigner = ({
       );
 
       if (isSectionToBeRemoved) {
-        // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isAssigningCourseOnly || isAssigningUnitOnly
+        // if on COURSE landing page or a SINGLE-UNIT COURSE unit overview, unassign entirely
+        isAssigningCourseOnly || isSingleUnitCourse
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
@@ -210,13 +210,15 @@ const MultipleSectionsAssigner = ({
         className={moduleStyle.information}
       >
         <div className={moduleStyle.modalHeader}>
-          <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
+          <Typography variant="h3">
+            {i18n.chooseSectionsPrompt({assignmentName})}
+          </Typography>
         </div>
         <div className={moduleStyle.sectionsDirections}>
-          <BodyTwoText>{sectionDirections}</BodyTwoText>
+          <Typography variant="body2">{sectionDirections}</Typography>
         </div>
         <div className={moduleStyle.sectionList}>
-          <Heading5>{i18n.yourSectionsList()}</Heading5>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(
@@ -243,6 +245,12 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </div>
       </div>
       <div className={moduleStyle.buttonContainer}>
@@ -271,10 +279,12 @@ MultipleSectionsAssigner.propTypes = {
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
   isAssigningCourseOnly: PropTypes.bool.isRequired,
-  isAssigningUnitOnly: PropTypes.bool,
+  isSingleUnitCourse: PropTypes.bool,
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,

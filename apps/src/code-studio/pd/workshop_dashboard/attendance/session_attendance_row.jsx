@@ -125,8 +125,8 @@ export default class SessionAttendanceRow extends React.Component {
 
   renderEditableAttendedCellContents() {
     const checkBoxClass = this.props.attendance.attended
-      ? 'fa fa-check-square-o'
-      : 'fa fa-square-o';
+      ? 'fa-regular fa-square-check'
+      : 'fa-regular fa-square';
     if (this.props.isReadOnly || this.state.pendingRequest) {
       return (
         <div>

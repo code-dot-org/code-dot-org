@@ -2,16 +2,13 @@
 Feature: Views the pages on the teacher dashboard that are untested elsewhere
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 
   @properties_encryption_key
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
@@ -19,14 +16,10 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I wait until element "a:contains('Untitled Section')" is visible
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "#ui-test-section-list" is visible
+    Then I click selector "#task-button-View-progress-Test-Section" once I see it
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
-    Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Stats')" once I see it
@@ -44,15 +37,15 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
 
     # Text responses tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Text Responses')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
     Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"

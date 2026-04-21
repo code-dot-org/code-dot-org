@@ -220,6 +220,7 @@
     "parent_level_id": 21734,
     "display_name": "Kids Movie Recommender",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

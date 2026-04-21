@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -43,10 +44,11 @@ describe('CoteacherSettings', () => {
       />
     );
     const addCoteacher = wrapper.find('AddCoteacher').dive();
-    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
-    expect(addCoteacher.find('Figcaption').props().children).to.include(
-      '2/5 co-teachers added'
-    );
+    const caption = addCoteacher
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.include('2/5 co-teachers added');
   });
   it('renders count if current sectionInstructors is null', () => {
     const wrapper = shallow(
@@ -58,10 +60,11 @@ describe('CoteacherSettings', () => {
       />
     );
     const addCoteacher = wrapper.find('AddCoteacher').dive();
-    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
-    expect(addCoteacher.find('Figcaption').props().children).to.include(
-      '0/5 co-teachers added'
-    );
+    const caption = addCoteacher
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.include('0/5 co-teachers added');
   });
   it('renders count of existing coteachers and added', () => {
     const wrapper = shallow(
@@ -73,10 +76,11 @@ describe('CoteacherSettings', () => {
       />
     );
     const addCoteacher = wrapper.find('AddCoteacher').dive();
-    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
-    expect(addCoteacher.find('Figcaption').props().children).to.include(
-      '3/5 co-teachers added'
-    );
+    const caption = addCoteacher
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.include('3/5 co-teachers added');
   });
   it('shows coteacher table and sorts instructors', () => {
     const wrapper = mount(
@@ -140,9 +144,11 @@ describe('CoteacherSettings', () => {
 
     expect(wrapper.find('RemoveCoteacherDialog').length).to.equal(1);
     expect(dialog.find('Button')).to.have.lengthOf(2);
-    expect(dialog.find('StrongText').dive().text()).to.contain(
-      'Remove coelophysis@code.org'
-    );
+    const title = dialog
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'strong')
+      .at(0);
+    expect(title.text()).to.contain('Remove coelophysis@code.org');
   });
   it('cancel remove does nothing', () => {
     let coteachersToAdd = ['coelophysis@code.org'];

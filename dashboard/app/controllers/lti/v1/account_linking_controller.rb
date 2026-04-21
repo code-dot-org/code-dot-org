@@ -33,7 +33,7 @@ module Lti
 
       # POST /lti/v1/account_linking/link_email
       def link_email
-        head :bad_request unless PartialRegistration.in_progress?(session)
+        return head :bad_request unless PartialRegistration.in_progress?(session)
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
         if existing_user&.admin?
@@ -64,10 +64,11 @@ module Lti
 
       # POST /lti/v1/account_linking/new_account
       def new_account
-        if current_user
+        if current_user && Policies::Lti.lti?(current_user)
           current_user.lms_landing_opted_out = true
           current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
           current_user.save!
+          PartialRegistration.delete(session)
         elsif PartialRegistration.in_progress?(session)
           partial_user = User.new_with_session(ActionController::Parameters.new, session)
           partial_user.lms_landing_opted_out = true

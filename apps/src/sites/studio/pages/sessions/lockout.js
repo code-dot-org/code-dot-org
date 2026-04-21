@@ -1,14 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import LockoutPanel from '@cdo/apps/templates/sessions/LockoutPanel';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(function () {
   const element = document.getElementById('lockout-container');
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <LockoutPanel
         apiURL={element.getAttribute('data-api-url')}
@@ -24,6 +24,9 @@ $(document).ready(function () {
         inSection={'true' === element.getAttribute('data-in-section')}
       />
     </Provider>,
-    element
+    element,
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2fd33fbad3754fecc1bfe9d18a479f0888b99ad32884f575411ca4a81e6090e9
-size 2378
+[
+  {
+    "id": "gen-ai-mistral-7b-inst-v01",
+    "name": "Mistral 7B Instruct v01",
+    "overview": "A generative language model pre-trained with 7 billion parameters, designed for following instructions.",
+    "trainingData": "The MistralAI team trained Mistral-7B-v0.1 on datasets taken directly from the openWeb. The v0.1 model took the base model and finetuned it using additional data from several sources, focusing on improving logic and reasoning or recalling trivia or other facts."
+  },
+  {
+    "id": "gpt-4o-mini",
+    "name": "GPT-4o mini",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "name": "Gemini 2.5 Flash",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash-image",
+    "name": "Gemini 2.5 Flash Image",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  }
+]

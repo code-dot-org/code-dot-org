@@ -1,25 +1,24 @@
 import {memo} from 'react';
 
-import _BaseButton, {
+import GenericButton, {
   CoreButtonProps,
   LinkButtonSpecificProps,
-} from './_BaseButton';
+} from './GenericButton';
 
 export interface LinkButtonProps
   extends CoreButtonProps,
     LinkButtonSpecificProps {}
 
 const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
-  <_BaseButton useAsLink {...props} />
+  <GenericButton useAsLink {...props} />
 );
 
 /**
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: Link Button Component.
- *
- * Alias for ***_BaseButton*** Component. Renders a Button with ```<a>``` html tag.
- *
- * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
+ * @deprecated Use MUI `Button` with `href` prop from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
+ * Codemod available: `yarn codemod:buttons`.
  */
 export default memo(LinkButton);

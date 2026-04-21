@@ -29,6 +29,17 @@ SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
+# Reset the dashboard database before seeding for UI tests. It is recommended to
+# use this tag when running drone against PRs that reduce what gets seeded in
+# drone via seed:ui_test, such as if you remove something from UI_TEST_SCRIPTS.
+#
+# By default, the database will have been prepopulated based on recent data
+# from the staging branch (see cache-staging-build pipeline in .drone.yml).
+# If you remove something from UI_TEST_SCRIPTS but do not specify this tag,
+# drone will still have that unit seeded in the database, possibly masking any
+# test failures that might show up in later drone builds after you merge.
+RESET_DB_TAG = 'reset db'.freeze
+
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
@@ -53,16 +64,24 @@ TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
+# By default, to conserve our SauceLabs credits we run our UI and Eyes tests
+# against a local webdriver first, and only use SauceLabs to rerun any tests
+# that fail. This flag ensures all tests will use SauceLabs for all runs.
+SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
+
+# Maximum parallel browsers to use for UI and eyes tests
+PARALLEL_COUNT = 24
+
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  timed_task_with_logging :run_tests do
-    unless CI::Utils.ci_job_unit_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
+  timed_task_with_logging :run_unit_tests do
+    target_branch = ENV.fetch('DRONE_TARGET_BRANCH', '')
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+      RakeUtils.rake_stream_output 'test:all'
+    # Always run all unit tests on pull requests against the 'test' branch
+    elsif target_branch == 'test'
+      ChatClient.log "Target branch is #{target_branch.dump}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
@@ -87,6 +106,8 @@ namespace :ci do
       next
     end
 
+    check_for_new_file_changes
+
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -101,7 +122,7 @@ namespace :ci do
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
-      Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+      Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
@@ -116,10 +137,10 @@ namespace :ci do
           "--local " \
           "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "--first_run_local " \
+          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -130,17 +151,15 @@ namespace :ci do
             "--config Chrome,iPhone " \
             "--local " \
             "--ci " \
-            "--parallel 10 " \
+            "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
-            "--first_run_local " \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
-
-    check_for_new_file_changes
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -162,19 +181,28 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CI::Utils.ci_job_ui_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 
     Dir.chdir('dashboard') do
+      if CI::Utils.tagged?(RESET_DB_TAG)
+        ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RESET_DB_TAG}], resetting dashboard database."
+        RakeUtils.rake_stream_output 'db:reset db:setup_or_migrate'
+      end
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
+  end
+
+  timed_task_with_logging :force_seed_ui_test do
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
+  timed_task_with_logging :check_for_new_file_changes do
+    check_for_new_file_changes
   end
 end
 
@@ -202,8 +230,18 @@ def check_for_new_file_changes
     RakeUtils.system_stream_output('git diff -- dashboard/config/locales | cat')
     raise 'Unexpected change to dashboard/config/locales/ - Make sure you run seeding locally and include those changes in your branch.'
   end
+
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
     RakeUtils.system_stream_output('git diff -- dashboard/db/schema.rb | cat')
     raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
+  else
+    ChatClient.log 'No changes to schema.rb detected.'
+  end
+
+  if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/app/models/**/*'])
+    RakeUtils.system_stream_output('git diff -- dashboard/app/models | cat')
+    raise 'Unexpected change to dashboard/app/models - Make sure you run your migration locally and push those changes into your branch.'
+  else
+    ChatClient.log 'No changes to dashboard/app/models detected.'
   end
 end

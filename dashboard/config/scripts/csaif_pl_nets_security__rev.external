@@ -1,0 +1,34 @@
+name 'csaif_pl_nets_security_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Network Security
+
+## 📝 To Do
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;"><i class="fa-solid fa-user-graduate"></i> Career Journeys
+</p>
+
+#### CyberShield Inc. is under attack!
+
+#### As a cybersecurity analyst, it’s your job to investigate security threats and identify the best defenses to protect the company’s network.
+
+#### In this interactive simulation, you’ll analyze real-world vulnerabilities including:
+* #### Phishing — Tricking someone into giving away private info (e.g., fake emails asking for passwords)
+* #### Social Engineering — Manipulating people to get access (e.g., pretending to be IT support)
+* #### Default Credentials — Using factory-set usernames/passwords like “admin123” that never got changed
+* #### Weak Passwords — Simple, easy-to-guess passwords like “123456” or “password”
+
+#### It'll be up to you to decide how to stop them before they cause damage.
+
+#### 1. **Open** the <a href='https://docs.google.com/presentation/d/1EVhT6Les4IsI59u1FssuiWn6gtuLIvOerjbMVISxQ5Q/preview?rm=minimal&slide=id.g2b778c96f3d_2_209' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Identify, Defend, Reflect! Activity Slide Deck</a>.
+
+#### 2. **Explore** the Slide Deck and learn more about network vulnerabilities.
+
+#### 3. *Optional:* **Open** the <a href='https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?tab=t.0#heading=h.2dese35ij8j8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Networks and The Internet Unit Guide</a> to Lesson 9 for additional guidance on what information students will be looking to learn while completing this activity.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 9. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

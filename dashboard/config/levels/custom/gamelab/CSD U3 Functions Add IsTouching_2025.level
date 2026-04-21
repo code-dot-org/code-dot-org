@@ -68,6 +68,7 @@
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -12,10 +12,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Assigned from '@cdo/apps/templates/Assigned';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import i18n from '@cdo/locale';
 
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
@@ -48,7 +44,6 @@ class UnitOverviewTopRow extends React.Component {
     scriptPath: PropTypes.string.isRequired,
 
     // redux provided
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
     deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
@@ -71,7 +66,6 @@ class UnitOverviewTopRow extends React.Component {
 
   render() {
     const {
-      sectionsForDropdown,
       unitAllowsHiddenLessons,
       deeperLearningCourse,
       scriptId,
@@ -85,8 +79,6 @@ class UnitOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       unitCompleted,
       hasPerLevelResults,
-      courseOfferingId,
-      courseVersionId,
       isUnitWithLevels,
     } = this.props;
 
@@ -113,8 +105,9 @@ class UnitOverviewTopRow extends React.Component {
                   __useDeprecatedTag
                   href={`${scriptPath}/next`}
                   text={NEXT_BUTTON_TEXT[unitProgress]}
+                  color={Button.ButtonColor.purple}
                   size={Button.ButtonSize.large}
-                  style={{marginRight: 10}}
+                  style={{marginRight: 10, boxShadow: 'none'}}
                   onClick={() => this.logTryNowButtonClick(unitProgress)}
                 />
               )}
@@ -132,17 +125,18 @@ class UnitOverviewTopRow extends React.Component {
                 text={i18n.getHelp()}
                 color={Button.ButtonColor.white}
                 size={Button.ButtonSize.large}
-                style={hasButtonMargin ? buttonMarginStyle : {}}
+                style={
+                  hasButtonMargin
+                    ? {...buttonMarginStyle, boxShadow: 'none'}
+                    : {boxShadow: 'none'}
+                }
               />
               {assignedSectionId && <Assigned />}
             </div>
           )}
 
           <div style={styles.resourcesRow}>
-            {!(
-              showV2TeacherDashboard() &&
-              location.pathname.includes('teacher_dashboard')
-            ) &&
+            {!location.pathname.includes('teacher_dashboard') &&
               showCalendar &&
               viewAs === ViewType.Instructor && (
                 <UnitCalendarButton
@@ -155,17 +149,7 @@ class UnitOverviewTopRow extends React.Component {
           <div style={styles.secondRow}>
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
-                {showV2TeacherDashboard() ? (
-                  <StudentSelector />
-                ) : (
-                  <SectionAssigner
-                    sections={sectionsForDropdown}
-                    courseOfferingId={courseOfferingId}
-                    courseVersionId={courseVersionId}
-                    scriptId={scriptId}
-                    forceReload={true}
-                  />
-                )}
+                <StudentSelector />
               </div>
             )}
           </div>
@@ -252,12 +236,6 @@ export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
 export default connect((state, ownProps) => ({
   selectedSectionId: state.teacherSections.selectedSectionId,
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    state.progress.scriptId
-  ),
   deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,

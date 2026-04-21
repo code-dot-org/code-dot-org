@@ -1,0 +1,92 @@
+name 'pl-sandbox-aif2-u2-variables-12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+#### Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
+
+#### Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
+
+<div style="width:90%; margin:auto; font-family:sans-serif; font-size:14pt;">
+
+<!-- Variable -->
+<h2 style="font-size:14pt;">What is a Variable?</h2>
+<div style="display:flex; align-items:center; margin-bottom:40px;">
+    
+<div style="flex:2; padding-right:20px;">
+<p style="font-size:14pt;">A <b>variable</b> is a named container that stores a value that can change.</p>
+      
+<p style="font-family:monospace; font-size:12pt; background-color:#f4f4f4; padding:8px; border-radius:6px; display:inline-block;">
+        score = 0
+      </p>
+      
+<p style="font-size:14pt;">When the player earns points, the value increases.</p>
+    </div>
+<div style="flex:1; text-align:center;">
+<img src="https://images.code.org/6aac191fc61f33592100e3d59ac7b717-image-1762187266713.png" 
+           alt="Eboxes symbolizing variable storage" 
+            style="width:70%; 
+            border-radius:12px; 
+            
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    </div>
+  </div>
+
+<!-- State -->
+<h2 style="font-size:14pt;">What is State?</h2>
+<div style="display:flex; align-items:center; margin-bottom:40px;">
+    
+<div style="flex:2; padding-right:20px;">
+<p style="font-size:14pt;"><b>State</b> is the current values of all the variables in a program.</p>
+      
+   <p style="font-family:monospace; font-size:12pt; background-color:#f4f4f4; padding:8px; border-radius:6px; display:inline-block;">
+        score = 10 &nbsp;&nbsp; level = 2
+      </p>
+      
+      <p style="font-size:14pt;">Together, these values describe what is happening right now.</p>
+    </div>
+
+<div style="flex:1; text-align:center;">
+      <img src="https://images.code.org/e3a6cd792666963257437c276c283ed5-image-1762187492236.png" 
+           alt="Graph showing score and level as state" 
+            style="width:70%; 
+            border-radius:12px; 
+             
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    </div>
+  </div>
+
+<!-- Operation -->
+<h2 style="font-size:14pt;">What is an Operation?</h2>
+<div style="display:flex; align-items:center;">
+    
+<div style="flex:2; padding-right:20px;">
+<p style="font-size:14pt;">An <b>operation</b> changes a variable’s value.</p>
+      
+<p style="font-family:monospace; font-size:12pt; background-color:#f4f4f4; padding:8px; border-radius:6px; display:inline-block;">
+        score = score + 1
+      </p>
+      
+<p style="font-size:14pt;">This adds one to the current score.</p>
+    </div>
+
+<div style="flex:1; text-align:center;">
+      <img src="https://images.code.org/2d7424f5c8832b0c3266d95848076aa7-image-1762187634384.png" 
+           alt="Graph showing +1 operation changing score" 
+            style="width:70%; 
+            border-radius:12px; 
+           
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    </div>
+  </div>
+
+</div>
+
+    
+<br>  
+
+
+
+MARKDOWN

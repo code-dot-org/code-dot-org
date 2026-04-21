@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:39:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Off-By-One Error\n\nAn **off-by-one error** is a programming mistake where a loop runs one time too many or one time too few.\n\n**Example**: Using `i <= 3` instead of `i < 3` makes the loop run 4 times instead of 3, causing one extra loop cycle.\n",
+        "imageUrl": "https://images.code.org/0a3c11608f4aecc381f6d2be27a3d2fb-Pasted Graphic 7.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:39:41.643+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-off-by-one-error-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-off-by-one-error-test-2025\"}]"
+}]]></config>
+</Panels>

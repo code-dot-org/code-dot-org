@@ -12,18 +12,23 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "TeacherRunner.java": {
+        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, \n                             {92, 87, 80}, \n                             {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "Teacher.java": {
+        "text": "/*\n * Represents a teacher\n */\npublic class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades(int week) {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[week].length; index++) {\n      result += weeklyGrades[week][index] + \"\\n\";\n    }\n\n    return result;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
       }
     },
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_pilot_oo2025",
     "teacher_markdown": "The `weeklyGrades[row][col]` access the value in row `row` and column `col`. For example, if `row` is `1` and `col` is `1`, this would access the value at row 1 column 1.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:37.762+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L2_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:37.762+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L2_pilot-2025\"},{\"changed_at\":\"2025-11-04 19:46:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:46:43 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:47:18 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:54 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:55 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:56 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

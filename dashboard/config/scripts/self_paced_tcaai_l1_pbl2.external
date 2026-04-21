@@ -1,0 +1,102 @@
+name 'self-paced-TCaAI-L1-PBL2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestones
+
+#### As previously mentioned, Thinking Critically About AI is split into **five milestones** to make progress toward the final project feel manageable for teachers and students.
+
+#### Each milestone spans two lessons and centers on a theme. Within each milestone, students investigate a guiding question that contributes to answering the unit’s overall driving question (*How can people make thoughtful decisions about when and how to use AI?*).
+
+<!-- Sustained Inquiry -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
+  <img src="https://images.code.org/60e7ab3ba61ec1c166508500e627aa2a-image-1772670747215.png" alt="" style="width: 40px; height: 40px;">
+  <div>
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Sustained Inquiry</p>
+    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+      Learning is driven by a compelling question and deepens over time through revisiting and refining ideas.
+    </p>
+  </div>
+</div>
+
+#### Briefly review each of the Milestones below. We'll go into more depth with each later in this module.
+
+<!-- Milestone 1 -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">🌏 Milestone 1: AI In My World</summary>
+  <div style="margin-top: 15px; font-size: 13pt; line-height: 1.4;">
+    <p><strong>🚀 Project Launch</p>
+    <p><strong>Guiding Question:</strong> What is AI, where is it around me, and what do I currently believe about it?</p>
+    <p>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 1</b> – Investigating AI Tools</a><br>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/2" target="blank" rel="noopener noreferrer"><b>Lesson 2</b> – A Deeper Look into AI</a>
+    </p>
+    <p>
+      Students test an AI tool multiple times, record evidence of patterns and errors, and discuss what makes outputs feel “right” or suspicious. They then participate in an unplugged simulation to see how training data and human choices shape AI predictions. This milestone launches the unit project and frames students as “Testers” who evaluate AI with curiosity and healthy skepticism.
+    </p>
+  </div>
+</details>
+
+<!-- Milestone 2 -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">🔨 Milestone 2: Creating with AI</summary>
+  <div style="margin-top: 15px; font-size: 13pt; line-height: 1.4;">
+    <p><strong>Guiding Question:</strong> When I use AI, who is in control, and where should I draw the line?</p>
+    <p>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/3" target="blank" rel="noopener noreferrer"><b>Lesson 3</b> – Responsible Co-Creation</a><br>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/4" target="blank" rel="noopener noreferrer"><b>Lesson 4</b> – Guidelines for Working with AI</a>
+    </p>
+    <p>
+      Students create with AI tools (like chat and sketch) while using the Pilot/Co-Pilot metaphor to decide when to rely on AI and when to take the lead. They compare examples across creative domains to identify a “tipping point” where AI support can start to override human voice and values. This milestone results in clear co-creation guidelines students add to their Responsible AI Use Guide.
+    </p>
+  </div>
+</details>
+
+<!-- Milestone 3 -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">💻 Milestone 3: Truth &amp; Credibility in AI</summary>
+  <div style="margin-top: 15px; font-size: 13pt; line-height: 1.4;">
+    <p><strong>Guiding Question:</strong> Why does AI sound believable, and how do I know when to trust it?</p>
+    <p>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/5" target="blank" rel="noopener noreferrer"><b>Lesson 5</b> – Truth &amp; Credibility of AI</a><br>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/6" target="blank" rel="noopener noreferrer"><b>Lesson 6</b> – The AI Credibility Guide</a>
+    </p>
+    <p>
+      Students run investigations to spot what makes AI responses feel convincing (e.g., confident tone, specific details, realistic visuals) and where those signals break down. In expert groups, they share evidence, identify patterns like bias or missing context, and turn findings into practical “trust checks.” This milestone culminates in students creating a Truth &amp; Credibility Meter to help others decide what to verify before believing or sharing.
+    </p>
+  </div>
+</details>
+
+<!-- Milestone 4 -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">🦺 Milestone 4: Safety &amp; Privacy with AI</summary>
+  <div style="margin-top: 15px; font-size: 13pt; line-height: 1.4;">
+    <p><strong>Guiding Question:</strong> How can small pieces of information become powerful and sometimes risky patterns?</p>
+    <p>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/7" target="blank" rel="noopener noreferrer"><b>Lesson 7</b> – Exploring Data in AI</a><br>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/8" target="blank" rel="noopener noreferrer"><b>Lesson 8</b> – Defending Your Data</a>
+    </p>
+    <p>
+      Students analyze scenarios to identify “invisible” data clues and sort information into public, private, and sensitive categories. They test how quickly AI can generate personalized inferences from limited details and discuss how pattern recognition can amplify risks. This milestone ends with students drafting safety and privacy recommendations—clear do’s, don’ts, and red flags—for their project guide.
+    </p>
+  </div>
+</details>
+
+<!-- Milestone 5 -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">🗣️ Milestone 5: Presenting My Learning</summary>
+  <div style="margin-top: 15px; font-size: 13pt; line-height: 1.4;">
+    <p><strong>🗣️ Project Shareout</p>
+    <p><strong>Guiding Question:</strong> How should we responsibly manage and stay in command of AI systems?</p>
+    <p>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/9" target="blank" rel="noopener noreferrer"><b>Lesson 9</b> – Refining Our Product</a><br>
+      <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/10" target="blank" rel="noopener noreferrer"><b>Lesson 10</b> – The Final Verdict</a>
+    </p>
+    <p>
+      Students “stress test” their Responsible AI Use Guide by gathering AI feedback and peer feedback, then revising for clarity, fairness, and audience fit. They add or refine visuals so key conclusions are easy to understand at a glance. The milestone concludes with students defending an evidence-based claim about how humans should interact with AI, emphasizing the importance of human oversight.
+    </p>
+
+  </div>
+</details>
+MARKDOWN

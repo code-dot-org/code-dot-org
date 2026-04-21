@@ -36,7 +36,8 @@
     "validation_enabled": "true",
     "display_name": "Step 3: Add Style",
     "bubble_choice_description": "Finally, add your user's style requests and layout to the page.",
-    "thumbnail_url": "https://images.code.org/208757d7854c9b08b4136dc203dc7e69-css.png"
+    "thumbnail_url": "https://images.code.org/208757d7854c9b08b4136dc203dc7e69-css.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

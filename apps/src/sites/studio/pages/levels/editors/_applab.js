@@ -1,7 +1,6 @@
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   configMicrobit,
@@ -9,48 +8,69 @@ import {
   getMakerBlocks,
 } from '@cdo/apps/maker/dropletConfig';
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   $('#level_makerlab_enabled').change(function () {
-    // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
+    // Get shared Maker blocks and board-specific block sets.
 
     // Setting block values to null to match the expected behavior in code_functions.
-    // The maker type given here sets the defaultPin in the example block. Since we are just using the function name,
-    // which doesn't include a pin parameter, we could use any block type.
-    const configMaker = getMakerBlocks(null);
-    let makerBlocks = {};
-    configMaker.forEach(block => (makerBlocks[block.func] = null));
+    // Board type only affects default pin examples, not function names.
+    let sharedMakerBlocks = {};
+    getMakerBlocks(null).forEach(
+      block => (sharedMakerBlocks[block.func] = null)
+    );
     let microbitBlocks = {};
     configMicrobit.blocks.forEach(block => (microbitBlocks[block.func] = null));
     let circuitBlocks = {};
     configCircuitPlayground.blocks.forEach(
       block => (circuitBlocks[block.func] = null)
     );
+    const microbitNonSharedMakerFuncs = Object.keys(microbitBlocks).filter(
+      func => !(func in sharedMakerBlocks)
+    );
+    const circuitNonSharedMakerFuncs = Object.keys(circuitBlocks).filter(
+      func => !(func in sharedMakerBlocks)
+    );
 
-    const editor = $('#level_code_functions')
-      .siblings()
-      .filter('.CodeMirror')[0].CodeMirror;
-    const currentFunctions = JSON.parse(editor.getValue());
-    let functionsWithMaker;
-    if ($(this).val() === 'circuitPlayground') {
-      // Load the circuitPlayground and maker blocks.
-      functionsWithMaker = Object.assign(
-        {},
-        currentFunctions,
-        makerBlocks,
-        circuitBlocks
-      );
-    } else if ($(this).val() === 'microbit') {
-      // Load the microbit and maker blocks
-      functionsWithMaker = Object.assign(
-        {},
-        currentFunctions,
-        makerBlocks,
-        microbitBlocks
-      );
+    const codeFunctionsTextarea = document.getElementById(
+      'level_code_functions'
+    );
+    const editor = codeFunctionsTextarea?.codeMirror;
+    if (!editor) {
+      return;
     }
-    editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
+    const codeFunctions = JSON.parse(editor.getValue() || '{}');
+    if ($(this).val() === 'circuitPlayground') {
+      // Load Circuit Playground blocks (includes shared Maker blocks).
+      Object.assign(codeFunctions, circuitBlocks);
+      microbitNonSharedMakerFuncs.forEach(func => {
+        if (!(func in circuitBlocks)) {
+          delete codeFunctions[func];
+        }
+      });
+    } else if ($(this).val() === 'microbit') {
+      // Load micro:bit blocks (includes shared Maker blocks).
+      Object.assign(codeFunctions, microbitBlocks);
+      circuitNonSharedMakerFuncs.forEach(func => {
+        if (!(func in microbitBlocks)) {
+          delete codeFunctions[func];
+        }
+      });
+    } else {
+      // Remove all board blocks (including shared Maker blocks).
+      Object.keys(microbitBlocks).forEach(func => delete codeFunctions[func]);
+      Object.keys(circuitBlocks).forEach(func => delete codeFunctions[func]);
+    }
+
+    // If there are no blocks, set the editor to an empty string instead of an empty object,
+    // as our block config will use all blocks if code_functions is empty, but no blocks if code_functions is an empty object.
+    const editorValue =
+      Object.keys(codeFunctions).length === 0
+        ? ''
+        : JSON.stringify(codeFunctions, null, ' ');
+    editor.setValue(editorValue);
   });
 
   const styles = {
@@ -140,10 +160,13 @@ $(document).ready(function () {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <DataLibrary />,
     $('<div></div>')
       .insertAfter(`label[for="level_data_library_tables"]`)
-      .get(0)
+      .get(0),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

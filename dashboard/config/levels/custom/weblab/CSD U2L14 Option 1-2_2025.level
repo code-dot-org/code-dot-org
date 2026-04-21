@@ -35,7 +35,8 @@
     "bubble_choice_description": "Ken would like you to style his page about his soccer club.",
     "encrypted_examples": "44XbzXhtsRka71ycA7hay++lj8MEDo51pfbb3iZLoLfu62hP8447z27EffE8\nwMoe8Zyn79JX/y4GORVxi6wK7Q==\n",
     "thumbnail_url": "https://images.code.org/6c51e9f55bf139f068d768759537fa82-football.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:54.252+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14 Option 1-2\\\"\"],\"cloned_from\":\"CSD U2L14 Option 1-2\"}]"

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-13T03:55:38.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Chat Helper\r\n\r\n**Do This:** Use AI Chat to plan your app logic before coding. Ask for help mapping your decisions, inputs, and outcomes, or checking if your flowchart covers all possible paths.\r\n\r\n**Try Asking:**\r\n\r\n* *\"Can you help me choose two decisions for [x]?\"*\r\n* *\"What could be good inputs and outcomes for [x]?\"*\r\n* *\"Can you check if my four leaves are all reachable?\"*\r\n* *\"How can I make my decision labels clearer?\"*\r\n* *\"How do I write a test cases that covers every outcome?\"*\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a planning coach helping a student map out an app’s logic before coding. The student is creating a flowchart with two decisions (diamonds) and four outcomes (leaves) for one of three scenarios: Ad-Me Algorithm, Age Gatekeeper, or Choose-Your-Own Outcome. Your job is to: Ask clarifying questions about the student’s inputs, conditions, and outputs (UI results). Help them ensure every combination of inputs leads to exactly one reachable leaf. Suggest how to label decisions clearly and make outcomes concrete (e.g., “show teen version,” “swap image,” “display warning”). Guide them to draft a Test Cases Table with four unique rows—one for each outcome. Encourage students to reason through why their conditions and outcomes make sense for users, not just make the logic “work.” Do not write full code. Instead, help the student reason through the flow of logic and test planning. Keep responses concise, visual when possible (e.g., quick logic outlines), and encourage reflection before giving examples.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI Chat Helper",
+    "thumbnail_url": "https://images.code.org/a2220c64a87e46200b5dc612fb9021b0-Pasted Graphic 1.png",
+    "bubble_choice_description": "Stuck on your flowchart? Ask AI to help you untangle your logic and fill in missing paths."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:55:38.031+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level2-choiceD-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level2-choiceD-test-2025\"},{\"changed_at\":\"2025-11-13 03:56:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

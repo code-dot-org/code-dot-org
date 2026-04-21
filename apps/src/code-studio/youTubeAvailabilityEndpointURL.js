@@ -1,3 +1,5 @@
+import cdoIcon from '@cdo/static/favicon.ico';
+
 /**
  * This function returns the image URL that should be tested to
  * determine whether YouTube is available.
@@ -17,7 +19,7 @@ export default function youTubeAvailabilityEndpointURL(noCookie) {
   if (url.indexOf('force_youtube_fallback') >= 0) {
     return 'https://unreachable-test-subdomain.example.com/favicon.ico';
   } else if (url.indexOf('force_youtube_player') >= 0) {
-    return 'https://code.org/images/favicon.ico';
+    return cdoIcon;
   }
 
   if (noCookie) {

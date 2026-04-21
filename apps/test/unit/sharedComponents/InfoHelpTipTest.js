@@ -1,5 +1,5 @@
 /** @file Test InfoHelpTip component */
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -18,15 +18,15 @@ describe('InfoHelpTip', () => {
   it('renders FontAwesome', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
     expect(wrapper.find(FontAwesome)).toHaveLength(1);
-    expect(wrapper.find(FontAwesome).props().icon).toBe('info-circle');
+    expect(wrapper.find(FontAwesome).props().icon).toBe('circle-info');
   });
 
   it('renders ReactTooltip', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
     expect(wrapper.find(ReactTooltip)).toHaveLength(1);
     expect(wrapper.find(ReactTooltip).props().id).toBe('test-id');
-    expect(wrapper.find(BodyTwoText)).toHaveLength(1);
-    expect(wrapper.find(BodyTwoText).at(0).props().children).toBe(
+    expect(wrapper.find(Typography)).toHaveLength(1);
+    expect(wrapper.find(Typography).at(0).props().children).toBe(
       'test content'
     );
   });

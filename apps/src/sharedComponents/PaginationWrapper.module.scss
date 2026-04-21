@@ -1,0 +1,33 @@
+.container {
+  display: inline-block;
+}
+
+.label {
+  float: left;
+}
+
+:global(.pagination) {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    float: left;
+    padding-left: 12px;
+    text-decoration: none;
+    color: #0094ca;
+  }
+
+  .active a {
+    color: var(--color-default-text);
+  }
+
+  a:hover {
+    color: var(--color-default-text);
+  }
+}

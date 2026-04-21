@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
 
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -88,24 +92,68 @@ DiamondContainer.propTypes = {
   children: PropTypes.node,
 };
 
-export function BubbleLink({url, onClick, children, a11y_description}) {
-  return (
+const handleKeyDown = (event, clickEvent) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    clickEvent();
+  }
+};
+
+export function BubbleLink({
+  url,
+  onClick,
+  children,
+  a11y_description,
+  clickedLevelNumber,
+  lessonName,
+}) {
+  const handleClick = () => {
+    const state = getStore().getState();
+    // Ensure we are reporting the parent level number if this is a sublevel
+    const currentLevelNumber = state.progress
+      ? getCurrentLevels(state)?.find(
+          l => l.isCurrentLevel || l.sublevels?.some(s => s.isCurrentLevel)
+        )?.levelNumber
+      : undefined;
+    analyticsReporter.sendEvent(EVENTS.HEADER_PROGRESS_BUBBLE_LINK_CLICKED, {
+      previousLevelNumber: currentLevelNumber,
+      newLevelNumber: clickedLevelNumber,
+      lessonName: lessonName,
+      levelPath: window.location.pathname,
+    });
+    onClick?.();
+  };
+
+  const commonProps = {
+    onClick: handleClick,
+    className: 'progress-bubble-link',
+    title: a11y_description,
+  };
+
+  return url ? (
+    <a href={url} {...commonProps}>
+      {children}
+    </a>
+  ) : (
+    // Anchor tags without href attributes are not recognizable by assistive tech.
+    // Adding additional props to make it tab navigable and screen reader accessible.
     <a
-      href={url}
-      onClick={onClick}
-      className="progress-bubble-link"
-      title={a11y_description}
-      aria-label={a11y_description}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => handleKeyDown(e, onClick)}
+      {...commonProps}
     >
       {children}
     </a>
   );
 }
+
 BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
   a11y_description: PropTypes.string,
+  clickedLevelNumber: PropTypes.number,
+  lessonName: PropTypes.string,
 };
 
 function getTooltipTextForLevel(level) {

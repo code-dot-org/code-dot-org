@@ -25,7 +25,7 @@ require_relative '../../lib/cdo/cdo_cli'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-sound-library'.freeze
-DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/code-studio/soundLibrary.json".freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/static/json/code-studio/soundLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-sound-library'.freeze
 
 class Hash

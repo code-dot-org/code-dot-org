@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're building a school schedule app that tracks which class period the user is in. When the bell rings, the app needs to update the period number.\r\n\r\n1. Look at the original value stored in `current_period`\r\n\r\n2. Change the value to the next class period.\r\n\r\n3. Run the program to make sure it shows the update.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

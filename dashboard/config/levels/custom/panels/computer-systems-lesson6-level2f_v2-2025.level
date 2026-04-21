@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:00:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "**Designer Derek**\n\n**Job/Hobby:** Freelance graphic designer and digital illustrator\n\n**Purpose:** Running design software like Adobe Creative Suite\n\n\n",
+        "imageUrl": "https://images.code.org/0ad631c2734af7e54a22204a359bf2ea-smiling-male-designer-working-in-creative-office-2023-11-27-05-10-19-utc.jpg",
+        "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "**Budget:** $1,500",
+        "imageUrl": "https://images.code.org/d1db06be2bebe5d42ed578e79fda6f9f-piggy-bank-savings-investment-and-hand-with-money-2023-11-27-05-12-13-utc.jpg",
+        "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
+      },
+      {
+        "text": "**Important Info:** Prioritizes aesthetics and prefers a minimalist build\n\n**Preferences:**\n* Large, color-accurate monitor (4K preferred).\n* Storage for large files (minimum 1 TB SSD).\n* Multi-port docking station for external devices like drawing tablets.",
+        "imageUrl": "https://images.code.org/8b5c01cde49fc2c3a732aad5360c96e6-office-desk-with-laptop-graphics-tablet-pen-and-2024-11-18-19-29-00-utc.jpg",
+        "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Designer Derek",
+    "bubble_choice_description": "Freelance graphic designer and digital illustrator",
+    "thumbnail_url": "https://images.code.org/a9157472971a8f86b2e3c9b28198af5a-Designer Derek.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:02.967+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level2f_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level2f_2025\"}]"
+}]]></config>
+</Panels>

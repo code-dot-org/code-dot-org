@@ -1,9 +1,8 @@
-import {buttonColors, Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -38,11 +37,7 @@ const LtiExistingAccountCard = () => {
       lms_name: ltiProvider,
       user_type: userType,
     };
-    analyticsReporter.sendEvent(
-      'lti_existing_account_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_existing_account_click', eventPayload);
 
     navigateToHref(existingAccountUrl.href);
   };
@@ -65,14 +60,16 @@ const LtiExistingAccountCard = () => {
         })}
       </CardContent>
       <CardActions>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           className={styles.button}
-          color={buttonColors.purple}
-          type={'primary'}
-          size="m"
           onClick={handleExistingAccountSubmit}
-          text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-        />
+          type="button"
+        >
+          {i18n.ltiLinkAccountExistingAccountCardActionLabel()}
+        </MuiButton>
       </CardActions>
     </Card>
   );

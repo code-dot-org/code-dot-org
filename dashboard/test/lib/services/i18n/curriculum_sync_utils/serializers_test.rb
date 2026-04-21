@@ -11,28 +11,6 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
         'details'    => 'announcement_details',
         'buttonText' => 'announcement_buttonText',
       ],
-      course_version: FactoryBot.build(
-        :course_version,
-        key: 'script_course_version_key',
-        course_offering: FactoryBot.build(
-          :course_offering,
-          key: 'script_course_offering_key'
-        ),
-        reference_guides: FactoryBot.build_list(
-          :reference_guide, 1,
-          key:          'reference_guide_key',
-          display_name: 'reference_guide_display_name',
-          content:      'reference_guide_content',
-          course_version: FactoryBot.build(
-            :course_version,
-            key: 'reference_guide_course_version_key',
-            course_offering: FactoryBot.build(
-              :course_offering,
-              key: 'reference_guide_course_offering_key'
-            )
-          )
-        ),
-      ),
       resources: FactoryBot.build_list(
         :resource, 1,
         key:  'resource_key',
@@ -128,12 +106,6 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
             name: 'student_resource_name',
             url:  'student_resource_url',
             type: 'student_resource_type'
-          }
-        },
-        reference_guides: {
-          URI('https://studio.code.org/courses/script_course_offering_key-script_course_version_key/guides/reference_guide_key') => {
-            display_name: 'reference_guide_display_name',
-            content:      'reference_guide_content'
           }
         },
         lessons: {

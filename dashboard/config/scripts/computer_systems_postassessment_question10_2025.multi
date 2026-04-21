@@ -1,17 +1,17 @@
 name 'computer-systems-postassessment-question10_2025'
 title 'Computer Systems and Devices Post-Assessment: Question 1'
 
-wrong 'wrong'
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
+wrong 'Only the physical parts'
+wrong 'Only the programs running on a device'
+right 'The combination of hardware and software working together'
+wrong 'Just the internet connection'
 
 allow_multiple_attempts true
 
 markdown <<MARKDOWN
-question
+What makes up a computer system?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 1: Introduction to Computer Systems
 MARKDOWN

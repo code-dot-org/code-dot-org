@@ -1,0 +1,87 @@
+.teacherSection {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teacherInput {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fileInput {
+  margin: 10px 0;
+}
+
+.errorMessage {
+  color: red;
+  margin: 10px 0;
+}
+
+.strongWarning {
+  font-weight: bold;
+  color: red;
+}
+
+.warningMessage {
+  color: orange;
+  font-weight: bold;
+}
+
+.successMessage {
+  color: green;
+}
+
+.convertButton {
+  margin-top: 10px;
+  background-color: #007bff;
+
+  &.converting {
+    background-color: #ccc;
+  }
+}
+
+.conversionError {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.formatInfo {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.buttonSection {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.disabledInfo {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.dataPreview {
+  margin-top: 30px;
+}
+
+.previewInfo {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}

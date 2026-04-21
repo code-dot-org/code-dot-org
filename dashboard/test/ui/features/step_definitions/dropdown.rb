@@ -11,8 +11,7 @@ Then /^the dropdown is (.*)$/ do |visibility|
   else
     raise "unexpected visibility"
   end
-  dropdown_class = google_blockly? ? 'blocklyDropDownDiv' : 'blocklyWidgetDiv'
-  element = @browser.find_element(:class, dropdown_class)
+  element = @browser.find_element(:class, 'blocklyDropDownDiv')
   expect(element.attribute('style').match(Regexp.new("opacity: #{expected}"))).not_to eq(nil)
 end
 

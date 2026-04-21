@@ -7,7 +7,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import Notification, {
@@ -24,7 +24,6 @@ import ManageStudentsActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ManageStudentsAgeCell from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 import ManageStudentsFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCellLegacy';
 import ManageStudentsLoginInfo from '@cdo/apps/templates/manageStudents/ManageStudentsLoginInfo';
 import ManageStudentsNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {
@@ -71,8 +70,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
-
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
 export const studentSectionDataPropType = PropTypes.shape({
@@ -84,8 +81,9 @@ export const studentSectionDataPropType = PropTypes.shape({
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
+  isDemoStudent: PropTypes.bool,
   secretWords: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
@@ -270,7 +268,7 @@ class ManageStudentsTable extends Component {
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
-                secretPicture={rowData.secretPicturePath}
+                secretPictureUrl={rowData.secretPictureUrl}
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
@@ -310,18 +308,6 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  genderLegacyFormatter(gender, {rowData}) {
-    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
-    return (
-      <ManageStudentsGenderCellLegacy
-        gender={gender}
-        id={rowData.id}
-        isEditing={rowData.isEditing}
-        editedValue={editedValue}
-      />
-    );
-  }
-
   nameFormatter(name, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     return (
@@ -331,6 +317,7 @@ class ManageStudentsTable extends Component {
         name={name}
         username={rowData.username}
         email={rowData.email}
+        isDemoStudent={rowData.isDemoStudent}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -367,8 +354,9 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isTeacher(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType) && !rowData.isDemoStudent}
         rowData={rowData}
+        syncEnabled={this.props.syncEnabled}
       />
     );
   }
@@ -381,8 +369,7 @@ class ManageStudentsTable extends Component {
       {
         sectionId: this.props.sectionId,
         sectionLoginType: this.props.loginType,
-      },
-      PLATFORMS.STATSIG
+      }
     );
   }
 
@@ -618,36 +605,8 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (
-      experiments.isEnabledAllowingQueryString(
-        experiments.GENDER_FEATURE_ENABLED
-      )
-    ) {
-      return {
-        property: 'genderTeacherInput',
-        header: {
-          label: i18n.gender(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 120,
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.genderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 120,
-            },
-          },
-        },
-      };
-    }
     return {
-      property: 'gender',
+      property: 'genderTeacherInput',
       header: {
         label: i18n.gender(),
         props: {
@@ -659,7 +618,7 @@ class ManageStudentsTable extends Component {
         transforms: [sortable],
       },
       cell: {
-        formatters: [this.genderLegacyFormatter],
+        formatters: [this.genderFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -761,7 +720,6 @@ class ManageStudentsTable extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
-    const tableStyle = showV2TeacherDashboard() ? styles.v2TableWidth : {};
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
@@ -832,7 +790,9 @@ class ManageStudentsTable extends Component {
           {this.isMoveStudentsEnabled() && (
             <div style={styles.button}>
               <MoveStudents
-                studentData={this.studentDataMinusBlanks()}
+                studentData={this.studentDataMinusBlanks().filter(
+                  s => !s.isDemoStudent
+                )}
                 transferData={transferData}
                 transferStatus={transferStatus}
               />
@@ -880,7 +840,7 @@ class ManageStudentsTable extends Component {
             sourceName="ManageStudentsTable"
           />
         </div>
-        <div style={tableStyle}>
+        <div style={styles.v2TableWidth}>
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}

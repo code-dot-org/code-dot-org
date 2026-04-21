@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
@@ -36,6 +36,7 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
   );
   return inDashboard ? (
     <NavLink
+      id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
       className={styles.emptyStateButton}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
@@ -45,7 +46,9 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
           iconName={icon}
           iconStyle={'solid'}
         />
-        <BodyThreeText>{buttonText}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {buttonText}
+        </Typography>
       </div>
       <FontAwesomeV6Icon
         className={styles.emptyStateButtonIcon}
@@ -54,14 +57,20 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
       />
     </NavLink>
   ) : (
-    <a className={styles.emptyStateButton} href={path}>
+    <a
+      id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
+      className={styles.emptyStateButton}
+      href={path}
+    >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon
           className={styles.emptyStateButtonIcon}
           iconName={icon}
           iconStyle={'solid'}
         />
-        <BodyThreeText>{buttonText}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {buttonText}
+        </Typography>
       </div>
       <FontAwesomeV6Icon
         className={styles.emptyStateButtonIcon}

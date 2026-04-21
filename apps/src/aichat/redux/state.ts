@@ -1,23 +1,25 @@
 import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
+  AiChatClientType,
   ChatAsset,
   ChatEvent,
   FieldVisibilities,
-  PendingChatMessage,
+  SaveError,
   SaveType,
   ServerChatEvent,
   ViewMode,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContext,
 } from '../types';
 
 export interface AichatState {
+  clientType?: AiChatClientType;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
   chatEventsCurrent: ChatEvent[];
-  // The user message currently awaiting response from the model (if any).
-  chatMessagePending?: PendingChatMessage;
   // Student events viewed by a teacher user in chat workspace. Always fetched from the server.
   studentChatHistory: ServerChatEvent[];
   // Denotes whether we should show the warning or teacher onboarding modal
@@ -31,7 +33,6 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess: boolean;
   // List of files that have been staged for upload to the model.
   stagedFiles: {
     key: string;
@@ -43,5 +44,21 @@ export interface AichatState {
     | 'uploadFailed'
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
+    | 'imageFileFlagged'
     | undefined;
+  // If the user has a sent a message on this level
+  hasSentMessage: boolean;
+  // If initial customizations have been set on this level
+  hasSetInitialCustomizations: boolean;
+  // If the user has updated customizations on this level
+  hasUpdatedCustomizations: boolean;
+  // Error message to display if a save fails
+  saveError: SaveError | undefined;
+  // If the model customizations were just reset to the default level values.
+  showResetMessage: boolean;
+  // If the user had previously selected a model that is no longer available.
+  showUnsupportedModelMessage: boolean;
+  // The tab selected when a teacher is viewing a student's chat history.
+  chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
+  userAddedSelectionContext: UserAddedSelectionContext;
 }

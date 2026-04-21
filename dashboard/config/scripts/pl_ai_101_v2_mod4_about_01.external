@@ -1,0 +1,21 @@
+name 'pl-ai-101-V2-mod4-about-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching About AI
+
+#### A lot of the content we've covered so far in this Module has focused on teaching with AI.
+
+#### 
+
+<div style="text-align:center;">
+  <img 
+    src="https://images.code.org/b83679a5c60b1c90831a4b35461b5103-Screenshot 2026-03-11 at 1.06.25 PM.png" 
+    alt="Potential benefits and risks of AI in education."
+    style="width:75%; max-width:100%; height:auto;"
+  >
+</div>
+
+*Image: TeachAI*
+MARKDOWN

@@ -1,0 +1,17 @@
+name 'networks-postassessment-question5_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 5'
+
+wrong 'FTP'
+wrong 'TCP'
+wrong 'VPN'
+right 'HTTP'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+When you type a website URL like `www.example.com` into a browser, what protocol is used to request and load the webpage?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: HTTP and DNS
+MARKDOWN

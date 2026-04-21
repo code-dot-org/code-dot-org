@@ -1,0 +1,553 @@
+{
+  "script": {
+    "name": "6-12-aif-s2-unit6",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-02-06 00:20:44 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "6-12-aif-s2-unit6"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Capstone Project",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "187701d4-d2ae-46ff-9afb-280b8e02132e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "187701d4-d2ae-46ff-9afb-280b8e02132e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    },
+    {
+      "key": "e357db24-dce6-43db-8cb3-e7453984cbbb",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "69e4eb9c-b898-4752-9680-6401f3cd49d3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "69e4eb9c-b898-4752-9680-6401f3cd49d3",
+        "lesson_activity.key": "187701d4-d2ae-46ff-9afb-280b8e02132e"
+      }
+    },
+    {
+      "key": "9fde3d74-cd24-47f1-88cd-64dfa635f38f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 1: Intent & Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fde3d74-cd24-47f1-88cd-64dfa635f38f",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "18a8d3e9-9110-4780-86b4-cccb45d77bf5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Milestone 2: System Explanation"
+      },
+      "seeding_key": {
+        "activity_section.key": "18a8d3e9-9110-4780-86b4-cccb45d77bf5",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "f45cfad6-cea8-4cd0-ad3e-eedbd87896f6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Milestone 3: Testing & Behavior"
+      },
+      "seeding_key": {
+        "activity_section.key": "f45cfad6-cea8-4cd0-ad3e-eedbd87896f6",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "022a24c3-026c-48e5-8220-7abecd7ef526",
+      "position": 4,
+      "properties": {
+        "progression_name": "Milestone 4: Feedback & Iteration"
+      },
+      "seeding_key": {
+        "activity_section.key": "022a24c3-026c-48e5-8220-7abecd7ef526",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "be03e891-b0e5-4c20-83ad-fc730516f87d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Milestone 5: Final App & Presentation"
+      },
+      "seeding_key": {
+        "activity_section.key": "be03e891-b0e5-4c20-83ad-fc730516f87d",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Vocab: Benchmark"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "b4a5ca39-0325-4af3-92df-f8b5b79607cf",
+      "position": 7,
+      "properties": {
+        "progression_name": "Vocab: Milestone"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4a5ca39-0325-4af3-92df-f8b5b79607cf",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "b43e98e1-aab8-4e28-a71a-b6296c13d089",
+      "position": 8,
+      "properties": {
+        "progression_name": "Vocab: Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "b43e98e1-aab8-4e28-a71a-b6296c13d089",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    },
+    {
+      "key": "7bb4821d-7952-49ab-9a31-c70e0a6e88ca",
+      "position": 9,
+      "properties": {
+        "progression_name": "Vocab: Project Backlog"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb4821d-7952-49ab-9a31-c70e0a6e88ca",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "capstone-project-lesson1-level1-hub-test-2025"
+        ],
+        "progression": "Milestone 1: Intent & Scope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "9fde3d74-cd24-47f1-88cd-64dfa635f38f"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level1-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "capstone-project-lesson1-level2-hub-test-2025"
+        ],
+        "progression": "Milestone 2: System Explanation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level2-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "18a8d3e9-9110-4780-86b4-cccb45d77bf5"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level2-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "capstone-project-lesson1-level3-hub-test-2025"
+        ],
+        "progression": "Milestone 3: Testing & Behavior"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level3-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "f45cfad6-cea8-4cd0-ad3e-eedbd87896f6"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level3-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "capstone-project-lesson1-level4-test-2025"
+        ],
+        "progression": "Milestone 4: Feedback & Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level4-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "022a24c3-026c-48e5-8220-7abecd7ef526"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "capstone-project-lesson1-level5-hub-test-2025"
+        ],
+        "progression": "Milestone 5: Final App & Presentation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level5-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "be03e891-b0e5-4c20-83ad-fc730516f87d"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level5-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Benchmark"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-benchmark-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d"
+      },
+      "level_keys": [
+        "capstone-project-benchmark-test-2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Milestone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-milestone-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "b4a5ca39-0325-4af3-92df-f8b5b79607cf"
+      },
+      "level_keys": [
+        "capstone-project-milestone-test-2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Scope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-scope-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "b43e98e1-aab8-4e28-a71a-b6296c13d089"
+      },
+      "level_keys": [
+        "capstone-project-scope-test-2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Project Backlog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-project-backlog-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "7bb4821d-7952-49ab-9a31-c70e0a6e88ca"
+      },
+      "level_keys": [
+        "capstone-project-project-backlog-test-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level1-hub-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "9fde3d74-cd24-47f1-88cd-64dfa635f38f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level2-hub-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level2-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "18a8d3e9-9110-4780-86b4-cccb45d77bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level3-hub-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level3-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "f45cfad6-cea8-4cd0-ad3e-eedbd87896f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level4-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level4-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "022a24c3-026c-48e5-8220-7abecd7ef526"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level5-hub-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level5-hub-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "be03e891-b0e5-4c20-83ad-fc730516f87d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-benchmark-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-benchmark-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-milestone-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-milestone-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "b4a5ca39-0325-4af3-92df-f8b5b79607cf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-scope-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-scope-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "b43e98e1-aab8-4e28-a71a-b6296c13d089"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-project-backlog-test-2025",
+        "script_level.level_keys": [
+          "capstone-project-project-backlog-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "7bb4821d-7952-49ab-9a31-c70e0a6e88ca"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

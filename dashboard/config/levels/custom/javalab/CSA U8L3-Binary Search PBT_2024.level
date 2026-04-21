@@ -23,7 +23,7 @@
       }
     },
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:08:29.054+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-Binary Search PBT_2023\\\"\"],\"cloned_from\":\"CSA U8L3-Binary Search PBT_2023\"},{\"changed_at\":\"2025-04-04 21:40:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-04 21:40:42 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"

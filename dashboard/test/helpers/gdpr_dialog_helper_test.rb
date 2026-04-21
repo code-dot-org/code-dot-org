@@ -2,7 +2,7 @@ require 'test_helper'
 
 class GdprDialogHelperTest < ActionView::TestCase
   setup do
-    @user = build :user
+    @user = build(:user)
 
     @request = ActionDispatch::Request.new({})
     @request.stubs(:gdpr?).returns(false)
@@ -14,7 +14,7 @@ class GdprDialogHelperTest < ActionView::TestCase
   end
 
   test 'do not show GDPR dialog if user has accepted data transfer agreement' do
-    accepted_user = build :user, data_transfer_agreement_accepted: true
+    accepted_user = build(:user, data_transfer_agreement_accepted: true)
 
     refute GdprDialogHelper.show?(accepted_user, @request)
   end

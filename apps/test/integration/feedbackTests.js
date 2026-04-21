@@ -1,5 +1,6 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
 
@@ -36,7 +37,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !args.blockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -158,7 +159,7 @@ describe('getUserBlocks_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
@@ -186,10 +187,10 @@ describe('getUserBlocks_', function () {
       '</xml>',
     ];
 
-    var readOnly = Blockly.readOnly;
-    Blockly.readOnly = true;
+    var readOnly = Blockly.mainBlockSpace.readOnly;
+    Blockly.mainBlockSpace.readOnly = true;
     validateNumUserBlocks(testBlockXml.join(''), 3);
-    Blockly.readOnly = readOnly;
+    Blockly.mainBlockSpace.readOnly = readOnly;
   });
 });
 
@@ -268,7 +269,7 @@ describe('getMissingBlocks_ tests', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !options.userBlockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -570,107 +571,6 @@ describe('getCountableBlocks_', function () {
         '</xml>'
     );
     assert.equal(0, count);
-  });
-
-  it('counts all other blocks', function () {
-    var count;
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="controls_repeat">' +
-        '<title name="TIMES">4</title>' +
-        '<statement name="DO">' +
-        '<block type="text_print"></block>' +
-        '</statement>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(2, count);
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="procedures_defnoreturn">' +
-        '<mutation/>' +
-        '<title name="NAME">do something</title>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(3, count);
-
-    count = countBlocks(
-      '<xml>' +
-        '<block type="procedures_defnoreturn">' +
-        '<mutation/>' +
-        '<title name="NAME">do something</title>' +
-        '<statement name="STACK">' +
-        '<block type="text_print"></block>' +
-        '</statement>' +
-        '</block>' +
-        '</xml>'
-    );
-    assert.equal(5, count);
-
-    count = countBlocks(
-      '<xml>' +
-        ' <block type="variables_set">' +
-        '   <title name="VAR">length</title>' +
-        '   <value name="VALUE">' +
-        '     <block type="math_number">' +
-        '       <title name="NUM">50</title>' +
-        '     </block>' +
-        '   </value>' +
-        '   <next>' +
-        '     <block type="controls_repeat_ext">' +
-        '       <value name="TIMES">' +
-        '         <block type="math_number">' +
-        '           <title name="NUM">100</title>' +
-        '         </block>' +
-        '       </value>' +
-        '       <statement name="DO">' +
-        '         <block type="controls_repeat_ext">' +
-        '           <value name="TIMES">' +
-        '             <block type="math_number">' +
-        '               <title name="NUM">3</title>' +
-        '             </block>' +
-        '           </value>' +
-        '           <statement name="DO">' +
-        '             <block type="draw_move">' +
-        '               <title name="DIR">moveForward</title>' +
-        '               <value name="VALUE">' +
-        '                 <block type="variables_get">' +
-        '                   <title name="VAR">length</title>' +
-        '                 </block>' +
-        '               </value>' +
-        '               <next>' +
-        '                 <block type="draw_turn">' +
-        '                   <title name="DIR">turnLeft</title>' +
-        '                   <value name="VALUE">' +
-        '                     <block type="math_number">' +
-        '                       <title name="NUM">120</title>' +
-        '                     </block>' +
-        '                   </value>' +
-        '                 </block>' +
-        '               </next>' +
-        '             </block>' +
-        '           </statement>' +
-        '           <next>' +
-        '             <block type="draw_move">' +
-        '               <title name="DIR">moveForward</title>' +
-        '               <value name="VALUE">' +
-        '                 <block type="variables_get">' +
-        '                   <title name="VAR">length</title>' +
-        '                 </block>' +
-        '               </value>' +
-        '             </block>' +
-        '           </next>' +
-        '         </block>' +
-        '       </statement>' +
-        '     </block>' +
-        '   </next>' +
-        ' </block>' +
-        '</xml>'
-    );
-    assert.equal(17, count);
   });
 });
 

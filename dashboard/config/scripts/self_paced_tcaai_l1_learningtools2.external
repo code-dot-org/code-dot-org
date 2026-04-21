@@ -1,0 +1,23 @@
+name 'self-paced-TCaAI-L1-LearningTools2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Student Learning Tools
+
+## Sketch Lab
+
+#### Sketch Lab is a digital design workspace similar to Canva or Figma where students can annotate, draw, create, and edit content. In Thinking Critically About AI, students use Sketch Lab to apply what they have learned in each lesson by completing structured, hands-on activities that build toward their final project.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img 
+    src="https://images.code.org/2f9936cfd475d9ee5fdd32ac094176a2-image-1772846190646.15.08 PM.png" 
+    alt="Screenshot of Sketch Lab" 
+    style="border-radius: 40px; height: 300px;">
+</div>
+
+
+#### They will annotate AI-generated content, map ideas, draft guidance, and design visuals that clarify complex conclusions. By combining analysis and design, Sketch Lab helps students move from exploration to polished, evidence-based communication.
+
+#### **Up Next**: Try out Sketch Lab!
+MARKDOWN

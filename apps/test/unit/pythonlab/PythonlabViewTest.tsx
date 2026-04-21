@@ -17,6 +17,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 jest.mock('@codebridge/Codebridge', () => {
   return {
@@ -47,6 +48,7 @@ describe('PythonLabView', () => {
       lab2Project,
       lab,
       lab2System,
+      currentUser,
     });
 
     store = getStore();

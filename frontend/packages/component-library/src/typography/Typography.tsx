@@ -18,8 +18,13 @@ export interface TypographyProps {
   children: ReactNode;
   /** Typography element id */
   id?: string;
+  /** Typography without margins */
+  noMargin?: boolean;
 }
 
+/**
+ * @deprecated Use MUI `Typography` from `@mui/material` instead.
+ */
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
   visualAppearance,
@@ -27,6 +32,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   className,
   style,
   id,
+  noMargin = false,
   ...props
 }) => {
   const Tag = semanticTag;
@@ -34,7 +40,14 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   return (
     <Tag
       id={id}
-      className={classnames(moduleStyles[visualAppearance], className)}
+      className={classnames(
+        moduleStyles[visualAppearance],
+        {
+          [moduleStyles['no-margin']]: noMargin,
+          [moduleStyles.wrapper]: semanticTag === 'div',
+        },
+        className,
+      )}
       style={style}
       {...props}
     >
@@ -43,4 +56,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
+/**
+ * @deprecated Use MUI `Typography` from `@mui/material` instead.
+ */
 export default memo(Typography);

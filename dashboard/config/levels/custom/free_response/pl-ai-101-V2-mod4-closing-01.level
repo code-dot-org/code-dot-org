@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-03-11T15:47:44.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Wrap Up\r\n\r\n<div style=\"display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;\">\r\n\r\n  <div>\r\n    <h4 style=\"margin-top: 0; font-weight: bold;\">In this professional learning module, you learned to:</h4>\r\n    <ul style=\"list-style-type: disc; padding-left: 10px; font-size: 14pt\">\r\n      <li>Explain what AI is as well as it's impact on industry and education.\r\n</li><br>\r\n\t  <li>Realize the benefits and address the risks of AI in an educational setting.\r\n</li><br>\r\n      <li>Describe AI Literacy and explain the benefits of AI literacy for both educators and students.</li>\r\n    </ul>\r\n  </div>\r\n  <div>\r\n    <img src=\"https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png\" \r\n         alt=\"Icon with computer and weblayout\" \r\n         style=\"border-radius: 10px; width: 200px; height: auto;\">\r\n  </div>\r\n</div>\r\n\r\n## Closing Reflection\r\n\r\n> #### In the reflection box below, answer **one or more** of the following questions:\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. What's something new you learned about AI?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. What's one thing you want to take back to your school/classroom?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. If you were going to describe AI to a student, what would you say?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-11T15:47:44.754+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-closing-00\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-closing-00\"}]"
+}]]></config>
+</FreeResponse>

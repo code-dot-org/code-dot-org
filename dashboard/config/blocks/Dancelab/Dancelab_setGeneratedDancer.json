@@ -1,0 +1,65 @@
+{
+  "category": "",
+  "config": {
+    "func": "setGeneratedDancer",
+    "docFunc": "gamelab_makeNewSpriteAnon",
+    "inline": false,
+    "blockText": "generated dancer do {NAME}",
+    "style": "ai_blocks",
+    "args": [
+      {
+        "name": "NAME",
+        "options": [
+          [
+            "Body Roll",
+            "\"roll\""
+          ],
+          [
+            "Clap High",
+            "\"clap_high\""
+          ],
+          [
+            "Dab",
+            "\"dab\""
+          ],
+          [
+            "Double Down",
+            "\"double_jam\""
+          ],
+          [
+            "Drop",
+            "\"drop\""
+          ],
+          [
+            "Floss",
+            "\"floss\""
+          ],
+          [
+            "Fresh",
+            "\"fresh\""
+          ],
+          [
+            "Gangnam",
+            "\"clown\""
+          ],
+          [
+            "Star",
+            "\"kick\""
+          ],
+          [
+            "This or That",
+            "\"this_or_that\""
+          ],
+          [
+            "Zombie",
+            "\"thriller\""
+          ],
+          [
+            "None",
+            "\"rest\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-03-08T21:57:56.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "Think about one specific styling change you made to improve your page. Write 1–2 sentences explaining how you refined your prompt and how the final change better reflects your brand and improves usability using this sentence frame:\r\n\r\n> I improved my design by ..., which helped my page ...",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026",
+    "teacher_markdown": "Key Concept\r\nUse intentional prompting and revision to apply brand styling with CSS and improve usability.\r\n\r\nExtensive Evidence\r\nClearly explains a specific styling issue, describes how the prompt was refined, and shows how the final changes improved brand alignment and usability. Demonstrates clear understanding of CSS as styling (not structure).\r\n\r\nConvincing Evidence\r\nExplains a styling change and how it improved the page, but the description of prompt refinement or CSS understanding may be general.\r\n\r\nLimited Evidence\r\nIdentifies a change that was made but provides limited explanation of how it improved the design or how AI prompting was used intentionally.\r\n\r\nNo Evidence\r\nDoes not clearly explain the refinement process or how the styling changes improved the page."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-08T21:57:56.601+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level7_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level7_2026\"},{\"changed_at\":\"2026-03-08 22:06:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

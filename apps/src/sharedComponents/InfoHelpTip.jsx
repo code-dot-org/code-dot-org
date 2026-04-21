@@ -1,4 +1,4 @@
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -10,11 +10,17 @@ export default function InfoHelpTip({id, content}) {
   return (
     <span style={{marginLeft: '12px'}}>
       <span data-tip data-for={id}>
-        <FontAwesome icon="info-circle" style={styles.infoTipIcon} />
+        <FontAwesome icon="circle-info" style={styles.infoTipIcon} />
       </span>
       <ReactTooltip id={id} role="tooltip" effect="solid">
         <div style={styles.infoToolTipBox}>
-          <BodyTwoText style={styles.infoToolTipText}>{content}</BodyTwoText>
+          <Typography
+            style={styles.infoToolTipText}
+            variant="body2"
+            gutterBottom
+          >
+            {content}
+          </Typography>
         </div>
       </ReactTooltip>
     </span>
