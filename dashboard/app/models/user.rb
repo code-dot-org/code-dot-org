@@ -198,7 +198,6 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
-    ai_tutor_access_denied
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
