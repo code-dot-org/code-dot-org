@@ -8,9 +8,9 @@ require 'sentry-ruby'
 
 describe Observability::Sentry do
   before do
-    CDO.enable_sentry = false
-    CDO.enable_opentelemetry = false
-    CDO.dashboard_sentry_dsn = nil
+    CDO.stubs(:enable_sentry).returns(false)
+    CDO.stubs(:enable_opentelemetry).returns(false)
+    CDO.stubs(:dashboard_sentry_dsn).returns(nil)
     # ENV['UNIT_TEST'] is nil in engine test runs — enabled path is active by default
   end
 
@@ -23,7 +23,7 @@ describe Observability::Sentry do
 
     describe 'when UNIT_TEST is set' do
       before do
-        CDO.enable_sentry = true
+        CDO.stubs(:enable_sentry).returns(true)
         ENV['UNIT_TEST'] = 'true'
       end
       after {ENV.delete('UNIT_TEST')}
@@ -35,8 +35,8 @@ describe Observability::Sentry do
 
     describe 'when CDO.enable_sentry is true and UNIT_TEST is not set' do
       before do
-        CDO.enable_sentry = true
-        CDO.dashboard_sentry_dsn = 'https://key@sentry.example.com/1'
+        CDO.stubs(:enable_sentry).returns(true)
+        CDO.stubs(:dashboard_sentry_dsn).returns('https://key@sentry.example.com/1')
       end
 
       describe 'when dashboard_sentry_dsn is blank' do
