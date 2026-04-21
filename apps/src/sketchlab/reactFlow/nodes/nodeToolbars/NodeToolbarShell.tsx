@@ -9,6 +9,9 @@ import styles from './node-toolbar.module.scss';
 
 const TOOLBAR_OFFSET_PX = 8;
 const PAN_DURATION_MS = 200;
+// Width reserved for React Flow's Controls overlay along the left edge
+// so the toolbar doesn't sit underneath it after panning into view.
+const CONTROLS_WIDTH_PX = 60;
 const FOCUSABLE_SELECTOR =
   'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -50,7 +53,9 @@ export default function NodeToolbarShell({
           '.react-flow__node-toolbar'
         );
         if (!toolbarEl) return;
-        const overflow = getViewportOverflow(toolbarEl);
+        const overflow = getViewportOverflow(toolbarEl, {
+          left: CONTROLS_WIDTH_PX,
+        });
         if (!overflow) return;
         const viewport = getViewport();
         setViewport(
