@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
+  AiChatTeacherFeedback as TeacherFeedback,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -55,6 +56,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     assets,
     userAddedSelectionContext,
   } = chatMessage;
+  const teacherFlagged = isCompletedChatMessage(chatMessage)
+    ? chatMessage.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
+    : false;
 
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
@@ -191,7 +195,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       messageStyle={getMessageStyle(status, role)}
       header={header}
       footer={footer}
-      teacherFeedback={chatMessage.teacherFeedback}
+      teacherFlagged={teacherFlagged}
     />
   );
 };

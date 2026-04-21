@@ -38,8 +38,6 @@ interface BaseChatMessage extends BaseChatEvent {
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
   /** Necessary to update a pending message to completed or to update chatMessageText */
   updateId?: string;
-  /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
-  teacherFeedback?: FeedbackValue;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
@@ -56,6 +54,8 @@ export interface ErrorChatMessage extends BaseChatMessage {
 export interface CompletedChatMessage extends BaseChatMessage {
   /** Required. Server request ID corresponding to this completed chat message. */
   requestId: number;
+  /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
+  teacherFeedback?: FeedbackValue;
   /**
    * Can be any status besides 'unknown', which is reserved only for pending messages.
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error

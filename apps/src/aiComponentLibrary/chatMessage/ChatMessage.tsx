@@ -7,7 +7,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -24,7 +23,7 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
-  teacherFeedback?: string;
+  teacherFlagged?: boolean;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -53,13 +52,11 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
-  teacherFeedback,
+  teacherFlagged,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
   const isAssistant = role === Role.ASSISTANT;
-
-  const teacherFlagged = teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
   console.log('teacherFlagged', teacherFlagged);
 
   return (
