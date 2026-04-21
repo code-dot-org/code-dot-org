@@ -106,6 +106,10 @@ class AnimationPicker extends React.Component {
     showFlaggedModal: false,
     pendingUploadData: null,
     flaggedModalError: null,
+    // Computed once per dialog open so the URL is stable across re-renders
+    // and accessible at moderation time (before the upload occurs).
+    uploadUrl:
+      '/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png',
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -217,7 +221,7 @@ class AnimationPicker extends React.Component {
         this.props.projectType,
         {
           uploaderType: 'AnimationPicker',
-          assetUrl: data.url,
+          assetUrl: this.state.uploadUrl,
         }
       );
       if (moderationStatus === 'flagged') {
@@ -294,13 +298,7 @@ class AnimationPicker extends React.Component {
       >
         <HiddenUploader
           ref="uploader"
-          toUrl={
-            '/v3/animations/' +
-            this.props.channelId +
-            '/' +
-            createUuid() +
-            '.png'
-          }
+          toUrl={this.state.uploadUrl}
           allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
