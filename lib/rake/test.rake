@@ -43,7 +43,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
-      '--priority 0'
+      '--saucelabs-priority 0'
     )
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'

@@ -11,8 +11,8 @@ UI_TEST_DIR = File.expand_path('../..', __dir__)
 
 # Load browser config from the appropriate JSON file depending on provider.
 # When TEST_DEVICE_FARM=true, use browsers_device_farm.json; otherwise use
-# the standard browsers.json (SauceLabs).
-browser_configs_file = ENV['TEST_DEVICE_FARM'] == 'true' ? 'browsers_device_farm.json' : 'browsers.json'
+# browsers_saucelabs.json.
+browser_configs_file = ENV['TEST_DEVICE_FARM'] == 'true' ? 'browsers_device_farm.json' : 'browsers_saucelabs.json'
 $browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, browser_configs_file))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
@@ -56,7 +56,7 @@ def saucelabs_browser(test_run_name, http_client: nil)
     tunnelIdentifier: CDO.saucelabs_tunnel_name,
   }
 
-  sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
+  sauce_options[:priority] = ENV['SAUCELABS_PRIORITY'].to_i if ENV['SAUCELABS_PRIORITY']
   capabilities['sauce:options'] ||= {}
   capabilities['sauce:options'].merge!(sauce_options)
 
@@ -263,7 +263,7 @@ After do |scenario|
   end
 end
 
-def context(str)
+def saucelabs_context(str)
   unless test_local? || test_device_farm?
     $browser&.execute_script("sauce:context=#{str}")
   end
@@ -274,22 +274,22 @@ end
 failed = false
 AfterConfiguration do |config|
   config.on_event :test_case_started do |event|
-    context "Scenario: #{event.test_case.name}"
+    saucelabs_context "Scenario: #{event.test_case.name}"
   end
   config.on_event :test_step_started do |event|
     last = event.test_step.source.last
     # Don't record context for (skipped) steps in scenario after failure.
     next if failed && last.is_a?(Cucumber::Core::Ast::Step)
-    context last
+    saucelabs_context last
   end
   config.on_event :test_step_finished do |event|
     if event.result.failed?
       failed = true
-      context "Failed: #{event.result.exception}"
+      saucelabs_context "Failed: #{event.result.exception}"
     end
   end
   config.on_event :test_case_finished do |_|
-    context 'Passed' unless failed
+    saucelabs_context 'Passed' unless failed
     failed = false
   end
 end

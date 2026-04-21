@@ -113,7 +113,7 @@ def parse_options
     options.magic_retry = false
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
-    options.priority = '99'
+    options.saucelabs_priority = '99'
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -148,7 +148,7 @@ def parse_options
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
-      opts.on("--first-run-local", "Use the local webdriver (not Saucelabs) only for the first run of a test; reruns will use Saucelabs.") do
+      opts.on("--first-run-local", "Use the local webdriver only for the first run of a test; reruns will use the configured remote provider.") do
         options.first_run_local = 'true'
       end
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
@@ -231,8 +231,8 @@ def parse_options
       opts.on("--dry-run", "Process features without running any actual steps.") do
         options.dry_run = true
       end
-      opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
-        options.priority = priority
+      opts.on("--saucelabs-priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
+        options.saucelabs_priority = priority
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -275,7 +275,7 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers_file = options.device_farm ? 'browsers_device_farm.json' : 'browsers.json'
+  browsers_file = options.device_farm ? 'browsers_device_farm.json' : 'browsers_saucelabs.json'
   browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, browsers_file)))
   if options.config
     options.config.map do |name|
@@ -793,7 +793,7 @@ def run_feature(browser, feature, options)
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = mobile_browser?(browser) ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['PRIORITY'] = options.priority
+  run_environment['SAUCELABS_PRIORITY'] = options.saucelabs_priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.

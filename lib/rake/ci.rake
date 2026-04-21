@@ -149,7 +149,7 @@ namespace :ci do
             "--html"
       end
     else
-      ui_test_browsers = browsers_to_run
+      ui_test_browsers = saucelabs_browsers_to_run
       use_saucelabs = !ui_test_browsers.empty?
       if use_saucelabs || test_eyes?
         Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
@@ -170,7 +170,7 @@ namespace :ci do
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
@@ -183,7 +183,7 @@ namespace :ci do
               "--ci " \
               "--parallel #{PARALLEL_COUNT} " \
               "--retry_count 1 " \
-              "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
+              "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
               "--with-status-page " \
               "--html"
         end
@@ -252,7 +252,7 @@ def device_farm_browsers_to_run
 end
 
 # @return [Array<String>] names of browser configurations for this test run
-def browsers_to_run
+def saucelabs_browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
   browsers << 'Firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
