@@ -82,14 +82,16 @@ const getNodeId = () => crypto.randomUUID();
 // (min-height 60 + padding 16 + border 4 = 80px in content-box).
 const SHAPE_HEIGHT = 80;
 
-// Force all circle/triangle nodes to the standard SHAPE_HEIGHT. This keeps
-// the wrapper dimensions that React Flow uses for handle hit-testing lined
-// up with the visible shape (whose inner CSS fills that wrapper), and
-// matches the fixed-size convention enforced by `onShapeSelect` when the
-// user picks a shape.
+// Apply the default SHAPE_HEIGHT to circle/triangle nodes that don't
+// already have explicit dimensions (e.g. freshly created or migrated from
+// Excalidraw). Nodes the user has manually resized carry explicit
+// `style.width`/`style.height` and are left alone.
 const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
   nodes.map(n => {
     const shape = n.data?.shape as string | undefined;
+    const hasExplicitSize =
+      typeof n.style?.width === 'number' && typeof n.style?.height === 'number';
+    if (hasExplicitSize) return n;
     if (shape === 'triangle') {
       const w = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
       return {

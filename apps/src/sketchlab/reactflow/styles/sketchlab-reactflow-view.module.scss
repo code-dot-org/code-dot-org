@@ -94,7 +94,13 @@
 }
 
 .textBoxNode {
-  min-width: 150px;
+  // Fill the React Flow wrapper so the visible element aligns with the
+  // wrapper bounds that React Flow uses for handle hit-testing. border-box
+  // keeps padding/border inside the stated width/height.
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 100px;
   min-height: 60px;
   background: var(--neutral-base-black);
   border: 2px solid var(--neutral-gray-70);
@@ -123,11 +129,6 @@
 
 .textBoxNodeCircle {
   border-radius: 50%;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
 }
 
 .textBoxNodeTriangle {
@@ -137,11 +138,6 @@
   box-shadow: none;
   background: transparent !important;
   position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
 }
 
 .triangleSvg {

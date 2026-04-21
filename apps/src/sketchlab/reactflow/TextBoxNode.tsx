@@ -1,5 +1,6 @@
 import {
   Handle,
+  NodeResizer,
   NodeToolbar,
   Position,
   useReactFlow,
@@ -217,6 +218,7 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
           />
         </NodeToolbar>
       )}
+      <NodeResizer isVisible={selected} minWidth={100} minHeight={60} />
       <div
         className={`${moduleStyles.textBoxNode} ${shapeClass} ${
           selected ? moduleStyles.textBoxNodeSelected : ''
