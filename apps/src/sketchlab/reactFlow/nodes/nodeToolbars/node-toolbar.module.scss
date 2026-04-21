@@ -48,8 +48,12 @@
   display: flex;
   justify-content: flex-end;
   // Pull into the Paper's 8px padding so the X sits in the corner
-  // rather than inside its own row of whitespace.
-  margin: -4px -4px 0 0;
+  // rather than inside its own row of whitespace. Bottom -20px
+  // offset makes it so the header doesn't have a massive gap to the
+  // toolbar content. The header only contains a right-aligned close button,
+  // and each content section starts with a left-aligned header,
+  // so the two can overlap without looking like they overlap.
+  margin: -4px -4px -20px 0;
 }
 
 .close-button {
