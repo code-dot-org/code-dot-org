@@ -4,7 +4,7 @@ import {Typography} from '@mui/material';
 import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import {Visibility} from '@cdo/apps/aichat/types';
+import {Visibility} from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 

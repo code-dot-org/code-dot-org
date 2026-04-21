@@ -1,10 +1,11 @@
+import {AiCustomizations} from '@cdo/apps/aichatLab/types';
 import {FIELDS_CHECKED_FOR_TOXICITY} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {ValueOf} from '../types/utils';
 
 import {MAX_NAME_LENGTH, modelDescriptions} from './constants';
-import {AiCustomizations, ChatAsset, ToxicityCheckedField} from './types';
+import {ChatAsset, ToxicityCheckedField} from './types';
 
 export const getShortName = (studentName: string): string => {
   // If the student name contains a first and last name separated by whitespace, only use the first name.

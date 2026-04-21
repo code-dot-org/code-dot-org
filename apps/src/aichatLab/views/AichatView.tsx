@@ -21,11 +21,7 @@ import {
   updateAiCustomization,
   initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
-import {
-  AichatLevelProperties,
-  ModelParameters,
-  ViewMode,
-} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
@@ -50,6 +46,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {AichatLevelProperties, ViewMode} from '../types';
 
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';

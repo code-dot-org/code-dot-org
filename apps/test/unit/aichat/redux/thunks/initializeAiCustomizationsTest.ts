@@ -5,7 +5,7 @@ import {
   AiCustomizations,
   LevelAichatSettings,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,

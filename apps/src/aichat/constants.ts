@@ -1,10 +1,11 @@
+import {SaveType} from '@cdo/apps/aichatLab/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 import type {ValueOf} from '../types/utils';
 
-import type {ModelDescription, SaveType} from './types';
+import type {ModelDescription} from './types';
 
 export const modelDescriptions: ModelDescription[] =
   modelsJson.filter(isValidDescription);
