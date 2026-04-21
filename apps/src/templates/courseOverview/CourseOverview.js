@@ -14,7 +14,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -200,7 +199,6 @@ class CourseOverview extends Component {
         {isSignedIn && (
           <Announcements
             announcements={this.props.announcements}
-            width={styleConstants['content-width']}
             viewAs={viewAs}
             firehoseAnalyticsId={{
               user_id: userId,

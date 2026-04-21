@@ -39,7 +39,6 @@ const NOTIFICATION_ICON_BY_TYPE = {
 export default class Announcements extends Component {
   static propTypes = {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   };
 
