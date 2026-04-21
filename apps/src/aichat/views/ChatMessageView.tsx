@@ -11,7 +11,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
-  AiChatTeacherFeedback as TeacherFeedback,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -35,6 +34,7 @@ interface ChatMessageViewProps {
   clientType?: string;
   modelParameters?: ModelParameters;
   postText?: React.ReactNode;
+  teacherFlaggedHidden: boolean;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
@@ -44,6 +44,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   clientType,
   modelParameters,
   postText,
+  teacherFlaggedHidden,
 }) => {
   const user = useAppSelector(state => state.currentUser);
 
@@ -56,13 +57,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     assets,
     userAddedSelectionContext,
   } = chatMessage;
-  const teacherFlagged = isCompletedChatMessage(chatMessage)
-    ? chatMessage.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
-    : false;
-
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
-  const teacherFlaggedHidden = teacherFlagged && !isChatHistoryView;
 
   // Determine if we should show the FlagResponseButton
   // The user must be a levelbuilder, and we currently only show the button for AI Tutor messages

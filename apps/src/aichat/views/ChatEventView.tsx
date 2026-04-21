@@ -5,6 +5,7 @@ import React, {forwardRef, memo} from 'react';
 import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import {modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux';
@@ -20,6 +21,7 @@ import {
   ChatEventDescriptionKey,
   ChatAsset,
   ModelParameters,
+  isCompletedChatMessage,
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
@@ -93,6 +95,10 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
     // Only wrap chat messages in a focusable div for keyboard navigation
     if (isChatMessage(event)) {
+      const teacherFlagged = isCompletedChatMessage(event)
+        ? event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
+        : false;
+      const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
       return (
         <div
           ref={ref}
@@ -102,7 +108,8 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.status,
             event.role,
             event.chatMessageText,
-            false // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            teacherFlaggedHidden
           )}
           className={styles.chatMessageOutline}
         >
@@ -113,6 +120,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             clientType={clientType}
             modelParameters={modelParameters}
             postText={postText}
+            teacherFlaggedHidden={teacherFlaggedHidden}
           />
         </div>
       );
