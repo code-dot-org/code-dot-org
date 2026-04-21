@@ -26,28 +26,26 @@ export default function NodeToolbarShell({
   const {openToolbarNodeId, closeToolbar, focusToolbarOnOpen} =
     useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
-  const paperRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = openToolbarNodeId === nodeId;
   const wasVisibleRef = useRef(false);
 
-  // On the rising edge of isVisible, consume the focus-on-open ref. If
+  // When isVisible changes from false to true, read the focusToolbarOnOpen ref. If
   // set, the toolbar was opened via keyboard ("e") and should grab focus
-  // for the trap; otherwise the click path keeps focus on the node. Also
-  // pans the viewport if the toolbar is not fully in view — it extends
-  // past the node to the left and can sit outside the container even
-  // when the node itself is visible.
+  // for the trap; otherwise the click path keeps focus on the node.
+  // Also pans the viewport if the toolbar is not fully in view.
   useEffect(() => {
     if (isVisible && !wasVisibleRef.current) {
       if (focusToolbarOnOpen.current) {
         focusToolbarOnOpen.current = false;
         const first =
-          paperRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR);
+          containerRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR);
         first?.focus();
       }
       // Defer until after React Flow positions the toolbar in the DOM
       // so getBoundingClientRect reflects the final placement.
       requestAnimationFrame(() => {
-        const toolbarEl = paperRef.current?.closest<HTMLElement>(
+        const toolbarEl = containerRef.current?.closest<HTMLElement>(
           '.react-flow__node-toolbar'
         );
         const container = toolbarEl?.closest<HTMLElement>('.react-flow');
@@ -100,7 +98,7 @@ export default function NodeToolbarShell({
       if (event.key !== 'Tab') return;
 
       const focusables =
-        paperRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
+        containerRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
       if (!focusables || focusables.length === 0) return;
 
       const first = focusables[0];
@@ -135,7 +133,7 @@ export default function NodeToolbarShell({
       isVisible={isVisible}
     >
       <Paper
-        ref={paperRef}
+        ref={containerRef}
         className={styles.toolbar}
         elevation={3}
         role="toolbar"
