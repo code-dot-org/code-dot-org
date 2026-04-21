@@ -145,9 +145,9 @@ def get_device_farm_browser
   # desktop sessions construct one from the project ARN + session ID.
   $device_farm_job_arn =
     is_mobile ? $device_farm_mobile_session_arn : Cdo::DeviceFarm.desktop_job_arn_for($session_id)
-  kind = is_mobile ? 'mobile session' : 'session'
-  sub_kind = is_mobile ? 'session' : 'job'
-  puts "AWS Device Farm #{kind}: #{$session_id} (#{sub_kind}: #{$device_farm_job_arn})"
+  console_url =
+    is_mobile ? Cdo::DeviceFarm.mobile_session_url($device_farm_job_arn) : Cdo::DeviceFarm.desktop_session_url($session_id)
+  puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
   browser
 end
 

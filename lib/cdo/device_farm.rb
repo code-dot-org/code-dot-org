@@ -67,6 +67,15 @@ module Cdo
       "arn:aws:devicefarm:#{REGION}:#{account_id}:job:#{project_uuid}/#{selenium_session_id}"
     end
 
+    # AWS console URL for a desktop TestGrid session's Selenium logs.
+    def self.desktop_session_url(selenium_session_id)
+      arn = CDO.device_farm_desktop_project_arn
+      return nil if arn.blank?
+      project_uuid = arn.split(':')[6]
+      "https://#{REGION}.console.aws.amazon.com/devicefarm/home" \
+        "#/browser/projects/#{project_uuid}/runsselenium/logs/#{selenium_session_id}"
+    end
+
     # ---- Mobile (Remote Access Session) -------------------------------------
 
     # Provisions a real device, waits for it to be ready, and returns the
@@ -91,6 +100,18 @@ module Cdo
       endpoint = wait_for_session_endpoint(session_arn)
 
       {url: endpoint, session_arn: session_arn}
+    end
+
+    # AWS console URL for a mobile remote access session's files/logs view.
+    # Parses session ARN tail <project>/<session>/<sub> into the console path.
+    def self.mobile_session_url(session_arn)
+      return nil if session_arn.blank?
+      tail = session_arn.split(':', 7)[6]
+      return nil if tail.blank?
+      project_uuid, session_uuid, sub_id = tail.split('/')
+      return nil unless project_uuid && session_uuid && sub_id
+      "https://#{REGION}.console.aws.amazon.com/devicefarm/home" \
+        "#/mobile/projects/#{project_uuid}/sessions/#{session_uuid}/#{sub_id}/files"
     end
 
     # ---- Result logging (both paths) ----------------------------------------
