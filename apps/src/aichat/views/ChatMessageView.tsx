@@ -29,7 +29,7 @@ import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 import styles from './chatWorkspace.module.scss';
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
-  isChatHistoryView: boolean;
+  isTeacherView: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   clientType?: string;
   modelParameters?: ModelParameters;
@@ -39,7 +39,7 @@ interface ChatMessageViewProps {
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
-  isChatHistoryView,
+  isTeacherView,
   buildAssetUrl,
   clientType,
   modelParameters,
@@ -92,51 +92,23 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   const isAssistant = chatMessage.role === Role.ASSISTANT;
 
-  let footer;
-  if (isChatHistoryView) {
-    // In chat history view, all events should have been retrieved from the server (i.e. should have an ID).
-    if (!isServerChatEvent(chatMessage)) {
-      console.warn('Invalid event in chat history', chatMessage);
-      return null;
-    }
-
-    const commonProps = {
-      id: chatMessage.id,
-      chatMessageText: chatMessage.chatMessageText,
-      teacherFeedback: isCompletedChatMessage(chatMessage)
-        ? chatMessage.teacherFeedback
-        : undefined,
-    };
-
-    footer = messageVisible ? (
-      <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
-    ) : userMessageProfanity ? (
-      <ProfanityFeedbackFooter
-        {...commonProps}
-        toggleProfaneMessageVisibility={() =>
-          setShowProfaneUserMessage(!showProfaneUserMessage)
-        }
-        profaneMessageVisible={showProfaneUserMessage}
-      />
-    ) : null;
-  } else {
-    footer =
-      messageVisible && isAssistant ? (
-        <div className={styles.buttonRow}>
-          <CopyButton
-            copyText={chatMessage.chatMessageText}
-            usage={'ai-chat-msg-footer'}
-          />
-          {canLogToLangfuse && isServerChatEvent(chatMessage) && (
-            <FlagResponseButton
-              chatMessageId={chatMessage.id}
-              chatMessageText={chatMessage.chatMessageText}
-              modelParameters={modelParameters}
-            />
-          )}
-        </div>
-      ) : null;
+  // In teacher view, all events should have been retrieved from the server (i.e. should have an ID).
+  if (isTeacherView && !isServerChatEvent(chatMessage)) {
+    console.warn('Invalid event in chat history', chatMessage);
+    return null;
   }
+
+  const footer = getFooter({
+    isTeacherView,
+    messageVisible,
+    userMessageProfanity,
+    isAssistant,
+    chatMessage,
+    canLogToLangfuse,
+    modelParameters,
+    showProfaneUserMessage,
+    setShowProfaneUserMessage,
+  });
 
   let header;
   if ((hasAssets || hasUserAddedSelectionContext) && !teacherFlaggedHidden) {
@@ -241,6 +213,78 @@ export function getChatMessageDisplayText(
     default:
       return chatMessageDisplayText;
   }
+}
+
+interface GetFooterParams {
+  isTeacherView: boolean;
+  messageVisible: boolean;
+  userMessageProfanity: boolean;
+  isAssistant: boolean;
+  chatMessage: ChatMessageType;
+  canLogToLangfuse: boolean;
+  modelParameters: ModelParameters | undefined;
+  showProfaneUserMessage: boolean;
+  setShowProfaneUserMessage: (value: boolean) => void;
+}
+
+function getFooter({
+  isTeacherView,
+  messageVisible,
+  userMessageProfanity,
+  isAssistant,
+  chatMessage,
+  canLogToLangfuse,
+  modelParameters,
+  showProfaneUserMessage,
+  setShowProfaneUserMessage,
+}: GetFooterParams): React.ReactNode {
+  if (isTeacherView) {
+    // Guaranteed by the component-level guard, but needed for type narrowing.
+    if (!isServerChatEvent(chatMessage)) return null;
+
+    const commonProps = {
+      id: chatMessage.id,
+      chatMessageText: chatMessage.chatMessageText,
+      teacherFeedback: isCompletedChatMessage(chatMessage)
+        ? chatMessage.teacherFeedback
+        : undefined,
+    };
+
+    if (messageVisible) {
+      return <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />;
+    }
+    if (userMessageProfanity) {
+      return (
+        <ProfanityFeedbackFooter
+          {...commonProps}
+          toggleProfaneMessageVisibility={() =>
+            setShowProfaneUserMessage(!showProfaneUserMessage)
+          }
+          profaneMessageVisible={showProfaneUserMessage}
+        />
+      );
+    }
+    return null;
+  }
+
+  if (messageVisible && isAssistant) {
+    return (
+      <div className={styles.buttonRow}>
+        <CopyButton
+          copyText={chatMessage.chatMessageText}
+          usage={'ai-chat-msg-footer'}
+        />
+        {canLogToLangfuse && isServerChatEvent(chatMessage) && (
+          <FlagResponseButton
+            chatMessageId={chatMessage.id}
+            chatMessageText={chatMessage.chatMessageText}
+            modelParameters={modelParameters}
+          />
+        )}
+      </div>
+    );
+  }
+  return null;
 }
 
 function getMessageStyle(

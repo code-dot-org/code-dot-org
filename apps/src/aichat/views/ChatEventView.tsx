@@ -115,7 +115,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         >
           <ChatMessageView
             chatMessage={event}
-            isChatHistoryView={isTeacherView || false}
+            isTeacherView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
             clientType={clientType}
             modelParameters={modelParameters}
