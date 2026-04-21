@@ -10,7 +10,14 @@ const TOOLTIP_LABELS = ['blockly-block', 'blockly-tooltip'];
  * Wraps localization.translate so that for short labels that are a single word,
  * we add a prefix to them so they can be translated with context.
  */
-function translate(text: string, labels: string[]) {
+export function translate(
+  text: string,
+  labels: string[],
+  forcePrefix: boolean = false
+) {
+  // Ensure a default set of labels
+  labels = Array.from(new Set(labels.concat(BLOCK_LABELS)));
+
   // Ignore things that are effectively numbers
   if (isFinite(+(text || NaN))) {
     return text;
@@ -21,7 +28,7 @@ function translate(text: string, labels: string[]) {
     return text;
   }
 
-  if (text.length < 4) {
+  if (text.length < 4 || forcePrefix) {
     const result = localization.translate(`[block] ${text}`, labels);
     if (result.startsWith('[block]')) {
       return result.substring(7).trim();
@@ -160,8 +167,16 @@ function localizeInputInPlace(
   input: BlocklyCore.Input
 ): void {
   // Translate dropdown options up-front; this is independent of grouping.
+  // FieldVariable (and its subclasses — e.g. CdoFieldVariable, CdoFieldParameter)
+  // is a FieldDropdown subclass, but its "options" aren't authored text —
+  // they're the workspace's variable map. Calling setOptions on one clobbers
+  // that internal state and init() throws, which CdoBlockSerializer catches
+  // and replaces with an "unknown block". Leave variable-bearing fields alone.
   for (const field of input.fieldRow) {
-    if (field instanceof BlocklyCore.FieldDropdown) {
+    if (
+      field instanceof BlocklyCore.FieldDropdown &&
+      !(field instanceof BlocklyCore.FieldVariable)
+    ) {
       localizeDropdownInPlace(field);
     }
   }
