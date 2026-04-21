@@ -1,6 +1,9 @@
 import type {Node} from '@xyflow/react';
 
-import {ProjectSources, SketchlabReactFlowSource} from '@cdo/apps/lab2/types';
+import type {
+  ProjectSources,
+  SketchlabReactFlowSource,
+} from '@cdo/apps/lab2/types';
 
 import type {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
 
