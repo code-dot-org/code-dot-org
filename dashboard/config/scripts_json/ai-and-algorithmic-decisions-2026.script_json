@@ -6514,79 +6514,12 @@
 
   ],
   "rubrics": [
-    {
-      "level_name": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
-      "s3_config_dir": null,
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goals": [
-    {
-      "key": "e0852a17-3e99-4935-9751-827f3fc97203",
-      "position": 1,
-      "learning_goal": "Track and evaluate how a value (state) changes over time in a program",
-      "ai_enabled": false,
-      "tips": "Look for whether the student can:\n- describe what should happen before running the app\n- track how the value changes step by step\n- explain what caused the change\n- verify that the displayed result matches the intended behavior",
-      "seeding_key": {
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+   
   ],
   "learning_goal_evidence_levels": [
-    {
-      "understanding": 0,
-      "teacher_description": "Does not correctly update the variable or cannot explain how the value changes. Does not compare expected vs actual behavior or relies entirely on AI without understanding.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Updates the variable with errors or incomplete logic. Shows limited understanding of how the value changes over time. Makes little or unclear comparison between expected and actual behavior.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Defines expected behavior and updates the variable correctly. Explains how the value changes, though reasoning may be partial or general. Attempts to compare expected vs actual behavior with minor gaps.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Defines expected behavior clearly, correctly updates the variable, and explains how the value (state) changes across interactions. Accurately compares expected vs actual behavior and verifies that the app works as intended using AI support appropriately.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+    
   ]
 }
