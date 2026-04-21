@@ -134,12 +134,6 @@ Lint/UnusedMethodArgument:
 Naming/BlockForwarding:
   Enabled: false
 
-# Offense count: 43
-# Configuration parameters: ForbiddenDelimiters.
-# ForbiddenDelimiters: (?i-mx:(^|\s)(EO[A-Z]{1}|END)(\s|$))
-Naming/HeredocDelimiterNaming:
-  Enabled: false
-
 # Offense count: 67
 # Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
 # AllowedNames: as, at, by, cc, db, id, if, in, io, ip, of, on, os, pp, to
