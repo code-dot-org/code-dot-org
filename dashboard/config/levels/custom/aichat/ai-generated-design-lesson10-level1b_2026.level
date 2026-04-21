@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Wireframe Partner\r\n\r\nUse AI chat as a thinking partner to help plan your wireframes.\r\n\r\nYou can ask for help with:\r\n- brainstorming page ideas for your web app\r\n- deciding what sections or components should go on each page\r\n- checking if your pages connect clearly for a user\r\n\r\nTips for working with AI:\r\n- Describe your app idea clearly\r\n- Ask for suggestions, not full designs\r\n- Only keep ideas that make sense for your app",
+    "long_instructions": "# Wireframe Brainstorming\r\n\r\nUse AI to help plan your wireframes.\r\n\r\nYou can ask for help with:\r\n- brainstorming page ideas for your web app\r\n- deciding what sections or components should go on each page\r\n- checking if your pages connect clearly for a user\r\n\r\nTips for working with AI:\r\n- Describe your app idea clearly\r\n- Ask for suggestions, not full designs\r\n- Only keep ideas that make sense for your app",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,11 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Use AI as a thinking partner to brainstorm page ideas and plan how your wireframes will be structured.",
+    "bubble_choice_description": "Use AI to brainstorm page ideas and plan how your wireframes will be structured.",
     "thumbnail_url": "https://images.code.org/cc00aad3ebc4bddcb48a0fcaf007f292-aiChat.png",
-    "display_name": "AI Wireframe Partner",
+    "display_name": "(Optional) AI Wireframing",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:13.338+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b_2025\"},{\"changed_at\":\"2026-03-18 12:39:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"thumbnail_url\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:13.338+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1b_2025\"},{\"changed_at\":\"2026-03-18 12:39:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"thumbnail_url\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:19:34 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

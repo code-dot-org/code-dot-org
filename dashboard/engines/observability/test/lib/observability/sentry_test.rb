@@ -6,8 +6,8 @@ describe Observability::Sentry do
   before do
     CDO.enable_sentry = false
     CDO.enable_opentelemetry = false
-    CDO.running_web_application = false
     CDO.dashboard_sentry_dsn = nil
+    # ENV['UNIT_TEST'] is nil in engine test runs — enabled path is active by default
   end
 
   describe '.setup' do
@@ -17,18 +17,21 @@ describe Observability::Sentry do
       end
     end
 
-    describe 'when CDO.running_web_application? is false' do
-      before {CDO.enable_sentry = true}
+    describe 'when UNIT_TEST is set' do
+      before do
+        CDO.enable_sentry = true
+        ENV['UNIT_TEST'] = 'true'
+      end
+      after {ENV.delete('UNIT_TEST')}
 
       it 'returns without initializing Sentry' do
         _(Observability::Sentry.setup).must_be_nil
       end
     end
 
-    describe 'when CDO.enable_sentry is true and running_web_application? is true' do
+    describe 'when CDO.enable_sentry is true and UNIT_TEST is not set' do
       before do
         CDO.enable_sentry = true
-        CDO.running_web_application = true
         CDO.dashboard_sentry_dsn = 'https://key@sentry.example.com/1'
       end
 

@@ -223,7 +223,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test "a get request to get current returns signed in user info" do
-    teacher = create(:teacher)
+    teacher = create(:teacher, grades_teaching: %w[9 10 11 12])
     sign_in(teacher)
     get :current
     assert_response :success
@@ -235,7 +235,19 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
     assert_equal teacher.educator_role, response["educator_role"]
+    assert_equal %w[9 10 11 12], response["grades_teaching"]
     assert_equal false, response["is_verified_instructor"]
+  end
+
+  test "a get request to get current returns empty grades_teaching when unset" do
+    teacher = create(:teacher, grades_teaching: nil)
+    sign_in(teacher)
+
+    get :current
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal [], response["grades_teaching"]
   end
 
   test "a get request to get school_name returns school object" do

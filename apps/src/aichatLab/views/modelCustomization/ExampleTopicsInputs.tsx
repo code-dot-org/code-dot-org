@@ -1,0 +1,61 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import React, {useCallback, useMemo} from 'react';
+
+import {setModelCardProperty} from '@cdo/apps/aichat/redux';
+import {Visibility} from '@cdo/apps/aichat/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import MultiInputCustomization from './MultiInputCustomization';
+
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
+
+const ExampleTopicsInputs: React.FunctionComponent<{
+  fieldLabel: string;
+  fieldId: string;
+  tooltipText: string;
+  topics: string[];
+  readOnly: boolean;
+  visibility: Visibility;
+}> = ({fieldLabel, fieldId, tooltipText, topics, readOnly, visibility}) => {
+  const dispatch = useAppDispatch();
+
+  const onUpdateItems = useCallback(
+    (updatedItems: string[]) => {
+      dispatch(
+        setModelCardProperty({
+          property: 'exampleTopics',
+          value: updatedItems.filter(topic => topic.trim().length > 0), // Remove empty topics
+        })
+      );
+    },
+    [dispatch]
+  );
+
+  const validationAlert = useMemo(() => {
+    return (
+      <Alert
+        text={'Must add at least one example prompt'}
+        type={alertTypes.warning}
+        size="s"
+        className={modelCustomizationStyles.examplePromptAlert}
+      />
+    );
+  }, []);
+
+  return (
+    <MultiInputCustomization
+      label={fieldLabel}
+      fieldId={fieldId}
+      tooltipText={tooltipText}
+      addedItems={topics}
+      visibility={visibility}
+      isReadOnly={readOnly}
+      hideInputBoxWhenReadOnly={false}
+      onUpdateItems={onUpdateItems}
+      addButtonId="uitest-add-example-topic"
+      validationAlert={topics?.length === 0 ? validationAlert : undefined}
+    />
+  );
+};
+
+export default ExampleTopicsInputs;
