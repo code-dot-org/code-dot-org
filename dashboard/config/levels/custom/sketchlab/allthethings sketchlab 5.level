@@ -96,9 +96,47 @@
           "zoom": 2
         }
       }
+    },
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "7669b7ac-6c88-48e4-82b8-adc51255a92c",
+            "type": "shape",
+            "position": {
+              "x": 909,
+              "y": 465.5
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "here's an exemplar!"
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -843.5,
+          "y": -502,
+          "zoom": 2
+        }
+      }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:12:54 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
