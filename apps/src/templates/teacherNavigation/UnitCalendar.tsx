@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -177,18 +178,24 @@ const UnitCalendar: React.FC = () => {
           <div>
             <div className={styles.calendarDropdowns}>
               <div className={styles.calendarDropdown}>
-                <div className={styles.calendarDropdownDescription}>
+                <Typography
+                  variant="label1"
+                  className={styles.calendarDropdownDescription}
+                >
                   {i18n.lessonsFor()}
-                </div>
+                </Typography>
                 <UnitSelectorV2
                   className={styles.calendarUnitDropdown}
                   filterToSelectedCourse={true}
                 />
               </div>
               <div className={styles.calendarDropdown}>
-                <div className={styles.calendarDropdownDescription}>
+                <Typography
+                  variant="label1"
+                  className={styles.calendarDropdownDescription}
+                >
                   {i18n.instructionalMinutesPerWeek()}
-                </div>
+                </Typography>
                 <SimpleDropdown
                   name="minutesPerWeek"
                   onChange={event => handleDropdownChange(event.target.value)}

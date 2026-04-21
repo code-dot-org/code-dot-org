@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -155,7 +156,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(
-      wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
+      wrapper.containsMatchingElement(
+        <Typography variant="body3" component="div">
+          {sampleLessonChunk.title}
+        </Typography>
+      )
     ).toBe(false);
   });
 
@@ -174,13 +179,17 @@ describe('UnitCalendarLessonChunk', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <div>{sampleLessonChunk.lessonNumber}</div>
+        <Typography variant="body3" component="div">
+          {sampleLessonChunk.lessonNumber}
+        </Typography>
       )
     ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <ReactTooltip>
-          <div>{sampleLessonChunk.title}</div>
+          <Typography variant="body3" component="div">
+            {sampleLessonChunk.title}
+          </Typography>
         </ReactTooltip>
       )
     ).toBe(true);

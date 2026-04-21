@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 class UnitCalendarLessonChunk extends Component {
@@ -90,7 +90,13 @@ class UnitCalendarLessonChunk extends Component {
                 />
               </div>
             )}
-            <div style={styles.titleText}>{displayTitle}</div>
+            <Typography
+              variant="body3"
+              component="div"
+              sx={{color: 'inherit', ...styles.titleText}}
+            >
+              {displayTitle}
+            </Typography>
           </div>
         )}
         {smallChunk && (
@@ -99,7 +105,9 @@ class UnitCalendarLessonChunk extends Component {
             role="tooltip"
             effect="solid"
           >
-            <div>{title}</div>
+            <Typography variant="body3" component="div">
+              {title}
+            </Typography>
           </ReactTooltip>
         )}
       </a>
@@ -119,7 +127,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    ...fontConstants['main-font-regular'],
     height: '100%',
   },
   assessment: {

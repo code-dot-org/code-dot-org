@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -90,7 +91,9 @@ export default function UnitCalendarGrid({
           {schedule.map((week, index) => (
             <tr key={`week-${index}`}>
               <td className={styles.weekColumn}>
-                {i18n.weekLabel({number: index + 1})}
+                <Typography variant="label1" sx={{color: 'inherit'}}>
+                  {i18n.weekLabel({number: index + 1})}
+                </Typography>
               </td>
               <td className={styles.scheduleColumn}>
                 {renderWeek(week, index + 1)}
@@ -102,7 +105,11 @@ export default function UnitCalendarGrid({
       <table className={styles.key}>
         <tbody>
           <tr>
-            <td className={styles.weekColumn}>Key</td>
+            <td className={styles.weekColumn}>
+              <Typography variant="label1" sx={{color: 'inherit'}}>
+                Key
+              </Typography>
+            </td>
             <td className={styles.scheduleColumn}>
               <div className={styles.keySection}>
                 <div className={styles.keyCell}>
@@ -114,7 +121,9 @@ export default function UnitCalendarGrid({
                     }}
                     className={styles.keyIcon}
                   />
-                  {i18n.instructionalLesson()}
+                  <Typography variant="body2">
+                    {i18n.instructionalLesson()}
+                  </Typography>
                 </div>
                 <div className={styles.keyCell}>
                   <FontAwesomeV6Icon
@@ -124,14 +133,16 @@ export default function UnitCalendarGrid({
                     }}
                     className={styles.keyIcon}
                   />
-                  {i18n.assessment()}
+                  <Typography variant="body2">{i18n.assessment()}</Typography>
                 </div>
                 <div className={styles.keyCell}>
                   <FontAwesomeV6Icon
                     iconName="scissors"
                     className={styles.keyIcon}
                   />
-                  {i18n.unpluggedLesson()}
+                  <Typography variant="body2">
+                    {i18n.unpluggedLesson()}
+                  </Typography>
                 </div>
               </div>
             </td>
