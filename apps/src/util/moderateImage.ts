@@ -17,7 +17,7 @@ type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
 type SeverityThresholds = Partial<Record<CategoryName, number>>;
 type CategoryAnalysis = {
   category: CategoryName;
-  severity: number;
+  severity: 0 | 2 | 4 | 6;
 };
 
 // Severity level blocked by category for AI Content Safety.
