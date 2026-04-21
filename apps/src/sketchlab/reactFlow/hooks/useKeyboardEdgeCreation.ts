@@ -41,10 +41,6 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   );
 }
 
-function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {
-  return edges.some(edge => edge.source === nodeId || edge.target === nodeId);
-}
-
 function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
   const node = nodes.find(candidate => candidate.id === nodeId);
   return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
@@ -55,6 +51,11 @@ interface UseKeyboardEdgeCreationOptions {
   edges: SketchlabReactFlowEdge[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
+  canCreateConnection: (
+    sourceNodeId: string,
+    targetNodeId: string,
+    edgesToCheck: SketchlabReactFlowEdge[]
+  ) => boolean;
   setNodes: (
     updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
   ) => void;
@@ -77,6 +78,7 @@ export function useKeyboardEdgeCreation({
   edges,
   tabOrder,
   focusEntry,
+  canCreateConnection,
   setNodes,
   setEdges,
   readOnly,
@@ -268,33 +270,36 @@ export function useKeyboardEdgeCreation({
           const targetNode = nodes.find(node => node.id === focusedNodeId);
           if (sourceNode && targetNode) {
             const handles = pickHandles(sourceNode, targetNode);
-            let connectionRejected = false;
-            setEdges(currentEdges => {
-              const sourceLimited = isLineAnchorNodeId(connectingFrom, nodes);
-              const targetLimited = isLineAnchorNodeId(focusedNodeId, nodes);
-              if (
-                (sourceLimited &&
-                  nodeHasAnyEdge(connectingFrom, currentEdges)) ||
-                (targetLimited && nodeHasAnyEdge(focusedNodeId, currentEdges))
-              ) {
-                connectionRejected = true;
-                return currentEdges;
-              }
-              return addEdge(
-                {
-                  source: connectingFrom,
-                  target: focusedNodeId,
-                  ...handles,
-                  markerEnd: {type: MarkerType.ArrowClosed},
-                },
-                currentEdges
-              );
-            });
+            const connectionRejected = !canCreateConnection(
+              connectingFrom,
+              focusedNodeId,
+              edges
+            );
             if (connectionRejected) {
               announce(
                 'Connection not created. Line endpoints may only have one edge.'
               );
             } else {
+              setEdges(currentEdges => {
+                if (
+                  !canCreateConnection(
+                    connectingFrom,
+                    focusedNodeId,
+                    currentEdges
+                  )
+                ) {
+                  return currentEdges;
+                }
+                return addEdge(
+                  {
+                    source: connectingFrom,
+                    target: focusedNodeId,
+                    ...handles,
+                    markerEnd: {type: MarkerType.ArrowClosed},
+                  },
+                  currentEdges
+                );
+              });
               announce(`Edge created to ${getNodeLabel(targetNode)}.`);
             }
           }
@@ -333,6 +338,7 @@ export function useKeyboardEdgeCreation({
     },
     [
       connectingFrom,
+      canCreateConnection,
       edges,
       focusEntry,
       nodes,

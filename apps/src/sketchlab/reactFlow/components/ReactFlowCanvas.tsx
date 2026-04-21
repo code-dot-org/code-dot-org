@@ -98,6 +98,24 @@ export default function ReactFlowCanvas({
     startSourcePosition: FlowPoint;
     startTargetPosition: FlowPoint;
   } | null>(null);
+  const canCreateConnection = useCallback(
+    (
+      sourceNodeId: string,
+      targetNodeId: string,
+      edgesToCheck: SketchlabReactFlowEdge[]
+    ) => {
+      const sourceLimited = isLineAnchorNodeId(sourceNodeId, nodes);
+      const targetLimited = isLineAnchorNodeId(targetNodeId, nodes);
+      if (sourceLimited && nodeHasAnyEdge(sourceNodeId, edgesToCheck)) {
+        return false;
+      }
+      if (targetLimited && nodeHasAnyEdge(targetNodeId, edgesToCheck)) {
+        return false;
+      }
+      return true;
+    },
+    [nodes]
+  );
 
   const {tabOrder, activeEntry, setActiveTabEntry} = useTabOrder(
     nodes as SketchlabReactFlowNode[],
@@ -116,6 +134,7 @@ export default function ReactFlowCanvas({
       edges: edges as SketchlabReactFlowEdge[],
       tabOrder,
       focusEntry,
+      canCreateConnection,
       setNodes,
       setEdges,
       readOnly,
@@ -172,12 +191,7 @@ export default function ReactFlowCanvas({
         if (!source || !target) {
           return currentEdges;
         }
-        const sourceLimited = isLineAnchorNodeId(source, nodes);
-        const targetLimited = isLineAnchorNodeId(target, nodes);
-        if (
-          (sourceLimited && nodeHasAnyEdge(source, currentEdges)) ||
-          (targetLimited && nodeHasAnyEdge(target, currentEdges))
-        ) {
+        if (!canCreateConnection(source, target, currentEdges)) {
           return currentEdges;
         }
 
@@ -186,7 +200,7 @@ export default function ReactFlowCanvas({
           currentEdges
         );
       }),
-    [nodes, setEdges]
+    [canCreateConnection, setEdges]
   );
 
   const isValidConnection: IsValidConnection = useCallback(
@@ -195,17 +209,9 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
-      const sourceLimited = isLineAnchorNodeId(source, nodes);
-      const targetLimited = isLineAnchorNodeId(target, nodes);
-      if (sourceLimited && nodeHasAnyEdge(source, edges)) {
-        return false;
-      }
-      if (targetLimited && nodeHasAnyEdge(target, edges)) {
-        return false;
-      }
-      return true;
+      return canCreateConnection(source, target, edges);
     },
-    [edges, nodes]
+    [canCreateConnection, edges]
   );
 
   const handleMoveEnd = useCallback(
