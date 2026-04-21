@@ -150,7 +150,10 @@ export default function ReactFlowCanvas({
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
-        const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const {selected, domAttributes} = applyDisplayProps(
+          node as SketchlabReactFlowNode,
+          'node'
+        );
         return {
           ...node,
           selected,

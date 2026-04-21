@@ -12,6 +12,7 @@ import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
   DEFAULT_STROKE_COLOR,
+  FontSizeValue,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -42,7 +43,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
       />
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-        onSelect={value => patchNodeData({fontSize: value})}
+        onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}
       />
       <SwatchGroup
         groupLabel="Font color"

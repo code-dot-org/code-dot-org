@@ -2,31 +2,29 @@ import type {Node} from '@xyflow/react';
 
 import {ProjectSources, SketchlabReactFlowSource} from '@cdo/apps/lab2/types';
 
+import {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
+
 export type ShapeType = 'rectangle' | 'triangle' | 'circle';
 
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
 };
 
-// Typed runtime data shapes for each custom node. These stay compatible
-// with `SketchlabReactFlowNode['data']` (values are string | number |
-// boolean) but are specific per node type so components can read fields
-// without casting. We cast to/from the persistence shape only at the
-// save/load boundary.
+// Typed runtime data shapes for each custom node.
 export type ShapeNodeData = {
   shapeType: ShapeType;
   label: string;
   backgroundColor?: string;
   strokeColor?: string;
   fontColor?: string;
-  fontSize?: string;
+  fontSize?: FontSizeValue;
   showHandles?: boolean;
 };
 
 export type TextNodeData = {
   text: string;
   fontColor?: string;
-  fontSize?: string;
+  fontSize?: FontSizeValue;
   showHandles?: boolean;
 };
 

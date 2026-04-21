@@ -9,6 +9,7 @@ import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
+  FontSizeValue,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -27,7 +28,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
     <NodeToolbarShell nodeId={nodeId} ariaLabel="Text style">
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-        onSelect={value => patchNodeData({fontSize: value})}
+        onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}
       />
       <SwatchGroup
         groupLabel="Font color"
