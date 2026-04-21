@@ -1,0 +1,104 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-21T22:01:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is an allthethings sketch lab level that uses the React Flow version of start sources.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "c3320c9f-6810-463d-9206-0579cda04bf1",
+            "type": "shape",
+            "position": {
+              "x": 533,
+              "y": 465.5
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "here are some start sources!"
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
+            "id": "27e8f16c-3cf2-42bd-839a-f694f73ab815",
+            "type": "shape",
+            "position": {
+              "x": 373.25,
+              "y": 334.25
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": ""
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false,
+            "selected": false
+          },
+          {
+            "id": "1a62511b-1009-4782-a549-d8a6c9f2ed5f",
+            "type": "shape",
+            "position": {
+              "x": 730.75,
+              "y": 628.75
+            },
+            "data": {
+              "shapeType": "triangle",
+              "label": ""
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "27e8f16c-3cf2-42bd-839a-f694f73ab815",
+            "sourceHandle": "right-source",
+            "target": "c3320c9f-6810-463d-9206-0579cda04bf1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__27e8f16c-3cf2-42bd-839a-f694f73ab815right-source-c3320c9f-6810-463d-9206-0579cda04bf1top-target"
+          }
+        ],
+        "viewport": {
+          "x": -467.5,
+          "y": -502,
+          "zoom": 2
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
