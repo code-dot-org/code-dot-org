@@ -29,6 +29,7 @@ export default function SwatchGroup({
 }: SwatchGroupProps) {
   const {theme} = useTheme();
   const isDarkMode = theme === 'Dark';
+  // We know a color is custom if it's a hex value. Our predefined palettes are css variables.
   const customSelected = isCustomHex(selectedValue);
   const customValue = customSelected ? selectedValue : CUSTOM_COLOR_DEFAULT;
   const customLabel = `${groupLabel}: Custom color`;
@@ -66,6 +67,7 @@ export default function SwatchGroup({
           );
         })}
         <Tooltip title="Custom color" placement="top">
+          {/* If the user has a custom color selected, show it as the background color, otherwise show the palette icon. */}
           <label
             className={classNames(styles.swatch, styles.customSwatch, {
               [styles.swatchSelected]: customSelected,

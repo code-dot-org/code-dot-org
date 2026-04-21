@@ -211,7 +211,7 @@ export default function ReactFlowCanvas({
   );
 
   const handleAddNode = useCallback(
-    (typeAndData: Pick<SketchLabNode, 'type' | 'data'>) => {
+    ({type, data}: Pick<SketchLabNode, 'type' | 'data'>) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
@@ -223,12 +223,13 @@ export default function ReactFlowCanvas({
       const newNodeId = createUuid();
       // Text nodes auto-size to fit content; shapes and images use fixed defaults.
       // Cast is needed because TS can't preserve the (type, data) correlation
-      // of the discriminated union across object spread.
+      // of the discriminated union across destructuring.
       const newNode = {
         id: newNodeId,
+        type,
+        data,
         position,
-        ...typeAndData,
-        ...(typeAndData.type !== 'text' && {
+        ...(type !== 'text' && {
           style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
         }),
       } as SketchLabNode;
