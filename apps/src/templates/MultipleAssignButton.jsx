@@ -14,6 +14,8 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import styles from './multipleAssignButton.module.scss';
+
 class MultipleAssignButton extends React.Component {
   static propTypes = {
     courseId: PropTypes.number,
@@ -66,7 +68,7 @@ class MultipleAssignButton extends React.Component {
     } = this.props;
 
     return (
-      <div style={{marginInlineStart: 5}}>
+      <div className={styles.container}>
         <Button
           variant="contained"
           color="primary"
