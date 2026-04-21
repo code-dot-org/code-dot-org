@@ -97,10 +97,14 @@ export function useFocusManagement(
             panToEntryIfNeeded(entry, element);
           }
         });
-      } else {
-        // Focus moved to a non-node/edge element (e.g. Controls buttons,
-        // toolbar). Clear visual selection but preserve lastFocusedEntry
-        // so the roving tabindex target stays correct for shift-tab.
+      } else if (
+        !(event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        // Focus moved to a non-node/edge element (e.g. Controls buttons).
+        // Clear visual selection but preserve lastFocusedEntry so the
+        // roving tabindex target stays correct for shift-tab.
+        // We skip this when focus moves into a NodeToolbar
+        // so the toolbar stays mounted while the user interacts with it.
         setNodeOrEdgeFocused(false);
       }
     },
