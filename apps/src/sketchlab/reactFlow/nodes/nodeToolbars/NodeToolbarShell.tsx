@@ -3,6 +3,7 @@ import {NodeToolbar, Position, useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {useSketchLabReadOnly, useToolbarVisibility} from '../../context';
+import {getViewportOverflow} from '../../utils/viewport';
 
 import styles from './node-toolbar.module.scss';
 
@@ -48,32 +49,18 @@ export default function NodeToolbarShell({
         const toolbarEl = containerRef.current?.closest<HTMLElement>(
           '.react-flow__node-toolbar'
         );
-        const container = toolbarEl?.closest<HTMLElement>('.react-flow');
-        if (!toolbarEl || !container) return;
-
-        const containerRect = container.getBoundingClientRect();
-        const toolbarRect = toolbarEl.getBoundingClientRect();
-
-        let dx = 0;
-        let dy = 0;
-        if (toolbarRect.left < containerRect.left) {
-          dx = containerRect.left - toolbarRect.left;
-        } else if (toolbarRect.right > containerRect.right) {
-          dx = containerRect.right - toolbarRect.right;
-        }
-        if (toolbarRect.top < containerRect.top) {
-          dy = containerRect.top - toolbarRect.top;
-        } else if (toolbarRect.bottom > containerRect.bottom) {
-          dy = containerRect.bottom - toolbarRect.bottom;
-        }
-
-        if (dx !== 0 || dy !== 0) {
-          const viewport = getViewport();
-          setViewport(
-            {x: viewport.x + dx, y: viewport.y + dy, zoom: viewport.zoom},
-            {duration: PAN_DURATION_MS}
-          );
-        }
+        if (!toolbarEl) return;
+        const overflow = getViewportOverflow(toolbarEl);
+        if (!overflow) return;
+        const viewport = getViewport();
+        setViewport(
+          {
+            x: viewport.x + overflow.dx,
+            y: viewport.y + overflow.dy,
+            zoom: viewport.zoom,
+          },
+          {duration: PAN_DURATION_MS}
+        );
       });
     }
     wasVisibleRef.current = isVisible;
