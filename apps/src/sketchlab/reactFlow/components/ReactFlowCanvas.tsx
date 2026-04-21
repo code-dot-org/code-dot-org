@@ -113,8 +113,10 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardEdgeCreation({
       nodes: nodes as SketchlabReactFlowNode[],
+      edges: edges as SketchlabReactFlowEdge[],
       tabOrder,
       focusEntry,
+      setNodes,
       setEdges,
       readOnly,
     });

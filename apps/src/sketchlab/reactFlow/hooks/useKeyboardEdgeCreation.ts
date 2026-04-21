@@ -52,8 +52,12 @@ function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
 
 interface UseKeyboardEdgeCreationOptions {
   nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
@@ -70,8 +74,10 @@ interface UseKeyboardEdgeCreationOptions {
  */
 export function useKeyboardEdgeCreation({
   nodes,
+  edges,
   tabOrder,
   focusEntry,
+  setNodes,
   setEdges,
   readOnly,
 }: UseKeyboardEdgeCreationOptions) {
@@ -114,6 +120,80 @@ export function useKeyboardEdgeCreation({
       const focusedEntry = getEntryFromDOM(target);
       const focusedNodeId =
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
+      const focusedEdgeId =
+        focusedEntry?.type === 'edge' ? focusedEntry.id : undefined;
+
+      // Arrow keys on a focused node move just that node.
+      if (!readOnly && focusedNodeId) {
+        const moveStep = event.shiftKey ? 20 : 10;
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -moveStep;
+        if (event.key === 'ArrowRight') deltaX = moveStep;
+        if (event.key === 'ArrowUp') deltaY = -moveStep;
+        if (event.key === 'ArrowDown') deltaY = moveStep;
+
+        if (deltaX || deltaY) {
+          event.preventDefault();
+          event.stopPropagation();
+          setNodes(currentNodes =>
+            currentNodes.map(node =>
+              node.id === focusedNodeId
+                ? {
+                    ...node,
+                    position: {
+                      x: node.position.x + deltaX,
+                      y: node.position.y + deltaY,
+                    },
+                  }
+                : node
+            )
+          );
+          return;
+        }
+      }
+
+      // Arrow keys on a focused line edge move the whole line by moving
+      // both line-anchor nodes together.
+      if (!readOnly && focusedEdgeId) {
+        const moveStep = event.shiftKey ? 20 : 10;
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -moveStep;
+        if (event.key === 'ArrowRight') deltaX = moveStep;
+        if (event.key === 'ArrowUp') deltaY = -moveStep;
+        if (event.key === 'ArrowDown') deltaY = moveStep;
+
+        if (deltaX || deltaY) {
+          const focusedEdge = edges.find(edge => edge.id === focusedEdgeId);
+          if (
+            focusedEdge &&
+            isLineAnchorNodeId(focusedEdge.source, nodes) &&
+            isLineAnchorNodeId(focusedEdge.target, nodes)
+          ) {
+            event.preventDefault();
+            event.stopPropagation();
+            setNodes(currentNodes =>
+              currentNodes.map(node => {
+                if (
+                  node.id !== focusedEdge.source &&
+                  node.id !== focusedEdge.target
+                ) {
+                  return node;
+                }
+                return {
+                  ...node,
+                  position: {
+                    x: node.position.x + deltaX,
+                    y: node.position.y + deltaY,
+                  },
+                };
+              })
+            );
+            return;
+          }
+        }
+      }
 
       // "c" toggles connect mode on/off (nodes only).
       if (event.key === 'c') {
@@ -252,7 +332,16 @@ export function useKeyboardEdgeCreation({
         }
       }
     },
-    [connectingFrom, focusEntry, nodes, readOnly, setEdges, tabOrder]
+    [
+      connectingFrom,
+      edges,
+      focusEntry,
+      nodes,
+      readOnly,
+      setEdges,
+      setNodes,
+      tabOrder,
+    ]
   );
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
