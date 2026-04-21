@@ -14,6 +14,10 @@ export default class CourseScriptTeacherInfo extends Component {
     onToggleHiddenScript: PropTypes.func.isRequired,
   };
 
+  // Stable per-instance id so `aria-describedby` does not change between
+  // renders and the tooltip doesn't re-mount unnecessarily.
+  tooltipId = _.uniqueId('hidden-script-tooltip-');
+
   render() {
     const {disabled, isHidden, onToggleHiddenScript} = this.props;
 
@@ -31,7 +35,7 @@ export default class CourseScriptTeacherInfo extends Component {
           <WithTooltip
             tooltipProps={{
               text: i18n.hiddenScriptTooltip(),
-              tooltipId: _.uniqueId('hidden-script-tooltip-'),
+              tooltipId: this.tooltipId,
             }}
           >
             <div>{toggle}</div>
