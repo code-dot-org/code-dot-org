@@ -1,13 +1,9 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
-import {
-  DemoType,
-  Section,
-} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -21,33 +17,28 @@ interface CourseContentDropdownProps {
   disabled?: boolean;
 }
 
-interface DemoSectionCourseContentDropdownProps {
-  section: Section;
-  demoType?: DemoType;
-  disabled?: boolean;
-  beforeNavigate: (path: string, eventName: string) => void;
-}
-
-interface CourseContentDropdownBaseProps {
+export interface CourseContentDropdownBaseProps {
   section: Section;
   disabled: boolean;
-  shouldShowLessonDropdown: boolean;
-  lessonSource: number | DemoType;
+  shouldShowLessonDropdown: boolean | string;
+  lessonSource: number | string;
   renderLessonOption: (lesson: UnitLessonOption) => React.ReactNode;
   renderCourseAction: () => React.ReactNode;
 }
 
-interface UnitLessonOption {
+export interface UnitLessonOption {
   value: string;
   text: string;
 }
 
-const getLessonEventName = (lessonValue: string) =>
+export const getLessonEventName = (lessonValue: string) =>
   lessonValue.includes('/lessons/')
     ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
     : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
 
-const CourseContentDropdownBase: React.FC<CourseContentDropdownBaseProps> = ({
+export const CourseContentDropdownBase: React.FC<
+  CourseContentDropdownBaseProps
+> = ({
   section,
   disabled,
   shouldShowLessonDropdown,
@@ -128,64 +119,6 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         sectionName={section.name}
         path={`courses/${section.courseVersionName}`}
       />
-    )}
-  />
-);
-
-export const DemoSectionCourseContentDropdown: React.FC<
-  DemoSectionCourseContentDropdownProps
-> = ({section, demoType, disabled = false, beforeNavigate}) => (
-  <CourseContentDropdownBase
-    section={section}
-    disabled={disabled}
-    shouldShowLessonDropdown={Boolean(section.unitId || demoType)}
-    lessonSource={demoType || section.id}
-    renderLessonOption={lesson => (
-      <li key={lesson.value}>
-        {/* Use a button here because demo flows perform work before
-            navigation. The menu item stays keyboard reachable and correctly
-            exposed as an action, while non-demo entries remain real links. */}
-        <button
-          type="button"
-          className={styles.dropdownMenuItem}
-          disabled={disabled}
-          aria-label={`Create demo section and go to '${lesson.text}'`}
-          onClick={() =>
-            beforeNavigate(lesson.value, getLessonEventName(lesson.value))
-          }
-        >
-          <span>{lesson.text}</span>
-        </button>
-      </li>
-    )}
-    renderCourseAction={() => (
-      <button
-        type="button"
-        className={styles.demoActionButton}
-        disabled={disabled}
-        onClick={() =>
-          beforeNavigate(
-            `courses/${section.courseVersionName}`,
-            EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED
-          )
-        }
-      >
-        <div className={styles.taskButtonLeft}>
-          <FontAwesomeV6Icon
-            className={styles.taskButtonIcons}
-            iconName="desktop"
-            iconStyle="solid"
-          />
-          <Typography variant="body3" gutterBottom>
-            {i18n.goToCourse()}
-          </Typography>
-        </div>
-        <FontAwesomeV6Icon
-          className={styles.taskButtonArrow}
-          iconName="arrow-right"
-          iconStyle="solid"
-        />
-      </button>
     )}
   />
 );

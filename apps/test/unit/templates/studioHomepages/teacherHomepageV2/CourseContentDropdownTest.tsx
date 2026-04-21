@@ -13,6 +13,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/CourseContentDropdown';
+import {DemoSectionCourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/DemoSectionCourseContentDropdown';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -198,7 +199,11 @@ describe('CourseContentDropdown', () => {
   it('uses the demo preset path when demoType is provided', async () => {
     render(
       <Provider store={store}>
-        <CourseContentDropdown section={nonUnitSection} demoType="high" />
+        <DemoSectionCourseContentDropdown
+          section={nonUnitSection}
+          demoType="high"
+          beforeNavigate={() => {}}
+        />
       </Provider>
     );
 
