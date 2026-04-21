@@ -22,7 +22,7 @@ import {
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {CourseContentDropdown} from './CourseContentDropdown';
+import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdown';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
@@ -130,6 +130,9 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
 
     try {
       const section = await dispatch(createDemoSection(demoType));
+      if (!section) {
+        return;
+      }
       const nextPath = path.includes(':sectionId')
         ? generatePath(path, {sectionId: section.id.toString()})
         : path.startsWith('/')
@@ -145,7 +148,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
       if (error instanceof DemoSectionCreationError) {
         onNotice({
           text: error.message,
-          type: error.code === 'conflict' ? 'warning' : 'danger',
+          type: error.errorType === 'conflict' ? 'warning' : 'danger',
         });
       } else {
         onNotice({
@@ -224,11 +227,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
       </div>
       <div className={styles.sectionCardBody}>
         <div className={styles.sectionCardBodyLeft}>
-          <CourseContentDropdown
+          <DemoSectionCourseContentDropdown
             section={demoSection}
             demoType={demoType}
             disabled={!!pendingPath}
-            onNavigateToPath={(path, eventName) =>
+            beforeNavigate={(path: string, eventName: string) =>
               handleActionClick(path, eventName, path)
             }
           />
