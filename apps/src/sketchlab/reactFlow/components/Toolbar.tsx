@@ -8,16 +8,12 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
-import {ImageNodeData, ShapeNodeData, ShapeType, TextNodeData} from '../types';
+import {ShapeType, SketchLabNode} from '../types';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
-  onAddNode: {
-    (type: 'shape', data: ShapeNodeData): void;
-    (type: 'text', data: TextNodeData): void;
-    (type: 'image', data: ImageNodeData): void;
-  };
+  onAddNode: (typeAndData: Pick<SketchLabNode, 'type' | 'data'>) => void;
 }
 
 export default function Toolbar({onAddNode}: ToolbarProps) {
@@ -27,11 +23,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
   const addShape = useCallback(
     (shapeType: ShapeType) => {
-      const data: ShapeNodeData = {
-        shapeType,
-        label: '',
-      };
-      onAddNode('shape', data);
+      onAddNode({type: 'shape', data: {shapeType, label: ''}});
     },
     [onAddNode]
   );
@@ -49,11 +41,10 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
       try {
         await HttpClient.put(uploadUrl, file);
-        const imageData: ImageNodeData = {
-          src: uploadUrl,
-          altText: file.name.replace(/\.[^.]+$/, ''),
-        };
-        onAddNode('image', imageData);
+        onAddNode({
+          type: 'image',
+          data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
+        });
       } catch (error) {
         console.error('Failed to upload image:', error);
       }
@@ -118,7 +109,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         <IconButton
           aria-label="Add text"
           id={`${uid}-text`}
-          onClick={() => onAddNode('text', {text: ''})}
+          onClick={() => onAddNode({type: 'text', data: {text: ''}})}
           size="small"
           color="tertiary"
           variant="outlined"

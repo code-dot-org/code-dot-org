@@ -16,7 +16,7 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
-import {ComponentType, LazyExoticComponent} from 'react';
+import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
@@ -101,7 +101,7 @@ export type Source =
 interface SketchlabReactFlowNodeBase {
   id: string;
   position: {x: number; y: number};
-  style?: Record<string, string | number>;
+  style?: CSSProperties;
 }
 
 export type SketchlabReactFlowNode =
