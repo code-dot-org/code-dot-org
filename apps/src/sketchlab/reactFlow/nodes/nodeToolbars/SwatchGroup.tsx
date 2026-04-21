@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
@@ -26,6 +27,8 @@ export default function SwatchGroup({
   selectedValue,
   onSelect,
 }: SwatchGroupProps) {
+  const {theme} = useTheme();
+  const isDarkMode = theme === 'Dark';
   const customSelected = isCustomHex(selectedValue);
   const customValue = customSelected ? selectedValue : CUSTOM_COLOR_DEFAULT;
   const customLabel = `${groupLabel}: Custom color`;
@@ -37,9 +40,13 @@ export default function SwatchGroup({
       <div className={styles.swatches}>
         {swatches.map(swatch => {
           const isSelected = selectedValue === swatch.value;
-          const ariaLabel = `${groupLabel}: ${swatch.label}`;
+          const label =
+            isDarkMode && swatch.darkModeLabel
+              ? swatch.darkModeLabel
+              : swatch.label;
+          const ariaLabel = `${groupLabel}: ${label}`;
           return (
-            <Tooltip key={swatch.value} title={swatch.label} placement="top">
+            <Tooltip key={swatch.value} title={label} placement="top">
               <IconButton
                 size="small"
                 className={classNames(styles.swatch, {
