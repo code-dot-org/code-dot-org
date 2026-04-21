@@ -303,7 +303,9 @@ namespace :test do
         # This task is typically only run in CI, so gate on CI just as a safeguard
         # in case a developer tries to run it locally.
         parallel = CI::Utils.ci_job_unit_tests?
-        TestRunUtils.run_dashboard_tests(parallel: parallel)
+        10.times do
+          TestRunUtils.run_dashboard_tests(parallel: parallel)
+        end
       end
     end
 
