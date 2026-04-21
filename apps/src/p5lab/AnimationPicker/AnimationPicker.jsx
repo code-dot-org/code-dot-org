@@ -217,6 +217,7 @@ class AnimationPicker extends React.Component {
         this.props.projectType,
         {
           uploaderType: 'AnimationPicker',
+          assetUrl: data.url,
         }
       );
       if (moderationStatus === 'flagged') {
