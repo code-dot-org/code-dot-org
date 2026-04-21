@@ -29,6 +29,7 @@ import {
 import {SketchLabReadOnlyProvider} from '../context';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardEdgeCreation} from '../hooks/useKeyboardEdgeCreation';
+import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
@@ -53,7 +54,6 @@ const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
 const LINE_ANCHOR_SIZE_PX = 10;
-type FlowPoint = {x: number; y: number};
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -83,13 +83,6 @@ export default function ReactFlowCanvas({
 
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
-  const draggingLineEdgeRef = useRef<{
-    sourceId: string;
-    targetId: string;
-    startPointer: FlowPoint;
-    startSourcePosition: FlowPoint;
-    startTargetPosition: FlowPoint;
-  } | null>(null);
   const {
     tabOrder,
     activeEntry,
@@ -119,6 +112,13 @@ export default function ReactFlowCanvas({
       setEdges,
       readOnly,
     });
+
+  const {handleEdgeMouseDown} = useLineEdgeDrag({
+    nodes: nodes as SketchlabReactFlowNode[],
+    readOnly,
+    setNodes,
+    screenToFlowPosition,
+  });
 
   // Clear selection when focus leaves the canvas container entirely
   // (e.g. clicking outside or tabbing out of the canvas).
@@ -202,100 +202,6 @@ export default function ReactFlowCanvas({
     },
     []
   );
-
-  const handleLineEdgeMouseMove = useCallback(
-    (event: MouseEvent) => {
-      const dragState = draggingLineEdgeRef.current;
-      if (!dragState) {
-        return;
-      }
-
-      const currentPointer = screenToFlowPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-      const deltaX = currentPointer.x - dragState.startPointer.x;
-      const deltaY = currentPointer.y - dragState.startPointer.y;
-
-      setNodes(currentNodes =>
-        currentNodes.map(node => {
-          if (node.id === dragState.sourceId) {
-            return {
-              ...node,
-              position: {
-                x: dragState.startSourcePosition.x + deltaX,
-                y: dragState.startSourcePosition.y + deltaY,
-              },
-            };
-          }
-          if (node.id === dragState.targetId) {
-            return {
-              ...node,
-              position: {
-                x: dragState.startTargetPosition.x + deltaX,
-                y: dragState.startTargetPosition.y + deltaY,
-              },
-            };
-          }
-          return node;
-        })
-      );
-    },
-    [screenToFlowPosition, setNodes]
-  );
-
-  const stopLineEdgeDrag = useCallback(() => {
-    draggingLineEdgeRef.current = null;
-    window.removeEventListener('mousemove', handleLineEdgeMouseMove);
-    window.removeEventListener('mouseup', stopLineEdgeDrag);
-  }, [handleLineEdgeMouseMove]);
-
-  const handleEdgeMouseDown = useCallback(
-    (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
-      if (readOnly || event.button !== 0) {
-        return;
-      }
-
-      const sourceNode = nodes.find(node => node.id === edge.source);
-      const targetNode = nodes.find(node => node.id === edge.target);
-      const isLineEdge =
-        sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
-      if (!sourceNode || !targetNode || !isLineEdge) {
-        return;
-      }
-
-      event.preventDefault();
-      event.stopPropagation();
-
-      draggingLineEdgeRef.current = {
-        sourceId: sourceNode.id,
-        targetId: targetNode.id,
-        startPointer: screenToFlowPosition({
-          x: event.clientX,
-          y: event.clientY,
-        }),
-        startSourcePosition: {...sourceNode.position},
-        startTargetPosition: {...targetNode.position},
-      };
-
-      window.addEventListener('mousemove', handleLineEdgeMouseMove);
-      window.addEventListener('mouseup', stopLineEdgeDrag);
-    },
-    [
-      readOnly,
-      nodes,
-      screenToFlowPosition,
-      handleLineEdgeMouseMove,
-      stopLineEdgeDrag,
-    ]
-  );
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('mousemove', handleLineEdgeMouseMove);
-      window.removeEventListener('mouseup', stopLineEdgeDrag);
-    };
-  }, [handleLineEdgeMouseMove, stopLineEdgeDrag]);
 
   // Apply roving tabindex through React Flow's domAttributes so it
   // survives React Flow re-renders (direct DOM manipulation gets
