@@ -1,4 +1,5 @@
-import {Paper} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Paper, Tooltip} from '@mui/material';
 import {NodeToolbar, Position, useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
@@ -78,13 +79,17 @@ export default function NodeToolbarShell({
     nodeElement?.focus();
   }, [nodeId]);
 
+  const handleClose = useCallback(() => {
+    closeToolbar();
+    returnFocusToNode();
+  }, [closeToolbar, returnFocusToNode]);
+
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         event.stopPropagation();
-        closeToolbar();
-        returnFocusToNode();
+        handleClose();
         return;
       }
       if (event.key !== 'Tab') return;
@@ -111,7 +116,7 @@ export default function NodeToolbarShell({
         event.stopPropagation();
       }
     },
-    [closeToolbar, returnFocusToNode]
+    [handleClose]
   );
 
   if (readOnly) {
@@ -132,6 +137,22 @@ export default function NodeToolbarShell({
         aria-label={ariaLabel}
         onKeyDown={handleKeyDown}
       >
+        <div className={styles.header}>
+          <Tooltip title="Close toolbar" placement="top">
+            <IconButton
+              size="small"
+              className={styles['close-button']}
+              aria-label="Close toolbar"
+              onClick={handleClose}
+            >
+              <FontAwesomeV6Icon
+                iconName="xmark"
+                iconStyle="solid"
+                aria-hidden="true"
+              />
+            </IconButton>
+          </Tooltip>
+        </div>
         {children}
       </Paper>
     </NodeToolbar>

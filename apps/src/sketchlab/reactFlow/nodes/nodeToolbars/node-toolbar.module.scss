@@ -44,6 +44,19 @@
   pointer-events: all;
 }
 
+.header {
+  display: flex;
+  justify-content: flex-end;
+  // Pull into the Paper's 8px padding so the X sits in the corner
+  // rather than inside its own row of whitespace.
+  margin: -4px -4px 0 0;
+}
+
+.close-button {
+  padding: 2px;
+  color: var(--text-neutral-primary);
+}
+
 .group {
   display: flex;
   flex-direction: column;
