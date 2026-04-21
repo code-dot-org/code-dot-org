@@ -23,7 +23,6 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
-  teacherFlagged?: boolean;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -52,12 +51,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
-  teacherFlagged,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
   const isAssistant = role === Role.ASSISTANT;
-  console.log('teacherFlagged', teacherFlagged);
 
   return (
     <div

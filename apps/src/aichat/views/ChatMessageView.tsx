@@ -62,6 +62,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
+  const teacherFlaggedHidden = teacherFlagged && !isChatHistoryView;
 
   // Determine if we should show the FlagResponseButton
   // The user must be a levelbuilder, and we currently only show the button for AI Tutor messages
@@ -77,18 +78,21 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     status,
     role,
     intendedDisplayText,
-    showProfaneUserMessage
+    showProfaneUserMessage,
+    teacherFlaggedHidden
   );
 
   // If the chat message's display text is what is displayed (i.e. no error or violation)
   const messageVisible =
     displayText === intendedDisplayText &&
-    chatMessage.status !== Status.PROFANITY_VIOLATION;
+    chatMessage.status !== Status.PROFANITY_VIOLATION &&
+    !teacherFlaggedHidden;
 
   // If a user's chat message has a profanity violation
   const userMessageProfanity =
     chatMessage.role === Role.USER &&
-    chatMessage.status === Status.PROFANITY_VIOLATION;
+    chatMessage.status === Status.PROFANITY_VIOLATION &&
+    !teacherFlaggedHidden;
 
   const isAssistant = chatMessage.role === Role.ASSISTANT;
 
@@ -192,10 +196,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       text={displayText}
       postText={postText}
       role={role}
-      messageStyle={getMessageStyle(status, role)}
+      messageStyle={getMessageStyle(status, role, teacherFlaggedHidden)}
       header={header}
       footer={footer}
-      teacherFlagged={teacherFlagged}
     />
   );
 };
@@ -204,7 +207,8 @@ export function getChatMessageDisplayText(
   status: ValueOf<typeof Status>,
   role: Role,
   chatMessageDisplayText: string,
-  showProfaneUserMessage: boolean
+  showProfaneUserMessage: boolean,
+  teacherFlaggedHidden: boolean
 ) {
   // If Role is USER, display the original message, unless there is a PII violation
   // or a profanity violation and the message is not supposed to be shown.
@@ -214,6 +218,9 @@ export function getChatMessageDisplayText(
     }
     if (status === Status.PROFANITY_VIOLATION && !showProfaneUserMessage) {
       return commonI18n.aiChatInappropriateUserMessage();
+    }
+    if (teacherFlaggedHidden) {
+      return 'This message has been flagged as inappropriate by the teacher.';
     }
     return chatMessageDisplayText;
   }
@@ -237,10 +244,15 @@ export function getChatMessageDisplayText(
   }
 }
 
-function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
+function getMessageStyle(
+  status: ValueOf<typeof Status>,
+  role: Role,
+  teacherFlaggedHidden: boolean
+) {
   if (
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
+    teacherFlaggedHidden ||
     (role === Role.ASSISTANT &&
       (status === Status.ERROR ||
         status === Status.MODEL_TIMEOUT ||
