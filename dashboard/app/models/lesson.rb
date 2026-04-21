@@ -33,6 +33,7 @@ class Lesson < ApplicationRecord
 
   belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
+  # Rubrics need to be deleted before levels since the rubrics are connected to a level in a lesson
   has_many :rubrics, dependent: :destroy
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
