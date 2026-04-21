@@ -140,6 +140,7 @@ class ScrollButtons extends React.Component {
         key="scrollUp"
         onClick={this.singleScrollUp}
         onMouseDown={this.continuousScrollStartUp}
+        aria-label="Scroll instructions up"
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
@@ -159,6 +160,7 @@ class ScrollButtons extends React.Component {
           moduleStyles.arrowGlyph,
           moduleStyles.removeButtonStyles
         )}
+        aria-label="Scroll instructions up"
       >
         <FontAwesome
           icon="caret-up"
@@ -183,6 +185,7 @@ class ScrollButtons extends React.Component {
         key="scrollDown"
         onClick={this.singleScrollDown}
         onMouseDown={this.continuousScrollStartDown}
+        aria-label="Scroll instructions down"
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
       </button>
@@ -203,6 +206,7 @@ class ScrollButtons extends React.Component {
         key="scrollDown"
         onClick={this.singleScrollDown}
         onMouseDown={this.continuousScrollStartDown}
+        aria-label="Scroll instructions down"
       >
         <FontAwesome
           icon="caret-down"

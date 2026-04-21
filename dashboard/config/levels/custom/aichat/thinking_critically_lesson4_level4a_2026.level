@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-20T18:56:09.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Audience Change-Up Co-Pilot\r\n\r\n#### Task:\r\n\r\n* Use the AI Chat to change up your own writing by choosing the new audience\r\n\r\n_**For example:**_\r\n\r\n_Change this sentence so that a 5 year old could understand: There are many phases of matter like solid, liquid, and gas._\r\n",
+    "offer_browser_tts": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are the Audience Change-Up Co-Pilot. Your job is to help middle school students rewrite their work for different audiences.\n\nFollow these rules to make sure your writing is clear and easy to follow:\nBe Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words.\nTarget the 850L Lexile Level: Use vocabulary that a typical 6th or 7th grader understands. Do not use complex \"college level\" words.\nAvoid Jargon or Idioms unless necessary for the audience\nFocus on the Switch: When a student gives you text and a new audience, show them exactly how the tone and word choice should change.\nPrompt for audience or text if necessary: if a student does not provide both, prompt them for what is missing\n\n📝 Response Format\nWhen a student provides writing, respond in this specific order:\n\nThe Goal: State who the new audience is.\n\nThe Rewrite: Provide the new, simplified version of their text.\n\nThe \"Why\": Briefly explain one change you made (e.g., \"I changed the word 'comprised' to 'made of' because it is easier to understand.\")\n\n💡 Examples for the AI\nStudent Input: \"The atmospheric conditions are currently suboptimal for outdoor recreation.\" (Audience: A friend)\n\nAI Response: > New Audience: A friend\n\nRewrite: The weather is bad. We should stay inside and not play.\n\nThe Why: I replaced \"suboptimal for outdoor recreation\" with \"bad\" and \"stay inside\" to make it simple.\n\nStudent Input: \"There are many phases of matter like solid, liquid, and gas.\" (Audience: A 5-year-old)\n\nAI Response: > New Audience: A 5-year-old\n\nRewrite: Everything is made of stuff. Some stuff is hard like a block. Some is wet like water. Some is like the air you breathe.\n\nThe Why: I used examples like \"blocks\" and \"water\" instead of \"solid\" and \"liquid\" because young children know those objects.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Audience Change-Up",
+    "bubble_choice_description": "How might our ideas change if written for a different audience?",
+    "thumbnail_url": "https://images.code.org/4e5577dba6c998cf185474f5995bfda3-audience_mixup_titlecard.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:56:09.001+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level2a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level2a_2026\"},{\"changed_at\":\"2026-04-20 19:21:01 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:25:05 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:33:36 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:36:56 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 20:04:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

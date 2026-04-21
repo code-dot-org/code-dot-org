@@ -31,6 +31,7 @@ import teacherSections, {
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 // 6 seconds
 const FLASH_DURATION = 6 * 1000;
@@ -94,9 +95,7 @@ $(document).ready(function () {
 
   createReactRoot(
     <Provider store={store}>
-      {sections.length === 0 ? (
-        // If a teacher has no sections, we will send them directly to the homepage to bypass
-        // all of the section loading logic in the TeacherNavigationRouter.
+      {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
         <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
         <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />

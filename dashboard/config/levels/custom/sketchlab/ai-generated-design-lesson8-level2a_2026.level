@@ -853,8 +853,8 @@
       }
     },
     "name_suffix": "_2026",
-    "teacher_markdown": "## Teacher Tip\r\n\r\nDuring peer testing, challenge the \"user\" student to try to change their mind at the last second. \r\n\r\nHave them consider this question: \"If the user gets to the 'Join Challenge' page and realizes they picked the wrong one, how do they get back to 'Challenges' without hitting the browser's back button?\" This encourages students to think about adding \"Cancel\" buttons or clearer navigation to their site maps."
+    "teacher_markdown": "During peer testing, challenge the \"user\" student to try to change their mind at the last second. \r\n\r\nHave them consider this question: \"If the user gets to the 'Join Challenge' page and realizes they picked the wrong one, how do they get back to 'Challenges' without hitting the browser's back button?\" This encourages students to think about adding \"Cancel\" buttons or clearer navigation to their site maps."
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:51.062+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level2a_2025\"},{\"changed_at\":\"2026-03-12 20:19:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:51.062+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level2a_2025\"},{\"changed_at\":\"2026-03-12 20:19:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:53:25 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

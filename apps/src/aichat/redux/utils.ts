@@ -1,14 +1,14 @@
 import moment from 'moment';
 
-import {getTypedKeys} from '@cdo/apps/types/utils';
-
 import {
   AiCustomizations,
   FieldVisibilities,
   ModelCardInfo,
-  ModelParameters,
   Visibility,
-} from '../types';
+} from '@cdo/apps/aichatLab/types';
+import {getTypedKeys} from '@cdo/apps/types/utils';
+
+import {ModelParameters} from '../types';
 
 // This variable keeps track of the most recent remove event ID so that we can
 // assign a unique remove event ID in increasing sequence to a new event.

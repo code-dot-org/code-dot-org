@@ -1,10 +1,11 @@
+import {SaveType} from '@cdo/apps/aichatLab/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 import type {ValueOf} from '../types/utils';
 
-import type {ModelDescription, SaveType} from './types';
+import type {ModelDescription} from './types';
 
 export const modelDescriptions: ModelDescription[] =
   modelsJson.filter(isValidDescription);
@@ -46,13 +47,6 @@ export const FAQ_LINK =
 
 export const AI_SETTINGS_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings';
-
-// Image types that assets bucket and safety moderation support.
-export const ACCEPTED_IMAGE_MEDIA_TYPES = [
-  'image/jpeg',
-  'image/png',
-  'image/gif',
-];
 
 export const VERIFIED_TEACHER_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher';

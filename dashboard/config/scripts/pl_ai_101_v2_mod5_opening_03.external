@@ -1,0 +1,28 @@
+name 'pl-ai-101-V2-mod5-opening-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Ethical Discussions
+
+#### As AI becomes more common in education, it’s important not only to understand its ethical implications, but also to create space for students to explore and discuss them. These conversations go beyond learning how AI works—they help students think critically about how technology impacts people, communities, and decision-making.
+
+#### AI-related topics can raise complex and sometimes controversial questions about fairness, bias, privacy, and responsibility. Students may have strong opinions, and in many cases, there are no simple or universally agreed-upon answers. This makes it especially important to approach these discussions with intention and care.
+
+#### When facilitating conversations about AI and ethics, consider the following strategies:
+
+* #### **Encourage multiple perspectives.**
+#### Help students explore who benefits from a system and who might be impacted negatively. Framing discussions around trade-offs, rather than “right” or “wrong” answers, can lead to deeper and more thoughtful engagement.
+
+* #### **Use “what-if” scenarios.**
+#### Present hypothetical situations that require students to think through the implications of AI decisions. These scenarios encourage students to consider different viewpoints and explore how outcomes might affect different groups.
+
+* #### **Acknowledge uncertainty and complexity.**
+#### Reinforce that ethical questions around AI are often complex and evolving. It’s okay not to have a clear answer. Emphasizing inquiry, questioning, and reflection helps students build confidence in navigating uncertainty.
+
+<br>
+
+>#### **💬 Quick Reflection:** Which of these stratagies fit best with your teaching style?
+
+#### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
+MARKDOWN

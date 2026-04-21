@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
+import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -17,7 +18,6 @@ import {
   isUserActionEvent,
   WorkspaceTeacherViewTab,
 } from '../../types';
-import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
   const visibleMessages = useAppSelector(selectAllVisibleMessages);

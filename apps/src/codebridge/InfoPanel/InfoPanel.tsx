@@ -44,7 +44,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
-    enableTutorVideos,
+    tutorVideos,
     config,
     onImageFlagged,
   } = useCodebridgeContext();
@@ -163,7 +163,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        enableTutorVideos={enableTutorVideos}
+        tutorVideos={tutorVideos}
         documentationUrl={documentationUrl}
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}

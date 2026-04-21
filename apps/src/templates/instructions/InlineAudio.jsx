@@ -260,6 +260,7 @@ class InlineAudio extends React.Component {
           style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
           type="button"
+          aria-label={this.state.playing ? 'Pause audio' : 'Play audio'}
         >
           <div
             style={

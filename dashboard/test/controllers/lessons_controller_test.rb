@@ -126,6 +126,11 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :student_lesson_plan, params: -> {{course_course_name: @pl_login_req_course.name, unit_position: 1, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :facilitator, response: :success, name: 'facilitator can view student lesson plan on pl script where login is required'
   test_user_gets_response_for :student_lesson_plan, params: -> {{course_course_name: @pl_login_req_course.name, unit_position: 1, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on pl script where login is required'
 
+  # signed out users are redirected to sign in for tutor
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor'
+
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
