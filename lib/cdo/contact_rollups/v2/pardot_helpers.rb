@@ -1,4 +1,5 @@
 require 'jwt'
+require 'dynamic_config/dcdo'
 
 module PardotHelpers
   AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
@@ -39,16 +40,30 @@ module PardotHelpers
   end
 
   PRIVATE_KEY = CDO.pardot_private_key
+  CLIENT_ID = CDO.pardot_client_id
+  CLIENT_SECRET = CDO.pardot_client_secret
   PARDOT_BUSINESS_ID = '0Uv5b0000004CHbCAM'
 
-  OAUTH_ENDPOINT = 'https://login.salesforce.com/services/oauth2/token'
+  OAUTH_ENDPOINT_JWT = 'https://login.salesforce.com/services/oauth2/token'
+  OAUTH_ENDPOINT_CLIENT_CREDENTIALS = 'https://codeorg2.my.salesforce.com/services/oauth2/token'
 
   @@access_token = nil
+  @@access_token_flow = nil
 
-  # Authenticates and requests an access token
+  # Authenticates and requests an access token, using the flow selected by
+  # the pardot-use-client-credentials-auth DCDO flag.
+  private def request_api_access_token
+    if DCDO.get('pardot-use-client-credentials-auth', false)
+      request_api_access_token_client_credentials
+    else
+      request_api_access_token_jwt
+    end
+  end
+
+  # JWT-bearer flow against login.salesforce.com.
   # https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm
   # https://thespotforpardot.com/2021/02/02/pardot-api-and-getting-ready-with-salesforce-sso-users-part-3b-connecting-to-pardot-api-from-code/
-  private def request_api_access_token
+  private def request_api_access_token_jwt
     # build token payload
     payload = {
       # connected app client id
@@ -75,13 +90,34 @@ module PardotHelpers
     }
 
     response = Net::HTTP.post(
-      URI(OAUTH_ENDPOINT),
+      URI(OAUTH_ENDPOINT_JWT),
       token_request.to_query
     )
 
     raise "Pardot authentication failed with HTTP #{response.code}" unless
       SUCCESS_HTTP_CODES.include?(response.code)
 
+    @@access_token_flow = :jwt
+    @@access_token = JSON.parse(response.body)["access_token"]
+  end
+
+  # OAuth 2.0 client-credentials flow against codeorg2.my.salesforce.com.
+  private def request_api_access_token_client_credentials
+    token_request = {
+      'grant_type' => 'client_credentials',
+      'client_id' => CLIENT_ID,
+      'client_secret' => CLIENT_SECRET,
+    }
+
+    response = Net::HTTP.post(
+      URI(OAUTH_ENDPOINT_CLIENT_CREDENTIALS),
+      token_request.to_query
+    )
+
+    raise "Pardot authentication failed with HTTP #{response.code}" unless
+      SUCCESS_HTTP_CODES.include?(response.code)
+
+    @@access_token_flow = :client_credentials
     @@access_token = JSON.parse(response.body)["access_token"]
   end
 
@@ -103,7 +139,8 @@ module PardotHelpers
   # @param url [String] URL to post to. The URL should not contain auth params.
   # @return [Nokogiri::XML] XML response from Pardot
   private def post_request_with_auth(url)
-    request_api_access_token if @@access_token.nil?
+    desired_flow = DCDO.get('pardot-use-client-credentials-auth', false) ? :client_credentials : :jwt
+    request_api_access_token if @@access_token.nil? || @@access_token_flow != desired_flow
     post_request(url)
   end
 

@@ -51,4 +51,53 @@ class PardotHelpersTest < Minitest::Test
     PardotHelpersTest.try_with_exponential_backoff(3, [RuntimeError]) {try_counter += 1}
     assert try_counter == 1
   end
+
+  def reset_access_token_cache
+    PardotHelpers.class_variable_set(:@@access_token, nil)
+    PardotHelpers.class_variable_set(:@@access_token_flow, nil)
+  end
+
+  def test_request_api_access_token_dispatches_to_jwt_when_flag_false
+    reset_access_token_cache
+    DCDO.stubs(:get).with('pardot-use-client-credentials-auth', false).returns(false)
+    PardotHelpersTest.expects(:request_api_access_token_jwt).once
+    PardotHelpersTest.expects(:request_api_access_token_client_credentials).never
+
+    PardotHelpersTest.send(:request_api_access_token)
+  end
+
+  def test_request_api_access_token_dispatches_to_client_credentials_when_flag_true
+    reset_access_token_cache
+    DCDO.stubs(:get).with('pardot-use-client-credentials-auth', false).returns(true)
+    PardotHelpersTest.expects(:request_api_access_token_client_credentials).once
+    PardotHelpersTest.expects(:request_api_access_token_jwt).never
+
+    PardotHelpersTest.send(:request_api_access_token)
+  end
+
+  def test_post_request_with_auth_reauths_when_cached_flow_differs_from_flag
+    PardotHelpers.class_variable_set(:@@access_token, 'stale-token')
+    PardotHelpers.class_variable_set(:@@access_token_flow, :jwt)
+    DCDO.stubs(:get).with('pardot-use-client-credentials-auth', false).returns(true)
+
+    PardotHelpersTest.expects(:request_api_access_token).once
+    PardotHelpersTest.expects(:post_request).with('https://example.com').once
+
+    PardotHelpersTest.send(:post_request_with_auth, 'https://example.com')
+  ensure
+    reset_access_token_cache
+  end
+
+  def test_post_request_with_auth_reuses_cached_token_when_flow_matches
+    PardotHelpers.class_variable_set(:@@access_token, 'fresh-token')
+    PardotHelpers.class_variable_set(:@@access_token_flow, :client_credentials)
+    DCDO.stubs(:get).with('pardot-use-client-credentials-auth', false).returns(true)
+
+    PardotHelpersTest.expects(:request_api_access_token).never
+    PardotHelpersTest.expects(:post_request).with('https://example.com').once
+
+    PardotHelpersTest.send(:post_request_with_auth, 'https://example.com')
+  ensure
+    reset_access_token_cache
+  end
 end
