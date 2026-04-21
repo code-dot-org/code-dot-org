@@ -20,7 +20,7 @@ jest.mock('@cdo/apps/aichat/redux/thunks/sendAnalytics', () => ({
   sendAnalytics: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/aichatLab/views/modelCustomization/utils', () => ({
+jest.mock('@cdo/apps/aichatLab/utils', () => ({
   validateModelId: jest.fn(),
 }));
 
