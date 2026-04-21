@@ -3,10 +3,10 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
-  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
@@ -96,6 +96,72 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
+  # POST /api/v1/sections/demo/:demo_type
+  # Creates a demo section with preset properties and adds demo students.
+  def create_demo
+    authorize! :create, Section
+
+    demo_type = params[:demo_type]
+    config = Policies::DemoSections.get_preset(demo_type)
+    return render json: {error: "unknown demo section type: #{demo_type}"}, status: :bad_request unless config
+
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Honeybadger.notify("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
+    end
+
+    section = ActiveRecord::Base.transaction do
+      s = Section.create!(
+        {
+          user_id: current_user.id,
+          name: config[:section_name],
+          login_type: config[:login_type],
+          participant_type: config[:participant_type],
+          grades: config[:grades],
+          script_id: unit&.id,
+          course_id: unit_group&.id,
+          avatar_color: config[:avatar_color],
+          avatar_emoji: config[:avatar_emoji],
+          ai_chat_access_level: config[:ai_chat_access_level],
+          ai_tutor_enabled: config[:ai_tutor_enabled],
+          demo_type: demo_type,
+        }.compact
+      )
+
+      Policies::DemoSections.demo_student_ids(demo_type).each do |student_id|
+        student = User.find_by(id: student_id)
+        next unless student
+        begin
+          s.add_student(student)
+        rescue ActiveRecord::ActiveRecordError => exception
+          Honeybadger.notify(exception, context: {section_id: s.id, student_id: student_id})
+        end
+      end
+
+      s
+    end
+
+    render json: section.summarize
+  rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
+    if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
+      render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
+    else
+      head :bad_request
+    end
+  end
+
+  # GET /api/v1/sections/demo/presets
+  def presets
+    authorize! :create, Section
+
+    preset_views = Policies::DemoSections.preset_views_for_all_types
+    return head :not_found if preset_views.empty?
+
+    render json: preset_views
+  end
+
   # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
@@ -136,6 +202,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section.update!(fields)
     if @unit
       section.students.each do |student|
+        next unless can?(:manage, student) # Don't modify students the teacher can't manage (like demo students)
         student.assign_script(@unit, @course)
       end
     end
@@ -209,15 +276,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     }
   end
 
-  def update_sharing_disabled
-    @section.update!(sharing_disabled: params[:sharing_disabled])
-    @section.update_student_sharing(params[:sharing_disabled])
-    render json: {
-      sharing_disabled: @section.sharing_disabled,
-      students: @section.students.map(&:summarize)
-    }
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
@@ -229,7 +287,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, I18n.locale.to_s)
     render json: course_offerings
   end
 
@@ -255,6 +313,17 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
     render json: {key: site_key}
+  end
+
+  # GET /api/v1/sections/assigned_essential_ai_dependency
+  # Returns whether the current user has any non-hidden section assigned a
+  # course with essential AI chat tools dependency.
+  def assigned_essential_ai_dependency
+    return head :forbidden unless current_user
+    result = current_user.sections_instructed.
+      where(hidden: false).
+      any? {|section| section.assigned_ai_chat_tools_dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]}
+    render json: {has_assigned_essential_ai_dependency: result}
   end
 
   # GET /api/v1/sections/<id>/code_review_groups

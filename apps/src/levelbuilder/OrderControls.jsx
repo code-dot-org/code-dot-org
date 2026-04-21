@@ -53,18 +53,18 @@ export default class OrderControls extends Component {
         <i
           onMouseDown={this.handleMoveUp}
           style={styles.controlIcon}
-          className="fa fa-caret-up"
+          className="fa-solid fa-caret-up"
         />
         <i
           onMouseDown={this.handleMoveDown}
           style={styles.controlIcon}
-          className="fa fa-caret-down"
+          className="fa-solid fa-caret-down"
         />
         {isDeleteable ? (
           <i
             onMouseDown={this.handleRemove}
             style={styles.controlIcon}
-            className="fa fa-trash"
+            className="fa-solid fa-trash"
           />
         ) : (
           <i
@@ -73,7 +73,7 @@ export default class OrderControls extends Component {
               color: '#888',
               cursor: 'not-allowed',
             }}
-            className="fa fa-lock"
+            className="fa-solid fa-lock"
             title={
               "This activity section contains a level referenced by the lesson's rubric. Modify the rubric first."
             }

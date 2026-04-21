@@ -7,6 +7,9 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function (event) {
   createReactRoot(
     <PreWorkshopSurvey {...getScriptData('props')} />,
-    document.getElementById('application-container')
+    document.getElementById('application-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

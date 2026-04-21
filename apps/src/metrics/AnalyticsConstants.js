@@ -180,8 +180,7 @@ const EVENTS = {
     'Section students table save all clicked',
 
   // Section progress v2
-  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
-  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
   PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
   PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
@@ -330,6 +329,16 @@ const EVENTS = {
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
+  // AI Tutor: Lesson Deep Dive
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION:
+    'AI Tutor Lesson Deep Dive Modality Navigation',
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED:
+    'AI Tutor Lesson Deep Dive Modality Clicked',
+
+  // Lesson Tutor
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
+  LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
+
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_TEST_PASSED: 'Javalab Test Passed',
@@ -391,6 +400,9 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
+  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
+  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
+  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -495,6 +507,7 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
   AICHAT_UNSUPPORTED_MODEL_SELECTED:
     'User had previously selected a model that is no longer supported',
+  AICHAT_DICTATION_COMPLETED: 'User completes dictation in aichat',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -574,9 +587,6 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
-  // Global Edition - Region Reset Button
-  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
-    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
     'Global Edition Region Switch Confirm Shown',
@@ -717,10 +727,4 @@ const EVENT_GROUPS = {
     EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-const EXPERIMENTS = {
-  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
-    'select_grades_taught_on_account_creation',
-  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
-};
-
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

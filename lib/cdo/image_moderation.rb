@@ -1,37 +1,91 @@
-require 'cdo/azure_content_moderator'
 require 'cdo/azure_ai_content_safety'
+require 'cdo/imagemagick_guard'
 require 'honeybadger/ruby'
+require 'mini_magick'
+require 'stringio'
 
 module ImageModeration
-  # Returns a content rating from an external service.
-  # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png
-  # @return [:everyone|:racy|:adult|:unknown] Whether the image is suitable for everyone
-  def self.rate_image(image_data, content_type)
-    return :everyone unless CDO.azure_content_moderation_key
-    AzureContentModerator.new(
-      endpoint: CDO.azure_content_moderation_endpoint,
-      api_key: CDO.azure_content_moderation_key
-    ).rate_image(image_data, content_type)
-  rescue AzureContentModerator::AzureError => exception
-    # If something goes wrong with the image moderation service our fallback
-    # behavior is to allow everything through, but we also want to notify
-    # Honeybadger so that we can figure out exactly what is going wrong.
-    Honeybadger.notify(exception)
-    :unknown
-  end
+  # Azure AI Content Safety requires both dimensions to be at least this many pixels.
+  MIN_MODERATION_DIMENSION = 50
+  # Downscale images when either side exceeds this (Azure and ImageMagick limits on very large rasters).
+  MAX_MODERATION_DIMENSION = 7200
+  # Azure AI Content Safety requires images to be at most 4MB.
+  MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png
-  # @return [Hash, nil] raw categoriesAnalysis response from Azure, or nil on error
+  # @param [String] content_type - image/gif, image/jpeg, image/png, etc
+  # @return [Hash, nil] categoriesAnalysis response from Azure, or nil on error
+  # @raise [AzureAiContentSafety::UnsupportedContentType] when magic-byte sniffing
+  #   determines the image format is not supported; callers should map this to a 400.
   def self.moderate_image(image_data, content_type)
-    return nil unless CDO.azure_ai_content_safety_key
+    # Validate and prepare the image before checking the API key so that
+    # UnsupportedContentType is always raised for bad formats.
+    moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
+
+    unless CDO.azure_ai_content_safety_key
+      Honeybadger.notify("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
+      return nil
+    end
+
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key
-    ).moderate_image(image_data, content_type)
+    ).moderate_image(moderation_io)
+  rescue AzureAiContentSafety::UnsupportedContentType
+    raise # This is a client error, not a service failure — let callers map to 400.
   rescue AzureAiContentSafety::AzureError => exception
-    Honeybadger.notify(exception)
+    Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
+  end
+
+  def self.extract_and_validate_actual_content_type(image_data, content_type)
+    raw_data = image_data.read
+    actual_type = ImageMagickGuard.actual_content_type(raw_data)
+    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if actual_type.nil? || !SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(actual_type)
+    [raw_data, actual_type]
+  end
+
+  # Scales images to meet Azure AI Content Safety dimension and size requirements.
+  # Scales up images smaller than MIN_MODERATION_DIMENSION on either dimension.
+  # Scales down images larger than MAX_MODERATION_DIMENSION on either dimension.
+  # Scales down images larger than MAX_MODERATION_SIZE.
+  # On errors, passes the original bytes through so Azure can still be tried.
+  # Uses magic-byte sniffing to determine actual content type, overriding the
+  # reported content_type value which may be incorrect.
+  def self.scale_image_for_moderation_if_needed(image_data, content_type)
+    raw_data, actual_type = extract_and_validate_actual_content_type(image_data, content_type)
+    image = MiniMagick::Image.read(raw_data)
+
+    if image.width < MIN_MODERATION_DIMENSION || image.height < MIN_MODERATION_DIMENSION
+      # Scale up images smaller than MIN_MODERATION_DIMENSION on either dimension using MiniMagick's
+      # ^ (minimum bounding box): scale up so both dimensions are at least MIN_MODERATION_DIMENSION,
+      # preserving aspect ratio (short side hits the minimum, long side may exceed it).
+      image.resize "#{MIN_MODERATION_DIMENSION}x#{MIN_MODERATION_DIMENSION}^"
+      raw_data = image.to_blob
+    end
+
+    if image.width > MAX_MODERATION_DIMENSION || image.height > MAX_MODERATION_DIMENSION
+      # Scale down images larger than MAX_MODERATION_DIMENSION on either dimension using MiniMagick's
+      # > (maximum bounding box): scale down to fit within MAX_MODERATION_DIMENSION on each side,
+      # preserving aspect ratio (long side hits the maximum, short side may be smaller).
+      # Note that if an image has an extreme aspect ratio, the smaller side may be scaled up in branch above,
+      # but then scaled down here to a smaller dimension than MIN_MODERATION_DIMENSION on one side (very unlikely scenario).
+      image.resize "#{MAX_MODERATION_DIMENSION}x#{MAX_MODERATION_DIMENSION}>"
+      raw_data = image.to_blob
+    end
+
+    if raw_data.bytesize > MAX_MODERATION_SIZE
+      # Scale factor is approximate: file size is not strictly proportional to pixel
+      # count for compressed formats, so scale conservatively to stay under the limit.
+      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.85
+      new_w = (image.width * scale).floor
+      new_h = (image.height * scale).floor
+      image.resize "#{new_w}x#{new_h}!"
+      raw_data = image.to_blob
+    end
+
+    [StringIO.new(raw_data), actual_type]
+  rescue MiniMagick::Invalid, MiniMagick::Error
+    [StringIO.new(raw_data), actual_type]
   end
 end

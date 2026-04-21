@@ -2,15 +2,18 @@
 
 module Observability
   module OpenTelemetry
-    # Sets up OpenTelemetry tracing. Only runs when CDO.enable_opentelemetry is
-    # true and the process is serving web requests (skips unit test runners,
-    # rake tasks, etc.).
+    # Sets up OpenTelemetry tracing. Runs in all processes except unit test runners
+    # (detected via UNIT_TEST env var set in dashboard/test/test_helper.rb).
     def self.setup
-      return unless CDO.enable_opentelemetry && CDO.running_web_application?
+      return unless CDO.enable_opentelemetry && !ENV['UNIT_TEST']
 
       require 'opentelemetry/sdk'
       require 'opentelemetry/instrumentation/all'
       require 'opentelemetry-exporter-otlp'
+
+      # Suppress noisy messages from auto-instrumentation gems by default.
+      # (e.g. detach/attach mismatches, double-finish on spans).
+      ENV['OTEL_LOG_LEVEL'] ||= 'fatal'
 
       ::OpenTelemetry::SDK.configure do |c|
         c.service_name = 'dashboard'

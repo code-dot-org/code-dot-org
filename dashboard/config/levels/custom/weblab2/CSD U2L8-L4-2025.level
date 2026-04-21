@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-26T01:49:43.000Z",
   "level_num": "custom",
@@ -83,9 +84,21 @@
         "5"
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqSqAs/iIcTJvipkm4x\nH4xypmSaXdOnMfojz2Um+kozKMAUqEik3y04yVOQVFBH9RXgt69q6638J9vs\nG2xaL6zbtO4bu95cEWtCgFbg1IiBtP+ekcW/DM832KTVmpMah47vywNfcIB4\neobFD4DAnGZw2ZzTERMGIB8JvmiPOuh7oW3U1Q6EIw5571h3d0h4BgJKT/Au\nnCHfhHiiWQ48d46lhjo4XcBwo2z6ji1iAMKXI0A2vqj2pCIRZUNga0n0wy3d\n5QE+EQwjbDxrzYB3jE8ydfPwrHCWfBLD/SsLyW+5pUTSLh29VMQyzDX/d77o\nWVcL0OZe9CBouIDxuchnw15iDZwuV+0/FKeIp7Kvz2kJ23Lvx5pEUJ9NnzyQ\n0aQmlPlpEAD/7Ai7+78KHkqJ0bdw368rpz6SNBd/Yixt6qY1pBxNONN+nLmx\nIqX4ipW0+BiUv/oADnGT6ocOymLVomFkxPEMutoUh3olEHexQcmFIHpno9Uh\nYF3h5rbYdvaWEragXHTUFJip3Z2GLsqkW+IGtuM8hzjgP0G9FjAJgBfdzpnb\nrI48jiImLjhpVgPyelOVa88C6zOW8Xu2O71cep1ZWNdz7VrPagH/Zjivwu7K\nj+dyX8hRm+GEGp2HcD4ueucqEznipP0UMdQgPWMInuWas91rqp9PeNC2cKd4\n8GGGI/u4tUNZRmYeJvTDAlnCMxqoh4pY772PPwCKmn+OC+uED/9Yw9tY56TO\nBq03TeWOeb8U7QyzG3Gk/C/rUDJ4XiRcRxgMVecgYN+SJsQaG3qetmhqh1sn\nQd5PUcfUM74+QSKkUy2RHnZP7Nu8CKINodGk7b942C1bTB8msEc2ZGxSvbho\nGhIXudn3APZ1tEKED7pfj/QZ2NU/s/RvWqjJPpfSiiONFi8IVaDXj5OZkqSh\naf/7vh0673tGJT2cvaXtzbYqdMjIqHRs9DXy0IIJdN4RqKKQKm+UkCb9CVPS\nLlprQLaU7/tsSfCEwM2CiX1gaLd903zaQ+fZt+/sayKQ7kr9vQuojFNKMYAf\nIwLw6Q2U/ATOoOPB0/8I4NxQID7BXs1D4kw7JssNnqcRkM22qfcjjSf9zb/h\nSIdXaEm57yJtWbUlPRK1RkkCCzV+NtbF0agLyQ4EeYVJ2Nn240aZKrN6orGX\nNV1R+X3dou9w0IxIkG47DzEYsLqmkbqGDQP4v5OmdDRJ4qXSFe8wff9ROk1u\nsx5iaAXWuo9PODJ+zAM8ppAR0japJ0nsgxTmEmzNFQxWCIYcu1kwR/N0bEuC\nLPr4RqCp29NfieInsrpVzbP8ErCROC4vp+Xtah7CvAWMe5/JIaL4jiQ9F3RV\nIZ0M2CkIb3BUyEHE84AB36BGMZQIr8QKByU9dV3vsihUcK8618bIvoWSs0xh\n/aZFZWbLUmRown4MOS4ksRA/32iXviyYKF7xzTZkLhTCzmtEEgfcbXZOMKAP\ntWOJqnZNc3g/YCl/q38XmgWQGRjvD7KF2k6lLjO1yrKXiwW3Vj/jl1JRWvNy\nYn2/hdPmCmVgDAQaJkpbsjwfqRp8kweDTVKpGLmX1osVTuC97WNkTrw7YXBn\nEPnyiInlha0iFcXnvY2JnxF1/JMTyYNtWHEdxZpz//C7Y3MY5XSsNJyTZhSV\n2khWnwhTo3pm4ihfB/pXuLg+uVzCiyjzVZBKwtxlQpWZNymNTGZgK5uItRkA\n+NOHcDiFkqlUR7uFsFnWSiQjb+OkdZdqx6nNHBgfSI7LDARH0P49\n"
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqSqAs/iIcTJvipkm4x\nH4xypmSaXdOnMfojz2Um+kozKMAUqEik3y04yVOQVFBH9RXgt69q6638J9vs\nG2xaL6zbtO4bu95cEWtCgFbg1IiBtP+ekcW/DM832KTVmpMah47vywNfcIB4\neobFD4DAnGZw2ZzTERMGIB8JvmiPOuh7oW3U1Q6EIw5571h3d0h4BgJKT/Au\nnCHfhHiiWQ48d46lhjo4XcBwo2z6ji1iAMKXI0A2vqj2pCIRZUNga0n0wy3d\n5QE+EQwjbDxrzYB3jE8ydfPwrHCWfBLD/SsLyW+5pUTSLh29VMQyzDX/d77o\nWVcL0OZe9CBouIDxuchnw15iDZwuV+0/FKeIp7Kvz2kJ23Lvx5pEUJ9NnzyQ\n0aQmlPlpEAD/7Ai7+78KHkqJ0bdw368rpz6SNBd/Yixt6qY1pBxNONN+nLmx\nIqX4ipW0+BiUv/oADnGT6ocOymLVomFkxPEMutoUh3olEHexQcmFIHpno9Uh\nYF3h5rbYdvaWEragXHTUFJip3Z2GLsqkW+IGtuM8hzjgP0G9FjAJgBfdzpnb\nrI48jiImLjhpVgPyelOVa88C6zOW8Xu2O71cep1ZWNdz7VrPagH/Zjivwu7K\nj+dyX8hRm+GEGp2HcD4ueucqEznipP0UMdQgPWMInuWas91rqp9PeNC2cKd4\n8GGGI/u4tUNZRmYeJvTDAlnCMxqoh4pY772PPwCKmn+OC+uED/9Yw9tY56TO\nBq03TeWOeb8U7QyzG3Gk/C/rUDJ4XiRcRxgMVecgYN+SJsQaG3qetmhqh1sn\nQd5PUcfUM74+QSKkUy2RHnZP7Nu8CKINodGk7b942C1bTB8msEc2ZGxSvbho\nGhIXudn3APZ1tEKED7pfj/QZ2NU/s/RvWqjJPpfSiiONFi8IVaDXj5OZkqSh\naf/7vh0673tGJT2cvaXtzbYqdMjIqHRs9DXy0IIJdN4RqKKQKm+UkCb9CVPS\nLlprQLaU7/tsSfCEwM2CiX1gaLd903zaQ+fZt+/sayKQ7kr9vQuojFNKMYAf\nIwLw6Q2U/ATOoOPB0/8I4NxQID7BXs1D4kw7JssNnqcRkM22qfcjjSf9zb/h\nSIdXaEm57yJtWbUlPRK1RkkCCzV+NtbF0agLyQ4EeYVJ2Nn240aZKrN6orGX\nNV1R+X3dou9w0IxIkG47DzEYsLqmkbqGDQP4v5OmdDRJ4qXSFe8wff9ROk1u\nsx5iaAXWuo9PODJ+zAM8ppAR0japJ0nsgxTmEmzNFQxWCIYcu1kwR/N0bEuC\nLPr4RqCp29NfieInsrpVzbP8ErCROC4vp+Xtah7CvAWMe5/JIaL4jiQ9F3RV\nIZ0M2CkIb3BUyEHE84AB36BGMZQIr8QKByU9dV3vsihUcK8618bIvoWSs0xh\n/aZFZWbLUmRown4MOS4ksRA/32iXviyYKF7xzTZkLhTCzmtEEgfcbXZOMKAP\ntWOJqnZNc3g/YCl/q38XmgWQGRjvD7KF2k6lLjO1yrKXiwW3Vj/jl1JRWvNy\nYn2/hdPmCmVgDAQaJkpbsjwfqRp8kweDTVKpGLmX1osVTuC97WNkTrw7YXBn\nEPnyiInlha0iFcXnvY2JnxF1/JMTyYNtWHEdxZpz//C7Y3MY5XSsNJyTZhSV\n2khWnwhTo3pm4ihfB/pXuLg+uVzCiyjzVZBKwtxlQpWZNymNTGZgK5uItRkA\n+NOHcDiFkqlUR7uFsFnWSiQjb+OkdZdqx6nNHBgfSI7LDARH0P49\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-01-26 01:52:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:53:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-26 01:52:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:53:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-25 15:47:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

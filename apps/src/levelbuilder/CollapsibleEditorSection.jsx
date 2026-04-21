@@ -21,7 +21,7 @@ export default function CollapsibleEditorSection(props) {
             className={style.headerButton}
           >
             <FontAwesome
-              icon={collapsed ? 'expand' : 'compress'}
+              icon={collapsed ? 'chevron-right' : 'chevron-down'}
               className={style.collapsibleEditorSectionIcon}
             />
             {title}

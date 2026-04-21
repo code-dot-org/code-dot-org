@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-01T00:38:34.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson3-template_2026",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "Don't add in parameters, only introduce functions with no parameters."
+      }
+    },
+    "long_instructions": "### **Generate with AI**\r\n\r\n#### **Do This:**\r\n\r\n1. Highlight `progressBar.style.width = progress + \"%\"` and select **Add to AI Tutor Chat**. Ask the AI to explain what this code does.\r\n\r\n2. Highlight the event handler and select **Add to AI Tutor Chat**. Prompt the AI to refactor the event handler into a **named arrow function**.\r\n\r\n3. Click the **Increase Progress** button and check that it still works as expected.\r\n\r\n4. **Check Code:** Look for where the code:\r\n\r\n   * defines a **named function**\r\n   * uses **arrow function syntax**\r\n   * uses the function name as the event handler in `addEventListener`\r\n",
+    "encrypted_exemplar_sources": "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\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T00:38:34.794+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level2-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level2-revised_2026\"},{\"changed_at\":\"2026-04-01 00:46:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:30:09 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:42:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:44:44 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:48:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:49:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 01:52:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:07:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:08:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:09:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-01 02:23:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-06 16:58:58 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 22:48:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 22:54:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 22:57:16 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 22:58:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 22:59:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:01:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

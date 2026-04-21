@@ -2,20 +2,20 @@
 
 module Observability
   module Sentry
-    # Sets up Sentry error tracking. Only runs when CDO.enable_sentry is true
-    # and the process is serving web requests (skips rake tasks, test runners, etc.).
+    # Sets up Sentry error tracking. Runs in all processes except unit test runners
+    # (detected via UNIT_TEST env var set in dashboard/test/test_helper.rb).
     # When OpenTelemetry is also enabled, the OTLP integration is activated so
     # errors are correlated with traces.
     def self.setup
-      return unless CDO.enable_sentry && CDO.running_web_application?
+      return unless CDO.enable_sentry && !ENV['UNIT_TEST']
 
-      if CDO.sentry_dsn.blank?
-        CDO.log.warn '[observability] enable_sentry is true but sentry_dsn is not configured; skipping Sentry setup'
+      if CDO.dashboard_sentry_dsn.blank?
+        CDO.log.warn '[observability] enable_sentry is true but dashboard_sentry_dsn is not configured; skipping Sentry setup'
         return
       end
 
       ::Sentry.init do |config|
-        config.dsn = CDO.sentry_dsn
+        config.dsn = CDO.dashboard_sentry_dsn
         # Explicitly disable PII collection per privacy policy.
         # Sentry defaults this to false, but we set it explicitly to make the
         # intent clear.

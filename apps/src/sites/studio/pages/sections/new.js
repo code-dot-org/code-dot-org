@@ -26,7 +26,10 @@ $(document).ready(() => {
         defaultRedirectUrl={defaultRedirectUrl}
       />
     </div>,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   displayDifferentiationChat();
 });

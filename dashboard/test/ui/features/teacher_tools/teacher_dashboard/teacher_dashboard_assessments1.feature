@@ -7,18 +7,9 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I click selector "#section-options-dropdown-dropdown-button" once I see it
-    And I click selector "#ui-test-Section-settings"
-    And I press the first "input[name='grades[]']" element
-    And I wait until element "button:contains(High School)" is visible
-    And I click selector "button:contains(High School)"
-    And I press the first "input[name='Computer Science Principles']" element
-    And I wait until element "#assignment-version-year" is visible
-    And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('24-'25)" once I see it
-    And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CS Principles Post-Course Survey" option in dropdown "uitest-secondary-assignment"
-    And I press the first "#uitest-save-section-changes" element to load a new page
+    And I assign my section in row 1 to course "allthethingscourse" unit 1
+    And I reload the page
+    And I click selector "a:contains(View progress)" once I see it
 
     # Progress tab
     And I wait until element "#unit-selector-v2" is visible
@@ -26,4 +17,6 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assessments tab
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     And I wait until element "#unit-selector-v2" is visible
+    And I wait until element "#assessment-selector" is visible
+    And I select the "Anonymous student survey 2" option in dropdown "assessment-selector"
     Then I wait until element "div:contains(this survey is anonymous)" is visible

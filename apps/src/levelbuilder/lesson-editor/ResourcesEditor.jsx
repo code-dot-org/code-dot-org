@@ -20,6 +20,7 @@ import {lessonEditorTableStyles} from './TableConstants';
 class ResourcesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
+    forJitPl: PropTypes.bool,
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     getRollupsUrl: PropTypes.string,
@@ -46,14 +47,14 @@ class ResourcesEditor extends Component {
     return (
       <div style={styles.actionsColumn}>
         <div style={styles.edit} onMouseDown={() => this.handleEdit(rowData)}>
-          <i className="fa fa-edit" />
+          <i className="fa-solid fa-pen-to-square" />
         </div>
         <div
           style={styles.remove}
           className="unit-test-remove-resource"
           onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -260,6 +261,7 @@ class ResourcesEditor extends Component {
             handleClose={this.handleNewResourceDialogClose}
             existingResource={this.state.editingResource}
             courseVersionId={this.props.courseVersionId}
+            forJitPl={this.props.forJitPl}
           />
         )}
         {this.state.confirmRemovalDialogOpen && (
@@ -283,9 +285,11 @@ class ResourcesEditor extends Component {
               onSearchSelect={this.onSearchSelect}
               searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
-              additionalQueryParams={{
-                courseVersionId: this.props.courseVersionId,
-              }}
+              additionalQueryParams={
+                this.props.forJitPl
+                  ? {forJitPl: true}
+                  : {courseVersionId: this.props.courseVersionId}
+              }
             />
           </div>
           <Table.Provider columns={columns}>
@@ -297,8 +301,8 @@ class ResourcesEditor extends Component {
             style={styles.addButton}
             type="button"
           >
-            <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
-            Resource
+            <i className="fa-solid fa-plus" style={{marginRight: 7}} /> Create
+            New Resource
           </button>
           {this.props.getRollupsUrl && (
             <button

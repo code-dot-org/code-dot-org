@@ -28,7 +28,7 @@ function StandardsEditor(props) {
           className="unit-test-remove-standard"
           onMouseDown={() => handleRemoveStandardDialogOpen(rowData)}
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );

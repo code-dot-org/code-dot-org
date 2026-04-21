@@ -13,8 +13,7 @@ markdown <<MARKDOWN
 >#### Keep an eye out for these as you're reviewing the following scenarios.
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
-
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 1️⃣ Treating AI Like It Has Awareness of the Current World
 </summary>
 
@@ -85,6 +84,8 @@ If timing matters, always specify the exact date, event, or context instead of a
 
 </div>
 
+</div>
+
 
 
 </div>
@@ -96,7 +97,7 @@ If timing matters, always specify the exact date, event, or context instead of a
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 2️⃣ Assuming AI Works Like a Google Search
 </summary>
 
@@ -174,7 +175,7 @@ Use AI to brainstorm and organize ideas, but verify research claims and citation
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 3️⃣ Mistaking Confidence for Accuracy
 </summary>
 
@@ -251,7 +252,7 @@ Confidence in tone does not equal accuracy — always compare AI summaries direc
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 4️⃣ Leaving Out Critical Context
 </summary>
 
@@ -328,7 +329,7 @@ The more specific your context, the more useful and realistic the AI’s respons
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 5️⃣ Believing AI Has Long-Term Memory
 </summary>
 
@@ -404,7 +405,7 @@ Reintroduce key materials and context whenever you want the AI to build on previ
 
 <details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
 
-<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+<summary onmouseover="this.style.background='#F2F4F7'" onmouseout="this.style.background='#FFFFFF'" style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF; transition:background 0.2s ease;">
 6️⃣ Leading AI Toward a Pre-Chosen Solution
 </summary>
 
@@ -485,5 +486,8 @@ Describe the challenge clearly, then ask for multiple recommendations before nar
 </div>
 </div>
 </details>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
 
 MARKDOWN

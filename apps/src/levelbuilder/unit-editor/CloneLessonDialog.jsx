@@ -162,7 +162,7 @@ export default class CloneLessonDialog extends Component {
                 />
               </label>
             )}
-            {this.state.saving && <i className="fa fa-spinner fa-spin" />}
+            {this.state.saving && <i className="fa-solid fa-spinner fa-spin" />}
           </div>
         )}
         <DialogFooter>

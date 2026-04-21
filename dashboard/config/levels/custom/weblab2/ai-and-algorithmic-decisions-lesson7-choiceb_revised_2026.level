@@ -1,0 +1,73 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-10T22:01:50.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Predict & Trace**\r\n\r\n#### **Do This:**\r\n\r\n1. Look at the JavaScript code in `script.js`.\r\n   Predict what will happen when the user interacts with the feature.\r\n\r\n2. Run the app and test it.\r\n   Did the result match your prediction?\r\n\r\n3. Use AI Tutor to help you understand how the code creates this behavior.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Show / Hide Information</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <div class=\"app\">\n    <h2>Help & FAQs</h2>\n\n    <div class=\"faq-item\">\n      <button id=\"question1\">What is this app?</button>\n      <p id=\"answer1\">\n        This app helps you read and customize your experience.\n      </p>\n    </div>\n\n    <div class=\"faq-item\">\n      <button id=\"question2\">How do I change settings?</button>\n      <p id=\"answer2\">\n        Use the buttons at the top of the page to adjust your preferences.\n      </p>\n    </div>\n\n  </div>\n\n  <script src=\"script.js\"></script>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  min-height: 100vh;\n  font-family: Arial, sans-serif;\n  background: linear-gradient(180deg, #1f2125 0%, #2d3035 100%);\n  color: #ffffff;\n  padding: 32px 16px;\n}\n\n.app {\n  max-width: 600px;\n  margin: 0 auto;\n}\n\nh2 {\n  margin-bottom: 24px;\n  font-size: 2.2rem;\n}\n\n.faq-item {\n  margin-bottom: 16px;\n}\n\nbutton {\n  width: 100%;\n  text-align: left;\n  padding: 16px;\n  font-size: 1rem;\n  font-weight: 600;\n  border: none;\n  border-radius: 12px;\n  background: #4a4d52;\n  color: white;\n  cursor: pointer;\n  transition: background 0.15s ease, transform 0.1s ease;\n}\n\nbutton:hover {\n  background: #5a5d63;\n  transform: translateY(-1px);\n}\n\np {\n  margin: 8px 0 0 0;\n  padding: 14px;\n  background: #f8f5ef;\n  color: #222;\n  border-radius: 12px;\n  line-height: 1.6;\n  display: none; /* hidden by default */\n}\n\n@media (max-width: 500px) {\n  h2 {\n    font-size: 1.8rem;\n  }\n\n  button {\n    padding: 14px;\n  }\n\n  p {\n    padding: 12px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "const question1 = document.getElementById(\"question1\");\nconst answer1 = document.getElementById(\"answer1\");\n\nconst question2 = document.getElementById(\"question2\");\nconst answer2 = document.getElementById(\"answer2\");\n\nconst toggleAnswer = (answer) => {\n  if (answer.style.display === \"block\") {\n    answer.style.display = \"none\";\n  } else {\n    answer.style.display = \"block\";\n  }\n};\n\nquestion1.addEventListener(\"click\", () => {\n  toggleAnswer(answer1);\n});\n\nquestion2.addEventListener(\"click\", () => {\n  toggleAnswer(answer2);\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nq0uT01gzoZuvOuk=\n",
+    "display_name": "Show More Information",
+    "bubble_choice_description": "Click to show or hide extra details when needed.",
+    "thumbnail_url": "https://images.code.org/89cf3fdbda16f6739bc7f3bddcf3b768-FAQ interface design in dark gray.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-11 00:28:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 00:30:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 00:54:50 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 00:56:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 00:56:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 00:57:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 01:00:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 01:02:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 01:02:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 01:13:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 01:15:12 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

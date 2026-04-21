@@ -18,10 +18,6 @@
 .buttonContainer {
   position: relative;
   display: flex;
-
-  .microphoneButtonContainer {
-    display: flex;
-  }
 }
 
 @keyframes ping {
@@ -63,4 +59,8 @@ button.recording.recording {
 
 .hide {
   display: none;
+}
+
+.flexContainer {
+  display: flex;
 }

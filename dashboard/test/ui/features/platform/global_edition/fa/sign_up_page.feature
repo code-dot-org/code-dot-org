@@ -2,12 +2,12 @@
 Feature: Global Edition - Farsi MVP - Sign Up page
 
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
+    And I switch to the Global Edition region "fa"
 
   @eyes
   Scenario: I see the Farsi MVP Sign In page
-    Given I am on "http://studio.code.org/global/fa/users/sign_up/account_type"
+    Given I am on "http://studio.code.org/fa/users/sign_up/account_type"
     And I open my eyes to test "[Farsi MVP] Sign Up page"
 
     # Create your free account

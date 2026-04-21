@@ -324,8 +324,8 @@ class AssetsTest < FilesApiTestBase
     # Can't test abuse score functionality, since it's been moved to Rails.
     #src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects

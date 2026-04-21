@@ -126,7 +126,9 @@ class ActivityCard extends Component {
               {hasLessonPlan && (
                 <div>
                   <FontAwesome
-                    icon={this.props.collapsed ? 'expand' : 'compress'}
+                    icon={
+                      this.props.collapsed ? 'chevron-right' : 'chevron-down'
+                    }
                     onClick={this.props.handleCollapse}
                   />
                   <label style={styles.labelAndInput}>
@@ -200,7 +202,10 @@ class ActivityCard extends Component {
                 type="button"
                 key={section.key + 'add'}
               >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                <i
+                  style={{marginRight: 7}}
+                  className="fa-solid fa-circle-plus"
+                />
                 Activity Section
               </button>
             </React.Fragment>

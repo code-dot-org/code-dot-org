@@ -163,6 +163,17 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "teacher with only a hidden section for the unit is not redirected to teacher dashboard" do
+    unit = create(:script, :in_single_unit_course)
+    teacher = create(:teacher)
+    hidden_section = create(:section, :hidden, user: teacher, script: unit)
+    sign_in teacher
+
+    get :show, params: {id: unit.name, section_id: hidden_section.id}
+
+    refute_match %r{/teacher_dashboard/sections/}, response.location.to_s
+  end
+
   test "should use unit name as param where unit name is words but looks like a number" do
     unit = create(:script, :in_single_unit_course, name: '15-16')
     get :show, params: {id: "15-16"}
@@ -830,11 +841,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     course_version = create(:course_version, content_root: unit.original_unit_group)
-    teacher_resources = [
-      create(:resource, course_version: course_version),
-      create(:resource, course_version: course_version),
-      create(:resource, course_version: course_version)
-    ]
+    teacher_resources = create_list(:resource, 3, course_version: course_version)
 
     unit.reload
     post :update, params: {
@@ -856,10 +863,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     course_version = create(:course_version, content_root: unit.original_unit_group)
-    student_resources = [
-      create(:resource, course_version: course_version),
-      create(:resource, course_version: course_version)
-    ]
+    student_resources = create_list(:resource, 2, course_version: course_version)
 
     unit.reload
     post :update, params: {

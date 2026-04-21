@@ -4,31 +4,33 @@ require 'test_helper'
 
 describe Observability::OpenTelemetry do
   before do
-    CDO.enable_opentelemetry = false
-    CDO.running_web_application = false
+    CDO.stubs(:enable_opentelemetry).returns(false)
+    # ENV['UNIT_TEST'] is nil in engine test runs — enabled path is active by default
   end
 
   describe '.setup' do
     describe 'when CDO.enable_opentelemetry is false' do
-      before {CDO.running_web_application = true}
-
       it 'returns without configuring the SDK' do
         _(Observability::OpenTelemetry.setup).must_be_nil
       end
     end
 
-    describe 'when CDO.running_web_application? is false' do
-      before {CDO.enable_opentelemetry = true}
-
-      it 'returns without configuring the SDK' do
-        _(Observability::OpenTelemetry.setup).must_be_nil
-      end
-    end
-
-    describe 'when both CDO.enable_opentelemetry and running_web_application? are true' do
+    describe 'when UNIT_TEST is set' do
       before do
-        CDO.enable_opentelemetry = true
-        CDO.running_web_application = true
+        CDO.stubs(:enable_opentelemetry).returns(true)
+        ENV['UNIT_TEST'] = 'true'
+      end
+      after {ENV.delete('UNIT_TEST')}
+
+      it 'returns without configuring the SDK' do
+        _(Observability::OpenTelemetry.setup).must_be_nil
+      end
+    end
+
+    describe 'when both CDO.enable_opentelemetry is true and UNIT_TEST is not set' do
+      before do
+        CDO.stubs(:enable_opentelemetry).returns(true)
+        OpenTelemetry::SDK.stubs(:configure)
       end
 
       it 'configures the OpenTelemetry SDK' do
@@ -43,6 +45,22 @@ describe Observability::OpenTelemetry do
         fake_config.stubs(:add_span_processor)
         OpenTelemetry::SDK.expects(:configure).yields(fake_config)
         Observability::OpenTelemetry.setup
+      end
+
+      describe 'OTEL_LOG_LEVEL' do
+        after {ENV.delete('OTEL_LOG_LEVEL')}
+
+        it 'sets OTEL_LOG_LEVEL to fatal' do
+          ENV.delete('OTEL_LOG_LEVEL')
+          Observability::OpenTelemetry.setup
+          _(ENV.fetch('OTEL_LOG_LEVEL', nil)).must_equal 'fatal'
+        end
+
+        it 'does not override an existing OTEL_LOG_LEVEL' do
+          ENV['OTEL_LOG_LEVEL'] = 'debug'
+          Observability::OpenTelemetry.setup
+          _(ENV.fetch('OTEL_LOG_LEVEL', nil)).must_equal 'debug'
+        end
       end
     end
   end

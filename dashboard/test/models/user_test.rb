@@ -2257,8 +2257,8 @@ class UserTest < ActiveSupport::TestCase
 
     User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
-    assert_nil user_level.locale
-    assert_nil user_level.locale_supported
+    assert_equal I18n.default_locale.to_s, user_level.locale
+    assert_equal true, user_level.locale_supported
 
     current_locale = 'uk-UA'
     User.track_level_progress(**level_progress_params.merge(locale: current_locale, unit_group: unit_group))
@@ -3059,6 +3059,7 @@ class UserTest < ActiveSupport::TestCase
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
         us_state: us_state,
+        is_demo_student: false,
       },
       @student.summarize
     )
@@ -4420,7 +4421,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:teacher, :google_sso_provider)}
 
       it 'can access AI Chat Lab' do
-        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
+        _(teacher.teacher_can_access_aichat?).must_equal true
       end
     end
 
@@ -4428,7 +4429,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:teacher, :with_lti_auth)}
 
       it 'can access AI Chat Lab' do
-        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
+        _(teacher.teacher_can_access_aichat?).must_equal true
       end
     end
 
@@ -4436,7 +4437,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:authorized_teacher)}
 
       it 'can access AI Chat Lab' do
-        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
+        _(teacher.teacher_can_access_aichat?).must_equal true
       end
     end
 
@@ -4444,7 +4445,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:teacher)}
 
       it 'cannot access AI Chat Lab' do
-        _(teacher.teacher_can_access_ai_chat_lab?).must_equal false
+        _(teacher.teacher_can_access_aichat?).must_equal false
       end
     end
 
@@ -4452,7 +4453,7 @@ class UserTest < ActiveSupport::TestCase
       let(:student) {create(:student)}
 
       it 'cannot access AI Chat Lab' do
-        _(student.student_can_access_ai_chat_lab?).must_equal false
+        _(student.has_essential_aichat_access?).must_equal false
       end
     end
 
@@ -4463,7 +4464,7 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'can access AI Chat Lab' do
-        _(student.student_can_access_ai_chat_lab?).must_equal true
+        _(student.has_essential_aichat_access?).must_equal true
       end
     end
 
@@ -4474,7 +4475,7 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'can access AI Chat Lab' do
-        _(student.student_can_access_ai_chat_lab?).must_equal true
+        _(student.has_essential_aichat_access?).must_equal true
       end
     end
 
@@ -4485,7 +4486,7 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'cannot access AI Chat Lab' do
-        _(student.student_can_access_ai_chat_lab?).must_equal false
+        _(student.has_essential_aichat_access?).must_equal false
       end
     end
 
@@ -4496,7 +4497,7 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'cannot access AI Chat Lab' do
-        _(student.student_can_access_ai_chat_lab?).must_equal false
+        _(student.has_essential_aichat_access?).must_equal false
       end
     end
 
@@ -4507,17 +4508,17 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'does not have access' do
-        _(student.student_can_access_ai_chat_lab?).must_equal false
+        _(student.has_essential_aichat_access?).must_equal false
       end
     end
   end
 
   describe '#ai_chat_access_level' do
-    context 'when user is a teacher' do
+    context 'when user is an unverified teacher' do
       let(:teacher) {create(:teacher)}
 
-      it 'returns ENABLED' do
-        _(teacher.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      it 'returns DISABLED' do
+        _(teacher.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
       end
     end
 

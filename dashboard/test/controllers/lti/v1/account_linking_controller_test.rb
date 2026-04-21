@@ -101,6 +101,19 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     post :link_email, params: {email: @user.email, password: 'password'}
   end
 
+  test 'returns bad request when partial registration is not in progress' do
+    PartialRegistration.stubs(:in_progress?).returns(false)
+
+    post :link_email, params: {
+      email: @user.email,
+      password: 'password',
+      lti_provider: 'test-provider',
+      lms_name: 'test-lms',
+    }
+
+    assert_response :bad_request
+  end
+
   describe '#new_account' do
     subject(:new_account_request) {post :new_account}
     let(:user) {create(:teacher, :with_lti_authentication_option)}
@@ -115,6 +128,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     context 'when signed in' do
       before do
         sign_in user
+        PartialRegistration.persist_attributes(session, user)
       end
 
       it 'opts the user out of lms landing' do
@@ -122,6 +136,12 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
         user.reload
         _(user.lms_landing_opted_out).must_equal true
+      end
+
+      it 'clears partial registration from the session' do
+        new_account_request
+
+        _(PartialRegistration.in_progress?(session)).must_be_nil
       end
 
       it 'verifies the teacher' do
@@ -139,6 +159,13 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
         partial_user = User.new_with_session(ActionController::Parameters.new, session)
         _(partial_user.lms_landing_opted_out).must_equal true
+      end
+
+      it 'keeps partial registration in the session' do
+        PartialRegistration.persist_attributes(session, user)
+        new_account_request
+
+        _(PartialRegistration.in_progress?(session)).must_equal true
       end
     end
 

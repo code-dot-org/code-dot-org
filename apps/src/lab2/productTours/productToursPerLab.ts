@@ -1,4 +1,12 @@
-import {AppName} from '../types';
+import {StepOptions, Tour} from 'shepherd.js';
+
+import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
+import experiments from '@cdo/apps/util/experiments';
+
+import {AppName, LevelProperties} from '../types';
+
+import {createOnboardingTourSteps} from './onboardingTourSteps';
+import {createValidationTourSteps} from './validationTourSteps';
 
 export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
@@ -16,6 +24,10 @@ export interface ProductTourConfig {
   // Description shown to level editors. Not necessary if triggeredByLevel is false, because the
   // tour will not be shown on the level edit page.
   description?: string;
+  getSteps: (tour: Tour) => StepOptions[];
+  // Optional function for more specific checks on whether the tour should be shown for a given level.
+  // If not provided, we will show by default.
+  shouldShowOnLevel?: (levelProperties: LevelProperties) => boolean;
 }
 
 const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
@@ -25,6 +37,7 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     triggeredByLevel: true,
     description:
       'Gives users an overview of the different components of the resource panel, including the tabs, extra links and continue button.',
+    getSteps: createOnboardingTourSteps,
   },
   [ProductTour.ResourcePanelValidation]: {
     name: ProductTour.ResourcePanelValidation,
@@ -32,11 +45,15 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
     triggeredByLevel: true,
     description:
       'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
+    getSteps: createValidationTourSteps,
+    shouldShowOnLevel: levelProperties =>
+      (levelProperties.validations?.length ?? 0) > 0,
   },
   [ProductTour.SketchlabIntro]: {
     name: ProductTour.SketchlabIntro,
     displayName: 'Intro to Sketch Lab',
     triggeredByLevel: false,
+    getSteps: createSketchlabTourSteps,
   },
 };
 
@@ -46,16 +63,46 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  appName: string,
-  productTours: string[] | undefined
+  levelProperties: LevelProperties
 ): boolean {
-  const isAvailableForLab = ToursPerLab[appName as AppName]?.some(
-    config => config.name === tour
-  );
-  if (!isAvailableForLab) return false;
+  const isAvailableOnLevel = isTourAvailableOnLevel(tour, levelProperties);
+  if (!isAvailableOnLevel) {
+    return false;
+  }
   const config = ProductTourConfigurations[tour];
-  if (!config.triggeredByLevel) return true;
-  return productTours?.includes(tour) ?? false;
+  if (!config.triggeredByLevel) {
+    return true;
+  }
+  return levelProperties.productTours?.includes(tour) ?? false;
+}
+
+// Returns true if the given tour is generally available for the given level,
+// ignoring whether the tour is triggered by the level or not.
+// This is used to determine whether to show tours in the student resources tab,
+// which should show all tours available for that level, not just those triggered by the level.
+export function isTourAvailableOnLevel(
+  tour: ProductTour,
+  levelProperties: LevelProperties
+): boolean {
+  const isAvailableForLab = ToursPerLab[
+    levelProperties.appName as AppName
+  ]?.some(config => config.name === tour);
+  if (!isAvailableForLab) {
+    return false;
+  }
+  // While we are developing the new sketch lab, skip any product tours when the
+  // experiment is on.
+  if (
+    levelProperties.appName === 'sketchlab' &&
+    experiments.isEnabledAllowingQueryString('sketch2')
+  ) {
+    return false;
+  }
+  const config = ProductTourConfigurations[tour];
+  if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
+    return false;
+  }
+  return true;
 }
 
 // These tour configurations are used to determine which tours should be shown in the level editor for a given lab.

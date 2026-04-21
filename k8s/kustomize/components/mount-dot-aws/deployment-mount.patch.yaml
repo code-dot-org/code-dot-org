@@ -16,4 +16,4 @@ spec:
       volumes:
         - name: dot-aws
           persistentVolumeClaim:
-            claimName: dot-aws
+            claimName: cdo-dot-aws

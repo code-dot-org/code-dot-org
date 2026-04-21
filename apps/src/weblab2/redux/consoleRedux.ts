@@ -8,6 +8,8 @@ export interface ConsoleEntry {
   level: ConsoleLogLevel;
   message: string;
   timestamp: string;
+  count: number;
+  groupKey: string;
 }
 
 export interface Weblab2ConsoleState {
@@ -28,10 +30,26 @@ const consoleSlice = createSlice({
       state,
       action: PayloadAction<{level: ConsoleLogLevel; args: string[]}>
     ) => {
+      const message = action.payload.args.join(' ');
+      const groupKey = `${action.payload.level}:${message}`;
+      const existingIndex = state.logs.findIndex(
+        log => log.groupKey === groupKey
+      );
+      if (existingIndex !== -1) {
+        const existingLog = state.logs[existingIndex];
+        existingLog.count += 1;
+        existingLog.message = message;
+        existingLog.timestamp = new Date().toLocaleTimeString();
+        state.logs.splice(existingIndex, 1);
+        state.logs.push(existingLog);
+        return;
+      }
       state.logs.push({
         level: action.payload.level,
-        message: action.payload.args.join(' '),
+        message,
         timestamp: new Date().toLocaleTimeString(),
+        count: 1,
+        groupKey,
       });
       // Cap length of console logs to MAX_LOG_ENTRIES entries.
       if (state.logs.length > MAX_LOG_ENTRIES) {

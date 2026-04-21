@@ -49,6 +49,41 @@ class StudentSnapshotsController < ApplicationController
     render json: response
   end
 
+  # GET /student_snapshots/student_has_work_in_lesson
+  def student_has_work_in_lesson
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id
+
+    begin
+      student = User.find_by(id: student_id)
+      return render json: {error: "Student not found"}, status: :not_found unless student
+
+      lesson = Lesson.find_by(id: lesson_id)
+      return render json: {error: "Lesson not found"}, status: :not_found unless lesson
+
+      unit = Unit.find_by(id: unit_id)
+      return render json: {error: "Unit not found"}, status: :not_found unless unit
+
+      unless student.student_of?(current_user)
+        return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+      end
+
+      # Check if student has work in this lesson
+      levels = lesson.levels.order(:position)
+      has_work = levels.any? do |level|
+        user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+        user_level.present? && (user_level.attempts > 0 || user_level.time_spent.to_i > 0)
+      end
+
+      render json: {has_work: has_work}
+    rescue
+      render json: {error: "Internal server error"}, status: :internal_server_error
+    end
+  end
+
   # GET /student_snapshots/cfu_levels/:lesson_id
   # Returns all CFU levels from the specified lesson, including metadata and basic question content.
   # CFU levels are identified by progression: "Check Your Understanding"
@@ -130,6 +165,10 @@ class StudentSnapshotsController < ApplicationController
     student = User.find_by(id: student_id)
     return render json: {error: "Can't find Student id=#{student_id}"}, status: :bad_request unless student
 
+    unless student.student_of?(current_user)
+      return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+    end
+
     script = lesson.script
     cfu_responses_data = []
 
@@ -178,6 +217,13 @@ class StudentSnapshotsController < ApplicationController
     lesson = Lesson.find_by(id: params[:lesson_id])
     return render json: {error: "Can't find Lesson id=#{params[:lesson_id]}"}, status: :bad_request unless lesson
 
+    student = User.find_by(id: params[:student_id])
+    return render json: {error: "Can't find Student id=#{params[:student_id]}"}, status: :bad_request unless student
+
+    unless student.student_of?(current_user)
+      return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+    end
+
     # Get the last Pythonlab level for this lesson
     level = lesson.levels.where(type: 'Pythonlab').last
 
@@ -218,17 +264,25 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # GET /student_snapshots/lesson_insight
-  # Returns the system prompt for generating insights
   def lesson_insight
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
     section_id = params[:section_id]
-    teacher_id = current_user.id
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
-    response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+    section = Section.find_by(id: section_id)
+    return render json: {error: "Section not found"}, status: :bad_request unless section
+    authorize! :manage, section
+    student = Student.find_by(id: student_id)
+    return render json: {error: "Student not found"}, status: :bad_request unless student
+    authorize! :read, student
+    return render json: {error: "Student not in section"}, status: :bad_request unless Follower.find_by(student_user_id: student_id, section_id: section_id)
+
+    response = AiStudentSnapshotHelper.fetch_or_generate_lesson_insight(
+      unit_id, lesson_id, current_user.id, student_id, section_id
+    )
 
     render json: response
   end

@@ -1,0 +1,12 @@
+name 'ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_2026'
+display_name 'Plan in Sketch Lab'
+description 'Choose one of the following UX scenarios and design a flowchart to model it.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson5-level1a_2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1c_2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1d_2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1e_2026'
+
+
+uses_lab2

@@ -17,10 +17,13 @@ export interface SuggestedPrompt {
 
 interface SuggestedPromptsProps {
   suggestedPrompts: Array<SuggestedPrompt>;
+  canToggle?: boolean;
 }
 
 const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   suggestedPrompts,
+  // If true, other chips aren't disabled when one is selected.
+  canToggle = false,
 }) => {
   const hasSelection = suggestedPrompts.some(prompt => prompt.selected);
   const visiblePrompts = suggestedPrompts.filter(prompt => prompt.show);
@@ -32,7 +35,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
       aria-label="Suggested Prompts"
     >
       {visiblePrompts.map(prompt => {
-        const isDisabled = hasSelection && !prompt.selected;
+        const isDisabled = !canToggle && hasSelection && !prompt.selected;
 
         return (
           <button

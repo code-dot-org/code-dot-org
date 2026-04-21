@@ -1,4 +1,4 @@
-import {validateModelId} from '@cdo/apps/aichat/views/modelCustomization/utils';
+import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 

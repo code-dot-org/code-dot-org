@@ -1,16 +1,24 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {
+  isTourAvailableOnLevel,
+  isTourEnabledOnLevel,
+  ProductTourConfig,
+  ToursPerLab,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
   isReadOnlyWorkspace,
@@ -18,7 +26,7 @@ import {
   isReadOnlyPredictLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -49,6 +57,7 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
+import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
 import {Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
@@ -116,6 +125,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: 'Backpack',
     icon: 'backpack',
   },
+  [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -132,6 +142,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  enableTutorVideos?: boolean;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
@@ -163,6 +174,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  enableTutorVideos,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
@@ -202,6 +214,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
+  const isPredictLevel =
+    instructionsProps.levelProperties.predictSettings?.isPredictLevel;
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
   const dispatch = useAppDispatch();
   const setBackpackTabAsActive = useCallback(
     () => setCurrentTab(Tabs.Backpack),
@@ -219,23 +236,37 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const aiTutorVisible =
-    shouldShowAiTutor({
+  const aiTutorVisible = shouldShowAiTutor({
+    appName,
+    tutorLevel: levelProperties.aiTutorAvailable,
+    aiChatAccessLevel: aiChatAccessLevel,
+  });
+  const {disabled: aiTutorDisabled, disabledMessage: aiTutorDisabledMessage} =
+    useAiChatDisabledState({
       appName,
-      tutorLevel: levelProperties.aiTutorAvailable,
-      aiChatAccessLevel: aiChatAccessLevel,
-    }) ||
-    queryParams('show-ai-tutor2') === 'true' ||
-    queryParams('show-ai-tutor') === 'true';
+      isPredictLevel: !!isPredictLevel,
+      hasSubmittedPredictResponse,
+    });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
-    appName,
-    productToursForLevel: instructionsProps.levelProperties.productTours,
+    levelProperties,
     isStandaloneCollapsed,
-    hasValidationConditions,
-    validationSettings,
   });
+
+  const {levelTours, otherAvailableTours} = useMemo(() => {
+    const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
+    const levelTours: ProductTourConfig[] = [];
+    const otherAvailableTours: ProductTourConfig[] = [];
+    toursForLab.forEach(tour => {
+      if (isTourEnabledOnLevel(tour.name, levelProperties)) {
+        levelTours.push(tour);
+      } else if (isTourAvailableOnLevel(tour.name, levelProperties)) {
+        otherAvailableTours.push(tour);
+      }
+    });
+    return {levelTours, otherAvailableTours};
+  }, [levelProperties]);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -268,6 +299,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
+        enableTutorVideos,
+        disabled: aiTutorDisabled,
+        disabledMessage: aiTutorDisabledMessage,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -277,6 +311,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {...aiTutorProps}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
+            isPredictLevel={isPredictLevel}
           />
         );
       }
@@ -333,11 +368,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
+    if (levelTours.length > 0 || otherAvailableTours.length > 0) {
+      tabMap[Tabs.StudentResources] = (
+        <StudentResourcesPanel
+          levelTours={levelTours}
+          otherAvailableTours={otherAvailableTours}
+        />
+      );
+    }
+
     return tabMap;
   }, [
     sidebarOnly,
     levelProperties,
     instructionsProps,
+    hideInstructionsNavigation,
+    validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
     aiTutorVisible,
@@ -349,13 +395,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     showRubric,
     showBackpack,
     isUserTeacher,
-    hideInstructionsNavigation,
+    levelTours,
+    otherAvailableTours,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
+    enableTutorVideos,
+    aiTutorDisabled,
+    aiTutorDisabledMessage,
+    hasInstructionsDrawer,
+    isPredictLevel,
     selectedVersion,
     levelId,
     isTemporarilyReadOnly,
@@ -365,8 +417,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
-    hasInstructionsDrawer,
-    validationSettings,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -535,25 +585,29 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   hideDelayMs={hideTooltipDelayMs}
                   hideOnFirstLeave={true}
                 >
-                  <Button
+                  <MuiIconButton
+                    variant="text"
+                    color="tertiary"
+                    size="medium"
                     className={styles.resourcePanelButton}
                     onClick={() =>
                       dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
                     }
-                    isIconOnly={true}
-                    icon={{
-                      iconName: isStandaloneCollapsed
-                        ? 'arrow-right-from-line'
-                        : 'arrow-left-from-line',
-                    }}
-                    color={'gray'}
-                    type={'tertiary'}
                     aria-label={
                       isStandaloneCollapsed
                         ? lab2I18n.expand()
                         : lab2I18n.collapse()
                     }
-                  />
+                    type="button"
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={
+                        isStandaloneCollapsed
+                          ? 'arrow-right-from-line'
+                          : 'arrow-left-from-line'
+                      }
+                    />
+                  </MuiIconButton>
                 </WithTooltip>
               )}
             </div>
@@ -572,26 +626,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   key={`tooltip-${tab}`}
                 >
                   <div id={`resource-panel-tab-${tab}`}>
-                    <Button
+                    <MuiIconButton
+                      variant="text"
+                      color="tertiary"
+                      size="medium"
                       className={classNames(
                         styles.tabButton,
                         tab === currentTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
-                      onClick={() => onClickTab(tab)}
-                      key={tab}
-                      color={'gray'}
-                      type={'tertiary'}
-                      isIconOnly={true}
-                      icon={{
-                        iconName: tabInfo[tab].icon,
-                        iconFamily: kitIcons.has(tabInfo[tab].icon)
-                          ? 'kit'
-                          : undefined,
-                      }}
-                      aria-label={tabInfo[tab].title}
                       id={`resource-panel-tab-button-${tab}`}
-                    />
+                      onClick={() => onClickTab(tab)}
+                      aria-label={tabInfo[tab].title}
+                      type="button"
+                      key={tab}
+                    >
+                      <FontAwesomeV6Icon
+                        iconName={tabInfo[tab].icon}
+                        iconFamily={
+                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                        }
+                      />
+                    </MuiIconButton>
                   </div>
                 </WithTooltip>
               ))}
@@ -607,13 +663,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="documentation"
                 label={commonI18n.documentation()}
                 icon={{iconName: 'book', iconStyle: 'solid'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             )}
             {aiTutorVisible && <DisclaimerButton theme={theme} />}
@@ -623,13 +679,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="settings"
                 label={commonI18n.settings()}
                 icon={{iconName: 'gear'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             </div>
           </div>

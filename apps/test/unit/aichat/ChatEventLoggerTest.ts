@@ -1,4 +1,5 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -27,7 +28,8 @@ describe('ChatEventLogger', () => {
       scriptId: 321,
       channelId: 'abc123',
     };
-    chatEventLogger = new ChatEventLogger(aichatContext);
+    AichatContextManager.setContext(aichatContext);
+    chatEventLogger = ChatEventLogger.getInstance();
   });
 
   afterEach(() => {
