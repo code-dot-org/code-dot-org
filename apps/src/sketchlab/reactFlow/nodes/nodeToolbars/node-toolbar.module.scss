@@ -77,6 +77,11 @@
   &:hover {
     border-color: var(--text-neutral-primary);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
 }
 
 // 1px gap (in toolbar background) between the swatch edge and the
@@ -101,8 +106,11 @@
   cursor: pointer;
   color: var(--text-neutral-primary);
 
+  // Propagate the inner input's focus state to the label, since the
+  // opacity:0 input can't show its own outline.
   &:focus-within {
-    border-color: var(--text-neutral-primary);
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
   }
 }
 
