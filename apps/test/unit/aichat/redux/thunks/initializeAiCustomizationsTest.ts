@@ -6,12 +6,12 @@ import {
   LevelAichatSettings,
   Visibility,
 } from '@cdo/apps/aichatLab/types';
+import {validateModelId} from '@cdo/apps/aichatLab/utils';
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
   EMPTY_MODEL_CARD_INFO,
 } from '@cdo/apps/aichatLab/views/modelCustomization/constants';
-import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
