@@ -132,7 +132,7 @@ class CourseScript extends React.Component {
           <div className={styles.description}>
             <SafeMarkdown markdown={description} />
           </div>
-          <span className={styles.flex}>
+          <div className={styles.flex}>
             <Button
               href={unitPath}
               className="uitest-go-to-unit-button"
@@ -160,7 +160,7 @@ class CourseScript extends React.Component {
                 aiChatToolsDependency={aiChatToolsDependency}
               />
             )}
-          </span>
+          </div>
         </div>
         {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
