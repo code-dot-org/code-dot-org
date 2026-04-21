@@ -74,7 +74,7 @@ export async function getImageModerationStatus(
       flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
       assetUrl,
     },
-    true // isModelOutput = true
+    {Violence: 2}
   );
   return moderationStatus;
 }
