@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T20:53:50.000Z",
   "level_num": "custom",
@@ -46,10 +47,9 @@
     },
     "display_name": "AI in Content Creation",
     "bubble_choice_description": "**Inquiry Question**: How do I use AI to grow my channel without losing my original voice?",
-    "thumbnail_url": "https://images.code.org/04c345c8485c6b577971d58b84b39e3b-L3_exploration_3.png",
+    "thumbnail_url": "https://images.code.org/360177dbd1fea45aabf21c3b930441b1-ai_content_titlecard.jpg",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:50.349+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:50.349+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot\"},{\"changed_at\":\"2026-04-20 14:36:19 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

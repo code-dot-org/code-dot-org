@@ -264,17 +264,25 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # GET /student_snapshots/lesson_insight
-  # Returns the system prompt for generating insights
   def lesson_insight
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
     section_id = params[:section_id]
-    teacher_id = current_user.id
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
-    response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+    section = Section.find_by(id: section_id)
+    return render json: {error: "Section not found"}, status: :bad_request unless section
+    authorize! :manage, section
+    student = Student.find_by(id: student_id)
+    return render json: {error: "Student not found"}, status: :bad_request unless student
+    authorize! :read, student
+    return render json: {error: "Student not in section"}, status: :bad_request unless Follower.find_by(student_user_id: student_id, section_id: section_id)
+
+    response = AiStudentSnapshotHelper.fetch_or_generate_lesson_insight(
+      unit_id, lesson_id, current_user.id, student_id, section_id
+    )
 
     render json: response
   end
