@@ -759,9 +759,6 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
-  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
-
   LESSON_OBJECTIVE_REFLECTION_VALUES = {
     UNSURE: 'unsure',
     LOST: 'lost',
