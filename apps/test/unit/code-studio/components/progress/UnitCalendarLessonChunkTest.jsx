@@ -3,7 +3,6 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
-import color from '@cdo/apps/util/color';
 
 const sampleLessonChunk = {
   id: 1,
@@ -33,9 +32,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.purple
+      '2px solid var(--borders-brand-purple-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-primary)'
+    );
   });
 
   it('is purple background with white text when is assessment and being hovered', () => {
@@ -52,12 +53,14 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.purple
+      '2px solid var(--borders-brand-purple-primary)'
     );
     expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(
-      color.purple
+      'var(--background-brand-purple-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('white');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-white-fixed)'
+    );
   });
 
   it('is teal border with grey text when is assessment', () => {
@@ -74,9 +77,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.teal
+      '2px solid var(--borders-brand-teal-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-primary)'
+    );
   });
 
   it('is teal background with white text when is assessment and being hovered', () => {
@@ -93,10 +98,14 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.teal
+      '2px solid var(--borders-brand-teal-primary)'
     );
-    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(color.teal);
-    expect(wrapper.find('a').prop('style')['color']).toBe(color.white);
+    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(
+      'var(--background-brand-teal-primary)'
+    );
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-white-fixed)'
+    );
   });
 
   it('has dashed left border when not isStart', () => {

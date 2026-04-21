@@ -5,7 +5,6 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
@@ -77,7 +76,9 @@ class UnitCalendarLessonChunk extends Component {
                 <FontAwesome
                   icon="check-circle"
                   style={{
-                    color: isHover ? color.white : color.purple,
+                    color: isHover
+                      ? 'var(--text-neutral-white-fixed)'
+                      : 'var(--text-brand-purple-primary)',
                     visibility: assessment ? 'visible' : 'hidden',
                   }}
                 />
@@ -109,7 +110,7 @@ class UnitCalendarLessonChunk extends Component {
 const styles = {
   box: {
     margin: 5,
-    color: '#333',
+    color: 'var(--text-neutral-primary)',
     textDecorationLine: 'none',
     boxSizing: 'border-box',
   },
@@ -122,20 +123,20 @@ const styles = {
     height: '100%',
   },
   assessment: {
-    border: '2px solid ' + color.purple,
+    border: '2px solid var(--borders-brand-purple-primary)',
   },
   assessmentHover: {
-    border: '2px solid ' + color.purple,
-    backgroundColor: color.purple,
-    color: 'white',
+    border: '2px solid var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-white-fixed)',
   },
   instructional: {
-    border: '2px solid ' + color.teal,
+    border: '2px solid var(--borders-brand-teal-primary)',
   },
   instructionalHover: {
-    border: '2px solid ' + color.teal,
-    backgroundColor: color.teal,
-    color: color.white,
+    border: '2px solid var(--borders-brand-teal-primary)',
+    backgroundColor: 'var(--background-brand-teal-primary)',
+    color: 'var(--text-neutral-white-fixed)',
   },
   isNotStart: {
     borderLeftStyle: 'dashed',

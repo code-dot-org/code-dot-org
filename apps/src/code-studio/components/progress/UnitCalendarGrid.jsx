@@ -4,7 +4,6 @@ import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
@@ -111,7 +110,7 @@ export default function UnitCalendarGrid({
                     icon="square"
                     iconStyle="regular"
                     style={{
-                      color: color.teal,
+                      color: 'var(--text-brand-teal-primary)',
                     }}
                     className={styles.keyIcon}
                   />
@@ -121,7 +120,7 @@ export default function UnitCalendarGrid({
                   <FontAwesome
                     icon="circle-check"
                     style={{
-                      color: color.purple,
+                      color: 'var(--text-brand-purple-primary)',
                     }}
                     className={styles.keyIcon}
                   />
