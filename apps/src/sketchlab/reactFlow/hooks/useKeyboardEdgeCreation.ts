@@ -81,6 +81,7 @@ export function useKeyboardEdgeCreation({
   setEdges,
   readOnly,
 }: UseKeyboardEdgeCreationOptions) {
+  const KEYBOARD_MOVE_STEP = 10;
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
   // Counter appended to announcements so identical consecutive strings
@@ -125,13 +126,12 @@ export function useKeyboardEdgeCreation({
 
       // Arrow keys on a focused node move just that node.
       if (!readOnly && focusedNodeId) {
-        const moveStep = event.shiftKey ? 20 : 10;
         let deltaX = 0;
         let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -moveStep;
-        if (event.key === 'ArrowRight') deltaX = moveStep;
-        if (event.key === 'ArrowUp') deltaY = -moveStep;
-        if (event.key === 'ArrowDown') deltaY = moveStep;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
 
         if (deltaX || deltaY) {
           event.preventDefault();
@@ -156,13 +156,12 @@ export function useKeyboardEdgeCreation({
       // Arrow keys on a focused line edge move the whole line by moving
       // both line-anchor nodes together.
       if (!readOnly && focusedEdgeId) {
-        const moveStep = event.shiftKey ? 20 : 10;
         let deltaX = 0;
         let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -moveStep;
-        if (event.key === 'ArrowRight') deltaX = moveStep;
-        if (event.key === 'ArrowUp') deltaY = -moveStep;
-        if (event.key === 'ArrowDown') deltaY = moveStep;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
 
         if (deltaX || deltaY) {
           const focusedEdge = edges.find(edge => edge.id === focusedEdgeId);
