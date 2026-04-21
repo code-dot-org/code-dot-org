@@ -1202,6 +1202,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Student Podcast Fragment routes
+    resources :ai_student_podcast_fragments, only: [:index, :show, :create, :update, :destroy]
+
     # AI Lesson Summary Podcasts routes
     resources :ai_lesson_summary_podcasts, only: [:show] do
       collection do
