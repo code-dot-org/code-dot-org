@@ -11,7 +11,8 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
   const handleType = data.lineAnchorRole === 'source' ? 'source' : 'target';
   const connections = useNodeConnections();
 
-  // This should become false immediately after a line is created.
+  // This should become false immediately after a line is created,
+  // as we create two hidden nodes with an edge in between them.
   const isConnectable = connections.length === 0;
 
   return (

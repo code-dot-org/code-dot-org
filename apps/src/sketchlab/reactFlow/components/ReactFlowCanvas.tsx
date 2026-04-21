@@ -132,6 +132,79 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
+  // Apply roving tabindex through React Flow's domAttributes so it
+  // survives React Flow re-renders (direct DOM manipulation gets
+  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
+  // Also applies connect-source styling and aria-selected via React
+  // rather than direct DOM classList manipulation.
+  const {displayNodes, displayEdges} = useMemo(() => {
+    const applyDisplayProps = (
+      item: SketchlabReactFlowEdge | SketchlabReactFlowNode,
+      type: 'node' | 'edge'
+    ) => {
+      const isTabTarget =
+        activeEntry?.type === type && activeEntry.id === item.id;
+      const isSelected =
+        nodeOrEdgeFocused &&
+        lastFocusedEntry?.type === type &&
+        lastFocusedEntry.id === item.id;
+      return {
+        selected: isSelected && !readOnly,
+        domAttributes: {tabIndex: isTabTarget ? 0 : -1},
+      };
+    };
+
+    return {
+      displayNodes: nodes.map(node => {
+        const isConnectSource = connectingFrom === node.id;
+        const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        return {
+          ...node,
+          selected,
+          className: isConnectSource ? styles.connectSource : undefined,
+          domAttributes: {
+            ...domAttributes,
+            ...(isConnectSource && {'aria-selected': true}),
+          },
+        };
+      }),
+      // TODO: Add meaningful ariaLabel to edges using node labels instead of
+      // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
+      displayEdges: edges.map(edge => {
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const isLineEdge =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+        const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
+        return {
+          ...edge,
+          selected,
+          domAttributes: {
+            ...domAttributes,
+            ...(isLineEdge && !readOnly
+              ? {
+                  onMouseDown: (event: React.MouseEvent) =>
+                    handleEdgeMouseDown(event, edge),
+                }
+              : {}),
+          },
+        };
+      }),
+    };
+  }, [
+    nodes,
+    edges,
+    activeEntry?.type,
+    activeEntry?.id,
+    nodeOrEdgeFocused,
+    lastFocusedEntry?.type,
+    lastFocusedEntry?.id,
+    connectingFrom,
+    readOnly,
+    handleEdgeMouseDown,
+  ]);
+
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -203,79 +276,6 @@ export default function ReactFlowCanvas({
     []
   );
 
-  // Apply roving tabindex through React Flow's domAttributes so it
-  // survives React Flow re-renders (direct DOM manipulation gets
-  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
-  // Also applies connect-source styling and aria-selected via React
-  // rather than direct DOM classList manipulation.
-  // TODO: Add meaningful ariaLabel to edges using node labels instead of
-  // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
-  const {displayNodes, displayEdges} = useMemo(() => {
-    const applyDisplayProps = (
-      item: SketchlabReactFlowEdge | SketchlabReactFlowNode,
-      type: 'node' | 'edge'
-    ) => {
-      const isTabTarget =
-        activeEntry?.type === type && activeEntry.id === item.id;
-      const isSelected =
-        nodeOrEdgeFocused &&
-        lastFocusedEntry?.type === type &&
-        lastFocusedEntry.id === item.id;
-      return {
-        selected: isSelected && !readOnly,
-        domAttributes: {tabIndex: isTabTarget ? 0 : -1},
-      };
-    };
-
-    return {
-      displayNodes: nodes.map(node => {
-        const isConnectSource = connectingFrom === node.id;
-        const {selected, domAttributes} = applyDisplayProps(node, 'node');
-        return {
-          ...node,
-          selected,
-          className: isConnectSource ? styles.connectSource : undefined,
-          domAttributes: {
-            ...domAttributes,
-            ...(isConnectSource && {'aria-selected': true}),
-          },
-        };
-      }),
-      displayEdges: edges.map(edge => {
-        const sourceNode = nodes.find(node => node.id === edge.source);
-        const targetNode = nodes.find(node => node.id === edge.target);
-        const isLineEdge =
-          sourceNode?.type === 'lineAnchor' &&
-          targetNode?.type === 'lineAnchor';
-        const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
-        return {
-          ...edge,
-          selected,
-          domAttributes: {
-            ...domAttributes,
-            ...(isLineEdge && !readOnly
-              ? {
-                  onMouseDown: (event: React.MouseEvent) =>
-                    handleEdgeMouseDown(event, edge),
-                }
-              : {}),
-          },
-        };
-      }),
-    };
-  }, [
-    nodes,
-    edges,
-    activeEntry?.type,
-    activeEntry?.id,
-    nodeOrEdgeFocused,
-    lastFocusedEntry?.type,
-    lastFocusedEntry?.id,
-    connectingFrom,
-    readOnly,
-    handleEdgeMouseDown,
-  ]);
-
   const handleAddNode = useCallback(
     (
       type: 'shape' | 'image' | 'text' | 'line',
@@ -289,6 +289,7 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
+      // For lines, we create two hidden nodes and connecting anchors between them.
       if (type === 'line') {
         const sourceAnchorId = createUuid();
         const targetAnchorId = createUuid();
