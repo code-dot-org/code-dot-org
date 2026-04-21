@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   Controls,
+  type IsValidConnection,
   MarkerType,
   ReactFlow,
   useEdgesState,
@@ -30,6 +31,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardEdgeCreation} from '../hooks/useKeyboardEdgeCreation';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
+import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {ReactFlowSketchLabSources} from '../types';
@@ -42,13 +44,24 @@ const NODE_TYPES = {
   shape: ShapeNode,
   image: ImageNode,
   text: TextNode,
+  lineAnchor: LineAnchorNode,
 };
 
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
-const LINE_ANCHOR_SIZE_PX = 1;
+const LINE_ANCHOR_SIZE_PX = 10;
+type FlowPoint = {x: number; y: number};
+
+function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {
+  return edges.some(edge => edge.source === nodeId || edge.target === nodeId);
+}
+
+function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
+  const node = nodes.find(candidate => candidate.id === nodeId);
+  return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
+}
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -78,6 +91,13 @@ export default function ReactFlowCanvas({
 
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
+  const draggingLineEdgeRef = useRef<{
+    sourceId: string;
+    targetId: string;
+    startPointer: FlowPoint;
+    startSourcePosition: FlowPoint;
+    startTargetPosition: FlowPoint;
+  } | null>(null);
 
   const {tabOrder, activeEntry, setActiveTabEntry} = useTabOrder(
     nodes as SketchlabReactFlowNode[],
@@ -121,18 +141,6 @@ export default function ReactFlowCanvas({
       }),
     [nodes, activeEntry, connectingFrom]
   );
-  // TODO: Add meaningful ariaLabel to edges using node labels instead of
-  // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
-  const displayEdges = useMemo(
-    () =>
-      edges.map(edge => {
-        const isActive =
-          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
-        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
-      }),
-    [edges, activeEntry]
-  );
-
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -157,13 +165,45 @@ export default function ReactFlowCanvas({
 
   const onConnect: OnConnect = useCallback(
     connection =>
-      setEdges(currentEdges =>
-        addEdge(
+      setEdges(currentEdges => {
+        const {source, target} = connection;
+        if (!source || !target) {
+          return currentEdges;
+        }
+        const sourceLimited = isLineAnchorNodeId(source, nodes);
+        const targetLimited = isLineAnchorNodeId(target, nodes);
+        if (
+          (sourceLimited && nodeHasAnyEdge(source, currentEdges)) ||
+          (targetLimited && nodeHasAnyEdge(target, currentEdges))
+        ) {
+          return currentEdges;
+        }
+
+        return addEdge(
           {...connection, markerEnd: {type: MarkerType.ArrowClosed}},
           currentEdges
-        )
-      ),
-    [setEdges]
+        );
+      }),
+    [nodes, setEdges]
+  );
+
+  const isValidConnection: IsValidConnection = useCallback(
+    connectionOrEdge => {
+      const {source, target} = connectionOrEdge;
+      if (!source || !target) {
+        return false;
+      }
+      const sourceLimited = isLineAnchorNodeId(source, nodes);
+      const targetLimited = isLineAnchorNodeId(target, nodes);
+      if (sourceLimited && nodeHasAnyEdge(source, edges)) {
+        return false;
+      }
+      if (targetLimited && nodeHasAnyEdge(target, edges)) {
+        return false;
+      }
+      return true;
+    },
+    [edges, nodes]
   );
 
   const handleMoveEnd = useCallback(
@@ -171,6 +211,129 @@ export default function ReactFlowCanvas({
       setViewport(newViewport);
     },
     []
+  );
+
+  const handleLineEdgeMouseMove = useCallback(
+    (event: MouseEvent) => {
+      const dragState = draggingLineEdgeRef.current;
+      if (!dragState) {
+        return;
+      }
+
+      const currentPointer = screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+      const deltaX = currentPointer.x - dragState.startPointer.x;
+      const deltaY = currentPointer.y - dragState.startPointer.y;
+
+      setNodes(currentNodes =>
+        currentNodes.map(node => {
+          if (node.id === dragState.sourceId) {
+            return {
+              ...node,
+              position: {
+                x: dragState.startSourcePosition.x + deltaX,
+                y: dragState.startSourcePosition.y + deltaY,
+              },
+            };
+          }
+          if (node.id === dragState.targetId) {
+            return {
+              ...node,
+              position: {
+                x: dragState.startTargetPosition.x + deltaX,
+                y: dragState.startTargetPosition.y + deltaY,
+              },
+            };
+          }
+          return node;
+        })
+      );
+    },
+    [screenToFlowPosition, setNodes]
+  );
+
+  const stopLineEdgeDrag = useCallback(() => {
+    draggingLineEdgeRef.current = null;
+    window.removeEventListener('mousemove', handleLineEdgeMouseMove);
+    window.removeEventListener('mouseup', stopLineEdgeDrag);
+  }, [handleLineEdgeMouseMove]);
+
+  const handleEdgeMouseDown = useCallback(
+    (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
+      if (readOnly || event.button !== 0) {
+        return;
+      }
+
+      const sourceNode = nodes.find(node => node.id === edge.source);
+      const targetNode = nodes.find(node => node.id === edge.target);
+      const isLineEdge =
+        sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
+      if (!sourceNode || !targetNode || !isLineEdge) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      draggingLineEdgeRef.current = {
+        sourceId: sourceNode.id,
+        targetId: targetNode.id,
+        startPointer: screenToFlowPosition({
+          x: event.clientX,
+          y: event.clientY,
+        }),
+        startSourcePosition: {...sourceNode.position},
+        startTargetPosition: {...targetNode.position},
+      };
+
+      window.addEventListener('mousemove', handleLineEdgeMouseMove);
+      window.addEventListener('mouseup', stopLineEdgeDrag);
+    },
+    [
+      readOnly,
+      nodes,
+      screenToFlowPosition,
+      handleLineEdgeMouseMove,
+      stopLineEdgeDrag,
+    ]
+  );
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('mousemove', handleLineEdgeMouseMove);
+      window.removeEventListener('mouseup', stopLineEdgeDrag);
+    };
+  }, [handleLineEdgeMouseMove, stopLineEdgeDrag]);
+
+  // TODO: Add meaningful ariaLabel to edges using node labels instead of
+  // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
+  const displayEdges = useMemo(
+    () =>
+      edges.map(edge => {
+        const isActive =
+          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const isLineEdge =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+
+        return {
+          ...edge,
+          domAttributes: {
+            tabIndex: isActive ? 0 : -1,
+            ...(isLineEdge && !readOnly
+              ? {
+                  onMouseDown: (event: React.MouseEvent) =>
+                    handleEdgeMouseDown(event, edge),
+                }
+              : {}),
+          },
+        };
+      }),
+    [edges, activeEntry, nodes, readOnly, handleEdgeMouseDown]
   );
 
   const handleAddNode = useCallback(
@@ -199,35 +362,35 @@ export default function ReactFlowCanvas({
 
         const sourceAnchor: SketchlabReactFlowNode = {
           id: sourceAnchorId,
-          type: 'shape',
+          type: 'lineAnchor',
           position: {
             x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
             y: centerPosition.y,
           },
-          data: anchorBaseData,
+          data: {
+            ...anchorBaseData,
+            lineAnchorRole: 'source',
+          },
           style: {
             width: LINE_ANCHOR_SIZE_PX,
             height: LINE_ANCHOR_SIZE_PX,
-            opacity: 0,
-            pointerEvents: 'none',
-            border: 'none',
           },
         };
 
         const targetAnchor: SketchlabReactFlowNode = {
           id: targetAnchorId,
-          type: 'shape',
+          type: 'lineAnchor',
           position: {
             x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
             y: centerPosition.y,
           },
-          data: anchorBaseData,
+          data: {
+            ...anchorBaseData,
+            lineAnchorRole: 'target',
+          },
           style: {
             width: LINE_ANCHOR_SIZE_PX,
             height: LINE_ANCHOR_SIZE_PX,
-            opacity: 0,
-            pointerEvents: 'none',
-            border: 'none',
           },
         };
 
@@ -309,6 +472,7 @@ export default function ReactFlowCanvas({
           onNodesChange={readOnly ? undefined : onNodesChange}
           onEdgesChange={readOnly ? undefined : onEdgesChange}
           onConnect={readOnly ? undefined : onConnect}
+          isValidConnection={readOnly ? undefined : isValidConnection}
           nodeTypes={NODE_TYPES}
           onMoveEnd={readOnly ? undefined : handleMoveEnd}
           defaultViewport={initialViewport}

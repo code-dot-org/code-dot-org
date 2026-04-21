@@ -41,6 +41,15 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   );
 }
 
+function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {
+  return edges.some(edge => edge.source === nodeId || edge.target === nodeId);
+}
+
+function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
+  const node = nodes.find(candidate => candidate.id === nodeId);
+  return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
+}
+
 interface UseKeyboardEdgeCreationOptions {
   nodes: SketchlabReactFlowNode[];
   tabOrder: TabOrderEntry[];
@@ -180,8 +189,19 @@ export function useKeyboardEdgeCreation({
           const targetNode = nodes.find(node => node.id === focusedNodeId);
           if (sourceNode && targetNode) {
             const handles = pickHandles(sourceNode, targetNode);
-            setEdges(currentEdges =>
-              addEdge(
+            let connectionRejected = false;
+            setEdges(currentEdges => {
+              const sourceLimited = isLineAnchorNodeId(connectingFrom, nodes);
+              const targetLimited = isLineAnchorNodeId(focusedNodeId, nodes);
+              if (
+                (sourceLimited &&
+                  nodeHasAnyEdge(connectingFrom, currentEdges)) ||
+                (targetLimited && nodeHasAnyEdge(focusedNodeId, currentEdges))
+              ) {
+                connectionRejected = true;
+                return currentEdges;
+              }
+              return addEdge(
                 {
                   source: connectingFrom,
                   target: focusedNodeId,
@@ -189,9 +209,15 @@ export function useKeyboardEdgeCreation({
                   markerEnd: {type: MarkerType.ArrowClosed},
                 },
                 currentEdges
-              )
-            );
-            announce(`Edge created to ${getNodeLabel(targetNode)}.`);
+              );
+            });
+            if (connectionRejected) {
+              announce(
+                'Connection not created. Line endpoints may only have one edge.'
+              );
+            } else {
+              announce(`Edge created to ${getNodeLabel(targetNode)}.`);
+            }
           }
           setConnectingFrom(null);
         }
