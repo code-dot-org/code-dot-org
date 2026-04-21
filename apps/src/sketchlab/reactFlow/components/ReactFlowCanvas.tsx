@@ -90,6 +90,7 @@ export default function ReactFlowCanvas({
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
     edges,
+    nodeOrEdgeFocused,
     setLastFocusedEntry,
     setNodeOrEdgeFocused
   );
