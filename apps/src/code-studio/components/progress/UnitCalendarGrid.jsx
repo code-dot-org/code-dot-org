@@ -1,8 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
 
@@ -106,8 +106,8 @@ export default function UnitCalendarGrid({
             <td className={styles.scheduleColumn}>
               <div className={styles.keySection}>
                 <div className={styles.keyCell}>
-                  <FontAwesome
-                    icon="square"
+                  <FontAwesomeV6Icon
+                    iconName="square"
                     iconStyle="regular"
                     style={{
                       color: 'var(--text-brand-teal-primary)',
@@ -117,8 +117,8 @@ export default function UnitCalendarGrid({
                   {i18n.instructionalLesson()}
                 </div>
                 <div className={styles.keyCell}>
-                  <FontAwesome
-                    icon="circle-check"
+                  <FontAwesomeV6Icon
+                    iconName="circle-check"
                     style={{
                       color: 'var(--text-brand-purple-primary)',
                     }}
@@ -127,7 +127,10 @@ export default function UnitCalendarGrid({
                   {i18n.assessment()}
                 </div>
                 <div className={styles.keyCell}>
-                  <FontAwesome icon="scissors" className={styles.keyIcon} />
+                  <FontAwesomeV6Icon
+                    iconName="scissors"
+                    className={styles.keyIcon}
+                  />
                   {i18n.unpluggedLesson()}
                 </div>
               </div>

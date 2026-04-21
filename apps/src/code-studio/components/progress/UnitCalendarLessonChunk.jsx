@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 class UnitCalendarLessonChunk extends Component {
@@ -73,8 +73,8 @@ class UnitCalendarLessonChunk extends Component {
           <div style={styles.boxContent}>
             {(assessment || unplugged) && (
               <div key={`lesson-${id}`} style={styles.iconSection}>
-                <FontAwesome
-                  icon="check-circle"
+                <FontAwesomeV6Icon
+                  iconName="check-circle"
                   style={{
                     color: isHover
                       ? 'var(--text-neutral-white-fixed)'
@@ -82,8 +82,8 @@ class UnitCalendarLessonChunk extends Component {
                     visibility: assessment ? 'visible' : 'hidden',
                   }}
                 />
-                <FontAwesome
-                  icon="scissors"
+                <FontAwesomeV6Icon
+                  iconName="scissors"
                   style={{
                     visibility: unplugged ? 'visible' : 'hidden',
                   }}

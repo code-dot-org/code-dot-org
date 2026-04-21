@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -198,9 +199,9 @@ describe('UnitCalendarLessonChunk', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome').at(0).prop('style')['visibility']).toBe(
-      'hidden'
-    );
+    expect(
+      wrapper.find(FontAwesomeV6Icon).at(0).prop('style')['visibility']
+    ).toBe('hidden');
   });
 
   it('hides unplugged icon if not unplugged', () => {
@@ -216,8 +217,8 @@ describe('UnitCalendarLessonChunk', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome').at(1).prop('style')['visibility']).toBe(
-      'hidden'
-    );
+    expect(
+      wrapper.find(FontAwesomeV6Icon).at(1).prop('style')['visibility']
+    ).toBe('hidden');
   });
 });
