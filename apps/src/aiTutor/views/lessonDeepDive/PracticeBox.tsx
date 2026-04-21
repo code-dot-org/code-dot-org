@@ -2,14 +2,16 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {FC, useCallback, useState} from 'react';
 
-// import matchJson from '@cdo/static/tutor/match_example.json';
+import matchJson from '@cdo/static/tutor/match_example.json';
 import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
 import multiMultiJson from '@cdo/static/tutor/multiple_choice_multi_select.json';
 import scrambleJson from '@cdo/static/tutor/scramble_example.json';
-// import sortJson from '@cdo/static/tutor/sort_example.json';
+import sortJson from '@cdo/static/tutor/sort_example.json';
 
+import PracticeMatch from './PracticeMatch';
 import PracticeMultipleChoice from './PracticeMultipleChoice';
 import PracticeScramble from './PracticeScramble';
+import PracticeSort from './PracticeSort';
 import {LessonDeepDiveData, PracticeProblem} from './types';
 
 import styles from './practice-problems.module.scss';
@@ -18,8 +20,8 @@ const PracticeProblems: PracticeProblem[] = [
   multiMultiJson as PracticeProblem,
   multiSingleJson as PracticeProblem,
   scrambleJson as PracticeProblem,
-  // matchJson as PracticeProblem,
-  // sortJson as PracticeProblem,
+  matchJson as PracticeProblem,
+  sortJson as PracticeProblem,
 ];
 
 interface PracticeBoxProps {
@@ -70,6 +72,26 @@ const PracticeBox: FC<PracticeBoxProps> = ({
       case 'scramble':
         return (
           <PracticeScramble
+            problem={PracticeProblems[index]}
+            key={PracticeProblems[index].id}
+            submitted={isSubmitted}
+            submitCallback={setIsSubmitted}
+            correctCallback={setIsCorrect}
+          />
+        );
+      case 'match':
+        return (
+          <PracticeMatch
+            problem={PracticeProblems[index]}
+            key={PracticeProblems[index].id}
+            submitted={isSubmitted}
+            submitCallback={setIsSubmitted}
+            correctCallback={setIsCorrect}
+          />
+        );
+      case 'sort':
+        return (
+          <PracticeSort
             problem={PracticeProblems[index]}
             key={PracticeProblems[index].id}
             submitted={isSubmitted}

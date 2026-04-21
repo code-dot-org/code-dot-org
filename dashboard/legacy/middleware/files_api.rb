@@ -1090,17 +1090,15 @@ class FilesApi < Sinatra::Base
     end
     image_stream = StringIO.new(raw)
 
-    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    # Determine reported MIME type (e.g. "image/png", "image/jpeg", "image/webp", "image/gif").
     content_type_header = request.content_type
-
-    # Validate allowed content types
-    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
-      status 400
-      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
-    end
 
     result = ImageModeration.moderate_image(image_stream, content_type_header)
     result.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
   end
 
   #

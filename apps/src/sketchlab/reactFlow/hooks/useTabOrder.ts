@@ -23,17 +23,29 @@ export function useTabOrder(
 ) {
   const tabOrder = useMemo(() => computeTabOrder(nodes, edges), [nodes, edges]);
 
-  const [activeTabEntry, setActiveTabEntry] = useState<TabOrderEntry | null>(
-    null
-  );
+  const [lastFocusedEntry, setLastFocusedEntry] =
+    useState<TabOrderEntry | null>(null);
+
+  // True when a node or edge currently has DOM focus. Tracked separately
+  // from lastFocusedEntry so the roving tabindex target persists when
+  // focus moves to non-element UI (e.g. Controls) while the visual
+  // selection (selected prop) can be cleared independently.
+  const [nodeOrEdgeFocused, setNodeOrEdgeFocused] = useState(false);
 
   // The entry that should have tabIndex 0. Falls back to the first in
   // order when nothing has been focused yet or the active element was
   // deleted (derived — no effect needed).
   const isActiveValid =
-    activeTabEntry &&
-    tabOrder.some(entry => entriesMatch(entry, activeTabEntry));
-  const activeEntry = isActiveValid ? activeTabEntry : tabOrder[0] ?? null;
+    lastFocusedEntry &&
+    tabOrder.some(entry => entriesMatch(entry, lastFocusedEntry));
+  const activeEntry = isActiveValid ? lastFocusedEntry : tabOrder[0] ?? null;
 
-  return {tabOrder, activeEntry, setActiveTabEntry};
+  return {
+    tabOrder,
+    activeEntry,
+    lastFocusedEntry,
+    setLastFocusedEntry,
+    nodeOrEdgeFocused,
+    setNodeOrEdgeFocused,
+  };
 }

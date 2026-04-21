@@ -28,14 +28,16 @@
 #  avatar_color         :integer
 #  avatar_emoji         :integer
 #  ai_chat_access_level :string(255)      default("disabled")
+#  demo_type            :string(255)
 #
 # Indexes
 #
-#  fk_rails_20b1e5de46          (course_id)
-#  fk_rails_f0d4df9901          (lti_integration_id)
-#  index_sections_on_code       (code) UNIQUE
-#  index_sections_on_script_id  (script_id)
-#  index_sections_on_user_id    (user_id)
+#  fk_rails_20b1e5de46                      (course_id)
+#  fk_rails_f0d4df9901                      (lti_integration_id)
+#  index_sections_on_code                   (code) UNIQUE
+#  index_sections_on_script_id              (script_id)
+#  index_sections_on_user_id                (user_id)
+#  index_sections_on_user_id_and_demo_type  (user_id,demo_type,deleted_at) UNIQUE
 #
 
 require 'full-name-splitter'
@@ -87,6 +89,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
   validates :course_id, presence: true, if: -> {script_id.present?}
+  validates :demo_type, uniqueness: {scope: [:user_id, :deleted_at]}, allow_nil: true
 
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
