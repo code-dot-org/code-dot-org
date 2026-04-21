@@ -1127,4 +1127,7 @@ module SharedConstants
     'fonts.googleapis.com',
     'fonts.gstatic.com'
   ].freeze
+
+  # Raster formats that are safe to process with ImageMagick, supported in assets, and supported by Azure AI Content Safety.
+  SAFE_AND_SUPPORTED_IMAGE_TYPES = %w(image/gif image/jpeg image/png image/webp).freeze
 end
