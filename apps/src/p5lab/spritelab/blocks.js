@@ -21,6 +21,7 @@ import {
   parseSoundPathString,
   registerCustomProcedureBlocks,
   soundField,
+  translate,
 } from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
@@ -223,20 +224,52 @@ const customInputTypes = {
       } else {
         switch (block.type) {
           case 'gamelab_clickedSpritePointer':
-            block.shortString = spritelabMsg.clicked();
-            block.longString = spritelabMsg.clickedSprite();
+            block.shortString = translate(
+              spritelabMsg.clicked(),
+              ['blockly-spritelab'],
+              true
+            );
+            block.longString = translate(
+              spritelabMsg.clickedSprite(),
+              ['blockly-spritelab'],
+              true
+            );
             break;
           case 'gamelab_newSpritePointer':
-            block.shortString = spritelabMsg.new();
-            block.longString = spritelabMsg.newSprite();
+            block.shortString = translate(
+              spritelabMsg.new(),
+              ['blockly-spritelab'],
+              true
+            );
+            block.longString = translate(
+              spritelabMsg.newSprite(),
+              ['blockly-spritelab'],
+              true
+            );
             break;
           case 'gamelab_subjectSpritePointer':
-            block.shortString = spritelabMsg.subject();
-            block.longString = spritelabMsg.subjectSprite();
+            block.shortString = translate(
+              spritelabMsg.subject(),
+              ['blockly-spritelab'],
+              true
+            );
+            block.longString = translate(
+              spritelabMsg.subjectSprite(),
+              ['blockly-spritelab'],
+              true
+            );
             break;
           case 'gamelab_objectSpritePointer':
-            block.shortString = spritelabMsg.object();
-            block.longString = spritelabMsg.objectSprite();
+            block.shortString = translate(
+              spritelabMsg.object(),
+              ['blockly-spritelab'],
+              true
+            );
+            block.longString = translate(
+              spritelabMsg.objectSprite(),
+              ['blockly-spritelab'],
+              true
+            );
             break;
           default:
             // unsupported block for spritePointer, leave the block text blank
