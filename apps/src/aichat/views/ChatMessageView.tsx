@@ -139,7 +139,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (hasAssets || hasUserAddedSelectionContext) {
+  if ((hasAssets || hasUserAddedSelectionContext) && !teacherFlaggedHidden) {
     header = (
       <div
         className={classNames(styles.assetCol, isAssistant && styles.assistant)}
@@ -222,6 +222,9 @@ export function getChatMessageDisplayText(
   }
 
   // If Role is ASSISTANT, display the appropriate message based on the status.
+  if (teacherFlaggedHidden) {
+    return 'This message has been flagged as inappropriate by the teacher.';
+  }
   switch (status) {
     case Status.PROFANITY_VIOLATION:
       return commonI18n.aiChatInappropriateModelMessage();
