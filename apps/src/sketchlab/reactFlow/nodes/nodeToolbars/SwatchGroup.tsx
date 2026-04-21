@@ -1,6 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -35,9 +35,13 @@ export default function SwatchGroup({
   const customLabel = `${groupLabel}: Custom color`;
   return (
     <div className={styles.group} role="group" aria-label={groupLabel}>
-      <span className={styles.groupLabel} aria-hidden="true">
+      <Typography
+        variant="overline3"
+        className={styles.groupLabel}
+        aria-hidden="true"
+      >
         {groupLabel}
-      </span>
+      </Typography>
       <div className={styles.swatches}>
         {swatches.map(swatch => {
           const isSelected = selectedValue === swatch.value;

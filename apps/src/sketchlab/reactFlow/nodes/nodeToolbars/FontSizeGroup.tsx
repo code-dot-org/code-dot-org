@@ -1,4 +1,4 @@
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -17,9 +17,13 @@ export default function FontSizeGroup({
 }: FontSizeGroupProps) {
   return (
     <div className={styles.group} role="group" aria-label="Font size">
-      <span className={styles.groupLabel} aria-hidden="true">
+      <Typography
+        variant="overline3"
+        className={styles.groupLabel}
+        aria-hidden="true"
+      >
         Font size
-      </span>
+      </Typography>
       <div className={styles.fontSizeButtons}>
         {FONT_SIZE_OPTIONS.map(option => {
           const isSelected = selectedValue === option.value;

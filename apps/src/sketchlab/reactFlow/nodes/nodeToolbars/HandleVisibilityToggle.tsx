@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import React from 'react';
 
 import styles from './node-toolbar.module.scss';
@@ -18,9 +18,13 @@ export default function HandleVisibilityToggle({
     : 'Show connection handles';
   return (
     <div className={styles.group} role="group" aria-label="Connection handles">
-      <span className={styles.groupLabel} aria-hidden="true">
+      <Typography
+        variant="overline3"
+        className={styles.groupLabel}
+        aria-hidden="true"
+      >
         Handles
-      </span>
+      </Typography>
       <div className={styles.fontSizeButtons}>
         <Tooltip title={actionLabel} placement="top">
           <IconButton
