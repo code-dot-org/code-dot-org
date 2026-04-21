@@ -221,7 +221,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
               const isLastChatMessage = index === lastChatMessageIndex;
               return (
                 <ChatEventView
-                  teacherFeedback={event.teacherFeedback}
                   event={event}
                   key={event.timestamp}
                   isTeacherView={isTeacherView}
