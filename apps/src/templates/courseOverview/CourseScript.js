@@ -126,7 +126,7 @@ class CourseScript extends React.Component {
         data-visibility={isHidden ? 'hidden' : 'visible'}
       >
         <div className={styles.content}>
-          <Typography variant="h5" componen="h5">
+          <Typography variant="h5" component="h5">
             {title}
           </Typography>
           <div className={styles.description}>
