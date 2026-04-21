@@ -99,6 +99,7 @@ export default class Announcements extends Component {
               variant={
                 NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
               }
+              style="filled"
               title={announcement.notice}
               description={announcement.details}
               icon={{

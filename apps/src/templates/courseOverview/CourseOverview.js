@@ -172,6 +172,7 @@ class CourseOverview extends Component {
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <NotificationBanner
             variant="warning"
+            style="filled"
             title=""
             description={i18n.redirectCourseVersionWarningDetails()}
             icon={WARNING_ICON}
@@ -185,6 +186,7 @@ class CourseOverview extends Component {
         {showVersionWarning && (
           <NotificationBanner
             variant="warning"
+            style="filled"
             title={i18n.wrongCourseVersionWarningNotice()}
             description={i18n.wrongCourseVersionWarningDetails()}
             icon={WARNING_ICON}

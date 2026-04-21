@@ -1,5 +1,5 @@
-import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
@@ -16,6 +16,7 @@ export default class VerifiedResourcesNotification extends PureComponent {
     return (
       <NotificationBanner
         variant="warning"
+        style="filled"
         title={i18n.verifiedResourcesNotice()}
         className={classNames(
           styles.verifiedResourcesNotification,
@@ -28,13 +29,15 @@ export default class VerifiedResourcesNotification extends PureComponent {
         }
         icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
         actions={
-          <Link
+          <Button
             href={VERIFIED_RESOURCES_URL}
-            text={i18n.learnMore()}
-            type="secondary"
+            variant="outlined"
+            color="secondary"
             size="s"
-            openInNewTab
-          />
+            target="_blank"
+          >
+            {i18n.learnMore()}
+          </Button>
         }
       />
     );
