@@ -8,28 +8,21 @@ interface LineAnchorNodeProps {
 }
 
 function LineAnchorNode({data}: LineAnchorNodeProps) {
-  const isSourceAnchor = data.lineAnchorRole === 'source';
+  const handleType = data.lineAnchorRole === 'source' ? 'source' : 'target';
   const connections = useNodeConnections();
+
+  // This should become false immediately after a line is created.
   const isConnectable = connections.length === 0;
+
   return (
     <div className={styles.anchorNode} aria-label="Line endpoint">
-      {isSourceAnchor ? (
-        <Handle
-          type="source"
-          id="line-anchor-source"
-          position={Position.Top}
-          isConnectable={isConnectable}
-          className={styles.anchorHandle}
-        />
-      ) : (
-        <Handle
-          type="target"
-          id="line-anchor-target"
-          position={Position.Top}
-          isConnectable={isConnectable}
-          className={styles.anchorHandle}
-        />
-      )}
+      <Handle
+        type={handleType}
+        id={`line-anchor-${handleType}`}
+        position={Position.Top}
+        isConnectable={isConnectable}
+        className={styles.anchorHandle}
+      />
     </div>
   );
 }
