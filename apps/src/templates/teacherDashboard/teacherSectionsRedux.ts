@@ -16,7 +16,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
   SectionLoginType,
@@ -37,11 +37,14 @@ import {
 import {
   Classroom,
   CourseOffering,
+  DemoPresetView,
+  DemoType,
   LtiSectionSyncResult,
   OAuthSectionTypeName,
   Section,
   SectionInstructor,
   SectionMap,
+  ServerDemoPresetView,
   ServerOAuthSectionTypeName,
   ServerSection,
   ServerStudent,
@@ -66,6 +69,42 @@ interface CourseOfferingSet {
   [courseOfferingId: number]: CourseOffering;
 }
 
+type DemoPresetMap = Partial<Record<DemoType, DemoPresetView>>;
+type DemoPresetsResponse = Partial<
+  Record<DemoType, ServerDemoPresetView | null>
+>;
+
+const demoPresetFromServerDemoPreset = (
+  demoPreset: ServerDemoPresetView
+): DemoPresetView => ({
+  demoType: demoPreset.demo_type,
+  sectionName: demoPreset.section_name,
+  avatarColor: demoPreset.avatar_color,
+  avatarEmoji: demoPreset.avatar_emoji,
+  loginType: demoPreset.login_type,
+  participantType: demoPreset.participant_type,
+  unit: demoPreset.unit
+    ? {
+        name: demoPreset.unit.name,
+        displayName: demoPreset.unit.display_name,
+      }
+    : null,
+  unitGroup: demoPreset.unit_group
+    ? {
+        name: demoPreset.unit_group.name,
+        displayName: demoPreset.unit_group.display_name,
+      }
+    : null,
+});
+
+export class DemoSectionCreationError extends Error {
+  constructor(public errorType: 'conflict' | 'generic', message: string) {
+    super(message);
+    this.name = 'DemoSectionCreationError';
+    Object.setPrototypeOf(this, DemoSectionCreationError.prototype);
+  }
+}
+
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
@@ -85,6 +124,9 @@ export interface TeacherSectionState {
   // assignmentCourseOfferingShape PropType.
   courseOfferings: CourseOfferingSet;
   courseOfferingsAreLoaded: boolean;
+  demoPresets: DemoPresetMap;
+  demoPresetsAreLoaded: boolean;
+  demoSectionCreationInProgress: boolean;
   // The participant types the user can create sections for
   availableParticipantTypes: string[];
   // Mapping from sectionId to section object
@@ -148,6 +190,9 @@ const initialState: TeacherSectionState = {
   // assignmentCourseOfferingShape PropType.
   courseOfferings: [],
   courseOfferingsAreLoaded: false,
+  demoPresets: {},
+  demoPresetsAreLoaded: false,
+  demoSectionCreationInProgress: false,
   // The participant types the user can create sections for
   availableParticipantTypes: [],
   // Mapping from sectionId to section object
@@ -405,6 +450,12 @@ const sectionSlice = createSlice({
     },
     setDemoPresetsLoaded(state, action: PayloadAction<boolean>) {
       state.demoPresetsAreLoaded = action.payload;
+    },
+    startDemoSectionCreation(state) {
+      state.demoSectionCreationInProgress = true;
+    },
+    finishDemoSectionCreation(state) {
+      state.demoSectionCreationInProgress = false;
     },
     setSectionCodeReviewExpiresAt: {
       reducer(
