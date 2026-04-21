@@ -18,7 +18,7 @@ Feature: AI Tutor smoke tests on legacy labs and Lab2 resource panels
 
     Then element "[aria-label='User chat message']" has text "Hello"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(255, 240, 247)"
+    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(255, 225, 221)"
 
   Scenario: Chat works in the resource panel AI Tutor tab in Python Lab
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true"
@@ -32,7 +32,7 @@ Feature: AI Tutor smoke tests on legacy labs and Lab2 resource panels
 
     Then element "[aria-label='User chat message']" has text "Hello"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(110, 21, 67)"
+    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(106, 27, 17)"
 
   Scenario: Chat works in the resource panel AI Tutor tab in Weblab2
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true"
@@ -47,4 +47,4 @@ Feature: AI Tutor smoke tests on legacy labs and Lab2 resource panels
 
     Then element "[aria-label='User chat message']" has text "Hello"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(110, 21, 67)"
+    And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(106, 27, 17)"
