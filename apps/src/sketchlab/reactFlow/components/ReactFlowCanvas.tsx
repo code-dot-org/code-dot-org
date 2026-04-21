@@ -35,6 +35,7 @@ import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {ReactFlowSketchLabSources} from '../types';
+import {canCreateConnection} from '../utils/connectionRules';
 
 import Toolbar from './Toolbar';
 
@@ -53,15 +54,6 @@ const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
 const LINE_ANCHOR_SIZE_PX = 10;
 type FlowPoint = {x: number; y: number};
-
-function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {
-  return edges.some(edge => edge.source === nodeId || edge.target === nodeId);
-}
-
-function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
-  const node = nodes.find(candidate => candidate.id === nodeId);
-  return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
-}
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -98,25 +90,6 @@ export default function ReactFlowCanvas({
     startSourcePosition: FlowPoint;
     startTargetPosition: FlowPoint;
   } | null>(null);
-  const canCreateConnection = useCallback(
-    (
-      sourceNodeId: string,
-      targetNodeId: string,
-      edgesToCheck: SketchlabReactFlowEdge[]
-    ) => {
-      const sourceLimited = isLineAnchorNodeId(sourceNodeId, nodes);
-      const targetLimited = isLineAnchorNodeId(targetNodeId, nodes);
-      if (sourceLimited && nodeHasAnyEdge(sourceNodeId, edgesToCheck)) {
-        return false;
-      }
-      if (targetLimited && nodeHasAnyEdge(targetNodeId, edgesToCheck)) {
-        return false;
-      }
-      return true;
-    },
-    [nodes]
-  );
-
   const {
     tabOrder,
     activeEntry,
@@ -142,7 +115,6 @@ export default function ReactFlowCanvas({
       edges: edges as SketchlabReactFlowEdge[],
       tabOrder,
       focusEntry,
-      canCreateConnection,
       setNodes,
       setEdges,
       readOnly,
@@ -189,7 +161,14 @@ export default function ReactFlowCanvas({
         if (!source || !target) {
           return currentEdges;
         }
-        if (!canCreateConnection(source, target, currentEdges)) {
+        if (
+          !canCreateConnection(
+            source,
+            target,
+            nodes as SketchlabReactFlowNode[],
+            currentEdges
+          )
+        ) {
           return currentEdges;
         }
 
@@ -198,7 +177,7 @@ export default function ReactFlowCanvas({
           currentEdges
         );
       }),
-    [canCreateConnection, setEdges]
+    [nodes, setEdges]
   );
 
   const isValidConnection: IsValidConnection = useCallback(
@@ -207,9 +186,14 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
-      return canCreateConnection(source, target, edges);
+      return canCreateConnection(
+        source,
+        target,
+        nodes as SketchlabReactFlowNode[],
+        edges as SketchlabReactFlowEdge[]
+      );
     },
-    [canCreateConnection, edges]
+    [edges, nodes]
   );
 
   const handleMoveEnd = useCallback(

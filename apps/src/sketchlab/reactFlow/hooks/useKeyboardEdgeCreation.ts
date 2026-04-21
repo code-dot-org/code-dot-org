@@ -11,6 +11,10 @@ import {
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
+import {
+  canCreateConnection,
+  isLineAnchorNodeId,
+} from '../utils/connectionRules';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -41,21 +45,11 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   );
 }
 
-function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
-  const node = nodes.find(candidate => candidate.id === nodeId);
-  return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
-}
-
 interface UseKeyboardEdgeCreationOptions {
   nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
-  canCreateConnection: (
-    sourceNodeId: string,
-    targetNodeId: string,
-    edgesToCheck: SketchlabReactFlowEdge[]
-  ) => boolean;
   setNodes: (
     updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
   ) => void;
@@ -78,7 +72,6 @@ export function useKeyboardEdgeCreation({
   edges,
   tabOrder,
   focusEntry,
-  canCreateConnection,
   setNodes,
   setEdges,
   readOnly,
@@ -273,6 +266,7 @@ export function useKeyboardEdgeCreation({
             const connectionRejected = !canCreateConnection(
               connectingFrom,
               focusedNodeId,
+              nodes,
               edges
             );
             if (connectionRejected) {
@@ -285,6 +279,7 @@ export function useKeyboardEdgeCreation({
                   !canCreateConnection(
                     connectingFrom,
                     focusedNodeId,
+                    nodes,
                     currentEdges
                   )
                 ) {
@@ -338,7 +333,6 @@ export function useKeyboardEdgeCreation({
     },
     [
       connectingFrom,
-      canCreateConnection,
       edges,
       focusEntry,
       nodes,
