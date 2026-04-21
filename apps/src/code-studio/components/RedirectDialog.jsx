@@ -23,7 +23,7 @@ const RedirectDialog = ({
   return (
     <Dialog
       title={i18n.notInRightPlace()}
-      customContent={<div id="dsco-dialog-description">{details}</div>}
+      description={details}
       onClose={handleClose}
       primaryButtonProps={{
         children: redirectButtonText,
