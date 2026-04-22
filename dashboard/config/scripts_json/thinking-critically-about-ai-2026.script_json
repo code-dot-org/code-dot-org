@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-20 20:11:44 UTC",
+    "serialized_at": "2026-04-22 00:05:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -309,8 +309,8 @@
       "key": "9875d92d-0fe8-43b2-9863-2f6afc573efd",
       "position": 2,
       "properties": {
-        "duration": 30,
-        "name": "Activity"
+        "duration": 15,
+        "name": "Activity 1"
       },
       "seeding_key": {
         "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd",
@@ -320,8 +320,22 @@
       }
     },
     {
-      "key": "f2077589-76f3-4591-a547-608391755e8d",
+      "key": "db8eddb8-9df4-4382-983a-280fd0607bea",
       "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Activity 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db8eddb8-9df4-4382-983a-280fd0607bea",
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "f2077589-76f3-4591-a547-608391755e8d",
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -752,7 +766,7 @@
       "key": "2696ec06-31b5-4805-a1bb-109bc9ab5da4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Play the \"Mix and Move with AI\" video.\n\n**Questions to consider with the video:** \n- What is AI?\n\n**Discussion Goal:** Students should recognize that artificial intelligence is a type of technology that learns patterns from data to generate outputs or make predictions, and that people may have different reactions to it based on how they have seen it used. The goal is to surface students' initial ideas about what AI is and begin building a shared understanding before they start testing it themselves.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Play the \"Mix and Move with AI\" video.\n\n**Questions to consider with the video:** \n- What is AI?\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -790,7 +804,8 @@
       "key": "c512dfad-082b-4897-bcba-f92fad9f61b9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the AI Dancer generation tool."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the AI Dancer generation tool.",
+        "name": "Generating Dancers with Simple Prompts"
       },
       "seeding_key": {
         "activity_section.key": "c512dfad-082b-4897-bcba-f92fad9f61b9",
@@ -801,7 +816,7 @@
       "key": "d53860fc-0bf6-42ea-a0b4-5dd35580719e",
       "position": 2,
       "properties": {
-        "description": "This tool helps us generate a lead dancer. It's meant to spark ideas and help us find unique character designs.",
+        "description": "This tool helps us generate a lead dancer. It's meant to spark ideas and help us find unique character designs. Think about the balance between AI speed and human control. Which do you prefer right now? Is it more helpful when it gives you a quick idea, or when you can control every detail?",
         "remarks": true
       },
       "seeding_key": {
@@ -813,8 +828,8 @@
       "key": "93d2d469-00e7-465c-ae32-9c03e37ad3e4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 2.\n- Level 1: Generate a dancer with a basic prompt\n- Level 2: Modify the slightly more detailed prompt to see how the output changes\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students experimenting with descriptive words. Ask: \"What happened when you added more detail to the prompt?\" Common misconception: Students may think the AI \"understands\" the prompt like a human. Remind them it is looking for patterns in data.",
-        "progression_name": "OLD_Generating Dancers"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 3.\n- Level 1: Generate a dancer with a basic prompt\n- Level 2: Modify the slightly more detailed prompt to see how the output changes\n- Level 3: Students systematically test the generator.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students experimenting with descriptive words. Ask: \"What happened when you added more detail to the prompt?\" Common misconception: Students may think the AI \"understands\" the prompt like a human. Remind them it is looking for patterns in data.",
+        "progression_name": "Generating Dancers"
       },
       "seeding_key": {
         "activity_section.key": "93d2d469-00e7-465c-ae32-9c03e37ad3e4",
@@ -822,44 +837,22 @@
       }
     },
     {
-      "key": "bd48d4eb-aed5-472d-9ccd-ec34c1979618",
+      "key": "70e22316-0aef-4be9-ba73-ef5597a1a085",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Milestone 1 Learning Log.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the questions in the Snap Judgments section of their Milestone 1 Learning Log."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** After students have explored the three generating dancers levels, pause the class and direct students to Lesson 1, Level 4 to explore how AI models work and make predictions."
       },
       "seeding_key": {
-        "activity_section.key": "bd48d4eb-aed5-472d-9ccd-ec34c1979618",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
-      }
-    },
-    {
-      "key": "af1689af-483b-4266-b416-07fbd1d2cc30",
-      "position": 5,
-      "properties": {
-        "description": "Think about the balance between AI speed and human control. Which do you prefer right now? Is it more helpful when it gives you a quick idea, or when you can control every detail?",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "af1689af-483b-4266-b416-07fbd1d2cc30",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
-      }
-    },
-    {
-      "key": "ad03254f-445a-4ec2-9107-4fbb35f88bf1",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three-step process of how AI models function."
-      },
-      "seeding_key": {
-        "activity_section.key": "ad03254f-445a-4ec2-9107-4fbb35f88bf1",
+        "activity_section.key": "70e22316-0aef-4be9-ba73-ef5597a1a085",
         "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
       }
     },
     {
       "key": "9e37a0dd-2ca6-4caf-bf99-7899e2f4d7b2",
-      "position": 7,
+      "position": 5,
       "properties": {
-        "description": "AI doesn't guess randomly. It looks at millions of examples to predict what you want based on patterns. It's like a student who has seen thousands of drawings of dancers and is trying to draw a new one based on what they remember."
+        "description": "The more specific you are with your prompt, the better the AI can give you exactly what you want! Think of it like ordering a pizza. You need to be specific about exactly what you want.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "9e37a0dd-2ca6-4caf-bf99-7899e2f4d7b2",
@@ -868,10 +861,9 @@
     },
     {
       "key": "9d8d7e81-8b9f-4c61-ab7b-20f64ede92e5",
-      "position": 8,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete Levels 3 and 4.\n- Level 3: Students explore how AI models work and make predictions.\n- Level 4: Students systematically test the generator.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students: \"What data do you think this model was trained on to know how to draw a dancer?\" Use Level 3 to demystify AI – it is just math and patterns, not magic. On Level 4, check that students are changing one thing at a time in their prompts to see the specific effect. Ask: \"How did that specific word change the result?\"",
-        "progression_name": "OLD_How AI Models Work"
+        "progression_name": "How to write a good prompt"
       },
       "seeding_key": {
         "activity_section.key": "9d8d7e81-8b9f-4c61-ab7b-20f64ede92e5",
@@ -879,135 +871,71 @@
       }
     },
     {
-      "key": "1c0e6746-60bc-4d2b-b27e-5c1904189d77",
-      "position": 9,
+      "key": "63628e48-f2a7-4dd2-905b-536c154dfc1b",
+      "position": 7,
       "properties": {
-        "progression_name": "OLD_Systematic Testing",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use Level 4 check that students are moving from opinions to evidence-based observations."
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "1c0e6746-60bc-4d2b-b27e-5c1904189d77",
+        "activity_section.key": "63628e48-f2a7-4dd2-905b-536c154dfc1b",
         "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
       }
     },
     {
-      "key": "3fcba57d-c39d-4734-99fe-903df45556ef",
-      "position": 10,
+      "key": "3ad68458-6d73-4ad0-b50d-80920a8e559c",
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Identify a variety of AI applications, including visible, hidden, helpful, and potentially risky systems.",
-        "duration": "10",
-        "name": "That's AI?"
-      },
-      "seeding_key": {
-        "activity_section.key": "3fcba57d-c39d-4734-99fe-903df45556ef",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
-      }
-    },
-    {
-      "key": "939aec1f-9908-415a-bba4-fc96f12e47df",
-      "position": 11,
-      "properties": {
-        "description": "AI is everywhere, but it's not always obvious. Sometimes it's right in front of us, and sometimes it's hidden in the background. We're going to explore where it's hiding using a KWL chart.",
+        "description": "In this short activity, you get to chat with an AI for the first time! Choose one of the chatbots in level 5 and follow the instructions to type a prompt. The fun part is experimenting with what to say in the prompt to get the best results from AI.",
+        "name": "Prompt Writing in AI Chat",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "939aec1f-9908-415a-bba4-fc96f12e47df",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
+        "activity_section.key": "3ad68458-6d73-4ad0-b50d-80920a8e559c",
+        "lesson_activity.key": "db8eddb8-9df4-4382-983a-280fd0607bea"
       }
     },
     {
-      "key": "a1808b09-14d8-4721-aa1d-191e0f65a9a5",
-      "position": 12,
+      "key": "be0befa5-6e62-4e43-9228-217e1a1f41ad",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down everything they know or believe about AI using the provided sentence starters in the K column of their KWL Chart. Encourage them to write specific claims.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students are stuck, ask them to think about their phones, social media algorithms, or video game characters."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5.\n- Choice A: Spirit Animal Portrait\n- Choice B: Superhero Origin Story\n- Choice C: Hype Poster\n- Choice D: Theme Song Intro\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who submitted a short or vague first prompt. Encourage them to try again with more detail. Ask: \"What changed when you added more information? Did the output feel more personal?\"\n",
+        "progression_name": "Try the AI Chat"
       },
       "seeding_key": {
-        "activity_section.key": "a1808b09-14d8-4721-aa1d-191e0f65a9a5",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
+        "activity_section.key": "be0befa5-6e62-4e43-9228-217e1a1f41ad",
+        "lesson_activity.key": "db8eddb8-9df4-4382-983a-280fd0607bea"
       }
     },
     {
-      "key": "30f3f55b-8048-499a-b69a-c4cfd46af763",
-      "position": 13,
+      "key": "b8b61ae8-6fe6-485c-b49c-3fc00d8c5157",
+      "position": 3,
       "properties": {
+        "progression_name": "Try a AI Chat"
       },
       "seeding_key": {
-        "activity_section.key": "30f3f55b-8048-499a-b69a-c4cfd46af763",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
+        "activity_section.key": "b8b61ae8-6fe6-485c-b49c-3fc00d8c5157",
+        "lesson_activity.key": "db8eddb8-9df4-4382-983a-280fd0607bea"
       }
     },
     {
-      "key": "382d2b23-6ea7-4ca6-8e9c-30f538e7999c",
-      "position": 14,
+      "key": "a312872f-87fd-4320-afc9-5688a744b1a3",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down questions they have about AI in the W column of their KWL Chart."
-      },
-      "seeding_key": {
-        "activity_section.key": "382d2b23-6ea7-4ca6-8e9c-30f538e7999c",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
-      }
-    },
-    {
-      "key": "19de1d90-f361-4a08-b73b-afc6abc7ae8e",
-      "position": 15,
-      "properties": {
-        "description": "Try to use stems like: How does AI decide? Why does AI sometimes? How can we tell if AI?",
+        "description": "Prompt writing is a real skill. The same AI tool can give very different results depending on how clearly and specifically you communicate. This is true whether you're generating something fun like today's activity, or using AI for something more serious.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "19de1d90-f361-4a08-b73b-afc6abc7ae8e",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
-      }
-    },
-    {
-      "key": "c0c6fad3-8bea-4e9e-a4dc-53fe23f64254",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Is AI \"good\" or \"bad\"?*\n- *How does evidence change your judgment?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI is not simply good or bad; it depends on how it is tested and used. The goal is to move from opinions to evidence-based critical thinking.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station. They should write at least one question in the AI in Your World section of their Learning Log\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to look carefully at examples they haven't seen before. Ask: \"How does this AI system work? What data do you think this system was trained on?\"",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Listen for students identifying that AI exists in places they didn't expect, like email filters or photo editing tools."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c0c6fad3-8bea-4e9e-a4dc-53fe23f64254",
-        "lesson_activity.key": "9875d92d-0fe8-43b2-9863-2f6afc573efd"
+        "activity_section.key": "a312872f-87fd-4320-afc9-5688a744b1a3",
+        "lesson_activity.key": "db8eddb8-9df4-4382-983a-280fd0607bea"
       }
     },
     {
       "key": "b231423b-69c4-46c7-993d-8c7ed377fb50",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students revisit their KWL charts. Encourage them to see if any of their Want to Know questions were answered or if their What I Know claims changed after testing the image generator.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Based on what you tried today, what is one tip or warning you would give someone who has never used AI before?\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Discussion Goal:** Surface student observations about AI's limitations and possibilities, and begin building shared thinking around using AI critically. Foreshadow tomorrow's project launch."
       },
       "seeding_key": {
         "activity_section.key": "b231423b-69c4-46c7-993d-8c7ed377fb50",
-        "lesson_activity.key": "f2077589-76f3-4591-a547-608391755e8d"
-      }
-    },
-    {
-      "key": "e1d7effa-4fe2-4a19-9640-cc943b805328",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "e1d7effa-4fe2-4a19-9640-cc943b805328",
         "lesson_activity.key": "f2077589-76f3-4591-a547-608391755e8d"
       }
     },
@@ -1475,7 +1403,7 @@
       "key": "d19bb9bc-79d5-4792-b104-8e0d1024a989",
       "position": 1,
       "properties": {
-        "progression_name": "Explorations: Co-Creation with AI"
+        "progression_name": "Exploration: Co-Creation with AI"
       },
       "seeding_key": {
         "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989",
@@ -1483,9 +1411,21 @@
       }
     },
     {
-      "key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc",
+      "key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50",
       "position": 2,
       "properties": {
+        "progression_name": "Using the Backpack in Sketch Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50",
+        "lesson_activity.key": "feefa02a-308d-4853-a23f-22927ae6794b"
+      }
+    },
+    {
+      "key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Further Exploration: Co-Creation with AI"
       },
       "seeding_key": {
         "activity_section.key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc",
@@ -1494,7 +1434,7 @@
     },
     {
       "key": "3274455f-ebe7-4c75-a740-10e5f3ae3630",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will meet with both expert and jigsaw groups to share findings and begin synthesizing patterns that will become actionable guidance for co-creating with AI.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Milestone 2 Learning Log from the previous lesson and their KWL Chart from Lesson 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Organize students into their Expert Groups based on the specific exploration they completed in the previous lesson.",
         "duration": "15",
@@ -1507,7 +1447,7 @@
     },
     {
       "key": "c5f69788-d4f6-41b5-87e0-6924138fd237",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -1517,7 +1457,7 @@
     },
     {
       "key": "ee33544a-a229-44a7-a77f-7cf22a653da5",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "First, meet with others who did the same exploration as you. You are the experts on that specific task.",
         "remarks": true
@@ -1529,7 +1469,7 @@
     },
     {
       "key": "e67f6c54-9a50-470e-8846-ab2a4125053f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their experiences with the previous exploration and consider one of the following questions:\n- At what point did the product become \"mostly AI\"?\n- When did it lose your personal \"voice\" or \"values\"?\n- What human input mattered most?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reform groups with members from different Explorations and Mini-Lessons. Explain expectations for sharing and note-taking using the Co-Pilot Debrief organizer."
       },
@@ -1540,7 +1480,7 @@
     },
     {
       "key": "3ca6182a-6930-40ed-83cd-53dffeea7340",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Now we will transition into jigsaw group. Share one finding from your Expert Group. As a group, focus on patterns and rules you found rather than just retelling the steps that you went through.",
         "remarks": true,
@@ -1562,7 +1502,7 @@
     },
     {
       "key": "77354415-4d18-4446-af48-3ad937fe95c8",
-      "position": 8,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1572,7 +1512,7 @@
     },
     {
       "key": "ecae326a-24ef-4ad2-b51b-fb2774532bae",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students update their KWL Chart."
       },
@@ -1583,7 +1523,7 @@
     },
     {
       "key": "53bcc78e-7955-47a6-ad85-c2e66a553258",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "Choose one jigsaw learning from your Learning Log and write one or more responses in the KWL chart that reflects your new understanding or new questions.",
         "remarks": true
@@ -1595,7 +1535,7 @@
     },
     {
       "key": "287ee813-ba0a-4faf-8835-375cfa3509cf",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who give very general answers and prompt them to add a specific example (for instance, a skill they'd keep vs. one they'd offload). For students who need support, offer a sentence stem from the organizer."
       },
@@ -1606,7 +1546,7 @@
     },
     {
       "key": "655a7f94-0912-4ee9-bbeb-bf5103ede97e",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their evidence to create clear, actionable guidelines for how they will use AI for the remainder of the course and in their final project.",
         "duration": "20",
@@ -1619,7 +1559,7 @@
     },
     {
       "key": "a3ba5f55-6385-45f9-91fe-a2e556aaaaed",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "Use your experience with your Explorations, Mini-Lessons, and your jigsaw conversations to draft a set of advice and guidelines that show how you will act as the Pilot and how you will use the AI as a Co-Pilot. Be specific: include a evidence from your testing.",
         "remarks": true
@@ -1631,7 +1571,7 @@
     },
     {
       "key": "8386eed8-4910-4abf-8997-39409166792d",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students draft their Co-Creation with AI guidance, making choices about medium and selecting layouts from their Digital Gallery Walk (Lesson 2).",
         "tips": [
@@ -1652,7 +1592,7 @@
     },
     {
       "key": "957eed82-ed38-44e0-b029-bfaa2809d562",
-      "position": 15,
+      "position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -1662,7 +1602,7 @@
     },
     {
       "key": "10092d5c-738e-4388-bad7-ba019ffcc27f",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students will begin drafting the Co-Creation with AI portion of their project.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
         "progression_name": "OLD_Project Work - Milestone 2"
@@ -3302,7 +3242,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "OLD_Generating Dancers"
+        "progression": "Generating Dancers"
       },
       "bonus": false,
       "seeding_key": {
@@ -3324,7 +3264,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "OLD_Generating Dancers"
+        "progression": "Generating Dancers"
       },
       "bonus": false,
       "seeding_key": {
@@ -3343,32 +3283,10 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "OLD_How AI Models Work"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026"
-        ],
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "9d8d7e81-8b9f-4c61-ab7b-20f64ede92e5"
-      },
-      "level_keys": [
-        "aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "OLD_Systematic Testing"
+        "progression": "Generating Dancers"
       },
       "bonus": false,
       "seeding_key": {
@@ -3378,10 +3296,32 @@
         "lesson.key": "Lesson 1: Investigating AI Tools",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "1c0e6746-60bc-4d2b-b27e-5c1904189d77"
+        "activity_section.key": "93d2d469-00e7-465c-ae32-9c03e37ad3e4"
       },
       "level_keys": [
         "aid-thinking-critically-lesson1-level4_2026-test_2026-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "How to write a good prompt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thinking_critically_lesson1_level4_2026"
+        ],
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "9d8d7e81-8b9f-4c61-ab7b-20f64ede92e5"
+      },
+      "level_keys": [
+        "thinking_critically_lesson1_level4_2026"
       ]
     },
     {
@@ -3390,20 +3330,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "End of Lesson Survey"
+        "progression": "Try a AI Chat"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson1-lessonsurvey_2026-pilot_2026"
+          "thinking_critically_lesson1_level5_2026"
         ],
         "lesson.key": "Lesson 1: Investigating AI Tools",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "e1d7effa-4fe2-4a19-9640-cc943b805328"
+        "activity_section.key": "b8b61ae8-6fe6-485c-b49c-3fc00d8c5157"
       },
       "level_keys": [
-        "thinking-critically-about-ai-lesson1-lessonsurvey_2026-pilot_2026"
+        "thinking_critically_lesson1_level5_2026"
       ]
     },
     {
@@ -3566,7 +3506,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explorations: Co-Creation with AI"
+        "progression": "Exploration: Co-Creation with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -3585,10 +3525,10 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explorations: Co-Creation with AI"
+        "progression": "Using the Backpack in Sketch Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -3598,7 +3538,7 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50"
       },
       "level_keys": [
         "thinking_critically_lesson4_level2_2026"
@@ -3607,10 +3547,10 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Explorations: Co-Creation with AI"
+        "progression": "Using the Backpack in Sketch Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -3620,7 +3560,7 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50"
       },
       "level_keys": [
         "thinking_critically_lesson4_level3_2026"
@@ -3629,10 +3569,10 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explorations: Co-Creation with AI"
+        "progression": "Further Exploration: Co-Creation with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -3642,7 +3582,7 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc"
       },
       "level_keys": [
         "thinking_critically_lesson4_level4_2026"
@@ -3651,49 +3591,27 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "OLD_Project Work - Milestone 2"
+        "progression": "Further Exploration: Co-Creation with AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aid-thinking-critically-lesson4-level2a_2026-test_2026-pilot_2026"
+          "thinking_critically_lesson4_level5_2026"
         ],
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "10092d5c-738e-4388-bad7-ba019ffcc27f"
+        "activity_section.key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc"
       },
       "level_keys": [
-        "aid-thinking-critically-lesson4-level2a_2026-test_2026-pilot_2026"
+        "thinking_critically_lesson4_level5_2026"
       ]
     },
     {
       "chapter": 19,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson4-lessonsurvey_2026-pilot_2026"
-        ],
-        "lesson.key": "Lesson 4: Guidelines for Working with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "5f9ab2b1-a1f3-4c55-9723-2ab88fa69868"
-      },
-      "level_keys": [
-        "thinking-critically-about-ai-lesson4-lessonsurvey_2026-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3715,7 +3633,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3737,7 +3655,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3759,7 +3677,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3781,7 +3699,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3803,7 +3721,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3825,7 +3743,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3847,7 +3765,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3869,7 +3787,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3891,7 +3809,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3913,7 +3831,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3935,7 +3853,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3957,7 +3875,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3979,7 +3897,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4001,7 +3919,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4023,7 +3941,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4045,7 +3963,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4067,7 +3985,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4089,7 +4007,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4110,7 +4028,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4132,7 +4050,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4154,7 +4072,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4215,9 +4133,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026",
+        "level.key": "aid-thinking-critically-lesson1-level4_2026-test_2026-pilot_2026",
         "script_level.level_keys": [
-          "aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026"
+          "aid-thinking-critically-lesson1-level4_2026-test_2026-pilot_2026"
+        ],
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "93d2d469-00e7-465c-ae32-9c03e37ad3e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thinking_critically_lesson1_level4_2026",
+        "script_level.level_keys": [
+          "thinking_critically_lesson1_level4_2026"
         ],
         "lesson.key": "Lesson 1: Investigating AI Tools",
         "lesson_group.key": "lessonGroup-3",
@@ -4227,26 +4157,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "aid-thinking-critically-lesson1-level4_2026-test_2026-pilot_2026",
+        "level.key": "thinking_critically_lesson1_level5_2026",
         "script_level.level_keys": [
-          "aid-thinking-critically-lesson1-level4_2026-test_2026-pilot_2026"
+          "thinking_critically_lesson1_level5_2026"
         ],
         "lesson.key": "Lesson 1: Investigating AI Tools",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "1c0e6746-60bc-4d2b-b27e-5c1904189d77"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "thinking-critically-about-ai-lesson1-lessonsurvey_2026-pilot_2026",
-        "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson1-lessonsurvey_2026-pilot_2026"
-        ],
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "e1d7effa-4fe2-4a19-9640-cc943b805328"
+        "activity_section.key": "b8b61ae8-6fe6-485c-b49c-3fc00d8c5157"
       }
     },
     {
@@ -4354,7 +4272,7 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50"
       }
     },
     {
@@ -4366,7 +4284,7 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "cf5ceb27-ddd7-4c31-b78f-5afad4441d50"
       }
     },
     {
@@ -4378,31 +4296,19 @@
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "d19bb9bc-79d5-4792-b104-8e0d1024a989"
+        "activity_section.key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc"
       }
     },
     {
       "seeding_key": {
-        "level.key": "aid-thinking-critically-lesson4-level2a_2026-test_2026-pilot_2026",
+        "level.key": "thinking_critically_lesson4_level5_2026",
         "script_level.level_keys": [
-          "aid-thinking-critically-lesson4-level2a_2026-test_2026-pilot_2026"
+          "thinking_critically_lesson4_level5_2026"
         ],
         "lesson.key": "Lesson 4: Guidelines for Working with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "10092d5c-738e-4388-bad7-ba019ffcc27f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "thinking-critically-about-ai-lesson4-lessonsurvey_2026-pilot_2026",
-        "script_level.level_keys": [
-          "thinking-critically-about-ai-lesson4-lessonsurvey_2026-pilot_2026"
-        ],
-        "lesson.key": "Lesson 4: Guidelines for Working with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "thinking-critically-about-ai-2026",
-        "activity_section.key": "5f9ab2b1-a1f3-4c55-9723-2ab88fa69868"
+        "activity_section.key": "6eab6fe1-2d6a-4c7b-bc32-d6791e3fa8fc"
       }
     },
     {
@@ -4686,20 +4592,6 @@
       }
     },
     {
-      "name": "About KWL Charts",
-      "url": "https://docs.google.com/document/d/1l_R69upqr3R7iOoXRVN6QPFBuuQvzY2-pVpTsbFiamA/edit?usp=sharing",
-      "key": "about_kwl_charts",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "about_kwl_charts"
-      }
-    },
-    {
       "name": "All Resources",
       "url": "/courses/aid-thinking-critically-about-ai-2025/units/1/resources",
       "key": "all_resources",
@@ -4919,36 +4811,6 @@
       }
     },
     {
-      "name": "KWL Chart",
-      "url": "https://docs.google.com/document/d/1RYgmTXz-SJyA5wEdEibB_zJDD_0s7NT-NaA4j2hu-wA/edit?usp=sharing",
-      "key": "kwl_chart",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "kwl_chart"
-      }
-    },
-    {
-      "name": "Milestone 1 Learning Log",
-      "url": "https://docs.google.com/document/d/1nlBmgN6pYzz0SgBShEmwx5BD9npnSL2gDuSpMjsjyk4/edit?usp=sharing",
-      "key": "milestone_1_learning_log",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "milestone_1_learning_log"
-      }
-    },
-    {
       "name": "Milestone 2 Learning Log",
       "url": "https://docs.google.com/document/d/14DM5b88eZfEIqGdkUEeRApwGOsaw4mR0JcKe7r5usEw/edit?usp=sharing",
       "key": "milestone_2_learning_log",
@@ -5051,20 +4913,6 @@
       }
     },
     {
-      "name": "That's AI? Stations",
-      "url": "https://docs.google.com/document/d/1vBHOJpV2dX20sEpm12YdDYfHdXyLX9Jrq05Huez--vw/edit?usp=sharing",
-      "key": "that_s_ai_stations",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "that_s_ai_stations"
-      }
-    },
-    {
       "name": "The AI Credibility Meter",
       "url": "https://docs.google.com/presentation/d/1BY2-q7J3r_iyfmP3PuwBi1Pad_GV_7xA9wevo0X-czM/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "the_ai_credibility_meter",
@@ -5116,31 +4964,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Investigating AI Tools",
-        "resource.key": "about_kwl_charts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
         "resource.key": "investigating_ai_tools"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "resource.key": "kwl_chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "resource.key": "milestone_1_learning_log"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "resource.key": "that_s_ai_stations"
       }
     },
     {
@@ -5528,6 +5352,16 @@
       }
     },
     {
+      "key": "2b556bcb-c1a5-43c0-ace9-7326a3b9a418",
+      "properties": {
+        "description": "Experiment with prompts to see how my words affect what AI creates."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "objective.key": "2b556bcb-c1a5-43c0-ace9-7326a3b9a418"
+      }
+    },
+    {
       "key": "3dce7269-c1c9-4a7e-b096-25e36ecd13f3",
       "properties": {
         "description": "Recognize patterns of bias or incomplete information in AI responses through repeated testing"
@@ -5598,16 +5432,6 @@
       }
     },
     {
-      "key": "79b34fbd-8b12-4ce9-8b6f-4da29532b43a",
-      "properties": {
-        "description": "Identify examples of visible, hidden, helpful, and potentially risky AI systems."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "objective.key": "79b34fbd-8b12-4ce9-8b6f-4da29532b43a"
-      }
-    },
-    {
       "key": "7ad545f1-8124-4538-bdf6-e15bf3d9de85",
       "properties": {
         "description": "Refine their product based on peer and AI feedback to ensure their advice is clear, fair, and easy-to-understand"
@@ -5635,16 +5459,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: Defending Your Data",
         "objective.key": "894f57de-17f9-4c8d-823c-da9a71eddc0b"
-      }
-    },
-    {
-      "key": "8fd02309-a6c6-4cd4-be32-42a994e4f237",
-      "properties": {
-        "description": "Describe AI as a system that learns patterns from data to make predictions."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "objective.key": "8fd02309-a6c6-4cd4-be32-42a994e4f237"
       }
     },
     {
@@ -5705,16 +5519,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 7: Exploring Data in AI",
         "objective.key": "bc110819-929d-4849-9d6f-596465443691"
-      }
-    },
-    {
-      "key": "deb44b84-2ab6-4e5f-93d5-6f458049c5d1",
-      "properties": {
-        "description": "Test an AI image generator by modifying prompts and observing the outputs to evaluate its usefulness."
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Investigating AI Tools",
-        "objective.key": "deb44b84-2ab6-4e5f-93d5-6f458049c5d1"
       }
     },
     {
