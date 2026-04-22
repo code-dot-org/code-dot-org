@@ -65,6 +65,15 @@ module Cdo
             assert_includes ddl, 'AUTO REFRESH NO'
           end
 
+          it 'includes DROP IF EXISTS before CREATE' do
+            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            drop_pos = ddl.index('DROP MATERIALIZED VIEW IF EXISTS')
+            create_pos = ddl.index('CREATE MATERIALIZED VIEW')
+            refute_nil drop_pos
+            refute_nil create_pos
+            assert_operator drop_pos, :<, create_pos
+          end
+
           it 'returns nil when the model has no columns' do
             model.stubs(:columns).returns([])
             assert_nil MaterializedViewGenerator.new(model).generate_pii_ddl
@@ -194,6 +203,92 @@ module Cdo
             File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
             result = MaterializedViewGenerator.render_ddl(template_path, environment_type: 'production')
             assert_equal 'SELECT * FROM production_db.table;', result
+          end
+
+          it 'accepts symbol environment_type' do
+            template_path = File.join(tmpdir, 'test_template.sql.erb')
+            File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
+            result = MaterializedViewGenerator.render_ddl(template_path, environment_type: :test)
+            assert_equal 'SELECT * FROM test_db.table;', result
+          end
+        end
+
+        describe '#create_or_replace_views' do
+          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:client) {mock('redshift_client')}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'saves templates then executes rendered DDL for both views' do
+            executed_sql = []
+            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal 2, executed_sql.length
+            assert_includes executed_sql[0], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users'
+            assert_includes executed_sql[0], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
+            assert_includes executed_sql[1], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production.zeroetl_users'
+            assert_includes executed_sql[1], 'CREATE MATERIALIZED VIEW dashboard_production.zeroetl_users'
+
+            assert_equal ['dashboard_production_pii.zeroetl_users', 'dashboard_production.zeroetl_users'], result
+          end
+
+          it 'saves ERB template files to the template directory' do
+            client.stubs(:execute)
+            generator.create_or_replace_views(client: client, environment_type: :test)
+
+            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
+          end
+
+          it 'renders ERB placeholders in the executed SQL' do
+            executed_sql = []
+            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+
+            generator.create_or_replace_views(client: client, environment_type: :test)
+
+            executed_sql.each do |sql|
+              assert_includes sql, 'test_learningplatform_mysql_zeroetl.dashboard_test.users'
+              refute_includes sql, '<%='
+            end
+          end
+
+          it 'accepts symbol environment_type' do
+            executed_sql = []
+            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_includes executed_sql[0], 'dashboard_production_pii'
+            assert_equal 'dashboard_production_pii.zeroetl_users', result[0]
+          end
+
+          it 'returns empty array when model has no columns' do
+            model.stubs(:columns).returns([])
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+            assert_empty result
+          end
+
+          it 'skips non-pii view when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            executed_sql = []
+            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal 1, executed_sql.length
+            assert_includes executed_sql[0], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users'
+            assert_includes executed_sql[0], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
+            assert_equal ['dashboard_production_pii.zeroetl_users'], result
           end
         end
 

@@ -67,13 +67,33 @@ module Cdo
           files
         end
 
+        # Generates, saves, renders, and executes the DDL for both PII and non-PII materialized views.
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol] e.g., :production, :test
+        # @return [Array<String>] fully qualified names of views created
+        def create_or_replace_views(client:, environment_type:)
+          env = environment_type.to_s
+          saved_files = save_ddl_templates
+          created = []
+
+          saved_files.each do |template_path|
+            sql = self.class.render_ddl(template_path, environment_type: env)
+            client.execute(sql)
+
+            schema = template_path.end_with?('_pii.sql.erb') ? "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii" : "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}"
+            created << "#{schema}.#{view_name}"
+          end
+
+          created
+        end
+
         # Renders a DDL ERB template file with the given environment type.
         # @param template_path [String] path to the .sql.erb template file
-        # @param environment_type [String] the environment type (e.g., 'test' or 'production')
+        # @param environment_type [String, Symbol] the environment type (e.g., :test or :production)
         # @return [String] the rendered SQL DDL
         def self.render_ddl(template_path, environment_type:)
           template = File.read(template_path)
-          ERB.new(template).result_with_hash(environment_type: environment_type)
+          ERB.new(template).result_with_hash(environment_type: environment_type.to_s)
         end
 
         private def non_pii_columns
@@ -88,10 +108,15 @@ module Cdo
           end.map(&:name)
         end
 
+        private def view_name
+          "zeroetl_#{model.table_name}"
+        end
+
         private def build_ddl_erb_template(schema:, columns:)
-          view_name = "zeroetl_#{model.table_name}"
+          qualified_view = "#{schema}.#{view_name}"
           <<~SQL
-            CREATE MATERIALIZED VIEW #{schema}.#{view_name}
+            DROP MATERIALIZED VIEW IF EXISTS #{qualified_view};
+            CREATE MATERIALIZED VIEW #{qualified_view}
               BACKUP NO
               DISTSTYLE KEY DISTKEY (#{distkey_column})
               AUTO REFRESH NO
