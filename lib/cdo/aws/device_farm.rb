@@ -19,7 +19,7 @@ require 'aws-sdk-devicefarm'
 #   3. Ensure AWS credentials are available (instance profile, env vars, etc.).
 
 module Cdo
-  module Aws
+  module AWS
     module DeviceFarm
       # How long (seconds) each desktop test grid session URL remains valid.
       SESSION_EXPIRY_SECONDS = 600 # 10 minutes
@@ -186,8 +186,10 @@ module Cdo
       end
 
       def self.client
-        # Scope-resolve to the AWS SDK's top-level Aws module so Ruby doesn't
-        # try to find an Aws::DeviceFarm::Client under Cdo::Aws::DeviceFarm.
+        # Scope-resolve to be explicit that we mean the AWS SDK's top-level
+        # Aws module (unrelated to our Cdo::AWS namespace). Our module's
+        # case-different name already protects against collision, but the
+        # `::` prefix makes intent unambiguous at the call site.
         @client ||= ::Aws::DeviceFarm::Client.new(region: REGION)
       end
 
