@@ -125,8 +125,7 @@ export default function NodeToolbarShell({
                   handleClose();
                 }}
                 onKeyDown={event => {
-                  // Drive Enter/Space directly instead of letting the
-                  // browser synthesize a click: the synthesized click
+                  // Handle Enter/Space directly. The synthesized click
                   // races with the focus move in handleClose and the
                   // toolbar can end up reopened.
                   if (event.key === 'Enter' || event.key === ' ') {

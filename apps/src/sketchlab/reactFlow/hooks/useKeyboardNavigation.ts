@@ -110,7 +110,7 @@ export function useKeyboardNavigation({
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
 
       // "e" opens the node toolbar. NodeToolbarShell's FocusTrap moves
-      // focus to the first tabbable when isVisible flips.
+      // focus to the first tabbable item when isVisible flips.
       if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
         event.preventDefault();
         openNodeToolbar(focusedNodeId);
