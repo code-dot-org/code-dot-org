@@ -11,6 +11,7 @@ import React, {
   useImperativeHandle,
 } from 'react';
 
+import {findChangedProperties} from '@cdo/apps/aichatLab/redux/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -32,7 +33,7 @@ import {
   uploadFiles,
 } from '../redux';
 import {clearUserAddedSelectionContext} from '../redux/slice';
-import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
   AiChatDisabledState,
@@ -255,6 +256,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     // Whenever model parameters change, 1) reset the chat session if necessary,
     // and 2) log the changed properties to the chat history.
     const previousParameters: ModelParameters = usePrevious(modelParameters);
+    // FIX!!
     useEffect(() => {
       const changedProperties = findChangedProperties(
         previousParameters,

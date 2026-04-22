@@ -80,7 +80,10 @@ const UserChatMessageEditor: React.FunctionComponent<
     isViewingAiTutorVersionFileUpdates
   );
 
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  // FIX!!!
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
+  );
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
   );
