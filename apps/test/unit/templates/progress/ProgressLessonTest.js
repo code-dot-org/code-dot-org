@@ -360,6 +360,7 @@ describe('ProgressLesson', () => {
       ...defaultProps,
       lesson: tutorLesson,
       viewAs: ViewType.Participant,
+      userId: 1,
     };
 
     let realIsEnabled;
@@ -382,11 +383,17 @@ describe('ProgressLesson', () => {
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
-    it('does not show when viewing as instructor', () => {
+    it('shows when viewing as instructor and signed in', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = shallow(
         <ProgressLesson {...tutorProps} viewAs={ViewType.Instructor} />
       );
+      expect(wrapper.text()).toContain('Lesson Tutor');
+    });
+
+    it('does not show when signed out', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(<ProgressLesson {...tutorProps} userId={null} />);
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 

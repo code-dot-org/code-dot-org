@@ -71,6 +71,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
+        grades_teaching: current_user.grades_teaching || [],
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,

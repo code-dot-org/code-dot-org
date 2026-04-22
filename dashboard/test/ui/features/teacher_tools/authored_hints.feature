@@ -29,5 +29,5 @@ Scenario: View Authored Hints
   And the hint lightbulb shows no hints available
 
   # Finally, verify that further clicking the lightbulb has no effect
-  When I press "lightbulb"
+  When I click selector "#lightbulb"
   Then element ".csf-top-instructions button:contains(Yes)" does not exist

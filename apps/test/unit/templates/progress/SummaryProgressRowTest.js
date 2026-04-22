@@ -87,6 +87,7 @@ describe('SummaryProgressRow', () => {
       ...baseProps,
       lesson: tutorLesson,
       viewAs: ViewType.Participant,
+      userId: 1,
     };
 
     let realIsEnabled;
@@ -109,9 +110,15 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
-    it('does not show when viewing as instructor', () => {
+    it('shows when viewing as instructor and signed in', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = setUp({...tutorProps, viewAs: ViewType.Instructor});
+      expect(wrapper.text()).toContain('Lesson Tutor');
+    });
+
+    it('does not show when signed out', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = setUp({...tutorProps, userId: null});
       expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 

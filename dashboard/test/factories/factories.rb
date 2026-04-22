@@ -1530,6 +1530,14 @@ FactoryBot.define do
     resources {nil}
   end
 
+  factory :lesson_insight do
+    lesson
+    association(:student, factory: :student)
+    section
+    teacher_id {nil}
+    insight_response {'{"progress":"test","misconceptions":"none","assessment":"good","next_steps":"continue"}'}
+  end
+
   factory :activity_section do
     sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)

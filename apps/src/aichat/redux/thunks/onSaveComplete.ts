@@ -1,10 +1,10 @@
+import {ViewMode} from '@cdo/apps/aichatLab/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {saveTypeToAnalyticsEvent} from '../../constants';
-import {ViewMode} from '../../types';
 import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
 import {findChangedProperties} from '../utils';
 

@@ -2,6 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
+import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -22,7 +23,6 @@ import {
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
