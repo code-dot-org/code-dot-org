@@ -18,11 +18,22 @@
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
+  // Line anchors get a custom handle-sized focus ring below.
   :global(.react-flow__node:focus-visible),
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  // Line anchors are tiny nodes; apply focus ring to the handle itself so it
+  // stays centered and sized to the visible endpoint.
+  :global(.react-flow__node-lineAnchor:focus-visible) {
+    outline: none;
+  }
+
+  :global(.react-flow__node-lineAnchor:focus-visible .react-flow__handle) {
+    box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
   }
 
   // Controls panel: themed background and text.
