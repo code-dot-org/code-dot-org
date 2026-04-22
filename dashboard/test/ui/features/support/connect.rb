@@ -235,7 +235,7 @@ def quit_browser
   # Release the Device Farm device so subsequent sessions don't block
   # on PENDING_CONCURRENCY.
   if $device_farm_mobile_session_arn
-    Cdo::DeviceFarm.stop_session($device_farm_mobile_session_arn)
+    Cdo::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
     $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil

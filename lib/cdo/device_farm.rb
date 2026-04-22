@@ -105,12 +105,12 @@ module Cdo
     # the pool. Without this, the session stays open until it times out
     # (defaultJobTimeoutMinutes) and blocks subsequent sessions with
     # PENDING_CONCURRENCY.
-    def self.stop_session(session_arn)
+    def self.stop_mobile_session(session_arn)
       return unless session_arn
-      puts "Device Farm: stopping session #{session_arn}"
+      puts "Device Farm: stopping mobile session #{session_arn}"
       client.stop_remote_access_session(arn: session_arn)
     rescue => exception
-      puts "Error stopping Device Farm session: #{exception}"
+      puts "Error stopping Device Farm mobile session: #{exception}"
     end
 
     # ---- Private helpers ----------------------------------------------------
