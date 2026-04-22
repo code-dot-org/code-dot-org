@@ -24,8 +24,8 @@ module Cdo
     SESSION_EXPIRY_SECONDS = 600 # 10 minutes
 
     # Polling parameters for mobile session provisioning.
-    MOBILE_SESSION_TIMEOUT = 360 # 6 minutes -- time for device to boot
-    MOBILE_CONCURRENCY_TIMEOUT = 300 # 5 minutes -- time waiting for a free slot
+    MOBILE_SESSION_TIMEOUT = 600 # 10 minutes -- time for device to boot
+    MOBILE_CONCURRENCY_TIMEOUT = 600 # 10 minutes -- time waiting for a free slot
     MOBILE_SESSION_POLL_INTERVAL = 10 # seconds
 
     # Retry budget for the WebDriver connect (not the session provisioning)
