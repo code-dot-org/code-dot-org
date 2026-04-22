@@ -104,13 +104,13 @@ class Policies::DemoSections
   def self.resolve_unit(unit_name)
     return nil if unit_name.blank?
 
-    Unit.find_by(name: unit_name)
+    Unit.get_from_cache(unit_name, raise_exceptions: false)
   end
 
   def self.resolve_unit_group(unit_group_name)
     return nil if unit_group_name.blank?
 
-    UnitGroup.find_by(name: unit_group_name)
+    UnitGroup.get_from_cache(unit_group_name)
   end
 
   private_class_method :resolve_unit, :resolve_unit_group
