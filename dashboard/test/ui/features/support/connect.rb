@@ -19,6 +19,10 @@ MAX_CONNECT_RETRIES = 3
 SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
 
 # Run all feature scenarios in a single session.
+# TODO: this misses SauceLabs mobile configs, which use `appium:mobile` rather
+# than the bare `mobile` key. Sauce iPhone/iPad runs that don't carry the
+# @single_session tag fall through to per-scenario sessions. Mirror
+# runner.rb's `mobile_browser?` (which checks both keys) as a follow-up.
 def single_session?
   $browser_config['mobile'] || $single_session
 end
