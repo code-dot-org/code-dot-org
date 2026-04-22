@@ -253,6 +253,7 @@ class LessonGroupCard extends Component {
                   name={lessonGroup.key || '(none)'}
                   move={this.handleMoveLessonGroup}
                   remove={this.handleRemoveLessonGroup}
+                  isDeleteable={true}
                 />
               )}
             </div>

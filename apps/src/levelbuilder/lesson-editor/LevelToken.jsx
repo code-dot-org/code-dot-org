@@ -221,7 +221,7 @@ export class LevelTokenContents extends Component {
         {allowMajorCurriculumChanges && isRubricLevel && (
           <div
             style={styles.rubricLock}
-            title="This level is referenced by the lesson's rubric. Remove the rubric first."
+            title="This level is referenced by the lesson's rubric.  Select a different submittable level for the rubric first."
           >
             <i className="fa fa-lock" />
           </div>

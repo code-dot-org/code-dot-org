@@ -816,7 +816,7 @@ class ScriptLevel < ApplicationRecord
     rubric_level_id = lesson.rubric.level_id
     rubric_level = levels.find {|l| l.id == rubric_level_id}
     return unless rubric_level
-    errors.add(:base, "Cannot remove level '#{rubric_level.name}' from this lesson because it is referenced by a rubric. Remove the rubric first.")
+    errors.add(:base, "Cannot remove level '#{rubric_level.name}' from this lesson because it is referenced by a rubric.  Select a different submittable level for the rubric first.")
     throw(:abort)
   end
 end
