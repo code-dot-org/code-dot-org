@@ -301,6 +301,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
         primaryApi: new BackpackClientApi('aichat', null),
         secondaryApis: {
           sketchlab: new BackpackClientApi('sketchlab', null),
+          weblab2: new BackpackClientApi('weblab2', null),
         },
       };
     }
