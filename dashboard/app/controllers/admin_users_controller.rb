@@ -459,6 +459,11 @@ class AdminUsersController < ApplicationController
 
     teacher_user = User.find_by_id(teacher_id)
 
+    unless teacher_user
+      render json: {success: false, message: 'Teacher not found'}, status: :not_found
+      return
+    end
+
     # Get user IDs of all students in the teacher_user's sections
     follower_ids = teacher_user.followers.pluck(:student_user_id)
 
@@ -484,7 +489,11 @@ class AdminUsersController < ApplicationController
       end
     end
 
-    render json: {success: true, message: 'User progress deletion completed'}
+    message = dry_run ? 'Dry run completed successfully' : 'User progress deletion completed'
+    render json: {success: true, message: message}
+  rescue => exception
+    Rails.logger.error "Error in delete_user_progress: #{exception.message}"
+    render json: {success: false, message: 'An error occurred while processing the request'}, status: :internal_server_error
   end
 
   private def restricted_users
