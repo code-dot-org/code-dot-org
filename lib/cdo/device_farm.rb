@@ -84,7 +84,7 @@ module Cdo
         name: "ui-test-#{Time.now.to_i}"
       )
       session_arn = resp.remote_access_session.arn
-      endpoint = wait_for_session_endpoint(session_arn)
+      endpoint = wait_for_mobile_session_endpoint(session_arn)
 
       {url: endpoint, session_arn: session_arn}
     end
@@ -138,7 +138,7 @@ module Cdo
     #     once a slot is acquired.
     TERMINAL_STATUSES = %w[COMPLETED STOPPING STOPPED].freeze
 
-    def self.wait_for_session_endpoint(session_arn)
+    def self.wait_for_mobile_session_endpoint(session_arn)
       concurrency_deadline = Time.now + MOBILE_CONCURRENCY_TIMEOUT
       boot_deadline = nil # set once we leave PENDING_CONCURRENCY
       last_status = nil
@@ -188,6 +188,6 @@ module Cdo
       @client ||= Aws::DeviceFarm::Client.new(region: REGION)
     end
 
-    private_class_method :project_arn_for, :wait_for_session_endpoint, :client
+    private_class_method :project_arn_for, :wait_for_mobile_session_endpoint, :client
   end
 end
