@@ -85,7 +85,6 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   test 'preset_view returns a display projection for a valid preset' do
     unit = create(:unit, name: 'aif2-2025')
     unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
-    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
 
     view = Policies::DemoSections.preset_view(:high)
 
@@ -106,7 +105,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_nil Policies::DemoSections.preset_view(:high)
   end
 
-  test 'preset_view returns nil when the unit has no original unit group' do
+  test 'preset_view returns nil when the unit group cannot be resolved' do
     create(:unit, name: 'aif2-2025')
 
     assert_nil Policies::DemoSections.preset_view(:high)

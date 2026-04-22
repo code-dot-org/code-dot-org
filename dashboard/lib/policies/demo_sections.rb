@@ -61,7 +61,7 @@ class Policies::DemoSections
     unit = resolve_unit(preset[:unit_name])
     return nil unless unit
 
-    unit_group = resolve_unit_group(unit)
+    unit_group = resolve_unit_group(preset[:unit_group_name])
     return nil unless unit_group
 
     {
@@ -107,8 +107,10 @@ class Policies::DemoSections
     Unit.find_by(name: unit_name)
   end
 
-  def self.resolve_unit_group(unit)
-    unit&.get_original_unit_group
+  def self.resolve_unit_group(unit_group_name)
+    return nil if unit_group_name.blank?
+
+    UnitGroup.find_by(name: unit_group_name)
   end
 
   private_class_method :resolve_unit, :resolve_unit_group

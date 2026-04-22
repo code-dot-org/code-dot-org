@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -23,6 +24,7 @@ import {
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
+import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
@@ -234,6 +236,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     new UserPreferences().setHasDismissedPersonalizationAlert(true);
   };
 
+  const isLoadingDemoCard = totalSections === 0 && !demoPresetsAreLoaded;
+
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
@@ -281,13 +285,24 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               destructiveLoad={true}
             />
             {!!isMiniTutorialEnabled && <OnboardingChecklist />}
-            {isDemoSectionEnabled &&
-            totalSections === 0 &&
-            !demoPresetsAreLoaded ? null : numSections === 0 ? (
-              <DemoSectionCard
-                isEnabled={isDemoSectionEnabled}
-                showHiddenOnly={showHiddenOnly}
-              />
+            {!isDemoSectionEnabled &&
+              (numSections === 0 ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <SectionList
+                  showHiddenOnly={selectedArchiveToggle === 'archived'}
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              ))}
+            {isDemoSectionEnabled && numSections === 0 ? (
+              isLoadingDemoCard ? (
+                <Spinner size="large" />
+              ) : (
+                <DemoSectionCard
+                  isEnabled={isDemoSectionEnabled}
+                  showHiddenOnly={showHiddenOnly}
+                />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}

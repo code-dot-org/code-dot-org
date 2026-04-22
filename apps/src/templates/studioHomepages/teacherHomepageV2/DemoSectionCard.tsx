@@ -160,7 +160,12 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
               sectionId: section.id.toString(),
             }
           );
-      navigate(nextPath);
+
+      if (nextPath.startsWith('/')) {
+        window.location.assign(nextPath);
+      } else {
+        navigate(nextPath);
+      }
     } catch (error) {
       if (error instanceof DemoSectionCreationError) {
         setNotice({
