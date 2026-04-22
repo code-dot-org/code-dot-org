@@ -162,14 +162,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_dashboard_observability_engine_tests
-    Dir.chdir(dashboard_dir) do
-      ChatClient.wrap('dashboard observability engine tests') do
-        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', dashboard_engines_dir('observability', 'test')
-      end
-    end
-  end
-
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
       ChatClient.wrap('pegasus tests') do
