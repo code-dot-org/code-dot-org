@@ -79,14 +79,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   // If the chat message's display text is what is displayed (i.e. no error or violation)
   const messageVisible =
     displayText === intendedDisplayText &&
-    chatMessage.status !== Status.PROFANITY_VIOLATION &&
-    !teacherFlaggedHidden;
+    chatMessage.status !== Status.PROFANITY_VIOLATION;
 
   // If a user's chat message has a profanity violation
   const userMessageProfanity =
     chatMessage.role === Role.USER &&
-    chatMessage.status === Status.PROFANITY_VIOLATION &&
-    !teacherFlaggedHidden;
+    chatMessage.status === Status.PROFANITY_VIOLATION;
 
   const isAssistant = chatMessage.role === Role.ASSISTANT;
 
@@ -96,34 +94,34 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     return null;
   }
 
-  const footer = getFooter({
-    isTeacherView,
-    messageVisible,
-    userMessageProfanity,
-    isAssistant,
-    chatMessage,
-    canLogToLangfuse,
-    modelParameters,
-    showProfaneUserMessage,
-    setShowProfaneUserMessage,
-  });
-
-  const header = getHeader({
-    isAssistant,
-    assets,
-    buildAssetUrl,
-    userAddedSelectionContext,
-    teacherFlaggedHidden,
-  });
-
   return (
     <ChatMessage
       text={displayText}
       postText={postText}
       role={role}
       messageStyle={getMessageStyle(status, role, teacherFlaggedHidden)}
-      header={header}
-      footer={footer}
+      header={
+        <MessageHeader
+          isAssistant={isAssistant}
+          assets={assets}
+          buildAssetUrl={buildAssetUrl}
+          userAddedSelectionContext={userAddedSelectionContext}
+          teacherFlaggedHidden={teacherFlaggedHidden}
+        />
+      }
+      footer={
+        <MessageFooter
+          isTeacherView={isTeacherView}
+          messageVisible={messageVisible}
+          userMessageProfanity={userMessageProfanity}
+          isAssistant={isAssistant}
+          chatMessage={chatMessage}
+          canLogToLangfuse={canLogToLangfuse}
+          modelParameters={modelParameters}
+          showProfaneUserMessage={showProfaneUserMessage}
+          setShowProfaneUserMessage={setShowProfaneUserMessage}
+        />
+      }
     />
   );
 };
@@ -135,6 +133,11 @@ export function getChatMessageDisplayText(
   showProfaneUserMessage: boolean,
   teacherFlaggedHidden: boolean
 ) {
+  // teacherFlaggedHidden is only true if the message was considered 'safe', but the teacher
+  // flagged it as inappropriate.
+  if (teacherFlaggedHidden) {
+    return 'This message has been flagged by your teacher.';
+  }
   // If Role is USER, display the original message, unless there is a PII violation
   // or a profanity violation and the message is not supposed to be shown.
   if (role === Role.USER) {
@@ -143,9 +146,6 @@ export function getChatMessageDisplayText(
     }
     if (status === Status.PROFANITY_VIOLATION && !showProfaneUserMessage) {
       return commonI18n.aiChatInappropriateUserMessage();
-    }
-    if (teacherFlaggedHidden) {
-      return 'This message has been flagged as inappropriate by the teacher.';
     }
     return chatMessageDisplayText;
   }
@@ -165,13 +165,10 @@ export function getChatMessageDisplayText(
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
   }
-  if (teacherFlaggedHidden) {
-    return 'This message has been flagged as inappropriate by the teacher.';
-  }
   return chatMessageDisplayText;
 }
 
-interface GetHeaderParams {
+interface MessageHeaderProps {
   isAssistant: boolean;
   assets: ChatAsset[] | undefined;
   buildAssetUrl: ((asset: ChatAsset) => string) | undefined;
@@ -179,18 +176,18 @@ interface GetHeaderParams {
   teacherFlaggedHidden: boolean;
 }
 
-function getHeader({
+const MessageHeader: React.FC<MessageHeaderProps> = ({
   isAssistant,
   assets,
   buildAssetUrl,
   userAddedSelectionContext,
   teacherFlaggedHidden,
-}: GetHeaderParams): React.ReactNode {
+}) => {
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   if ((!hasAssets && !hasUserAddedSelectionContext) || teacherFlaggedHidden) {
-    return undefined;
+    return null;
   }
 
   return (
@@ -238,9 +235,9 @@ function getHeader({
         ))}
     </div>
   );
-}
+};
 
-interface GetFooterParams {
+interface MessageFooterProps {
   isTeacherView: boolean;
   messageVisible: boolean;
   userMessageProfanity: boolean;
@@ -252,7 +249,7 @@ interface GetFooterParams {
   setShowProfaneUserMessage: (value: boolean) => void;
 }
 
-function getFooter({
+const MessageFooter: React.FC<MessageFooterProps> = ({
   isTeacherView,
   messageVisible,
   userMessageProfanity,
@@ -262,7 +259,7 @@ function getFooter({
   modelParameters,
   showProfaneUserMessage,
   setShowProfaneUserMessage,
-}: GetFooterParams): React.ReactNode {
+}) => {
   if (isTeacherView) {
     // Guaranteed by the component-level guard, but needed for type narrowing.
     if (!isServerChatEvent(chatMessage)) return null;
@@ -310,7 +307,7 @@ function getFooter({
     );
   }
   return null;
-}
+};
 
 function getMessageStyle(
   status: ValueOf<typeof Status>,

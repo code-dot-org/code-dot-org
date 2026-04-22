@@ -95,9 +95,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
     // Only wrap chat messages in a focusable div for keyboard navigation
     if (isChatMessage(event)) {
-      const teacherFlagged = isCompletedChatMessage(event)
-        ? event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
-        : false;
+      const teacherFlagged =
+        isCompletedChatMessage(event) &&
+        event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
       const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
       return (
         <div
