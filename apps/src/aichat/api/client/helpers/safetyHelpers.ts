@@ -66,10 +66,15 @@ export async function getImageModerationStatus(
     SafeAndSupportedImageTypes
   );
   const image = new File([fileBuffer], filename, {type: mediaType});
-  const moderationStatus = await moderateImage(image, 'aichat', {
-    moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
-    flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
-    assetUrl,
-  });
+  const moderationStatus = await moderateImage(
+    image,
+    'aichat',
+    {
+      moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
+      flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
+      assetUrl,
+    },
+    {Violence: 2}
+  );
   return moderationStatus;
 }

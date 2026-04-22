@@ -1,6 +1,15 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {
+  AiCustomizations,
+  LevelAichatSettings,
+  ModelCardInfo,
+  SaveError,
+  SaveType,
+  ViewMode,
+  Visibility,
+} from '@cdo/apps/aichatLab/types';
+import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '@cdo/apps/aichatLab/views/modelCustomization/constants';
@@ -13,13 +22,7 @@ import {
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
 import {
-  AiCustomizations,
   ChatEvent,
-  LevelAichatSettings,
-  ModelCardInfo,
-  SaveType,
-  ViewMode,
-  Visibility,
   isModelUpdate,
   isNotification,
   isUserActionEvent,
@@ -27,7 +30,6 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   ChatAsset,
-  SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
