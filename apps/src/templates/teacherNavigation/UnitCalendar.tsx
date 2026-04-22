@@ -187,6 +187,7 @@ const UnitCalendar: React.FC = () => {
               <div className={styles.calendarDropdown}>
                 <SimpleDropdown
                   name="minutesPerWeek"
+                  className={styles.calendarMinutesPerWeekDropdown}
                   onChange={event => handleDropdownChange(event.target.value)}
                   items={weeklyMinutesOptions}
                   selectedValue={weeklyInstructionalMinutes}
