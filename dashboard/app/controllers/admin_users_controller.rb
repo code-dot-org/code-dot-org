@@ -523,7 +523,7 @@ class AdminUsersController < ApplicationController
     end
 
     message = dry_run ? 'Dry run completed successfully' : 'User progress deletion completed'
-    render json: {success: true, message: message}
+    render json: {success: true, dry_run: dry_run, message: message}
   rescue => exception
     Rails.logger.error "Error in delete_user_progress: #{exception.message}"
     render json: {success: false, message: 'An error occurred while processing the request'}, status: :internal_server_error
