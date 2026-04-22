@@ -1,5 +1,5 @@
 @import 'color.scss';
-@import './aichat-common.module.scss';
+@import '../../aichat/views/aichat-common.module.scss';
 @import '../../mixins.scss';
 
 //200px is a value got from visual comparison (screen collapses when columns width is smaller than 196.7px,
@@ -72,9 +72,4 @@ $column-min-width: 200px;
 
 .workspaceHeaderContent {
   @include center-header-content(false);
-}
-
-.templateIconWrapper {
-  margin-right: auto;
-  margin-left: -16px; // Offset the column gap to bring non-header icon beside header
 }
