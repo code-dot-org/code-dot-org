@@ -11,6 +11,8 @@ import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {
   DEFAULT_PANEL_LINK_WIDTH,
+  DEFAULT_PANEL_LINK_X,
+  DEFAULT_PANEL_LINK_Y,
   Panel,
   PanelLayout,
   PanelLink,
@@ -23,6 +25,12 @@ const createKey = (levelName: string) => levelName + '-' + createUuid();
 
 const PANEL_WIDTH = 1920;
 const PANEL_HEIGHT = 1080;
+
+// Fraction of the viewport width that the pinned preview occupies. Keep in
+// sync with `.panelsContainerPinned { width: 29vw }` in edit-panels.module.scss
+// — the scale transform on the inner 1920x1080 surface is derived from this
+// value.
+const PINNED_WIDTH_VIEWPORT_FRACTION = 0.29;
 
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {
@@ -73,7 +81,9 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       const editorOffscreen =
         !!editor && editor.getBoundingClientRect().bottom <= 0;
       setPinPreview(slot.getBoundingClientRect().top <= 0 && !editorOffscreen);
-      setPinnedScale((window.innerWidth * 0.29) / PANEL_WIDTH);
+      setPinnedScale(
+        (window.innerWidth * PINNED_WIDTH_VIEWPORT_FRACTION) / PANEL_WIDTH
+      );
     };
     onScroll();
     window.addEventListener('scroll', onScroll, {passive: true});
@@ -288,8 +298,8 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
     if (!firstOtherKey) return;
     const newLink: PanelLink = {
       text: '',
-      x: 50,
-      y: 50,
+      x: DEFAULT_PANEL_LINK_X,
+      y: DEFAULT_PANEL_LINK_Y,
       targetKey: firstOtherKey,
     };
     updatePanel({...panel, links: [...links, newLink]});

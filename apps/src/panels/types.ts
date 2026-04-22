@@ -46,3 +46,8 @@ export interface PanelLink {
 }
 
 export const DEFAULT_PANEL_LINK_WIDTH = 40;
+
+// Default placement for a newly-added link: center of the panel, in
+// percent-of-panel coordinates.
+export const DEFAULT_PANEL_LINK_X = 50;
+export const DEFAULT_PANEL_LINK_Y = 50;
