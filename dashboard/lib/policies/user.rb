@@ -39,16 +39,16 @@ class Policies::User
   # - Be a teacher
   # - Not already be verified
   # - Have the provider-specific teacher role in the auth payload
-  def self.oauth_verified_teacher_candidate?(user, auth, provider:)
+  def self.oauth_verified_teacher_candidate?(user:, auth_hash:, provider:)
     return false unless user.teacher?
     return false if user.verified_teacher?
 
     case provider
     when AuthenticationOption::CLEVER
-      roles = auth&.dig(:extra, :raw_info, :canonical, :data, :roles)
+      roles = auth_hash&.dig(:extra, :raw_info, :canonical, :data, :roles)
       roles.respond_to?(:key?) && (roles.key?(:teacher) || roles.key?('teacher'))
     when AuthenticationOption::CLASSLINK
-      auth&.dig(:extra, :raw_info, :role).to_s.casecmp?(User::TYPE_TEACHER)
+      auth_hash&.dig(:extra, :raw_info, :role).to_s.casecmp?(User::TYPE_TEACHER)
     else
       false
     end

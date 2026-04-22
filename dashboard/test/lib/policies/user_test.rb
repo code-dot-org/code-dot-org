@@ -60,51 +60,51 @@ class Policies::UserTest < ActiveSupport::TestCase
 
   test 'oauth_verified_teacher_candidate? returns true for unverified Clever teacher' do
     teacher = create(:teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    assert Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
+    assert Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLEVER)
   end
 
   test 'oauth_verified_teacher_candidate? returns false for Clever staff role' do
     teacher = create(:teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {staff: {}}}}}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {staff: {}}}}}})
 
-    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
+    refute Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLEVER)
   end
 
   test 'oauth_verified_teacher_candidate? returns false for Clever student' do
     student = create(:student)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    refute Policies::User.oauth_verified_teacher_candidate?(student, auth, provider: AuthenticationOption::CLEVER)
+    refute Policies::User.oauth_verified_teacher_candidate?(user: student, auth_hash:, provider: AuthenticationOption::CLEVER)
   end
 
   test 'oauth_verified_teacher_candidate? returns false for already verified Clever teacher' do
     teacher = create(:authorized_teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {canonical: {data: {roles: {teacher: {}}}}}})
 
-    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLEVER)
+    refute Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLEVER)
   end
 
   test 'oauth_verified_teacher_candidate? returns true for unverified ClassLink teacher' do
     teacher = create(:teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
 
-    assert Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
+    assert Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLASSLINK)
   end
 
   test 'oauth_verified_teacher_candidate? returns false for ClassLink student' do
     teacher = create(:teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Student'}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Student'}})
 
-    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
+    refute Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLASSLINK)
   end
 
   test 'oauth_verified_teacher_candidate? returns false for already verified ClassLink teacher' do
     teacher = create(:authorized_teacher)
-    auth = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
+    auth_hash = OmniAuth::AuthHash.new(extra: {raw_info: {role: 'Teacher'}})
 
-    refute Policies::User.oauth_verified_teacher_candidate?(teacher, auth, provider: AuthenticationOption::CLASSLINK)
+    refute Policies::User.oauth_verified_teacher_candidate?(user: teacher, auth_hash:, provider: AuthenticationOption::CLASSLINK)
   end
 
   describe '.personal_account?' do
