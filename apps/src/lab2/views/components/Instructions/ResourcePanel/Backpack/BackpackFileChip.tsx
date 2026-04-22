@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -13,7 +13,9 @@ import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/Resour
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import {
   fetchAndSaveFile,
@@ -70,6 +72,27 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
+
+  const uploadImage = useCallback(
+    async (blob: Blob, fileType: string, errorMessage: string) => {
+      const uuid = createUuid();
+      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+      try {
+        await HttpClient.put(uploadUrl, blob);
+        return uploadUrl;
+      } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(
+            'Backpack could not upload image file to assets channel',
+            error as Error
+          );
+        addAlert('danger', errorMessage);
+        return undefined;
+      }
+    },
+    [channelId, addAlert]
+  );
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported =
     fileExtension && supportedFileTypes.includes(fileExtension);
@@ -108,7 +131,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       await handleSaveSupportFile(
         dialogControl,
         backpackApi,
-        channelId,
+        uploadImage,
         addAlert,
         saveFileToProject,
         createNewProjectFile,
@@ -120,7 +143,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       await handleSaveDuplicateFile(
         dialogControl,
         backpackApi,
-        channelId,
+        uploadImage,
         addAlert,
         saveFileToProject,
         createNewProjectFile,
@@ -135,7 +158,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       await fetchAndSaveFile({
         successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
         backpackApi,
-        channelId,
+        uploadImage,
         addAlert,
         saveFile: saveFileToProject,
         createNewFile: createNewProjectFile,

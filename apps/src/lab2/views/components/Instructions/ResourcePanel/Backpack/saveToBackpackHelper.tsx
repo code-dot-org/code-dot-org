@@ -5,14 +5,16 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
-import {createUuid} from '@cdo/apps/utils';
 
 export const handleSaveSupportFile = async (
   dialogControl: DialogControlInterface,
   backpackApi: BackpackClientApi,
-  channelId: string,
+  uploadImage: (
+    blob: Blob,
+    fileType: string,
+    errorMessage: string
+  ) => Promise<string | undefined>,
   addAlert: (type: 'success' | 'danger', message: string) => void,
   saveFile: (fileId: string, contents: string, url?: string) => void,
   createNewFile: (fileName: string, contents: string, url?: string) => void,
@@ -33,7 +35,7 @@ export const handleSaveSupportFile = async (
     await fetchAndSaveFile({
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
-      channelId,
+      uploadImage,
       addAlert,
       saveFile,
       createNewFile,
@@ -47,7 +49,11 @@ export const handleSaveSupportFile = async (
 export const handleSaveDuplicateFile = async (
   dialogControl: DialogControlInterface,
   backpackApi: BackpackClientApi,
-  channelId: string,
+  uploadImage: (
+    blob: Blob,
+    fileType: string,
+    errorMessage: string
+  ) => Promise<string | undefined>,
   addAlert: (type: 'success' | 'danger', message: string) => void,
   saveFile: (fileId: string, contents: string, url?: string) => void,
   createNewFile: (fileName: string, contents: string, url?: string) => void,
@@ -82,7 +88,7 @@ export const handleSaveDuplicateFile = async (
     await fetchAndSaveFile({
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
       backpackApi,
-      channelId,
+      uploadImage,
       addAlert,
       saveFile,
       createNewFile,
@@ -97,7 +103,7 @@ export const handleSaveDuplicateFile = async (
     await fetchAndSaveFile({
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
-      channelId,
+      uploadImage,
       addAlert,
       saveFile,
       createNewFile,
@@ -112,7 +118,11 @@ export const handleSaveDuplicateFile = async (
 export interface FetchAndSaveFileParams {
   successMetric: string;
   backpackApi: BackpackClientApi;
-  channelId: string;
+  uploadImage: (
+    blob: Blob,
+    fileType: string,
+    errorMessage: string
+  ) => Promise<string | undefined>;
   addAlert: (type: 'success' | 'danger', message: string) => void;
   saveFile: (fileId: string, contents: string, url?: string) => void;
   createNewFile: (fileName: string, contents: string, url?: string) => void;
@@ -130,7 +140,7 @@ export interface FetchAndSaveFileParams {
 export const fetchAndSaveFile = async ({
   successMetric,
   backpackApi,
-  channelId,
+  uploadImage,
   addAlert,
   saveFile,
   createNewFile,
@@ -160,8 +170,6 @@ export const fetchAndSaveFile = async ({
   if (response?.headers.get('Content-Type')?.startsWith('image/')) {
     const fileType = selectedFileName.split('.').pop();
     const blob = await response.blob();
-    const uuid = createUuid();
-    const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
 
     // Moderate image if file is from a secondary backpack.
     if (isSecondaryBackpack && fileType) {
@@ -172,17 +180,11 @@ export const fetchAndSaveFile = async ({
 
       const moderationStatus = await moderateImage(file, appName ?? '', {
         uploaderType: 'Lab2FileUploader',
-        assetUrl: uploadUrl,
       });
       if (moderationStatus === 'flagged') {
         // Callback function so if user accepts flagged image, we can save the image to the project.
         const saveBackpackImageFileToProjectFunction = async () => {
-          const uploadedUrl = await handleSaveImageToChannelAssets(
-            uploadUrl,
-            blob,
-            errorMessage,
-            addAlert
-          );
+          const uploadedUrl = await uploadImage(blob, fileType, errorMessage);
           if (uploadedUrl) {
             await handleSaveFileToProject(
               newFileName,
@@ -199,7 +201,7 @@ export const fetchAndSaveFile = async ({
             );
           }
         };
-        // FlagedImageModal will be shown to the user and user can choose to add the image file to the project or not.
+        // FlaggedImageModal will be shown to the user and user can choose to add the image file to the project or not.
         onImageFlagged &&
           onImageFlagged(
             file,
@@ -211,12 +213,7 @@ export const fetchAndSaveFile = async ({
     }
 
     // Proceed without moderation because image was already moderated when uploaded to project (for primary backpack files).
-    const uploadedUrl = await handleSaveImageToChannelAssets(
-      uploadUrl,
-      blob,
-      errorMessage,
-      addAlert
-    );
+    const uploadedUrl = await uploadImage(blob, fileType ?? '', errorMessage);
     if (uploadedUrl) {
       url = uploadedUrl;
     } else {
@@ -238,29 +235,6 @@ export const fetchAndSaveFile = async ({
     successMetric,
     successMessage
   );
-};
-
-// Handle image file content as a blob, and upload as an asset.
-// Return the url for the new file contents.
-const handleSaveImageToChannelAssets = async (
-  uploadUrl: string,
-  blob: Blob,
-  errorMessage: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void
-): Promise<string | undefined> => {
-  try {
-    await HttpClient.put(uploadUrl, blob);
-    return uploadUrl;
-  } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError(
-        'Backpack could not upload image file to assets channel',
-        error as Error
-      );
-    addAlert('danger', errorMessage);
-    return undefined;
-  }
 };
 
 // Save backpack file to project.
