@@ -10,19 +10,46 @@ $full-height: 1080px;
   flex-direction: column;
 }
 
+// Reserves layout space for the preview so that pinning via `position: fixed`
+// on the inner element does not collapse the surrounding page.
+.panelsSlot {
+  height: $full-height * $scale-factor;
+  width: $full-width * $scale-factor;
+  margin-bottom: 25px;
+}
+
 .panelsContainer {
   position: relative;
   height: $full-height * $scale-factor;
   width: $full-width * $scale-factor;
-  background-color: #121212;
-  margin-bottom: 25px;
+}
+
+// Applied to .panelsContainer when the slot's top has scrolled above the
+// viewport. Pins a shrunk version of the preview to the top-left corner of
+// the page; the slot keeps its reserved height so content below does not
+// jump. The inner scale transform uses the `--pinned-scale` custom
+// property, which EditPanels sets from JS based on window.innerWidth so it
+// tracks viewport changes without relying on CSS length-division support.
+.panelsContainerPinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 30vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+
+  .fullSizeContainer {
+    transform: scale(var(--pinned-scale, 0.5));
+  }
 }
 
 .fullSizeContainer {
   position: relative;
   width: $full-width;
   height: $full-height;
-  transform: scale($scale-factor) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: scale($scale-factor);
 }
 
 .panelEditors {

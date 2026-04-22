@@ -53,6 +53,31 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
   const [useLinks, setUseLinks] = useState<boolean>(initialUseLinks);
   const [toastMessage, setToastMessage] = useState('');
   const [toastIndex, setToastIndex] = useState(0);
+  const [pinPreview, setPinPreview] = useState(false);
+  const [pinnedScale, setPinnedScale] = useState(0.5);
+  const previewSlotRef = useRef<HTMLDivElement | null>(null);
+
+  // Pin the preview to the top of the viewport once its reserved slot scrolls
+  // above it. We drive this from a scroll listener because
+  // `position: sticky` does not reliably engage on the level edit page, where
+  // the preview lives many layers deep in flex / Bootstrap collapse ancestors.
+  // We also track the pinned scale so the shrunk 30vw preview renders at the
+  // correct zoom for the inner 1920x1080 surface as the viewport resizes.
+  useEffect(() => {
+    const onScroll = () => {
+      const slot = previewSlotRef.current;
+      if (!slot) return;
+      setPinPreview(slot.getBoundingClientRect().top <= 0);
+      setPinnedScale((window.innerWidth * 0.3) / PANEL_WIDTH);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
 
   // Update a panel. Replaces a panel with the given key with the new panel.
   const updatePanel = useCallback(
@@ -143,21 +168,33 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <Typography variant="h3" gutterBottom>
         Preview
       </Typography>
-      <div className={moduleStyles.panelsContainer}>
-        <Toast message={toastMessage} index={toastIndex} />
-        <div className={moduleStyles.fullSizeContainer}>
-          <ThemeProvider>
-            <PanelsView
-              panels={panels}
-              onContinue={onContinue}
-              targetWidth={PANEL_WIDTH}
-              targetHeight={PANEL_HEIGHT}
-              offerBrowserTts={false}
-              resetOnChange={false}
-              levelId={null}
-              useLinks={useLinks}
-            />
-          </ThemeProvider>
+      <div ref={previewSlotRef} className={moduleStyles.panelsSlot}>
+        <div
+          className={classNames(
+            moduleStyles.panelsContainer,
+            pinPreview && moduleStyles.panelsContainerPinned
+          )}
+          style={
+            pinPreview
+              ? ({'--pinned-scale': pinnedScale} as React.CSSProperties)
+              : undefined
+          }
+        >
+          <Toast message={toastMessage} index={toastIndex} />
+          <div className={moduleStyles.fullSizeContainer}>
+            <ThemeProvider>
+              <PanelsView
+                panels={panels}
+                onContinue={onContinue}
+                targetWidth={PANEL_WIDTH}
+                targetHeight={PANEL_HEIGHT}
+                offerBrowserTts={false}
+                resetOnChange={false}
+                levelId={null}
+                useLinks={useLinks}
+              />
+            </ThemeProvider>
+          </div>
         </div>
       </div>
       <div className={moduleStyles.fieldRow}>
