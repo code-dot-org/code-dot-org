@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Classroom Context
 
-#### This is the fifth unit of the course, building off the content from units one through three. The course was designed to teach in order.
+#### This is the 6th, and final, unit of the course, building off the content from the previous units. 
 
-#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students navigate through a capstone project**.
 
 <div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
 
@@ -29,11 +29,11 @@ markdown <<MARKDOWN
 
 ## Unit Length and Format
 
-#### **Total Duration:** Approximately 3 weeks
-#### **Structure:** Eleven 45-minute lessons and one 5-day culminating project
+#### **Total Duration:** Approximately 2 weeks
+#### **Structure:** 10 days structred capstone project
 
-# ****Update image - calendar not posted yet**
-<img src="https://images.code.org/64f9fd216d8674befc3da54e558ff1fc-image-1768411220399.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<img src="https://images.code.org/c089a1b337eaeb996ef66189c6fab281-image-1776695464260.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 
 

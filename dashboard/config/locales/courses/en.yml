@@ -7008,3 +7008,23 @@ en:
             > 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)
             > 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)
           version_title: ''
+        pl-csd-summer-2026:
+          title: CSD In-Person PL Workshop Course 2026
+          description_short: ''
+          description_student: |-
+            **You will**:
+
+            * Prepare to teach CS Discoveries.
+            * Practice key concepts in the CS Discoveries curriculum.
+            * Grow in your understanding of equitable CS education.
+            * Develop empathy for the student experience.
+            * Become a part of a network of teachers who are doing similar work.
+          description_teacher: |-
+            **You will**:
+
+            * Prepare to teach CS Discoveries.
+            * Practice key concepts in the CS Discoveries curriculum.
+            * Grow in your understanding of equitable CS education.
+            * Develop empathy for the student experience.
+            * Become a part of a network of teachers who are doing similar work.
+          version_title: "'25-'26"

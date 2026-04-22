@@ -1,12 +1,8 @@
 import {detectToxicityInCustomizations} from '@cdo/apps/aichat/aichatApi';
-import {
-  AiCustomizations,
-  DetectToxicityResponse,
-  FlaggedField,
-  SaveType,
-} from '@cdo/apps/aichat/types';
+import {DetectToxicityResponse, FlaggedField} from '@cdo/apps/aichat/types';
 import {extractFieldsToCheckForToxicity} from '@cdo/apps/aichat/utils';
-import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {AiCustomizations, SaveType} from '@cdo/apps/aichatLab/types';
+import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 

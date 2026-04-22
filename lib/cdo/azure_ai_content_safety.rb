@@ -20,11 +20,10 @@ class AzureAiContentSafety
   end
 
   #
-  # Given some binary image data and a content type, sends it to Azure AI
-  # Content Safety and returns the raw parsed JSON response.
+  # Sends a JSON request with image data to Azure AI Content Safety
+  # and returns the raw parsed JSON response.
   #
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - one of image/gif, image/jpeg, image/png
   # @returns [Hash] the categoriesAnalysis response from Azure, e.g.:
   #   {"categoriesAnalysis"=>[{"category"=>"Sexual","severity"=>0}, {"category"=>"Hate","severity"=>0},
   #   {"category"=>"SelfHarm","severity"=>0}, {"category"=>"Violence","severity"=>0}]}, or
@@ -32,26 +31,8 @@ class AzureAiContentSafety
   #   The severity value increases with the severity of the input content and possible values are:
   #   0 (safe), 2 (low), 4 (medium), 6 (high)
   # @raise [AzureAiContentSafety::RequestFailed] when the request is not successful.
-  # @raise [AzureAiContentSafety::UnsupportedContentType] when the content type is unsupported.
   #
-  def moderate_image(image_data, content_type)
-    raise UnsupportedContentType.new("Cannot accept content-type #{content_type}") unless %w(
-      image/gif
-      image/jpeg
-      image/png
-    ).include? content_type
-
-    make_request(image_data)
-  end
-
-  #
-  # Sends a JSON request to Azure AI Content Safety with base64-encoded image data.
-  #
-  # @param [IO] image_data - binary image data to be rated
-  # @returns [Hash] the parsed response from Azure
-  # @raise [AzureAiContentSafety::RequestFailed] when the request is not successful.
-  #
-  private def make_request(image_data)
+  def moderate_image(image_data)
     uri = URI(@endpoint + API_PATH)
     encoded_image = Base64.strict_encode64(image_data.read)
 
