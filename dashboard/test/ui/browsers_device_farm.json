@@ -26,7 +26,7 @@
   {
     "name": "iPad",
     "mobile": true,
-    "device_arn": "arn:aws:devicefarm:us-west-2::device:30FFDD10560948EABAF2288A9BF0397C",
+    "device_arn": "arn:aws:devicefarm:us-west-2::device:0A5D934CFF7E4B5BB2612E922588C354",
     "platformName": "iOS",
     "browserName": "Safari",
     "appium:orientation": "LANDSCAPE"
