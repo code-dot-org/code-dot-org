@@ -85,6 +85,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   test 'preset_view returns a display projection for a valid preset' do
     unit = create(:unit, name: 'aif2-2025')
     unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
 
     view = Policies::DemoSections.preset_view(:high)
 
@@ -101,20 +102,14 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     )
   end
 
-  test 'preset_view falls back to configured metadata when a unit cannot be resolved' do
-    Unit.expects(:get_from_cache).with('aif2-2025', raise_exceptions: false).returns(nil)
-    unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
+  test 'preset_view returns nil when the unit cannot be resolved' do
+    assert_nil Policies::DemoSections.preset_view(:high)
+  end
 
-    view = Policies::DemoSections.preset_view(:high)
+  test 'preset_view returns nil when the unit has no original unit group' do
+    create(:unit, name: 'aif2-2025')
 
-    assert_equal(
-      {
-        name: 'aif2-2025',
-        display_name: 'Artificial Intelligence Foundations',
-      },
-      view[:unit]
-    )
-    assert_equal unit_group.name, view[:unit_group][:name]
+    assert_nil Policies::DemoSections.preset_view(:high)
   end
 
   test 'preset_views_for_all_types skips misconfigured presets' do

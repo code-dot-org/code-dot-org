@@ -280,6 +280,18 @@ describe('TeacherHomepage', () => {
     screen.getByText('Demo');
   }, 10000);
 
+  it('falls back to the empty homepage when the demo section is disabled', async () => {
+    experiments.isEnabled = jest.fn(() => false);
+
+    renderComponent([]);
+
+    await screen.findByText(i18n.emptySectionHeadline());
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
+  });
+
   it('falls back to the empty homepage when demo presets fail to load', async () => {
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/api/v1/sections/demo/presets') {

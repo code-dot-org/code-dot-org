@@ -23,10 +23,8 @@ import {
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
-import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import OnboardingChecklist from './OnboardingChecklist';
-import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -43,11 +41,6 @@ interface TeacherHomepageProps {
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
-
-type DemoSectionNotice = {
-  text: string;
-  type: 'warning' | 'danger';
-};
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const isMiniTutorialEnabled =
@@ -79,8 +72,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   ] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
-  const [demoSectionNotice, setDemoSectionNotice] =
-    React.useState<DemoSectionNotice | null>(null);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -213,26 +204,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     React.useState<ArchivedToggleOption>('teaching');
 
   const sections = useAppSelector(state => state.teacherSections.sections);
-  const demoPresets = useAppSelector(
-    state => state.teacherSections.demoPresets
-  );
   const demoPresetsAreLoaded = useAppSelector(
     state => state.teacherSections.demoPresetsAreLoaded
   );
-  const gradesTeaching = useAppSelector(
-    state => state.currentUser.gradesTeaching
-  );
   const totalSections = Object.keys(sections).length;
-  const demoType = React.useMemo(
-    () => pickDemoType(gradesTeaching),
-    [gradesTeaching]
-  );
-  const selectedDemoPreset = demoPresets[demoType];
-  const shouldShowDemoSectionCard =
-    isDemoSectionEnabled &&
-    totalSections === 0 &&
-    demoPresetsAreLoaded &&
-    !!selectedDemoPreset;
 
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
@@ -296,18 +271,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 }}
               />
             )}
-            {demoSectionNotice && (
-              <Alert
-                type={
-                  demoSectionNotice.type === 'warning'
-                    ? alertTypes.warning
-                    : alertTypes.danger
-                }
-                text={demoSectionNotice.text}
-                className={styles.notificationBanner}
-                onClose={() => setDemoSectionNotice(null)}
-              />
-            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
@@ -320,16 +283,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
             {!!isMiniTutorialEnabled && <OnboardingChecklist />}
             {isDemoSectionEnabled &&
             totalSections === 0 &&
-            !demoPresetsAreLoaded ? null : shouldShowDemoSectionCard ? (
-              <ul className={styles.sectionList}>
-                <DemoSectionCard
-                  demoType={demoType}
-                  onNotice={setDemoSectionNotice}
-                  preset={selectedDemoPreset!}
-                />
-              </ul>
-            ) : numSections === 0 ? (
-              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+            !demoPresetsAreLoaded ? null : numSections === 0 ? (
+              <DemoSectionCard
+                isEnabled={isDemoSectionEnabled}
+                showHiddenOnly={showHiddenOnly}
+              />
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}

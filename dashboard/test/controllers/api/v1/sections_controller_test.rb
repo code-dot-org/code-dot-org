@@ -1714,19 +1714,55 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'presets: returns the preset projections' do
     sign_in @teacher
-    create(:unit, name: 'aif2-2025')
-    create(:unit, name: 'csd3-2024')
-    create(:unit, name: 'k5-ai-data-2024')
-    create(:unit_group, name: 'artificial-intelligence-foundations-2025')
-    create(:unit_group, name: 'csd-2024')
-    create(:unit_group, name: 'k5-ai-data-2024')
+    high_unit = create(:unit, name: 'fake-high-unit')
+    middle_unit = create(:unit, name: 'fake-middle-unit')
+    high_unit_group = create(:unit_group, name: 'fake-high-course')
+    middle_unit_group = create(:unit_group, name: 'fake-middle-course')
+    create(:unit_group_unit, unit_group: high_unit_group, script: high_unit, position: 1)
+    create(:unit_group_unit, unit_group: middle_unit_group, script: middle_unit, position: 1)
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns(
+      {
+        high: {
+          demo_type: 'high',
+          section_name: 'Fake High Practice Section',
+          avatar_color: 8,
+          avatar_emoji: 5,
+          login_type: 'email',
+          participant_type: 'student',
+          unit: {
+            name: high_unit.name,
+            display_name: high_unit.localized_title,
+          },
+          unit_group: {
+            name: high_unit_group.name,
+            display_name: high_unit_group.localized_title,
+          },
+        },
+        middle: {
+          demo_type: 'middle',
+          section_name: 'Fake Middle Practice Section',
+          avatar_color: 1,
+          avatar_emoji: 0,
+          login_type: 'word',
+          participant_type: 'student',
+          unit: {
+            name: middle_unit.name,
+            display_name: middle_unit.localized_title,
+          },
+          unit_group: {
+            name: middle_unit_group.name,
+            display_name: middle_unit_group.localized_title,
+          },
+        },
+      }
+    )
 
     get :presets
 
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 'High School Practice Section', response['high']['section_name']
-    assert_equal 'aif2-2025', response['high']['unit']['name']
+    assert_equal 'Fake High Practice Section', response['high']['section_name']
+    assert_equal high_unit.name, response['high']['unit']['name']
     assert_equal 'student', response['middle']['participant_type']
   end
 
