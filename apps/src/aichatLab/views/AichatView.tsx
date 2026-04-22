@@ -243,7 +243,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     <>
       {projectTemplateLevel && (
         <span className={moduleStyles.templateIconWrapper}>
-          <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
+          <ProjectTemplateWorkspaceIconV2
+            tooltipPlace="onBottom"
+            ariaLabel="Project template level"
+          />
         </span>
       )}
       <AiChatHeaderButtons />
