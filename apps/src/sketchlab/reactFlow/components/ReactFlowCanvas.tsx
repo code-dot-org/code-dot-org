@@ -305,11 +305,8 @@ export default function ReactFlowCanvas({
           id: sourceAnchorId,
           type: 'lineAnchor',
           position: {
-            x:
-              centerPosition.x -
-              LINE_DEFAULT_LENGTH_PX / 2 -
-              LINE_ANCHOR_SIZE_PX,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+            x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
+            y: centerPosition.y,
           },
           data: {
             ...anchorBaseData,
@@ -326,7 +323,7 @@ export default function ReactFlowCanvas({
           type: 'lineAnchor',
           position: {
             x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+            y: centerPosition.y,
           },
           data: {
             ...anchorBaseData,

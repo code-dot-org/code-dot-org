@@ -8,9 +8,7 @@ interface LineAnchorNodeProps {
 }
 
 function LineAnchorNode({data}: LineAnchorNodeProps) {
-  const isSource = data.lineAnchorRole === 'source';
-  const handleType = isSource ? 'source' : 'target';
-  const handlePosition = isSource ? Position.Right : Position.Left;
+  const handleType = data.lineAnchorRole === 'source' ? 'source' : 'target';
   const connections = useNodeConnections();
 
   // This should become false immediately after a line is created,
@@ -22,7 +20,7 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
       <Handle
         type={handleType}
         id={`line-anchor-${handleType}`}
-        position={handlePosition}
+        position={Position.Top}
         isConnectable={isConnectable}
         className={styles.anchorHandle}
       />
