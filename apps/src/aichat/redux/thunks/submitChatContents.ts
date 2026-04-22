@@ -304,7 +304,7 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
-  // See comment above for why error.name is checked instead of instanceof.
+    // See comment above for why error.name is checked instead of instanceof.
   } else if (error.name === 'TurnstileDevToolsError') {
     dispatch(
       addChatEvent({

@@ -76,7 +76,9 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
 
     const timer = setTimeout(() => {
       console.warn(
-        `${LOG} DevTools probe: breakpoints detected (${(performance.now() - start).toFixed(1)}ms) — challenge will be blocked`
+        `${LOG} DevTools probe: breakpoints detected (${(
+          performance.now() - start
+        ).toFixed(1)}ms) — challenge will be blocked`
       );
       settle(true);
     }, DEBUGGER_PROBE_TIMEOUT_MS);
@@ -90,7 +92,9 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
       worker = new Worker(blobUrl);
       worker.onmessage = () => {
         console.log(
-          `${LOG} DevTools probe: no breakpoints detected (${(performance.now() - start).toFixed(1)}ms)`
+          `${LOG} DevTools probe: no breakpoints detected (${(
+            performance.now() - start
+          ).toFixed(1)}ms)`
         );
         settle(false);
       };
@@ -125,7 +129,9 @@ function loadTurnstileScript(): Promise<void> {
 
   scriptLoadPromise = new Promise((resolve, reject) => {
     if (window.turnstile) {
-      console.log(`${LOG} Turnstile already present on window (externally loaded)`);
+      console.log(
+        `${LOG} Turnstile already present on window (externally loaded)`
+      );
       resolve();
       return;
     }
@@ -194,7 +200,9 @@ export class TurnstileManager {
     container.id = CONTAINER_ID;
     document.body.appendChild(container);
     this.container = container;
-    console.log(`${LOG} TurnstileManager initialized — container appended to body`);
+    console.log(
+      `${LOG} TurnstileManager initialized — container appended to body`
+    );
   }
 
   static getInstance(): TurnstileManager {
@@ -223,7 +231,9 @@ export class TurnstileManager {
       console.log(
         '          Click the "Deactivate breakpoints" button in the Sources panel toolbar'
       );
-      console.log('          (it looks like a breakpoint circle with a slash through it).');
+      console.log(
+        '          (it looks like a breakpoint circle with a slash through it).'
+      );
       console.log(
         '          This disables all breakpoints including debugger statements. Click again to re-enable.'
       );
@@ -246,19 +256,25 @@ export class TurnstileManager {
       );
       console.log('      debugger statements.');
       console.groupEnd();
-      console.error(`${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`);
+      console.error(
+        `${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`
+      );
       throw new TurnstileDevToolsError();
     }
 
     try {
       const token = await this.getToken();
       console.log(
-        `${LOG} Token delivered successfully (len=${token.length}) in ${(performance.now() - start).toFixed(0)}ms`
+        `${LOG} Token delivered successfully (len=${token.length}) in ${(
+          performance.now() - start
+        ).toFixed(0)}ms`
       );
       return token;
     } catch (err) {
       console.error(
-        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(0)}ms:`,
+        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(
+          0
+        )}ms:`,
         err
       );
       throw err;
@@ -293,7 +309,9 @@ export class TurnstileManager {
     this.nextToken = p;
     p.then(
       token => {
-        console.log(`${LOG} Pre-fetch resolved — token ready (len=${token.length})`);
+        console.log(
+          `${LOG} Pre-fetch resolved — token ready (len=${token.length})`
+        );
       },
       err => {
         // Intentionally swallowed — pre-fetch is speculative. Failure is
@@ -312,7 +330,9 @@ export class TurnstileManager {
         return loadTurnstileScript().then(() => this.runChallenge());
       },
       () => {
-        console.log(`${LOG} Challenge starting after previous chain error (chain released)`);
+        console.log(
+          `${LOG} Challenge starting after previous chain error (chain released)`
+        );
         return loadTurnstileScript().then(() => this.runChallenge());
       }
     );
@@ -369,7 +389,9 @@ export class TurnstileManager {
 
       const timeout = setTimeout(() => {
         if (settled) {
-          console.log(`${LOG} Timeout fired after token already delivered — no-op`);
+          console.log(
+            `${LOG} Timeout fired after token already delivered — no-op`
+          );
           return;
         }
         console.error(
@@ -409,7 +431,9 @@ export class TurnstileManager {
               return;
             }
             console.log(
-              `${LOG} Token callback fired — len=${token.length}, ${(performance.now() - renderTime).toFixed(0)}ms since render()`
+              `${LOG} Token callback fired — len=${token.length}, ${(
+                performance.now() - renderTime
+              ).toFixed(0)}ms since render()`
             );
             settle(() => {
               clearTimeout(timeout);
