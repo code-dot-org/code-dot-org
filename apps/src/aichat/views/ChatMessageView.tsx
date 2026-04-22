@@ -194,7 +194,6 @@ export function getChatMessageDisplayText(
   }
 
   // If Role is ASSISTANT, display the appropriate message based on the status.
-
   switch (status) {
     case Status.PROFANITY_VIOLATION:
       return commonI18n.aiChatInappropriateModelMessage();
