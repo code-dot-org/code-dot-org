@@ -77,22 +77,25 @@ export default function ReactFlowCanvas({
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
-  const [openNodeToolbar_, setOpenNodeToolbar_] = useState<{
+  const [openNodeToolbarInfo, setOpenNodeToolbarInfo] = useState<{
     id: string | null;
     trapFocus: boolean;
   }>({id: null, trapFocus: false});
-  const openNodeToolbarId = openNodeToolbar_.id;
-  const trapFocus = openNodeToolbar_.trapFocus;
+  const openNodeToolbarId = openNodeToolbarInfo.id;
+  const trapFocus = openNodeToolbarInfo.trapFocus;
 
   const openNodeToolbar = useCallback(
     (nodeId: string, options?: {trapFocus?: boolean}) => {
-      setOpenNodeToolbar_({id: nodeId, trapFocus: options?.trapFocus ?? false});
+      setOpenNodeToolbarInfo({
+        id: nodeId,
+        trapFocus: options?.trapFocus ?? false,
+      });
     },
     []
   );
 
   const closeNodeToolbar = useCallback(() => {
-    setOpenNodeToolbar_({id: null, trapFocus: false});
+    setOpenNodeToolbarInfo({id: null, trapFocus: false});
   }, []);
 
   const nodeToolbarVisibility = useMemo(
