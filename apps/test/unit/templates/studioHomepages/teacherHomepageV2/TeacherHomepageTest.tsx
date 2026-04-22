@@ -94,7 +94,9 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
     postSpy = jest.spyOn(HttpClient, 'post');
-    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(() => {});
     jquerySpy = jest.spyOn($, 'getJSON');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
@@ -222,9 +224,8 @@ describe('TeacherHomepage', () => {
     await screen.findByText('Create a new section');
 
     await screen.findByText('Picture password', {}, {timeout: 5000});
-    screen.getByRole('button', {name: 'Cancel'});
-    // This is a hail mary quick flakiness mitigation attempt. If we see continued failures, we should look for underlying causes.
-  }, 25000);
+    expect(document.querySelector('.uitest-new-section-dialog')).not.toBeNull();
+  }, 10000);
 
   it('teaching/archived toggle', async () => {
     renderComponent();

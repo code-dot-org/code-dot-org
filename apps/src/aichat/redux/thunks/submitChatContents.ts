@@ -10,6 +10,7 @@ import {
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
+import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -38,7 +39,6 @@ import {
   AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
-  AichatLevelProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 

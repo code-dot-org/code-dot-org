@@ -5,7 +5,7 @@ import React, {forwardRef, memo} from 'react';
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {modelDescriptions} from '../constants';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -22,7 +22,6 @@ import {
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
@@ -47,7 +46,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {

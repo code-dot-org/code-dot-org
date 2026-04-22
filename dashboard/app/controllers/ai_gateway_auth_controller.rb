@@ -9,7 +9,7 @@ class AiGatewayAuthController < ApplicationController
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
-  # GET /ai_gateway/access_token
+  # POST /ai_gateway/access_token
   # ----------------------------
 
   def get_access_token

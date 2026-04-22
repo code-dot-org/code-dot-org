@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-20T23:46:38.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Password Visibility\r\n\r\n**Do This:**\r\n\r\n\r\n1. Add `let showPassword = false;` at the top of your JS.\r\n1. Write a `render()` function that:\r\n\r\n   * Sets the input field’s `type` to `\"text\"` when `showPassword` is true.\r\n   * Sets it to `\"password\"` when `showPassword` is false.\r\n1. In the checkbox change event: flip `showPassword` and call `render()`.\r\n\r\n",
+    "long_instructions": "## IT Ticket: Password Visibility Not Working\r\n\r\nA user reported that the password visibility feature is not working correctly.\r\n\r\n### Expected Behavior:\r\n- Checking the box should show the password\r\n- Unchecking the box should hide the password\r\n\r\n### Do This:\r\n\r\n1. Run the app and test the checkbox. What’s wrong?\r\n2. Check how the `showPassword` value changes and how the UI updates.\r\n3. Fix the issue so the password visibility works correctly.\r\n\r\nUse AI (if needed) to explain the code before making changes.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -25,8 +26,8 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "display_name": "Password Visibility",
-    "bubble_choice_description": "Show or hide a password in an input field.",
+    "display_name": "Fix Password Visibility",
+    "bubble_choice_description": "Investigate and fix a broken password visibility feature. Figure out what’s wrong and make sure the password shows and hides correctly.",
     "thumbnail_url": "https://images.code.org/22f7b42cb451c3a7ef366ba683ca15d7-password.png",
     "start_sources": {
       "folders": {
@@ -36,7 +37,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Level 2 – Password Visibility</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body class=\"light\">\n    <h1>Password Visibility</h1>\n\n    <section id=\"pwBlock\">\n      <label for=\"pwInput\">Password:</label>\n      <input id=\"pwInput\" type=\"password\" value=\"p@ssword123!\">\n      <br/><br/>\n      <label>\n        <input id=\"chkToggle\" type=\"checkbox\">\n        Show password\n      </label>\n    </section>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Sign In</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main class=\"page\">\n      <section class=\"login-card\">\n        <h1 class=\"app-title\">Streamly</h1>\n        <p class=\"subtitle\">Sign in to continue</p>\n\n        <label for=\"pwInput\" class=\"label\">Password</label>\n\n        <div class=\"input-row\">\n          <input\n            id=\"pwInput\"\n            type=\"password\"\n            placeholder=\"Enter your password\"\n          />\n\n          <button id=\"btnToggle\" class=\"toggle-btn\">\n            👁\n          </button>\n        </div>\n\n        <label class=\"checkbox-row\">\n          <input id=\"chkToggle\" type=\"checkbox\" />\n          Show password\n        </label>\n\n        <button class=\"primary-btn\">Sign In</button>\n      </section>\n    </main>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
           "active": false,
           "folderId": "0"
         },
@@ -44,7 +45,7 @@
           "id": "2",
           "name": "style.css",
           "language": "css",
-          "contents": "/* Layout */\nbody {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  align-items: center;\n  min-height: 100vh;\n  transition: background-color 0.3s, color 0.3s;\n}\n\ninput[type=\"password\"],\ninput[type=\"text\"] {\n  padding: 0.4rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n\nlabel {\n  margin: 0.5rem;\n}\n",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background: linear-gradient(135deg, #4f46e5, #9333ea);\n  color: #111827;\n}\n\n.page {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px;\n}\n\n.login-card {\n  width: 100%;\n  max-width: 360px;\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 28px;\n  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);\n}\n\n.app-title {\n  margin: 0;\n  font-size: 28px;\n  text-align: center;\n}\n\n.subtitle {\n  text-align: center;\n  margin: 6px 0 20px 0;\n  color: #6b7280;\n  font-size: 14px;\n}\n\n.label {\n  font-size: 14px;\n  margin-bottom: 6px;\n  display: block;\n}\n\n.input-row {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  border: 1px solid #d1d5db;\n  border-radius: 10px;\n  padding: 8px 10px;\n  margin-bottom: 12px;\n}\n\n.input-row input {\n  border: none;\n  outline: none;\n  flex: 1;\n  font-size: 16px;\n}\n\n.toggle-btn {\n  border: none;\n  background: none;\n  cursor: pointer;\n  font-size: 18px;\n}\n\n.checkbox-row {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  font-size: 14px;\n  margin-bottom: 18px;\n}\n\n.primary-btn {\n  width: 100%;\n  padding: 12px;\n  border: none;\n  border-radius: 10px;\n  background: #4f46e5;\n  color: white;\n  font-size: 16px;\n  font-weight: 600;\n  cursor: pointer;\n}\n\n.primary-btn:hover {\n  background: #4338ca;\n}",
           "folderId": "0",
           "active": false
         },
@@ -52,7 +53,7 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "// Selectors\nconst pwInput = document.getElementById(\"pwInput\");\nconst chkToggle = document.getElementById(\"chkToggle\");\n",
+          "contents": "// State\nlet showPassword = false;\n\n// Selectors\nconst pwInput = document.getElementById(\"pwInput\");\nconst chkToggle = document.getElementById(\"chkToggle\");\n\n// Render UI from state\nconst render = () => {\n  if (!showPassword) { \n    pwInput.setAttribute(\"type\", \"text\");\n  } else {\n    pwInput.setAttribute(\"type\", \"password\");\n  }\n};\n\n// Event: checkbox change -> flip -> render\nchkToggle.addEventListener(\"change\", () => {\n  showPassword = showPassword;\n  render();\n});\n\n// Initial render\nrender();",
           "folderId": "0",
           "active": true
         }
@@ -61,10 +62,23 @@
         "3"
       ]
     },
-    "encrypted_exemplar_sources": "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\n",
-    "name_suffix": "_2026"
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "example",
+        "explainCode",
+        "pseudocode",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:38.972+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:38.972+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4b_2025\"},{\"changed_at\":\"2026-04-16 18:26:03 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:27:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:30:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:30:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:34:25 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:35:31 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

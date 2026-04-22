@@ -1,6 +1,7 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
 import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
+import experiments from '@cdo/apps/util/experiments';
 
 import {AppName, LevelProperties} from '../types';
 
@@ -87,6 +88,14 @@ export function isTourAvailableOnLevel(
     levelProperties.appName as AppName
   ]?.some(config => config.name === tour);
   if (!isAvailableForLab) {
+    return false;
+  }
+  // While we are developing the new sketch lab, skip any product tours when the
+  // experiment is on.
+  if (
+    levelProperties.appName === 'sketchlab' &&
+    experiments.isEnabledAllowingQueryString('sketch2')
+  ) {
     return false;
   }
   const config = ProductTourConfigurations[tour];

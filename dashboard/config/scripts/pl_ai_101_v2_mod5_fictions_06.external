@@ -1,0 +1,70 @@
+name 'pl-ai-101-V2-mod5-fictions-06'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Strategies for Teachers
+
+#### As students begin using AI tools, it’s important to explicitly teach them how to recognize and respond to AI-generated inaccuracies. This is an opportunity to strengthen digital literacy and critical thinking skills that extend beyond AI use.
+
+#### Teachers can support students by focusing on four key areas: modeling, verification, critical thinking, and reflection.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
+
+<!-- Model Critical Use -->
+<div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+<img src="https://images.code.org/364dde8b8544e934222afc3806ae8cb7-Screenshot 2026-04-17 at 12.19.54 PM.png" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<strong>Model Critical Use of AI</strong>
+<p style="font-size:14px;">Students need to see what it looks like to question AI.</p>
+<ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
+<li>Review AI-generated responses as a class and identify what seems accurate, unclear, or questionable</li>
+<li>Demonstrate how to ask follow-up questions (e.g., “Are you sure?” or “What is your source?”)</li>
+<li>Show how to revise or improve prompts to get better information</li>
+</ul>
+<p style="font-size:14px; margin-top:8px;">Modeling helps students understand that AI outputs should be examined—not accepted at face value.</p>
+</div>
+
+<!-- Verification -->
+<div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+<img src="https://images.code.org/5a4a83e54454cac973bfaf16d4925161-Screenshot 2026-04-17 at 12.20.00 PM.png" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<strong>Teach Verification and Source Evaluation</strong>
+<p style="font-size:14px;">Students should learn to confirm information rather than rely on a single source.</p>
+<ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
+<li>Encourage students to corroborate information using multiple sources</li>
+<li>Teach them to check for bias, credibility, and accuracy</li>
+<li>Reinforce using different tools for different purposes (e.g., AI for brainstorming, search engines for fact-checking)</li>
+</ul>
+<p style="font-size:14px; margin-top:8px;">These habits build stronger digital literacy and reduce reliance on AI as an authority.</p>
+</div>
+
+<!-- Critical Thinking -->
+<div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+<img src="https://images.code.org/21ea3ccdf3e1670471b2d39f52edfbb7-Screenshot 2026-04-17 at 12.20.07 PM.png" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<strong>Design Tasks That Build Critical Thinking</strong>
+<p style="font-size:14px;">Assignments can help students actively engage with AI-generated content.</p>
+<ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
+<li>Ask students to identify and correct inaccuracies in AI responses</li>
+<li>Have them compare their own thinking to AI outputs</li>
+<li>Explore how different prompts lead to different (and sometimes unreliable) results</li>
+</ul>
+<p style="font-size:14px; margin-top:8px;">These activities shift the focus from using AI to thinking about AI.</p>
+</div>
+
+<!-- Reflection -->
+<div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+<img src="https://images.code.org/fbe8c08b44e2f4c5added1085a97b482-Screenshot 2026-04-17 at 12.20.13 PM.png" style="width:100%; height:175px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+<strong>Encourage Reflection and Responsibility</strong>
+<p style="font-size:14px;">Students should remain responsible for the content they use.</p>
+<ul style="font-size:14px; padding-left:18px; margin:8px 0 0 0;">
+<li>Ask students to explain how they used AI and what they accepted, changed, or rejected</li>
+<li>Reinforce that AI is a tool—not a final source of truth</li>
+<li>Emphasize that students are responsible for evaluating the accuracy of information</li>
+</ul>
+</div>
+
+</div>
+
+<br>
+
+>#### **💬 Quick Reflection:** Which of these strategies can you take back to your classroom tomorrow?
+MARKDOWN

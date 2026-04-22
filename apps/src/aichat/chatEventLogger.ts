@@ -2,7 +2,8 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 import {postLogChatEvent} from './aichatApi';
-import {ChatEvent, AichatContext} from './types';
+import AichatContextManager from './aichatContextManager';
+import {ChatEvent} from './types';
 
 export default class ChatEventLogger {
   private queue: ChatEvent[];
@@ -10,20 +11,16 @@ export default class ChatEventLogger {
 
   private static instance: ChatEventLogger;
 
-  constructor(public readonly aichatContext: AichatContext) {
+  constructor() {
     this.queue = [];
     this.sendingInProgress = false;
   }
 
   public static getInstance(): ChatEventLogger {
     if (ChatEventLogger.instance === undefined) {
-      throw new Error('ChatEventLogger was not initialized with API context.');
+      ChatEventLogger.instance = new ChatEventLogger();
     }
     return ChatEventLogger.instance;
-  }
-
-  public static initialize(context: AichatContext) {
-    ChatEventLogger.instance = new ChatEventLogger(context);
   }
 
   public logChatEvent(chatEvent: ChatEvent) {
@@ -34,13 +31,14 @@ export default class ChatEventLogger {
   }
 
   private async sendChatEvent() {
+    const aichatContext = AichatContextManager.getContext();
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
       const chatEvent = this.queue.shift(); // Remove the first element from the queue.
       if (chatEvent) {
         this.sendingInProgress = true;
         try {
-          await postLogChatEvent(chatEvent, this.aichatContext);
+          await postLogChatEvent(chatEvent, aichatContext);
         } catch (error) {
           // Only send log report if not a 403 error.
           if (

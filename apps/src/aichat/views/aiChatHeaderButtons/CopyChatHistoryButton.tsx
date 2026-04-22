@@ -1,13 +1,8 @@
 import React from 'react';
 
+import {MODEL_PARAMETER_LABELS} from '@cdo/apps/aichat/constants';
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
-import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-
-import {timestampToDateTime} from '../../redux/utils';
+import {timestampToDateTime} from '@cdo/apps/aichat/redux/utils';
 import {
   ChatEvent,
   ChatEventDescriptionKey,
@@ -16,8 +11,12 @@ import {
   isNotification,
   isUserActionEvent,
   WorkspaceTeacherViewTab,
-} from '../../types';
-import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
+} from '@cdo/apps/aichat/types';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
   const visibleMessages = useAppSelector(selectAllVisibleMessages);
@@ -77,7 +76,7 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   }
 
   if (isModelUpdate(chatEvent)) {
-    return `[${formattedTimestamp} - Model Update] ${AI_CUSTOMIZATIONS_LABELS[
+    return `[${formattedTimestamp} - Model Update] ${MODEL_PARAMETER_LABELS[
       chatEvent.updatedField
     ]!} updated.`;
   }

@@ -14,14 +14,20 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
-import {ComponentType, LazyExoticComponent} from 'react';
+import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
+import type {
+  ImageNodeData,
+  ShapeNodeData,
+  TextNodeData,
+} from '../sketchlab/reactFlow/types';
 
 export {Theme};
 
@@ -83,7 +89,41 @@ export type LabConfig = {[key: string]: {[key: string]: string}};
 export type Source =
   | BlocklySource
   | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+  | ExcalidrawSourceWithExternalFiles
+  | SketchlabReactFlowSource;
+
+// -- REACT FLOW SKETCH LAB -- //
+
+// Serializable node/edge types for project storage. These mirror the
+// @xyflow/react Node/Edge fields we persist, without the complex DOM
+// types that are incompatible with Immer's WritableDraft. Cast to/from
+// the full React Flow types at the read/write boundary.
+interface SketchlabReactFlowNodeBase {
+  id: string;
+  position: {x: number; y: number};
+  style?: CSSProperties;
+}
+
+export type SketchlabReactFlowNode =
+  | (SketchlabReactFlowNodeBase & {type: 'shape'; data: ShapeNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'text'; data: TextNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData});
+
+export interface SketchlabReactFlowEdge {
+  id: string;
+  source: string;
+  target: string;
+  sourceHandle?: string;
+  targetHandle?: string;
+  type?: string;
+  markerEnd?: EdgeMarkerType;
+}
+
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -462,3 +502,5 @@ export interface LabProps<
 }
 
 export type ShareDialogId = 'hoc2024' | 'hoai2025';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

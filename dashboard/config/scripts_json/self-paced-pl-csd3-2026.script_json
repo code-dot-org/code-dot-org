@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-10 20:42:10 UTC",
+    "serialized_at": "2026-04-21 19:49:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -27,7 +27,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Overview of CS Discoveries"
+        "display_name": "Overview of AI Discoveries"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -44,8 +44,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 30 minutes"
+        "overview": "**You will:**\n\n* Gain a high-level understanding of the AI Discoveries curriculum.\n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Gain a high-level understanding of the AI Discoveries curriculum.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "Overview of Course Content",
@@ -61,8 +61,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Become familiar with the student learning tools used within CS Discoveries.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Become familiar with the student learning tools used within CS Discoveries.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Become familiar with the student learning tools used within AI Discoveries.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Become familiar with the student learning tools used within AI Discoveries.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Overview of Learning Tools",
@@ -78,8 +78,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested Time:** 10 minutes",
-        "student_overview": "**You will:**\n\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested Time:** 10 minutes"
+        "overview": "**You will:**\n\n* Decide which units of AI Discoveries you will teach in your class.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Decide which units of AI Discoveries you will teach in your class.\n\n**Suggested Time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Overview of Implementation ",
@@ -1078,6 +1078,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

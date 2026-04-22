@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -21,8 +22,10 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
+  disabled?: boolean;
+  disabledMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -37,8 +40,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorResponseSchemaSettings,
   instructionsContent,
   isCollapsedByDefault,
-  enableTutorVideos,
+  tutorVideos,
   isPredictLevel,
+  disabled,
+  disabledMessage,
 }) => {
   const {
     containerRef,
@@ -116,7 +121,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
-            enableTutorVideos={enableTutorVideos}
+            tutorVideos={tutorVideos}
+            disabled={disabled}
+            disabledMessage={disabledMessage}
           />
         </div>
       </div>
