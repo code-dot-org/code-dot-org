@@ -11540,6 +11540,7 @@ __metadata:
     grunt-webpack: "npm:^6.0.0"
     hammerjs: "npm:^2.0.8"
     history: "npm:^2.0.1"
+    html-to-image: "npm:1.11.11"
     html2canvas: "npm:^0.5.0-beta4"
     htmlhint: "npm:^1.1.4"
     identity-obj-proxy: "npm:^3.0.0"
@@ -18598,6 +18599,13 @@ canvg@gabelerner/canvg:
   version: 3.3.1
   resolution: "html-tags@npm:3.3.1"
   checksum: 10/d0e808544b92d8b999cbcc86d539577255a2f0f2f4f73110d10749d1d36e6fe6ad706a0355a8477afb6e000ecdc93d8455b3602951f9a2b694ac9e28f1b52878
+  languageName: node
+  linkType: hard
+
+"html-to-image@npm:1.11.11":
+  version: 1.11.11
+  resolution: "html-to-image@npm:1.11.11"
+  checksum: 10/099206c3aaa54ca36d0df91426fe2b05258fe73c913dca6874dd8250973d47f629d3f45e427d5d51cc416ee305b898ce8db0a71336b3700a059ef1116b64d944
   languageName: node
   linkType: hard
 
