@@ -1,14 +1,20 @@
-import {ViewMode} from '@cdo/apps/aichatLab/types';
+import {SaveType, ViewMode} from '@cdo/apps/aichatLab/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {saveTypeToAnalyticsEvent} from '../../constants';
 import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
 import {findChangedProperties} from '../utils';
 
 import {sendAnalytics} from './sendAnalytics';
+
+const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
+  updateChatbot: EVENTS.UPDATE_CHATBOT,
+  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
+  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
+};
 
 // Thunk called after a save has completed successfully.
 // Updates the chat window and reports analytics as necessary.
