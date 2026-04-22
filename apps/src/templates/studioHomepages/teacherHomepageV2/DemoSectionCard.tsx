@@ -6,6 +6,7 @@ import {generatePath, useNavigate} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
 import {
   createDemoSection,
@@ -36,7 +37,6 @@ type Notice = {
 };
 
 interface DemoSectionCardProps {
-  isEnabled: boolean;
   showHiddenOnly: boolean;
 }
 
@@ -74,10 +74,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
   return actions;
 };
 
-const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
-  isEnabled,
-  showHiddenOnly,
-}) => {
+const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [pendingPath, setPendingPath] = React.useState<string | null>(null);
@@ -89,12 +86,23 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
   const demoPresets = useAppSelector(
     state => state.teacherSections.demoPresets
   );
+  const demoPresetsAreLoaded = useAppSelector(
+    state => state.teacherSections.demoPresetsAreLoaded
+  );
   const demoType = React.useMemo(
     () => pickDemoType(gradesTeaching),
     [gradesTeaching]
   );
   const preset = demoPresets[demoType];
   const totalSections = Object.keys(sections).length;
+  const numSections = React.useMemo(
+    () =>
+      Object.values(sections).filter(
+        section => showHiddenOnly === section.hidden
+      ).length,
+    [sections, showHiddenOnly]
+  );
+  const isLoadingDemoCard = totalSections === 0 && !demoPresetsAreLoaded;
   const primaryActions = React.useMemo(
     () => (preset ? buildPrimaryActions(preset) : []),
     [preset]
@@ -183,11 +191,15 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({
     }
   };
 
-  if (totalSections !== 0) {
+  if (numSections !== 0) {
     return null;
   }
 
-  if (!isEnabled || !preset) {
+  if (isLoadingDemoCard) {
+    return <Spinner size="large" />;
+  }
+
+  if (totalSections !== 0 || !preset) {
     return <EmptyHomepage showHiddenOnly={showHiddenOnly} />;
   }
 
