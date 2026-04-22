@@ -73,8 +73,3 @@ $column-min-width: 200px;
 .workspaceHeaderContent {
   @include center-header-content(false);
 }
-
-.templateIconWrapper {
-  margin-right: auto;
-  margin-left: -16px; // Offset the column gap to bring non-header icon beside header
-}

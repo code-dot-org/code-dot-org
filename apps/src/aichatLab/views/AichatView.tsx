@@ -32,15 +32,14 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useWorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -69,7 +68,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     aichatSettings: levelAichatSettings,
     starterAssets,
   } = levelProperties;
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const {templateIcon} = useWorkspaceHeader();
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -239,20 +238,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     </div>
   );
 
-  const chatWorkspaceHeaderRight = (
-    <>
-      {projectTemplateLevel && (
-        <span className={moduleStyles.templateIconWrapper}>
-          <ProjectTemplateWorkspaceIconV2
-            tooltipPlace="onBottom"
-            ariaLabel="Project template level"
-          />
-        </span>
-      )}
-      <AiChatHeaderButtons />
-    </>
-  );
-
   const resetProject = useCallback(() => {
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
     // Save the customizations to the user's project.
@@ -371,7 +356,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
-              rightHeaderContent={chatWorkspaceHeaderRight}
+              rightHeaderContent={
+                <>
+                  {templateIcon}
+                  <AiChatHeaderButtons />
+                </>
+              }
             >
               {chatWorkspaceInitialized && (
                 <ChatWorkspace
