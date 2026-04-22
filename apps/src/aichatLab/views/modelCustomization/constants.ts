@@ -115,16 +115,6 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   availableModelIds: [modelDescriptions[0].id],
 };
 
-export const AI_CUSTOMIZATIONS_LABELS: {
-  [key in keyof AiCustomizations]: string;
-} = {
-  selectedModelId: 'Selected model',
-  temperature: 'Temperature',
-  systemPrompt: 'System prompt',
-  retrievalContexts: 'Retrieval',
-  modelCardInfo: 'Model card information',
-};
-
 // Model customization fields that are checked for toxicity before updating.
 export const FIELDS_CHECKED_FOR_TOXICITY = [
   'systemPrompt',
