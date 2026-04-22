@@ -17,6 +17,7 @@
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "./run-tests-in-parallel.sh",
     "test:unit": "jest",
+    "update-ai-gateway-schema-snapshots": "jest --config jest.updateSchemas.config.js --runInBand --verbose",
     "test:integration": "grunt karma --testType=integration",
     "test:storybook": "grunt karma --testType=storybook",
     "clean": "grunt clean",
