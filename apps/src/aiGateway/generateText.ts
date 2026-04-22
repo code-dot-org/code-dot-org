@@ -1,9 +1,10 @@
 import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '../util/HttpClient';
+import experiments from '../util/experiments';
 
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {getTurnstileToken} from './turnstile';
+import {TurnstileManager} from './turnstile';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -88,17 +89,19 @@ const generateTextThroughGateway = async <
 
     const [token, turnstileToken] = await Promise.all([
       fetchAccessToken(),
-      getTurnstileToken(),
+      experiments.isEnabledAllowingQueryString('useTurnstile')
+        ? TurnstileManager.getInstance().getTurnstileToken()
+        : Promise.resolve(null),
     ]);
+
+    const headers: Record<string, string> = {'Content-Type': 'application/json'};
+    if (turnstileToken) headers['X-Turnstile-Token'] = turnstileToken;
 
     const response = await HttpClient.post(
       AI_GATEWAY_URL,
       JSON.stringify({...payload, token}),
       false,
-      {
-        'Content-Type': 'application/json',
-        'X-Turnstile-Token': turnstileToken,
-      }
+      headers
     );
 
     const data = await (response.json() as Promise<

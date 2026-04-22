@@ -150,7 +150,6 @@ function loadTurnstileScript(): Promise<void> {
   return scriptLoadPromise;
 }
 
-
 /**
  * Manages Turnstile widget lifecycle with three goals:
  *
@@ -165,9 +164,12 @@ function loadTurnstileScript(): Promise<void> {
  * 3. Double-settle prevention — explicit checks before the settle() call in
  *    each branch ensure the timeout and the token callback can never both
  *    fire, and log which race occurred so it is visible in the console.
+ *
+ * Instantiated lazily via getInstance() — nothing executes until the first
+ * call, ensuring zero side effects when the experiment is disabled.
  */
-class TurnstileManager {
-  private widgetId: string | null = null;
+export class TurnstileManager {
+  private static instance: TurnstileManager | null = null;
 
   // Serializes all widget renders — ensures only one challenge runs at a time.
   // The chain always advances even on rejection so queued callers are never
@@ -179,13 +181,15 @@ class TurnstileManager {
   // cannot claim the same one-time-use token.
   private nextToken: Promise<string> | null = null;
 
+  private widgetId: string | null = null;
+
   // Created once in the constructor and appended directly to document.body,
   // placing it outside any React render tree so React's reconciler can never
   // unmount or move it. Stored as a field so all child-count checks always
   // reference the same DOM node.
   private container: HTMLElement;
 
-  constructor() {
+  private constructor() {
     const container = document.createElement('div');
     container.id = CONTAINER_ID;
     document.body.appendChild(container);
@@ -193,7 +197,75 @@ class TurnstileManager {
     console.log(`${LOG} TurnstileManager initialized — container appended to body`);
   }
 
-  getToken(): Promise<string> {
+  static getInstance(): TurnstileManager {
+    if (!TurnstileManager.instance) {
+      TurnstileManager.instance = new TurnstileManager();
+    }
+    return TurnstileManager.instance;
+  }
+
+  async getTurnstileToken(): Promise<string> {
+    const start = performance.now();
+    console.log(`${LOG} getTurnstileToken() called`);
+
+    if (await debuggerWillPauseInAnonymousScope()) {
+      console.error(
+        '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
+          'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
+          'scripts that trigger a debugger statement — if breakpoints are ' +
+          'active for these, the challenge cannot complete.'
+      );
+      console.group('How to fix the Turnstile / DevTools conflict');
+      console.log('Option 1: Close DevTools entirely and reload the page.');
+      console.log(
+        'Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.'
+      );
+      console.log(
+        '          Click the "Deactivate breakpoints" button in the Sources panel toolbar'
+      );
+      console.log('          (it looks like a breakpoint circle with a slash through it).');
+      console.log(
+        '          This disables all breakpoints including debugger statements. Click again to re-enable.'
+      );
+      console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
+      console.log(
+        '          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as'
+      );
+      console.log(
+        '          standard function keys" enabled — clicking the button directly is more reliable.'
+      );
+      console.log('');
+      console.log(
+        'NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,'
+      );
+      console.log(
+        '      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob'
+      );
+      console.log(
+        '      Workers which are isolated contexts — no Ignore List pattern can suppress their'
+      );
+      console.log('      debugger statements.');
+      console.groupEnd();
+      console.error(`${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`);
+      throw new TurnstileDevToolsError();
+    }
+
+    try {
+      const token = await this.getToken();
+      console.log(
+        `${LOG} Token delivered successfully (len=${token.length}) in ${(performance.now() - start).toFixed(0)}ms`
+      );
+      return token;
+    } catch (err) {
+      console.error(
+        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(0)}ms:`,
+        err
+      );
+      throw err;
+    }
+  }
+
+  private getToken(): Promise<string> {
     if (this.nextToken) {
       console.log(`${LOG} Pre-fetch hit — returning in-progress token`);
       const p = this.nextToken;
@@ -367,68 +439,5 @@ class TurnstileManager {
         this.widgetId = widgetId;
       }
     });
-  }
-}
-
-const manager = new TurnstileManager();
-
-export async function getTurnstileToken(): Promise<string> {
-  const start = performance.now();
-  console.log(`${LOG} getTurnstileToken() called`);
-
-  if (await debuggerWillPauseInAnonymousScope()) {
-    console.error(
-      '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
-        'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
-        'scripts that trigger a debugger statement — if breakpoints are ' +
-        'active for these, the challenge cannot complete.'
-    );
-    console.group('How to fix the Turnstile / DevTools conflict');
-    console.log('Option 1: Close DevTools entirely and reload the page.');
-    console.log(
-      'Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.'
-    );
-    console.log(
-      '          Click the "Deactivate breakpoints" button in the Sources panel toolbar'
-    );
-    console.log('          (it looks like a breakpoint circle with a slash through it).');
-    console.log(
-      '          This disables all breakpoints including debugger statements. Click again to re-enable.'
-    );
-    console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
-    console.log(
-      '          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as'
-    );
-    console.log(
-      '          standard function keys" enabled — clicking the button directly is more reliable.'
-    );
-    console.log('');
-    console.log(
-      'NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,'
-    );
-    console.log(
-      '      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob'
-    );
-    console.log(
-      '      Workers which are isolated contexts — no Ignore List pattern can suppress their'
-    );
-    console.log('      debugger statements.');
-    console.groupEnd();
-    console.error(`${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`);
-    throw new TurnstileDevToolsError();
-  }
-
-  try {
-    const token = await manager.getToken();
-    console.log(
-      `${LOG} Token delivered successfully (len=${token.length}) in ${(performance.now() - start).toFixed(0)}ms`
-    );
-    return token;
-  } catch (err) {
-    console.error(
-      `${LOG} getToken() failed after ${(performance.now() - start).toFixed(0)}ms:`,
-      err
-    );
-    throw err;
   }
 }
