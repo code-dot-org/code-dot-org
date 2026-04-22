@@ -2,7 +2,7 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import React from 'react';
-import {generatePath, useNavigate} from 'react-router-dom';
+import {generatePath} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -17,8 +17,8 @@ import {
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
+  getBasePath,
   TEACHER_NAVIGATION_PATHS,
-  TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -76,7 +76,6 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
   const [pendingPath, setPendingPath] = React.useState<string | null>(null);
   const [notice, setNotice] = React.useState<Notice | null>(null);
   const gradesTeaching = useAppSelector(
@@ -158,22 +157,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       if (!section) {
         return;
       }
-      const nextPath = path.includes(':sectionId')
-        ? generatePath(path, {sectionId: section.id.toString()})
-        : path.startsWith('/')
+      const nextPath = path.startsWith('/')
         ? path
-        : generatePath(
-            `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
-            {
-              sectionId: section.id.toString(),
-            }
-          );
+        : generatePath(getBasePath(path), {sectionId: section.id.toString()});
 
-      if (nextPath.startsWith('/')) {
-        window.location.assign(nextPath);
-      } else {
-        navigate(nextPath);
-      }
+      window.location.assign(nextPath);
     } catch (error) {
       if (error instanceof DemoSectionCreationError) {
         setNotice({
