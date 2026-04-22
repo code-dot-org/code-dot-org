@@ -4,7 +4,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
-import {ModelParameters} from './customizations';
+import {ModelParameters} from './model';
 import {FeedbackValue} from './toxicity';
 import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 

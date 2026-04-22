@@ -5,13 +5,13 @@ import {
   AiCustomizations,
   LevelAichatSettings,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
   EMPTY_MODEL_CARD_INFO,
-} from '@cdo/apps/aichat/views/modelCustomization/constants';
-import {validateModelId} from '@cdo/apps/aichat/views/modelCustomization/utils';
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
@@ -20,7 +20,7 @@ jest.mock('@cdo/apps/aichat/redux/thunks/sendAnalytics', () => ({
   sendAnalytics: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/aichat/views/modelCustomization/utils', () => ({
+jest.mock('@cdo/apps/aichatLab/views/modelCustomization/utils', () => ({
   validateModelId: jest.fn(),
 }));
 

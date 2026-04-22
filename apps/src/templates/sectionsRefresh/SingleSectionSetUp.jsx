@@ -63,6 +63,7 @@ export default function SingleSectionSetUp({
               className={moduleStyles.classNameTextField}
               value={section.name}
               onChange={e => updateSection('name', e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
               disabled={isLoading}
             />
           )}

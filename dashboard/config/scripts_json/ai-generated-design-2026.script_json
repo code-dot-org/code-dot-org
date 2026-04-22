@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-16 01:42:10 UTC",
+    "serialized_at": "2026-04-20 21:52:12 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3598,7 +3598,7 @@
       "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
       "position": 18,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
@@ -5443,6 +5443,28 @@
     },
     {
       "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "User Persona and Problem Statement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level2_cfu_2026"
+        ],
+        "lesson.key": "Lesson 7: Meet Your User",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson7-level2_cfu_2026"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5467,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5492,7 +5514,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5500,7 +5522,7 @@
         "level_keys": [
           "ai-generated-design-lesson8-level7_2026"
         ],
-        "progression": "Check for Understanding"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5517,7 +5539,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5542,7 +5564,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5567,7 +5589,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5592,7 +5614,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5617,7 +5639,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5642,7 +5664,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5667,7 +5689,29 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Wireframe an App Idea"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-level2-cfu_2026"
+        ],
+        "lesson.key": "Lesson 10: Wireframes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "680e9565-15c8-4f93-94ee-76c65da3ae5d"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson10-level2-cfu_2026"
+      ]
+    },
+    {
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5692,7 +5736,29 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Generate from a Wireframe"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-cfu_2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "ed08db48-f3e6-40a8-81f1-093f71598511"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level2-cfu_2026"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5717,7 +5783,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5742,7 +5808,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5767,7 +5833,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5792,7 +5858,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5817,7 +5883,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5842,7 +5908,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6110,6 +6176,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson7-level2_cfu_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson7-level2_cfu_2026"
+        ],
+        "lesson.key": "Lesson 7: Meet Your User",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson8-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson8-level1_2026"
@@ -6218,9 +6296,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson10-level2-cfu_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson10-level2-cfu_2026"
+        ],
+        "lesson.key": "Lesson 10: Wireframes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "680e9565-15c8-4f93-94ee-76c65da3ae5d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson11-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson11-level1_2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "ed08db48-f3e6-40a8-81f1-093f71598511"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level2-cfu_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-cfu_2026"
         ],
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-3",
@@ -7649,6 +7751,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

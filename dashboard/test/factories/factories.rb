@@ -1451,6 +1451,14 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :json_video do
+    sequence(:key) {|n| "json-video-#{n}"}
+    description {'fake description'}
+    s3_uri {'s3://fake-bucket/fake-path/video.json'}
+    json_schema_version {1}
+    audience {'student'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
@@ -1520,6 +1528,14 @@ FactoryBot.define do
     submitted_feedback {nil}
     submitted_at {nil}
     resources {nil}
+  end
+
+  factory :lesson_insight do
+    lesson
+    association(:student, factory: :student)
+    section
+    teacher_id {nil}
+    insight_response {'{"progress":"test","misconceptions":"none","assessment":"good","next_steps":"continue"}'}
   end
 
   factory :activity_section do

@@ -56,13 +56,13 @@ end
 
 def write_jwk_dev
   # format values to be written to locals.yml
-  jwk_data = <<~EOF
+  jwk_data = <<~YAML
     jwks_data:
       #{@jwks_hash.to_json}
 
     jwk_private_key_data:
       #{@private_key_obj.to_json}
-  EOF
+  YAML
 
   File.write(File.join(File.dirname(__FILE__), '../locals.yml'), jwk_data, mode: "a")
 end
