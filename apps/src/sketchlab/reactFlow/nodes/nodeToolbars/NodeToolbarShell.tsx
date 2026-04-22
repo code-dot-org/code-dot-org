@@ -30,7 +30,8 @@ export default function NodeToolbarShell({
   children,
 }: NodeToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openNodeToolbarId, closeNodeToolbar} = useNodeToolbarVisibility();
+  const {openNodeToolbarId, trapFocus, closeNodeToolbar} =
+    useNodeToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = openNodeToolbarId === nodeId;
@@ -87,7 +88,7 @@ export default function NodeToolbarShell({
       isVisible={isVisible}
     >
       <FocusTrap
-        active={isVisible}
+        active={isVisible && trapFocus}
         focusTrapOptions={{
           // Route Escape through handleClose. Return false so the trap
           // stays active; the subsequent isVisible=false flip is what

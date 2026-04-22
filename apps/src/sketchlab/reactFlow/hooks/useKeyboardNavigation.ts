@@ -50,7 +50,7 @@ interface UseKeyboardNavigationOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   readOnly: boolean;
-  openNodeToolbar: (nodeId: string) => void;
+  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
 }
 
 /**
@@ -113,7 +113,7 @@ export function useKeyboardNavigation({
       // focus to the first tabbable item when isVisible flips.
       if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
         event.preventDefault();
-        openNodeToolbar(focusedNodeId);
+        openNodeToolbar(focusedNodeId, {trapFocus: true});
         return;
       }
 

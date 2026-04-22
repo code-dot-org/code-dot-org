@@ -10,13 +10,15 @@ export function useSketchLabReadOnly(): boolean {
 
 interface NodeToolbarVisibilityContextValue {
   openNodeToolbarId: string | null;
-  openNodeToolbar: (nodeId: string) => void;
+  trapFocus: boolean;
+  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
   closeNodeToolbar: () => void;
 }
 
 const NodeToolbarVisibilityContext =
   createContext<NodeToolbarVisibilityContextValue>({
     openNodeToolbarId: null,
+    trapFocus: false,
     openNodeToolbar: () => {},
     closeNodeToolbar: () => {},
   });

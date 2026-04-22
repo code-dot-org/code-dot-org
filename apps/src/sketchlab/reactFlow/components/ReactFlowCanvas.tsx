@@ -77,25 +77,32 @@ export default function ReactFlowCanvas({
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
-  const [openNodeToolbarId, setOpenNodeToolbarId] = useState<string | null>(
-    null
+  const [openNodeToolbar_, setOpenNodeToolbar_] = useState<{
+    id: string | null;
+    trapFocus: boolean;
+  }>({id: null, trapFocus: false});
+  const openNodeToolbarId = openNodeToolbar_.id;
+  const trapFocus = openNodeToolbar_.trapFocus;
+
+  const openNodeToolbar = useCallback(
+    (nodeId: string, options?: {trapFocus?: boolean}) => {
+      setOpenNodeToolbar_({id: nodeId, trapFocus: options?.trapFocus ?? false});
+    },
+    []
   );
 
-  const openNodeToolbar = useCallback((nodeId: string) => {
-    setOpenNodeToolbarId(nodeId);
-  }, []);
-
   const closeNodeToolbar = useCallback(() => {
-    setOpenNodeToolbarId(null);
+    setOpenNodeToolbar_({id: null, trapFocus: false});
   }, []);
 
   const nodeToolbarVisibility = useMemo(
     () => ({
       openNodeToolbarId,
+      trapFocus,
       openNodeToolbar,
       closeNodeToolbar,
     }),
-    [openNodeToolbarId, openNodeToolbar, closeNodeToolbar]
+    [openNodeToolbarId, trapFocus, openNodeToolbar, closeNodeToolbar]
   );
 
   const {screenToFlowPosition} = useReactFlow();
@@ -139,9 +146,14 @@ export default function ReactFlowCanvas({
         ? lastFocusedEntry.id
         : null;
     if (focusedNodeId !== openNodeToolbarId) {
-      setOpenNodeToolbarId(null);
+      closeNodeToolbar();
     }
-  }, [openNodeToolbarId, nodeOrEdgeFocused, lastFocusedEntry]);
+  }, [
+    openNodeToolbarId,
+    nodeOrEdgeFocused,
+    lastFocusedEntry,
+    closeNodeToolbar,
+  ]);
 
   // Close the node toolbar when its owning node is deleted.
   useEffect(() => {
@@ -149,9 +161,9 @@ export default function ReactFlowCanvas({
       openNodeToolbarId &&
       !nodes.some(node => node.id === openNodeToolbarId)
     ) {
-      setOpenNodeToolbarId(null);
+      closeNodeToolbar();
     }
-  }, [nodes, openNodeToolbarId]);
+  }, [nodes, openNodeToolbarId, closeNodeToolbar]);
 
   // Clear selection when focus leaves the canvas container entirely
   // (e.g. clicking outside or tabbing out of the canvas). Skip when the
@@ -298,12 +310,13 @@ export default function ReactFlowCanvas({
 
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: {id: string}) => {
-      // Only open the node toolbar in editable mode.
+      // Only open the node toolbar in editable mode. Mouse opens don't
+      // trap focus so resize handles and contenteditable text stay usable.
       if (!readOnly) {
-        setOpenNodeToolbarId(node.id);
+        openNodeToolbar(node.id, {trapFocus: false});
       }
     },
-    [readOnly]
+    [readOnly, openNodeToolbar]
   );
 
   return (
