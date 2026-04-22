@@ -2,6 +2,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '../util/HttpClient';
 
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 
 type SDKOptions = Parameters<typeof generateText>[0];
@@ -100,7 +101,9 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(data);
   } catch (error) {
-    console.error('Fetch error:', error);
+    getErrorLogData(error).then(data => {
+      console.error('Fetch error in generateTextThroughGateway:', data);
+    });
     throw error;
   }
 };

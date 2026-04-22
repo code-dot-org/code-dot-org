@@ -5,6 +5,7 @@ import {
 
 import HttpClient from '../util/HttpClient';
 
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
@@ -15,26 +16,33 @@ type TranscribeOptions = Parameters<typeof transcribe>[0];
 async function transcribeThroughGateway(
   options: TranscribeOptions
 ): Promise<TranscriptionResult> {
-  const {model, audio, ...restOptions} = options;
+  try {
+    const {model, audio, ...restOptions} = options;
 
-  const token = await fetchAccessToken();
+    const token = await fetchAccessToken();
 
-  const formData = new FormData();
-  formData.append('token', token);
-  const audioBlob = await audioToBlob(audio);
-  formData.append('audio', audioBlob, 'audio');
-  formData.append('model', getModelString(model));
+    const formData = new FormData();
+    formData.append('token', token);
+    const audioBlob = await audioToBlob(audio);
+    formData.append('audio', audioBlob, 'audio');
+    formData.append('model', getModelString(model));
 
-  for (const [key, value] of Object.entries(restOptions)) {
-    formData.append(key, String(value));
+    for (const [key, value] of Object.entries(restOptions)) {
+      formData.append(key, String(value));
+    }
+
+    const response = await HttpClient.post(
+      `${AI_GATEWAY_URL}/transcribe`,
+      formData
+    );
+
+    return await response.json();
+  } catch (error) {
+    getErrorLogData(error).then(data => {
+      console.error('Fetch error in transcribeThroughGateway:', data);
+    });
+    throw error;
   }
-
-  const response = await HttpClient.post(
-    `${AI_GATEWAY_URL}/transcribe`,
-    formData
-  );
-
-  return await response.json();
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {
