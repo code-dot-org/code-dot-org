@@ -4,7 +4,6 @@ import {Channel} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import musicNoteProjectCardImage from '@cdo/static/music/music-note-project-card.png';
 import pythonlabProjectCardImage from '@cdo/static/pythonlab/pythonlab-project-card.png';
-import weblab2ProjectCardImage from '@cdo/static/weblab2/weblab2-project-card.png';
 
 export const publishedFeaturedProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -78,7 +77,6 @@ export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
 } = {
   music: musicNoteProjectCardImage,
   pythonlab: pythonlabProjectCardImage,
-  weblab2: weblab2ProjectCardImage,
 };
 
 export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {

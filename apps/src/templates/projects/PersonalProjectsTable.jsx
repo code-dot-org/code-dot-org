@@ -306,9 +306,6 @@ export const styles = {
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
-  if (rowData.type === 'weblab2') {
-    console.log(`weblab2 project, thumbnailUrl: ${thumbnailUrl}`);
-  }
   return (
     <a
       style={tableLayoutStyles.link}
