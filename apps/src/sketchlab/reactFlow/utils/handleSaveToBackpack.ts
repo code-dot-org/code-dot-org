@@ -12,6 +12,8 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 
+import {computeExportDimensions} from './computeExportDimensions';
+
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1
 // (so a single node looks crisp, not tiny); only sketches larger than this
@@ -72,20 +74,13 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  if (reactFlow.getNodes().length === 0) {
-    errorCallback(
-      `Error saving ${newFileName} to your Backpack. Please try again`
-    );
-    return;
-  }
-
   // Read the themed canvas background so the PNG matches light/dark mode.
   const canvasEl = document.querySelector<HTMLElement>(
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
   );
 
   // Union the rendered bounding rects of every node and edge so we include
-  // curved edges and arrow markers that extend beyond node bounds.
+  // edges that extend beyond node bounds.
   // Convert screen-space rects back to flow space using the current viewport.
   const rootRect = (canvasEl ?? viewportEl).getBoundingClientRect();
   const {x: panX, y: panY, zoom} = reactFlow.getViewport();
@@ -93,6 +88,12 @@ export const handleSaveToBackpack = async (
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
       `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
   );
+  if (contentEls.length === 0) {
+    errorCallback(
+      'Add something to your workspace before saving to your backpack'
+    );
+    return;
+  }
   let minX = Infinity;
   let minY = Infinity;
   let maxX = -Infinity;
@@ -111,24 +112,12 @@ export const handleSaveToBackpack = async (
     if (flowRight > maxX) maxX = flowRight;
     if (flowBottom > maxY) maxY = flowBottom;
   });
-  if (!Number.isFinite(minX)) {
-    errorCallback(
-      `Error saving ${newFileName} to your Backpack. Please try again`
+  const {imageWidth, imageHeight, scale, translateX, translateY} =
+    computeExportDimensions(
+      {minX, minY, maxX, maxY},
+      EXPORT_PADDING_PX,
+      MAX_EXPORT_DIM_PX
     );
-    return;
-  }
-  const contentWidth = maxX - minX + 2 * EXPORT_PADDING_PX;
-  const contentHeight = maxY - minY + 2 * EXPORT_PADDING_PX;
-  // Scale down only if content exceeds MAX_EXPORT_DIM_PX along either axis;
-  // otherwise export at 1:1 so small sketches don't get shrunk.
-  const scale = Math.min(
-    1,
-    MAX_EXPORT_DIM_PX / Math.max(contentWidth, contentHeight)
-  );
-  const imageWidth = Math.round(contentWidth * scale);
-  const imageHeight = Math.round(contentHeight * scale);
-  const translateX = (-minX + EXPORT_PADDING_PX) * scale;
-  const translateY = (-minY + EXPORT_PADDING_PX) * scale;
   const backgroundColor = canvasEl
     ? getComputedStyle(canvasEl).backgroundColor
     : '#ffffff';
