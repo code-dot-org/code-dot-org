@@ -281,9 +281,11 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
     updatePanel({...panel, links: newLinks});
   };
 
+  const otherPanels = allPanels.filter(p => p.key !== panel.key);
+
   const addLink = () => {
-    const firstOtherKey =
-      allPanels.find(p => p.key !== panel.key)?.key || panel.key;
+    const firstOtherKey = otherPanels[0]?.key;
+    if (!firstOtherKey) return;
     const newLink: PanelLink = {
       text: '',
       x: 50,
@@ -492,9 +494,9 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
                 onChange={e =>
                   updateLink(linkIndex, {...link, targetKey: e.target.value})
                 }
-                items={allPanels.map((p, i) => ({
+                items={otherPanels.map(p => ({
                   value: p.key,
-                  text: `Panel ${i + 1}${p.key === panel.key ? ' (self)' : ''}`,
+                  text: `Panel ${allPanels.indexOf(p) + 1}`,
                 }))}
               />
               <button
@@ -513,6 +515,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
             text="Add Link"
             color="gray"
             icon="plus"
+            disabled={otherPanels.length === 0}
           />
         </div>
       )}
