@@ -1,12 +1,12 @@
-require_relative '../../test_helper'
+require_relative '../../../test_helper'
 require 'aws-sdk-redshiftdataapiservice'
-require 'cdo/aws/redshift'
+require 'cdo/aws/redshift/client'
 
-class TestRedshift < Minitest::Test
+class TestRedshiftClient < Minitest::Test
   def setup
     CDO.stubs(:redshift_cluster_id).returns('test-cluster')
 
-    @redshift = Cdo::Redshift.new
+    @redshift = Cdo::Aws::Redshift::Client.new
     # Stub sleep so tests execute instantly instead of waiting in the polling loop.
     @redshift.stubs(:sleep)
   end
@@ -15,7 +15,7 @@ class TestRedshift < Minitest::Test
     mock_resp = mock
     mock_resp.stubs(:id).returns('async-123')
 
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(mock_resp)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(mock_resp)
 
     id = @redshift.execute_async('REFRESH MATERIALIZED VIEW mv')
     assert_equal 'async-123', id
@@ -25,7 +25,7 @@ class TestRedshift < Minitest::Test
     desc_resp = mock
     desc_resp.stubs(:status).returns('STARTED')
 
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
       with(id: 'async-123').
       returns(desc_resp)
 
@@ -40,7 +40,7 @@ class TestRedshift < Minitest::Test
     desc_finished.stubs(:status).returns('FINISHED')
 
     # Loops once on STARTED, then breaks on FINISHED
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
       with(id: 'wait-123').
       times(2).
       returns(desc_started, desc_finished)
@@ -52,10 +52,10 @@ class TestRedshift < Minitest::Test
   def test_wait_for_completion_times_out
     desc_started = mock
     desc_started.stubs(:status).returns('STARTED')
-    Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).returns(desc_started)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).returns(desc_started)
 
     # We expect the client to actively cancel the statement on the cluster
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:cancel_statement).with(id: 'timeout-123')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:cancel_statement).with(id: 'timeout-123')
 
     # Simulate Time passing to trigger the timeout
     start_time = Time.new(2025, 1, 1, 12, 0, 0)
@@ -65,7 +65,7 @@ class TestRedshift < Minitest::Test
       start_time + 301     # Second loop check (exceeds 300s timeout)
     )
 
-    error = assert_raises(Cdo::Redshift::QueryError) do
+    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
       @redshift.wait_for_completion('timeout-123', timeout: 300)
     end
 
@@ -75,7 +75,7 @@ class TestRedshift < Minitest::Test
   def test_fetch_results_all_data_types
     desc_finished = mock
     desc_finished.stubs(:has_result_set).returns(true)
-    Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).returns(desc_finished)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).returns(desc_finished)
 
     # 1. Mock Column Metadata
     cols = %w[str lng bool_t bool_f dbl blb null_val].map do |name|
@@ -100,7 +100,7 @@ class TestRedshift < Minitest::Test
     res_resp.stubs(:records).returns([row])
     res_resp.stubs(:next_token).returns(nil)
 
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:get_statement_result).returns(res_resp)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:get_statement_result).returns(res_resp)
 
     results = @redshift.fetch_results('type-123')
 
@@ -120,14 +120,14 @@ class TestRedshift < Minitest::Test
   def test_execute_synchronous_success
     exec_resp = mock
     exec_resp.stubs(:id).returns('sync-123')
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
 
     desc_finished = mock
     desc_finished.stubs(:status).returns('FINISHED')
     desc_finished.stubs(:has_result_set).returns(true)
 
     # Describe is called once in wait_for_completion and once in fetch_results
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
       with(id: 'sync-123').
       twice.
       returns(desc_finished, desc_finished)
@@ -148,7 +148,7 @@ class TestRedshift < Minitest::Test
     res_resp.stubs(:records).returns([[field]])
     res_resp.stubs(:next_token).returns(nil)
 
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:get_statement_result).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:get_statement_result).
       with(id: 'sync-123', next_token: nil).
       returns(res_resp)
 
@@ -159,19 +159,19 @@ class TestRedshift < Minitest::Test
   def test_execute_raises_on_failure
     exec_resp = mock
     exec_resp.stubs(:id).returns('fail-123')
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
 
     desc_failed = mock
     desc_failed.stubs(:status).returns('FAILED')
     desc_failed.stubs(:error).returns('Syntax Error')
 
     # Wait loop calls status once (gets FAILED), then explicitly calls describe_statement to get the error.
-    Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
       with(id: 'fail-123').
       twice.
       returns(desc_failed, desc_failed)
 
-    error = assert_raises(Cdo::Redshift::QueryError) do
+    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
       @redshift.execute('BAD SQL')
     end
     assert_includes error.message, 'FAILED'

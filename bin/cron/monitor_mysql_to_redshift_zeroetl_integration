@@ -4,7 +4,7 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../deployment'
-require 'cdo/aws/redshift'
+require 'cdo/aws/redshift/client'
 require 'cdo/chat_client'
 
 NOTIFY_CHANNEL = 'data-alerts'
@@ -19,7 +19,7 @@ def alert(message)
 end
 
 def main
-  redshift = Cdo::Redshift.new(db_user: REDSHIFT_SQL_USER)
+  redshift = Cdo::Aws::Redshift::Client.new(db_user: REDSHIFT_SQL_USER)
 
   # Check Integration-level status.
   # Expected healthy states are `PendingDbConnectState`, `SchemaDiscoveryState`, and `CdcRefreshState`
