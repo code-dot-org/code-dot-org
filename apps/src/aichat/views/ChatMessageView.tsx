@@ -194,9 +194,7 @@ export function getChatMessageDisplayText(
   }
 
   // If Role is ASSISTANT, display the appropriate message based on the status.
-  if (teacherFlaggedHidden) {
-    return 'This message has been flagged as inappropriate by the teacher.';
-  }
+
   switch (status) {
     case Status.PROFANITY_VIOLATION:
       return commonI18n.aiChatInappropriateModelMessage();
@@ -210,9 +208,11 @@ export function getChatMessageDisplayText(
       return commonI18n.aiChatModelRateLimited();
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
-    default:
-      return chatMessageDisplayText;
   }
+  if (teacherFlaggedHidden) {
+    return 'This message has been flagged as inappropriate by the teacher.';
+  }
+  return chatMessageDisplayText;
 }
 
 interface GetFooterParams {
