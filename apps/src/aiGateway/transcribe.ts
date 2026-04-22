@@ -3,8 +3,8 @@ import {
   Experimental_TranscriptionResult as TranscriptionResult,
 } from 'ai';
 
-import experiments from '../util/experiments';
-import HttpClient from '../util/HttpClient';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {TurnstileManager} from './turnstile';
