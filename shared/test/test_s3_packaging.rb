@@ -181,6 +181,50 @@ class S3PackagingTest < Minitest::Test
     assert threw
   end
 
+  def test_warn_packages_differ_writes_diff
+    diff_dir, dir1, dir2 = Array.new(3) {Dir.mktmpdir}
+
+    # Write a different file to each dir
+    File.write(File.join(dir1, 'file.txt'), "same\nold\n")
+    File.write(File.join(dir2, 'file.txt'), "same\nnew\n")
+
+    Time.stubs(:now).returns(Time.utc(2026, 3, 19, 12, 34, 56))
+    @packager.send(:warn_packages_differ, "file.txt differs\n", dir1, dir2, diff_dir: diff_dir)
+
+    diff_path = File.join(diff_dir, 's3-vs-local-20260319T123456Z.diff')
+    assert File.size(diff_path) > 0
+    assert_includes File.read(diff_path), '-old'
+    assert_includes File.read(diff_path), '+new'
+  ensure
+    [diff_dir, dir1, dir2].compact.each {|dir| FileUtils.remove_entry_secure(dir)}
+  end
+
+  def test_warn_packages_differ_deletes_oldest_diff_files
+    diff_dir, dir1, dir2 = Array.new(3) {Dir.mktmpdir}
+
+    # Write 5x 1kb files
+    5.times do |i|
+      path = File.join(diff_dir, "old-#{i}.diff")
+      File.write(path, 'x' * 1024)
+      time = Time.utc(2026, 3, 19, 12, 0, i)
+      File.utime(time, time, path)
+    end
+
+    # call warn_packages_differ with max_size of 3.1kb
+    @packager.send(:warn_packages_differ, "file.txt differs\n", dir1, dir2, diff_dir: diff_dir, max_size_gb: 3.1 / 1024 / 1024)
+
+    # expect the oldest two 1kb diff files to be deleted
+    refute File.exist?(File.join(diff_dir, 'old-0.diff'))
+    refute File.exist?(File.join(diff_dir, 'old-1.diff'))
+
+    # expect the youngest three 1kb diff files to still exist
+    assert File.exist?(File.join(diff_dir, 'old-2.diff'))
+    assert File.exist?(File.join(diff_dir, 'old-3.diff'))
+    assert File.exist?(File.join(diff_dir, 'old-4.diff'))
+  ensure
+    [diff_dir, dir1, dir2].compact.each {|dir| FileUtils.remove_entry_secure(dir)}
+  end
+
   def test_download_anonymous
     RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
     package = @packager.send(:create_package, 'build')

@@ -4,7 +4,9 @@
 // levels without doing page reloads.
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 
+import Lab2Registry from '../lab2/Lab2Registry';
 import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getStore} from '../redux';
 
@@ -30,16 +32,37 @@ export function canChangeLevelInPage(currentLevel, newLevel) {
 export function setupNavigationHandler(initialLevelId) {
   // Store the starting level ID in the browser history stack.
   window.history.replaceState({levelId: initialLevelId}, '');
-  window.addEventListener('popstate', function (event) {
+  window.addEventListener('popstate', async function (event) {
     const levelId = event.state?.levelId;
     if (!levelId) {
       return;
     }
+    const store = getStore();
+    const progressStoreState = store.getState().progress;
+    const previousLevelId = progressStoreState.currentLevelId;
+    const levelNavigationConfirmation =
+      Lab2Registry.getInstance().getLevelNavigationConfirmation();
+    if (levelNavigationConfirmation && !(await levelNavigationConfirmation())) {
+      // Restore URL history for the current level when navigation is canceled.
+      if (previousLevelId && progressStoreState.currentLessonId) {
+        const previousLevel = levelById(
+          progressStoreState,
+          progressStoreState.currentLessonId,
+          previousLevelId
+        );
+        if (previousLevel?.path) {
+          window.history.pushState(
+            {levelId: previousLevelId},
+            '',
+            previousLevel.path + window.location.search
+          );
+        }
+      }
+      return;
+    }
     // Notify the Lab2 system (that handles changing levels without reload) about the level change.
-    // The browser history API does not provide access to the state of the page we just came from,
-    // so we don't know the previous level ID.
-    notifyLevelChange(null, levelId);
-    getStore().dispatch(setCurrentLevelId(levelId));
+    notifyLevelChange(previousLevelId || null, levelId);
+    store.dispatch(setCurrentLevelId(levelId));
   });
 }
 

@@ -1,24 +1,22 @@
-import {
-  Button,
-  LinkButton,
-  ButtonProps,
-  LinkButtonProps,
-} from '@code-dot-org/component-library/button';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   TooltipProps,
   WithTooltip,
   WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton, IconButtonProps} from '@mui/material';
 import React, {memo, useCallback, useRef} from 'react';
 
 interface IconButtonWithTooltipProps {
   id: string;
   label: string;
-  icon: ButtonProps['icon'];
-  type: ButtonProps['type'];
-  color: ButtonProps['color'];
-  buttonSize?: ButtonProps['size'];
+  icon: FontAwesomeV6IconProps;
+  variant?: IconButtonProps['variant'];
+  color?: IconButtonProps['color'];
+  size?: IconButtonProps['size'];
   tooltipSize: TooltipProps['size'];
   tooltipDirection: TooltipProps['direction'];
   hideTooltipTail?: TooltipProps['hideTail'];
@@ -27,8 +25,8 @@ interface IconButtonWithTooltipProps {
   containerRef?: React.RefObject<HTMLDivElement>;
   className?: string;
   theme?: Theme;
-  href?: LinkButtonProps['href'];
-  target?: LinkButtonProps['target'];
+  href?: string;
+  target?: string;
 }
 
 const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps> =
@@ -37,9 +35,9 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       id,
       label,
       icon,
-      type,
-      color,
-      buttonSize,
+      variant = 'contained',
+      color = 'primary',
+      size = 'medium',
       tooltipSize,
       tooltipDirection,
       hideTooltipTail,
@@ -68,17 +66,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
         [onClick, containerRef]
       );
 
-      // Common props shared between Button and LinkButton.
-      const commonButtonProps = {
-        id: `${id}-button`,
-        ariaLabel: label,
-        type,
-        color,
-        size: buttonSize,
-        isIconOnly: true,
-        icon,
-        disabled,
-      };
+      const iconElement = <FontAwesomeV6Icon {...icon} />;
 
       const tooltipProps = {
         tooltipId: `${id}-tooltip`,
@@ -93,9 +81,32 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       return (
         <WithTooltip ref={tooltipRef} tooltipProps={tooltipProps}>
           {href ? (
-            <LinkButton {...commonButtonProps} href={href} target={target} />
+            <MuiIconButton
+              id={`${id}-button`}
+              aria-label={label}
+              variant={variant}
+              color={color}
+              size={size}
+              disabled={disabled}
+              href={href}
+              target={target}
+              rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+            >
+              {iconElement}
+            </MuiIconButton>
           ) : (
-            <Button {...commonButtonProps} onClick={handleClick} />
+            <MuiIconButton
+              id={`${id}-button`}
+              aria-label={label}
+              variant={variant}
+              color={color}
+              size={size}
+              disabled={disabled}
+              onClick={handleClick}
+              type="button"
+            >
+              {iconElement}
+            </MuiIconButton>
           )}
         </WithTooltip>
       );

@@ -446,6 +446,7 @@ en:
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
       videos: "Videos"
+      hour_of_ai: Hour of AI
       hour_of_code: "Hour of Code"
       csf: "CS Fundamentals"
 
@@ -510,6 +511,7 @@ en:
       thebadguys: 'The Bad Guys'
       loading: 'Loading...'
       weblab: 'Web Lab'
+      weblab2: 'Web Lab (new)'
       view_all: 'View all projects...'
 
     popup:

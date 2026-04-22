@@ -4,7 +4,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const USER_MENU_OPTION_IDS = ['my-projects', 'user-edit', 'user-signout'];
 const HELP_ICON_OPTION_IDS = ['support', 'report-bug', 'teacher-community'];
 const HAMBURGER_OPTION_IDS = [
   'learn',
@@ -36,14 +35,14 @@ const addCreateMenuMetrics = (
 ) => {
   if (headerCreateMenu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
-    headerCreateMenu.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        isSignedIn
-          ? EVENTS.SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN
-          : EVENTS.SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN,
-        additionalOptions
-      );
-    });
+    if (!isSignedIn) {
+      headerCreateMenu.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN,
+          additionalOptions
+        );
+      });
+    }
 
     // Log if a signed-out user clicks an option in the "Create" menu dropdown
     const createMenuOptions = getScriptData('createMenuOptions');
@@ -51,15 +50,15 @@ const addCreateMenuMetrics = (
       document
         .getElementById(`create_menu_option_${option}`)
         .addEventListener('click', () => {
-          analyticsReporter.sendEvent(
-            isSignedIn
-              ? EVENTS.SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION
-              : EVENTS.SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION,
-            {
-              option: option,
-              ...additionalOptions,
-            }
-          );
+          if (!isSignedIn) {
+            analyticsReporter.sendEvent(
+              EVENTS.SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION,
+              {
+                option: option,
+                ...additionalOptions,
+              }
+            );
+          }
         });
     });
   }
@@ -76,7 +75,9 @@ const addMenuMetrics = (
   if (menu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
     menu.addEventListener('click', () => {
-      analyticsReporter.sendEvent(dropdownEventName, additionalOptions);
+      if (dropdownEventName) {
+        analyticsReporter.sendEvent(dropdownEventName, additionalOptions);
+      }
     });
 
     // Log if a signed-out user clicks an option in the "Create" menu dropdown
@@ -84,10 +85,12 @@ const addMenuMetrics = (
       const optionElement = document.getElementById(option);
       if (optionElement) {
         optionElement.addEventListener('click', () => {
-          analyticsReporter.sendEvent(optionEventName, {
-            option: option,
-            ...additionalOptions,
-          });
+          if (optionEventName) {
+            analyticsReporter.sendEvent(optionEventName, {
+              option: option,
+              ...additionalOptions,
+            });
+          }
         });
       }
     });
@@ -136,19 +139,7 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
   };
 
   // Log if a header link is clicked
-  addClickEventToLinks(
-    'headerlink',
-    EVENTS.SIGNED_IN_USER_CLICKS_HEADER_LINK,
-    additionalOptions
-  );
-
-  addMenuMetrics(
-    'header_user_menu',
-    USER_MENU_OPTION_IDS,
-    EVENTS.SIGNED_IN_USER_CLICKS_USER_MENU,
-    EVENTS.SIGNED_IN_USER_CLICKS_USER_MENU_OPTION,
-    additionalOptions
-  );
+  // Intentionally do not log signed-in header link and user menu events.
 
   addMenuMetrics(
     'help-icon',
@@ -161,7 +152,7 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
   addMenuMetrics(
     'hamburger-icon',
     HAMBURGER_OPTION_IDS,
-    EVENTS.SIGNED_IN_USER_CLICKS_HAMBURGER_LINK,
+    null,
     EVENTS.SIGNED_IN_USER_CLICKS_HAMBURGER_OPTION,
     additionalOptions
   );

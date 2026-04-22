@@ -7,8 +7,6 @@ import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import msg from '@cdo/locale';
 
@@ -29,7 +27,6 @@ export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldWarnOnAnimationUpload,
   isBackgroundsTab,
-  projectType,
   teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
@@ -71,12 +68,6 @@ export function UnconnectedAnimationUploadButton({
       showUploadModal();
     } else {
       onUploadClick();
-      if (projectType) {
-        analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
-          UploaderType: 'Animation Picker',
-          ProjectType: projectType,
-        });
-      }
     }
   };
 
@@ -125,7 +116,6 @@ UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
-  projectType: PropTypes.string,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
   teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,

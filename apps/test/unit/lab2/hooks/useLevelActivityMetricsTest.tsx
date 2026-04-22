@@ -40,13 +40,6 @@ const defaultLevelProperties: LevelProperties = {
   appName: 'weblab2',
 };
 
-const projectLevelProperties: LevelProperties = {
-  isProjectLevel: true,
-  id: 456,
-  name: 'Project Level',
-  appName: 'weblab2',
-};
-
 const differentLevelProperties: LevelProperties = {
   isProjectLevel: false,
   id: 789,
@@ -117,25 +110,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 123,
           levelName: 'Test Level',
-        }
-      );
-      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
-    });
-
-    it('logs PROJECT_ACTIVITY event when callback is invoked for project level', () => {
-      const {result} = renderHookWithRedux(projectLevelProperties);
-
-      act(() => {
-        result.current();
-      });
-
-      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
-        EVENTS.PROJECT_ACTIVITY,
-        {
-          signedIn: true,
-          unitName: 'test-script',
-          levelId: 456,
-          levelName: 'Project Level',
+          locale: 'en-US',
         }
       );
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
@@ -155,6 +130,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: expect.any(String),
           levelId: expect.any(Number),
           levelName: expect.any(String),
+          locale: 'en-US',
         })
       );
     });
@@ -219,31 +195,8 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 789,
           levelName: 'Different Level',
+          locale: 'en-US',
         }
-      );
-    });
-
-    it('can log again for new level after reset', () => {
-      const {result: result1} = renderHookWithRedux(defaultLevelProperties);
-
-      act(() => {
-        result1.current();
-      });
-
-      const {result: result2} = renderHookWithRedux(projectLevelProperties);
-
-      act(() => {
-        result2.current();
-      });
-
-      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(2);
-
-      expect(mockSendLab2AnalyticsEvent).toHaveBeenLastCalledWith(
-        EVENTS.PROJECT_ACTIVITY,
-        expect.objectContaining({
-          levelId: 456,
-          levelName: 'Project Level',
-        })
       );
     });
   });

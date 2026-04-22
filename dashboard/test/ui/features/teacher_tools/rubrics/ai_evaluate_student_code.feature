@@ -4,6 +4,11 @@
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
+  #
+  # Note that this only covers units which we are seeding in our ui tests, no
+  # longer includes all production courses. Full validation of production
+  # courses is done by the `rake seed:validate_ai_rubrics` task during the
+  # deploy to staging.
   @chrome
   Scenario: Validate Rubric AI Config
     Given I validate rubric ai config for all lessons
@@ -194,7 +199,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-dismissible-alert" is visible
 
     # Teacher dismisses alert
-    When I click selector ".uitest-dismissible-alert .fa-close"
+    When I click selector ".uitest-dismissible-alert .fa-xmark"
     And I wait until element ".uitest-dismiss-confirmed" is visible
     And element ".uitest-dismissible-alert" is not visible
 

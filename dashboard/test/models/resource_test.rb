@@ -132,6 +132,39 @@ class ResourceTest < ActiveSupport::TestCase
     resource.serialize_scripts
   end
 
+  test 'serialize_scripts writes serialization for attached jit pl concepts' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    concept = create(:jit_pl_concept)
+    resource = create(:resource)
+    concept.resources << resource
+
+    JitPlConcept.any_instance.expects(:write_serialization).once
+    resource.serialize_scripts
+  end
+
+  test 'serialize_scripts writes serialization for concepts attached via misconception' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    concept = create(:jit_pl_concept)
+    misconception = create(:jit_pl_misconception, jit_pl_concept: concept)
+    resource = create(:resource)
+    misconception.resources << resource
+
+    JitPlConcept.any_instance.expects(:write_serialization).once
+    resource.serialize_scripts
+  end
+
+  test 'serialize_scripts writes serialization once for a concept attached both directly and via misconception' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    concept = create(:jit_pl_concept)
+    misconception = create(:jit_pl_misconception, jit_pl_concept: concept)
+    resource = create(:resource)
+    concept.resources << resource
+    misconception.resources << resource
+
+    JitPlConcept.any_instance.expects(:write_serialization).once
+    resource.serialize_scripts
+  end
+
   test 'creates new resource when copying to a course version without a matching resource' do
     course_version = create(:course_version)
     resource = create(:resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version)

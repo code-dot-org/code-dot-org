@@ -342,7 +342,10 @@ Javalab.prototype.init = function (config) {
         />
       </BackpackAPIContext.Provider>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
@@ -372,9 +375,6 @@ Javalab.prototype.onRun = function () {
     levelId: this.levelIdForAnalytics,
     scriptId: this.scriptIdForAnalytics,
     interaction: UserLevelInteractions.click_run,
-  });
-  analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
-    levelId: this.levelIdForAnalytics,
   });
   this.executeJavabuilder(ExecutionType.RUN);
 };

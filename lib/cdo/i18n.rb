@@ -5,16 +5,22 @@ require 'i18n'
 require 'uri'
 require 'yaml'
 
-require 'cdo/shared_constants'
-
 module Cdo
   module I18n
-    DEFAULT_LOCALE = SharedConstants::DEFAULT_LOCALE
+    DEFAULT_LOCALE = 'en-US'
 
     LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
     LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
       data.symbolize_keys! if data.is_a?(Hash)
+    end.freeze
+
+    # Mapping of short locale codes to normalized I18n locale codes (e.g., 'en' => 'en-US').
+    LOCALE_ALIASES = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v if v.is_a?(String)}.freeze
+
+    # Mapping LocalizeJS locale codes to normalized I18n locale codes (e.g., 'zh-Hans' => 'zh-CN').
+    LOCALIZE_TO_I18N_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
+      locales[cdo_language[:localize_code_s]] = cdo_language[:locale_s] if cdo_language[:localize_code_s]
     end.freeze
 
     TEXT_DIRECTIONS = Set[

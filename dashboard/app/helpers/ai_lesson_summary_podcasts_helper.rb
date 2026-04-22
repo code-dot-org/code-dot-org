@@ -1,12 +1,11 @@
 module AiLessonSummaryPodcastsHelper
-  API_KEY = CDO.elevenlabs_api_key
   MODEL = "eleven_v3"
-  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'podcasts/'
 
   def self.create_and_save_to_s3(lesson_id, user_id)
     script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
-    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
     unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
       podcast = get_podcast_from_script(script)
@@ -15,12 +14,11 @@ module AiLessonSummaryPodcastsHelper
   end
 
   def self.retrieve_podcast_from_s3(lesson_id)
-    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
     AWS::S3.download_from_bucket(PODCAST_BUCKET, filename)
   end
 
   def self.get_podcast_from_script(script)
-    client = Client.new(API_KEY, MODEL)
     begin
       response = client.request_podcast(script)
     rescue Net::OpenTimeout, Net::ReadTimeout
@@ -65,5 +63,9 @@ module AiLessonSummaryPodcastsHelper
         timeout: 180,
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.elevenlabs_api_key, MODEL)
   end
 end

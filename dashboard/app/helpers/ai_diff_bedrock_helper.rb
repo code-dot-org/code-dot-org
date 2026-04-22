@@ -1,10 +1,24 @@
+require 'cdo/aws/ec2'
+
 module AiDiffBedrockHelper
   include UsersHelper
 
+  def self.account_id
+    AWS::EC2.account_id || begin
+      Aws::STS::Client.new.get_caller_identity.account
+    rescue StandardError
+      nil
+    end
+  end
+
+  def self.region
+    AWS::EC2.region || CDO.aws_region
+  end
+
   MAX_TOKENS = 1500
   TEMP = 0.5
-  MODEL_ID = 'anthropic.claude-3-sonnet-20240229-v1:0'
-  MODEL_ARN = 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+  MODEL_ID = 'us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+  MODEL_ARN = "arn:aws:bedrock:#{region}:#{account_id}:inference-profile/#{MODEL_ID}".freeze
   # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
   KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
@@ -64,7 +78,7 @@ module AiDiffBedrockHelper
   def populate_new_session_messages(messages, input)
     new_input_text = "This is a continuation of a previous conversation. The previous messages are:"
     messages.each do |msg|
-      new_input_text << "\n\n#{msg.user? ? "User" : "Assistant"}: #{msg.raw_content}"
+      new_input_text << "\n\n#{msg.user? ? 'User' : 'Assistant'}: #{msg.raw_content}"
     end
     new_input_text << "\n\n\n**The current message that you should respond to is:**\nUser: #{input}"
   end
@@ -93,7 +107,6 @@ module AiDiffBedrockHelper
           },
           retrieval_configuration: {
             vector_search_configuration: {
-              filter: {},
               number_of_results: RETRIEVAL_LIMIT,
             }
           }
@@ -137,7 +150,7 @@ module AiDiffBedrockHelper
       end
     end
 
-    if lesson_number.nil? && unit_num.nil? && course_names.nil?
+    if lesson_number.nil? && unit_num.nil? && course_names.nil? && !section_contexts.empty?
       or_all_filters.push({equals: {key: "scope", value: "general"}})
       section_contexts&.each do |section_context|
         or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
@@ -186,7 +199,7 @@ module AiDiffBedrockHelper
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
     filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
-    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
+    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config unless filter_config.empty?
 
     attempts = 0
     begin
@@ -247,9 +260,10 @@ module AiDiffBedrockHelper
     if reference_urls.any?
       text << "\n\n**See also:**"
       reference_urls.each_with_index do |url, index|
-        text << "\n- [Link #{index+1}](#{url})"
+        text << "\n- [Link #{index + 1}](#{url})"
       end
     end
+
     {
       content: text,
       raw_content: response.output.text,

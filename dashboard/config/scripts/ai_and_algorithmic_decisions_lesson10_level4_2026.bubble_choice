@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson10-level4_2026'
+display_name 'IT Support: Fix a Broken Feature'
+description '####Step into the role of IT Support and choose one of these tickets to investigate and fix. Your job is to figure out what\’s wrong, fix the logic, and make sure it works correctly.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson10-level4a_2026'
+level 'ai-and-algorithmic-decisions-lesson10-level4b_2026'
+level 'ai-and-algorithmic-decisions-lesson10-level4c_2026'
+
+uses_lab2

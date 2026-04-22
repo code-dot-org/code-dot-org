@@ -108,7 +108,8 @@ export default function UnitCalendarGrid({
               <div className={styles.keySection}>
                 <div className={styles.keyCell}>
                   <FontAwesome
-                    icon="square-o"
+                    icon="square"
+                    iconStyle="regular"
                     style={{
                       color: color.teal,
                     }}
@@ -118,7 +119,7 @@ export default function UnitCalendarGrid({
                 </div>
                 <div className={styles.keyCell}>
                   <FontAwesome
-                    icon="check-circle"
+                    icon="circle-check"
                     style={{
                       color: color.purple,
                     }}

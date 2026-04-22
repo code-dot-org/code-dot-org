@@ -141,6 +141,8 @@ pardot_password:
 pardot_user_key:
 pardot_username:
 pardot_private_key:
+pardot_client_id:
+pardot_client_secret:
 
 # Honeybadger
 honeybadger_api_token:
@@ -207,9 +209,9 @@ crowdin_project_test_mapping:
   codeorg-restricted: codeorg-restricted-test
   hour-of-code: hour-of-code-test
 
-# Azure Content Moderator
-azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
-azure_content_moderation_key:
+# Azure AI Content Safety
+azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
+azure_ai_content_safety_key: !Secret
 
 # Credentials for SauceLabs.com, used for running selenium tests against
 # multiple browsers
@@ -253,8 +255,17 @@ acapela_ephemeral_password:
 new_relic_license_key:
 newrelic_logging: false
 
-# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/config/initializers/opentelemetry.rb` for more details.
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/engines/observability/` for more details.
 enable_opentelemetry: false
+
+# Sentry trace and error reporting.
+enable_sentry: false
+# DSN for the Dashboard Rails backend Sentry project.
+dashboard_sentry_dsn: !Secret
+# DSN for the apps/ webpack bundle Sentry project.
+frontend_apps_sentry_dsn: !Secret
+# DSN for the frontend/apps/studio Vite app Sentry project.
+frontend_studio_sentry_dsn: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -434,7 +445,7 @@ dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
-dashboard_workers: 8
+dashboard_workers:
 dashboard_web_server_name: dashboard
 dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
@@ -452,19 +463,6 @@ pegasus_port:
 pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
-
-# Whether most pegasus content is present in the sites and sites.v3 directories.
-# This flag should be set to false if this content has been omitted from the
-# local git client via git-sparse-checkout.
-#
-# When set to false, application features and tests which depend on most
-# pegasus content will be disabled. A small subset of pegasus content will still
-# be available to support certain features used by dashboard, such as
-# certificates, dcdo flags, and image optimization.
-#
-# It is recommended to control this flag via the `HAS_PEGASUS_CONTENT`
-# environment variable, since that will also be picked up by the apps build.
-has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
@@ -561,20 +559,14 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
@@ -599,22 +591,18 @@ db_credential_reader: !StackSecret
 db_proxy_admin:
 
 db_writer: !Secret
-reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
 pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
-reporting_db_reader: <%=reporting_db_writer%>
 
 # Default DB-specific endpoints to base endpoint plus db name.
 dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
 pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
 pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
-pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
-pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
@@ -661,8 +649,10 @@ openai_lesson_summaries_api_key: !Secret
 elevenlabs_api_key: !Secret
 
 # Credentials for Langfuse API
-langfuse_secret_key: !Secret
-langfuse_public_key: !Secret
+tutor_langfuse_secret_key: !Secret
+tutor_langfuse_public_key: !Secret
+ta_langfuse_secret_key: !Secret
+ta_langfuse_public_key: !Secret
 
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
@@ -726,3 +716,10 @@ contentful_cs_for_all_api_url: preview.contentful.com
 
 # HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
 hoc_tracking_enabled: true
+
+# Demo student IDs for demo sections. See Policies::DemoSections for usage.
+demo_student_ids:
+
+# Dummy course for attaching resources to just-in-time PL content
+jit_pl_course_name: 'just-in-time-pl'
+

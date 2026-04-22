@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-20T23:43:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "### Student Budgeter\r\n\r\n#### **Do This:**\r\n\r\n1. **Review the example:** Look at the completed button. Notice how the function is written as a named arrow function and how it is connected using `addEventListener`.\r\n\r\n2. Read a function description for another button in `prompt.md`.\r\n\r\n3. Highlight the button description, select **Add to AI Tutor Chat**, and ask the AI to write a named arrow function that matches the description.\r\n\r\n4. Create an event handler using `addEventListener(\"click\", functionName)` and add your function.\r\n\r\n5. Click the button and confirm that it works as expected.\r\n\r\n6. Complete the same steps for the remaining buttons.",
+    "display_name": "Student Budgeter",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Student Budgeter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n  <h1>Student Budgeter</h1>\n  <p>Track a total and update it with buttons.</p>\n\n  <h2>Total</h2>\n  <p id=\"totalDisplay\">$0</p>\n\n  <p id=\"output\">Ready.</p>\n\n  <h2>Actions</h2>\n  <button id=\"addFiveButton\">Add $5</button>\n  <button id=\"addTwelveButton\">Add $12</button>\n  <button id=\"taxButton\">Add Tax</button>\n  <button id=\"discountButton\">Add Discount</button>\n  <button id=\"resetButton\">Reset</button>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  line-height: 1.5;\n  color: #0f172a;\n  background: #f5f7ff;\n  text-align: center;\n  padding: 24px 12px;\n}\n\nh1 {\n  margin: 10px 0;\n}\n\nh2 {\n  margin-top: 24px;\n}\n\np {\n  margin: 8px 0;\n}\n\n#totalDisplay {\n  font-size: 32px;\n  font-weight: 800;\n  margin: 8px 0;\n}\n\n#output {\n  margin: 16px auto;\n  max-width: 400px;\n  min-height: 30px;\n  padding: 10px;\n  border: 1px dashed #cbd5e1;\n  border-radius: 10px;\n  background: #fbfdff;\n}\n\nbutton {\n  display: inline-block;\n  margin: 6px;\n  padding: 10px 14px;\n  border-radius: 10px;\n  font-weight: 600;\n  cursor: pointer;\n  border: 1px solid #d1d5db;\n}\n\n#addFiveButton {\n  background: #dbeafe;\n  border-color: #93c5fd;\n  color: #1e3a8a;\n}\n\n#addTwelveButton {\n  background: #e9d5ff;\n  border-color: #c084fc;\n  color: #6b21a8;\n}\n\n#taxButton {\n  background: #fde68a;\n  border-color: #fcd34d;\n  color: #92400e;\n}\n\n#discountButton {\n  background: #dcfce7;\n  border-color: #86efac;\n  color: #166534;\n}\n\n#resetButton {\n  background: #f3f4f6;\n  border-color: #d1d5db;\n  color: #374151;\n}\n\nbutton:hover {\n  opacity: 0.7;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const addFiveButton = document.getElementById(\"addFiveButton\");\n\nconst totalDisplay = document.getElementById(\"totalDisplay\");\nconst output = document.getElementById(\"output\");\n\nlet total = 0;\n\nconst addFive = () => {\n  total = total + 5;\n  totalDisplay.textContent = \"$\" + total;\n  output.textContent = \"Added $5.\";\n};\n\naddFiveButton.addEventListener(\"click\", addFive);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "contents": "## Add $5 Button\nName of Button: Add $5\nEvent: click\nWhat should happen: increase the total by 5\nWhat on the page changes: the total number and the message\n\n## Add $12 Button\nName of Button: Add $12\nEvent: click\nWhat should happen: increase the total by 12\nWhat on the page changes: the total number and the message\n\n## Tax Button\nName of Button: Add Tax\nEvent: click\nWhat should happen: increase the total by 7\nWhat on the page changes: the total number and the message\n\n## Discount Button\nName of Button: Add Discount\nEvent: click\nWhat should happen: decrease the total by 10\nWhat on the page changes: the total number and the message\n\n## Reset Button\nName of Button: Reset\nEvent: click\nWhat should happen: reset the total to 0\nWhat on the page changes: the total number and the message",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "4",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nxicJOJCmDs4JYQnFqw==\n",
+    "thumbnail_url": "https://images.code.org/a671f2663db01acff2af3c22cd1d7ce8-budget.png",
+    "bubble_choice_description": "Track expenses and savings with simple functions that add, tax, and discount your total.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:18.667+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson4-level8b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson4-level8b_2025\"},{\"changed_at\":\"2026-04-04 00:45:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:46:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:47:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:48:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 00:53:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 01:30:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-14 23:27:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-15 00:59:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-15 00:59:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-15 00:59:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

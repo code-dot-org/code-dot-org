@@ -1,0 +1,10 @@
+.videoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoInner {
+  width: 70%;
+  max-width: 600px;
+}

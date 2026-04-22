@@ -1,0 +1,80 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-20T23:44:51.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Code & Test\r\n\r\nUse AI to turn your flowchart into working code. The AI should create nested `if/else` statements based on your decision diamonds, and each path should display a clear output message.\r\n\r\n----\r\n\r\n**Before you start:**\r\n- Make sure your flowchart is **clear, complete, and easy to read.**\r\n- Import your flowchart from your Backpack.  \r\n\r\n**Do This:**\r\n1. Prompt AI Tutor to generate code from your flowchart.  \r\n2. Carefully **check the code** to make sure it matches your logic (don’t assume it’s correct!)\r\n3. Use your test cases table to **verify and fix** any issues\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Logic Template</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <div class=\"container\">\n      \n      <header class=\"header-section\">\n        <h1>Logic Flow</h1>\n        <p>Make your choices below...</p>\n      </header>\n\n      <hr>\n\n      <div class=\"questions-section\">\n        <div class=\"question-group\">\n          <p class=\"question-text\">Condition 1</p>\n          <div class=\"button-group\">\n            <button id=\"q1-option-a\">True</button>\n            <button id=\"q1-option-b\">False</button>\n          </div>\n        </div>\n\n        <div class=\"question-group\">\n          <p class=\"question-text\">Condition 2</p>\n          <div class=\"button-group\">\n            <button id=\"q2-option-a\">True</button>\n            <button id=\"q2-option-b\">False</button>\n          </div>\n        </div>\n      </div>\n\n      <hr>\n\n      <div class=\"result-section\">\n        <div id=\"message-box\">\n          <p id=\"result-text\">Output will appear here...</p>\n        </div>\n      </div>\n      \n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* General Page Styling */\nbody {\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n  background-color: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.container {\n  background-color: white;\n  padding: 2rem;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n  text-align: center;\n  width: 90%;\n  max-width: 500px;\n}\n\n/* Result Section */\n.result-section {\n  margin-bottom: 2rem;\n  padding: 1.5rem;\n  background-color: #eef2ff;\n  border-radius: 8px;\n  border: 2px dashed #4f46e5;\n}\n\n#result-text {\n  color: #3730a3;\n  margin: 0;\n}\n\n/* Question Groups */\n.question-group {\n  margin-bottom: 1.5rem;\n}\n\n.question-text {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #333;\n}\n\n/* Button Styling */\n.button-group {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\nbutton {\n  padding: 10px 20px;\n  font-size: 1rem;\n  cursor: pointer;\n  border: none;\n  border-radius: 6px;\n  background-color: #4f46e5;\n  color: white;\n  transition: background-color 0.2s, transform 0.1s;\n}\n\nbutton:hover {\n  background-color: #4338ca;\n}\n\nbutton:active {\n  transform: scale(0.95);\n}\n\n/* Utility Class */\n.hide {\n  display: none;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "placeholder.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level3-test-2025/uuid/62ed3aed-7574-4ccd-b854-37c82fbcb4f7.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "teacher_markdown": "Make sure students clean up their flowcharts. AI tools may **misinterpret unclear diagrams** and generate incorrect code.",
+    "offer_browser_tts": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:51.208+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level5_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level5_2025\"},{\"changed_at\":\"2026-04-08 18:32:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:34:10 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:55:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:55:54 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:56:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:56:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 22:47:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

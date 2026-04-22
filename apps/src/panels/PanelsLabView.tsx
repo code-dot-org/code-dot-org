@@ -85,16 +85,13 @@ const PanelsLabView: React.FunctionComponent<
     nextPanel: number,
     timeSpentOnPanelSeconds: number
   ) => {
-    sendAnalyticsEvent(
-      source === 'button'
-        ? 'Panels Next Button Clicked'
-        : 'Panels Bubble Clicked',
-      {
+    if (source === 'bubble') {
+      sendAnalyticsEvent('Panels Bubble Clicked', {
         currentPanel,
         nextPanel,
         timeSpentOnPanelSeconds,
-      }
-    );
+      });
+    }
   };
 
   const onClickContinue = (

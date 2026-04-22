@@ -1,0 +1,25 @@
+name 'pl-ai-101-V2-mod5-fictions-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Misinformation and AI
+
+#### AI are capable of producing responses that sound clear, confident, and highly convincing. However, these responses are not always accurate. In some cases, AI systems generate information that is incorrect, misleading, or entirely fabricated.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI Fictions or Fabrications:</strong> content that AI systems generate that is incorrect or misleading.</p>
+</div>
+
+#### AI fiction occurs because large language models do not actually understand the content they produce. Instead, they generate responses by predicting the most likely sequence of words based on patterns learned from large amounts of text. This means they are designed to produce language that sounds right, not to verify whether information is true. As a result, they can sometimes fill in gaps, make assumptions, or generate details that are inaccurate.
+
+#### Check out Module 2, Understanding AI to learn more about how AI works and why AI generates misinformation.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 You may also hear the term “<strong>hallucinations</strong>” used to describe this phenomenon. <br><br>While it is commonly used in discussions about AI, some educators and researchers choose not to use this term because it can imply human-like thinking or perception. <br><br>Instead, terms like AI fiction or fabricated content more accurately reflect what is happening: the system is generating plausible-sounding language without understanding or verifying its accuracy.</p>
+</div>
+
+#### This becomes especially important as AI is used more frequently in professional and educational settings. AI can unintentionally amplify existing issues with misinformation by quickly producing large amounts of believable—but inaccurate—content.
+
+#### Understanding AI fiction is a key part of using AI responsibly. It requires healthy skepticism, careful verification, and the ability to question what you see—even when it appears credible.
+MARKDOWN

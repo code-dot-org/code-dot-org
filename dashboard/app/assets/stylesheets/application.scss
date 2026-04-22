@@ -1253,11 +1253,14 @@ $default-modal-width: 640px;
       vertical-align: middle;
       font-size: 24pt;
 
-      &.fa-facebook {
+      &.fa-facebook, &.fa-facebook-f {
         background-color: $facebook_blue;
       }
       &.fa-twitter {
         background-color: $twitter_blue;
+      }
+      &.fa-x-twitter {
+        background-color: $x_black;
       }
     }
     span {
@@ -1619,6 +1622,10 @@ body.iframe_embed_app_and_code {
 
 .x-close {
   @include close-button($cornerOffset: -20px);
+  // Reset native <button> styles so the icon matches the old <div>-based markup.
+  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  border: 0;
+  padding: 0;
 }
 
 .open-link {

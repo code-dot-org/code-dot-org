@@ -44,6 +44,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    tutorVideos,
     config,
     onImageFlagged,
   } = useCodebridgeContext();
@@ -130,6 +131,15 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
+  const documentationUrl = useMemo(() => {
+    if (appName === 'pythonlab') {
+      return '/docs/ide/pythonlab';
+    } else if (appName === 'weblab2') {
+      return '/docs/ide/weblab2';
+    }
+    return undefined;
+  }, [appName]);
+
   return (
     <div style={style} className={className}>
       <ResourcePanel
@@ -152,12 +162,9 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
-        isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        documentationUrl={
-          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
-        }
+        tutorVideos={tutorVideos}
+        documentationUrl={documentationUrl}
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}
         hasInstructionsDrawer={appName === 'weblab2'}

@@ -32,7 +32,7 @@ module Cdo
         # Overrides the protected method +I18n::Backend::Base#interpolate+ to localize interpolation values.
         # @see https://github.com/ruby-i18n/i18n/blob/v1.14.1/lib/i18n/backend/base.rb#L181-L200
         protected def interpolate(locale, subject, values = ::I18n::EMPTY_HASH)
-          super locale, subject, localize_interpolation_values(locale, values)
+          super(locale, subject, localize_interpolation_values(locale, values))
         rescue StandardError
           super
         end
@@ -40,7 +40,7 @@ module Cdo
         # Overrides the protected method +I18n::Backend::Base#deep_interpolate+ to localize interpolation values.
         # @see https://github.com/ruby-i18n/i18n/blob/v1.14.1/lib/i18n/backend/base.rb#L202-L224
         protected def deep_interpolate(locale, data, values = ::I18n::EMPTY_HASH)
-          super locale, data, localize_interpolation_values(locale, values)
+          super(locale, data, localize_interpolation_values(locale, values))
         rescue StandardError
           super
         end

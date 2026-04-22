@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
@@ -12,8 +11,6 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {studentShape, levelWithProgress} from './types';
-
-const RadiumFontAwesome = Radium(FontAwesome);
 
 export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
@@ -118,7 +115,7 @@ export default class SelectedStudentInfo extends React.Component {
     if (!levelWithProgress) {
       return (
         <div style={styles.main}>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-left"
             onClick={this.previousStudent}
             style={styles.arrow}
@@ -126,7 +123,7 @@ export default class SelectedStudentInfo extends React.Component {
           <div style={styles.studentInfo}>
             <div style={styles.name}>{selectedStudent.name}</div>
           </div>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-right"
             onClick={this.nextStudent}
             style={styles.arrow}
@@ -140,7 +137,7 @@ export default class SelectedStudentInfo extends React.Component {
 
     return (
       <div style={styles.main}>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-left"
           onClick={this.previousStudent}
           style={styles.arrow}
@@ -189,7 +186,7 @@ export default class SelectedStudentInfo extends React.Component {
             </div>
           )}
         </div>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-right"
           onClick={this.nextStudent}
           style={styles.arrow}

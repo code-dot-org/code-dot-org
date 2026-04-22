@@ -57,7 +57,8 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
               />
             ) : (
               <FontAwesome
-                icon="thumbs-o-up"
+                icon="thumbs-up"
+                iconStyle="regular"
                 aria-label={i18n.thumbsUpUnselected()}
               />
             )}
@@ -86,7 +87,8 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
               />
             ) : (
               <FontAwesome
-                icon="thumbs-o-down"
+                icon="thumbs-down"
+                iconStyle="regular"
                 aria-label={i18n.thumbsDownUnselected()}
               />
             )}

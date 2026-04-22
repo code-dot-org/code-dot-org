@@ -161,7 +161,7 @@ class HeightResizer extends React.Component {
         this.props.style,
       ];
       ellipsisStyle = styles.ellipsisVertical;
-      ellipsisClassName = 'fa fa-ellipsis-v';
+      ellipsisClassName = 'fa-solid fa-ellipsis-vertical';
     } else {
       mainStyle = [
         styles.main,
@@ -171,7 +171,7 @@ class HeightResizer extends React.Component {
         this.props.style,
       ];
       ellipsisStyle = styles.ellipsis;
-      ellipsisClassName = 'fa fa-ellipsis-h';
+      ellipsisClassName = 'fa-solid fa-ellipsis';
     }
 
     return (

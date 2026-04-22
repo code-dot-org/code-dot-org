@@ -5,21 +5,22 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTooltipIcon';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  AiChatAccessLevels,
-  AiChatToolsDependency,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
-import {AI_SETTINGS_SUPPORT_LINK} from '../../constants';
+import {
+  AI_SETTINGS_SUPPORT_LINK,
+  VERIFIED_TEACHER_SUPPORT_LINK,
+} from '../../constants';
+import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
-import InfoTooltipIcon from '../InfoTooltipIcon';
 
 import style from './ai-chat-access-controls.module.scss';
 
@@ -53,6 +54,11 @@ const accessToggleState = (accessLevel: AiChatAccessLevel): boolean => {
 
 const AiChatAccessControls: React.FC = () => {
   const section = useAppSelector(selectedSectionSelector);
+  const teacherAiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
+  const isCurrentUserAccessDisabled =
+    teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED;
   if (!section) {
     throw new Error('Section does not exist');
   }
@@ -67,10 +73,11 @@ const AiChatAccessControls: React.FC = () => {
     essentialOnlyCheckboxState(section.aiChatAccessLevel)
   );
 
-  const shouldShowAlert =
-    section.assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-    calculateAccessLevel(accessToggle, essentialOnlyCheckbox) ===
-      AiChatAccessLevels.DISABLED;
+  const shouldShowAlert = shouldShowAiChatEssentialAlert({
+    assignedAiChatToolsDependency: section.assignedAiChatToolsDependency,
+    sectionAiChatAccessLevel: section.aiChatAccessLevel,
+    teacherAiChatAccessLevel,
+  });
 
   const dispatch = useAppDispatch();
 
@@ -125,6 +132,18 @@ const AiChatAccessControls: React.FC = () => {
 
   return (
     <div className={style.container}>
+      {isCurrentUserAccessDisabled && (
+        <Alert
+          text="You cannot enable AI Chat Tools. These settings will not take
+              effect until you become a verified teacher."
+          type={alertTypes.warning}
+          link={{
+            href: VERIFIED_TEACHER_SUPPORT_LINK,
+            text: 'Learn how to become a verified teacher',
+          }}
+          icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
+        />
+      )}
       <div className={style.interactionsElement}>
         <Typography variant="h4">Class Section Settings</Typography>
         <Typography className={style.subHeader} variant="body3" gutterBottom>
@@ -158,7 +177,12 @@ const AiChatAccessControls: React.FC = () => {
                     label="Allow essential AI features only"
                     name="section_essential_ai_checkbox"
                     onChange={handleEssentialOnlyToggle}
-                    checked={essentialOnlyCheckbox}
+                    checked={
+                      isCurrentUserAccessDisabled
+                        ? false
+                        : essentialOnlyCheckbox
+                    }
+                    disabled={isCurrentUserAccessDisabled}
                   />
                   <InfoTooltipIcon
                     id="section-essential-ai-checkbox-info"
@@ -169,8 +193,9 @@ const AiChatAccessControls: React.FC = () => {
               <Toggle
                 id="uitest-ai-chat-section-access-toggle"
                 name="aiChatSectionAccessToggle"
-                checked={accessToggle}
+                checked={isCurrentUserAccessDisabled ? false : accessToggle}
                 onChange={handleAccessToggle}
+                disabled={isCurrentUserAccessDisabled}
               />
             </div>
           </>

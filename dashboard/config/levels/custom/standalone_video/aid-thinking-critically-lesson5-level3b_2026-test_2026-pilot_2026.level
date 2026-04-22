@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-04-01T20:53:58.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aid-thinking-critically-lesson5-minilesson2-2026-test",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "display_name": "AI Makes Guesses",
+    "bubble_choice_description": "How AI fills in gaps by making guesses.",
+    "thumbnail_url": "https://images.code.org/f45f9385e475a405cbd53914d8cc9e85-video2.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:58.707+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level3b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level3b_2026-test_2026-pilot\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

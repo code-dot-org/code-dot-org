@@ -14,7 +14,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
-      tutorMode: {
+      answerType: {
         type: 'string',
         enum: [...AI_TUTOR_ANSWER_TYPES],
       },
@@ -61,18 +61,36 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         description:
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
+      pseudocode: {
+        type: 'string',
+        description:
+          'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
+      },
+      example: {
+        type: 'string',
+        description:
+          "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
+      },
+      videoUrl: {
+        type: 'string',
+        description:
+          'Optional. URL of a single tutorial video to share with the student, copied exactly from the available videos list. Omit if no video is relevant.',
+      },
     },
-    // We return tutorMode and goal but do not show them to the student.
+    // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
+    required: ['answerType', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
-      'tutorMode',
+      'answerType',
       'goal',
       'assumptions',
       'code',
       'explanation',
+      'pseudocode',
+      'example',
       'nextSteps',
       'questions',
+      'videoUrl',
     ],
     additionalProperties: false,
   };
@@ -124,7 +142,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -141,8 +159,13 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
+  formattedResponse += formatSection('Pseudocode', response.pseudocode);
+  formattedResponse += formatSection('Example', response.example);
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
+  if (response.videoUrl) {
+    formattedResponse += `\n[Watch this video](${response.videoUrl})\n`;
+  }
 
   return formattedResponse;
 };
@@ -158,20 +181,23 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  const explanation =
+    formatSection('Explanation', response.explanation) +
+    (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
-    explanation: formatSection('Explanation', response.explanation),
+    explanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
-    answerType: response.tutorMode,
+    answerType: response.answerType,
   };
 };
 

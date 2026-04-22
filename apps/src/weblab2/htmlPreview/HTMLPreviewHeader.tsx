@@ -203,33 +203,39 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
       />
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: 'toggle-debug-panel',
-          direction: 'onBottom',
-          size: 'xs',
-          text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
-        }}
-      >
-        <MuiIconButton
-          variant="outlined"
-          color="tertiary"
-          size="extraSmall"
-          className={
-            debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
-          }
-          onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
-          aria-label={debugPanelOpen ? 'Close debug panel' : 'Open debug panel'}
-          type="button"
-        >
-          <FontAwesomeV6Icon iconName="bug" />
-        </MuiIconButton>
-      </WithTooltip>
+
       {!isShareView && (
-        <ToggleFullScreenButton
-          isFullScreenView={isFullScreenView}
-          onToggleFullScreen={onToggleFullScreen}
-        />
+        // Hide debug panel toggle and full screen toggle buttons in share view.
+        <>
+          <WithTooltip
+            tooltipProps={{
+              tooltipId: 'toggle-debug-panel',
+              direction: 'onBottom',
+              size: 'xs',
+              text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
+            }}
+          >
+            <MuiIconButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              className={
+                debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
+              }
+              onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
+              aria-label={
+                debugPanelOpen ? 'Close debug panel' : 'Open debug panel'
+              }
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="bug" />
+            </MuiIconButton>
+          </WithTooltip>
+          <ToggleFullScreenButton
+            isFullScreenView={isFullScreenView}
+            onToggleFullScreen={onToggleFullScreen}
+          />
+        </>
       )}
     </div>
   );

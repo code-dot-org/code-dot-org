@@ -45,7 +45,7 @@ module Pd
     end
 
     def questions=(value)
-      super(value)
+      super
       @form_questions = nil
     end
 

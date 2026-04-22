@@ -7,17 +7,20 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nYou may have heard of terms such as artificial intelligence, machine learning, data science, deep learning, or natural language processing - what do all these phrases mean and how do they fit together?\r\n\r\nStart the chat by asking:\r\n> What terms are used when talking about AI.\r\n\r\nThe chatbot is designed to help you articulate your current understanding of these terms and to help you better understand the language used when talking about AI and how it works.\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nYou may have heard of terms such as artificial intelligence, machine learning, data science, deep learning, or natural language processing - what do all these phrases mean? \r\n\r\nThis AI chat will quiz you on key terms related to AI and give you feedback on your answers. It's okay if you don't get them all right! The goal of this level is to learn something new.\r\n\r\nStart the chat by saying:\r\n> I'm ready to begin!\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. Key terms are summarized on the next level.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 0.5,
-        "systemPrompt": "",
+        "systemPrompt": "I'm ready to begin!",
         "retrievalContexts": [
-          "Elementary Scenario: During a science project about animals, the student is tasked with researching different species. They encounter various search results on the internet, including articles, videos, and AI generated images of both real and fake animals. \nAnswer: The student applies AI literacy skills by recognizing and selecting credible sources of information. They understand the importance of verifying information and avoiding biased or misleading content, demonstrating critical thinking skills in evaluating AI-generated search results.",
-          "Middle School Scenario: In a social studies class, students are discussing current events. The topic of conversation shifts to climate change, and the teacher mentions the role of AI in climate prediction models. Intrigued, the student decides to explore the concept further. They use online resources to learn about how AI algorithms analyze vast amounts of data to make predictions about future climate patterns. \nAnswer: The student engages in AI literacy by understanding basic concepts of AI and its applications, broadening their understanding of technology's impact on various fields.",
-          "High School Scenario: As part of a research project in their computer science class, students are exploring the ethical implications of facial recognition technology. The student examines different perspectives on the use of facial recognition in surveillance systems and its potential consequences for privacy and civil liberties. \nAnswer: They apply AI literacy skills by critically analyzing the ethical dilemmas posed by AI technologies, considering societal implications and advocating for responsible AI development and deployment. Additionally, they may engage in discussions about bias and fairness in AI algorithms, demonstrating an understanding of complex AI-related issues.",
-          "Administrator Scenario: In preparing to write a difficult email to a parent regarding a sensitive matter concerning their child's behavior in school, a teacher decides to utilize AI to assist in crafting a thoughtful and empathetic message. \nAnswer: By leveraging AI to assist in composing the email, the teacher demonstrates a proactive approach to communication while also considering the ethical implications of AI technology in educational contexts. They prioritize effective communication and empathy in addressing sensitive matters with parents, showcasing a thoughtful integration of AI tools into their professional practice."
+          "Artificial Intelligence (AI): AI is the branch of computer science that aims to develop systems capable of performing tasks that would normally require human intelligence, including decision-making, visual perception, and speech recognition.",
+          "Machine Learning: ML is a subset of AI that involves training algorithms to learn patterns and make decisions with minimal human intervention, based on data.",
+          "Natural Language Processing: NLP is a field at the intersection of computer science, artificial intelligence, and linguistics, focused on enabling computers to understand, interpret, and generate human language.\n",
+          "Deep Learning: Deep learning is a subset of machine learning that uses neural networks with many layers (deep neural networks) to analyze large volumes of data, enabling the model to learn complex patterns.\n",
+          "Large Language Models: These are advanced deep learning models trained on extensive corpora of text data, capable of understanding and generating human-like text by predicting subsequent parts of text based on the input they receive.\n",
+          "ChatGPT: ChatGPT is a prominent example of a large language model, developed by OpenAI, designed specifically for generating human-like responses in a conversational context by processing and producing text based on its training on a diverse dataset.\n",
+          "Data Science: an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.\n"
         ],
         "modelCardInfo": {
           "botName": "",
@@ -38,7 +41,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "The user should open the chat by asking \"What terms are used when talking about AI.\" if they don't, then respond saying you're only here to discuss the language around AI. Once the user asks \"What terms are used when talking about AI.\" Respond with a list of five to ten key terms that are used when discussing AI and how it works. Do not include any definitions. Ask the user to define one of these terms in their own words. Wait for them to respond. Give them feedback on their definition and help them to see the relationship between the various terms. Keep asking the user for their definitions and providing feedback and additional connections.",
+      "levelSystemPrompt": "The user will prompt that they're ready to begin. Starting with AI, choose a vocabulary word from the Retrieval Contexts and ask the user a multiple choice question where they pick the best definition. Make it a bit tricky but not too hard. Wait till the user selects their choice, then give them feedback on their answer. If they got it wrong, explain the correct answer in simple language and ask if they have any additional questions. Then, move on to another vocabulary word and do the same thing. When you've gone through all the words - tell the user that you're out of words, but ask if they have any questions or want to chat more about AI vocabulary.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -49,6 +52,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-04T21:30:06.753+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-understanding-07\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-understanding-07\"},{\"changed_at\":\"2026-03-04 21:37:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T21:30:06.753+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-understanding-07\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-understanding-07\"},{\"changed_at\":\"2026-03-04 21:37:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-03-24 15:42:33 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-03-24 15:56:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

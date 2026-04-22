@@ -1,6 +1,5 @@
 @no_mobile
 Feature: Policy Compliance
-  @pegasus_content
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
@@ -72,7 +71,7 @@ Feature: Policy Compliance
 
     # Have the student pick a state (outside the policy region)
     Given I select the "Alabama" option in dropdown "user_us_state"
-    Then I click "#submit-update"
+    Then I click "#submit-update" to load a new page
     Then I wait until element "div#account-update-success" is visible
 
     # Right now, we have to assert that the experiment is active

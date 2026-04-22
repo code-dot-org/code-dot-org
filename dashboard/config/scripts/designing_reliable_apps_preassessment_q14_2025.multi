@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q14_2025'
+
+question 'Which statement best describes "human-centered reliability" in the context of app design?'
+
+wrong 'Ensuring that an app\'s code has no bugs so it never fails under any circumstances'
+right 'Designing an app to remain transparent and helpful to users even when technical problems occur'
+wrong 'Building apps that automatically detect and fix their own errors without any developer intervention'
+wrong 'Optimizing an app to reduce the total number of server requests it makes per session'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

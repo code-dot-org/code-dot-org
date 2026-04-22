@@ -18,7 +18,7 @@ describe('InfoHelpTip', () => {
   it('renders FontAwesome', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
     expect(wrapper.find(FontAwesome)).toHaveLength(1);
-    expect(wrapper.find(FontAwesome).props().icon).toBe('info-circle');
+    expect(wrapper.find(FontAwesome).props().icon).toBe('circle-info');
   });
 
   it('renders ReactTooltip', () => {

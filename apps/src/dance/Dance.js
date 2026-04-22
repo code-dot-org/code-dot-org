@@ -216,7 +216,10 @@ Dance.prototype.init = function (config) {
         />
       </ErrorBoundary>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -597,15 +600,6 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   } else {
     this.studioApp_.playAudio('failure');
   }
-  const state = getStore().getState();
-  const validationResult = result ? 'PASSED' : 'FAILED';
-  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-    levelPath: state.pageConstants.currentScriptLevelUrl,
-    result: validationResult,
-    message, // feedback message key
-    userId: state.currentUser.userId,
-  });
-
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',

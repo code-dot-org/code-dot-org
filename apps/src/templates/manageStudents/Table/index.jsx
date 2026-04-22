@@ -24,7 +24,6 @@ import ManageStudentsActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ManageStudentsAgeCell from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 import ManageStudentsFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCellLegacy';
 import ManageStudentsLoginInfo from '@cdo/apps/templates/manageStudents/ManageStudentsLoginInfo';
 import ManageStudentsNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {
@@ -82,6 +81,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
+  isDemoStudent: PropTypes.bool,
   secretWords: PropTypes.string,
   secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
@@ -308,18 +308,6 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  genderLegacyFormatter(gender, {rowData}) {
-    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
-    return (
-      <ManageStudentsGenderCellLegacy
-        gender={gender}
-        id={rowData.id}
-        isEditing={rowData.isEditing}
-        editedValue={editedValue}
-      />
-    );
-  }
-
   nameFormatter(name, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     return (
@@ -329,6 +317,7 @@ class ManageStudentsTable extends Component {
         name={name}
         username={rowData.username}
         email={rowData.email}
+        isDemoStudent={rowData.isDemoStudent}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -365,8 +354,9 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isTeacher(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType) && !rowData.isDemoStudent}
         rowData={rowData}
+        syncEnabled={this.props.syncEnabled}
       />
     );
   }
@@ -615,36 +605,8 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (
-      experiments.isEnabledAllowingQueryString(
-        experiments.GENDER_FEATURE_ENABLED
-      )
-    ) {
-      return {
-        property: 'genderTeacherInput',
-        header: {
-          label: i18n.gender(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 120,
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.genderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 120,
-            },
-          },
-        },
-      };
-    }
     return {
-      property: 'gender',
+      property: 'genderTeacherInput',
       header: {
         label: i18n.gender(),
         props: {
@@ -656,7 +618,7 @@ class ManageStudentsTable extends Component {
         transforms: [sortable],
       },
       cell: {
-        formatters: [this.genderLegacyFormatter],
+        formatters: [this.genderFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -828,7 +790,9 @@ class ManageStudentsTable extends Component {
           {this.isMoveStudentsEnabled() && (
             <div style={styles.button}>
               <MoveStudents
-                studentData={this.studentDataMinusBlanks()}
+                studentData={this.studentDataMinusBlanks().filter(
+                  s => !s.isDemoStudent
+                )}
                 transferData={transferData}
                 transferStatus={transferStatus}
               />

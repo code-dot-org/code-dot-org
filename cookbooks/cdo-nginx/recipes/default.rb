@@ -10,7 +10,7 @@ end
 
 apt_package 'nginx'
 
-%w(dashboard pegasus).each do |app|
+%w(dashboard).each do |app|
   socket_path = File.join node['cdo-nginx']['socket_path'], "#{app}.sock"
   # Ensure stale socket-files are cleaned up
   # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
@@ -53,7 +53,7 @@ service 'nginx' do
   action [:enable, :start]
 
   # Ensure app services are updated to their current listener configuration before (re)starting nginx.
-  %w(pegasus dashboard).each do |app|
+  %w(dashboard).each do |app|
     notifies :create, "file[#{app}_listeners]", :before
   end
 

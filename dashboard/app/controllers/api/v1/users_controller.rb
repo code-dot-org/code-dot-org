@@ -71,6 +71,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
+        grades_teaching: current_user.grades_teaching || [],
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,
@@ -297,8 +298,10 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user&.teacher?
     target_user = User.find_by_id(params[:user_id])
 
-    unless target_user&.student_of?(current_user)
-      return head :unauthorized
+    # can?(:manage, target_user) blocks demo students, whose User record is
+    # shared across teachers and should not be modified.
+    unless target_user&.student_of?(current_user) && can?(:manage, target_user)
+      return head :forbidden
     end
 
     target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])

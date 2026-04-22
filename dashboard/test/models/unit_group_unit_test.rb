@@ -13,6 +13,7 @@ class UnitGroupUnitTest < ActiveSupport::TestCase
 
     before do
       allow(UnitGroup).to receive(:should_cache?).and_return(should_cache)
+      ActiveRecord::Base.connection.disable_query_cache!
     end
 
     context('should not cache') do

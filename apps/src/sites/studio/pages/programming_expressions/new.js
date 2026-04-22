@@ -12,6 +12,9 @@ $(document).ready(() => {
     <NewProgrammingExpressionForm
       programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
     />,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

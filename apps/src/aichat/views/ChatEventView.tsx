@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {FAQ_LINK, modelDescriptions} from '../constants';
-import aichatI18n from '../locale';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
   ModelUpdate,
   isChatMessage,
@@ -22,33 +22,31 @@ import {
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
 const chatEventDescriptionsOwner = {
-  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
-  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
+  CLEAR_CHAT: 'You cleared the chat workspace.',
+  LOAD_LEVEL: 'You loaded the level.',
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 const chatEventDescriptionsStudent = {
-  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
-  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the level.',
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
-  isLastMessage?: boolean;
   clientType?: string;
   modelParameters?: ModelParameters;
+  postText?: React.ReactNode;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {
@@ -61,15 +59,10 @@ function formatModelUpdateText(update: ModelUpdate): string {
   }
 
   const modelUpdateText = updatedToText
-    ? aichatI18n.modelUpdateText({
-        fieldLabel: fieldLabel,
-        updatedText: updatedToText.toString(),
-        timestamp: timestampToLocalTime(timestamp),
-      })
-    : aichatI18n.modelUpdateText2({
-        fieldLabel: fieldLabel,
-        timestamp: timestampToLocalTime(timestamp),
-      });
+    ? `${fieldLabel} has been updated to ${updatedToText.toString()}. ${timestampToLocalTime(
+        timestamp
+      )}`
+    : `${fieldLabel} has been updated. ${timestampToLocalTime(timestamp)}`;
 
   return modelUpdateText;
 }
@@ -85,10 +78,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       buildAssetUrl,
       tabIndex,
       onKeyDown,
-      isAiTutorVersion,
-      isLastMessage,
       clientType,
       modelParameters,
+      postText,
     },
     ref
   ) => {
@@ -117,10 +109,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             chatMessage={event}
             isChatHistoryView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
-            isAiTutorVersion={isAiTutorVersion}
-            isLastMessage={isLastMessage}
             clientType={clientType}
             modelParameters={modelParameters}
+            postText={postText}
           />
         </div>
       );
@@ -138,14 +129,14 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
       // Use special notification component for AI tutor version actions.
       if (
-        notificationType === 'aiTutorVersionActionAccept' ||
-        notificationType === 'aiTutorVersionActionReject'
+        notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        notificationType === AI_TUTOR_VERSION_ACTION_REJECT
       ) {
         return (
           <AiTutorVersionActionNotification
             text={text}
             type={
-              notificationType === 'aiTutorVersionActionAccept'
+              notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
                 ? 'accept'
                 : 'reject'
             }
@@ -172,15 +163,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
-          }
-          link={
-            notificationType === 'permissionsError'
-              ? {
-                  href: FAQ_LINK,
-                  text: commonI18n.learnMore(),
-                  className: styles.alertLink,
-                }
-              : undefined
           }
           size="s"
           ref={ref}

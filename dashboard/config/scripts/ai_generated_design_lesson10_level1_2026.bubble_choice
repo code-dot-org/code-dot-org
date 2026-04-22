@@ -5,3 +5,5 @@ description 'Use Sketch Lab to design a wireframe for your web pages. Use AI Cha
 sublevels
 level 'ai-generated-design-lesson10-level1a_2026'
 level 'ai-generated-design-lesson10-level1b_2026'
+
+uses_lab2

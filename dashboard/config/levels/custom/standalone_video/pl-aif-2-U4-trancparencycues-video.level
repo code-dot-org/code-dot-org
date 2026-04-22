@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-04-02T19:55:16.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-display-arrays",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n## What Should an App Show? Making Results Clear and Trustworthy\r\n\r\n#### When you search for something in an app, you expect the results to make sense.\r\n#### Too little information can make it feel broken. Too much information can feel overwhelming.\r\n\r\n#### Below are three versions of a movie search for a 7:00 pm showtime. Each one makes different choices about what results to display. As you explore them, focus not just on what is shown, but how those choices affect your confidence in the results.\r\n\r\n---\r\n## Movie Times\r\n\r\n<img src=\"https://images.code.org/7d57afeca63698b5ed2a4d26f03e039f-image-1768601417811.png\" alt=\"design process graph of the cycle\" width=\"650px\" style=\"display: block; margin-left: auto; margin-right: auto;border-radius:10px; \">\r\n\r\n---\r\n\r\n\r\n#### **Think about:**\r\n\r\n- #### Which version feels most helpful or realistic?\r\n\r\n- #### Which one feels confusing or overwhelming?\r\n\r\n\r\n #### 👉 **How does each version affect your trust that the app is working correctly?**\r\n\r\n\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">💡 Check your thinking:</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\">\r\n    <p style = \"font-size: 14pt;\">\r\n  You may notice that clear messages and the right amount of information increase trust, while either missing information or information overload can feel confusing or suspicious. Designers and programmers make choices about what to show, what to hide, and how to explain what is happening.\r\n</p>\r\n</div>\r\n</details>\r\n\r\n\r\n---\r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 A <strong>Transparency Cue</strong> is  information your app shows that helps users understand what's happening with the data and trust the results.</p>\r\n</div>\r\n\r\n\r\n\r\n## Next up\r\n\r\n#### Let's practice adding transparency to a web app.\r\n\r\n## Activity Tutorial\r\n\r\n#### The video below walks through the steps movie times activity. Watch the video to get a basic understanding of the activity, and then try it on your own. Feel free to rewatch the video as needed.  \r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-04-02T19:55:16.275+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-schema-video\\\"\"],\"cloned_from\":\"pl-aif-2-U3-schema-video\"},{\"changed_at\":\"2026-04-02 19:57:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-02 19:58:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-09 21:34:29 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

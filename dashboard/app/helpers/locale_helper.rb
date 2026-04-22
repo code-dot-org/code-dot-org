@@ -1,9 +1,8 @@
 require 'cdo/i18n'
 
 module LocaleHelper
-  # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    request.locale.to_sym
+    I18n.locale
   end
 
   def locale_dir
@@ -22,7 +21,7 @@ module LocaleHelper
   end
 
   def locale_options
-    request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
+    Cdo::I18n.locale_options
   end
 
   def options_for_locale_code_select

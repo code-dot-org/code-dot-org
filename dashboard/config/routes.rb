@@ -119,6 +119,11 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [] do
+      member do
+        get 'content'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -206,7 +211,6 @@ Dashboard::Application.routes.draw do
         member do
           post 'join'
           post 'leave'
-          post 'update_sharing_disabled'
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
@@ -218,6 +222,9 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          get 'demo/presets', action: 'presets', as: 'presets'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
+          get 'assigned_essential_ai_dependency'
         end
       end
     end
@@ -473,6 +480,7 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
+        get 'tutor', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -552,6 +560,17 @@ Dashboard::Application.routes.draw do
     resources :data_docs, param: :key do
       collection do
         get '/edit', to: 'data_docs#edit_all'
+      end
+    end
+
+    resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
+      resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
+        resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      end
+      resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      resources :jit_pl_teaching_tips, only: [:create, :update, :destroy]
+      collection do
+        get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
       end
     end
 
@@ -733,9 +752,11 @@ Dashboard::Application.routes.draw do
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
@@ -1049,6 +1070,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Utility routes not intended for use in production
     if rack_env?(:development, :test)
       scope '/api' do
         namespace :test, defaults: {format: 'json'} do
@@ -1058,6 +1080,12 @@ Dashboard::Application.routes.draw do
           end
         end
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
+      end
+    end
+    if rack_env?(:staging, :test)
+      scope path: '/api/dev', controller: :dev do
+        post 'check-dts', action: 'check_dts'
+        post 'start-build', action: 'start_build'
       end
     end
 
@@ -1192,11 +1220,14 @@ Dashboard::Application.routes.draw do
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
         get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
         get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
+        get 'student_has_work_in_lesson', controller: :student_snapshots, action: :student_has_work_in_lesson # GET /student_snapshots/student_has_work_in_lesson
       end
     end
 
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
     resources :lesson_feedbacks, only: [:create, :update]
+    resources :user_lesson_reflections, only: [:create]
+    resources :user_lesson_objective_reflections, only: [:create]
 
     resources :ai_lesson_summary_podcasts do
       collection do
@@ -1253,7 +1284,7 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
@@ -1363,7 +1394,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
-    get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]

@@ -34,6 +34,7 @@ import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDia
 import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
+import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
@@ -378,7 +379,10 @@ StudioApp.prototype.init = function (config) {
           })}
         />
       </Provider>,
-      document.body.appendChild(document.createElement('div'))
+      document.body.appendChild(document.createElement('div')),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -632,7 +636,10 @@ StudioApp.prototype.init = function (config) {
         levelId={config.serverLevelId}
         unitId={config.serverScriptId}
       />,
-      startDialogDiv
+      startDialogDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -762,7 +769,9 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    createReactRoot(React.createElement(SettingsModal), contentDiv);
+    createReactRoot(React.createElement(SettingsModal), contentDiv, {
+      legacyReactDomRender: true,
+    });
     dialog.show();
   };
 };
@@ -783,7 +792,10 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         selectedVersion: queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
       }),
-      contentDiv
+      contentDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
 
     dialog.show();
@@ -1072,7 +1084,9 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv, {
+    legacyReactDomRender: true,
+  });
 };
 
 /**
@@ -2167,6 +2181,11 @@ StudioApp.prototype.skipLevel = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
+  let locale = localization.locale;
+  localization.on('change', _info => {
+    locale = localization.locale;
+  });
+
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
@@ -2179,24 +2198,26 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
+  const shouldLogLevelActivity = () =>
+    !runButtonWasClicked && !config.level.isProjectLevel;
+
+  const logLevelActivity = () => {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {
+      signedIn: config.isSignedIn,
+      unitName: config.scriptName,
+      levelId: config.serverLevelId,
+      levelName: config.level.name,
+      locale: LocalizeToI18nLocales[locale] || locale,
+    });
+    runButtonWasClicked = true;
+  };
+
   // Modify throttledRunClick to include metrics logging
   const originalThrottledRunClick = throttledRunClick;
   throttledRunClick = () => {
     originalThrottledRunClick();
-    let eventName;
-    if (!!config.level.isProjectLevel) {
-      eventName = EVENTS.PROJECT_ACTIVITY;
-    } else {
-      eventName = EVENTS.LEVEL_ACTIVITY;
-    }
-    if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: config.isSignedIn,
-        unitName: config.scriptName,
-        levelId: config.serverLevelId,
-        levelName: config.level.name,
-      });
-      runButtonWasClicked = true;
+    if (shouldLogLevelActivity()) {
+      logLevelActivity();
     }
   };
 
@@ -2345,7 +2366,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
               appType: project.getStandaloneApp(),
               isLegacyShare: !!options.isLegacyShare,
             }),
-            div
+            div,
+            {
+              legacyReactDomRender: true,
+            }
           );
         }
       }
@@ -2484,6 +2508,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig
   );
 
+  // Localize the droplet palette categories
+  fullDropletPalette.forEach(
+    info =>
+      (info.name = localization.translate(info.name, [
+        'droplet',
+        'droplet-palette',
+      ]))
+  );
+
   // Create a child element of codeTextbox to instantiate droplet on, because
   // droplet sets css properties on its wrapper that would interfere with our
   // layout otherwise.
@@ -2491,6 +2524,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   const codeTextbox = document.getElementById('codeTextbox');
   const dropletCodeTextbox = document.createElement('div');
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  // Do not translate the contents. We will do that manually.
+  dropletCodeTextbox.setAttribute('data-notranslate', '');
   codeTextbox.appendChild(dropletCodeTextbox);
 
   this.editor = new droplet.Editor(dropletCodeTextbox, {
@@ -2594,6 +2629,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
+
   this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
@@ -2625,8 +2661,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
   if (startBlocks) {
     try {
-      // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // Try to localize the comments in start droplet code
+      // Also, ensures we don't pass CRLF pairs to droplet until they fix CR handling:
+      const localizedStartCode = startBlocks
+        .split(/\r\n|\n/)
+        .map(line =>
+          line.startsWith('//')
+            ? `//${localization.translate(line.substring(2), [
+                'comment',
+                'droplet',
+              ])}`
+            : line
+        )
+        .join('\n');
+      this.editor.setValue(localizedStartCode);
       // When adding content via setValue, the aceEditor cursor gets set to be
       // at the end of the file. For mysterious reasons we've been unable to
       // understand, we end up with some pretty funky render issues if the first
@@ -3153,7 +3201,9 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  createReactRoot(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0], {
+    legacyReactDomRender: true,
+  });
 
   return container[0];
 };
@@ -3192,7 +3242,9 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  createReactRoot(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement, {
+    legacyReactDomRender: true,
+  });
 
   return renderElement;
 };

@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {buildMessagesForModelHistory} from '@cdo/apps/aichat/helpers/buildMessagesForModelHistory';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -9,31 +10,28 @@ import {
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
+import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isAiGatewayEnabled} from '@cdo/apps/aiGateway';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {MetricDimension} from '@cdo/apps/metrics/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
-import {
-  AiChatModelIds,
-  AiInteractionStatus as Status,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import supportsClientApi from '../../api/supportsClientApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
-  isCompletedChatMessage,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -41,16 +39,12 @@ import {
   AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
-  AichatLevelProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
-
-const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
-  isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -68,6 +62,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
       logLevelActivity?: () => void;
+      lessonId?: number;
     },
     thunkAPI
   ) => {
@@ -84,6 +79,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       responseCallback,
       logLevelActivity,
+      lessonId,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -96,6 +92,7 @@ export const submitChatContents = createAsyncThunk(
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
+      lessonId,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
@@ -167,16 +164,21 @@ export const submitChatContents = createAsyncThunk(
       ...analyticsProperties,
     };
 
+    const metricDimensions = [
+      {name: 'ModelId', value: modelParameters.selectedModelId},
+    ];
+
     try {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+      incrementCounter(
+        'Aichat.ChatCompletionRequestInitiated',
+        metricDimensions
+      );
 
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (useClientApi(modelParameters.selectedModelId)) {
+      if (supportsClientApi(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =
@@ -184,21 +186,11 @@ export const submitChatContents = createAsyncThunk(
           (levelProperties as AichatLevelProperties)?.aichatSettings
             ?.levelSystemPrompt;
 
-        let filteredChatEvents: CompletedChatMessage[] =
-          chatEventsCurrent.filter(isCompletedChatMessage);
-
-        if (
-          modelParameters.selectedModelId ===
-          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
-        ) {
-          filteredChatEvents = filteredChatEvents.filter(
-            message => message.status === Status.OK
-          );
-        }
-
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          filteredChatEvents,
+          buildMessagesForModelHistory(chatEventsCurrent).filter(
+            event => event.status === Status.OK
+          ),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -208,7 +200,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
+          buildMessagesForModelHistory(chatEventsCurrent),
           {...modelParameters},
           aichatContext
         );
@@ -223,18 +215,18 @@ export const submitChatContents = createAsyncThunk(
       );
       Lab2Registry.getInstance()
         .getMetricsReporter()
-        .reportLoadTime('AichatModelResponseTime', responseTime, [
-          {
-            name: 'ModelId',
-            value: modelParameters.selectedModelId,
-          },
-        ]);
+        .reportLoadTime(
+          'AichatModelResponseTime',
+          responseTime,
+          metricDimensions
+        );
     } catch (error) {
       await handleChatCompletionError(
         error as Error,
         newUserMessage,
         dispatch,
-        state.progress.viewAsUserId
+        state.progress.viewAsUserId,
+        metricDimensions
       );
       return;
     }
@@ -273,7 +265,8 @@ async function handleChatCompletionError(
   error: Error,
   newUserMessage: PendingChatMessage & {updateId: string},
   dispatch: AppDispatch,
-  viewAsUserId: number | null
+  viewAsUserId: number | null,
+  dimensions: MetricDimension[] = []
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -293,9 +286,7 @@ async function handleChatCompletionError(
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorRateLimited');
+    incrementCounter('Aichat.ChatCompletionErrorRateLimited', dimensions);
     dispatch(
       addChatEvent({
         removeId: getNewRemoveId(),
@@ -307,9 +298,7 @@ async function handleChatCompletionError(
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
   } else {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
+    incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
     dispatch(
       addChatEvent({
         role: Role.ASSISTANT,
@@ -319,4 +308,11 @@ async function handleChatCompletionError(
       })
     );
   }
+}
+
+function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
+  const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  reporter.incrementCounter(metricName, dimensions);
+  // Report without dimensions for an aggregate count.
+  reporter.incrementCounter(metricName);
 }

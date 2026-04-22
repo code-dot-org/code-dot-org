@@ -102,6 +102,17 @@ module MailjetConstants
         default: 10_443_291,
         'es-MX': 10_443_295,
       },
+    },
+    intro_web_lab: {
+      production: {
+        default: 10_488_233,
+      },
     }
   }
+
+  # Maps UnitGroup name to CONTACT_LISTS key. When a teacher assigns one of
+  # these courses to a section, they are added to the corresponding contact list.
+  MAILJET_COURSE_ASSIGNMENT_CONTACT_LISTS = {
+    'intro-to-web-lab' => :intro_web_lab,
+  }.freeze
 end

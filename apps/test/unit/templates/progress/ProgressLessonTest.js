@@ -8,6 +8,7 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('ProgressLesson', () => {
   const lessonNumber = 3;
@@ -307,7 +308,9 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Participant}
       />
     );
-    expect(wrapper.find('Button').props().href).toEqual('test-url');
+    expect(wrapper.find('.ui-test-lesson-resources').props().href).toEqual(
+      'test-url'
+    );
     delete myLesson.student_lesson_plan_html_url;
   });
 
@@ -315,7 +318,22 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
-    expect(wrapper.find('Button').length).toEqual(0);
+    expect(wrapper.find('.ui-test-lesson-resources').length).toEqual(0);
+  });
+
+  it('does not show Lesson Resources button when viewing as a participant and student_lesson_plan_html_url is not null, and isOnLevelView is true', () => {
+    let myLesson = defaultProps.lesson;
+    myLesson.student_lesson_plan_html_url = 'test-url';
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={myLesson}
+        viewAs={ViewType.Participant}
+        isOnLevelView={true}
+      />
+    );
+    expect(wrapper.find('.ui-test-lesson-resources').length).toEqual(0);
+    delete myLesson.student_lesson_plan_html_url;
   });
 
   it('does not show Lesson Resources button when viewing as a instructor and student_lesson_plan_html_url is not null', () => {
@@ -328,8 +346,75 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Instructor}
       />
     );
-    expect(wrapper.find('Button').length).toEqual(0);
+    expect(wrapper.find('.ui-test-lesson-resources').length).toEqual(0);
     delete myLesson.student_lesson_plan_html_url;
+  });
+
+  describe('Lesson Tutor button', () => {
+    const tutorLesson = {
+      ...fakeLesson('lesson1', 1, false, lessonNumber),
+      lessonTutorPath: '/s/course/lessons/1/tutor',
+      hasLessonPlan: true,
+    };
+    const tutorProps = {
+      ...defaultProps,
+      lesson: tutorLesson,
+      viewAs: ViewType.Participant,
+      userId: 1,
+    };
+
+    let realIsEnabled;
+    beforeEach(() => {
+      realIsEnabled = experiments.isEnabled;
+    });
+    afterEach(() => {
+      experiments.isEnabled = realIsEnabled;
+    });
+
+    it('shows when experiment is enabled, viewing as participant, hasLessonPlan is true', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(<ProgressLesson {...tutorProps} />);
+      expect(wrapper.text()).toContain('Lesson Tutor');
+    });
+
+    it('does not show when experiment is disabled', () => {
+      experiments.isEnabled = jest.fn(() => false);
+      const wrapper = shallow(<ProgressLesson {...tutorProps} />);
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('shows when viewing as instructor and signed in', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(
+        <ProgressLesson {...tutorProps} viewAs={ViewType.Instructor} />
+      );
+      expect(wrapper.text()).toContain('Lesson Tutor');
+    });
+
+    it('does not show when signed out', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(<ProgressLesson {...tutorProps} userId={null} />);
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('does not show when isOnLevelView is true', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(
+        <ProgressLesson {...tutorProps} isOnLevelView={true} />
+      );
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
+
+    it('does not show when hasLessonPlan is false', () => {
+      experiments.isEnabled = jest.fn(() => true);
+      const wrapper = shallow(
+        <ProgressLesson
+          {...tutorProps}
+          lesson={{...tutorLesson, hasLessonPlan: false}}
+        />
+      );
+      expect(wrapper.text()).not.toContain('Lesson Tutor');
+    });
   });
 
   it('does not lock non-lockable lessons, such as peer reviews', () => {

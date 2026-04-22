@@ -10,7 +10,7 @@ Feature: Web Lab 2 Preview
 @no_ci
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"
-  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true"
   And I wait until element "#preview" is visible
   And I switch to the iframe "#preview"
   And I wait until element "#codeprojects-preview-container" is visible

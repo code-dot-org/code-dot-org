@@ -156,8 +156,8 @@ class CourseVersion < ApplicationRecord
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids, user)
     Unit.joins(unit_groups: :course_version).where(id: unit_ids).
-        flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.
-        map(&:summarize_for_unit_selector).uniq.sort_by {|c| c[:display_name]}
+      flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.
+      map(&:summarize_for_unit_selector).uniq.sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
