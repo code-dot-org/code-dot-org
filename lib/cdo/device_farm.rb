@@ -54,19 +54,6 @@ module Cdo
       resp.url
     end
 
-    # Constructs a desktop TestGrid job ARN from the project ARN and the
-    # Selenium session ID returned by browser.session_id.
-    def self.desktop_job_arn_for(selenium_session_id)
-      arn = CDO.device_farm_desktop_project_arn
-      return nil if arn.blank?
-
-      arn_parts = arn.split(':')
-      account_id = arn_parts[4]
-      project_uuid = arn_parts[6]
-
-      "arn:aws:devicefarm:#{REGION}:#{account_id}:job:#{project_uuid}/#{selenium_session_id}"
-    end
-
     # AWS console URL for a desktop TestGrid session's Selenium logs.
     def self.desktop_session_url(selenium_session_id)
       arn = CDO.device_farm_desktop_project_arn
@@ -112,34 +99,6 @@ module Cdo
       return nil unless project_uuid && session_uuid && sub_id
       "https://#{REGION}.console.aws.amazon.com/devicefarm/home" \
         "#/mobile/projects/#{project_uuid}/sessions/#{session_uuid}/#{sub_id}/files"
-    end
-
-    # ---- Result logging (both paths) ----------------------------------------
-
-    # Logs outcome for a completed Device Farm session.
-    # Handles both desktop job ARNs and mobile remote-access-session ARNs.
-    #
-    # @param arn [String] either a job ARN (desktop) or session ARN (mobile)
-    # @param mobile [Boolean] true for mobile remote access sessions
-    def self.log_result(arn, mobile: false)
-      return unless arn
-
-      if mobile
-        session = client.get_remote_access_session(arn: arn).remote_access_session
-        puts "Device Farm mobile session #{arn}: " \
-             "status=#{session.status}, result=#{session.result}"
-      else
-        job = client.get_job(arn: arn).job
-        counters = job.counters
-        puts "Device Farm job #{arn}: " \
-             "result=#{job.result}, " \
-             "passed=#{counters.passed}, " \
-             "failed=#{counters.failed}, " \
-             "errored=#{counters.errored}, " \
-             "total=#{counters.total}"
-      end
-    rescue => exception
-      puts "Error fetching Device Farm result: #{exception}"
     end
 
     # Stops a mobile remote access session so the device is released back to

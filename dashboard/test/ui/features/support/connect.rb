@@ -125,9 +125,9 @@ def change_orientation(orientation)
   )
 end
 
-# Connects via Device Farm, sets $session_id and $device_farm_job_arn, and
-# logs a session descriptor. Assumes test_device_farm? and $selenium_http_client
-# have been established by the caller.
+# Connects via Device Farm, sets $session_id, and logs the console URL.
+# Assumes test_device_farm? and $selenium_http_client have been established
+# by the caller.
 def get_device_farm_browser
   is_mobile = $browser_config['mobile']
   browser =
@@ -141,12 +141,8 @@ def get_device_farm_browser
       end
     end
   $session_id = browser.session_id
-  # Mobile sessions already have an ARN from create_remote_access_session;
-  # desktop sessions construct one from the project ARN + session ID.
-  $device_farm_job_arn =
-    is_mobile ? $device_farm_mobile_session_arn : Cdo::DeviceFarm.desktop_job_arn_for($session_id)
   console_url =
-    is_mobile ? Cdo::DeviceFarm.mobile_session_url($device_farm_job_arn) : Cdo::DeviceFarm.desktop_session_url($session_id)
+    is_mobile ? Cdo::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn) : Cdo::DeviceFarm.desktop_session_url($session_id)
   puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
   browser
 end
@@ -188,7 +184,6 @@ def get_browser(test_run_name)
 end
 
 $browser = nil
-$device_farm_job_arn = nil
 $device_farm_mobile_session_arn = nil
 
 Before('@dashboard_db_access') do
@@ -215,10 +210,10 @@ end
 def log_result(result)
   return unless $session_id
 
-  if test_device_farm?
-    Cdo::DeviceFarm.log_result($device_farm_job_arn, mobile: $browser_config['mobile'])
-    return
-  end
+  # Device Farm has no equivalent "stamp this session as passed/failed"
+  # API; the session's AWS console URL is printed at session-start for any
+  # post-mortem needs.
+  return if test_device_farm?
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
   HTTParty.put(
