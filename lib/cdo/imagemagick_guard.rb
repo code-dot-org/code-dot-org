@@ -1,5 +1,7 @@
 require 'marcel'
 
+require 'cdo/shared_constants'
+
 # Security guard for ImageMagick processing.
 module ImageMagickGuard
   # Returns the MIME type inferred from magic bytes via Marcel, or nil if
