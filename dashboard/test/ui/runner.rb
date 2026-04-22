@@ -590,6 +590,7 @@ end
 
 # returns the first line of the first selenium error in the html output file.
 def first_selenium_error(filename)
+  return 'no html output file' unless filename && File.exist?(filename)
   html = File.read(filename)
   error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
   match = error_regex.match(html)
