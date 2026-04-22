@@ -288,7 +288,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
       text: '',
       x: 50,
       y: 50,
-      key: firstOtherKey,
+      targetKey: firstOtherKey,
     };
     updatePanel({...panel, links: [...links, newLink]});
   };
@@ -488,9 +488,9 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
                 labelText="Target panel"
                 name={`link-target-${linkIndex}`}
                 size="s"
-                selectedValue={link.key}
+                selectedValue={link.targetKey}
                 onChange={e =>
-                  updateLink(linkIndex, {...link, key: e.target.value})
+                  updateLink(linkIndex, {...link, targetKey: e.target.value})
                 }
                 items={allPanels.map((p, i) => ({
                   value: p.key,

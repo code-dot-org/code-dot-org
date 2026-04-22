@@ -156,7 +156,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const handleLinkClick = useCallback(
     (link: PanelLink) => {
-      const targetIndex = panels.findIndex(p => p.key === link.key);
+      const targetIndex = panels.findIndex(p => p.key === link.targetKey);
       if (targetIndex !== -1) {
         changePanel(targetIndex, 'bubble');
       }

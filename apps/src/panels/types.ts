@@ -36,13 +36,13 @@ export interface Panel {
 // x and y are percentages (0-100) of the panel, describing the link's center.
 // width is the link box width as a percentage (0-100) of the panel, defaulting
 // to DEFAULT_PANEL_LINK_WIDTH when not specified.
-// key is the target panel's key.
+// targetKey is the target panel's key.
 export interface PanelLink {
   text: string;
   x: number;
   y: number;
   width?: number;
-  key: string;
+  targetKey: string;
 }
 
 export const DEFAULT_PANEL_LINK_WIDTH = 40;
