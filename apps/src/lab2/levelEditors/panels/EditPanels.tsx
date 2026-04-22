@@ -26,11 +26,11 @@ const createKey = (levelName: string) => levelName + '-' + createUuid();
 const PANEL_WIDTH = 1920;
 const PANEL_HEIGHT = 1080;
 
-// Fraction of the viewport width that the pinned preview occupies. Keep in
-// sync with `.panelsContainerPinned { width: 29vw }` in edit-panels.module.scss
-// — the scale transform on the inner 1920x1080 surface is derived from this
-// value.
-const PINNED_WIDTH_VIEWPORT_FRACTION = 0.29;
+// Fraction of the viewport width that the pinned preview occupies. Sourced
+// from a `:export` in edit-panels.module.scss so the CSS `width: Nvw` rule
+// and this scale calculation cannot drift.
+const PINNED_WIDTH_VIEWPORT_FRACTION =
+  parseFloat(moduleStyles.pinnedWidthVw) / 100;
 
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {

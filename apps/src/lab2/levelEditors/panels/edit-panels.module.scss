@@ -4,6 +4,13 @@
 $scale-factor: 0.5;
 $full-width: 1920px;
 $full-height: 1080px;
+// Unitless; consumed by the pinned-preview width (as vw) and re-exported to
+// EditPanels.tsx so JS can derive the matching inner-surface scale factor.
+$pinned-width-vw: 29;
+
+:export {
+  pinnedWidthVw: $pinned-width-vw;
+}
 
 .container {
   display: flex;
@@ -35,8 +42,7 @@ $full-height: 1080px;
   top: 0;
   left: 0;
   z-index: 10;
-  // Keep in sync with PINNED_WIDTH_VIEWPORT_FRACTION in EditPanels.tsx.
-  width: 29vw;
+  width: #{$pinned-width-vw}vw;
   height: auto;
   aspect-ratio: 16 / 9;
 
