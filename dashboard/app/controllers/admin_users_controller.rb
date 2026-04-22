@@ -442,8 +442,9 @@ class AdminUsersController < ApplicationController
     end
 
     csv_data = params[:csv_data]
+    puts csv_data.inspect
     teacher_id = params[:teacher_id]
-    dry_run = params[:dry_run] == 'true'
+    dry_run = ActiveModel::Type::Boolean.new.cast(params[:dry_run])
 
     if csv_data.blank? || teacher_id.blank?
       render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
@@ -456,68 +457,34 @@ class AdminUsersController < ApplicationController
       return
     end
 
-    # Create temporary files
-    temp_file = Tempfile.new(['delete_progress', '.csv'])
-    output_file = Tempfile.new('script_output')
+    teacher_user = User.find_by_id(teacher_id)
 
-    begin
-      CSV.open(temp_file.path, 'w', headers: true) do |csv|
-        csv << ['student_id', 'unit_name']
-        csv_data.each do |row|
-          csv << [row['student_id'], row['unit_name']]
+    # Get user IDs of all students in the teacher_user's sections
+    follower_ids = teacher_user.followers.pluck(:student_user_id)
+
+    # Delete progress
+    csv_data.each do |row|
+      student_id = row['student_id'].to_i
+      unit = Unit.find_by_name(row['unit_name'])
+      script_id = unit.id
+      raise "missing script_id for row #{row}" unless script_id
+      if follower_ids.include?(student_id)
+        if dry_run
+          puts "Can remove student data with id " + student_id.to_s + " for unit with ID " + script_id.to_s
+        else
+          begin
+            User.delete_progress_for_unit(user_id: student_id, script_id: script_id)
+          rescue
+            puts "Error deleting progress for student " + student_id.to_s + " for unit with ID " + script_id.to_s
+          end
         end
+      else
+        puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +
+          " section"
       end
-
-      # Determine which script based on data structure
-      script_name = csv_data.first&.key?('unit_name') ?
-        'delete_user_progress_by_unit.rb' :
-        'delete_user_progress_all_units.rb'
-
-      # Path to the delete script
-      repo_root = File.expand_path('..', Rails.root)
-      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', script_name)
-
-      unless File.exist?(script_path) && script_path.start_with?(repo_root)
-        Rails.logger.error "Invalid script path: #{script_path}"
-        render json: {error: 'Script not found'}, status: :internal_server_error
-        return
-      end
-
-      commit_flag = dry_run ? '' : 'for-real'
-
-      success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
-
-      output = File.read(output_file.path)
-
-      unless success
-        Rails.logger.error "Delete progress script failed: #{output}"
-        render json: {error: 'Delete progress script failed', details: output}, status: :internal_server_error
-        return
-      end
-
-      render json: {
-        success: true,
-        output: output,
-        dry_run: dry_run,
-        message: dry_run ? "Dry run completed successfully" : "Progress deletion completed successfully"
-      }
-    rescue => exception
-      Rails.logger.error "Error in delete_user_progress: #{exception.message}"
-      Rails.logger.error exception.backtrace.join("\n")
-      render json: {error: 'Internal server error', details: exception.message}, status: :internal_server_error
-    ensure
-      output_file&.unlink
-      temp_file&.unlink
     end
-  end
 
-  private def execute_delete_script(script_path, teacher_id, csv_file, commit_flag, output_file, repo_root)
-    system(
-      'ruby', script_path, teacher_id, csv_file, commit_flag,
-      out: output_file,
-      err: [:child, :out],
-      chdir: repo_root
-    )
+    render json: {success: true, message: 'User progress deletion completed'}
   end
 
   private def restricted_users
