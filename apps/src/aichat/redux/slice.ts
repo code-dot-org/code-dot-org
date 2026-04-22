@@ -3,24 +3,22 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {
   AiCustomizations,
   LevelAichatSettings,
+  ModalTypes,
   ModelCardInfo,
   SaveError,
   SaveType,
   ViewMode,
   Visibility,
 } from '@cdo/apps/aichatLab/types';
+import {validateModelId} from '@cdo/apps/aichatLab/utils';
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '@cdo/apps/aichatLab/views/modelCustomization/constants';
-import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
 import {registerReducers} from '@cdo/apps/redux';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  ModalTypes,
-  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
-} from '../constants';
+import {RESET_CONVERSATION_CUSTOMIZATION_UPDATES} from '../constants';
 import {
   ChatEvent,
   isModelUpdate,

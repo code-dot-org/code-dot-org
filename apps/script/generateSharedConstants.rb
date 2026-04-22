@@ -11,7 +11,6 @@ require 'fileutils'
 require 'require_all'
 require 'ostruct'
 
-require_relative '../../deployment'
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))

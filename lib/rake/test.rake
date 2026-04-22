@@ -165,15 +165,6 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :dashboard_observability_engine_qa do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-    ENV['TEST_ENV_NUMBER'] = '1'
-    TestRunUtils.run_dashboard_observability_engine_tests
-    ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
-  end
-
   timed_task_with_logging :shared_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -218,7 +209,6 @@ namespace :test do
     :dashboard_legacy_qa,
     :dashboard_hoc_legacy_engine_qa,
     :dashboard_cdo_contentful_engine_qa,
-    :dashboard_observability_engine_qa,
     :lib_qa,
     :bin_qa,
     :ui_live
@@ -245,11 +235,6 @@ namespace :test do
   desc 'Runs dashboard hoc_legacy engine tests.'
   timed_task_with_logging :dashboard_hoc_legacy_engine do
     TestRunUtils.run_dashboard_hoc_legacy_engine_tests
-  end
-
-  desc 'Runs dashboard observability engine tests.'
-  timed_task_with_logging :dashboard_observability_engine do
-    TestRunUtils.run_dashboard_observability_engine_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -368,16 +353,6 @@ namespace :test do
       end
     end
 
-    desc 'Runs dashboard observability engine tests'
-    timed_task_with_logging :dashboard_observability_engine do
-      run_tests_if_changed(
-        'dashboard observability engine',
-        %w[Gemfile Gemfile.lock dashboard/engines/observability/**/*],
-      ) do
-        TestRunUtils.run_dashboard_observability_engine_tests
-      end
-    end
-
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     timed_task_with_logging :pegasus do
       run_tests_if_changed(
@@ -473,7 +448,6 @@ namespace :test do
       :dashboard_legacy,
       :dashboard_cdo_contentful_engine,
       :dashboard_hoc_legacy_engine,
-      :dashboard_observability_engine,
       :pegasus,
       :shared,
       :lib,
@@ -495,7 +469,6 @@ namespace :test do
     :dashboard_legacy,
     :dashboard_cdo_contentful_engine,
     :dashboard_hoc_legacy_engine,
-    :dashboard_observability_engine,
     :pegasus,
     :shared,
     :lib,

@@ -1,4 +1,6 @@
 require 'json'
+
+require_relative '../../deployment'
 require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
