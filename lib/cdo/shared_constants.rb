@@ -1,4 +1,7 @@
 require 'json'
+
+require_relative '../../deployment'
+require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
 
@@ -11,7 +14,8 @@ require_relative '../state_abbr'
 # result in changes to these other files.
 
 module SharedConstants
-  DEFAULT_LOCALE = 'en-US'.freeze
+  DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
+  LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
 
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(

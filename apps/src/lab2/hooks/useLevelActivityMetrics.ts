@@ -1,8 +1,10 @@
 import {useCallback, useEffect, useRef} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {useLocalization} from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelProperties} from '../types';
 
@@ -24,6 +26,7 @@ import {LevelProperties} from '../types';
 export function useLevelActivityMetrics(
   levelProperties: LevelProperties
 ): () => void {
+  const locale = useLocalization();
   const signedIn =
     useAppSelector(state => state.currentUser.signInState) === 'SignedIn' ||
     false;
@@ -50,6 +53,9 @@ export function useLevelActivityMetrics(
       unitName: scriptName ?? '',
       levelId: levelProperties.id,
       levelName: levelProperties.name,
+      locale:
+        LocalizeToI18nLocales[locale as keyof typeof LocalizeToI18nLocales] ||
+        locale,
     });
   }, [
     levelProperties.id,
@@ -57,6 +63,7 @@ export function useLevelActivityMetrics(
     levelProperties.name,
     signedIn,
     scriptName,
+    locale,
   ]);
 
   return logLevelActivity;
