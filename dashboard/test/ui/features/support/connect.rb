@@ -9,22 +9,35 @@ require 'retryable'
 
 UI_TEST_DIR = File.expand_path('../..', __dir__)
 
-# Load browser config from the appropriate JSON file depending on provider.
-# When TEST_DEVICE_FARM=true, use browsers_device_farm.json; otherwise use
-# browsers_saucelabs.json.
-browser_configs_file = ENV['TEST_DEVICE_FARM'] == 'true' ? 'browsers_device_farm.json' : 'browsers_saucelabs.json'
-$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, browser_configs_file))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+# Load the browser config for the active provider from its JSON file. Only
+# one of the two globals is populated per run; the other stays empty.
+$saucelabs_browser_config = {}
+$device_farm_browser_config = {}
+if ENV['TEST_DEVICE_FARM'] == 'true'
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers_device_farm.json')))
+  $device_farm_browser_config = browsers.detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+else
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers_saucelabs.json')))
+  $saucelabs_browser_config = browsers.detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+end
 
 MAX_CONNECT_RETRIES = 3
 SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
 
 # Run all feature scenarios in a single session.
-# TODO: this misses SauceLabs mobile configs, which use `appium:mobile` rather
-# than the bare `mobile` key. Sauce iPhone/iPad runs that don't carry the
-# @single_session tag fall through to per-scenario sessions. Mirror
-# runner.rb's `mobile_browser?` (which checks both keys) as a follow-up.
+# TODO: the SauceLabs branch misses Sauce's mobile configs, which use
+# `appium:mobile` rather than the bare `mobile` key. Sauce iPhone/iPad runs
+# that don't carry the @single_session tag fall through to per-scenario
+# sessions. Mirror runner.rb's `mobile_browser?` (which checks both keys)
+# as a follow-up.
 def single_session?
-  $browser_config['mobile'] || $single_session
+  is_mobile =
+    if test_device_farm?
+      $device_farm_browser_config['mobile']
+    else
+      $saucelabs_browser_config['mobile']
+    end
+  is_mobile || $single_session
 end
 
 # Should we run the tests using the local Selenium webdriver rather than a
@@ -47,7 +60,7 @@ def saucelabs_browser(test_run_name, http_client: nil)
   raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
   raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($saucelabs_browser_config.except('name'))
 
   sauce_options = {
     name: test_run_name,
@@ -77,7 +90,7 @@ def device_farm_desktop_browser(http_client: nil)
   url = Cdo::DeviceFarm.create_test_grid_url
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
   )
 
   SeleniumBrowser.remote(
@@ -91,12 +104,12 @@ end
 # (the Appium endpoint may return 400 briefly after status becomes RUNNING).
 def device_farm_mobile_browser(http_client: nil)
   session = Cdo::DeviceFarm.create_mobile_session(
-    device_arn: $browser_config['device_arn']
+    device_arn: $device_farm_browser_config['device_arn']
   )
   $device_farm_mobile_session_arn = session[:session_arn]
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
   )
 
   Retryable.retryable(
@@ -133,7 +146,7 @@ end
 # Assumes test_device_farm? and $selenium_http_client have been established
 # by the caller.
 def get_device_farm_browser
-  is_mobile = $browser_config['mobile']
+  is_mobile = $device_farm_browser_config['mobile']
   browser =
     if is_mobile
       # Provision once, then retry the Selenium connection (Appium server
