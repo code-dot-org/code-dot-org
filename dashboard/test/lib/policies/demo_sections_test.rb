@@ -61,6 +61,27 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
   end
 
+  test 'get_preset uses drone curriculum names on ci webserver' do
+    CDO.stubs(:ci_webserver?).returns(true)
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'allthethings', preset[:unit_name]
+    assert_equal 'original-allthethings-course', preset[:unit_group_name]
+  end
+
+  test 'get_preset uses adhoc curriculum names from config' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:rack_env?).with(:adhoc).returns(true)
+    CDO.stubs(:demo_section_unit_name).returns('adhoc-unit')
+    CDO.stubs(:demo_section_unit_group_name).returns('adhoc-course')
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'adhoc-unit', preset[:unit_name]
+    assert_equal 'adhoc-course', preset[:unit_group_name]
+  end
+
   test 'get_preset returns preset for each demo type' do
     Policies::DemoSections::DEMO_TYPES.each do |type|
       preset = Policies::DemoSections.get_preset(type)

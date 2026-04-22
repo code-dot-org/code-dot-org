@@ -1766,13 +1766,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 'student', response['middle']['participant_type']
   end
 
-  test 'presets: returns not_found when no preset can be projected' do
+  test 'presets: returns an empty response when no preset can be projected' do
     sign_in @teacher
     Policies::DemoSections.stubs(:preset_views_for_all_types).returns({})
 
     get :presets
 
-    assert_response :not_found
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
   end
 
   private def stub_demo_preset

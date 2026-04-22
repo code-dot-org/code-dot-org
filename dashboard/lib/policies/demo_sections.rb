@@ -2,6 +2,8 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
+  DRONE_UNIT_NAME = 'allthethings'
+  DRONE_UNIT_GROUP_NAME = 'original-allthethings-course'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -46,7 +48,10 @@ class Policies::DemoSections
   }.freeze
 
   def self.get_preset(demo_type)
-    DEMO_SECTION_PRESETS[demo_type.to_sym]
+    preset = DEMO_SECTION_PRESETS[demo_type.to_sym]
+    return nil unless preset
+
+    preset.merge(curriculum_names(preset))
   end
 
   def self.demo_student_ids(demo_type)
@@ -113,5 +118,26 @@ class Policies::DemoSections
     UnitGroup.get_from_cache(unit_group_name)
   end
 
-  private_class_method :resolve_unit, :resolve_unit_group
+  def self.curriculum_names(preset)
+    if CDO.rack_env?(:adhoc)
+      return {
+        unit_name: CDO.demo_section_unit_name,
+        unit_group_name: CDO.demo_section_unit_group_name,
+      }
+    end
+
+    if CDO.ci_webserver?
+      return {
+        unit_name: DRONE_UNIT_NAME,
+        unit_group_name: DRONE_UNIT_GROUP_NAME,
+      }
+    end
+
+    {
+      unit_name: preset[:unit_name],
+      unit_group_name: preset[:unit_group_name],
+    }
+  end
+
+  private_class_method :resolve_unit, :resolve_unit_group, :curriculum_names
 end

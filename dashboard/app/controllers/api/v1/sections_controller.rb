@@ -157,8 +157,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     authorize! :create, Section
 
     preset_views = Policies::DemoSections.preset_views_for_all_types
-    return head :not_found if preset_views.empty?
-
     render json: preset_views
   end
 
