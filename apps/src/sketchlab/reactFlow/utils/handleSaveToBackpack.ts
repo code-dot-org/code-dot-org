@@ -1,4 +1,4 @@
-import {getNodesBounds, type ReactFlowInstance} from '@xyflow/react';
+import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -72,16 +72,53 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  const nodes = reactFlow.getNodes();
-  if (nodes.length === 0) {
+  if (reactFlow.getNodes().length === 0) {
     errorCallback(
       `Error saving ${newFileName} to your Backpack. Please try again`
     );
     return;
   }
-  const bounds = getNodesBounds(nodes);
-  const contentWidth = bounds.width + 2 * EXPORT_PADDING_PX;
-  const contentHeight = bounds.height + 2 * EXPORT_PADDING_PX;
+
+  // Read the themed canvas background so the PNG matches light/dark mode.
+  const canvasEl = document.querySelector<HTMLElement>(
+    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
+  );
+
+  // Union the rendered bounding rects of every node and edge so we include
+  // curved edges and arrow markers that extend beyond node bounds.
+  // Convert screen-space rects back to flow space using the current viewport.
+  const rootRect = (canvasEl ?? viewportEl).getBoundingClientRect();
+  const {x: panX, y: panY, zoom} = reactFlow.getViewport();
+  const contentEls = document.querySelectorAll<Element>(
+    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
+      `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
+  );
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  contentEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) {
+      return;
+    }
+    const flowLeft = (rect.left - rootRect.left - panX) / zoom;
+    const flowTop = (rect.top - rootRect.top - panY) / zoom;
+    const flowRight = (rect.right - rootRect.left - panX) / zoom;
+    const flowBottom = (rect.bottom - rootRect.top - panY) / zoom;
+    if (flowLeft < minX) minX = flowLeft;
+    if (flowTop < minY) minY = flowTop;
+    if (flowRight > maxX) maxX = flowRight;
+    if (flowBottom > maxY) maxY = flowBottom;
+  });
+  if (!Number.isFinite(minX)) {
+    errorCallback(
+      `Error saving ${newFileName} to your Backpack. Please try again`
+    );
+    return;
+  }
+  const contentWidth = maxX - minX + 2 * EXPORT_PADDING_PX;
+  const contentHeight = maxY - minY + 2 * EXPORT_PADDING_PX;
   // Scale down only if content exceeds MAX_EXPORT_DIM_PX along either axis;
   // otherwise export at 1:1 so small sketches don't get shrunk.
   const scale = Math.min(
@@ -90,13 +127,8 @@ export const handleSaveToBackpack = async (
   );
   const imageWidth = Math.round(contentWidth * scale);
   const imageHeight = Math.round(contentHeight * scale);
-  const translateX = (-bounds.x + EXPORT_PADDING_PX) * scale;
-  const translateY = (-bounds.y + EXPORT_PADDING_PX) * scale;
-
-  // Read the themed canvas background so the PNG matches light/dark mode.
-  const canvasEl = document.querySelector<HTMLElement>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
-  );
+  const translateX = (-minX + EXPORT_PADDING_PX) * scale;
+  const translateY = (-minY + EXPORT_PADDING_PX) * scale;
   const backgroundColor = canvasEl
     ? getComputedStyle(canvasEl).backgroundColor
     : '#ffffff';
