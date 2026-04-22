@@ -111,8 +111,15 @@ export default function NodeToolbarShell({
             handleClose();
             return false;
           },
+          // We handle returning focus and click outside elsewhere.
+          // This is so if the user clicks on another node, we won't return focus to
+          // the original node, and because we already have to handle click outside
+          // for the node selection state. allowOutsideClick is required
+          // because focus-trap's default blocks outside clicks entirely,
+          // which would swallow clicks on other nodes, etc.
           returnFocusOnDeactivate: false,
           clickOutsideDeactivates: false,
+          allowOutsideClick: true,
         }}
       >
         <Paper
