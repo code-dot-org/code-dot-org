@@ -236,10 +236,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const chatWorkspaceHeader = (
     <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT ? 'AI Chat' : botName}
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
-      )}
     </div>
+  );
+
+  const chatWorkspaceHeaderRight = (
+    <>
+      {projectTemplateLevel && (
+        <span className={moduleStyles.templateIconWrapper}>
+          <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
+        </span>
+      )}
+      <AiChatHeaderButtons />
+    </>
   );
 
   const resetProject = useCallback(() => {
@@ -360,7 +368,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
-              rightHeaderContent={<AiChatHeaderButtons />}
+              rightHeaderContent={chatWorkspaceHeaderRight}
             >
               {chatWorkspaceInitialized && (
                 <ChatWorkspace
