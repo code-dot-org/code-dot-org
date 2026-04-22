@@ -41,7 +41,10 @@ module Cdo
       REGION = 'us-west-2'.freeze
 
       # Internal keys in browser configs that are not Selenium capabilities.
-      INTERNAL_KEYS = %w[name mobile device_arn].freeze
+      # Device Farm also rejects `appium:orientation` as a session capability
+      # (reserved), so we strip it from caps and apply it after session-start
+      # via the WebDriver /orientation endpoint.
+      INTERNAL_KEYS = %w[name mobile device_arn appium:orientation].freeze
 
       # ---- Desktop (TestGrid) -------------------------------------------------
 

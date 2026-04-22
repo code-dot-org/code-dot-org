@@ -112,7 +112,7 @@ def device_farm_mobile_browser(http_client: nil)
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
-  Retryable.retryable(
+  browser = Retryable.retryable(
     tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
     sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
   ) do
@@ -122,6 +122,19 @@ def device_farm_mobile_browser(http_client: nil)
       http_client: http_client
     )
   end
+
+  # Device Farm rejects `appium:orientation` as a session capability, so
+  # apply it via the WebDriver /orientation endpoint after session-start.
+  orientation = $device_farm_browser_config['appium:orientation']
+  if orientation
+    browser.send(:bridge).http.call(
+      :post,
+      "session/#{browser.session_id}/orientation",
+      {orientation: orientation.upcase}
+    )
+  end
+
+  browser
 end
 
 # Set HTTP read timeout to the specified value during the block.

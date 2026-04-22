@@ -20,13 +20,15 @@
     "mobile": true,
     "device_arn": "arn:aws:devicefarm:us-west-2::device:EEED8AB9E08F4B6C862F982EDA0A0C34",
     "platformName": "iOS",
-    "browserName": "Safari"
+    "browserName": "Safari",
+    "appium:orientation": "LANDSCAPE"
   },
   {
     "name": "iPad",
     "mobile": true,
     "device_arn": "arn:aws:devicefarm:us-west-2::device:30FFDD10560948EABAF2288A9BF0397C",
     "platformName": "iOS",
-    "browserName": "Safari"
+    "browserName": "Safari",
+    "appium:orientation": "LANDSCAPE"
   }
 ]
