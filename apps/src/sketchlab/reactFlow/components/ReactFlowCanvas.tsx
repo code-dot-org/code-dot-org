@@ -25,7 +25,10 @@ import {
   DEFAULT_NODE_WIDTH,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
-import {SketchLabReadOnlyProvider, ToolbarVisibilityProvider} from '../context';
+import {
+  SketchLabReadOnlyProvider,
+  NodeToolbarVisibilityProvider,
+} from '../context';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useTabOrder} from '../hooks/useTabOrder';
@@ -74,25 +77,25 @@ export default function ReactFlowCanvas({
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
-  const [openToolbarNodeId, setOpenToolbarNodeId] = useState<string | null>(
+  const [openNodeToolbarId, setOpenNodeToolbarId] = useState<string | null>(
     null
   );
 
-  const openToolbar = useCallback((nodeId: string) => {
-    setOpenToolbarNodeId(nodeId);
+  const openNodeToolbar = useCallback((nodeId: string) => {
+    setOpenNodeToolbarId(nodeId);
   }, []);
 
-  const closeToolbar = useCallback(() => {
-    setOpenToolbarNodeId(null);
+  const closeNodeToolbar = useCallback(() => {
+    setOpenNodeToolbarId(null);
   }, []);
 
-  const toolbarVisibility = useMemo(
+  const nodeToolbarVisibility = useMemo(
     () => ({
-      openToolbarNodeId,
-      openToolbar,
-      closeToolbar,
+      openNodeToolbarId,
+      openNodeToolbar,
+      closeNodeToolbar,
     }),
-    [openToolbarNodeId, openToolbar, closeToolbar]
+    [openNodeToolbarId, openNodeToolbar, closeNodeToolbar]
   );
 
   const {screenToFlowPosition} = useReactFlow();
@@ -122,32 +125,33 @@ export default function ReactFlowCanvas({
       focusEntry,
       setEdges,
       readOnly,
-      openToolbar,
+      openNodeToolbar,
     });
 
-  // Close the toolbar when focus moves off the owning node: to a different
-  // node/edge, or out of the canvas entirely. Skips clearing while focus
-  // is inside the toolbar itself so keyboard interactions don't dismiss it.
+  // Close the node toolbar when focus moves off the owning node: to a
+  // different node/edge, or out of the canvas entirely. Skips clearing
+  // while focus is inside the toolbar itself so keyboard interactions
+  // don't dismiss it.
   useEffect(() => {
-    if (!openToolbarNodeId) return;
+    if (!openNodeToolbarId) return;
     const focusedNodeId =
       nodeOrEdgeFocused && lastFocusedEntry?.type === 'node'
         ? lastFocusedEntry.id
         : null;
-    if (focusedNodeId !== openToolbarNodeId) {
-      setOpenToolbarNodeId(null);
+    if (focusedNodeId !== openNodeToolbarId) {
+      setOpenNodeToolbarId(null);
     }
-  }, [openToolbarNodeId, nodeOrEdgeFocused, lastFocusedEntry]);
+  }, [openNodeToolbarId, nodeOrEdgeFocused, lastFocusedEntry]);
 
-  // Close the toolbar when its owning node is deleted.
+  // Close the node toolbar when its owning node is deleted.
   useEffect(() => {
     if (
-      openToolbarNodeId &&
-      !nodes.some(node => node.id === openToolbarNodeId)
+      openNodeToolbarId &&
+      !nodes.some(node => node.id === openNodeToolbarId)
     ) {
-      setOpenToolbarNodeId(null);
+      setOpenNodeToolbarId(null);
     }
-  }, [nodes, openToolbarNodeId]);
+  }, [nodes, openNodeToolbarId]);
 
   // Clear selection when focus leaves the canvas container entirely
   // (e.g. clicking outside or tabbing out of the canvas). Skip when the
@@ -294,9 +298,9 @@ export default function ReactFlowCanvas({
 
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: {id: string}) => {
-      // Only open toolbar in editable mode.
+      // Only open the node toolbar in editable mode.
       if (!readOnly) {
-        setOpenToolbarNodeId(node.id);
+        setOpenNodeToolbarId(node.id);
       }
     },
     [readOnly]
@@ -304,7 +308,7 @@ export default function ReactFlowCanvas({
 
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
-      <ToolbarVisibilityProvider value={toolbarVisibility}>
+      <NodeToolbarVisibilityProvider value={nodeToolbarVisibility}>
         <div
           className={classNames(
             styles.canvasContainer,
@@ -349,7 +353,7 @@ export default function ReactFlowCanvas({
             <Controls />
           </ReactFlow>
         </div>
-      </ToolbarVisibilityProvider>
+      </NodeToolbarVisibilityProvider>
     </SketchLabReadOnlyProvider>
   );
 }

@@ -50,7 +50,7 @@ interface UseKeyboardNavigationOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   readOnly: boolean;
-  openToolbar: (nodeId: string) => void;
+  openNodeToolbar: (nodeId: string) => void;
 }
 
 /**
@@ -67,7 +67,7 @@ export function useKeyboardNavigation({
   focusEntry,
   setEdges,
   readOnly,
-  openToolbar,
+  openNodeToolbar,
 }: UseKeyboardNavigationOptions) {
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
@@ -113,7 +113,7 @@ export function useKeyboardNavigation({
       // focus to the first tabbable when isVisible flips.
       if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
         event.preventDefault();
-        openToolbar(focusedNodeId);
+        openNodeToolbar(focusedNodeId);
         return;
       }
 
@@ -241,7 +241,7 @@ export function useKeyboardNavigation({
       connectingFrom,
       focusEntry,
       nodes,
-      openToolbar,
+      openNodeToolbar,
       readOnly,
       setEdges,
       tabOrder,

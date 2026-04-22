@@ -6,16 +6,16 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   useSketchLabReadOnly,
-  useToolbarVisibility,
+  useNodeToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
 
 import styles from './node-toolbar.module.scss';
 
-const TOOLBAR_OFFSET_PX = 8;
+const NODE_TOOLBAR_OFFSET_PX = 8;
 const PAN_DURATION_MS = 200;
 // Width reserved for React Flow's Controls overlay along the left edge
-// so the toolbar doesn't sit underneath it after panning into view.
+// so the node toolbar doesn't sit underneath it after panning into view.
 const CONTROLS_WIDTH_PX = 60;
 
 interface NodeToolbarShellProps {
@@ -30,23 +30,23 @@ export default function NodeToolbarShell({
   children,
 }: NodeToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openToolbarNodeId, closeToolbar} = useToolbarVisibility();
+  const {openNodeToolbarId, closeNodeToolbar} = useNodeToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
-  const isVisible = openToolbarNodeId === nodeId;
+  const isVisible = openNodeToolbarId === nodeId;
   const wasVisibleRef = useRef(false);
 
-  // Pan the viewport into view when the toolbar first becomes visible.
+  // Pan the viewport into view when the node toolbar first becomes visible.
   useEffect(() => {
     if (isVisible && !wasVisibleRef.current) {
       // Defer until after React Flow positions the toolbar in the DOM
       // so getBoundingClientRect reflects the final placement.
       requestAnimationFrame(() => {
-        const toolbarEl = containerRef.current?.closest<HTMLElement>(
+        const nodeToolbarEl = containerRef.current?.closest<HTMLElement>(
           '.react-flow__node-toolbar'
         );
-        if (!toolbarEl) return;
-        const overflow = getViewportOverflow(toolbarEl, {
+        if (!nodeToolbarEl) return;
+        const overflow = getViewportOverflow(nodeToolbarEl, {
           left: CONTROLS_WIDTH_PX,
         });
         if (!overflow) return;
@@ -72,9 +72,9 @@ export default function NodeToolbarShell({
   }, [nodeId]);
 
   const handleClose = useCallback(() => {
-    closeToolbar();
+    closeNodeToolbar();
     returnFocusToNode();
-  }, [closeToolbar, returnFocusToNode]);
+  }, [closeNodeToolbar, returnFocusToNode]);
 
   if (readOnly) {
     return null;
@@ -83,7 +83,7 @@ export default function NodeToolbarShell({
     <NodeToolbar
       nodeId={nodeId}
       position={Position.Left}
-      offset={TOOLBAR_OFFSET_PX}
+      offset={NODE_TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
     >
       <FocusTrap
