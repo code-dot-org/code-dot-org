@@ -101,9 +101,8 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(data);
   } catch (error) {
-    getErrorLogData(error).then(data => {
-      console.error('Fetch error in generateTextThroughGateway:', data);
-    });
+    const logData = await getErrorLogData(error);
+    console.error('Fetch error in generateTextThroughGateway:', logData);
     throw error;
   }
 };

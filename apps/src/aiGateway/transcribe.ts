@@ -38,9 +38,8 @@ async function transcribeThroughGateway(
 
     return await response.json();
   } catch (error) {
-    getErrorLogData(error).then(data => {
-      console.error('Fetch error in transcribeThroughGateway:', data);
-    });
+    const logData = getErrorLogData(error);
+    console.error('Fetch error in transcribeThroughGateway:', logData);
     throw error;
   }
 }
