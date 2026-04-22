@@ -12,7 +12,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_FLAGGED_PLACEHOLDER =
-  'This message has been flagged as inappropriate by the teacher.';
+  'This message has been flagged by your teacher.';
 
 const mockWaitingText = 'Waiting...';
 
