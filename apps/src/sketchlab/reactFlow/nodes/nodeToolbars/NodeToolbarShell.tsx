@@ -76,17 +76,6 @@ export default function NodeToolbarShell({
     returnFocusToNode();
   }, [closeToolbar, returnFocusToNode]);
 
-  // focus-trap handles Tab wrapping; stop propagation so the canvas-level
-  // Tab handler doesn't also treat it as node nav.
-  const handleKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (event.key === 'Tab') {
-        event.stopPropagation();
-      }
-    },
-    []
-  );
-
   if (readOnly) {
     return null;
   }
@@ -124,7 +113,6 @@ export default function NodeToolbarShell({
           elevation={3}
           role="toolbar"
           aria-label={ariaLabel}
-          onKeyDown={handleKeyDown}
         >
           <div className={styles.header}>
             <Tooltip title="Close toolbar" placement="top">

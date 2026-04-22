@@ -294,9 +294,12 @@ export default function ReactFlowCanvas({
 
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: {id: string}) => {
-      setOpenToolbarNodeId(node.id);
+      // Only open toolbar in editable mode.
+      if (!readOnly) {
+        setOpenToolbarNodeId(node.id);
+      }
     },
-    []
+    [readOnly]
   );
 
   return (
