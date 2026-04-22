@@ -164,6 +164,8 @@ class TestRedshiftClient < Minitest::Test
     desc_failed = mock
     desc_failed.stubs(:status).returns('FAILED')
     desc_failed.stubs(:error).returns('Syntax Error')
+    desc_failed.stubs(:query_string).returns('BAD SQL')
+    desc_failed.stubs(:sub_statements).returns([])
 
     # Wait loop calls status once (gets FAILED), then explicitly calls describe_statement to get the error.
     ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
@@ -176,6 +178,41 @@ class TestRedshiftClient < Minitest::Test
     end
     assert_includes error.message, 'FAILED'
     assert_includes error.message, 'Syntax Error'
+    assert_includes error.message, 'SQL: BAD SQL'
+  end
+
+  def test_execute_failure_includes_sub_statement_errors
+    exec_resp = mock
+    exec_resp.stubs(:id).returns('multi-fail-123')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
+
+    sub1 = mock
+    sub1.stubs(:status).returns('FINISHED')
+    sub1.stubs(:error).returns(nil)
+    sub1.stubs(:query_string).returns('DROP MATERIALIZED VIEW IF EXISTS schema.view')
+
+    sub2 = mock
+    sub2.stubs(:status).returns('FAILED')
+    sub2.stubs(:error).returns('relation "schema.view" already exists')
+    sub2.stubs(:query_string).returns('CREATE MATERIALIZED VIEW schema.view AS SELECT id FROM t')
+
+    desc_failed = mock
+    desc_failed.stubs(:status).returns('FAILED')
+    desc_failed.stubs(:error).returns('')
+    desc_failed.stubs(:query_string).returns('DROP ...; CREATE ...')
+    desc_failed.stubs(:sub_statements).returns([sub1, sub2])
+
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+      with(id: 'multi-fail-123').
+      twice.
+      returns(desc_failed, desc_failed)
+
+    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
+      @redshift.execute('DROP ...; CREATE ...')
+    end
+    assert_includes error.message, 'Sub-statement 2 FAILED'
+    assert_includes error.message, 'relation "schema.view" already exists'
+    assert_includes error.message, 'CREATE MATERIALIZED VIEW'
   end
 
   private def create_field(str: nil, lng: nil, bool: nil, dbl: nil, blb: nil, is_null: false)

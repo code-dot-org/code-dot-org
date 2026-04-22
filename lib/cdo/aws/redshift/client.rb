@@ -29,12 +29,14 @@ module Cdo
         # @param sql [String] The SQL statement to execute.
         # @return [String] Statement ID.
         def execute_async(sql)
+          CDO.log.info "[Redshift] Submitting SQL (#{sql.length} chars):\n#{sql}"
           resp = @client.execute_statement(
             cluster_identifier: @cluster_id,
             database: @database,
             db_user: @db_user,
             sql: sql
           )
+          CDO.log.info "[Redshift] Statement submitted: #{resp.id}"
           resp.id
         end
 
@@ -70,10 +72,13 @@ module Cdo
 
             case current_status
             when 'FINISHED'
+              CDO.log.info "[Redshift] Statement #{statement_id} finished in #{(Time.now - start_time).round(1)}s."
               return current_status
             when 'FAILED', 'ABORTED'
               desc = @client.describe_statement(id: statement_id)
-              raise QueryError, "Redshift Data API Error (#{current_status}): #{desc.error}"
+              error_detail = build_error_detail(desc)
+              CDO.log.error "[Redshift] Statement #{statement_id} #{current_status}:\n#{error_detail}"
+              raise QueryError, "Redshift Data API Error (#{current_status}): #{error_detail}"
             end
 
             sleep 1
@@ -121,6 +126,22 @@ module Cdo
           end
 
           results
+        end
+
+        private def build_error_detail(desc)
+          parts = []
+          parts << desc.error if desc.error.present?
+          parts << "SQL: #{desc.query_string}" if desc.query_string.present?
+
+          if desc.respond_to?(:sub_statements) && desc.sub_statements&.any?
+            desc.sub_statements.each_with_index do |sub, i|
+              next unless sub.status == 'FAILED'
+              parts << "Sub-statement #{i + 1} FAILED: #{sub.error}"
+              parts << "Sub-statement #{i + 1} SQL: #{sub.query_string}" if sub.query_string.present?
+            end
+          end
+
+          parts.empty? ? '(no error detail available)' : parts.join("\n")
         end
       end
     end
