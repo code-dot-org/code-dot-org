@@ -4,8 +4,11 @@ import {NodeToolbar, Position, useReactFlow} from '@xyflow/react';
 import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
-import {useSketchLabReadOnly, useToolbarVisibility} from '../../context';
-import {getViewportOverflow} from '../../utils/viewport';
+import {
+  useSketchLabReadOnly,
+  useToolbarVisibility,
+} from '@cdo/apps/sketchlab/reactFlow/context';
+import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
 
 import styles from './node-toolbar.module.scss';
 

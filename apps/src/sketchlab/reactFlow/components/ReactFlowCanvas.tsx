@@ -81,9 +81,11 @@ export default function ReactFlowCanvas({
   const openToolbar = useCallback((nodeId: string) => {
     setOpenToolbarNodeId(nodeId);
   }, []);
+
   const closeToolbar = useCallback(() => {
     setOpenToolbarNodeId(null);
   }, []);
+
   const toolbarVisibility = useMemo(
     () => ({
       openToolbarNodeId,

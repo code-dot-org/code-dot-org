@@ -14,8 +14,7 @@ interface VisibleAreaInsets {
  * element inside the visible area.
  *
  * `insets` shrinks the visible area from each edge — e.g. pass
- * `{left: 36}` to reserve space for the Controls overlay so elements
- * panned into view aren't hidden behind it.
+ * `{left: 36}` to reserve 36px on the left edge.
  */
 export function getViewportOverflow(
   element: HTMLElement,
