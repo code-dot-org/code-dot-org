@@ -101,10 +101,20 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     )
   end
 
-  test 'preset_view returns nil when a configured unit cannot be resolved' do
+  test 'preset_view falls back to configured metadata when a unit cannot be resolved' do
     Unit.expects(:get_from_cache).with('aif2-2025', raise_exceptions: false).returns(nil)
+    unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
 
-    assert_nil Policies::DemoSections.preset_view(:high)
+    view = Policies::DemoSections.preset_view(:high)
+
+    assert_equal(
+      {
+        name: 'aif2-2025',
+        display_name: 'Artificial Intelligence Foundations',
+      },
+      view[:unit]
+    )
+    assert_equal unit_group.name, view[:unit_group][:name]
   end
 
   test 'preset_views_for_all_types skips misconfigured presets' do
