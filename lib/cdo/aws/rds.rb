@@ -22,7 +22,7 @@ module Cdo
       delay: 60
     )
       clone_instance_id = clone_cluster_id + "-0"
-      rds_client = Aws::RDS::Client.new
+      rds_client = ::Aws::RDS::Client.new
       begin
         CDO.log.info "Creating clone of database cluster - #{source_cluster_id}"
         source_cluster = rds_client.describe_db_clusters({db_cluster_identifier: source_cluster_id}).db_clusters.first
@@ -72,7 +72,7 @@ module Cdo
           {db_instance_identifier: clone_instance_id},
           {max_attempts: max_attempts, delay: delay}
         )
-      rescue Aws::Waiters::Errors::WaiterFailed => exception
+      rescue ::Aws::Waiters::Errors::WaiterFailed => exception
         CDO.log.info "Error waiting for cluster clone instance to become available. #{exception}"
       end
       CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
@@ -80,7 +80,7 @@ module Cdo
 
     def self.delete_cluster(cluster_id, max_attempts = 20, delay = 60)
       raise StandardError.new("cluster_id is required") unless cluster_id.present?
-      rds_client = Aws::RDS::Client.new
+      rds_client = ::Aws::RDS::Client.new
       begin
         existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: cluster_id}).db_clusters.first
         existing_cluster.db_cluster_members.each do |instance|
@@ -116,14 +116,14 @@ module Cdo
             db_cluster_parameter_group_name: existing_cluster.db_cluster_parameter_group
           )
         end
-      rescue Aws::RDS::Errors::DBClusterNotFoundFault => exception
+      rescue ::Aws::RDS::Errors::DBClusterNotFoundFault => exception
         CDO.log.info "Cluster #{cluster_id} does not exist. #{exception}.  No need to delete it."
       end
     end
 
     # The AWS SDK does not currently provide waiters for DBCluster operations.
     def self.wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
-      rds_client = Aws::RDS::Client.new
+      rds_client = ::Aws::RDS::Client.new
       attempts = 0
       cluster_state = nil
       while attempts <= max_attempts && cluster_state != 'deleted'
@@ -134,7 +134,7 @@ module Cdo
             db_clusters.
             first.
             status
-        rescue Aws::RDS::Errors::DBClusterNotFoundFault => exception
+        rescue ::Aws::RDS::Errors::DBClusterNotFoundFault => exception
           cluster_state = 'deleted'
           CDO.log.info "Database Cluster #{db_cluster_id} has been deleted. #{exception}"
         end
@@ -161,7 +161,7 @@ module Cdo
       # the name, but I haven't been able to find one.
       return source_name if source_name.start_with?('default.')
 
-      rds_client = Aws::RDS::Client.new
+      rds_client = ::Aws::RDS::Client.new
       copied_parameter_group = rds_client.copy_db_parameter_group(
         source_db_parameter_group_identifier: source_name,
         target_db_parameter_group_identifier: target_name,
