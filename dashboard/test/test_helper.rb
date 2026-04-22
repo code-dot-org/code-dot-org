@@ -1,6 +1,8 @@
 require 'test_reporter'
 require 'faker'
 
+require 'oj'
+
 require 'objspace'
 ObjectSpace.trace_object_allocations_start
 
@@ -85,6 +87,7 @@ require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
+  Oj.optimize_rails
 
   class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
