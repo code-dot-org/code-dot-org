@@ -125,7 +125,7 @@ def change_orientation(orientation)
   )
 end
 
-# Connects via Device Farm, sets $session_id, and logs the console URL.
+# Connects via Device Farm and logs the session's AWS console URL.
 # Assumes test_device_farm? and $selenium_http_client have been established
 # by the caller.
 def get_device_farm_browser
@@ -140,9 +140,12 @@ def get_device_farm_browser
         device_farm_desktop_browser(http_client: $selenium_http_client)
       end
     end
-  $session_id = browser.session_id
   console_url =
-    is_mobile ? Cdo::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn) : Cdo::DeviceFarm.desktop_session_url($session_id)
+    if is_mobile
+      Cdo::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
+    else
+      Cdo::DeviceFarm.desktop_session_url(browser.session_id)
+    end
   puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
   browser
 end
@@ -159,8 +162,8 @@ def get_browser(test_run_name)
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end
-    $session_id = browser.session_id
-    visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
+    $saucelabs_session_id = browser.session_id
+    visual_log_url = "https://saucelabs.com/tests/#{$saucelabs_session_id}"
     puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
   end
 
@@ -208,14 +211,13 @@ Before do |scenario|
 end
 
 def log_result(result)
-  return unless $session_id
-
   # Device Farm has no equivalent "stamp this session as passed/failed"
   # API; the session's AWS console URL is printed at session-start for any
   # post-mortem needs.
   return if test_device_farm?
+  return unless $saucelabs_session_id
 
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$saucelabs_session_id}"
   HTTParty.put(
     url,
     body: {"passed" => result}.to_json,
