@@ -2,22 +2,18 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
-import {ShapeType} from '../types';
+import {ShapeType, SketchLabNode} from '../types';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
-  onAddNode: (
-    type: 'shape' | 'image' | 'text',
-    data: SketchlabReactFlowNode['data']
-  ) => void;
+  onAddNode: (typeAndData: Pick<SketchLabNode, 'type' | 'data'>) => void;
 }
 
 export default function Toolbar({onAddNode}: ToolbarProps) {
@@ -27,11 +23,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
   const addShape = useCallback(
     (shapeType: ShapeType) => {
-      const data: SketchlabReactFlowNode['data'] = {
-        shapeType,
-        label: '',
-      };
-      onAddNode('shape', data);
+      onAddNode({type: 'shape', data: {shapeType, label: ''}});
     },
     [onAddNode]
   );
@@ -49,11 +41,10 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
       try {
         await HttpClient.put(uploadUrl, file);
-        const imageData: SketchlabReactFlowNode['data'] = {
-          src: uploadUrl,
-          altText: file.name.replace(/\.[^.]+$/, ''),
-        };
-        onAddNode('image', imageData);
+        onAddNode({
+          type: 'image',
+          data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
+        });
       } catch (error) {
         console.error('Failed to upload image:', error);
       }
@@ -118,7 +109,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         <IconButton
           aria-label="Add text"
           id={`${uid}-text`}
-          onClick={() => onAddNode('text', {text: ''})}
+          onClick={() => onAddNode({type: 'text', data: {text: ''}})}
           size="small"
           color="tertiary"
           variant="outlined"
