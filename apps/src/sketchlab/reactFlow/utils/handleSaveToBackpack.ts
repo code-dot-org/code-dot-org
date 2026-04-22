@@ -13,6 +13,7 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {getCanvasBounds} from './getCanvasBounds';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1
@@ -80,44 +81,26 @@ export const handleSaveToBackpack = async (
   );
 
   // Union the rendered bounding rects of every node and edge so we include
-  // edges that extend beyond node bounds.
-  // Convert screen-space rects back to flow space using the current viewport.
+  // edges that extend beyond node bounds, converting back to flow space.
   const rootRect = (canvasEl ?? viewportEl).getBoundingClientRect();
-  const {x: panX, y: panY, zoom} = reactFlow.getViewport();
   const contentEls = document.querySelectorAll<Element>(
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
       `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
   );
-  if (contentEls.length === 0) {
+  const contentRects = Array.from(contentEls, el => el.getBoundingClientRect());
+  const bounds = getCanvasBounds(
+    contentRects,
+    rootRect,
+    reactFlow.getViewport()
+  );
+  if (!bounds) {
     errorCallback(
       'Add something to your workspace before saving to your backpack'
     );
     return;
   }
-  let minX = Infinity;
-  let minY = Infinity;
-  let maxX = -Infinity;
-  let maxY = -Infinity;
-  contentEls.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.width === 0 && rect.height === 0) {
-      return;
-    }
-    const flowLeft = (rect.left - rootRect.left - panX) / zoom;
-    const flowTop = (rect.top - rootRect.top - panY) / zoom;
-    const flowRight = (rect.right - rootRect.left - panX) / zoom;
-    const flowBottom = (rect.bottom - rootRect.top - panY) / zoom;
-    if (flowLeft < minX) minX = flowLeft;
-    if (flowTop < minY) minY = flowTop;
-    if (flowRight > maxX) maxX = flowRight;
-    if (flowBottom > maxY) maxY = flowBottom;
-  });
   const {imageWidth, imageHeight, scale, translateX, translateY} =
-    computeExportDimensions(
-      {minX, minY, maxX, maxY},
-      EXPORT_PADDING_PX,
-      MAX_EXPORT_DIM_PX
-    );
+    computeExportDimensions(bounds, EXPORT_PADDING_PX, MAX_EXPORT_DIM_PX);
   const backgroundColor = canvasEl
     ? getComputedStyle(canvasEl).backgroundColor
     : '#ffffff';
