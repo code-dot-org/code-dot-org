@@ -8,7 +8,6 @@ Feature: Demo section card on the teacher homepage
     And element "#ui-test-demo-section-card" contains text "High School Practice Section"
     And element "#ui-test-demo-section-card" contains text "Demo"
     When I press "go-to-lesson-dropdown-button"
-    Then I wait until element "#go-to-lesson-dropdown" is open
     And I wait until element "#go-to-lesson-dropdown li" is visible
     When I click "#ui-test-demo-section-action-progress" once it exists
     Then I wait until current URL contains "/teacher_dashboard/sections/"
