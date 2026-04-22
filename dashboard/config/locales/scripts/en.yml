@@ -28055,28 +28055,28 @@ en:
           title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
-          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching AI Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching AI Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
         self-paced-pl-csd3-2026:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
-              display_name: Overview of CS Discoveries
+              display_name: Overview of AI Discoveries
           name: self-paced-pl-csd3-2026
-          title: 'Module 3: Overview of CS Discoveries'
+          title: 'Module 3: Overview of AI Discoveries'
           description_audience: ''
           description_short: ''
-          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
-          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          description: "This module will provide you with an overview of the AI Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the AI Discoveries curriculum.\n* Become familiar with the programming environments used within AI Discoveries.\n* Decide which units of AI Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the AI Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the AI Discoveries curriculum.\n* Become familiar with the programming environments used within AI Discoveries.\n* Decide which units of AI Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csd4-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd4-2026
-          title: 'Module 4: Teaching and Learning CS Discoveries'
+          title: 'Module 4: Teaching and Learning AI Discoveries'
           description_audience: ''
           description_short: ''
-          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
-          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          description: "In this module, you will be introduced to authentic computer science and AI practices that students will engage with throughout the AI Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within an AI Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in an AI Discoveries classroom. \n* Learn about authentic computer science and AI practices that students will develop throughout the AI Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic computer science and AI practices that students will engage with throughout the AI Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within an AI Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in an AI Discoveries classroom. \n* Learn about authentic computer science and AI practices that students will develop throughout the AI Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
         self-paced-pl-csd5-2026:
           lessons: {}
           lesson_groups: {}
@@ -28264,3 +28264,133 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-teaching-web-dev-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-web-dev-2026
+          title: Teaching Web Development
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+        self-paced-pl-teaching-programming-with-music-lab-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-programming-with-music-lab-2026
+          title: Teaching Programming with Music Lab
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          student_description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+        self-paced-pl-teaching-data-and-society-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-data-and-society-2026
+          title: Teaching Data and Society
+          description_audience: "'26-'27"
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+        self-paced-pl-teaching-design-process-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-design-process-2026
+          title: Preparing to Teach the Design Process
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+        self-paced-pl-teaching-interactive-animations-and-games-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-interactive-animations-and-games-2026
+          title: 'Preparing to Teach: Interactive Animations and Games'
+          description_audience: "'26-'27"
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+        self-paced-pl-teaching-creating-apps-with-devices-circuit-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-creating-apps-with-devices-circuit-2026
+          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-creating-apps-with-devices-microbit-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
+          title: 'Preparing to Teach: Creating Apps with Devices (micro:bit)'
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-ai-and-ml-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-and-ml-2026
+          title: 'Preparing to Teach: AI and Machine Learning '
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          student_description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes

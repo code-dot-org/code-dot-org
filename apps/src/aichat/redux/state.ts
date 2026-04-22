@@ -1,14 +1,17 @@
-import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
+  FieldVisibilities,
+  ModalTypes,
+  SaveError,
+  SaveType,
+  ViewMode,
+} from '@cdo/apps/aichatLab/types';
+
+import {
   AiChatClientType,
   ChatAsset,
   ChatEvent,
-  FieldVisibilities,
-  SaveError,
-  SaveType,
   ServerChatEvent,
-  ViewMode,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContext,
 } from '../types';

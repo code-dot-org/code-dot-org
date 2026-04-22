@@ -5,7 +5,6 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
-import {ModalTypes} from '@cdo/apps/aichat/constants';
 import {
   addChatEvent,
   clearChatMessages,
@@ -21,14 +20,9 @@ import {
   updateAiCustomization,
   initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
-import {
-  AichatLevelProperties,
-  ModelParameters,
-  ViewMode,
-} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
@@ -50,10 +44,12 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {AichatLevelProperties, ModalTypes, ViewMode} from '../types';
 
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
+import TeacherOnboardingModal from './TeacherOnboardingModal';
 
 import moduleStyles from './aichatView.module.scss';
 

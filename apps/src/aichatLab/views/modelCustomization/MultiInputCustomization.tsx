@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
-import {Visibility} from '@cdo/apps/aichat/types';
+import {Visibility} from '@cdo/apps/aichatLab/types';
 
 import FieldLabel from './FieldLabel';
 import {isDisabled} from './utils';

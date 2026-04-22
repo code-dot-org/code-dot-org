@@ -2884,67 +2884,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  class RecentCoursesAndScripts < ActiveSupport::TestCase
-    setup do
-      test_locale = :'te-ST'
-      I18n.locale = test_locale
-      custom_i18n = {
-        'data' => {
-          'course' => {
-            'name' => {
-              'csd' => {
-                'title' => 'Computer Science Discoveries',
-                'description_short' => 'CSD short description',
-              },
-              'pl-csd' => {
-                'title' => 'Computer Science Discoveries PL Course',
-                'description_short' => 'PL CSD short description',
-              }
-            }
-          },
-          'script' => {
-            'name' => {
-              'other' => {
-                title: 'Unit Other',
-                'description_short' => 'other-description'
-              },
-              'pl-other' => {
-                title: 'PL Unit Other',
-                'description_short' => 'pl-other-description'
-              }
-            }
-          }
-        }
-      }
-
-      I18n.backend.store_translations test_locale, custom_i18n
-
-      @student = create(:student)
-      @teacher = create(:teacher)
-      facilitator = create(:facilitator)
-
-      unit_group = create(:unit_group, name: 'csd')
-      create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd1')), position: 1)
-      create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd2')), position: 2)
-
-      other_script = create(:single_unit_course, unit: create(:script, name: 'other')).first_unit
-      @student.assign_script(other_script)
-
-      section = create(:section, user_id: @teacher.id, unit_group: unit_group)
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      pl_unit_group = create(:unit_group, :pl_course, name: 'pl-csd')
-      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil)), position: 1)
-      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil)), position: 2)
-
-      other_pl_script = create(:single_unit_course, :pl_course, unit: create(:script, name: 'pl-other')).first_unit
-      @teacher.assign_script(other_pl_script)
-
-      pl_section = create(:section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group)
-      Follower.create!(section_id: pl_section.id, student_user_id: @teacher.id, user: facilitator)
-    end
-  end
-
   test 'from_omniauth: creates new user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',

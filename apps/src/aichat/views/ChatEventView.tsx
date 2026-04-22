@@ -2,11 +2,10 @@ import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
-import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {modelDescriptions} from '../constants';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -47,7 +46,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {

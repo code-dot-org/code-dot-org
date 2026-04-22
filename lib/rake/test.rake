@@ -482,6 +482,7 @@ timed_task_with_logging test: ['test:changed']
 GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
   lib/rake/test.rake
+  docker/ci/**/*
 )
 
 def run_tests_if_changed(test_name, changed_globs, ignore: [])

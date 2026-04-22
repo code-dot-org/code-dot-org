@@ -96,16 +96,16 @@ class ManifestBuilder
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
-    info <<-EOS.unindent
+    info <<-OUTPUT.unindent
       Manifest written to #{DEFAULT_OUTPUT_FILE}.
 
         #{dim 'd[ o_0 ]b'}
-    EOS
+    OUTPUT
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-EOS.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -114,7 +114,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    EOS
+    WARNING
   end
 
   #
@@ -171,16 +171,16 @@ class ManifestBuilder
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
-    info <<-EOS.unindent
+    info <<-OUTPUT.unindent
       Library downloaded to #{DOWNLOAD_DESTINATION}
 
         #{dim 'd[ o_0 ]b'}
-    EOS
+    OUTPUT
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-EOS.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -189,7 +189,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    EOS
+    WARNING
   end
 
   # Given an S3 bucket, return map of sound file objects:
@@ -201,10 +201,10 @@ class ManifestBuilder
       extension = object_summary.key[/(?<=\.)\w+$/]
       next if extension.nil? # Skip 'directory' objects
 
-      verbose <<-EOS.unindent
+      verbose <<-OUTPUT.unindent
         #{bold object_summary.key}
         #{object_summary.last_modified} | #{object_summary.size}
-      EOS
+      OUTPUT
       # Push into sounds collection if unique
       sounds_by_name[sound_name] ||= {}
       if sounds_by_name[sound_name][extension].nil?
@@ -324,10 +324,10 @@ class ManifestBuilder
       # Generate appropriate sourceUrl pointing to the sound library API
       metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
-      verbose <<~EOS
+      verbose <<~DEBUG
         #{bold name} @ #{metadata['version']}
         #{JSON.pretty_generate metadata}
-      EOS
+      DEBUG
 
       metadata
     end
