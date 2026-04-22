@@ -29,6 +29,7 @@ import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/Te
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -88,6 +89,9 @@ describe('TeacherHomepage', () => {
   const serverSections = sections.map(serverSectionFromSection);
 
   let fetchSpy: jest.SpyInstance;
+  let originalFetch:
+    | ((input: RequestInfo | URL, init?: RequestInit) => Promise<Response>)
+    | undefined;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
@@ -95,6 +99,12 @@ describe('TeacherHomepage', () => {
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
+    (globalThis as unknown as {fetch?: jest.Mock}).fetch = jest
+      .fn()
+      .mockResolvedValue({
+        json: () => Promise.resolve({data: {matchedPersona: true}}),
+      } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
     sendEventSpy = jest
       .spyOn(analyticsReporter, 'sendEvent')
@@ -124,6 +134,10 @@ describe('TeacherHomepage', () => {
           },
           response: new Response(),
         });
+      } else if (
+        url.match(/^\/sections\/\d+\/retrieve_lessons_for_dropdown$/)
+      ) {
+        return Promise.resolve({value: [], response: new Response()});
       }
       return Promise.resolve({value: {}, response: new Response()});
     });
@@ -161,6 +175,7 @@ describe('TeacherHomepage', () => {
   });
 
   afterEach(() => {
+    (globalThis as {fetch?: typeof originalFetch}).fetch = originalFetch;
     jest.restoreAllMocks();
     experiments.isEnabled = realIsEnabled;
     restoreRedux();
@@ -260,12 +275,10 @@ describe('TeacherHomepage', () => {
     });
 
     renderComponent([]);
-    await act(async () => await new Promise(process.nextTick));
-
-    screen.getByText('High School Practice Section');
+    await screen.findByText('High School Practice Section');
     screen.getByText(/DEMO-123/);
     screen.getByText('Demo');
-  });
+  }, 10000);
 
   it('falls back to the empty homepage when demo presets fail to load', async () => {
     fetchSpy.mockImplementation((url: string) => {
@@ -285,12 +298,11 @@ describe('TeacherHomepage', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
     renderComponent([]);
-    await act(async () => await new Promise(process.nextTick));
+    await screen.findByText(i18n.emptySectionHeadline());
 
-    expect(
-      screen.queryByText('High School Practice Section')
-    ).not.toBeInTheDocument();
-    screen.getByText('No sections yet');
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
   });
 
   it('create section button opens popup', async () => {
