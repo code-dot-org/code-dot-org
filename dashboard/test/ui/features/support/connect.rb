@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
-require_relative '../../../../../lib/cdo/device_farm'
+require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
@@ -87,10 +87,10 @@ end
 
 def device_farm_desktop_browser(http_client: nil)
   # One-shot TestGrid URL, ready immediately.
-  url = Cdo::DeviceFarm.create_test_grid_url
+  url = Cdo::Aws::DeviceFarm.create_test_grid_url
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $device_farm_browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*Cdo::Aws::DeviceFarm::INTERNAL_KEYS)
   )
 
   SeleniumBrowser.remote(
@@ -103,18 +103,18 @@ end
 # Provisions a real mobile device, then connects Selenium with retries
 # (the Appium endpoint may return 400 briefly after status becomes RUNNING).
 def device_farm_mobile_browser(http_client: nil)
-  session = Cdo::DeviceFarm.create_mobile_session(
+  session = Cdo::Aws::DeviceFarm.create_mobile_session(
     device_arn: $device_farm_browser_config['device_arn']
   )
   $device_farm_mobile_session_arn = session[:session_arn]
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $device_farm_browser_config.except(*Cdo::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*Cdo::Aws::DeviceFarm::INTERNAL_KEYS)
   )
 
   Retryable.retryable(
-    tries: Cdo::DeviceFarm::MOBILE_CONNECT_TRIES,
-    sleep: Cdo::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+    tries: Cdo::Aws::DeviceFarm::MOBILE_CONNECT_TRIES,
+    sleep: Cdo::Aws::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
   ) do
     SeleniumBrowser.remote(
       session[:url],
@@ -159,9 +159,9 @@ def get_device_farm_browser
     end
   console_url =
     if is_mobile
-      Cdo::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
+      Cdo::Aws::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
     else
-      Cdo::DeviceFarm.desktop_session_url(browser.session_id)
+      Cdo::Aws::DeviceFarm.desktop_session_url(browser.session_id)
     end
   puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
   browser
@@ -254,7 +254,7 @@ def quit_browser
   # Release the Device Farm device so subsequent sessions don't block
   # on PENDING_CONCURRENCY.
   if $device_farm_mobile_session_arn
-    Cdo::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+    Cdo::Aws::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
     $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil
