@@ -20,6 +20,7 @@ import {
   isServerChatEvent,
   ModelParameters,
 } from '../types';
+import {UserAddedSelectionContextItem} from '../types/userAddedSelectionContext';
 
 import FilePreview from './assets/FilePreview';
 import FlagResponseButton from './FlagResponseButton';
@@ -57,9 +58,6 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     assets,
     userAddedSelectionContext,
   } = chatMessage;
-  const hasAssets = assets && buildAssetUrl;
-  const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
-
   // Determine if we should show the FlagResponseButton
   // The user must be a levelbuilder, and we currently only show the button for AI Tutor messages
   // that have been saved to the server (i.e. have an ID).
@@ -110,54 +108,13 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     setShowProfaneUserMessage,
   });
 
-  let header;
-  if ((hasAssets || hasUserAddedSelectionContext) && !teacherFlaggedHidden) {
-    header = (
-      <div
-        className={classNames(styles.assetCol, isAssistant && styles.assistant)}
-      >
-        {hasAssets &&
-          assets.map(asset => {
-            const filename = asset.filename;
-            const url = buildAssetUrl(asset);
-            return (
-              <button
-                key={filename}
-                type="button"
-                className={styles.assetButton}
-                onClick={() => window.open(url, '_blank')}
-              >
-                {filename.endsWith('.pdf') ? (
-                  <FilePreview type="pdf" filename={filename} url={url} />
-                ) : (
-                  <img
-                    alt=""
-                    className={classNames(
-                      styles.imagePreview,
-                      isAssistant && styles.assistant
-                    )}
-                    src={url}
-                  />
-                )}
-              </button>
-            );
-          })}
-        {hasUserAddedSelectionContext &&
-          userAddedSelectionContext.map(contextItem => (
-            <FilePreview
-              key={contextItem.displayName}
-              type="text"
-              filename={contextItem.filename}
-              fileDetail={
-                contextItem.lineReference
-                  ? getLineReferenceText(contextItem.lineReference)
-                  : undefined
-              }
-            />
-          ))}
-      </div>
-    );
-  }
+  const header = getHeader({
+    isAssistant,
+    assets,
+    buildAssetUrl,
+    userAddedSelectionContext,
+    teacherFlaggedHidden,
+  });
 
   return (
     <ChatMessage
@@ -212,6 +169,75 @@ export function getChatMessageDisplayText(
     return 'This message has been flagged as inappropriate by the teacher.';
   }
   return chatMessageDisplayText;
+}
+
+interface GetHeaderParams {
+  isAssistant: boolean;
+  assets: ChatAsset[] | undefined;
+  buildAssetUrl: ((asset: ChatAsset) => string) | undefined;
+  userAddedSelectionContext: UserAddedSelectionContextItem[] | undefined;
+  teacherFlaggedHidden: boolean;
+}
+
+function getHeader({
+  isAssistant,
+  assets,
+  buildAssetUrl,
+  userAddedSelectionContext,
+  teacherFlaggedHidden,
+}: GetHeaderParams): React.ReactNode {
+  const hasAssets = assets && buildAssetUrl;
+  const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
+
+  if ((!hasAssets && !hasUserAddedSelectionContext) || teacherFlaggedHidden) {
+    return undefined;
+  }
+
+  return (
+    <div
+      className={classNames(styles.assetCol, isAssistant && styles.assistant)}
+    >
+      {hasAssets &&
+        assets.map(asset => {
+          const filename = asset.filename;
+          const url = buildAssetUrl(asset);
+          return (
+            <button
+              key={filename}
+              type="button"
+              className={styles.assetButton}
+              onClick={() => window.open(url, '_blank')}
+            >
+              {filename.endsWith('.pdf') ? (
+                <FilePreview type="pdf" filename={filename} url={url} />
+              ) : (
+                <img
+                  alt=""
+                  className={classNames(
+                    styles.imagePreview,
+                    isAssistant && styles.assistant
+                  )}
+                  src={url}
+                />
+              )}
+            </button>
+          );
+        })}
+      {hasUserAddedSelectionContext &&
+        userAddedSelectionContext.map(contextItem => (
+          <FilePreview
+            key={contextItem.displayName}
+            type="text"
+            filename={contextItem.filename}
+            fileDetail={
+              contextItem.lineReference
+                ? getLineReferenceText(contextItem.lineReference)
+                : undefined
+            }
+          />
+        ))}
+    </div>
+  );
 }
 
 interface GetFooterParams {
