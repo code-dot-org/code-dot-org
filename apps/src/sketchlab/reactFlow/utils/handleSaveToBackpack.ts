@@ -1,8 +1,4 @@
-import {
-  getNodesBounds,
-  getViewportForBounds,
-  type ReactFlowInstance,
-} from '@xyflow/react';
+import {getNodesBounds, type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -17,10 +13,10 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 
 const EXPORT_PADDING_PX = 10;
-const EXPORT_MIN_ZOOM = 0.5;
-const EXPORT_MAX_ZOOM = 2;
-const EXPORT_WIDTH_PX = 1024;
-const EXPORT_HEIGHT_PX = 768;
+// Cap the longer side of the exported PNG. Small sketches export at 1:1
+// (so a single node looks crisp, not tiny); only sketches larger than this
+// along either axis are scaled down to fit.
+const MAX_EXPORT_DIM_PX = 2048;
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
@@ -76,15 +72,26 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  const bounds = getNodesBounds(reactFlow.getNodes());
-  const viewport = getViewportForBounds(
-    bounds,
-    EXPORT_WIDTH_PX,
-    EXPORT_HEIGHT_PX,
-    EXPORT_MIN_ZOOM,
-    EXPORT_MAX_ZOOM,
-    EXPORT_PADDING_PX
+  const nodes = reactFlow.getNodes();
+  if (nodes.length === 0) {
+    errorCallback(
+      `Error saving ${newFileName} to your Backpack. Please try again`
+    );
+    return;
+  }
+  const bounds = getNodesBounds(nodes);
+  const contentWidth = bounds.width + 2 * EXPORT_PADDING_PX;
+  const contentHeight = bounds.height + 2 * EXPORT_PADDING_PX;
+  // Scale down only if content exceeds MAX_EXPORT_DIM_PX along either axis;
+  // otherwise export at 1:1 so small sketches don't get shrunk.
+  const scale = Math.min(
+    1,
+    MAX_EXPORT_DIM_PX / Math.max(contentWidth, contentHeight)
   );
+  const imageWidth = Math.round(contentWidth * scale);
+  const imageHeight = Math.round(contentHeight * scale);
+  const translateX = (-bounds.x + EXPORT_PADDING_PX) * scale;
+  const translateY = (-bounds.y + EXPORT_PADDING_PX) * scale;
 
   // Read the themed canvas background so the PNG matches light/dark mode.
   const canvasEl = document.querySelector<HTMLElement>(
@@ -96,12 +103,12 @@ export const handleSaveToBackpack = async (
 
   const blobToSave = await toBlob(viewportEl, {
     backgroundColor,
-    width: EXPORT_WIDTH_PX,
-    height: EXPORT_HEIGHT_PX,
+    width: imageWidth,
+    height: imageHeight,
     style: {
-      width: `${EXPORT_WIDTH_PX}px`,
-      height: `${EXPORT_HEIGHT_PX}px`,
-      transform: `translate(${viewport.x}px, ${viewport.y}px) scale(${viewport.zoom})`,
+      width: `${imageWidth}px`,
+      height: `${imageHeight}px`,
+      transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
     },
   });
   if (!blobToSave) {
