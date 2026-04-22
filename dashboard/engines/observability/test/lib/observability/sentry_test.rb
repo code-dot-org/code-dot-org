@@ -11,7 +11,10 @@ describe Observability::Sentry do
     CDO.stubs(:enable_sentry).returns(false)
     CDO.stubs(:enable_opentelemetry).returns(false)
     CDO.stubs(:dashboard_sentry_dsn).returns(nil)
-    # ENV['UNIT_TEST'] is nil in engine test runs — enabled path is active by default
+    # CDO.unit_test proxies ENV['UNIT_TEST'], which dashboard's test_helper.rb
+    # sets to disable observability during unit tests. Stub it to false so the
+    # enabled code path is exercised; the disabled-path describe block overrides.
+    CDO.stubs(:unit_test).returns(false)
   end
 
   describe '.setup' do
@@ -21,19 +24,18 @@ describe Observability::Sentry do
       end
     end
 
-    describe 'when UNIT_TEST is set' do
+    describe 'when CDO.unit_test is true' do
       before do
         CDO.stubs(:enable_sentry).returns(true)
-        ENV['UNIT_TEST'] = 'true'
+        CDO.stubs(:unit_test).returns(true)
       end
-      after {ENV.delete('UNIT_TEST')}
 
       it 'returns without initializing Sentry' do
         _(Observability::Sentry.setup).must_be_nil
       end
     end
 
-    describe 'when CDO.enable_sentry is true and UNIT_TEST is not set' do
+    describe 'when CDO.enable_sentry is true and CDO.unit_test is false' do
       before do
         CDO.stubs(:enable_sentry).returns(true)
         CDO.stubs(:dashboard_sentry_dsn).returns('https://key@sentry.example.com/1')

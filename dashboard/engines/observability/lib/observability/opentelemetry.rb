@@ -3,9 +3,10 @@
 module Observability
   module OpenTelemetry
     # Sets up OpenTelemetry tracing. Runs in all processes except unit test runners
-    # (detected via UNIT_TEST env var set in dashboard/test/test_helper.rb).
+    # (detected via CDO.unit_test, a proxy for the UNIT_TEST env var set in
+    # dashboard/test/test_helper.rb).
     def self.setup
-      return unless CDO.enable_opentelemetry && !ENV['UNIT_TEST']
+      return unless CDO.enable_opentelemetry && !CDO.unit_test
 
       require 'opentelemetry/sdk'
       require 'opentelemetry/instrumentation/all'
