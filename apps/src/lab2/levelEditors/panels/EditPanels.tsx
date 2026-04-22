@@ -67,8 +67,13 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
     const onScroll = () => {
       const slot = previewSlotRef.current;
       if (!slot) return;
-      setPinPreview(slot.getBoundingClientRect().top <= 0);
-      setPinnedScale((window.innerWidth * 0.3) / PANEL_WIDTH);
+      // Hide the pinned preview once the whole panels editor has scrolled
+      // above the viewport — there is no editor content to preview against.
+      const editor = document.getElementById('panels-editor');
+      const editorOffscreen =
+        !!editor && editor.getBoundingClientRect().bottom <= 0;
+      setPinPreview(slot.getBoundingClientRect().top <= 0 && !editorOffscreen);
+      setPinnedScale((window.innerWidth * 0.29) / PANEL_WIDTH);
     };
     onScroll();
     window.addEventListener('scroll', onScroll, {passive: true});
