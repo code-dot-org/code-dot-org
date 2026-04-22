@@ -27,18 +27,15 @@ export default function NodeToolbarShell({
   children,
 }: NodeToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openToolbarNodeId, closeToolbar, focusToolbarOnOpen} =
-    useToolbarVisibility();
+  const {openToolbarNodeId, closeToolbar} = useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
   const isVisible = openToolbarNodeId === nodeId;
   const wasVisibleRef = useRef(false);
 
-  // Pan the viewport into view when the toolbar first becomes visible,
-  // and clear the keyboard-open flag now that FocusTrap has consumed it.
+  // Pan the viewport into view when the toolbar first becomes visible.
   useEffect(() => {
     if (isVisible && !wasVisibleRef.current) {
-      focusToolbarOnOpen.current = false;
       // Defer until after React Flow positions the toolbar in the DOM
       // so getBoundingClientRect reflects the final placement.
       requestAnimationFrame(() => {
@@ -62,7 +59,7 @@ export default function NodeToolbarShell({
       });
     }
     wasVisibleRef.current = isVisible;
-  }, [isVisible, focusToolbarOnOpen, getViewport, setViewport]);
+  }, [isVisible, getViewport, setViewport]);
 
   const returnFocusToNode = useCallback(() => {
     const nodeElement = document.querySelector<HTMLElement>(
@@ -100,11 +97,6 @@ export default function NodeToolbarShell({
       <FocusTrap
         active={isVisible}
         focusTrapOptions={{
-          // undefined = focus-trap default (first tabbable); false = don't
-          // move focus. The ref is set by the keyboard-open path in
-          // ReactFlowCanvas; the click-open path leaves it false so focus
-          // stays on the node.
-          initialFocus: focusToolbarOnOpen.current ? undefined : false,
           // Route Escape through handleClose. Return false so the trap
           // stays active; the subsequent isVisible=false flip is what
           // actually deactivates it. We don't use onDeactivate because it

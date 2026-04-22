@@ -1,4 +1,4 @@
-import React, {createContext, useContext} from 'react';
+import {createContext, useContext} from 'react';
 
 const SketchLabReadOnlyContext = createContext(false);
 
@@ -10,20 +10,14 @@ export function useSketchLabReadOnly(): boolean {
 
 interface ToolbarVisibilityContextValue {
   openToolbarNodeId: string | null;
-  openToolbar: (nodeId: string, options?: {focusToolbar?: boolean}) => void;
+  openToolbar: (nodeId: string) => void;
   closeToolbar: () => void;
-  // Set to true by openToolbar({focusToolbar: true}) and consumed
-  // (cleared) by NodeToolbarShell on the rising edge of isVisible.
-  // A ref rather than state so flipping it doesn't re-render every
-  // toolbar shell in the canvas.
-  focusToolbarOnOpen: React.MutableRefObject<boolean>;
 }
 
 const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
   openToolbarNodeId: null,
   openToolbar: () => {},
   closeToolbar: () => {},
-  focusToolbarOnOpen: {current: false},
 });
 
 export const ToolbarVisibilityProvider = ToolbarVisibilityContext.Provider;

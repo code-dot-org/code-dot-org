@@ -77,17 +77,11 @@ export default function ReactFlowCanvas({
   const [openToolbarNodeId, setOpenToolbarNodeId] = useState<string | null>(
     null
   );
-  const focusToolbarOnOpen = useRef(false);
 
-  const openToolbar = useCallback(
-    (nodeId: string, options?: {focusToolbar?: boolean}) => {
-      focusToolbarOnOpen.current = options?.focusToolbar === true;
-      setOpenToolbarNodeId(nodeId);
-    },
-    []
-  );
+  const openToolbar = useCallback((nodeId: string) => {
+    setOpenToolbarNodeId(nodeId);
+  }, []);
   const closeToolbar = useCallback(() => {
-    focusToolbarOnOpen.current = false;
     setOpenToolbarNodeId(null);
   }, []);
   const toolbarVisibility = useMemo(
@@ -95,7 +89,6 @@ export default function ReactFlowCanvas({
       openToolbarNodeId,
       openToolbar,
       closeToolbar,
-      focusToolbarOnOpen,
     }),
     [openToolbarNodeId, openToolbar, closeToolbar]
   );
