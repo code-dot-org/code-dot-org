@@ -4,8 +4,8 @@
 $scale-factor: 0.5;
 $full-width: 1920px;
 $full-height: 1080px;
-// Unitless; consumed by the pinned-preview width (as vw) and re-exported to
-// EditPanels.tsx so JS can derive the matching inner-surface scale factor.
+// Unitless. Used as Nvw below; exported to EditPanels.tsx for the JS-side
+// inner-surface scale.
 $pinned-width-vw: 29;
 
 :export {
@@ -17,8 +17,7 @@ $pinned-width-vw: 29;
   flex-direction: column;
 }
 
-// Reserves layout space for the preview so that pinning via `position: fixed`
-// on the inner element does not collapse the surrounding page.
+// Reserves space so the page does not jump when the inner preview pins.
 .panelsSlot {
   height: $full-height * $scale-factor;
   width: $full-width * $scale-factor;
@@ -31,12 +30,9 @@ $pinned-width-vw: 29;
   width: $full-width * $scale-factor;
 }
 
-// Applied to .panelsContainer when the slot's top has scrolled above the
-// viewport. Pins a shrunk version of the preview to the top-left corner of
-// the page; the slot keeps its reserved height so content below does not
-// jump. The inner scale transform uses the `--pinned-scale` custom
-// property, which EditPanels sets from JS based on window.innerWidth so it
-// tracks viewport changes without relying on CSS length-division support.
+// Pins the preview at top-left while the slot above scrolls offscreen.
+// --pinned-scale is written from JS; CSS length-division would work too but
+// has only recently landed across browsers.
 .panelsContainerPinned {
   position: fixed;
   top: 0;

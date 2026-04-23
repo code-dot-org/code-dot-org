@@ -45,9 +45,8 @@ interface PanelsProps {
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
-  // When true, the level uses links for navigation: bubbles are hidden and
-  // the Next/Continue button is only shown on panels that opt in via
-  // `showContinueButton`.
+  // Enables link-based navigation: bubbles are hidden, and the Continue
+  // button appears only on panels whose `showContinueButton` is set.
   useLinks?: boolean;
   onChangePanel?: (
     source: 'button' | 'bubble',
@@ -125,8 +124,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
-    // In link mode the button always continues past the level — within-level
-    // navigation is handled by the links themselves.
+    // In link mode the button leaves the level; between-panel navigation
+    // goes through links only.
     if (!useLinks && currentPanelIndex < panels.length - 1) {
       changePanel(currentPanelIndex + 1, 'button');
     } else {
@@ -197,8 +196,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const showTyping =
     panel?.typing || queryParams('panels-show-typing') === 'true';
 
-  // In legacy (non-link) mode the button is always eligible. In link mode, a
-  // panel opts in to the Continue button via `showContinueButton`.
+  // Legacy mode always shows the button; link mode requires opt-in per panel.
   const buttonEligible = useLinks ? !!panel?.showContinueButton : true;
 
   // When typing, only show the button when the typing is done.

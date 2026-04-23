@@ -2,8 +2,7 @@ import {LevelProperties} from '../lab2/types';
 
 export interface PanelsLevelProperties extends LevelProperties {
   panels?: Panel[];
-  // Rails serializes boolean properties as the string "true" or "false", so
-  // callers must coerce before passing to PanelsView.
+  // Rails serializes this as "true" or "false". Coerce at the call site.
   useLinks?: boolean | string;
 }
 
@@ -22,8 +21,7 @@ export interface Panel {
   nextUrl?: string;
   layout?: PanelLayout;
   links?: PanelLink[];
-  // Only honored when the level is in links mode. When true, the Continue
-  // button is shown on this panel.
+  // Honored only when useLinks is set on the level.
   showContinueButton?: boolean;
 
   // The following fields are exploratory and not yet exposed in levelbuilder.
@@ -32,11 +30,8 @@ export interface Panel {
   fadeInOverPrevious?: boolean;
 }
 
-// A clickable box rendered inside a panel that navigates to another panel.
-// x and y are percentages (0-100) of the panel, describing the link's center.
-// width is the link box width as a percentage (0-100) of the panel, defaulting
-// to DEFAULT_PANEL_LINK_WIDTH when not specified.
-// targetKey is the target panel's key.
+// Clickable box inside a panel that jumps to the panel with matching key.
+// x, y, width are percentages of the containing panel; (x, y) is the center.
 export interface PanelLink {
   text: string;
   x: number;
@@ -46,8 +41,5 @@ export interface PanelLink {
 }
 
 export const DEFAULT_PANEL_LINK_WIDTH = 40;
-
-// Default placement for a newly-added link: center of the panel, in
-// percent-of-panel coordinates.
 export const DEFAULT_PANEL_LINK_X = 50;
 export const DEFAULT_PANEL_LINK_Y = 50;

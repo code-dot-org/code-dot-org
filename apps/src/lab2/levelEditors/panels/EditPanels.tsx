@@ -26,9 +26,8 @@ const createKey = (levelName: string) => levelName + '-' + createUuid();
 const PANEL_WIDTH = 1920;
 const PANEL_HEIGHT = 1080;
 
-// Fraction of the viewport width that the pinned preview occupies. Sourced
-// from a `:export` in edit-panels.module.scss so the CSS `width: Nvw` rule
-// and this scale calculation cannot drift.
+// Fraction of viewport width occupied by the pinned preview. Paired with
+// `width: Nvw` in edit-panels.module.scss via `:export`.
 const PINNED_WIDTH_VIEWPORT_FRACTION =
   parseFloat(moduleStyles.pinnedWidthVw) / 100;
 
@@ -65,18 +64,16 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
   const [pinnedScale, setPinnedScale] = useState(0.5);
   const previewSlotRef = useRef<HTMLDivElement | null>(null);
 
-  // Pin the preview to the top of the viewport once its reserved slot scrolls
-  // above it. We drive this from a scroll listener because
-  // `position: sticky` does not reliably engage on the level edit page, where
-  // the preview lives many layers deep in flex / Bootstrap collapse ancestors.
-  // We also track the pinned scale so the shrunk 30vw preview renders at the
-  // correct zoom for the inner 1920x1080 surface as the viewport resizes.
+  // Pin the preview once its reserved slot scrolls above the viewport.
+  // `position: sticky` is unreliable here due to ancestor flex and Bootstrap
+  // collapse wrappers, so a scroll listener drives it instead. The same
+  // listener updates pinnedScale so the 1920x1080 inner surface fits the
+  // shrunk outer box across viewport resizes.
   useEffect(() => {
     const onScroll = () => {
       const slot = previewSlotRef.current;
       if (!slot) return;
-      // Hide the pinned preview once the whole panels editor has scrolled
-      // above the viewport — there is no editor content to preview against.
+      // Unpin once the whole editor is above the viewport.
       const editor = document.getElementById('panels-editor');
       const editorOffscreen =
         !!editor && editor.getBoundingClientRect().bottom <= 0;
