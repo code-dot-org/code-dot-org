@@ -19,7 +19,7 @@ export interface ExportDimensions {
 //
 // Small content exports at 1:1 so a single node doesn't get shrunk into an
 // otherwise-empty canvas. Only content whose longer side (including padding)
-// exceeds `maxDimension` is scaled down proportionally to fit.
+// exceeds `maxDimension` is scaled down proportionally to fit, including padding.
 export function computeExportDimensions(
   bounds: ContentBounds,
   padding: number,
