@@ -57,7 +57,6 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
-            aiTutorEnabled: false,
             course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
             avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
             avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
@@ -231,7 +230,6 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,

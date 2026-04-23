@@ -36,6 +36,7 @@ export type CodebridgeContextType = {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   aiTutorSystemPrompt?: string;
   tutorVideos?: JsonVideoFileMetadata[];
+  aiTutorDisabled?: boolean;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(
