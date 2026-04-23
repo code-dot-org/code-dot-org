@@ -2128,7 +2128,7 @@ describe('teacherSectionsRedux', () => {
       });
     });
 
-    it('logs preset fetch failures and hides the card data', async () => {
+    it('logs preset fetch failures and marks presets as loaded', async () => {
       const consoleErrorStub = sinon.stub(console, 'error');
       try {
         fetchSpy.rejects(new Error('presets failed'));
@@ -2136,7 +2136,7 @@ describe('teacherSectionsRedux', () => {
         await store.dispatch(fetchDemoPresets());
 
         assert.deepEqual(getState().teacherSections.demoPresets, {});
-        expect(getState().teacherSections.demoPresetsAreLoaded).to.be.false;
+        expect(getState().teacherSections.demoPresetsAreLoaded).to.be.true;
         expect(consoleErrorStub).to.have.been.calledOnce;
       } finally {
         consoleErrorStub.restore();

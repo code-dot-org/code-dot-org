@@ -2,6 +2,8 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
+  DRONE_UNIT_NAME = 'allthethings'
+  DRONE_UNIT_GROUP_NAME = 'original-allthethings-course'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -46,7 +48,10 @@ class Policies::DemoSections
   }.freeze
 
   def self.get_preset(demo_type)
-    DEMO_SECTION_PRESETS[demo_type.to_sym]
+    preset = DEMO_SECTION_PRESETS[demo_type.to_sym]
+    return nil unless preset
+
+    preset.merge(curriculum_names(preset))
   end
 
   def self.demo_student_ids(demo_type)
@@ -59,9 +64,10 @@ class Policies::DemoSections
     return nil unless preset
 
     unit = resolve_unit(preset[:unit_name])
+    return nil unless unit
+
     unit_group = resolve_unit_group(preset[:unit_group_name])
-    return nil if preset[:unit_name].present? && unit.nil?
-    return nil if preset[:unit_group_name].present? && unit_group.nil?
+    return nil unless unit_group
 
     {
       demo_type: demo_type.to_s,
@@ -70,8 +76,11 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
-      unit: unit && {name: unit.name, display_name: unit.localized_title},
-      unit_group: unit_group && {
+      unit: {
+        name: unit.name,
+        display_name: unit.localized_title,
+      },
+      unit_group: {
         name: unit_group.name,
         display_name: unit_group.localized_title,
       },
@@ -109,5 +118,26 @@ class Policies::DemoSections
     UnitGroup.get_from_cache(unit_group_name)
   end
 
-  private_class_method :resolve_unit, :resolve_unit_group
+  def self.curriculum_names(preset)
+    if CDO.rack_env?(:adhoc)
+      return {
+        unit_name: CDO.demo_section_unit_name,
+        unit_group_name: CDO.demo_section_unit_group_name,
+      }
+    end
+
+    if CDO.ci_webserver?
+      return {
+        unit_name: DRONE_UNIT_NAME,
+        unit_group_name: DRONE_UNIT_GROUP_NAME,
+      }
+    end
+
+    {
+      unit_name: preset[:unit_name],
+      unit_group_name: preset[:unit_group_name],
+    }
+  end
+
+  private_class_method :resolve_unit, :resolve_unit_group, :curriculum_names
 end

@@ -962,6 +962,7 @@ export const fetchDemoPresets =
       return demoPresets;
     } catch (error) {
       console.error('Error fetching demo section presets:', error);
+      dispatch(setDemoPresetsLoaded(true));
       return {};
     }
   };
