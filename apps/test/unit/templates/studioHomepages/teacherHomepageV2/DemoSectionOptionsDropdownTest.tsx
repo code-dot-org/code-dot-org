@@ -34,7 +34,6 @@ const SECTION: Section = {
   courseVersionName: 'csd-2024',
   unitName: 'csd3-2024',
   unitPosition: null,
-  aiTutorEnabled: false,
   atRiskAgeGatedDate: new Date(),
   atRiskAgeGatedUsState: 'ca',
   anyStudentHasProgress: false,
