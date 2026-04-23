@@ -18,9 +18,15 @@
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
-  // Line anchors get a custom handle-sized focus ring below.
-  :global(.react-flow__node:focus),
-  :global(.react-flow__edge:focus) {
+  :global(.react-flow__node:focus-visible),
+  :global(.react-flow__edge:focus-visible) {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  // Additional focus outline support on standalone line edges for click/programmatic focus.
+  :global(.react-flow__edge).lineEdge:focus {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 4px;

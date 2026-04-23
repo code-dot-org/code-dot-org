@@ -188,6 +188,7 @@ export default function ReactFlowCanvas({
         return {
           ...edge,
           selected,
+          className: isLineEdge ? styles.lineEdge : undefined,
           domAttributes: {
             ...domAttributes,
             ...(isLineEdge && !readOnly
