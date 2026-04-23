@@ -185,7 +185,7 @@ export class TurnstileManager {
   // Speculatively started challenge from the previous token delivery.
   // Cleared to null immediately when taken so a concurrent synchronous caller
   // cannot claim the same one-time-use token.
-  private nextToken: Promise<string> | null = null;
+  private nextTokenPromise: Promise<string> | null = null;
 
   private widgetId: string | null = null;
 
@@ -282,10 +282,10 @@ export class TurnstileManager {
   }
 
   private getToken(): Promise<string> {
-    if (this.nextToken) {
+    if (this.nextTokenPromise) {
       console.log(`${LOG} Pre-fetch hit — returning in-progress token`);
-      const p = this.nextToken;
-      this.nextToken = null;
+      const p = this.nextTokenPromise;
+      this.nextTokenPromise = null;
       this.schedulePrefetch();
       return p;
     }
@@ -300,13 +300,13 @@ export class TurnstileManager {
   }
 
   private schedulePrefetch(): void {
-    if (this.nextToken) {
+    if (this.nextTokenPromise) {
       console.log(`${LOG} Pre-fetch already in flight — skipping`);
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
     const p = this.runSerializedChallenge();
-    this.nextToken = p;
+    this.nextTokenPromise = p;
     p.then(
       token => {
         console.log(
@@ -314,10 +314,13 @@ export class TurnstileManager {
         );
       },
       err => {
-        // Intentionally swallowed — pre-fetch is speculative. Failure is
-        // logged and nextToken cleared so the next real call retries cleanly.
-        console.error(`${LOG} Pre-fetch failed — clearing nextToken:`, err);
-        if (this.nextToken === p) this.nextToken = null;
+        // Intentionally swallowed — pre-fetch is speculative. Failure is logged
+        // and nextTokenPromise cleared so the next real call retries cleanly.
+        console.error(
+          `${LOG} Pre-fetch failed — clearing nextTokenPromise:`,
+          err
+        );
+        if (this.nextTokenPromise === p) this.nextTokenPromise = null;
       }
     );
   }
