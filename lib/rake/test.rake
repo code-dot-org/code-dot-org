@@ -87,10 +87,16 @@ namespace :test do
   end
 
   timed_task_with_logging :devicefarm_desktop_ui do
+    # The default per-AWS-account concurrency limit for desktop browser sessions
+    # in Device Farm is 50.
     run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'desktop')
   end
 
   timed_task_with_logging :devicefarm_mobile_ui do
+    # As of April 2026, our concurrency limit for remote access sessions on real
+    # mobile devices in Device Farm within our prod AWS account is 40. However,
+    # the devices take so long to spin up and shut down that we can saturate our
+    # Device Farm concurrency by setting parallelism equal to half of that limit.
     run_devicefarm_ui(config: 'iPhone,iPad', parallel: 20, label: 'mobile')
   end
 
