@@ -125,16 +125,6 @@ export default function NodeToolbarShell({
                   event.stopPropagation();
                   handleClose();
                 }}
-                onKeyDown={event => {
-                  // Handle Enter/Space directly. The synthesized click
-                  // races with the focus move in handleClose and the
-                  // toolbar can end up reopened.
-                  if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    handleClose();
-                  }
-                }}
               >
                 <FontAwesomeV6Icon
                   iconName="xmark"
