@@ -50,6 +50,15 @@ interface DemoAction {
   eventName: string;
 }
 
+type DemoMenuAction = 'settings' | 'roster' | 'loginCards' | 'certificates';
+
+const DEMO_MENU_ACTION_PATHS: Record<DemoMenuAction, string> = {
+  settings: TEACHER_NAVIGATION_PATHS.settings,
+  roster: TEACHER_NAVIGATION_PATHS.roster,
+  loginCards: TEACHER_NAVIGATION_PATHS.loginInfo,
+  certificates: '/certificates/batch',
+};
+
 const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
   const actions: DemoAction[] = [];
 
@@ -141,56 +150,23 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     };
   }, [preset]);
 
-  const handleActionClick = async (
-    path: string,
-    eventName: string,
-    pendingKey?: string
-  ) => {
-    if (pendingPath) {
-      return;
-    }
-
-    setPendingPath(pendingKey || path);
-    setNotice(null);
-    analyticsReporter.sendEvent(eventName, {});
-
-    try {
-      const section = await dispatch(createDemoSection(demoType as DemoType));
-      if (!section) {
-        return;
-      }
-      const nextPath = path.startsWith('/')
-        ? path
-        : generatePath(getBasePath(path), {sectionId: section.id.toString()});
-
-      window.location.assign(nextPath);
-    } catch (error) {
-      if (error instanceof DemoSectionCreationError) {
-        setNotice({
-          text: error.message,
-          type: error.errorType === 'conflict' ? 'warning' : 'danger',
-        });
-      } else {
-        setNotice({
-          text: "Couldn't create your practice section.",
-          type: 'danger',
-        });
-      }
-    } finally {
-      setPendingPath(null);
-    }
-  };
-
-  const createSectionForMenuAction = React.useCallback(
-    async (
-      eventName: string,
-      actionKey: 'settings' | 'roster' | 'loginCards' | 'certificates'
-    ) => {
+  const createSectionForAction = React.useCallback(
+    async ({
+      eventName,
+      path,
+      pendingKey,
+      navigateToPath = false,
+    }: {
+      eventName: string;
+      path: string;
+      pendingKey: string;
+      navigateToPath?: boolean;
+    }) => {
       if (pendingPath) {
         throw new Error('Demo section creation already in progress');
       }
 
-      setPendingPath(actionKey);
+      setPendingPath(pendingKey);
       setNotice(null);
       analyticsReporter.sendEvent(eventName, {});
 
@@ -199,6 +175,16 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         if (!section) {
           throw new Error('Failed to create demo section');
         }
+
+        if (navigateToPath) {
+          const nextPath = path.startsWith('/')
+            ? path
+            : generatePath(getBasePath(path), {
+                sectionId: section.id.toString(),
+              });
+          window.location.assign(nextPath);
+        }
+
         return section;
       } catch (error) {
         if (error instanceof DemoSectionCreationError) {
@@ -218,6 +204,33 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       }
     },
     [demoType, dispatch, pendingPath]
+  );
+
+  const handleActionClick = async (
+    path: string,
+    eventName: string,
+    pendingKey?: string
+  ) => {
+    try {
+      await createSectionForAction({
+        eventName,
+        path,
+        pendingKey: pendingKey || path,
+        navigateToPath: true,
+      });
+    } catch {
+      // Errors are handled by createSectionForAction via the notice banner.
+    }
+  };
+
+  const createSectionForMenuAction = React.useCallback(
+    async (eventName: string, actionKey: DemoMenuAction) =>
+      createSectionForAction({
+        eventName,
+        path: DEMO_MENU_ACTION_PATHS[actionKey],
+        pendingKey: actionKey,
+      }),
+    [createSectionForAction]
   );
 
   if (numSections !== 0) {
