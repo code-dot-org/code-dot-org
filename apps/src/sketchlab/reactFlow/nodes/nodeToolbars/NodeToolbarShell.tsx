@@ -20,12 +20,14 @@ const CONTROLS_WIDTH_PX = 60;
 
 interface NodeToolbarShellProps {
   nodeId: string;
+  nodeElementRef: React.RefObject<HTMLDivElement | null>;
   ariaLabel: string;
   children: React.ReactNode;
 }
 
 export default function NodeToolbarShell({
   nodeId,
+  nodeElementRef,
   ariaLabel,
   children,
 }: NodeToolbarShellProps) {
@@ -66,11 +68,8 @@ export default function NodeToolbarShell({
   }, [isVisible, getViewport, setViewport]);
 
   const returnFocusToNode = useCallback(() => {
-    const nodeElement = document.querySelector<HTMLElement>(
-      `.react-flow__node[data-id="${nodeId}"]`
-    );
-    nodeElement?.focus();
-  }, [nodeId]);
+    nodeElementRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+  }, [nodeElementRef]);
 
   const handleClose = useCallback(() => {
     closeNodeToolbar();

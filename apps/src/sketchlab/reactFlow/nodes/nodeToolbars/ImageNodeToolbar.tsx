@@ -8,14 +8,22 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ImageNodeToolbarProps {
   nodeId: string;
+  nodeElementRef: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
+export default function ImageNodeToolbar({
+  nodeId,
+  nodeElementRef,
+}: ImageNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Image options">
+    <NodeToolbarShell
+      nodeId={nodeId}
+      nodeElementRef={nodeElementRef}
+      ariaLabel="Image options"
+    >
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}

@@ -16,16 +16,24 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface TextNodeToolbarProps {
   nodeId: string;
+  nodeElementRef: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
+export default function TextNodeToolbar({
+  nodeId,
+  nodeElementRef,
+}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
   const {fontSize, fontColor} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Text style">
+    <NodeToolbarShell
+      nodeId={nodeId}
+      nodeElementRef={nodeElementRef}
+      ariaLabel="Text style"
+    >
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
         onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}

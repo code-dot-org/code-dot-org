@@ -19,16 +19,24 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ShapeNodeToolbarProps {
   nodeId: string;
+  nodeElementRef: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
+export default function ShapeNodeToolbar({
+  nodeId,
+  nodeElementRef,
+}: ShapeNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
   const {backgroundColor, strokeColor, fontSize, fontColor} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Shape style">
+    <NodeToolbarShell
+      nodeId={nodeId}
+      nodeElementRef={nodeElementRef}
+      ariaLabel="Shape style"
+    >
       <SwatchGroup
         groupLabel="Background"
         swatches={BACKGROUND_PALETTE}

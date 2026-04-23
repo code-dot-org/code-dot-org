@@ -18,6 +18,7 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const [altValue, setAltValue] = useState('');
   const cancelledRef = useRef(false);
+  const nodeRef = useRef<HTMLDivElement>(null);
 
   const {src, altText} = data;
   const showHandles = data.showHandles !== false;
@@ -64,14 +65,18 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   );
 
   return (
-    <div className={styles.imageNode} aria-label={altText || 'Image node'}>
+    <div
+      ref={nodeRef}
+      className={styles.imageNode}
+      aria-label={altText || 'Image node'}
+    >
       <NodeResizer
         isVisible={selected}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <ImageNodeToolbar nodeId={id} />
+      <ImageNodeToolbar nodeId={id} nodeElementRef={nodeRef} />
 
       <img src={src} alt={altText} className={styles.image} draggable={false} />
 

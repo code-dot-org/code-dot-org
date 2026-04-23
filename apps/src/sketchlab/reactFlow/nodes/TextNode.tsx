@@ -15,6 +15,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
+  const nodeRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
   const {text} = data;
@@ -74,6 +75,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
 
   return (
     <div
+      ref={nodeRef}
       className={styles.textNode}
       aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
@@ -84,7 +86,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <TextNodeToolbar nodeId={id} />
+      <TextNodeToolbar nodeId={id} nodeElementRef={nodeRef} />
 
       <div
         ref={textRef}

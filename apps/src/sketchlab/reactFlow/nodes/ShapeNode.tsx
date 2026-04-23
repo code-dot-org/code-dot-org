@@ -73,6 +73,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
+  const nodeRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLDivElement>(null);
 
   const {shapeType, label, backgroundColor, strokeColor} = data;
@@ -145,6 +146,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
   return (
     <div
+      ref={nodeRef}
       className={styles.shapeNode}
       aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
@@ -155,7 +157,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <ShapeNodeToolbar nodeId={id} />
+      <ShapeNodeToolbar nodeId={id} nodeElementRef={nodeRef} />
 
       {/* Background shape */}
       {isRectangle ? (
