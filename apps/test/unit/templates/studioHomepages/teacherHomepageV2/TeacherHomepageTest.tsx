@@ -278,7 +278,7 @@ describe('TeacherHomepage', () => {
     await screen.findByText('High School Practice Section');
     screen.getByText(/DEMO-123/);
     screen.getByText('Demo');
-  }, 10000);
+  });
 
   it('falls back to the empty homepage when the demo section is disabled', async () => {
     experiments.isEnabled = jest.fn(() => false);
