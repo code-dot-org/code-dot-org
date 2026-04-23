@@ -6,6 +6,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {TurnstileManager} from './turnstile';
 
@@ -17,36 +18,42 @@ type TranscribeOptions = Parameters<typeof transcribe>[0];
 async function transcribeThroughGateway(
   options: TranscribeOptions
 ): Promise<TranscriptionResult> {
-  const {model, audio, ...restOptions} = options;
+  try {
+    const {model, audio, ...restOptions} = options;
 
-  const [token, turnstileToken] = await Promise.all([
-    fetchAccessToken(),
-    experiments.isEnabledAllowingQueryString('useTurnstile')
-      ? TurnstileManager.getInstance().getTurnstileToken()
-      : Promise.resolve(null),
-  ]);
+    const [token, turnstileToken] = await Promise.all([
+      fetchAccessToken(),
+      experiments.isEnabledAllowingQueryString('useTurnstile')
+        ? TurnstileManager.getInstance().getTurnstileToken()
+        : Promise.resolve(null),
+    ]);
 
-  const formData = new FormData();
-  formData.append('token', token);
-  const audioBlob = await audioToBlob(audio);
-  formData.append('audio', audioBlob, 'audio');
-  formData.append('model', getModelString(model));
+    const formData = new FormData();
+    formData.append('token', token);
+    const audioBlob = await audioToBlob(audio);
+    formData.append('audio', audioBlob, 'audio');
+    formData.append('model', getModelString(model));
 
-  for (const [key, value] of Object.entries(restOptions)) {
-    formData.append(key, String(value));
+    for (const [key, value] of Object.entries(restOptions)) {
+      formData.append(key, String(value));
+    }
+
+    const headers: Record<string, string> = {};
+    if (turnstileToken) headers['X-Turnstile-Token'] = turnstileToken;
+
+    const response = await HttpClient.post(
+      `${AI_GATEWAY_URL}/transcribe`,
+      formData,
+      false,
+      headers
+    );
+
+    return await response.json();
+  } catch (error) {
+    const logData = getErrorLogData(error);
+    console.error('Fetch error in transcribeThroughGateway:', logData);
+    throw error;
   }
-
-  const headers: Record<string, string> = {};
-  if (turnstileToken) headers['X-Turnstile-Token'] = turnstileToken;
-
-  const response = await HttpClient.post(
-    `${AI_GATEWAY_URL}/transcribe`,
-    formData,
-    false,
-    headers
-  );
-
-  return await response.json();
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {

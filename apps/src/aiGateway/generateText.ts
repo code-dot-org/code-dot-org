@@ -3,6 +3,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {TurnstileManager} from './turnstile';
 
@@ -112,7 +113,8 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(data);
   } catch (error) {
-    console.error('Fetch error:', error);
+    const logData = await getErrorLogData(error);
+    console.error('Fetch error in generateTextThroughGateway:', logData);
     throw error;
   }
 };

@@ -7,5 +7,11 @@ markdown <<MARKDOWN
 
 ## Answer: D
 
-#### A weather forecasting model that predicts rain more accurately in urban areas than in rural areas due to higher sensor density in cities. This is more a case of data availability and sensor placement than an instance of algorithmic bias affecting social or ethical outcomes.
+#### **A recommendation system that suggests different types of products to users based on their past browsing behavior and stated preferences.**
+
+#### Answer D describes a system tailoring results based on user behavior and preferences, which is the intended function of many recommendation systems and not necessarily bias.
+
+#### In contrast, the other examples reflect algorithmic bias because they reproduce or amplify inequities present in their training data (such as gender bias or language inequities).
+
+#### The key distinction is whether the system is reinforcing unfair patterns or simply personalizing based on user input.
 MARKDOWN
