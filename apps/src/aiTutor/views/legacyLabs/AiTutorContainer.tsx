@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';

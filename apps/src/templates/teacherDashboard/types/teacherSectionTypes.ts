@@ -14,7 +14,6 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  aiTutorEnabled: boolean;
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
@@ -86,7 +85,6 @@ type Course = {
 };
 
 export interface UserEditableSection {
-  aiTutorEnabled?: boolean;
   codeReviewExpiresAt?: number | null;
   courseId?: number | null;
   courseOfferingId?: number | null;
@@ -107,7 +105,6 @@ export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
 export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
-  ai_tutor_enabled?: boolean;
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
   code: string;
