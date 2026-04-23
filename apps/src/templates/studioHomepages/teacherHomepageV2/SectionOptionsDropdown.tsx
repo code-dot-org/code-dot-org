@@ -26,6 +26,7 @@ export interface SectionOptionsDropdownProps {
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
   disabled?: boolean;
+  showArchiveAndDelete?: boolean;
   resolveSectionForAction?: (
     eventName: string,
     actionKey:
@@ -60,6 +61,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
   disabled = false,
+  showArchiveAndDelete = true,
   resolveSectionForAction,
 }) => {
   const dispatch = useAppDispatch();
@@ -267,37 +269,42 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
           </Typography>
         </button>
       </li>,
-      <li key={'archive'}>
-        <button
-          id="ui-test-archive-section"
-          type="button"
-          className={styles.dropdownMenuItem}
-          disabled={disabled || !!pendingActionKey}
-          onClick={() =>
-            resolveSectionForAction
-              ? withResolvedSection(
-                  'archive',
-                  section.hidden
-                    ? EVENTS.SECTION_CARD_RESTORE_CLICKED
-                    : EVENTS.SECTION_CARD_ARCHIVE_CLICKED,
-                  resolvedSection =>
-                    dispatch(toggleSectionHidden(resolvedSection.id))
-                )
-              : onArchiveClick(dispatch, section)
-          }
-        >
-          <FontAwesomeV6Icon
-            iconName={section.hidden ? 'window-restore' : 'box-archive'}
-            iconStyle="solid"
-          />
-          <Typography variant="body2" component="span">
-            {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
-          </Typography>
-        </button>
-      </li>,
     ];
 
-    if (section.studentCount === 0) {
+    if (showArchiveAndDelete) {
+      options.push(
+        <li key={'archive'}>
+          <button
+            id="ui-test-archive-section"
+            type="button"
+            className={styles.dropdownMenuItem}
+            disabled={disabled || !!pendingActionKey}
+            onClick={() =>
+              resolveSectionForAction
+                ? withResolvedSection(
+                    'archive',
+                    section.hidden
+                      ? EVENTS.SECTION_CARD_RESTORE_CLICKED
+                      : EVENTS.SECTION_CARD_ARCHIVE_CLICKED,
+                    resolvedSection =>
+                      dispatch(toggleSectionHidden(resolvedSection.id))
+                  )
+                : onArchiveClick(dispatch, section)
+            }
+          >
+            <FontAwesomeV6Icon
+              iconName={section.hidden ? 'window-restore' : 'box-archive'}
+              iconStyle="solid"
+            />
+            <Typography variant="body2" component="span">
+              {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
+            </Typography>
+          </button>
+        </li>
+      );
+    }
+
+    if (showArchiveAndDelete && section.studentCount === 0) {
       options.push(
         <li key={'delete'}>
           <button
@@ -332,6 +339,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
     onClickPrintCerts,
     pendingActionKey,
     disabled,
+    showArchiveAndDelete,
     resolveSectionForAction,
     withResolvedSection,
   ]);

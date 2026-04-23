@@ -78,7 +78,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
-  const [pendingActionKey, setPendingActionKey] = React.useState<string | null>(
+  const [pendingPath, setPendingPath] = React.useState<string | null>(
     null
   );
   const [notice, setNotice] = React.useState<Notice | null>(null);
@@ -148,11 +148,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     eventName: string,
     pendingKey?: string
   ) => {
-    if (pendingActionKey) {
+    if (pendingPath) {
       return;
     }
 
-    setPendingActionKey(pendingKey || path);
+    setPendingPath(pendingKey || path);
     setNotice(null);
     analyticsReporter.sendEvent(eventName, {});
 
@@ -179,26 +179,20 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         });
       }
     } finally {
-      setPendingActionKey(null);
+      setPendingPath(null);
     }
   };
 
   const createSectionForMenuAction = React.useCallback(
     async (
       eventName: string,
-      actionKey:
-        | 'settings'
-        | 'roster'
-        | 'loginCards'
-        | 'certificates'
-        | 'archive'
-        | 'delete'
+      path: 'settings' | 'roster' | 'loginCards' | 'certificates'
     ) => {
-      if (pendingActionKey) {
+      if (pendingPath) {
         throw new Error('Demo section creation already in progress');
       }
 
-      setPendingActionKey(actionKey);
+      setPendingPath(path);
       setNotice(null);
       analyticsReporter.sendEvent(eventName, {});
 
@@ -218,10 +212,10 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         }
         throw error;
       } finally {
-        setPendingActionKey(null);
+        setPendingPath(null);
       }
     },
-    [demoType, dispatch, pendingActionKey]
+    [demoType, dispatch, pendingPath]
   );
 
   if (numSections !== 0) {
@@ -301,8 +295,9 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
             </div>
             <div className={styles.sectionCardHeaderRight}>
               <SectionOptionsDropdown
-                disabled={!!pendingActionKey}
+                disabled={!!pendingPath}
                 section={demoSection}
+                showArchiveAndDelete={false}
                 onDeleteClickCallback={() => {}}
                 resolveSectionForAction={createSectionForMenuAction}
               />
@@ -313,7 +308,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
               <DemoSectionCourseContentDropdown
                 section={demoSection}
                 demoType={demoType as DemoType}
-                disabled={!!pendingActionKey}
+                disabled={!!pendingPath}
                 beforeNavigate={(path: string, eventName: string) =>
                   handleActionClick(path, eventName, path)
                 }
@@ -321,14 +316,14 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
             </div>
             <div className={styles.sectionCardBodyRight}>
               {primaryActions.map(action => {
-                const isPending = pendingActionKey === action.id;
+                const isPending = pendingPath === action.id;
                 return (
                   <button
                     id={`ui-test-demo-section-action-${action.id}`}
                     key={action.id}
                     type="button"
                     className={styles.demoActionButton}
-                    disabled={!!pendingActionKey}
+                    disabled={!!pendingPath}
                     onClick={() =>
                       handleActionClick(
                         action.path,
