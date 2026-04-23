@@ -24,6 +24,7 @@ interface UseLineEdgeDragOptions {
   screenToFlowPosition: (position: {x: number; y: number}) => FlowPoint;
 }
 
+// This hook enables moving both endpoints of a line edge simultaneously by dragging the edge itself.
 export function useLineEdgeDrag({
   readOnly,
   setNodes,
