@@ -105,7 +105,7 @@ module Cdo
                 if field.is_null
                   nil
                 elsif !field.string_value.nil?
-                  field.string_value
+                  field.string_value.strip # Trim trailing spaces from fixed width CHAR and BPCHAR columns.
                 elsif !field.long_value.nil?
                   field.long_value
                 elsif !field.boolean_value.nil?
