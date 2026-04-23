@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -6,7 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
@@ -378,12 +378,15 @@ class ManageStudentsTable extends Component {
     return (
       <div>
         {numberOfEditingRows > 1 && (
-          <Button
-            __useDeprecatedTag
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={this.handleSaveAllClick}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            text={i18n.saveAll()}
-          />
+            type="button"
+          >
+            {i18n.saveAll()}
+          </MuiButton>
         )}
         {numberOfEditingRows <= 1 && (
           <span style={styles.verticalAlign}>
@@ -827,10 +830,11 @@ class ManageStudentsTable extends Component {
             Despite being unused in this component, we pass the dataApi object
             so that it can be more easily stubbed in tests. */}
           {isSectionAssignedCSA && (
-            <CodeReviewGroupsDialog
-              dataApi={new CodeReviewGroupsDataApi(sectionId)}
-              buttonContainerStyle={styles.button}
-            />
+            <div style={styles.button}>
+              <CodeReviewGroupsDialog
+                dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              />
+            </div>
           )}
           <JoinLinkCopyButton
             sectionId={sectionId}
