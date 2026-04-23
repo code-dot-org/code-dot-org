@@ -35,7 +35,7 @@ describe('getCanvasBounds', () => {
     });
   });
 
-  it('unions the extents of multiple non-overlapping rects', () => {
+  it('returns the bounding box for multiple non-overlapping rects', () => {
     const rects = [rect(0, 0, 50, 50), rect(200, 300, 50, 50)];
     expect(getCanvasBounds(rects, ROOT, IDENTITY_VIEWPORT)).toEqual({
       minX: 0,
@@ -45,7 +45,7 @@ describe('getCanvasBounds', () => {
     });
   });
 
-  it('ignores zero-size rects but still unions the rest', () => {
+  it('ignores zero-size rects but still encloses the rest', () => {
     const rects = [
       rect(10, 10, 0, 0),
       rect(0, 0, 50, 50),

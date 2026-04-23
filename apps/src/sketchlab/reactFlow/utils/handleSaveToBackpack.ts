@@ -16,10 +16,9 @@ import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
 
 const EXPORT_PADDING_PX = 10;
-// Cap the longer side of the exported PNG. Small sketches export at 1:1
-// (so a single node looks crisp, not tiny); only sketches larger than this
-// along either axis are scaled down to fit.
-const MAX_EXPORT_DIM_PX = 2048;
+// Cap the longer side of the exported PNG. Small sketches export at 1:1.
+// Only sketches larger than this along either axis are scaled down to fit.
+const MAX_EXPORT_DIMENSION_PX = 2048;
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
@@ -31,6 +30,7 @@ export const handleSaveToBackpack = async (
   if (!reactFlow || !backpackApi) {
     return;
   }
+
   const validateSketchName = (
     sketchName: string
   ): {type: 'error' | 'warning'; text: string} | undefined => {
@@ -51,6 +51,7 @@ export const handleSaveToBackpack = async (
       };
     }
   };
+
   const dialogResults = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
     title: 'Give your sketch a name',
@@ -63,12 +64,13 @@ export const handleSaveToBackpack = async (
   if (dialogResults.type !== 'confirm') {
     return;
   }
+
   const newFileName = extractUserInput(dialogResults) + '.png';
 
-  const viewportEl = document.querySelector<HTMLElement>(
+  const viewport = document.querySelector<HTMLElement>(
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__viewport`
   );
-  if (!viewportEl) {
+  if (!viewport) {
     errorCallback(
       `Error saving ${newFileName} to your Backpack. Please try again`
     );
@@ -76,18 +78,19 @@ export const handleSaveToBackpack = async (
   }
 
   // Read the themed canvas background so the PNG matches light/dark mode.
-  const canvasEl = document.querySelector<HTMLElement>(
+  const canvas = document.querySelector<HTMLElement>(
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
   );
 
-  // Union the rendered bounding rects of every node and edge so we include
-  // edges that extend beyond node bounds, converting back to flow space.
-  const rootRect = (canvasEl ?? viewportEl).getBoundingClientRect();
-  const contentEls = document.querySelectorAll<Element>(
+  // Find the bounding box of all nodes and edges on the canvas.
+  const rootRect = (canvas ?? viewport).getBoundingClientRect();
+  const contentElements = document.querySelectorAll<Element>(
     `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
       `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
   );
-  const contentRects = Array.from(contentEls, el => el.getBoundingClientRect());
+  const contentRects = Array.from(contentElements, element =>
+    element.getBoundingClientRect()
+  );
   const bounds = getCanvasBounds(
     contentRects,
     rootRect,
@@ -100,12 +103,12 @@ export const handleSaveToBackpack = async (
     return;
   }
   const {imageWidth, imageHeight, scale, translateX, translateY} =
-    computeExportDimensions(bounds, EXPORT_PADDING_PX, MAX_EXPORT_DIM_PX);
-  const backgroundColor = canvasEl
-    ? getComputedStyle(canvasEl).backgroundColor
+    computeExportDimensions(bounds, EXPORT_PADDING_PX, MAX_EXPORT_DIMENSION_PX);
+  const backgroundColor = canvas
+    ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  const blobToSave = await toBlob(viewportEl, {
+  const blobToSave = await toBlob(viewport, {
     backgroundColor,
     width: imageWidth,
     height: imageHeight,

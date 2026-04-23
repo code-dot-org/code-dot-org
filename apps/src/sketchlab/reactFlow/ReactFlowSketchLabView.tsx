@@ -139,6 +139,33 @@ function ReactFlowSketchLabViewInner({
     appName: 'sketchlab',
   });
 
+  const backpackProps = useMemo(
+    () => ({
+      validateFileName: (fileName: string) => ({
+        isSupportFileName: false,
+        newFileName: fileName,
+      }),
+      // Sketch Lab doesn't support importing Backpack files into the
+      // project, so these import-related handlers are no-ops.
+      saveFileToProject: () => {},
+      createNewProjectFile: () => {},
+      findIdForFileName: () => undefined,
+      saveToBackpackButton: {
+        onClick: (fileList: string[], errorCallback: (error: string) => void) =>
+          handleSaveToBackpack(
+            reactFlow,
+            backpackContext?.primaryApi,
+            dialogControl,
+            fileList,
+            errorCallback
+          ),
+        text: 'Save Sketch to Backpack',
+      },
+      supportedFileTypes: [],
+    }),
+    [reactFlow, backpackContext, dialogControl]
+  );
+
   // Deep-clone so React Flow can mutate node style objects during resize.
   const source = currentSources.source;
   const hasValidNodes = Array.isArray(source?.nodes);
@@ -163,32 +190,7 @@ function ReactFlowSketchLabViewInner({
                 REACT_FLOW_DEFAULT_SOURCES,
               onLoadVersion,
             }}
-            backpackProps={{
-              validateFileName: (fileName: string) => ({
-                isSupportFileName: false,
-                newFileName: fileName,
-              }),
-              // Sketch Lab doesn't support importing Backpack files into the
-              // project, so these import-related handlers are no-ops.
-              saveFileToProject: () => {},
-              createNewProjectFile: () => {},
-              findIdForFileName: () => undefined,
-              saveToBackpackButton: {
-                onClick: (
-                  fileList: string[],
-                  errorCallback: (error: string) => void
-                ) =>
-                  handleSaveToBackpack(
-                    reactFlow,
-                    backpackContext?.primaryApi,
-                    dialogControl,
-                    fileList,
-                    errorCallback
-                  ),
-                text: 'Save Sketch to Backpack',
-              },
-              supportedFileTypes: [],
-            }}
+            backpackProps={backpackProps}
           />
         </div>
         <ResizeBar

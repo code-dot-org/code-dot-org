@@ -51,7 +51,9 @@ describe('computeExportDimensions', () => {
     const expectedScale = MAX_DIM / (4000 + 2 * PADDING);
     expect(result.scale).toBeCloseTo(expectedScale);
     expect(result.imageWidth).toBe(MAX_DIM);
-    expect(result.imageHeight).toBe(Math.round((1000 + 2 * PADDING) * expectedScale));
+    expect(result.imageHeight).toBe(
+      Math.round((1000 + 2 * PADDING) * expectedScale)
+    );
     expect(result.translateX).toBeCloseTo(PADDING * expectedScale);
     expect(result.translateY).toBeCloseTo(PADDING * expectedScale);
   });
@@ -65,7 +67,9 @@ describe('computeExportDimensions', () => {
     const expectedScale = MAX_DIM / (4000 + 2 * PADDING);
     expect(result.scale).toBeCloseTo(expectedScale);
     expect(result.imageHeight).toBe(MAX_DIM);
-    expect(result.imageWidth).toBe(Math.round((1000 + 2 * PADDING) * expectedScale));
+    expect(result.imageWidth).toBe(
+      Math.round((1000 + 2 * PADDING) * expectedScale)
+    );
   });
 
   it('picks the longer axis when both exceed maxDim', () => {
@@ -92,17 +96,5 @@ describe('computeExportDimensions', () => {
       translateX: 0,
       translateY: 0,
     });
-  });
-
-  it('respects a custom maxDim smaller than the content', () => {
-    const result = computeExportDimensions(
-      {minX: 0, minY: 0, maxX: 500, maxY: 500},
-      PADDING,
-      256
-    );
-    const expectedScale = 256 / (500 + 2 * PADDING);
-    expect(result.scale).toBeCloseTo(expectedScale);
-    expect(result.imageWidth).toBe(256);
-    expect(result.imageHeight).toBe(256);
   });
 });

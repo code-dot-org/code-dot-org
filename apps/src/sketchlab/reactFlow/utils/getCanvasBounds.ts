@@ -18,10 +18,9 @@ export interface Viewport {
   zoom: number;
 }
 
-// Union the screen-space rects of every rendered node + edge into a single
-// bounding box in flow-space coordinates. Rects with zero width AND height
-// are skipped (unrendered SVG groups, detached elements, etc.). Returns null
-// if no rect contributes — the caller should treat that as "nothing to export".
+// Returns the bounding box for all nodes and edges in a React Flow canvas.
+// Rects with zero width and height are skipped (unrendered SVG groups, detached elements, etc.).
+// Returns null if no rects are provided or all provided rects are empty.
 export function getCanvasBounds(
   rects: ScreenRect[],
   rootRect: Pick<ScreenRect, 'left' | 'top'>,
