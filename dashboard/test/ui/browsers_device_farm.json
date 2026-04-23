@@ -21,7 +21,9 @@
     "device_arn": "arn:aws:devicefarm:us-west-2::device:EEED8AB9E08F4B6C862F982EDA0A0C34",
     "platformName": "iOS",
     "browserName": "Safari",
-    "appium:orientation": "LANDSCAPE"
+    "appium:orientation": "LANDSCAPE",
+    "appium:safariInitialUrl": "about:blank",
+    "appium:webviewConnectTimeout": 30000
   },
   {
     "name": "iPad",
@@ -29,6 +31,8 @@
     "device_arn": "arn:aws:devicefarm:us-west-2::device:0A5D934CFF7E4B5BB2612E922588C354",
     "platformName": "iOS",
     "browserName": "Safari",
-    "appium:orientation": "LANDSCAPE"
+    "appium:orientation": "LANDSCAPE",
+    "appium:safariInitialUrl": "about:blank",
+    "appium:webviewConnectTimeout": 30000
   }
 ]
