@@ -1,5 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
+  include AnalyticsExportable
 
   connects_to database: {
     writing: Policies::ActiveRecordRoles.get_writing_role_name,
