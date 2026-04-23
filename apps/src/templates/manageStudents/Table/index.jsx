@@ -70,6 +70,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import moduleStyles from './table.module.scss';
+
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
 export const studentSectionDataPropType = PropTypes.shape({
@@ -207,7 +209,7 @@ class ManageStudentsTable extends Component {
   passwordHeaderFormatter() {
     const {loginType} = this.props;
     return (
-      <span style={styles.verticalAlign}>
+      <span className={moduleStyles.verticalAlign}>
         <div data-for="password" data-tip="" id="password-header">
           {this.getPasswordLabel(loginType)}
         </div>
@@ -389,9 +391,9 @@ class ManageStudentsTable extends Component {
           </MuiButton>
         )}
         {numberOfEditingRows <= 1 && (
-          <span style={styles.verticalAlign}>
-            <div style={styles.headerName}>{i18n.actions()}</div>
-            <div style={styles.headerIcon}>
+          <span className={moduleStyles.verticalAlign}>
+            <div className={moduleStyles.headerName}>{i18n.actions()}</div>
+            <div className={moduleStyles.headerIcon}>
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
@@ -405,8 +407,12 @@ class ManageStudentsTable extends Component {
 
   projectSharingHeaderFormatter() {
     return (
-      <span style={styles.verticalAlign}>
-        <div style={styles.headerName} data-for="explain-sharing" data-tip="">
+      <span className={moduleStyles.verticalAlign}>
+        <div
+          className={moduleStyles.headerName}
+          data-for="explain-sharing"
+          data-tip=""
+        >
           {i18n.projectSharingColumnHeader()}
         </div>
         <ReactTooltip
@@ -419,7 +425,7 @@ class ManageStudentsTable extends Component {
         >
           <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
         </ReactTooltip>
-        <div style={styles.headerIcon}>
+        <div className={moduleStyles.headerIcon}>
           <SharingControlActionsHeaderCell />
         </div>
       </span>
@@ -784,14 +790,12 @@ class ManageStudentsTable extends Component {
         )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
-        <div>
-          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-            <div style={styles.buttonWithMargin}>
+        <div className={moduleStyles.additionalControlsContainer}>
+          <div className={moduleStyles.additionalControlsButtonsRow}>
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
               <AddMultipleStudents sectionId={this.props.sectionId} />
-            </div>
-          )}
-          {this.isMoveStudentsEnabled() && (
-            <div style={styles.button}>
+            )}
+            {this.isMoveStudentsEnabled() && (
               <MoveStudents
                 studentData={this.studentDataMinusBlanks().filter(
                   s => !s.isDemoStudent
@@ -799,10 +803,8 @@ class ManageStudentsTable extends Component {
                 transferData={transferData}
                 transferStatus={transferStatus}
               />
-            </div>
-          )}
-          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-            <div style={styles.button}>
+            )}
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
               <PrintLoginCards
                 sectionId={this.props.sectionId}
                 entryPointForMetrics={
@@ -810,41 +812,35 @@ class ManageStudentsTable extends Component {
                 }
                 onPrintLoginCards={this.onPrintLoginCards}
               />
-            </div>
-          )}
-          <GlobalEditionWrapper
-            component={() => (
-              <div style={styles.button}>
+            )}
+            <GlobalEditionWrapper
+              component={() => (
                 <DownloadParentLetter
                   sectionId={this.props.sectionId}
                   buttonMetricsCategory={
                     ParentLetterButtonMetricsCategory.ABOVE_TABLE
                   }
                 />
-              </div>
-            )}
-            componentId="DownloadParentLetterButton"
-          />
-          {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
-            but is otherwise similar to other button/modal components here.
-            Despite being unused in this component, we pass the dataApi object
-            so that it can be more easily stubbed in tests. */}
-          {isSectionAssignedCSA && (
-            <div style={styles.button}>
+              )}
+              componentId="DownloadParentLetterButton"
+            />
+            {isSectionAssignedCSA && (
               <CodeReviewGroupsDialog
                 dataApi={new CodeReviewGroupsDataApi(sectionId)}
               />
-            </div>
-          )}
-          <JoinLinkCopyButton
-            sectionId={sectionId}
-            sectionCode={sectionCode}
-            loginType={loginType}
-            studioUrlPrefix={this.props.studioUrlPrefix}
-            sourceName="ManageStudentsTable"
-          />
+            )}
+          </div>
+          <div className={moduleStyles.headerBottomRow}>
+            <JoinLinkCopyButton
+              sectionId={sectionId}
+              sectionCode={sectionCode}
+              loginType={loginType}
+              studioUrlPrefix={this.props.studioUrlPrefix}
+              sourceName="ManageStudentsTable"
+            />
+          </div>
         </div>
-        <div style={styles.v2TableWidth}>
+        <div className={moduleStyles.v2TableWidth}>
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
@@ -872,33 +868,6 @@ class ManageStudentsTable extends Component {
     );
   }
 }
-
-const styles = {
-  headerName: {
-    width: '60%',
-    float: 'left',
-    marginRight: 5,
-  },
-  headerIcon: {
-    width: '20%',
-    float: 'left',
-  },
-  button: {
-    float: 'left',
-  },
-  buttonWithMargin: {
-    marginRight: 5,
-    float: 'left',
-  },
-  verticalAlign: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  v2TableWidth: {
-    width: '100%',
-    overflowX: 'auto',
-  },
-};
 
 // The "add row" should always be pinned to the top when sorting.
 // The "new student rows" should always be next.
