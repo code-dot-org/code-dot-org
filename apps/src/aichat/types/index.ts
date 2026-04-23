@@ -7,5 +7,5 @@ export * from './context';
 export * from './model';
 export * from './structuredOutput';
 export * from './systemPrompt';
-export * from './toxicity';
+export * from './feedback';
 export * from './userAddedSelectionContext';

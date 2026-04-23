@@ -6,7 +6,13 @@ import {CompletedChatMessage} from '@cdo/apps/aichat/types';
 import ChatEventsList from '@cdo/apps/aichat/views/ChatEventsList';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatTeacherFeedback,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
+
+const TEACHER_FLAGGED_PLACEHOLDER =
+  'This message has been flagged by your teacher.';
 
 const mockWaitingText = 'Waiting...';
 
@@ -113,5 +119,72 @@ describe('ChatEventsList', () => {
     await waitFor(() => {
       expect(screen.getByText(mockWaitingText)).toBeInTheDocument();
     });
+  });
+});
+
+// ServerChatEvent requires an `id` field in addition to CompletedChatMessage fields.
+type FlaggedMessage = CompletedChatMessage & {id: number};
+
+describe('ChatEventsList — teacher-flagged messages', () => {
+  const flaggedUserMessage: FlaggedMessage = {
+    id: 1,
+    timestamp: Date.now() - 2000,
+    chatMessageText: 'Inappropriate user message',
+    role: Role.USER,
+    status: AiInteractionStatus.OK,
+    requestId: 1,
+    teacherFeedback: AiChatTeacherFeedback.CLEAN_DISAGREE,
+  };
+
+  const flaggedAssistantMessage: FlaggedMessage = {
+    id: 2,
+    timestamp: Date.now() - 1000,
+    chatMessageText: 'Inappropriate assistant response',
+    role: Role.ASSISTANT,
+    status: AiInteractionStatus.OK,
+    requestId: 2,
+    teacherFeedback: AiChatTeacherFeedback.CLEAN_DISAGREE,
+  };
+
+  it('student view: shows placeholder instead of original text for flagged messages', () => {
+    render(
+      <ChatEventsList events={[flaggedUserMessage, flaggedAssistantMessage]} />
+    );
+
+    // Placeholder shown for each flagged message
+    expect(screen.getAllByText(TEACHER_FLAGGED_PLACEHOLDER)).toHaveLength(2);
+
+    // Original text not visible to student
+    expect(
+      screen.queryByText(flaggedUserMessage.chatMessageText)
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(flaggedAssistantMessage.chatMessageText)
+    ).not.toBeInTheDocument();
+  });
+
+  it('teacher view: shows original text and feedback footer for flagged messages', () => {
+    render(
+      <ChatEventsList
+        events={[flaggedUserMessage, flaggedAssistantMessage]}
+        isTeacherView
+      />
+    );
+
+    // Original text visible to teacher
+    expect(
+      screen.getByText(flaggedUserMessage.chatMessageText)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(flaggedAssistantMessage.chatMessageText)
+    ).toBeInTheDocument();
+
+    // Placeholder not shown in teacher view
+    expect(
+      screen.queryByText(TEACHER_FLAGGED_PLACEHOLDER)
+    ).not.toBeInTheDocument();
+
+    // Feedback footer present: flag button rendered in active "unflag" state for each message
+    expect(screen.getAllByRole('button', {name: 'unflag'})).toHaveLength(2);
   });
 });

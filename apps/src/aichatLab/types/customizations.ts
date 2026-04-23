@@ -28,11 +28,6 @@ export enum Visibility {
   EDITABLE = 'editable',
 }
 
-export enum ViewMode {
-  EDIT = 'edit-mode',
-  PRESENTATION = 'presentation-mode',
-}
-
 // The type of save action being performed (customization update, publish, model card save, etc).
 export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
 

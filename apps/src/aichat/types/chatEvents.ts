@@ -4,8 +4,8 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
+import {FeedbackValue} from './feedback';
 import {ModelParameters} from './model';
-import {FeedbackValue} from './toxicity';
 import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 
 export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';

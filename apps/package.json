@@ -255,7 +255,7 @@
     "@reduxjs/toolkit": "^1.9.3",
     "@replit/codemirror-css-color-picker": "^6.3.0",
     "@selectize/selectize": "^0.15.2",
-    "@sentry/browser": "^10.46.0",
+    "@sentry/browser": "10.40.0",
     "@statsig/js-client": "^3.25.5",
     "@statsig/session-replay": "^3.25.5",
     "@statsig/web-analytics": "^3.25.5",

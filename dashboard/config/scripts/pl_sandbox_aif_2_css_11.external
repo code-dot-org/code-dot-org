@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### CSS **(Cascading Style Sheets)** is the language that controls the look and feel of a webpage.
 
-#### If **HTM**L is the structure, **CSS** is the design—it handles colors, fonts, spacing, and layout.
+#### If **HTM**L is the structure, **CSS** is the design. It handles colors, fonts, spacing, and layout.
 
 ## Key things CSS does:
 - #### Changes colors, fonts, and text sizes
@@ -43,9 +43,23 @@ markdown <<MARKDOWN
 
 ## What's the Difference? 
 
-<img src="https://images.code.org/b26d1b354a67f5c6f94c3efbb7c38dcc-image-1759349763132.png" alt="HtML layout example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/b26d1b354a67f5c6f94c3efbb7c38dcc-image-1759349763132.png" alt="HtML layout example" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 #### Compare the HTML only site on the right to the one with CSS above. What do you notice?
+
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; width: 50%;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡Click to check your answer</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+        <ul>
+          <li>The header is blue, centered, and in arial font.</li>
+          <li>The text is gray.</li>
+        </ul>
+    </div>
+</details>
+
+
 
 #### While **HTML tags** tell the browser what the content is (heading, paragraph, image), **CSS selectors** tell the browser how that content should look (color, size, position).
 
