@@ -36,9 +36,9 @@ const mockTryGetLocalStorage = tryGetLocalStorage as jest.MockedFunction<
   typeof tryGetLocalStorage
 >;
 
-const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
+const ONBOARDING_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
-const RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME =
+const VALIDATION_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
 
 const defaultLevelProperties = {
@@ -258,7 +258,7 @@ describe('useResourcePanelTours', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_STARTED,
         {
-          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          flowName: ONBOARDING_FLOW_NAME,
           triggerSource: TriggerSource.Auto,
         }
       );
@@ -275,7 +275,7 @@ describe('useResourcePanelTours', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_COMPLETED,
         {
-          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          flowName: ONBOARDING_FLOW_NAME,
           triggerSource: TriggerSource.Auto,
         }
       );
@@ -292,7 +292,7 @@ describe('useResourcePanelTours', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_EXIT,
         {
-          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          flowName: ONBOARDING_FLOW_NAME,
           step: '2',
           triggerSource: TriggerSource.Auto,
         }
@@ -308,7 +308,7 @@ describe('useResourcePanelTours', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_STARTED,
         {
-          flowName: RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
+          flowName: VALIDATION_FLOW_NAME,
           triggerSource: TriggerSource.Auto,
         }
       );

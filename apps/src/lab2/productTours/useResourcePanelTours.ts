@@ -46,9 +46,9 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
     triggerSource: TriggerSource.Auto,
   });
 
-const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
+const ONBOARDING_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
-const RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME =
+const VALIDATION_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
 
 const useResourcePanelTours = ({
@@ -84,12 +84,12 @@ const useResourcePanelTours = ({
       ) === 'yes'
   );
   const onOnboardingTourComplete = useCallback(() => {
-    onTourComplete(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME)();
+    onTourComplete(ONBOARDING_FLOW_NAME)();
     setOnboardingTourSeen(true);
   }, []);
 
   const onOnboardingTourCancel = useCallback((stepIndex: number) => {
-    onTourCancel(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME)(stepIndex);
+    onTourCancel(ONBOARDING_FLOW_NAME)(stepIndex);
     setOnboardingTourSeen(true);
   }, []);
 
@@ -97,7 +97,7 @@ const useResourcePanelTours = ({
     getSteps: createOnboardingTourSteps,
     localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     tourAvailable: isOnboardingTourEnabled,
-    onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
+    onStart: onTourStart(ONBOARDING_FLOW_NAME),
     onComplete: onOnboardingTourComplete,
     onCancel: onOnboardingTourCancel,
   });
@@ -126,9 +126,9 @@ const useResourcePanelTours = ({
     getSteps: createValidationTourSteps,
     localStorageKey: VALIDATION_TOUR_SEEN,
     tourAvailable: showValidationTour,
-    onStart: onTourStart(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
-    onComplete: onTourComplete(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
-    onCancel: onTourCancel(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
+    onStart: onTourStart(VALIDATION_FLOW_NAME),
+    onComplete: onTourComplete(VALIDATION_FLOW_NAME),
+    onCancel: onTourCancel(VALIDATION_FLOW_NAME),
   });
 
   useStartTourWhenAvailable(validationTour);
