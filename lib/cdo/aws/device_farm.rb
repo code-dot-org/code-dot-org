@@ -45,6 +45,13 @@ module Cdo
       MOBILE_CONNECT_TRIES = 6
       MOBILE_CONNECT_RETRY_SLEEP = 10 # seconds
 
+      # Retry budget for the whole mobile session at the device level.
+      # Some physical devices in a pool have persistent problems (e.g. Web
+      # Inspector disabled -- Appium times out waiting for web apps, no
+      # amount of Appium-level retrying helps). Tearing down the DF session
+      # and picking a fresh device from the pool side-steps those.
+      MOBILE_DEVICE_TRIES = 3
+
       # AWS region where Device Farm projects live.
       # As of April 2026, Device Farm only available in us-west-2.
       REGION = 'us-west-2'.freeze

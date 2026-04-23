@@ -102,47 +102,58 @@ end
 
 # Provisions a real mobile device, then connects Selenium with retries
 # (the Appium endpoint may return 400 briefly after status becomes RUNNING).
+# If a whole DF session fails (typically a bad physical device -- Web
+# Inspector disabled, etc.), tear it down and pick a fresh device from
+# the pool.
 def device_farm_mobile_browser(http_client: nil)
-  session = Cdo::AWS::DeviceFarm.create_mobile_session(
-    device_arns: $device_farm_browser_config['device_arns']
-  )
-  $device_farm_mobile_session_arn = session[:session_arn]
-
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
-  )
-
-  # Anything after a successful create_mobile_session leaks a running device
-  # on failure unless we stop it here -- at_exit's quit_browser eventually
-  # stops it, but stopping immediately frees the device for the next run.
-  begin
-    browser = Retryable.retryable(
-      tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
-      sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
-    ) do
-      SeleniumBrowser.remote(
-        session[:url],
-        capabilities: capabilities,
-        http_client: http_client
-      )
+  Retryable.retryable(tries: Cdo::AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
+    if exception
+      puts "Device Farm: previous mobile session attempt failed " \
+           "(#{exception.class}: #{exception.message.lines.first&.strip}); " \
+           "provisioning a fresh device (attempt #{try})..."
     end
+    session = Cdo::AWS::DeviceFarm.create_mobile_session(
+      device_arns: $device_farm_browser_config['device_arns']
+    )
+    $device_farm_mobile_session_arn = session[:session_arn]
 
-    # Device Farm rejects `appium:orientation` as a session capability, so
-    # apply it via the WebDriver /orientation endpoint after session-start.
-    orientation = $device_farm_browser_config['appium:orientation']
-    if orientation
-      browser.send(:bridge).http.call(
-        :post,
-        "session/#{browser.session_id}/orientation",
-        {orientation: orientation.upcase}
-      )
+    capabilities = Selenium::WebDriver::Remote::Capabilities.new(
+      $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+    )
+
+    # Anything after a successful create_mobile_session leaks a running
+    # device on failure unless we stop it here -- at_exit's quit_browser
+    # eventually stops it, but stopping immediately frees the device for
+    # the next attempt, and lets the outer Retryable pick a different one.
+    begin
+      browser = Retryable.retryable(
+        tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
+        sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+      ) do
+        SeleniumBrowser.remote(
+          session[:url],
+          capabilities: capabilities,
+          http_client: http_client
+        )
+      end
+
+      # Device Farm rejects `appium:orientation` as a session capability, so
+      # apply it via the WebDriver /orientation endpoint after session-start.
+      orientation = $device_farm_browser_config['appium:orientation']
+      if orientation
+        browser.send(:bridge).http.call(
+          :post,
+          "session/#{browser.session_id}/orientation",
+          {orientation: orientation.upcase}
+        )
+      end
+
+      browser
+    rescue
+      Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+      $device_farm_mobile_session_arn = nil
+      raise
     end
-
-    browser
-  rescue
-    Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
-    $device_farm_mobile_session_arn = nil
-    raise
   end
 end
 
