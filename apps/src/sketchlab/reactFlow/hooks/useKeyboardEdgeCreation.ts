@@ -276,7 +276,7 @@ export function useKeyboardEdgeCreation({
             );
             if (connectionRejected) {
               announce(
-                'Connection not created. Line endpoints may only have one edge.'
+                'Connection not created. Line endpoints cannot accept additional connections.'
               );
             } else {
               setEdges(currentEdges => {
