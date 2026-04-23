@@ -65,15 +65,6 @@ module Cdo
             assert_includes ddl, 'AUTO REFRESH NO'
           end
 
-          it 'includes DROP IF EXISTS before CREATE' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            drop_pos = ddl.index('DROP MATERIALIZED VIEW IF EXISTS')
-            create_pos = ddl.index('CREATE MATERIALIZED VIEW')
-            refute_nil drop_pos
-            refute_nil create_pos
-            assert_operator drop_pos, :<, create_pos
-          end
-
           it 'returns nil when the model has no columns' do
             model.stubs(:columns).returns([])
             assert_nil MaterializedViewGenerator.new(model).generate_pii_ddl
@@ -227,48 +218,48 @@ module Cdo
             FileUtils.remove_entry(tmpdir)
           end
 
-          it 'saves templates then executes rendered DDL for both views' do
-            executed_sql = []
-            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+          it 'batch executes DROP and CREATE for both views' do
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
-            assert_equal 2, executed_sql.length
-            assert_includes executed_sql[0], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users'
-            assert_includes executed_sql[0], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
-            assert_includes executed_sql[1], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production.zeroetl_users'
-            assert_includes executed_sql[1], 'CREATE MATERIALIZED VIEW dashboard_production.zeroetl_users'
+            assert_equal 2, batches.length
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users', batches[0][0]
+            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production.zeroetl_users', batches[1][0]
+            assert_includes batches[1][1], 'CREATE MATERIALIZED VIEW dashboard_production.zeroetl_users'
 
             assert_equal ['dashboard_production_pii.zeroetl_users', 'dashboard_production.zeroetl_users'], result
           end
 
           it 'saves ERB template files to the template directory' do
-            client.stubs(:execute)
+            client.stubs(:batch_execute)
             generator.create_or_replace_views(client: client, environment_type: :test)
 
             assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
             assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
           end
 
-          it 'renders ERB placeholders in the executed SQL' do
-            executed_sql = []
-            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+          it 'renders ERB placeholders in the CREATE SQL' do
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
 
             generator.create_or_replace_views(client: client, environment_type: :test)
 
-            executed_sql.each do |sql|
-              assert_includes sql, 'test_learningplatform_mysql_zeroetl.dashboard_test.users'
-              refute_includes sql, '<%='
+            batches.each do |sqls|
+              assert_includes sqls[1], 'test_learningplatform_mysql_zeroetl.dashboard_test.users'
+              refute_includes sqls[1], '<%='
             end
           end
 
           it 'accepts symbol environment_type' do
-            executed_sql = []
-            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
-            assert_includes executed_sql[0], 'dashboard_production_pii'
+            assert_includes batches[0][0], 'dashboard_production_pii'
             assert_equal 'dashboard_production_pii.zeroetl_users', result[0]
           end
 
@@ -280,14 +271,14 @@ module Cdo
 
           it 'skips non-pii view when all columns are text' do
             model.stubs(:columns).returns([name_col, bio_col])
-            executed_sql = []
-            client.stubs(:execute).with {|sql| executed_sql << sql; true}
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
-            assert_equal 1, executed_sql.length
-            assert_includes executed_sql[0], 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users'
-            assert_includes executed_sql[0], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
+            assert_equal 1, batches.length
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users', batches[0][0]
+            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
             assert_equal ['dashboard_production_pii.zeroetl_users'], result
           end
         end

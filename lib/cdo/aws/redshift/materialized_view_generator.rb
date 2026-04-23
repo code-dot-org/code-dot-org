@@ -77,11 +77,13 @@ module Cdo
           created = []
 
           saved_files.each do |template_path|
-            sql = self.class.render_ddl(template_path, environment_type: env)
-            client.execute(sql)
-
+            create_sql = self.class.render_ddl(template_path, environment_type: env)
             schema = template_path.end_with?('_pii.sql.erb') ? "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii" : "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}"
-            created << "#{schema}.#{view_name}"
+            fqn = "#{schema}.#{view_name}"
+            drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
+
+            client.batch_execute([drop_sql, create_sql])
+            created << fqn
           end
 
           created
@@ -115,7 +117,6 @@ module Cdo
         private def build_ddl_erb_template(schema:, columns:)
           qualified_view = "#{schema}.#{view_name}"
           <<~SQL
-            DROP MATERIALIZED VIEW IF EXISTS #{qualified_view};
             CREATE MATERIALIZED VIEW #{qualified_view}
               BACKUP NO
               DISTSTYLE KEY DISTKEY (#{distkey_column})
