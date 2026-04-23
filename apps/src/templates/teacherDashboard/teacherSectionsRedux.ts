@@ -416,17 +416,6 @@ const sectionSlice = createSlice({
     setRosterProviderName(state, action: PayloadAction<string>) {
       state.rosterProviderName = action.payload;
     },
-    updateSectionAiTutorEnabled(
-      state,
-      action: PayloadAction<{
-        sectionId: number;
-        aiTutorEnabled: boolean;
-      }>
-    ) {
-      const {sectionId, aiTutorEnabled} = action.payload;
-
-      state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
-    },
     updateSectionAiChatAccessLevel(
       state,
       action: PayloadAction<{
@@ -1353,7 +1342,6 @@ export const {
   setStudentsForCurrentSection,
   setAvailableParticipantTypes,
   startLoadingSectionData,
-  updateSectionAiTutorEnabled,
   updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
