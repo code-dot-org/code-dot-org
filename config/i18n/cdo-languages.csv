@@ -26,7 +26,7 @@ ga,ga,ga,ga-IE,,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish,TRUE,TRUE,FALSE,TRUE,TRUE
 gl,gl,gl,gl-ES,,Galego,Galician,TRUE,FALSE,gl,Galician,FALSE,FALSE,FALSE,FALSE,FALSE
 haw,ha,haw,haw-HI,,ʻŌlelo Hawaiʻi,Hawaiian,FALSE,FALSE,haw,Hawaiian,FALSE,TRUE,FALSE,TRUE,FALSE
 he,he,he,he-IL,,עברית,Hebrew,TRUE,TRUE,he,Hebrew,FALSE,FALSE,FALSE,FALSE,FALSE
-hi,hi,hi,hi-IN,hi-IN,हिन्दी,Hindi,TRUE,TRUE,hi,Hindi,FALSE,FALSE,FALSE,TRUE,FALSE
+hi,hi,hi,hi-IN,hi,हिन्दी,Hindi,TRUE,TRUE,hi,Hindi,FALSE,FALSE,FALSE,TRUE,FALSE
 hr,hr,hr,hr-HR,,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian,FALSE,TRUE,TRUE,TRUE,FALSE
 hu,hu,hu,hu-HU,,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian,TRUE,TRUE,FALSE,TRUE,FALSE
 hy,hy,hy,hy-AM,,Հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,FALSE,FALSE,FALSE,TRUE,FALSE
@@ -34,7 +34,7 @@ id,id,id,id-ID,id,Bahasa Indonesia,Indonesian,TRUE,TRUE,id,Indonesian,TRUE,TRUE,
 in,in,in,in-TL,,I18n Pseudo-Language,I18n Pseudo-Language,FALSE,FALSE,in-TL,I18n Pseudo-Language,FALSE,FALSE,FALSE,FALSE,FALSE
 is,is,is,is-IS,,Íslenska,Icelandic,TRUE,TRUE,is,Icelandic,TRUE,TRUE,TRUE,TRUE,TRUE
 it,it,it,it-IT,it,Italiano,Italian,TRUE,TRUE,it,Italian,FALSE,TRUE,TRUE,TRUE,FALSE
-ja,ja,ja,ja-JP,,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
+ja,ja,ja,ja-JP,ja,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
 ka,ka,ka,ka-GE,,ქართული,Georgian,TRUE,TRUE,ka,Georgian,TRUE,TRUE,FALSE,TRUE,TRUE
 kk,kk,kk,kk-KZ,,Қазақша,Kazakh,TRUE,TRUE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE,TRUE
 kn,kn,kn,kn-IN,kn,ಕನ್ನಡ,Kannada,TRUE,TRUE,kn,Kannada,TRUE,TRUE,TRUE,TRUE,TRUE
@@ -60,7 +60,7 @@ ps,ps,ps,ps-AF,,پښتو,Pashto,FALSE,FALSE,ps,Pashto,TRUE,TRUE,FALSE,TRUE,FALSE
 pt-BR,pt,pt,pt-BR,pt-BR,Português (Brasil),Portuguese (Brazil),TRUE,TRUE,pt-BR,"Portuguese, Brazilian",FALSE,TRUE,TRUE,TRUE,TRUE
 pt-PT,po,pt,pt-PT,pt,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt-PT,Portuguese,TRUE,TRUE,TRUE,TRUE,TRUE
 ro,ro,ro,ro-RO,,Română,Romanian,TRUE,TRUE,ro,Romanian,TRUE,TRUE,FALSE,TRUE,FALSE
-ru,ru,ru,ru-RU,,Pусский,Russian,TRUE,TRUE,ru,Russian,FALSE,FALSE,TRUE,FALSE,TRUE
+ru,ru,ru,ru-RU,ru,Pусский,Russian,TRUE,TRUE,ru,Russian,FALSE,FALSE,TRUE,FALSE,TRUE
 se,se,se,se-FI,,Davvisámegiella,Northern Sami,TRUE,TRUE,se,Northern Sami,FALSE,FALSE,FALSE,FALSE,FALSE
 sm,sm,sm,sm-WS,,Sāmoa,Samoan,TRUE,TRUE,sm,Samoan,FALSE,FALSE,FALSE,FALSE,FALSE
 si,si,si,si-LK,,සිංහල,Sinhalese,TRUE,TRUE,si-LK,Sinhala,FALSE,FALSE,FALSE,FALSE,FALSE
@@ -74,7 +74,7 @@ te,te,te,te-IN,te,తెలుగు,Telugu,TRUE,TRUE,te,Telugu,FALSE,FALSE,FALS
 tg,tg,tg,tg-TJ,,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik,FALSE,TRUE,FALSE,TRUE,TRUE
 th,th,th,th-TH,th,ภาษาไทย,Thai,TRUE,TRUE,th,Thai,TRUE,TRUE,TRUE,FALSE,TRUE
 tr,tr,tr,tr-TR,tr,Türkçe,Turkish,TRUE,TRUE,tr,Turkish,TRUE,FALSE,TRUE,FALSE,TRUE
-uk,uk,uk,uk-UA,,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian,FALSE,FALSE,FALSE,FALSE,TRUE
+uk,uk,uk,uk-UA,uk,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian,FALSE,FALSE,FALSE,FALSE,TRUE
 ur,ur,ur,ur-PK,,اردو,Urdu (Pakistan),TRUE,TRUE,ur-PK,Urdu (Pakistan),FALSE,TRUE,FALSE,TRUE,FALSE
 uz,uz,uz,uz-UZ,,Oʻzbekcha,Uzbek,TRUE,TRUE,uz,Uzbek,FALSE,TRUE,TRUE,TRUE,TRUE
 vi,vi,vi,vi-VN,,Tiếng Việt,Vietnamese,TRUE,TRUE,vi,Vietnamese,TRUE,TRUE,FALSE,TRUE,FALSE
