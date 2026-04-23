@@ -26,8 +26,10 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -87,17 +89,29 @@ describe('TeacherHomepage', () => {
   const serverSections = sections.map(serverSectionFromSection);
 
   let fetchSpy: jest.SpyInstance;
+  let originalFetch:
+    | ((input: RequestInfo | URL, init?: RequestInit) => Promise<Response>)
+    | undefined;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
+  let realIsEnabled: typeof experiments.isEnabled;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
+    (globalThis as unknown as {fetch?: jest.Mock}).fetch = jest
+      .fn()
+      .mockResolvedValue({
+        json: () => Promise.resolve({data: {matchedPersona: true}}),
+      } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
     sendEventSpy = jest
       .spyOn(analyticsReporter, 'sendEvent')
       .mockImplementation(() => {});
     jquerySpy = jest.spyOn($, 'getJSON');
+    realIsEnabled = experiments.isEnabled;
+    experiments.isEnabled = jest.fn((key: string) => key === 'demo-section');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
@@ -120,6 +134,10 @@ describe('TeacherHomepage', () => {
           },
           response: new Response(),
         });
+      } else if (
+        url.match(/^\/sections\/\d+\/retrieve_lessons_for_dropdown$/)
+      ) {
+        return Promise.resolve({value: [], response: new Response()});
       }
       return Promise.resolve({value: {}, response: new Response()});
     });
@@ -157,14 +175,22 @@ describe('TeacherHomepage', () => {
   });
 
   afterEach(() => {
+    (globalThis as {fetch?: typeof originalFetch}).fetch = originalFetch;
     jest.restoreAllMocks();
+    experiments.isEnabled = realIsEnabled;
     restoreRedux();
   });
 
   function renderComponent(initialSections = serverSections) {
     const store = getStore();
     registerReducers({teacherSections, currentUser});
-    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        display_name: 'Rubber Ducky',
+        grades_teaching: ['9', '10'],
+      })
+    );
     store.dispatch(setSections(initialSections));
     return render(
       <Provider store={store}>
@@ -210,6 +236,85 @@ describe('TeacherHomepage', () => {
     screen.getByText('Class Sections');
     screen.getByText('Period 1');
     screen.getByText('Period 4');
+  });
+
+  it('renders the demo section card for zero-section teachers', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.resolve({
+          value: {
+            high: {
+              demo_type: 'high',
+              section_name: 'High School Practice Section',
+              avatar_color: 8,
+              avatar_emoji: 5,
+              login_type: 'email',
+              participant_type: 'student',
+              unit: {
+                name: 'aif2-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+              unit_group: {
+                name: 'artificial-intelligence-foundations-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+            },
+          },
+          response: new Response(),
+        });
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    renderComponent([]);
+    await screen.findByText('High School Practice Section');
+    screen.getByText(/DEMO-123/);
+    screen.getByText('Demo');
+  });
+
+  it('falls back to the empty homepage when the demo section is disabled', async () => {
+    experiments.isEnabled = jest.fn(() => false);
+
+    renderComponent([]);
+
+    await screen.findByText(i18n.emptySectionHeadline());
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
+  });
+
+  it('falls back to the empty homepage when demo presets fail to load', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.reject(new Error('presets failed'));
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    renderComponent([]);
+    await screen.findByText(i18n.emptySectionHeadline());
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
   });
 
   it('create section button opens popup', async () => {
@@ -287,6 +392,50 @@ describe('TeacherHomepage', () => {
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText("It's a bit empty here...");
     screen.getByText('You haven’t archived any class sections yet.');
+  });
+
+  it('shows the teaching empty state instead of the demo card when only archived sections exist', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.resolve({
+          value: {
+            high: {
+              demo_type: 'high',
+              section_name: 'High School Practice Section',
+              avatar_color: 8,
+              avatar_emoji: 5,
+              login_type: 'email',
+              participant_type: 'student',
+              unit: {
+                name: 'aif2-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+              unit_group: {
+                name: 'artificial-intelligence-foundations-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+            },
+          },
+          response: new Response(),
+        });
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    renderComponent([serverSections.find(section => section.id === 15)!]);
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t created any class sections yet.');
   });
 
   it('displays coteacher invite notification', async () => {
