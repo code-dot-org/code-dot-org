@@ -17,3 +17,10 @@ export function turnstileHeaders(
 ): Record<string, string> {
   return token ? {'X-Turnstile-Token': token} : {};
 }
+
+// instanceof cannot be used across webpack chunk boundaries — the dynamic
+// import of getClientApi() produces a separate copy of the class object,
+// so instanceof always returns false for errors thrown inside that chunk.
+export function isTurnstileDevToolsError(error: Error): boolean {
+  return error.name === 'TurnstileDevToolsError';
+}

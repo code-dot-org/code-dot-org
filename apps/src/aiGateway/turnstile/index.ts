@@ -1,3 +1,3 @@
 export {TurnstileManager} from './manager';
 export {TurnstileDevToolsError} from './types';
-export {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './util';
+export {fetchTurnstileTokenIfEnabled, isTurnstileDevToolsError, turnstileHeaders} from './util';
