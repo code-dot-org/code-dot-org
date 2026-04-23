@@ -1,0 +1,20 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_projects
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY (id)
+  AUTO REFRESH NO
+AS SELECT
+  id,
+  storage_id,
+  value,
+  updated_at,
+  updated_ip,
+  state,
+  created_at,
+  abuse_score,
+  project_type,
+  published_at,
+  standalone,
+  remix_parent_id,
+  skip_content_moderation,
+  uuid
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.projects;

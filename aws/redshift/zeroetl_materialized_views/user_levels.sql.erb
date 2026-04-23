@@ -1,0 +1,20 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_user_levels
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY (id)
+  AUTO REFRESH NO
+AS SELECT
+  id,
+  user_id,
+  level_id,
+  attempts,
+  created_at,
+  updated_at,
+  best_result,
+  script_id,
+  level_source_id,
+  submitted,
+  readonly_answers,
+  time_spent,
+  deleted_at,
+  unit_group_id
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.user_levels;

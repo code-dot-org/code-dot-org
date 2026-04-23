@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_level_sources
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY (id)
+  AUTO REFRESH NO
+AS SELECT
+  id,
+  level_id,
+  md5,
+  data,
+  created_at,
+  updated_at,
+  hidden
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.level_sources;
