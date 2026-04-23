@@ -95,12 +95,21 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     return null;
   }
 
+  const isFlaggedInTeacherView = teacherFlagged && isTeacherView;
+
   return (
     <ChatMessage
       text={displayText}
       postText={postText}
       role={role}
       messageStyle={getMessageStyle(status, role, teacherFlagged)}
+      customStyles={
+        isFlaggedInTeacherView
+          ? {
+              [`message-${role}`]: styles.teacherFlaggedMessage,
+            }
+          : undefined
+      }
       header={
         <MessageHeader
           isAssistant={isAssistant}
@@ -108,6 +117,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
           buildAssetUrl={buildAssetUrl}
           userAddedSelectionContext={userAddedSelectionContext}
           teacherFlaggedHidden={teacherFlaggedHidden}
+          isFlaggedInTeacherView={isFlaggedInTeacherView}
         />
       }
       footer={
@@ -175,6 +185,7 @@ interface MessageHeaderProps {
   buildAssetUrl: ((asset: ChatAsset) => string) | undefined;
   userAddedSelectionContext: UserAddedSelectionContextItem[] | undefined;
   teacherFlaggedHidden: boolean;
+  isFlaggedInTeacherView: boolean;
 }
 
 const MessageHeader: React.FC<MessageHeaderProps> = ({
@@ -183,6 +194,7 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
   buildAssetUrl,
   userAddedSelectionContext,
   teacherFlaggedHidden,
+  isFlaggedInTeacherView,
 }) => {
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
@@ -213,7 +225,8 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
                   alt=""
                   className={classNames(
                     styles.imagePreview,
-                    isAssistant && styles.assistant
+                    isAssistant && styles.assistant,
+                    isFlaggedInTeacherView && styles.flaggedImagePreview
                   )}
                   src={url}
                 />
