@@ -35,7 +35,7 @@ interface ChatMessageViewProps {
   clientType?: string;
   modelParameters?: ModelParameters;
   postText?: React.ReactNode;
-  teacherFlaggedHidden: boolean;
+  teacherFlagged: boolean;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
@@ -45,9 +45,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   clientType,
   modelParameters,
   postText,
-  teacherFlaggedHidden,
+  teacherFlagged,
 }) => {
   const user = useAppSelector(state => state.currentUser);
+  const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
 
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
@@ -99,7 +100,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       text={displayText}
       postText={postText}
       role={role}
-      messageStyle={getMessageStyle(status, role, teacherFlaggedHidden)}
+      messageStyle={getMessageStyle(status, role, teacherFlagged)}
       header={
         <MessageHeader
           isAssistant={isAssistant}
