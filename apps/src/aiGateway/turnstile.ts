@@ -223,7 +223,7 @@ export class TurnstileManager {
           'scripts that trigger a debugger statement — if breakpoints are ' +
           'active for these, the challenge cannot complete.'
       );
-      console.group('How to fix the Turnstile / DevTools conflict');
+      console.groupCollapsed('How to fix the Turnstile / DevTools conflict');
       console.log('Option 1: Close DevTools entirely and reload the page.');
       console.log(
         'Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.'
