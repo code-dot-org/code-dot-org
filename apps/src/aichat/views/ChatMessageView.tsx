@@ -48,7 +48,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   teacherFlagged,
 }) => {
   const user = useAppSelector(state => state.currentUser);
-  const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
+  const isTeacherFlaggedHidden = teacherFlagged && !isTeacherView;
 
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
@@ -74,7 +74,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     role,
     intendedDisplayText,
     showProfaneUserMessage,
-    teacherFlaggedHidden
+    isTeacherFlaggedHidden
   );
 
   // If the chat message's display text is what is displayed (i.e. no error or violation)
@@ -116,7 +116,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
           assets={assets}
           buildAssetUrl={buildAssetUrl}
           userAddedSelectionContext={userAddedSelectionContext}
-          teacherFlaggedHidden={teacherFlaggedHidden}
+          teacherFlaggedHidden={isTeacherFlaggedHidden}
           isFlaggedInTeacherView={isFlaggedInTeacherView}
         />
       }
@@ -226,7 +226,7 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
                   className={classNames(
                     styles.imagePreview,
                     isAssistant && styles.assistant,
-                    isFlaggedInTeacherView && styles.flaggedImagePreview
+                    isFlaggedInTeacherView && styles.teacherFlaggedImagePreview
                   )}
                   src={url}
                 />
