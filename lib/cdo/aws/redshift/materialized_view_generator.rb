@@ -121,7 +121,7 @@ module Cdo
               DISTSTYLE KEY DISTKEY (#{distkey_column})
               AUTO REFRESH NO
             AS SELECT
-              #{columns.join(',\n' + SQL_INDENT)}
+              #{columns.join(",\n" + SQL_INDENT)}
             FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
           SQL
         end
