@@ -24,9 +24,18 @@ module Cdo
       # How long (seconds) each desktop test grid session URL remains valid.
       SESSION_EXPIRY_SECONDS = 600 # 10 minutes
 
-      # Polling parameters for mobile session provisioning.
-      MOBILE_SESSION_TIMEOUT = 600 # 10 minutes -- time for device to boot
-      MOBILE_CONCURRENCY_TIMEOUT = 600 # 10 minutes -- time waiting for a free slot
+      # Polling parameters for mobile session provisioning. The three timeouts
+      # correspond to the three gating statuses AWS walks a session through:
+      #   PENDING_CONCURRENCY -- waiting on a free concurrency slot (quota)
+      #   PENDING_DEVICE      -- slot acquired, waiting for a free device
+      #   PREPARING (and any  -- device found, booting / installing
+      #   other intermediate
+      #   non-terminal state)
+      # Isolating PENDING_DEVICE lets us tune the PREPARING timeout to actual
+      # device boot time rather than absorbing queue-wait time.
+      MOBILE_CONCURRENCY_TIMEOUT = 600 # 10 minutes -- time waiting for a slot
+      MOBILE_PENDING_DEVICE_TIMEOUT = 300 # 5 minutes -- time waiting for a device
+      MOBILE_PREPARING_TIMEOUT = 600 # 10 minutes -- time for device to boot
       MOBILE_SESSION_POLL_INTERVAL = 10 # seconds
 
       # Retry budget for the WebDriver connect (not the session provisioning)
@@ -144,17 +153,14 @@ module Cdo
 
       # Polls until the remote access session is RUNNING and returns its
       # WebDriver endpoint URL. Raises on timeout or unexpected terminal state.
-      #
-      # Two separate timeout windows:
-      #   MOBILE_CONCURRENCY_TIMEOUT -- how long to wait for a device slot
-      #     (PENDING_CONCURRENCY). Another session may be finishing up.
-      #   MOBILE_SESSION_TIMEOUT -- how long to wait for the device to boot
-      #     once a slot is acquired.
+      # Each gating status has its own deadline so we can tell from a timeout
+      # message which phase ran long.
       TERMINAL_STATUSES = %w[COMPLETED STOPPING STOPPED].freeze
 
       def self.wait_for_mobile_session_endpoint(session_arn)
         concurrency_deadline = Time.now + MOBILE_CONCURRENCY_TIMEOUT
-        boot_deadline = nil # set once we leave PENDING_CONCURRENCY
+        pending_device_deadline = nil # set on first PENDING_DEVICE observation
+        preparing_deadline = nil # set on first PREPARING / other intermediate
         last_status = nil
 
         loop do
@@ -180,16 +186,24 @@ module Cdo
                   "status=#{session.status}, result=#{session.result}, message=#{session.message}"
           end
 
-          if session.status == 'PENDING_CONCURRENCY'
+          case session.status
+          when 'PENDING_CONCURRENCY'
             if Time.now > concurrency_deadline
-              raise "Timed out after #{MOBILE_CONCURRENCY_TIMEOUT}s waiting for a free device slot " \
+              raise "Timed out after #{MOBILE_CONCURRENCY_TIMEOUT}s waiting for a free concurrency slot " \
                     "(PENDING_CONCURRENCY) for session #{session_arn}"
             end
+          when 'PENDING_DEVICE'
+            pending_device_deadline ||= Time.now + MOBILE_PENDING_DEVICE_TIMEOUT
+            if Time.now > pending_device_deadline
+              raise "Timed out after #{MOBILE_PENDING_DEVICE_TIMEOUT}s waiting for a free device " \
+                    "(PENDING_DEVICE) for session #{session_arn}"
+            end
           else
-            # We have a slot; start the boot timer on first non-concurrency status.
-            boot_deadline ||= Time.now + MOBILE_SESSION_TIMEOUT
-            if Time.now > boot_deadline
-              raise "Timed out after #{MOBILE_SESSION_TIMEOUT}s waiting for device to boot " \
+            # PREPARING and any other intermediate status. First observation
+            # of such a status starts the preparing (boot) timer.
+            preparing_deadline ||= Time.now + MOBILE_PREPARING_TIMEOUT
+            if Time.now > preparing_deadline
+              raise "Timed out after #{MOBILE_PREPARING_TIMEOUT}s waiting for device to boot " \
                     "for session #{session_arn} (last status: #{session.status})"
             end
           end
