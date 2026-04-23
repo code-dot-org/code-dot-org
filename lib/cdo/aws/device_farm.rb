@@ -53,7 +53,7 @@ module Cdo
       # Device Farm also rejects `appium:orientation` as a session capability
       # (reserved), so we strip it from caps and apply it after session-start
       # via the WebDriver /orientation endpoint.
-      INTERNAL_KEYS = %w[name mobile device_arn appium:orientation].freeze
+      INTERNAL_KEYS = %w[name mobile device_arns appium:orientation].freeze
 
       # ---- Desktop (TestGrid) -------------------------------------------------
 
@@ -78,22 +78,28 @@ module Cdo
 
       # ---- Mobile (Remote Access Session) -------------------------------------
 
-      # Provisions a real device, waits for it to be ready, and returns the
-      # Appium WebDriver endpoint URL plus the session ARN (for later logging).
+      # Provisions a real device from a candidate list, waits for it to be
+      # ready, and returns the Appium WebDriver endpoint URL plus the session
+      # ARN (for later logging). AWS doesn't accept a device pool on
+      # create_remote_access_session (pools are a create_run concept), so the
+      # caller passes the candidate ARNs directly from configuration. We
+      # query AWS for each device's current availability and pick from the
+      # healthiest tier to avoid queueing behind a BUSY device.
       #
-      # @param device_arn [String] ARN of the device to provision, from browsers_device_farm.json.
-      #   These ARNs correspond to devices in the project's static device pool
-      #   and should be updated if the pool changes.
-      #   TODO: if these devices fall behind, update the pool + JSON to newer models.
+      # @param device_arns [Array<String>] candidate device ARNs. One is
+      #   picked client-side based on current availability.
       # @return [Hash] { url: String, session_arn: String }
-      def self.create_mobile_session(device_arn:)
+      def self.create_mobile_session(device_arns:)
+        raise "Device Farm: no candidate device ARNs provided" if device_arns.blank?
         project_arn = project_arn_for(mobile: true)
-
-        puts "Device Farm: provisioning device #{device_arn} ..."
+        devices = lookup_devices(device_arns)
+        device = pick_best_device(devices)
+        puts "Device Farm: provisioning device #{device.arn} (#{device.availability}) " \
+             "from #{device_arns.size} candidate(s)..."
 
         resp = client.create_remote_access_session(
           project_arn: project_arn,
-          device_arn: device_arn,
+          device_arn: device.arn,
           name: "ui-test-#{Time.now.to_i}"
         )
         session_arn = resp.remote_access_session.arn
@@ -137,6 +143,40 @@ module Cdo
       end
 
       # ---- Private helpers ----------------------------------------------------
+
+      # Fetches Device objects for the given ARNs so we can inspect current
+      # availability. Uses get_device per ARN rather than list_devices with
+      # an ARN-IN filter; list_devices silently returned empty results for
+      # some iPad ARNs despite those ARNs being valid and visible in the
+      # console (suspected fleet-scope / pagination nuance). Per-ARN
+      # lookups are ~3 API calls per session but give explicit per-ARN
+      # errors on mismatch.
+      def self.lookup_devices(device_arns)
+        device_arns.filter_map do |arn|
+          client.get_device(arn: arn).device
+        rescue ::Aws::DeviceFarm::Errors::NotFoundException => exception
+          puts "Device Farm: skipping unresolved device #{arn}: #{exception.message}"
+          nil
+        end
+      end
+
+      # Availability tiers AWS reports for each device, in descending order
+      # of desirability. TEMPORARY_NOT_AVAILABLE is excluded entirely -- the
+      # device is out of service and requesting it wastes time.
+      AVAILABILITY_PREFERENCE = %w[HIGHLY_AVAILABLE AVAILABLE BUSY].freeze
+
+      # Groups candidate devices by availability, picks the best-tier group,
+      # and samples within it at random to spread load across equal-priority
+      # devices. Raises if no device is in any usable tier.
+      def self.pick_best_device(devices)
+        by_tier = devices.group_by(&:availability)
+        AVAILABILITY_PREFERENCE.each do |tier|
+          candidates = by_tier[tier]
+          return candidates.sample if candidates&.any?
+        end
+        raise "Device Farm: no usable device among candidates " \
+              "(availabilities: #{by_tier.keys.sort})"
+      end
 
       # Returns the appropriate project ARN and raises if blank.
       def self.project_arn_for(mobile: false)
@@ -220,7 +260,8 @@ module Cdo
         @client ||= ::Aws::DeviceFarm::Client.new(region: REGION)
       end
 
-      private_class_method :project_arn_for, :wait_for_mobile_session_endpoint, :client
+      private_class_method :lookup_devices, :pick_best_device, :project_arn_for,
+        :wait_for_mobile_session_endpoint, :client
     end
   end
 end

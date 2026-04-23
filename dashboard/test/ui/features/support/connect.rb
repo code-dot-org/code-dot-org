@@ -104,7 +104,7 @@ end
 # (the Appium endpoint may return 400 briefly after status becomes RUNNING).
 def device_farm_mobile_browser(http_client: nil)
   session = Cdo::AWS::DeviceFarm.create_mobile_session(
-    device_arn: $device_farm_browser_config['device_arn']
+    device_arns: $device_farm_browser_config['device_arns']
   )
   $device_farm_mobile_session_arn = session[:session_arn]
 

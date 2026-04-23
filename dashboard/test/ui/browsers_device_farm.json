@@ -1,8 +1,10 @@
 /* AWS Device Farm browser configurations.
    - Desktop entries use a Desktop Browser Testing (TestGrid) project.
-   - Mobile entries use a standard Device Farm project with real devices, and
-   "device_arn" selects the exact device from the fleet. The runner routes
-   each entry to the correct project ARN based on the "mobile" flag. */
+   - Mobile entries use a standard Device Farm project; "device_arns" is the
+   set of physical devices to pick from at provisioning time (one chosen at
+   random among the healthiest availability tier). Update this list when the
+   pool composition changes in the AWS console. The runner routes each entry
+   to the correct project ARN based on the "mobile" flag. */
 
 [
   {
@@ -18,7 +20,11 @@
   {
     "name": "iPhone",
     "mobile": true,
-    "device_arn": "arn:aws:devicefarm:us-west-2::device:EEED8AB9E08F4B6C862F982EDA0A0C34",
+    "device_arns": [
+      "arn:aws:devicefarm:us-west-2::device:EEED8AB9E08F4B6C862F982EDA0A0C34",
+      "arn:aws:devicefarm:us-west-2::device:3D8FC46FCD034EF8B617E538C1651422",
+      "arn:aws:devicefarm:us-west-2::device:C3481B68E9EA4202BBF6F9D215E9AE5F"
+    ],
     "platformName": "iOS",
     "browserName": "Safari",
     "appium:orientation": "LANDSCAPE",
@@ -28,7 +34,11 @@
   {
     "name": "iPad",
     "mobile": true,
-    "device_arn": "arn:aws:devicefarm:us-west-2::device:0A5D934CFF7E4B5BB2612E922588C354",
+    "device_arns": [
+      "arn:aws:devicefarm:us-west-2::device:30FFDD10560948EABAF2288A9BF0397C",
+      "arn:aws:devicefarm:us-west-2::device:F30C04464C40471CA1DD9C66B12F837F",
+      "arn:aws:devicefarm:us-west-2::device:DA4173B905884C2DA13C0D88ED325F8C"
+    ],
     "platformName": "iOS",
     "browserName": "Safari",
     "appium:orientation": "LANDSCAPE",
