@@ -109,8 +109,8 @@ export default function ReactFlowCanvas({
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardEdgeCreation({
-      nodes: nodes as SketchlabReactFlowNode[],
-      edges: edges as SketchlabReactFlowEdge[],
+      nodes: nodes,
+      edges: edges,
       tabOrder,
       focusEntry,
       setNodes,
@@ -241,14 +241,7 @@ export default function ReactFlowCanvas({
         if (!source || !target) {
           return currentEdges;
         }
-        if (
-          !canCreateConnection(
-            source,
-            target,
-            nodes as SketchlabReactFlowNode[],
-            currentEdges
-          )
-        ) {
+        if (!canCreateConnection(source, target, nodes, currentEdges)) {
           return currentEdges;
         }
 
@@ -266,12 +259,7 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
-      return canCreateConnection(
-        source,
-        target,
-        nodes as SketchlabReactFlowNode[],
-        edges as SketchlabReactFlowEdge[]
-      );
+      return canCreateConnection(source, target, nodes, edges);
     },
     [edges, nodes]
   );
