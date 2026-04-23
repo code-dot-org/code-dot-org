@@ -70,7 +70,7 @@ export const AiTutorContainer: FC<{
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
-  const {disabled, disabledMessage} = useAiChatDisabledState({
+  const {disabled, disabledMessage, disabledLink} = useAiChatDisabledState({
     appName: labState.appType,
   });
 
@@ -185,6 +185,7 @@ export const AiTutorContainer: FC<{
           channelId={lab?.channel}
           disabled={disabled}
           disabledMessage={disabledMessage}
+          disabledLink={disabledLink}
         />
       </div>
       <div

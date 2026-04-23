@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import type {LinkProps} from '@code-dot-org/component-library/link';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
@@ -25,6 +26,7 @@ interface ChatEventsListProps {
   hasInstructionsDrawer?: boolean;
   chatDisabled?: boolean;
   chatDisabledMessage?: string;
+  chatDisabledLink?: LinkProps;
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
@@ -42,6 +44,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   hasInstructionsDrawer,
   chatDisabled,
   chatDisabledMessage,
+  chatDisabledLink,
   renderLastMessagePostText,
 }) => {
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -209,7 +212,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled && !(isTeacherView && hasChatHistory) ? (
-          <ChatDisabled message={chatDisabledMessage} />
+          <ChatDisabled message={chatDisabledMessage} link={chatDisabledLink} />
         ) : (
           <>
             {hasInstructionsDrawer && (

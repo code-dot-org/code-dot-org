@@ -1,5 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import type {LinkProps} from '@code-dot-org/component-library/link';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
 import React, {
@@ -78,6 +79,7 @@ interface ChatWorkspaceProps {
   lessonId?: number;
   disabled?: boolean;
   disabledMessage?: string;
+  disabledLink?: LinkProps;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -106,6 +108,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       lessonId,
       disabled = false,
       disabledMessage,
+      disabledLink,
       renderLastMessagePostText,
     },
     ref
@@ -301,6 +304,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             buildAssetUrl={buildAssetUrlValue}
             chatDisabled={disabled}
             chatDisabledMessage={disabledMessage}
+            chatDisabledLink={disabledLink}
           />
         ),
         iconLeft: iconValue,
@@ -314,6 +318,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             buildAssetUrl={buildAssetUrlValue}
             chatDisabled={disabled}
             chatDisabledMessage={disabledMessage}
+            chatDisabledLink={disabledLink}
           />
         ),
       },
@@ -385,6 +390,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             hasInstructionsDrawer={hasInstructionsDrawer}
             chatDisabled={disabled}
             chatDisabledMessage={disabledMessage}
+            chatDisabledLink={disabledLink}
             renderLastMessagePostText={renderLastMessagePostText}
           />
         )}
@@ -417,6 +423,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           <Alert
             type={alertTypes.info}
             text={disabledMessage || ''}
+            link={disabledLink}
             icon={{
               className: moduleStyles.chatDisabledAlertIcon,
               iconName: 'ai-locked',
