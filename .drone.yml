@@ -49,6 +49,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
+      # TODO: restore to cache-staging-ci-build.tar.gz
       filename: cache-staging-ci-build-external-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
@@ -96,7 +97,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:mysqlless
+    image: codedotorg/cdo-ci:1.20
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -171,6 +172,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
+      # TODO: restore to cache-staging-ci-build.tar.gz
       filename: cache-staging-ci-build-external-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
@@ -219,7 +221,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:mysqlless
+    image: codedotorg/cdo-ci:1.20
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -304,7 +306,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:mysqlless
+    image: codedotorg/cdo-ci:1.20
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -324,6 +326,7 @@ steps:
   - name: cache-staging-ci-build
     image: plugins/s3-cache
     settings:
+      # TODO: restore to cache-staging-ci-build.tar.gz
       filename: cache-staging-ci-build-external-mysql.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
@@ -341,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 7f7d765dac688ed86e9c6d1bcf9e0639620699590399ba15b2e6a254f7b09c52
+hmac: d03bfebccbcc19daf81c38f15fc9b51cfdc7118763451e4a2cc47c2c0bcbb903
 
 ...
