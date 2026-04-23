@@ -3,12 +3,11 @@ import {
   Experimental_TranscriptionResult as TranscriptionResult,
 } from 'ai';
 
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {TurnstileManager} from './turnstile';
+import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -23,9 +22,7 @@ async function transcribeThroughGateway(
 
     const [token, turnstileToken] = await Promise.all([
       fetchAccessToken(),
-      experiments.isEnabledAllowingQueryString('useTurnstile')
-        ? TurnstileManager.getInstance().getTurnstileToken()
-        : Promise.resolve(null),
+      fetchTurnstileTokenIfEnabled(),
     ]);
 
     const formData = new FormData();
@@ -38,14 +35,11 @@ async function transcribeThroughGateway(
       formData.append(key, String(value));
     }
 
-    const headers: Record<string, string> = {};
-    if (turnstileToken) headers['X-Turnstile-Token'] = turnstileToken;
-
     const response = await HttpClient.post(
       `${AI_GATEWAY_URL}/transcribe`,
       formData,
       false,
-      headers
+      turnstileHeaders(turnstileToken)
     );
 
     return await response.json();
