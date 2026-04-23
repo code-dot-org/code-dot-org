@@ -1,4 +1,4 @@
-import {addEdge, MarkerType} from '@xyflow/react';
+import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
@@ -77,6 +77,10 @@ export function useKeyboardEdgeCreation({
   setEdges,
   readOnly,
 }: UseKeyboardEdgeCreationOptions) {
+  const {getEdge, getNode} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
   const KEYBOARD_MOVE_STEP = 10;
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
@@ -160,7 +164,7 @@ export function useKeyboardEdgeCreation({
         if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
 
         if (deltaX || deltaY) {
-          const focusedEdge = edges.find(edge => edge.id === focusedEdgeId);
+          const focusedEdge = getEdge(focusedEdgeId);
           if (
             focusedEdge &&
             isLineAnchorNodeId(focusedEdge.source, nodes) &&
@@ -201,7 +205,7 @@ export function useKeyboardEdgeCreation({
         }
         if (focusedNodeId) {
           event.preventDefault();
-          const node = nodes.find(candidate => candidate.id === focusedNodeId);
+          const node = getNode(focusedNodeId);
           setConnectingFrom(focusedNodeId);
           announce(
             `Connect mode: ${
@@ -260,8 +264,8 @@ export function useKeyboardEdgeCreation({
         if (focusedNodeId && focusedNodeId !== connectingFrom) {
           event.preventDefault();
           event.stopPropagation();
-          const sourceNode = nodes.find(node => node.id === connectingFrom);
-          const targetNode = nodes.find(node => node.id === focusedNodeId);
+          const sourceNode = getNode(connectingFrom);
+          const targetNode = getNode(focusedNodeId);
           if (sourceNode && targetNode) {
             const handles = pickHandles(sourceNode, targetNode);
             const connectionRejected = !canCreateConnection(
@@ -336,6 +340,8 @@ export function useKeyboardEdgeCreation({
       connectingFrom,
       edges,
       focusEntry,
+      getEdge,
+      getNode,
       nodes,
       readOnly,
       setEdges,

@@ -1,3 +1,4 @@
+import {useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
@@ -16,7 +17,6 @@ interface DragState {
 }
 
 interface UseLineEdgeDragOptions {
-  nodes: SketchlabReactFlowNode[];
   readOnly: boolean;
   setNodes: (
     updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
@@ -25,11 +25,14 @@ interface UseLineEdgeDragOptions {
 }
 
 export function useLineEdgeDrag({
-  nodes,
   readOnly,
   setNodes,
   screenToFlowPosition,
 }: UseLineEdgeDragOptions) {
+  const {getNode} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
   const draggingLineEdgeRef = useRef<DragState | null>(null);
 
   const handleLineEdgeMouseMove = useCallback(
@@ -85,8 +88,8 @@ export function useLineEdgeDrag({
         return;
       }
 
-      const sourceNode = nodes.find(node => node.id === edge.source);
-      const targetNode = nodes.find(node => node.id === edge.target);
+      const sourceNode = getNode(edge.source);
+      const targetNode = getNode(edge.target);
       const isLineEdge =
         sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
       if (!sourceNode || !targetNode || !isLineEdge) {
@@ -112,7 +115,7 @@ export function useLineEdgeDrag({
     },
     [
       readOnly,
-      nodes,
+      getNode,
       screenToFlowPosition,
       handleLineEdgeMouseMove,
       stopLineEdgeDrag,

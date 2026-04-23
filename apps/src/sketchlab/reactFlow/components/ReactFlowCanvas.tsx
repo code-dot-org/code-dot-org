@@ -117,7 +117,6 @@ export default function ReactFlowCanvas({
     });
 
   const {handleEdgeMouseDown} = useLineEdgeDrag({
-    nodes: nodes as SketchlabReactFlowNode[],
     readOnly,
     setNodes,
     screenToFlowPosition,
