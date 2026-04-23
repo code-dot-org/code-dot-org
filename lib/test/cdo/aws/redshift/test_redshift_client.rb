@@ -181,6 +181,65 @@ class TestRedshiftClient < Minitest::Test
     assert_includes error.message, 'SQL: BAD SQL'
   end
 
+  def test_batch_execute_async_returns_id
+    mock_resp = mock
+    mock_resp.stubs(:id).returns('batch-123')
+
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(mock_resp)
+
+    id = @redshift.batch_execute_async(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
+    assert_equal 'batch-123', id
+  end
+
+  def test_batch_execute_synchronous_success
+    batch_resp = mock
+    batch_resp.stubs(:id).returns('batch-sync-123')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(batch_resp)
+
+    desc_finished = mock
+    desc_finished.stubs(:status).returns('FINISHED')
+
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+      with(id: 'batch-sync-123').
+      returns(desc_finished)
+
+    status = @redshift.batch_execute(['SELECT 1', 'SELECT 2'])
+    assert_equal 'FINISHED', status
+  end
+
+  def test_batch_execute_raises_on_sub_statement_failure
+    batch_resp = mock
+    batch_resp.stubs(:id).returns('batch-fail-123')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(batch_resp)
+
+    sub1 = mock
+    sub1.stubs(:status).returns('FINISHED')
+    sub1.stubs(:error).returns(nil)
+    sub1.stubs(:query_string).returns('DROP MATERIALIZED VIEW IF EXISTS s.v')
+
+    sub2 = mock
+    sub2.stubs(:status).returns('FAILED')
+    sub2.stubs(:error).returns('permission denied for schema s')
+    sub2.stubs(:query_string).returns('CREATE MATERIALIZED VIEW s.v AS SELECT 1')
+
+    desc_failed = mock
+    desc_failed.stubs(:status).returns('FAILED')
+    desc_failed.stubs(:error).returns('')
+    desc_failed.stubs(:query_string).returns('')
+    desc_failed.stubs(:sub_statements).returns([sub1, sub2])
+
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+      with(id: 'batch-fail-123').
+      twice.
+      returns(desc_failed, desc_failed)
+
+    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
+      @redshift.batch_execute(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
+    end
+    assert_includes error.message, 'Sub-statement 2 FAILED'
+    assert_includes error.message, 'permission denied for schema s'
+  end
+
   def test_execute_failure_includes_sub_statement_errors
     exec_resp = mock
     exec_resp.stubs(:id).returns('multi-fail-123')

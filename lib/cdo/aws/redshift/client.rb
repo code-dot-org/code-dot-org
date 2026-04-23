@@ -40,6 +40,31 @@ module Cdo
           resp.id
         end
 
+        # SYNCHRONOUS: Executes multiple SQL statements serially. Blocks until all are FINISHED or one FAILS.
+        # TODO: Does not return result sets. To support queries that return results, fetch_results would need to
+        # iterate describe_statement sub_statements and call get_statement_result on each sub-statement ID.
+        # @param sqls [Array<String>] SQL statements to execute in order.
+        # @param timeout [Integer] Maximum time to wait in seconds. Defaults to 5 minutes.
+        def batch_execute(sqls, timeout: 5.minutes.to_i)
+          statement_id = batch_execute_async(sqls)
+          wait_for_completion(statement_id, timeout: timeout)
+        end
+
+        # ASYNCHRONOUS: Submits multiple SQL statements for serial execution and returns the statement ID immediately.
+        # @param sqls [Array<String>] SQL statements to execute in order.
+        # @return [String] Statement ID.
+        def batch_execute_async(sqls)
+          CDO.log.info "[Redshift] Submitting batch of #{sqls.length} SQL statements:\n#{sqls.map.with_index(1) {|s, i| "  [#{i}] #{s}"}.join("\n")}"
+          resp = @client.batch_execute_statement(
+            cluster_identifier: @cluster_id,
+            database: @database,
+            db_user: @db_user,
+            sqls: sqls
+          )
+          CDO.log.info "[Redshift] Batch statement submitted: #{resp.id}"
+          resp.id
+        end
+
         # Helper: Checks the status of an asynchronous statement.
         # @param statement_id [String] Identifier for the SQL statement to check.
         # @return [String] Current status of statement execution (`ABORTED`, `SUBMITTED`, `FINISHED`, etc.).
