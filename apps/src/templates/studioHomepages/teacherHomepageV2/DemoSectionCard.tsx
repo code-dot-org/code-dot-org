@@ -29,6 +29,7 @@ import DemoSectionOptionsDropdown from './DemoSectionOptionsDropdown';
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
+import {CERTIFICATE_URL} from './SectionOptionsDropdown';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';
@@ -56,7 +57,7 @@ const DEMO_MENU_ACTION_PATHS: Record<DemoMenuAction, string> = {
   settings: TEACHER_NAVIGATION_PATHS.settings,
   roster: TEACHER_NAVIGATION_PATHS.roster,
   loginCards: TEACHER_NAVIGATION_PATHS.loginInfo,
-  certificates: '/certificates/batch',
+  certificates: CERTIFICATE_URL,
 };
 
 const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
@@ -89,6 +90,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
   const [pendingPath, setPendingPath] = React.useState<string | null>(null);
   const [notice, setNotice] = React.useState<Notice | null>(null);
+  const pendingActionRef = React.useRef<string | null>(null);
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
   );
@@ -162,10 +164,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       pendingKey: string;
       navigateToPath?: boolean;
     }) => {
-      if (pendingPath) {
-        throw new Error('Demo section creation already in progress');
+      if (pendingActionRef.current) {
+        return;
       }
 
+      pendingActionRef.current = pendingKey;
       setPendingPath(pendingKey);
       setNotice(null);
       analyticsReporter.sendEvent(eventName, {});
@@ -173,7 +176,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       try {
         const section = await dispatch(createDemoSection(demoType as DemoType));
         if (!section) {
-          throw new Error('Failed to create demo section');
+          return;
         }
 
         if (navigateToPath) {
@@ -200,10 +203,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         }
         throw error;
       } finally {
+        pendingActionRef.current = null;
         setPendingPath(null);
       }
     },
-    [demoType, dispatch, pendingPath]
+    [demoType, dispatch]
   );
 
   const handleActionClick = async (

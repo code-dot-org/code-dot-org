@@ -15,9 +15,9 @@ import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import styles from './teacherHomepage.module.scss';
+import {CERTIFICATE_URL} from './SectionOptionsDropdown';
 
-const CERTIFICATE_URL = '/certificates/batch';
+import styles from './teacherHomepage.module.scss';
 
 type DemoMenuAction = 'settings' | 'roster' | 'loginCards' | 'certificates';
 
@@ -27,7 +27,7 @@ interface DemoSectionOptionsDropdownProps {
   resolveSectionForAction: (
     eventName: string,
     actionKey: DemoMenuAction
-  ) => Promise<Section>;
+  ) => Promise<Section | void>;
 }
 
 const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
@@ -74,7 +74,12 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           eventName,
           actionKey
         );
+        if (!resolvedSection) {
+          return;
+        }
         await callback(resolvedSection);
+      } catch {
+        // DemoSectionCard owns the notice banner for create failures.
       } finally {
         setPendingActionKey(null);
       }
@@ -82,21 +87,26 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
     [disabled, pendingActionKey, resolveSectionForAction]
   );
 
-  const onClickPrintCerts = React.useCallback((targetSection: Section) => {
-    HttpClient.fetchJson<Student[]>(
-      `/dashboardapi/sections/${targetSection.id}/students`
-    )
-      .then(result => result.value)
-      .then(value => {
-        const names = value.map((student: {name: string}) => student.name);
-        setStudentNames(names);
-        setCertificateCourse(targetSection.courseVersionName);
-        certFormRef.current?.submit();
-      })
-      .catch(error =>
-        console.error('Error retrieving student names for certificates', error)
-      );
-  }, []);
+  const onClickPrintCerts = React.useCallback(
+    async (targetSection: Section) => {
+      const result = await HttpClient.fetchJson<Student[]>(
+        `/dashboardapi/sections/${targetSection.id}/students`
+      ).catch(error => {
+        console.error('Error retrieving student names for certificates', error);
+        return null;
+      });
+
+      if (!result) {
+        return;
+      }
+
+      const names = result.value.map((student: {name: string}) => student.name);
+      setStudentNames(names);
+      setCertificateCourse(targetSection.courseVersionName);
+      certFormRef.current?.submit();
+    },
+    []
+  );
 
   const dropdownOptions = useMemo(
     () => [
