@@ -17,7 +17,7 @@ export enum ProductTour {
 export interface ProductTourConfig {
   name: ProductTour;
   displayName: string;
-  // Name for tour to be used in analytics (ex. Statsig)
+  // Name for tour to be used in analytics.
   metricName: string;
   // If the tour is enabled based on a level setting or not. If true, the tour will only be triggered
   // when the user first reaches a level with the tour enabled. If false, the tour will be triggered the first time
