@@ -55,7 +55,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         direction: isAssistant ? 'onRight' : 'onLeft',
         size: 'xs',
         text: teacherFlagged
-          ? 'You flagged this messge as inappropriate. It has been hidden from the student.'
+          ? 'You flagged this message. It has been hidden from the student.'
           : 'Flag message as inappropriate',
         className: moduleStyles.tooltip,
         iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
