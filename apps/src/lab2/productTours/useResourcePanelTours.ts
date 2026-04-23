@@ -4,9 +4,7 @@ import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
-  RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
   RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-  RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
   VALIDATION_TOUR_SEEN,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -15,8 +13,13 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {LevelProperties} from '../types';
 
+import {TriggerSource} from './constants';
 import {createOnboardingTourSteps} from './onboardingTourSteps';
-import {ProductTour, isTourEnabledOnLevel} from './productToursPerLab';
+import {
+  ProductTour,
+  ProductTourConfigurations,
+  isTourEnabledOnLevel,
+} from './productToursPerLab';
 import {createValidationTourSteps} from './validationTourSteps';
 
 interface UseResourcePanelToursParams {
@@ -25,16 +28,28 @@ interface UseResourcePanelToursParams {
 }
 
 const onTourStart = (flowName: string) => () =>
-  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {flowName});
+  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
+    flowName,
+    triggerSource: TriggerSource.Auto,
+  });
 
 const onTourComplete = (flowName: string) => () =>
-  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {flowName});
+  sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
+    flowName,
+    triggerSource: TriggerSource.Auto,
+  });
 
 const onTourCancel = (flowName: string) => (stepIndex: number) =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
     flowName,
     step: stepIndex.toString(),
+    triggerSource: TriggerSource.Auto,
   });
+
+const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
+  ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
+const RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME =
+  ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
 
 const useResourcePanelTours = ({
   levelProperties,

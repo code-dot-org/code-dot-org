@@ -17,6 +17,8 @@ export enum ProductTour {
 export interface ProductTourConfig {
   name: ProductTour;
   displayName: string;
+  // Name for tour to be used in analytics (ex. Statsig)
+  metricName: string;
   // If the tour is enabled based on a level setting or not. If true, the tour will only be triggered
   // when the user first reaches a level with the tour enabled. If false, the tour will be triggered the first time
   // the user reaches a lab that has that tour available.
@@ -30,32 +32,36 @@ export interface ProductTourConfig {
   shouldShowOnLevel?: (levelProperties: LevelProperties) => boolean;
 }
 
-const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
-  [ProductTour.ResourcePanelOnboarding]: {
-    name: ProductTour.ResourcePanelOnboarding,
-    displayName: 'Using the Resource Panel',
-    triggeredByLevel: true,
-    description:
-      'Gives users an overview of the different components of the resource panel, including the tabs, extra links and continue button.',
-    getSteps: createOnboardingTourSteps,
-  },
-  [ProductTour.ResourcePanelValidation]: {
-    name: ProductTour.ResourcePanelValidation,
-    displayName: 'Validating Your Work',
-    triggeredByLevel: true,
-    description:
-      'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
-    getSteps: createValidationTourSteps,
-    shouldShowOnLevel: levelProperties =>
-      (levelProperties.validations?.length ?? 0) > 0,
-  },
-  [ProductTour.SketchlabIntro]: {
-    name: ProductTour.SketchlabIntro,
-    displayName: 'Intro to Sketch Lab',
-    triggeredByLevel: false,
-    getSteps: createSketchlabTourSteps,
-  },
-};
+export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
+  {
+    [ProductTour.ResourcePanelOnboarding]: {
+      name: ProductTour.ResourcePanelOnboarding,
+      displayName: 'Using the Resource Panel',
+      metricName: 'Resource Panel Onboarding Tour',
+      triggeredByLevel: true,
+      description:
+        'Gives users an overview of the different components of the resource panel, including the tabs, extra links and continue button.',
+      getSteps: createOnboardingTourSteps,
+    },
+    [ProductTour.ResourcePanelValidation]: {
+      name: ProductTour.ResourcePanelValidation,
+      displayName: 'Validating Your Work',
+      metricName: 'Resource Panel Validation Tour',
+      triggeredByLevel: true,
+      description:
+        'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
+      getSteps: createValidationTourSteps,
+      shouldShowOnLevel: levelProperties =>
+        (levelProperties.validations?.length ?? 0) > 0,
+    },
+    [ProductTour.SketchlabIntro]: {
+      name: ProductTour.SketchlabIntro,
+      displayName: 'Intro to Sketch Lab',
+      metricName: 'Sketch Lab Onboarding V2',
+      triggeredByLevel: false,
+      getSteps: createSketchlabTourSteps,
+    },
+  };
 
 // Returns true if the given tour should be shown for the given level and lab.
 // Tours with triggeredByLevel=true require the tour to be available on the lab

@@ -3,14 +3,14 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  ProductTour,
+  ProductTourConfigurations,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {
-  RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
-  RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-  RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
-} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
@@ -34,6 +34,11 @@ const mockSendLab2AnalyticsEvent =
 const mockTryGetLocalStorage = tryGetLocalStorage as jest.MockedFunction<
   typeof tryGetLocalStorage
 >;
+
+const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
+  ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
+const RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME =
+  ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
 
 const defaultLevelProperties = {
   appName: 'pythonlab',
