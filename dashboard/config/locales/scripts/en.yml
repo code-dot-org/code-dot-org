@@ -26993,35 +26993,37 @@ en:
           name: ai-generated-design-2026
           title: AI-Generated Design
           description_audience: ''
-          description_short: ''
+          description_short: Students learn to think and work like designers, using AI as a creative and technical partner to plan, build, and refine a multi-page web app for a real user.
           description: |-
-            Students learn that effective digital experiences begin not with code, but with empathy for a user. They take on the roles of professional UX and UI designers, first defining a specific user's problem with a user persona and problem statement. They then plan a multi-page solution using a site map and wireframes. Students collaborate with an AI partner throughout this process, using it for ideation and content generation before directing it in Guide mode to build their app piece-by-piece. This unit establishes a design-first mindset, lays the groundwork for computational thinking, and introduces responsible AI collaboration.
+            In this unit, students learn to think and work like designers, using AI as a creative and technical partner to build a multi-page web app. Rather than starting with code, the unit starts with people: who uses digital products, what they need, and how intentional design decisions shape every interaction a user has with a website. Students move through the full design process, developing a brand identity, creating personas and problem statements, mapping site structure, wireframing pages, and generating HTML and CSS with AI tools, while examining how AI learns from existing design patterns and what that means for accessibility, representation, and who gets included or left out of the digital world. The unit culminates in a complete digital magazine: a portfolio-ready web app with a defined user, a consistent visual identity, and a design process students can speak to and reflect on.
 
             <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
 
-            - Define a problem from a specific user’s perspective.
-            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
-            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
-            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
-            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
-            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
-            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
-            - Explain the difference between HTML for structure and CSS for styling.
-            - Describe how design tasks relate to the professional roles of UX and UI designers.
+            - Explain how intentional design decisions shape user behavior and interaction in web apps.
+            - Apply human-centered design principles to identify user needs and define design problems.
+            - Use prompt engineering to generate and refine AI-produced HTML and CSS.
+            - Develop a brand identity, including a cohesive color palette, typography, and visual style.
+            - Create personas and problem statements that ground design decisions in a specific user's needs.
+            - Plan and communicate site structure using site maps and low-fidelity wireframes.
+            - Evaluate AI-generated designs for accessibility using the POUR framework.
+            - Test and refine layouts for responsiveness across different screen sizes and devices.
+            - Reflect critically on AI output, identifying when and how to redirect, correct, or override it.
+            - Design and build a complete multi-page web app that demonstrates design thinking, technical skill, and intentional decision-making for a defined user.
           student_description: |-
-            In this unit, you think like a real UX and UI designer by starting with a user, not with code. You create a persona, write a clear problem statement, and plan a multi-page web app using tools like site maps and wireframes. Throughout the process, you work with an AI partner to brainstorm ideas, generate content, and build your app piece by piece. You stay in control of the creative decisions while the AI supports your vision, giving you practice with empathy-driven design, computational thinking, and responsible AI collaboration.
+            Have you ever scrolled through a website and immediately felt something — a vibe, an energy, a sense that this was made for you? That feeling isn't an accident. Someone designed it that way. In this unit, you get to be that person. You'll learn how to think like a designer, use AI as your creative partner, and build a real multi-page web app from the ground up, starting with who your user is and ending with a finished digital magazine you can actually put in your portfolio. Along the way, you'll dig into how AI learns from existing designs, who gets included in those patterns, and how to push back when it gets things wrong. This is where design thinking meets real technology, and you're in charge.
 
             <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
 
-            - Define a problem from a specific user’s perspective.
-            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
-            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
-            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
-            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
-            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
-            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
-            - Explain the difference between HTML for structure and CSS for styling.
-            - Describe how design tasks relate to the professional roles of UX and UI designers.
+            - Explain how intentional design decisions shape user behavior and interaction in web apps.
+            - Apply human-centered design principles to identify user needs and define design problems.
+            - Use prompt engineering to generate and refine AI-produced HTML and CSS.
+            - Develop a brand identity, including a cohesive color palette, typography, and visual style.
+            - Create personas and problem statements that ground design decisions in a specific user's needs.
+            - Plan and communicate site structure using site maps and low-fidelity wireframes.
+            - Evaluate AI-generated designs for accessibility using the POUR framework.
+            - Test and refine layouts for responsiveness across different screen sizes and devices.
+            - Reflect critically on AI output, identifying when and how to redirect, correct, or override it.
+            - Design and build a complete multi-page web app that demonstrates design thinking, technical skill, and intentional decision-making for a defined user.
         self-paced-pl-thinkingcriticallywithai-unit1:
           lessons:
             lesson-1:
@@ -28394,3 +28396,60 @@ en:
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
+        self-paced-pl-intro-to-teaching-exploring-ai-computing-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-intro-to-teaching-exploring-ai-computing-2026
+          title: Getting Started Teaching Exploring AI & Computing
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-generated-design-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-generated-design-2026
+          title: Preparing to Teach AI Generated Design
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-and-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-and-algorithmic-decisions-2026
+          title: 'Preparing to Teach: AI and Algorithmic Decisions'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-data-driven-systems-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-data-driven-systems-2026
+          title: 'Preparing to Teach: Data-Driven Systems'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-iterating-with-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-iterating-with-ai-2026
+          title: 'Preparing to Teach: Iterating with AI'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026
+          title: 'Web Apps with AI Capstone Project: Professional Learning Module'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
