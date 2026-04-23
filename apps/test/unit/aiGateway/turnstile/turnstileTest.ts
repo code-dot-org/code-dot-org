@@ -1,10 +1,9 @@
-import experiments from '@cdo/apps/util/experiments';
-
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
   fetchTurnstileTokenIfEnabled,
   turnstileHeaders,
 } from '@cdo/apps/aiGateway/turnstile/util';
+import experiments from '@cdo/apps/util/experiments';
 
 // Reset the singleton between tests so each test starts clean.
 afterEach(() => {
@@ -43,9 +42,7 @@ describe('fetchTurnstileTokenIfEnabled', () => {
     // Provide a minimal DOM environment so the constructor can run.
     document.body.innerHTML = '';
     const mockToken = 'test-token';
-    const getTurnstileTokenMock = jest
-      .fn()
-      .mockResolvedValue(mockToken);
+    const getTurnstileTokenMock = jest.fn().mockResolvedValue(mockToken);
     const getInstanceSpy = jest
       .spyOn(TurnstileManager, 'getInstance')
       .mockReturnValue({
@@ -80,8 +77,6 @@ describe('TurnstileManager.getInstance', () => {
   it('does not create a second container on repeated calls', () => {
     TurnstileManager.getInstance();
     TurnstileManager.getInstance();
-    expect(
-      document.querySelectorAll('#turnstile-container').length
-    ).toBe(1);
+    expect(document.querySelectorAll('#turnstile-container').length).toBe(1);
   });
 });

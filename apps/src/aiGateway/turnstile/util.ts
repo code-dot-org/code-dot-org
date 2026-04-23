@@ -12,9 +12,7 @@ export function fetchTurnstileTokenIfEnabled(): Promise<string | null> {
 
 // Builds the X-Turnstile-Token header entry when a token is present.
 // Returns an empty object when token is null so callers can spread unconditionally.
-export function turnstileHeaders(
-  token: string | null
-): Record<string, string> {
+export function turnstileHeaders(token: string | null): Record<string, string> {
   return token ? {'X-Turnstile-Token': token} : {};
 }
 

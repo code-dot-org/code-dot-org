@@ -12,6 +12,7 @@ import {
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -41,8 +42,6 @@ import {
   UserAddedSelectionContextItem,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
-
-import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';

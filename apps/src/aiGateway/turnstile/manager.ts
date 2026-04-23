@@ -124,9 +124,9 @@ export class TurnstileManager {
       return token;
     } catch (err) {
       console.error(
-        `${LOG} getToken() failed after ${(
-          performance.now() - start
-        ).toFixed(0)}ms:`,
+        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(
+          0
+        )}ms:`,
         err
       );
       throw err;
