@@ -5,6 +5,7 @@ import {
   type EdgeMouseHandler,
   type IsValidConnection,
   MarkerType,
+  type NodeMouseHandler,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -316,6 +317,13 @@ export default function ReactFlowCanvas({
     [focusEntry]
   );
 
+  const handleNodeClick: NodeMouseHandler = useCallback(
+    (_event, node) => {
+      focusEntry({type: 'node', id: node.id});
+    },
+    [focusEntry]
+  );
+
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       const {type} = request;
@@ -438,6 +446,7 @@ export default function ReactFlowCanvas({
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onEdgesDelete={handleEdgesDelete}
+          onNodeClick={handleNodeClick}
           onEdgeClick={handleEdgeClick}
           onConnect={onConnect}
           isValidConnection={isValidConnection}
