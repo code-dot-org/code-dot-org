@@ -86,7 +86,7 @@ export default function ReactFlowCanvas({
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
 
-  const {screenToFlowPosition} = useReactFlow();
+  const {screenToFlowPosition, getNode} = useReactFlow();
   const addedNodeCountRef = useRef(0);
   const {
     tabOrder,
@@ -279,6 +279,33 @@ export default function ReactFlowCanvas({
     []
   );
 
+  const handleEdgesDelete = useCallback(
+    (deletedEdges: SketchlabReactFlowEdge[]) => {
+      setNodes(currentNodes => {
+        const lineAnchorIdsToDelete = new Set<string>();
+
+        deletedEdges.forEach(edge => {
+          const sourceNode = getNode(edge.source);
+          const targetNode = getNode(edge.target);
+          if (
+            sourceNode?.type === 'lineAnchor' &&
+            targetNode?.type === 'lineAnchor'
+          ) {
+            lineAnchorIdsToDelete.add(edge.source);
+            lineAnchorIdsToDelete.add(edge.target);
+          }
+        });
+
+        if (lineAnchorIdsToDelete.size === 0) {
+          return currentNodes;
+        }
+
+        return currentNodes.filter(node => !lineAnchorIdsToDelete.has(node.id));
+      });
+    },
+    [getNode, setNodes]
+  );
+
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       const {type} = request;
@@ -400,6 +427,7 @@ export default function ReactFlowCanvas({
           edges={displayEdges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onEdgesDelete={handleEdgesDelete}
           onConnect={onConnect}
           isValidConnection={isValidConnection}
           nodeTypes={NODE_TYPES}

@@ -1,10 +1,12 @@
 import {Handle, Position, useNodeConnections} from '@xyflow/react';
 import React, {memo} from 'react';
 
+import {LineAnchorNodeData} from '../types';
+
 import styles from './line-anchor-node.module.scss';
 
 interface LineAnchorNodeProps {
-  data: Record<string, string | number | boolean>;
+  data: LineAnchorNodeData;
 }
 
 function LineAnchorNode({data}: LineAnchorNodeProps) {
