@@ -283,6 +283,51 @@ module Cdo
           end
         end
 
+        describe '#refresh_views' do
+          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:client) {mock('redshift_client')}
+
+          it 'batch executes REFRESH for both PII and non-PII views' do
+            batch = nil
+            client.stubs(:batch_execute).with {|sqls| batch = sqls; true}
+
+            result = generator.refresh_views(client: client, environment_type: :production)
+
+            assert_equal 2, batch.length
+            assert_equal 'REFRESH MATERIALIZED VIEW dashboard_production_pii.zeroetl_users', batch[0]
+            assert_equal 'REFRESH MATERIALIZED VIEW dashboard_production.zeroetl_users', batch[1]
+            assert_equal ['dashboard_production_pii.zeroetl_users', 'dashboard_production.zeroetl_users'], result
+          end
+
+          it 'accepts symbol environment_type' do
+            batch = nil
+            client.stubs(:batch_execute).with {|sqls| batch = sqls; true}
+
+            result = generator.refresh_views(client: client, environment_type: :test)
+
+            assert_includes batch[0], 'dashboard_test_pii'
+            assert_equal 'dashboard_test_pii.zeroetl_users', result[0]
+          end
+
+          it 'returns empty array when model has no columns' do
+            model.stubs(:columns).returns([])
+            result = generator.refresh_views(client: client, environment_type: :production)
+            assert_empty result
+          end
+
+          it 'skips non-pii view when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            batch = nil
+            client.stubs(:batch_execute).with {|sqls| batch = sqls; true}
+
+            result = generator.refresh_views(client: client, environment_type: :production)
+
+            assert_equal 1, batch.length
+            assert_equal 'REFRESH MATERIALIZED VIEW dashboard_production_pii.zeroetl_users', batch[0]
+            assert_equal ['dashboard_production_pii.zeroetl_users'], result
+          end
+        end
+
         describe '#distkey_column (via generated DDL)' do
           it 'uses the first element of a composite primary key' do
             model.stubs(:primary_key).returns(%w[user_id activity_id])

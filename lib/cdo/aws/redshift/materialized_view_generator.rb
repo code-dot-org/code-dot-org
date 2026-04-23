@@ -78,8 +78,8 @@ module Cdo
 
           saved_files.each do |template_path|
             create_sql = self.class.render_ddl(template_path, environment_type: env)
-            schema = template_path.end_with?('_pii.sql.erb') ? "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii" : "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}"
-            fqn = "#{schema}.#{view_name}"
+            pii = template_path.end_with?('_pii.sql.erb')
+            fqn = fully_qualified_view_name(env, pii: pii)
             drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
 
             client.batch_execute([drop_sql, create_sql])
@@ -87,6 +87,19 @@ module Cdo
           end
 
           created
+        end
+
+        # Refreshes both PII and non-PII materialized views for this model.
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol] e.g., :production, :test
+        # @return [Array<String>] fully qualified names of views refreshed
+        def refresh_views(client:, environment_type:)
+          env = environment_type.to_s
+          fqns = view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
+          return fqns if fqns.empty?
+
+          client.batch_execute(fqns.map {|fqn| "REFRESH MATERIALIZED VIEW #{fqn}"})
+          fqns
         end
 
         # Renders a DDL ERB template file with the given environment type.
@@ -112,6 +125,20 @@ module Cdo
 
         private def view_name
           "zeroetl_#{model.table_name}"
+        end
+
+        private def fully_qualified_view_name(env, pii:)
+          schema = pii ? "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii" : "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}"
+          "#{schema}.#{view_name}"
+        end
+
+        # Returns which view variants exist for this model: [true] for PII-only,
+        # [true, false] for both PII and non-PII.
+        private def view_variants
+          variants = []
+          variants << true unless model.columns.empty?
+          variants << false unless non_pii_columns.empty?
+          variants
         end
 
         private def build_ddl_erb_template(schema:, columns:)
