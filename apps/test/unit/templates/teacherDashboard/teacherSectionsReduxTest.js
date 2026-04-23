@@ -484,7 +484,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -519,7 +518,6 @@ describe('teacherSectionsRedux', () => {
         unitId: unitId,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
   });
@@ -549,7 +547,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -613,7 +610,6 @@ describe('teacherSectionsRedux', () => {
           ltiRosterSyncEnabled: false,
         },
         syncEnabled: undefined,
-        aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
@@ -779,7 +775,6 @@ describe('teacherSectionsRedux', () => {
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
-      ai_tutor_enabled: false,
       at_risk_age_gated_date: undefined,
       at_risk_age_gated_us_state: undefined,
     };
@@ -973,7 +968,6 @@ describe('teacherSectionsRedux', () => {
             ltiRosterSyncEnabled: false,
           },
           syncEnabled: undefined,
-          aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,

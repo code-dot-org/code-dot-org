@@ -464,25 +464,6 @@ FactoryBot.define do
         end
       end
 
-      factory :student_with_ai_tutor_access do
-        after(:create) do |user|
-          teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::AI_TUTOR_PILOT_NAME)
-          section = create(:section, user: teacher)
-          create(:follower, student_user: user, section: section)
-          user.reload
-        end
-      end
-
-      factory :student_without_ai_tutor_access do
-        after(:create) do |user|
-          teacher = create(:teacher)
-          section = create(:section, user: teacher)
-          create(:follower, student_user: user, section: section)
-          user.reload
-        end
-      end
-
       trait :migrated_imported_from_google_classroom do
         google_sso_provider
         without_email
