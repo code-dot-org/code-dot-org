@@ -5,6 +5,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTooltipIcon';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
@@ -20,7 +21,6 @@ import {
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
-import InfoTooltipIcon from '../InfoTooltipIcon';
 
 import style from './ai-chat-access-controls.module.scss';
 

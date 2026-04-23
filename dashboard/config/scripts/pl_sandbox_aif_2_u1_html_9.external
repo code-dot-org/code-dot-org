@@ -9,7 +9,9 @@ markdown <<MARKDOWN
 
 ## HTML
 
-#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
+#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. 
+
+#### It tells the browser what to show, like headings, paragraphs, images, and links, so users can see and interact with the content.
 
 
 <div style="
@@ -27,7 +29,7 @@ markdown <<MARKDOWN
 <tr>
 
 <td style="vertical-align:top;text-align:center;">
-<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" alt="html code with head, body, header, main and footer labeled" width="900" style="border-radius:10px;">
+<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" alt="html code with head, body, header, main and footer labeled" width="1000" style="border-radius:10px;">
 </td>
 
 <td style="width:350px;vertical-align:top;text-align:center;padding-top:20px;">

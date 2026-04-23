@@ -355,7 +355,7 @@ class BucketHelper
             select(:comment).
             where(storage_app_id: storage_app_id, object_version_id: version.version_id).
             first&.
-          fetch(:comment) :
+            fetch(:comment) :
           nil
         {
           versionId: version.version_id,

@@ -476,7 +476,7 @@ class AdminUsersController < ApplicationController
 
     csv_data = params[:csv_data]
     teacher_id = params[:teacher_id]
-    dry_run = params[:dry_run] == 'true'
+    dry_run = ActiveModel::Type::Boolean.new.cast(params[:dry_run])
 
     if csv_data.blank? || teacher_id.blank?
       render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
