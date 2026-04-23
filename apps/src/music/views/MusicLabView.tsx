@@ -26,7 +26,7 @@ import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useWorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -116,7 +116,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   viewingOldVersion,
 }) => {
   const dialogControl = useDialogControl();
-  const {headerContent, templateIcon} = useWorkspaceHeader();
+
   useUpdatePlayer(player);
   useUpdateAnalytics(
     analyticsReporter,
@@ -413,11 +413,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
             <PanelContainer
               id="workspace-panel"
-              headerContent={headerContent}
+              headerContent={<WorkspaceHeader.Content />}
               hideHeaders={hideHeaders}
               rightHeaderContent={
                 <>
-                  {templateIcon}
+                  <WorkspaceHeader.TemplateIcon />
                   <HeaderButtons
                     onClickUndo={undo}
                     onClickRedo={redo}

@@ -27,9 +27,7 @@ const TemplateIcon = () => {
   );
 };
 
-export function useWorkspaceHeader() {
-  return {
-    headerContent: <WorkspaceHeaderText />,
-    templateIcon: <TemplateIcon />,
-  };
-}
+export const WorkspaceHeader = {
+  Content: WorkspaceHeaderText,
+  TemplateIcon,
+};

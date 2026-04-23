@@ -37,7 +37,7 @@ import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teach
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useWorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -68,7 +68,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     aichatSettings: levelAichatSettings,
     starterAssets,
   } = levelProperties;
-  const {templateIcon} = useWorkspaceHeader();
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -358,7 +357,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={
                 <>
-                  {templateIcon}
+                  <WorkspaceHeader.TemplateIcon />
                   <AiChatHeaderButtons />
                 </>
               }

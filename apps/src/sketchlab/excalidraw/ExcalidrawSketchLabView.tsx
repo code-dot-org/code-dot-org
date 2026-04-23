@@ -27,7 +27,7 @@ import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teach
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useWorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -88,7 +88,6 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
   >({});
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
-  const {headerContent, templateIcon} = useWorkspaceHeader();
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -386,10 +385,10 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
           <PanelContainer
             id="workspace"
             className={panelClassName}
-            headerContent={headerContent}
+            headerContent={<WorkspaceHeader.Content />}
             rightHeaderContent={
               <>
-                {templateIcon}
+                <WorkspaceHeader.TemplateIcon />
                 {!readonlyWorkspace && (
                   <MuiButton
                     variant="outlined"
