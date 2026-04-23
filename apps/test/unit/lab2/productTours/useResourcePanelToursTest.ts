@@ -3,6 +3,7 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
 import {
   ProductTour,
   ProductTourConfigurations,
@@ -256,7 +257,10 @@ describe('useResourcePanelTours', () => {
 
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_STARTED,
-        {flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME}
+        {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          triggerSource: TriggerSource.Auto,
+        }
       );
     });
 
@@ -270,7 +274,10 @@ describe('useResourcePanelTours', () => {
 
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_COMPLETED,
-        {flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME}
+        {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          triggerSource: TriggerSource.Auto,
+        }
       );
     });
 
@@ -284,7 +291,11 @@ describe('useResourcePanelTours', () => {
 
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_EXIT,
-        {flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME, step: '2'}
+        {
+          flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+          step: '2',
+          triggerSource: TriggerSource.Auto,
+        }
       );
     });
 
@@ -296,7 +307,10 @@ describe('useResourcePanelTours', () => {
 
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.INTRO_FLOW_STARTED,
-        {flowName: RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME}
+        {
+          flowName: RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
+          triggerSource: TriggerSource.Auto,
+        }
       );
     });
   });
