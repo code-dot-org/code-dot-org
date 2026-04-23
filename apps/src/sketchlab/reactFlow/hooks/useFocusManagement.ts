@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
@@ -22,10 +22,37 @@ const PAN_DURATION_MS = 200;
 export function useFocusManagement(
   tabOrder: TabOrderEntry[],
   edges: SketchlabReactFlowEdge[],
+  nodeOrEdgeFocused: boolean,
   setLastFocusedEntry: (entry: TabOrderEntry | null) => void,
   setNodeOrEdgeFocused: (focused: boolean) => void
 ) {
   const {fitView, getZoom} = useReactFlow();
+
+  // Close the node toolbar on clicks outside nodes, edges, and the
+  // toolbar itself. Clicking on non-focusable areas (e.g. the canvas
+  // pane background) does not move DOM focus, so blur-based detection
+  // alone misses this case. Scoped to when a node/edge is focused so
+  // we don't attach a global listener unnecessarily.
+  useEffect(() => {
+    if (!nodeOrEdgeFocused) return;
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target) return;
+      if (
+        target.closest('.react-flow__node') ||
+        target.closest('.react-flow__edge') ||
+        target.closest('.react-flow__node-toolbar')
+      ) {
+        return;
+      }
+      setLastFocusedEntry(null);
+      setNodeOrEdgeFocused(false);
+    };
+    document.addEventListener('pointerdown', handlePointerDown, true);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown, true);
+    };
+  }, [nodeOrEdgeFocused, setLastFocusedEntry, setNodeOrEdgeFocused]);
 
   /** Pan the viewport so that `entry` is fully visible, if it isn't already. */
   const panToEntryIfNeeded = useCallback(
@@ -97,10 +124,14 @@ export function useFocusManagement(
             panToEntryIfNeeded(entry, element);
           }
         });
-      } else {
-        // Focus moved to a non-node/edge element (e.g. Controls buttons,
-        // toolbar). Clear visual selection but preserve lastFocusedEntry
-        // so the roving tabindex target stays correct for shift-tab.
+      } else if (
+        !(event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        // Focus moved to a non-node/edge element (e.g. Controls buttons).
+        // Clear visual selection but preserve lastFocusedEntry so the
+        // roving tabindex target stays correct for shift-tab.
+        // We skip this when focus moves into a NodeToolbar
+        // so the toolbar stays mounted while the user interacts with it.
         setNodeOrEdgeFocused(false);
       }
     },

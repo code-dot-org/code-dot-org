@@ -147,6 +147,7 @@
           "type": "checkbox",
           "name": "pl_interest_content",
           "title": "What additional professional development content would you like to see offered by Code.org?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "additional_cs_content",
@@ -183,6 +184,7 @@
           "type": "checkbox",
           "name": "pl_interest_format",
           "title": "What types of professional learning experiences could Code.org offer to support your growth as a computer science teacher?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "self_paced_pl",

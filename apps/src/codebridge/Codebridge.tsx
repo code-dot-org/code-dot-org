@@ -15,6 +15,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -48,7 +49,7 @@ type CodebridgeProps = {
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
 };
 
@@ -68,7 +69,7 @@ export const Codebridge = React.memo(
     aiTutorContextHelper,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
-    enableTutorVideos,
+    tutorVideos,
     secondaryBackpackAppNames,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
@@ -210,7 +211,7 @@ export const Codebridge = React.memo(
           aiTutorContextHelper,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
-          enableTutorVideos,
+          tutorVideos,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

@@ -25,7 +25,7 @@ export function isLineAnchorNodeId(
   nodes: SketchlabReactFlowNode[]
 ) {
   const node = nodes.find(candidate => candidate.id === nodeId);
-  return node?.type === 'lineAnchor' || node?.data?.isLineAnchor === true;
+  return node?.type === 'lineAnchor';
 }
 
 function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {

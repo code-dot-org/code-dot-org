@@ -35,7 +35,11 @@ import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {ReactFlowSketchLabSources} from '../types';
+import {
+  AddNodeRequest,
+  ReactFlowSketchLabSources,
+  SketchLabNode,
+} from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
 
 import Toolbar from './Toolbar';
@@ -76,7 +80,8 @@ export default function ReactFlowCanvas({
   colorMode,
   readOnly = false,
 }: ReactFlowCanvasProps) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, setNodes, onNodesChange] =
+    useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
@@ -90,14 +95,12 @@ export default function ReactFlowCanvas({
     setLastFocusedEntry,
     nodeOrEdgeFocused,
     setNodeOrEdgeFocused,
-  } = useTabOrder(
-    nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[]
-  );
+  } = useTabOrder(nodes, edges);
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
-    edges as SketchlabReactFlowEdge[],
+    edges,
+    nodeOrEdgeFocused,
     setLastFocusedEntry,
     setNodeOrEdgeFocused
   );
@@ -121,13 +124,20 @@ export default function ReactFlowCanvas({
   });
 
   // Clear selection when focus leaves the canvas container entirely
-  // (e.g. clicking outside or tabbing out of the canvas).
+  // (e.g. clicking outside or tabbing out of the canvas). Skip when the
+  // blur originates from a NodeToolbar control — e.g. a native color
+  // picker steals focus to an OS dialog (relatedTarget null), and
+  // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
-      if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-        setLastFocusedEntry(null);
-        setNodeOrEdgeFocused(false);
+      if (
+        event.currentTarget.contains(event.relatedTarget as Node) ||
+        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        return;
       }
+      setLastFocusedEntry(null);
+      setNodeOrEdgeFocused(false);
     },
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
@@ -138,10 +148,7 @@ export default function ReactFlowCanvas({
   // Also applies connect-source styling and aria-selected via React
   // rather than direct DOM classList manipulation.
   const {displayNodes, displayEdges} = useMemo(() => {
-    const applyDisplayProps = (
-      item: SketchlabReactFlowEdge | SketchlabReactFlowNode,
-      type: 'node' | 'edge'
-    ) => {
+    const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
         activeEntry?.type === type && activeEntry.id === item.id;
       const isSelected =
@@ -212,11 +219,7 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: SketchlabReactFlowSource = {
-        nodes: nodes as SketchlabReactFlowNode[],
-        edges: edges as SketchlabReactFlowEdge[],
-        viewport,
-      };
+      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
@@ -277,10 +280,8 @@ export default function ReactFlowCanvas({
   );
 
   const handleAddNode = useCallback(
-    (
-      type: 'shape' | 'image' | 'text' | 'line',
-      data?: SketchlabReactFlowNode['data']
-    ) => {
+    (request: AddNodeRequest) => {
+      const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
@@ -295,12 +296,6 @@ export default function ReactFlowCanvas({
         const targetAnchorId = createUuid();
         const lineEdgeId = createUuid();
 
-        const anchorBaseData: SketchlabReactFlowNode['data'] = {
-          isLineAnchor: true,
-          shapeType: 'rectangle',
-          label: '',
-        };
-
         const sourceAnchor: SketchlabReactFlowNode = {
           id: sourceAnchorId,
           type: 'lineAnchor',
@@ -311,10 +306,7 @@ export default function ReactFlowCanvas({
               LINE_ANCHOR_SIZE_PX,
             y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
           },
-          data: {
-            ...anchorBaseData,
-            lineAnchorRole: 'source',
-          },
+          data: {lineAnchorRole: 'source'},
           style: {
             width: LINE_ANCHOR_SIZE_PX,
             height: LINE_ANCHOR_SIZE_PX,
@@ -328,10 +320,7 @@ export default function ReactFlowCanvas({
             x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
             y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
           },
-          data: {
-            ...anchorBaseData,
-            lineAnchorRole: 'target',
-          },
+          data: {lineAnchorRole: 'target'},
           style: {
             width: LINE_ANCHOR_SIZE_PX,
             height: LINE_ANCHOR_SIZE_PX,
@@ -357,29 +346,24 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      if (!data) {
-        return;
-      }
-
       const position = screenToFlowPosition({
         x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
         y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
       });
 
       const newNodeId = createUuid();
-      const newNode: SketchlabReactFlowNode = {
+      // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // Cast is needed because TS can't preserve the (type, data) correlation
+      // of the discriminated union across destructuring.
+      const newNode = {
         id: newNodeId,
         type,
+        data: request.data,
         position,
-        data,
-        // Text nodes auto-size to fit content; shapes and images use fixed defaults.
         ...(type !== 'text' && {
-          style: {
-            width: DEFAULT_NODE_WIDTH,
-            height: DEFAULT_NODE_HEIGHT,
-          },
+          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
         }),
-      };
+      } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 

@@ -8,7 +8,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {
   DEFAULT_LEVEL_AICHAT_SETTINGS,
   DEFAULT_VISIBILITIES,

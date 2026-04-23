@@ -37,12 +37,13 @@ function pickHandles(
 }
 
 function getNodeLabel(node: SketchlabReactFlowNode): string {
-  return (
-    (node.data?.label as string) ||
-    (node.data?.text as string) ||
-    node.type ||
-    node.id
-  );
+  if (node.type === 'shape' && node.data.label) {
+    return node.data.label;
+  }
+  if (node.type === 'text' && node.data.text) {
+    return node.data.text;
+  }
+  return node.type;
 }
 
 interface UseKeyboardEdgeCreationOptions {

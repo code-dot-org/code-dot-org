@@ -136,6 +136,11 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
     },
     {
       iconFamily: 'kit',
+      iconName: 'classlink',
+      title: 'classlink-kit',
+    },
+    {
+      iconFamily: 'kit',
       iconName: 'clever',
       title: 'clever-kit',
     },

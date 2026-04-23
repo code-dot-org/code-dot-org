@@ -130,9 +130,9 @@ module Pd::WorkshopFilters
           workshops = workshops.order("subject #{direction}".strip)
         when 'virtual'
           workshops = workshops.joins_sessions.
-          group("pd_workshops.id").
-          select("pd_workshops.*, MAX(CASE WHEN pd_sessions.session_format = #{Pd::Session.session_formats[:virtual]} THEN 1 ELSE 0 END) as has_virtual").
-          order(Arel.sql("has_virtual #{direction}"))
+            group("pd_workshops.id").
+            select("pd_workshops.*, MAX(CASE WHEN pd_sessions.session_format = #{Pd::Session.session_formats[:virtual]} THEN 1 ELSE 0 END) as has_virtual").
+            order(Arel.sql("has_virtual #{direction}"))
         when 'date'
           workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
         when 'enrollments'
