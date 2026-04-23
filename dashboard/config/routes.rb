@@ -222,6 +222,8 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          get 'demo/presets', action: 'presets', as: 'presets'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
         end
       end

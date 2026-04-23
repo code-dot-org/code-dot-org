@@ -1,4 +1,4 @@
-import {SaveErrorType} from '@cdo/apps/aichat/types';
+import {SaveErrorType} from '@cdo/apps/aichatLab/types';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {endSave, setSaveError} from '../../slice';

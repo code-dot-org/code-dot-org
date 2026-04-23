@@ -5,30 +5,31 @@ require 'test_helper'
 describe Observability::OpenTelemetry do
   before do
     CDO.stubs(:enable_opentelemetry).returns(false)
-    CDO.stubs(:running_web_application?).returns(false)
+    # ENV['UNIT_TEST'] is nil in engine test runs — enabled path is active by default
   end
 
   describe '.setup' do
     describe 'when CDO.enable_opentelemetry is false' do
-      before {CDO.stubs(:running_web_application?).returns(true)}
-
       it 'returns without configuring the SDK' do
         _(Observability::OpenTelemetry.setup).must_be_nil
       end
     end
 
-    describe 'when CDO.running_web_application? is false' do
-      before {CDO.stubs(:enable_opentelemetry).returns(true)}
-
-      it 'returns without configuring the SDK' do
-        _(Observability::OpenTelemetry.setup).must_be_nil
-      end
-    end
-
-    describe 'when both CDO.enable_opentelemetry and running_web_application? are true' do
+    describe 'when UNIT_TEST is set' do
       before do
         CDO.stubs(:enable_opentelemetry).returns(true)
-        CDO.stubs(:running_web_application?).returns(true)
+        ENV['UNIT_TEST'] = 'true'
+      end
+      after {ENV.delete('UNIT_TEST')}
+
+      it 'returns without configuring the SDK' do
+        _(Observability::OpenTelemetry.setup).must_be_nil
+      end
+    end
+
+    describe 'when both CDO.enable_opentelemetry is true and UNIT_TEST is not set' do
+      before do
+        CDO.stubs(:enable_opentelemetry).returns(true)
         OpenTelemetry::SDK.stubs(:configure)
       end
 

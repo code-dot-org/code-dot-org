@@ -32,7 +32,7 @@ import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {ReactFlowSketchLabSources} from '../types';
+import {ReactFlowSketchLabSources, SketchLabNode} from '../types';
 
 import Toolbar from './Toolbar';
 
@@ -69,7 +69,8 @@ export default function ReactFlowCanvas({
   colorMode,
   readOnly = false,
 }: ReactFlowCanvasProps) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, setNodes, onNodesChange] =
+    useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
@@ -77,59 +78,102 @@ export default function ReactFlowCanvas({
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
 
-  const {tabOrder, activeEntry, setActiveTabEntry} = useTabOrder(
-    nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[]
-  );
+  const {
+    tabOrder,
+    activeEntry,
+    lastFocusedEntry,
+    setLastFocusedEntry,
+    nodeOrEdgeFocused,
+    setNodeOrEdgeFocused,
+  } = useTabOrder(nodes, edges);
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
-    edges as SketchlabReactFlowEdge[],
-    setActiveTabEntry
+    edges,
+    nodeOrEdgeFocused,
+    setLastFocusedEntry,
+    setNodeOrEdgeFocused
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardEdgeCreation({
-      nodes: nodes as SketchlabReactFlowNode[],
+      nodes,
       tabOrder,
       focusEntry,
       setEdges,
       readOnly,
     });
 
+  // Clear selection when focus leaves the canvas container entirely
+  // (e.g. clicking outside or tabbing out of the canvas). Skip when the
+  // blur originates from a NodeToolbar control — e.g. a native color
+  // picker steals focus to an OS dialog (relatedTarget null), and
+  // clearing here would unmount the toolbar before the user can pick.
+  const handleContainerBlur = useCallback(
+    (event: React.FocusEvent) => {
+      if (
+        event.currentTarget.contains(event.relatedTarget as Node) ||
+        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        return;
+      }
+      setLastFocusedEntry(null);
+      setNodeOrEdgeFocused(false);
+    },
+    [setLastFocusedEntry, setNodeOrEdgeFocused]
+  );
+
   // Apply roving tabindex through React Flow's domAttributes so it
   // survives React Flow re-renders (direct DOM manipulation gets
   // overwritten when RF reconciles tabIndex={0} on focusable nodes).
   // Also applies connect-source styling and aria-selected via React
   // rather than direct DOM classList manipulation.
-  const displayNodes = useMemo(
-    () =>
-      nodes.map(node => {
-        const isActive =
-          activeEntry?.type === 'node' && activeEntry.id === node.id;
+  const {displayNodes, displayEdges} = useMemo(() => {
+    const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
+      const isTabTarget =
+        activeEntry?.type === type && activeEntry.id === item.id;
+      const isSelected =
+        nodeOrEdgeFocused &&
+        lastFocusedEntry?.type === type &&
+        lastFocusedEntry.id === item.id;
+      return {
+        selected: isSelected && !readOnly,
+        domAttributes: {tabIndex: isTabTarget ? 0 : -1},
+      };
+    };
+
+    return {
+      displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
+        const {selected, domAttributes} = applyDisplayProps(node, 'node');
         return {
           ...node,
+          selected,
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
-            tabIndex: isActive ? 0 : -1,
+            ...domAttributes,
             ...(isConnectSource && {'aria-selected': true}),
           },
         };
       }),
-    [nodes, activeEntry, connectingFrom]
-  );
-  // TODO: Add meaningful ariaLabel to edges using node labels instead of
-  // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
-  const displayEdges = useMemo(
-    () =>
-      edges.map(edge => {
-        const isActive =
-          activeEntry?.type === 'edge' && activeEntry.id === edge.id;
-        return {...edge, domAttributes: {tabIndex: isActive ? 0 : -1}};
-      }),
-    [edges, activeEntry]
-  );
+      // TODO: Add meaningful ariaLabel to edges using node labels instead of
+      // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
+      displayEdges: edges.map(edge => ({
+        ...edge,
+        ...applyDisplayProps(edge, 'edge'),
+      })),
+    };
+  }, [
+    nodes,
+    edges,
+    activeEntry?.type,
+    activeEntry?.id,
+    nodeOrEdgeFocused,
+    lastFocusedEntry?.type,
+    lastFocusedEntry?.id,
+    connectingFrom,
+    readOnly,
+  ]);
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -138,11 +182,7 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: SketchlabReactFlowSource = {
-        nodes: nodes as SketchlabReactFlowNode[],
-        edges: edges as SketchlabReactFlowEdge[],
-        viewport,
-      };
+      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
@@ -172,10 +212,7 @@ export default function ReactFlowCanvas({
   );
 
   const handleAddNode = useCallback(
-    (
-      type: 'shape' | 'image' | 'text',
-      data: SketchlabReactFlowNode['data']
-    ) => {
+    ({type, data}: Pick<SketchLabNode, 'type' | 'data'>) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
@@ -185,19 +222,18 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = createUuid();
-      const newNode: SketchlabReactFlowNode = {
+      // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // Cast is needed because TS can't preserve the (type, data) correlation
+      // of the discriminated union across destructuring.
+      const newNode = {
         id: newNodeId,
         type,
-        position,
         data,
-        // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+        position,
         ...(type !== 'text' && {
-          style: {
-            width: DEFAULT_NODE_WIDTH,
-            height: DEFAULT_NODE_HEIGHT,
-          },
+          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
         }),
-      };
+      } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 
@@ -223,6 +259,7 @@ export default function ReactFlowCanvas({
         )}
         onKeyDownCapture={handleKeyDown}
         onFocusCapture={handleFocusCapture}
+        onBlur={handleContainerBlur}
       >
         {!readOnly && <Toolbar onAddNode={handleAddNode} />}
         <div aria-live="assertive" className={styles.srOnly}>
@@ -231,11 +268,11 @@ export default function ReactFlowCanvas({
         <ReactFlow
           nodes={displayNodes}
           edges={displayEdges}
-          onNodesChange={readOnly ? undefined : onNodesChange}
-          onEdgesChange={readOnly ? undefined : onEdgesChange}
-          onConnect={readOnly ? undefined : onConnect}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          onConnect={onConnect}
           nodeTypes={NODE_TYPES}
-          onMoveEnd={readOnly ? undefined : handleMoveEnd}
+          onMoveEnd={handleMoveEnd}
           defaultViewport={initialViewport}
           fitView={!initialViewport}
           colorMode={colorMode}
@@ -246,6 +283,8 @@ export default function ReactFlowCanvas({
           elementsSelectable={!readOnly}
           nodesFocusable={true}
           edgesFocusable={true}
+          // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+          // it manages things like moving nodes with arrow keys.
           disableKeyboardA11y={false}
           autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
         >

@@ -361,6 +361,11 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     }
 
     const currentLevel = getCurrentLevel(getState());
+    const levelNavigationConfirmation =
+      Lab2Registry.getInstance().getLevelNavigationConfirmation();
+    if (levelNavigationConfirmation && !(await levelNavigationConfirmation())) {
+      return;
+    }
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       // If the requested level is the same as the current level, don't do anything.

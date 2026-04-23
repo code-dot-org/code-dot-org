@@ -23,12 +23,6 @@ module CDO
   class << self
     attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn
 
-    def running_web_application?
-      @running_web_application
-    end
-
-    attr_writer :running_web_application
-
     def log
       @log ||= Logger.new(IO::NULL)
     end
@@ -37,7 +31,6 @@ module CDO
   self.enable_opentelemetry = false
   self.enable_sentry = false
   self.dashboard_sentry_dsn = nil
-  self.running_web_application = false
 end
 
 require 'observability'
