@@ -310,8 +310,8 @@ async function handleChatCompletionError(
       addChatEvent({
         removeId: getNewRemoveId(),
         text:
-          "Tutor chat messages cannot be sent due to your browser's dev tools being open. " +
-          'Please close dev tools and try again or see message in dev tools for other options.',
+          "Chat messages cannot be sent due to your browser's dev tools being open. Please close " +
+          'dev tools and reload the page to try again or see message in dev tools for other options.',
         notificationType: 'error',
         timestamp: Date.now(),
       })
