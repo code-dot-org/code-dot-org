@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:jemalloc
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,13 +212,14 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:jemalloc
     pull: always
     volumes:
       - name: mysql
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
+      CDO_DASHBOARD_USE_JEMALLOC: 'true'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -295,7 +296,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:jemalloc
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
