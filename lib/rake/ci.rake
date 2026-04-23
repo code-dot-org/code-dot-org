@@ -81,10 +81,10 @@ USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
 
-# The limit for our Device Farm Desktop project in CI is 5 parallel sessions.
-# Once the limit is increased, consider going back to using the full PARALLEL_COUNT
-# for Device Farm as well.
-DEVICE_FARM_PARALLEL_COUNT = 5
+# The limit for our Device Farm Desktop project in CI is 24 parallel sessions.
+# Keep a separate limit for device farm so that we do not run into any quota
+# issues if the PARALLEL_COUNT is increased for SauceLabs testing in the future.
+DEVICE_FARM_PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
