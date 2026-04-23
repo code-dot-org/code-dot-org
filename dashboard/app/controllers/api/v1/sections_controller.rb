@@ -124,7 +124,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
           avatar_color: config[:avatar_color],
           avatar_emoji: config[:avatar_emoji],
           ai_chat_access_level: config[:ai_chat_access_level],
-          ai_tutor_enabled: config[:ai_tutor_enabled],
           demo_type: demo_type,
         }.compact
       )
