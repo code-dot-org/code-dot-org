@@ -242,7 +242,7 @@ export default function ReactFlowCanvas({
         if (!source || !target) {
           return currentEdges;
         }
-        if (!canCreateConnection(source, target, nodes, currentEdges)) {
+        if (!canCreateConnection(source, target, nodes)) {
           return currentEdges;
         }
 
@@ -260,9 +260,9 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
-      return canCreateConnection(source, target, nodes, edges);
+      return canCreateConnection(source, target, nodes);
     },
-    [edges, nodes]
+    [nodes]
   );
 
   const handleMoveEnd = useCallback(

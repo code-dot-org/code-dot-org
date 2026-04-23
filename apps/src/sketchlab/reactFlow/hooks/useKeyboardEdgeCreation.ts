@@ -272,8 +272,7 @@ export function useKeyboardEdgeCreation({
             const connectionRejected = !canCreateConnection(
               connectingFrom,
               focusedNodeId,
-              nodes,
-              edges
+              nodes
             );
             if (connectionRejected) {
               announce(
@@ -282,12 +281,7 @@ export function useKeyboardEdgeCreation({
             } else {
               setEdges(currentEdges => {
                 if (
-                  !canCreateConnection(
-                    connectingFrom,
-                    focusedNodeId,
-                    nodes,
-                    currentEdges
-                  )
+                  !canCreateConnection(connectingFrom, focusedNodeId, nodes)
                 ) {
                   return currentEdges;
                 }
@@ -339,7 +333,6 @@ export function useKeyboardEdgeCreation({
     },
     [
       connectingFrom,
-      edges,
       focusEntry,
       getEdge,
       getNode,

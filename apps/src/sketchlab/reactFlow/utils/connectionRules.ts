@@ -1,23 +1,15 @@
-import {
-  SketchlabReactFlowEdge,
-  SketchlabReactFlowNode,
-} from '@cdo/apps/lab2/types';
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 
+// Checks whether either node is a line anchor, which should not be connectable to any other node.
 export function canCreateConnection(
   sourceNodeId: string,
   targetNodeId: string,
-  nodes: SketchlabReactFlowNode[],
-  edgesToCheck: SketchlabReactFlowEdge[]
+  nodes: SketchlabReactFlowNode[]
 ) {
-  const sourceLimited = isLineAnchorNodeId(sourceNodeId, nodes);
-  const targetLimited = isLineAnchorNodeId(targetNodeId, nodes);
-  if (sourceLimited && nodeHasAnyEdge(sourceNodeId, edgesToCheck)) {
-    return false;
-  }
-  if (targetLimited && nodeHasAnyEdge(targetNodeId, edgesToCheck)) {
-    return false;
-  }
-  return true;
+  return (
+    !isLineAnchorNodeId(sourceNodeId, nodes) &&
+    !isLineAnchorNodeId(targetNodeId, nodes)
+  );
 }
 
 export function isLineAnchorNodeId(
@@ -26,8 +18,4 @@ export function isLineAnchorNodeId(
 ) {
   const node = nodes.find(candidate => candidate.id === nodeId);
   return node?.type === 'lineAnchor';
-}
-
-function nodeHasAnyEdge(nodeId: string, edges: SketchlabReactFlowEdge[]) {
-  return edges.some(edge => edge.source === nodeId || edge.target === nodeId);
 }
