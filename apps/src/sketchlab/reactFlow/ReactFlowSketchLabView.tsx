@@ -5,6 +5,7 @@ import {ReactFlowProvider} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -86,6 +87,20 @@ function ReactFlowSketchLabViewInner({
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
+  );
+
+  const WorkspaceAlert = useLevelEditMode<LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
+      },
+      [currentSources]
+    )
   );
 
   const {
@@ -179,6 +194,7 @@ function ReactFlowSketchLabViewInner({
             colorMode={colorMode}
             readOnly={readonlyWorkspace}
           />
+          {WorkspaceAlert}
         </PanelContainer>
       </div>
     </div>

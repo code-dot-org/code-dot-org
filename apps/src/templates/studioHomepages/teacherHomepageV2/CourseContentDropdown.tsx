@@ -1,6 +1,6 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography} from '@mui/material';
-import React, {useEffect, useState, useMemo} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -14,57 +14,53 @@ import styles from './teacherHomepage.module.scss';
 
 interface CourseContentDropdownProps {
   section: Section;
+  disabled?: boolean;
 }
 
-// Interface for the unit lessons dropdown
-interface UnitLessonOptions {
+export interface CourseContentDropdownBaseProps {
+  section: Section;
+  disabled: boolean;
+  shouldShowLessonDropdown: boolean | string;
+  lessonSource: number | string;
+  renderLessonOption: (lesson: UnitLessonOption) => React.ReactNode;
+  renderCourseAction: () => React.ReactNode;
+}
+
+export interface UnitLessonOption {
   value: string;
   text: string;
 }
 
-/**
- * CourseContentDropdown component.
- * Used to render a dropdown for selecting a lesson to navigate to.
- * @param section - Section object containing the course display name.
- */
-export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
+export const getLessonEventName = (lessonValue: string) =>
+  lessonValue.includes('/lessons/')
+    ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
+    : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
+
+export const CourseContentDropdownBase: React.FC<
+  CourseContentDropdownBaseProps
+> = ({
   section,
+  disabled,
+  shouldShowLessonDropdown,
+  lessonSource,
+  renderLessonOption,
+  renderCourseAction,
 }) => {
-  const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
+  const [lessonList, setLessonList] = useState<UnitLessonOption[]>([]);
 
   useEffect(() => {
     const fetchLessonList = async () => {
-      HttpClient.fetchJson<UnitLessonOptions[]>(
-        `/sections/${section.id}/retrieve_lessons_for_dropdown`
+      HttpClient.fetchJson<UnitLessonOption[]>(
+        `/sections/${lessonSource}/retrieve_lessons_for_dropdown`
       )
         .then(response => setLessonList(response.value))
         .catch(error => console.error(error));
     };
 
-    if (section.unitId && lessonList.length === 0) {
+    if (shouldShowLessonDropdown && lessonList.length === 0) {
       fetchLessonList();
     }
-  }, [section, lessonList]);
-
-  const dropdownOptions = useMemo(
-    () =>
-      lessonList.map(lesson => (
-        <LinkOption
-          key={lesson.value}
-          value={lesson.value}
-          label={lesson.text}
-          labelStyle={lesson.value.includes('/lessons/') ? 'i' : 'b'}
-          url={lesson.value}
-          eventName={
-            lesson.value.includes('/lessons/')
-              ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
-              : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
-          }
-          eventOptions={{lesson: lesson.value}}
-        />
-      )),
-    [lessonList]
-  );
+  }, [lessonList, lessonSource, shouldShowLessonDropdown]);
 
   return (
     <div className={styles.courseContentDropdownContainer}>
@@ -77,26 +73,52 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         <b>{`${i18n.course()}: `}</b>
         {section.courseDisplayName}
       </Typography>
-      {section.unitId ? (
+      {shouldShowLessonDropdown ? (
         <CustomDropdown
           className={styles.courseContentDropdown}
           name="go-to-lesson"
           labelText={i18n.jumpTo()}
           labelType="thin"
-          disabled={lessonList.length === 0}
+          disabled={disabled || lessonList.length === 0}
           size="m"
         >
-          <ul>{dropdownOptions}</ul>
+          <ul>{lessonList.map(renderLessonOption)}</ul>
         </CustomDropdown>
       ) : (
-        <TaskButton
-          buttonText={i18n.goToCourse()}
-          icon="desktop"
-          sectionId={section.id}
-          sectionName={section.name}
-          path={`courses/${section.courseVersionName}`}
-        />
+        renderCourseAction()
       )}
     </div>
   );
 };
+
+export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
+  section,
+  disabled = false,
+}) => (
+  <CourseContentDropdownBase
+    section={section}
+    disabled={disabled}
+    shouldShowLessonDropdown={Boolean(section.unitId)}
+    lessonSource={section.id}
+    renderLessonOption={lesson => (
+      <LinkOption
+        key={lesson.value}
+        value={lesson.value}
+        label={lesson.text}
+        labelStyle={lesson.value.includes('/lessons/') ? 'i' : 'b'}
+        url={lesson.value}
+        eventName={getLessonEventName(lesson.value)}
+        eventOptions={{lesson: lesson.value}}
+      />
+    )}
+    renderCourseAction={() => (
+      <TaskButton
+        buttonText={i18n.goToCourse()}
+        icon="desktop"
+        sectionId={section.id}
+        sectionName={section.name}
+        path={`courses/${section.courseVersionName}`}
+      />
+    )}
+  />
+);

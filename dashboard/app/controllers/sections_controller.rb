@@ -64,16 +64,28 @@ class SectionsController < ApplicationController
   end
 
   def retrieve_lessons_for_dropdown
-    section = Section.find(params[:id])
+    preset = Policies::DemoSections.get_preset(params[:id])
+
+    if preset
+      return head :forbidden unless current_user
+
+      unit = Unit.get_from_cache(preset[:unit_name], raise_exceptions: false) if preset[:unit_name].present?
+      unit_group = UnitGroup.get_from_cache(preset[:unit_group_name]) if preset[:unit_group_name].present?
+      section_id = ':sectionId'
+    else
+      section = Section.find(params[:id])
+      unit = Unit.get_from_cache(section.script_id) if section.script_id
+      unit_group = UnitGroup.get_from_cache(section.course_id) if section.course_id
+      section_id = section.id
+    end
+
     lessons = []
-    if section.script_id
-      unit = Unit.get_from_cache(section.script_id)
-      unit_group = UnitGroup.get_from_cache(section.course_id)
+    if unit
       unit_group_unit = Queries::Courses.unit_group_unit(unit, unit_group)
       unit_path = if unit_group_unit && unit_group
-                    "/teacher_dashboard/sections/#{section.id}/courses/#{unit_group.name}/units/#{unit_group_unit.position}"
+                    "/teacher_dashboard/sections/#{section_id}/courses/#{unit_group.name}/units/#{unit_group_unit.position}"
                   else
-                    "/teacher_dashboard/sections/#{section.id}/courses"
+                    "/teacher_dashboard/sections/#{section_id}/courses"
                   end
       lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit_path}
       unit.lesson_groups.each do |lesson_group|
