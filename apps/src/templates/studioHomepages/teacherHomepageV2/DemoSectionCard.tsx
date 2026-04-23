@@ -1,6 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import React from 'react';
 import {generatePath} from 'react-router-dom';
 
@@ -25,10 +25,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdown';
+import DemoSectionOptionsDropdown from './DemoSectionOptionsDropdown';
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
-import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';
@@ -78,9 +78,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
-  const [pendingPath, setPendingPath] = React.useState<string | null>(
-    null
-  );
+  const [pendingPath, setPendingPath] = React.useState<string | null>(null);
   const [notice, setNotice] = React.useState<Notice | null>(null);
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
@@ -186,18 +184,22 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const createSectionForMenuAction = React.useCallback(
     async (
       eventName: string,
-      path: 'settings' | 'roster' | 'loginCards' | 'certificates'
+      actionKey: 'settings' | 'roster' | 'loginCards' | 'certificates'
     ) => {
       if (pendingPath) {
         throw new Error('Demo section creation already in progress');
       }
 
-      setPendingPath(path);
+      setPendingPath(actionKey);
       setNotice(null);
       analyticsReporter.sendEvent(eventName, {});
 
       try {
-        return await dispatch(createDemoSection(demoType as DemoType));
+        const section = await dispatch(createDemoSection(demoType as DemoType));
+        if (!section) {
+          throw new Error('Failed to create demo section');
+        }
+        return section;
       } catch (error) {
         if (error instanceof DemoSectionCreationError) {
           setNotice({
@@ -294,11 +296,9 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
               </div>
             </div>
             <div className={styles.sectionCardHeaderRight}>
-              <SectionOptionsDropdown
+              <DemoSectionOptionsDropdown
                 disabled={!!pendingPath}
                 section={demoSection}
-                showArchiveAndDelete={false}
-                onDeleteClickCallback={() => {}}
                 resolveSectionForAction={createSectionForMenuAction}
               />
             </div>
