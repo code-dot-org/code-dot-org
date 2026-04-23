@@ -245,7 +245,7 @@ class MoveStudents extends Component {
     const pendingTransfer = transferStatus.status === TransferStatus.PENDING;
 
     return (
-      <div>
+      <>
         <MuiButton
           variant="outlined"
           color="tertiary"
@@ -278,7 +278,7 @@ class MoveStudents extends Component {
             }}
           />
         )}
-      </div>
+      </>
     );
   }
 }
