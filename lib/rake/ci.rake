@@ -81,11 +81,6 @@ USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
 
-# The limit for our Device Farm Desktop project in CI is 24 parallel sessions.
-# Keep a separate limit for device farm so that we do not run into any quota
-# issues if the PARALLEL_COUNT is increased for SauceLabs testing in the future.
-DEVICE_FARM_PARALLEL_COUNT = 24
-
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_unit_tests do
@@ -141,12 +136,17 @@ namespace :ci do
       Dir.chdir('dashboard/test/ui') do
         container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
         device_farm_browsers = device_farm_browsers_to_run
+
+        # The default per-account limit for concurrent desktop sessions is 50.
+        # Because CI runs Device Farm in the codeorg-dev AWS account, this limit
+        # is not shared with the prod limits in the prod AWS account, which
+        # affect local development and the chef-managed test environment.
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
             "--device-farm " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
-            "--parallel #{DEVICE_FARM_PARALLEL_COUNT} " \
+            "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
             "--output-synopsis " \
