@@ -67,7 +67,9 @@ const TeacherPromotions: React.FC = () => {
     HttpClient.fetchJson<ServerPromotion[]>(TEACHER_PROMOTION_URL)
       .then(response => response?.value)
       .then(data => {
-        setUnfilteredPromotions(data.map(serverPromotionConverter));
+        setUnfilteredPromotions(
+          Array.isArray(data) ? data.map(serverPromotionConverter) : []
+        );
         setIsLoading(false);
       })
       .catch(error => {
