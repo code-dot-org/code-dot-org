@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Typography} from '@mui/material';
 import {orderBy} from 'lodash';
@@ -58,24 +59,30 @@ export default class SortedTableSelect extends React.Component {
 
   selectedRowHeaderFormatter = () => {
     return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={this.areAllSelected()}
-        onChange={this.toggleSelectAll}
-      />
+      <div style={styles.checkboxWrapper}>
+        <Checkbox
+          name="select-all"
+          checked={this.areAllSelected()}
+          onChange={this.toggleSelectAll}
+          ariaLabel={i18n.selectAll()}
+          size="s"
+        />
+      </div>
     );
   };
 
   selectedRowFormatter = (_, {rowData}) => {
     const {onRowChecked} = this.props;
     return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={rowData.isChecked}
-        onChange={() => onRowChecked(rowData.id)}
-      />
+      <div style={styles.checkboxWrapper}>
+        <Checkbox
+          name={`select-row-${rowData.id}`}
+          checked={!!rowData.isChecked}
+          onChange={() => onRowChecked(rowData.id)}
+          ariaLabel={rowData.name}
+          size="s"
+        />
+      </div>
     );
   };
 
@@ -215,10 +222,11 @@ export default class SortedTableSelect extends React.Component {
 const styles = {
   checkboxCell: {
     width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center',
   },
-  checkbox: {
-    margin: 0,
+  checkboxWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   container: {
     display: 'flex',
