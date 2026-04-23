@@ -81,6 +81,7 @@ def main
   shared_content = generate_multiple_constants(
         %w(
       DEFAULT_LOCALE
+      LOCALIZE_TO_I18N_LOCALES
       ARTIST_AUTORUN_OPTIONS
       LEVEL_KIND
       LEVEL_STATUS
@@ -133,6 +134,7 @@ def main
       ALLOWED_HOSTNAME_SUFFIXES
       ALLOWED_IMAGE_HOSTNAME_SUFFIXES
       ALLOWED_FONT_HOSTNAMES
+      SAFE_AND_SUPPORTED_IMAGE_TYPES
     ),
     file_type: 'ts'
   )

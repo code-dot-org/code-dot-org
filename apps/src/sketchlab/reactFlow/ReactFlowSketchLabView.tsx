@@ -5,6 +5,7 @@ import {ReactFlowProvider} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -14,7 +15,7 @@ import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teach
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -44,6 +45,7 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
@@ -85,6 +87,20 @@ function ReactFlowSketchLabViewInner({
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
+  );
+
+  const WorkspaceAlert = useLevelEditMode<LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
+      },
+      [currentSources]
+    )
   );
 
   const {
@@ -141,26 +157,29 @@ function ReactFlowSketchLabViewInner({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent={<WorkspaceHeader />}
+          headerContent={<WorkspaceHeader.Content />}
           rightHeaderContent={
-            !readonlyWorkspace && (
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
-                onClick={onClickStartOver}
-                aria-label={commonI18n.startOver()}
-                type="button"
-                endIcon={
-                  <FontAwesomeV6Icon
-                    iconStyle="solid"
-                    iconName="arrow-rotate-left"
-                  />
-                }
-              >
-                {commonI18n.startOver()}
-              </MuiButton>
-            )
+            <>
+              <WorkspaceHeader.TemplateIcon />
+              {!readonlyWorkspace && (
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
+                  onClick={onClickStartOver}
+                  aria-label={commonI18n.startOver()}
+                  type="button"
+                  endIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="arrow-rotate-left"
+                    />
+                  }
+                >
+                  {commonI18n.startOver()}
+                </MuiButton>
+              )}
+            </>
           }
         >
           {teacherViewingStudent && (
@@ -175,6 +194,7 @@ function ReactFlowSketchLabViewInner({
             colorMode={colorMode}
             readOnly={readonlyWorkspace}
           />
+          {WorkspaceAlert}
         </PanelContainer>
       </div>
     </div>

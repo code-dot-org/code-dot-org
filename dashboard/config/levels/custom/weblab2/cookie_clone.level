@@ -1,0 +1,120 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-21T17:03:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Predict & Trace**\r\n\r\n#### **Do This:**\r\n\r\n1. Look at the JavaScript code in `script.js`.\r\n   Predict what will happen when the user interacts with the feature.\r\n\r\n2. Run the app and test it.\r\n   Did the result match your prediction?\r\n\r\n3. Use AI Tutor to help you understand how the code creates this behavior.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "display_name": "Move Through Steps",
+    "bubble_choice_description": "Click Next to move through recipe instructions one step at a time.",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Recipe Steps</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div class=\"app\">\n    <h2>Chocolate Chip Cookies</h2>\n\n    <div class=\"recipe-card\">\n      <img id=\"stepImage\" src=\"step1.jpg\">\n      <p class=\"step-label\">Current Step</p>\n      <p id=\"stepText\">Step 1: Gather your ingredients.</p>\n    </div>\n\n    <button id=\"nextButton\">Next</button>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  min-height: 100vh;\n  font-family: Arial, sans-serif;\n  background: linear-gradient(180deg, #1f2125 0%, #2d3035 100%);\n  color: #ffffff;\n  padding: 32px 16px;\n}\n\n.app {\n  max-width: 600px;\n  margin: 0 auto;\n  text-align: center;\n}\n\nh2 {\n  margin-bottom: 24px;\n  font-size: 2.2rem;\n}\n\n\n.recipe-card {\n  background: #f8f5ef;\n  color: #1f1f1f;\n  border-radius: 20px;\n  padding: 20px;\n  margin-bottom: 20px;\n  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);\n}\n\n#stepImage {\n  width: 100%;\n  height: auto;\n  border-radius: 12px;\n  margin-bottom: 16px;\n}\n\n\n.step-label {\n  font-size: 0.8rem;\n  font-weight: 700;\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n  color: #666;\n  margin: 0 0 6px 0;\n}\n\n#stepText {\n  font-size: 1.2rem;\n  line-height: 1.6;\n  margin: 0;\n}\n\n/* Button */\nbutton {\n  padding: 14px 24px;\n  font-size: 1rem;\n  font-weight: 700;\n  border: none;\n  border-radius: 12px;\n  background: #1da1f2;\n  color: white;\n  cursor: pointer;\n  transition: background 0.15s ease, transform 0.1s ease;\n}\n\nbutton:hover {\n  background: #0d8bd8;\n}\n\nbutton:active {\n  transform: scale(0.98);\n}\n\n/* Responsive */\n@media (max-width: 500px) {\n  h2 {\n    font-size: 1.8rem;\n  }\n\n  .recipe-card {\n    padding: 16px;\n  }\n\n  #stepText {\n    font-size: 1.05rem;\n  }\n\n  button {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "const stepText = document.getElementById(\"stepText\");\nconst stepImage = document.getElementById(\"stepImage\");\nconst nextButton = document.getElementById(\"nextButton\");\n\nlet step = 1;\n\n\nconst showStep = (currentStep) => {\n  if (currentStep === 1) {\n    stepText.textContent = \"Step 1: Gather your ingredients.\";\n    stepImage.src = \"step1.jpg\";\n    \n  } else if (currentStep === 2) {\n    stepText.textContent = \"Step 2: Mix the dry ingredients.\";\n    stepImage.src = \"step2.jpg\";\n    \n  } else if (currentStep === 3) {\n    stepText.textContent = \"Step 3: Add the wet ingredients.\";\n    stepImage.src = \"step3.jpg\";\n    \n  } else if (currentStep === 4) {\n    stepText.textContent = \"Step 4: Bake for 20 minutes.\";\n    stepImage.src = \"step4.jpg\";\n    \n  } else {\n    stepText.textContent = \"You're all done!\";\n    stepImage.src = \"step5.jpg\";\n  }\n};\n\n\nnextButton.addEventListener(\"click\", () => {\n  step = step + 1;\n  showStep(step);\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "step3.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-choicec_revised_2026/uuid/9cb9f063-19e6-484b-8d53-8d040c31ffb0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "step4.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-choicec_revised_2026/uuid/6df86846-d6ba-4a0e-b2d4-087749337c08.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "step2.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-choicec_revised_2026/uuid/8c838cb2-9522-4fc9-93a8-67895ca3a2fd.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "step5.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-choicec_revised_2026/uuid/f4f3cd7a-8dd7-4f8e-a1bd-0b775dff88b6.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "step1.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-choicec_revised_2026/uuid/c36ae66b-254d-49af-adfb-37a955224ba4.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nB9gURCzloVHDSA==\n",
+    "thumbnail_url": "https://images.code.org/c1d643b2f2c098a0082161b3b39dccf9-Mixing dry ingredients step 2.png",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-21T17:03:35.178+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-choicec_revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-choicec_revised_2026\"},{\"changed_at\":\"2026-04-21 17:03:42 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-21 17:03:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

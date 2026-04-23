@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-21T22:21:47.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Spirit Animal Portrait\r\n\r\n1. In the chat, type a 3–5 word prompt that describes your personality.\r\n\r\n>*For example: \"creative, silly, loves music\"*\r\n>\r\n2. Send the prompt to the AI Chat to see what it generates.\r\n3. Then, try sending another prompt with more details.\r\n4. Keep experimenting! ",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Spirit Animal Generator",
+          "description": "testing description",
+          "intendedUse": "testing use ",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+            "Creative, loves music, lazy"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a fun, encouraging creative assistant for middle school students. When a student gives you a few personality words, respond with: (1) an image of their spirit animal, (2) a 2–3 sentence description of why it fits them, and (3) a vivid, imaginative description of what their spirit animal looks like. Keep all language age-appropriate, positive, and school-safe. Never generate anything scary, violent, or inappropriate. If a student's input seems off-topic or inappropriate, kindly redirect them by asking for personality words instead.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Spirit Animal Portrait",
+    "bubble_choice_description": "AI will reveal your spirit animal and describe it!",
+    "thumbnail_url": "https://images.code.org/b7936aee3c0bf89f58e2f97d98d1c9c7-paw.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:47.369+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicea\\\"\"],\"cloned_from\":\"use_ai_test_choicea\"},{\"changed_at\":\"2026-04-21 22:30:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

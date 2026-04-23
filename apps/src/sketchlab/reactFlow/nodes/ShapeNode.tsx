@@ -1,13 +1,13 @@
-import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useRef, useState} from 'react';
-
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import {ShapeType} from '../types';
+import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
+import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './shape-node.module.scss';
 
@@ -15,7 +15,15 @@ import styles from './shape-node.module.scss';
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 const SHAPE_BORDER_PX = 2;
 
-function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
+interface ShapeSvgProps {
+  shapeType: ShapeType;
+  strokeColor?: string;
+  backgroundColor?: string;
+}
+
+function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
+  const stroke = strokeColor ?? 'currentColor';
+  const fill = backgroundColor ?? 'none';
   if (shapeType === 'circle') {
     return (
       <svg
@@ -31,8 +39,7 @@ function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
           cy="50"
           rx="48"
           ry="48"
-          fill="none"
-          stroke="currentColor"
+          style={{fill, stroke}}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
@@ -51,8 +58,7 @@ function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
       >
         <polygon
           points={TRIANGLE_POINTS}
-          fill="none"
-          stroke="currentColor"
+          style={{fill, stroke}}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
@@ -63,20 +69,14 @@ function ShapeSvg({shapeType}: {shapeType: ShapeType}) {
   return null;
 }
 
-interface ShapeNodeProps {
-  id: string;
-  data: SketchlabReactFlowNode['data'];
-  selected: boolean;
-}
-
-function ShapeNode({id, data, selected}: ShapeNodeProps) {
+function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
 
-  const shapeType = data.shapeType as ShapeType;
-  const label = (data.label as string) ?? '';
+  const {shapeType, label, backgroundColor, strokeColor} = data;
+  const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {
@@ -123,6 +123,26 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
 
   const isRectangle = shapeType === 'rectangle';
 
+  const rectangleStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (strokeColor) {
+      style.borderColor = strokeColor;
+    }
+    if (backgroundColor) {
+      style.backgroundColor = backgroundColor;
+    }
+    return style;
+  }, [strokeColor, backgroundColor]);
+
+  const labelStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (data.fontColor) {
+      style.color = data.fontColor;
+    }
+    style.fontSize = fontSizePx(data.fontSize);
+    return style;
+  }, [data.fontColor, data.fontSize]);
+
   return (
     <div
       className={styles.shapeNode}
@@ -135,17 +155,28 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
+      <ShapeNodeToolbar nodeId={id} />
+
       {/* Background shape */}
       {isRectangle ? (
-        <div className={styles.rectangleBackground} aria-hidden="true" />
+        <div
+          className={styles.rectangleBackground}
+          style={rectangleStyle}
+          aria-hidden="true"
+        />
       ) : (
-        <ShapeSvg shapeType={shapeType} />
+        <ShapeSvg
+          shapeType={shapeType}
+          strokeColor={strokeColor}
+          backgroundColor={backgroundColor}
+        />
       )}
 
       {/* Text label: click or enter to start editing */}
       <div
         ref={labelRef}
         className={styles.label}
+        style={labelStyle}
         contentEditable={isEditing}
         suppressContentEditableWarning
         onFocus={startEditing}
@@ -158,7 +189,7 @@ function ShapeNode({id, data, selected}: ShapeNodeProps) {
         {label}
       </div>
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }

@@ -57,8 +57,29 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'email', preset[:login_type]
     assert_equal 'student', preset[:participant_type]
     assert_equal %w[9 10 11 12], preset[:grades]
-    assert_equal 'aif-foundations-2026', preset[:unit_name]
-    assert_equal 'ai-foundations-exploring-ai-and-cs-2026', preset[:unit_group_name]
+    assert_equal 'aif2-2025', preset[:unit_name]
+    assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
+  end
+
+  test 'get_preset uses drone curriculum names on ci webserver' do
+    CDO.stubs(:ci_webserver?).returns(true)
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'allthethings', preset[:unit_name]
+    assert_equal 'original-allthethings-course', preset[:unit_group_name]
+  end
+
+  test 'get_preset uses adhoc curriculum names from config' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:rack_env?).with(:adhoc).returns(true)
+    CDO.stubs(:demo_section_unit_name).returns('adhoc-unit')
+    CDO.stubs(:demo_section_unit_group_name).returns('adhoc-course')
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'adhoc-unit', preset[:unit_name]
+    assert_equal 'adhoc-course', preset[:unit_group_name]
   end
 
   test 'get_preset returns preset for each demo type' do
@@ -78,6 +99,47 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
   test 'get_preset returns nil for unknown type' do
     assert_nil Policies::DemoSections.get_preset(:unknown)
+  end
+
+  # preset_view
+
+  test 'preset_view returns a display projection for a valid preset' do
+    unit = create(:unit, name: 'aif2-2025')
+    unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
+
+    view = Policies::DemoSections.preset_view(:high)
+
+    assert_equal 'high', view[:demo_type]
+    assert_equal 'High School Practice Section', view[:section_name]
+    assert_equal 8, view[:avatar_color]
+    assert_equal 5, view[:avatar_emoji]
+    assert_equal 'email', view[:login_type]
+    assert_equal 'student', view[:participant_type]
+    assert_equal({name: unit.name, display_name: unit.localized_title}, view[:unit])
+    assert_equal(
+      {name: unit_group.name, display_name: unit_group.localized_title},
+      view[:unit_group]
+    )
+  end
+
+  test 'preset_view returns nil when the unit cannot be resolved' do
+    assert_nil Policies::DemoSections.preset_view(:high)
+  end
+
+  test 'preset_view returns nil when the unit group cannot be resolved' do
+    create(:unit, name: 'aif2-2025')
+
+    assert_nil Policies::DemoSections.preset_view(:high)
+  end
+
+  test 'preset_views_for_all_types skips misconfigured presets' do
+    valid_view = {demo_type: 'middle'}
+
+    Policies::DemoSections.expects(:preset_view).with(:high).returns(nil)
+    Policies::DemoSections.expects(:preset_view).with(:middle).returns(valid_view)
+    Policies::DemoSections.expects(:preset_view).with(:elementary).returns(nil)
+
+    assert_equal({middle: valid_view}, Policies::DemoSections.preset_views_for_all_types)
   end
 
   # demo_student?

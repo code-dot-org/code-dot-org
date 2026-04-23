@@ -147,6 +147,7 @@
           "type": "checkbox",
           "name": "pl_interest_content",
           "title": "What additional professional development content would you like to see offered by Code.org?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "additional_cs_content",
@@ -183,6 +184,7 @@
           "type": "checkbox",
           "name": "pl_interest_format",
           "title": "What types of professional learning experiences could Code.org offer to support your growth as a computer science teacher?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "self_paced_pl",
@@ -206,6 +208,203 @@
             }
           ],
           "hasOther": true
+        },
+        {
+          "type": "panel",
+          "name": "teaching_aif_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "section_header_teaching_aif",
+              "html": "<h1>Your Experience Teaching AIF</h1>"
+            },
+            {
+              "type": "html",
+              "name": "section_aif_description",
+              "html": "\n<p><span style='font-size: 12pt;'>We believe you have taught one or more units of Code.org's AIF (AI Foundations) this school year. &nbsp;</p>\n<p><strong>AIF Units</strong></p>\n<ul>\n<li>Unit 1 - Problem Solving with AI</li>\n<li>Unit 2 - Foundations of AI Programming</li>\n<li>Unit 3 - AI and the Systems That Power It</li>\n<li>Unit 4 - The Fabric of the Internet and AI</li>\n<li>Unit 5 - AI-Powered Threats and Defenses</li>\n<li>Unit 6 - Insights from Data and AI</li>\n</ul> The following questions are about your experience teaching this course. We value your feedback, as it will inform our next steps to improve this curriculum. </span></p>\n"
+            },
+            {
+              "type": "radiogroup",
+              "name": "aif_teaching_self_response",
+              "title": "Did you teach one or more units of AIF this school year?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "Not sure"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "aif_student_engagement",
+              "title": "When teaching AIF, were most students engaged and interested in the topics covered?",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Most Students Were Not Engaged",
+              "maxRateDescription": "Most Students Were Very Engaged",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'"
+            },
+            {
+              "type": "rating",
+              "name": "aif_confident_to_teach",
+              "title": "How confident did you feel in your ability to effectively teach the concepts in AIF?",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Confident At All",
+              "maxRateDescription": "Very Confident",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'"
+            },
+            {
+              "type": "rating",
+              "name": "aif_supported_to_teach",
+              "title": "Were the teaching resources provided effective in supporting you to teach the concepts in AIF?",
+              "description": "Teaching resources include lesson plans, slides, self-paced professional learning modules, etc.",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Effective at all",
+              "maxRateDescription": "Very Effective",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'"
+            },
+            {
+              "type": "rating",
+              "name": "aif_nps_value",
+              "title": "How likely are you to recommend teaching AIF to other teachers? ",
+              "rateCount": 11,
+              "rateMin": 0,
+              "rateMax": 10,
+              "minRateDescription": "Not At All Likely",
+              "maxRateDescription": "Extremely Likely",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'"
+            },
+            {
+              "type": "radiogroup",
+              "name": "aif_teach_plans_next_sy",
+              "title": "Are you planning to teach AIF again next school year?",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "Not sure"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "aif_teach_plans_next_sy_reasons_no",
+              "visibleIf": "{aif_teach_plans_next_sy} = 'no'",
+              "title": "Please select the reason(s) why you don't plan to teach AIF next school year",
+              "description": "(Select all that apply)",
+              "choices": [
+                {
+                  "value": "own_aif_material",
+                  "text": "I have developed my own materials for teaching about AI and CS foundations"
+                },
+                {
+                  "value": "no_interest_aif",
+                  "text": "I no longer want to teach about AI and CS foundations"
+                },
+                {
+                  "value": "no_teach_aif",
+                  "text": "I no longer need to teach about AI and CS foundations"
+                },
+                {
+                  "value": "other_provider",
+                  "text": "Another provider meets my needs better"
+                },
+                {
+                  "value": "did_not_meet_requirements",
+                  "text": "Code.org's AIF curriculum did not meet district or school requirements"
+                },
+                {
+                  "value": "tools_dont_meet_needs",
+                  "text": "Code.org's teaching tools did not meet my needs (e.g. progress tracking, feedback, grading, etc.)"
+                },
+                {
+                  "value": "students_not_engaged",
+                  "text": "My students were not engaged when learning with Code.org's AIF curriculum"
+                }
+              ],
+              "hasOther": true
+            },
+            {
+              "type": "text",
+              "name": "aif_teach_plans_next_sy_reasons_no_switch_provider",
+              "visibleIf": "{aif_teach_plans_next_sy_reasons_no} contains 'other_provider'",
+              "title": "What provider are you planning to use next year instead?"
+            },
+            {
+              "type": "text",
+              "name": "aif_teach_plans_next_sy_reasons_not_sure_comment",
+              "visibleIf": "{aif_teach_plans_next_sy} contains 'not_sure'",
+              "title": "Please describe the main reasons why you are not sure if you will use Code.org's AIF curriculum next school year."
+            },
+            {
+              "type": "checkbox",
+              "name": "aif_challenges_teaching",
+              "title": "What challenges did you encounter while teaching AIF?",
+              "description": "(Select up to three)",
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'",
+              "hasOther": true,
+              "validators": [
+                {
+                  "type": "answercount",
+                  "text": "Please select a maximum of three areas",
+                  "minCount": 0,
+                  "maxCount": 3
+                }
+              ],
+              "choices": [
+                {
+                  "value": "lack_student_engagement",
+                  "text": "Lack of student engagement or motivation"
+                },
+                {
+                  "value": "difficult_explain_concepts",
+                  "text": "Difficulty in explaining complex concepts"
+                },
+                {
+                  "value": "time_constraints",
+                  "text": "Time constraints in covering all the material"
+                },
+                {
+                  "value": "integrate_curriculum_requirements",
+                  "text": "Integrating the content with other curriculum requirements"
+                },
+                {
+                  "value": "diverse_learning",
+                  "text": "Managing diverse learning speeds and styles"
+                },
+                {
+                  "value": "none",
+                  "text": "None of these"
+                }
+              ],
+              "otherErrorText": "Please enter a description for \"Other\""
+            },
+            {
+              "type": "comment",
+              "name": "aif_other_feedback_FR",
+              "title": "Is there anything else you would like to share about your experience teaching AIF with the Code.org team? Your constructive feedback is essential for us to improve our curriculum, and we appreciate you sharing it with us.",
+              "rows": 3,
+              "visibleIf": "{aif_teaching_self_response} <> 'no' and {aif_teaching_self_response} <> 'not_sure'"
+            }
+          ]
         },
         {
           "type": "panel",
@@ -329,6 +528,105 @@
                 {
                   "value": "prefer_learn_other_ways",
                   "text": "I prefer to learn in other ways"
+                },
+                {
+                  "value": "lack_access_ai_tools",
+                  "text": "My school restricts access to AI tools"
+                }
+              ],
+              "hasOther": true
+            },
+            {
+              "type": "rating",
+              "name": "teaching_with_ai_cs_tutor_students",
+              "title": "How likely are you to enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor?",
+              "description": "This would be an AI-powered tool for students that can deliver content and guidance, personalized hints, feedback, and encouragement on CS concepts as students work through their projects.",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Likely At All",
+              "maxRateDescription": "Extremely Likely"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_with_ai_cs_tutor_students_reasons",
+              "visibleIf": "{teaching_with_ai_cs_tutor_students} < 5",
+              "title": "Please share the reasons why you wouldn't enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor.",
+              "description": "(Please select all that apply)",
+              "choices": [
+                {
+                  "value": "need_more_prep_or_knowledge",
+                  "text": "I would like to understand how the tool works before using it"
+                },
+                {
+                  "value": "dont_trust",
+                  "text": "I don't trust that an AI tool can support my students reliably and accurately"
+                },
+                {
+                  "value": "prevent_learning",
+                  "text": "My students won't learn as much if they over-rely on AI tools"
+                },
+                {
+                  "value": "academic_integrity",
+                  "text": "I want to prevent cheating and academic integrity violations caused by AI misuse"
+                },
+                {
+                  "value": "lack_access_ai_tools",
+                  "text": "My school restricts access to AI tools"
+                }
+              ],
+              "hasOther": true
+            },
+            {
+              "type": "comment",
+              "name": "teaching_with_ai_comments",
+              "title": "Is there anything you would like us to know as we think about developing AI-supported tools to complement your teaching and student learning?",
+              "description": "(Optional)",
+              "rows": 3
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "teaching_with_ai_panel_2026",
+          "elements": [
+            {
+              "type": "html",
+              "name": "section_header_teaching_with_ai",
+              "html": "<h1>Using Artificial Intelligence to Teach and Learn Computer Science</h1>"
+            },
+            {
+              "type": "html",
+              "name": "section_teaching_with_ai",
+              "html": "\n<p><span style='font-size: 12pt;'>The following are questions about your experience and interests in <strong>using Artificial Intelligence (AI) to support you while teaching Computer Science</strong>. Your responses will inform our priorities around tool development.</span></p>\n"
+            },
+            {
+              "type": "rating",
+              "name": "teaching_with_ai_ta_likelihood",
+              "title": "How likely are you to use an AI-assisted tool to assess and evaluate students' computer science projects?",
+              "description": "Such a tool uses AI to check students' work against a rubric, assessing progress toward learning outcomes and standards.",
+              "rateCount": 7,
+              "rateMax": 7,
+              "minRateDescription": "Not Likely At All",
+              "maxRateDescription": "Extremely Likely"
+            },
+            {
+              "type": "checkbox",
+              "name": "teaching_with_ai_ta_reasons",
+              "visibleIf": "{teaching_with_ai_ta_likelihood} < 5",
+              "title": "Please share the reasons why you wouldn't use an AI-assisted tool to assess and evaluate students' computer science projects. Understanding your answer will help us find how to improve the tool and supports.",
+              "description": "(Please select all that apply)",
+              "choices": [
+                {
+                  "value": "need_more_prep_or_knowledge",
+                  "text": "I would like to understand how the tool works before using it"
+                },
+                {
+                  "value": "dont_trust",
+                  "text": "I don't trust AI enough to use it for essential components of teaching"
+                },
+                {
+                  "value": "tool_not_as_good_as_me",
+                  "text": "I am not confident that an AI tool will assess student work as well as I can"
                 },
                 {
                   "value": "lack_access_ai_tools",

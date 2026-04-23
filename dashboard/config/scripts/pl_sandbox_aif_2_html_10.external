@@ -46,7 +46,11 @@ The **p** tag makes a regular block of text.
 The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A cute puppy” used if the image can’t load." width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?” Notice in the output above, there is no styling. Everything is plain and the system default. 
+#### HTML doesn’t control colors or style; that’s what **CSS** is for.
+
+#### Instead, it answers the question: “What is on the page?” 
+
+#### Notice in the output above, there is no styling. Everything is plain and the system default. 
 
 ## Next, let's see how **CSS** layers in!
 
