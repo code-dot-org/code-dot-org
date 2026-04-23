@@ -88,7 +88,17 @@ module Cdo
           name: "ui-test-#{Time.now.to_i}"
         )
         session_arn = resp.remote_access_session.arn
-        endpoint = wait_for_mobile_session_endpoint(session_arn)
+
+        # If waiting for the endpoint fails (typically a PENDING_CONCURRENCY /
+        # PENDING_DEVICE timeout), stop the session before re-raising so we
+        # release the device back to AWS -- otherwise the next run queues
+        # behind this stuck session and hits the same timeout.
+        endpoint = begin
+          wait_for_mobile_session_endpoint(session_arn)
+        rescue
+          stop_mobile_session(session_arn)
+          raise
+        end
 
         {url: endpoint, session_arn: session_arn}
       end
