@@ -12,6 +12,10 @@ module Cdo
     NOT_FOUND = Aws::SecretsManager::Errors::ResourceNotFoundException
     EXISTS = Aws::SecretsManager::Errors::ResourceExistsException
 
+    # Maximum number of secrets that BatchGetSecretValue will return in a single call.
+    # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_BatchGetSecretValue.html
+    BATCH_GET_MAX = 20
+
     attr_accessor :logger
 
     def initialize(client: nil, required: [], logger: nil)
@@ -47,11 +51,27 @@ module Cdo
       get_multi(*@required).value!
     end
 
-    # Asynchronously fetch keys in parallel.
+    # Asynchronously fetch keys in parallel, batching the underlying calls to
+    # AWS Secrets Manager via BatchGetSecretValue. Each batch retrieves up to
+    # BATCH_GET_MAX secrets in a single request, which is dramatically faster
+    # than issuing N individual GetSecretValue requests during startup.
     # @return [Concurrent::Promises::Future<Hash>] All keys and their resolved values
     def get_multi(*keys)
+      keys = keys.map(&:to_s).uniq
       return Concurrent::Promises.fulfilled_future({}, @pool) if keys.empty?
-      client_promise.then do
+
+      # Only fetch keys we don't already have cached (or in-flight) from a
+      # previous call to get/get_multi.
+      uncached = keys.reject {|key| @values.key?(key)}
+
+      batch_future =
+        if uncached.empty?
+          Concurrent::Promises.fulfilled_future(true, @pool)
+        else
+          client_promise.then {|client| batch_fetch!(client, uncached)}
+        end
+
+      batch_future.then do
         promises = keys.map {|key| get(key).then {|value| [key, value]}}
         Concurrent::Promises.zip_futures_on(@pool, *promises).
           then {|*values| values.to_h}
@@ -138,6 +158,51 @@ module Cdo
     rescue NOT_FOUND => exception
       exception.set_backtrace []
       raise
+    end
+
+    # Fetch the provided keys from AWS Secrets Manager using BatchGetSecretValue,
+    # populating the in-memory cache in @values so subsequent calls to +get+
+    # return the already-fetched value without issuing another request.
+    #
+    # Keys that fail to resolve (e.g. because they are not present in AWS
+    # Secrets Manager) are cached as rejected futures so that they surface the
+    # same exception types callers would see from the single-key code path.
+    #
+    # @param client [Aws::SecretsManager::Client]
+    # @param keys [Array<String>]
+    private def batch_fetch!(client, keys)
+      keys.each_slice(BATCH_GET_MAX) do |batch|
+        logger&.info("BatchGetSecretValue: #{batch.length} key(s)")
+        response = client.batch_get_secret_value(secret_id_list: batch)
+
+        response.secret_values.each do |entry|
+          parsed = parse_json(entry.secret_string)
+          @values[entry.name] ||= Concurrent::Promises.fulfilled_future(parsed, @pool)
+        end
+
+        response.errors.each do |error|
+          @values[error.secret_id] ||= Concurrent::Promises.rejected_future(
+            build_batch_error(error), @pool
+          )
+        end
+      end
+      true
+    end
+
+    # Translate a BatchGetSecretValue error entry into the same exception type
+    # that would be raised from a single-key GetSecretValue call, so callers
+    # can continue to rescue +Cdo::Secrets::NOT_FOUND+ etc.
+    #
+    # @param error [Aws::SecretsManager::Types::APIErrorType]
+    # @return [Aws::SecretsManager::Errors::ServiceError]
+    private def build_batch_error(error)
+      error_class =
+        begin
+          Aws::SecretsManager::Errors.const_get(error.error_code)
+        rescue NameError
+          Aws::SecretsManager::Errors::ServiceError
+        end
+      error_class.new(nil, "#{error.message} Key: #{error.secret_id}")
     end
 
     # If +value+ is a JSON array, return an Array.
