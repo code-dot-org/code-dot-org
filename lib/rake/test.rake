@@ -125,7 +125,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', (eyes_features.count * 2).to_s
+      '--parallel', '20'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
