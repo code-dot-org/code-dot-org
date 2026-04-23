@@ -46,6 +46,26 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   return node.type;
 }
 
+function moveNodesByDelta(
+  currentNodes: SketchlabReactFlowNode[],
+  nodeIds: string[],
+  deltaX: number,
+  deltaY: number
+) {
+  const nodeIdsToMove = new Set(nodeIds);
+  return currentNodes.map(node =>
+    nodeIdsToMove.has(node.id)
+      ? {
+          ...node,
+          position: {
+            x: node.position.x + deltaX,
+            y: node.position.y + deltaY,
+          },
+        }
+      : node
+  );
+}
+
 interface UseKeyboardEdgeCreationOptions {
   nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
@@ -137,17 +157,7 @@ export function useKeyboardEdgeCreation({
           event.preventDefault();
           event.stopPropagation();
           setNodes(currentNodes =>
-            currentNodes.map(node =>
-              node.id === focusedNodeId
-                ? {
-                    ...node,
-                    position: {
-                      x: node.position.x + deltaX,
-                      y: node.position.y + deltaY,
-                    },
-                  }
-                : node
-            )
+            moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
           );
           return;
         }
@@ -173,21 +183,12 @@ export function useKeyboardEdgeCreation({
             event.preventDefault();
             event.stopPropagation();
             setNodes(currentNodes =>
-              currentNodes.map(node => {
-                if (
-                  node.id !== focusedEdge.source &&
-                  node.id !== focusedEdge.target
-                ) {
-                  return node;
-                }
-                return {
-                  ...node,
-                  position: {
-                    x: node.position.x + deltaX,
-                    y: node.position.y + deltaY,
-                  },
-                };
-              })
+              moveNodesByDelta(
+                currentNodes,
+                [focusedEdge.source, focusedEdge.target],
+                deltaX,
+                deltaY
+              )
             );
             return;
           }
