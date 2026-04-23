@@ -1,6 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import type {LinkProps} from '@code-dot-org/component-library/link';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import markdownToTxt from 'markdown-to-txt';
 import React, {
@@ -36,6 +35,7 @@ import {addStagedFile, clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
+  AiChatDisabledState,
   ChatAsset,
   ChatButtonAndKey,
   ModelParameters,
@@ -77,9 +77,7 @@ interface ChatWorkspaceProps {
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
-  disabled?: boolean;
-  disabledMessage?: string;
-  disabledLink?: LinkProps;
+  disabledState?: AiChatDisabledState;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -106,13 +104,15 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       logLevelActivity,
       hasInstructionsDrawer,
       lessonId,
-      disabled = false,
-      disabledMessage,
-      disabledLink,
+      disabledState,
       renderLastMessagePostText,
     },
     ref
   ) => {
+    const disabled = disabledState?.disabled ?? false;
+    const disabledMessage = disabledState?.disabledMessage;
+    const disabledLink = disabledState?.disabledLink;
+
     const canDisplayAssets = !!levelName && !!channelId;
     if (multimodalEnabled && !canDisplayAssets) {
       console.warn(
@@ -302,9 +302,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             events={studentChatHistory}
             isTeacherView={true}
             buildAssetUrl={buildAssetUrlValue}
-            chatDisabled={disabled}
-            chatDisabledMessage={disabledMessage}
-            chatDisabledLink={disabledLink}
+            disabledState={disabledState}
           />
         ),
         iconLeft: iconValue,
@@ -316,9 +314,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           <ChatEventsList
             events={visibleItems}
             buildAssetUrl={buildAssetUrlValue}
-            chatDisabled={disabled}
-            chatDisabledMessage={disabledMessage}
-            chatDisabledLink={disabledLink}
+            disabledState={disabledState}
           />
         ),
       },
@@ -388,9 +384,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             clientType={clientType}
             modelParameters={modelParameters}
             hasInstructionsDrawer={hasInstructionsDrawer}
-            chatDisabled={disabled}
-            chatDisabledMessage={disabledMessage}
-            chatDisabledLink={disabledLink}
+            disabledState={disabledState}
             renderLastMessagePostText={renderLastMessagePostText}
           />
         )}

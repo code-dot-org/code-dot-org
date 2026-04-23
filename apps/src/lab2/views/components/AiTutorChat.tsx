@@ -1,12 +1,12 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import type {LinkProps} from '@code-dot-org/component-library/link';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useMemo} from 'react';
 
 import {
+  AiChatDisabledState,
   ChatButtonClickHandler,
   ChatButtonData,
   ResponseSchemaSettings,
@@ -41,9 +41,7 @@ interface AiTutorChatProps {
   tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
-  disabled?: boolean;
-  disabledMessage?: string;
-  disabledLink?: LinkProps;
+  disabledState?: AiChatDisabledState;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -59,9 +57,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   tutorVideos,
   isLessonDeepDive = false,
   lessonId,
-  disabled,
-  disabledMessage,
-  disabledLink,
+  disabledState,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -155,9 +151,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
-        disabled={disabled}
-        disabledMessage={disabledMessage}
-        disabledLink={disabledLink}
+        disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>

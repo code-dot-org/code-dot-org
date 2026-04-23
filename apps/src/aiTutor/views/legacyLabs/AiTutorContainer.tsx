@@ -70,7 +70,7 @@ export const AiTutorContainer: FC<{
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
-  const {disabled, disabledMessage, disabledLink} = useAiChatDisabledState({
+  const disabledState = useAiChatDisabledState({
     appName: labState.appType,
   });
 
@@ -183,9 +183,7 @@ export const AiTutorContainer: FC<{
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}
-          disabled={disabled}
-          disabledMessage={disabledMessage}
-          disabledLink={disabledLink}
+          disabledState={disabledState}
         />
       </div>
       <div
@@ -198,7 +196,7 @@ export const AiTutorContainer: FC<{
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
-          disabled={disabled}
+          disabled={disabledState.disabled}
         />
       </div>
     </>

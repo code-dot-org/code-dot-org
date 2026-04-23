@@ -1,4 +1,3 @@
-import type {LinkProps} from '@code-dot-org/component-library/link';
 import {useMemo} from 'react';
 
 import {
@@ -8,6 +7,7 @@ import {
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -16,12 +16,6 @@ interface UseAiChatDisabledStateParams {
   appName?: string;
   isPredictLevel?: boolean;
   hasSubmittedPredictResponse?: boolean;
-}
-
-export interface AiChatDisabledState {
-  disabled: boolean;
-  disabledMessage?: string;
-  disabledLink?: LinkProps;
 }
 
 /**
