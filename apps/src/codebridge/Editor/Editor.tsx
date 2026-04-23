@@ -41,7 +41,7 @@ interface EditorProps {
 }
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
-  const {levelProperties} = useCodebridgeContext();
+  const {levelProperties, aiTutorDisabled} = useCodebridgeContext();
   const activeFile = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
@@ -130,7 +130,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const extensions: Extension[] = [];
     if (
       activeFile?.name &&
-      enableUserAddedSelectionContext(levelProperties.appName)
+      enableUserAddedSelectionContext(levelProperties.appName) &&
+      !aiTutorDisabled
     ) {
       const addToAiTutorField = getAddToAiTutorField(activeFile.name, dispatch);
       extensions.push(addToAiTutorField);
@@ -196,6 +197,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     levelProperties.appName,
     hasUnifiedDiffView,
     codeBeforeAiTutorVersion,
+    aiTutorDisabled,
   ]);
 
   const activeFileExt = activeFile?.name
