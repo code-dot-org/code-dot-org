@@ -81,6 +81,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     }
     dispatch(asyncLoadCoteacherInvite());
 
+    // Fetch personalization alert dismissal status
     const fetchPersonalizationStatus = async () => {
       try {
         const userPreferences = new UserPreferences();
@@ -97,6 +98,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
     fetchPersonalizationStatus();
 
+    // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
       try {
         const response = await fetch('/teaching_profile_data');
@@ -148,21 +150,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     hasAssignedEssentialAiDependency;
 
   const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
+    // Don't show while loading
     if (personaData.isLoading) {
       return false;
     }
+    // Show alert only when hasMatchedPersona is explicitly false
     return personaData.hasMatchedPersona === false;
   }, [personaData]);
 
   const shouldShowPersonalizationAlert = React.useMemo(() => {
+    // Don't show if still loading data
     if (personaData.isLoading || isLoadingPersonalizationAlertStatus) {
       return false;
     }
 
+    // Don't show if user has already dismissed the alert
     if (hasDismissedPersonalizationAlert) {
       return false;
     }
 
+    // Don't show if user has answered personalization questions
     if (!needsToAnswerPersonalizationQuestions) {
       return false;
     }
@@ -176,6 +183,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   ]);
 
   React.useEffect(() => {
+    // Send one analytics event when a teacher logs in. Use session storage to determine
+    // whether they've just logged in.
     if (
       !!teacherId &&
       tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
@@ -188,6 +197,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     }
     analyticsReporter.sendEvent(EVENTS.NEW_TEACHER_HOMEPAGE_VISITED, {});
 
+    // Temporarily check network availability on teacher login
     detectNetworkAvailability(teacherId);
   }, [teacherId]);
 
@@ -196,6 +206,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   const sections = useAppSelector(state => state.teacherSections.sections);
 
+  // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
   const numSections = React.useMemo(
