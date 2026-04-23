@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   Controls,
+  type EdgeMouseHandler,
   type IsValidConnection,
   MarkerType,
   ReactFlow,
@@ -190,8 +191,10 @@ export default function ReactFlowCanvas({
             ...domAttributes,
             ...(isLineEdge && !readOnly
               ? {
-                  onMouseDown: (event: React.MouseEvent) =>
-                    handleEdgeMouseDown(event, edge),
+                  onMouseDown: (event: React.MouseEvent) => {
+                    focusEntry({type: 'edge', id: edge.id});
+                    handleEdgeMouseDown(event, edge);
+                  },
                 }
               : {}),
           },
@@ -208,6 +211,7 @@ export default function ReactFlowCanvas({
     lastFocusedEntry?.id,
     connectingFrom,
     readOnly,
+    focusEntry,
     handleEdgeMouseDown,
   ]);
 
@@ -303,6 +307,13 @@ export default function ReactFlowCanvas({
       });
     },
     [getNode, setNodes]
+  );
+
+  const handleEdgeClick: EdgeMouseHandler = useCallback(
+    (_event, edge) => {
+      focusEntry({type: 'edge', id: edge.id});
+    },
+    [focusEntry]
   );
 
   const handleAddNode = useCallback(
@@ -427,6 +438,7 @@ export default function ReactFlowCanvas({
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onEdgesDelete={handleEdgesDelete}
+          onEdgeClick={handleEdgeClick}
           onConnect={onConnect}
           isValidConnection={isValidConnection}
           nodeTypes={NODE_TYPES}
