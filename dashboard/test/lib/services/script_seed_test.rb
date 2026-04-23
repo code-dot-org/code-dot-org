@@ -76,8 +76,6 @@ module Services
       script_to_destroy = Unit.find(script.id)
       script_to_destroy.original_unit_group.course_version.resources.destroy_all
       script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
-
-      # Destroy all rubrics connected to all lessons in the script, to avoid validation errors when destroying lesson groups and lessons.
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
