@@ -5,7 +5,7 @@ import {
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 

@@ -1543,36 +1543,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  test 'can toggle ai_tutor_enabled by the section teacher' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :success
-    @section.reload
-    assert @section.ai_tutor_enabled
-
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
-    assert_response :success
-    @section.reload
-    refute @section.ai_tutor_enabled
-  end
-
-  test 'cannot set ai_tutor_enabled by a different teacher' do
-    sign_in @following_teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled returns 403 for unauthorized access' do
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled fails when section does not exist' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
   test 'can set ai_chat_access_level by the section teacher' do
     sign_in @teacher
     post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
@@ -1714,29 +1684,66 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'presets: returns the preset projections' do
     sign_in @teacher
-    create(:unit, name: 'aif2-2025')
-    create(:unit, name: 'csd3-2024')
-    create(:unit, name: 'k5-ai-data-2024')
-    create(:unit_group, name: 'artificial-intelligence-foundations-2025')
-    create(:unit_group, name: 'csd-2024')
-    create(:unit_group, name: 'k5-ai-data-2024')
+    high_unit = create(:unit, name: 'fake-high-unit')
+    middle_unit = create(:unit, name: 'fake-middle-unit')
+    high_unit_group = create(:unit_group, name: 'fake-high-course')
+    middle_unit_group = create(:unit_group, name: 'fake-middle-course')
+    create(:unit_group_unit, unit_group: high_unit_group, script: high_unit, position: 1)
+    create(:unit_group_unit, unit_group: middle_unit_group, script: middle_unit, position: 1)
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns(
+      {
+        high: {
+          demo_type: 'high',
+          section_name: 'Fake High Practice Section',
+          avatar_color: 8,
+          avatar_emoji: 5,
+          login_type: 'email',
+          participant_type: 'student',
+          unit: {
+            name: high_unit.name,
+            display_name: high_unit.localized_title,
+          },
+          unit_group: {
+            name: high_unit_group.name,
+            display_name: high_unit_group.localized_title,
+          },
+        },
+        middle: {
+          demo_type: 'middle',
+          section_name: 'Fake Middle Practice Section',
+          avatar_color: 1,
+          avatar_emoji: 0,
+          login_type: 'word',
+          participant_type: 'student',
+          unit: {
+            name: middle_unit.name,
+            display_name: middle_unit.localized_title,
+          },
+          unit_group: {
+            name: middle_unit_group.name,
+            display_name: middle_unit_group.localized_title,
+          },
+        },
+      }
+    )
 
     get :presets
 
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 'High School Practice Section', response['high']['section_name']
-    assert_equal 'aif2-2025', response['high']['unit']['name']
+    assert_equal 'Fake High Practice Section', response['high']['section_name']
+    assert_equal high_unit.name, response['high']['unit']['name']
     assert_equal 'student', response['middle']['participant_type']
   end
 
-  test 'presets: returns not_found when no preset can be projected' do
+  test 'presets: returns an empty response when no preset can be projected' do
     sign_in @teacher
     Policies::DemoSections.stubs(:preset_views_for_all_types).returns({})
 
     get :presets
 
-    assert_response :not_found
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
   end
 
   private def stub_demo_preset

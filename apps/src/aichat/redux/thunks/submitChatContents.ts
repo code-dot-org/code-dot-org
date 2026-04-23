@@ -238,9 +238,12 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        message.chatMessageText =
-          responseCallback?.(message.chatMessageText) ??
-          message.chatMessageText;
+        // Structured-output callbacks only apply to successful model responses.
+        if (message.status === Status.OK) {
+          message.chatMessageText =
+            responseCallback?.(message.chatMessageText) ??
+            message.chatMessageText;
+        }
         dispatch(addChatEvent(message));
       }
       if (message.role === Role.USER) {

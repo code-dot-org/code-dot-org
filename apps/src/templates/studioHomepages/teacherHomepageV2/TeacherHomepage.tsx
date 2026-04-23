@@ -18,9 +18,11 @@ import i18n from '@cdo/locale';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
+  fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
+import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import OnboardingChecklist from './OnboardingChecklist';
@@ -33,7 +35,6 @@ import styles from './teacherHomepage.module.scss';
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
-
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
@@ -46,6 +47,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
+  const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
@@ -74,6 +76,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
+    if (isDemoSectionEnabled) {
+      dispatch(fetchDemoPresets());
+    }
     dispatch(asyncLoadCoteacherInvite());
 
     // Fetch personalization alert dismissal status
@@ -112,7 +117,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     };
 
     fetchTeachingProfileData();
-  }, [dispatch]);
+  }, [dispatch, isDemoSectionEnabled]);
 
   const aiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
@@ -273,11 +278,20 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               destructiveLoad={true}
             />
             {!!isMiniTutorialEnabled && <OnboardingChecklist />}
-            {numSections === 0 ? (
-              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+            {!isDemoSectionEnabled ? (
+              numSections === 0 ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <SectionList
+                  showHiddenOnly={showHiddenOnly}
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )
+            ) : numSections === 0 ? (
+              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
             ) : (
               <SectionList
-                showHiddenOnly={selectedArchiveToggle === 'archived'}
+                showHiddenOnly={showHiddenOnly}
                 studioUrlPrefix={studioUrlPrefix}
               />
             )}
