@@ -1,0 +1,18 @@
+.nameWithChip {
+  display: inline-flex;
+  align-items: center;
+}
+
+.details {
+  font-size: 12px;
+  color: var(--text-neutral-primary);
+}
+
+.inputWrapper {
+  width: 160px;
+
+  input {
+    width: 160px;
+    margin: 5px;
+  }
+}
