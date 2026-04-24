@@ -8,7 +8,12 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 
-import {addMultipleAddRows} from './manageStudentsRedux';
+import {
+  addMultipleAddRows,
+  parseAge,
+  parseGender,
+  parseUsState,
+} from './manageStudentsRedux';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
@@ -29,13 +34,18 @@ class AddMultipleStudents extends Component {
     this.setState({isDialogOpen: false});
   };
 
+  // Column order: DisplayName, FamilyName, Age, Gender, State
   add = () => {
     const value = this.refs.studentsTextBox.value;
     const studentDataArray = value.split('\n').map(line => {
       const parts = line.split(',');
-      const name = parts[0].trim();
-      const familyName = parts.length > 1 ? parts[1].trim() : null;
-      return {name, familyName};
+      const name = (parts[0] || '').trim();
+      const familyName = (parts[1] || '').trim() || null;
+      const age = parseAge(parts[2]);
+      const gender = parseGender(parts[3]);
+      const usState = parseUsState(parts[4]) || null;
+      console.log({name, familyName, age, gender, usState});
+      return {name, familyName, age, gender, usState};
     });
     this.props.addMultipleStudents(studentDataArray);
     this.closeDialog();

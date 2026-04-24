@@ -93,7 +93,7 @@
   "addStudentsToCurrentSection": "Add students to the current section",
   "addStudentsMultiple": "Add multiple students",
   "addStudentsMultipleInstructions": "Type or paste the names of your students, one per line.",
-  "addStudentsMultipleWithFamilyNameInstructions": "Type or paste the display names of your students, one per line. Optionally, you can include their family name after a comma on the same line.",
+  "addStudentsMultipleWithFamilyNameInstructions": "Type or paste student info, one per line, as comma-separated values: Display Name, Family Name, Age, Gender, State. Only Display Name is required. Leave a field blank (e.g. Jane,,12,,CA) to skip it.",
   "addStudentsManageMyOwn": "Create and manage my own list of students",
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
   "addStudentsToSectionInstructions": "Choose how you want to add your students:",

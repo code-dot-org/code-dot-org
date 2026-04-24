@@ -8,6 +8,9 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
+import {ages} from '../AgeDropdown';
+import {STATE_CODES} from '@cdo/apps/geographyConstants';
+
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
   BELOW_TABLE: 'below-table',
@@ -385,6 +388,34 @@ export const addStudents = studentIds => {
   };
 };
 
+export const parseAge = raw => {
+  if (!raw) return '';
+  const trimmed = raw.trim();
+  return ages.includes(trimmed) ? trimmed : '';
+};
+
+export const parseGender = raw => {
+  if (!raw) return '';
+  const normalized = raw.trim().toLowerCase();
+  const lookup = {
+    male: 'm',
+    m: 'm',
+    female: 'f',
+    f: 'f',
+    'non-binary': 'n',
+    nonbinary: 'n',
+    'preferred term not listed': 'o',
+    other: 'o',
+  };
+  return lookup[normalized] || '';
+};
+
+export const parseUsState = raw => {
+  if (!raw) return '';
+  const upper = raw.trim().toUpperCase();
+  return STATE_CODES.includes(upper) ? upper : '';
+};
+
 // Creates a new RowType.NEW_STUDENT for each name in the array.
 export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
@@ -392,13 +423,15 @@ export const addMultipleAddRows = studentDataArray => {
       .filter(data => data.name)
       .reduce((accumulator, data) => {
         const newId = addRowIdCounter--;
-
         return {
           ...accumulator,
           [newId]: {
             ...blankNewStudentRow,
             name: data.name,
-            familyName: data.familyName,
+            familyName: data.familyName || '',
+            age: data.age || '',
+            genderTeacherInput: data.gender || '',
+            usState: data.usState || null,
             id: newId,
           },
         };
