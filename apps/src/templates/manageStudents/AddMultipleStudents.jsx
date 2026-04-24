@@ -46,7 +46,7 @@ class AddMultipleStudents extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <MuiButton
           variant="outlined"
           color="tertiary"
@@ -81,7 +81,7 @@ class AddMultipleStudents extends Component {
             }}
           />
         )}
-      </div>
+      </>
     );
   }
 }
