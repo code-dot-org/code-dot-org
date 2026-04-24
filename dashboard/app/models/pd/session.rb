@@ -25,6 +25,7 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  export_to_analytics
   include Pd::UrlValidator
 
   # creates a hash like {in_person: 0, virtual: 1}

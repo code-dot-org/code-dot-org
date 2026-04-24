@@ -15,6 +15,7 @@
 #  index_pd_regional_partner_contacts_on_user_id              (user_id)
 #
 class Pd::RegionalPartnerContact < ApplicationRecord
+  export_to_analytics
   include Pd::Form
 
   belongs_to :user, optional: true

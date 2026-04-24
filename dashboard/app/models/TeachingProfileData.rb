@@ -13,5 +13,6 @@
 #  index_teaching_profile_data_on_user_id  (user_id)
 #
 class TeachingProfileData < ApplicationRecord
+  export_to_analytics
   belongs_to :user
 end

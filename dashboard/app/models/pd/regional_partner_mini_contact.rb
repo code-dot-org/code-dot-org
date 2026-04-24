@@ -16,6 +16,7 @@
 #
 
 class Pd::RegionalPartnerMiniContact < ApplicationRecord
+  export_to_analytics
   include Pd::Form
 
   belongs_to :user, optional: true

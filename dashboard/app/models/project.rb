@@ -27,6 +27,7 @@
 #  storage_apps_storage_id_state_index  (storage_id,state)
 #
 class Project < ApplicationRecord
+  export_to_analytics
   # NOTE: skip_content_moderation is currently not used in the codebase.
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account

@@ -22,6 +22,7 @@
 #
 
 class UserScript < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

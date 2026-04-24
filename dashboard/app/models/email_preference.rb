@@ -23,6 +23,7 @@
 #     time the corresponding user-facing string is updated.
 
 class EmailPreference < ApplicationRecord
+  export_to_analytics
   include EmailPreferenceConstants
 
   validates_presence_of :email, :ip_address, :source

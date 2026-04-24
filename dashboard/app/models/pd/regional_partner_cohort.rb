@@ -20,6 +20,7 @@
 #
 
 class Pd::RegionalPartnerCohort < ApplicationRecord
+  export_to_analytics
   ALLOWED_COURSES = [
     Pd::Workshop::COURSE_CSP,
     Pd::Workshop::COURSE_CSD,

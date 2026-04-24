@@ -23,5 +23,6 @@
 #  index_aichat_events_on_request_id  (request_id)
 #
 class AichatEvent < ApplicationRecord
+  export_to_analytics
   belongs_to :user
 end

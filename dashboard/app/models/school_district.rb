@@ -18,6 +18,7 @@
 #
 
 class SchoolDistrict < ApplicationRecord
+  export_to_analytics
   include Seeded
 
   has_many :regional_partners_school_districts

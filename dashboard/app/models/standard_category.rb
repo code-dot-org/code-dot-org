@@ -17,6 +17,7 @@
 #  index_standard_categories_on_parent_category_id          (parent_category_id)
 #
 class StandardCategory < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
 
   belongs_to :framework, optional: true

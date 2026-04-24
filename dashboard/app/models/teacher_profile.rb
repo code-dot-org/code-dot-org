@@ -20,6 +20,7 @@
 #
 
 class TeacherProfile < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
   # teals: True if the teacher was a TEALS teacher.
   serialized_attrs %w(teals)

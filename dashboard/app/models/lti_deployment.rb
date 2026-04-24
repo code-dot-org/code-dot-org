@@ -15,6 +15,7 @@
 #  index_lti_deployments_on_lti_integration_id  (lti_integration_id)
 #
 class LtiDeployment < ApplicationRecord
+  export_to_analytics
   belongs_to :lti_integration
   has_and_belongs_to_many :lti_user_identities
 

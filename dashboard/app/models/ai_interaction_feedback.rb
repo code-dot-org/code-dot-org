@@ -19,5 +19,6 @@
 #  index_ai_interaction_feedbacks_on_ai_interaction  (ai_interaction_type,ai_interaction_id)
 #
 class AiInteractionFeedback < ApplicationRecord
+  export_to_analytics
   belongs_to :ai_interaction, polymorphic: true
 end

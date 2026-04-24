@@ -20,6 +20,7 @@
 #  index_section_instructors_on_section_id                    (section_id)
 #
 class SectionInstructor < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
 
   belongs_to :instructor, class_name: 'User'

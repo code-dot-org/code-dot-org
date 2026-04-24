@@ -26,6 +26,7 @@
 #
 
 class Pd::FacilitatorTeacherconAttendance < ApplicationRecord
+  export_to_analytics
   DATE_FORMAT = "%B %e".freeze
 
   belongs_to :user, optional: true

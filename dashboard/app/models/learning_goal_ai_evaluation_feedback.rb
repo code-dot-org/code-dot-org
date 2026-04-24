@@ -19,5 +19,6 @@
 #  index_feedback_on_learning_goal_ai_evaluation  (learning_goal_ai_evaluation_id)
 #
 class LearningGoalAiEvaluationFeedback < ApplicationRecord
+  export_to_analytics
   belongs_to :learning_goal_ai_evaluation
 end

@@ -15,5 +15,6 @@
 #  index_aidiff_message_feedbacks_on_aidiff_message_id  (aidiff_message_id) UNIQUE
 #
 class AidiffMessageFeedback < ApplicationRecord
+  export_to_analytics
   belongs_to :aidiff_message
 end

@@ -42,6 +42,7 @@
 #
 
 class Pd::Workshop < ApplicationRecord
+  export_to_analytics
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants

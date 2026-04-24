@@ -17,6 +17,7 @@
 #  index_lti_sections_on_section_id     (section_id)
 #
 class LtiSection < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
   belongs_to :lti_course
   belongs_to :section

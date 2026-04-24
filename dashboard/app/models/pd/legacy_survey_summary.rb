@@ -12,5 +12,6 @@
 #
 
 class Pd::LegacySurveySummary < ApplicationRecord
+  export_to_analytics
   belongs_to :facilitator, class_name: 'User', optional: true
 end

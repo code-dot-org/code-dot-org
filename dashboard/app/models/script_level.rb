@@ -34,6 +34,7 @@ require 'cdo/shared_constants'
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
   include LevelsHelper
   include SharedConstants

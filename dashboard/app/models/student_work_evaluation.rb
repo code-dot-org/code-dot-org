@@ -27,6 +27,7 @@
 #  index_student_work_evaluations_on_type        (type)
 #
 class StudentWorkEvaluation < ApplicationRecord
+  export_to_analytics
   self.inheritance_column = :type
 
   has_many :ai_interaction_feedbacks, as: :ai_interaction

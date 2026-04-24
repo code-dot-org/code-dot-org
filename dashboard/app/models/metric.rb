@@ -16,4 +16,5 @@
 #
 
 class Metric < ApplicationRecord
+  export_to_analytics
 end

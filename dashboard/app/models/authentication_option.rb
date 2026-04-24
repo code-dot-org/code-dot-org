@@ -23,6 +23,7 @@
 #
 
 class AuthenticationOption < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
   belongs_to :user, optional: true
 

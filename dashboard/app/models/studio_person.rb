@@ -11,6 +11,7 @@
 require 'cdo/firehose'
 
 class StudioPerson < ApplicationRecord
+  export_to_analytics
   has_many :users
 
   # Returns the emails associated with the StudioPerson as an array.

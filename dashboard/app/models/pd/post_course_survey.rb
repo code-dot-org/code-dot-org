@@ -26,6 +26,7 @@
 
 module Pd
   class PostCourseSurvey < ApplicationRecord
+    export_to_analytics
     include JotFormBackedForm
 
     VALID_YEARS = [

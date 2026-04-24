@@ -39,6 +39,7 @@ require 'ruby-progressbar'
 
 # A sequence of Levels
 class Unit < ApplicationRecord
+  export_to_analytics
   self.table_name = 'scripts'
 
   TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]

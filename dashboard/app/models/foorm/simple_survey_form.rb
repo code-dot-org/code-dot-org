@@ -16,6 +16,7 @@
 #  index_foorm_simple_survey_forms_on_path  (path)
 #
 class Foorm::SimpleSurveyForm < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
 
   serialized_attrs [

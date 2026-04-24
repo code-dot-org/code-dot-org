@@ -44,6 +44,7 @@
 # type field set. Always use one of the derived types to save a submission.
 #
 class Census::CensusSubmission < ApplicationRecord
+  export_to_analytics
   has_and_belongs_to_many :school_infos
 
   validates :school_infos, presence: true

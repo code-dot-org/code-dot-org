@@ -26,6 +26,7 @@ require 'cdo/shared_constants'
 # Ordered partitioning of script levels within a unit
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
+  export_to_analytics
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers

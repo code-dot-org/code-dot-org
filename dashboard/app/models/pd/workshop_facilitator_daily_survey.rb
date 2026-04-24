@@ -31,6 +31,7 @@
 
 module Pd
   class WorkshopFacilitatorDailySurvey < ApplicationRecord
+    export_to_analytics
     include JotFormBackedForm
     include Pd::WorkshopSurveyConstants
 

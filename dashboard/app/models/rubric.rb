@@ -14,6 +14,7 @@
 #  index_rubrics_on_lesson_id_and_level_id  (lesson_id,level_id) UNIQUE
 #
 class Rubric < ApplicationRecord
+  export_to_analytics
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy, inverse_of: :rubric
   belongs_to :level
   belongs_to :lesson

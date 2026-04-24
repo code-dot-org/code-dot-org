@@ -23,6 +23,7 @@
 #
 
 class LevelConceptDifficulty < ApplicationRecord
+  export_to_analytics
   include ConceptDifficulties
   belongs_to :level
 

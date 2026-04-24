@@ -14,6 +14,7 @@
 #  index_frameworks_on_shortcode  (shortcode) UNIQUE
 #
 class Framework < ApplicationRecord
+  export_to_analytics
   def summarize_for_lesson_edit
     {
       name: name,

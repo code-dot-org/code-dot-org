@@ -27,6 +27,7 @@
 require 'cdo/shared_constants'
 
 class PeerReview < ApplicationRecord
+  export_to_analytics
   include SharedConstants
   include LevelsHelper
   include Rails.application.routes.url_helpers

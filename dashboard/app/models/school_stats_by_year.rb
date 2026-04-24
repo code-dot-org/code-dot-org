@@ -45,6 +45,7 @@
 #
 
 class SchoolStatsByYear < ApplicationRecord
+  export_to_analytics
   SCHOOL_STATUSES = [
     STATUS_OPEN = '1-Open'.freeze,
     STATUS_CLOSED = '2-Closed'.freeze,

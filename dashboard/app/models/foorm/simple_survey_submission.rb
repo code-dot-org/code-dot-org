@@ -17,6 +17,7 @@
 #
 
 class Foorm::SimpleSurveySubmission < ApplicationRecord
+  export_to_analytics
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user, optional: true
   belongs_to :simple_survey_form

@@ -18,6 +18,7 @@
 require 'dynamic_config/gatekeeper'
 
 class PuzzleRating < ApplicationRecord
+  export_to_analytics
   belongs_to :user, optional: true
   belongs_to :script, class_name: 'Unit'
   belongs_to :level

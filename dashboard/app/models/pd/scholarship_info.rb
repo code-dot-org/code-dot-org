@@ -21,6 +21,7 @@
 #
 
 class Pd::ScholarshipInfo < ApplicationRecord
+  export_to_analytics
   include Pd::Application::ActiveApplicationModels
   include Pd::Application::ApplicationConstants
   include Pd::WorkshopConstants

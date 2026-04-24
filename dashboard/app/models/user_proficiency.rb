@@ -65,6 +65,7 @@
 #
 
 class UserProficiency < ApplicationRecord
+  export_to_analytics
   include ConceptDifficulties
   belongs_to :user, optional: true
 

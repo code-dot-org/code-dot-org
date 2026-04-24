@@ -21,6 +21,7 @@
 #  index_aidiff_messages_on_aidiff_thread_id  (aidiff_thread_id)
 #
 class AidiffMessage < ApplicationRecord
+  export_to_analytics
   belongs_to :aidiff_thread
   has_one :aidiff_message_feedback, dependent: :destroy
 

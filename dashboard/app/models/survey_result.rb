@@ -16,6 +16,7 @@
 #
 
 class SurveyResult < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
 
   SYSTEM_DELETED = 'system_deleted'.freeze

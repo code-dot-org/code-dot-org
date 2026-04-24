@@ -17,6 +17,7 @@
 #
 
 class Foorm::LibraryQuestion < ApplicationRecord
+  export_to_analytics
   include Seeded
 
   class InvalidFoormConfigurationError < StandardError; end

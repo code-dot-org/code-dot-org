@@ -18,6 +18,7 @@
 #  index_lti_user_identities_on_user_id             (user_id)
 #
 class LtiUserIdentity < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :user

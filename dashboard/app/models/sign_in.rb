@@ -14,5 +14,6 @@
 #
 
 class SignIn < ApplicationRecord
+  export_to_analytics
   belongs_to :user, optional: true
 end

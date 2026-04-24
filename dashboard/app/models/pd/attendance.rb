@@ -20,6 +20,7 @@
 #
 
 class Pd::Attendance < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id, optional: true

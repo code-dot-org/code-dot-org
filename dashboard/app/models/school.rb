@@ -31,6 +31,7 @@
 #
 
 class School < ApplicationRecord
+  export_to_analytics
   include Seeded
 
   self.primary_key = 'id'

@@ -17,6 +17,7 @@
 #  index_parental_permission_requests_on_uuid     (uuid)
 #
 class ParentalPermissionRequest < ApplicationRecord
+  export_to_analytics
   belongs_to :user
   validates :parent_email, presence: true
 

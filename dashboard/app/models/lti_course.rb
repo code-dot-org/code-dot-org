@@ -22,6 +22,7 @@
 #  index_on_course_id_and_lti_integration_id        (course_id,lti_integration_id)
 #
 class LtiCourse < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :lti_deployment

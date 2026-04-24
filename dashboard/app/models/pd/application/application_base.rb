@@ -41,6 +41,7 @@ require 'state_abbr'
 # This on its own will fail validation.
 module Pd::Application
   class ApplicationBase < ApplicationRecord
+    export_to_analytics
     include ApplicationConstants
     include Pd::SharedApplicationConstants
     include Pd::Form

@@ -88,6 +88,7 @@ require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
   include SchoolInfoDeduplicator
   include EmailPreferences

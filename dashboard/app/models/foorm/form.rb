@@ -16,6 +16,7 @@
 #
 
 class Foorm::Form < ApplicationRecord
+  export_to_analytics
   include Seeded
   include Pd::Foorm::Constants
 

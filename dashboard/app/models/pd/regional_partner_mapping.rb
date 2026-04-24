@@ -18,6 +18,7 @@
 require 'state_abbr'
 
 class Pd::RegionalPartnerMapping < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid # use deleted_at column instead of deleting rows
   belongs_to :regional_partner, optional: true
 

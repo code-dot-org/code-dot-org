@@ -26,6 +26,7 @@
 #
 
 class TeacherFeedback < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User', optional: true

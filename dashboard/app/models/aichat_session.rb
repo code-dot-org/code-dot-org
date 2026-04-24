@@ -17,5 +17,6 @@
 #  index_acs_user_level_script  (user_id,level_id,script_id)
 #
 class AichatSession < ApplicationRecord
+  export_to_analytics
   belongs_to :user
 end

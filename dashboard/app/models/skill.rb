@@ -15,6 +15,7 @@
 #  index_skills_on_key  (key) UNIQUE
 #
 class Skill < ApplicationRecord
+  export_to_analytics
   validates :description, presence: true
 
   has_and_belongs_to_many :levels, join_table: 'levels_skills', dependent: :delete_all

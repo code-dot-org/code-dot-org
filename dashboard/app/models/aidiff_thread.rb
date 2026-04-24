@@ -21,6 +21,7 @@
 #  index_aidiff_threads_on_user_id  (user_id)
 #
 class AidiffThread < ApplicationRecord
+  export_to_analytics
   belongs_to :user
   has_one :aidiff_artifact
   has_many :aidiff_messages, dependent: :destroy

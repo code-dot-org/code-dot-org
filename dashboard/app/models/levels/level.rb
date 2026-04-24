@@ -28,6 +28,7 @@
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
+  export_to_analytics
   include SharedConstants
   include Levels::LevelsWithinLevels
 

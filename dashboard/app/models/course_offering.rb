@@ -33,6 +33,7 @@
 #
 
 class CourseOffering < ApplicationRecord
+  export_to_analytics
   include Curriculum::SharedCourseConstants
   include Localizable
 

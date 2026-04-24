@@ -16,6 +16,7 @@
 #
 
 class Standard < ApplicationRecord
+  export_to_analytics
   belongs_to :framework, optional: true
   belongs_to :category, class_name: 'StandardCategory', optional: true
   has_one :parent_category, through: :category

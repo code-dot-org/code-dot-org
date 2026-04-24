@@ -16,6 +16,7 @@
 
 module Pd
   class SurveyQuestion < ApplicationRecord
+    export_to_analytics
     # Sync question data for the specified form_id, upsert the DB row, and return the latest model instance
     # @param form_id [Integer]
     # @return [SurveyQuestion]

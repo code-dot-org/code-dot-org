@@ -19,6 +19,7 @@
 #
 module CAP
   class UserEvent < ApplicationRecord
+    export_to_analytics
     POLICIES = Policies::ChildAccount::StatePolicies.state_policies.each_value.pluck(:name).freeze
 
     NAMES = [

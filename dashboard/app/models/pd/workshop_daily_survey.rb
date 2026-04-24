@@ -29,6 +29,7 @@
 
 module Pd
   class WorkshopDailySurvey < ApplicationRecord
+    export_to_analytics
     include JotFormBackedForm
     include SharedWorkshopConstants
     include Pd::WorkshopSurveyConstants

@@ -46,6 +46,7 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants

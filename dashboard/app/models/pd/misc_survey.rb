@@ -19,6 +19,7 @@
 
 module Pd
   class MiscSurvey < ApplicationRecord
+    export_to_analytics
     include JotFormBackedForm
 
     belongs_to :user, optional: true

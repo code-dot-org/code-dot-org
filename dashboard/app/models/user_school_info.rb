@@ -17,6 +17,7 @@
 #
 
 class UserSchoolInfo < ApplicationRecord
+  export_to_analytics
   validates_presence_of :start_date, :last_confirmation_date
 
   belongs_to :user

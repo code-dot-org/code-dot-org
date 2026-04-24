@@ -26,6 +26,7 @@
 #
 
 class SchoolInfo < ApplicationRecord
+  export_to_analytics
   SCHOOL_TYPES = [
     SCHOOL_TYPE_CHARTER = "charter".freeze,
     SCHOOL_TYPE_PRIVATE = "private".freeze,

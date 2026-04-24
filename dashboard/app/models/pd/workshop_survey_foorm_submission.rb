@@ -22,6 +22,7 @@
 #
 
 class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
+  export_to_analytics
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user
   belongs_to :pd_session, class_name: 'Pd::Session', optional: true

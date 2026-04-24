@@ -13,6 +13,7 @@
 #
 
 class SectionHiddenLesson < ApplicationRecord
+  export_to_analytics
   belongs_to :section, optional: true
   belongs_to :lesson, foreign_key: 'stage_id', optional: true
 

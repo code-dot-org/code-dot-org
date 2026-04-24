@@ -24,6 +24,7 @@
 require 'state_abbr'
 
 class RegionalPartner < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers

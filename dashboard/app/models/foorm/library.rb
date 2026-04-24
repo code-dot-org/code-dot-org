@@ -14,6 +14,7 @@
 #  index_foorm_libraries_on_multiple_fields  (name,version) UNIQUE
 #
 class Foorm::Library < ApplicationRecord
+  export_to_analytics
   include Seeded
 
   # To consider: should a Foorm::Library go through all of the same validations as a Foorm::Form?

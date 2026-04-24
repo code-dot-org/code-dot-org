@@ -11,6 +11,7 @@
 #
 
 class Foorm::Submission < ApplicationRecord
+  export_to_analytics
   include Pd::Foorm::Constants
 
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id

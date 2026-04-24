@@ -13,6 +13,7 @@
 #
 
 class Pd::CourseFacilitator < ApplicationRecord
+  export_to_analytics
   class InvalidCourseOfferingIdError < StandardError; end
 
   belongs_to :facilitator, class_name: 'User', optional: true

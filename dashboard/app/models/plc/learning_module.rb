@@ -22,6 +22,7 @@
 # part of modules, and modules are not part of courses.
 # Learning Modules correspond to Lessons in our regular curriculum hierarchy.
 class Plc::LearningModule < ApplicationRecord
+  export_to_analytics
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,

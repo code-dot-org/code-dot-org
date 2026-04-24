@@ -15,6 +15,7 @@
 #
 
 class PairedUserLevel < ApplicationRecord
+  export_to_analytics
   belongs_to :navigator_user_level, class_name: 'UserLevel', optional: true
   belongs_to :driver_user_level, class_name: 'UserLevel', optional: true
 

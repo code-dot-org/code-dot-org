@@ -15,6 +15,7 @@
 #  index_potential_teachers_on_script_id  (script_id)
 #
 class PotentialTeacher < ApplicationRecord
+  export_to_analytics
   belongs_to :script, class_name: 'Unit', optional: true
 
   validates_presence_of :name, :email

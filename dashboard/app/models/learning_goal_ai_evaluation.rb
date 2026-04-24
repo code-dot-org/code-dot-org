@@ -19,6 +19,7 @@
 #  index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id  (rubric_ai_evaluation_id)
 #
 class LearningGoalAiEvaluation < ApplicationRecord
+  export_to_analytics
   belongs_to :rubric_ai_evaluation, inverse_of: :learning_goal_ai_evaluations
   belongs_to :learning_goal
 

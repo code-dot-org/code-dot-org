@@ -32,6 +32,7 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Pd::Enrollment < ApplicationRecord
+  export_to_analytics
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants

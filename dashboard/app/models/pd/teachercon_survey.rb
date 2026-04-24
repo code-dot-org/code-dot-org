@@ -14,6 +14,7 @@
 #
 
 class Pd::TeacherconSurvey < ApplicationRecord
+  export_to_analytics
   include Pd::FacilitatorSpecificForm
 
   DISAGREES = [

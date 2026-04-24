@@ -14,6 +14,7 @@
 #
 
 class Pd::PreWorkshopSurvey < ApplicationRecord
+  export_to_analytics
   include Pd::Form
 
   UNIT_NOT_STARTED = 'I have not started teaching the course yet'

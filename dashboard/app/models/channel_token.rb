@@ -19,6 +19,7 @@
 #
 
 class ChannelToken < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true

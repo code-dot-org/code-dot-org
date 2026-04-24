@@ -22,6 +22,7 @@
 #
 
 class UserGeo < ApplicationRecord
+  export_to_analytics
   belongs_to :user, optional: true
 
   PII_FIELDS = %w[ip_address city postal_code latitude longitude].freeze

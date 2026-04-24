@@ -21,6 +21,7 @@ require 'cdo/shared_constants'
 #  rubric_ai_evaluation_rubric_index       (rubric_id)
 #
 class RubricAiEvaluation < ApplicationRecord
+  export_to_analytics
   belongs_to :user
   belongs_to :requester, class_name: 'User'
   belongs_to :rubric

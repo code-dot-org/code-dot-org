@@ -18,6 +18,7 @@
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ApplicationRecord
+  export_to_analytics
   acts_as_paranoid
 
   belongs_to :section, optional: true

@@ -21,6 +21,7 @@
 # A named group of learning modules within a PLC course.
 # Corresponds to a Unit in our regular curriculum hierarchy.
 class Plc::CourseUnit < ApplicationRecord
+  export_to_analytics
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :plc_course, class_name: '::Plc::Course'
   has_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_course_unit_id', dependent: :destroy

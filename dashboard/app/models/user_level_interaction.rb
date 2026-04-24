@@ -24,6 +24,7 @@
 # This contains additional information than just completion status or attempts.
 # These interactions are used to improve insights into student learning.
 class UserLevelInteraction < ApplicationRecord
+  export_to_analytics
   belongs_to :user
   belongs_to :level
 end
