@@ -1,4 +1,4 @@
-import {addEdge, MarkerType} from '@xyflow/react';
+import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
@@ -11,6 +11,10 @@ import {
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
+import {
+  canCreateConnection,
+  isLineAnchorNodeId,
+} from '../utils/connectionRules';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -42,10 +46,34 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   return node.type;
 }
 
+function moveNodesByDelta(
+  currentNodes: SketchlabReactFlowNode[],
+  nodeIds: string[],
+  deltaX: number,
+  deltaY: number
+) {
+  const nodeIdsToMove = new Set(nodeIds);
+  return currentNodes.map(node =>
+    nodeIdsToMove.has(node.id)
+      ? {
+          ...node,
+          position: {
+            x: node.position.x + deltaX,
+            y: node.position.y + deltaY,
+          },
+        }
+      : node
+  );
+}
+
 interface UseKeyboardNavigationOptions {
   nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
@@ -63,12 +91,20 @@ interface UseKeyboardNavigationOptions {
  */
 export function useKeyboardNavigation({
   nodes,
+  edges,
   tabOrder,
   focusEntry,
+  setNodes,
   setEdges,
   readOnly,
   openNodeToolbar,
 }: UseKeyboardNavigationOptions) {
+  const {getEdge, getNode} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
+  const KEYBOARD_MOVE_STEP = 10;
+
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
   // Counter appended to announcements so identical consecutive strings
@@ -108,6 +144,59 @@ export function useKeyboardNavigation({
       const focusedEntry = getEntryFromDOM(target);
       const focusedNodeId =
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
+      const focusedEdgeId =
+        focusedEntry?.type === 'edge' ? focusedEntry.id : undefined;
+
+      // Arrow keys on a focused node move just that node.
+      if (!readOnly && focusedNodeId) {
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
+
+        if (deltaX || deltaY) {
+          event.preventDefault();
+          event.stopPropagation();
+          setNodes(currentNodes =>
+            moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
+          );
+          return;
+        }
+      }
+
+      // Arrow keys on a focused line edge move the whole line by moving
+      // both line-anchor nodes together.
+      if (!readOnly && focusedEdgeId) {
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
+
+        if (deltaX || deltaY) {
+          const focusedEdge = getEdge(focusedEdgeId);
+          if (
+            focusedEdge &&
+            isLineAnchorNodeId(focusedEdge.source, nodes) &&
+            isLineAnchorNodeId(focusedEdge.target, nodes)
+          ) {
+            event.preventDefault();
+            event.stopPropagation();
+            setNodes(currentNodes =>
+              moveNodesByDelta(
+                currentNodes,
+                [focusedEdge.source, focusedEdge.target],
+                deltaX,
+                deltaY
+              )
+            );
+            return;
+          }
+        }
+      }
 
       // "e" opens the node toolbar. NodeToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
@@ -128,7 +217,7 @@ export function useKeyboardNavigation({
         }
         if (focusedNodeId) {
           event.preventDefault();
-          const node = nodes.find(candidate => candidate.id === focusedNodeId);
+          const node = getNode(focusedNodeId);
           setConnectingFrom(focusedNodeId);
           announce(
             `Connect mode: ${
@@ -187,22 +276,38 @@ export function useKeyboardNavigation({
         if (focusedNodeId && focusedNodeId !== connectingFrom) {
           event.preventDefault();
           event.stopPropagation();
-          const sourceNode = nodes.find(node => node.id === connectingFrom);
-          const targetNode = nodes.find(node => node.id === focusedNodeId);
+          const sourceNode = getNode(connectingFrom);
+          const targetNode = getNode(focusedNodeId);
           if (sourceNode && targetNode) {
             const handles = pickHandles(sourceNode, targetNode);
-            setEdges(currentEdges =>
-              addEdge(
-                {
-                  source: connectingFrom,
-                  target: focusedNodeId,
-                  ...handles,
-                  markerEnd: {type: MarkerType.ArrowClosed},
-                },
-                currentEdges
-              )
+            const connectionRejected = !canCreateConnection(
+              connectingFrom,
+              focusedNodeId,
+              nodes
             );
-            announce(`Edge created to ${getNodeLabel(targetNode)}.`);
+            if (connectionRejected) {
+              announce(
+                'Connection not created. Line endpoints cannot accept additional connections.'
+              );
+            } else {
+              setEdges(currentEdges => {
+                if (
+                  !canCreateConnection(connectingFrom, focusedNodeId, nodes)
+                ) {
+                  return currentEdges;
+                }
+                return addEdge(
+                  {
+                    source: connectingFrom,
+                    target: focusedNodeId,
+                    ...handles,
+                    markerEnd: {type: MarkerType.ArrowClosed},
+                  },
+                  currentEdges
+                );
+              });
+              announce(`Edge created to ${getNodeLabel(targetNode)}.`);
+            }
           }
           setConnectingFrom(null);
         }
@@ -240,10 +345,13 @@ export function useKeyboardNavigation({
     [
       connectingFrom,
       focusEntry,
+      getEdge,
+      getNode,
       nodes,
       openNodeToolbar,
       readOnly,
       setEdges,
+      setNodes,
       tabOrder,
     ]
   );
