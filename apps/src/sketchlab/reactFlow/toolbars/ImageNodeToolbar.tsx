@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {ImageNodeType} from '../../types';
+import {ImageNodeType} from '../types';
 
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';

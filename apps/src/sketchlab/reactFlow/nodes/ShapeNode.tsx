@@ -3,11 +3,11 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import ShapeNodeToolbar from '../toolbars/ShapeNodeToolbar';
+import {fontSizePx} from '../toolbars/toolbarPalettes';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
-import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
-import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './shape-node.module.scss';
 

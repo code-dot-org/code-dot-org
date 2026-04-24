@@ -3,11 +3,11 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import TextNodeToolbar from '../toolbars/TextNodeToolbar';
+import {fontSizePx} from '../toolbars/toolbarPalettes';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
-import TextNodeToolbar from './nodeToolbars/TextNodeToolbar';
-import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './text-node.module.scss';
 

@@ -37,9 +37,10 @@ import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
-import {DEFAULT_STROKE_COLOR} from '../nodes/nodeToolbars/toolbarPalettes';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
+import LineEdgeToolbar from '../toolbars/LineEdgeToolbar';
+import {DEFAULT_STROKE_COLOR} from '../toolbars/toolbarPalettes';
 import {
   AddNodeRequest,
   ReactFlowSketchLabSources,
@@ -47,7 +48,6 @@ import {
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
 
-import LineEdgeToolbar from './LineEdgeToolbar';
 import Toolbar from './Toolbar';
 
 import styles from './react-flow-canvas.module.scss';
