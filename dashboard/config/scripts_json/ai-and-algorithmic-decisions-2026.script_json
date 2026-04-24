@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-24 06:44:50 UTC",
+    "serialized_at": "2026-04-24 08:32:52 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -532,21 +532,8 @@
       }
     },
     {
-      "key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5",
-      "position": 1,
-      "properties": {
-        "name": "Revised Progression"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5",
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
       "key": "a84b66f1-e827-441c-bc56-5bb92ec0ac28",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -560,7 +547,7 @@
     },
     {
       "key": "3531ff01-c9bb-4671-9b96-667b323f7bce",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -574,7 +561,7 @@
     },
     {
       "key": "9d51cb3a-dd12-4f4c-b8c0-a19fb0c5ee75",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2023,50 +2010,10 @@
       }
     },
     {
-      "key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09",
-        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
-      }
-    },
-    {
-      "key": "bb51a1c0-afb4-4a48-95f8-12ecc43543d6",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bb51a1c0-afb4-4a48-95f8-12ecc43543d6",
-        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
-      }
-    },
-    {
-      "key": "d7514c9d-7aa3-49c1-93b5-51679181cf2a",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d7514c9d-7aa3-49c1-93b5-51679181cf2a",
-        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
-      }
-    },
-    {
-      "key": "b7c0ac6c-8991-4815-b993-4eabec87b3a5",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b7c0ac6c-8991-4815-b993-4eabec87b3a5",
-        "lesson_activity.key": "f5356326-9f77-4cd1-a855-4ee6c6bc72b5"
-      }
-    },
-    {
       "key": "16129a2f-5835-47e5-871b-8e533963854a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to imagine they are shopping online for clothing and click the \"Add to Cart\" button. Prompt them to think about what information the website needs to process this request. Record their ideas on the board. Ask students to consider what would happen if one of the pieces of information (like size, color, or quantity) was missing when they clicked \"Add to Cart\". Guide them to understand that functions need specific information to work correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts. \nWhen a customer clicks \"Add to Cart\" for an item of clothing, what information does the website need to know?\nWhat if a piece of information, like size, is missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify the key pieces of information (e.g., size, color, quantity) needed for the system to complete the action and explain that missing information prevents the process from working correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "16129a2f-5835-47e5-871b-8e533963854a",
@@ -2077,9 +2024,15 @@
       "key": "3838490b-e04b-45e4-bb2d-c681008f59e6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Students will extend their flowchart knowledge by introducing new shapes for inputs (arguments) passed into a function and visualize how parameters enter and move through a function.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What new symbol do you notice? What is its purpose?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Introduce the blue rounded box symbol in flowcharts as representing input (parameters) for a process (function). Students should be able tp identify the inputs (color, size, material, and quantity) the process (function) requires. The purpose of these parameters is to make the Add to Cart process more reusable; there can be a single function that accounts for a wide variety of different shirts and properties.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define parameter.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do parameters make a single function able to handle different variations (like different shirt sizes or colors)?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should articulate that parameters allow a single function to be reused with different data, making the code more efficient and adaptable. Guide the discussion to highlight that instead of writing separate functions for 'add small shirt' and 'add large shirt,' one function can handle both by accepting a 'size' parameter.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will identify the key pieces of information needed to determine an outcome and recognize that the same process can be reused with different inputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to play the pizza guessing game. One student selects a pizza, and the other asks YES/NO questions to identify it. Students should switch roles after each round.",
         "duration": "10",
-        "name": "Parameters"
+        "name": "Guess the Pizza",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep the game moving by limiting the number of questions or encouraging students to choose questions that narrow down options quickly."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3838490b-e04b-45e4-bb2d-c681008f59e6",
@@ -2087,66 +2040,140 @@
       }
     },
     {
-      "key": "a713f47c-7038-4483-a7c1-8a8408d4678a",
+      "key": "9ba8c0f1-f8a8-4869-b16b-f4f3934f28ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students will complete Lesson 6, Levels 1 through 3.\n- Level 1: Analyze a flowchart in Sketch Lab to identified repeated code that might be refactored into one parameterized function.\n- Level 2: Write clear, beginner-friendly docs for your refactored function from Sketch Lab.\n- Level 3: Trace the user flow within an actual application.\n",
-        "duration": "25",
-        "name": "Writing Functions with Parameters",
-        "progression_name": "Exploring Functions with Parameters"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- Which questions helped you narrow down the options fastest?\n- How could you reuse those same questions to find a different pizza?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify which questions most effectively narrow down the options and recognize that the same set of questions can be reused with different answers to produce different outcomes.\n"
       },
       "seeding_key": {
-        "activity_section.key": "a713f47c-7038-4483-a7c1-8a8408d4678a",
+        "activity_section.key": "9ba8c0f1-f8a8-4869-b16b-f4f3934f28ac",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
     {
-      "key": "b7aa162e-5d66-444c-81c9-4a84f84e98b5",
+      "key": "52457ed3-f58a-4047-bf83-72a36d477308",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4. Explain that students will now create their own parameterized function. Provide examples of contexts they could use (e.g., rendering a card, setting a status, updating a score). Instruct them to document their function in Markdown and then use AI Suggest Mode to help draft the JavaScript code, emphasizing that AI will provide hints rather than full solutions.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Provide support and guidance as students design their functions. Offer suggestions for different contexts and help them refine their documentation and code. Encourage them to experiment with different parameters and their effects.",
-        "progression_name": "Writing Functions with Parameters"
+        "description": "The questions you were asking are like categories (like \"topping\" or \"quantity\"), and the answers (like \"mushroom\" or \"2\") are the specific values. In programming, those categories become parameters, and the specific values are called arguments.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b7aa162e-5d66-444c-81c9-4a84f84e98b5",
+        "activity_section.key": "52457ed3-f58a-4047-bf83-72a36d477308",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
     {
-      "key": "8ad2e3cf-09bb-4983-aa32-3352d53e84c6",
+      "key": "e22fdb07-ccdc-4a99-9e57-5aac5d747063",
       "position": 4,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define parameter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define argument."
       },
       "seeding_key": {
-        "activity_section.key": "8ad2e3cf-09bb-4983-aa32-3352d53e84c6",
+        "activity_section.key": "e22fdb07-ccdc-4a99-9e57-5aac5d747063",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
     {
-      "key": "81ac71b4-95c1-4454-adca-59c3b8bc96c4",
+      "key": "ea506632-3276-4e31-9179-9be8f4c7e161",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students will complete Lesson 6, Levels 1 through 3.\n- Level 1: Explore a shopping app that doesn’t use a function with parameters and use their Unit Guide to note what inputs are needed.\n- Level 2: Plan and use AI to generate a function that updates the page based on an input (parameter)\n- Level 3: Using the AI-generated function as a model, create an additional parameterized function that updates the page",
+        "duration": "10",
+        "name": "Why Functions Matter",
+        "progression_name": "Exploring Functions"
       },
       "seeding_key": {
-        "activity_section.key": "81ac71b4-95c1-4454-adca-59c3b8bc96c4",
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
     {
-      "key": "6bcbf80d-a429-4823-ac2e-f6777e27784a",
+      "key": "e6b734bf-774d-488e-bc75-d0ff39193a47",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief discussion about working with parameters. Prompt students to share specific examples of how their functions that they created were made more reusable and flexible by adding one or more parameters. Then ask students to share their experiences using the AI tool for coding assistance. Encourage them to discuss both the benefits (e.g., faster code generation, debugging hints) and the drawbacks (e.g., potential for incorrect suggestions, difficulty understanding the generated code).\n",
+      },
+      "seeding_key": {
+        "activity_section.key": "e6b734bf-774d-488e-bc75-d0ff39193a47",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "46c3fb9c-ab93-4728-ac7e-27fae467b2c1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to show how an example of how to define a function, use a function’s parameters, and call the function in the program.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Normalize the idea that AI is a tool and not always perfect. Emphasize the importance of critical thinking and verifying AI-generated output. Discuss how AI can be a powerful learning aid when used effectively.\n"
+            "markdown": "Connect each step back to the Guess the Pizza activity. Emphasize that details like topping and quantity become parameters (inputs), and when the function is called, the specific values (like 3 or \"mushroom\") are the arguments. The function uses these inputs to update what appears on the screen."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6bcbf80d-a429-4823-ac2e-f6777e27784a",
+        "activity_section.key": "46c3fb9c-ab93-4728-ac7e-27fae467b2c1",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "cf92794f-bd7e-4826-9d1e-84efe142a25d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain that quantity and topping are parameters.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the purpose of the `quantity` parameter. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the parameters are used in the function to create the output. Point out which parts come from the inputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the parameters are used in the function to create the output. Point out which parts stay the same.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the function is called when the button is clicked, and point out how the values passed in become the inputs for the function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the purpose of the `topping` parameter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the function is called when the button is clicked and point out how the arguments are connected to the parameters from the function definition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out how the values passed in become the inputs for the function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Point out that the values passed in (like 3 and \"mushroom\") are the arguments, which are the specific inputs used when the function runs, rather than the general categories (parameters)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cf92794f-bd7e-4826-9d1e-84efe142a25d",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4–6. \n- Level 4: Students will first plan a function by identifying which user interactions should change the output. \n- Level 5: Students should use their Sketch as context in AI Tutor and build a function that changes what is shown on the page based on different inputs. \n- Level 6: Student explain what their function does, what input it takes, and how that input changes the result.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students as they identify inputs, generate their function, and test different values. \n\nAsk:\n- “What inputs does your function take?”\n- “How do those inputs change the result on the page?”\n- “Where are the inputs used in the function?”\n- “Where is the function called?”",
+        "duration": "20",
+        "name": "Writing Functions with Parameters",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to start, give them a frame such as: “This function updates ______ when given ______.” Encourage students to compare their Sketch to their code and test different inputs to make sure the output changes as expected."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "a2de9d97-da66-472d-9a1d-3e8286ca13e4",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a2de9d97-da66-472d-9a1d-3e8286ca13e4",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "40beb2c2-16b8-4caf-827a-6b09e1a97dcf",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\nHow did parameters make your function more flexible?\nWhere did AI help or confuse you in the process?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief discussion about working with parameters. Prompt students to share specific examples of how their functions that they created were made more reusable and flexible by adding one or more parameters. Then ask students to share their experiences using the AI tool for coding assistance. Encourage them to discuss both the benefits (e.g., faster code generation, debugging hints) and the drawbacks (e.g., potential for incorrect suggestions, difficulty understanding the generated code). ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Normalize the idea that AI is a tool and not always perfect. Emphasize the importance of critical thinking and verifying AI-generated output. Discuss how AI can be a powerful learning aid when used effectively."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "40beb2c2-16b8-4caf-827a-6b09e1a97dcf",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
@@ -2165,8 +2192,6 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
-        "duration": "5",
-        "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
@@ -3786,19 +3811,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level1-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+        "ai-and-algorithmic-decisions-lesson6-level1-revised-v4_2026"
       ]
     },
     {
@@ -3807,19 +3833,20 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+        "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
       ]
     },
     {
@@ -3828,19 +3855,20 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revisedv2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level3-revisedv2_2026"
+        "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
       ]
     },
     {
@@ -3858,7 +3886,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "bb51a1c0-afb4-4a48-95f8-12ecc43543d6"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
@@ -3867,7 +3895,7 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
       },
@@ -3879,7 +3907,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d7514c9d-7aa3-49c1-93b5-51679181cf2a"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026"
@@ -3888,8 +3916,8 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": 1,
-      "assessment": true,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
       },
       "bonus": false,
@@ -3900,7 +3928,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b7c0ac6c-8991-4815-b993-4eabec87b3a5"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson6-level6_2026-revised"
@@ -4897,38 +4925,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level1-revised-v4_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level2-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level1-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level3-revisedv2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revisedv2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b391d2fd-cf17-4c18-b11b-c01d52af5b09"
+        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
       }
     },
     {
@@ -4940,7 +4968,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "bb51a1c0-afb4-4a48-95f8-12ecc43543d6"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       }
     },
     {
@@ -4952,7 +4980,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d7514c9d-7aa3-49c1-93b5-51679181cf2a"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       }
     },
     {
@@ -4964,7 +4992,7 @@
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b7c0ac6c-8991-4815-b993-4eabec87b3a5"
+        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       }
     },
     {
@@ -5895,6 +5923,16 @@
       }
     },
     {
+      "key": "argument",
+      "word": "argument",
+      "definition": "the actual value that is passed into a function when it is called",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
       "key": "boolean_expression",
       "word": "Boolean expression",
       "definition": "a data type that can only have one of two values: true or false",
@@ -6116,6 +6154,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 5: Making Decisions with If/Else",
         "vocabulary.key": "flowchart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions with Parameters",
+        "vocabulary.key": "argument"
       }
     },
     {
