@@ -28373,7 +28373,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
-          title: 'Preparing to Teach: AI and Machine Learning '
+          title: 'Preparing to Teach AI and Machine Learning '
           description_audience: ''
           description_short: ''
           description: |-
@@ -28449,6 +28449,15 @@ en:
           lesson_groups: {}
           name: self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026
           title: 'Web Apps with AI Capstone Project: Professional Learning Module'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-tools-ai-enabled-classroom-fac-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-tools-ai-enabled-classroom-fac-2026
+          title: AI Tools
           description_audience: ''
           description_short: ''
           description: ''
