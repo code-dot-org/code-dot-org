@@ -20,7 +20,7 @@ const CONTROLS_WIDTH_PX = 60;
 
 interface NodeToolbarShellProps {
   nodeId: string;
-  nodeElementRef: React.RefObject<HTMLDivElement | null>;
+  nodeElementRef: React.RefObject<HTMLDivElement>;
   ariaLabel: string;
   children: React.ReactNode;
 }

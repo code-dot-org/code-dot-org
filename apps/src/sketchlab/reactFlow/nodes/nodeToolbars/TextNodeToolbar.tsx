@@ -16,7 +16,7 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface TextNodeToolbarProps {
   nodeId: string;
-  nodeElementRef: React.RefObject<HTMLDivElement | null>;
+  nodeElementRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function TextNodeToolbar({

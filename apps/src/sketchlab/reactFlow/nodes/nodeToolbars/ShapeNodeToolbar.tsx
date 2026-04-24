@@ -19,7 +19,7 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ShapeNodeToolbarProps {
   nodeId: string;
-  nodeElementRef: React.RefObject<HTMLDivElement | null>;
+  nodeElementRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function ShapeNodeToolbar({

@@ -8,7 +8,7 @@ import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ImageNodeToolbarProps {
   nodeId: string;
-  nodeElementRef: React.RefObject<HTMLDivElement | null>;
+  nodeElementRef: React.RefObject<HTMLDivElement>;
 }
 
 export default function ImageNodeToolbar({
