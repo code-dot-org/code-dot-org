@@ -93,6 +93,11 @@
   native: "English (UK)"
   debug: true
 
+"en-IN":
+  english: "English (India)"
+  native: "English (India)"
+  fallback: "en-US"
+
 "en-PLOC":
   english: "Pseudoloc"
   native: "Pseudoloc"
@@ -117,7 +122,6 @@
   english: "Basque"
   native: "Euskara"
 
-"fa": "fa-AF"
 "fa-AF":
   english: Dari
   native: "دريلو"
