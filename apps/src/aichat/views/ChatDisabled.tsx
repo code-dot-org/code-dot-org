@@ -21,7 +21,12 @@ export const ChatDisabled: FC<{message?: string; link?: LinkProps}> = ({
         {link && (
           <>
             {' '}
-            <Link {...link} size={link.size ?? 's'} />
+            <Link
+              {...link}
+              size={link.size ?? 's'}
+              type={link.type ?? 'secondary'}
+              openInNewTab
+            />
           </>
         )}
       </Typography>
