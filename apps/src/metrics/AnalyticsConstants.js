@@ -689,6 +689,8 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
+
+  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
 };
 
 const EVENT_GROUP_NAMES = {
