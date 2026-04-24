@@ -40,9 +40,9 @@ function renderUserAuth(userAuth: UserAuthProp) {
           sx={{borderRadius: '4px'}}
         />
       );
-    case 'signed-in':
+    case 'signedIn':
       return <SignedInUserButton userAuth={userAuth} />;
-    case 'signed-out':
+    case 'signedOut':
       return <SignedOutUserButtons />;
     default: {
       const _: never = userAuth;

@@ -10,15 +10,15 @@ import {recordError, logger} from '@code-dot-org/core/plugins/observability';
 /** All possible states of the auth bootstrap lifecycle. */
 export type ReducerState =
   | {status: 'loading'}
-  | ({status: 'signed-in'} & CurrentUserResponseSignedIn)
-  | {status: 'signed-out'}
+  | ({status: 'signedIn'} & CurrentUserResponseSignedIn)
+  | {status: 'signedOut'}
   | {status: 'error'; eventId?: string};
 
 /** Discriminated union of all actions the auth reducer handles. */
 export type AuthAction =
-  | {type: 'success'; response: CurrentUserResponse}
-  | {type: 'failure'; tag: string; eventId?: string}
-  | {type: 'retry'};
+  | {type: 'auth/success'; response: CurrentUserResponse}
+  | {type: 'auth/failure'; tag: string; eventId?: string}
+  | {type: 'auth/retry'};
 
 /**
  * Pure reducer for auth bootstrap state transitions.
@@ -33,17 +33,17 @@ export function authReducer(
   action: AuthAction,
 ): ReducerState {
   switch (action.type) {
-    case 'success': {
+    case 'auth/success': {
       if (state.status !== 'loading') return state;
       if (action.response.is_signed_in) {
-        return {status: 'signed-in', ...action.response};
+        return {status: 'signedIn', ...action.response};
       }
-      return {status: 'signed-out'};
+      return {status: 'signedOut'};
     }
-    case 'failure':
+    case 'auth/failure':
       if (state.status !== 'loading') return state;
       return {status: 'error', eventId: action.eventId};
-    case 'retry':
+    case 'auth/retry':
       if (state.status !== 'error') return state;
       return {status: 'loading'};
     default: {
@@ -89,5 +89,5 @@ export function handleAuthFailure(
     error_kind: tag,
     event_id: eventId,
   });
-  dispatch({type: 'failure', tag, eventId});
+  dispatch({type: 'auth/failure', tag, eventId});
 }

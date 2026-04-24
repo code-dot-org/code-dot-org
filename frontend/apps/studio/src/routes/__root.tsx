@@ -39,8 +39,8 @@ function RootContent() {
   let routeArea: React.ReactNode;
   switch (auth.status) {
     case 'loading':
-    case 'signed-in':
-    case 'signed-out':
+    case 'signedIn':
+    case 'signedOut':
       routeArea = <Outlet />;
       break;
     case 'error':

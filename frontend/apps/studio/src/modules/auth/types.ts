@@ -9,6 +9,6 @@ export type {CurrentUserResponseSignedIn};
  */
 export type AuthOutcome =
   | {status: 'loading'}
-  | ({status: 'signed-in'} & CurrentUserResponseSignedIn)
-  | {status: 'signed-out'}
+  | ({status: 'signedIn'} & CurrentUserResponseSignedIn)
+  | {status: 'signedOut'}
   | {status: 'error'; onRetry: () => void; eventId?: string};

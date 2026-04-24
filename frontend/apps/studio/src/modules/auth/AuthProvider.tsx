@@ -10,7 +10,6 @@ import type {ReactNode} from 'react';
 
 import {DashboardApiClient} from '@code-dot-org/core/api';
 import type {CurrentUserResponse} from '@code-dot-org/core/api';
-import {logger} from '@code-dot-org/core/plugins/observability';
 
 import {authReducer, handleAuthFailure} from './authReducer';
 import type {AuthOutcome} from './types';
@@ -30,7 +29,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
    * Stability is required to avoid recreating the context value on every render.
    */
   const handleRetry = useCallback(() => {
-    dispatch({type: 'retry'});
+    dispatch({type: 'auth/retry'});
   }, []);
 
   /**
@@ -46,8 +45,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
       .getCurrent()
       .then((response: CurrentUserResponse) => {
         if (cancelled) return;
-        dispatch({type: 'success', response});
-        logger.info('auth bootstrap: resolved');
+        dispatch({type: 'auth/success', response});
       })
       .catch((err: Error) => {
         if (cancelled) return;

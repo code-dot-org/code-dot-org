@@ -11,14 +11,14 @@ import moduleStyles from './signedInUserButton.module.scss';
 /** Discriminated union of auth states consumed by header auth components. */
 export type UserAuthProp =
   | {status: 'loading'}
-  | {status: 'signed-in'; display_name: string}
-  | {status: 'signed-out'}
+  | {status: 'signedIn'; display_name: string}
+  | {status: 'signedOut'}
   | {status: 'error'};
 
 /** Props for {@link SignedInUserButton}. */
 export interface SignedInUserButtonProps {
-  /** Must be the signed-in variant of {@link UserAuthProp}. */
-  userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
+  /** Must be the signedIn variant of {@link UserAuthProp}. */
+  userAuth: Extract<UserAuthProp, {status: 'signedIn'}>;
 }
 
 /** Navigation links shown inside the signed-in account dropdown. */

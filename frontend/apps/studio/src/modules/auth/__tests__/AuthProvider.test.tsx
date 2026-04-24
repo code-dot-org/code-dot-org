@@ -83,14 +83,14 @@ describe('AuthProvider', () => {
     getCurrent.mockResolvedValue(SIGNED_IN_RESPONSE);
     renderWithProvider();
     await act(async () => {});
-    expect(screen.getByTestId('status').textContent).toBe('signed-in');
+    expect(screen.getByTestId('status').textContent).toBe('signedIn');
   });
 
   it('transitions to signed-out when not signed in', async () => {
     getCurrent.mockResolvedValue({is_signed_in: false});
     renderWithProvider();
     await act(async () => {});
-    expect(screen.getByTestId('status').textContent).toBe('signed-out');
+    expect(screen.getByTestId('status').textContent).toBe('signedOut');
   });
 
   it('transitions to error on HTTP failure', async () => {
@@ -145,7 +145,7 @@ describe('AuthProvider', () => {
       screen.getByRole('button', {name: 'retry'}).click();
     });
     await act(async () => {});
-    expect(screen.getByTestId('status').textContent).toBe('signed-in');
+    expect(screen.getByTestId('status').textContent).toBe('signedIn');
   });
 
   it('fetches only once across re-renders', async () => {
