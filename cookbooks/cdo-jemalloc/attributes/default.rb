@@ -1,5 +1,5 @@
-default['cdo-jemalloc']['version'] = '5.1.0'
-default['cdo-jemalloc']['checksum'] = '5396e61cc6103ac393136c309fae09e44d74743c86f90e266948c50f3dbb7268'
+default['cdo-jemalloc']['version'] = '5.3.0'
+default['cdo-jemalloc']['checksum'] = '2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa'
 default['cdo-jemalloc']['lib'] = '/usr/local/lib/libjemalloc.so.2'
 
 # See:
@@ -31,6 +31,9 @@ default['cdo-jemalloc']['malloc_conf'] = {
   # (usually at the cost of more CPU cycles spent on purging), and vice versa.
   #
   # Suggested: tune the values based on the desired trade-offs.
-  dirty_decay_ms: 1_000, # Default 10_000
-  muzzy_decay_ms: 0 # Default 10_000
+  dirty_decay_ms: 500, # Default 10_000
+  muzzy_decay_ms: 0, # Default 10_000
+
+  # Abort on invalid MALLOC_CONF options rather than silently ignoring them.
+  abort_conf: true
 }
