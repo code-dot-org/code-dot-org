@@ -84,7 +84,7 @@ class ShowSecret extends Component {
         : i18n.hidePicture();
 
     return (
-      <div>
+      <div className={moduleStyles.showSecretContainer}>
         {!this.state.isShowing && (
           <span data-for={tooltipId} data-tip>
             <MuiButton
