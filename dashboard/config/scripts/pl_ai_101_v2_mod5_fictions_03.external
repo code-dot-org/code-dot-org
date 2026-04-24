@@ -7,6 +7,8 @@ markdown <<MARKDOWN
 
 ## Answer: C
 
+#### **AI produces confident, well-structured answers that may include incomplete or incorrect information.**
+
 #### AI-generated responses are often difficult to evaluate because they are designed to sound fluent, organized, and authoritative. Even when information is incorrect or incomplete, it is presented with the same level of confidence as accurate content. This makes it easy to assume the response is trustworthy, especially when it aligns with what we expect to hear.
 
 #### Writing better prompts can improve the quality of AI responses—but it does not eliminate the risk of AI fiction.

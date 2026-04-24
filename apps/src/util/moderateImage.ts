@@ -13,17 +13,24 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
 ];
 
+type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
+type SeverityThresholds = Partial<Record<CategoryName, number>>;
+type CategoryAnalysis = {
+  category: CategoryName;
+  severity: 0 | 2 | 4 | 6;
+};
+
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
 // the image is flagged. If all categories' severity levels are less than the severity level blocked value,
 // the image is 'ok'
 // The severity value increases with the severity of the input content:
 // 0 (safe), 2 (low), 4 (medium), 6 (high)
-const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
+const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<CategoryName, number> = {
   Hate: 2,
   SelfHarm: 2,
   Sexual: 2,
-  Violence: 2,
+  Violence: 4,
 };
 
 interface AnalyticsData {
@@ -41,7 +48,8 @@ export const moderateImage = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
-  }: AnalyticsData
+  }: AnalyticsData,
+  overrideSeverityThresholds?: SeverityThresholds
 ): Promise<'safe' | 'flagged' | 'error'> => {
   const imageType = file.type || '';
   if (
@@ -71,12 +79,15 @@ export const moderateImage = async (
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
+    const categorySeverityLevelBlocked: Record<CategoryName, number> = {
+      ...CATEGORY_SEVERITY_LEVEL_BLOCKED,
+      ...overrideSeverityThresholds,
+    };
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
-        (category: {severity: number; category: string}) =>
-          category?.severity <
-          CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
+        (category: CategoryAnalysis) =>
+          category?.severity < categorySeverityLevelBlocked[category?.category]
       )
     ) {
       return 'safe';

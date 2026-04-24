@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-20 16:50:49 UTC",
+    "serialized_at": "2026-04-24 06:44:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3853,7 +3853,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level4-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -3861,7 +3861,7 @@
         "activity_section.key": "bb51a1c0-afb4-4a48-95f8-12ecc43543d6"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level4-revised-v2_2026"
+        "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
       ]
     },
     {
@@ -3874,7 +3874,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level5_choice_2026"
+          "ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -3882,7 +3882,7 @@
         "activity_section.key": "d7514c9d-7aa3-49c1-93b5-51679181cf2a"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level5_choice_2026"
+        "ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026"
       ]
     },
     {
@@ -4933,9 +4933,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-revised-v2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level4-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -4945,9 +4945,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level5_choice_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level5_choice_2026"
+          "ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026"
         ],
         "lesson.key": "Lesson 6: Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -5529,7 +5529,7 @@
     },
     {
       "name": "Interactivity in Web Apps",
-      "url": "https://docs.google.com/document/d/1AtRRufIl4mUbldpHK-seyaVGiGvaUAX3IZwcpw7Ymgo/edit?tab=t.0#heading=h.h2r5nv72w96n",
+      "url": "https://docs.google.com/presentation/d/1vDM5wouUgzL4K_CXxiCk5djNvQit9OLOxlmYqQfKxUE/edit?usp=sharing",
       "key": "interactivity_in_web_apps",
       "properties": {
         "audience": "Teacher",
@@ -5877,7 +5877,7 @@
     {
       "key": "abstraction",
       "word": "abstraction",
-      "definition": "hides complex details and shows only the essential features",
+      "definition": "the practice of focusing only on the details that matter for what you're trying to do and leaving out everything else",
       "properties": {
       },
       "seeding_key": {
@@ -6514,79 +6514,12 @@
 
   ],
   "rubrics": [
-    {
-      "level_name": "ai-and-algorithmic-decisions-lesson3-level6-revised_2026",
-      "s3_config_dir": null,
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goals": [
-    {
-      "key": "e0852a17-3e99-4935-9751-827f3fc97203",
-      "position": 1,
-      "learning_goal": "Track and evaluate how a value (state) changes over time in a program",
-      "ai_enabled": false,
-      "tips": "Look for whether the student can:\n- describe what should happen before running the app\n- track how the value changes step by step\n- explain what caused the change\n- verify that the displayed result matches the intended behavior",
-      "seeding_key": {
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ],
   "learning_goal_evidence_levels": [
-    {
-      "understanding": 0,
-      "teacher_description": "Does not correctly update the variable or cannot explain how the value changes. Does not compare expected vs actual behavior or relies entirely on AI without understanding.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Updates the variable with errors or incomplete logic. Shows limited understanding of how the value changes over time. Makes little or unclear comparison between expected and actual behavior.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Defines expected behavior and updates the variable correctly. Explains how the value changes, though reasoning may be partial or general. Attempts to compare expected vs actual behavior with minor gaps.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Defines expected behavior clearly, correctly updates the variable, and explains how the value (state) changes across interactions. Accurately compares expected vs actual behavior and verifies that the app works as intended using AI support appropriately.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "e0852a17-3e99-4935-9751-827f3fc97203",
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    }
+
   ]
 }

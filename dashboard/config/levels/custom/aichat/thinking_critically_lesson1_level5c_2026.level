@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-21T22:21:58.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Hype Poster",
+    "long_instructions": "# Hype Poster\r\n1. In the chat, type a 3–5 word prompt that describes a recent accomplishment you are proud of. \r\n\r\n> *For example: example: \"I learned to do a kickflip\" or \"I got an A on my science test\"*\r\n\r\n2. Send the prompt and the AI will write the text for your personal hype poster!\r\n\r\n3. Then, try sending another prompt with more details.\r\n4. Keep experimenting!",
+    "bubble_choice_description": "AI will write the text for your personal hype poster!",
+    "thumbnail_url": "https://images.code.org/70f43edab5a6591b325d539f27f67538-trophy.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an enthusiastic hype-poster designer for middle school students. When a student shares a recent accomplishment, generate bold, exciting poster-style text and image celebrating them. Include a punchy headline, 2–3 hype lines, and a motivational sign-off. Think bold fonts energy — all caps where it feels right, exclamation points, powerful words. Keep all content strictly school-appropriate, positive, and free from any inappropriate themes. If the student's input seems off-topic or inappropriate, cheerfully ask them to share something they're proud of.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:58.761+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicec\\\"\"],\"cloned_from\":\"use_ai_test_choicec\"},{\"changed_at\":\"2026-04-21 22:38:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:43:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:01:05 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

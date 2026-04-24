@@ -238,10 +238,12 @@ class FilesApi < Sinatra::Base
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
     type_params = {}
-    # Sinatra does not have a content type for markdown files, so we
-    # add it here.
+    # Sinatra does not have content types for all file extensions we
+    # serve, so we add missing ones here.
     if type == '.md'
       type_params = {default: 'text/markdown'}
+    elsif type == '.webp'
+      type_params = {default: 'image/webp'}
     end
     content_type(type, type_params)
 

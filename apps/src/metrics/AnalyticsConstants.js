@@ -321,8 +321,6 @@ const EVENTS = {
     'AI Differentiation Notification AI Prompt Clicked',
 
   // AI Tutor
-  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
-  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
   AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:

@@ -2,12 +2,16 @@
 
 module Observability
   module Sentry
-    # Sets up Sentry error tracking. Runs in all processes except unit test runners
-    # (detected via UNIT_TEST env var set in dashboard/test/test_helper.rb).
+    # Sets up Sentry error tracking. Runs in all processes except unit test runners.
     # When OpenTelemetry is also enabled, the OTLP integration is activated so
     # errors are correlated with traces.
+
+    def self.enabled?
+      CDO.enable_sentry && !CDO.unit_test
+    end
+
     def self.setup
-      return unless CDO.enable_sentry && !ENV['UNIT_TEST']
+      return unless enabled?
 
       if CDO.dashboard_sentry_dsn.blank?
         CDO.log.warn '[observability] enable_sentry is true but dashboard_sentry_dsn is not configured; skipping Sentry setup'
@@ -30,6 +34,11 @@ module Observability
           config.otlp.setup_propagator = false             # keep existing propagation
         end
       end
+    end
+
+    # Sets the user_id in the Sentry context. Intended to be called from a Warden after_fetch hook.
+    def self.set_user_id(id)
+      ::Sentry.set_user(id:)
     end
   end
 end

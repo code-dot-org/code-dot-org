@@ -79,6 +79,7 @@ export const useFileRowOptions = (
   const {
     config: {supportedFileTypes},
     levelProperties,
+    aiTutorDisabled,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -128,7 +129,7 @@ export const useFileRowOptions = (
           }),
       },
       {
-        condition: enableUserAddedSelectionContext(appName),
+        condition: enableUserAddedSelectionContext(appName) && !aiTutorDisabled,
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -209,6 +210,7 @@ export const useFileRowOptions = (
       openSaveToBackpackPrompt,
       projectFiles,
       projectFolders,
+      aiTutorDisabled,
     ]
   );
 
