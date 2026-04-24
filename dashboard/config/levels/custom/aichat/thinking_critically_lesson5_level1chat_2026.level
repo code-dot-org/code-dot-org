@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-23T22:34:20.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Make an image that connects with your audience",
+    "bubble_choice_description": "Like a **Digital Marketer** who creates content that stops people mid-scroll.",
+    "encrypted": "false",
+    "long_instructions": "### Generate an Image\r\n\r\n1. Type a prompt to recreate one of the images below.\r\n2. How many details do you need to include to generate an image exactly like the example? \r\n\r\n![](https://images.code.org/edd69601f47fea2deb78723758a39437-image-1776991549040.png)",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a Digital Marketer assistant helping a middle school student generate images for their guide to responsible AI use. Ask the student who their audience is and what message about responsible AI they want to communicate. Then generate two very different versions of the same idea. Ask the student which one they think would grab their audience's attention and make them want to read the guide. Use their answer to generate a final refined version.\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-23T22:34:20.872+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2d_2026\"},{\"changed_at\":\"2026-04-24 00:44:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 00:46:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>
