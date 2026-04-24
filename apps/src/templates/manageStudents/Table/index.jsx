@@ -596,7 +596,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 90,
+            width: 110,
           },
         },
         transforms: [sortable],
@@ -606,7 +606,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 90,
+            width: 110,
           },
         },
       },
@@ -621,7 +621,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 120,
+            width: 140,
           },
         },
         transforms: [sortable],
@@ -631,7 +631,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 120,
+            width: 140,
           },
         },
       },
@@ -647,7 +647,7 @@ class ManageStudentsTable extends Component {
           style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 180,
+            width: 220,
           },
         },
       },
@@ -656,7 +656,8 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 180,
+            width: 220,
+            maxWidth: 220,
           },
         },
       },
@@ -840,10 +841,10 @@ class ManageStudentsTable extends Component {
             />
           </div>
         </div>
-        <div className={moduleStyles.v2TableWidth}>
+        <div>
           <Table.Provider
             columns={columns}
-            style={tableLayoutStyles.table}
+            style={{...tableLayoutStyles.table, width: '100%', minWidth: 1050}}
             id="uitest-manage-students-table"
           >
             <Table.Header />
