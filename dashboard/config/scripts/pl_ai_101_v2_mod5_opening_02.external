@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Ethical Considerations When Using AI
 
-#### As AI tools become more widely used across different fields, it’s important to recognize that their use raises important ethical questions. While AI can support decision-making, creativity, and efficiency, it also introduces risks that users should consider when deciding how and when to use these tools.
+#### As AI tools become more widely used, it’s important to recognize that their use raises important ethical questions. While AI can support decision-making, creativity, and efficiency, it also introduces risks that users should consider when deciding how and when to use these tools.
 
-#### Understanding these considerations helps ensure that AI is used thoughtfully, responsibly, and in ways that support—rather than undermine—human judgment.
+#### Understanding these considerations helps ensure that AI is used thoughtfully, responsibly, and in ways that support, rather than undermine, human judgment.
 
 ## Key Ethical Considerations
 
@@ -71,7 +71,7 @@ AI can be misused—for example, to generate misleading content or manipulate in
 </div>
 </summary>
 <div style="padding:0 12px 12px 12px; font-size:14px; line-height:1.4;">
-AI should support—not replace—human decision-making. Maintaining oversight and applying judgment is critical when using AI tools.</div>
+AI should support, not replace, human decision-making. Maintaining oversight and applying judgment is critical when using AI tools.</div>
 </details>
 
 <details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
@@ -90,7 +90,7 @@ AI also raises broader considerations, including environmental impact, questions
 
 ## Focus Areas in This Module
 #### While all of these considerations are important, this module focuses on the areas most directly connected to **teaching and learning** in the classroom:
-* #### **Misinformation and AI Fiction**: How AI can generate incorrect, misleading, or incomplete information—and how educators and students can identify and respond to it.
+* #### **Misinformation and AI Fiction**: How AI can generate incorrect, misleading, or incomplete information, and how educators and students can identify and respond to it.
 * #### **Algorithmic Bias**: How bias can appear in AI-generated content and what it means for representation, fairness, and student experience.
 * #### **Data Privacy**: How to protect student information and make responsible choices when using AI tools in educational settings.
 MARKDOWN

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-13 16:55:47 UTC",
+    "serialized_at": "2026-04-23 19:26:02 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -71,7 +71,7 @@
       "key": "03c8ef9a-a5f0-4639-8832-8713397d80ab",
       "position": 1,
       "properties": {
-        "progression_name": "Introduction"
+        "progression_name": "Introduction (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "03c8ef9a-a5f0-4639-8832-8713397d80ab",
@@ -82,7 +82,7 @@
       "key": "866506f7-d5b1-4a24-9964-2c989db54d3f",
       "position": 2,
       "properties": {
-        "progression_name": "User-Centered Design"
+        "progression_name": "User-Centered Design (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "866506f7-d5b1-4a24-9964-2c989db54d3f",
@@ -93,7 +93,7 @@
       "key": "a4e8e8fe-059a-4585-a43f-cdd039201f44",
       "position": 3,
       "properties": {
-        "progression_name": "Building Web Apps with AI"
+        "progression_name": "Building Web Apps with AI (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44",
@@ -104,7 +104,7 @@
       "key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da",
       "position": 4,
       "properties": {
-        "progression_name": "Adding Style to Web Apps with AI"
+        "progression_name": "Adding Style to Web Apps with AI (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da",
@@ -115,7 +115,7 @@
       "key": "f194476b-67f7-4778-b176-640b4562c468",
       "position": 5,
       "properties": {
-        "progression_name": "Web Design with AI"
+        "progression_name": "Web Design with AI (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "f194476b-67f7-4778-b176-640b4562c468",
@@ -126,7 +126,7 @@
       "key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
       "position": 6,
       "properties": {
-        "progression_name": "Wireframes "
+        "progression_name": "Wireframes  (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
@@ -137,7 +137,7 @@
       "key": "3d42791f-5713-463c-9dc3-c952d7c88e00",
       "position": 7,
       "properties": {
-        "progression_name": "Closing"
+        "progression_name": "Closing(5 min)"
       },
       "seeding_key": {
         "activity_section.key": "3d42791f-5713-463c-9dc3-c952d7c88e00",
@@ -155,7 +155,7 @@
         "level_keys": [
           "pl_sandbox_aif-2-U1-Intro_1"
         ],
-        "progression": "Introduction"
+        "progression": "Introduction (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -180,7 +180,7 @@
         "level_keys": [
           "pl_sandbox_aif-2-U1-overview_2"
         ],
-        "progression": "Introduction"
+        "progression": "Introduction (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -205,7 +205,7 @@
         "level_keys": [
           "pl_sandbox_aif-2-U1-class-context_2-2"
         ],
-        "progression": "Introduction"
+        "progression": "Introduction (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -230,7 +230,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-webapp_4"
         ],
-        "progression": "Introduction"
+        "progression": "Introduction (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -255,7 +255,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-projectOverview_5"
         ],
-        "progression": "Introduction"
+        "progression": "Introduction (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -280,7 +280,7 @@
         "level_keys": [
           "pl-sandbox-aif2- U1-evolving-web_6"
         ],
-        "progression": "User-Centered Design"
+        "progression": "User-Centered Design (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -305,7 +305,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-user-centered-design_7"
         ],
-        "progression": "User-Centered Design"
+        "progression": "User-Centered Design (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -330,7 +330,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-html_9"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -355,7 +355,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-html-tags-9-2"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -380,7 +380,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-html_9-2"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -405,7 +405,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-weblab-panels_10"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -430,7 +430,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1_HTML-11"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -455,7 +455,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-HTML-howto-12"
         ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Building Web Apps with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -480,7 +480,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-CSS-13"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -505,7 +505,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-CSS-13-2"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -530,7 +530,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-CSS-practice-14"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -555,7 +555,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-CSS-howto-15"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -580,7 +580,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-weblabTips-16"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -605,7 +605,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-CFU-17"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -630,7 +630,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-CSS-HTML-18"
         ],
-        "progression": "Adding Style to Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -655,7 +655,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-webdesign-19"
         ],
-        "progression": "Web Design with AI"
+        "progression": "Web Design with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -680,7 +680,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-firstwebpage-20"
         ],
-        "progression": "Web Design with AI"
+        "progression": "Web Design with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -705,7 +705,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-userExperience-21"
         ],
-        "progression": "Web Design with AI"
+        "progression": "Web Design with AI (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -730,7 +730,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-wireframe-26"
         ],
-        "progression": "Wireframes "
+        "progression": "Wireframes  (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -755,7 +755,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_sketchlab_panels"
         ],
-        "progression": "Wireframes "
+        "progression": "Wireframes  (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -780,7 +780,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-webapp-27"
         ],
-        "progression": "Wireframes "
+        "progression": "Wireframes  (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -805,7 +805,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-practice-28"
         ],
-        "progression": "Wireframes "
+        "progression": "Wireframes  (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -830,7 +830,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-howto-29"
         ],
-        "progression": "Wireframes "
+        "progression": "Wireframes  (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -852,7 +852,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -874,7 +874,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -896,7 +896,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -921,7 +921,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1-reflection"
         ],
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -946,7 +946,7 @@
         "level_keys": [
           "pl-sandbox-aif2-lesson-info"
         ],
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -971,7 +971,7 @@
         "level_keys": [
           "pl-sandbox-aif2-U1_Closing-Cert"
         ],
-        "progression": "Closing"
+        "progression": "Closing(5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1426,6 +1426,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
