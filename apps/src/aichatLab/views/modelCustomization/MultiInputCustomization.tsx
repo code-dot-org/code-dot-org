@@ -80,7 +80,9 @@ const MultiInputCustomization: React.FunctionComponent<{
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <Typography variant="strong">{'Added'}</Typography>
+        <Typography variant="label2" component="h3">
+          {'Added'}
+        </Typography>
       </div>
       {addedItems.map((message, index) => {
         return (

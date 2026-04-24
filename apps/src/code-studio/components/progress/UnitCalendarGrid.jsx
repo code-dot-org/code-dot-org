@@ -1,10 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
@@ -91,7 +91,9 @@ export default function UnitCalendarGrid({
           {schedule.map((week, index) => (
             <tr key={`week-${index}`}>
               <td className={styles.weekColumn}>
-                {i18n.weekLabel({number: index + 1})}
+                <Typography variant="label1" sx={{color: 'inherit'}}>
+                  {i18n.weekLabel({number: index + 1})}
+                </Typography>
               </td>
               <td className={styles.scheduleColumn}>
                 {renderWeek(week, index + 1)}
@@ -103,33 +105,49 @@ export default function UnitCalendarGrid({
       <table className={styles.key}>
         <tbody>
           <tr>
-            <td className={styles.weekColumn}>Key</td>
+            <td className={styles.weekColumn}>
+              <Typography variant="label1" sx={{color: 'inherit'}}>
+                Key
+              </Typography>
+            </td>
             <td className={styles.scheduleColumn}>
               <div className={styles.keySection}>
                 <div className={styles.keyCell}>
-                  <FontAwesome
-                    icon="square"
+                  <FontAwesomeV6Icon
+                    iconName="square"
                     iconStyle="regular"
                     style={{
-                      color: color.teal,
+                      color: 'var(--text-brand-teal-primary)',
                     }}
                     className={styles.keyIcon}
                   />
-                  {i18n.instructionalLesson()}
+                  <Typography variant="body2" component="span">
+                    {i18n.instructionalLesson()}
+                  </Typography>
                 </div>
                 <div className={styles.keyCell}>
-                  <FontAwesome
-                    icon="circle-check"
+                  <FontAwesomeV6Icon
+                    iconName="circle-check"
                     style={{
-                      color: color.purple,
+                      color: 'var(--text-brand-purple-primary)',
                     }}
                     className={styles.keyIcon}
                   />
-                  {i18n.assessment()}
+                  <Typography variant="body2" component="span">
+                    {i18n.assessment()}
+                  </Typography>
                 </div>
                 <div className={styles.keyCell}>
-                  <FontAwesome icon="scissors" className={styles.keyIcon} />
-                  {i18n.unpluggedLesson()}
+                  <FontAwesomeV6Icon
+                    iconName="scissors"
+                    style={{
+                      color: 'var(--text-neutral-primary)',
+                    }}
+                    className={styles.keyIcon}
+                  />
+                  <Typography variant="body2" component="span">
+                    {i18n.unpluggedLesson()}
+                  </Typography>
                 </div>
               </div>
             </td>

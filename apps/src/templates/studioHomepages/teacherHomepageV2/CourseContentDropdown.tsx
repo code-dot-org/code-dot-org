@@ -47,20 +47,29 @@ export const CourseContentDropdownBase: React.FC<
   renderCourseAction,
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOption[]>([]);
+  const [hasLoadedLessonList, setHasLoadedLessonList] = useState(false);
+
+  useEffect(() => {
+    setLessonList([]);
+    setHasLoadedLessonList(false);
+  }, [lessonSource]);
 
   useEffect(() => {
     const fetchLessonList = async () => {
       HttpClient.fetchJson<UnitLessonOption[]>(
         `/sections/${lessonSource}/retrieve_lessons_for_dropdown`
       )
-        .then(response => setLessonList(response.value))
+        .then(response =>
+          setLessonList(Array.isArray(response.value) ? response.value : [])
+        )
+        .finally(() => setHasLoadedLessonList(true))
         .catch(error => console.error(error));
     };
 
-    if (shouldShowLessonDropdown && lessonList.length === 0) {
+    if (shouldShowLessonDropdown && !hasLoadedLessonList) {
       fetchLessonList();
     }
-  }, [lessonList, lessonSource, shouldShowLessonDropdown]);
+  }, [hasLoadedLessonList, lessonSource, shouldShowLessonDropdown]);
 
   return (
     <div className={styles.courseContentDropdownContainer}>
