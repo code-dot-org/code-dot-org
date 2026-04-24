@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">🧰 What resources are available to students?</summary>
 
-#### CS Discoveries includes several key resources to support students in the learning process. For the most part, these resources are set up to be used as needed, not read as a pre-reading or presented as a lecture. Students are not expected to already know all of the needed information when they engage in programming activities.  This structure reflects the “discovery” model of the course, but also supports students in the authentic use of resources and code documentation.
+#### AI Discoveries includes several key resources to support students in the learning process. For the most part, these resources are set up to be used as needed, not read as a pre-reading or presented as a lecture. Students are not expected to already know all of the needed information when they engage in programming activities.  This structure reflects the “discovery” model of the course, but also supports students in the authentic use of resources and code documentation.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.2em; font-weight: bold;">🎞️ Videos</summary>
@@ -40,8 +40,6 @@ markdown <<MARKDOWN
 
 #### **Videos** provide direct instruction on certain topics throughout the curriculum.  Relevant videos are embedded within the **“Help and Tips”** tab, so that students can access them at any time in the online progression.  
 
-#### To read more about how to effectively use our curriculum videos, see our <a href="https://docs.google.com/document/d/1mILCKhIG90QceT0wwWhKd3IkxmOLIXVKiHW1EwjbDIE/view" target="blank" rel="noopener noreferrer">Guide to Curriculum Videos</a>
-</p></div>
 </details>
 
 <div style="clear:both"/>
@@ -80,9 +78,4 @@ markdown <<MARKDOWN
 
 ####  Informational resources are available to students throughout programming lessons to give them just-in-time information to solve their problems. These resources allow students to self-differentiate, deciding for themselves how much help they need for a particular activity. Students should continue to explore resources and previous solutions throughout the lessons as they experiment and create computational artifacts.
 </p></div></details>
-
-
-### <a href="https://docs.google.com/document/d/1GpNdN-6LVOMSFeYRLTruil18Gc5_bebPulriW7VkpTs/view" target="blank" rel="noopener noreferrer">Click here</a> to read the CS Discoveries Guide to Using Resources. 
-
-
 MARKDOWN
