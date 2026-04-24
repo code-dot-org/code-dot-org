@@ -202,6 +202,7 @@ class MoveStudents extends Component {
               </label>
               <input
                 required
+                id="sectionCode"
                 name="sectionCode"
                 className={moduleStyles.sectionInput}
                 value={transferData.otherTeacherSection}

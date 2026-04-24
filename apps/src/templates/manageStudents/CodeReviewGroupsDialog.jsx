@@ -151,7 +151,9 @@ export default function CodeReviewGroupsDialog({dataApi}) {
           customContent={
             <div id="dsco-dialog-description">
               {renderBody()}
-              <div className={moduleStyles.statusRow}>
+              <div
+                className={`${moduleStyles.statusRow} uitest-base-dialog-footer`}
+              >
                 {renderSubmitStatus()}
               </div>
             </div>
@@ -165,6 +167,7 @@ export default function CodeReviewGroupsDialog({dataApi}) {
             children: i18n.confirmChanges(),
             onClick: submitNewGroups,
             disabled: !groupsHaveChanged,
+            className: 'uitest-base-dialog-confirm',
           }}
           secondaryButtonProps={{
             children: i18n.dialogCancel(),

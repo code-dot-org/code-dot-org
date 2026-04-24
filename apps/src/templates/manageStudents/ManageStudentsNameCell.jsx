@@ -96,6 +96,7 @@ class ManageStudentNameCell extends Component {
             <TextField
               id="uitest-display-name"
               name="displayName"
+              aria-label={i18n.displayName()}
               required
               size="s"
               value={editedValue}

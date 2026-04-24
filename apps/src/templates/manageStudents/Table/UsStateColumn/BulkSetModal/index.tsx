@@ -62,7 +62,8 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
       customContent={
         <div id="dsco-dialog-description">
           <SimpleDropdown
-            name="usState"
+            id="us-state"
+            name="us-state"
             labelText={i18n.usState()}
             size="s"
             items={items}
