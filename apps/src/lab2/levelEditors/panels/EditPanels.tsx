@@ -9,15 +9,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
-import {
-  DEFAULT_PANEL_LINK_WIDTH,
-  DEFAULT_PANEL_LINK_X,
-  DEFAULT_PANEL_LINK_Y,
-  Panel,
-  PanelLayout,
-  PanelLink,
-} from '@cdo/apps/panels/types';
+import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
+
+import EditPanelsLinks from './EditPanelsLinks';
 
 import moduleStyles from './edit-panels.module.scss';
 
@@ -280,33 +275,6 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   deletePanel,
   last = false,
 }) => {
-  const links = panel.links || [];
-
-  const updateLink = (linkIndex: number, newLink: PanelLink) => {
-    const newLinks = [...links];
-    newLinks[linkIndex] = newLink;
-    updatePanel({...panel, links: newLinks});
-  };
-
-  const otherPanels = allPanels.filter(p => p.key !== panel.key);
-
-  const addLink = () => {
-    const firstOtherKey = otherPanels[0]?.key;
-    if (!firstOtherKey) return;
-    const newLink: PanelLink = {
-      text: '',
-      x: DEFAULT_PANEL_LINK_X,
-      y: DEFAULT_PANEL_LINK_Y,
-      targetKey: firstOtherKey,
-    };
-    updatePanel({...panel, links: [...links, newLink]});
-  };
-
-  const deleteLink = (linkIndex: number) => {
-    const newLinks = links.filter((_, i) => i !== linkIndex);
-    updatePanel({...panel, links: newLinks.length > 0 ? newLinks : undefined});
-  };
-
   return (
     <div className={moduleStyles.panelEditor}>
       <div className={moduleStyles.fieldRow}>
@@ -427,104 +395,11 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
         </div>
       )}
       {useLinks && (
-        <div className={moduleStyles.linksSection}>
-          <Typography variant="h6" gutterBottom>
-            Links
-          </Typography>
-          {links.map((link, linkIndex) => (
-            <div
-              key={linkIndex}
-              className={classNames(
-                moduleStyles.fieldRow,
-                moduleStyles.linkRow
-              )}
-            >
-              <label>
-                Text
-                <textarea
-                  value={link.text}
-                  onChange={e =>
-                    updateLink(linkIndex, {...link, text: e.target.value})
-                  }
-                />
-              </label>
-              <label className={moduleStyles.linkSliderHorizontal}>
-                X: {link.x}%
-                <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  value={link.x}
-                  onChange={e =>
-                    updateLink(linkIndex, {
-                      ...link,
-                      x: Number(e.target.value),
-                    })
-                  }
-                />
-              </label>
-              <label className={moduleStyles.linkSliderVertical}>
-                Y: {link.y}%
-                <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  value={link.y}
-                  onChange={e =>
-                    updateLink(linkIndex, {
-                      ...link,
-                      y: Number(e.target.value),
-                    })
-                  }
-                />
-              </label>
-              <label className={moduleStyles.linkSliderHorizontal}>
-                Width: {link.width ?? DEFAULT_PANEL_LINK_WIDTH}%
-                <input
-                  type="range"
-                  min={1}
-                  max={100}
-                  value={link.width ?? DEFAULT_PANEL_LINK_WIDTH}
-                  onChange={e =>
-                    updateLink(linkIndex, {
-                      ...link,
-                      width: Number(e.target.value),
-                    })
-                  }
-                />
-              </label>
-              <SimpleDropdown
-                labelText="Target panel"
-                name={`link-target-${linkIndex}`}
-                size="s"
-                selectedValue={link.targetKey}
-                onChange={e =>
-                  updateLink(linkIndex, {...link, targetKey: e.target.value})
-                }
-                items={otherPanels.map(p => ({
-                  value: p.key,
-                  text: `Panel ${allPanels.indexOf(p) + 1}`,
-                }))}
-              />
-              <button
-                type="button"
-                className={moduleStyles.deleteButton}
-                onClick={() => deleteLink(linkIndex)}
-                aria-label="Delete link"
-              >
-                <FontAwesomeV6Icon iconName="trash" />
-              </button>
-            </div>
-          ))}
-          <Button
-            type="button"
-            onClick={addLink}
-            text="Add Link"
-            color="gray"
-            icon="plus"
-            disabled={otherPanels.length === 0}
-          />
-        </div>
+        <EditPanelsLinks
+          panel={panel}
+          allPanels={allPanels}
+          updatePanel={updatePanel}
+        />
       )}
       {last && (
         <div className={moduleStyles.fieldRow}>
