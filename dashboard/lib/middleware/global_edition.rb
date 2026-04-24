@@ -95,7 +95,7 @@ module Middleware
             setup_redirect_to(fallback_path)
           end
         elsif effective_region
-          if effective_region == url_region
+          if url_region == effective_region && (url_locale.nil? || url_locale == original_locale)
             normalize_request_for_routing
           else
             redirect_request_to_region(effective_region)
@@ -125,14 +125,20 @@ module Middleware
         @response ||= Rack::Response[*app.call(env)]
       end
 
-      private def url_data
-        return @url_data if defined?(@url_data)
-        @url_data = Cdo::GlobalEdition::PATH_PATTERN.match(original_path)
+      private def path_match
+        return @path_match if defined?(@path_match)
+        @path_match = Cdo::GlobalEdition.match_path(original_path)
       end
 
       private def url_region
         return @url_region if defined?(@url_region)
-        @url_region = url_data.try(:[], :ge_region).presence
+        @url_region = path_match.try(:[], :region).presence
+      end
+
+      private def url_locale
+        return @url_locale if defined?(@url_locale)
+        url_locale_segment = path_match.try(:[], :locale).presence
+        @url_locale = url_locale_segment && Cdo::GlobalEdition.resolve_region_locale(url_region, url_locale_segment)
       end
 
       # Returns the request path with the Global Edition (GE) prefix removed.
@@ -141,7 +147,7 @@ module Middleware
       #
       # @return [String] path without GE prefix, or the original path if no prefix is present
       private def main_path
-        @main_path ||= url_data.try(:[], :main_path) || original_path
+        @main_path ||= path_match.try(:[], :main_path) || original_path
       end
 
       private def main_fullpath
@@ -179,7 +185,7 @@ module Middleware
 
         # Sets the request cookies to apply changes immediately without needing to reload the page.
         request.cookies[REGION_KEY] = Cdo::GlobalEdition.current_region = new_region
-        request.cookies[LOCALE_KEY] = request.locale = new_locale = site_locale(new_region)
+        request.cookies[LOCALE_KEY] = request.locale = new_locale = resolve_locale_for(new_region)
 
         # Updates the global `ge_region` cookie to lock the platform to the regional version.
         set_global_cookie(REGION_KEY, new_region, high_priority: true)
@@ -209,19 +215,24 @@ module Middleware
         false
       end
 
-      private def site_locale(region)
-        site_locale = original_locale
+      # Resolves the most appropriate locale for the given region.
+      #
+      # @param region [String, nil] The target Global Edition region code.
+      # @return [String, nil] The resolved locale for the region,
+      #   or `nil` if no locale should be preserved during a region reset.
+      private def resolve_locale_for(region)
+        resolved_locale = original_locale
 
         if Cdo::GlobalEdition.region_available?(region)
-          unless Cdo::GlobalEdition.locale_available?(region, site_locale)
-            site_locale = Cdo::GlobalEdition.main_region_locale(region)
+          unless Cdo::GlobalEdition.locale_available?(region, resolved_locale)
+            resolved_locale = url_locale || Cdo::GlobalEdition.main_region_locale(region)
           end
         else
           # Locales locked to a specific region should not be set during a region reset.
-          site_locale = nil if Cdo::GlobalEdition.locales_regions[site_locale].present?
+          resolved_locale = nil if Cdo::GlobalEdition.locales_regions[resolved_locale].present?
         end
 
-        site_locale
+        resolved_locale
       end
 
       private def excluded_path?(path)
@@ -231,7 +242,7 @@ module Middleware
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?(path = original_path)
+      private def redirectable?(path = main_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
@@ -239,7 +250,7 @@ module Middleware
       end
 
       private def regional_path_for(region, main_path)
-        Cdo::GlobalEdition.path(region, main_path.to_s)
+        Cdo::GlobalEdition.path(region, main_path.to_s, locale: resolve_locale_for(region))
       end
 
       private def setup_redirect_to(redirect_path)

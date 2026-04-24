@@ -5,6 +5,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {
   addChatEvent,
   clearChatMessages,
@@ -30,10 +31,8 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -41,6 +40,7 @@ import ResourcePanel, {
   BackpackProps,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {
@@ -48,7 +48,6 @@ import {
   BackpackContextType,
 } from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -78,7 +77,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     aichatSettings: levelAichatSettings,
     starterAssets,
   } = levelProperties;
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -245,9 +243,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const chatWorkspaceHeader = (
     <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT ? 'AI Chat' : botName}
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
-      )}
     </div>
   );
 
@@ -429,7 +424,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 headerContent={chatWorkspaceHeader}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
-                rightHeaderContent={<AiChatHeaderButtons />}
+                rightHeaderContent={
+                  <>
+                    <WorkspaceHeader.TemplateIcon />
+                    <AiChatHeaderButtons />
+                  </>
+                }
               >
                 {chatWorkspaceInitialized && (
                   <ChatWorkspace

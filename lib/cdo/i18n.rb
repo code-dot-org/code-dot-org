@@ -18,6 +18,11 @@ module Cdo
     # Mapping of short locale codes to normalized I18n locale codes (e.g., 'en' => 'en-US').
     LOCALE_ALIASES = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v if v.is_a?(String)}.freeze
 
+    # Mapping locale codes to their fallback locale codes (e.g., 'en-IN' => 'en-US').
+    LOCALE_FALLBACKS = LOCALE_CONFIGS.each_with_object({}) do |(k, v), h|
+      h[k] = v[:fallback] if v.is_a?(Hash) && v[:fallback]
+    end.freeze
+
     # Mapping LocalizeJS locale codes to normalized I18n locale codes (e.g., 'zh-Hans' => 'zh-CN').
     LOCALIZE_TO_I18N_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
       locales[cdo_language[:localize_code_s]] = cdo_language[:locale_s] if cdo_language[:localize_code_s]

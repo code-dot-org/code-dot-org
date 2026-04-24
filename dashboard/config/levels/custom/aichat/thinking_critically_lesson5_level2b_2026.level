@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-04-23T19:39:43.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Turn words and ideas into images",
+    "bubble_choice_description": "Like an **Illustrator** who brings stories, comics, and apps to life visually.",
+    "encrypted": "false",
+    "long_instructions": "### Use AI like an Illustrator\r\n\r\n1. Type a description of the image you want into the chat.\r\n   \r\n2. Include who is in it, what is happening, and how it should feel.\r\n\r\n3. Send it and see what the AI generates.\r\n4. Add more details to get closer to what you imagined.\r\n\r\n>Use your prompting strategy: Include a goal, context, and details.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an Illustrator assistant helping a middle school student create images for their guide to responsible AI use. Ask the student to describe a moment, feeling, or idea from their guide — who or what is in the image, what is happening, and what feeling it should give. Then generate one image that matches their description as closely as possible. Ask one follow up question at a time to refine it until it captures exactly what they want to show in their guide.\n\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/b3e8a25cc1cae84c925085e3d8fae2ae-5.4b.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-23 19:41:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:46:23 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:27:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:30:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:56:34 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 23:56:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>
