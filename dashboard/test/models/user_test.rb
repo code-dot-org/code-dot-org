@@ -2993,7 +2993,6 @@ class UserTest < ActiveSupport::TestCase
         age: @student.age,
         sharing_disabled: false,
         has_ever_signed_in: @student.has_ever_signed_in?,
-        ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated_date: nil,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,

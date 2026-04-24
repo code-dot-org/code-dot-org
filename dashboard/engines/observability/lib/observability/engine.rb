@@ -13,7 +13,7 @@ module Observability
     # threads are unwanted. All other processes (workers, cron, rake, console)
     # get observability. sentry-opentelemetry is only needed when both
     # integrations are active.
-    if CDO.enable_sentry && !CDO.unit_test
+    if Sentry.enabled?
       require 'sentry-ruby'
       require 'sentry-rails'
       require 'sentry-opentelemetry' if CDO.enable_opentelemetry

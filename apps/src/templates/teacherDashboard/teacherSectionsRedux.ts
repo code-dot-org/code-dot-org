@@ -416,17 +416,6 @@ const sectionSlice = createSlice({
     setRosterProviderName(state, action: PayloadAction<string>) {
       state.rosterProviderName = action.payload;
     },
-    updateSectionAiTutorEnabled(
-      state,
-      action: PayloadAction<{
-        sectionId: number;
-        aiTutorEnabled: boolean;
-      }>
-    ) {
-      const {sectionId, aiTutorEnabled} = action.payload;
-
-      state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
-    },
     updateSectionAiChatAccessLevel(
       state,
       action: PayloadAction<{
@@ -962,6 +951,7 @@ export const fetchDemoPresets =
       return demoPresets;
     } catch (error) {
       console.error('Error fetching demo section presets:', error);
+      dispatch(setDemoPresetsLoaded(true));
       return {};
     }
   };
@@ -1352,7 +1342,6 @@ export const {
   setStudentsForCurrentSection,
   setAvailableParticipantTypes,
   startLoadingSectionData,
-  updateSectionAiTutorEnabled,
   updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
