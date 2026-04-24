@@ -25,14 +25,17 @@ import {
   DEFAULT_NODE_WIDTH,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
-import {SketchLabReadOnlyProvider} from '../context';
+import {
+  SketchLabReadOnlyProvider,
+  NodeToolbarVisibilityProvider,
+} from '../context';
 import {useFocusManagement} from '../hooks/useFocusManagement';
-import {useKeyboardEdgeCreation} from '../hooks/useKeyboardEdgeCreation';
+import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {ReactFlowSketchLabSources} from '../types';
+import {ReactFlowSketchLabSources, SketchLabNode} from '../types';
 
 import Toolbar from './Toolbar';
 
@@ -69,10 +72,41 @@ export default function ReactFlowCanvas({
   colorMode,
   readOnly = false,
 }: ReactFlowCanvasProps) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, setNodes, onNodesChange] =
+    useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
+  const [openNodeToolbarInfo, setOpenNodeToolbarInfo] = useState<{
+    id: string | null;
+    trapFocus: boolean;
+  }>({id: null, trapFocus: false});
+  const openNodeToolbarId = openNodeToolbarInfo.id;
+  const trapFocus = openNodeToolbarInfo.trapFocus;
+
+  const openNodeToolbar = useCallback(
+    (nodeId: string, options?: {trapFocus?: boolean}) => {
+      setOpenNodeToolbarInfo({
+        id: nodeId,
+        trapFocus: options?.trapFocus ?? false,
+      });
+    },
+    []
+  );
+
+  const closeNodeToolbar = useCallback(() => {
+    setOpenNodeToolbarInfo({id: null, trapFocus: false});
+  }, []);
+
+  const nodeToolbarVisibility = useMemo(
+    () => ({
+      openNodeToolbarId,
+      trapFocus,
+      openNodeToolbar,
+      closeNodeToolbar,
+    }),
+    [openNodeToolbarId, trapFocus, openNodeToolbar, closeNodeToolbar]
+  );
 
   const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
@@ -84,35 +118,71 @@ export default function ReactFlowCanvas({
     setLastFocusedEntry,
     nodeOrEdgeFocused,
     setNodeOrEdgeFocused,
-  } = useTabOrder(
-    nodes as SketchlabReactFlowNode[],
-    edges as SketchlabReactFlowEdge[]
-  );
+  } = useTabOrder(nodes, edges);
 
   const {focusEntry, handleFocusCapture} = useFocusManagement(
     tabOrder,
-    edges as SketchlabReactFlowEdge[],
+    edges,
+    nodeOrEdgeFocused,
     setLastFocusedEntry,
     setNodeOrEdgeFocused
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
-    useKeyboardEdgeCreation({
-      nodes: nodes as SketchlabReactFlowNode[],
+    useKeyboardNavigation({
+      nodes,
       tabOrder,
       focusEntry,
       setEdges,
       readOnly,
+      openNodeToolbar,
     });
 
+  // Close the node toolbar when focus moves off the owning node: to a
+  // different node/edge, or out of the canvas entirely. Skips clearing
+  // while focus is inside the toolbar itself so keyboard interactions
+  // don't dismiss it.
+  useEffect(() => {
+    if (!openNodeToolbarId) return;
+    const focusedNodeId =
+      nodeOrEdgeFocused && lastFocusedEntry?.type === 'node'
+        ? lastFocusedEntry.id
+        : null;
+    if (focusedNodeId !== openNodeToolbarId) {
+      closeNodeToolbar();
+    }
+  }, [
+    openNodeToolbarId,
+    nodeOrEdgeFocused,
+    lastFocusedEntry,
+    closeNodeToolbar,
+  ]);
+
+  // Close the node toolbar when its owning node is deleted.
+  useEffect(() => {
+    if (
+      openNodeToolbarId &&
+      !nodes.some(node => node.id === openNodeToolbarId)
+    ) {
+      closeNodeToolbar();
+    }
+  }, [nodes, openNodeToolbarId, closeNodeToolbar]);
+
   // Clear selection when focus leaves the canvas container entirely
-  // (e.g. clicking outside or tabbing out of the canvas).
+  // (e.g. clicking outside or tabbing out of the canvas). Skip when the
+  // blur originates from a NodeToolbar control — e.g. a native color
+  // picker steals focus to an OS dialog (relatedTarget null), and
+  // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
-      if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-        setLastFocusedEntry(null);
-        setNodeOrEdgeFocused(false);
+      if (
+        event.currentTarget.contains(event.relatedTarget as Node) ||
+        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+      ) {
+        return;
       }
+      setLastFocusedEntry(null);
+      setNodeOrEdgeFocused(false);
     },
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
@@ -123,10 +193,7 @@ export default function ReactFlowCanvas({
   // Also applies connect-source styling and aria-selected via React
   // rather than direct DOM classList manipulation.
   const {displayNodes, displayEdges} = useMemo(() => {
-    const applyDisplayProps = (
-      item: SketchlabReactFlowEdge | SketchlabReactFlowNode,
-      type: 'node' | 'edge'
-    ) => {
+    const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
         activeEntry?.type === type && activeEntry.id === item.id;
       const isSelected =
@@ -179,11 +246,7 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: SketchlabReactFlowSource = {
-        nodes: nodes as SketchlabReactFlowNode[],
-        edges: edges as SketchlabReactFlowEdge[],
-        viewport,
-      };
+      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
@@ -213,10 +276,7 @@ export default function ReactFlowCanvas({
   );
 
   const handleAddNode = useCallback(
-    (
-      type: 'shape' | 'image' | 'text',
-      data: SketchlabReactFlowNode['data']
-    ) => {
+    ({type, data}: Pick<SketchLabNode, 'type' | 'data'>) => {
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
 
@@ -226,19 +286,18 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = createUuid();
-      const newNode: SketchlabReactFlowNode = {
+      // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // Cast is needed because TS can't preserve the (type, data) correlation
+      // of the discriminated union across destructuring.
+      const newNode = {
         id: newNodeId,
         type,
-        position,
         data,
-        // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+        position,
         ...(type !== 'text' && {
-          style: {
-            width: DEFAULT_NODE_WIDTH,
-            height: DEFAULT_NODE_HEIGHT,
-          },
+          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
         }),
-      };
+      } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 
@@ -252,51 +311,65 @@ export default function ReactFlowCanvas({
     [focusEntry, screenToFlowPosition, setNodes]
   );
 
+  const handleNodeClick = useCallback(
+    (_event: React.MouseEvent, node: {id: string}) => {
+      // Only open the node toolbar in editable mode. Mouse opens don't
+      // trap focus so resize handles and contenteditable text stay usable.
+      if (!readOnly) {
+        openNodeToolbar(node.id, {trapFocus: false});
+      }
+    },
+    [readOnly, openNodeToolbar]
+  );
+
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
-      <div
-        className={classNames(
-          styles.canvasContainer,
-          {
-            [styles.connectMode]: !!connectingFrom,
-          },
-          SKETCHLAB_CONTAINER_CLASS
-        )}
-        onKeyDownCapture={handleKeyDown}
-        onFocusCapture={handleFocusCapture}
-        onBlur={handleContainerBlur}
-      >
-        {!readOnly && <Toolbar onAddNode={handleAddNode} />}
-        <div aria-live="assertive" className={styles.srOnly}>
-          {connectAnnouncement}
-        </div>
-        <ReactFlow
-          nodes={displayNodes}
-          edges={displayEdges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          onConnect={onConnect}
-          nodeTypes={NODE_TYPES}
-          onMoveEnd={handleMoveEnd}
-          defaultViewport={initialViewport}
-          fitView={!initialViewport}
-          colorMode={colorMode}
-          deleteKeyCode={readOnly ? null : 'Delete'}
-          proOptions={{hideAttribution: true}}
-          nodesDraggable={!readOnly}
-          nodesConnectable={!readOnly}
-          elementsSelectable={!readOnly}
-          nodesFocusable={true}
-          edgesFocusable={true}
-          // Even though we manage tab order, we keep React Flow's keyboard A11y on because
-          // it manages things like moving nodes with arrow keys.
-          disableKeyboardA11y={false}
-          autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+      <NodeToolbarVisibilityProvider value={nodeToolbarVisibility}>
+        <div
+          className={classNames(
+            styles.canvasContainer,
+            {
+              [styles.connectMode]: !!connectingFrom,
+            },
+            SKETCHLAB_CONTAINER_CLASS
+          )}
+          onKeyDownCapture={handleKeyDown}
+          onFocusCapture={handleFocusCapture}
+          onBlur={handleContainerBlur}
         >
-          <Background />
-          <Controls />
-        </ReactFlow>
-      </div>
+          {!readOnly && <Toolbar onAddNode={handleAddNode} />}
+          <div aria-live="assertive" className={styles.srOnly}>
+            {connectAnnouncement}
+          </div>
+          <ReactFlow
+            nodes={displayNodes}
+            edges={displayEdges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            nodeTypes={NODE_TYPES}
+            onMoveEnd={handleMoveEnd}
+            defaultViewport={initialViewport}
+            fitView={!initialViewport}
+            colorMode={colorMode}
+            deleteKeyCode={readOnly ? null : 'Delete'}
+            proOptions={{hideAttribution: true}}
+            nodesDraggable={!readOnly}
+            nodesConnectable={!readOnly}
+            elementsSelectable={!readOnly}
+            nodesFocusable={true}
+            edgesFocusable={true}
+            onNodeClick={handleNodeClick}
+            // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+            // it manages things like moving nodes with arrow keys.
+            disableKeyboardA11y={false}
+            autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+          >
+            <Background />
+            <Controls />
+          </ReactFlow>
+        </div>
+      </NodeToolbarVisibilityProvider>
     </SketchLabReadOnlyProvider>
   );
 }

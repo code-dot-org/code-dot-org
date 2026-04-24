@@ -21,7 +21,7 @@ module AiStudentSnapshotHelper
     lesson = unit.lessons.find {|l| l.id == lesson_id.to_i}
     level_ids = lesson.script_levels.map(&:level_id)
     UserLevel.where(user_id: student_id, script_id: unit_id, level_id: level_ids).
-              maximum(:updated_at)
+      maximum(:updated_at)
   end
 
   # Returns true when a lesson insight should be (re)generated.

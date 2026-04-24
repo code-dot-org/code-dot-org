@@ -49,6 +49,7 @@ import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
+import {pythonLabVideoFiles} from './pythonLabVideos';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -264,7 +265,7 @@ const PythonlabView: React.FunctionComponent<
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-          enableTutorVideos={true}
+          tutorVideos={pythonLabVideoFiles}
         />
       )}
       {showProjectPickerModal && (

@@ -1,13 +1,12 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2026-04-20T14:46:15.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Creative Writing Co-Pilot\r\n\r\nYou are the Pilot in command of your writing. This AI is your Co-Pilot who will help you to brainstorm ideas for a comic, 'zine, or short story.\r\n\r\n#### Task:\r\n\r\n* Type an idea you have for a story into the AI Chat (_For example: I want to write about a world where lizards have all the same technology as humans_)\r\n\r\n* Test AI's _outputs_ to see how they might assist you with adding to your original idea.\r\n\r\n",
+    "long_instructions": "##Creative Writing Co-Pilot\r\n\r\nYou are the Pilot in command of your writing. This AI is your Co-Pilot who will help you to brainstorm ideas for a comic, 'zine, or short story.\r\n\r\n#### Task:\r\n\r\n* Type an idea you have for a story into the AI Chat in **3 words** only (_For example: Super smart lizards!_)\r\n\r\n* Rewrite your prompt to be **10 words** and compare AI's output.\r\n\r\n* Rewrite your prompt to be **20 words** by adding even more detail and compare the output.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,12 +44,13 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "Creative Writing Co-Pilot",
-    "bubble_choice_description": "How can AI act as a co-pilot to assist with my creative writing?",
+    "display_name": "AI for a Creative Writing",
+    "bubble_choice_description": "Test out how AI can help with my creative writing.",
     "thumbnail_url": "https://images.code.org/50c79be18279978dc91432a6e5988a89-ai_writer_titlecard.jpg",
     "name_suffix": "_2026",
     "project_template_level_name": "thinking_critically_lesson4_level1_chat-template_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:15.048+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:31:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:38:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 21:02:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:15.048+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:31:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:38:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 21:02:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:50:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:51:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-23 15:51:01 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

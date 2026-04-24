@@ -3,9 +3,9 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import React, {useCallback, useEffect, useMemo} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
-import {ModalTypes} from '@cdo/apps/aichat/constants';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {
   addChatEvent,
   clearChatMessages,
@@ -21,39 +21,44 @@ import {
   updateAiCustomization,
   initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
-import {
-  AichatLevelProperties,
-  ModelParameters,
-  ViewMode,
-} from '@cdo/apps/aichat/types';
+import {AssetSource, ChatAsset, ModelParameters} from '@cdo/apps/aichat/types';
+import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
+import ChatWorkspace, {
+  ChatWorkspaceHandle,
+} from '@cdo/apps/aichat/views/ChatWorkspace';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import ResourcePanel, {
+  BackpackProps,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import {
+  BackpackAPIContext,
+  BackpackContextType,
+} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {AichatLevelProperties, ModalTypes, ViewMode} from '../types';
 
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
+import TeacherOnboardingModal from './TeacherOnboardingModal';
 
 import moduleStyles from './aichatView.module.scss';
 
@@ -72,7 +77,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     aichatSettings: levelAichatSettings,
     starterAssets,
   } = levelProperties;
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -239,9 +243,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const chatWorkspaceHeader = (
     <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT ? 'AI Chat' : botName}
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
-      )}
     </div>
   );
 
@@ -284,106 +285,173 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     hasSubmittedPredictResponse,
   });
 
+  const chatWorkspaceRef = useRef<ChatWorkspaceHandle>(null);
+
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const backpackContext: BackpackContextType | null = useMemo(() => {
+    if (currentUserId) {
+      // The backpack api does not work for signed-out users (it redirects to sign-in),
+      // so we don't create the api instance if there is no current user.
+      return {
+        primaryApi: new BackpackClientApi('aichat', null),
+        secondaryApis: {
+          sketchlab: new BackpackClientApi('sketchlab', null),
+          weblab2: new BackpackClientApi('weblab2', null),
+        },
+      };
+    }
+    return null;
+  }, [currentUserId]);
+
+  const backpackProps: BackpackProps = useMemo(() => {
+    return {
+      validateFileName: (fileName: string) => ({
+        newFileName: fileName,
+        isSupportFileName: false,
+      }),
+      // no-op; we're always importing backpack files as new files.
+      saveFileToProject: () => {},
+      createNewProjectFile: (
+        _fileName: string,
+        _contents: string,
+        url?: string
+      ) => {
+        const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
+        if (!url) {
+          metricsReporter.logWarning(
+            'Missing URL for imported backpack file. Cannot add to AI chat.'
+          );
+          return;
+        }
+        const filename = url.split('/').pop();
+        if (!filename) {
+          metricsReporter.logWarning(
+            'Could not parse backpack filename from URL. Cannot add to AI chat.'
+          );
+          return;
+        }
+        const asset: ChatAsset = {filename, source: AssetSource.PROJECT};
+        chatWorkspaceRef.current?.addAssets([asset]);
+      },
+      // no-op; we're always importing backpack files as new files.
+      findIdForFileName: () => undefined,
+      supportedFileTypes: getAllowedFileTypes(
+        modelParameters.selectedModelId
+      ).map(f => f.split('.').pop() || ''),
+    };
+  }, [modelParameters.selectedModelId]);
+
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;
   }
 
   return (
     <LevelPropertiesContext.Provider value={levelProperties}>
-      <div id="aichat-lab" className={moduleStyles.aichatLab}>
-        {ChatModal && <ChatModal onClose={onCloseModal} />}
-        {showPresentationToggle() && (
-          <div
-            id="uitest-view-mode-toggle-container"
-            className={moduleStyles.viewModeButtons}
-          >
-            <SegmentedButtons {...viewModeButtonsProps} />
-          </div>
-        )}
-        {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
-        <div className={moduleStyles.labCoreContainer}>
-          {viewMode === ViewMode.EDIT && (
-            <>
-              <div className={moduleStyles.instructionsArea}>
-                <ResourcePanel
-                  className={moduleStyles.panelContainer}
-                  headerClassName={moduleStyles.panelHeader}
-                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                  isRunning={false}
-                  hasRun={hasSentMessage}
-                  hasEdited={hasUpdatedCustomizations}
-                  levelProperties={levelProperties}
-                  rightHeaderContent={renderInstructionsHeaderRight(
-                    isUserTeacher,
-                    () => {
-                      dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
-                    }
-                  )}
-                />
-              </div>
-              {!allFieldsHidden && (
-                <div className={moduleStyles.customizationArea}>
-                  <PanelContainer
-                    id="aichat-model-customization-panel"
-                    headerContent={'Model Customization'}
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    rightHeaderContent={
-                      !viewAsUserId &&
-                      renderModelCustomizationHeaderRight(() => {
-                        onClickStartOver();
-                        dispatch(sendAnalytics(EVENTS.AICHAT_START_OVER, {}));
-                      })
-                    }
-                  >
-                    <ModelCustomizationWorkspace />
-                  </PanelContainer>
-                </div>
-              )}
-            </>
-          )}
-          {viewMode === ViewMode.PRESENTATION && (
+      <BackpackAPIContext.Provider value={backpackContext}>
+        <div id="aichat-lab" className={moduleStyles.aichatLab}>
+          {ChatModal && <ChatModal onClose={onCloseModal} />}
+          {showPresentationToggle() && (
             <div
-              id="uitest-presentation-view-container"
-              className={moduleStyles.presentationArea}
+              id="uitest-view-mode-toggle-container"
+              className={moduleStyles.viewModeButtons}
             >
-              <PanelContainer
-                id="aichat-presentation-panel"
-                headerContent={'Model Card'}
-                className={moduleStyles.panelContainer}
-                headerClassName={moduleStyles.panelHeader}
-              >
-                <PresentationView />
-              </PanelContainer>
+              <SegmentedButtons {...viewModeButtonsProps} />
             </div>
           )}
-          <div className={moduleStyles.chatWorkspaceArea}>
-            <PanelContainer
-              id="aichat-workspace-panel"
-              headerContent={chatWorkspaceHeader}
-              className={moduleStyles.panelContainer}
-              headerClassName={moduleStyles.panelHeader}
-              rightHeaderContent={<AiChatHeaderButtons />}
-            >
-              {chatWorkspaceInitialized && (
-                <ChatWorkspace
-                  modelParameters={modelParameters}
-                  clientType={AiChatClientTypes.AI_CHAT_LAB}
-                  levelName={levelName}
-                  channelId={channelId}
-                  hasStarterAssets={
-                    starterAssets && Object.keys(starterAssets).length > 0
-                  }
-                  multimodalEnabled={levelAichatSettings?.multimodalEnabled}
-                  logLevelActivity={logLevelActivity}
-                  disabled={disabled}
-                  disabledMessage={disabledMessage}
-                />
-              )}
-            </PanelContainer>
+          {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+          <div className={moduleStyles.labCoreContainer}>
+            {viewMode === ViewMode.EDIT && (
+              <>
+                <div className={moduleStyles.instructionsArea}>
+                  <ResourcePanel
+                    className={moduleStyles.panelContainer}
+                    headerClassName={moduleStyles.panelHeader}
+                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                    isRunning={false}
+                    hasRun={hasSentMessage}
+                    hasEdited={hasUpdatedCustomizations}
+                    levelProperties={levelProperties}
+                    rightHeaderContent={renderInstructionsHeaderRight(
+                      isUserTeacher,
+                      () => {
+                        dispatch(
+                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
+                        );
+                      }
+                    )}
+                    backpackProps={backpackProps}
+                  />
+                </div>
+                {!allFieldsHidden && (
+                  <div className={moduleStyles.customizationArea}>
+                    <PanelContainer
+                      id="aichat-model-customization-panel"
+                      headerContent={'Model Customization'}
+                      className={moduleStyles.panelContainer}
+                      headerClassName={moduleStyles.panelHeader}
+                      rightHeaderContent={
+                        !viewAsUserId &&
+                        renderModelCustomizationHeaderRight(() => {
+                          onClickStartOver();
+                          dispatch(sendAnalytics(EVENTS.AICHAT_START_OVER, {}));
+                        })
+                      }
+                    >
+                      <ModelCustomizationWorkspace />
+                    </PanelContainer>
+                  </div>
+                )}
+              </>
+            )}
+            {viewMode === ViewMode.PRESENTATION && (
+              <div
+                id="uitest-presentation-view-container"
+                className={moduleStyles.presentationArea}
+              >
+                <PanelContainer
+                  id="aichat-presentation-panel"
+                  headerContent={'Model Card'}
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
+                >
+                  <PresentationView />
+                </PanelContainer>
+              </div>
+            )}
+            <div className={moduleStyles.chatWorkspaceArea}>
+              <PanelContainer
+                id="aichat-workspace-panel"
+                headerContent={chatWorkspaceHeader}
+                className={moduleStyles.panelContainer}
+                headerClassName={moduleStyles.panelHeader}
+                rightHeaderContent={
+                  <>
+                    <WorkspaceHeader.TemplateIcon />
+                    <AiChatHeaderButtons />
+                  </>
+                }
+              >
+                {chatWorkspaceInitialized && (
+                  <ChatWorkspace
+                    modelParameters={modelParameters}
+                    clientType={AiChatClientTypes.AI_CHAT_LAB}
+                    levelName={levelName}
+                    channelId={channelId}
+                    hasStarterAssets={
+                      starterAssets && Object.keys(starterAssets).length > 0
+                    }
+                    multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                    logLevelActivity={logLevelActivity}
+                    disabled={disabled}
+                    disabledMessage={disabledMessage}
+                    ref={chatWorkspaceRef}
+                  />
+                )}
+              </PanelContainer>
+            </div>
           </div>
         </div>
-      </div>
+      </BackpackAPIContext.Provider>
     </LevelPropertiesContext.Provider>
   );
 };

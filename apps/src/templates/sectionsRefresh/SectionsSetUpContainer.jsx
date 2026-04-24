@@ -57,7 +57,6 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
-            aiTutorEnabled: false,
             course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
             avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
             avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
@@ -124,20 +123,12 @@ export default function SectionsSetUpContainer({
   const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
 
   const toggleIsCoteacherOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setIsCoteacherOpen(!isCoteacherOpen);
-    },
+    () => setIsCoteacherOpen(!isCoteacherOpen),
     [isCoteacherOpen]
   );
 
   const toggleAdvancedSettingsOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setAdvancedSettingsOpen(!advancedSettingsOpen);
-    },
+    () => setAdvancedSettingsOpen(!advancedSettingsOpen),
     [advancedSettingsOpen]
   );
 
@@ -239,7 +230,6 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
@@ -355,6 +345,7 @@ export default function SectionsSetUpContainer({
           styleAsText
           icon={caret(isOpen)}
           onClick={toggleIsOpen}
+          type="button"
         >
           <Typography variant="h3" gutterBottom>
             {sectionTitle()}
@@ -497,10 +488,8 @@ export default function SectionsSetUpContainer({
                 icon="plus"
                 text={i18n.addAnotherClassSection()}
                 color={Button.ButtonColor.neutralDark}
-                onClick={e => {
-                  e.preventDefault();
-                  saveSection(sections[0], true, coteachersToAdd);
-                }}
+                onClick={() => saveSection(sections[0], true, coteachersToAdd)}
+                type="button"
               />
             )}
             <Button
@@ -515,11 +504,11 @@ export default function SectionsSetUpContainer({
               }
               color={Button.ButtonColor.brandSecondaryDefault}
               disabled={isSaveInProgress}
-              onClick={e => {
-                e.preventDefault();
+              onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
+              type="button"
             />
           </div>
         </>

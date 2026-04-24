@@ -2,7 +2,10 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {getJsonVideoPrompt} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {
+  getJsonVideoPrompt,
+  type JsonVideoFileMetadata,
+} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import experiments from '@cdo/apps/util/experiments';
@@ -46,7 +49,7 @@ export const baseModelParameters: ModelParameters = {
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPrompt?: string;
   aiTutorJsonSchema?: object;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
 }
 
 export const useAiTutorModelParameters = (
@@ -56,9 +59,8 @@ export const useAiTutorModelParameters = (
 
   useEffect(() => {
     const promptString =
-      options?.aiTutorSystemPrompt ??
-      defaultSystemPrompt +
-        getJsonVideoPrompt(options?.enableTutorVideos ?? false);
+      (options?.aiTutorSystemPrompt ?? defaultSystemPrompt) +
+      getJsonVideoPrompt(options?.tutorVideos, !!options?.aiTutorJsonSchema);
 
     let mounted = true;
 
@@ -113,7 +115,11 @@ export const useAiTutorModelParameters = (
     return () => {
       mounted = false;
     };
-  }, [options?.aiTutorSystemPrompt, options?.enableTutorVideos]);
+  }, [
+    options?.aiTutorSystemPrompt,
+    options?.tutorVideos,
+    options?.aiTutorJsonSchema,
+  ]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
