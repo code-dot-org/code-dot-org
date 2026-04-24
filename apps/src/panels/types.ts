@@ -2,8 +2,7 @@ import {LevelProperties} from '../lab2/types';
 
 export interface PanelsLevelProperties extends LevelProperties {
   panels?: Panel[];
-  // Rails serializes this as "true" or "false". Coerce at the call site.
-  useLinks?: boolean | string;
+  useLinks?: boolean;
 }
 
 export type PanelLayout =

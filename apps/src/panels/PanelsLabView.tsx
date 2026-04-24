@@ -33,7 +33,6 @@ const PanelsLabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const {panels, appName, skipUrl, offerBrowserTts, useLinks} = levelProperties;
-  const useLinksBool = useLinks === true || useLinks === 'true';
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
@@ -120,7 +119,7 @@ const PanelsLabView: React.FunctionComponent<
       targetHeight={windowHeight}
       offerBrowserTts={offerBrowserTts || queryParams('show-tts') === 'true'}
       levelId={currentLevelId}
-      useLinks={useLinksBool}
+      useLinks={useLinks}
       onChangePanel={onChangePanel}
       onClickContinue={onClickContinue}
     />
