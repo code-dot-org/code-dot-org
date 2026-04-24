@@ -27,7 +27,7 @@ import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teach
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -385,26 +385,29 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
           <PanelContainer
             id="workspace"
             className={panelClassName}
-            headerContent={<WorkspaceHeader />}
+            headerContent={<WorkspaceHeader.Content />}
             rightHeaderContent={
-              !readonlyWorkspace && (
-                <MuiButton
-                  variant="outlined"
-                  color="tertiary"
-                  size="extraSmall"
-                  onClick={onClickStartOver}
-                  aria-label={commonI18n.startOver()}
-                  type="button"
-                  endIcon={
-                    <FontAwesomeV6Icon
-                      iconStyle="solid"
-                      iconName="arrow-rotate-left"
-                    />
-                  }
-                >
-                  {commonI18n.startOver()}
-                </MuiButton>
-              )
+              <>
+                <WorkspaceHeader.TemplateIcon />
+                {!readonlyWorkspace && (
+                  <MuiButton
+                    variant="outlined"
+                    color="tertiary"
+                    size="extraSmall"
+                    onClick={onClickStartOver}
+                    aria-label={commonI18n.startOver()}
+                    type="button"
+                    endIcon={
+                      <FontAwesomeV6Icon
+                        iconStyle="solid"
+                        iconName="arrow-rotate-left"
+                      />
+                    }
+                  >
+                    {commonI18n.startOver()}
+                  </MuiButton>
+                )}
+              </>
             }
           >
             {teacherViewingStudent && (

@@ -19,3 +19,4 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Use constants for any magic numbers.
 - Ensure eslint passes. Run `./tools/hooks/pre-commit` from the repo root after making changes to verify.
 - CSS module names should be in kebab-case.
+- Write comments in plain English, avoiding dense jargon.

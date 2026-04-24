@@ -2,8 +2,10 @@ import {offset} from '@floating-ui/dom';
 import {useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
+import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
 import {
   ProductTour,
+  ProductTourConfigurations,
   isTourEnabledOnLevel,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
@@ -14,22 +16,23 @@ import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/us
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from '@cdo/apps/sketchlab/constants';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
-
 const onTourStart = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
+    triggerSource: TriggerSource.Auto,
   });
 
 const onTourComplete = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
+    triggerSource: TriggerSource.Auto,
   });
 
 const onTourCancel = (stepIndex: number) =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
     step: stepIndex.toString(),
+    triggerSource: TriggerSource.Auto,
   });
 
 interface UseSketchlabTourParams {
