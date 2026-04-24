@@ -9,11 +9,13 @@ import Link from '@/link/Link';
 import moduleStyles from './signedInUserButton.module.scss';
 
 export type UserAuthProp =
-  | {isSignedIn: false}
-  | {isSignedIn: true; firstName: string};
+  | {status: 'loading'}
+  | {status: 'signed-in'; display_name: string}
+  | {status: 'signed-out'}
+  | {status: 'error'};
 
 export interface SignedInUserButtonProps {
-  userAuth: UserAuthProp;
+  userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
 }
 
 const SUB_MENU_ITEMS = [
@@ -60,14 +62,10 @@ const triggerSx = {
 const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   userAuth,
 }) => {
-  if (!userAuth.isSignedIn) {
-    return null;
-  }
-
   return (
     <CustomDropdown
       name="signed-in-user"
-      labelText={userAuth.firstName}
+      labelText={userAuth.display_name}
       size="m"
       menuPlacement="right"
       aria-label="Account menu"
@@ -88,7 +86,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
               flex: '1 1 auto',
             }}
           >
-            {userAuth.firstName}
+            {userAuth.display_name}
           </Box>
         ),
       }}

@@ -38,8 +38,14 @@ export class DeferredAdapter implements ObservabilityClient {
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
-    this.enqueue(client => client.recordError(error, context));
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined {
+    this.enqueue(client => {
+      client.recordError(error, context);
+    });
+    return undefined;
   }
 
   /**

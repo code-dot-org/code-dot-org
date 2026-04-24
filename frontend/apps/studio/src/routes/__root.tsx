@@ -13,9 +13,11 @@ import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
+import {useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
+import {AuthErrorPage} from '@/modules/errors';
 
-const SIGNED_OUT_MENU_ITEMS = [
+const MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
   {label: 'Teach', href: '/teach'},
   {label: 'Districts', href: '/administrators'},
@@ -25,26 +27,47 @@ const SIGNED_OUT_MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
-/** Root layout: flex column so the main content area fills the remaining viewport height. */
+function RootContent() {
+  const auth = useAuth();
+
+  let routeArea: React.ReactNode;
+  switch (auth.status) {
+    case 'loading':
+    case 'signed-in':
+    case 'signed-out':
+      routeArea = <Outlet />;
+      break;
+    case 'error':
+      routeArea = (
+        <AuthErrorPage onRetry={auth.onRetry} eventId={auth.eventId} />
+      );
+      break;
+    default: {
+      const _: never = auth;
+      throw new Error(`Unhandled auth status: ${JSON.stringify(_)}`);
+    }
+  }
+
+  return (
+    <>
+      <Header
+        logoImageUrl={CdoLogo}
+        brandName="Code.org"
+        menuItems={MENU_ITEMS}
+        userAuth={auth}
+      />
+      {routeArea}
+      <TanStackRouterDevtools />
+    </>
+  );
+}
+
 function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
-      <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
-        <Bootstrap locale="en-US" />
-        <Header
-          logoImageUrl={CdoLogo}
-          brandName="Code.org"
-          menuItems={SIGNED_OUT_MENU_ITEMS}
-        />
-        <Box
-          component="main"
-          sx={{flex: 1, display: 'flex', flexDirection: 'column'}}
-        >
-          <Outlet />
-        </Box>
-        <StudioFooter />
-        <TanStackRouterDevtools />
-      </Box>
+      <Bootstrap locale="en-US">
+        <RootContent />
+      </Bootstrap>
     </ThemeProvider>
   );
 }

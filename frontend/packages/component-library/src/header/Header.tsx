@@ -6,10 +6,12 @@ import {
   List,
   ListItem,
   Box,
+  Skeleton,
 } from '@mui/material';
 import {FunctionComponent} from 'react';
 
 import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
+import SignedOutUserButtons from './SignedOutUserButtons';
 
 interface MenuItem {
   label: string;
@@ -119,7 +121,30 @@ const Header: FunctionComponent<HeaderProps> = ({
                 backgroundColor: 'var(--background-brand-teal-primary)',
               }}
             >
-              <SignedInUserButton userAuth={userAuth} />
+              {(() => {
+                switch (userAuth.status) {
+                  case 'loading':
+                  case 'error':
+                    return (
+                      <Skeleton
+                        variant="rectangular"
+                        width={120}
+                        height={32}
+                        sx={{borderRadius: '4px'}}
+                      />
+                    );
+                  case 'signed-in':
+                    return <SignedInUserButton userAuth={userAuth} />;
+                  case 'signed-out':
+                    return <SignedOutUserButtons />;
+                  default: {
+                    const _: never = userAuth;
+                    throw new Error(
+                      `Unhandled userAuth status: ${JSON.stringify(_)}`,
+                    );
+                  }
+                }
+              })()}
             </Box>
           )}
         </Toolbar>

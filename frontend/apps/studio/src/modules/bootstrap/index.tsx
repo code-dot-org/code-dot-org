@@ -1,21 +1,23 @@
 import {CssBaseline} from '@mui/material';
+import type {ReactNode} from 'react';
 
 import FontLoader from '@code-dot-org/fonts/FontLoader';
 
+import {AuthProvider} from '@/modules/auth';
+
 interface BootstrapProps {
   locale: string;
+  children: ReactNode;
 }
 
-/**
- * Early bootstrap component for loading necessary fonts and styles.
- */
-const Bootstrap = ({locale}: BootstrapProps) => {
+/** Early bootstrap: fonts, CSS reset, and auth context for all descendants. */
+const Bootstrap = ({locale, children}: BootstrapProps) => {
   return (
-    <>
+    <AuthProvider>
       <FontLoader locale={locale} />
-      {/* Resets browser CSS defaults (e.g. body margin) using MUI defaults */}
       <CssBaseline />
-    </>
+      {children}
+    </AuthProvider>
   );
 };
 
