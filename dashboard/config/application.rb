@@ -144,7 +144,7 @@ module Dashboard
     LOCALES = Cdo::I18n::LOCALE_CONFIGS
     Cdo::I18n.available_languages.each do |language|
       locale = language[:locale_s]
-      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+      fallback_locale = Cdo::I18n::LOCALE_FALLBACKS[locale]
 
       config.i18n.available_locales << locale
       config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
@@ -155,8 +155,9 @@ module Dashboard
       # itself and can't be configured using config.i18n.fallbacks.
       # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
       # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
-      I18n.fallbacks.map(es: :'es-MX')
-      I18n.fallbacks.map(pt: :'pt-BR')
+      Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|
+        I18n.fallbacks.map(short_locale.to_sym => normalized_locale.to_sym)
+      end
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.

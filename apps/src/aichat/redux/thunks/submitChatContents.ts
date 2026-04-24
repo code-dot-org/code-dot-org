@@ -12,6 +12,7 @@ import {
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -271,8 +272,11 @@ async function handleChatCompletionError(
   viewAsUserId: number | null,
   dimensions: MetricDimension[] = []
 ) {
-  // Only send log report if not a 403 error.
-  if (!(error instanceof NetworkError && error.response.status === 403)) {
+  // Skip log report for expected client-side conditions (403, DevTools block).
+  if (
+    !(error instanceof NetworkError && error.response.status === 403) &&
+    !isTurnstileDevToolsError(error)
+  ) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
@@ -300,6 +304,17 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  } else if (isTurnstileDevToolsError(error)) {
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text:
+          "Chat messages cannot be sent due to your browser's dev tools being open. Please close " +
+          'dev tools and reload the page to try again or see message in dev tools for other options.',
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
   } else {
     incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
     dispatch(

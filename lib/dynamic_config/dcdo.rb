@@ -71,6 +71,7 @@ class DCDOBase < DynamicConfigBase
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
+      'language-deprecation-warning-enabled': DCDO.get('language-deprecation-warning-enabled', false),
       'launch-grades-in-sign-up': DCDO.get('launch-grades-in-sign-up', false)
     }
   end

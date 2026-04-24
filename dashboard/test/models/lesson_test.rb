@@ -1466,4 +1466,17 @@ class LessonTest < ActiveSupport::TestCase
     bubble_choice_summary = summary[:levels].first
     assert_equal false, bubble_choice_summary[:isSubmittable]
   end
+
+  test 'lesson with rubric referencing a level can be destroyed' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    level = create(:level, name: 'submittable level', properties: {submittable: 'true'})
+    create(:script_level, lesson: lesson, script: script, levels: [level])
+    create(:rubric, lesson: lesson, level: level)
+
+    assert_nothing_raised do
+      lesson.destroy!
+    end
+  end
 end
