@@ -1,5 +1,5 @@
 import * as utils from '@cdo/apps/aichat/redux/utils';
-import {AiCustomizations} from '@cdo/apps/aichat/types';
+import {AiCustomizations} from '@cdo/apps/aichatLab/types';
 import {EMPTY_MODEL_CARD_INFO} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-20 21:52:12 UTC",
+    "serialized_at": "2026-04-22 19:17:52 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -124,7 +124,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Why do some web apps feel easy and others frustrating?**\n\nStudents explore how technology is designed for people. They compare old and modern websites, uncover the concept of Human-Centered Design (HCD), and connect it to the real-world work of User Experience (UX) Designers. Through a guided critique activity, students practice empathy by analyzing how different users experience different web apps and suggest improvements that make the design more inclusive.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Why do some web apps feel easy and others frustrating?**\n\nStudents explore how technology is designed for people. They compare old and modern websites, uncover the concept of Human-Centered Design (HCD), and connect it to the real-world work of User Experience (UX) Designers. Through a guided critique activity, students practice empathy by analyzing how different users experience different web apps and suggest improvements that make the design more inclusive.",
         "preparation": "- Print copies of the The User’s Experience (one for each student)",
         "student_overview": "**Why do some web apps feel easy and others frustrating?**\n\nIn this lesson, you’ll explore how technology is designed for people. You’ll compare old and modern websites to see how design has changed, learn about Human-Centered Design (HCD), and discover what User Experience (UX) Designers do. Then, you’ll practice empathy by looking at how different users experience different web apps and suggest ways to make the design easier and more inclusive."
       },
@@ -178,7 +178,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How do fonts and colors tell a story?**\n\nIn this lesson, students take on the role of marketing specialists to explore how color, typography, and tone communicate brand identity. They analyze real-world brands to uncover design patterns and audience targeting, then design their own accessible, inclusive brand kits. Through peer feedback and reflection, students connect ethical and aesthetic decision-making, recognizing how design and AI can shape perception, representation, and inclusivity.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do fonts and colors tell a story?**\n\nIn this lesson, students take on the role of marketing specialists to explore how color, typography, and tone communicate brand identity. They analyze real-world brands to uncover design patterns and audience targeting, then design their own accessible, inclusive brand kits. Through peer feedback and reflection, students connect ethical and aesthetic decision-making, recognizing how design and AI can shape perception, representation, and inclusivity.",
         "student_overview": "**How do fonts and colors tell a story?**\n\nIn this lesson, you act as a marketing specialist to explore how colors, fonts, and style choices communicate a brand’s identity. You create a mini brand kit that reflects your audience’s needs while keeping your design accessible, inclusive, and intentional."
       },
       "seeding_key": {
@@ -195,7 +195,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**How do we make our web app reflect our brand identity?**\n\nIn this lesson, students take on the role of front-end web designers, translating visual brand identity into working code through CSS. They connect design and function by generating, applying, and refining AI-assisted CSS to achieve consistency across webpages. Through guided debugging and validation, students learn that professional coding practice involves reviewing AI outputs for accuracy, accessibility, and alignment with design intent.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do we make our web app reflect our brand identity?**\n\nIn this lesson, students take on the role of front-end web designers, translating visual brand identity into working code through CSS. They connect design and function by generating, applying, and refining AI-assisted CSS to achieve consistency across webpages. Through guided debugging and validation, students learn that professional coding practice involves reviewing AI outputs for accuracy, accessibility, and alignment with design intent.",
         "student_overview": "**How do we make our web app reflect our brand identity?**\n\nIn this lesson, you act as a front-end web designer, using CSS to turn brand designs into working websites. You apply and refine AI-generated styles to make pages consistent, accessible, and aligned with a clear visual identity."
       },
       "seeding_key": {
@@ -229,7 +229,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How do we break down a site into parts?**\n\nThis lesson positions students as UX Designers who create and test site maps to plan how users move through a website. Through iterative design and AI collaboration, students translate their structures into clear, precise prompts that guide an AI to build connected web pages. The work emphasizes clarity of logic, user-centered thinking, and effective communication with AI to ensure design intent is accurately reflected in the output.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do we break down a site into parts?**\n\nThis lesson positions students as UX Designers who create and test site maps to plan how users move through a website. Through iterative design and AI collaboration, students translate their structures into clear, precise prompts that guide an AI to build connected web pages. The work emphasizes clarity of logic, user-centered thinking, and effective communication with AI to ensure design intent is accurately reflected in the output.",
         "preparation": "- Print and cut out copies of the Website Cards for the Warm Up activity (one set of cards for each pair of students)",
         "student_overview": "**How do we break down a site into parts?**\n\nIn this lesson, you take on the role of a UX Designer to plan how users move through a website and guide an AI to build it. The focus is on creating clear, logical structures and communicating your design ideas so the AI understands your intent."
       },
@@ -247,7 +247,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How can we make sites usable for everyone?**\n\nIn this lesson, students explore how accessible design ensures that digital experiences work for everyone, regardless of ability. They analyze real-world accessibility challenges and AI-generated designs to understand how bias and inaccessibility can be replicated through training data. By applying the POUR framework, students practice identifying accessibility issues and writing AI prompts that make designs more inclusive—reinforcing empathy, user-centered thinking, and the importance of human oversight in guiding AI.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we make sites usable for everyone?**\n\nIn this lesson, students explore how accessible design ensures that digital experiences work for everyone, regardless of ability. They analyze real-world accessibility challenges and AI-generated designs to understand how bias and inaccessibility can be replicated through training data. By applying the POUR framework, students practice identifying accessibility issues and writing AI prompts that make designs more inclusive—reinforcing empathy, user-centered thinking, and the importance of human oversight in guiding AI.",
         "preparation": "- Print copies of the Accessibility and Design activity guide (one for each student)",
         "student_overview": "**How can we make sites usable for everyone?**\n\nIn this lesson, you explore how to design websites and apps that work for everyone. By examining common accessibility issues and using the POUR framework, you learn how designers and AI can create more inclusive digital experiences when guided by human empathy and clear design choices."
       },
@@ -299,7 +299,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "**How should layouts adapt across devices?**\n\nStudents examine how websites adapt across devices to understand responsiveness and test AI-generated layouts for usability issues. They take on the role of Software Test Engineers to identify and fix layout problems, connecting responsive design to accessibility and inclusion.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How should layouts adapt across devices?**\n\nStudents examine how websites adapt across devices to understand responsiveness and test AI-generated layouts for usability issues. They take on the role of Software Test Engineers to identify and fix layout problems, connecting responsive design to accessibility and inclusion.",
         "preparation": "- Print copies of the Designing for Responsiveness activity guide (one for each student).",
         "student_overview": "**How should layouts adapt across devices?**\n\nTest and improve your AI-generated webpage like a Software Test Engineer, by finding and fixing layout issues to make your design more responsive."
       },
@@ -317,6 +317,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment": true,
         "overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nEvery skill students have built since Lesson 1 comes together here. Students choose a topic they care about and take it all the way from concept to published site, working through four milestones that mirror a real design process. The milestone structure provides natural moments to check in and redirect before students are too invested to course-correct. By the end, every student has a finished, shareable piece of work to be genuinely proud of.",
         "preparation": "- Print copies of the Digital Magazine Project Planning Guide to students (one for each student)",
         "student_overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nIn this project, you'll build something that is genuinely your own. Starting from a topic that matters to you, you'll define an audience, establish a brand, wireframe a layout, and bring a multi-page digital magazine to life using AI tools. By the end, you'll have a portfolio piece that demonstrates your design thinking and intentional collaboration with AI."
@@ -898,6 +899,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f2a59972-b9d7-464e-a0e1-c5e0c9593331",
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "77cc86a9-26bd-47c6-a08d-981be5fe7309",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77cc86a9-26bd-47c6-a08d-981be5fe7309",
         "lesson.key": "Lesson 13: Digital Magazine Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-generated-design-2026"
@@ -4667,12 +4680,13 @@
       }
     },
     {
-      "key": "a85c460f-3fc0-4be6-af6d-d4345c96e3f5",
+      "key": "4d351343-9de1-47fb-8c6c-74a575c38db4",
       "position": 6,
       "properties": {
+        "progression_name": "Milestone 1"
       },
       "seeding_key": {
-        "activity_section.key": "a85c460f-3fc0-4be6-af6d-d4345c96e3f5",
+        "activity_section.key": "4d351343-9de1-47fb-8c6c-74a575c38db4",
         "lesson_activity.key": "fa9a4d79-3dd4-46ef-bfce-56b06b84871b"
       }
     },
@@ -4706,21 +4720,21 @@
       }
     },
     {
-      "key": "8255406b-4203-4ef1-b58f-601f0b2e574c",
-      "position": 1,
+      "key": "6cdaea00-9d86-4333-b9dc-aad0f3f0a7f3",
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one element you're excited to see come to life from your design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reconnect with their design vision and build enthusiasm to begin the hands-on coding phase. This primes them to think intentionally about how their design ideas translate into real HTML/CSS builds today.",
         "duration": "5",
         "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "8255406b-4203-4ef1-b58f-601f0b2e574c",
-        "lesson_activity.key": "ce0571db-6c55-4805-b665-3a08c5e9f612"
+        "activity_section.key": "6cdaea00-9d86-4333-b9dc-aad0f3f0a7f3",
+        "lesson_activity.key": "fa9a4d79-3dd4-46ef-bfce-56b06b84871b"
       }
     },
     {
       "key": "82def46b-d238-4186-b410-5944a670a406",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Digital Magazine Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
         "duration": "35",
@@ -4739,7 +4753,7 @@
     },
     {
       "key": "0819d1aa-2e99-4cbe-92fa-db74f0dc82ce",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 2 and 3 to work on their first draft of their pages. Clarify that they'll begin building the first draft of their magazine pages using HTML and CSS, with help from the AI tools available at these levels. Encourage students to use AI prompts strategically — for example, to generate layouts, apply color palettes, or organize text elements, while checking that the code makes sense.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- \"What part of your magazine are you starting with?\"\n- \"What feedback from your plan or Milestone 1 are you using as you build?\"\n- \"Have you tested your page to make sure it behaves the way you expect?\"\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.",
         "progression_name": "Milestone 2: Build Your First Draft"
@@ -4751,7 +4765,7 @@
     },
     {
       "key": "fc80c524-f720-450d-ab48-3a97167cde0c",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Milestone 3: Refine and Align"
       },
@@ -4762,7 +4776,7 @@
     },
     {
       "key": "e813196c-4355-417b-8b30-f19e7370da7f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights before moving to Milestone 3.",
         "tips": [
@@ -4779,7 +4793,7 @@
     },
     {
       "key": "57f64b42-21ae-4b5a-89bf-ccdfc2fc58ba",
-      "position": 6,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -4789,7 +4803,7 @@
     },
     {
       "key": "3bca3854-f066-4ea8-a84f-26d0e903d859",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Explain that this reflection helps them identify what's working well and what still needs adjustment before the final milestone. Give students a few minutes to reflect individually, then share with a partner or small group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps (e.g., \"I need to fix spacing,\" \"My navigation isn't consistent,\" or \"I want to make my site more accessible\"). Encourage students to connect these adjustments back to their user goals and audience experience.",
         "duration": "5",
@@ -4870,7 +4884,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Digital Magazine projects. Explain that this is their final dedicated work session for Milestone 4 – Test and Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Digital Magazine project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
-        "progression_name": "Milestone 4: Finalize and Showcase",
+        "progression_name": "Milestone 3: Finalize and Showcase",
         "tips": [
           {
             "type": "teachingTip",
@@ -4938,6 +4952,17 @@
       "seeding_key": {
         "activity_section.key": "8e6ad030-d2c4-4bff-9640-04b705809ffa",
         "lesson_activity.key": "f2a59972-b9d7-464e-a0e1-c5e0c9593331"
+      }
+    },
+    {
+      "key": "e138520b-35b9-4234-b4d2-d00aab476bb2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Design Your App Layout"
+      },
+      "seeding_key": {
+        "activity_section.key": "e138520b-35b9-4234-b4d2-d00aab476bb2",
+        "lesson_activity.key": "77cc86a9-26bd-47c6-a08d-981be5fe7309"
       }
     },
     {
@@ -5813,9 +5838,94 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson13-level1_2026"
+        "progression": "Milestone 1: Define Your Magazine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone1-overview_2026"
         ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-milestone1-overview_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1: Define Your Magazine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1-plan_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level1-plan_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1: Define Your Magazine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-brandkit_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1: Define Your Magazine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-sitemap_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "progression": "Milestone 1: Define Your Magazine"
       },
       "bonus": false,
@@ -5833,9 +5943,53 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 2,
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": true,
+      "properties": {
+        "progression": "Milestone 1: Define Your Magazine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level3-reflection_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level3-reflection_2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2: Build Your First Draft"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone2-overview_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "0819d1aa-2e99-4cbe-92fa-db74f0dc82ce"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-milestone2-overview_2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5858,40 +6012,59 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
+      "chapter": 44,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson13-level3_2026"
-        ],
-        "progression": "Milestone 3: Refine and Align"
+        "progression": "Milestone 2: Build Your First Draft"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson13-level3_2026"
+          "ai-generated-design-lesson13-level4-reflection_2026"
         ],
         "lesson.key": "Lesson 13: Digital Magazine Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "fc80c524-f720-450d-ab48-3a97167cde0c"
+        "activity_section.key": "0819d1aa-2e99-4cbe-92fa-db74f0dc82ce"
       },
       "level_keys": [
-        "ai-generated-design-lesson13-level3_2026"
+        "ai-generated-design-lesson13-level4-reflection_2026"
       ]
     },
     {
-      "chapter": 39,
-      "position": 4,
+      "chapter": 45,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
+      "properties": {
+        "progression": "Milestone 3: Finalize and Showcase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone3-overview_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "63452eec-ca7f-4bd8-97ea-ae2a5b7b1345"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-milestone3-overview_2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson13-level4_2026"
         ],
-        "progression": "Milestone 4: Finalize and Showcase"
+        "progression": "Milestone 3: Finalize and Showcase"
       },
       "bonus": false,
       "seeding_key": {
@@ -5908,7 +6081,29 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Milestone 3: Finalize and Showcase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level7-reflection_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "63452eec-ca7f-4bd8-97ea-ae2a5b7b1345"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level7-reflection_2026"
+      ]
+    },
+    {
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6356,6 +6551,54 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-milestone1-overview_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone1-overview_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level1-plan_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1-plan_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-brandkit_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-sitemap_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson13-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson13-level1_2026"
@@ -6364,6 +6607,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level3-reflection_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level3-reflection_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "cdbc385d-6f39-4a76-b595-fec6334cda59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-milestone2-overview_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone2-overview_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "0819d1aa-2e99-4cbe-92fa-db74f0dc82ce"
       }
     },
     {
@@ -6380,14 +6647,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson13-level3_2026",
+        "level.key": "ai-generated-design-lesson13-level4-reflection_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson13-level3_2026"
+          "ai-generated-design-lesson13-level4-reflection_2026"
         ],
         "lesson.key": "Lesson 13: Digital Magazine Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "fc80c524-f720-450d-ab48-3a97167cde0c"
+        "activity_section.key": "0819d1aa-2e99-4cbe-92fa-db74f0dc82ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-milestone3-overview_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-milestone3-overview_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "63452eec-ca7f-4bd8-97ea-ae2a5b7b1345"
       }
     },
     {
@@ -6395,6 +6674,18 @@
         "level.key": "ai-generated-design-lesson13-level4_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson13-level4_2026"
+        ],
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "63452eec-ca7f-4bd8-97ea-ae2a5b7b1345"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level7-reflection_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level7-reflection_2026"
         ],
         "lesson.key": "Lesson 13: Digital Magazine Project",
         "lesson_group.key": "lessonGroup-4",

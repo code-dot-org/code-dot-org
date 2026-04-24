@@ -183,6 +183,7 @@ const UserMessageEditor = React.forwardRef<
                   onSpeechToTextFinished?.(analytics);
                 }}
                 onRecordStart={() => setIsRecording(true)}
+                onRecordEnd={() => setIsRecording(false)}
                 disabled={disabled}
               />
             )}
