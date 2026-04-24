@@ -13,6 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
@@ -77,6 +78,14 @@ export const Codebridge = React.memo(
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
     const currentUserId = useAppSelector(state => state.currentUser.userId);
+    const hasSubmittedPredictResponse = useAppSelector(
+      state => state.predictLevel.hasSubmittedResponse
+    );
+    const {disabled: aiTutorDisabled} = useAiChatDisabledState({
+      appName,
+      isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
+      hasSubmittedPredictResponse,
+    });
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -212,6 +221,7 @@ export const Codebridge = React.memo(
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
           tutorVideos,
+          aiTutorDisabled,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

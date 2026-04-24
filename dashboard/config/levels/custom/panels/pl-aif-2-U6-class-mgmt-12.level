@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-04-15T14:49:37.000Z",
   "level_num": "custom",
@@ -9,63 +10,74 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Playlist Activity Tutorial\nIn the next activity, you’ll build a music web app. These panels walk you through each step, including using an API to fetch and display a playlist.",
-        "imageUrl": "https://images.code.org/3eaba7ae3cf636121186d76653a82d58-playlist.png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-1a2d86f6-474a-4004-b046-1e5049309d79",
+        "text": "",
+        "imageUrl": "https://images.code.org/6ce79bce9245fbf186cac4d0309cf388-Teaching Moves_ Facilitating Capstone Projects.png",
+        "key": "pl-aif-2-U6-class-mgmt-12-ee5adfcb-0be1-4b19-bb31-a1e94eee71ba",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Layout Design \nIn the previous level, you sketched how the playlist data should appear. Be sure to save that image, as you’ll upload it in the next level to create the card layout.",
-        "imageUrl": "https://images.code.org/87785242bda4c100776dda0ed7db2270-playlist (1).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-18be9ff4-aa9b-4aed-8224-e17a316df41c",
+        "text": "## Group Challenges\n\nGroup capstone projects are powerful, but they come with predictable challenges.\n\nThis tutorial presents common classroom scenarios and simple teacher moves to help you facilitate **collaboration, maintain focus, and support meaningful student work**.\n",
+        "imageUrl": "https://images.code.org/6630df28b66d84b6c4012d4a6836db4d-Teaching Moves_ Facilitating Capstone Projects (1).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-2267017e-0c57-4439-907c-f71b4a6dde78",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Starter Files\nThis activity begins with a blank project. You’ll see a JSON file that contains the music data, but the other files—HTML, CSS, and JavaScript—are currently empty.",
-        "imageUrl": "https://images.code.org/c1a8e0bcaaffbaab5e83da3668e5e218-playlist (2).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-51d25811-5444-44d6-a815-e2231ada547b",
+        "text": "## Scenario (Before)\n\nYou notice one student taking over as Project Leader...assigning tasks, correcting others, and making decisions without team input. \n\nOther students are disengaging or just waiting to be told what to do.\n",
+        "imageUrl": "https://images.code.org/9e66e4fa616cbb3aa9bfa1d64180f7b5-Capstone Projects.png",
+        "key": "pl-aif-2-U6-class-mgmt-12-429d4798-f047-4436-ba4d-7162c6af017c",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Upload the layout image\nFirst, upload the layout card image you created earlier.\nOpen the AI Tutor, attach your image file, and include a brief description of what you’d like it to help you build.",
-        "imageUrl": "https://images.code.org/38f51c21a5fbb20d1d72d70eb564b633-playlist (3).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-a71e2a5c-f44c-4368-a991-9dda3d2dd025",
+        "text": "## Teacher Move \nRedirect the student away from being “the boss” and back to the process.\n\n**Ask:** “What does your Kanban board say you should be working on next?”\n**Then follow with:** “How can your team use that to decide together?”\n\nThis shifts leadership from authority to facilitation and keeps decisions grounded in shared planning tools, not personalities.\n",
+        "imageUrl": "https://images.code.org/df26a3b5ce0b97c373f997f0a86d8709-Capstone Projects (1).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-02e38e56-d447-4fb5-9445-19fe591d751e",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Build the HTML Structure\nStart with the HTML—the foundation of your website.\nUpload your layout image to the AI Tutor, then write a simple prompt explaining what you want to build and how the playlist cards should be structured.\n",
-        "imageUrl": "https://images.code.org/9f112e59dc21365a6b74fbe334a218ef-playlist (4).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-70132e35-b3f0-4f70-984c-9892671f8e77",
+        "text": "## Scenario (Before)\n\nOn Day 2, teams jump straight into building (designing screens, picking colors, or starting code) without clearly explaining how their app is supposed to work. \n\nWhen you ask questions, their ideas are vague or inconsistent.\n",
+        "imageUrl": "https://images.code.org/867c23bc74a237b325d03344ca82886d-Capstone Projects (2).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-a297eb00-9b03-403c-af21-dfc87ef8bbd5",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Review the AI plan\nThe AI Tutor will suggest a plan and describe the changes it wants to make.\nRead the description carefully and decide whether to accept or reject it.\n\n- If you reject the plan, revise your prompt and try again.\n\n- If you accept the plan, the updated HTML code will appear in your project.",
-        "imageUrl": "https://images.code.org/ff42d56bd1157486886f036f33707f66-playlist (5).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-b4d07980-4e0b-4f4a-b8a2-764b39a63688",
+        "text": "## Teacher Move \n\nPause the group and require clarity before progress.\n**Ask:** “Walk me through one user interaction. What does the user do, and what happens next?”\n\nIf they can’t explain it clearly, they’re not ready to build.\nThis reinforces that planning and system thinking come before coding, not after.\n",
+        "imageUrl": "https://images.code.org/f25547f1ea9273b5106c2c69f2f597ae-Capstone Projects (3).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-98aaef4a-e69c-4c94-9d3d-465e33438b09",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Add the CSS styling\nNext, add the CSS layer. Remember, CSS controls the look and style of your web app.\n\nPrompt the AI Tutor to create and style the CSS file for your music cards. After reviewing and accepting the suggested changes, check the code preview.\n\nDecide whether you want to keep the first version or revise your prompt to tweak the styling.\n\n*Feel free to adjust the design to match your original layout.*",
-        "imageUrl": "https://images.code.org/56bd544a00d0921f6c58a5fabdb173ee-playlist (6).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-284050e0-e4be-449a-bd32-ff2287499764",
+        "text": "## Scenario (Before)\n\nTeams keep adding new ideas (extra screens, features, or “cool” elements), but their core app is incomplete or buggy. \n\nThey’re excited, but their project is becoming scattered and unfinished.\n",
+        "imageUrl": "https://images.code.org/46e52f6468973ba9d05cb528cf110074-Capstone Projects (4).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-928cbfd2-b981-4540-a5ff-0785b3359e82",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Add the JavaScript Functionality\n\nFinally, add the JavaScript. This code has two main steps:\n\n- 1. Fetch and render the data\n\n- 2. Loop through the array to build the HTML\n\nStart by asking the AI Tutor to help you write a function that fetches the data from the JSON file and renders it to the page.\n\nWhen reviewing the code, look for the use of async and await. These keywords allow your app to load the data properly before displaying it.",
-        "imageUrl": "https://images.code.org/4547ae3805560418e32f103271aa0532-playlist (7).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-8824c347-e5bc-4020-bf8c-e565b3f65257",
+        "text": "## Teacher Move \n\nSlow them down and refocus on purpose.\n\n**Ask:**\n- “What problem does this feature solve?”\n- “What testing or feedback led you to add it?”\n\n**Then remind them**: a simpler, well-explained app is stronger than a complex, unfinished one.\n\nThis helps students prioritize intentional design over quantity.\n",
+        "imageUrl": "https://images.code.org/d81b980355b44b21683334706ead8860-Capstone Projects (5).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-00868d1b-6904-4bf1-be94-dcbd0a07464c",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Loop Through the Array and Build the Cards\nNext, check whether your code loops through the entire array of songs. You can confirm this by looking at the preview—if it’s working, you should see all of the playlist cards filled in with the correct information.\n\n- If the preview still shows only one card, return to the AI Tutor and ask for code that loops through the array and builds the HTML for each item.\n\n*Remember: the AI Tutor may generate slightly different code each time. It’s normal to iterate a few times to get the result you want.*\n\n---\nNow, it's your turn to try. Return to this tutorial anytime. ",
-        "imageUrl": "https://images.code.org/1ba73ecd741fc56a82494e64e966e995-playlist (8).png",
-        "key": "pl-aif-2-U5-steps-music-app-panal-21671b8b-b0cf-4ba8-91b8-12f30ca5b1a6",
+        "text": "## Scenario (Before)\n\nStudents don’t know how their projects will be shared, so some overbuild while others under-prepare. \n\nAt the end, expectations feel unclear or mismatched.\n\n",
+        "imageUrl": "https://images.code.org/ed2aa58acf4d019b3076e11fa159682f-Capstone Projects (6).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-1e491800-b256-4cc7-b4dc-fcfcaa0fdc69",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Teacher Move \n\n Set expectations early and frame the purpose.\n Tell students upfront how they will share:\n- Option 1: In-class gallery walk\n- Option 2: School/community showcase\n- Option 3: Public/online sharing\n\nExplain that the goal is to celebrate their thinking and decisions, not just the final product.\nThis helps students scope their work appropriately and reduces unnecessary stress.\n\n",
+        "imageUrl": "https://images.code.org/d5c493c9d214a993762046a74b194164-Capstone Projects (7).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-6cedd9ca-2b57-41bb-90b2-99b04ef52564",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Facilitating Confident Capstones\n\nGuide students to:\n- Use shared tools like the Kanban board\n- Think before they build\n- Focus on meaningful features\n- Understand how their work will be shared\n\nYour role isn’t to manage every decision, it’s to create the conditions where students can **collaborate, reflect, and confidently explain their thinking.**\n",
+        "imageUrl": "https://images.code.org/d33e52b5c1ce86a7dc729ffce2e6070f-Teaching Moves_ Facilitating Capstone Projects (10).png",
+        "key": "pl-aif-2-U6-class-mgmt-12-b5ae8528-4ed9-4b80-9f0e-b0c951bd8737",
         "layout": "text-bottom-right"
       }
     ],
     "name_suffix": "_2025-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-15T14:49:37.619+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-steps-music-app-panal\\\"\"],\"cloned_from\":\"pl-aif-2-U5-steps-music-app-panal\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-15T14:49:37.619+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-steps-music-app-panal\\\"\"],\"cloned_from\":\"pl-aif-2-U5-steps-music-app-panal\"},{\"changed_at\":\"2026-04-23 15:01:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-23 15:03:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-23 15:05:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

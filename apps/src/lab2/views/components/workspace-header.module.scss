@@ -3,3 +3,11 @@
 .centerHeaderContent {
   @include mixins.center-header-content(true);
 }
+
+// Offsets the 20px PanelContainer grid gap to achieve the original 4px visual
+// gap between the heading text and icon. margin-right: auto anchors the icon
+// to the left edge of the right header cell.
+.templateIconWrapper {
+  margin-right: auto;
+  margin-left: -16px;
+}

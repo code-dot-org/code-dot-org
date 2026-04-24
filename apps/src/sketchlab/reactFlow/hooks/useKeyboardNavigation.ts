@@ -42,7 +42,7 @@ function getNodeLabel(node: SketchlabReactFlowNode): string {
   return node.type;
 }
 
-interface UseKeyboardEdgeCreationOptions {
+interface UseKeyboardNavigationOptions {
   nodes: SketchlabReactFlowNode[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
@@ -50,6 +50,7 @@ interface UseKeyboardEdgeCreationOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   readOnly: boolean;
+  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
 }
 
 /**
@@ -60,13 +61,14 @@ interface UseKeyboardEdgeCreationOptions {
  * cancels. Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  */
-export function useKeyboardEdgeCreation({
+export function useKeyboardNavigation({
   nodes,
   tabOrder,
   focusEntry,
   setEdges,
   readOnly,
-}: UseKeyboardEdgeCreationOptions) {
+  openNodeToolbar,
+}: UseKeyboardNavigationOptions) {
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
   // Counter appended to announcements so identical consecutive strings
@@ -106,6 +108,14 @@ export function useKeyboardEdgeCreation({
       const focusedEntry = getEntryFromDOM(target);
       const focusedNodeId =
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
+
+      // "e" opens the node toolbar. NodeToolbarShell's FocusTrap moves
+      // focus to the first tabbable item when isVisible flips.
+      if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
+        event.preventDefault();
+        openNodeToolbar(focusedNodeId, {trapFocus: true});
+        return;
+      }
 
       // "c" toggles connect mode on/off (nodes only).
       if (event.key === 'c') {
@@ -227,7 +237,15 @@ export function useKeyboardEdgeCreation({
         }
       }
     },
-    [connectingFrom, focusEntry, nodes, readOnly, setEdges, tabOrder]
+    [
+      connectingFrom,
+      focusEntry,
+      nodes,
+      openNodeToolbar,
+      readOnly,
+      setEdges,
+      tabOrder,
+    ]
   );
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};

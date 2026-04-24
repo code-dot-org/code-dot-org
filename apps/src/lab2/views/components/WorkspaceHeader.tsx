@@ -7,17 +7,27 @@ import commonI18n from '@cdo/locale';
 
 import styles from './workspace-header.module.scss';
 
-const WorkspaceHeader = () => {
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-
-  return (
-    <div className={styles.centerHeaderContent}>
-      <div className={styles.centerHeaderContentText}>
-        {commonI18n.workspaceHeaderShort()}
-      </div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
+const WorkspaceHeaderText = () => (
+  <div className={styles.centerHeaderContent}>
+    <div className={styles.centerHeaderContentText}>
+      {commonI18n.workspaceHeaderShort()}
     </div>
+  </div>
+);
+
+// Rendered via rightHeaderContent (sibling div to the h2) so the icon is
+// never inside the heading element — do not move into headerContent.
+const TemplateIcon = () => {
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  if (!projectTemplateLevel) return null;
+  return (
+    <span className={styles.templateIconWrapper}>
+      <ProjectTemplateWorkspaceIconV2 />
+    </span>
   );
 };
 
-export default WorkspaceHeader;
+export const WorkspaceHeader = {
+  Content: WorkspaceHeaderText,
+  TemplateIcon,
+};
