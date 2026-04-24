@@ -1,5 +1,6 @@
 import {render, screen, act} from '@testing-library/react';
 import {describe, it, expect, vi, beforeEach} from 'vitest';
+import {ZodError} from 'zod';
 
 import {DashboardApiClient} from '@code-dot-org/core/api';
 
@@ -109,7 +110,7 @@ describe('AuthProvider', () => {
   });
 
   it('transitions to error on malformed body', async () => {
-    getCurrent.mockResolvedValue({});
+    getCurrent.mockRejectedValue(new ZodError([]));
     renderWithProvider();
     await act(async () => {});
     expect(screen.getByTestId('status').textContent).toBe('error');

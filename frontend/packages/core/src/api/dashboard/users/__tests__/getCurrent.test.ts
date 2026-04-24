@@ -1,5 +1,6 @@
 import type {KyInstance} from 'ky';
 import {describe, it, expect, vi} from 'vitest';
+import {ZodError} from 'zod';
 
 import {getCurrent} from '../getCurrent';
 import type {CurrentUserResponseSignedIn} from '../currentUserTypes';
@@ -86,5 +87,10 @@ describe('getCurrent', () => {
     const error = new SyntaxError('Unexpected token');
     const http = makeHttp(null, error);
     await expect(getCurrent(http)()).rejects.toThrow(SyntaxError);
+  });
+
+  it('rejects with ZodError on schema mismatch', async () => {
+    const http = makeHttp({});
+    await expect(getCurrent(http)()).rejects.toThrow(ZodError);
   });
 });

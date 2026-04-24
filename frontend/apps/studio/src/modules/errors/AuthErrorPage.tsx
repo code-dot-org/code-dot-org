@@ -1,5 +1,5 @@
 import {Button} from '@mui/material';
-import {FunctionComponent} from 'react';
+import type {FunctionComponent} from 'react';
 
 import {ErrorPage} from './ErrorPage';
 

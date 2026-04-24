@@ -1,17 +1,10 @@
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Link,
-  List,
-  ListItem,
-  Box,
-  Skeleton,
-} from '@mui/material';
+import {AppBar, Toolbar, Box} from '@mui/material';
 import {FunctionComponent} from 'react';
 
-import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
-import SignedOutUserButtons from './SignedOutUserButtons';
+import NavLogo from './NavLogo';
+import NavMenu from './NavMenu';
+import {UserAuthProp} from './SignedInUserButton';
+import UserAuthArea from './UserAuthArea';
 
 interface MenuItem {
   label: string;
@@ -26,131 +19,28 @@ export interface HeaderProps {
   userAuth?: UserAuthProp;
 }
 
-const styles = {
-  appBar: {
-    backgroundColor: 'var(--background-brand-teal-primary)',
-  },
-  logoBox: {
-    width: '2.375rem',
-    height: '2.375rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    '& img': {
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
-      display: 'block',
-    },
-  },
-  logoIconButton: {
-    marginLeft: 0,
-    p: 0,
-    paddingLeft: 1.5,
-    paddingRight: 1.5,
-  },
-  menuList: {display: 'flex', flexDirection: 'row', p: 0, m: 0},
-  menuListItem: {width: 'auto', p: 0},
-  menuListItemLink: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    paddingLeft: 2,
-    paddingRight: 2,
-    textDecoration: 'none',
-    '&:hover': {
-      backgroundColor: 'var(--background-brand-teal-strong)',
-    },
-    fontWeight: 'normal',
-  },
-};
-
+/** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
 const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
   brandName,
   menuItems,
   userAuth,
-}) => {
-  return (
-    <Box component="header">
-      <AppBar
-        component="nav"
-        elevation={0}
-        position="relative"
-        aria-label="Main navigation"
-        sx={styles.appBar}
-      >
-        <Toolbar variant="dense" disableGutters sx={{alignItems: 'stretch'}}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label={`${brandName} Home`}
-            sx={styles.logoIconButton}
-            href="/"
-          >
-            <Box sx={styles.logoBox}>
-              <img src={logoImageUrl} alt={`${brandName} Logo`} />
-            </Box>
-          </IconButton>
-
-          <List sx={styles.menuList}>
-            {Array.isArray(menuItems) &&
-              menuItems.map(item => (
-                <ListItem key={item.label} sx={styles.menuListItem}>
-                  <Link
-                    href={item.href}
-                    color="inherit"
-                    variant="body3"
-                    sx={styles.menuListItemLink}
-                  >
-                    {item.label}
-                  </Link>
-                </ListItem>
-              ))}
-          </List>
-          {userAuth && (
-            <Box
-              sx={{
-                marginLeft: 'auto',
-                display: 'flex',
-                alignItems: 'center',
-                paddingRight: 2,
-                backgroundColor: 'var(--background-brand-teal-primary)',
-              }}
-            >
-              {(() => {
-                switch (userAuth.status) {
-                  case 'loading':
-                  case 'error':
-                    return (
-                      <Skeleton
-                        variant="rectangular"
-                        width={120}
-                        height={32}
-                        sx={{borderRadius: '4px'}}
-                      />
-                    );
-                  case 'signed-in':
-                    return <SignedInUserButton userAuth={userAuth} />;
-                  case 'signed-out':
-                    return <SignedOutUserButtons />;
-                  default: {
-                    const _: never = userAuth;
-                    throw new Error(
-                      `Unhandled userAuth status: ${JSON.stringify(_)}`,
-                    );
-                  }
-                }
-              })()}
-            </Box>
-          )}
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-};
+}) => (
+  <Box component="header">
+    <AppBar
+      component="nav"
+      elevation={0}
+      position="relative"
+      aria-label="Main navigation"
+      sx={{backgroundColor: 'var(--background-brand-teal-primary)'}}
+    >
+      <Toolbar variant="dense" disableGutters sx={{alignItems: 'stretch'}}>
+        <NavLogo logoImageUrl={logoImageUrl} brandName={brandName} />
+        <NavMenu menuItems={menuItems} />
+        {userAuth && <UserAuthArea userAuth={userAuth} />}
+      </Toolbar>
+    </AppBar>
+  </Box>
+);
 
 export default Header;
