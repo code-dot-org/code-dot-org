@@ -3,6 +3,7 @@
 #
 # Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
 #
+# Make arbitrary change to trigger drone run
 # NOTE: after making changes to this file, you'll need to sign them using
 # `drone sign code-dot-org/code-dot-org --save`
 
