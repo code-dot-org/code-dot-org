@@ -17,7 +17,7 @@ const Header: React.FC = () => {
       <ActionDropdown
         name="us-state-header-actions"
         labelText={i18n.actions()}
-        size="xs"
+        size="s"
         menuPlacement="right"
         options={[
           {

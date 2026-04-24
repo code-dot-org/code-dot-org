@@ -645,8 +645,8 @@ class ManageStudentsTable extends Component {
         formatters: [this.passwordHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
             width: 220,
           },
         },
@@ -672,8 +672,8 @@ class ManageStudentsTable extends Component {
         formatters: [this.projectSharingHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
             width: 130,
           },
         },
@@ -698,8 +698,8 @@ class ManageStudentsTable extends Component {
         formatters: [this.actionsHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
           },
         },
       },
