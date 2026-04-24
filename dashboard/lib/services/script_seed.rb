@@ -799,7 +799,7 @@ module Services
         if model_class.primary_key
           model_class.destroy(should_keep[false].pluck(:id))
         else
-          should_keep[false].each {|record| model_class.where(record.attributes.compact).delete_all}
+          puts "WARNING: skipping destroy of #{should_keep[false].size} outdated #{model_class.name} records (table has no primary key)"
         end
       end
       should_keep[true]
