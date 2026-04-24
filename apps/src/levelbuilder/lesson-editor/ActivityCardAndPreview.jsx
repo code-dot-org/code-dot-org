@@ -19,6 +19,7 @@ export default class ActivityCardAndPreview extends Component {
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
   };
 
   constructor(props) {
@@ -34,7 +35,7 @@ export default class ActivityCardAndPreview extends Component {
   };
 
   render() {
-    const {activity, allowMajorCurriculumChanges} = this.props;
+    const {activity, allowMajorCurriculumChanges, rubricLevelId} = this.props;
 
     return (
       <div style={styles.cardAndPreview}>
@@ -56,6 +57,7 @@ export default class ActivityCardAndPreview extends Component {
             collapsed={this.state.collapsed}
             hasLessonPlan={this.props.hasLessonPlan}
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            rubricLevelId={rubricLevelId}
           />
         </div>
         <div style={styles.preview}>
