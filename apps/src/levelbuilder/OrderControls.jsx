@@ -16,7 +16,6 @@ export default class OrderControls extends Component {
     name: PropTypes.string.isRequired,
     item: PropTypes.object,
     itemType: PropTypes.oneOf(['activity', 'activitySection']),
-    isDeleteable: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -46,7 +45,7 @@ export default class OrderControls extends Component {
 
   render() {
     const {showConfirm} = this.state;
-    const {name, item, itemType, isDeleteable} = this.props;
+    const {name, item, itemType} = this.props;
     const text = `Are you sure you want to remove "${name}" and all its contents from the script?`;
     return (
       <div style={styles.controls}>
@@ -60,25 +59,11 @@ export default class OrderControls extends Component {
           style={styles.controlIcon}
           className="fa-solid fa-caret-down"
         />
-        {isDeleteable ? (
-          <i
-            onMouseDown={this.handleRemove}
-            style={styles.controlIcon}
-            className="fa-solid fa-trash"
-          />
-        ) : (
-          <i
-            style={{
-              ...styles.controlIcon,
-              color: '#888',
-              cursor: 'not-allowed',
-            }}
-            className="fa-solid fa-lock"
-            title={
-              "This activity section contains a level referenced by the lesson's rubric. Modify the rubric first."
-            }
-          />
-        )}
+        <i
+          onMouseDown={this.handleRemove}
+          style={styles.controlIcon}
+          className="fa-solid fa-trash"
+        />
         <BaseDialog
           isOpen={showConfirm}
           handleClose={this.handleClose}
