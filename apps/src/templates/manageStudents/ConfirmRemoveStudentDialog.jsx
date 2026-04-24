@@ -87,6 +87,11 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
         customContent={
           <div id="dsco-dialog-description">{this.renderBody()}</div>
         }
+        icon={{
+          iconName: 'circle-exclamation',
+          iconFamily: 'solid',
+          style: {display: 'flex'},
+        }}
         onClose={onCancel}
         primaryButtonProps={{
           children: i18n.removeStudent(),
