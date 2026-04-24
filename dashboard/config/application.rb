@@ -158,6 +158,8 @@ module Dashboard
       Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|
         I18n.fallbacks.map(short_locale.to_sym => normalized_locale.to_sym)
       end
+
+      I18n.fallbacks.map(es: :'es-MX')
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
