@@ -4,11 +4,13 @@
 # generation in Redshift.
 #
 # Zero ETL cannot export tables that lack a primary key or contain blob
-# (binary) columns. These conditions are validated at registration time.
+# (binary) columns. These conditions are validated lazily when
+# `validate_exported_models!` is called, not at class load time, because
+# models may set `self.table_name` or `self.primary_key` after the
+# `export_to_analytics` declaration.
 #
 # Usage:
 #   class User < ApplicationRecord
-#     include AnalyticsExportable
 #     export_to_analytics
 #   end
 #
@@ -24,15 +26,6 @@ module AnalyticsExportable
         raise ArgumentError, "export_to_analytics must be called on the Single Table Inheritance base class (#{base_class.name}), not #{name}"
       end
 
-      if primary_key.blank?
-        raise ArgumentError, "#{name} cannot be exported: Zero ETL requires a primary key"
-      end
-
-      if columns.any? {|col| BLOB_DATA_TYPES.include?(col.type)}
-        blob_columns = columns.select {|col| BLOB_DATA_TYPES.include?(col.type)}.map(&:name)
-        raise ArgumentError, "#{name} cannot be exported: Zero ETL does not support blob columns (#{blob_columns.join(', ')})"
-      end
-
       AnalyticsExportable.exported_models.add(self)
     end
   end
@@ -43,6 +36,23 @@ module AnalyticsExportable
 
   def self.reset_exported_models!
     @exported_models = Set.new
+  end
+
+  # Validates that all registered models can be exported via Zero ETL.
+  # Call after eager loading when all models have finished defining
+  # table_name and primary_key.
+  # @raise [ArgumentError] if any model lacks a primary key or has blob columns.
+  def self.validate_exported_models!
+    exported_models.each do |model|
+      if model.primary_key.blank?
+        raise ArgumentError, "#{model.name} cannot be exported: Zero ETL requires a primary key"
+      end
+
+      blob_columns = model.columns.select {|col| BLOB_DATA_TYPES.include?(col.type)}.map(&:name)
+      unless blob_columns.empty?
+        raise ArgumentError, "#{model.name} cannot be exported: Zero ETL does not support blob columns (#{blob_columns.join(', ')})"
+      end
+    end
   end
 
   # Generates Maxwell filter exclude expressions for tables that cannot be

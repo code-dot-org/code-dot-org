@@ -41,20 +41,28 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_includes error.message, 'StiBase'
   end
 
-  test 'raises ArgumentError when model has no primary key' do
+  test 'validate_exported_models! raises when model has no primary key' do
     model = create_base_model('NoPrimaryKeyModel', primary_key: nil)
+    model.export_to_analytics
 
-    error = assert_raises(ArgumentError) {model.export_to_analytics}
+    error = assert_raises(ArgumentError) {AnalyticsExportable.validate_exported_models!}
     assert_includes error.message, 'Zero ETL requires a primary key'
   end
 
-  test 'raises ArgumentError when model has blob columns' do
+  test 'validate_exported_models! raises when model has blob columns' do
     blob_col = mock_column('avatar', :binary)
     model = create_base_model('BlobModel', columns: [mock_column('id', :integer), blob_col])
+    model.export_to_analytics
 
-    error = assert_raises(ArgumentError) {model.export_to_analytics}
+    error = assert_raises(ArgumentError) {AnalyticsExportable.validate_exported_models!}
     assert_includes error.message, 'Zero ETL does not support blob columns'
     assert_includes error.message, 'avatar'
+  end
+
+  test 'validate_exported_models! passes for valid models' do
+    model = create_base_model('ValidModel')
+    model.export_to_analytics
+    assert_nothing_raised {AnalyticsExportable.validate_exported_models!}
   end
 
   test 'reset_exported_models! clears the registry' do
