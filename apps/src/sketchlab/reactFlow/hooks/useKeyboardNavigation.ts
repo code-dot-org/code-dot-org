@@ -198,7 +198,7 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "e" opens the node/edge toolbar. NodeToolbarShell's FocusTrap moves
+      // "e" opens the node/edge toolbar. ToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
       if (event.key === 'e' && !readOnly && !connectingFrom && focusedEntry) {
         event.preventDefault();

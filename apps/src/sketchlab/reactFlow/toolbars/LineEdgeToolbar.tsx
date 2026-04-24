@@ -2,9 +2,9 @@ import React from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import NodeToolbarShell from './NodeToolbarShell';
 import SwatchGroup from './SwatchGroup';
 import {DEFAULT_STROKE_COLOR, STROKE_FONT_PALETTE} from './toolbarPalettes';
+import ToolbarShell from './ToolbarShell';
 
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
@@ -22,7 +22,7 @@ export default function LineEdgeToolbar({
     DEFAULT_STROKE_COLOR;
 
   return (
-    <NodeToolbarShell
+    <ToolbarShell
       target={{type: 'edge', id: edge.id}}
       anchorNodeId={anchorNodeId}
       ariaLabel="Line style"
@@ -33,6 +33,6 @@ export default function LineEdgeToolbar({
         selectedValue={selectedValue}
         onSelect={onSelectColor}
       />
-    </NodeToolbarShell>
+    </ToolbarShell>
   );
 }

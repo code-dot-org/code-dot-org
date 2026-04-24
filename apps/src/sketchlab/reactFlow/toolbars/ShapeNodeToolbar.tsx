@@ -4,7 +4,6 @@ import {ShapeNodeType} from '../types';
 
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import NodeToolbarShell from './NodeToolbarShell';
 import SwatchGroup from './SwatchGroup';
 import {
   BACKGROUND_PALETTE,
@@ -15,6 +14,7 @@ import {
   FontSizeValue,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
+import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ShapeNodeToolbarProps {
@@ -28,7 +28,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell
+    <ToolbarShell
       target={{type: 'node', id: nodeId}}
       anchorNodeId={nodeId}
       ariaLabel="Shape style"
@@ -59,6 +59,6 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
       />
-    </NodeToolbarShell>
+    </ToolbarShell>
   );
 }

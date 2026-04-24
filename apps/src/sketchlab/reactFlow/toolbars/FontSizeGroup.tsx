@@ -4,7 +4,7 @@ import React from 'react';
 
 import {FONT_SIZE_OPTIONS} from './toolbarPalettes';
 
-import styles from './node-toolbar.module.scss';
+import styles from './toolbar-shell.module.scss';
 
 export interface FontSizeGroupProps {
   selectedValue: string | undefined;

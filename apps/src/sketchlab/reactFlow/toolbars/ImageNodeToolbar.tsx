@@ -3,7 +3,7 @@ import React from 'react';
 import {ImageNodeType} from '../types';
 
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import NodeToolbarShell from './NodeToolbarShell';
+import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ImageNodeToolbarProps {
@@ -15,7 +15,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell
+    <ToolbarShell
       target={{type: 'node', id: nodeId}}
       anchorNodeId={nodeId}
       ariaLabel="Image options"
@@ -24,6 +24,6 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
       />
-    </NodeToolbarShell>
+    </ToolbarShell>
   );
 }

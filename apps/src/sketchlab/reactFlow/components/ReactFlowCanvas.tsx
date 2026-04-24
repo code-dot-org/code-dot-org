@@ -201,7 +201,7 @@ export default function ReactFlowCanvas({
 
   // Clear selection when focus leaves the canvas container entirely
   // (e.g. clicking outside or tabbing out of the canvas). Skip when the
-  // blur originates from a NodeToolbar control — e.g. a native color
+  // blur originates from a toolbar control — e.g. a native color
   // picker steals focus to an OS dialog (relatedTarget null), and
   // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
@@ -471,7 +471,7 @@ export default function ReactFlowCanvas({
 
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: {id: string}) => {
-      // Only open the node toolbar in editable mode. Mouse opens don't
+      // Only open the toolbar in editable mode. Mouse opens don't
       // trap focus so resize handles and contenteditable text stay usable.
       if (!readOnly) {
         openToolbar({type: 'node', id: node.id}, {trapFocus: false});

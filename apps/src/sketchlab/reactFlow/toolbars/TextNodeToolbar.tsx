@@ -4,7 +4,6 @@ import {TextNodeType} from '../types';
 
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import NodeToolbarShell from './NodeToolbarShell';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
@@ -12,6 +11,7 @@ import {
   FontSizeValue,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
+import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface TextNodeToolbarProps {
@@ -25,7 +25,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell
+    <ToolbarShell
       target={{type: 'node', id: nodeId}}
       anchorNodeId={nodeId}
       ariaLabel="Text style"
@@ -44,6 +44,6 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
       />
-    </NodeToolbarShell>
+    </ToolbarShell>
   );
 }
