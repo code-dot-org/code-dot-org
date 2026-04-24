@@ -22,6 +22,8 @@
 #google_vertex_ai_tutor_service_account_key: localoverride
 #google_vertex_ai_chat_service_account_key: localoverride
 #azure_ai_content_safety_key: localoverride
+#device_farm_desktop_project_arn: localoverride
+#device_farm_mobile_project_arn: localoverride
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true

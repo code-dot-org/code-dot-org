@@ -1,7 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
-import {FAQ_LINK, modelDescriptions} from '@cdo/apps/aichat/constants';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
   selectCurrentCustomizationsMatchInitial,
   selectHavePropertiesChanged,
@@ -11,6 +11,9 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import styles from '../model-customization-workspace.module.scss';
+
+const FAQ_LINK =
+  'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
 
 const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
   isReadOnly,

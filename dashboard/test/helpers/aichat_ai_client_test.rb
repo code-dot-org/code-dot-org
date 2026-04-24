@@ -193,10 +193,7 @@ class AichatAiClientTest < ActionView::TestCase
     AichatGeminiClient.any_instance.stubs(:bearer_token).returns(@vertex_bearer_token)
 
     stub_request(:post, url_to_post).
-        with(
-          body: expected_request_body,
-          headers: expected_headers
-      ).
+      with(body: expected_request_body, headers: expected_headers).
       to_return(status: 200, body: stubbed_response_body.to_json, headers: {})
 
     call_get_response(model_id, level, new_message, json_schema)

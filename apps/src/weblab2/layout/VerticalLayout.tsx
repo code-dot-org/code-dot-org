@@ -15,7 +15,7 @@ import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
@@ -43,6 +43,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
+
   const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
@@ -195,13 +196,18 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           <PanelContainer
             id="workspace"
             className={weblab2Styles.headerContainer}
-            headerContent={<WorkspaceHeader />}
+            headerContent={<WorkspaceHeader.Content />}
             leftHeaderContent={
               hideWorkspaceForWidgetView ? undefined : (
                 <SegmentedButtons {...viewModeButtonsProps} />
               )
             }
-            rightHeaderContent={<HeaderButtons />}
+            rightHeaderContent={
+              <>
+                <WorkspaceHeader.TemplateIcon />
+                <HeaderButtons />
+              </>
+            }
           />
           <div className={weblab2Styles.workspaceContainer}>
             {isAiTutorVersion && (

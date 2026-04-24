@@ -26,12 +26,14 @@ export interface SpeechToTextAnalytics {
 interface SpeechToTextButtonProps {
   onTranscribed: (text: string, analytics: SpeechToTextAnalytics) => void;
   onRecordStart?: () => void;
+  onRecordEnd?: () => void;
   disabled?: boolean;
 }
 
 const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
   onTranscribed,
   onRecordStart,
+  onRecordEnd,
   disabled,
 }) => {
   const [isRecording, setIsRecording] = useState(false);
@@ -90,6 +92,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       setErrorMessage(unknownErrorMessage);
     } finally {
       setIsTranscribing(false);
+      onRecordEnd?.();
     }
   };
 

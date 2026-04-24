@@ -1,0 +1,2198 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-21 15:19:30 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Creating Apps with Devices ",
+      "name": "Introduction to Creating Apps with Devices ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "Experiment with Inputs and Outputs",
+      "name": "Experiment with Inputs and Outputs",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "Engage with Prototypes",
+      "name": "Engage with Prototypes",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "Teaching Creating Apps with Devices ",
+      "name": "Teaching Creating Apps with Devices ",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "3c964f65-9a0b-4695-a701-2a608ad51a85",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c964f65-9a0b-4695-a701-2a608ad51a85",
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50",
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "29af55a5-dc08-44bb-8d6d-92678cc34c22",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29af55a5-dc08-44bb-8d6d-92678cc34c22",
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    },
+    {
+      "key": "0156dd97-6791-49bf-aa04-139bf3e34110",
+      "position": 1,
+      "properties": {
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110",
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7f620e8e-91d7-488e-8571-56f412990702",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702",
+        "lesson_activity.key": "3c964f65-9a0b-4695-a701-2a608ad51a85"
+      }
+    },
+    {
+      "key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c",
+        "lesson_activity.key": "3c964f65-9a0b-4695-a701-2a608ad51a85"
+      }
+    },
+    {
+      "key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed",
+      "position": 3,
+      "properties": {
+        "progression_name": "Connect your Circuit Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed",
+        "lesson_activity.key": "3c964f65-9a0b-4695-a701-2a608ad51a85"
+      }
+    },
+    {
+      "key": "3067f29a-bc56-4f76-ac79-100e392c2710",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction to the Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "3067f29a-bc56-4f76-ac79-100e392c2710",
+        "lesson_activity.key": "3c964f65-9a0b-4695-a701-2a608ad51a85"
+      }
+    },
+    {
+      "key": "9cacd637-f2bd-462b-90d9-3696841851e3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9cacd637-f2bd-462b-90d9-3696841851e3",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "2594b420-2996-442b-b21d-14403d8bbfb1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Inputs and Outputs"
+      },
+      "seeding_key": {
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add Complexity to Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "f281c0bc-9367-477e-a807-e26201ecc4a1",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice Using the Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "f281c0bc-9367-477e-a807-e26201ecc4a1",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "74636afd-fb1b-41d8-9e58-720ce8df99d9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Explore Additional Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "bfb7492f-1a4c-4e2e-ac85-2b1e5bba02af",
+      "position": 6,
+      "properties": {
+        "progression_name": "Preview the End-of-Chapter Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfb7492f-1a4c-4e2e-ac85-2b1e5bba02af",
+        "lesson_activity.key": "36fc4984-5d9b-4f9e-8c93-cc27d4992b50"
+      }
+    },
+    {
+      "key": "33a9518a-f30c-418a-937f-ba05df628f61",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "33a9518a-f30c-418a-937f-ba05df628f61",
+        "lesson_activity.key": "29af55a5-dc08-44bb-8d6d-92678cc34c22"
+      }
+    },
+    {
+      "key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Use Sensors "
+      },
+      "seeding_key": {
+        "activity_section.key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3",
+        "lesson_activity.key": "29af55a5-dc08-44bb-8d6d-92678cc34c22"
+      }
+    },
+    {
+      "key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Interact with Apps and Prototypes "
+      },
+      "seeding_key": {
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a",
+        "lesson_activity.key": "29af55a5-dc08-44bb-8d6d-92678cc34c22"
+      }
+    },
+    {
+      "key": "e6dcdacb-b2a2-466d-99e6-e82c408ea68c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Preview the End-of-Chapter Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6dcdacb-b2a2-466d-99e6-e82c408ea68c",
+        "lesson_activity.key": "29af55a5-dc08-44bb-8d6d-92678cc34c22"
+      }
+    },
+    {
+      "key": "433aefbb-f4b6-494b-b91f-186378fdd68b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "433aefbb-f4b6-494b-b91f-186378fdd68b",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    },
+    {
+      "key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Role of the Teacher"
+      },
+      "seeding_key": {
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    },
+    {
+      "key": "39762d0d-bede-4a24-af04-f1abe9a02c29",
+      "position": 3,
+      "properties": {
+        "progression_name": "Teaching and Learning Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    },
+    {
+      "key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918",
+      "position": 4,
+      "properties": {
+        "progression_name": "Meeting Student Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    },
+    {
+      "key": "1a787304-9a7b-4209-81a5-3517f182cd27",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a787304-9a7b-4209-81a5-3517f182cd27",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    },
+    {
+      "key": "e1a85fb7-6934-4c99-862e-50fed6048737",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1a85fb7-6934-4c99-862e-50fed6048737",
+        "lesson_activity.key": "0156dd97-6791-49bf-aa04-139bf3e34110"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      },
+      "level_keys": [
+        "VPL-Devices-22-pre-survey_25_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      },
+      "level_keys": [
+        "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LessonTypes_25_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PSP-vid_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PSP-vid_25_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "9cacd637-f2bd-462b-90d9-3696841851e3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "9cacd637-f2bd-462b-90d9-3696841851e3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      },
+      "level_keys": [
+        "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preview the End-of-Chapter Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "bfb7492f-1a4c-4e2e-ac85-2b1e5bba02af"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "33a9518a-f30c-418a-937f-ba05df628f61"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Use Sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Use Sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preview the End-of-Chapter Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e6dcdacb-b2a2-466d-99e6-e82c408ea68c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "433aefbb-f4b6-494b-b91f-186378fdd68b"
+      },
+      "level_keys": [
+        "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LeadLearner_25_2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LeadLearner-vid_25_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-ClassroomCulture_25_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming_25_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming-TipVid_25_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Resources_25_2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging_25_2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging-TipVid_25_2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-teamworkOverview_25_2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Strategies-StudentVideos_25_2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-Inclusion_25_2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Differentiation_25_2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-DifferentiationContinued_25_2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "1a787304-9a7b-4209-81a5-3517f182cd27"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Assessment_25_2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "1a787304-9a7b-4209-81a5-3517f182cd27"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-AssessmentPlan_25_2026"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e1a85fb7-6934-4c99-862e-50fed6048737"
+      },
+      "level_keys": [
+        "VPL-Devices-22-post-survey_25_2026"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e1a85fb7-6934-4c99-862e-50fed6048737"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-mod2-WrapUp_25_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-pre-survey_25_2026",
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026",
+        "script_level.level_keys": [
+          "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "7f620e8e-91d7-488e-8571-56f412990702"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LessonTypes_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PSP-vid_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PSP-vid_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "4e0f9f3b-cb94-442f-a430-51e56b1ac50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2026"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "5445e52f-3d34-4da9-a19a-b890bce0b1ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "9cacd637-f2bd-462b-90d9-3696841851e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "9cacd637-f2bd-462b-90d9-3696841851e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2026",
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "2594b420-2996-442b-b21d-14403d8bbfb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "ae9007ac-1df0-49f4-acab-a6ecf85f030c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "74636afd-fb1b-41d8-9e58-720ce8df99d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2026"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "bfb7492f-1a4c-4e2e-ac85-2b1e5bba02af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "33a9518a-f30c-418a-937f-ba05df628f61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "d0bb0a1e-733f-4ec6-b251-f4003649c9b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "f9d8f552-52f8-4887-9bb2-58e2bdcc283a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2026",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2026"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e6dcdacb-b2a2-466d-99e6-e82c408ea68c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "433aefbb-f4b6-494b-b91f-186378fdd68b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner-vid_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-ClassroomCulture_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "10d3db93-efb3-4dc3-9ebd-048842a09ea1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming-TipVid_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Resources_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging-TipVid_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-teamworkOverview_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Strategies-StudentVideos_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "39762d0d-bede-4a24-af04-f1abe9a02c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-Inclusion_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Differentiation_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-DifferentiationContinued_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "b30927d3-5a0f-456d-bd4c-5a07f80b8918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Assessment_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "1a787304-9a7b-4209-81a5-3517f182cd27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-AssessmentPlan_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "1a787304-9a7b-4209-81a5-3517f182cd27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-post-survey_25_2026",
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e1a85fb7-6934-4c99-862e-50fed6048737"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-mod2-WrapUp_25_2026",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_25_2026"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+        "activity_section.key": "e1a85fb7-6934-4c99-862e-50fed6048737"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

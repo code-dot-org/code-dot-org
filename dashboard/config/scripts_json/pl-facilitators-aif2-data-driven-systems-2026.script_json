@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-08 02:35:08 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-04-22 17:44:55 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -365,7 +365,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U3-schema-practice-6_2026"
+          "pl-aif-2-U3-schema-video-updated"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -373,7 +373,7 @@
         "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
       },
       "level_keys": [
-        "pl-aif-2-U3-schema-practice-6_2026"
+        "pl-aif-2-U3-schema-video-updated"
       ]
     },
     {
@@ -475,7 +475,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U3-reflectionmd-3_2026"
+          "pl-aif-2-U3-push-pop-panel-fac-2026"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -483,7 +483,7 @@
         "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
       },
       "level_keys": [
-        "pl-aif-2-U3-reflectionmd-3_2026"
+        "pl-aif-2-U3-push-pop-panel-fac-2026"
       ]
     },
     {
@@ -497,7 +497,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U3-array-method-choice-level_2026"
+          "pl-aif-2-U3-reflectionmd-3_2026"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -505,13 +505,35 @@
         "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
       },
       "level_keys": [
-        "pl-aif-2-U3-array-method-choice-level_2026"
+        "pl-aif-2-U3-reflectionmd-3_2026"
       ]
     },
     {
       "chapter": 18,
       "position": 18,
       "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-method-choice-level-fac-pl"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-method-choice-level-fac-pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Array Methods"
@@ -531,8 +553,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
+      "chapter": 20,
+      "position": 20,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -553,8 +575,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 20,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -575,8 +597,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -597,8 +619,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -619,8 +641,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -641,8 +663,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -663,8 +685,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -685,8 +707,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -707,8 +729,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -729,8 +751,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
@@ -751,8 +773,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
@@ -773,8 +795,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
@@ -795,8 +817,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -817,8 +839,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -839,9 +861,31 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-logic-echo-video-fac-pl-2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-logic-echo-video-fac-pl-2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -861,9 +905,9 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
-      "activity_section_position": 4,
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -883,9 +927,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
-      "activity_section_position": 5,
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -905,9 +949,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
-      "activity_section_position": 6,
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -927,9 +971,9 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
-      "activity_section_position": 7,
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -949,9 +993,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 38,
-      "activity_section_position": 8,
+      "chapter": 40,
+      "position": 40,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -971,9 +1015,31 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 39,
-      "activity_section_position": 9,
+      "chapter": 41,
+      "position": 41,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-video-fac-pl-2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-pipeline-video-fac-pl-2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 42,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -993,9 +1059,9 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 40,
-      "activity_section_position": 10,
+      "chapter": 43,
+      "position": 43,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "progression": "Filter, Search, and Sort"
@@ -1015,8 +1081,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 41,
+      "chapter": 44,
+      "position": 44,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1037,8 +1103,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 42,
+      "chapter": 45,
+      "position": 45,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1059,8 +1125,8 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 43,
+      "chapter": 46,
+      "position": 46,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1204,9 +1270,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U3-schema-practice-6_2026",
+        "level.key": "pl-aif-2-U3-schema-video-updated",
         "script_level.level_keys": [
-          "pl-aif-2-U3-schema-practice-6_2026"
+          "pl-aif-2-U3-schema-video-updated"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -1264,6 +1330,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U3-push-pop-panel-fac-2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-push-pop-panel-fac-2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U3-reflectionmd-3_2026",
         "script_level.level_keys": [
           "pl-aif-2-U3-reflectionmd-3_2026"
@@ -1276,9 +1354,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U3-array-method-choice-level_2026",
+        "level.key": "pl-aif-2-U3-array-method-choice-level-fac-pl",
         "script_level.level_keys": [
-          "pl-aif-2-U3-array-method-choice-level_2026"
+          "pl-aif-2-U3-array-method-choice-level-fac-pl"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -1468,6 +1546,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-logic-echo-video-fac-pl-2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-logic-echo-video-fac-pl-2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U3-filter-weblab-5_2026",
         "script_level.level_keys": [
           "pl-aif-2-U3-filter-weblab-5_2026"
@@ -1531,6 +1621,18 @@
         "level.key": "pl-aif-2-U3-pipeline-4_2026",
         "script_level.level_keys": [
           "pl-aif-2-U3-pipeline-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-pipeline-video-fac-pl-2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-video-fac-pl-2026"
         ],
         "lesson.key": "Teaching Data-Driven Systems",
         "lesson_group.key": "",
@@ -1627,6 +1729,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
