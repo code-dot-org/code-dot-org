@@ -15,7 +15,11 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Image options">
+    <NodeToolbarShell
+      target={{type: 'node', id: nodeId}}
+      anchorNodeId={nodeId}
+      ariaLabel="Image options"
+    >
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}

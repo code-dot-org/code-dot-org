@@ -25,7 +25,11 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Text style">
+    <NodeToolbarShell
+      target={{type: 'node', id: nodeId}}
+      anchorNodeId={nodeId}
+      ariaLabel="Text style"
+    >
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
         onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}

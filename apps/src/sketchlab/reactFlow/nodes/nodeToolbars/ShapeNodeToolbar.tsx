@@ -28,7 +28,11 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Shape style">
+    <NodeToolbarShell
+      target={{type: 'node', id: nodeId}}
+      anchorNodeId={nodeId}
+      ariaLabel="Shape style"
+    >
       <SwatchGroup
         groupLabel="Background"
         swatches={BACKGROUND_PALETTE}

@@ -78,7 +78,7 @@ interface UseKeyboardNavigationOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   readOnly: boolean;
-  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
+  openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
 }
 
 /**
@@ -97,7 +97,7 @@ export function useKeyboardNavigation({
   setNodes,
   setEdges,
   readOnly,
-  openNodeToolbar,
+  openToolbar,
 }: UseKeyboardNavigationOptions) {
   const {getEdge, getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -198,11 +198,11 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "e" opens the node toolbar. NodeToolbarShell's FocusTrap moves
+      // "e" opens the node/edge toolbar. NodeToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
-      if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
+      if (event.key === 'e' && !readOnly && !connectingFrom && focusedEntry) {
         event.preventDefault();
-        openNodeToolbar(focusedNodeId, {trapFocus: true});
+        openToolbar(focusedEntry, {trapFocus: true});
         return;
       }
 
@@ -348,7 +348,7 @@ export function useKeyboardNavigation({
       getEdge,
       getNode,
       nodes,
-      openNodeToolbar,
+      openToolbar,
       readOnly,
       setEdges,
       setNodes,

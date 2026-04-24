@@ -6,7 +6,8 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   useSketchLabReadOnly,
-  useNodeToolbarVisibility,
+  type ToolbarTarget,
+  useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
 
@@ -19,22 +20,25 @@ const PAN_DURATION_MS = 200;
 const CONTROLS_WIDTH_PX = 60;
 
 interface NodeToolbarShellProps {
-  nodeId: string;
+  target: ToolbarTarget;
+  anchorNodeId: string;
   ariaLabel: string;
   children: React.ReactNode;
 }
 
 export default function NodeToolbarShell({
-  nodeId,
+  target,
+  anchorNodeId,
   ariaLabel,
   children,
 }: NodeToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openNodeToolbarId, trapFocus, closeNodeToolbar} =
-    useNodeToolbarVisibility();
+  const {openToolbarTarget, trapFocus, closeToolbar} = useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
-  const isVisible = openNodeToolbarId === nodeId;
+  const isVisible =
+    openToolbarTarget?.type === target.type &&
+    openToolbarTarget.id === target.id;
   const wasVisibleRef = useRef(false);
 
   // Pan the viewport into view when the node toolbar first becomes visible.
@@ -66,23 +70,25 @@ export default function NodeToolbarShell({
   }, [isVisible, getViewport, setViewport]);
 
   const returnFocusToNode = useCallback(() => {
-    const nodeElement = document.querySelector<HTMLElement>(
-      `.react-flow__node[data-id="${nodeId}"]`
-    );
-    nodeElement?.focus();
-  }, [nodeId]);
+    const selector =
+      target.type === 'node'
+        ? `.react-flow__node[data-id="${target.id}"]`
+        : `.react-flow__edge[data-id="${target.id}"]`;
+    const element = document.querySelector<HTMLElement>(selector);
+    element?.focus();
+  }, [target.id, target.type]);
 
   const handleClose = useCallback(() => {
-    closeNodeToolbar();
+    closeToolbar();
     returnFocusToNode();
-  }, [closeNodeToolbar, returnFocusToNode]);
+  }, [closeToolbar, returnFocusToNode]);
 
   if (readOnly) {
     return null;
   }
   return (
     <NodeToolbar
-      nodeId={nodeId}
+      nodeId={anchorNodeId}
       position={Position.Left}
       offset={NODE_TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
