@@ -1,5 +1,5 @@
-import experiments from '@cdo/apps/util/experiments';
 import {ValueOf} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {isGeminiModel} from './client/helpers/modelHelpers';
