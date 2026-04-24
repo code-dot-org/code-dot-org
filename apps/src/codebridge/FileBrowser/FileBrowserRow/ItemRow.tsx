@@ -1,9 +1,11 @@
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+
+import {DragDescriptionContext} from '../Draggable';
 
 import {ItemRowProps} from './types';
 
@@ -36,15 +38,22 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
   openFunction,
   className,
 }) => {
+  const dragDescribedBy = useContext(DragDescriptionContext);
+
   return (
     <div
       className={classNames(moduleStyles.row, className)}
       id={`uitest-file-${item.id}-row`}
     >
-      <div className={moduleStyles.label} onClick={() => openFunction(item.id)}>
+      <button
+        type="button"
+        className={moduleStyles.label}
+        onClick={() => openFunction(item.id)}
+        aria-describedby={dragDescribedBy}
+      >
         <IconComponent item={item} />
         <NameComponent item={item} />
-      </div>
+      </button>
       {enableMenu && (
         <PopUpButton
           iconName="ellipsis-v"
