@@ -1,13 +1,20 @@
-import {Button} from '@mui/material';
+import Button from '@mui/material/Button';
 import type {FunctionComponent} from 'react';
 
 import {ErrorPage} from './ErrorPage';
 
+/** Props for {@link AuthErrorPage}. */
 interface AuthErrorPageProps {
+  /** Called when the user clicks the retry button. */
   onRetry: () => void;
+  /** Observability event ID surfaced from the auth failure, when available. */
   eventId?: string;
 }
 
+/**
+ * Full-page error state shown when auth bootstrap fails.
+ * Provides a retry action and surfaces the event ID for support reference.
+ */
 export const AuthErrorPage: FunctionComponent<AuthErrorPageProps> = ({
   onRetry,
   eventId,

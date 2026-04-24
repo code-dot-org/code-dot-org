@@ -1,6 +1,11 @@
-import {Box, Button} from '@mui/material';
-import {FunctionComponent} from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import type {FunctionComponent} from 'react';
 
+/**
+ * MUI sx styles for the Sign In button.
+ * Uses `&&` double-class specificity to beat MUI's per-variant overrides.
+ */
 const signInSx = {
   '&&': {
     typography: 'body3',
@@ -20,6 +25,10 @@ const signInSx = {
   },
 };
 
+/**
+ * MUI sx styles for the Create Account button.
+ * Uses `&&` double-class specificity to beat MUI's per-variant overrides.
+ */
 const createAccountSx = {
   '&&': {
     typography: 'body3',
@@ -38,6 +47,7 @@ const createAccountSx = {
   },
 };
 
+/** Sign In and Create Account buttons shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
   <Box sx={{display: 'flex', gap: 1, alignItems: 'center'}}>
     <Button href="/users/sign_in" disableElevation sx={signInSx}>

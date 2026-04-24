@@ -1,5 +1,5 @@
-import {Box} from '@mui/material';
-import {FunctionComponent} from 'react';
+import Box from '@mui/material/Box';
+import type {FunctionComponent} from 'react';
 
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import CustomDropdown from '@/dropdown/CustomDropdown';
@@ -8,16 +8,20 @@ import Link from '@/link/Link';
 
 import moduleStyles from './signedInUserButton.module.scss';
 
+/** Discriminated union of auth states consumed by header auth components. */
 export type UserAuthProp =
   | {status: 'loading'}
   | {status: 'signed-in'; display_name: string}
   | {status: 'signed-out'}
   | {status: 'error'};
 
+/** Props for {@link SignedInUserButton}. */
 export interface SignedInUserButtonProps {
+  /** Must be the signed-in variant of {@link UserAuthProp}. */
   userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
 }
 
+/** Navigation links shown inside the signed-in account dropdown. */
 const SUB_MENU_ITEMS = [
   {label: 'My projects', href: '/projects'},
   // TODO: wire up pair programming URL
@@ -26,8 +30,11 @@ const SUB_MENU_ITEMS = [
   {label: 'Sign out', href: '/users/sign_out'},
 ] as const;
 
-// Rendered inside DropdownProviderWrapper so useDropdownContext resolves.
-// Must be at module scope — inlining creates a new component type per render (remounts).
+/**
+ * Chevron icon that reflects the open/closed state of the signed-in dropdown.
+ * Defined at module scope — inlining inside SignedInUserButton would create a
+ * new component type on every render, causing remounts.
+ */
 const ChevronIcon = () => {
   const {activeDropdownName} = useDropdownContext();
   const icon =
@@ -35,8 +42,11 @@ const ChevronIcon = () => {
   return <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />;
 };
 
-// Use && to generate .cls.cls specificity, beating MUI's internal
-// per-variant/per-color overrides which sit at single-class specificity.
+/**
+ * MUI sx styles for the dropdown trigger button.
+ * Uses `&&` double-class specificity to beat MUI's per-variant/per-color
+ * overrides which sit at single-class specificity.
+ */
 const triggerSx = {
   '&&': {
     typography: 'body3',
@@ -59,6 +69,7 @@ const triggerSx = {
   '&& .MuiButton-endIcon': {color: 'white'},
 };
 
+/** Dropdown button showing the signed-in user's display name with an account menu. */
 const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   userAuth,
 }) => {

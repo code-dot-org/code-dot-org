@@ -17,6 +17,7 @@ import {useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 
+/** Top-level navigation items shared across all routes. */
 const MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
   {label: 'Teach', href: '/teach'},
@@ -27,6 +28,11 @@ const MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
+/**
+ * Renders the page body based on auth status.
+ * Shows the route outlet while loading or authenticated; shows the auth error
+ * page on failure so the user can retry without a full page reload.
+ */
 function RootContent() {
   const auth = useAuth();
 
@@ -62,6 +68,7 @@ function RootContent() {
   );
 }
 
+/** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
@@ -72,4 +79,5 @@ function RootLayout() {
   );
 }
 
+/** TanStack Router root route definition. */
 export const Route = createRootRoute({component: RootLayout});

@@ -1,5 +1,6 @@
 import type {CurrentUserResponseSignedIn} from '@code-dot-org/core/api';
 
+/** Re-exported for consumers that need the signed-in user shape without importing from core directly. */
 export type {CurrentUserResponseSignedIn};
 
 /**

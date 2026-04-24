@@ -1,9 +1,11 @@
 import {z} from 'zod';
 
+/** Zod schema for a signed-out `/api/v1/users/current` response. */
 export const CurrentUserResponseSignedOutSchema = z.object({
   is_signed_in: z.literal(false),
 });
 
+/** Zod schema for a signed-in `/api/v1/users/current` response. */
 export const CurrentUserResponseSignedInSchema = z.object({
   is_signed_in: z.literal(true),
 
@@ -49,15 +51,21 @@ export const CurrentUserResponseSignedInSchema = z.object({
   created_at: z.string(),
 });
 
+/** Discriminated union schema for all `/api/v1/users/current` response shapes. */
 export const CurrentUserResponseSchema = z.discriminatedUnion('is_signed_in', [
   CurrentUserResponseSignedOutSchema,
   CurrentUserResponseSignedInSchema,
 ]);
 
+/** TypeScript type inferred from {@link CurrentUserResponseSignedOutSchema}. */
 export type CurrentUserResponseSignedOut = z.infer<
   typeof CurrentUserResponseSignedOutSchema
 >;
+
+/** TypeScript type inferred from {@link CurrentUserResponseSignedInSchema}. */
 export type CurrentUserResponseSignedIn = z.infer<
   typeof CurrentUserResponseSignedInSchema
 >;
+
+/** Union of signed-in and signed-out response shapes. */
 export type CurrentUserResponse = z.infer<typeof CurrentUserResponseSchema>;
