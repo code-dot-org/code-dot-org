@@ -1,4 +1,4 @@
-import Modal from '@code-dot-org/component-library/modal';
+import Dialog from '@code-dot-org/component-library/dialog';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -76,18 +76,17 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
   }
 
   render() {
-    const {isOpen, disabled, hasEverSignedIn, onConfirm, onCancel} = this.props;
+    const {isOpen, disabled, onConfirm, onCancel} = this.props;
     if (!isOpen) {
       return null;
     }
 
     return (
-      <Modal
+      <Dialog
         title={this.headerText()}
         customContent={
           <div id="dsco-dialog-description">{this.renderBody()}</div>
         }
-        className={hasEverSignedIn ? undefined : moduleStyles.noBody}
         onClose={onCancel}
         primaryButtonProps={{
           children: i18n.removeStudent(),

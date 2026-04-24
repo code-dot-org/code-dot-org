@@ -3,10 +3,3 @@
   text-align: center;
   margin-bottom: 1em;
 }
-
-// DSCO Modal always renders two <hr>s around its content section.
-// When there's no body to show, suppress both so the modal doesn't render
-// a pair of empty horizontal rules.
-.noBody > hr {
-  display: none;
-}
