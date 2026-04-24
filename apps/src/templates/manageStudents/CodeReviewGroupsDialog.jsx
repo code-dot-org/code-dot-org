@@ -149,12 +149,12 @@ export default function CodeReviewGroupsDialog({dataApi}) {
           title={i18n.codeReviewGroups()}
           onClose={onDialogClose}
           customContent={
-            <>
+            <div id="dsco-dialog-description">
               {renderBody()}
               <div className={moduleStyles.statusRow}>
                 {renderSubmitStatus()}
               </div>
-            </>
+            </div>
           }
           customBottomContent={
             <div className={moduleStyles.toggleRow}>

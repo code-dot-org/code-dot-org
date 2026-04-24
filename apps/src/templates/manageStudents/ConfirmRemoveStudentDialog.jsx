@@ -84,7 +84,9 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
     return (
       <Modal
         title={this.headerText()}
-        customContent={this.renderBody()}
+        customContent={
+          <div id="dsco-dialog-description">{this.renderBody()}</div>
+        }
         className={hasEverSignedIn ? undefined : moduleStyles.noBody}
         onClose={onCancel}
         primaryButtonProps={{

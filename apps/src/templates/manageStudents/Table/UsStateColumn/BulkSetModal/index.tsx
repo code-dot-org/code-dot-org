@@ -60,7 +60,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
       title={i18n.studentUsStateUpdatesModal_title()}
       onClose={onClose}
       customContent={
-        <>
+        <div id="dsco-dialog-description">
           <SimpleDropdown
             name="usState"
             labelText={i18n.usState()}
@@ -75,7 +75,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
               docURL: CapLinks.PARENTAL_CONSENT_GUIDE_URL,
             })}
           />
-        </>
+        </div>
       }
       primaryButtonProps={{
         children: i18n.add(),

@@ -261,7 +261,11 @@ class MoveStudents extends Component {
             title={i18n.moveStudents()}
             onClose={this.closeDialog}
             className={moduleStyles.modal}
-            customContent={this.renderModalContent()}
+            customContent={
+              <div id="dsco-dialog-description">
+                {this.renderModalContent()}
+              </div>
+            }
             primaryButtonProps={{
               children: pendingTransfer
                 ? i18n.movingStudents()

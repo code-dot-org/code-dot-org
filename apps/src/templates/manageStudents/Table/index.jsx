@@ -835,7 +835,7 @@ class ManageStudentsTable extends Component {
               />
             )}
           </div>
-          <div className={moduleStyles.headerBottomRow}>
+          <div>
             <JoinLinkCopyButton
               sectionId={sectionId}
               sectionCode={sectionCode}

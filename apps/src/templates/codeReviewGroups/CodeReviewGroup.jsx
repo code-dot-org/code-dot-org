@@ -28,6 +28,7 @@ export default function CodeReviewGroup({
           value={name}
           onChange={handleNameUpdate}
           placeholder={i18n.enterGroupName()}
+          aria-label={i18n.enterGroupName()}
           size="s"
           className={moduleStyles.nameInput}
         />

@@ -31,7 +31,9 @@ class ControlProjectSharingDialog extends Component {
         title={i18n.projectSharingDialogHeader()}
         onClose={this.props.closeDialog}
         customContent={
-          <SafeMarkdown markdown={i18n.projectSharingDialogInstructions()} />
+          <div id="dsco-dialog-description">
+            <SafeMarkdown markdown={i18n.projectSharingDialogInstructions()} />
+          </div>
         }
         primaryButtonProps={{
           children: i18n.projectSharingDialogButton(),
