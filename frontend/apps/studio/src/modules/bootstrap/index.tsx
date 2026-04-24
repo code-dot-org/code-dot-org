@@ -1,4 +1,4 @@
-import {CssBaseline} from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 import type {ReactNode} from 'react';
 
 import FontLoader from '@code-dot-org/fonts/FontLoader';
@@ -18,6 +18,7 @@ const Bootstrap = ({locale, children}: BootstrapProps) => {
   return (
     <AuthProvider>
       <FontLoader locale={locale} />
+      {/* MUI CSS reset — normalizes browser defaults */}
       <CssBaseline />
       {children}
     </AuthProvider>

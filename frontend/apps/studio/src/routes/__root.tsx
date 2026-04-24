@@ -29,31 +29,38 @@ const MENU_ITEMS = [
 ];
 
 /**
- * Renders the page body based on auth status.
- * Shows the route outlet while loading or authenticated; shows the auth error
- * page on failure so the user can retry without a full page reload.
+ * Maps auth status to the route content area.
+ * Returns the outlet for all non-error states; the auth error page otherwise.
+ *
+ * @param auth - Current auth outcome from {@link useAuth}.
+ * @returns The content node for the current auth status.
  */
-function RootContent() {
-  const auth = useAuth();
-
-  let routeArea: React.ReactNode;
+function renderRouteArea(auth: ReturnType<typeof useAuth>): React.ReactNode {
   switch (auth.status) {
     case 'loading':
     case 'signedIn':
     case 'signedOut':
-      routeArea = <Outlet />;
-      break;
+      return <Outlet />;
     case 'error':
-      routeArea = (
-        <AuthErrorPage onRetry={auth.onRetry} eventId={auth.eventId} />
+      return (
+        <AuthErrorPage
+          onRetry={auth.onRetry}
+          observabilityEventId={auth.observabilityEventId}
+        />
       );
-      break;
     default: {
       const _: never = auth;
       throw new Error(`Unhandled auth status: ${JSON.stringify(_)}`);
     }
   }
+}
 
+/**
+ * Renders the page shell: header, route content area, and devtools.
+ * Auth state drives both the header user area and the content area.
+ */
+function RootContent() {
+  const auth = useAuth();
   return (
     <>
       <Header
@@ -62,7 +69,7 @@ function RootContent() {
         menuItems={MENU_ITEMS}
         userAuth={auth}
       />
-      {routeArea}
+      {renderRouteArea(auth)}
       <TanStackRouterDevtools />
     </>
   );

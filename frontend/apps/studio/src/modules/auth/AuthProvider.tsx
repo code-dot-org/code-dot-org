@@ -62,10 +62,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
    * a complete AuthOutcome with onRetry attached.
    */
   const value: AuthOutcome = useMemo(
-    () =>
-      state.status === 'error'
-        ? {...state, onRetry: handleRetry, eventId: state.eventId}
-        : state,
+    () => (state.status === 'error' ? {...state, onRetry: handleRetry} : state),
     [state, handleRetry],
   );
 

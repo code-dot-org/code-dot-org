@@ -7,8 +7,8 @@ import {ErrorPage} from './ErrorPage';
 interface AuthErrorPageProps {
   /** Called when the user clicks the retry button. */
   onRetry: () => void;
-  /** Observability event ID surfaced from the auth failure, when available. */
-  eventId?: string;
+  /** Observability event ID from the auth failure, when available. */
+  observabilityEventId?: string;
 }
 
 /**
@@ -17,12 +17,12 @@ interface AuthErrorPageProps {
  */
 export const AuthErrorPage: FunctionComponent<AuthErrorPageProps> = ({
   onRetry,
-  eventId,
+  observabilityEventId,
 }) => (
   <ErrorPage
     title="Something went wrong"
     description="We had trouble loading your account. Check your connection and try again."
-    eventId={eventId}
+    eventId={observabilityEventId}
     actions={
       <Button variant="contained" color="primary" onClick={onRetry}>
         Try again

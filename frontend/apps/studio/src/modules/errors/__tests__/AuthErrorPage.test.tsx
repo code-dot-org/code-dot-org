@@ -21,7 +21,7 @@ describe('AuthErrorPage', () => {
   });
 
   it('shows event ID when provided', () => {
-    render(<AuthErrorPage onRetry={vi.fn()} eventId="abc-123" />);
+    render(<AuthErrorPage onRetry={vi.fn()} observabilityEventId="abc-123" />);
     expect(screen.getByText(/abc-123/)).toBeInTheDocument();
   });
 

@@ -11,4 +11,4 @@ export type AuthOutcome =
   | {status: 'loading'}
   | ({status: 'signedIn'} & CurrentUserResponseSignedIn)
   | {status: 'signedOut'}
-  | {status: 'error'; onRetry: () => void; eventId?: string};
+  | {status: 'error'; onRetry: () => void; observabilityEventId?: string};

@@ -12,12 +12,12 @@ export type ReducerState =
   | {status: 'loading'}
   | ({status: 'signedIn'} & CurrentUserResponseSignedIn)
   | {status: 'signedOut'}
-  | {status: 'error'; eventId?: string};
+  | {status: 'error'; observabilityEventId?: string};
 
 /** Discriminated union of all actions the auth reducer handles. */
 export type AuthAction =
   | {type: 'auth/success'; response: CurrentUserResponse}
-  | {type: 'auth/failure'; tag: string; eventId?: string}
+  | {type: 'auth/failure'; tag: string; observabilityEventId?: string}
   | {type: 'auth/retry'};
 
 /**
@@ -42,7 +42,10 @@ export function authReducer(
     }
     case 'auth/failure':
       if (state.status !== 'loading') return state;
-      return {status: 'error', eventId: action.eventId};
+      return {
+        status: 'error',
+        observabilityEventId: action.observabilityEventId,
+      };
     case 'auth/retry':
       if (state.status !== 'error') return state;
       return {status: 'loading'};
@@ -84,10 +87,10 @@ export function handleAuthFailure(
   dispatch: Dispatch<AuthAction>,
 ): void {
   const tag = classifyError(err);
-  const eventId = recordError(err, {error_kind: tag});
+  const observabilityEventId = recordError(err, {error_kind: tag});
   logger.error('auth bootstrap: terminal failure', {
     error_kind: tag,
-    event_id: eventId,
+    event_id: observabilityEventId,
   });
-  dispatch({type: 'auth/failure', tag, eventId});
+  dispatch({type: 'auth/failure', tag, observabilityEventId});
 }
