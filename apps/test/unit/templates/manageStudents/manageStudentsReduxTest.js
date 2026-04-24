@@ -38,6 +38,9 @@ import manageStudents, {
   addStudentsFull,
   transferStudentsFull,
   loadSectionStudentData,
+  parseAge,
+  parseGender,
+  parseUsState,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
@@ -61,6 +64,55 @@ const expectedBlankRow = {
   isEditing: true,
   rowType: RowType.ADD,
 };
+
+describe('parseAge', () => {
+  it('accepts valid ages', () => {
+    assert.equal(parseAge('12'), '12');
+    assert.equal(parseAge('21+'), '21+');
+    assert.equal(parseAge('  4  '), '4');
+  });
+
+  it('rejects invalid ages', () => {
+    assert.equal(parseAge('3'), '');
+    assert.equal(parseAge('22'), '');
+    assert.equal(parseAge('abc'), '');
+    assert.equal(parseAge(''), '');
+  });
+});
+
+describe('parseGender', () => {
+  it('accepts valid gender values case-insensitively', () => {
+    assert.equal(parseGender('Male'), 'm');
+    assert.equal(parseGender('FEMALE'), 'f');
+    assert.equal(parseGender('M'), 'm');
+    assert.equal(parseGender('m'), 'm');
+    assert.equal(parseGender('F'), 'f');
+    assert.equal(parseGender('f'), 'f');
+    assert.equal(parseGender('non-binary'), 'n');
+    assert.equal(parseGender('Preferred term not listed'), 'o');
+    assert.equal(parseGender('other'), 'o');
+  });
+
+  it('rejects unrecognized gender values', () => {
+    assert.equal(parseGender('unknown'), '');
+    assert.equal(parseGender(''), '');
+  });
+});
+
+describe('parseUsState', () => {
+  it('accepts valid two-letter state codes case-insensitively', () => {
+    assert.equal(parseUsState('ca'), 'CA');
+    assert.equal(parseUsState('WA'), 'WA');
+    assert.equal(parseUsState('  tx  '), 'TX');
+    assert.equal(parseUsState('wi'), 'WI');
+  });
+
+  it('rejects invalid state codes', () => {
+    assert.equal(parseUsState('XX'), '');
+    assert.equal(parseUsState('California'), '');
+    assert.equal(parseUsState(''), '');
+  });
+});
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
@@ -731,6 +783,42 @@ describe('manageStudentsRedux', () => {
       };
       assert.deepEqual(nextState.studentData, expectedData);
       assert.deepEqual(nextState.editingData, expectedData);
+    });
+
+    it('includes age, gender, and usState when provided', () => {
+      const action = addMultipleRows({
+        '-1': {
+          id: -1,
+          name: 'student -1',
+          familyName: '',
+          age: '14',
+          genderTeacherInput: 'f',
+          usState: 'CA',
+          isEditing: true,
+        },
+      });
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData['-1'].age, '14');
+      assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, 'f');
+      assert.deepEqual(nextState.studentData['-1'].usState, 'CA');
+    });
+
+    it('stores empty string or null for age, gender, and usState when not provided', () => {
+      const action = addMultipleRows({
+        '-1': {
+          id: -1,
+          name: 'student -1',
+          familyName: '',
+          age: '',
+          genderTeacherInput: '',
+          usState: null,
+          isEditing: true,
+        },
+      });
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData['-1'].age, '');
+      assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, '');
+      assert.deepEqual(nextState.studentData['-1'].usState, null);
     });
   });
 
