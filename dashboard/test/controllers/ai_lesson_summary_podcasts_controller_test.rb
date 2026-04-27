@@ -41,11 +41,11 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'generate_podcasts_by_unit enqueues job when DCDO flag is enabled and unit is AIF' do
+  test 'generate_podcasts_by_unit enqueues job when DCDO flag is enabled and unit is AIF and launched' do
     sign_in @teacher
 
-    # Mock the DCDO flag enabled
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+    Unit.any_instance.stubs(:launched?).returns(true)
 
     assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
       post :generate_podcasts_by_unit, params: {
@@ -55,6 +55,17 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_nil response.content_type
+  end
+
+  test 'generate_podcasts_by_unit returns forbidden when unit is AIF but not launched' do
+    sign_in @teacher
+
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+    Unit.any_instance.stubs(:launched?).returns(false)
+
+    post :generate_podcasts_by_unit, params: {unit_id: @unit.id}
+
+    assert_response :forbidden
   end
 
   # *****
@@ -90,8 +101,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
     create(:lesson, lesson_group: lesson_group, has_lesson_plan: false)
 
-    # Enable access
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+    Unit.any_instance.stubs(:launched?).returns(true)
 
     assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
       post :generate_podcasts_by_unit, params: {
@@ -144,10 +155,9 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   test 'podcast_params permits correct parameters' do
     sign_in @teacher
 
-    # Enable access
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+    Unit.any_instance.stubs(:launched?).returns(true)
 
-    # Test with parameters - should still work despite extra params
     assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
       post :generate_podcasts_by_unit, params: {
         unit_id: @unit.id,
