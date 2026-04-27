@@ -6,6 +6,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {ToolbarTarget} from '../context';
+import {
+  LineStrokeStyleValue,
+  strokeDasharrayFromStyle,
+} from '../elementToolbars/toolbarPalettes';
 import {isLineEdge} from '../utils/lineEdges';
 
 interface UseLineToolbarOptions {
@@ -69,5 +73,46 @@ export function useLineToolbar({
     [setEdges]
   );
 
-  return {handleEdgeClick, openLineEdge, setLineEdgeColor};
+  const setLineEdgeWidth = useCallback(
+    (edgeId: string, strokeWidth: number) => {
+      setEdges(currentEdges =>
+        currentEdges.map(edge =>
+          edge.id === edgeId
+            ? {
+                ...edge,
+                style: {...edge.style, strokeWidth},
+              }
+            : edge
+        )
+      );
+    },
+    [setEdges]
+  );
+
+  const setLineEdgeStrokeStyle = useCallback(
+    (edgeId: string, strokeStyle: LineStrokeStyleValue) => {
+      const strokeDasharray = strokeDasharrayFromStyle(strokeStyle);
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          const nextStyle = {...edge.style, strokeDasharray};
+          if (!strokeDasharray) {
+            delete nextStyle.strokeDasharray;
+          }
+          return {...edge, style: nextStyle};
+        })
+      );
+    },
+    [setEdges]
+  );
+
+  return {
+    handleEdgeClick,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+  };
 }
