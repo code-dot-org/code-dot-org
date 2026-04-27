@@ -279,7 +279,6 @@ function localizeInputInPlace(
         label.setValue(seg.text);
         rebuilt.push(label);
       } else {
-        console.log('creating new label', seg.text);
         rebuilt.push(mountLabel(block, seg.text));
       }
     } else {
