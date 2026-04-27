@@ -203,9 +203,13 @@ export function convertExcalidrawToReactFlow(
     if (!points || points.length < 2) continue;
     const first = points[0];
     const last = points[points.length - 1];
-    const startX = el.x + first[0] - LINE_ANCHOR_SIZE_PX / 2;
+    // The source anchor's handle sits on its right edge and the target
+    // anchor's handle sits on its left edge (see LineAnchorNode), so
+    // offset each anchor so its handle — not its center — lands on the
+    // original Excalidraw endpoint.
+    const startX = el.x + first[0] - LINE_ANCHOR_SIZE_PX;
     const startY = el.y + first[1] - LINE_ANCHOR_SIZE_PX / 2;
-    const endX = el.x + last[0] - LINE_ANCHOR_SIZE_PX / 2;
+    const endX = el.x + last[0];
     const endY = el.y + last[1] - LINE_ANCHOR_SIZE_PX / 2;
 
     const sourceAnchorId = createUuid();

@@ -22,4 +22,4 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Write comments in plain English, avoiding dense jargon.
 - Memoize derived values that are non-trivial to compute. The view re-renders
   frequently, so bias towards wrapping any non-trivial (more than O(1)) computation in `useMemo`.
-  Wrap callbacks passed to children in `useCallback` for the same reason. 
+  Wrap callbacks passed to children in `useCallback` for the same reason.
