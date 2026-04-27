@@ -17,9 +17,63 @@ markdown <<MARKDOWN
 #### Check out some real-world examples below. While you do so, ask yourself, **"Why might a designer choose to start with a paper prototype?"**
 <br>
 
-|Image  |Description  |
-|---|---|
-| <img src="https://images.code.org/9e9fd1f7ce74a44e7a23fd1ae3a268f2-image-1704411539273.38.56 PM.png" alt="Screenshot of an app prototype" style="width: 400px; clear: both; margin: 20px 20px 20px 0px;"> | This is a paper prototype that is combined with a digital device! Notice that this designer has overlaid their app design on top of an iPad to give users a sense of scale during testing. This app seems to suggest curated video playlists to their users, who can skip or save a video for later.<br><br>Tobe101, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons |
-| <img src="https://images.code.org/f13061ba5f0e7e9ffb9371759abd06e8-image-1704411638371.40.25 PM.png" alt="Screenshot of an app prototype" style="width: 400px; clear: both; margin: 20px 20px 20px 0px"> | Although technically made out of cardboard, this is still a paper prototype. The designer shows different elements on a mobile phone-sized device. Based on the screen and the buttons on the bottom, what do you think this app might be for? <br><br>d_jan, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons |
-| <img src="https://images.code.org/3b408cbe44083f9e5730038e4a439efd-image-1704411777716.42.54 PM.png" alt="Screenshot of an app prototype" style="width: 400px; clear: both; margin: 20px 20px 20px 0px"> | Paper prototypes aren't only for apps! Designers in this image are prototyping a board game. They appear to be roleplaying gameplay to surface pain points and key feedback for a next draft of their game. <br><br>&quot;<a href='https://www.flickr.com/photos/_scypher/4552934264/' target='_blank'>First prototype</a>&quot; (<a rel='license' href='https://creativecommons.org/licenses/by-nc/2.0/' target='_blank'>CC BY-NC 2.0</a>) by <a xmlns:cc='http://creativecommons.org/ns#' rel='cc:attributionURL' property='cc:attributionName' href='https://www.flickr.com/people/_scypher/' target='_blank'>Elliot Trinidad</a></div> |
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+  <thead>
+    <tr style="background-color: #4A4A4A; color: #FFFFFF;">
+      <th style="padding: 10px; text-align: left; width: 35%;">Image</th>
+      <th style="padding: 10px; text-align: left; width: 65%;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #F5F7F8;">
+      <td style="padding: 15px; vertical-align: top;">
+        <img src="https://images.code.org/9e9fd1f7ce74a44e7a23fd1ae3a268f2-image-1704411539273.38.56 PM.png" alt="A paper app prototype placed on top of a tablet screen." style="width: 100%; border-radius: 10px;">
+      </td>
+      <td style="padding: 15px; vertical-align: top;">
+        <p style="margin-top: 0; font-size: 14pt;"><strong>Example 1</strong></p>
+        <p style="font-size: 14pt; line-height: 1.4;">
+          This prototype combines paper with a digital device. The designer has placed their app screens on top of an iPad to help users understand the app’s scale during testing. The design appears to recommend curated video playlists, with options to skip a video or save it for later.
+        </p>
+        <p style="font-size: 12pt; margin-bottom: 0;">
+          Tobe101, 
+          <a href="https://creativecommons.org/licenses/by-sa/4.0" target="blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, 
+          via Wikimedia Commons
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 15px; vertical-align: top;">
+        <img src="https://images.code.org/f13061ba5f0e7e9ffb9371759abd06e8-image-1704411638371.40.25 PM.png" alt="A cardboard mobile phone prototype with screen elements and buttons." style="width: 100%; border-radius: 10px;">
+      </td>
+      <td style="padding: 15px; vertical-align: top;">
+        <p style="margin-top: 0; font-size: 14pt;"><strong>Example 2</strong></p>
+        <p style="font-size: 14pt; line-height: 1.4;">
+          Although it is made from cardboard, this is still a paper prototype. The designer has created a phone-sized model with a screen and buttons. You might invite learners to infer the app’s purpose based on the visible controls and layout.
+        </p>
+        <p style="font-size: 12pt; margin-bottom: 0;">
+          d_jan, 
+          <a href="https://creativecommons.org/licenses/by/2.0" target="blank" rel="noopener noreferrer">CC BY 2.0</a>, 
+          via Wikimedia Commons
+        </p>
+      </td>
+    </tr>
+    <tr style="background-color: #F5F7F8;">
+      <td style="padding: 15px; vertical-align: top;">
+        <img src="https://images.code.org/3b408cbe44083f9e5730038e4a439efd-image-1704411777716.42.54 PM.png" alt="Designers testing a paper prototype for a board game." style="width: 100%; border-radius: 10px;">
+      </td>
+      <td style="padding: 15px; vertical-align: top;">
+        <p style="margin-top: 0; font-size: 14pt;"><strong>Example 3</strong></p>
+        <p style="font-size: 14pt; line-height: 1.4;">
+          Paper prototypes are not only useful for apps. In this image, designers are prototyping a board game. They appear to be role-playing gameplay in order to identify pain points and gather feedback before creating the next version of the game.
+        </p>
+        <p style="font-size: 12pt; margin-bottom: 0;">
+          “<a href="https://www.flickr.com/photos/_scypher/4552934264/" target="blank" rel="noopener noreferrer">First prototype</a>” 
+          by 
+          <a href="https://www.flickr.com/people/_scypher/" target="blank" rel="noopener noreferrer">Elliot Trinidad</a>, 
+          <a href="https://creativecommons.org/licenses/by-nc/2.0/" target="blank" rel="noopener noreferrer">CC BY-NC 2.0</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 MARKDOWN
