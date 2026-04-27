@@ -121,6 +121,7 @@ export function convertExcalidrawToReactFlow(
           text: el.text,
           fontColor: el.strokeColor,
           fontSize: fontSizeBand(el.fontSize),
+          showHandles: false,
         },
       };
       nodes.push(node);
@@ -217,12 +218,16 @@ export function convertExcalidrawToReactFlow(
       style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
       data: {lineAnchorRole: 'target'},
     });
-    edges.push({
+    const lineEdge: SketchlabReactFlowEdge = {
       id: createUuid(),
       source: sourceAnchorId,
       target: targetAnchorId,
       type: 'straight',
-    });
+    };
+    if (el.type === 'arrow') {
+      lineEdge.markerEnd = {type: MarkerType.ArrowClosed};
+    }
+    edges.push(lineEdge);
   }
 
   return {nodes, edges};

@@ -96,7 +96,7 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes).toHaveLength(2);
   });
 
-  it('emits standalone text as a TextNode', () => {
+  it('emits standalone text as a TextNode with handles hidden by default', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
         el({
@@ -116,6 +116,7 @@ describe('convertExcalidrawToReactFlow', () => {
       text: 'hello',
       fontColor: '#222222',
       fontSize: 'medium',
+      showHandles: false,
     });
   });
 
@@ -251,7 +252,7 @@ describe('convertExcalidrawToReactFlow', () => {
     });
   });
 
-  it('converts a free-floating arrow into a paired-anchor straight line', () => {
+  it('keeps the arrow markerEnd on a free-floating arrow', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
         el({
@@ -276,8 +277,8 @@ describe('convertExcalidrawToReactFlow', () => {
       source: anchors[0].id,
       target: anchors[1].id,
       type: 'straight',
+      markerEnd: {type: 'arrowclosed'},
     });
-    expect(edges[0].markerEnd).toBeUndefined();
   });
 
   it('converts a free-floating line into a paired-anchor straight line', () => {
@@ -302,7 +303,7 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(edges[0].type).toBe('straight');
   });
 
-  it('treats an arrow whose binding points at a dropped element as a free-floating line', () => {
+  it('treats an arrow whose binding points at a dropped element as a free-floating arrow', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
         el({type: 'rectangle', id: 'a', x: 0, y: 0, width: 100, height: 100}),
@@ -323,7 +324,7 @@ describe('convertExcalidrawToReactFlow', () => {
     const {nodes, edges} = convertExcalidrawToReactFlow(source);
     expect(nodes.filter(n => n.type === 'lineAnchor')).toHaveLength(2);
     expect(edges).toHaveLength(1);
-    expect(edges[0].markerEnd).toBeUndefined();
+    expect(edges[0].markerEnd).toEqual({type: 'arrowclosed'});
   });
 
   it('does not emit a viewport', () => {
