@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -62,6 +62,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }>({PRIMARY_BACKPACK_KEY: []});
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
+  const latestAlertRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (alertList.length > 0 && latestAlertRef.current) {
+      const closeButton = latestAlertRef.current.querySelector('button');
+      closeButton?.focus();
+    }
+  }, [alertList.length]);
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -302,6 +310,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             text={alert.message}
             key={index}
             size="s"
+            ref={index === alertList.length - 1 ? latestAlertRef : null}
             onClose={() => {
               const newList = [...alertList];
               newList.splice(index, 1);
