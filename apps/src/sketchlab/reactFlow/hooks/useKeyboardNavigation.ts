@@ -202,7 +202,7 @@ export function useKeyboardNavigation({
         !readOnly &&
         !connectingFrom &&
         focusedEntry &&
-        isLineAnchorNodeId(focusedEntry.id, nodes)
+        !isLineAnchorNodeId(focusedEntry.id, nodes)
       ) {
         event.preventDefault();
         openToolbar(focusedEntry, {trapFocus: true});
