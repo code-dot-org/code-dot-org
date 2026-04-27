@@ -20,7 +20,7 @@ import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWra
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
-import {Panel} from './types';
+import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
 
 import styles from './panelsView.module.scss';
 
@@ -45,6 +45,9 @@ interface PanelsProps {
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
+  // Enables link-based navigation: bubbles are hidden, and the Continue
+  // button appears only on panels whose `showContinueButton` is set.
+  useLinks?: boolean;
   onChangePanel?: (
     source: 'button' | 'bubble',
     currentPanel: number,
@@ -69,6 +72,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerBrowserTts,
   levelId,
   resetOnChange = true,
+  useLinks = false,
   onChangePanel,
   onClickContinue,
 }) => {
@@ -120,7 +124,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
-    if (currentPanelIndex < panels.length - 1) {
+    // In link mode the button leaves the level; between-panel navigation
+    // goes through links only.
+    if (!useLinks && currentPanelIndex < panels.length - 1) {
       changePanel(currentPanelIndex + 1, 'button');
     } else {
       if (onClickContinue) {
@@ -131,13 +137,30 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       }
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
+  }, [
+    useLinks,
+    changePanel,
+    panels,
+    currentPanelIndex,
+    onContinue,
+    onClickContinue,
+  ]);
 
   const handleBubbleClick = useCallback(
     (index: number) => {
       changePanel(index, 'bubble');
     },
     [changePanel]
+  );
+
+  const handleLinkClick = useCallback(
+    (link: PanelLink) => {
+      const targetIndex = panels.findIndex(p => p.key === link.targetKey);
+      if (targetIndex !== -1) {
+        changePanel(targetIndex, 'bubble');
+      }
+    },
+    [panels, changePanel]
   );
 
   // Reset to first panel whenever panels content changes if specified.
@@ -173,8 +196,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const showTyping =
     panel?.typing || queryParams('panels-show-typing') === 'true';
 
+  // Legacy mode always shows the button; link mode requires opt-in per panel.
+  const buttonEligible = useLinks ? !!panel?.showContinueButton : true;
+
   // When typing, only show the button when the typing is done.
-  const showButton = !showTyping || typingDone;
+  const showButton = (!showTyping || typingDone) && buttonEligible;
 
   useEffect(() => {
     if (showButton) {
@@ -208,7 +234,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     : styles.textTopRight;
 
   const buttonText =
-    currentPanelIndex < panels.length - 1
+    !useLinks && currentPanelIndex < panels.length - 1
       ? commonI18n.next()
       : commonI18n.continue();
 
@@ -251,6 +277,22 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             }}
           />
         )}
+        {useLinks &&
+          panel.links?.map((link, index) => (
+            <button
+              type="button"
+              key={`link-${index}`}
+              className={classNames(styles.link, panel.dark && styles.linkDark)}
+              style={{
+                left: `${link.x}%`,
+                top: `${link.y}%`,
+                width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
+              }}
+              onClick={() => handleLinkClick(link)}
+            >
+              <EnhancedSafeMarkdown markdown={link.text} />
+            </button>
+          ))}
         {panel.text && (
           <div
             ref={contentRef}
@@ -311,7 +353,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </MuiButton>
         )}
 
-        {panels.length > 1 && (
+        {panels.length > 1 && !useLinks && (
           <div id="panels-bubbles">
             {Array.from(Array(panels.length).keys()).map(index => {
               return (
