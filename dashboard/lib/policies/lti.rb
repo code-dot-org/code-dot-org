@@ -33,6 +33,7 @@ class Policies::Lti
   ALLOWED_TARGET_LINK_URI_DOMAINS = {
     'code.org' => true,
     'studio.code.org' => true,
+    'csforall.org' => true,
   }.freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'
