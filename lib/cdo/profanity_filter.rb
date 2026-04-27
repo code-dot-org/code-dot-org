@@ -14,7 +14,8 @@ class ProfanityFilter
   # handling them with our custom code, here. Webpurify credentials are in LastPass.
   LANGUAGE_SPECIFIC_ALLOWLIST = {
     fu: %w(it), # past-tense "to be" in Italian
-    fick: %w(sv) # "got" in Swedish
+    fick: %w(sv), # "got" in Swedish
+    nazionale: %w(it), # The word 'national' in Italian
   }
 
   # Look for profanity in a given text, return the first expletive found
