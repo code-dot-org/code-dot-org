@@ -316,18 +316,6 @@ export function useKeyboardNavigation({
         return;
       }
 
-      // Enter on a focused line edge (outside connect mode) opens the
-      // line toolbar and traps focus within it for keyboard users.
-      if (event.key === 'Enter' && !readOnly && focusedEdgeId) {
-        const focusedEdge = getEdge(focusedEdgeId);
-        if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
-          event.preventDefault();
-          event.stopPropagation();
-          openToolbar({type: 'edge', id: focusedEdgeId}, {trapFocus: true});
-          return;
-        }
-      }
-
       // Enter on a focused node (outside connect mode) enters edit mode.
       // Do NOT stopPropagation here: React Flow's handler needs to fire
       // to select the node, which enables arrow-key movement.
