@@ -47,7 +47,10 @@ import {
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
-import {canCreateConnection} from '../utils/connectionRules';
+import {
+  canCreateConnection,
+  isLineAnchorNodeId,
+} from '../utils/connectionRules';
 import {isLineEdge} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -464,13 +467,13 @@ export default function ReactFlowCanvas({
 
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: {id: string}) => {
-      // Only open the toolbar in editable mode. Mouse opens don't
-      // trap focus so resize handles and contenteditable text stay usable.
-      if (!readOnly) {
+      // Only open the toolbar in editable mode, and for nodes that aren't line anchors.
+      // Mouse opens don't trap focus so resize handles and contenteditable text stay usable.
+      if (!readOnly && !isLineAnchorNodeId(node.id, nodes)) {
         openToolbar({type: 'node', id: node.id}, {trapFocus: false});
       }
     },
-    [readOnly, openToolbar]
+    [readOnly, openToolbar, nodes]
   );
 
   const {handleEdgeClick, openLineEdge, setLineEdgeColor} = useLineToolbar({

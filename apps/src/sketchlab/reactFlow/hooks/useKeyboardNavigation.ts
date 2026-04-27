@@ -11,7 +11,10 @@ import {
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
-import {canCreateConnection} from '../utils/connectionRules';
+import {
+  canCreateConnection,
+  isLineAnchorNodeId,
+} from '../utils/connectionRules';
 import {isLineEdge} from '../utils/lineEdges';
 
 /**
@@ -194,7 +197,13 @@ export function useKeyboardNavigation({
 
       // "e" opens the node/edge toolbar. ToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
-      if (event.key === 'e' && !readOnly && !connectingFrom && focusedEntry) {
+      if (
+        event.key === 'e' &&
+        !readOnly &&
+        !connectingFrom &&
+        focusedEntry &&
+        isLineAnchorNodeId(focusedEntry.id, nodes)
+      ) {
         event.preventDefault();
         openToolbar(focusedEntry, {trapFocus: true});
         return;

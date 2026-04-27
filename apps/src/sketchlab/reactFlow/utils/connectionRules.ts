@@ -12,7 +12,10 @@ export function canCreateConnection(
   );
 }
 
-function isLineAnchorNodeId(nodeId: string, nodes: SketchlabReactFlowNode[]) {
+export function isLineAnchorNodeId(
+  nodeId: string,
+  nodes: SketchlabReactFlowNode[]
+) {
   const node = nodes.find(candidate => candidate.id === nodeId);
   return node?.type === 'lineAnchor';
 }
