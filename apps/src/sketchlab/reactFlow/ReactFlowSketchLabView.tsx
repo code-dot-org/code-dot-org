@@ -75,7 +75,7 @@ function ReactFlowSketchLabViewInner({
       currentUserId
         ? {primaryApi: new BackpackClientApi('sketchlab', null)}
         : null,
-    [currentUserId],
+    [currentUserId]
   );
 
   // Remount the canvas to re-read sources, same pattern as Excalidraw's
@@ -98,7 +98,7 @@ function ReactFlowSketchLabViewInner({
       }
       reinitializationHandler();
     },
-    [updateSources, reinitializationHandler],
+    [updateSources, reinitializationHandler]
   );
 
   // Since there's no run button in Sketch Lab, set hasRun to true by default
@@ -116,7 +116,7 @@ function ReactFlowSketchLabViewInner({
   }, [showStartOverDialog]);
 
   const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId),
+    useAppSelector(state => state.progress.viewAsUserId)
   );
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
@@ -129,8 +129,8 @@ function ReactFlowSketchLabViewInner({
             currentSources,
         };
       },
-      [currentSources],
-    ),
+      [currentSources]
+    )
   );
 
   const {
@@ -171,13 +171,13 @@ function ReactFlowSketchLabViewInner({
             backpackContext?.primaryApi,
             dialogControl,
             fileList,
-            errorCallback,
+            errorCallback
           ),
         text: 'Save Sketch to Backpack',
       },
       supportedFileTypes: [],
     }),
-    [reactFlow, backpackContext, dialogControl],
+    [reactFlow, backpackContext, dialogControl]
   );
 
   // Read sources, converting from Excalidraw if this project was last
@@ -193,7 +193,7 @@ function ReactFlowSketchLabViewInner({
       let didConvert = false;
       if (source && (source as {type?: string}).type === 'excalidraw') {
         normalized = convertExcalidrawToReactFlow(
-          source as ExcalidrawSourceWithExternalFiles,
+          source as ExcalidrawSourceWithExternalFiles
         );
         didConvert = true;
       } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
@@ -209,19 +209,17 @@ function ReactFlowSketchLabViewInner({
     }, [currentSources.source]);
 
   // Only after a fresh Excalidraw conversion, upload any ImageNode
-  // whose src is still a base64 dataURL — these come from sources
-  // whose externalFiles map was empty (typical of level-authored
-  // start_sources / exemplar_sources). The canvas's debounced save
+  // whose src is still a base64 dataURL — these can come from old
+  // start sources or exemplar sources. The canvas's debounced save
   // then persists the resulting asset URLs instead of base64. We
-  // don't run this for native React Flow sources: any dataURLs there
-  // are a steady-state we shouldn't touch.
+  // don't run this for native React Flow sources, as they never use base64.
   useEffect(() => {
     if (!convertedFromExcalidraw || readonlyWorkspace) return;
     uploadConvertedDataUrlImages(
       reactFlow,
       channelId,
       levelProperties.name,
-      dataUrlUploadsInFlight.current,
+      dataUrlUploadsInFlight.current
     );
   }, [
     convertedFromExcalidraw,
@@ -305,7 +303,7 @@ function ReactFlowSketchLabViewInner({
 }
 
 export default function ReactFlowSketchLabView(
-  props: LabProps<LevelProperties>,
+  props: LabProps<LevelProperties>
 ) {
   return (
     <ReactFlowProvider>
