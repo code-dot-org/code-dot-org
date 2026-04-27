@@ -19,6 +19,61 @@ import ToolbarShell from './ToolbarShell';
 
 import styles from './element-toolbar.module.scss';
 
+interface LineOption {
+  value: string | number;
+  label: string;
+}
+
+interface LineOptionGroupProps {
+  groupLabel: string;
+  options: readonly LineOption[];
+  selectedValue: string | number;
+  onSelect: (value: string | number) => void;
+  ariaLabelPrefix: string;
+  getButtonText?: (option: LineOption) => React.ReactNode;
+}
+
+function LineOptionGroup({
+  groupLabel,
+  options,
+  selectedValue,
+  onSelect,
+  ariaLabelPrefix,
+  getButtonText,
+}: LineOptionGroupProps) {
+  return (
+    <div className={styles.group} role="group" aria-label={groupLabel}>
+      <Typography
+        variant="overline3"
+        className={styles.groupLabel}
+        aria-hidden="true"
+      >
+        {groupLabel}
+      </Typography>
+      <div className={styles.lineStyleButtons}>
+        {options.map(option => {
+          const isSelected = selectedValue === option.value;
+          return (
+            <Tooltip key={option.value} title={option.label} placement="top">
+              <IconButton
+                size="small"
+                className={classNames(styles.lineStyleButton, {
+                  [styles.lineStyleButtonSelected]: isSelected,
+                })}
+                aria-label={`${ariaLabelPrefix}: ${option.label}`}
+                aria-pressed={isSelected}
+                onClick={() => onSelect(option.value)}
+              >
+                {getButtonText ? getButtonText(option) : option.label}
+              </IconButton>
+            </Tooltip>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
   anchorNodeId: string;
@@ -64,64 +119,21 @@ export default function LineEdgeToolbar({
         selectedValue={selectedValue}
         onSelect={onSelectColor}
       />
-      <div className={styles.group} role="group" aria-label="Line width">
-        <Typography
-          variant="overline3"
-          className={styles.groupLabel}
-          aria-hidden="true"
-        >
-          Line width
-        </Typography>
-        <div className={styles.lineStyleButtons}>
-          {LINE_WIDTH_OPTIONS.map(option => {
-            const isSelected = selectedWidthValue === option.value;
-            return (
-              <Tooltip key={option.value} title={option.label} placement="top">
-                <IconButton
-                  size="small"
-                  className={classNames(styles.lineStyleButton, {
-                    [styles.lineStyleButtonSelected]: isSelected,
-                  })}
-                  aria-label={`Line width: ${option.label}`}
-                  aria-pressed={isSelected}
-                  onClick={() => onSelectWidth(option.value)}
-                >
-                  {option.value}
-                </IconButton>
-              </Tooltip>
-            );
-          })}
-        </div>
-      </div>
-      <div className={styles.group} role="group" aria-label="Stroke style">
-        <Typography
-          variant="overline3"
-          className={styles.groupLabel}
-          aria-hidden="true"
-        >
-          Stroke style
-        </Typography>
-        <div className={styles.lineStyleButtons}>
-          {LINE_STROKE_STYLE_OPTIONS.map(option => {
-            const isSelected = selectedStrokeStyleValue === option.value;
-            return (
-              <Tooltip key={option.value} title={option.label} placement="top">
-                <IconButton
-                  size="small"
-                  className={classNames(styles.lineStyleButton, {
-                    [styles.lineStyleButtonSelected]: isSelected,
-                  })}
-                  aria-label={`Stroke style: ${option.label}`}
-                  aria-pressed={isSelected}
-                  onClick={() => onSelectStrokeStyle(option.value)}
-                >
-                  {option.label}
-                </IconButton>
-              </Tooltip>
-            );
-          })}
-        </div>
-      </div>
+      <LineOptionGroup
+        groupLabel="Line width"
+        options={LINE_WIDTH_OPTIONS}
+        selectedValue={selectedWidthValue}
+        onSelect={value => onSelectWidth(value as number)}
+        ariaLabelPrefix="Line width"
+        getButtonText={option => option.value}
+      />
+      <LineOptionGroup
+        groupLabel="Stroke style"
+        options={LINE_STROKE_STYLE_OPTIONS}
+        selectedValue={selectedStrokeStyleValue}
+        onSelect={value => onSelectStrokeStyle(value as LineStrokeStyleValue)}
+        ariaLabelPrefix="Stroke style"
+      />
     </ToolbarShell>
   );
 }
