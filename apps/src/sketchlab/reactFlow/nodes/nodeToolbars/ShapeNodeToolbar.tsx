@@ -2,6 +2,7 @@ import React from 'react';
 
 import {ShapeNodeType} from '../../types';
 
+import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import NodeToolbarShell from './NodeToolbarShell';
@@ -51,6 +52,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
         selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
         onSelect={value => patchNodeData({fontColor: value})}
       />
+      <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
