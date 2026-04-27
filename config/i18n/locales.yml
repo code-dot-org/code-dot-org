@@ -86,7 +86,6 @@
 "en-US":
   english: "English"
   native: "English"
-  fallback: "en" # Need this because source files use "en", not "en-US"
 
 "en-GB":
   english: "English (UK)"
@@ -107,6 +106,7 @@
 "es-ES":
   english: "Spanish (Spain)"
   native: "Español (España)"
+  fallback: "es-MX"
 
 "es-MX":
   english: "Spanish (Latin America)"
@@ -361,6 +361,7 @@
 "pt-PT":
   english: "Portuguese (Portugal)"
   native: "Português (Portugal)"
+  fallback: "pt-BR"
 
 "ro": "ro-RO"
 "ro-RO":
