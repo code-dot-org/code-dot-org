@@ -51,6 +51,9 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # get_preset
 
   test 'get_preset returns preset for known type' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:ci_webserver?).returns(false)
+
     preset = Policies::DemoSections.get_preset(:high)
 
     assert_equal 'High School Practice Section', preset[:section_name]
@@ -61,7 +64,17 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
   end
 
-  test 'get_preset uses drone curriculum names on ci webserver' do
+  test 'get_preset uses allthethings curriculum names in test' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:rack_env?).with(:test).returns(true)
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'allthethings', preset[:unit_name]
+    assert_equal 'original-allthethings-course', preset[:unit_group_name]
+  end
+
+  test 'get_preset uses allthethings curriculum names on ci webserver' do
     CDO.stubs(:ci_webserver?).returns(true)
 
     preset = Policies::DemoSections.get_preset(:high)
@@ -70,16 +83,27 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'original-allthethings-course', preset[:unit_group_name]
   end
 
-  test 'get_preset uses adhoc curriculum names from config' do
+  test 'get_preset uses adhoc curriculum names by demo type from config' do
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:rack_env?).with(:adhoc).returns(true)
-    CDO.stubs(:demo_section_unit_name).returns('adhoc-unit')
-    CDO.stubs(:demo_section_unit_group_name).returns('adhoc-course')
+    CDO.stubs(:demo_section_unit_name).returns(
+      {
+        'high' => 'adhoc-high-unit',
+      }
+    )
+    CDO.stubs(:demo_section_unit_group_name).returns(
+      {
+        'high' => 'adhoc-high-course',
+      }
+    )
 
-    preset = Policies::DemoSections.get_preset(:high)
+    high_preset = Policies::DemoSections.get_preset(:high)
+    middle_preset = Policies::DemoSections.get_preset(:middle)
 
-    assert_equal 'adhoc-unit', preset[:unit_name]
-    assert_equal 'adhoc-course', preset[:unit_group_name]
+    assert_equal 'adhoc-high-unit', high_preset[:unit_name]
+    assert_equal 'adhoc-high-course', high_preset[:unit_group_name]
+    assert_equal 'csd3-2024', middle_preset[:unit_name]
+    assert_equal 'csd-2024', middle_preset[:unit_group_name]
   end
 
   test 'get_preset returns preset for each demo type' do
@@ -104,9 +128,6 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # preset_view
 
   test 'preset_view returns a display projection for a valid preset' do
-    unit = create(:unit, name: 'aif2-2025')
-    unit_group = create(:unit_group, name: 'artificial-intelligence-foundations-2025')
-
     view = Policies::DemoSections.preset_view(:high)
 
     assert_equal 'high', view[:demo_type]
@@ -115,18 +136,23 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 5, view[:avatar_emoji]
     assert_equal 'email', view[:login_type]
     assert_equal 'student', view[:participant_type]
-    assert_equal({name: unit.name, display_name: unit.localized_title}, view[:unit])
+    assert_equal({name: 'allthethings', display_name: 'All the Things!'}, view[:unit])
     assert_equal(
-      {name: unit_group.name, display_name: unit_group.localized_title},
+      {name: 'original-allthethings-course', display_name: 'original-allthethings-course'},
       view[:unit_group]
     )
   end
 
   test 'preset_view returns nil when the unit cannot be resolved' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:ci_webserver?).returns(false)
+
     assert_nil Policies::DemoSections.preset_view(:high)
   end
 
   test 'preset_view returns nil when the unit group cannot be resolved' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:ci_webserver?).returns(false)
     create(:unit, name: 'aif2-2025')
 
     assert_nil Policies::DemoSections.preset_view(:high)
