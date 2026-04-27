@@ -638,6 +638,68 @@ Resources:
                 Action:
                   - 'devicefarm:ListTestGridProjects'
                 Resource: '*'
+        # Mobile Device Farm access for UI test runners on the test daemon.
+        # Covers the run lifecycle: read project/run/job/suite/test/upload
+        # state, schedule and stop runs, manage uploads, and drive remote
+        # access sessions. Erring on the side of broader access — trim later
+        # if a tighter set proves sufficient.
+        - PolicyName: DaemonDeviceFarmMobilePolicy
+          PolicyDocument:
+            Statement:
+              # Resource-scoped actions on Device Farm resources owned by this account.
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:GetProject'
+                  - 'devicefarm:GetRun'
+                  - 'devicefarm:GetJob'
+                  - 'devicefarm:GetSuite'
+                  - 'devicefarm:GetTest'
+                  - 'devicefarm:GetUpload'
+                  - 'devicefarm:GetDevicePool'
+                  - 'devicefarm:GetDevicePoolCompatibility'
+                  - 'devicefarm:GetNetworkProfile'
+                  - 'devicefarm:GetRemoteAccessSession'
+                  - 'devicefarm:ListJobs'
+                  - 'devicefarm:ListSuites'
+                  - 'devicefarm:ListTests'
+                  - 'devicefarm:ListArtifacts'
+                  - 'devicefarm:ListSamples'
+                  - 'devicefarm:ListUniqueProblems'
+                  - 'devicefarm:ListUploads'
+                  - 'devicefarm:ListRuns'
+                  - 'devicefarm:ListNetworkProfiles'
+                  - 'devicefarm:ListDevicePools'
+                  - 'devicefarm:ListRemoteAccessSessions'
+                  - 'devicefarm:ScheduleRun'
+                  - 'devicefarm:StopRun'
+                  - 'devicefarm:StopJob'
+                  - 'devicefarm:StopRemoteAccessSession'
+                  - 'devicefarm:CreateUpload'
+                  - 'devicefarm:CreateRemoteAccessSession'
+                  - 'devicefarm:DeleteRun'
+                  - 'devicefarm:DeleteUpload'
+                  - 'devicefarm:DeleteRemoteAccessSession'
+                Resource:
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:project:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:run:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:job:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:suite:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:test:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:upload:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:devicepool:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:networkprofile:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:session:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:artifact:*'
+              # Device-level and account-wide list actions are not resource-scopable
+              # (devices are AWS-managed and have no account in their ARN).
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:GetDevice'
+                  - 'devicefarm:ListDevices'
+                  - 'devicefarm:ListProjects'
+                  - 'devicefarm:ListOfferings'
+                  - 'devicefarm:ListOfferingPromotions'
+                Resource: '*'
 <% end -%>
       ManagedPolicyArns:
         - !Ref CDOPolicy
