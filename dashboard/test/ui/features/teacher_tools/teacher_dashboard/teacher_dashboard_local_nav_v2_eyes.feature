@@ -60,7 +60,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     Then I see no difference for "unit overview"
 
     When I click selector "a:contains('allthethingscourse')" once I see it
-    And I wait until element "h2:contains('allthethingscourse')" is visible
+    And I wait until element "h1:contains('allthethingscourse')" is visible
     Then I see no difference for "course overview"
 
     And I close my eyes

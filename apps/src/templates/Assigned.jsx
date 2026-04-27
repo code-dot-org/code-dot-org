@@ -1,22 +1,35 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
 import React, {Component} from 'react';
 
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import styles from './assigned.module.scss';
 
 export default class Assigned extends Component {
   render() {
     return (
-      <span className={`${styles.assigned} uitest-assigned`}>
-        <span className={styles.checkmark}>
-          <FontAwesomeV6Icon iconName="check" iconStyle="solid" />
+      <span style={styles.assigned} className={'uitest-assigned'}>
+        <span style={styles.checkmark}>
+          <FontAwesome icon="check" />
         </span>
-        <Typography variant="body2" component="span">
-          <strong>{i18n.assigned()}</strong>
-        </Typography>
+        {i18n.assigned()}
       </span>
     );
   }
 }
+
+const styles = {
+  checkmark: {
+    padding: 5,
+  },
+  assigned: {
+    color: color.level_perfect,
+    fontSize: 16,
+    ...fontConstants['main-font-semi-bold'],
+    lineHeight: '36px',
+    marginLeft: 10,
+    verticalAlign: 'top',
+    display: 'flex',
+    alignItems: 'center',
+  },
+};

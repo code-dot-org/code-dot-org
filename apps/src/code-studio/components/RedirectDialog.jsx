@@ -1,7 +1,9 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -12,35 +14,42 @@ const RedirectDialog = ({
   redirectUrl,
   redirectButtonText,
 }) => {
-  if (!isOpen) {
-    return null;
-  }
-
   const redirect = () => {
     navigateToHref(redirectUrl);
   };
 
   return (
-    <Dialog
-      title={i18n.notInRightPlace()}
-      description={details}
-      onClose={handleClose}
-      primaryButtonProps={{
-        children: redirectButtonText,
-        onClick: redirect,
-        size: 'small',
-        color: 'primary',
-        type: 'button',
-      }}
-      secondaryButtonProps={{
-        children: i18n.stayHere(),
-        onClick: handleClose,
-        size: 'small',
-        color: 'tertiary',
-        variant: 'outlined',
-        type: 'button',
-      }}
-    />
+    <BaseDialog
+      useUpdatedStyles
+      isOpen={isOpen}
+      style={styles.dialog}
+      handleClose={handleClose}
+    >
+      <div>
+        <h2 style={styles.dialogHeader}>{i18n.notInRightPlace()}</h2>
+        {details}
+      </div>
+      <DialogFooter>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          onClick={handleClose}
+          type="button"
+        >
+          {i18n.stayHere()}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          onClick={redirect}
+          type="button"
+        >
+          {redirectButtonText}
+        </MuiButton>
+      </DialogFooter>
+    </BaseDialog>
   );
 };
 
@@ -50,6 +59,15 @@ RedirectDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
   redirectUrl: PropTypes.string.isRequired,
   redirectButtonText: PropTypes.string.isRequired,
+};
+
+const styles = {
+  dialog: {
+    padding: 20,
+  },
+  dialogHeader: {
+    marginTop: 0,
+  },
 };
 
 export default RedirectDialog;
