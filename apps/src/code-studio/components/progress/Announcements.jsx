@@ -1,5 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -9,6 +10,8 @@ import {
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
+
+import styles from './announcements.module.scss';
 
 const NOTIFICATION_VARIANT_BY_TYPE = {
   default: 'primary',
@@ -94,7 +97,10 @@ export default class Announcements extends Component {
           return (
             <NotificationBanner
               key={key}
-              className="announcement-notification"
+              className={classNames(
+                styles.notificationBanner,
+                'announcement-notification'
+              )}
               variant={
                 NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
               }
