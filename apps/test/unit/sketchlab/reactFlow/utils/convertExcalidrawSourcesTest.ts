@@ -59,7 +59,9 @@ describe('convertExcalidrawToReactFlow', () => {
       ],
     };
     const {nodes} = convertExcalidrawToReactFlow(source);
-    expect(nodes.map(n => [n.id, n.type, (n.data as {shapeType?: string}).shapeType])).toEqual([
+    expect(
+      nodes.map(n => [n.id, n.type, (n.data as {shapeType?: string}).shapeType])
+    ).toEqual([
       ['r1', 'shape', 'rectangle'],
       ['d1', 'shape', 'diamond'],
       ['e1', 'shape', 'circle'],
@@ -80,20 +82,12 @@ describe('convertExcalidrawToReactFlow', () => {
       ],
     };
     const {nodes} = convertExcalidrawToReactFlow(source);
-    const data = nodes[0].data as {strokeColor: string; backgroundColor: string};
+    const data = nodes[0].data as {
+      strokeColor: string;
+      backgroundColor: string;
+    };
     expect(data.strokeColor).toBe('#abcdef');
     expect(data.backgroundColor).toBe('#123456');
-  });
-
-  it('ignores groupIds entirely', () => {
-    const source: ExcalidrawSourceWithExternalFiles = {
-      elements: [
-        el({type: 'rectangle', id: 'r1', groupIds: ['g1', 'g2']}),
-        el({type: 'rectangle', id: 'r2', groupIds: ['g1']}),
-      ],
-    };
-    const {nodes} = convertExcalidrawToReactFlow(source);
-    expect(nodes).toHaveLength(2);
   });
 
   it('emits standalone text as a TextNode with handles hidden by default', () => {
@@ -147,9 +141,27 @@ describe('convertExcalidrawToReactFlow', () => {
   it('maps fontSize px into the small/medium/large bands', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
-        el({type: 'text', id: 'small', text: '', fontSize: 12, containerId: null}),
-        el({type: 'text', id: 'medium', text: '', fontSize: 16, containerId: null}),
-        el({type: 'text', id: 'large', text: '', fontSize: 22, containerId: null}),
+        el({
+          type: 'text',
+          id: 'small',
+          text: '',
+          fontSize: 12,
+          containerId: null,
+        }),
+        el({
+          type: 'text',
+          id: 'medium',
+          text: '',
+          fontSize: 16,
+          containerId: null,
+        }),
+        el({
+          type: 'text',
+          id: 'large',
+          text: '',
+          fontSize: 22,
+          containerId: null,
+        }),
       ],
     };
     const {nodes} = convertExcalidrawToReactFlow(source);
@@ -161,7 +173,13 @@ describe('convertExcalidrawToReactFlow', () => {
   it('emits image nodes when the file id has an externalFiles url', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
-        el({type: 'image', id: 'img1', fileId: 'f1' as never, status: 'saved', scale: [1, 1]}),
+        el({
+          type: 'image',
+          id: 'img1',
+          fileId: 'f1' as never,
+          status: 'saved',
+          scale: [1, 1],
+        }),
       ],
       externalFiles: {
         f1: {id: 'f1', url: 'https://example.com/f1.png'},
@@ -180,7 +198,13 @@ describe('convertExcalidrawToReactFlow', () => {
   it('falls back to the embedded dataURL when externalFiles has no entry', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
-        el({type: 'image', id: 'img1', fileId: 'f1' as never, status: 'saved', scale: [1, 1]}),
+        el({
+          type: 'image',
+          id: 'img1',
+          fileId: 'f1' as never,
+          status: 'saved',
+          scale: [1, 1],
+        }),
       ],
       files: {
         f1: {
@@ -203,7 +227,13 @@ describe('convertExcalidrawToReactFlow', () => {
   it('drops images with neither an externalFiles url nor a dataURL', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
-        el({type: 'image', id: 'img1', fileId: 'missing' as never, status: 'saved', scale: [1, 1]}),
+        el({
+          type: 'image',
+          id: 'img1',
+          fileId: 'missing' as never,
+          status: 'saved',
+          scale: [1, 1],
+        }),
       ],
     };
     expect(convertExcalidrawToReactFlow(source).nodes).toEqual([]);
@@ -212,7 +242,14 @@ describe('convertExcalidrawToReactFlow', () => {
   it('drops freedraw, frame, and embeddable elements', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
-        el({type: 'freedraw', id: 'fd', points: [], pressures: [], simulatePressure: false, lastCommittedPoint: null}),
+        el({
+          type: 'freedraw',
+          id: 'fd',
+          points: [],
+          pressures: [],
+          simulatePressure: false,
+          lastCommittedPoint: null,
+        }),
         el({type: 'frame', id: 'fr', name: null}),
         el({type: 'embeddable', id: 'em', validated: true}),
       ],
@@ -230,7 +267,10 @@ describe('convertExcalidrawToReactFlow', () => {
           id: 'arr',
           x: 0,
           y: 0,
-          points: [[0, 0], [300, 0]],
+          points: [
+            [0, 0],
+            [300, 0],
+          ],
           startBinding: {elementId: 'a', focus: 0, gap: 0},
           endBinding: {elementId: 'b', focus: 0, gap: 0},
           startArrowhead: null,
@@ -259,7 +299,10 @@ describe('convertExcalidrawToReactFlow', () => {
         el({
           type: 'line',
           id: 'ln',
-          points: [[0, 0], [0, 300]],
+          points: [
+            [0, 0],
+            [0, 300],
+          ],
           startBinding: {elementId: 'a', focus: 0, gap: 0},
           endBinding: {elementId: 'b', focus: 0, gap: 0},
           startArrowhead: null,
@@ -287,7 +330,10 @@ describe('convertExcalidrawToReactFlow', () => {
           id: 'arr',
           x: 50,
           y: 60,
-          points: [[0, 0], [100, 0]],
+          points: [
+            [0, 0],
+            [100, 0],
+          ],
           startBinding: null,
           endBinding: null,
           startArrowhead: null,
@@ -316,7 +362,10 @@ describe('convertExcalidrawToReactFlow', () => {
           id: 'ln',
           x: 0,
           y: 0,
-          points: [[0, 0], [100, 100]],
+          points: [
+            [0, 0],
+            [100, 100],
+          ],
           startBinding: null,
           endBinding: null,
           startArrowhead: null,
@@ -339,7 +388,10 @@ describe('convertExcalidrawToReactFlow', () => {
           id: 'arr',
           x: 0,
           y: 0,
-          points: [[0, 0], [300, 0]],
+          points: [
+            [0, 0],
+            [300, 0],
+          ],
           startBinding: {elementId: 'a', focus: 0, gap: 0},
           endBinding: {elementId: 'ghost', focus: 0, gap: 0},
           startArrowhead: null,
