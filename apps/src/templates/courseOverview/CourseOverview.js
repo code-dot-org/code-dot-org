@@ -1,3 +1,6 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -8,18 +11,12 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
-import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
@@ -34,6 +31,10 @@ import SafeMarkdown from '../SafeMarkdown';
 import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
+
+import styles from './course-overview.module.scss';
+
+const WARNING_ICON = {iconName: 'triangle-exclamation', iconStyle: 'solid'};
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -156,7 +157,7 @@ class CourseOverview extends Component {
     };
 
     return (
-      <div style={styles.main}>
+      <div className={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
           <RedirectDialog
             isOpen={this.state.showRedirectDialog}
@@ -168,27 +169,36 @@ class CourseOverview extends Component {
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.redirectCourseVersionWarningDetails()}
-            dismissible={true}
-            onDismiss={() => onDismissRedirectWarning(name)}
+          <NotificationBanner
+            variant="warning"
+            style="filled"
+            title=""
+            description={i18n.redirectCourseVersionWarningDetails()}
+            icon={WARNING_ICON}
+            onClose={() => onDismissRedirectWarning(name)}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {showVersionWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.wrongCourseVersionWarningNotice()}
-            details={i18n.wrongCourseVersionWarningDetails()}
-            dismissible={true}
-            onDismiss={this.onDismissVersionWarning}
+          <NotificationBanner
+            variant="warning"
+            style="filled"
+            title={i18n.wrongCourseVersionWarningNotice()}
+            description={i18n.wrongCourseVersionWarningDetails()}
+            icon={WARNING_ICON}
+            onClose={this.onDismissVersionWarning}
+            className={classNames(
+              styles.notificationBanner,
+              'announcement-notification'
+            )}
           />
         )}
         {isSignedIn && (
           <Announcements
             announcements={this.props.announcements}
-            width={styleConstants['content-width']}
             viewAs={viewAs}
             firehoseAnalyticsId={{
               user_id: userId,
@@ -197,8 +207,15 @@ class CourseOverview extends Component {
           />
         )}
         {showNotification && <VerifiedResourcesNotification />}
-        <div style={styles.titleWrapper}>
-          <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
+        <div className={styles.titleWrapper}>
+          <Typography
+            variant="h2"
+            component="h2"
+            gutterBottom
+            className={styles.title}
+          >
+            {assignmentFamilyTitle}
+          </Typography>
         </div>
         <CourseOverviewActionRow
           courseVersionId={courseVersionId}
@@ -218,7 +235,7 @@ class CourseOverview extends Component {
             <RequiresAiChatToolsAlert />
           )}
         <SafeMarkdown
-          style={styles.description}
+          className={styles.description}
           openExternalLinksInNewTab={true}
           markdown={
             viewAs === ViewType.Participant
@@ -247,35 +264,6 @@ class CourseOverview extends Component {
     );
   }
 }
-
-const styles = {
-  main: {
-    width: '100%',
-  },
-  description: {
-    marginBottom: 20,
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  title: {
-    display: 'inline-block',
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  versionLabel: {
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 15,
-    color: color.charcoal,
-  },
-  versionDropdown: {
-    marginBottom: 13,
-  },
-};
 
 export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({
