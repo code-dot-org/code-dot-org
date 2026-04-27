@@ -86,10 +86,8 @@ export function convertExcalidrawToReactFlow(
   const nodes: SketchlabReactFlowNode[] = [];
   const edges: SketchlabReactFlowEdge[] = [];
 
-  // Map each emitted node's id back to its excalidraw element id, so
-  // that arrow/line bindings can resolve to a node we kept.
-  // Bound shapes / text / images keep their original Excalidraw id, so
-  // the lookup is just "did we emit a node with this id?".
+  // Lookup table for nodes we kept, so arrow/line bindings can verify
+  // both endpoints exist.
   const emittedNodeById = new Map<string, SketchlabReactFlowNode>();
 
   for (const el of elements) {
@@ -171,12 +169,7 @@ export function convertExcalidrawToReactFlow(
     const startNode = startId ? emittedNodeById.get(startId) : undefined;
     const endNode = endId ? emittedNodeById.get(endId) : undefined;
 
-    if (
-      startNode &&
-      endNode &&
-      startNode.type !== 'lineAnchor' &&
-      endNode.type !== 'lineAnchor'
-    ) {
+    if (startNode && endNode) {
       const sourceBox = {
         x: startNode.position.x,
         y: startNode.position.y,
