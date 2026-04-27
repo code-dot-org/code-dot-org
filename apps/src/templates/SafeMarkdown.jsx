@@ -147,11 +147,7 @@ const localizationComponentWrappers = {
     return <p {...props} data-isolate="true" />;
   },
   code: function ({children, ...props}) {
-    return (
-      <code {...props} data-notranslate="true">
-        {localization.translate(children)}
-      </code>
-    );
+    return <code {...props}>{localization.translate(children)}</code>;
   },
 };
 
