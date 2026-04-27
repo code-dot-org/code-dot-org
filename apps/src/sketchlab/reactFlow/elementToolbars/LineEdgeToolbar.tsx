@@ -24,13 +24,15 @@ interface LineOption {
   label: string;
 }
 
+type LinePreviewStyle = 'solid' | 'dashed' | 'dotted';
+
 interface LineOptionGroupProps {
   groupLabel: string;
   options: readonly LineOption[];
   selectedValue: string | number;
   onSelect: (value: string | number) => void;
   ariaLabelPrefix: string;
-  getButtonText?: (option: LineOption) => React.ReactNode;
+  getButtonContent?: (option: LineOption) => React.ReactNode;
 }
 
 function LineOptionGroup({
@@ -39,7 +41,7 @@ function LineOptionGroup({
   selectedValue,
   onSelect,
   ariaLabelPrefix,
-  getButtonText,
+  getButtonContent,
 }: LineOptionGroupProps) {
   return (
     <div className={styles.group} role="group" aria-label={groupLabel}>
@@ -64,7 +66,7 @@ function LineOptionGroup({
                 aria-pressed={isSelected}
                 onClick={() => onSelect(option.value)}
               >
-                {getButtonText ? getButtonText(option) : option.label}
+                {getButtonContent ? getButtonContent(option) : option.label}
               </IconButton>
             </Tooltip>
           );
@@ -106,6 +108,19 @@ export default function LineEdgeToolbar({
   )
     ? selectedStrokeStyle
     : DEFAULT_LINE_STROKE_STYLE;
+  const renderLinePreview = (
+    width: number,
+    lineStyle: LinePreviewStyle
+  ): React.ReactNode => (
+    <span
+      aria-hidden="true"
+      className={styles.linePreview}
+      style={{
+        borderTopWidth: width,
+        borderTopStyle: lineStyle,
+      }}
+    />
+  );
 
   return (
     <ToolbarShell
@@ -125,7 +140,9 @@ export default function LineEdgeToolbar({
         selectedValue={selectedWidthValue}
         onSelect={value => onSelectWidth(value as number)}
         ariaLabelPrefix="Line width"
-        getButtonText={option => option.value}
+        getButtonContent={option =>
+          renderLinePreview(option.value as number, 'solid')
+        }
       />
       <LineOptionGroup
         groupLabel="Stroke style"
@@ -133,6 +150,9 @@ export default function LineEdgeToolbar({
         selectedValue={selectedStrokeStyleValue}
         onSelect={value => onSelectStrokeStyle(value as LineStrokeStyleValue)}
         ariaLabelPrefix="Stroke style"
+        getButtonContent={option =>
+          renderLinePreview(2, option.value as LinePreviewStyle)
+        }
       />
     </ToolbarShell>
   );

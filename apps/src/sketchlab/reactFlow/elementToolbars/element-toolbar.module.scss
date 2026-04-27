@@ -191,12 +191,10 @@
   border: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  font-size: 12px;
-  font-weight: 600;
   border-radius: 6px;
-  min-width: 24px;
+  min-width: 36px;
   height: 24px;
-  padding: 0 6px;
+  padding: 0 8px;
 
   &:hover {
     background-color: var(--background-neutral-secondary);
@@ -206,4 +204,11 @@
 .lineStyleButtonSelected {
   background-color: var(--background-neutral-secondary);
   border-color: var(--text-neutral-primary);
+}
+
+.linePreview {
+  display: inline-block;
+  width: 16px;
+  border-top-color: currentColor;
+  border-top-style: solid;
 }
