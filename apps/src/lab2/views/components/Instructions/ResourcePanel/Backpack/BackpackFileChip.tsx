@@ -15,6 +15,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
   handleSaveDuplicateFile,
@@ -55,6 +56,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   setActionInProgress,
   isSecondaryBackpack,
   onImageFlagged,
+  addFileTooltipText = 'Add to project',
+  addFileHandler,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -83,9 +86,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     } else if (!isFileSupported) {
       return 'File type not supported in this project';
     } else {
-      return 'Add to project';
+      return addFileTooltipText;
     }
-  }, [disableActions, inReadOnly, isFileSupported]);
+  }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
@@ -103,48 +106,52 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   const handleAdd = async (isSecondaryBackpack?: boolean) => {
     setActionInProgress(true);
-    const {isSupportFileName, newFileName} = validateFileName(fileName);
-    if (isSupportFileName) {
-      await handleSaveSupportFile(
-        dialogControl,
-        backpackApi,
-        channelId,
-        addAlert,
-        saveFileToProject,
-        createNewProjectFile,
-        findIdForFileName,
-        fileName,
-        newFileName
-      );
-    } else if (newFileName !== fileName) {
-      await handleSaveDuplicateFile(
-        dialogControl,
-        backpackApi,
-        channelId,
-        addAlert,
-        saveFileToProject,
-        createNewProjectFile,
-        findIdForFileName,
-        fileName,
-        newFileName,
-        onImageFlagged,
-        isSecondaryBackpack
-      );
+    if (addFileHandler) {
+      onClickAddFile(backpackApi, fileName, addAlert, addFileHandler);
     } else {
-      // Fetch backpack file content and import new file to project - not a duplicate file name.
-      await fetchAndSaveFile({
-        successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
-        backpackApi,
-        channelId,
-        addAlert,
-        saveFile: saveFileToProject,
-        createNewFile: createNewProjectFile,
-        findIdForFileName,
-        selectedFileName: fileName,
-        newFileName: fileName,
-        onImageFlagged,
-        isSecondaryBackpack,
-      });
+      const {isSupportFileName, newFileName} = validateFileName(fileName);
+      if (isSupportFileName) {
+        await handleSaveSupportFile(
+          dialogControl,
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFileToProject,
+          createNewProjectFile,
+          findIdForFileName,
+          fileName,
+          newFileName
+        );
+      } else if (newFileName !== fileName) {
+        await handleSaveDuplicateFile(
+          dialogControl,
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFileToProject,
+          createNewProjectFile,
+          findIdForFileName,
+          fileName,
+          newFileName,
+          onImageFlagged,
+          isSecondaryBackpack
+        );
+      } else {
+        // Fetch backpack file content and import new file to project - not a duplicate file name.
+        await fetchAndSaveFile({
+          successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFile: saveFileToProject,
+          createNewFile: createNewProjectFile,
+          findIdForFileName,
+          selectedFileName: fileName,
+          newFileName: fileName,
+          onImageFlagged,
+          isSecondaryBackpack,
+        });
+      }
     }
     setActionInProgress(false);
   };

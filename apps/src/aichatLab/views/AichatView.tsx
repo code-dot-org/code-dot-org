@@ -21,7 +21,7 @@ import {
   updateAiCustomization,
   initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
-import {AssetSource, ChatAsset, ModelParameters} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace, {
@@ -305,41 +305,37 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const backpackProps: BackpackProps = useMemo(() => {
     return {
+      addFileText: 'Add to chat',
+      addFileHandler: async (fileName, getFile, notifySuccess, notifyError) => {
+        const {file, flagged} = await getFile();
+        if (flagged) {
+          notifyError(
+            `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
+          );
+          return;
+        }
+        // Skip Chat Workspace's moderation since Backpack has already moderated the file.
+        chatWorkspaceRef.current?.addFiles([file], /* skipModeration */ true);
+        notifySuccess(
+          'new',
+          `${fileName} has been added to your chat message.`
+        );
+      },
       validateFileName: (fileName: string) => ({
         newFileName: fileName,
         isSupportFileName: false,
       }),
-      // no-op; we're always importing backpack files as new files.
+      // no-ops since we're using the addFileHandler.
       saveFileToProject: () => {},
-      createNewProjectFile: (
-        _fileName: string,
-        _contents: string,
-        url?: string
-      ) => {
-        const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
-        if (!url) {
-          metricsReporter.logWarning(
-            'Missing URL for imported backpack file. Cannot add to AI chat.'
-          );
-          return;
-        }
-        const filename = url.split('/').pop();
-        if (!filename) {
-          metricsReporter.logWarning(
-            'Could not parse backpack filename from URL. Cannot add to AI chat.'
-          );
-          return;
-        }
-        const asset: ChatAsset = {filename, source: AssetSource.PROJECT};
-        chatWorkspaceRef.current?.addAssets([asset]);
-      },
-      // no-op; we're always importing backpack files as new files.
+      createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
-      supportedFileTypes: getAllowedFileTypes(
-        modelParameters.selectedModelId
-      ).map(f => f.split('.').pop() || ''),
+      supportedFileTypes: levelAichatSettings?.multimodalEnabled
+        ? getAllowedFileTypes(modelParameters.selectedModelId).map(
+            f => f.split('.').pop() || ''
+          )
+        : [],
     };
-  }, [modelParameters.selectedModelId]);
+  }, [modelParameters.selectedModelId, levelAichatSettings?.multimodalEnabled]);
 
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;

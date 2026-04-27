@@ -17,10 +17,17 @@ import {sendAnalytics} from './sendAnalytics';
 
 export const uploadFiles = createAppAsyncThunk<
   void,
-  {files: File[]; buildAssetUrl: (asset: ChatAsset) => string}
+  {
+    files: File[];
+    buildAssetUrl: (asset: ChatAsset) => string;
+    skipModeration?: boolean;
+  }
 >(
   'aichat/uploadFiles',
-  async ({files, buildAssetUrl}, {dispatch, getState}) => {
+  async (
+    {files, buildAssetUrl, skipModeration = false},
+    {dispatch, getState}
+  ) => {
     const numStagedFiles = getState().aichat.stagedFiles.length;
     const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
 
@@ -65,8 +72,8 @@ export const uploadFiles = createAppAsyncThunk<
 
       if (file.name.endsWith('.pdf')) {
         fileCountPdf += 1;
-      } else {
-        // Moderate images before uploading.
+      } else if (!skipModeration) {
+        // Moderate images before uploading, unless directed to skip.
         const moderationResult = await moderateImage(file, 'aichat', {});
         if (moderationResult === 'flagged') {
           imageFlaggedCount += 1;
