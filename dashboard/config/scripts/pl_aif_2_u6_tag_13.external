@@ -3,75 +3,106 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Display Pipeline
+# TAG Protocol for Meaningful Feedback
 
-#### Before users ever see data on the screen, an app has to make a series of decisions about what data to use, how to process it, and how to display it.
-
-
- <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>pipeline</strong> is a series of steps that you run in order, where the output from one step becomes the input to the next. </p> </div>
+#### When teams are ready for feedback (typically around Day 8 / Milestone 4), use the TAG protocol to guide structured, meaningful peer feedback.
 
 
-#### A pipeline starts with raw data, reshapes it for a purpose, and then displays the result to the user.
+#### TAG helps students move beyond surface-level comments and engage in feedback that improves both the product and their thinking.
 
 ---
 
-## How Loops Fit into the Display Pipeline
-
-#### A display pipeline describes how data moves from storage to the screen.
-#### Loops are what allow the program to process each piece of data systematically at every stage.
-
-
-## Steps
+## How TAG Works
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
-  
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/31f147dec60e5cb84e6be34638f4dc3d-image-1768927433873.png" alt="file folder emoji" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-        <p style = "font-size: 18pt";> <b>1. Read: Decide What Data Your App Will Use </b></p>
-            <p style = "font-size: 14pt";>            
-           Data is stored in an array or list. <br> A loop is prepared to move through the array one element at a time.
- <br><br>
-<i><b>Loop’s role:</b> Enables access to each item in the dataset.</i>
-
-</p>
-        </div>
+  <!-- TELL -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/b7b707ce75276f775ec583954ec65bf4-image-1776956980531.png" alt="icon for stength with fist" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>1. Tell: Identify Strengths</b></p>
+      <p style="font-size: 12pt;">
+        Students highlight something that is working well in the app.
+        <br><br>
+        This reinforces strong ideas and helps teams recognize what to keep.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Build confidence and clarity around what is already effective.</i></p>
     </div>
+  </div>
 
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/c58c4f780a34e12135ae97962267c13d-image-1768927841008.png" alt="gear emoji" style="width: 20%; max-width: 120px; height: auto;border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-        <p style = "font-size: 18pt";> <b>2. Transform: Select What Fits Your Purpose
- </b></p>
-            <p style = "font-size: 14pt";>            
-           A loop goes through the array and checks each element.<br>
-Conditions (if statements) inside the loop decide:</p>
-<ul>
-<li style = "font-size: 14pt";>Which items to keep</li>
-<li style = "font-size: 14pt";>Which items to skip</li>
-<li style = "font-size: 14pt";>How values should be modified</li>
-</ul>
-<br>
-<p style = "font-size: 14pt";><i><b>Loop's role:</b></i> Applies the same rules consistently to every item.</p>
+  <!-- ASK -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/6b33a4aff94907563a6ed75218fae485-image-1776957078956.png" alt="Icon with quesiton marks" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>2. Ask: Clarify Understanding</b></p>
+      <p style="font-size: 12pt;">
+        Students ask questions about how the app works or why decisions were made.
+        <br><br>
+        This helps uncover confusion or gaps in communication.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Surface misunderstandings and prompt deeper thinking.</i></p>
+    </div>
+  </div>
+
+  <!-- GIVE -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/948548ff076e40fbdaec850ae53eb3e9-image-1776957143962.png" alt="lightbulb with suggestions icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>3. Give: Suggest Improvements</b></p>
+      <p style="font-size: 12pt;">
+        Students offer a concrete suggestion to improve the app.
+        <br><br>
+        Suggestions should be specific and actionable.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Move the project forward with clear next steps.</i></p>
+    </div>
+  </div>
+
 </div>
-    </div>
 
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/792cd534bf599b4696528668350410eb-image-1768927535521.png" alt="computer monitor emoji" style="width: 20%; max-width: 120px; height: auto;border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-        <p style = "font-size: 18pt";> <b>3. Render: Display the Data to the User</b></p>
-            <p style = "font-size: 14pt";>            
-          The loop uses the transformed data to update the screen.<br>
-Each iteration adds text, images, or visual elements to the view.<br>
-Formatting and feedback (colors, messages, layout) happen here.
+---
 
-</p>
-<p style = "font-size: 14pt";><i><b>Loop's role:</b></i> Turns processed data into visible output, one item at a time.</p>
-        </div>
-    </div>
+## When to Use TAG
 
+#### Students do <b>not</b> need a finished app to get feedback.
+
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 85%;">
+  <p style="font-size: 14pt;">
+    As soon as a team has <b>one working interaction</b>, they are ready for feedback.
+    <br><br>
+    Early feedback leads to better decisions and prevents wasted work later.
+  </p>
+</div>
+
+---
+
+## Keep TAG Flexible
+
+#### TAG does not need to be a rigid, whole-class activity.
+
+- #### Teams can give feedback to a neighboring group  
+- #### You can use TAG during teacher spot-checks  
+- #### Students can adapt TAG when reviewing AI-generated feedback  
+
+#### The goal is consistent, meaningful feedback, not a specific format.
+
+---
+
+## Feedback is a Decision, Not a To-Do List
+
+<div style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 85%;">
+  <p style="font-size: 14pt;">
+    Strong teams treat feedback as <b>information for decision-making</b>, not a checklist.
+  </p>
+</div>
+
+#### Coach students to:
+
+- #### Act on feedback that improves their goals  
+- #### Defer feedback that isn’t immediately useful  
+- #### Reject feedback that doesn’t align with their design  
+
+#### When reviewing work, look for evidence that teams explain <b>why</b> they accepted or rejected feedback in their Project Guide.
 
 ---
 
@@ -80,17 +111,13 @@ Formatting and feedback (colors, messages, layout) happen here.
     font-size: 18px; 
     background-color: #F5F7F8; 
     padding: 10px; 
-    border-left: 5px solid #8148B2; 
-    border-right: 5px solid #8148B2;
+    border-left: 5px solid #048899; 
+    border-right: 5px solid #048899;
     display: inline-block;
   ">
-    <i>A display pipeline is the plan for moving data, and loops are the mechanism that carry each piece of data through that plan from start to finish.</i>
+    <i>TAG turns feedback into a structured conversation that helps teams improve their work and make better decisions.</i>
   </p>
 </div>
 
-
-
-
-
-
+![]()
 MARKDOWN

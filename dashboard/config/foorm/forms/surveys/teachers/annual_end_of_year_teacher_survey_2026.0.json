@@ -13,15 +13,51 @@
         },
         {
           "type": "radiogroup",
-          "name": "survey_variable_name",
-          "defaultValueExpression": "{survey_variable}",
+          "name": "survey_variable_name_aif",
+          "defaultValueExpression": "{variable_aif}",
           "startWithNewLine": false,
-          "readOnly": false,
-          "visible": true,
+          "readOnly": true,
+          "visible": false,
           "choices": [
             {
               "value": "aif",
               "text": "aif"
+            },
+            {
+              "value": "other",
+              "text": "other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "survey_variable_name_csp",
+          "defaultValueExpression": "{variable_csp}",
+          "startWithNewLine": false,
+          "readOnly": true,
+          "visible": false,
+          "choices": [
+            {
+              "value": "csp",
+              "text": "csp"
+            },
+            {
+              "value": "other",
+              "text": "other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "survey_variable_name_csa",
+          "defaultValueExpression": "{variable_csa}",
+          "startWithNewLine": false,
+          "readOnly": true,
+          "visible": false,
+          "choices": [
+            {
+              "value": "csa",
+              "text": "csa"
             },
             {
               "value": "other",
@@ -226,7 +262,7 @@
         {
           "type": "html",
           "name": "section_pd_experience",
-          "html": "<h2>Computer Science Professional Learning Experience</h2>"
+          "html": "<h2>Computer Science & AI Professional Learning Experience</h2>"
         },
         {
           "type": "checkbox",
@@ -280,7 +316,7 @@
           "choices": [
             {
               "value": "full_cs_course_cdo",
-              "text": "Teaching a full computer science course using Code.org's curriculum and activities (e.g. CS Fundamentals / CS Discoveries / CS Principles / Computer Science A)"
+              "text": "Teaching a full computer science course using Code.org's curriculum and activities (e.g. CS Fundamentals / CS Discoveries / CS Principles / Computer Science A / AI Foundations)"
             },
             {
               "value": "some_units",
@@ -305,6 +341,12 @@
           "name": "cdo_goal_other_comment",
           "visibleIf": "{cdo_goal} = 'other'",
           "title": "Please share what is your main goal for using Code.org in your classroom?"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/annual_survey",
+          "library_version": 0,
+          "name": "cdo_implementation_panel"
         },
         {
           "type": "radiogroup",
@@ -637,6 +679,18 @@
               "text": "None"
             }
           ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/annual_survey",
+          "library_version": 0,
+          "name": "ap_high_school_courses_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/annual_survey",
+          "library_version": 0,
+          "name": "csa_panel"
         }
       ]
     },
@@ -651,12 +705,12 @@
         {
           "type": "html",
           "name": "section2_using_cdo_description",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2024-25 school year.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2025-26 school year.</span></p>\n"
         },
         {
           "type": "rating",
           "name": "teach_cs_cdo_easy",
-          "title": "How easy is it to teach computer science using Code.org?",
+          "title": "How easy is it to teach computer science and/or AI using Code.org?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Very Hard",
@@ -665,7 +719,7 @@
         {
           "type": "rating",
           "name": "cdo_effective",
-          "title": "Is teaching with Code.org effective for your students to learn computer science?",
+          "title": "Is teaching with Code.org effective for your students to learn computer science and/or AI?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Effective At All",
@@ -674,7 +728,7 @@
         {
           "type": "rating",
           "name": "cdo_students_engaged",
-          "title": "Are your students engaged when using Code.org to learn computer science?",
+          "title": "Are your students engaged when using Code.org?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Engaged At All",
@@ -701,11 +755,11 @@
         {
           "type": "rating",
           "name": "cdo_students_belonging",
-          "title": "When using Code.org, do your students feel they belong in computer science (CS)?",
+          "title": "When using Code.org, do your students feel they belong in computer science and/or AI (CS/AI)?",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Students Don't Feel They Belong in CS",
-          "maxRateDescription": "Students Feel They Belong in CS"
+          "minRateDescription": "Students Don't Feel They Belong in CS/AI",
+          "maxRateDescription": "Students Feel They Belong in CS/AI"
         },
         {
           "type": "html",
@@ -769,7 +823,7 @@
     },
     {
       "name": "page_aif",
-      "visibleIf": "{survey_variable_name}='aif'",
+      "visibleIf": "{survey_variable_name_aif}='aif'",
       "elements": [
         {
           "type": "library_item",
@@ -981,6 +1035,10 @@
             {
               "value": "generative_ai_tools",
               "text": "Building and using generative AI tools, like chatbots, in the classroom"
+            },
+            {
+              "value": "ai_agentic",
+              "text": "Working with AI agents"
             },
             {
               "value": "ai_how_works_in_depth",

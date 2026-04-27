@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   Controls,
+  type IsValidConnection,
   MarkerType,
   ReactFlow,
   useEdgesState,
@@ -31,11 +32,18 @@ import {
 } from '../context';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
+import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
+import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import {ReactFlowSketchLabSources, SketchLabNode} from '../types';
+import {
+  AddNodeRequest,
+  ReactFlowSketchLabSources,
+  SketchLabNode,
+} from '../types';
+import {canCreateConnection} from '../utils/connectionRules';
 
 import Toolbar from './Toolbar';
 
@@ -45,11 +53,14 @@ const NODE_TYPES = {
   shape: ShapeNode,
   image: ImageNode,
   text: TextNode,
+  lineAnchor: LineAnchorNode,
 };
 
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
+const LINE_DEFAULT_LENGTH_PX = 220;
+const LINE_ANCHOR_SIZE_PX = 10;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -108,9 +119,8 @@ export default function ReactFlowCanvas({
     [openNodeToolbarId, trapFocus, openNodeToolbar, closeNodeToolbar]
   );
 
-  const {screenToFlowPosition} = useReactFlow();
+  const {screenToFlowPosition, getNode} = useReactFlow();
   const addedNodeCountRef = useRef(0);
-
   const {
     tabOrder,
     activeEntry,
@@ -131,12 +141,20 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
+      edges,
       tabOrder,
       focusEntry,
+      setNodes,
       setEdges,
       readOnly,
       openNodeToolbar,
     });
+
+  const {handleEdgeMouseDown} = useLineEdgeDrag({
+    readOnly,
+    setNodes,
+    screenToFlowPosition,
+  });
 
   // Close the node toolbar when focus moves off the owning node: to a
   // different node/edge, or out of the canvas entirely. Skips clearing
@@ -222,10 +240,30 @@ export default function ReactFlowCanvas({
       }),
       // TODO: Add meaningful ariaLabel to edges using node labels instead of
       // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
-      displayEdges: edges.map(edge => ({
-        ...edge,
-        ...applyDisplayProps(edge, 'edge'),
-      })),
+      displayEdges: edges.map(edge => {
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const isLineEdge =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+        const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
+        return {
+          ...edge,
+          selected,
+          className: isLineEdge ? styles.lineEdge : undefined,
+          domAttributes: {
+            ...domAttributes,
+            ...(isLineEdge && !readOnly
+              ? {
+                  onMouseDown: (event: React.MouseEvent) => {
+                    focusEntry({type: 'edge', id: edge.id});
+                    handleEdgeMouseDown(event, edge);
+                  },
+                }
+              : {}),
+          },
+        };
+      }),
     };
   }, [
     nodes,
@@ -237,6 +275,8 @@ export default function ReactFlowCanvas({
     lastFocusedEntry?.id,
     connectingFrom,
     readOnly,
+    focusEntry,
+    handleEdgeMouseDown,
   ]);
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -259,13 +299,32 @@ export default function ReactFlowCanvas({
 
   const onConnect: OnConnect = useCallback(
     connection =>
-      setEdges(currentEdges =>
-        addEdge(
+      setEdges(currentEdges => {
+        const {source, target} = connection;
+        if (!source || !target) {
+          return currentEdges;
+        }
+        if (!canCreateConnection(source, target, nodes)) {
+          return currentEdges;
+        }
+
+        return addEdge(
           {...connection, markerEnd: {type: MarkerType.ArrowClosed}},
           currentEdges
-        )
-      ),
-    [setEdges]
+        );
+      }),
+    [nodes, setEdges]
+  );
+
+  const isValidConnection: IsValidConnection = useCallback(
+    connectionOrEdge => {
+      const {source, target} = connectionOrEdge;
+      if (!source || !target) {
+        return false;
+      }
+      return canCreateConnection(source, target, nodes);
+    },
+    [nodes]
   );
 
   const handleMoveEnd = useCallback(
@@ -275,10 +334,99 @@ export default function ReactFlowCanvas({
     []
   );
 
+  const handleEdgesDelete = useCallback(
+    (deletedEdges: SketchlabReactFlowEdge[]) => {
+      setNodes(currentNodes => {
+        const lineAnchorIdsToDelete = new Set<string>();
+
+        deletedEdges.forEach(edge => {
+          const sourceNode = getNode(edge.source);
+          const targetNode = getNode(edge.target);
+          if (
+            sourceNode?.type === 'lineAnchor' &&
+            targetNode?.type === 'lineAnchor'
+          ) {
+            lineAnchorIdsToDelete.add(edge.source);
+            lineAnchorIdsToDelete.add(edge.target);
+          }
+        });
+
+        if (lineAnchorIdsToDelete.size === 0) {
+          return currentNodes;
+        }
+
+        return currentNodes.filter(node => !lineAnchorIdsToDelete.has(node.id));
+      });
+    },
+    [getNode, setNodes]
+  );
+
   const handleAddNode = useCallback(
-    ({type, data}: Pick<SketchLabNode, 'type' | 'data'>) => {
+    (request: AddNodeRequest) => {
+      const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
+
+      const centerPosition = screenToFlowPosition({
+        x: window.innerWidth / 2 + stagger,
+        y: window.innerHeight / 2 + stagger,
+      });
+
+      // For lines, we create two hidden nodes and connecting anchors between them.
+      if (type === 'line') {
+        const sourceAnchorId = createUuid();
+        const targetAnchorId = createUuid();
+        const lineEdgeId = createUuid();
+
+        const sourceAnchor: SketchlabReactFlowNode = {
+          id: sourceAnchorId,
+          type: 'lineAnchor',
+          position: {
+            x:
+              centerPosition.x -
+              LINE_DEFAULT_LENGTH_PX / 2 -
+              LINE_ANCHOR_SIZE_PX,
+            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+          },
+          data: {lineAnchorRole: 'source'},
+          style: {
+            width: LINE_ANCHOR_SIZE_PX,
+            height: LINE_ANCHOR_SIZE_PX,
+          },
+        };
+
+        const targetAnchor: SketchlabReactFlowNode = {
+          id: targetAnchorId,
+          type: 'lineAnchor',
+          position: {
+            x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
+            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+          },
+          data: {lineAnchorRole: 'target'},
+          style: {
+            width: LINE_ANCHOR_SIZE_PX,
+            height: LINE_ANCHOR_SIZE_PX,
+          },
+        };
+
+        const newLine: SketchlabReactFlowEdge = {
+          id: lineEdgeId,
+          source: sourceAnchorId,
+          target: targetAnchorId,
+          type: 'straight',
+        };
+
+        setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
+        setEdges(currentEdges => [...currentEdges, newLine]);
+
+        // Move focus to the new line after React Flow renders it.
+        (document.activeElement as HTMLElement)?.blur();
+        setTimeout(
+          () => focusEntry({type: 'edge', id: lineEdgeId}),
+          FOCUS_DELAY_MS
+        );
+        return;
+      }
 
       const position = screenToFlowPosition({
         x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
@@ -292,7 +440,7 @@ export default function ReactFlowCanvas({
       const newNode = {
         id: newNodeId,
         type,
-        data,
+        data: request.data,
         position,
         ...(type !== 'text' && {
           style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
@@ -308,7 +456,7 @@ export default function ReactFlowCanvas({
         FOCUS_DELAY_MS
       );
     },
-    [focusEntry, screenToFlowPosition, setNodes]
+    [focusEntry, screenToFlowPosition, setNodes, setEdges]
   );
 
   const handleNodeClick = useCallback(
@@ -346,7 +494,10 @@ export default function ReactFlowCanvas({
             edges={displayEdges}
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
+            onEdgesDelete={handleEdgesDelete}
+            onNodeClick={handleNodeClick}
             onConnect={onConnect}
+            isValidConnection={isValidConnection}
             nodeTypes={NODE_TYPES}
             onMoveEnd={handleMoveEnd}
             defaultViewport={initialViewport}
@@ -359,7 +510,6 @@ export default function ReactFlowCanvas({
             elementsSelectable={!readOnly}
             nodesFocusable={true}
             edgesFocusable={true}
-            onNodeClick={handleNodeClick}
             // Even though we manage tab order, we keep React Flow's keyboard A11y on because
             // it manages things like moving nodes with arrow keys.
             disableKeyboardA11y={false}
