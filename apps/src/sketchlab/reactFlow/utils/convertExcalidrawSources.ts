@@ -131,14 +131,20 @@ export function convertExcalidrawToReactFlow(
 
     if (el.type === 'image') {
       const fileId = el.fileId;
-      const url = fileId ? externalFiles?.[fileId]?.url : undefined;
-      if (!url) continue;
+      if (!fileId) continue;
+      // Prefer the S3 url; fall back to the embedded base64 dataURL.
+      // Level-authored start_sources / exemplar_sources never go
+      // through the runtime S3 upload, so externalFiles is empty
+      // there and dataURL is the only image we have.
+      const src =
+        externalFiles?.[fileId]?.url ?? source.files?.[fileId]?.dataURL;
+      if (!src) continue;
       const node: SketchlabReactFlowNode = {
         id: el.id,
         type: 'image',
         position: {x: el.x, y: el.y},
         style: {width: el.width, height: el.height},
-        data: {src: url, altText: ''},
+        data: {src, altText: ''},
       };
       nodes.push(node);
       emittedNodeById.set(el.id, node);

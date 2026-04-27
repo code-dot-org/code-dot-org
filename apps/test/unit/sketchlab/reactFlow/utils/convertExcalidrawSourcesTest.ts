@@ -173,7 +173,29 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({src: 'https://example.com/f1.png', altText: ''});
   });
 
-  it('drops images with no externalFiles entry', () => {
+  it('falls back to the embedded dataURL when externalFiles has no entry', () => {
+    const source: ExcalidrawSourceWithExternalFiles = {
+      elements: [
+        el({type: 'image', id: 'img1', fileId: 'f1' as never, status: 'saved', scale: [1, 1]}),
+      ],
+      files: {
+        f1: {
+          id: 'f1',
+          mimeType: 'image/png',
+          dataURL: 'data:image/png;base64,AAAA',
+          created: 0,
+        },
+      } as never,
+    };
+    const {nodes} = convertExcalidrawToReactFlow(source);
+    expect(nodes).toHaveLength(1);
+    expect(nodes[0].data).toEqual({
+      src: 'data:image/png;base64,AAAA',
+      altText: '',
+    });
+  });
+
+  it('drops images with neither an externalFiles url nor a dataURL', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
         el({type: 'image', id: 'img1', fileId: 'missing' as never, status: 'saved', scale: [1, 1]}),
