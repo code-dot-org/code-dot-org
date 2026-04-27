@@ -202,11 +202,7 @@ const schemaWithEmbeds = {
     ],
   },
   code: function ({children, ...props}) {
-    return (
-      <code {...props} data-notranslate="true">
-        {localization.translate(children)}
-      </code>
-    );
+    return <code {...props}>{localization.translate(children)}</code>;
   },
 };
 
