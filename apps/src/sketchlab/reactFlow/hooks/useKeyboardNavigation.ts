@@ -11,10 +11,8 @@ import {
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
-import {
-  canCreateConnection,
-  isLineAnchorNodeId,
-} from '../utils/connectionRules';
+import {canCreateConnection} from '../utils/connectionRules';
+import {isLineEdge} from '../utils/lineEdges';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -178,11 +176,7 @@ export function useKeyboardNavigation({
 
         if (deltaX || deltaY) {
           const focusedEdge = getEdge(focusedEdgeId);
-          if (
-            focusedEdge &&
-            isLineAnchorNodeId(focusedEdge.source, nodes) &&
-            isLineAnchorNodeId(focusedEdge.target, nodes)
-          ) {
+          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
             event.preventDefault();
             event.stopPropagation();
             setNodes(currentNodes =>
@@ -320,6 +314,18 @@ export function useKeyboardNavigation({
         setConnectingFrom(null);
         announce('Connect mode cancelled.');
         return;
+      }
+
+      // Enter on a focused line edge (outside connect mode) opens the
+      // line toolbar and traps focus within it for keyboard users.
+      if (event.key === 'Enter' && !readOnly && focusedEdgeId) {
+        const focusedEdge = getEdge(focusedEdgeId);
+        if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
+          event.preventDefault();
+          event.stopPropagation();
+          openToolbar({type: 'edge', id: focusedEdgeId}, {trapFocus: true});
+          return;
+        }
       }
 
       // Enter on a focused node (outside connect mode) enters edit mode.
