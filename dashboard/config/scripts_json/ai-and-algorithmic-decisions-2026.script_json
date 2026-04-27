@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-24 08:32:52 UTC",
+    "serialized_at": "2026-04-25 20:37:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -742,21 +742,8 @@
       }
     },
     {
-      "key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6",
-      "position": 1,
-      "properties": {
-        "name": "Revised Level Progression"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6",
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026"
-      }
-    },
-    {
       "key": "6fcf9bc2-3cde-4870-aab4-e12c5b315dd5",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 45,
         "name": "Day 1"
@@ -770,7 +757,7 @@
     },
     {
       "key": "fa478d88-f0d4-45af-9e1b-785af3f759a6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 45,
         "name": "Day 2"
@@ -784,7 +771,7 @@
     },
     {
       "key": "ccf3baea-7266-4176-a45d-e848e0f8d155",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 3"
@@ -798,7 +785,7 @@
     },
     {
       "key": "76bdbe1a-3cf7-4431-9576-e2bb7d5cd5d1",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 45,
         "name": "Day 4"
@@ -812,7 +799,7 @@
     },
     {
       "key": "852c9cb3-d50a-4faf-a852-643a72231b35",
-      "position": 6,
+      "position": 5,
       "properties": {
         "duration": 45,
         "name": "Day 5"
@@ -2025,7 +2012,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will identify the key pieces of information needed to determine an outcome and recognize that the same process can be reused with different inputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to play the pizza guessing game. One student selects a pizza, and the other asks YES/NO questions to identify it. Students should switch roles after each round.",
-        "duration": "10",
+        "duration": "5",
         "name": "Guess the Pizza",
         "tips": [
           {
@@ -2040,8 +2027,18 @@
       }
     },
     {
-      "key": "9ba8c0f1-f8a8-4869-b16b-f4f3934f28ac",
+      "key": "2e4bb90d-584b-4328-bbd2-4448301ca278",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e4bb90d-584b-4328-bbd2-4448301ca278",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "9ba8c0f1-f8a8-4869-b16b-f4f3934f28ac",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- Which questions helped you narrow down the options fastest?\n- How could you reuse those same questions to find a different pizza?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify which questions most effectively narrow down the options and recognize that the same set of questions can be reused with different answers to produce different outcomes.\n"
       },
@@ -2052,7 +2049,7 @@
     },
     {
       "key": "52457ed3-f58a-4047-bf83-72a36d477308",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "The questions you were asking are like categories (like \"topping\" or \"quantity\"), and the answers (like \"mushroom\" or \"2\") are the specific values. In programming, those categories become parameters, and the specific values are called arguments.",
         "remarks": true
@@ -2064,7 +2061,7 @@
     },
     {
       "key": "e22fdb07-ccdc-4a99-9e57-5aac5d747063",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define parameter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define argument."
       },
@@ -2075,7 +2072,7 @@
     },
     {
       "key": "ea506632-3276-4e31-9179-9be8f4c7e161",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students will complete Lesson 6, Levels 1 through 3.\n- Level 1: Explore a shopping app that doesn’t use a function with parameters and use their Unit Guide to note what inputs are needed.\n- Level 2: Plan and use AI to generate a function that updates the page based on an input (parameter)\n- Level 3: Using the AI-generated function as a model, create an additional parameterized function that updates the page",
         "duration": "10",
@@ -2089,8 +2086,9 @@
     },
     {
       "key": "e6b734bf-774d-488e-bc75-d0ff39193a47",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will use a table to identify actions, inputs (parameters), and outputs and connect them to how a function is defined, used, and called in a program.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What user actions, inputs, and output might a shopping app have?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify the ways in which the user interacts with the shopping app such as selecting products and adding them to the cart. They recognize that there are many possible inputs for a function, such as size, color, and price. Finally, they suggest output that includes those inputs. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show possible user actions, inputs for a function, and a possible output. "
       },
       "seeding_key": {
         "activity_section.key": "e6b734bf-774d-488e-bc75-d0ff39193a47",
@@ -2099,7 +2097,7 @@
     },
     {
       "key": "46c3fb9c-ab93-4728-ac7e-27fae467b2c1",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to show how an example of how to define a function, use a function’s parameters, and call the function in the program.",
         "tips": [
@@ -2115,8 +2113,18 @@
       }
     },
     {
+      "key": "dd3f6584-a9a8-47a7-a8ef-e97347b30ed9",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dd3f6584-a9a8-47a7-a8ef-e97347b30ed9",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
       "key": "cf92794f-bd7e-4826-9d1e-84efe142a25d",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain that quantity and topping are parameters.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the purpose of the `quantity` parameter. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the parameters are used in the function to create the output. Point out which parts come from the inputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the parameters are used in the function to create the output. Point out which parts stay the same.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the function is called when the button is clicked, and point out how the values passed in become the inputs for the function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the purpose of the `topping` parameter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show how the function is called when the button is clicked and point out how the arguments are connected to the parameters from the function definition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out how the values passed in become the inputs for the function.",
         "tips": [
@@ -2132,8 +2140,18 @@
       }
     },
     {
+      "key": "78484e1e-bad2-4334-8c37-fede5c2af71d",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78484e1e-bad2-4334-8c37-fede5c2af71d",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
       "key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4–6. \n- Level 4: Students will first plan a function by identifying which user interactions should change the output. \n- Level 5: Students should use their Sketch as context in AI Tutor and build a function that changes what is shown on the page based on different inputs. \n- Level 6: Student explain what their function does, what input it takes, and how that input changes the result.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students as they identify inputs, generate their function, and test different values. \n\nAsk:\n- “What inputs does your function take?”\n- “How do those inputs change the result on the page?”\n- “Where are the inputs used in the function?”\n- “Where is the function called?”",
         "duration": "20",
@@ -2152,7 +2170,7 @@
     },
     {
       "key": "a2de9d97-da66-472d-9a1d-3e8286ca13e4",
-      "position": 10,
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -2162,7 +2180,7 @@
     },
     {
       "key": "40beb2c2-16b8-4caf-827a-6b09e1a97dcf",
-      "position": 11,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\nHow did parameters make your function more flexible?\nWhere did AI help or confuse you in the process?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief discussion about working with parameters. Prompt students to share specific examples of how their functions that they created were made more reusable and flexible by adding one or more parameters. Then ask students to share their experiences using the AI tool for coding assistance. Encourage them to discuss both the benefits (e.g., faster code generation, debugging hints) and the drawbacks (e.g., potential for incorrect suggestions, difficulty understanding the generated code). ",
         "tips": [
@@ -2174,6 +2192,16 @@
       },
       "seeding_key": {
         "activity_section.key": "40beb2c2-16b8-4caf-827a-6b09e1a97dcf",
+        "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
+      }
+    },
+    {
+      "key": "786a14de-22e2-4674-8ba6-edbddcad11cb",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "786a14de-22e2-4674-8ba6-edbddcad11cb",
         "lesson_activity.key": "3531ff01-c9bb-4671-9b96-667b323f7bce"
       }
     },
@@ -2853,83 +2881,6 @@
       }
     },
     {
-      "key": "d3126695-87b2-4404-b600-e708ab25872a",
-      "position": 1,
-      "properties": {
-        "name": "Level 1 - Plan Your App Idea"
-      },
-      "seeding_key": {
-        "activity_section.key": "d3126695-87b2-4404-b600-e708ab25872a",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "01968177-18c3-4b74-b987-1ddf0ece7ca8",
-      "position": 2,
-      "properties": {
-        "name": "Level 2 - Design Your App Layout"
-      },
-      "seeding_key": {
-        "activity_section.key": "01968177-18c3-4b74-b987-1ddf0ece7ca8",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "87b0c39d-c9db-49ec-b291-c1200b69f615",
-      "position": 3,
-      "properties": {
-        "name": "Level 3 - Plan Your App Logic"
-      },
-      "seeding_key": {
-        "activity_section.key": "87b0c39d-c9db-49ec-b291-c1200b69f615",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "0f6d6efe-a9c0-4a03-a1a2-1766be03adee",
-      "position": 4,
-      "properties": {
-        "name": "Level 4 - Reflect on Your Idea"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f6d6efe-a9c0-4a03-a1a2-1766be03adee",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58",
-      "position": 5,
-      "properties": {
-        "name": "Level 5 and 6 - Weblab Milestone 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "7f28f699-97c0-412c-baf8-b58f6d7d9455",
-      "position": 6,
-      "properties": {
-        "name": "Level 7-9 - Milestone 3"
-      },
-      "seeding_key": {
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
-      "key": "10d2031f-30fc-4176-9c81-40a53545410b",
-      "position": 7,
-      "properties": {
-        "name": "Level 10 and 11: Milestone 4"
-      },
-      "seeding_key": {
-        "activity_section.key": "10d2031f-30fc-4176-9c81-40a53545410b",
-        "lesson_activity.key": "0bb4ff66-9901-45e5-89e5-2727493f0ff6"
-      }
-    },
-    {
       "key": "837d709a-e5a4-4585-841a-5edcd5301983",
       "position": 1,
       "properties": {
@@ -2946,7 +2897,7 @@
       "key": "474b6a12-a5a5-46d2-a4a8-63866ed0f078",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Reactive Logic Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Reactive Logic Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Reactive Logic Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.\n",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -2972,42 +2923,15 @@
       }
     },
     {
-      "key": "086dd250-cef1-42d0-8cd8-ed84ad41d1e4",
+      "key": "33614ba6-634a-4b99-bb80-6063ba85dc2b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to highlight or note parts of the deliverables that feel most exciting or challenging. This helps you gauge engagement and plan support for different groups.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "086dd250-cef1-42d0-8cd8-ed84ad41d1e4",
-        "lesson_activity.key": "6fcf9bc2-3cde-4870-aab4-e12c5b315dd5"
-      }
-    },
-    {
-      "key": "3426799d-767b-4ab3-a83c-5bed378c0231",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3426799d-767b-4ab3-a83c-5bed378c0231",
-        "lesson_activity.key": "6fcf9bc2-3cde-4870-aab4-e12c5b315dd5"
-      }
-    },
-    {
-      "key": "33614ba6-634a-4b99-bb80-6063ba85dc2b",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Plan Your Interactive App. Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their logic and design.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “What type of interaction or outcome are you imagining for your app?”\n- “Which of these tools will help you move your idea forward right now?”\n- “How does your planned logic connect to the kind of experience you want your user to have?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to work through Levels 1 - 3 to begin Milestone 1: Plan Your Interactive App. Students will move through a sequence of levels to define their app idea, design their layout, and map how their app works.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore each level, ask guiding questions such as:\n- “What is the main interaction in your app?”\n- “Where does the user interact with your app, and what happens in response?”\n- “How does your flowchart represent what your app should do?”\n\nUse these check-ins to ensure students are connecting their idea, layout, and logic.",
         "progression_name": "Milestone 1",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to experiment with multiple tools as they develop their plan — for example, brainstorming with the Idea Bot before mapping logic in the Flowchart Bot or sketching layouts in Sketch Lab. Remind them that testing and refining their ideas here will save time later once they start coding.\n"
+            "markdown": "Encourage students to move quickly from idea to design to logic. These levels are meant to help them get a clear starting point—not to fully plan every detail."
           },
           {
             "type": "teachingTip",
@@ -3022,7 +2946,7 @@
     },
     {
       "key": "f7976ad4-c9b4-43a3-a96b-e2e0ea87d1b4",
-      "position": 7,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3032,11 +2956,12 @@
     },
     {
       "key": "69b48c23-9a73-425d-beec-0eaedd6fa599",
-      "position": 8,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to complete their reflection on Milestone 1. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to discuss and share these reflection questions with a thought partner. \n",
         "duration": "5",
         "name": "Wrap Up",
+        "progression_name": "Milestone 1 Reflection",
         "tips": [
           {
             "type": "teachingTip",
@@ -3066,7 +2991,7 @@
       "key": "01a86911-8e22-4e45-b50c-a78252320303",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2 to work on completing their planning and moving to drafting their app. Frame this transition as the point where their ideas become interactive. Encourage students to build one working piece before adding more complexity — professional developers also prototype small, testable pieces first. If students feel unsure where to start, remind them to revisit their flowchart and focus on building the first clear cause-and-effect moment from their logic plan.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- “Do your flowchart and wireframe clearly show what the user can do and what will happen?\n- “What’s the first part of your plan you’ll try to build today?”\n- “How will you know your first interaction is working correctly?”\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to begin building their app. This is the point where their ideas become interactive. Encourage students to build one working interaction first before adding more complexity. Emphasize that strong apps are built in small, testable pieces. If students feel unsure where to start, remind them to focus on the first clear cause-and-effect moment from their plan.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a working first interaction. Ask check-in questions like:\n- “What is the first interaction you’re building?”\n- “What should happen when the user interacts with your app?”\n- “How will you know your interaction is working correctly?”\n\nProvide quick support if students get stuck — encourage them to use AI Tutor to help debug and build before stepping in directly.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 2"
@@ -3080,7 +3005,7 @@
       "key": "c6bae210-dd8a-4270-9772-2b520a2c6637",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps. Encourage students to document these next steps clearly so they can pick up with them in the next class period.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to complete their reflection on Milestone 2. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students respond and discuss, listen for reflections that identify concrete next steps. Encourage students to document these next steps clearly so they can pick up with them in the next class period.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3112,15 +3037,9 @@
       "key": "4579f2b8-8633-4cca-abac-4c0b109b5179",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Reactive Logic Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Peer Feedback with TAG handout.",
         "duration": "35",
-        "name": "Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Point out that these milestones move from building to refining. Encourage students not to aim for perfection at first—just to get their layout functioning, then improve it through feedback and iteration.\n"
-          }
-        ]
+        "name": "Activity"
       },
       "seeding_key": {
         "activity_section.key": "4579f2b8-8633-4cca-abac-4c0b109b5179",
@@ -3128,21 +3047,10 @@
       }
     },
     {
-      "key": "43f26543-d7d6-4660-a72c-b73ac5016774",
+      "key": "c42355bb-a76a-4416-b3c2-fb1dd6dbd674",
       "position": 3,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "43f26543-d7d6-4660-a72c-b73ac5016774",
-        "lesson_activity.key": "ccf3baea-7266-4176-a45d-e848e0f8d155"
-      }
-    },
-    {
-      "key": "c42355bb-a76a-4416-b3c2-fb1dd6dbd674",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
-        "progression_name": "Milestone 3",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up and exchange apps. Students should review one to two peers’ projects and use the TAG method (Tell, Ask, Give) to provide feedback using the provided handout. Emphasize that this is not a final critique — it’s an opportunity to gather feedback and identify ways to improve their app.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3157,7 +3065,7 @@
     },
     {
       "key": "5fd70c7e-9fde-48cf-b224-5eb671e1c062",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -3166,12 +3074,26 @@
       }
     },
     {
+      "key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 7 and 8 to complete and test the app’s interactivity and then get feedback from a partner. \n\nStudents will:\n- finish implementing their app’s logic\n- test how it responds to different inputs\n- get feedback from a peer\n\nDirect students to continue working in WebLab (Level 7) to complete their app’s logic, then move to Level 8 to participate in peer feedback using the TAG method.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions such as:\n- “Are all your planned conditions working as expected?”\n- “What happens when you try different inputs?”\n- “How are you using functions and variables to control your app’s behavior?”\n\nUse these check-ins to ensure students are testing their app and refining how it works.\n",
+        "name": "Milestone 3",
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51",
+        "lesson_activity.key": "ccf3baea-7266-4176-a45d-e848e0f8d155"
+      }
+    },
+    {
       "key": "16594286-5e31-43f1-983c-b7733b3ff92e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 9 to complete their reflection on Milestone 3. \n",
         "duration": "5",
         "name": "Wrap Up",
+        "progression_name": "Milestone 3 Reflection",
         "tips": [
           {
             "type": "teachingTip",
@@ -3198,12 +3120,23 @@
       }
     },
     {
-      "key": "4f3f7ce1-81b6-4b38-ac02-182b891c521b",
+      "key": "d83eee5e-016c-422f-9296-190fd90cfa4a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Reactive Logic Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to go to Lesson 11, Level 10 to refine their app by improving functionality, design, and code using feedback. \n",
         "duration": "35",
-        "name": "Activity",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "d83eee5e-016c-422f-9296-190fd90cfa4a",
+        "lesson_activity.key": "76bdbe1a-3cf7-4431-9576-e2bb7d5cd5d1"
+      }
+    },
+    {
+      "key": "4f3f7ce1-81b6-4b38-ac02-182b891c521b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
         "progression_name": "Milestone 4",
         "tips": [
           {
@@ -3219,7 +3152,7 @@
     },
     {
       "key": "6e96f7f4-1e89-4dda-9eb7-ea2faeb0539b",
-      "position": 3,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -3229,15 +3162,15 @@
     },
     {
       "key": "d5577499-b9af-43a3-94fb-e266107863fe",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit their Milestone 3 reflection on Level 9 add on to what they wrote the previous class period.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "When students revisit their reflections today, point out that adding new insights after another round of testing is exactly how professional engineers document progress. Encourage them to notice what changed, what improved, and what new questions emerged—this shows they’re thinking like real developers who learn from every test cycle to make smarter, more informed decisions.\n"
+            "markdown": "When students revisit their reflections today, point out that adding new insights after another round of testing is exactly how professional engineers document progress. Encourage them to notice what changed, what improved, and what new questions emerged—this shows they’re thinking like real developers who learn from every test cycle to make smarter, more informed decisions."
           }
         ]
       },
@@ -3263,7 +3196,7 @@
       "key": "6277ec54-655c-4104-abd9-d6ea032e566a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today is focused on Milestone 4 – Finalize, where students polish their app and make their code ready for showcasing. Remind students to check their Reactive Logic Project Guide for the Milestone 4 deliverables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Reactive Logic Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Project Rubric. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
         "duration": "30",
         "name": "Activity",
         "tips": [
@@ -3292,7 +3225,7 @@
       "key": "2cfdf282-f8ef-4767-b19e-0b0c1c87daf3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Reactive Logic projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Reactive Logic project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 10 to finish developing their Reactive Logic projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Reactive Logic project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
         "progression_name": "Milestone 4",
         "tips": [
           {
@@ -3361,7 +3294,7 @@
       "key": "b8ee2d5c-5b77-476e-85b0-4ee7153d545e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Reactive Logic Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 11 to complete the Final Project Reflection. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4358,6 +4291,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4367,7 +4301,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d3126695-87b2-4404-b600-e708ab25872a"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level1-revised_2026"
@@ -4376,9 +4310,10 @@
     {
       "chapter": 46,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4388,7 +4323,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "01968177-18c3-4b74-b987-1ddf0ece7ca8"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level2-revised_2026"
@@ -4397,9 +4332,10 @@
     {
       "chapter": 47,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4409,7 +4345,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "87b0c39d-c9db-49ec-b291-c1200b69f615"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level3-revised_2026"
@@ -4421,19 +4357,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1 Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level4-revised_2026"
+          "ai-and-algorithmic-decisions-lesson11-level4-revised-v2_2026"
         ],
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0f6d6efe-a9c0-4a03-a1a2-1766be03adee"
+        "activity_section.key": "69b48c23-9a73-425d-beec-0eaedd6fa599"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level4-revised_2026"
+        "ai-and-algorithmic-decisions-lesson11-level4-revised-v2_2026"
       ]
     },
     {
@@ -4442,6 +4379,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -4451,7 +4389,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58"
+        "activity_section.key": "01a86911-8e22-4e45-b50c-a78252320303"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level5-revised_2026"
@@ -4460,22 +4398,22 @@
     {
       "chapter": 50,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level6-revised_2026"
+          "ai-and-algorithmic-decisions-lesson11-level6-revised-v2_2026"
         ],
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58"
+        "activity_section.key": "c6bae210-dd8a-4270-9772-2b520a2c6637"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level6-revised_2026"
+        "ai-and-algorithmic-decisions-lesson11-level6-revised-v2_2026"
       ]
     },
     {
@@ -4484,6 +4422,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3"
       },
       "bonus": false,
       "seeding_key": {
@@ -4493,7 +4432,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level7_2026"
@@ -4505,6 +4444,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3"
       },
       "bonus": false,
       "seeding_key": {
@@ -4514,7 +4454,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level8_2026"
@@ -4523,9 +4463,10 @@
     {
       "chapter": 53,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4535,7 +4476,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "16594286-5e31-43f1-983c-b7733b3ff92e"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level9-revised_2026"
@@ -4547,6 +4488,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 4"
       },
       "bonus": false,
       "seeding_key": {
@@ -4556,7 +4498,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "10d2031f-30fc-4176-9c81-40a53545410b"
+        "activity_section.key": "2cfdf282-f8ef-4767-b19e-0b0c1c87daf3"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level10_2026"
@@ -4565,8 +4507,8 @@
     {
       "chapter": 55,
       "position": 11,
-      "activity_section_position": 2,
-      "assessment": true,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
       },
       "bonus": false,
@@ -4577,7 +4519,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "10d2031f-30fc-4176-9c81-40a53545410b"
+        "activity_section.key": "b8ee2d5c-5b77-476e-85b0-4ee7153d545e"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson11-level11_2026"
@@ -4585,94 +4527,6 @@
     },
     {
       "chapter": 56,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 1"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level1_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level1_2026"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 2"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level2_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "01a86911-8e22-4e45-b50c-a78252320303"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level2_2026"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 3"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level3_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "c42355bb-a76a-4416-b3c2-fb1dd6dbd674"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level3_2026"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 4"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level4_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "2cfdf282-f8ef-4767-b19e-0b0c1c87daf3"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson11-level4_2026"
-      ]
-    },
-    {
-      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5232,7 +5086,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d3126695-87b2-4404-b600-e708ab25872a"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       }
     },
     {
@@ -5244,7 +5098,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "01968177-18c3-4b74-b987-1ddf0ece7ca8"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       }
     },
     {
@@ -5256,19 +5110,19 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "87b0c39d-c9db-49ec-b291-c1200b69f615"
+        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level4-revised_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson11-level4-revised-v2_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level4-revised_2026"
+          "ai-and-algorithmic-decisions-lesson11-level4-revised-v2_2026"
         ],
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "0f6d6efe-a9c0-4a03-a1a2-1766be03adee"
+        "activity_section.key": "69b48c23-9a73-425d-beec-0eaedd6fa599"
       }
     },
     {
@@ -5280,19 +5134,19 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58"
+        "activity_section.key": "01a86911-8e22-4e45-b50c-a78252320303"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level6-revised_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson11-level6-revised-v2_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level6-revised_2026"
+          "ai-and-algorithmic-decisions-lesson11-level6-revised-v2_2026"
         ],
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "12058a16-820d-4dcf-a6fd-7ee258d6bd58"
+        "activity_section.key": "c6bae210-dd8a-4270-9772-2b520a2c6637"
       }
     },
     {
@@ -5304,7 +5158,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51"
       }
     },
     {
@@ -5316,7 +5170,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "a89421e0-7ea0-4bbb-a5b7-1939119e1b51"
       }
     },
     {
@@ -5328,7 +5182,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7f28f699-97c0-412c-baf8-b58f6d7d9455"
+        "activity_section.key": "16594286-5e31-43f1-983c-b7733b3ff92e"
       }
     },
     {
@@ -5340,7 +5194,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "10d2031f-30fc-4176-9c81-40a53545410b"
+        "activity_section.key": "2cfdf282-f8ef-4767-b19e-0b0c1c87daf3"
       }
     },
     {
@@ -5352,55 +5206,7 @@
         "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "10d2031f-30fc-4176-9c81-40a53545410b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level1_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level1_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "33614ba6-634a-4b99-bb80-6063ba85dc2b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level2_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level2_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "01a86911-8e22-4e45-b50c-a78252320303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level3_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level3_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "c42355bb-a76a-4416-b3c2-fb1dd6dbd674"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson11-level4_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson11-level4_2026"
-        ],
-        "lesson.key": "Lesson 11: Reactive Logic Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "2cfdf282-f8ef-4767-b19e-0b0c1c87daf3"
+        "activity_section.key": "b8ee2d5c-5b77-476e-85b0-4ee7153d545e"
       }
     },
     {
@@ -5626,32 +5432,44 @@
       }
     },
     {
-      "name": "Reactive Logic Project",
-      "url": "https://docs.google.com/presentation/d/1PCtJ7JqMfQxS9WR6g0LI7JaKkMLExx58HNkzXewDVJo/edit?usp=sharing",
-      "key": "reactive_logic_project",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "reactive_logic_project"
-      }
-    },
-    {
-      "name": "Reactive Logic Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1k-JEJp3lg2qt97Z1G710N-EejCLKyudeKke65MIiK4g/edit?usp=sharing",
-      "key": "reactive_logic_project_planning_guide",
+      "name": "Peer Feedback with TAG",
+      "url": "https://docs.google.com/document/d/16iglxfSWoMLxNKZn-TckTSdC6sDSJDgDCDl4M5bJLoc/edit?usp=sharing",
+      "key": "peer_feedback_with_tag",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "reactive_logic_project_planning_guide"
+        "resource.key": "peer_feedback_with_tag"
+      }
+    },
+    {
+      "name": "Project Rubric",
+      "url": "https://docs.google.com/document/d/1X021QnqLwRY6l76aiCUluE56ARKPdgLPC2K3SXcCD90/edit?usp=sharing",
+      "key": "project_rubric",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "project_rubric"
+      }
+    },
+    {
+      "name": "Reactive Logic Project",
+      "url": "https://docs.google.com/presentation/d/1ceIjAopwi--ANvdc2VVBncdz9PrpLB_lWOk-QGNDuqM/edit?usp=sharing",
+      "key": "reactive_logic_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "reactive_logic_project_1"
       }
     },
     {
@@ -5705,13 +5523,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Reactive Logic Project",
-        "resource.key": "reactive_logic_project"
+        "resource.key": "peer_feedback_with_tag"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Reactive Logic Project",
-        "resource.key": "reactive_logic_project_planning_guide"
+        "resource.key": "project_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "reactive_logic_project_1"
       }
     },
     {

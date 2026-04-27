@@ -66,5 +66,7 @@ markdown <<MARKDOWN
 
 #### <a href="https://docs.google.com/document/d/1fwXnkosoiHTJJuc2CGF9zEwl0NsUa20Z7THRk8cuZwg/view" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about teaching a programming lesson. 
 
+### <a href="" target="blank" rel="noopener noreferrer">Click here</a> to learn more about teaching a programming lesson.
+
 <div style="clear:both"/>
 MARKDOWN

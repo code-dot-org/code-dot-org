@@ -11,30 +11,30 @@
     "panels": [
       {
         "text": "UX Design is the process of creating products that provide meaningful, smooth, and relevant experiences to users.",
-        "imageUrl": "https://images.code.org/ea904832c5ab0ebd50286264726e0769-l2-p1.jpg",
+        "imageUrl": "https://images.code.org/b92a26196561f4e12b96905047146d4f-lesson2-panel1.png",
         "key": "undefined-f97b510a-e1c0-4e9c-88a0-6911a42ef05a",
         "layout": "text-bottom-left"
       },
       {
         "text": "Designers create \"wireframes\"—digital blueprints that focus on the layout and functionality before any colors or images are added.",
-        "imageUrl": "https://images.code.org/35e2ec77987685175f6ec5bde1629e65-l2-p2.jpg",
+        "imageUrl": "https://images.code.org/b582851f3dc5c4654157b9f0784874fd-lesson2-panel2.png",
         "key": "undefined-e9c5e44d-7dc1-4c0b-b8f9-d4991047b009",
         "layout": "text-bottom-center"
       },
       {
         "text": "By researching human behavior, UX designers organize information so that the most important buttons are exactly where you expect them to be.",
-        "imageUrl": "https://images.code.org/83eca41729b97d8e46318bcdadbdd732-l2-p3.jpg",
+        "imageUrl": "https://images.code.org/7b5c1b82a9743790a223b4bb5417c52b-lesson2-panel3.png",
         "key": "undefined-27e7d451-ed33-4ec9-a662-b9f8fd73455f",
         "layout": "text-bottom-right"
       },
       {
         "text": "Great UX design ensures technology is usable for everyone, including people with different physical or cognitive abilities.",
-        "imageUrl": "https://images.code.org/c284ed07e8be97fd96e49e48f26b2108-l2-p4.jpg",
+        "imageUrl": "https://images.code.org/209fc93dd1f31f5079a2130970cb682f-lesson2-panel4.png",
         "key": "undefined-2c9ccff0-1dcc-43e3-bc17-dde6078e4cc9",
-        "layout": "text-top-left"
+        "layout": "text-bottom-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24 02:16:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 02:18:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24 02:16:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 02:18:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 12:31:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Panels>
