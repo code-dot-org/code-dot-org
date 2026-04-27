@@ -6,7 +6,7 @@ import {
   getSelectedCourseName,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -70,13 +70,13 @@ class ManageStudentNameCell extends Component {
                 >
                   {name}
                 </a>
-                {this.props.isDemoStudent && <DemoStudentChip />}
+                {this.props.isDemoStudent && <DemoChip />}
               </span>
             )}
             {!studentUrl && (
               <span style={styles.nameWithChip}>
                 {name}
-                {this.props.isDemoStudent && <DemoStudentChip />}
+                {this.props.isDemoStudent && <DemoChip />}
               </span>
             )}
             {username && (

@@ -4,6 +4,7 @@ import {CSS} from '@dnd-kit/utilities';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React from 'react';
 
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
@@ -65,13 +66,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             size={'s'}
           />
           <div className={styles.sectionCardHeaderText}>
-            <Typography
-              id={`section-card-title-${section.id}`}
-              variant="h5"
-              gutterBottom
-            >
-              {section.name}
-            </Typography>
+            <div className={styles.demoSectionTitleRow}>
+              <Typography id={`section-card-title-${section.id}`} variant="h5">
+                {section.name}
+              </Typography>
+
+              {section.demoType && <DemoChip size="medium" />}
+            </div>
             <JoinLinkCopyButton
               loginType={section.loginType}
               sectionCode={section.code}

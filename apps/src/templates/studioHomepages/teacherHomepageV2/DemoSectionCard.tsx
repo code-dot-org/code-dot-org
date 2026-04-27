@@ -7,7 +7,7 @@ import {generatePath} from 'react-router-dom';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {
   createDemoSection,
   DemoSectionCreationError,
@@ -235,7 +235,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                   >
                     {preset.sectionName}
                   </Typography>
-                  <DemoStudentChip />
+                  <DemoChip size="medium" />
                 </div>
                 <div
                   className={joinLinkStyles.sectionCodeBox}
