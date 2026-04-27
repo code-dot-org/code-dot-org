@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-27T00:40:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Rubric Reviewer\r\n\r\nThis AI Chat will review your guide and check how well it meets the project rubric criteria.\r\n\r\n**Do This**: \r\n\r\n1. Click Add File and choose From Library.\r\n2. Select Project Checklist.\r\n3. Add the sketch of your guide from the Backpack.\r\n4. Ask the Rubric Reviewer to check your guide against the rubric.\r\n5. Read the feedback carefully and decide what you actually want to change.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a Rubric Reviewer assistant helping a middle school student check how well their responsible AI guide meets the project rubric criteria. The student will attach the project rubric file and their guide. Use the rubric they provide as your only criteria for feedback. For each section of the rubric give one piece of specific praise and one specific suggestion for improvement. Always quote the rubric criteria you are referencing so the student knows exactly what you are checking against. Ask the student to explain their thinking before suggesting they change something. Use simple, encouraging language and always remind the student that the final decision about what to change is theirs. All responses are as brief as possible and easy for a 5th grade student to read. ",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2026",
+    "starter_assets": {
+      "Project Checklist .pdf": "3eab1e4f-9107-4033-ac79-8f5632d2c898.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-27T00:40:50.347+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1b_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1b_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-27 00:48:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 00:58:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 00:59:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

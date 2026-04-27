@@ -28346,7 +28346,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: 'Preparing to Teach: Interactive Animations and Games'
+          title: Preparing to Teach Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
@@ -28370,7 +28370,9 @@ en:
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-ai-and-ml-2026:
-          lessons: {}
+          lessons:
+            lesson-6:
+              name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
           title: 'Preparing to Teach AI and Machine Learning '
@@ -28458,6 +28460,17 @@ en:
           lesson_groups: {}
           name: pl-facilitators-tools-ai-enabled-classroom-fac-2026
           title: AI Tools
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        code-connect-2026:
+          lessons:
+            lesson-1:
+              name: Build Your First Web Page with AI
+          lesson_groups: {}
+          name: code-connect-2026
+          title: Code Connect 2026
           description_audience: ''
           description_short: ''
           description: ''

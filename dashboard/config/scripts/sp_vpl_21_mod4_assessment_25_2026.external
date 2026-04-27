@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">💻 Lesson-Level assessment</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">💻 Lesson-Level Assessment</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -44,4 +44,6 @@ markdown <<MARKDOWN
 
 #### Post-project tests are included at the end of every unit.  These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit.  These tests are aligned to the learning framework of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics.
 </p></div></details>
+
+### <a href="" target="blank" rel="noopener noreferrer">Click here</a> to read the AI Discoveries Guide to Assessment.
 MARKDOWN
