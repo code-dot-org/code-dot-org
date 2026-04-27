@@ -24,6 +24,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  LINE_ANCHOR_SIZE_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -60,7 +61,6 @@ const NODE_TYPES = {
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
-const LINE_ANCHOR_SIZE_PX = 10;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<

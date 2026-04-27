@@ -10,7 +10,13 @@ import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  ExcalidrawSourceWithExternalFiles,
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+  SketchlabReactFlowSource,
+} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -25,6 +31,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from './types';
+import {convertExcalidrawToReactFlow} from './utils/convertExcalidrawSources';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
@@ -167,10 +174,22 @@ function ReactFlowSketchLabViewInner({
     [reactFlow, backpackContext, dialogControl]
   );
 
-  // Deep-clone so React Flow can mutate node style objects during resize.
-  const source = currentSources.source;
-  const hasValidNodes = Array.isArray(source?.nodes);
-  const cloned = hasValidNodes ? structuredClone(source) : null;
+  // Read sources, converting from Excalidraw if this project was last
+  // saved by the old lab. Deep-clone so React Flow can mutate node
+  // style objects during resize.
+  const source = currentSources.source as
+    | SketchlabReactFlowSource
+    | ExcalidrawSourceWithExternalFiles
+    | undefined;
+  let normalized: SketchlabReactFlowSource | null = null;
+  if (source && (source as {type?: string}).type === 'excalidraw') {
+    normalized = convertExcalidrawToReactFlow(
+      source as ExcalidrawSourceWithExternalFiles
+    );
+  } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
+    normalized = source as SketchlabReactFlowSource;
+  }
+  const cloned = normalized ? structuredClone(normalized) : null;
   const initialNodes = cloned?.nodes ?? [];
   const initialEdges = cloned?.edges ?? [];
   const initialViewport = cloned?.viewport;
