@@ -118,12 +118,15 @@ class Policies::DemoSections
 
   def self.curriculum_names(demo_type, preset)
     if CDO.rack_env?(:adhoc)
+      unit_overrides = adhoc_curriculum_overrides(CDO.demo_section_units, :demo_section_units)
+      unit_group_overrides = adhoc_curriculum_overrides(
+        CDO.demo_section_unit_groups,
+        :demo_section_unit_groups
+      )
+
       return {
-        unit_name: (CDO.demo_section_unit_name || {}).fetch(demo_type.to_s, preset[:unit_name]),
-        unit_group_name: (CDO.demo_section_unit_group_name || {}).fetch(
-          demo_type.to_s,
-          preset[:unit_group_name]
-        ),
+        unit_name: unit_overrides.fetch(demo_type.to_s, preset[:unit_name]),
+        unit_group_name: unit_group_overrides.fetch(demo_type.to_s, preset[:unit_group_name]),
       }
     end
 
@@ -140,5 +143,21 @@ class Policies::DemoSections
     }
   end
 
-  private_class_method :resolve_unit, :resolve_unit_group, :curriculum_names
+  def self.adhoc_curriculum_overrides(overrides, config_name)
+    return {} if overrides.nil?
+    return overrides if overrides.is_a?(Hash)
+
+    Rails.logger.error(
+      "Ignoring malformed CDO.#{config_name} for demo section curriculum overrides: " \
+        "expected Hash, got #{overrides.class}"
+    )
+    {}
+  end
+
+  private_class_method(
+    :resolve_unit,
+    :resolve_unit_group,
+    :curriculum_names,
+    :adhoc_curriculum_overrides
+  )
 end

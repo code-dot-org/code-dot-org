@@ -86,12 +86,12 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   test 'get_preset uses adhoc curriculum names by demo type from config' do
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:rack_env?).with(:adhoc).returns(true)
-    CDO.stubs(:demo_section_unit_name).returns(
+    CDO.stubs(:demo_section_units).returns(
       {
         'high' => 'adhoc-high-unit',
       }
     )
-    CDO.stubs(:demo_section_unit_group_name).returns(
+    CDO.stubs(:demo_section_unit_groups).returns(
       {
         'high' => 'adhoc-high-course',
       }
@@ -104,6 +104,19 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'adhoc-high-course', high_preset[:unit_group_name]
     assert_equal 'csd3-2024', middle_preset[:unit_name]
     assert_equal 'csd-2024', middle_preset[:unit_group_name]
+  end
+
+  test 'get_preset ignores malformed adhoc curriculum config' do
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:rack_env?).with(:adhoc).returns(true)
+    CDO.stubs(:demo_section_units).returns(['adhoc-high-unit'])
+    CDO.stubs(:demo_section_unit_groups).returns('adhoc-high-course')
+    Rails.logger.expects(:error).twice
+
+    preset = Policies::DemoSections.get_preset(:high)
+
+    assert_equal 'aif2-2025', preset[:unit_name]
+    assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
   end
 
   test 'get_preset returns preset for each demo type' do
