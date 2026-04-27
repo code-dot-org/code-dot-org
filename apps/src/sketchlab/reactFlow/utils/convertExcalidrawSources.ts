@@ -29,9 +29,7 @@ function fontSizeBand(px: number): FontSizeValue {
   return 'large';
 }
 
-function shapeTypeFor(
-  el: ExcalidrawElement
-): ShapeType | null {
+function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';
   if (el.type === 'diamond') return 'diamond';
   if (el.type === 'ellipse') return 'circle';
@@ -67,11 +65,14 @@ export function convertExcalidrawToReactFlow(
   // First pass: index text elements by their containerId so shape
   // nodes can absorb them as labels rather than emit them as
   // standalone TextNodes.
-  const labelByContainerId = new Map<string, {
-    text: string;
-    fontSize: number;
-    strokeColor: string;
-  }>();
+  const labelByContainerId = new Map<
+    string,
+    {
+      text: string;
+      fontSize: number;
+      strokeColor: string;
+    }
+  >();
   for (const el of elements) {
     if (el.type === 'text' && el.containerId) {
       labelByContainerId.set(el.containerId, {
@@ -86,7 +87,7 @@ export function convertExcalidrawToReactFlow(
   const edges: SketchlabReactFlowEdge[] = [];
 
   // Map each emitted node's id back to its excalidraw element id, so
-  // that arrow/line bindings can resolve to a node we actually kept.
+  // that arrow/line bindings can resolve to a node we kept.
   // Bound shapes / text / images keep their original Excalidraw id, so
   // the lookup is just "did we emit a node with this id?".
   const emittedNodeById = new Map<string, SketchlabReactFlowNode>();
@@ -139,10 +140,9 @@ export function convertExcalidrawToReactFlow(
     if (el.type === 'image') {
       const fileId = el.fileId;
       if (!fileId) continue;
-      // Prefer the S3 url; fall back to the embedded base64 dataURL.
-      // Level-authored start_sources / exemplar_sources never go
-      // through the runtime S3 upload, so externalFiles is empty
-      // there and dataURL is the only image we have.
+      // Prefer the S3 url. Fall back to the embedded base64 dataURL.
+      // Older start sources / exemplar sources may have base64 data urls rather
+      // than S3 urls, due to a data conversion.
       const src =
         externalFiles?.[fileId]?.url ?? source.files?.[fileId]?.dataURL;
       if (!src) continue;
@@ -151,7 +151,7 @@ export function convertExcalidrawToReactFlow(
         type: 'image',
         position: {x: el.x, y: el.y},
         style: {width: el.width, height: el.height},
-        data: {src, altText: ''},
+        data: {src, altText: '', showHandles: false},
       };
       nodes.push(node);
       emittedNodeById.set(el.id, node);
@@ -303,22 +303,17 @@ async function uploadDataUrlImage(
 }
 
 /**
- * Scans the canvas for ImageNodes whose src is still a base64 data URL —
+ * Scans the canvas for ImageNodes whose src is still a base64 data URL,
  * which the converter emits when an Excalidraw source's externalFiles
- * map was empty (typical for level-authored start_sources / exemplar
- * sources) — uploads each to S3, and rewrites the node's src to the
+ * map was empty. Uploads each to S3, and rewrites the node's src to the
  * resulting asset URL via reactFlow.updateNodeData. The canvas's
  * existing debounced save then writes URLs to the persisted source
- * instead of base64.
- *
- * Call this once per Excalidraw conversion. inFlightIds dedupes if the
- * caller invokes it again before pending uploads complete.
+ * instead of base64. Call once per Excalidraw conversion.
  */
 export async function uploadConvertedDataUrlImages(
   reactFlow: ReactFlowInstance,
   channelId: string,
-  levelName: string,
-  inFlightIds: Set<string>
+  levelName: string
 ): Promise<void> {
   const pending = reactFlow
     .getNodes()
@@ -326,23 +321,17 @@ export async function uploadConvertedDataUrlImages(
       node =>
         node.type === 'image' &&
         typeof node.data?.src === 'string' &&
-        (node.data.src as string).startsWith('data:') &&
-        !inFlightIds.has(node.id)
+        (node.data.src as string).startsWith('data:')
     );
   await Promise.allSettled(
     pending.map(async node => {
-      inFlightIds.add(node.id);
-      try {
-        const newUrl = await uploadDataUrlImage(
-          node.data.src as string,
-          channelId,
-          levelName
-        );
-        if (newUrl) {
-          reactFlow.updateNodeData(node.id, {src: newUrl});
-        }
-      } finally {
-        inFlightIds.delete(node.id);
+      const newUrl = await uploadDataUrlImage(
+        node.data.src as string,
+        channelId,
+        levelName
+      );
+      if (newUrl) {
+        reactFlow.updateNodeData(node.id, {src: newUrl});
       }
     })
   );

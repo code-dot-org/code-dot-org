@@ -170,7 +170,11 @@ describe('convertExcalidrawToReactFlow', () => {
     const {nodes} = convertExcalidrawToReactFlow(source);
     expect(nodes).toHaveLength(1);
     expect(nodes[0].type).toBe('image');
-    expect(nodes[0].data).toEqual({src: 'https://example.com/f1.png', altText: ''});
+    expect(nodes[0].data).toEqual({
+      src: 'https://example.com/f1.png',
+      altText: '',
+      showHandles: false,
+    });
   });
 
   it('falls back to the embedded dataURL when externalFiles has no entry', () => {
@@ -192,6 +196,7 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'data:image/png;base64,AAAA',
       altText: '',
+      showHandles: false,
     });
   });
 

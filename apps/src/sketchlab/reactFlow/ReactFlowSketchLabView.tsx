@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -84,8 +84,6 @@ function ReactFlowSketchLabViewInner({
   const reinitializationHandler = useCallback(() => {
     setMountKey(key => key + 1);
   }, []);
-
-  const dataUrlUploadsInFlight = useRef<Set<string>>(new Set());
 
   useEffect(() => {
     setReinitializationHandler(reinitializationHandler);
@@ -215,12 +213,7 @@ function ReactFlowSketchLabViewInner({
   // don't run this for native React Flow sources, as they never use base64.
   useEffect(() => {
     if (!convertedFromExcalidraw || readonlyWorkspace) return;
-    uploadConvertedDataUrlImages(
-      reactFlow,
-      channelId,
-      levelProperties.name,
-      dataUrlUploadsInFlight.current
-    );
+    uploadConvertedDataUrlImages(reactFlow, channelId, levelProperties.name);
   }, [
     convertedFromExcalidraw,
     reactFlow,
