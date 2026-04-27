@@ -325,7 +325,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
     response_json = JSON.parse(@response.body)
     assert_equal "/teacher_dashboard/sections/:sectionId/courses/original-allthethings-course/units/1", response_json.first['value']
-    assert_equal "/courses/original-allthethings-course/units/1/lessons/1/levels/1", response_json.second['value']
+    assert_equal "/courses/original-allthethings-course/units/1/lessons/49/levels/1", response_json.second['value']
   end
 
   describe 'POST /sections/:id/log_in' do
