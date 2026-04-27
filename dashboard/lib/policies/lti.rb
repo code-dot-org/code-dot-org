@@ -32,7 +32,6 @@ class Policies::Lti
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
   ALLOWED_TARGET_LINK_URI_DOMAINS = {
     'code.org' => true,
-    'studio.code.org' => true,
     'csforall.org' => true,
   }.freeze
 
@@ -210,8 +209,12 @@ class Policies::Lti
     uri = URI.parse(target_link_uri.to_s)
     return false unless uri.is_a?(URI::HTTP)
 
+    host = uri.host.to_s.downcase
+    return false if host.blank?
+
     ALLOWED_TARGET_LINK_URI_DOMAINS.keys.any? do |domain|
-      uri.host == domain || uri.host.end_with?(".#{domain}")
+      normalized_domain = domain.downcase
+      host == normalized_domain || host.end_with?(".#{normalized_domain}")
     end
   rescue URI::InvalidURIError
     false
