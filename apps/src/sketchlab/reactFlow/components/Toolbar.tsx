@@ -105,6 +105,19 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
+      <Tooltip title="Add diamond" placement="right">
+        <IconButton
+          aria-label="Add diamond"
+          id={`${uid}-diamond`}
+          onClick={() => addShape('diamond')}
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          <FontAwesomeV6Icon iconName="diamond" />
+        </IconButton>
+      </Tooltip>
+
       <Tooltip title="Add text" placement="right">
         <IconButton
           aria-label="Add text"
