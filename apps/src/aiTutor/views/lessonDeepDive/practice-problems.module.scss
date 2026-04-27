@@ -26,8 +26,40 @@
   flex-direction: column;
   margin: auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   padding: 24px 0;
+  list-style-type: none;
+}
+
+.optionsRows {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  gap: 8px;
+  padding: 24px 0;
+  list-style-type: none;
+
+  &Wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.dropZone {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  // max-width: 400px;
+  min-height: 200px;
+  height: stretch;
+  padding: 12px 4px;
+  align-items: center;
+  list-style-type: none;
+  border: 1px solid;
+  border-color: $lightest_gray;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .card {
@@ -40,6 +72,29 @@
   border-radius: 4px;
   cursor: pointer;
   transition: filter 0.15s ease, transform 0.15s ease;
+
+  &draggable {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: $lightest_gray;
+  }
+
+  &draggableOption {
+    display: inline-block;
+    background-color: $dark_slate_gray;
+    border: 1px solid;
+    border-color: $lightest_gray;
+    color: $brand_primary_light;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 100px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 6px 12px;
+    text-wrap: auto;
+    cursor: pointer !important;
+  }
 
   &selected {
     border: 4px solid;

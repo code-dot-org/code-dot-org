@@ -73,6 +73,9 @@ elevenlabs_api_key: !Secret
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
 
+# Azure AI Content Safety
+azure_ai_content_safety_key: !Secret
+
 # AI Gateway
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
@@ -92,6 +95,10 @@ use_cookie_dcdo: true
 
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
+
+# AWS DeviceFarm project ARNs for remote browser testing in UI tests.
+device_farm_desktop_project_arn: !Secret
+device_farm_mobile_project_arn: !Secret
 
 # ActiveJob Queue Adapter, default to async which doesn't require manually
 # starting the worker processes. See locals.yml.default for more discussion.

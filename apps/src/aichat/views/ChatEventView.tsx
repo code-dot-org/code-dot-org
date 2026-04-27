@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import {FAQ_LINK, modelDescriptions} from '../constants';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
@@ -20,10 +20,10 @@ import {
   ChatEventDescriptionKey,
   ChatAsset,
   ModelParameters,
+  isCompletedChatMessage,
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
@@ -48,7 +48,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {
@@ -94,6 +94,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
     // Only wrap chat messages in a focusable div for keyboard navigation
     if (isChatMessage(event)) {
+      const teacherFlagged =
+        isCompletedChatMessage(event) &&
+        event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
       return (
         <div
           ref={ref}
@@ -103,17 +106,19 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.status,
             event.role,
             event.chatMessageText,
-            false // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            teacherFlagged
           )}
           className={styles.chatMessageOutline}
         >
           <ChatMessageView
             chatMessage={event}
-            isChatHistoryView={isTeacherView || false}
+            isTeacherView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
             clientType={clientType}
             modelParameters={modelParameters}
             postText={postText}
+            teacherFlagged={teacherFlagged}
           />
         </div>
       );
@@ -165,15 +170,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
-          }
-          link={
-            notificationType === 'permissionsError'
-              ? {
-                  href: FAQ_LINK,
-                  text: commonI18n.learnMore(),
-                  className: styles.alertLink,
-                }
-              : undefined
           }
           size="s"
           ref={ref}

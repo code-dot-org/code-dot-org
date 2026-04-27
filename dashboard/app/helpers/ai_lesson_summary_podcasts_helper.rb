@@ -1,6 +1,6 @@
 module AiLessonSummaryPodcastsHelper
   MODEL = "eleven_v3"
-  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'podcasts/'
 
   def self.create_and_save_to_s3(lesson_id, user_id)

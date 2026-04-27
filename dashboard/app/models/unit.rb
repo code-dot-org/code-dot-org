@@ -112,7 +112,8 @@ class Unit < ApplicationRecord
           :objectives,
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
-          :opportunity_standards
+          :opportunity_standards,
+          :jit_pl_concepts
         ],
         unit_group_units: {
           unit_group: :course_version
@@ -1905,11 +1906,6 @@ class Unit < ApplicationRecord
   def show_ai_assessments_announcement?(user)
     # limit to CSD to avoid showing on allthethings
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
-  end
-
-  # TODO-AITUTOR: update or remove
-  def has_ai_tutor_level?
-    levels.with_ai_tutor_available.exists?
   end
 
   def has_ai_chat_tools?

@@ -4,11 +4,17 @@
 Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
   Background:
-    Given I create a teacher-associated student named "Lillian"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
+    And I create a teacher-associated student named "Lillian"
 
   Scenario: The student sees only the projects available in Farsi MVP
-    Given I am on "http://studio.code.org/fa/projects"
+    Given I am on "http://studio.code.org/projects"
+    And I select the "فارسی" option in dropdown "locale" to load a new page
+    And I wait until current URL contains "http://studio.code.org/fa/projects"
+
+    When I reload the page
+    Then element "script[data-ge-region='fa']" does exist
+    And element "html[lang='fa-IR']" is visible
 
     When I wait until element "h4.new-project-heading" is visible
     # The "Create a new project" section contains exactly: Sprite Lab, Artist, App Lab, and Game Lab

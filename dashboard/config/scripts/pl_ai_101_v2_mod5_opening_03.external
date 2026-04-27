@@ -1,0 +1,86 @@
+name 'pl-ai-101-V2-mod5-opening-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Ethical Discussions
+
+#### As students begin using AI tools, these ethical questions will naturally surface in classroom conversations - sometimes planned, and sometimes unexpectedly. Being prepared to guide these discussions is an important part of using AI responsibly in teaching.
+
+#### At the same time, these discussions can feel challenging to lead. Topics like bias, fairness, and privacy can be sensitive, and it’s normal to feel uncertain about how to respond to strong opinions or complex questions.
+
+#### When facilitating conversations about AI and ethics, consider the following strategies:
+
+<div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/565c75e7d1f3466cd58137aa810bdfef-Screenshot 2026-04-23 at 11.08.57 AM.png" style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Encourage Multiple Perspectives</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Help students consider who benefits and who may be affected differently.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Identifying groups impacted by a system</li>
+<li>Considering benefits alongside risks</li>
+<li>Framing discussion around trade-offs, not “right” answers</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+This helps students recognize that the same technology can affect people in different ways.
+</div>
+</div>
+</div>
+
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/427eb03aa0fc68d914e9b677703d11f8-Screenshot 2026-04-23 at 11.09.02 AM.png" style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Use “What-If” Scenarios</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Use hypothetical situations to explore how AI decisions shape outcomes.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Testing how different design choices change results</li>
+<li>Exploring impacts on different groups</li>
+<li>Comparing possible benefits and harms</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+These scenarios push students to think beyond a single viewpoint.
+</div>
+</div>
+</div>
+
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/a69a9704f963a5a0282ebce5551f2c13-Screenshot 2026-04-23 at 11.09.07 AM.png" style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Acknowledge Uncertainty and Complexity</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Emphasize that many AI-related questions don’t have clear answers.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Normalizing uncertainty</li>
+<li>Encouraging questioning and reflection</li>
+<li>Supporting thoughtful decision-making</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+Students build confidence by learning to navigate complexity, not avoid it.
+</div>
+</div>
+</div>
+
+</div>
+
+<br>
+
+>#### **💬 Quick Reflection:** Which of these stratagies fit best with your teaching style?
+
+#### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to AI technology.
+MARKDOWN

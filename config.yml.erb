@@ -141,6 +141,8 @@ pardot_password:
 pardot_user_key:
 pardot_username:
 pardot_private_key:
+pardot_client_id:
+pardot_client_secret:
 
 # Honeybadger
 honeybadger_api_token:
@@ -216,6 +218,15 @@ azure_ai_content_safety_key: !Secret
 saucelabs_username:
 saucelabs_authkey:
 saucelabs_tunnel_name:
+
+# Credentials for AWS Device Farm, used as an alternative to SauceLabs for
+# running selenium tests against multiple browsers.
+# device_farm_desktop_project_arn is the ARN of a Desktop Browser Testing project,
+# created via the AWS Device Farm console or CLI.
+device_farm_desktop_project_arn:
+# device_farm_mobile_project_arn is the ARN of a Mobile Device Testing project,
+# used for running mobile browser tests (iPhone, iPad, etc.).
+device_farm_mobile_project_arn:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -717,3 +728,8 @@ hoc_tracking_enabled: true
 
 # Demo student IDs for demo sections. See Policies::DemoSections for usage.
 demo_student_ids:
+demo_section_unit_name:
+demo_section_unit_group_name:
+
+# Dummy course for attaching resources to just-in-time PL content
+jit_pl_course_name: 'just-in-time-pl'

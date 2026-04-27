@@ -1,0 +1,108 @@
+name 'pl-aif-2-U6-warm-up-exit-tixcket-11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Managing the Project 
+
+## Daily Spot Checks, Warm-Ups, and Exit Tickets
+
+#### Use daily structures to quickly assess team progress, collaboration, and understanding without adding extra grading workload.
+
+---
+
+## Warm-Ups as Daily Status Checks
+
+#### The beginning of class is the perfect time to evaluate how teams are managing workflow and collaboration. 
+
+#### **Use these prompts to spot-check team alignment before work begins:**
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0px;">
+
+  <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
+    <p style="font-weight: bold; font-size: 12pt;">Day 2: Checking Task Quality</p>
+    <p style = "font-size: 12pt;">Ask: <i>“Are these ready to be task cards? If not, how would you rewrite them?”</i></p>
+    <p style = "font-size: 12pt;">Look for tasks that are <b>specific, actionable, and small enough</b> to complete in one class period.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
+    <p style="font-weight: bold; font-size: 12pt;"">Day 6: Checking Kanban Accuracy</p>
+    <p style = "font-size: 12pt;">Ask teams to identify:</p>
+    <ul>
+      <li style = "font-size: 12pt;">One card that moved forward</li>
+      <li style = "font-size: 12pt;">One card that’s stuck</li>
+      <li style = "font-size: 12pt;">One card to add or split</li>
+    </ul>
+    <p style = "font-size: 12pt;">Prevents the board from becoming static.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
+    <p style="font-weight: bold;font-size: 12pt;">Day 7: Checking Progress Reality</p>
+    <p style = "font-size: 12pt;">Ask: <i>“On track, some concerns, or blocked? What made you choose that?”</i></p>
+    <p style = "font-size: 12pt;">Surfaces where teams need support or scope adjustments.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
+    <p style="font-weight: bold;font-size: 12pt;">Day 9: Checking Prioritization</p>
+    <p style = "font-size: 12pt;">Ask: <i>“If you had 10 extra minutes, what would you work on?”</i></p>
+    <p style = "font-size: 12pt;">Pushes teams to prioritize <b>high-value unfinished work</b>.</p>
+  </div>
+
+</div>
+
+---
+
+## Circulation Questions (Over-the-Shoulder Spot Checks)
+
+#### Instead of asking “Are you done?”, use targeted questions to assess understanding and decision-making.
+
+### During Planning (Days 1–2)
+
+- #### “What are you intentionally leaving out of this version?”
+- #### “If I hadn’t seen your project before, could I follow what happens?”
+
+### During Building & Testing (Days 4–7)
+
+- #### “What did you learn from testing this interaction?”
+- #### “Did anything behave differently than expected?”
+- #### “Which task card feels most urgent now?”
+
+---
+
+## Wrap-Ups: Using the Project Guide as an Exit Ticket
+
+#### You do not need separate exit tickets. Students update the **milestone sections** in their Project Guide each day.
+
+<div style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; margin: 20px 0px;">
+  <p style="font-weight: bold; font-size: 12pt;">💡Teacher Tip</p>
+  <p style = "font-size: 12pt;">Look for <b>decision-making</b>, not just activity.</p>
+  <p style = "font-size: 12pt;">If students write “we tested” or “we fixed bugs,” ask:</p>
+  <ul>
+    <li style = "font-size: 12pt;">“What problem did this fix address?”</li>
+    <li style = "font-size: 12pt;">“What evidence told you this was the right change?”</li>
+  </ul>
+</div>
+
+---
+
+## Using Benchmarks as Formal Checkpoints
+
+#### Benchmarks A, B, and C (Days 3, 5, and 8) are your most important structured check-ins.
+
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0px;">
+  
+  <p style = "font-size: 12pt;">Slow this moment down.</p>
+  <ul>
+    <li style = "font-size: 12pt;">Pause coding</li>
+    <li style = "font-size: 12pt;">Review the Kanban board</li>
+    <li style = "font-size: 12pt;">Move task cards</li>
+    <li style = "font-size: 12pt;">Reflect on feedback</li>
+    <li style = "font-size: 12pt;">Rotate the Project Leader</li>
+  </ul>
+  <p style = "font-size: 12pt;">Only then should teams continue building.</p>
+</div>
+
+
+
+
+MARKDOWN

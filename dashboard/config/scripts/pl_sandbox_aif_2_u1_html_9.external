@@ -9,41 +9,54 @@ markdown <<MARKDOWN
 
 ## HTML
 
-#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
+#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. 
+
+#### It tells the browser what to show, like headings, paragraphs, images, and links, so users can see and interact with the content.
 
 
 <div style="
   border:3px solid #ccc;
   border-radius:16px;
-  padding:12px;
+  padding:16px;
   margin:24px 0;
   background:#fff;
+  text-align:center;
 ">
 
->#### Look at the HTML below. Can you imagine what parts of the web page might look like?
+<h4 style="margin-bottom:12px;">
+    Look at the image below. Can you imagine what parts of the web page might look like?
+</h4>
 
+<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" 
+    alt="html code with head, body, header, main and footer labeled" 
+    style="width:90%; max-width:1000px; border-radius:10px;">
 
-<table style="width:100%;margin:20px 0;border-collapse:collapse;">
-<tr>
+<div style="margin-top:20px;">
+    <details>
+      <summary style="
+        cursor:pointer;
+        display:inline-block;
+        background:#8148B2;
+        color:white;
+        padding:14px 22px;
+        font-size:18px;
+        font-weight:600;
+        border-radius:999px;
+        list-style:none;
+      ">
+        Click to reveal the web page
+      </summary>
 
-<td style="vertical-align:top;text-align:center;">
-<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" alt="html code with head, body, header, main and footer labeled" width="900" style="border-radius:10px;">
-</td>
+  <div style="margin-top:16px;">
+  <img 
+          src="https://images.code.org/755f257f750cad47ad5323718eff8e78-Screenshot%202026-01-15%20at%203.38.24%20PM.png" 
+          alt="annotated html structure" 
+          style="width:80%; max-width:500px; border-radius:10px;"
+        >
+      </div>
+    </details>
+  </div>
 
-<td style="width:350px;vertical-align:top;text-align:center;padding-top:20px;">
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-Click to reveal the web page.
-</summary>
-
-<div style="margin-top:16px;">
-<img src="https://images.code.org/755f257f750cad47ad5323718eff8e78-Screenshot%202026-01-15%20at%203.38.24%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
-</div>
-</details>
-</td>
-
-</tr>
-</table>
 </div>
 
 
@@ -56,6 +69,6 @@ Click to reveal the web page.
     - #### The `<main>` section holds the core content of the site. In this example, there is a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
     - #### The `<footer>` section closes out the web page. This example has a copyright line. 
     
-## Next Up: let's take a look at some common HTML tags. 
+
 
 MARKDOWN

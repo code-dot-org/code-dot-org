@@ -58,7 +58,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       student_id: selectedStudentId.toString(),
       section_id: sectionId.toString(),
     });
-    HttpClient.fetchJson<{json: string}>(
+    HttpClient.fetchJson<{json: string; updated_at: string | null}>(
       `/student_snapshots/lesson_insight?${params}`
     )
       .then(response => {
@@ -89,7 +89,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       });
   }, [selectedLessonId, selectedUnitId, selectedStudentId, sectionId]);
 
-  React.useEffect(loadInsight, [loadInsight]);
+  React.useEffect(() => loadInsight(), [loadInsight]);
 
   return (
     <WidgetTemplate
@@ -97,15 +97,6 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       gridWidth={1}
       gridHeight={2}
       loading={loading}
-      settingsOptions={[
-        {
-          onClick: loadInsight,
-          isOptionDestructive: false,
-          icon: {iconName: 'arrows-rotate'},
-          label: 'Refresh Insight',
-          value: 'refresh_insight',
-        },
-      ]}
     >
       {error && (
         <div className={styles.widgetBody}>

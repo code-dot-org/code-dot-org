@@ -274,8 +274,10 @@ end
 
 And 'I visit Farsi version of Professional Learning Lending page' do
   steps <<~GHERKIN
-    When I am on "http://studio.code.org/fa/my-professional-learning"
-    Then I wait until element "h1:contains(یادگیری پیشرفته)" is visible
+    When I am on "http://studio.code.org/my-professional-learning"
+    And I switch to the Global Edition region "fa"
+    Then I wait until current URL contains "http://studio.code.org/fa/my-professional-learning"
+    And element "h1:contains(یادگیری پیشرفته)" is visible
     And element "a[href*='/educate/professional-learning']" is not visible
     And element "button.ui-test-join-section" is not visible
     And element "a[href*='/professional-learning/workshops']" is not visible

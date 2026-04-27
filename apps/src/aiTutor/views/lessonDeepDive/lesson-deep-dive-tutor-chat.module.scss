@@ -4,4 +4,16 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  color: initial;
+
+  // Scale down the copy button — it's visually heavy at default size in this
+  // chat layout.
+  :global(.MuiIconButton-sizeExtraSmall) {
+    padding: 1px;
+    font-size: 10px;
+
+    :global(.fa-copy) {
+      font-size: 10px;
+    }
+  }
 }

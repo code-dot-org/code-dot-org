@@ -28,18 +28,21 @@
 #  avatar_color         :integer
 #  avatar_emoji         :integer
 #  ai_chat_access_level :string(255)      default("disabled")
+#  demo_type            :string(255)
 #
 # Indexes
 #
-#  fk_rails_20b1e5de46          (course_id)
-#  fk_rails_f0d4df9901          (lti_integration_id)
-#  index_sections_on_code       (code) UNIQUE
-#  index_sections_on_script_id  (script_id)
-#  index_sections_on_user_id    (user_id)
+#  fk_rails_20b1e5de46                      (course_id)
+#  fk_rails_f0d4df9901                      (lti_integration_id)
+#  index_sections_on_code                   (code) UNIQUE
+#  index_sections_on_script_id              (script_id)
+#  index_sections_on_user_id                (user_id)
+#  index_sections_on_user_id_and_demo_type  (user_id,demo_type,deleted_at) UNIQUE
 #
 
 require 'full-name-splitter'
 require 'cdo/code_generation'
+require 'cdo/mailjet'
 require 'cdo/safe_names'
 require 'policies/lti'
 
@@ -86,6 +89,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
   validates :course_id, presence: true, if: -> {script_id.present?}
+  validates :demo_type, uniqueness: {scope: [:user_id, :deleted_at]}, allow_nil: true
 
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
@@ -259,6 +263,15 @@ class Section < ApplicationRecord
     add_instructor(user)
   end
 
+  after_save :add_teacher_to_mailjet_course_list
+  def add_teacher_to_mailjet_course_list
+    return unless saved_change_to_course_id? && course_id.present? && teacher.present?
+    return unless unit_group
+    MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
+  rescue => exception
+    Honeybadger.notify(exception)
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
@@ -427,7 +440,6 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
@@ -560,7 +572,6 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          ai_tutor_enabled: ai_tutor_enabled,
           at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,

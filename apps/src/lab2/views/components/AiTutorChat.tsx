@@ -14,6 +14,7 @@ import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -36,9 +37,11 @@ interface AiTutorChatProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
+  disabled?: boolean;
+  disabledMessage?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -51,9 +54,11 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
-  enableTutorVideos,
+  tutorVideos,
   isLessonDeepDive = false,
   lessonId,
+  disabled,
+  disabledMessage,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -65,7 +70,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
-    enableTutorVideos,
+    tutorVideos,
   });
 
   const chatButtons = useMemo(() => {
@@ -147,6 +152,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
+        disabled={disabled}
+        disabledMessage={disabledMessage}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>

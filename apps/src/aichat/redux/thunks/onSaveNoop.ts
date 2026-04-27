@@ -1,7 +1,7 @@
+import {ViewMode} from '@cdo/apps/aichatLab/types';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {ViewMode} from '../../types';
 import {endSave, setViewMode} from '../slice';
 
 // Thunk called when a save no-ops (there are no changes to save)

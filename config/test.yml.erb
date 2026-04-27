@@ -12,6 +12,8 @@ saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 puma_control_server_token: !Secret
 redshift_cluster_id: !Secret
+device_farm_desktop_project_arn: !Secret
+device_farm_mobile_project_arn: !Secret
 <% else %>
 
 ##
@@ -129,6 +131,7 @@ skip_seed_all: true
 cloudfront_key_pair_id: <%= ENV['CLOUDFRONT_KEY_PAIR_ID'] %>
 cloudfront_private_key: "<%= ENV['CLOUDFRONT_PRIVATE_KEY'] %>"
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
+device_farm_desktop_project_arn: <%= ENV['DEVICE_FARM_DESKTOP_PROJECT_ARN'] %>
 saucelabs_authkey: <%= ENV['SAUCE_ACCESS_KEY'] %>
 saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
@@ -184,3 +187,5 @@ active_job_queue_adapter: :test
 
 # End CI-specific settings
 <% end -%>
+
+jit_pl_course_name: 'ui-test-just-in-time-pl'

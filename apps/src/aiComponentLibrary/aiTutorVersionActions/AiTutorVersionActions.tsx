@@ -3,10 +3,15 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import getRejectNotification from '@cdo/apps/weblab2/helpers/getRejectNotification';
 import {
   acceptAiTutorVersion,
   rejectAiTutorVersion,
@@ -31,7 +36,53 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   const [isAcceptMode, setIsAcceptMode] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+
   const dispatch = useAppDispatch();
+  const dialogControl = useDialogControl();
+
+  const handleReject = useCallback(async () => {
+    await dispatch(rejectAiTutorVersion(files));
+  }, [dispatch, files]);
+
+  // Presents a confirmation dialog if the user attempts to navigate to another lab2 level with unsaved AI Tutor changes.
+  // If the user confirms they want to navigate away, we log a "reject" event and reject the proposed changes.
+  useEffect(() => {
+    Lab2Registry.getInstance().setLevelNavigationConfirmation(async () => {
+      if (!dialogControl) {
+        return true;
+      }
+
+      const {type} = await dialogControl.showDialog({
+        type: DialogType.GenericDialog,
+        title: 'Please review AI Tutor changes',
+        message:
+          "AI Tutor has made changes that you haven't accepted or rejected. If you exit this level, those changes will be lost. Are you sure you want to continue?",
+        icon: {iconName: 'triangle-exclamation', iconStyle: 'solid'},
+        showCloseButton: false,
+        buttons: {
+          confirm: {
+            text: 'Stay on this level',
+          },
+          cancel: {
+            text: 'Continue anyway',
+          },
+        },
+      });
+
+      if (type !== 'cancel') {
+        return false;
+      }
+
+      await handleReject();
+      return true;
+    });
+    return () => {
+      Lab2Registry.getInstance().setLevelNavigationConfirmation(undefined);
+    };
+  }, [dialogControl, handleReject]);
 
   // Warn the user if they attempt to reload the page before accepting or
   // rejecting the proposed updates.
@@ -46,6 +97,30 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
+
+  // Logs a "reject" event if the user navigates away from the page without accepting or rejecting AI Tutor's proposed changes.
+  useEffect(() => {
+    const possiblyRejectOnPageHide = async (event: PageTransitionEvent) => {
+      if (viewingAiTutorVersionFileUpdates) {
+        const notification = getRejectNotification(files);
+        const payload = {
+          newChatEvent: notification,
+          aichatContext: AichatContextManager.getContext(),
+          authenticity_token: await getAuthenticityToken(),
+        };
+
+        navigator.sendBeacon(
+          '/aichat_events/log_chat_event',
+          new Blob([JSON.stringify(payload)], {type: 'application/json'})
+        );
+      }
+    };
+
+    window.addEventListener('pagehide', possiblyRejectOnPageHide);
+
+    return () =>
+      window.removeEventListener('pagehide', possiblyRejectOnPageHide);
+  }, [files, viewingAiTutorVersionFileUpdates]);
 
   const handleSaveAiTutorVersion = useCallback(async () => {
     if (isSaving) return;
@@ -63,10 +138,6 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       setIsSaving(false);
     }
   }, [dispatch, files, commitDescription, isSaving]);
-
-  const handleReject = useCallback(() => {
-    dispatch(rejectAiTutorVersion(files));
-  }, [dispatch, files]);
 
   // Scroll to the bottom of the page when switching to accept mode,
   // so that the commit description input and save button are visible to the user.

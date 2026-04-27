@@ -2195,7 +2195,9 @@ function parsePath() {
 
   const geRegion = getGlobalEditionRegion();
   if (geRegion) {
-    pathname = pathname.replace(`/${geRegion}/`, '/');
+    pathname =
+      pathname.replace(new RegExp(`^/${geRegion}(?:/[a-z]{2})?(?=/|$)`), '') ||
+      '/';
   }
 
   // We have a hash based route. Replace the hash with a slash, and append to

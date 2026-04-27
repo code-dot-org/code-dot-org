@@ -1,0 +1,121 @@
+@property --validated-count {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes count-up {
+  from {
+    --validated-count: 0;
+  }
+  to {
+    --validated-count: var(--target-count);
+  }
+}
+
+@keyframes bubble-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+}
+
+.lessonName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 375px;
+}
+
+.countSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 0 8px;
+  text-align: center;
+}
+
+.levelNumber {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  counter-reset: validated-count var(--validated-count);
+  animation: count-up 1.5s ease-out forwards;
+
+  &::after {
+    content: counter(validated-count);
+  }
+}
+
+.levelLabel {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.bubblesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 420px;
+}
+
+.bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0;
+  flex-shrink: 0;
+  animation: bubble-pop 0.25s ease-out forwards;
+}
+
+.bubbleCorrect {
+  color: hsl(145deg 65% 52%);
+  border-color: hsl(145deg 65% 42%);
+  background-color: hsl(145deg 65% 42% / 0.12);
+}
+
+.bubbleIncorrect {
+  color: hsl(35deg 90% 62%);
+  border-color: hsl(35deg 90% 52%);
+  background-color: hsl(35deg 90% 52% / 0.12);
+}
+
+.bubbleUnattempted {
+  color: hsl(215deg 20% 60%);
+  border-color: hsl(215deg 20% 50%);
+  background-color: hsl(215deg 20% 50% / 0.12);
+}

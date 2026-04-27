@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-15T14:38:16.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Utilizing the Kanban Board\n## What it is: \nThe Kanban board is a visual project management tool that manages tasks and priorities, tracking exactly what the team is working on right now and what comes next.\n",
+        "imageUrl": "https://images.code.org/7e3f10208ba7bb3327bffc1d7f9b412c-Kanban.png",
+        "key": "pl-aif-2-U6-kanban-panel-5-5663616e-1f64-4990-b65d-0ccc79283d79",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## How it Works: \nThe board is divided into \"To Do,\" \"In Progress,\" and \"Done\" columns. \n\nStudents break down their milestone goals into actionable task cards (using sticky notes) and move them across the board as work progresses.\n",
+        "imageUrl": "https://images.code.org/dea2b8ca605612c0ae6917354298a961-Kanban (1).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-41a299d5-7ae4-4aa7-b7e0-9cae22651eb7",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Keeping the Flow: \nTask cards are not written in stone. \n\nAn essential part of the process is teaching students that rewriting, splitting, or removing task cards based on testing is a sign of progress, not falling behind. \n\nGood task cards should be specific, actionable, and small enough to be completed in one class period.\n",
+        "imageUrl": "https://images.code.org/c5cea6eabafd9d004b7c06e3b2b0a722-Kanban (2).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-156d1969-391c-475e-bb3d-e00602b04dac",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# How Teachers Can Use It for Management:\n## Empowering the Project Leader: \n\nThe rotating Project Leader is explicitly responsible for maintaining the board, moving cards, and noting when tasks are blocked.\n",
+        "imageUrl": "https://images.code.org/82a76d15baad379468791f48da0118da-Kanban (3).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-2d6f0244-3f06-4518-9fb2-b7f52842ab4a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Neutralizing Conflict: \nIf a Project Leader acts too bossy or tries to manage the team, teachers can redirect them to the Kanban board by asking, \"What does the board tell us to work on next?\" \n\nThis keeps leadership grounded in the shared team plan rather than personal authority.",
+        "imageUrl": "https://images.code.org/a27ce2ba609305649062561b128315f7-Kanban (4).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-3e20fa56-8101-4b10-a4de-dfc5ea931079",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Structuring Check-ins: \nDuring scheduled Benchmarks, use the Kanban board to help teams slow down. \n\nForce them to review the board to see what is stuck and adjust their priorities before jumping back into coding.",
+        "imageUrl": "https://images.code.org/e0172155cae504b9fa816fd1634a4806-Kanban (5).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-0be9ac03-2c99-47d7-9000-b36f0e081023",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Evidence for Grading: \n\nThe board provides your primary evidence for assessing the Collaboration & Professional Practice section of the rubric, showing how effectively the team tracked, prioritized, and communicated their tasks.",
+        "imageUrl": "https://images.code.org/913248b9a8cadc6ba8405b61510fbe4c-Kanban (6).png",
+        "key": "pl-aif-2-U6-kanban-panel-5-15ba2938-43c5-427c-94dd-155be04fd0ea",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-15T14:38:16.065+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-steps-music-app-panal\\\"\"],\"cloned_from\":\"pl-aif-2-U5-steps-music-app-panal\"},{\"changed_at\":\"2026-04-21 16:31:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-21 16:32:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

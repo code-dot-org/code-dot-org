@@ -238,10 +238,12 @@ class FilesApi < Sinatra::Base
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
     type_params = {}
-    # Sinatra does not have a content type for markdown files, so we
-    # add it here.
+    # Sinatra does not have content types for all file extensions we
+    # serve, so we add missing ones here.
     if type == '.md'
       type_params = {default: 'text/markdown'}
+    elsif type == '.webp'
+      type_params = {default: 'image/webp'}
     end
     content_type(type, type_params)
 
@@ -1084,19 +1086,21 @@ class FilesApi < Sinatra::Base
 
     # Read the raw bytes and wrap in an IO.
     raw = request.body.read
+    if raw.empty?
+      status 400
+      return {error: 'No image data provided.'}.to_json
+    end
     image_stream = StringIO.new(raw)
 
-    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    # Determine reported MIME type (e.g. "image/png", "image/jpeg", "image/webp", "image/gif").
     content_type_header = request.content_type
-
-    # Validate allowed content types
-    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
-      status 400
-      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
-    end
 
     result = ImageModeration.moderate_image(image_stream, content_type_header)
     result.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
   end
 
   #

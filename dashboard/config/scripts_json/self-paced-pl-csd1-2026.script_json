@@ -6,12 +6,14 @@
     "properties": {
       "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-10 20:24:04 UTC",
+    "serialized_at": "2026-04-17 21:33:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -55,7 +57,7 @@
     },
     {
       "key": "Welcome to \"Teaching CS Discoveries\"",
-      "name": "Welcome to \"Teaching CS Discoveries\"",
+      "name": "Welcome to \"Teaching AI Discoveries\"",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -126,7 +128,7 @@
       "key": "64181daa-f1ae-4962-b510-040f18e220d9",
       "position": 3,
       "properties": {
-        "progression_name": "Welcome to CS Discoveries"
+        "progression_name": "Welcome to AI Discoveries"
       },
       "seeding_key": {
         "activity_section.key": "64181daa-f1ae-4962-b510-040f18e220d9",
@@ -137,7 +139,7 @@
       "key": "f954a765-8c4b-4023-b906-a1529de99d87",
       "position": 1,
       "properties": {
-        "progression_name": "Engaging in this course"
+        "progression_name": "Engaging in this Course"
       },
       "seeding_key": {
         "activity_section.key": "f954a765-8c4b-4023-b906-a1529de99d87",
@@ -262,7 +264,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Welcome to CS Discoveries"
+        "progression": "Welcome to AI Discoveries"
       },
       "bonus": false,
       "seeding_key": {
@@ -284,7 +286,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Welcome to CS Discoveries"
+        "progression": "Welcome to AI Discoveries"
       },
       "bonus": false,
       "seeding_key": {
@@ -306,7 +308,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Engaging in this course"
+        "progression": "Engaging in this Course"
       },
       "bonus": false,
       "seeding_key": {
@@ -328,7 +330,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Engaging in this course"
+        "progression": "Engaging in this Course"
       },
       "bonus": false,
       "seeding_key": {
@@ -350,7 +352,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Engaging in this course"
+        "progression": "Engaging in this Course"
       },
       "bonus": false,
       "seeding_key": {
@@ -517,6 +519,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

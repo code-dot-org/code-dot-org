@@ -13,18 +13,20 @@ interface SectonAvatarProps {
 }
 
 const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji, size}) => {
+  const safeColor = color >= 0 && color < COLORS.length ? color : 0;
+  const safeEmoji = emoji >= 0 && emoji < EMOJIS.length ? emoji : 0;
   return (
     <div
       className={classNames(
         styles.sectionAvatar,
         styles[`sectionAvatar-${size}`]
       )}
-      style={{backgroundColor: COLORS[color]}}
-      aria-label={`${COLOR_LABELS[color]}, ${EMOJI_LABELS[emoji]}`}
-      title={`${COLOR_LABELS[color]} ${EMOJI_LABELS[emoji]}`}
+      style={{backgroundColor: COLORS[safeColor]}}
+      aria-label={`${COLOR_LABELS[safeColor]}, ${EMOJI_LABELS[safeEmoji]}`}
+      title={`${COLOR_LABELS[safeColor]} ${EMOJI_LABELS[safeEmoji]}`}
       role="img"
     >
-      {EMOJIS[emoji]}
+      {EMOJIS[safeEmoji]}
     </div>
   );
 };
