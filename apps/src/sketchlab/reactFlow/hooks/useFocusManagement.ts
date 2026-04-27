@@ -29,7 +29,7 @@ export function useFocusManagement(
 ) {
   const {fitView, getZoom} = useReactFlow();
 
-  // Close the node toolbar on clicks outside nodes, edges, and the
+  // Close the toolbar on clicks outside nodes, edges, and the
   // toolbar itself. Clicking on non-focusable areas (e.g. the canvas
   // pane background) does not move DOM focus, so blur-based detection
   // alone misses this case. Scoped to when a node/edge is focused so
