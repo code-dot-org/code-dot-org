@@ -105,53 +105,60 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async (isSecondaryBackpack?: boolean) => {
-    setActionInProgress(true);
+    // Use the addFileHandler if provided; otherwise fall back to default logic.
     if (addFileHandler) {
-      onClickAddFile(backpackApi, fileName, addAlert, addFileHandler);
+      onClickAddFile(
+        backpackApi,
+        fileName,
+        addAlert,
+        setActionInProgress,
+        addFileHandler
+      );
+      return;
+    }
+    setActionInProgress(true);
+    const {isSupportFileName, newFileName} = validateFileName(fileName);
+    if (isSupportFileName) {
+      await handleSaveSupportFile(
+        dialogControl,
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFileToProject,
+        createNewProjectFile,
+        findIdForFileName,
+        fileName,
+        newFileName
+      );
+    } else if (newFileName !== fileName) {
+      await handleSaveDuplicateFile(
+        dialogControl,
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFileToProject,
+        createNewProjectFile,
+        findIdForFileName,
+        fileName,
+        newFileName,
+        onImageFlagged,
+        isSecondaryBackpack
+      );
     } else {
-      const {isSupportFileName, newFileName} = validateFileName(fileName);
-      if (isSupportFileName) {
-        await handleSaveSupportFile(
-          dialogControl,
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFileToProject,
-          createNewProjectFile,
-          findIdForFileName,
-          fileName,
-          newFileName
-        );
-      } else if (newFileName !== fileName) {
-        await handleSaveDuplicateFile(
-          dialogControl,
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFileToProject,
-          createNewProjectFile,
-          findIdForFileName,
-          fileName,
-          newFileName,
-          onImageFlagged,
-          isSecondaryBackpack
-        );
-      } else {
-        // Fetch backpack file content and import new file to project - not a duplicate file name.
-        await fetchAndSaveFile({
-          successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFile: saveFileToProject,
-          createNewFile: createNewProjectFile,
-          findIdForFileName,
-          selectedFileName: fileName,
-          newFileName: fileName,
-          onImageFlagged,
-          isSecondaryBackpack,
-        });
-      }
+      // Fetch backpack file content and import new file to project - not a duplicate file name.
+      await fetchAndSaveFile({
+        successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFile: saveFileToProject,
+        createNewFile: createNewProjectFile,
+        findIdForFileName,
+        selectedFileName: fileName,
+        newFileName: fileName,
+        onImageFlagged,
+        isSecondaryBackpack,
+      });
     }
     setActionInProgress(false);
   };

@@ -14,9 +14,11 @@ export function onClickAddFile(
   backpackApi: BackpackClientApi,
   fileName: string,
   addAlert: (type: 'success' | 'danger', message: string) => void,
+  setActionInProgress: (inProgress: boolean) => void,
   addFileHandler: AddFileHandler
 ) {
   const getFile = async () => {
+    setActionInProgress(true);
     const response = await backpackApi.fetchFileResponse(fileName);
     if (!response || response instanceof Error) {
       throw new Error('Error fetching file from backpack');
@@ -33,6 +35,7 @@ export function onClickAddFile(
       Lab2Registry.getInstance().getAppName() ?? '',
       {uploaderType: 'Lab2FileUploader'}
     );
+    setActionInProgress(false);
     return {file, flagged: moderationStatus === 'flagged'};
   };
 
