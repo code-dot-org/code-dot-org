@@ -71,7 +71,14 @@ class VarnishEnvironment < Sinatra::Base
 
     # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
     def language_to_locale(language)
-      Cdo::I18n::LOCALE_ALIASES[language] || language
+      language = language.to_s
+
+      locale = Cdo::I18n::LOCALE_ALIASES[language] || language
+      return unless settings.locales_supported.include?(locale.downcase)
+
+      locale.sub(/-(.+)\z/, &:upcase)
+    rescue ArgumentError
+      nil
     end
   end
 end
