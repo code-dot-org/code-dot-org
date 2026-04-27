@@ -78,6 +78,7 @@ export function useAiChatDisabledState({
           disabledMessage: 'Chat is disabled for this class section.',
           disabledLink: {
             href: AI_SETTINGS_SUPPORT_LINK,
+            openInNewTab: true,
             text: 'Learn more',
           },
         };
@@ -89,6 +90,7 @@ export function useAiChatDisabledState({
           disabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
           disabledLink: {
             href: VERIFIED_TEACHER_SUPPORT_LINK,
+            openInNewTab: true,
             text: 'Learn how to become a verified teacher',
           },
         };

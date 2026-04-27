@@ -25,7 +25,6 @@ export const ChatDisabled: FC<{message?: string; link?: LinkProps}> = ({
               {...link}
               size={link.size ?? 's'}
               type={link.type ?? 'secondary'}
-              openInNewTab
             />
           </>
         )}
