@@ -7,7 +7,7 @@ import type {
 
 import type {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
 
-export type ShapeType = 'rectangle' | 'triangle' | 'circle';
+export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
 
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
