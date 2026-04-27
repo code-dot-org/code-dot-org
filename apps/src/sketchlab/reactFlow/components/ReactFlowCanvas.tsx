@@ -34,6 +34,7 @@ import {
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
+import {useLineToolbar} from '../hooks/useLineToolbar';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
@@ -47,6 +48,7 @@ import {
   SketchLabNode,
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
+import {isLineEdge} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
 
@@ -64,15 +66,6 @@ const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
 const LINE_ANCHOR_SIZE_PX = 10;
-
-function isLineEdge(
-  edge: SketchlabReactFlowEdge,
-  nodes: SketchlabReactFlowNode[]
-) {
-  const sourceNode = nodes.find(node => node.id === edge.source);
-  const targetNode = nodes.find(node => node.id === edge.target);
-  return sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
-}
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -480,47 +473,14 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar]
   );
 
-  const handleEdgeClick = useCallback(
-    (_event: React.MouseEvent, edge: {id: string}) => {
-      if (readOnly) {
-        return;
-      }
-      const clickedEdge = edges.find(currentEdge => currentEdge.id === edge.id);
-      if (clickedEdge && isLineEdge(clickedEdge, nodes)) {
-        openToolbar({type: 'edge', id: clickedEdge.id}, {trapFocus: false});
-      }
-    },
-    [readOnly, edges, nodes, openToolbar]
-  );
-
-  const openLineEdge = useMemo(() => {
-    if (openToolbarTarget?.type !== 'edge') {
-      return null;
-    }
-    const edge = edges.find(
-      currentEdge => currentEdge.id === openToolbarTarget.id
-    );
-    if (!edge || !isLineEdge(edge, nodes)) {
-      return null;
-    }
-    return edge;
-  }, [openToolbarTarget, edges, nodes]);
-
-  const setLineEdgeColor = useCallback(
-    (edgeId: string, strokeColor: string) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge =>
-          edge.id === edgeId
-            ? {
-                ...edge,
-                style: {...edge.style, stroke: strokeColor},
-              }
-            : edge
-        )
-      );
-    },
-    [setEdges]
-  );
+  const {handleEdgeClick, openLineEdge, setLineEdgeColor} = useLineToolbar({
+    edges,
+    nodes,
+    readOnly,
+    openToolbarTarget,
+    openToolbar,
+    setEdges,
+  });
 
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
