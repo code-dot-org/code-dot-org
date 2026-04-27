@@ -112,6 +112,7 @@ module Middleware
 
         response.finish
       ensure
+        Cdo::GlobalEdition.current_region = nil
         # Restore the original `script_name` and `path_info` so that upstream middlewares
         # (e.g., VarnishEnvironment's after filter) see a consistent `request.path`.
         # Without this, downstream processing may partially restore `path_info` while
