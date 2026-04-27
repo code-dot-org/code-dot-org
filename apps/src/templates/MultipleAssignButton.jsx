@@ -1,9 +1,8 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
@@ -13,8 +12,6 @@ import {
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import styles from './multipleAssignButton.module.scss';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {
@@ -68,17 +65,14 @@ class MultipleAssignButton extends React.Component {
     } = this.props;
 
     return (
-      <div className={styles.container}>
+      <div>
         <Button
-          variant="contained"
-          color="primary"
-          startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          text={i18n.assignToMultipleSections()}
+          icon="plus"
           onClick={this.handleClick}
           id="uitest-multi-assign-button"
-          size="small"
-        >
-          {i18n.assignToMultipleSections()}
-        </Button>
+        />
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
             assignmentName={assignmentName}

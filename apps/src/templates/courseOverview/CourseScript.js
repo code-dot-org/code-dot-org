@@ -1,7 +1,5 @@
-import {Button, Typography} from '@mui/material';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {
@@ -9,10 +7,13 @@ import {
   toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -20,9 +21,7 @@ import MultipleAssignButton from '../MultipleAssignButton';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
-import styles from './courseScript.module.scss';
-
-class CourseScript extends React.Component {
+class CourseScript extends Component {
   static propTypes = {
     title: PropTypes.string,
     name: PropTypes.string,
@@ -61,18 +60,8 @@ class CourseScript extends React.Component {
   };
 
   onClickHiddenToggle = value => {
-    const {name, selectedSectionId, id, hiddenLessonState, toggleHiddenScript} =
-      this.props;
-    const nextHidden = value === 'hidden';
-    const currentHidden = isScriptHiddenForSection(
-      hiddenLessonState,
-      selectedSectionId,
-      id
-    );
-    if (nextHidden === currentHidden) {
-      return;
-    }
-    toggleHiddenScript(name, selectedSectionId, id, nextHidden);
+    const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
+    toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
   };
 
   render() {
@@ -128,49 +117,47 @@ class CourseScript extends React.Component {
     }
     return (
       <div
-        className={classNames(
-          styles.main,
-          isHidden && styles.hidden,
-          'uitest-CourseScript'
-        )}
+        style={{
+          ...styles.main,
+          ...(isHidden && styles.hidden),
+        }}
+        className="uitest-CourseScript"
         data-visibility={isHidden ? 'hidden' : 'visible'}
       >
-        <div className={styles.content}>
-          <Typography variant="h5" component="h5">
-            {title}
-          </Typography>
-          <div className={styles.description}>
+        <div style={styles.content}>
+          <div style={styles.title}>{title}</div>
+          <div style={styles.description}>
             <SafeMarkdown markdown={description} />
           </div>
-          <div className={styles.flex}>
+          <span style={styles.flex}>
             <Button
+              __useDeprecatedTag
+              text={i18n.goToUnit()}
               href={unitPath}
+              color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
-              variant="outlined"
-              color="secondary"
-              size="small"
-            >
-              {i18n.goToUnit()}
-            </Button>
+            />
             {isAssigned && viewAs === ViewType.Participant && <Assigned />}
             {confirmationMessageOpen && (
-              <span className={styles.confirmText}>{i18n.assignSuccess()}</span>
+              <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
             )}
             {viewAs === ViewType.Instructor && showAssignButton && (
-              <MultipleAssignButton
-                courseOfferingId={courseOfferingId}
-                courseVersionId={courseVersionId}
-                courseId={courseId}
-                scriptId={id}
-                assignmentName={title}
-                reassignConfirm={this.onReassignConfirm}
-                isAssigningCourseOnly={false}
-                isSingleUnitCourse={false}
-                participantAudience={participantAudience}
-                aiChatToolsDependency={aiChatToolsDependency}
-              />
+              <div className={styles.assignButton}>
+                <MultipleAssignButton
+                  courseOfferingId={courseOfferingId}
+                  courseVersionId={courseVersionId}
+                  courseId={courseId}
+                  scriptId={id}
+                  assignmentName={title}
+                  reassignConfirm={this.onReassignConfirm}
+                  isAssigningCourseOnly={false}
+                  isSingleUnitCourse={false}
+                  participantAudience={participantAudience}
+                  aiChatToolsDependency={aiChatToolsDependency}
+                />
+              </div>
             )}
-          </div>
+          </span>
         </div>
         {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
@@ -184,6 +171,47 @@ class CourseScript extends React.Component {
   }
 }
 
+const styles = {
+  main: {
+    display: 'table',
+    width: '100%',
+    height: '100%',
+    background: color.background_gray,
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    borderStyle: 'solid',
+    borderRadius: 2,
+    marginBottom: 12,
+  },
+  content: {
+    padding: 20,
+  },
+  description: {
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 18,
+    ...fontConstants['main-font-semi-bold'],
+  },
+  // TODO: share better with ProgressLesson
+  hidden: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0,
+  },
+  flex: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  confirmText: {
+    marginLeft: 5,
+    marginRight: 5,
+  },
+};
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(

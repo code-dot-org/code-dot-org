@@ -1,60 +1,71 @@
-import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('HiddenForSectionToggle', () => {
-  it('renders SegmentedButtons reflecting hidden state', () => {
+  it('renders two buttons reflecting hidden state', () => {
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={() => {}} />
     );
-    const segmented = wrapper.find(SegmentedButtons);
-    expect(segmented).to.have.lengthOf(1);
-    expect(segmented.prop('selectedButtonValue')).to.equal('visible');
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <Button
+          text={i18n.visible()}
+          color={Button.ButtonColor.gray}
+          disabled={true}
+          icon="eye"
+        />
+        <Button
+          text={i18n.hidden()}
+          color={Button.ButtonColor.gray}
+          disabled={false}
+          icon="eye-slash"
+        />
+      </div>
+    );
 
-    const buttons = segmented.prop('buttons');
-    expect(buttons).to.have.lengthOf(2);
-    expect(buttons[0]).to.include({label: i18n.visible(), value: 'visible'});
-    expect(buttons[1]).to.include({label: i18n.hidden(), value: 'hidden'});
-
-    // Changing the 'hidden' prop flips which value is selected.
+    // Changing the 'hidden' prop reverses which button is enabled:
     wrapper.setProps({hidden: true});
-    expect(wrapper.find(SegmentedButtons).prop('selectedButtonValue')).to.equal(
-      'hidden'
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <Button text={i18n.visible()} disabled={false} />
+        <Button text={i18n.hidden()} disabled={true} />
+      </div>
     );
   });
 
-  it('forwards onChange value from SegmentedButtons', () => {
+  it('calls onChange handler when buttons are clicked', () => {
     const callback = sinon.spy();
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={callback} />
     );
 
-    const onChange = wrapper.find(SegmentedButtons).prop('onChange');
-    onChange('visible');
+    // Click the first button
+    wrapper.find(Button).at(0).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
     callback.resetHistory();
-    onChange('hidden');
+
+    // Click the second button
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
-  it('disables all buttons when disabled prop is true', () => {
+  it('does not call onChange when disabled', () => {
+    const callback = sinon.spy();
     const wrapper = shallow(
-      <HiddenForSectionToggle
-        hidden={false}
-        onChange={() => {}}
-        disabled={true}
-      />
+      <HiddenForSectionToggle hidden={false} onChange={callback} disabled />
     );
 
-    const buttons = wrapper.find(SegmentedButtons).prop('buttons');
-    expect(buttons[0].disabled).to.equal(true);
-    expect(buttons[1].disabled).to.equal(true);
+    // Click both buttons
+    wrapper.find(Button).at(0).props().onClick();
+    wrapper.find(Button).at(1).props().onClick();
+    expect(callback).not.to.have.been.called;
   });
 });
