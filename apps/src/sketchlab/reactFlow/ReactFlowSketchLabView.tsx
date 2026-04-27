@@ -177,22 +177,26 @@ function ReactFlowSketchLabViewInner({
   // Read sources, converting from Excalidraw if this project was last
   // saved by the old lab. Deep-clone so React Flow can mutate node
   // style objects during resize.
-  const source = currentSources.source as
-    | SketchlabReactFlowSource
-    | ExcalidrawSourceWithExternalFiles
-    | undefined;
-  let normalized: SketchlabReactFlowSource | null = null;
-  if (source && (source as {type?: string}).type === 'excalidraw') {
-    normalized = convertExcalidrawToReactFlow(
-      source as ExcalidrawSourceWithExternalFiles
-    );
-  } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
-    normalized = source as SketchlabReactFlowSource;
-  }
-  const cloned = normalized ? structuredClone(normalized) : null;
-  const initialNodes = cloned?.nodes ?? [];
-  const initialEdges = cloned?.edges ?? [];
-  const initialViewport = cloned?.viewport;
+  const {initialNodes, initialEdges, initialViewport} = useMemo(() => {
+    const source = currentSources.source as
+      | SketchlabReactFlowSource
+      | ExcalidrawSourceWithExternalFiles
+      | undefined;
+    let normalized: SketchlabReactFlowSource | null = null;
+    if (source && (source as {type?: string}).type === 'excalidraw') {
+      normalized = convertExcalidrawToReactFlow(
+        source as ExcalidrawSourceWithExternalFiles
+      );
+    } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
+      normalized = source as SketchlabReactFlowSource;
+    }
+    const cloned = normalized ? structuredClone(normalized) : null;
+    return {
+      initialNodes: cloned?.nodes ?? [],
+      initialEdges: cloned?.edges ?? [],
+      initialViewport: cloned?.viewport,
+    };
+  }, [currentSources.source]);
 
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
