@@ -1,7 +1,7 @@
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import HiddenForSectionToggle from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import TeacherInfoBox from '@cdo/apps/templates/progress/TeacherInfoBox';
@@ -14,35 +14,30 @@ export default class CourseScriptTeacherInfo extends Component {
     onToggleHiddenScript: PropTypes.func.isRequired,
   };
 
-  // Stable per-instance id so `aria-describedby` does not change between
-  // renders and the tooltip doesn't re-mount unnecessarily.
-  tooltipId = _.uniqueId('hidden-script-tooltip-');
-
   render() {
     const {disabled, isHidden, onToggleHiddenScript} = this.props;
 
-    const toggle = (
-      <HiddenForSectionToggle
-        hidden={isHidden}
-        disabled={disabled}
-        onChange={onToggleHiddenScript}
-      />
-    );
+    // Note: Students should always have no (owned) sections
+    const tooltipId = _.uniqueId();
 
     return (
       <TeacherInfoBox>
-        {disabled ? (
-          <WithTooltip
-            tooltipProps={{
-              text: i18n.hiddenScriptTooltip(),
-              tooltipId: this.tooltipId,
-            }}
-          >
-            <div>{toggle}</div>
-          </WithTooltip>
-        ) : (
-          <div>{toggle}</div>
-        )}
+        <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <HiddenForSectionToggle
+            hidden={isHidden}
+            disabled={disabled}
+            onChange={onToggleHiddenScript}
+          />
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+          disable={!disabled}
+        >
+          {i18n.hiddenScriptTooltip()}
+        </ReactTooltip>
       </TeacherInfoBox>
     );
   }
