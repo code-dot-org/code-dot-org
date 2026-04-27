@@ -15,6 +15,7 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {isLineEdge} from '../utils/lineEdges';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -78,7 +79,7 @@ interface UseKeyboardNavigationOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   readOnly: boolean;
-  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
+  openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
 }
 
 /**
@@ -97,7 +98,7 @@ export function useKeyboardNavigation({
   setNodes,
   setEdges,
   readOnly,
-  openNodeToolbar,
+  openToolbar,
 }: UseKeyboardNavigationOptions) {
   const {getEdge, getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -178,11 +179,7 @@ export function useKeyboardNavigation({
 
         if (deltaX || deltaY) {
           const focusedEdge = getEdge(focusedEdgeId);
-          if (
-            focusedEdge &&
-            isLineAnchorNodeId(focusedEdge.source, nodes) &&
-            isLineAnchorNodeId(focusedEdge.target, nodes)
-          ) {
+          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
             event.preventDefault();
             event.stopPropagation();
             setNodes(currentNodes =>
@@ -198,11 +195,17 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "e" opens the node toolbar. NodeToolbarShell's FocusTrap moves
+      // "e" opens the node/edge toolbar. ToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
-      if (event.key === 'e' && !readOnly && !connectingFrom && focusedNodeId) {
+      if (
+        event.key === 'e' &&
+        !readOnly &&
+        !connectingFrom &&
+        focusedEntry &&
+        !isLineAnchorNodeId(focusedEntry.id, nodes)
+      ) {
         event.preventDefault();
-        openNodeToolbar(focusedNodeId, {trapFocus: true});
+        openToolbar(focusedEntry, {trapFocus: true});
         return;
       }
 
@@ -348,7 +351,7 @@ export function useKeyboardNavigation({
       getEdge,
       getNode,
       nodes,
-      openNodeToolbar,
+      openToolbar,
       readOnly,
       setEdges,
       setNodes,

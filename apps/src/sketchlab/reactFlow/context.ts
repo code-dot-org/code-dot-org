@@ -8,24 +8,27 @@ export function useSketchLabReadOnly(): boolean {
   return useContext(SketchLabReadOnlyContext);
 }
 
-interface NodeToolbarVisibilityContextValue {
-  openNodeToolbarId: string | null;
-  trapFocus: boolean;
-  openNodeToolbar: (nodeId: string, options?: {trapFocus?: boolean}) => void;
-  closeNodeToolbar: () => void;
+export interface ToolbarTarget {
+  type: 'node' | 'edge';
+  id: string;
 }
 
-const NodeToolbarVisibilityContext =
-  createContext<NodeToolbarVisibilityContextValue>({
-    openNodeToolbarId: null,
-    trapFocus: false,
-    openNodeToolbar: () => {},
-    closeNodeToolbar: () => {},
-  });
+interface ToolbarVisibilityContextValue {
+  openToolbarTarget: ToolbarTarget | null;
+  trapFocus: boolean;
+  openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
+  closeToolbar: () => void;
+}
 
-export const NodeToolbarVisibilityProvider =
-  NodeToolbarVisibilityContext.Provider;
+const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
+  openToolbarTarget: null,
+  trapFocus: false,
+  openToolbar: () => {},
+  closeToolbar: () => {},
+});
 
-export function useNodeToolbarVisibility(): NodeToolbarVisibilityContextValue {
-  return useContext(NodeToolbarVisibilityContext);
+export const ToolbarVisibilityProvider = ToolbarVisibilityContext.Provider;
+
+export function useToolbarVisibility(): ToolbarVisibilityContextValue {
+  return useContext(ToolbarVisibilityContext);
 }
