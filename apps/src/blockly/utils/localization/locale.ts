@@ -25,10 +25,19 @@ export function getBlockDefinitionsForUpdatedLocale(
   )) {
     const blockDefinition =
       Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName];
+
+    if (!blockDefinition.config.sourceArgs) {
+      blockDefinition.config.sourceArgs = blockDefinition.config.args;
+    }
+
+    blockDefinition.config.args = blockDefinition.config.sourceArgs || [];
+
     Blockly.SourceCustomBlocks.blockTexts[blockName] ||=
       blockDefinition.config.blockText;
+
     const oldBlockText = Blockly.SourceCustomBlocks.blockTexts[blockName];
     let newBlockText: string = oldBlockText;
+
     if (blockDefinition.config.returnType === 'Behavior') {
       newBlockText = localization.translate(`[behavior] ${oldBlockText}`, [
         'blockly-block',
@@ -47,14 +56,34 @@ export function getBlockDefinitionsForUpdatedLocale(
       newBlockText = localization.translate(oldBlockText, ['blockly-block']);
     }
 
-    // Unfreeze the block definition to add the new translation strings
-    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = {
+    const args = blockDefinition.config.args
+      ? [...blockDefinition.config.args]
+      : blockDefinition.config.args;
+
+    (args || []).forEach((arg, i) => {
+      if (arg.options) {
+        // Deep clone the argument
+        args[i] = {...args[i]};
+
+        args[i].options = arg.options.map(([text, ...rest]) => [
+          localization.translate(text, ['blockly-block']),
+          ...rest,
+        ]);
+      }
+    });
+
+    const newDefinition = {
       ...blockDefinition,
       config: {
         ...blockDefinition.config,
+        ...(args ? {args} : {}),
         blockText: newBlockText,
       },
     };
+
+    // Unfreeze the block definition to add the new translation strings
+    Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] =
+      newDefinition;
   }
 
   return Object.values(Blockly.SourceCustomBlocks.blockDefinitionsByName);

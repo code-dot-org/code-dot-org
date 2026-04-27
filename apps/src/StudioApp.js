@@ -15,6 +15,7 @@ import {
   appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
+  localizeBlockStrings,
   processToolboxXml,
   localizeBlockInitDefinition,
 } from '@cdo/apps/blockly/utils';
@@ -1348,7 +1349,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, localizeBlockStrings(source));
 };
 
 /**

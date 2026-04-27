@@ -13,6 +13,7 @@ import {formatForPlayspace} from '../utils';
 
 import commands from './commands/index';
 import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
+import {unlocalizeColor} from './localizedColors';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {
@@ -90,7 +91,8 @@ export default class CoreLibrary {
 
   drawBackground() {
     if (typeof this.background === 'string') {
-      this.p5.background(this.background);
+      // Determine if we should reverse the localization of the color
+      this.p5.background(unlocalizeColor(this.background));
     } else {
       this.p5.background('white');
     }

@@ -22,6 +22,7 @@ export interface BlockDefinition {
 
 export interface BlockConfig {
   args: arg[];
+  sourceArgs?: arg[];
   blockText: string;
   color: [number, number, number];
   func: string;
