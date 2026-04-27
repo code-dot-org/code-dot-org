@@ -455,8 +455,8 @@
           },
           {
             "type": "text",
-            "version": 973,
-            "versionNonce": 997252900,
+            "version": 974,
+            "versionNonce": 269102809,
             "isDeleted": false,
             "id": "XrXz_FXypyHlsHzBzccNr",
             "fillStyle": "solid",
@@ -480,7 +480,7 @@
             "boundElements": [
 
             ],
-            "updated": 1776894460604,
+            "updated": 1776957659687,
             "link": null,
             "locked": true,
             "fontSize": 45.535401616107144,
@@ -491,7 +491,7 @@
             "containerId": null,
             "originalText": "Digital Gallery Walk",
             "lineHeight": 1.25,
-            "baseline": 40
+            "baseline": 39
           },
           {
             "type": "text",
@@ -575,8 +575,8 @@
           },
           {
             "type": "text",
-            "version": 1301,
-            "versionNonce": 612503964,
+            "version": 1302,
+            "versionNonce": 1880590135,
             "isDeleted": false,
             "id": "dXfkULvHASgme2YmV6ABA",
             "fillStyle": "solid",
@@ -600,7 +600,7 @@
             "boundElements": [
 
             ],
-            "updated": 1776894460604,
+            "updated": 1776957659689,
             "link": null,
             "locked": true,
             "fontSize": 44.274130002758056,
@@ -611,7 +611,7 @@
             "containerId": null,
             "originalText": "Start Here",
             "lineHeight": 1.25,
-            "baseline": 39
+            "baseline": 38
           },
           {
             "type": "image",
@@ -1688,10 +1688,10 @@
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 4140.600724400811,
-          "scrollY": 359.9009078380254,
+          "scrollX": 4138.392836065202,
+          "scrollY": 443.59181499073094,
           "zoom": {
-            "value": 0.7000122040508359
+            "value": 1.000012204050836
           }
         },
         "files": {
@@ -1866,6 +1866,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

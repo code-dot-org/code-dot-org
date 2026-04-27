@@ -127,7 +127,6 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       participantType: preset.participantType,
       loginType: preset.loginType as Section['loginType'],
       grades: [],
-      aiTutorEnabled: false,
       lessonExtras: false,
       pairingAllowed: true,
       providerManaged: false,

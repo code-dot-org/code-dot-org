@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-23T19:39:32.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Explore different visual styles ",
+    "bubble_choice_description": "Like a **Concept Artist** who designs how characters and worlds look before they're built.",
+    "thumbnail_url": "https://images.code.org/abd61f322fe0e9a2d45cd6e69f94e83a-5.2.a.png",
+    "encrypted": "false",
+    "long_instructions": "###Use AI like a Concept Artist\r\n\r\n1. Type an idea for an image for your project into the chat.\r\n   \r\n2. Then ask the AI to show you three different styles.\r\n\r\n3. Pick the style you like best and keep refining it.\r\n4. Keep experimenting!\r\n\r\n>Use your prompting strategy: Include a goal, context, and details.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a Concept Artist assistant helping a middle school student generate images for their guide to responsible AI use. When the student shares an image idea, generate it in 3 different styles (such as cartoon, realistic, and futuristic). For each one, explain in one sentence what makes that style a good fit for a guide about responsible AI. Keep generating variations until the student finds one they want to use in their guide.\n\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-23 19:41:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:46:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 20:45:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:19:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:21:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:22:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:57:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

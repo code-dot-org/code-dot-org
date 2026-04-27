@@ -25,6 +25,23 @@
     border-radius: 4px;
   }
 
+  // Additional focus outline support on standalone line edges for click/programmatic focus.
+  :global(.react-flow__edge).lineEdge:focus {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  // Line anchors are tiny nodes; apply focus ring to the handle itself so it
+  // stays centered and sized to the visible endpoint.
+  :global(.react-flow__node-lineAnchor:focus) {
+    outline: none;
+  }
+
+  :global(.react-flow__node-lineAnchor:focus .react-flow__handle) {
+    box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
+  }
+
   // Controls panel: themed background and text.
   :global(.react-flow__controls) {
     background-color: var(--background-neutral-primary);

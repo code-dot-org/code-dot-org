@@ -1,3 +1,4 @@
+import {Button} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -30,7 +31,7 @@ describe('MultipleAssignButtonTest', () => {
     const wrapper = setUp();
     expect(wrapper.find('.uitest-assign-button')).toBeDefined();
     expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(false);
-    wrapper.find('Button').simulate('click');
+    wrapper.find(Button).simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
         .isAssigningCourseOnly
@@ -42,7 +43,7 @@ describe('MultipleAssignButtonTest', () => {
     const wrapper = setUp({isAssigningCourseOnly: true});
     expect(wrapper.find('.uitest-assign-button')).toBeDefined();
     expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(false);
-    wrapper.find('Button').simulate('click');
+    wrapper.find(Button).simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
         .isAssigningCourseOnly
