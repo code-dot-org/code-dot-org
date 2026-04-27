@@ -57,55 +57,60 @@ export function useLineToolbar({
     return edge;
   }, [openToolbarTarget, edges, nodes]);
 
-  const setLineEdgeColor = useCallback(
-    (edgeId: string, strokeColor: string) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge =>
-          edge.id === edgeId
-            ? {
-                ...edge,
-                style: {...edge.style, stroke: strokeColor},
-              }
-            : edge
-        )
-      );
-    },
-    [setEdges]
-  );
-
-  const setLineEdgeWidth = useCallback(
-    (edgeId: string, strokeWidth: number) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge =>
-          edge.id === edgeId
-            ? {
-                ...edge,
-                style: {...edge.style, strokeWidth},
-              }
-            : edge
-        )
-      );
-    },
-    [setEdges]
-  );
-
-  const setLineEdgeStrokeStyle = useCallback(
-    (edgeId: string, strokeStyle: LineStrokeStyleValue) => {
-      const strokeDasharray = strokeDasharrayFromStyle(strokeStyle);
+  const updateLineEdgeStyle = useCallback(
+    (
+      edgeId: string,
+      updateStyle: (currentStyle: React.CSSProperties) => React.CSSProperties
+    ) => {
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
             return edge;
           }
-          const nextStyle = {...edge.style, strokeDasharray};
-          if (!strokeDasharray) {
-            delete nextStyle.strokeDasharray;
-          }
-          return {...edge, style: nextStyle};
+          const currentStyle = {...edge.style};
+          return {
+            ...edge,
+            style: updateStyle(currentStyle),
+          };
         })
       );
     },
     [setEdges]
+  );
+
+  const setLineEdgeColor = useCallback(
+    (edgeId: string, strokeColor: string) => {
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        stroke: strokeColor,
+      }));
+    },
+    [updateLineEdgeStyle]
+  );
+
+  const setLineEdgeWidth = useCallback(
+    (edgeId: string, strokeWidth: number) => {
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        strokeWidth,
+      }));
+    },
+    [updateLineEdgeStyle]
+  );
+
+  const setLineEdgeStrokeStyle = useCallback(
+    (edgeId: string, strokeStyle: LineStrokeStyleValue) => {
+      const strokeDasharray = strokeDasharrayFromStyle(strokeStyle);
+      updateLineEdgeStyle(edgeId, currentStyle => {
+        if (!strokeDasharray) {
+          const styleWithoutDasharray = {...currentStyle};
+          delete styleWithoutDasharray.strokeDasharray;
+          return styleWithoutDasharray;
+        }
+        return {...currentStyle, strokeDasharray};
+      });
+    },
+    [updateLineEdgeStyle]
   );
 
   return {
