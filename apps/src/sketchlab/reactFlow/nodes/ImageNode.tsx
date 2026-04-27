@@ -5,7 +5,7 @@ import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import ImageNodeToolbar from '../toolbars/ImageNodeToolbar';
+import ImageNodeToolbar from '../elementToolbars/ImageNodeToolbar';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';

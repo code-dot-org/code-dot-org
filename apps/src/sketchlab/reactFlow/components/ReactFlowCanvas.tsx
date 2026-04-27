@@ -31,6 +31,8 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
+import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
+import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -40,8 +42,6 @@ import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
-import LineEdgeToolbar from '../toolbars/LineEdgeToolbar';
-import {DEFAULT_STROKE_COLOR} from '../toolbars/toolbarPalettes';
 import {
   AddNodeRequest,
   ReactFlowSketchLabSources,

@@ -5,7 +5,7 @@ import type {
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
-import type {FontSizeValue} from './toolbars/toolbarPalettes';
+import type {FontSizeValue} from './elementToolbars/toolbarPalettes';
 
 export type ShapeType = 'rectangle' | 'triangle' | 'circle';
 

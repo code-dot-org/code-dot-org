@@ -6,7 +6,7 @@ import React from 'react';
 
 import {ColorSwatch} from './toolbarPalettes';
 
-import styles from './toolbar-shell.module.scss';
+import styles from './element-toolbar.module.scss';
 
 const CUSTOM_COLOR_DEFAULT = '#000000';
 

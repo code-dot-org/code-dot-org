@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton, Tooltip, Typography} from '@mui/material';
 import React from 'react';
 
-import styles from './toolbar-shell.module.scss';
+import styles from './element-toolbar.module.scss';
 
 export interface HandleVisibilityToggleProps {
   visible: boolean;

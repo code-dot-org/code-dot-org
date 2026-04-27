@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
 
-import styles from './toolbar-shell.module.scss';
+import styles from './element-toolbar.module.scss';
 
 const TOOLBAR_OFFSET_PX = 8;
 const PAN_DURATION_MS = 200;

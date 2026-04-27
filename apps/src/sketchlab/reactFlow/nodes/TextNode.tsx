@@ -3,8 +3,8 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import TextNodeToolbar from '../toolbars/TextNodeToolbar';
-import {fontSizePx} from '../toolbars/toolbarPalettes';
+import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
+import {fontSizePx} from '../elementToolbars/toolbarPalettes';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
