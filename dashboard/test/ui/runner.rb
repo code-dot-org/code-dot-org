@@ -100,7 +100,7 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
+    options.pegasus_domain = 'code.org'
     options.dashboard_domain = 'test-studio.code.org'
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
