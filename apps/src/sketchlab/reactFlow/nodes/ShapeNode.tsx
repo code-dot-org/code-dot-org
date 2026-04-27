@@ -189,7 +189,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {label}
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles && selected} />
     </div>
   );
 }

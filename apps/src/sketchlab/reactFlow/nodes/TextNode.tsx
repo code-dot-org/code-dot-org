@@ -102,7 +102,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         {text}
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles && selected} />
     </div>
   );
 }

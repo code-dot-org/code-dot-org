@@ -104,7 +104,7 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
         </MuiButton>
       )}
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles && selected} />
     </div>
   );
 }
