@@ -3,7 +3,7 @@ import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
-import styles from './node-toolbar.module.scss';
+import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
   nodeId: string;
