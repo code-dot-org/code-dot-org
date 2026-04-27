@@ -118,6 +118,7 @@ export interface SketchlabReactFlowEdge {
   id: string;
   source: string;
   target: string;
+  style?: CSSProperties;
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
