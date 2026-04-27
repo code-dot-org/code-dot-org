@@ -17,7 +17,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
-import {FontSizeValue} from '../nodes/nodeToolbars/toolbarPalettes';
+import {FontSizeValue} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeData, ShapeType} from '../types';
 
 // Maps Excalidraw px font size to our small/medium/large bands. The
