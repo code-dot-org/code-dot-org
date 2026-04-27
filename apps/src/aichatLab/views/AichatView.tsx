@@ -305,7 +305,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const backpackProps: BackpackProps = useMemo(() => {
     return {
-      addFileText: 'Add to chat',
+      addFileTooltipText: 'Add to chat',
       addFileHandler: async (fileName, getFile, notifySuccess, notifyError) => {
         const {file, flagged} = await getFile();
         if (flagged) {
