@@ -8,7 +8,6 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import styleConstants from '@cdo/apps/styleConstants';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -177,17 +176,10 @@ class LessonOverview extends Component {
           </div>
         </div>
         {isSignedIn && (
-          <Announcements
-            announcements={announcements}
-            width={styleConstants['content-width']}
-            viewAs={viewAs}
-          />
+          <Announcements announcements={announcements} viewAs={viewAs} />
         )}
         {displayVerifiedResourcesNotification && (
-          <VerifiedResourcesNotification
-            width={styleConstants['content-width']}
-            inLesson={true}
-          />
+          <VerifiedResourcesNotification inLesson={true} />
         )}
         <h1 className="uitest-lesson-title">{lesson.title}</h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
