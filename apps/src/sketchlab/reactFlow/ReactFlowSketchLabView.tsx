@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -31,7 +31,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from './types';
-import {convertExcalidrawToReactFlow} from './utils/convertExcalidrawSources';
+import {
+  convertExcalidrawToReactFlow,
+  uploadConvertedDataUrlImages,
+} from './utils/convertExcalidrawSources';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
@@ -64,6 +67,7 @@ function ReactFlowSketchLabViewInner({
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
   // create an instance when we have a user.
   const backpackContext = useMemo(
@@ -71,7 +75,7 @@ function ReactFlowSketchLabViewInner({
       currentUserId
         ? {primaryApi: new BackpackClientApi('sketchlab', null)}
         : null,
-    [currentUserId]
+    [currentUserId],
   );
 
   // Remount the canvas to re-read sources, same pattern as Excalidraw's
@@ -80,6 +84,8 @@ function ReactFlowSketchLabViewInner({
   const reinitializationHandler = useCallback(() => {
     setMountKey(key => key + 1);
   }, []);
+
+  const dataUrlUploadsInFlight = useRef<Set<string>>(new Set());
 
   useEffect(() => {
     setReinitializationHandler(reinitializationHandler);
@@ -92,7 +98,7 @@ function ReactFlowSketchLabViewInner({
       }
       reinitializationHandler();
     },
-    [updateSources, reinitializationHandler]
+    [updateSources, reinitializationHandler],
   );
 
   // Since there's no run button in Sketch Lab, set hasRun to true by default
@@ -110,7 +116,7 @@ function ReactFlowSketchLabViewInner({
   }, [showStartOverDialog]);
 
   const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId)
+    useAppSelector(state => state.progress.viewAsUserId),
   );
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
@@ -123,8 +129,8 @@ function ReactFlowSketchLabViewInner({
             currentSources,
         };
       },
-      [currentSources]
-    )
+      [currentSources],
+    ),
   );
 
   const {
@@ -165,38 +171,65 @@ function ReactFlowSketchLabViewInner({
             backpackContext?.primaryApi,
             dialogControl,
             fileList,
-            errorCallback
+            errorCallback,
           ),
         text: 'Save Sketch to Backpack',
       },
       supportedFileTypes: [],
     }),
-    [reactFlow, backpackContext, dialogControl]
+    [reactFlow, backpackContext, dialogControl],
   );
 
   // Read sources, converting from Excalidraw if this project was last
   // saved by the old lab. Deep-clone so React Flow can mutate node
   // style objects during resize.
-  const {initialNodes, initialEdges, initialViewport} = useMemo(() => {
-    const source = currentSources.source as
-      | SketchlabReactFlowSource
-      | ExcalidrawSourceWithExternalFiles
-      | undefined;
-    let normalized: SketchlabReactFlowSource | null = null;
-    if (source && (source as {type?: string}).type === 'excalidraw') {
-      normalized = convertExcalidrawToReactFlow(
-        source as ExcalidrawSourceWithExternalFiles
-      );
-    } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
-      normalized = source as SketchlabReactFlowSource;
-    }
-    const cloned = normalized ? structuredClone(normalized) : null;
-    return {
-      initialNodes: cloned?.nodes ?? [],
-      initialEdges: cloned?.edges ?? [],
-      initialViewport: cloned?.viewport,
-    };
-  }, [currentSources.source]);
+  const {initialNodes, initialEdges, initialViewport, convertedFromExcalidraw} =
+    useMemo(() => {
+      const source = currentSources.source as
+        | SketchlabReactFlowSource
+        | ExcalidrawSourceWithExternalFiles
+        | undefined;
+      let normalized: SketchlabReactFlowSource | null = null;
+      let didConvert = false;
+      if (source && (source as {type?: string}).type === 'excalidraw') {
+        normalized = convertExcalidrawToReactFlow(
+          source as ExcalidrawSourceWithExternalFiles,
+        );
+        didConvert = true;
+      } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
+        normalized = source as SketchlabReactFlowSource;
+      }
+      const cloned = normalized ? structuredClone(normalized) : null;
+      return {
+        initialNodes: cloned?.nodes ?? [],
+        initialEdges: cloned?.edges ?? [],
+        initialViewport: cloned?.viewport,
+        convertedFromExcalidraw: didConvert,
+      };
+    }, [currentSources.source]);
+
+  // Only after a fresh Excalidraw conversion, upload any ImageNode
+  // whose src is still a base64 dataURL — these come from sources
+  // whose externalFiles map was empty (typical of level-authored
+  // start_sources / exemplar_sources). The canvas's debounced save
+  // then persists the resulting asset URLs instead of base64. We
+  // don't run this for native React Flow sources: any dataURLs there
+  // are a steady-state we shouldn't touch.
+  useEffect(() => {
+    if (!convertedFromExcalidraw || readonlyWorkspace) return;
+    uploadConvertedDataUrlImages(
+      reactFlow,
+      channelId,
+      levelProperties.name,
+      dataUrlUploadsInFlight.current,
+    );
+  }, [
+    convertedFromExcalidraw,
+    reactFlow,
+    channelId,
+    levelProperties.name,
+    readonlyWorkspace,
+  ]);
 
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
@@ -272,7 +305,7 @@ function ReactFlowSketchLabViewInner({
 }
 
 export default function ReactFlowSketchLabView(
-  props: LabProps<LevelProperties>
+  props: LabProps<LevelProperties>,
 ) {
   return (
     <ReactFlowProvider>

@@ -1,6 +1,12 @@
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {MarkerType} from '@xyflow/react';
+import {MarkerType, type ReactFlowInstance} from '@xyflow/react';
+import {extension as mimeToExtension} from 'mime-types';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {
   ExcalidrawSourceWithExternalFiles,
   SketchlabReactFlowEdge,
@@ -9,7 +15,8 @@ import {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {LINE_ANCHOR_SIZE_PX} from '../constants';
+import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
+import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {FontSizeValue} from '../nodes/nodeToolbars/toolbarPalettes';
 import {ShapeNodeData, ShapeType} from '../types';
 
@@ -237,4 +244,106 @@ export function convertExcalidrawToReactFlow(
   }
 
   return {nodes, edges};
+}
+
+// "data:image/png;base64,..." -> "image/png"
+function parseDataUrlMimeType(dataUrl: string): string | null {
+  const match = /^data:([^;,]+)/.exec(dataUrl);
+  return match ? match[1] : null;
+}
+
+// Uploads a single base64 data URL to the asset store and returns the
+// new asset URL, or null on failure / unsupported mime type. Mirrors
+// Excalidraw's externalFiles upload path so a converted project produces
+// URLs of the same shape a natively-saved one would.
+async function uploadDataUrlImage(
+  dataUrl: string,
+  channelId: string,
+  levelName: string
+): Promise<string | null> {
+  const mimeType = parseDataUrlMimeType(dataUrl);
+  if (!mimeType) return null;
+  const ext = mimeToExtension(mimeType);
+  if (!ext) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning(`Skipping image: unsupported mime type "${mimeType}"`);
+    return null;
+  }
+
+  const filenameWithExtension = `${createUuid()}.${ext}`;
+  const isStarterAssetOrExemplar = !!(
+    getIsStartMode() || getAppOptionsEditingExemplar()
+  );
+  const uploadUrl = isStarterAssetOrExemplar
+    ? `/level_starter_assets/${encodeURIComponent(
+        levelName
+      )}/uuid/${filenameWithExtension}`
+    : `${ASSET_PATH_PREFIX}/${channelId}/${filenameWithExtension}`;
+
+  try {
+    await uploadBase64ToUrl(
+      dataUrl,
+      uploadUrl,
+      mimeType,
+      isStarterAssetOrExemplar,
+      filenameWithExtension
+    );
+    return uploadUrl;
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning(
+        `Failed to upload converted image: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      );
+    return null;
+  }
+}
+
+/**
+ * Scans the canvas for ImageNodes whose src is still a base64 data URL —
+ * which the converter emits when an Excalidraw source's externalFiles
+ * map was empty (typical for level-authored start_sources / exemplar
+ * sources) — uploads each to S3, and rewrites the node's src to the
+ * resulting asset URL via reactFlow.updateNodeData. The canvas's
+ * existing debounced save then writes URLs to the persisted source
+ * instead of base64.
+ *
+ * Call this once per Excalidraw conversion. inFlightIds dedupes if the
+ * caller invokes it again before pending uploads complete.
+ */
+export async function uploadConvertedDataUrlImages(
+  reactFlow: ReactFlowInstance,
+  channelId: string,
+  levelName: string,
+  inFlightIds: Set<string>
+): Promise<void> {
+  const pending = reactFlow
+    .getNodes()
+    .filter(
+      node =>
+        node.type === 'image' &&
+        typeof node.data?.src === 'string' &&
+        (node.data.src as string).startsWith('data:') &&
+        !inFlightIds.has(node.id)
+    );
+  await Promise.allSettled(
+    pending.map(async node => {
+      inFlightIds.add(node.id);
+      try {
+        const newUrl = await uploadDataUrlImage(
+          node.data.src as string,
+          channelId,
+          levelName
+        );
+        if (newUrl) {
+          reactFlow.updateNodeData(node.id, {src: newUrl});
+        }
+      } finally {
+        inFlightIds.delete(node.id);
+      }
+    })
+  );
 }
