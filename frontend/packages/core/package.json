@@ -73,7 +73,7 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "^4.0.17"
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "@sentry/browser": "10.40.0",
