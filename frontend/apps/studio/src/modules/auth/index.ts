@@ -1,3 +1,3 @@
-export {AuthProvider} from './AuthProvider';
 export {useAuth} from './useAuth';
+export {fetchAuthOutcome} from './fetchAuthOutcome';
 export type {AuthOutcome, CurrentUserResponseSignedIn} from './types';

@@ -46,7 +46,7 @@ function makeHttp(jsonResult: unknown, rejectWith?: unknown): KyInstance {
 }
 
 describe('getCurrent', () => {
-  it('issues GET api/v1/users/current with no body', async () => {
+  it('issues GET api/v1/users/current', async () => {
     const http = makeHttp({is_signed_in: false});
     await getCurrent(http)();
     expect(http.get).toHaveBeenCalledWith('api/v1/users/current');

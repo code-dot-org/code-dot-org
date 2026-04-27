@@ -22,7 +22,7 @@ const containerSx = {
 
 /**
  * Selects the appropriate auth UI for the current status.
- * Shows a skeleton during loading/error, signed-in button when authenticated,
+ * Shows a skeleton on error, the signed-in button when authenticated,
  * or sign-in/create-account buttons when signed out.
  *
  * @param userAuth - Current auth status and associated data.
@@ -30,12 +30,11 @@ const containerSx = {
  */
 function renderUserAuth(userAuth: UserAuthProp) {
   switch (userAuth.status) {
-    case 'loading':
     case 'error':
       return (
         <Skeleton
           variant="rectangular"
-          width={120}
+          width={238}
           height={32}
           sx={{borderRadius: '4px'}}
         />

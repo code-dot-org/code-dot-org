@@ -4,16 +4,17 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {Box, ThemeProvider} from '@mui/material';
-import {createRootRoute, Outlet} from '@tanstack/react-router';
+import {ThemeProvider} from '@mui/material';
+import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
+import {useCallback} from 'react';
 
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
-import {useAuth} from '@/modules/auth';
+import {fetchAuthOutcome, useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 
@@ -30,21 +31,24 @@ const MENU_ITEMS = [
 
 /**
  * Maps auth status to the route content area.
- * Returns the outlet for all non-error states; the auth error page otherwise.
+ * Returns the outlet for non-error states; the auth error page on failure.
  *
- * @param auth - Current auth outcome from {@link useAuth}.
+ * @param auth - Current auth outcome from the root route context.
+ * @param onRetry - Calls `router.invalidate()` to re-run `beforeLoad`.
  * @returns The content node for the current auth status.
  */
-function renderRouteArea(auth: ReturnType<typeof useAuth>): React.ReactNode {
+function renderRouteArea(
+  auth: ReturnType<typeof useAuth>,
+  onRetry: () => void,
+): React.ReactNode {
   switch (auth.status) {
-    case 'loading':
     case 'signedIn':
     case 'signedOut':
       return <Outlet />;
     case 'error':
       return (
         <AuthErrorPage
-          onRetry={auth.onRetry}
+          onRetry={onRetry}
           observabilityEventId={auth.observabilityEventId}
         />
       );
@@ -58,9 +62,13 @@ function renderRouteArea(auth: ReturnType<typeof useAuth>): React.ReactNode {
 /**
  * Renders the page shell: header, route content area, and devtools.
  * Auth state drives both the header user area and the content area.
+ * `onRetry` calls `router.invalidate()` to re-run `beforeLoad`.
  */
 function RootContent() {
   const auth = useAuth();
+  const router = useRouter();
+  const onRetry = useCallback(() => router.invalidate(), [router]);
+
   return (
     <>
       <Header
@@ -69,7 +77,7 @@ function RootContent() {
         menuItems={MENU_ITEMS}
         userAuth={auth}
       />
-      {renderRouteArea(auth)}
+      {renderRouteArea(auth, onRetry)}
       <TanStackRouterDevtools />
     </>
   );
@@ -86,5 +94,12 @@ function RootLayout() {
   );
 }
 
-/** TanStack Router root route definition. */
-export const Route = createRootRoute({component: RootLayout});
+/**
+ * TanStack Router root route definition.
+ * `beforeLoad` fetches auth once per navigation before any component renders,
+ * eliminating the useEffect bootstrap pattern and StrictMode double-fetch.
+ */
+export const Route = createRootRoute({
+  beforeLoad: async () => ({auth: await fetchAuthOutcome()}),
+  component: RootLayout,
+});

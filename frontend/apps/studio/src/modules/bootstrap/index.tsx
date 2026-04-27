@@ -3,8 +3,6 @@ import type {ReactNode} from 'react';
 
 import FontLoader from '@code-dot-org/fonts/FontLoader';
 
-import {AuthProvider} from '@/modules/auth';
-
 /** Props for {@link Bootstrap}. */
 interface BootstrapProps {
   /** BCP 47 locale string used for font selection. */
@@ -13,16 +11,14 @@ interface BootstrapProps {
   children: ReactNode;
 }
 
-/** Early bootstrap: fonts, CSS reset, and auth context for all descendants. */
-const Bootstrap = ({locale, children}: BootstrapProps) => {
-  return (
-    <AuthProvider>
-      <FontLoader locale={locale} />
-      {/* MUI CSS reset — normalizes browser defaults */}
-      <CssBaseline />
-      {children}
-    </AuthProvider>
-  );
-};
+/** Early bootstrap: fonts and CSS reset for all descendants. */
+const Bootstrap = ({locale, children}: BootstrapProps) => (
+  <>
+    <FontLoader locale={locale} />
+    {/* MUI CSS reset — normalizes browser defaults */}
+    <CssBaseline />
+    {children}
+  </>
+);
 
 export default Bootstrap;

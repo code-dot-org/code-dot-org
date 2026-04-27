@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import type {FunctionComponent} from 'react';
 
 /**
@@ -8,7 +9,6 @@ import type {FunctionComponent} from 'react';
  */
 const signInSx = {
   '&&': {
-    typography: 'body3',
     backgroundColor: 'transparent',
     color: 'var(--neutral-base-white)',
     border: '1px solid var(--neutral-base-white)',
@@ -31,7 +31,6 @@ const signInSx = {
  */
 const createAccountSx = {
   '&&': {
-    typography: 'body3',
     backgroundColor: 'var(--neutral-base-white)',
     color: 'var(--background-brand-teal-primary)',
     borderRadius: '4px',
@@ -51,14 +50,18 @@ const createAccountSx = {
 const SignedOutUserButtons: FunctionComponent = () => (
   <Box sx={{display: 'flex', gap: 1, alignItems: 'center'}}>
     <Button href="/users/sign_in" disableElevation sx={signInSx}>
-      Sign In
+      <Typography variant="body3" component="span" color="inherit">
+        Sign In
+      </Typography>
     </Button>
     <Button
       href="/users/sign_up/account_type"
       disableElevation
       sx={createAccountSx}
     >
-      Create Account
+      <Typography variant="body3" component="span" color="inherit">
+        Create Account
+      </Typography>
     </Button>
   </Box>
 );

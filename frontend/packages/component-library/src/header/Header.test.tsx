@@ -10,17 +10,10 @@ const BASE_PROPS = {
 };
 
 describe('Header', () => {
-  it('renders brand and menu items when loading', () => {
-    render(<Header {...BASE_PROPS} userAuth={{status: 'loading'}} />);
+  it('renders brand and menu items when signed out', () => {
+    render(<Header {...BASE_PROPS} userAuth={{status: 'signedOut'}} />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();
     expect(screen.getByText('Learn')).toBeInTheDocument();
-  });
-
-  it('renders Skeleton for loading state', () => {
-    const {container} = render(
-      <Header {...BASE_PROPS} userAuth={{status: 'loading'}} />,
-    );
-    expect(container.querySelector('.MuiSkeleton-root')).toBeInTheDocument();
   });
 
   it('renders Skeleton for error state', () => {
@@ -51,7 +44,6 @@ describe('Header', () => {
 
   it('renders brand and menu items in every auth state', () => {
     const states = [
-      {status: 'loading' as const},
       {status: 'signedIn' as const, display_name: 'Alice'},
       {status: 'signedOut' as const},
       {status: 'error' as const},

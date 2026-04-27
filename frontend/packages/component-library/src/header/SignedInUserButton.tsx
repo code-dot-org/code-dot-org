@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import type {FunctionComponent} from 'react';
 
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
@@ -8,9 +8,12 @@ import Link from '@/link/Link';
 
 import moduleStyles from './signedInUserButton.module.scss';
 
-/** Discriminated union of auth states consumed by header auth components. */
+/**
+ * Discriminated union of auth states consumed by header auth components.
+ * Matches {@link AuthOutcome} from `@/modules/auth` — no `loading` variant
+ * because auth resolves before the header renders (via root route `beforeLoad`).
+ */
 export type UserAuthProp =
-  | {status: 'loading'}
   | {status: 'signedIn'; display_name: string}
   | {status: 'signedOut'}
   | {status: 'error'};
@@ -49,10 +52,9 @@ const ChevronIcon = () => {
  */
 const triggerSx = {
   '&&': {
-    typography: 'body3',
     backgroundColor: 'var(--background-brand-teal-primary)',
-    color: 'white',
-    border: '1px solid white',
+    color: 'var(--neutral-base-white)',
+    border: '1px solid var(--neutral-base-white)',
     borderRadius: '4px',
     boxShadow: 'none',
     textTransform: 'none' as const,
@@ -63,10 +65,10 @@ const triggerSx = {
   },
   '&&:hover, &&:active, &&:focus-visible': {
     backgroundColor: 'var(--background-brand-teal-primary)',
-    color: 'white',
+    color: 'var(--neutral-base-white)',
     boxShadow: 'none',
   },
-  '&& .MuiButton-endIcon': {color: 'white'},
+  '&& .MuiButton-endIcon': {color: 'var(--neutral-base-white)'},
 };
 
 /** Dropdown button showing the signed-in user's display name with an account menu. */
@@ -87,8 +89,10 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         sx: triggerSx,
         endIcon: <ChevronIcon />,
         children: (
-          <Box
+          <Typography
+            variant="body3"
             component="span"
+            color="inherit"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -98,7 +102,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
             }}
           >
             {userAuth.display_name}
-          </Box>
+          </Typography>
         ),
       }}
     >
