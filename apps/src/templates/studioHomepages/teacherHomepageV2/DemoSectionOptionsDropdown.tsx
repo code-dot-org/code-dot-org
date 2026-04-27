@@ -2,15 +2,11 @@ import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
-import {generatePath, useNavigate} from 'react-router-dom';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import {
-  TEACHER_NAVIGATION_SECTIONS_URL,
-  TEACHER_NAVIGATION_PATHS,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
@@ -19,73 +15,33 @@ import {CERTIFICATE_URL} from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
-type DemoMenuAction = 'settings' | 'roster' | 'loginCards' | 'certificates';
+const CERTIFICATES_ACTION_KEY = 'certificates';
 
 interface DemoSectionOptionsDropdownProps {
   section: Section;
   disabled?: boolean;
-  resolveSectionForAction: (
+  handleNavigationClick: (
+    path: string,
+    eventName: string
+  ) => Promise<void> | void;
+  createSectionForAction: (
     eventName: string,
-    actionKey: DemoMenuAction
+    pendingKey: string
   ) => Promise<Section | void>;
 }
 
 const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
   section,
   disabled = false,
-  resolveSectionForAction,
+  handleNavigationClick,
+  createSectionForAction,
 }) => {
-  const navigate = useNavigate();
   const certFormRef = React.useRef<HTMLFormElement>(null);
 
   const [studentNames, setStudentNames] = React.useState<string[]>([]);
   const [certificateCourse, setCertificateCourse] = React.useState<
     string | undefined
   >(section.courseVersionName);
-  const [pendingActionKey, setPendingActionKey] =
-    React.useState<DemoMenuAction | null>(null);
-
-  const navigateToSectionPath = React.useCallback(
-    (sectionId: number, path: string) => {
-      const nextPath = generatePath(
-        `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
-        {
-          sectionId: sectionId.toString(),
-        }
-      );
-      navigate(nextPath);
-    },
-    [navigate]
-  );
-
-  const withResolvedSection = React.useCallback(
-    async (
-      actionKey: DemoMenuAction,
-      eventName: string,
-      callback: (resolvedSection: Section) => Promise<void> | void
-    ) => {
-      if (pendingActionKey || disabled) {
-        return;
-      }
-
-      setPendingActionKey(actionKey);
-      try {
-        const resolvedSection = await resolveSectionForAction(
-          eventName,
-          actionKey
-        );
-        if (!resolvedSection) {
-          return;
-        }
-        await callback(resolvedSection);
-      } catch {
-        // DemoSectionCard owns the notice banner for create failures.
-      } finally {
-        setPendingActionKey(null);
-      }
-    },
-    [disabled, pendingActionKey, resolveSectionForAction]
-  );
 
   const onClickPrintCerts = React.useCallback(
     async (targetSection: Section) => {
@@ -108,22 +64,36 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
     []
   );
 
+  const handleCertificatesClick = React.useCallback(async () => {
+    if (disabled) {
+      return;
+    }
+
+    try {
+      const section = await createSectionForAction(
+        EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+        CERTIFICATES_ACTION_KEY
+      );
+      if (!section) {
+        return;
+      }
+      await onClickPrintCerts(section);
+    } catch {
+      // DemoSectionCard owns the notice banner for create failures.
+    }
+  }, [createSectionForAction, disabled, onClickPrintCerts]);
+
   const dropdownOptions = useMemo(
     () => [
       <li key={'sectionSettings'}>
         <button
           type="button"
           className={styles.dropdownMenuItem}
-          disabled={disabled || !!pendingActionKey}
+          disabled={disabled}
           onClick={() =>
-            withResolvedSection(
-              'settings',
-              EVENTS.SECTION_CARD_SETTINGS_CLICKED,
-              resolvedSection =>
-                navigateToSectionPath(
-                  resolvedSection.id,
-                  TEACHER_NAVIGATION_PATHS.settings
-                )
+            handleNavigationClick(
+              TEACHER_NAVIGATION_PATHS.settings,
+              EVENTS.SECTION_CARD_SETTINGS_CLICKED
             )
           }
         >
@@ -135,16 +105,11 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
         <button
           type="button"
           className={styles.dropdownMenuItem}
-          disabled={disabled || !!pendingActionKey}
+          disabled={disabled}
           onClick={() =>
-            withResolvedSection(
-              'roster',
-              EVENTS.SECTION_CARD_ROSTER_CLICKED,
-              resolvedSection =>
-                navigateToSectionPath(
-                  resolvedSection.id,
-                  TEACHER_NAVIGATION_PATHS.roster
-                )
+            handleNavigationClick(
+              TEACHER_NAVIGATION_PATHS.roster,
+              EVENTS.SECTION_CARD_ROSTER_CLICKED
             )
           }
         >
@@ -156,16 +121,11 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
         <button
           type="button"
           className={styles.dropdownMenuItem}
-          disabled={disabled || !!pendingActionKey}
+          disabled={disabled}
           onClick={() =>
-            withResolvedSection(
-              'loginCards',
-              EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
-              resolvedSection =>
-                navigateToSectionPath(
-                  resolvedSection.id,
-                  TEACHER_NAVIGATION_PATHS.loginInfo
-                )
+            handleNavigationClick(
+              TEACHER_NAVIGATION_PATHS.loginInfo,
+              EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED
             )
           }
         >
@@ -178,14 +138,8 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           id="ui-test-print-certificates"
           type="button"
           className={styles.dropdownMenuItem}
-          disabled={disabled || !!pendingActionKey}
-          onClick={() =>
-            withResolvedSection(
-              'certificates',
-              EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
-              onClickPrintCerts
-            )
-          }
+          disabled={disabled}
+          onClick={handleCertificatesClick}
         >
           <FontAwesomeV6Icon iconName="file-certificate" iconStyle="solid" />
           <Typography variant="body2" component="span">
@@ -194,13 +148,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
         </button>
       </li>,
     ],
-    [
-      disabled,
-      navigateToSectionPath,
-      onClickPrintCerts,
-      pendingActionKey,
-      withResolvedSection,
-    ]
+    [disabled, handleCertificatesClick, handleNavigationClick]
   );
 
   return (
@@ -227,7 +175,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           size: 'small',
           className: styles.dropdownButton,
           'aria-label': i18n.sectionOptionsDropdown(),
-          disabled: disabled || !!pendingActionKey,
+          disabled: disabled,
         }}
       >
         <ul>{dropdownOptions}</ul>

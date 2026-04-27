@@ -1,30 +1,13 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import {
-  createMemoryRouter,
-  createRoutesFromElements,
-  Outlet,
-  Route,
-  RouterProvider,
-  useLocation,
-} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import DemoSectionOptionsDropdown from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/DemoSectionOptionsDropdown';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import {
-  SPECIFIC_SECTION_BASE_URL,
-  TEACHER_NAVIGATION_PATHS,
-  TEACHER_NAVIGATION_SECTIONS_URL,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
-
-const LocationElement = () => {
-  const location = useLocation();
-  return <div>{location.pathname}</div>;
-};
 
 const SECTION: Section = {
   id: 0,
@@ -96,11 +79,13 @@ const STUDENTS: Student[] = [
 ];
 
 describe('DemoSectionOptionsDropdown', () => {
-  let resolveSectionForAction: jest.Mock;
+  let handleNavigationClick: jest.Mock;
+  let createSectionForAction: jest.Mock;
   let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
-    resolveSectionForAction = jest.fn().mockResolvedValue(RESOLVED_SECTION);
+    handleNavigationClick = jest.fn().mockResolvedValue(undefined);
+    createSectionForAction = jest.fn().mockResolvedValue(RESOLVED_SECTION);
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
       value: STUDENTS,
       response: new Response(),
@@ -112,60 +97,42 @@ describe('DemoSectionOptionsDropdown', () => {
     jest.restoreAllMocks();
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(disabled = false) {
     return render(
-      <RouterProvider
-        router={createMemoryRouter(
-          createRoutesFromElements([
-            <Route path="/">
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <DemoSectionOptionsDropdown
-                    section={SECTION}
-                    resolveSectionForAction={resolveSectionForAction}
-                  />
-                }
-              />
-              <Route
-                path={TEACHER_NAVIGATION_SECTIONS_URL}
-                element={<Outlet />}
-              >
-                <Route path={SPECIFIC_SECTION_BASE_URL} element={<Outlet />}>
-                  <Route
-                    path={TEACHER_NAVIGATION_PATHS.settings}
-                    element={<LocationElement />}
-                  />
-                  <Route
-                    path={TEACHER_NAVIGATION_PATHS.roster}
-                    element={<LocationElement />}
-                  />
-                  <Route
-                    path={TEACHER_NAVIGATION_PATHS.loginInfo}
-                    element={<LocationElement />}
-                  />
-                </Route>
-              </Route>
-            </Route>,
-          ]),
-          {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
-        )}
+      <DemoSectionOptionsDropdown
+        section={SECTION}
+        disabled={disabled}
+        handleNavigationClick={handleNavigationClick}
+        createSectionForAction={createSectionForAction}
       />
     );
   }
 
-  it('creates a section and navigates to settings', async () => {
+  it('handles settings navigation clicks', async () => {
     renderComponent();
 
     fireEvent.click(screen.getByText(i18n.sectionSettings()));
 
     await act(async () => await new Promise(process.nextTick));
 
-    expect(resolveSectionForAction).toHaveBeenCalledWith(
-      EVENTS.SECTION_CARD_SETTINGS_CLICKED,
-      'settings'
+    expect(handleNavigationClick).toHaveBeenCalledWith(
+      TEACHER_NAVIGATION_PATHS.settings,
+      EVENTS.SECTION_CARD_SETTINGS_CLICKED
     );
-    screen.getByText('/sections/11/settings');
+    expect(createSectionForAction).not.toHaveBeenCalled();
+  });
+
+  it('handles login card navigation clicks', async () => {
+    renderComponent();
+
+    fireEvent.click(screen.getByText(i18n.loginCards()));
+
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(handleNavigationClick).toHaveBeenCalledWith(
+      TEACHER_NAVIGATION_PATHS.loginInfo,
+      EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED
+    );
   });
 
   it('creates a section and prints certificates for the resolved section', async () => {
@@ -175,28 +142,38 @@ describe('DemoSectionOptionsDropdown', () => {
 
     await act(async () => await new Promise(process.nextTick));
 
-    expect(resolveSectionForAction).toHaveBeenCalledWith(
+    expect(createSectionForAction).toHaveBeenCalledWith(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
       'certificates'
     );
+    expect(handleNavigationClick).not.toHaveBeenCalled();
     expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
     expect(HTMLFormElement.prototype.submit).toHaveBeenCalled();
   });
 
-  it('swallows create failures and allows retrying the menu action', async () => {
-    resolveSectionForAction
-      .mockRejectedValueOnce(new Error('boom'))
-      .mockResolvedValueOnce(RESOLVED_SECTION);
+  it('does not handle menu actions when disabled', async () => {
+    renderComponent(true);
+
+    fireEvent.click(screen.getByText(i18n.sectionSettings()));
+    fireEvent.click(screen.getByText(i18n.certificates()));
+
+    expect(handleNavigationClick).not.toHaveBeenCalled();
+    expect(createSectionForAction).not.toHaveBeenCalled();
+  });
+
+  it('swallows certificate create failures', async () => {
+    createSectionForAction.mockRejectedValueOnce(new Error('boom'));
 
     renderComponent();
 
-    fireEvent.click(screen.getByText(i18n.sectionSettings()));
+    fireEvent.click(screen.getByText(i18n.certificates()));
     await act(async () => await new Promise(process.nextTick));
 
-    fireEvent.click(screen.getByText(i18n.sectionSettings()));
-    await act(async () => await new Promise(process.nextTick));
-
-    expect(resolveSectionForAction).toHaveBeenCalledTimes(2);
-    screen.getByText('/sections/11/settings');
+    expect(createSectionForAction).toHaveBeenCalledWith(
+      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      'certificates'
+    );
+    expect(fetchSpy).not.toHaveBeenCalled();
+    expect(HTMLFormElement.prototype.submit).not.toHaveBeenCalled();
   });
 });

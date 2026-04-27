@@ -2,7 +2,7 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import React from 'react';
-import {generatePath} from 'react-router-dom';
+import {generatePath, useNavigate} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -18,8 +18,8 @@ import {
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
-  getBasePath,
   TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -29,7 +29,6 @@ import DemoSectionOptionsDropdown from './DemoSectionOptionsDropdown';
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
-import {CERTIFICATE_URL} from './SectionOptionsDropdown';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';
@@ -50,15 +49,6 @@ interface DemoAction {
   path: string;
   eventName: string;
 }
-
-type DemoMenuAction = 'settings' | 'roster' | 'loginCards' | 'certificates';
-
-const DEMO_MENU_ACTION_PATHS: Record<DemoMenuAction, string> = {
-  settings: TEACHER_NAVIGATION_PATHS.settings,
-  roster: TEACHER_NAVIGATION_PATHS.roster,
-  loginCards: TEACHER_NAVIGATION_PATHS.loginInfo,
-  certificates: CERTIFICATE_URL,
-};
 
 const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
   const actions: DemoAction[] = [];
@@ -88,6 +78,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [pendingPath, setPendingPath] = React.useState<string | null>(null);
   const [notice, setNotice] = React.useState<Notice | null>(null);
   const pendingActionRef = React.useRef<string | null>(null);
@@ -153,17 +144,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   }, [preset]);
 
   const createSectionForAction = React.useCallback(
-    async ({
-      eventName,
-      path,
-      pendingKey,
-      navigateToPath = false,
-    }: {
-      eventName: string;
-      path: string;
-      pendingKey: string;
-      navigateToPath?: boolean;
-    }) => {
+    async (eventName: string, pendingKey: string) => {
       if (pendingActionRef.current) {
         return;
       }
@@ -177,15 +158,6 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
         const section = await dispatch(createDemoSection(demoType as DemoType));
         if (!section) {
           return;
-        }
-
-        if (navigateToPath) {
-          const nextPath = path.startsWith('/')
-            ? path
-            : generatePath(getBasePath(path), {
-                sectionId: section.id.toString(),
-              });
-          window.location.assign(nextPath);
         }
 
         return section;
@@ -210,31 +182,34 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     [demoType, dispatch]
   );
 
-  const handleActionClick = async (
-    path: string,
-    eventName: string,
-    pendingKey?: string
-  ) => {
-    try {
-      await createSectionForAction({
-        eventName,
-        path,
-        pendingKey: pendingKey || path,
-        navigateToPath: true,
-      });
-    } catch {
-      // Errors are handled by createSectionForAction via the notice banner.
-    }
-  };
+  const navigateToSectionPath = React.useCallback(
+    (sectionId: number, path: string) => {
+      const nextPath = path.startsWith('/')
+        ? path
+        : generatePath(
+            `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
+            {
+              sectionId: sectionId.toString(),
+            }
+          );
+      navigate(nextPath);
+    },
+    [navigate]
+  );
 
-  const createSectionForMenuAction = React.useCallback(
-    async (eventName: string, actionKey: DemoMenuAction) =>
-      createSectionForAction({
-        eventName,
-        path: DEMO_MENU_ACTION_PATHS[actionKey],
-        pendingKey: actionKey,
-      }),
-    [createSectionForAction]
+  const handleNavigationClick = React.useCallback(
+    async (path: string, eventName: string, pendingKey = path) => {
+      try {
+        const section = await createSectionForAction(eventName, pendingKey);
+        if (!section) {
+          return;
+        }
+        navigateToSectionPath(section.id, path);
+      } catch {
+        // Errors are handled by createSectionForAction via the notice banner.
+      }
+    },
+    [createSectionForAction, navigateToSectionPath]
   );
 
   if (numSections !== 0) {
@@ -316,7 +291,8 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
               <DemoSectionOptionsDropdown
                 disabled={!!pendingPath}
                 section={demoSection}
-                resolveSectionForAction={createSectionForMenuAction}
+                handleNavigationClick={handleNavigationClick}
+                createSectionForAction={createSectionForAction}
               />
             </div>
           </div>
@@ -326,9 +302,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                 section={demoSection}
                 demoType={demoType as DemoType}
                 disabled={!!pendingPath}
-                beforeNavigate={(path: string, eventName: string) =>
-                  handleActionClick(path, eventName, path)
-                }
+                beforeNavigate={handleNavigationClick}
               />
             </div>
             <div className={styles.sectionCardBodyRight}>
@@ -342,7 +316,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                     className={styles.demoActionButton}
                     disabled={!!pendingPath}
                     onClick={() =>
-                      handleActionClick(
+                      handleNavigationClick(
                         action.path,
                         action.eventName,
                         action.id
