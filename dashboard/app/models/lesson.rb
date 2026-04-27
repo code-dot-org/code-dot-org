@@ -33,8 +33,7 @@ class Lesson < ApplicationRecord
 
   belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
-  # Rubrics need to be deleted before levels since the rubrics are connected to a level in a lesson
-  has_many :rubrics, dependent: :destroy
+
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
@@ -44,6 +43,7 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
   has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_lessons
   has_many :objectives, dependent: :destroy
+  has_many :rubrics, dependent: :destroy
 
   # join tables needed for seeding logic
   has_many :lessons_resources
