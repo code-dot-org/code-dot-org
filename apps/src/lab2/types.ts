@@ -25,6 +25,7 @@ import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 import type {
   ImageNodeData,
+  LineAnchorNodeData,
   ShapeNodeData,
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
@@ -107,7 +108,11 @@ interface SketchlabReactFlowNodeBase {
 export type SketchlabReactFlowNode =
   | (SketchlabReactFlowNodeBase & {type: 'shape'; data: ShapeNodeData})
   | (SketchlabReactFlowNodeBase & {type: 'text'; data: TextNodeData})
-  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData});
+  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData})
+  | (SketchlabReactFlowNodeBase & {
+      type: 'lineAnchor';
+      data: LineAnchorNodeData;
+    });
 
 export interface SketchlabReactFlowEdge {
   id: string;
