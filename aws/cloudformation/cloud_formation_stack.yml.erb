@@ -613,7 +613,7 @@ Resources:
                   - dms:StartReplicationTask
                 Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
-<% if rack_env?(:test) -%>
+<% if rack_env?(:adhoc) -%>
         # AWS Device Farm (Test Grid) access for UI test runners on the test daemon.
         # Scoped to Test Grid only — this is a Selenium/WebDriver replacement
         # evaluation for Saucelabs and does not need mobile Device Farm actions.
