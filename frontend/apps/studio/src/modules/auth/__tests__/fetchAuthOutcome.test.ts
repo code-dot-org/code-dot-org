@@ -61,19 +61,19 @@ describe('fetchAuthOutcome', () => {
     loggerError.mockReset();
   });
 
-  it('returns signedIn when the session is active', async () => {
+  it('returns signed-in when the session is active', async () => {
     getCurrent.mockResolvedValue(SIGNED_IN_RESPONSE);
     const result = await fetchAuthOutcome();
-    expect(result.status).toBe('signedIn');
-    if (result.status === 'signedIn') {
+    expect(result.status).toBe('signed-in');
+    if (result.status === 'signed-in') {
       expect(result.display_name).toBe('Coder');
     }
   });
 
-  it('returns signedOut when no session is active', async () => {
+  it('returns signed-out when no session is active', async () => {
     getCurrent.mockResolvedValue({is_signed_in: false});
     const result = await fetchAuthOutcome();
-    expect(result).toEqual({status: 'signedOut'});
+    expect(result).toEqual({status: 'signed-out'});
   });
 
   it('returns error on HTTP failure', async () => {

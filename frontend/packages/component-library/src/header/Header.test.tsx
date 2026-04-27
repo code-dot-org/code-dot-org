@@ -11,7 +11,7 @@ const BASE_PROPS = {
 
 describe('Header', () => {
   it('renders brand and menu items when signed out', () => {
-    render(<Header {...BASE_PROPS} userAuth={{status: 'signedOut'}} />);
+    render(<Header {...BASE_PROPS} userAuth={{status: 'signed-out'}} />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();
     expect(screen.getByText('Learn')).toBeInTheDocument();
   });
@@ -27,14 +27,14 @@ describe('Header', () => {
     render(
       <Header
         {...BASE_PROPS}
-        userAuth={{status: 'signedIn', display_name: 'Alice'}}
+        userAuth={{status: 'signed-in', display_name: 'Alice'}}
       />,
     );
     expect(screen.getByText('Alice')).toBeInTheDocument();
   });
 
   it('renders Sign In and Create Account links when signed-out', () => {
-    render(<Header {...BASE_PROPS} userAuth={{status: 'signedOut'}} />);
+    render(<Header {...BASE_PROPS} userAuth={{status: 'signed-out'}} />);
     expect(screen.getByRole('link', {name: 'Sign In'})).toBeInTheDocument();
     expect(
       screen.getByRole('link', {name: 'Create Account'}),
@@ -44,8 +44,8 @@ describe('Header', () => {
 
   it('renders brand and menu items in every auth state', () => {
     const states = [
-      {status: 'signedIn' as const, display_name: 'Alice'},
-      {status: 'signedOut' as const},
+      {status: 'signed-in' as const, display_name: 'Alice'},
+      {status: 'signed-out' as const},
       {status: 'error' as const},
     ];
     for (const userAuth of states) {

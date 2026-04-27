@@ -35,8 +35,8 @@ export async function fetchAuthOutcome(): Promise<AuthOutcome> {
   try {
     const response = await DashboardApiClient.users.getCurrent();
     return response.is_signed_in
-      ? {status: 'signedIn', ...response}
-      : {status: 'signedOut'};
+      ? {status: 'signed-in', ...response}
+      : {status: 'signed-out'};
   } catch (err) {
     const error = err as Error;
     const tag = classifyError(error);

@@ -10,18 +10,20 @@ import moduleStyles from './signedInUserButton.module.scss';
 
 /**
  * Discriminated union of auth states consumed by header auth components.
- * Matches {@link AuthOutcome} from `@/modules/auth` — no `loading` variant
- * because auth resolves before the header renders (via root route `beforeLoad`).
+ * Matches the `status` field of `AuthOutcome` from `@code-dot-org/studio`.
+ * `loading` covers the window before auth resolves in consumers that render
+ * before `beforeLoad` completes.
  */
 export type UserAuthProp =
-  | {status: 'signedIn'; display_name: string}
-  | {status: 'signedOut'}
+  | {status: 'signed-in'; display_name: string}
+  | {status: 'signed-out'}
+  | {status: 'loading'}
   | {status: 'error'};
 
 /** Props for {@link SignedInUserButton}. */
 export interface SignedInUserButtonProps {
-  /** Must be the signedIn variant of {@link UserAuthProp}. */
-  userAuth: Extract<UserAuthProp, {status: 'signedIn'}>;
+  /** Must be the signed-in variant of {@link UserAuthProp}. */
+  userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
 }
 
 /** Navigation links shown inside the signed-in account dropdown. */

@@ -9,6 +9,6 @@ export type {CurrentUserResponseSignedIn};
  * root route's `beforeLoad`. Every consumer must exhaustively switch on `status`.
  */
 export type AuthOutcome =
-  | ({status: 'signedIn'} & CurrentUserResponseSignedIn)
-  | {status: 'signedOut'}
+  | ({status: 'signed-in'} & CurrentUserResponseSignedIn)
+  | {status: 'signed-out'}
   | {status: 'error'; observabilityEventId?: string};

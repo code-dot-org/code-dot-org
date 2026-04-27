@@ -42,8 +42,8 @@ function renderRouteArea(
   onRetry: () => void,
 ): React.ReactNode {
   switch (auth.status) {
-    case 'signedIn':
-    case 'signedOut':
+    case 'signed-in':
+    case 'signed-out':
       return <Outlet />;
     case 'error':
       return (

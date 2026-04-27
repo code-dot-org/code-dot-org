@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import type {FunctionComponent} from 'react';
 
 import {ErrorPage} from './ErrorPage';
@@ -25,7 +26,9 @@ export const AuthErrorPage: FunctionComponent<AuthErrorPageProps> = ({
     eventId={observabilityEventId}
     actions={
       <Button variant="contained" color="primary" onClick={onRetry}>
-        Try again
+        <Typography variant="body3" component="span" color="inherit">
+          Try again
+        </Typography>
       </Button>
     }
   />
