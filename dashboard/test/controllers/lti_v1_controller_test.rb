@@ -481,6 +481,18 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
+  test 'auth - off-site target_link_uri returns unauthorized' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = 'https://example.com/launch'
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :unauthorized
+    assert_nil session[:user_return_to]
+  end
+
   test 'auth - error raised for issued at time in future' do
     payload = get_valid_payload
     payload[:iat] = 3.days.from_now.to_i
