@@ -464,7 +464,23 @@ def server_status_page_url
 end
 
 def status_page_filename
-  "test_status_#{test_type}.html"
+  # SauceLabs runs keep the unqualified name. Device Farm runs are
+  # split into desktop/mobile/combined buckets so a desktop and a
+  # mobile run (which use separate concurrency quotas and are
+  # typically invoked as separate runner.rb commands) don't overwrite
+  # each other's status page in the shared S3 prefix.
+  return "test_status_#{test_type}.html" unless $options.device_farm
+  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
+  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
+  device_farm_kind =
+    if all_mobile
+      'mobile'
+    elsif any_mobile
+      'combined'
+    else
+      'desktop'
+    end
+  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
 end
 
 # Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
