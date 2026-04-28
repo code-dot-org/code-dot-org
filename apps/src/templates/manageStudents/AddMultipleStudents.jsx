@@ -54,7 +54,9 @@ class AddMultipleStudents extends Component {
   // Column order: DisplayName, FamilyName, Age, Gender, State
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    const results = Papa.parse(value);
+    const results = Papa.parse(value, {
+      skipEmptyLines: true,
+    });
     const studentDataArray = results.data.map(parts => {
       const name = (parts[0] || '').trim();
       const familyName = (parts[1] || '').trim() || null;
