@@ -15,7 +15,8 @@ en-GB,gb,en,en-GB,,English (UK),English (UK),FALSE,TRUE,en-GB,"English, United K
 en-IN,in,en,en-IN,en-IN,English (India),English (India),TRUE,FALSE,en-IN,"English, India",FALSE,FALSE,FALSE,FALSE,FALSE
 en,en,en,en-US,en,English,English,TRUE,TRUE,en,English,TRUE,TRUE,TRUE,TRUE,FALSE
 es,es,es,es-ES,es,Español (España),Spanish (Spain),TRUE,TRUE,es-ES,Spanish,TRUE,TRUE,TRUE,TRUE,TRUE
-es-MX,la,es,es-MX,es-LA,Español (LATAM),Spanish (LATAM),TRUE,TRUE,es-MX,"Spanish, Mexico",TRUE,TRUE,TRUE,TRUE,TRUE
+es-MX,mx,es,es-MX,es-MX,Español (Mexico),Spanish (Mexico),TRUE,TRUE,es-MX,"Spanish, Mexico",TRUE,TRUE,TRUE,TRUE,TRUE
+es-LA,la,es,es-LA,es-LA,Español (LATAM),Spanish (LATAM),TRUE,TRUE,es-LA,"Spanish, Latin America",TRUE,TRUE,TRUE,TRUE,TRUE
 et,et,et,et-EE,,Eesti,Estonian,TRUE,FALSE,et,Estonian,TRUE,TRUE,FALSE,TRUE,TRUE
 eu,eu,eu,eu-ES,,Euskara,Basque,TRUE,FALSE,eu,Basque,FALSE,FALSE,FALSE,FALSE,FALSE
 fa-AF,af,fa,fa-AF,,دريلو,Dari,FALSE,TRUE,fa-AF,Dari,FALSE,TRUE,FALSE,FALSE,FALSE
