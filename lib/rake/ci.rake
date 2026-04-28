@@ -171,6 +171,7 @@ namespace :ci do
             "--feature #{container_features.join(',')} " \
             "--local " \
             "--ci " \
+            "--db " \
             "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
@@ -186,6 +187,7 @@ namespace :ci do
               "--config Chrome,iPhone " \
               "--local " \
               "--ci " \
+              "--db " \
               "--parallel #{PARALLEL_COUNT} " \
               "--retry_count 1 " \
               "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \

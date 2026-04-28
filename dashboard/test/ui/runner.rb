@@ -246,17 +246,9 @@ def parse_options
       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif CI::Utils.running_on_ci?
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
-    elsif rack_env?(:test)
-      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
-      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -726,7 +718,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
