@@ -10,6 +10,7 @@
       "show_calendar": true,
       "supported_locales": [
         "es-ES",
+        "es-LA",
         "es-MX",
         "ar-SA",
         "fa-IR",

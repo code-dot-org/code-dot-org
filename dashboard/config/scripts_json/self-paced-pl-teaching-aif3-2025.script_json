@@ -10,6 +10,7 @@
       "is_migrated": true,
       "student_detail_progress_view": true,
       "supported_locales": [
+        "es-LA",
         "es-MX"
       ],
       "topic_tags": [
