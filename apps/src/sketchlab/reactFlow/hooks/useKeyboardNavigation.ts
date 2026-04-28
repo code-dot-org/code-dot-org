@@ -7,6 +7,19 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  MIN_NODE_HEIGHT,
+  MIN_NODE_WIDTH,
+  KEYBOARD_RESIZE_STEP,
+  KEYBOARD_MOVE_STEP,
+} from '../constants';
+import {
+  DEFAULT_FONT_SIZE,
+  FONT_SIZE_OPTIONS,
+  type FontSizeValue,
+} from '../elementToolbars/toolbarPalettes';
+import {
   entriesMatch,
   getEntryFromDOM,
   type TabOrderEntry,
@@ -67,9 +80,45 @@ function moveNodesByDelta(
   );
 }
 
+/**
+ * Return the next font size in the ordered list given a step direction
+ * (+1 = larger, -1 = smaller). Returns null when already at the boundary
+ * so the caller can treat it as a no-op.
+ */
+function stepFontSize(
+  current: FontSizeValue | undefined,
+  direction: 1 | -1
+): FontSizeValue | null {
+  const sizes = FONT_SIZE_OPTIONS.map(option => option.value);
+  const currentIndex = sizes.indexOf(current ?? DEFAULT_FONT_SIZE);
+  const nextIndex = currentIndex + direction;
+  if (nextIndex < 0 || nextIndex >= sizes.length) return null;
+  return sizes[nextIndex];
+}
+
+/**
+ * Resize a single node by adding `delta` to both its width and height,
+ * clamped to the minimum node dimensions. The node's measured dimensions
+ * (set by NodeResizer on drag) are used as the base; DEFAULT_NODE_* values
+ * are the fallback when the node has not been measured yet.
+ */
+function resizeNodeByDelta(
+  currentNodes: SketchlabReactFlowNode[],
+  nodeId: string,
+  delta: number
+) {
+  return currentNodes.map(node => {
+    if (node.id !== nodeId) return node;
+    const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
+    const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
+    const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + delta);
+    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + delta);
+    return {...node, width: newWidth, height: newHeight};
+  });
+}
+
 interface UseKeyboardNavigationOptions {
   nodes: SketchlabReactFlowNode[];
-  edges: SketchlabReactFlowEdge[];
   tabOrder: TabOrderEntry[];
   focusEntry: (entry: TabOrderEntry) => void;
   setNodes: (
@@ -87,12 +136,13 @@ interface UseKeyboardNavigationOptions {
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
  * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. Also handles Tab-based navigation in normal mode and Enter to
+ * cancels. "[" and "]" resize the focused node by the same step size for shapes and images.
+ * Text-only nodes step through font sizes.
+ * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  */
 export function useKeyboardNavigation({
   nodes,
-  edges,
   tabOrder,
   focusEntry,
   setNodes,
@@ -104,8 +154,6 @@ export function useKeyboardNavigation({
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
-  const KEYBOARD_MOVE_STEP = 10;
-
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const [connectAnnouncement, setConnectAnnouncement] = useState('');
   // Counter appended to announcements so identical consecutive strings
@@ -195,7 +243,58 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "e" opens the node/edge toolbar. ToolbarShell's FocusTrap moves
+      // "[" and "]" adjust the focused node. For text and shape nodes (which
+      // carry a text label) the keys step through font sizes. For image nodes
+      // (no text) the keys resize the node dimensions instead.
+      // Line-anchor pseudo-nodes are excluded — they have no visible body.
+      if (
+        !readOnly &&
+        focusedNodeId &&
+        !isLineAnchorNodeId(focusedNodeId, nodes) &&
+        (event.key === '[' || event.key === ']')
+      ) {
+        const focusedNode = getNode(focusedNodeId);
+        const direction = (event.key === ']' ? 1 : -1) as 1 | -1;
+
+        if (focusedNode?.type === 'text') {
+          // Text-only nodes: step through font sizes.
+          const newFontSize = stepFontSize(
+            focusedNode.data.fontSize,
+            direction
+          );
+          if (newFontSize === null) return; // already at boundary, no-op
+          event.preventDefault();
+          event.stopPropagation();
+          setNodes(currentNodes =>
+            currentNodes.map(node => {
+              if (node.id !== focusedNodeId) return node;
+              if (node.type === 'text') {
+                return {...node, data: {...node.data, fontSize: newFontSize}};
+              }
+              return node;
+            })
+          );
+          announce(`${getNodeLabel(focusedNode)} font size ${newFontSize}.`);
+        } else {
+          // Shape and image nodes: resize dimensions.
+          event.preventDefault();
+          event.stopPropagation();
+          setNodes(currentNodes =>
+            resizeNodeByDelta(
+              currentNodes,
+              focusedNodeId,
+              direction * KEYBOARD_RESIZE_STEP
+            )
+          );
+          const nodeLabel = focusedNode
+            ? getNodeLabel(focusedNode)
+            : focusedNodeId;
+          announce(`${nodeLabel} ${direction > 0 ? 'enlarged' : 'shrunk'}.`);
+        }
+        return;
+      }
+
+      // "e" opens the node/line/image toolbar. ToolbarShell's FocusTrap moves
       // focus to the first tabbable item when isVisible flips.
       if (
         event.key === 'e' &&

@@ -148,7 +148,6 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
-      edges,
       tabOrder,
       focusEntry,
       setNodes,
