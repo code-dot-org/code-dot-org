@@ -8,8 +8,6 @@ require 'policies/devise/email_domains'
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
-  OAUTH_AUTO_VERIFICATION_SESSION_KEY = :oauth_teacher_auto_verification
-
   skip_before_action :clear_sign_up_session_vars
 
   before_action :check_account_linking_lock
@@ -277,22 +275,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       prepare_locale_cookie u
     end
 
-    store_oauth_auto_verification! user, AuthenticationOption::CLASSLINK
-
     register_new_user(user, AuthenticationOption::CLASSLINK)
   end
 
   private def sign_in_classlink(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
-    auto_verify_oauth_teacher! user, AuthenticationOption::CLASSLINK
+    auto_verify_teacher! user
     sign_in_user user
   end
 
   private def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
-    auto_verify_oauth_teacher! user, AuthenticationOption::CLEVER
+    auto_verify_teacher! user
     sign_in_user user
   end
 
@@ -323,8 +319,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       u.user_type = user_type
       prepare_locale_cookie u
     end
-
-    store_oauth_auto_verification! user, AuthenticationOption::CLEVER
 
     register_new_user(user, AuthenticationOption::CLEVER)
   end
@@ -466,13 +460,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  private def auto_verify_oauth_teacher!(user, provider)
-    user.verify_teacher! if Policies::User.oauth_verified_teacher_candidate?(user, auth_hash, provider:)
-  end
-
-  private def store_oauth_auto_verification!(user, provider)
-    session[OAUTH_AUTO_VERIFICATION_SESSION_KEY] =
-      Policies::User.oauth_verified_teacher_candidate?(user, auth_hash, provider:)
+  private def auto_verify_teacher!(user)
+    user.verify_teacher! if user.teacher? && !user.verified_teacher?
   end
 
   # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we

@@ -555,15 +555,55 @@ class RegistrationsControllerTest < ActionController::TestCase
     refute assigns(:user).verified_teacher?
   end
 
-  test 'create does not verify non-Clever sign up when Clever auto-verification marker is present' do
-    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
-    session[OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY] = true
-    session[:sign_up_type] = AuthenticationOption::GOOGLE
+  test 'create verifies teacher with Clever authentication option' do
+    teacher = create(:teacher)
+    create(
+      :authentication_option,
+      user: teacher,
+      email: teacher.email,
+      hashed_email: teacher.hashed_email,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: SecureRandom.uuid
+    )
+    teacher.reload
+    Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
 
-    post :create, params: {user: teacher_params}
+    assert_difference('UserPermission.count', 1) do
+      post :create, params: {user: @default_params}
+    end
 
-    refute assigns(:user).verified_teacher?
-    assert_nil session[OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY]
+    assert teacher.reload.verified_teacher?
+  end
+
+  test 'create verifies teacher with ClassLink authentication option' do
+    teacher = create(:teacher)
+    create(
+      :authentication_option,
+      user: teacher,
+      email: teacher.email,
+      hashed_email: teacher.hashed_email,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: SecureRandom.uuid
+    )
+    teacher.reload
+    Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
+
+    assert_difference('UserPermission.count', 1) do
+      post :create, params: {user: @default_params}
+    end
+
+    assert teacher.reload.verified_teacher?
+  end
+
+  test 'create does not verify teacher without Clever or ClassLink authentication option' do
+    teacher = create(:teacher, :with_google_authentication_option)
+    Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
+
+    assert_no_difference('UserPermission.count') do
+      post :create, params: {user: @default_params}
+    end
+
+    refute teacher.reload.verified_teacher?
   end
 
   test 'adds LtiUserIdentity to LtiDeployment if LTI user' do

@@ -63,7 +63,7 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "staff sign-up does not auto-verify" do
+    test "staff sign-up" do
       auth_hash = mock_oauth clever_role: :staff
 
       post user_clever_omniauth_authorize_path
@@ -79,7 +79,8 @@ module OmniauthCallbacksControllerTests
 
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
-      refute created_user.verified_teacher?
+      assert created_user.verified_teacher?
+      assert_equal 1, created_user.permissions.where(permission: UserPermission::AUTHORIZED_TEACHER).count
       assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -116,7 +117,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, teacher
     end
 
-    test "staff sign-in does not auto-verify" do
+    test "staff sign-in" do
       auth_hash = mock_oauth clever_role: :staff
 
       teacher = create(:teacher, :clever_sso_provider, uid: auth_hash.uid)
@@ -127,7 +128,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
-      refute teacher.verified_teacher?
+      assert teacher.verified_teacher?
       assert_credentials auth_hash, teacher
     end
 

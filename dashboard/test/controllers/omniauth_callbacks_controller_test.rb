@@ -466,7 +466,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert User.find(user.id).verified_teacher?
   end
 
-  test 'clever: does not verify unverified teacher on sign in with Clever staff role' do
+  test 'clever: verifies unverified teacher on sign in with Clever staff role' do
     user = create(:teacher, :with_clever_authentication_option)
     clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
     refute user.verified_teacher?
@@ -479,12 +479,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
-    assert_no_difference('UserPermission.count') do
+    assert_difference('UserPermission.count', 1) do
       get :clever
     end
 
     assert_equal user.id, signed_in_user_id
-    refute User.find(user.id).verified_teacher?
+    assert User.find(user.id).verified_teacher?
   end
 
   test 'clever: signs in user and updates auth option if user is found by legacy_id' do

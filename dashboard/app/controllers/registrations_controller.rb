@@ -112,7 +112,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
-    session.delete(OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY)
     PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
@@ -166,12 +165,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     if current_user && current_user.errors.blank?
-      if [AuthenticationOption::CLEVER, AuthenticationOption::CLASSLINK].include?(session[:sign_up_type]) &&
-          session.delete(OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY)
-        current_user.verify_teacher! if current_user.teacher? && !current_user.verified_teacher?
-      else
-        session.delete(OmniauthCallbacksController::OAUTH_AUTO_VERIFICATION_SESSION_KEY)
-      end
+      auto_verify_school_owned_oauth_teacher! current_user
 
       if current_user.teacher?
         begin
@@ -227,6 +221,16 @@ class RegistrationsController < Devise::RegistrationsController
         session: session,
       )
     end
+  end
+
+  private def auto_verify_school_owned_oauth_teacher!(user)
+    return unless user.teacher? && !user.verified_teacher?
+
+    school_owned_oauth_provider_used = user.authentication_options.any? do |auth_option|
+      [AuthenticationOption::CLEVER, AuthenticationOption::CLASSLINK].include?(auth_option.credential_type)
+    end
+
+    user.verify_teacher! if school_owned_oauth_provider_used
   end
 
   #

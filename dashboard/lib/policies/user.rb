@@ -34,26 +34,6 @@ class Policies::User
     !is_google_email
   end
 
-  # Determines if a user should be auto-verified when authenticated via a school-owned provider.
-  # In order to be an OAuth verification candidate, the user must:
-  # - Be a teacher
-  # - Not already be verified
-  # - Have the provider-specific teacher role in the auth payload
-  def self.oauth_verified_teacher_candidate?(user:, auth_hash:, provider:)
-    return false unless user.teacher?
-    return false if user.verified_teacher?
-
-    case provider
-    when AuthenticationOption::CLEVER
-      roles = auth_hash&.dig(:extra, :raw_info, :canonical, :data, :roles)
-      roles.respond_to?(:key?) && (roles.key?(:teacher) || roles.key?('teacher'))
-    when AuthenticationOption::CLASSLINK
-      auth_hash&.dig(:extra, :raw_info, :role).to_s.casecmp?(User::TYPE_TEACHER)
-    else
-      false
-    end
-  end
-
   def self.in_usa?(country_code)
     %w[US RD].include?(country_code)
   end
