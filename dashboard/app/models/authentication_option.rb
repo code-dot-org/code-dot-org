@@ -84,6 +84,12 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
+  SCHOOL_OWNED_CREDENTIAL_TYPES = [
+    CLEVER,
+    LTI_V1,
+    CLASSLINK,
+  ].freeze
+
   module Clever
     VERSION = {
       v3: 'v3',
