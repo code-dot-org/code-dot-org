@@ -171,7 +171,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       onDoubleClick={startEditing}
     >
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />

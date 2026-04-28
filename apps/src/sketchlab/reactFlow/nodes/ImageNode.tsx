@@ -66,7 +66,7 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   return (
     <div className={styles.imageNode} aria-label={altText || 'Image node'}>
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
