@@ -34,6 +34,22 @@ class AddMultipleStudents extends Component {
     this.setState({isDialogOpen: false});
   };
 
+  onImportCSV = () => {
+    this.fileInput.click();
+  };
+
+  onFileUpload = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = event => {
+      this.refs.studentsTextBox.value = event.target.result;
+      this.fileInput.value = '';
+    };
+    reader.readAsText(file);
+  };
+
   // Column order: DisplayName, FamilyName, Age, Gender, State
   add = () => {
     const value = this.refs.studentsTextBox.value;
@@ -44,7 +60,6 @@ class AddMultipleStudents extends Component {
       const age = parseAge(parts[2]);
       const gender = parseGender(parts[3]);
       const usState = parseUsState(parts[4]) || null;
-      console.log({name, familyName, age, gender, usState});
       return {name, familyName, age, gender, usState};
     });
     this.props.addMultipleStudents(studentDataArray);
@@ -68,13 +83,33 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
+          <div>{i18n.addStudentsMultipleInstructions()}</div>
+          <hr style={styles.divider} />
+          <input
+            type="file"
+            accept=".csv"
+            ref={input => (this.fileInput = input)}
+            style={styles.hiddenFileInput}
+            onChange={this.onFileUpload}
+          />
+          <div style={styles.textareaHeader}>
+            <label htmlFor="students-text-box">
+              {i18n.addStudentsTypeLabel()}
+            </label>
+            <Button
+              style={styles.button}
+              text={i18n.importFromCSV()}
+              onClick={this.onImportCSV}
+              color={Button.ButtonColor.gray}
+              icon="upload"
+            />
+          </div>
           <textarea
-            rows="15"
+            id="students-text-box"
+            rows="8"
             cols="70"
             ref="studentsTextBox"
             style={styles.textarea}
-            aria-label={i18n.addStudentsMultiple()}
           />
           <DialogFooter>
             <Button
@@ -107,6 +142,20 @@ const styles = {
   },
   button: {
     margin: 0,
+    marginBottom: 5,
+  },
+  hiddenFileInput: {
+    display: 'none',
+  },
+  divider: {
+    borderTop: '1px solid #e7e8ea',
+    margin: '10px 0',
+  },
+  textareaHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: 10,
     marginBottom: 5,
   },
 };
