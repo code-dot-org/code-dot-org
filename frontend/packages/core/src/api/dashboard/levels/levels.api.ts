@@ -1,6 +1,10 @@
 import type {Transport} from '../../transports/types';
 import {getLevelKindSchema} from './levels.kinds';
-import type {LevelPropertiesMap, LevelProperties} from './levels.types';
+import type {
+  LevelPropertiesMap,
+  LevelProperties,
+  LevelPropertiesRequestParams,
+} from './levels.types';
 import {
   AppOptionsSchema,
   CloneLevelResponseSchema,
@@ -12,6 +16,23 @@ import {
   UserAppOptionsSchema,
 } from './levels.schemata';
 
+/**
+ * Returns the URL for the API call to retrieve level metadata depending on the
+ * level type and/or position.
+ */
+function getLevelPropertiesUrl(params: LevelPropertiesRequestParams) {
+  const {levelId, standaloneProjectType, scriptName, lessonPosition} = params;
+
+  return standaloneProjectType
+    ? // Standalone project level
+      `/projects/${standaloneProjectType}/level_properties`
+    : scriptName && lessonPosition
+      ? // Level as part of a unit progression
+        `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
+      : // Specific level (when viewing/editing a specific level)
+        `/levels/${levelId}/level_properties`;
+}
+
 export function createLevelsApi(transport: Transport) {
   return {
     /**
@@ -19,24 +40,12 @@ export function createLevelsApi(transport: Transport) {
      * GET /projects/:standaloneProjectType/level_properties
      * GET /s/:scriptName/lessons/:lessonPosition/level_properties
      */
-    async getLevelProperties(params: {
-      levelId?: number;
-      standaloneProjectType?: string;
-      scriptName?: string;
-      lessonPosition?: number;
-    }): Promise<LevelPropertiesMap> {
-      const {levelId, standaloneProjectType, scriptName, lessonPosition} =
-        params;
-
+    async getLevelProperties(
+      params: LevelPropertiesRequestParams,
+    ): Promise<LevelPropertiesMap> {
       const raw = await transport.request<unknown>({
         method: 'GET',
-        url: standaloneProjectType
-          ? `/projects/${standaloneProjectType}/level_properties`
-          : scriptName && lessonPosition
-            ? `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
-            : levelId
-              ? `/levels/${levelId}/level_properties`
-              : '',
+        url: getLevelPropertiesUrl(params),
       });
 
       // Transform 'true'/'false' into actual boolean values
