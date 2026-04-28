@@ -33,27 +33,28 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Semicolon ending\nBecause this is a variable assignment,\nwe end it with a semicolon, just like other variables.\n\n**Tip:** That’s a big structural difference students often miss.\n",
+        "text": "## Semicolon ending\nBecause this is a variable assignment,\nwe end it with a semicolon, just like other variables.\n\n> **Tip:** That’s a big structural difference students often miss.\n",
         "imageUrl": "https://images.code.org/9d720c3987a46adc4ad7160edb1d0ad6-arrowfunction (4).png",
         "key": "pl-aif-2-U2-arrow-functions-panel-8eb18046-d43e-4e04-8f6c-00504b824640",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Calling the Function\nEven though an arrow function is stored in a variable, you call it the same way as a regular function:\n\n- **addFive(); **✅ calls the function\n-  **addFive**  ✅ refers to the function (useful for event handlers)\n\n\n**Why would we use it without parentheses?**\n - Because sometimes we want to pass the function somewhere else (like an event listener), not run it immediately.\n\n",
+        "text": "## Calling the Function\nEven though an arrow function is stored in a variable, you call it the same way as a regular function:\n\n- **addFive();** ✅ calls the function\n-  **addFive**  ✅ refers to the function (useful for event handlers)\n\n\n**Why would we use it without parentheses?**\n - Because sometimes we want to pass the function somewhere else (like an event listener), not run it immediately.\n\n",
         "imageUrl": "https://images.code.org/bbbd6304c9033f73f8ab8b9994f70c95-arrowfunction (5).png",
         "key": "pl-aif-2-U2-arrow-functions-panel-e6af00dd-dd27-45df-b4c1-3e18abbaaa20",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Why Use Arrow Functions?\n- They are shorter.\n- They are common in modern JavaScript.\n- They are used heavily in frameworks and real-world code.\n- They make small, single-purpose functions less bulky.\n\nThey are mostly about:\n***Writing cleaner, more compact code.***\n",
+        "text": "## Why Use Arrow Functions?\n- They are common in modern JavaScript.\n- They are used heavily in frameworks and real-world code.\n- They make small, single-purpose functions less bulky.\n\nThey are mostly about:\n***Writing cleaner, more compact code.***\n",
         "imageUrl": "https://images.code.org/307afdb6724421a113f49e6f73ec3e9e-arrowfunction (6).png",
         "key": "pl-aif-2-U2-arrow-functions-panel-c5986024-3931-48e3-a07f-d8ca24d24764",
         "layout": "text-bottom-right"
       }
     ],
     "name_suffix": "_2024",
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "false",
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-02T19:24:19.243+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-functions-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U2-functions-panel\"},{\"changed_at\":\"2026-03-03 20:52:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-02T19:24:19.243+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-functions-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U2-functions-panel\"},{\"changed_at\":\"2026-03-03 20:52:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-27 15:29:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
