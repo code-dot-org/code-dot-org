@@ -7,6 +7,9 @@ if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
 end
 
+require 'memory_profiler'
+MemoryProfiler.start
+
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
@@ -126,6 +129,14 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
+    # https://ttb.software/2026/03/25/debug-memory-leaks-ruby-rails-production/
+    if `free -m | awk 'NR==2{print $7}'`.to_i < 10_000
+      filename = "/tmp/heap_dump_#{Process.pid}.json"
+      unless File.exist?(filename)
+        report = MemoryProfiler.stop
+        report.pretty_print(to_file: filename)
+      end
+    end
   end
 
   def after_teardown

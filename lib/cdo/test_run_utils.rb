@@ -125,6 +125,7 @@ module TestRunUtils
   end
 
   def self.run_dashboard_tests(parallel: false, upload_seed_data: false)
+    MemoryProfiler.start
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
         if parallel
@@ -135,6 +136,9 @@ module TestRunUtils
           RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
         end
       end
+    ensure
+      report = MemoryProfiler.stop
+      report.pretty_print
     end
   end
 
