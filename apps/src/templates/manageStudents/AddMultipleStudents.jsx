@@ -44,8 +44,14 @@ class AddMultipleStudents extends Component {
     if (!file) return;
 
     Papa.parse(file, {
+      skipEmptyLines: true,
       complete: results => {
-        this.refs.studentsTextBox.value = Papa.unparse(results.data);
+        this.refs.studentsTextBox.value = this.refs.studentsTextBox.value
+          ? this.refs.studentsTextBox.value + '\n' + Papa.unparse(results.data)
+          : Papa.unparse(results.data);
+        this.fileInput.value = '';
+      },
+      error: () => {
         this.fileInput.value = '';
       },
     });
