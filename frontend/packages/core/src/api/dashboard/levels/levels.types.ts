@@ -38,16 +38,16 @@ export type ExemplarSettings = z.infer<typeof ExemplarSettingsSchema>;
 export type CloneLevelResponse = z.infer<typeof CloneLevelResponseSchema>;
 export type DeleteLevelResponse = z.infer<typeof DeleteLevelResponseSchema>;
 
-interface UnitLevelPropertiesRequestParams {
+export interface UnitLevelPropertiesRequestParams {
   levelId: number;
   standaloneProjectType?: never;
   scriptName?: string;
   lessonPosition?: number;
 }
 
-interface ProjectLevelPropertiesRequestParams {
+export interface ProjectLevelPropertiesRequestParams {
   levelId?: never;
-  standaloneProjectType?: never;
+  standaloneProjectType?: string;
   scriptName?: never;
   lessonPosition?: never;
 }
