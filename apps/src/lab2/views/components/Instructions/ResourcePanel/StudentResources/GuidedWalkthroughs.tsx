@@ -118,9 +118,9 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
           </Typography>
         )}
         {levelTours.map(tour => renderTourChip(tour, 'level'))}
-        {otherAvailableTours.length > 0 && (
+        {otherAvailableTours.length > 0 && levelTours.length > 0 && (
           <Typography variant="overline3" className={styles.subSectionHeading}>
-            All Walkthroughs
+            Additional Walkthroughs
           </Typography>
         )}
         {otherAvailableTours.map(tour => renderTourChip(tour, 'other'))}
