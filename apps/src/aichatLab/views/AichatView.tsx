@@ -307,7 +307,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const backpackProps: BackpackProps = useMemo(() => {
     return {
       addFileTooltipText: 'Add to chat',
-      addFileHandler: async (fileName, getFile, notifySuccess, notifyError) => {
+      addFileHandler: async params => {
+        const {fileName, getFile, notifySuccess, notifyError} = params;
         const file = await getFile();
         if (file.type.startsWith('image/')) {
           // Moderate images before adding to chat, since we want to display the error in the Backpack rather than the chat.

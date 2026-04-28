@@ -44,5 +44,5 @@ export function onClickAddFile(
   };
   const notifyError = (message: string) => addAlert('danger', message);
 
-  addFileHandler(fileName, getFile, notifySuccess, notifyError);
+  addFileHandler({fileName, getFile, notifySuccess, notifyError});
 }
