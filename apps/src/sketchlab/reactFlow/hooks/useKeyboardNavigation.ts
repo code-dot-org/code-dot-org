@@ -189,15 +189,70 @@ export function useKeyboardNavigation({
         return;
       }
 
-      // Determine which node or edge currently has focus.
       const focusedEntry = getEntryFromDOM(target);
       const focusedNodeId =
         focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
       const focusedEdgeId =
         focusedEntry?.type === 'edge' ? focusedEntry.id : undefined;
 
+      // Tab navigation works in both read-only and edit mode and uses the computed tab order.
+      // We stopPropagation so React Flow's built-in Tab handler (which cycles
+      // nodes in array order) never fires.
+      if (event.key === 'Tab') {
+        if (tabOrder.length === 0) return;
+        const currentIdx = focusedEntry
+          ? tabOrder.findIndex(tabEntry => entriesMatch(tabEntry, focusedEntry))
+          : -1;
+        const tabDirection = event.shiftKey ? -1 : 1;
+
+        if (connectingFrom) {
+          // Connect mode: cycle through nodes only, wrap around.
+          const nodeEntries = tabOrder.filter(
+            tabEntry => tabEntry.type === 'node'
+          );
+          if (nodeEntries.length === 0) return;
+          const curNodeIdx = focusedNodeId
+            ? nodeEntries.findIndex(tabEntry => tabEntry.id === focusedNodeId)
+            : -1;
+          const nextNodeIdx =
+            (curNodeIdx + tabDirection + nodeEntries.length) %
+            nodeEntries.length;
+          event.preventDefault();
+          event.stopPropagation();
+          focusEntry(nodeEntries[nextNodeIdx]);
+          return;
+        }
+
+        // Normal mode: move through full order; escape at boundaries.
+        if (focusedEntry) {
+          // Block ReactFlow's built-in Tab handler when focus is on a
+          // node/edge (it conflicts with elementsSelectable=false in
+          // read-only mode).
+          event.stopPropagation();
+          const nextIdx = currentIdx + tabDirection;
+          if (nextIdx >= 0 && nextIdx < tabOrder.length) {
+            event.preventDefault();
+            focusEntry(tabOrder[nextIdx]);
+          }
+          // Boundary: no preventDefault lets the browser move focus out.
+          return;
+        }
+      }
+
+      // Escape cancels connect mode.
+      if (event.key === 'Escape' && connectingFrom) {
+        event.preventDefault();
+        event.stopPropagation();
+        setConnectingFrom(null);
+        announce('Connect mode cancelled.');
+        return;
+      }
+
+      // Everything below mutates the canvas and requires edit access.
+      if (readOnly) return;
+
       // Arrow keys on a focused node move just that node.
-      if (!readOnly && focusedNodeId) {
+      if (focusedNodeId) {
         let deltaX = 0;
         let deltaY = 0;
         if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
@@ -217,7 +272,7 @@ export function useKeyboardNavigation({
 
       // Arrow keys on a focused line edge move the whole line by moving
       // both line-anchor nodes together.
-      if (!readOnly && focusedEdgeId) {
+      if (focusedEdgeId) {
         let deltaX = 0;
         let deltaY = 0;
         if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
@@ -243,12 +298,10 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "[" and "]" adjust the focused node. For shape andimage nodes
-      // (no text) the keys resize the node dimensions. For text-only nodes,
-      // the keys step through font sizes.
-      // Line-anchor pseudo-nodes are excluded. They can be resized through 'ghost' nodes.
+      // "[" and "]" adjust the focused node. Text-only nodes step through
+      // font sizes; shape and image nodes resize their dimensions.
+      // Line-anchor pseudo-nodes are excluded — they have no visible body.
       if (
-        !readOnly &&
         focusedNodeId &&
         !isLineAnchorNodeId(focusedNodeId, nodes) &&
         (event.key === '[' || event.key === ']')
@@ -257,7 +310,6 @@ export function useKeyboardNavigation({
         const direction = (event.key === ']' ? 1 : -1) as 1 | -1;
 
         if (focusedNode?.type === 'text') {
-          // Text-only nodes: step through font sizes.
           const newFontSize = stepFontSize(
             focusedNode.data.fontSize,
             direction
@@ -294,11 +346,10 @@ export function useKeyboardNavigation({
         return;
       }
 
-      // "e" opens the node/line/image toolbar. ToolbarShell's FocusTrap moves
-      // focus to the first tabbable item when isVisible flips.
+      // "e" opens the node/line/image toolbar. ToolbarShell's FocusTrap
+      // moves focus to the first tabbable item when isVisible flips.
       if (
         event.key === 'e' &&
-        !readOnly &&
         !connectingFrom &&
         focusedEntry &&
         !isLineAnchorNodeId(focusedEntry.id, nodes)
@@ -310,7 +361,6 @@ export function useKeyboardNavigation({
 
       // "c" toggles connect mode on/off (nodes only).
       if (event.key === 'c') {
-        if (readOnly) return;
         if (connectingFrom) {
           event.preventDefault();
           setConnectingFrom(null);
@@ -330,51 +380,8 @@ export function useKeyboardNavigation({
         return;
       }
 
-      // Tab uses the computed logical tab order. We stopPropagation so
-      // React Flow's built-in Tab handler (which cycles nodes in array
-      // order) never fires.
-      if (event.key === 'Tab') {
-        if (tabOrder.length === 0) return;
-        const currentIdx = focusedEntry
-          ? tabOrder.findIndex(tabEntry => entriesMatch(tabEntry, focusedEntry))
-          : -1;
-        const direction = event.shiftKey ? -1 : 1;
-
-        if (connectingFrom) {
-          // Connect mode: cycle through nodes only, wrap around.
-          const nodeEntries = tabOrder.filter(
-            tabEntry => tabEntry.type === 'node'
-          );
-          if (nodeEntries.length === 0) return;
-          const curNodeIdx = focusedNodeId
-            ? nodeEntries.findIndex(tabEntry => tabEntry.id === focusedNodeId)
-            : -1;
-          const nextNodeIdx =
-            (curNodeIdx + direction + nodeEntries.length) % nodeEntries.length;
-          event.preventDefault();
-          event.stopPropagation();
-          focusEntry(nodeEntries[nextNodeIdx]);
-          return;
-        }
-
-        // Normal mode: move through full order; escape at boundaries.
-        if (focusedEntry) {
-          // Block ReactFlow's built-in Tab handler when focus is on a
-          // node/edge (it conflicts with elementsSelectable=false in
-          // read-only mode).
-          event.stopPropagation();
-          const nextIdx = currentIdx + direction;
-          if (nextIdx >= 0 && nextIdx < tabOrder.length) {
-            event.preventDefault();
-            focusEntry(tabOrder[nextIdx]);
-          }
-          // Boundary: no preventDefault lets the browser move focus out.
-          return;
-        }
-      }
-
       // Enter on a different node completes the connection.
-      if (event.key === 'Enter' && !readOnly && connectingFrom) {
+      if (event.key === 'Enter' && connectingFrom) {
         if (focusedNodeId && focusedNodeId !== connectingFrom) {
           event.preventDefault();
           event.stopPropagation();
@@ -416,18 +423,10 @@ export function useKeyboardNavigation({
         return;
       }
 
-      if (event.key === 'Escape' && connectingFrom) {
-        event.preventDefault();
-        event.stopPropagation();
-        setConnectingFrom(null);
-        announce('Connect mode cancelled.');
-        return;
-      }
-
       // Enter on a focused node (outside connect mode) enters edit mode.
       // Do NOT stopPropagation here: React Flow's handler needs to fire
       // to select the node, which enables arrow-key movement.
-      if (event.key === 'Enter' && !readOnly && focusedNodeId) {
+      if (event.key === 'Enter' && focusedNodeId) {
         const focusedNodeElement = document.querySelector<HTMLElement>(
           `.react-flow__node[data-id="${focusedNodeId}"]`
         );
