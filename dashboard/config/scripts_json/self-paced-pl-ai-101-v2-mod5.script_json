@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-23 16:14:05 UTC",
+    "serialized_at": "2026-04-27 17:10:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -571,6 +571,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod5-data-00"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-ai-101-V2-mod5-data-01"
         ],
         "lesson.key": "lesson-1",
@@ -583,9 +605,9 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
-      "activity_section_position": 2,
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Data Privacy"
@@ -605,9 +627,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
-      "activity_section_position": 3,
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Data Privacy"
@@ -627,8 +649,52 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod5-data-04"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod5-data-05"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -649,8 +715,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -671,8 +737,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -936,6 +1002,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod5-data-00",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-ai-101-V2-mod5-data-01",
         "script_level.level_keys": [
           "pl-ai-101-V2-mod5-data-01"
@@ -963,6 +1041,30 @@
         "level.key": "pl-ai-101-V2-mod5-data-03",
         "script_level.level_keys": [
           "pl-ai-101-V2-mod5-data-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod5-data-04",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod5-data-05",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-data-05"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

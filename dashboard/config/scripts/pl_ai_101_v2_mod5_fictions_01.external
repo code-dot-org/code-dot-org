@@ -13,7 +13,9 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI Fictions or Fabrications:</strong> content that AI systems generate that is incorrect or misleading.</p>
 </div>
 
-#### AI fiction occurs because large language models do not actually understand the content they produce. Instead, they generate responses by predicting the most likely sequence of words based on patterns learned from large amounts of text. This means they are designed to produce language that sounds right, not to verify whether information is true. As a result, they can sometimes fill in gaps, make assumptions, or generate details that are inaccurate.
+#### AI fiction occurs because large language models like ChatGPT or Gemini do not actually understand the content they produce. Instead, they generate responses by predicting the most likely sequence of words based on patterns learned from large amounts of text.
+
+#### Because of this, AI can fill in gaps, make assumptions, or generate details that are inaccurate. While responses may sound confident and complete, they are not verified for accuracy—so it’s important to approach them with critical thinking and validation.
 
 <p style="text-align:center;"><img src="https://images.code.org/b345e75edd30dcf95dcf431466604d55-AI-Its-going-to-rain.jpg" alt="alt text"></p>
 

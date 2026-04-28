@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 15:15:53 UTC",
+    "serialized_at": "2026-04-27 14:59:02 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**By the end of this professional learning module, you will be able to:**\n\n- Explain the process-oriented approach, emphasizing iteration, testing, and intentional decision-making over just adding features\n- Use project tools like the Kanban Board and Project Guide to manage workflow, scope, and team roles\n- Facilitate daily spot-checks to monitor progress, prompt reflection, and keep teams aligned\n- Assess and celebrate student growth based on process, reasoning, and iteration, not just the final product",
+        "student_overview": "**By the end of this professional learning module, you will be able to:**\n\n- Explain the process-oriented approach, emphasizing iteration, testing, and intentional decision-making over just adding features\n- Use project tools like the Kanban Board and Project Guide to manage workflow, scope, and team roles\n- Facilitate daily spot-checks to monitor progress, prompt reflection, and keep teams aligned\n- Assess and celebrate student growth based on process, reasoning, and iteration, not just the final product"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -53,6 +55,7 @@
       "key": "91be9717-d5d7-4be8-a7c7-df71ee4a0a49",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "91be9717-d5d7-4be8-a7c7-df71ee4a0a49",
@@ -67,7 +70,7 @@
       "key": "93b6dce6-3149-4160-b288-cdf1a0a49cee",
       "position": 1,
       "properties": {
-        "progression_name": "Introducting the Capstone"
+        "progression_name": "Introducting the Capstone (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "93b6dce6-3149-4160-b288-cdf1a0a49cee",
@@ -78,7 +81,7 @@
       "key": "61fc95c4-a694-450d-a4b9-f9c2dadad735",
       "position": 2,
       "properties": {
-        "progression_name": "Day-by-Day Planning"
+        "progression_name": "Day-by-Day Planning (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "61fc95c4-a694-450d-a4b9-f9c2dadad735",
@@ -89,7 +92,7 @@
       "key": "cf11bda7-c2c7-41cc-8908-3057ec513235",
       "position": 3,
       "properties": {
-        "progression_name": "Managing the Capstone"
+        "progression_name": "Managing the Capstone (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "cf11bda7-c2c7-41cc-8908-3057ec513235",
@@ -100,7 +103,7 @@
       "key": "a5682e1c-59a4-4802-ba4e-c2628b91b608",
       "position": 4,
       "properties": {
-        "progression_name": "Assessing the Capstone"
+        "progression_name": "Assessing the Capstone (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "a5682e1c-59a4-4802-ba4e-c2628b91b608",
@@ -111,7 +114,7 @@
       "key": "26991e76-9a9a-4ad9-b147-c16ac6569fb2",
       "position": 5,
       "properties": {
-        "progression_name": "Wrapping-Up"
+        "progression_name": "Wrapping-Up (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "26991e76-9a9a-4ad9-b147-c16ac6569fb2",
@@ -126,7 +129,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -148,7 +151,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -170,7 +173,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -192,7 +195,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -214,7 +217,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -236,7 +239,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -258,7 +261,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Introducting the Capstone"
+        "progression": "Introducting the Capstone (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -280,7 +283,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day-by-Day Planning"
+        "progression": "Day-by-Day Planning (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -302,7 +305,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Day-by-Day Planning"
+        "progression": "Day-by-Day Planning (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -324,7 +327,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Day-by-Day Planning"
+        "progression": "Day-by-Day Planning (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -346,7 +349,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Managing the Capstone"
+        "progression": "Managing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -368,7 +371,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Managing the Capstone"
+        "progression": "Managing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +393,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Managing the Capstone"
+        "progression": "Managing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -412,7 +415,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Managing the Capstone"
+        "progression": "Managing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -434,7 +437,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Assessing the Capstone"
+        "progression": "Assessing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -456,7 +459,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Assessing the Capstone"
+        "progression": "Assessing the Capstone (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -478,7 +481,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping-Up"
+        "progression": "Wrapping-Up (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -500,7 +503,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping-Up"
+        "progression": "Wrapping-Up (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -763,6 +766,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
