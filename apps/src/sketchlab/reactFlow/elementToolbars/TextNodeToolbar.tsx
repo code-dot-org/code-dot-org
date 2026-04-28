@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {TextNodeType} from '../../types';
+import {TextNodeType} from '../types';
 
+import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import NodeToolbarShell from './NodeToolbarShell';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
@@ -12,6 +12,7 @@ import {
   FontSizeValue,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
+import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface TextNodeToolbarProps {
@@ -25,7 +26,11 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <NodeToolbarShell nodeId={nodeId} ariaLabel="Text style">
+    <ToolbarShell
+      target={{type: 'node', id: nodeId}}
+      anchorNodeId={nodeId}
+      ariaLabel="Text style"
+    >
       <FontSizeGroup
         selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
         onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}
@@ -36,10 +41,11 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
         selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
         onSelect={value => patchNodeData({fontColor: value})}
       />
+      <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
       />
-    </NodeToolbarShell>
+    </ToolbarShell>
   );
 }

@@ -1,8 +1,10 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {
+  AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -133,6 +135,11 @@ describe('useAiChatDisabledState', () => {
     expect(result.current).toEqual({
       disabled: true,
       disabledMessage: 'Chat is disabled for this class section.',
+      disabledLink: {
+        href: AI_SETTINGS_SUPPORT_LINK,
+        openInNewTab: true,
+        text: 'Learn more',
+      },
     });
   });
 
@@ -147,6 +154,11 @@ describe('useAiChatDisabledState', () => {
     expect(result.current).toEqual({
       disabled: true,
       disabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+      disabledLink: {
+        href: VERIFIED_TEACHER_SUPPORT_LINK,
+        openInNewTab: true,
+        text: 'Learn how to become a verified teacher',
+      },
     });
   });
 });

@@ -690,6 +690,7 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
+  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
   LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
 };
 

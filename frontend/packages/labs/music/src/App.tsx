@@ -1,11 +1,12 @@
 import {useEffect, useState} from 'react';
+
 import {CodeStudioConfig} from '@code-dot-org/core';
 import {DashboardApiClient} from '@code-dot-org/core/api';
-import * as Observability from '@code-dot-org/core/plugins/observability';
 import type {
   LevelPropertiesResponse,
   UserPreferenceThemeResponse,
 } from '@code-dot-org/core/api';
+import * as Observability from '@code-dot-org/core/plugins/observability';
 
 function App() {
   const [count, setCount] = useState(0);
