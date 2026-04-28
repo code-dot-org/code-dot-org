@@ -7,6 +7,7 @@ default['cdo-jemalloc']['lib'] = '/usr/local/lib/libjemalloc.so.2'
 # http://jemalloc.net/jemalloc.3.html
 # To convert this attributes hash to a malloc_conf string, run:
 # node['cdo-jemalloc']['malloc_conf'].map {|x| x.join(':')}.join(',')
+# Any changes to MALLOC_CONF must also be applied to our Docker image: `docker/ci/Dockerfile`
 default['cdo-jemalloc']['malloc_conf'] = {
   # Maximum number of arenas to use for automatic multiplexing of threads and arenas.
   # The default is four times the number of CPUs, or one if there is a single CPU.
