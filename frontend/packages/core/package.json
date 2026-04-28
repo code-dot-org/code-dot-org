@@ -51,8 +51,6 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
-    "@tanstack/react-query": "^5.90.20",
-    "@tanstack/react-query-devtools": "^5.91.3",
     "camelcase-keys": "^10.0.2",
     "events": "^3.3.0",
     "flat": "^6.0.1",
@@ -62,6 +60,7 @@
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@sentry/browser": "10.40.0",
+    "@tanstack/react-query": "catalog:",
     "@types/flat": "^5.0.5",
     "@types/node": "catalog:",
     "@types/tldjs": "^2",
@@ -81,6 +80,7 @@
   },
   "peerDependencies": {
     "@sentry/browser": "10.40.0",
+    "@tanstack/react-query": "*",
     "ky": "^1.14.3",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "uuid": ">=8.3.2"
