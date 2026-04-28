@@ -48,6 +48,7 @@ import {
   BackpackContextType,
 } from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -307,14 +308,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     return {
       addFileTooltipText: 'Add to chat',
       addFileHandler: async (fileName, getFile, notifySuccess, notifyError) => {
-        const {file, flagged} = await getFile();
-        if (flagged) {
-          notifyError(
-            `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
-          );
-          return;
+        const file = await getFile();
+        if (file.type.startsWith('image/')) {
+          // Moderate images before adding to chat, since we want to display the error in the Backpack rather than the chat.
+          const moderationResult = await moderateImage(file, 'aichat', {});
+          if (moderationResult === 'flagged') {
+            notifyError(
+              `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
+            );
+            return;
+          }
         }
-        // Skip Chat Workspace's moderation since Backpack has already moderated the file.
+        // Skip Chat Workspace's moderation since we've already moderated the file.
         chatWorkspaceRef.current?.addFiles([file], /* skipModeration */ true);
         notifySuccess(
           'new',

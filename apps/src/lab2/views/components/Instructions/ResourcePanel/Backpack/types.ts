@@ -1,11 +1,6 @@
-type GetFileResponse = {
-  file: File;
-  flagged?: boolean;
-};
-
 export type AddFileHandler = (
   fileName: string,
-  getFile: () => Promise<GetFileResponse>,
+  getFile: () => Promise<File>,
   notifySuccess: (
     method: 'new' | 'replace' | 'rename',
     message: string
