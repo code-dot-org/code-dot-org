@@ -46,7 +46,7 @@ export default function SingleSectionSetUp({
         <div className={moduleStyles.sectionHeader}>
           <Typography variant="h2">
             {i18n.classSection()}
-            {section.demoType && <DemoChip size="medium" />}
+            {section.demoType && <DemoChip />}
           </Typography>
         </div>
         <label className={moduleStyles.typographyLabelTwo}>

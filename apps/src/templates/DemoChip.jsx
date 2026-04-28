@@ -1,32 +1,17 @@
-import {Chip} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const DemoChip = ({size = 'small', className}) => (
-  <Chip
-    className={className}
-    label="Demo"
-    size={size}
-    color="default"
-    sx={{
-      ml: 1,
-      ...(size === 'small'
-        ? {height: 18, maxHeight: 18}
-        : {
-            '& .MuiChip-label': {
-              fontSize: '1rem',
-              lineHeight: 1.25,
-            },
-            height: 24,
-            maxHeight: 24,
-          }),
-    }}
-  />
+import styles from './DemoChip.module.scss';
+
+const DemoChip = ({className}) => (
+  <span className={classNames(styles.demoChip, className)}>
+    <span className={styles.demoChipText}>Demo</span>
+  </span>
 );
 
 DemoChip.propTypes = {
   className: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium']),
 };
 
 export default DemoChip;

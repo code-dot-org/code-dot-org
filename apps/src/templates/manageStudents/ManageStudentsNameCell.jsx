@@ -70,13 +70,21 @@ class ManageStudentNameCell extends Component {
                 >
                   {name}
                 </a>
-                {this.props.isDemoStudent && <DemoChip />}
+                {this.props.isDemoStudent && (
+                  <span style={styles.demoChipWrapper}>
+                    <DemoChip />
+                  </span>
+                )}
               </span>
             )}
             {!studentUrl && (
               <span style={styles.nameWithChip}>
                 {name}
-                {this.props.isDemoStudent && <DemoChip />}
+                {this.props.isDemoStudent && (
+                  <span style={styles.demoChipWrapper}>
+                    <DemoChip />
+                  </span>
+                )}
               </span>
             )}
             {username && (
@@ -110,6 +118,11 @@ const styles = {
   nameWithChip: {
     display: 'inline-flex',
     alignItems: 'center',
+    lineHeight: 'normal',
+  },
+  demoChipWrapper: {
+    display: 'inline-flex',
+    transform: 'translateY(-1px)',
   },
   inputBox: {
     width: NAME_CELL_INPUT_WIDTH,

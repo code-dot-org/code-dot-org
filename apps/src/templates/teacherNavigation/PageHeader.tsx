@@ -83,7 +83,9 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
         {sectionNameText}
       </Typography>
       {selectedSection?.demoType && (
-        <DemoChip className={styles.headerDemoChip} />
+        <Typography component="span" variant="overline2">
+          <DemoChip />
+        </Typography>
       )}
     </div>
   );

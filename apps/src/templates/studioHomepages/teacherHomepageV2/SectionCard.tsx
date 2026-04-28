@@ -67,11 +67,18 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           />
           <div className={styles.sectionCardHeaderText}>
             <div className={styles.demoSectionTitleRow}>
-              <Typography id={`section-card-title-${section.id}`} variant="h5">
-                {section.name}
+              <Typography
+                className={styles.sectionCardTitle}
+                id={`section-card-title-${section.id}`}
+                variant="h5"
+              >
+                <span className={styles.sectionCardTitleText}>
+                  {section.name}
+                </span>
+                {section.demoType && (
+                  <DemoChip className={styles.sectionCardDemoChip} />
+                )}
               </Typography>
-
-              {section.demoType && <DemoChip size="medium" />}
             </div>
             <JoinLinkCopyButton
               loginType={section.loginType}

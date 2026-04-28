@@ -235,7 +235,9 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                   >
                     {preset.sectionName}
                   </Typography>
-                  <DemoChip size="medium" />
+                  <Typography component="span" variant="h5">
+                    <DemoChip />
+                  </Typography>
                 </div>
                 <div
                   className={joinLinkStyles.sectionCodeBox}

@@ -124,6 +124,22 @@
   }
 }
 
+.sectionCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionCardTitleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sectionCardDemoChip {
+  margin-left: 0;
+}
+
 .sectionCardHeaderRight {
   display: flex;
   margin-inline-start: 6px;
