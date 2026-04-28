@@ -2,6 +2,7 @@ import React from 'react';
 
 import {TextNodeType} from '../types';
 
+import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import SwatchGroup from './SwatchGroup';
@@ -40,6 +41,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
         selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
         onSelect={value => patchNodeData({fontColor: value})}
       />
+      <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}
