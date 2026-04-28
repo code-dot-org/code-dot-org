@@ -15,11 +15,6 @@ import {
   KEYBOARD_MOVE_STEP,
 } from '../constants';
 import {
-  DEFAULT_FONT_SIZE,
-  FONT_SIZE_OPTIONS,
-  type FontSizeValue,
-} from '../elementToolbars/toolbarPalettes';
-import {
   entriesMatch,
   getEntryFromDOM,
   type TabOrderEntry,
@@ -78,22 +73,6 @@ function moveNodesByDelta(
         }
       : node
   );
-}
-
-/**
- * Return the next font size in the ordered list given a step direction
- * (+1 = larger, -1 = smaller). Returns null when already at the boundary
- * so the caller can treat it as a no-op.
- */
-function stepFontSize(
-  current: FontSizeValue | undefined,
-  direction: 1 | -1
-): FontSizeValue | null {
-  const sizes = FONT_SIZE_OPTIONS.map(option => option.value);
-  const currentIndex = sizes.indexOf(current ?? DEFAULT_FONT_SIZE);
-  const nextIndex = currentIndex + direction;
-  if (nextIndex < 0 || nextIndex >= sizes.length) return null;
-  return sizes[nextIndex];
 }
 
 /**
@@ -309,40 +288,21 @@ export function useKeyboardNavigation({
         const focusedNode = getNode(focusedNodeId);
         const direction = (event.key === ']' ? 1 : -1) as 1 | -1;
 
-        if (focusedNode?.type === 'text') {
-          const newFontSize = stepFontSize(
-            focusedNode.data.fontSize,
-            direction
-          );
-          if (newFontSize === null) return; // already at boundary, no-op
-          event.preventDefault();
-          event.stopPropagation();
-          setNodes(currentNodes =>
-            currentNodes.map(node => {
-              if (node.id !== focusedNodeId) return node;
-              if (node.type === 'text') {
-                return {...node, data: {...node.data, fontSize: newFontSize}};
-              }
-              return node;
-            })
-          );
-          announce(`${getNodeLabel(focusedNode)} font size ${newFontSize}.`);
-        } else {
-          // Shape and image nodes: resize dimensions.
-          event.preventDefault();
-          event.stopPropagation();
-          setNodes(currentNodes =>
-            resizeNodeByDelta(
-              currentNodes,
-              focusedNodeId,
-              direction * KEYBOARD_RESIZE_STEP
-            )
-          );
-          const nodeLabel = focusedNode
-            ? getNodeLabel(focusedNode)
-            : focusedNodeId;
-          announce(`${nodeLabel} ${direction > 0 ? 'enlarged' : 'shrunk'}.`);
-        }
+        // Shape and image nodes: resize dimensions.
+        event.preventDefault();
+        event.stopPropagation();
+        setNodes(currentNodes =>
+          resizeNodeByDelta(
+            currentNodes,
+            focusedNodeId,
+            direction * KEYBOARD_RESIZE_STEP
+          )
+        );
+        const nodeLabel = focusedNode
+          ? getNodeLabel(focusedNode)
+          : focusedNodeId;
+        announce(`${nodeLabel} ${direction > 0 ? 'enlarged' : 'shrunk'}.`);
+
         return;
       }
 
