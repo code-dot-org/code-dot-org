@@ -5,7 +5,6 @@ import {createMockTransport} from './transports/mockTransport';
 import {createReplayTransport} from './transports/replayTransport';
 import {CodeStudioConfig} from '@/config';
 import {getDashboardApiUrl} from '@/dashboard';
-// TODO: import {mockRoutes} from './mocks/allRoutes';
 
 type ApiMode = 'dashboard' | 'fetch' | 'mock' | 'replay' | 'auto';
 
