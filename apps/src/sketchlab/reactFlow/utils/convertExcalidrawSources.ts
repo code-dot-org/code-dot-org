@@ -64,7 +64,7 @@ export function convertExcalidrawToReactFlow(
 
   // First pass: index text elements by their containerId so shape
   // nodes can absorb them as labels rather than emit them as
-  // standalone TextNodes.
+  // standalone TextNodes. Excalidraw's text is stored separately from its container.
   const labelByContainerId = new Map<
     string,
     {
@@ -90,6 +90,7 @@ export function convertExcalidrawToReactFlow(
   // both endpoints exist.
   const emittedNodeById = new Map<string, SketchlabReactFlowNode>();
 
+  // Second pass: store shape nodes and standalone text/image nodes.
   for (const el of elements) {
     const shapeType = shapeTypeFor(el);
     if (shapeType !== null) {
@@ -158,7 +159,7 @@ export function convertExcalidrawToReactFlow(
     // freedraw, frame, embeddable, selection: dropped.
   }
 
-  // Second pass: linear elements (arrows and lines). These must run
+  // Third pass: linear elements (arrows and lines). These must run
   // after the node pass so we can verify both endpoints resolve to a
   // node we emitted.
   for (const el of elements) {
