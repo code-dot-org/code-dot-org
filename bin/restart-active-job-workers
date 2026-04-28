@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+ENV['RUBYOPT'] = [ENV.fetch('RUBYOPT', nil), '--yjit'].compact.join(' ')
 require_relative '../deployment'
 require 'cdo/active_job_backend'
 

@@ -19,6 +19,7 @@ ENV \
     LANG=C.UTF-8 \
     TZ=Etc/UTC \
     DEBIAN_FRONTEND=noninteractive \
+    RUBYOPT=--yjit \
     USER=ci \
     GROUP=ci
 
