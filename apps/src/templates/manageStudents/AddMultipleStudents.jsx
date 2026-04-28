@@ -45,8 +45,7 @@ class AddMultipleStudents extends Component {
 
     Papa.parse(file, {
       complete: results => {
-        const text = results.data.map(row => row.join(',')).join('\n');
-        this.refs.studentsTextBox.value = text;
+        this.refs.studentsTextBox.value = Papa.unparse(results.data);
         this.fileInput.value = '';
       },
     });
