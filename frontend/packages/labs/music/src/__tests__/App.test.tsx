@@ -1,6 +1,12 @@
 import {act, render} from '@testing-library/react';
 import {vi} from 'vitest';
 
+import {
+  ApiClientProvider,
+  DashboardApiClient as api,
+  QueryClientProvider,
+} from '@code-dot-org/core/api';
+
 import App from '../App';
 
 vi.mock('@code-dot-org/core', () => ({
@@ -46,7 +52,13 @@ vi.mock('@code-dot-org/core/api', async () => {
 });
 
 it('renders without crashing', async () => {
-  const {container} = render(<App />);
+  const {container} = render(
+    <QueryClientProvider>
+      <ApiClientProvider client={api}>
+        <App />
+      </ApiClientProvider>
+    </QueryClientProvider>,
+  );
   // Flush microtasks so the API promises (and their setState calls) settle
   // inside an act scope. Without this, React warns about updates outside act.
   await act(async () => {});
