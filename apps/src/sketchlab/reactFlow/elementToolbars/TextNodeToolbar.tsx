@@ -5,6 +5,7 @@ import {TextNodeType} from '../types';
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
+import LockedNotice from './LockedNotice';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
@@ -31,21 +32,29 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
       anchorNodeId={nodeId}
       ariaLabel="Text style"
     >
-      <FontSizeGroup
-        selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-        onSelect={value => patchNodeData({fontSize: value as FontSizeValue})}
-      />
-      <SwatchGroup
-        groupLabel="Font color"
-        swatches={STROKE_FONT_PALETTE}
-        selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
-        onSelect={value => patchNodeData({fontColor: value})}
-      />
-      <ActionsGroup nodeId={nodeId} />
-      <HandleVisibilityToggle
-        visible={handlesVisible}
-        onToggle={() => patchNodeData({showHandles: !handlesVisible})}
-      />
+      {data.locked ? (
+        <LockedNotice nodeId={nodeId} />
+      ) : (
+        <>
+          <FontSizeGroup
+            selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
+            onSelect={value =>
+              patchNodeData({fontSize: value as FontSizeValue})
+            }
+          />
+          <SwatchGroup
+            groupLabel="Font color"
+            swatches={STROKE_FONT_PALETTE}
+            selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
+            onSelect={value => patchNodeData({fontColor: value})}
+          />
+          <ActionsGroup nodeId={nodeId} />
+          <HandleVisibilityToggle
+            visible={handlesVisible}
+            onToggle={() => patchNodeData({showHandles: !handlesVisible})}
+          />
+        </>
+      )}
     </ToolbarShell>
   );
 }

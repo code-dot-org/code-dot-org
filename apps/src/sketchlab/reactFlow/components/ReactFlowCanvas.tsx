@@ -237,9 +237,19 @@ export default function ReactFlowCanvas({
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const locked =
+          (node.data as {locked?: boolean} | undefined)?.locked === true;
         return {
           ...node,
           selected,
+          // Per-node overrides take precedence over the canvas-level
+          // nodesDraggable / nodesConnectable / deleteKeyCode settings,
+          // so locked nodes stay locked even in fully-editable mode.
+          ...(locked && {
+            draggable: false,
+            connectable: false,
+            deletable: false,
+          }),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,

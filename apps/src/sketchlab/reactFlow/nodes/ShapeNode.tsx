@@ -100,7 +100,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     setIsEditing(true);
@@ -115,7 +115,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly]);
+  }, [isEditing, readOnly, data.locked]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);

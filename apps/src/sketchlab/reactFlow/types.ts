@@ -22,6 +22,7 @@ export type ShapeNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type TextNodeData = {
@@ -29,12 +30,14 @@ export type TextNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type ImageNodeData = {
   src: string;
   altText: string;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type LineAnchorNodeData = {
