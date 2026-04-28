@@ -42,6 +42,7 @@ export type ImageNodeData = {
 
 export type LineAnchorNodeData = {
   lineAnchorRole: 'source' | 'target';
+  // TODO: this is not used yet, but is included for ease of typing.
   locked?: boolean;
 };
 
