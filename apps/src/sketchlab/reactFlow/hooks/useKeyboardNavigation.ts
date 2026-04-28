@@ -277,9 +277,9 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "[" and "]" adjust the focused node. Text-only nodes step through
-      // font sizes; shape and image nodes resize their dimensions.
-      // Line-anchor pseudo-nodes are excluded — they have no visible body.
+      // "[" and "]" decrease or increase the size of the focused node.
+      // Line-anchor pseudo-nodes are excluded — they have no visible body and can
+      // be resized through 'ghost' nodes.
       if (
         focusedNodeId &&
         !isLineAnchorNodeId(focusedNodeId, nodes) &&
