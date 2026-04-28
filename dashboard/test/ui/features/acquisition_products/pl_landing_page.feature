@@ -26,6 +26,7 @@ Feature: Professional Learning landing page
     And I close my eyes
 
   @eyes
+  @dashboard_db_access
   Scenario: Facilitator sees relevant content sections
     Given I am a facilitator with started and completed courses
     And I am on "http://studio.code.org/my-professional-learning"
