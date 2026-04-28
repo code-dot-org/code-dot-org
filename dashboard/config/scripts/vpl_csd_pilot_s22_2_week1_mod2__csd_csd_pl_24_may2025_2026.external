@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 1 - 5
 
-#### Unit 2 - Web Development begins with an opportunity for students to think about developing websites for other users. They will first encounter Web Lab by viewing sample web pages created within the tool for different purposes and different users. 
+#### Web Development begins with an opportunity for students to think about developing websites for other users. They will first encounter Web Lab by viewing sample web pages created within the tool for different purposes and different users. 
 
 #### Students will then learn to build the structure of a web page using HTML in a set of scaffolded lessons that introduce them to Web Lab. These first few lessons help students build foundational skills and knowledge that they will use later in the unit where they will need to apply these skills and knowledge to create their own web sites.  
 </p></div>
@@ -33,7 +33,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/46806d01b09f7572920599c6f5118251-image-1710458545993.22.22 PM.png" alt="Several sample websites on Code Studio" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/1" target="blank" rel="noopener noreferrer">Lesson 1 Link</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/1" target="blank" rel="noopener noreferrer">Lesson 1 Link</a>
 
 #### **Question of the Day:** How can we choose websites based on the needs of a user?
 
@@ -57,7 +57,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/db49d3fe50911bd3c60fe65e0e0d697e-image-1710458713989.25.09 PM.png" alt="Web Lab page showing the heading Welcome to Web Lab!" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2 Link</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2 Link</a>
 
 #### **Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?
 
@@ -81,7 +81,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/0c7cabda71953d03d876905932aa6a35-image-1710458865890.27.42 PM.png" alt="A Web Lab level demonstrating different sizes of HTML headings" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/3" target="blank" rel="noopener noreferrer">Lesson 3 Link</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/3" target="blank" rel="noopener noreferrer">Lesson 3 Link</a>
 
 #### **Question of the Day:** How can we work together to fix problems with our websites?
 
@@ -104,7 +104,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/e1be14e7973d04621a1d4e8bff3be3b9-image-1710458949464.29.05 PM.png" alt="Several sample social media pages" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/4" target="blank" rel="noopener noreferrer">Lesson 4 Link</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/4" target="blank" rel="noopener noreferrer">Lesson 4 Link</a>
 
 #### **Question of the Day:** How can you make sure that your private information stays private?
 
@@ -128,7 +128,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/d4a91e2262f022b7bfbc1aaff6cb08a2-image-1710459018246.30.13 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/5" target="blank" rel="noopener noreferrer">Lesson 5 Link</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/5" target="blank" rel="noopener noreferrer">Lesson 5 Link</a>
 
 #### **Question of the Day:** How can I use HTML to design and build a web page for a user?
 

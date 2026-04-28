@@ -59,8 +59,25 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
     it 'redacts section names' do
       scrub_pii
-      user.sections.with_deleted.each do |section|
+      user.sections_owned.with_deleted.each do |section|
         _(section.reload.name).must_equal Services::User::PiiScrubber::REDACTED_STRING
+      end
+    end
+
+    context 'when user is a co-instructor for another teacher\'s section' do
+      let(:soft_deleted_user) {false}
+      let(:other_teacher) {create(:teacher)}
+      let(:co_taught_section) {create(:section, user: other_teacher, name: 'Shared Section')}
+
+      before do
+        co_taught_section
+        create(:section_instructor, section: co_taught_section, instructor: user, status: :active)
+        user.update_column(:deleted_at, Time.zone.now)
+      end
+
+      it 'does not redact sections co-instructed but not owned by the user' do
+        scrub_pii
+        _(co_taught_section.reload.name).must_equal 'Shared Section'
       end
     end
 

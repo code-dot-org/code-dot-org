@@ -15,6 +15,7 @@ require_relative '../state_abbr'
 
 module SharedConstants
   DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
+  LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
   LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
 
   # Used to communicate different types of levels.
@@ -762,9 +763,6 @@ module SharedConstants
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
-
-  # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
-  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
   LESSON_OBJECTIVE_REFLECTION_VALUES = {
     UNSURE: 'unsure',

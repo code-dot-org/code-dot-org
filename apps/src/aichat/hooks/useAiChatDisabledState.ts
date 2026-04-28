@@ -1,10 +1,13 @@
 import {useMemo} from 'react';
 
 import {
+  AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -13,11 +16,6 @@ interface UseAiChatDisabledStateParams {
   appName?: string;
   isPredictLevel?: boolean;
   hasSubmittedPredictResponse?: boolean;
-}
-
-export interface AiChatDisabledState {
-  disabled: boolean;
-  disabledMessage?: string;
 }
 
 /**
@@ -78,6 +76,11 @@ export function useAiChatDisabledState({
         return {
           disabled: true,
           disabledMessage: 'Chat is disabled for this class section.',
+          disabledLink: {
+            href: AI_SETTINGS_SUPPORT_LINK,
+            openInNewTab: true,
+            text: 'Learn more',
+          },
         };
       }
       // If the teacher doesn't have access, show the appropriate message to direct the teacher on how to get access.
@@ -85,6 +88,11 @@ export function useAiChatDisabledState({
         return {
           disabled: true,
           disabledMessage: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+          disabledLink: {
+            href: VERIFIED_TEACHER_SUPPORT_LINK,
+            openInNewTab: true,
+            text: 'Learn how to become a verified teacher',
+          },
         };
       }
       return {disabled: false};

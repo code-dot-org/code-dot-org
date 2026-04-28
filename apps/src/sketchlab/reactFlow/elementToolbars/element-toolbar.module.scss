@@ -1,0 +1,182 @@
+:global([data-theme='Light']) {
+  --sketchlab-stroke-default: #292f36;
+  --sketchlab-stroke-red: #fb2c36;
+  --sketchlab-stroke-yellow: #f0b100;
+  --sketchlab-stroke-green: #00bc7d;
+  --sketchlab-stroke-blue: #2b7fff;
+  --sketchlab-stroke-purple: #ad46ff;
+  --sketchlab-stroke-pink: #f6339a;
+  --sketchlab-bg-gray: #dfe3e9;
+  --sketchlab-bg-red: #ffe2e2;
+  --sketchlab-bg-yellow: #fef3c6;
+  --sketchlab-bg-green: #d0fae5;
+  --sketchlab-bg-blue: #dbeafe;
+  --sketchlab-bg-purple: #f3e8ff;
+  --sketchlab-bg-pink: #fce7f3;
+}
+
+:global([data-theme='Dark']) {
+  --sketchlab-stroke-default: #fff;
+  --sketchlab-stroke-red: #fb2c36;
+  --sketchlab-stroke-yellow: #f0b100;
+  --sketchlab-stroke-green: #00bc7d;
+  --sketchlab-stroke-blue: #2b7fff;
+  --sketchlab-stroke-purple: #ad46ff;
+  --sketchlab-stroke-pink: #f6339a;
+  --sketchlab-bg-gray: #576575;
+  --sketchlab-bg-red: #82181a;
+  --sketchlab-bg-yellow: #733e0a;
+  --sketchlab-bg-green: #006045;
+  --sketchlab-bg-blue: #1c398e;
+  --sketchlab-bg-purple: #59168b;
+  --sketchlab-bg-pink: #861043;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  pointer-events: all;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  // Pull into the Paper's 8px padding so the X sits in the corner
+  // rather than inside its own row of whitespace. Bottom -10px
+  // offset makes it so the header (just a close button) 
+  // doesn't have a massive gap to the toolbar content.
+  margin: -4px -4px -10px 0;
+}
+
+.close-button {
+  padding: 2px;
+  color: var(--text-neutral-primary);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  & + & {
+    padding-top: 8px;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.groupLabel {
+  color: var(--text-neutral-secondary);
+}
+
+.swatches {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--borders-neutral-primary);
+
+  &:hover {
+    border-color: var(--text-neutral-primary);
+  }
+}
+
+// 1px gap (in toolbar background) between the swatch edge and the
+// selection ring, so black/transparent swatches remain distinguishable.
+// Chaining `:global(.MuiIconButton-root)` gives this rule 3-class
+// specificity, outranking MUI's own focus-visible box-shadow that would
+// otherwise suppress the ring while the button has focus.
+.swatch.swatchSelected:global(.MuiIconButton-root),
+.swatch.swatchSelected.customSwatch {
+  box-shadow:
+    0 0 0 1px var(--background-neutral-primary),
+    0 0 0 3px var(--text-neutral-primary);
+}
+
+// The component-library MUI theme overrides IconButton :focus-visible to
+// force a 0.375rem border-radius; we want 50% so the focus outline
+// follows the circular swatch shape.
+.swatch:global(.MuiIconButton-root):focus-visible {
+  border-radius: 50%;
+}
+
+// Swatch-shaped label wraps the native color input. Clicking or focusing
+// the label activates the visually-hidden input, which opens the picker.
+.customSwatch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  // Propagate the inner input's focus state to the label, since the
+  // opacity:0 input can't show its own outline.
+  &:focus-within {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.customSwatchIcon {
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.customSwatchInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.swatchTransparent {
+  background-color: var(--background-neutral-primary);
+  background-image: linear-gradient(
+    45deg,
+    transparent 45%,
+    var(--text-neutral-primary) 45%,
+    var(--text-neutral-primary) 55%,
+    transparent 55%
+  );
+}
+
+.fontSizeButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.fontSizeButton {
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.fontSizeButtonSelected {
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--text-neutral-primary);
+}
