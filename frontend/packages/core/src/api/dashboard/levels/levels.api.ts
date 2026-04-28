@@ -3,6 +3,7 @@ import {getLevelKindSchema} from './levels.kinds';
 import type {
   LevelPropertiesMap,
   LevelProperties,
+  ProjectLevelPropertiesRequestParams,
   LevelPropertiesRequestParams,
 } from './levels.types';
 import {
@@ -16,21 +17,29 @@ import {
   UserAppOptionsSchema,
 } from './levels.schemata';
 
+function getProjectLevelPropertiesUrl(
+  params: ProjectLevelPropertiesRequestParams,
+) {
+  return `/projects/${params.standaloneProjectType}/level_properties`;
+}
+
 /**
  * Returns the URL for the API call to retrieve level metadata depending on the
  * level type and/or position.
  */
 function getLevelPropertiesUrl(params: LevelPropertiesRequestParams) {
-  const {levelId, standaloneProjectType, scriptName, lessonPosition} = params;
+  if (params.standaloneProjectType) {
+    // Standalone project level
+    return getProjectLevelPropertiesUrl(params);
+  }
 
-  return standaloneProjectType
-    ? // Standalone project level
-      `/projects/${standaloneProjectType}/level_properties`
-    : scriptName && lessonPosition
-      ? // Level as part of a unit progression
-        `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
-      : // Specific level (when viewing/editing a specific level)
-        `/levels/${levelId}/level_properties`;
+  const {levelId, scriptName, lessonPosition} = params;
+
+  return scriptName && lessonPosition
+    ? // Level as part of a unit progression
+      `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
+    : // Specific level (when viewing/editing a specific level)
+      `/levels/${levelId}/level_properties`;
 }
 
 export function createLevelsApi(transport: Transport) {
