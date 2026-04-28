@@ -1,15 +1,14 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {STATE_CODES} from '@cdo/apps/geographyConstants';
+import {ages} from '@cdo/apps/templates/AgeDropdown';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
   sectionName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-
-import {ages} from '../AgeDropdown';
-import {STATE_CODES} from '@cdo/apps/geographyConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',

@@ -1,7 +1,7 @@
+import Papa from 'papaparse';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Papa from 'papaparse';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
