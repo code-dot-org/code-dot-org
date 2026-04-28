@@ -5,14 +5,23 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
 import {ThemeProvider} from '@mui/material';
+import {TanStackDevtools} from '@tanstack/react-devtools';
+import {ReactQueryDevtoolsPanel} from '@tanstack/react-query-devtools';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
-import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
+import {TanStackRouterDevtoolsPanel} from '@tanstack/react-router-devtools';
 
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {
+  ApiClientProvider,
+  bootstrapApiClient,
+  QueryClientProvider,
+} from '@code-dot-org/core/api';
 
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
+
+const api = bootstrapApiClient();
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
@@ -34,8 +43,23 @@ function RootLayout() {
         menuItems={SIGNED_OUT_MENU_ITEMS}
       />
 
-      <Outlet />
-      <TanStackRouterDevtools />
+      <QueryClientProvider>
+        <ApiClientProvider client={api}>
+          <Outlet />
+          <TanStackDevtools
+            plugins={[
+              {
+                name: 'TanStack Query',
+                render: <ReactQueryDevtoolsPanel />,
+              },
+              {
+                name: 'TanStack Router',
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+        </ApiClientProvider>
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
