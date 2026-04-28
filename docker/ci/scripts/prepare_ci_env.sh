@@ -14,8 +14,8 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-# Enable jemalloc to prevent runaway memory growth during dashboard unit tests.
-# Configuration options based on the defaults used in chef (see
+# Enable jemalloc, both for memory optimization and parity with our deployed
+# application. Configuration options based on the defaults used in chef (see
 # cookbooks/cdo-jemalloc/attributes/default.rb), with the notable exception of
 # `background_thread:true` since that breaks chromedriver (see
 # https://issues.chromium.org/issues/378077860).
