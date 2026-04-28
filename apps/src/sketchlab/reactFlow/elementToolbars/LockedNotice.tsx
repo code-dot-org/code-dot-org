@@ -14,9 +14,10 @@ interface LockedNoticeProps {
   nodeId: string;
 }
 
-// Shown in place of the regular toolbar groups when a node is locked.
-// The Close button comes from ToolbarShell's header, so this component
-// only shows the lock state and (in start_sources mode) an Unlock button.
+// Replacement for the regular toolbar groups when a node is locked.
+// In standard mode, users cannot unlock a locked node, so it only shows
+// a message that the node is locked. In start mode, users can unlock nodes, so it also
+// includes an unlock button.
 export default function LockedNotice({nodeId}: LockedNoticeProps) {
   const {patchNodeData} = useNodeToolbarData<SketchLabNode>(nodeId);
   const isStartMode = getIsStartMode();
@@ -40,6 +41,9 @@ export default function LockedNotice({nodeId}: LockedNoticeProps) {
           color="secondary"
           variant="outlined"
           size="small"
+          startIcon={
+            <FontAwesomeV6Icon iconName="lock-open" aria-hidden="true" />
+          }
         >
           Unlock
         </Button>

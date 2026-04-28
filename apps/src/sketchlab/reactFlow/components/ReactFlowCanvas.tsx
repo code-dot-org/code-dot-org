@@ -241,9 +241,6 @@ export default function ReactFlowCanvas({
         return {
           ...node,
           selected,
-          // Per-node overrides take precedence over the canvas-level
-          // nodesDraggable / nodesConnectable / deleteKeyCode settings,
-          // so locked nodes stay locked even in fully-editable mode.
           ...(locked && {
             draggable: false,
             connectable: false,
