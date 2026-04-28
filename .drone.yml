@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:jemalloc-5.3
+    image: codedotorg/cdo-ci:jemalloc-5.3.1
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:jemalloc-5.3
+    image: codedotorg/cdo-ci:jemalloc-5.3.1
     pull: always
     volumes:
       - name: mysql
@@ -297,7 +297,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:jemalloc-5.3
+    image: codedotorg/cdo-ci:jemalloc-5.3.1
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -344,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: df04757615bfe9b30dea6b629792d36d22d4a6feeba2ba629babb1cd3e1731e9
+hmac: 374099557d002df91a2fdd2479063c44e87f622f92831bb567c8ad4dd5832953
 
 ...
