@@ -96,7 +96,7 @@ end
 # Rack::Cache::Response used by Rack::Optimize in non-development environments.
 gem 'rack-cache'
 
-group :development, :test do
+group :development, :test, :adhoc do
   gem 'rerun'
   gem 'thin'
   # Use debugger
