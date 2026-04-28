@@ -41,6 +41,7 @@ import manageStudents, {
   parseAge,
   parseGender,
   parseUsState,
+  addMultipleAddRows,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
@@ -64,53 +65,71 @@ const expectedBlankRow = {
   isEditing: true,
   rowType: RowType.ADD,
 };
-
 describe('parseAge', () => {
   it('accepts valid ages', () => {
-    assert.equal(parseAge('12'), '12');
-    assert.equal(parseAge('21+'), '21+');
-    assert.equal(parseAge('  4  '), '4');
+    assert.strictEqual(parseAge('12'), '12');
+    assert.strictEqual(parseAge('21+'), '21+');
+    assert.strictEqual(parseAge('  4  '), '4');
   });
 
   it('rejects invalid ages', () => {
-    assert.equal(parseAge('3'), '');
-    assert.equal(parseAge('22'), '');
-    assert.equal(parseAge('abc'), '');
-    assert.equal(parseAge(''), '');
+    assert.strictEqual(parseAge('3'), '');
+    assert.strictEqual(parseAge('22'), '');
+    assert.strictEqual(parseAge('abc'), '');
+    assert.strictEqual(parseAge('   '), '');
+  });
+
+  it('rejects falsy ages', () => {
+    assert.strictEqual(parseAge(''), '');
+    assert.strictEqual(parseAge(null), '');
+    assert.strictEqual(parseAge(undefined), '');
   });
 });
 
 describe('parseGender', () => {
   it('accepts valid gender values case-insensitively', () => {
-    assert.equal(parseGender('Male'), 'm');
-    assert.equal(parseGender('FEMALE'), 'f');
-    assert.equal(parseGender('M'), 'm');
-    assert.equal(parseGender('m'), 'm');
-    assert.equal(parseGender('F'), 'f');
-    assert.equal(parseGender('f'), 'f');
-    assert.equal(parseGender('non-binary'), 'n');
-    assert.equal(parseGender('Preferred term not listed'), 'o');
-    assert.equal(parseGender('other'), 'o');
+    assert.strictEqual(parseGender('Male'), 'm');
+    assert.strictEqual(parseGender('FEMALE'), 'f');
+    assert.strictEqual(parseGender('M'), 'm');
+    assert.strictEqual(parseGender('m'), 'm');
+    assert.strictEqual(parseGender('F'), 'f');
+    assert.strictEqual(parseGender('f'), 'f');
+    assert.strictEqual(parseGender('non-binary'), 'n');
+    assert.strictEqual(parseGender('nonbinary'), 'n');
+    assert.strictEqual(parseGender('Preferred term not listed'), 'o');
+    assert.strictEqual(parseGender('other'), 'o');
   });
 
   it('rejects unrecognized gender values', () => {
-    assert.equal(parseGender('unknown'), '');
-    assert.equal(parseGender(''), '');
+    assert.strictEqual(parseGender('unknown'), '');
+    assert.strictEqual(parseGender('   '), '');
+  });
+
+  it('rejects falsy gender values', () => {
+    assert.strictEqual(parseGender(''), '');
+    assert.strictEqual(parseGender(null), '');
+    assert.strictEqual(parseGender(undefined), '');
   });
 });
 
 describe('parseUsState', () => {
   it('accepts valid two-letter state codes case-insensitively', () => {
-    assert.equal(parseUsState('ca'), 'CA');
-    assert.equal(parseUsState('WA'), 'WA');
-    assert.equal(parseUsState('  tx  '), 'TX');
-    assert.equal(parseUsState('wi'), 'WI');
+    assert.strictEqual(parseUsState('ca'), 'CA');
+    assert.strictEqual(parseUsState('WA'), 'WA');
+    assert.strictEqual(parseUsState('  tx  '), 'TX');
+    assert.strictEqual(parseUsState('wi'), 'WI');
   });
 
   it('rejects invalid state codes', () => {
-    assert.equal(parseUsState('XX'), '');
-    assert.equal(parseUsState('California'), '');
-    assert.equal(parseUsState(''), '');
+    assert.strictEqual(parseUsState('XX'), '');
+    assert.strictEqual(parseUsState('California'), '');
+    assert.strictEqual(parseUsState('   '), '');
+  });
+
+  it('rejects falsy state codes', () => {
+    assert.strictEqual(parseUsState(''), '');
+    assert.strictEqual(parseUsState(null), '');
+    assert.strictEqual(parseUsState(undefined), '');
   });
 });
 
@@ -819,6 +838,57 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(nextState.studentData['-1'].age, '');
       assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, '');
       assert.deepEqual(nextState.studentData['-1'].usState, null);
+    });
+  });
+
+  describe('addMultipleAddRows', () => {
+    it('filters blank names and maps imported fields into new student rows', () => {
+      const dispatch = sinon.spy();
+
+      addMultipleAddRows([
+        {
+          name: '',
+          familyName: 'ignored',
+          age: '12',
+          gender: 'f',
+          usState: 'CA',
+        },
+        {
+          name: 'Ada',
+          familyName: 'Lovelace',
+          age: '14',
+          gender: 'f',
+          usState: 'CA',
+        },
+        {name: 'Grace'},
+      ])(dispatch);
+
+      assert.strictEqual(dispatch.calledOnce, true);
+
+      const action = dispatch.firstCall.args[0];
+      const rows = Object.values(action.studentData);
+      assert.strictEqual(rows.length, 2);
+
+      const adaRow = rows.find(row => row.name === 'Ada');
+      const graceRow = rows.find(row => row.name === 'Grace');
+
+      assert.strictEqual(adaRow.familyName, 'Lovelace');
+      assert.strictEqual(adaRow.age, '14');
+      assert.strictEqual(adaRow.genderTeacherInput, 'f');
+      assert.strictEqual(adaRow.usState, 'CA');
+      assert.strictEqual(adaRow.isEditing, true);
+      assert.strictEqual(adaRow.rowType, RowType.NEW_STUDENT);
+
+      assert.strictEqual(graceRow.familyName, '');
+      assert.strictEqual(graceRow.age, '');
+      assert.strictEqual(graceRow.genderTeacherInput, '');
+      assert.strictEqual(graceRow.usState, null);
+      assert.strictEqual(graceRow.isEditing, true);
+      assert.strictEqual(graceRow.rowType, RowType.NEW_STUDENT);
+
+      assert.isBelow(adaRow.id, 0);
+      assert.isBelow(graceRow.id, 0);
+      assert.notStrictEqual(adaRow.id, graceRow.id);
     });
   });
 
