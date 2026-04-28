@@ -22,6 +22,7 @@
       "show_calendar": true,
       "supported_locales": [
         "es-ES",
+        "es-LA",
         "es-MX"
       ],
       "weekly_instructional_minutes": 225

@@ -12,6 +12,7 @@
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
+        "es-LA",
         "es-MX"
       ],
       "topic_tags": [

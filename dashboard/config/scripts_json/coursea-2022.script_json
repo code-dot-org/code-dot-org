@@ -17,6 +17,7 @@
       "project_widget_visible": true,
       "show_calendar": true,
       "supported_locales": [
+        "es-LA",
         "es-MX",
         "fa-AF",
         "fa-IR",
