@@ -1,6 +1,7 @@
 require_relative './rake_utils'
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'memory_profiler'
 
 module TestRunUtils
   def self.run_apps_tests
