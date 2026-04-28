@@ -30,6 +30,8 @@ class Policies::Lti
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
+  # For security reasons, we only allow target_link_uris that are on domains we control.
+  # This is to prevent abuse of our LTI integration to launch unexpected URLs.
   ALLOWED_TARGET_LINK_URI_DOMAINS = Set.new(
     [
       'code.org',
