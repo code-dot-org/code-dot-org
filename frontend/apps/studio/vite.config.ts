@@ -27,6 +27,12 @@ export default defineConfig(({mode}) => {
         react: path.resolve(workspaceRoot, 'node_modules/react'),
         'react-dom': path.resolve(workspaceRoot, 'node_modules/react-dom'),
       },
+      dedupe: [
+        '@tanstack/react-query',
+        '@tanstack/react-query-devtools',
+        'react',
+        'react-dom',
+      ],
     },
     plugins: [
       ViteRails(),

@@ -1,18 +1,16 @@
 import {useEffect, useState} from 'react';
 
 import {CodeStudioConfig} from '@code-dot-org/core';
-import {DashboardApiClient} from '@code-dot-org/core/api';
-import type {
-  LevelPropertiesMap,
-  UserThemeSettings,
+import {
+  DashboardApiClient,
+  useLevelProperties,
+  useApiClient,
 } from '@code-dot-org/core/api';
+import type {UserThemeSettings} from '@code-dot-org/core/api';
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [levelProperties, setLevelProperties] = useState<
-    LevelPropertiesMap | undefined
-  >();
   const [theme, setTheme] = useState<UserThemeSettings | null | undefined>();
 
   useEffect(() => {
@@ -24,14 +22,14 @@ function App() {
       environment: CodeStudioConfig.environment,
       source: 'music-lab',
     });
-
-    DashboardApiClient.levels
-      .getLevelProperties({levelId: 46446})
-      .then(res => setLevelProperties(res));
     DashboardApiClient.preferences
       .getThemeSettings({errorCallback: () => ({})})
       .then(res => setTheme(res));
   }, []);
+
+  const api = useApiClient();
+  const {data: levelPropertiesMap} = useLevelProperties(api, {levelId: 46446});
+  const levelProperties = levelPropertiesMap?.['46446'];
 
   const reportObservabilityClick = () => {
     Observability.logger.info('Music Lab observability test button clicked', {
