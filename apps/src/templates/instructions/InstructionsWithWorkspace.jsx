@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
 
@@ -154,9 +153,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
           {children}
         </CodeWorkspaceContainer>
         {shouldMountAiTutorContainer && (
-          <AiChatDisabledProvider>
-            <AiTutorContainer onLayoutChange={this.handleLayoutChange} />
-          </AiChatDisabledProvider>
+          <AiTutorContainer onLayoutChange={this.handleLayoutChange} />
         )}
       </span>
     );

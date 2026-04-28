@@ -198,7 +198,6 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
-    ai_tutor_access_denied
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
@@ -247,6 +246,7 @@ class User < ApplicationRecord
   has_many :hint_view_requests
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   has_many :ai_lesson_summaries, dependent: :destroy
+  has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -992,7 +992,6 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
-      ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated_date: at_risk_age_gated_date,
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,

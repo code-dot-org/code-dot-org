@@ -106,13 +106,14 @@ def parse_options
     options.local = nil
     options.local_headless = true
     options.first_run_local = nil
+    options.device_farm = nil
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
     options.magic_retry = false
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
-    options.priority = '99'
+    options.saucelabs_priority = '99'
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -147,8 +148,15 @@ def parse_options
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
-      opts.on("--first-run-local", "Use the local webdriver (not Saucelabs) only for the first run of a test; reruns will use Saucelabs.") do
+      opts.on("--first-run-local", "Use the local webdriver only for the first run of a test; reruns will use the configured remote provider.") do
         options.first_run_local = 'true'
+      end
+      opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
+                               "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
+                               "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
+                               "Note: Device Farm browsers cannot reach localhost; use a public domain."
+              ) do
+        options.device_farm = true
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -223,8 +231,8 @@ def parse_options
       opts.on("--dry-run", "Process features without running any actual steps.") do
         options.dry_run = true
       end
-      opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
-        options.priority = priority
+      opts.on("--saucelabs-priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
+        options.saucelabs_priority = priority
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -267,7 +275,8 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
+  browsers_file = options.device_farm ? 'browsers_device_farm.json' : 'browsers_saucelabs.json'
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, browsers_file)))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -459,7 +468,7 @@ end
 
 def server_status_page_url
   return nil unless $options.with_status_page
-  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
+  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
 def status_page_filename
@@ -493,7 +502,7 @@ def generate_status_page(suite_start_time)
     haml_engine.render(
       Object.new,
       {
-        api_origin: CDO.studio_url('', scheme_for_environment),
+        api_origin: CDO.studio_url('', scheme_for_environment, ge_region: nil),
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
@@ -581,6 +590,7 @@ end
 
 # returns the first line of the first selenium error in the html output file.
 def first_selenium_error(filename)
+  return 'no html output file' unless filename && File.exist?(filename)
   html = File.read(filename)
   error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
   match = error_regex.match(html)
@@ -671,6 +681,12 @@ def skip_tag(tag)
   " -t 'not #{tag}'"
 end
 
+# Whether this browser config represents a mobile device.
+# Device Farm configs use "mobile", SauceLabs configs use "appium:mobile".
+def mobile_browser?(browser)
+  browser['mobile'] || browser['appium:mobile']
+end
+
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
@@ -680,7 +696,7 @@ def cucumber_arguments_for_browser(browser, options)
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['appium:mobile']
+      if mobile_browser?(browser)
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
       else
@@ -694,8 +710,8 @@ def cucumber_arguments_for_browser(browser, options)
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['appium:mobile']
-  arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
+  arguments += skip_tag('@no_mobile') if mobile_browser?(browser)
+  arguments += skip_tag('@only_mobile') unless mobile_browser?(browser)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_ci') if options.is_ci
@@ -773,11 +789,12 @@ def run_feature(browser, feature, options)
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = mobile_browser?(browser) ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['PRIORITY'] = options.priority
+  run_environment['SAUCELABS_PRIORITY'] = options.saucelabs_priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
@@ -808,6 +825,7 @@ def run_feature(browser, feature, options)
   # After the first run, we no longer want to consider the `first_run_local`
   # option when deciding whether a test should be run locally.
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
 
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
@@ -897,10 +915,10 @@ def run_feature(browser, feature, options)
 
   if scenario_count == 0 && !CI::Utils.running_on_ci?
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
-    skip_warning += <<~EOS
+    skip_warning += <<~WARN
       Check the excluded @tags in the cucumber command line above and in the #{feature} file:
         - Do the feature or scenario tags exclude #{browser_name}?
-    EOS
+    WARN
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end

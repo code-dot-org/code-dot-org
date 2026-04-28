@@ -8,6 +8,8 @@ import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -45,6 +47,9 @@ class ProgressLesson extends React.Component {
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
     unitHasUnnumberedLessons: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    userType: PropTypes.string,
+    unitName: PropTypes.string,
   };
 
   constructor(props) {
@@ -74,6 +79,19 @@ class ProgressLesson extends React.Component {
       collapsed: !this.state.collapsed,
     });
 
+  handleLessonTutorClick = () => {
+    const {lesson, scriptId, unitName, userId, userType} = this.props;
+    analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
+      lessonId: lesson.id,
+      lessonName: lesson.name,
+      unitId: scriptId,
+      unitName,
+      userId,
+      userType,
+      view: 'progress-lesson',
+    });
+  };
+
   render() {
     const {
       lesson,
@@ -87,6 +105,7 @@ class ProgressLesson extends React.Component {
       isRtl,
       unitHasUnnumberedLessons,
       isOnLevelView,
+      userId,
     } = this.props;
 
     if (!isVisible) {
@@ -107,7 +126,7 @@ class ProgressLesson extends React.Component {
     // These lessons don't have lesson plans, so we can use that as a proxy for
     // whether or not to show the Lesson Tutor button.
     const showLessonTutorButton =
-      lesson.lessonTutorPath && lesson.hasLessonPlan;
+      lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -192,29 +211,33 @@ class ProgressLesson extends React.Component {
               )}
               <span>{title}</span>
             </div>
-            {viewAs === ViewType.Participant && !isOnLevelView && (
+            {!isOnLevelView && (
               <div style={styles.buttonColumn}>
-                {lesson.student_lesson_plan_html_url && (
-                  <MuiButton
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    variant="contained"
-                    color="white"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
-                  >
-                    {i18n.lessonResources()}
-                  </MuiButton>
-                )}
+                {viewAs === ViewType.Participant &&
+                  lesson.student_lesson_plan_html_url && (
+                    <MuiButton
+                      className="ui-test-lesson-resources"
+                      href={lesson.student_lesson_plan_html_url}
+                      variant="contained"
+                      color="white"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+                    >
+                      {i18n.lessonResources()}
+                    </MuiButton>
+                  )}
                 {showLessonTutorButton &&
-                  experiments.isEnabled(experiments.LESSON_TUTOR) && (
+                  experiments.isEnabledAllowingQueryString(
+                    experiments.LESSON_TUTOR
+                  ) && (
                     <MuiButton
                       href={lesson.lessonTutorPath}
                       variant="contained"
                       color="white"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={this.handleLessonTutorClick}
                       startIcon={
                         <FontAwesomeV6Icon
                           iconName="ai-bot-solid"
@@ -363,4 +386,7 @@ export default connect((state, ownProps) => ({
     state.progress.unitProgressHasLoaded &&
     state.lessonLock.lessonsBySectionIdLoaded,
   unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
+  userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
+  unitName: state.progress.unitTitle,
 }))(ProgressLesson);

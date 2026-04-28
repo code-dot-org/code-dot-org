@@ -10,29 +10,23 @@ import {ValueOf} from '../types/utils';
 
 import {chatHistoryValidator} from './api/validators';
 import {
-  AiCustomizations,
   AichatContext,
   ModelParameters,
   ChatEvent,
-  DetectToxicityResponse,
   FeedbackValue,
   PendingChatMessage,
   ServerChatEvent,
   CompletedChatMessage,
 } from './types';
-import {extractFieldsToCheckForToxicity} from './utils';
 
-const ROOT_GENERAL_URL = '/aichat';
 const ROOT_REQUEST_URL = '/aichat_request';
 const ROOT_EVENT_URL = '/aichat_events';
 const paths = {
   START_CHAT_COMPLETION_URL: `${ROOT_REQUEST_URL}/start_chat_completion`,
   GET_CHAT_REQUEST_URL: `${ROOT_REQUEST_URL}/chat_request`,
-  CHAT_COMPLETION_URL: `${ROOT_GENERAL_URL}/chat_completion`,
   LOG_CHAT_EVENT_URL: `${ROOT_EVENT_URL}/log_chat_event`,
   CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/chat_history`,
   SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_EVENT_URL}/submit_teacher_feedback`,
-  FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
 const MIN_POLLING_INTERVAL_MS = 1000;
@@ -111,29 +105,6 @@ export async function getUserChatHistory(
   );
 
   return response.value;
-}
-
-/**
- * Detects toxicity in the provided AI customizations by invoking the toxicity detection endpoint.
- * Returns a {@link DetectToxicityResponse}.
- */
-export async function detectToxicityInCustomizations(
-  aiCustomizations: AiCustomizations,
-  levelId: number | null
-): Promise<DetectToxicityResponse> {
-  const response = await HttpClient.post(
-    paths.FIND_TOXICITY_URL,
-    JSON.stringify({
-      ...extractFieldsToCheckForToxicity(aiCustomizations),
-      levelId,
-    }),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  return (await response.json()) as DetectToxicityResponse;
 }
 
 interface StartChatCompletionResponse {

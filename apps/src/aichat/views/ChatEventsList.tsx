@@ -3,12 +3,17 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
-import {ChatAsset, ChatEvent, isChatMessage, ModelParameters} from '../types';
+import {
+  AiChatDisabledState,
+  ChatAsset,
+  ChatEvent,
+  isChatMessage,
+  ModelParameters,
+} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
@@ -24,6 +29,7 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   hasInstructionsDrawer?: boolean;
+  disabledState?: AiChatDisabledState;
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
@@ -39,9 +45,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   hasInstructionsDrawer,
+  disabledState,
   renderLastMessagePostText,
 }) => {
-  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const chatDisabled = disabledState?.disabled ?? false;
+  const chatDisabledMessage = disabledState?.disabledMessage;
+  const chatDisabledLink = disabledState?.disabledLink;
+
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
@@ -207,7 +217,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled && !(isTeacherView && hasChatHistory) ? (
-          <ChatDisabled message={chatDisabledMessage} />
+          <ChatDisabled message={chatDisabledMessage} link={chatDisabledLink} />
         ) : (
           <>
             {hasInstructionsDrawer && (

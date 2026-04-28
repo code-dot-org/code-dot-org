@@ -9,6 +9,8 @@ import {
 } from '@mui/material';
 import {FunctionComponent} from 'react';
 
+import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
+
 interface MenuItem {
   label: string;
   href: string;
@@ -19,6 +21,7 @@ export interface HeaderProps {
   /** Site logo image source */
   logoImageUrl: string;
   menuItems: MenuItem[];
+  userAuth?: UserAuthProp;
 }
 
 const styles = {
@@ -66,6 +69,7 @@ const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
   brandName,
   menuItems,
+  userAuth,
 }) => {
   return (
     <Box component="header">
@@ -105,6 +109,19 @@ const Header: FunctionComponent<HeaderProps> = ({
                 </ListItem>
               ))}
           </List>
+          {userAuth && (
+            <Box
+              sx={{
+                marginLeft: 'auto',
+                display: 'flex',
+                alignItems: 'center',
+                paddingRight: 2,
+                backgroundColor: 'var(--background-brand-teal-primary)',
+              }}
+            >
+              <SignedInUserButton userAuth={userAuth} />
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
     </Box>

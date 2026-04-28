@@ -1,4 +1,7 @@
 require 'cdo/azure_ai_content_safety'
+require 'cdo/imagemagick_guard'
+require 'cdo/shared_constants'
+
 require 'honeybadger/ruby'
 require 'mini_magick'
 require 'stringio'
@@ -12,26 +15,36 @@ module ImageModeration
   MAX_MODERATION_SIZE = 4 * 1024 * 1024
 
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png
+  # @param [String] content_type - image/gif, image/jpeg, image/png, etc
   # @return [Hash, nil] categoriesAnalysis response from Azure, or nil on error
+  # @raise [AzureAiContentSafety::UnsupportedContentType] when magic-byte sniffing
+  #   determines the image format is not supported; callers should map this to a 400.
   def self.moderate_image(image_data, content_type)
+    # Validate and prepare the image before checking the API key so that
+    # UnsupportedContentType is always raised for bad formats.
+    moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
+
     unless CDO.azure_ai_content_safety_key
       Honeybadger.notify("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
       return nil
     end
 
-    moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
-    if !moderation_type.nil? && moderation_type != content_type
-      Honeybadger.notify("Actual content type differs from reported content type in image moderation", context: {reported_content_type: content_type, actual_content_type: moderation_type})
-    end
-    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if moderation_type.nil?
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key
-    ).moderate_image(moderation_io, moderation_type)
+    ).moderate_image(moderation_io)
+  rescue AzureAiContentSafety::UnsupportedContentType
+    raise # This is a client error, not a service failure — let callers map to 400.
   rescue AzureAiContentSafety::AzureError => exception
     Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
+  end
+
+  def self.extract_and_validate_actual_content_type(image_data, content_type)
+    raw_data = image_data.read
+    actual_type = ImageMagickGuard.actual_content_type(raw_data)
+    raise AzureAiContentSafety::UnsupportedContentType, "Unrecognized image format (reported: #{content_type})" if actual_type.nil? || !SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(actual_type)
+    [raw_data, actual_type]
   end
 
   # Scales images to meet Azure AI Content Safety dimension and size requirements.
@@ -42,8 +55,7 @@ module ImageModeration
   # Uses magic-byte sniffing to determine actual content type, overriding the
   # reported content_type value which may be incorrect.
   def self.scale_image_for_moderation_if_needed(image_data, content_type)
-    raw_data = image_data.read
-    actual_type = get_actual_content_type(raw_data)
+    raw_data, actual_type = extract_and_validate_actual_content_type(image_data, content_type)
     image = MiniMagick::Image.read(raw_data)
 
     if image.width < MIN_MODERATION_DIMENSION || image.height < MIN_MODERATION_DIMENSION
@@ -77,22 +89,5 @@ module ImageModeration
     [StringIO.new(raw_data), actual_type]
   rescue MiniMagick::Invalid, MiniMagick::Error
     [StringIO.new(raw_data), actual_type]
-  end
-
-  # Returns the MIME type of image bytes by inspecting magic bytes.
-  # Returns nil only when the format is completely unrecognizable.
-  # Recognizes Azure-accepted types (png, gif, jpeg) and common
-  # unsupported ones (webp, heic, heif) so error context is informative.
-  def self.get_actual_content_type(bytes)
-    return 'image/png'  if bytes.start_with?("\x89PNG\r\n\x1a\n".b)
-    return 'image/gif'  if bytes.match?(/\AGIF8[79]a/n)
-    return 'image/jpeg' if bytes.start_with?("\xff\xd8\xff".b)
-    return 'image/webp' if bytes.start_with?('RIFF'.b) && bytes.byteslice(8, 4) == 'WEBP'
-    # HEIC/HEIF: ISO Base Media File Format — ftyp box at offset 4 with a heic/heif brand.
-    if bytes.bytesize >= 12 && bytes.byteslice(4, 4) == 'ftyp'
-      return 'image/heic' if %w[heic heix hevm hevx heim heis].include?(bytes.byteslice(8, 4))
-      return 'image/heif' if %w[mif1 msf1].include?(bytes.byteslice(8, 4))
-    end
-    nil
   end
 end

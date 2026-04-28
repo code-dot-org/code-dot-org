@@ -40,7 +40,7 @@
         "2": {
           "id": "2",
           "name": "prompt.md",
-          "contents": "1. What are the goals?\n\n2. What are the constraints?\n\n3. What are the edge cases?",
+          "contents": "1. What are the goals?\nWhat should the final product look, feel, or do? Think about your user — what do they need this to accomplish?\n\nAnswer:\n\n---\n\n2. What are the constraints?\nWhat rules or limits should the AI follow? Think about style, tone, colors, layout, length, or anything it should avoid.\n\nAnswer:\n\n---\n\n3. What are the edge cases?\nWhat unusual situations or tricky users might this design need to handle? What could go wrong, and how should the design respond?\n\nAnswer:\n",
           "folderId": "0",
           "active": true
         }
@@ -52,6 +52,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:53.226+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level4-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level4-template-test-2025\"},{\"changed_at\":\"2026-03-11 21:07:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:07:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:36:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-10 05:35:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:35:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:53.226+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level4-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level4-template-test-2025\"},{\"changed_at\":\"2026-03-11 21:07:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:07:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 21:36:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-10 05:35:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:35:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-16 15:59:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 17:03:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

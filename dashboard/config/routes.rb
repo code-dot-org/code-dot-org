@@ -119,6 +119,11 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [] do
+      member do
+        get 'content'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -209,7 +214,6 @@ Dashboard::Application.routes.draw do
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
-          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
         end
         collection do
@@ -217,6 +221,8 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          get 'demo/presets', action: 'presets', as: 'presets'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
         end
       end
@@ -1096,7 +1102,6 @@ Dashboard::Application.routes.draw do
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
-        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
         post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
@@ -1277,7 +1282,7 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do

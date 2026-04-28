@@ -1,0 +1,71 @@
+name 'pl-aif-2-U6-day-by-day-8'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day-by-Day Plan 
+
+<img src="https://images.code.org/e827bdf32b80224568c141c2bfc4dfda-image-1776868114972.png" alt="road with signs for milestones 1 through 3" width="350px" style="border-radius:10px; float:right; margin: 10px 20px 0px 20px;">
+
+#### This project is organized around daily objectives to keep students focused on manageable tasks, with milestone checkpoints placed throughout the three weeks to mark key moments of progress. 
+
+#### Together, they provide teachers with a clear roadmap for guiding work and supporting successful project completion.
+
+<div style="clear:both;"></div>
+
+## Days 1–4: Planning & Building
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- Day 1 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/9db62a22e33a6a5e9a21f23911cc1daf-image-1776868614574.png" alt="Day 1" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Intent & Scope</b></h3>
+      <p style="font-size: 14pt;">Students set up their Kanban boards, define who their app is for, and decide on a realistic scope for their first version.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🎯 “Who is our app for and what can we realistically build first?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/a97330d951eb469979c54d73e876942c-image-1776868386937.png" alt="Day 2" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>System Explanation</b></h3>
+      <p style="font-size: 14pt;">Students map out user interactions (user action → app decision → user sees) before they begin coding.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔄 “What happens step-by-step when a user interacts with our app?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/7e162a4cdb89f72f503e030993838c3c-image-1776868418360.png" alt="Day 3" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Testing & Behavior + Benchmark A</b></h3>
+      <p style="font-size: 14pt;">Students start building to get one interaction working end-to-end. The class pauses for Benchmark A, where teams review progress, update the Kanban board, and rotate the Project Leader.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🧪 “Can we get one full interaction working from start to finish?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/ad8a89f0229cc8287ceff7b5be214754-image-1776868450503.png" alt="Day 4" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Build & Iterate</b></h3>
+      <p style="font-size: 14pt;">Focused build time where testing informs next steps and tasks are prioritized on the Kanban board.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔧 “What should we improve next based on what we learned from testing?”
+      </p>
+    </div>
+  </div>
+
+</div>
+
+![]()
+MARKDOWN

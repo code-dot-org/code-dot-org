@@ -9,6 +9,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import DCDO from '@cdo/apps/dcdo';
 import {FlashHandler} from '@cdo/apps/flashes/FlashHandler';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -21,6 +22,7 @@ import currentUser, {
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
+import LanguageDeprecationWarning from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LanguageDeprecationWarning';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
@@ -31,6 +33,7 @@ import teacherSections, {
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 // 6 seconds
 const FLASH_DURATION = 6 * 1000;
@@ -94,9 +97,12 @@ $(document).ready(function () {
 
   createReactRoot(
     <Provider store={store}>
-      {sections.length === 0 ? (
-        // If a teacher has no sections, we will send them directly to the homepage to bypass
-        // all of the section loading logic in the TeacherNavigationRouter.
+      {DCDO.get('language-deprecation-warning-enabled', false) && (
+        // TODO(GEPW-11): Remove along with language cleanup
+        <LanguageDeprecationWarning />
+      )}
+
+      {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
         <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
         <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />

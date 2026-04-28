@@ -3,7 +3,8 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
+  before_action :authenticate_user!, only: [:tutor]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -100,13 +101,19 @@ class LessonsController < ApplicationController
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
+    json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
     @lesson_deep_dive_data = {
       lessonId: @lesson.id,
       lessonName: @lesson.localized_name,
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
       objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}},
-      assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user.id)
+      assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user&.id),
+      jsonVideos: json_videos.map {|v| {key: v.key, url: content_json_video_url(v.key), description: v.description}},
+      progressCounts: lesson_progress_status(@lesson.id, current_user&.id).transform_keys do |k|
+        k.to_s.camelize(:lower).to_sym
+      end,
+      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id)
     }
   end
 
