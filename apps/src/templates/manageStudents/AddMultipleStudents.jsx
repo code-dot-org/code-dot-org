@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Papa from 'papaparse';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
@@ -42,19 +43,20 @@ class AddMultipleStudents extends Component {
     const file = e.target.files[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = event => {
-      this.refs.studentsTextBox.value = event.target.result;
-      this.fileInput.value = '';
-    };
-    reader.readAsText(file);
+    Papa.parse(file, {
+      complete: results => {
+        const text = results.data.map(row => row.join(',')).join('\n');
+        this.refs.studentsTextBox.value = text;
+        this.fileInput.value = '';
+      },
+    });
   };
 
   // Column order: DisplayName, FamilyName, Age, Gender, State
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    const studentDataArray = value.split('\n').map(line => {
-      const parts = line.split(',');
+    const results = Papa.parse(value);
+    const studentDataArray = results.data.map(parts => {
       const name = (parts[0] || '').trim();
       const familyName = (parts[1] || '').trim() || null;
       const age = parseAge(parts[2]);
