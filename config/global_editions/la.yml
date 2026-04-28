@@ -11,26 +11,13 @@ header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
   top:
     signed_out:
-      - title: teach
-        id: header-teach
-        domain: code.org
-        url: /la/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /la/about
-      - title: csf
-        id: header-csf
-        domain: code.org
-        url: /la/csf
-      - title: hour_of_code
-        id: header-hoc
-        domain: code.org
-        url: /la/hourofcode
-      - title: videos
-        id: header-videos
-        domain: code.org
-        url: /la/videos
+        url: /es/global
+      - title: hour_of_ai
+        id: header-hoa
+        url: https://csforall.org/es/hour-of-ai
 
     student:
       - title: my_dashboard
