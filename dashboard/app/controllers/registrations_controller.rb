@@ -221,19 +221,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  # Auto-verify teachers who sign up using a school-owned login type: Clever, Classlink or LTI.
-  # Google Classroom teachers are not auto-verified at sign-up, but will be after they sync
-  # their first section. This proves they are a roster-bearing user, which is evidence of them being a real teacher.
-  private def auto_verify_teacher!(user)
-    return unless user.teacher? && !user.verified_teacher?
-
-    is_school_owned = user.authentication_options.any? do |auth_option|
-      AuthenticationOption::SCHOOL_OWNED_CREDENTIAL_TYPES.include?(auth_option.credential_type)
-    end
-
-    user.verify_teacher! if is_school_owned
-  end
-
   #
   # GET /users/to_destroy
   #
@@ -722,5 +709,18 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def assign_redirect_url
     @redirect_url = session[:user_return_to] || @redirect_url
+  end
+
+  # Auto-verify teachers who sign up using a school-owned login type: Clever, Classlink or LTI.
+  # Google Classroom teachers are not auto-verified at sign-up, but will be after they sync
+  # their first section. This proves they are a roster-bearing user, which is evidence of them being a real teacher.
+  private def auto_verify_teacher!(user)
+    return unless user.teacher? && !user.verified_teacher?
+
+    is_school_owned = user.authentication_options.any? do |auth_option|
+      AuthenticationOption::SCHOOL_OWNED_CREDENTIAL_TYPES.include?(auth_option.credential_type)
+    end
+
+    user.verify_teacher! if is_school_owned
   end
 end
