@@ -1,9 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import {useReactFlow, type Node} from '@xyflow/react';
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+
+import {SketchLabNode} from '../types';
 
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -13,11 +15,9 @@ interface ActionsGroupProps {
   nodeId: string;
 }
 
-type LockableNode = Node<{locked?: boolean}>;
-
 export default function ActionsGroup({nodeId}: ActionsGroupProps) {
   const {deleteElements} = useReactFlow();
-  const {patchNodeData} = useNodeToolbarData<LockableNode>(nodeId);
+  const {patchNodeData} = useNodeToolbarData<SketchLabNode>(nodeId);
   const isStartMode = getIsStartMode();
 
   const handleDelete = () => {

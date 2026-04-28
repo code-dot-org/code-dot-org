@@ -42,6 +42,7 @@ export type ImageNodeData = {
 
 export type LineAnchorNodeData = {
   lineAnchorRole: 'source' | 'target';
+  locked?: boolean;
 };
 
 export type AddNodeRequest =

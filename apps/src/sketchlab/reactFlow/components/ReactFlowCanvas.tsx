@@ -237,8 +237,7 @@ export default function ReactFlowCanvas({
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
-        const locked =
-          (node.data as {locked?: boolean} | undefined)?.locked === true;
+        const locked = node.data?.locked === true;
         return {
           ...node,
           selected,
