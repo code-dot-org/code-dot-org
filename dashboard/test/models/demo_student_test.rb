@@ -70,4 +70,14 @@ class DemoStudentTest < ActiveSupport::TestCase
 
     refute_includes Policies::DemoSections.all_demo_student_ids, student.id
   end
+
+  test 'after_create_commit hook locks the linked user' do
+    student = create(:student, :in_email_section, encrypted_password: 'pw')
+    record = DemoStudent.new(user: student, demo_type: 'high')
+
+    record.save!
+    record.run_callbacks(:commit)
+
+    assert_equal '', student.reload.encrypted_password
+  end
 end

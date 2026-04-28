@@ -200,4 +200,19 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     refute Policies::DemoSections.demo_student?(-1)
   end
+
+  test 'demo_student? matches across all demo types' do
+    high = create(:student)
+    middle = create(:student)
+    elementary = create(:student)
+    DemoStudent.create!(user: high, demo_type: 'high')
+    DemoStudent.create!(user: middle, demo_type: 'middle')
+    DemoStudent.create!(user: elementary, demo_type: 'elementary')
+    Policies::DemoSections.reset_cache!
+
+    assert Policies::DemoSections.demo_student?(high.id)
+    assert Policies::DemoSections.demo_student?(middle.id)
+    assert Policies::DemoSections.demo_student?(elementary.id)
+    refute Policies::DemoSections.demo_student?(-1)
+  end
 end

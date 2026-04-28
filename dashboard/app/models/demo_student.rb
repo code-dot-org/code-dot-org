@@ -20,6 +20,7 @@ class DemoStudent < ApplicationRecord
   validate :user_must_be_student
 
   after_commit :reset_policy_cache
+  after_create_commit :lock_user_login!
 
   private def user_must_be_student
     return unless user
@@ -28,5 +29,10 @@ class DemoStudent < ApplicationRecord
 
   private def reset_policy_cache
     Policies::DemoSections.reset_cache!
+  end
+
+  private def lock_user_login!
+    require 'demo_students'
+    DemoStudents.prevent_demo_student_login(user_id, demo_type)
   end
 end
