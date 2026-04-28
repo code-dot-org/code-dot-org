@@ -336,6 +336,9 @@ GEM
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
+    bullet (8.1.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     camertron-eprun (1.1.1)
     cancancan (3.5.0)
     case_transform (0.2)
@@ -1178,6 +1181,7 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
+    uniform_notifier (1.18.0)
     uri (1.0.3)
     user_agent_parser (2.18.0)
     validate_url (1.0.15)
@@ -1266,6 +1270,7 @@ DEPENDENCIES
   bootsnap (>= 1.14.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman
+  bullet
   cancancan (~> 3.5.0)
   cdo_contentful!
   cgi (~> 0.3.6)

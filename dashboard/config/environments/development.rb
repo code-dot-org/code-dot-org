@@ -77,4 +77,12 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   config.experiment_cache_time_seconds = 0
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.rails_logger = true
+    Bullet.unused_eager_loading_enable = true
+  end
 end

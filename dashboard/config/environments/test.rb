@@ -82,6 +82,13 @@ Dashboard::Application.configure do
 
   config.experiment_cache_time_seconds = 0
 
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.bullet_logger = true
+    Bullet.raise = false
+    Bullet.unused_eager_loading_enable = true
+  end
+
   # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
   # on the test machine. this is necessary because as of April 2025 the test DB
   # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
