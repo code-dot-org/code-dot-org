@@ -1568,6 +1568,7 @@ en:
     regions:
       fa: Farsi
       in: India
+      la: Latin America
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes
