@@ -7,27 +7,100 @@ markdown <<MARKDOWN
 
 #### Not all AI tools are designed for education. Before using any AI tool with students—or as part of your teaching practice—it’s important to evaluate whether it meets safety, privacy, and instructional needs.
 
-#### **Look for an Educational Focus** Start by determining whether the tool is specifically designed for use in schools. Tools built for education are more likely to include safeguards, teacher controls, and alignment to classroom needs.
+<br>
 
-#### **Review Documentation and Support Materials** Explore the tool’s help articles, guides, or support pages. These resources often explain:
-* #### How the tool is intended to be used
-* #### What safety features are included
-* #### How data is handled
+<div style="width:80%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
-#### Clear and transparent documentation is a good sign that a tool is designed responsibly.
+<div style="font-size:24px; font-weight:800; margin-bottom:12px; text-align:center;">
+Evaluating an AI Tool for Classroom Use
+</div>
 
-#### **Examine the Privacy Policy** Review the tool’s privacy policy carefully, especially for:
-* #### References to educational use
-* #### Compliance with laws such as FERPA, COPPA, or other regional regulations
-* #### How user data is collected, stored, and used
+<div style="border:1px solid #D9DDE3; border-radius:16px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 
-#### If this information is unclear or missing, the tool may not be appropriate for school use.
+<!-- ROW -->
+<div style="display:grid; grid-template-columns:80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;">
+1
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Check for an Educational Focus</div>
+<div style="font-size:15px; line-height:1.5;">
+<div>☐ Confirm the tool is designed for educational use</div>
+<div>☐ Identify features such as teacher controls, student safeguards, or classroom alignment</div>
+<div style="margin-top:6px;">➡️ If the tool is not education-specific, proceed with caution.</div>
+</div>
+</div>
+</div>
 
-#### **Adjust Privacy Settings** Before using an AI tool, review and configure its settings to maximize data protection. This may include:
-* #### Limiting data sharing
-* #### Turning off optional features
-* #### Restricting access where possible
-* #### Follow Local Policies and Guidance
+<!-- ROW -->
+<div style="display:grid; grid-template-columns:80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;">
+2
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Review Documentation and Support Materials</div>
+<div style="font-size:15px; line-height:1.5;">
+<div>☐ Read help articles, guides, or support pages</div>
+<div>☐ Identify how the tool is intended to be used</div>
+<div>☐ Locate information about safety features</div>
+<div>☐ Review how the tool handles data</div>
+<div style="margin-top:6px;">➡️ Clear, transparent documentation is a positive sign.</div>
+</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns:80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;">
+3
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Examine the Privacy Policy</div>
+<div style="font-size:15px; line-height:1.5;">
+<div>☐ Locate and review the privacy policy</div>
+<div>☐ Confirm references to educational use</div>
+<div>☐ Check for compliance with laws (e.g., FERPA, COPPA)</div>
+<div>☐ Identify how user data is collected, stored, and used</div>
+<div style="margin-top:6px;">➡️ If this information is unclear or missing, reconsider using the tool.</div>
+</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns:80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;">
+4
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Adjust Privacy Settings</div>
+<div style="font-size:15px; line-height:1.5;">
+<div>☐ Review all available privacy and security settings</div>
+<div>☐ Limit data sharing where possible</div>
+<div>☐ Turn off optional or unnecessary features</div>
+<div>☐ Restrict access to appropriate users</div>
+<div style="margin-top:6px;">➡️ Always configure settings to maximize student data protection.</div>
+</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns:80px 1fr;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center;">
+5
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Follow School and District Guidance</div>
+<div style="font-size:15px; line-height:1.5;">
+<div>☐ Verify whether the tool is approved by your school or district</div>
+<div>☐ Follow local policies and guidelines for AI use</div>
+<div>☐ Consult administration if unsure about appropriate use</div>
+<div style="margin-top:6px;">➡️ When in doubt, check before using the tool.</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 
 #### Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved tools, and any guidance provided by your administration.
 MARKDOWN

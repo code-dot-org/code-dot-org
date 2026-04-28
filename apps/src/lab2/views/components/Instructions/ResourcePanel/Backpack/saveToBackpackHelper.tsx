@@ -172,6 +172,7 @@ export const fetchAndSaveFile = async ({
 
       const moderationStatus = await moderateImage(file, appName ?? '', {
         uploaderType: 'Lab2FileUploader',
+        assetUrl: uploadUrl,
       });
       if (moderationStatus === 'flagged') {
         // Callback function so if user accepts flagged image, we can save the image to the project.

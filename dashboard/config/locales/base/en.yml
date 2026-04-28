@@ -446,6 +446,7 @@ en:
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
       videos: "Videos"
+      hour_of_ai: Hour of AI
       hour_of_code: "Hour of Code"
       csf: "CS Fundamentals"
 
@@ -1566,6 +1567,7 @@ en:
   global_edition:
     regions:
       fa: Farsi
+      in: India
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes

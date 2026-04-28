@@ -321,15 +321,21 @@ const EVENTS = {
     'AI Differentiation Notification AI Prompt Clicked',
 
   // AI Tutor
-  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
-  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
   AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
+
+  // AI Tutor: Lesson Deep Dive
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION:
+    'AI Tutor Lesson Deep Dive Modality Navigation',
   AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED:
     'AI Tutor Lesson Deep Dive Modality Clicked',
+
+  // Lesson Tutor
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
+  LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
 
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
@@ -683,6 +689,9 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
+
+  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
+  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
 };
 
 const EVENT_GROUP_NAMES = {

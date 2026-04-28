@@ -7,6 +7,7 @@ Feature: Droplet levels work as expected
   Scenario: Open editcode level and write some autocompleted, tooltipped code
     When I ensure droplet is in text mode
     And I wait until element ".ace_text-input" is visible
+    And I wait for 5 seconds
     And I press keys "b" for element ".ace_text-input"
     And the Droplet ACE text is "b"
     And I press keys "utto" for element ".ace_text-input"
@@ -27,6 +28,7 @@ Feature: Droplet levels work as expected
   Scenario: Open editcode level and verify parameter autocomplete replaces quoted text
     When I ensure droplet is in text mode
     And I wait until element ".ace_text-input" is visible
+    And I wait for 5 seconds
     And I press keys "setProperty(" for element ".ace_text-input"
     And the Droplet ACE text is "setProperty()"
     And there is a Tooltipster tooltip with text "the specified element"

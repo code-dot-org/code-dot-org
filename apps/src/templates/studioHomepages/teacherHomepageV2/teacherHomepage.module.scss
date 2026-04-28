@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // TeacherHomepage
@@ -111,6 +113,12 @@
   }
 }
 
+.demoSectionTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .sectionCardHeaderRight {
   display: flex;
   margin-inline-start: 6px;
@@ -157,6 +165,17 @@
     line-height: 125%;
     width: 1.5rem;
     text-align: center;
+  }
+
+  span {
+    @include typography.body-two;
+    color: inherit;
+    margin-bottom: 0;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
   }
 }
 
@@ -210,7 +229,7 @@
 }
 
 // Task Button
-.taskButtons {
+%task-buttons-base {
   border: 1px solid var(--borders-neutral-strong);
   display: flex;
   flex-direction: row;
@@ -222,6 +241,22 @@
   justify-content: space-between;
   margin: 0;
   border-radius: 4px;
+}
+
+.taskButtons {
+  @extend %task-buttons-base;
+}
+
+.demoActionButton {
+  @extend %task-buttons-base;
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.7;
+  }
 }
 
 .taskButtonLeft {

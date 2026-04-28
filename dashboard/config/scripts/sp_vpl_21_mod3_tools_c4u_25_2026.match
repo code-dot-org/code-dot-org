@@ -14,4 +14,13 @@ answer 'App Lab'
 question 'I want to teach my students how to use tabular data to train a machine learning model.'
 answer 'AI Lab'
 
+question 'I want my students to create and remix music while learning programming concepts like sequencing, loops, and triggers.'
+answer 'Music Lab'
+
+question 'I am looking for a tool where my students can interact with an AI to generate text and images while practicing responsible and critical use.'
+answer 'AI Chat Lab'
+
+question 'I would like a tool where students can brainstorm, sketch, and visually organize their ideas using text, images, and shapes.'
+answer 'Sketch Lab'
+
 allow_multiple_attempts true

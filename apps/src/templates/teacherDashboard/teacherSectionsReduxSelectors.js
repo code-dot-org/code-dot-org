@@ -22,7 +22,6 @@ export const USER_EDITABLE_SECTION_PROPS = [
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt',
-  'aiTutorEnabled',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -197,7 +196,6 @@ export const sectionFromServerSection = serverSection => ({
   })),
   primaryInstructor: serverSection.primaryInstructor,
   syncEnabled: serverSection.sync_enabled,
-  aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,
   atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
     ? new Date(serverSection.at_risk_age_gated_date)
@@ -248,7 +246,6 @@ export function serverSectionFromSection(section) {
     course_id: section.courseId,
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
-    ai_tutor_enabled: section.aiTutorEnabled,
     at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
     at_risk_age_gated_us_state: section.atRiskAgeGatedUsState,
   };
@@ -277,7 +274,6 @@ export function newSectionData(participantType) {
     unitPosition: null,
     hidden: false,
     restrictSection: false,
-    aiTutorEnabled: false,
   };
 }
 

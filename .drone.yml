@@ -232,6 +232,8 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      DEVICE_FARM_DESKTOP_PROJECT_ARN:
+        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
@@ -342,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
+hmac: 94099b2e7d920d508596699178953a73f541da4646b72e0703b27d82a8084940
 
 ...

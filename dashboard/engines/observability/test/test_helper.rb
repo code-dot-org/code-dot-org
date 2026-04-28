@@ -17,27 +17,16 @@ require 'opentelemetry-sdk'
 require 'sentry-ruby'
 
 # Stub the CDO global config object referenced by both setup modules.
-# All flags default to false so nothing activates accidentally.
+# Flags are nil by default (falsy) so nothing activates accidentally.
 # Individual tests set the values they need in before blocks.
 module CDO
   class << self
-    attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn
-
-    def running_web_application?
-      @running_web_application
-    end
-
-    attr_writer :running_web_application
+    attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn, :unit_test
 
     def log
       @log ||= Logger.new(IO::NULL)
     end
   end
-
-  self.enable_opentelemetry = false
-  self.enable_sentry = false
-  self.dashboard_sentry_dsn = nil
-  self.running_web_application = false
 end
 
 require 'observability'

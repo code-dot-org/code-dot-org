@@ -1,28 +1,33 @@
-import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useRef, useState} from 'react';
-
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
+import {fontSizePx} from '../elementToolbars/toolbarPalettes';
+import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 
 import styles from './text-node.module.scss';
 
-interface TextNodeProps {
-  id: string;
-  data: SketchlabReactFlowNode['data'];
-  selected: boolean;
-}
-
-function TextNode({id, data, selected}: TextNodeProps) {
+function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditing, setIsEditing] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
 
-  const text = (data.text as string) ?? '';
+  const {text} = data;
+  const showHandles = data.showHandles !== false;
+
+  const textStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {};
+    if (data.fontColor) {
+      style.color = data.fontColor;
+    }
+    style.fontSize = fontSizePx(data.fontSize);
+    return style;
+  }, [data.fontColor, data.fontSize]);
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly) {
@@ -79,9 +84,12 @@ function TextNode({id, data, selected}: TextNodeProps) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
+      <TextNodeToolbar nodeId={id} />
+
       <div
         ref={textRef}
         className={styles.text}
+        style={textStyle}
         contentEditable={isEditing}
         suppressContentEditableWarning
         onFocus={startEditing}
@@ -94,7 +102,7 @@ function TextNode({id, data, selected}: TextNodeProps) {
         {text}
       </div>
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }
