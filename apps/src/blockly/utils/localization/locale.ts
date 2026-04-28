@@ -65,10 +65,17 @@ export function getBlockDefinitionsForUpdatedLocale(
         // Deep clone the argument
         args[i] = {...args[i]};
 
-        args[i].options = arg.options.map(([text, ...rest]) => [
-          localization.translate(text, ['blockly-block']),
-          ...rest,
-        ]);
+        args[i].options = arg.options.map(item => {
+          // Sometimes the options list is just an array of strings rather than
+          // a tuple of a label and an id. This is typically true of grid/image
+          // dropdowns.
+          if (!Array.isArray(item)) {
+            return item;
+          }
+
+          const [text, ...rest] = item;
+          return [localization.translate(text, ['blockly-block']), ...rest];
+        });
       }
     });
 
