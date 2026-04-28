@@ -115,6 +115,7 @@
 "es-LA":
   english: "Spanish (Latin America)"
   native: "Español (Latinoamérica)"
+  fallback: "es-MX"
 
 "et": "et-EE"
 "et-EE":
