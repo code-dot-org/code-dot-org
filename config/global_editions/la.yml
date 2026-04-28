@@ -4,7 +4,7 @@
 
 locales: [es-LA]
 locale_lock: true
-countries: [LA]
+countries: [MX, CR, SV, GT, HN, NI, PA, CU, DO, PR, AR, BO, CL, CO, EC, PY, PE, UY, VE]
 
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
