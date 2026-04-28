@@ -11,7 +11,7 @@ interface DocumentProps {
 }
 
 const Document: React.FunctionComponent<DocumentProps> = ({region}) => (
-  <script data-ge-region={region} />
+  <html lang="en-US" data-ge-region={region} />
 );
 
 describe('globalEdition', () => {
