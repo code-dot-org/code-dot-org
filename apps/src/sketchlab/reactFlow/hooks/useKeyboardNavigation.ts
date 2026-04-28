@@ -243,10 +243,10 @@ export function useKeyboardNavigation({
         }
       }
 
-      // "[" and "]" adjust the focused node. For text and shape nodes (which
-      // carry a text label) the keys step through font sizes. For image nodes
-      // (no text) the keys resize the node dimensions instead.
-      // Line-anchor pseudo-nodes are excluded — they have no visible body.
+      // "[" and "]" adjust the focused node. For shape andimage nodes
+      // (no text) the keys resize the node dimensions. For text-only nodes,
+      // the keys step through font sizes.
+      // Line-anchor pseudo-nodes are excluded. They can be resized through 'ghost' nodes.
       if (
         !readOnly &&
         focusedNodeId &&
