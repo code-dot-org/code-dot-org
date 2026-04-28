@@ -416,6 +416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       uid: user.primary_contact_info.authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
     assert_does_not_create(User) do
       get :clever
     end
@@ -457,6 +458,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
 
     assert_no_difference('UserPermission.count') do
       get :clever
@@ -1705,7 +1707,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when authorizing with existing verified teacher' do
+    context 'when teacher already verified' do
       subject(:existing_user) {create(:authorized_teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
       let(:classlink_req) {get :classlink}
 
@@ -1716,6 +1718,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       it 'does not duplicate verification' do
+        existing_user.expects(:verify_teacher!).never
         assert_no_difference('UserPermission.count') do
           classlink_req
         end
@@ -1724,7 +1727,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when authorizing with existing student' do
+    context 'when student' do
       subject(:existing_user) {create(:student, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
       let(:student_auth_hash) do
         auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
@@ -1740,6 +1743,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       it 'does not verify the student' do
+        existing_user.expects(:verify_teacher!).never
         assert_no_difference('UserPermission.count') do
           classlink_req
         end
