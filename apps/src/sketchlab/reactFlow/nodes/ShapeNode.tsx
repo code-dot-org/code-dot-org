@@ -13,6 +13,8 @@ import styles from './shape-node.module.scss';
 
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
+// SVG path for a diamond (rhombus) filling a 100x100 viewBox: top, right, bottom, left.
+const DIAMOND_POINTS = '50,5 95,50 50,95 5,50';
 const SHAPE_BORDER_PX = 2;
 
 interface ShapeSvgProps {
@@ -58,6 +60,25 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
       >
         <polygon
           points={TRIANGLE_POINTS}
+          style={{fill, stroke}}
+          strokeWidth={SHAPE_BORDER_PX}
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+    );
+  }
+  if (shapeType === 'diamond') {
+    return (
+      <svg
+        aria-hidden="true"
+        width="100%"
+        height="100%"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className={styles.shapeSvg}
+      >
+        <polygon
+          points={DIAMOND_POINTS}
           style={{fill, stroke}}
           strokeWidth={SHAPE_BORDER_PX}
           vectorEffect="non-scaling-stroke"
