@@ -149,11 +149,15 @@ const FilePreview: React.FC<{
           </div>
           <div className={styles.filenameContainer}>
             <div className={styles.filenameRow}>
-              <Typography variant="strong">
-                {fileDetail ? `${filename} ${fileDetail}` : filename}
+              <Typography variant="body4">
+                <Typography variant="strong">
+                  {fileDetail ? `${filename} ${fileDetail}` : filename}
+                </Typography>
               </Typography>
               {timestamp && (
-                <Typography variant="body4">{timestamp}</Typography>
+                <Typography variant="body4" className={styles.timestamp}>
+                  {timestamp}
+                </Typography>
               )}
             </div>
           </div>
