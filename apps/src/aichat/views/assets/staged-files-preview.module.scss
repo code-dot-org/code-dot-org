@@ -86,8 +86,9 @@ $preview-image-size: 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    max-width: 80px;
-    height: 39px;
+    max-width: 160px;
+    height: auto;
+    min-height: 39px;
     color: var(--text-neutral-primary);
     background: var(--background-neutral-primary);
     padding: 0.22rem 0.5rem;
@@ -108,6 +109,12 @@ $preview-image-size: 48px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .filenameRow {
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .fileDetail {

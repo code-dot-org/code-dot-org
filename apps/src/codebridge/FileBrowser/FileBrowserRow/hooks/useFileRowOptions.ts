@@ -169,6 +169,11 @@ export const useFileRowOptions = (
                 displayName: fullFilename,
                 filename: fullFilename,
                 sourceCode: file.contents,
+                timestamp: new Date().toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true,
+                }),
               })
             );
           }
