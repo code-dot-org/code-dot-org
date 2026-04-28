@@ -11,6 +11,7 @@ import type {
   AppOptions,
   ExtraLinksLevelData,
   LevelPropertiesMap,
+  LevelPropertiesRequestParams,
   SectionSummary,
   UserAppOptions,
 } from './levels.types';
@@ -18,12 +19,7 @@ import {levelsKeys} from './levels.keys';
 
 export function useLevelProperties(
   api: ApiClient,
-  params: {
-    levelId?: number;
-    standaloneProjectType?: string;
-    scriptName?: string;
-    lessonPosition?: number;
-  },
+  params: LevelPropertiesRequestParams,
   options?: Omit<UseQueryOptions<LevelPropertiesMap>, 'queryKey' | 'queryFn'>,
 ) {
   const {levelId, standaloneProjectType, scriptName, lessonPosition} = params;

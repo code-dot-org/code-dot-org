@@ -37,3 +37,21 @@ export type UserAppOptions = z.infer<typeof UserAppOptionsSchema>;
 export type ExemplarSettings = z.infer<typeof ExemplarSettingsSchema>;
 export type CloneLevelResponse = z.infer<typeof CloneLevelResponseSchema>;
 export type DeleteLevelResponse = z.infer<typeof DeleteLevelResponseSchema>;
+
+interface UnitLevelPropertiesRequestParams {
+  levelId: number;
+  standaloneProjectType?: never;
+  scriptName?: string;
+  lessonPosition?: number;
+}
+
+interface ProjectLevelPropertiesRequestParams {
+  levelId?: never;
+  standaloneProjectType?: never;
+  scriptName?: never;
+  lessonPosition?: never;
+}
+
+export type LevelPropertiesRequestParams =
+  | UnitLevelPropertiesRequestParams
+  | ProjectLevelPropertiesRequestParams;
