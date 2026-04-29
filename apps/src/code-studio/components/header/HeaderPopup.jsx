@@ -2,8 +2,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import progress from '../../progress';
@@ -35,10 +33,6 @@ export default class HeaderPopup extends Component {
   handleClickOpen = e => {
     e.stopPropagation();
     this.setState({open: true});
-    analyticsReporter.sendEvent(EVENTS.HEADER_UNIT_DETAILS_TOGGLED, {
-      open: true,
-      levelPath: window.location.pathname,
-    });
 
     progress.retrieveProgress(
       this.props.scriptName,
@@ -51,10 +45,6 @@ export default class HeaderPopup extends Component {
 
   handleClickClose = () => {
     this.setState({open: false});
-    analyticsReporter.sendEvent(EVENTS.HEADER_UNIT_DETAILS_TOGGLED, {
-      open: false,
-      levelPath: window.location.pathname,
-    });
 
     $(document).off('click', this.handleClickDocument);
   };

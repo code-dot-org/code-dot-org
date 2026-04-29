@@ -1,8 +1,27 @@
+var fs = require('fs');
+var ts = require('typescript');
+
+require.extensions['.ts'] = function (module, filename) {
+  var source = fs.readFileSync(filename, 'utf8');
+  var result = ts.transpileModule(source, {
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2019,
+    },
+  });
+
+  module._compile(result.outputText, filename);
+};
+
 module.exports = function (grunt) {
   var path = require('path');
   var MessageFormat = require('messageformat');
 
   grunt.registerMultiTask('messages', 'Compile messages!', function () {
+    const {
+      LocaleFallbacks,
+    } = require('../generated-scripts/sharedConstants.ts');
+
     var locales = new Set();
     var namespaces = new Set();
 
@@ -17,14 +36,17 @@ module.exports = function (grunt) {
         var namespace = path.basename(filePair.dest).split('.js')[0];
         namespaces.add(namespace);
 
+        const normalizedLocale = normalizeLocale(locale);
+        const fallbackLocale =
+          LocaleFallbacks[normalizedLocale] &&
+          denormalizeLocale(LocaleFallbacks[normalizedLocale]);
+
         var englishData = grunt.file.readJSON(src.replace(locale, 'en_us'));
-        var localeData = grunt.file.readJSON(src);
-        Object.keys(localeData).forEach(function (key) {
-          if (localeData[key] === '') {
-            delete localeData[key];
-          }
-        });
-        var finalData = Object.assign(englishData, localeData);
+        var fallbackData = fallbackLocale
+          ? clearData(grunt.file.readJSON(src.replace(locale, fallbackLocale)))
+          : {};
+        var localeData = clearData(grunt.file.readJSON(src));
+        var finalData = Object.assign(englishData, fallbackData, localeData);
 
         // Verify the translated content is formatted correctly.
         const formatErrors = checkForFormatIssues(
@@ -94,6 +116,21 @@ module.exports = function (grunt) {
       });
     });
   });
+
+  function normalizeLocale(locale) {
+    const [language, region] = locale.split('_');
+    return `${language.toLowerCase()}-${region.toUpperCase()}`;
+  }
+
+  function denormalizeLocale(locale) {
+    return locale.replace('-', '_').toLowerCase();
+  }
+
+  function clearData(data) {
+    return Object.fromEntries(
+      Object.entries(data).filter(([, value]) => value !== '')
+    );
+  }
 
   /**
    * Parses the given JSON for any MessageFormat issues and returns a list of exceptions found.
