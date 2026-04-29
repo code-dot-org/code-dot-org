@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+# On macOS, runner.rb's Parallel.map (in_processes) workers segfault inside
+# libsystem_trace _os_log_preferences_refresh during their first AWS S3
+# upload's net/http connect. Disable os_activity and ObjC initialize-fork
+# safety in the env before any require touches those macOS subsystems.
+# Read lazily by the OS on first use; harmless on Linux (vars ignored).
+if RUBY_PLATFORM.include?('darwin')
+  ENV['OS_ACTIVITY_MODE'] ||= 'disable'
+  ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] ||= 'YES'
+end
+
 require_relative '../../../deployment'
 
 UI_TEST_DIR = File.expand_path(__dir__)
