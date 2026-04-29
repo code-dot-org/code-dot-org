@@ -86,6 +86,24 @@ class FilesApi < Sinatra::Base
     forbidden
   end
 
+  # Log filename validation failures for monitoring unsafe filename attempts
+  def report_filename_validation_failure(filename, endpoint, encrypted_channel_id, event_type = 'FilesApiFilenameValidationFailure')
+    return unless CDO.newrelic_logging
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
+
+    event_details = {
+      filename: filename,
+      endpoint: endpoint,
+      encrypted_channel_id: encrypted_channel_id,
+      owner_user_id: owner_user_id,
+      timestamp: Time.now.iso8601
+    }
+
+    NewRelic::Agent.record_custom_event(event_type, event_details)
+  end
+
   def record_metric(quota_event_type, quota_type, value = 1)
     return unless CDO.newrelic_logging
 
@@ -417,13 +435,21 @@ class FilesApi < Sinatra::Base
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
+    # Layer 2: Validation safety net (secondary defense)
+    # The Layer 1 defenses are naming conventions for most file upload routes, but for
+    # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
+    # replacing them with dashes.
+    #
+    # TEMPORARY: Monitor when new_allowed_file_name? would reject but allowed_file_name? allows
+    # This helps us understand the impact before switching to stricter validation.
+    unless buckets.new_allowed_file_name?(filename)
+      report_filename_validation_failure(filename, endpoint, encrypted_channel_id)
+    end
     if body.length >= max_file_size
       body = buckets.try_resize_file(body, file_type)
     end
 
     file_too_large(endpoint) unless body.length < max_file_size
-
-    bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -775,13 +801,23 @@ class FilesApi < Sinatra::Base
     # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
     filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
 
+    bucket = FileBucket.new
+    # Layer 2: Validation safety net (secondary defense)
+    # The Layer 1 defenses are naming conventions for most file upload routes, but for
+    # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
+    # replacing them with dashes.
+    #
+    # TEMPORARY: Monitor when new_allowed_file_name? would reject but allowed_file_name? allows
+    # This helps us understand the impact before switching to stricter validation.
+    unless bucket.new_allowed_file_name?(filename)
+      report_filename_validation_failure(filename, 'files', encrypted_channel_id)
+    end
+
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
     bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
-
-    bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
     manifest_is_unchanged = true
 
@@ -852,8 +888,8 @@ class FilesApi < Sinatra::Base
 
   # POST /v3/files/<channel-id>/?version=<version-id>&files-version=<project-version-id>
   #
-  # Create or replace a file. We use this method so that IE9 can still
-  # upload by posting to an iframe.
+  # Create or replace a file via traditional multipart form upload (drag & drop, file picker).
+  # This endpoint handles file uploads from web forms and provides IE9 compatibility.
   #
   post %r{/v3/files/([^/]+)/$} do |encrypted_channel_id|
     dont_cache
@@ -868,6 +904,9 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
+    # Layer 1: Sanitize unsafe characters (main defense)
+    # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
+    # (Layer 2 is the allowed_file_name? check in put_file and files_put_file)
     filename = BucketHelper.replace_unsafe_chars(file[:filename])
     files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
@@ -875,11 +914,22 @@ class FilesApi < Sinatra::Base
   #
   # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&files-version=<project-version-id>
   #
-  # Create or replace a file. Optionally overwrite a specific version.
+  # Create or replace a file via direct API calls (JavaScript-initiated uploads).
+  # This endpoint handles programmatic file uploads and provides direct file content.
   #
   put %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
+
+    # Layer 1: Sanitize unsafe characters (main defense)
+    # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
+    # (Layer 2 is the allowed_file_name? check in put_file and files_put_file)
+    sanitized_filename = BucketHelper.replace_unsafe_chars(filename)
+
+    # Compare when the sanitized filename is different from the original filename
+    if sanitized_filename != filename
+      report_filename_validation_failure(filename, 'files', encrypted_channel_id, 'FilesApiFilenameValidationFailureSanitizedFilename')
+    end
 
     if params['src'].nil?
       # read the entire request before considering rejecting it, otherwise varnish
@@ -889,6 +939,7 @@ class FilesApi < Sinatra::Base
       body = request.body.read
     end
 
+    # TEMPORARY: use un-sanitized filename for now to monitor the impact of stricter validation
     files_put_file(encrypted_channel_id, filename, body)
   end
 

@@ -1,0 +1,587 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 30 May 2025 16:34:13 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>DYN23MJ9DR6TYFEE</RequestId><HostId>X1a0ygToRKaTsguYX4OVB5FXTbQo0xwmpJvMD7MJwnLgqYNv8ys0tP2jHLqqT/1VKyJrpgGhYzk=</HostId></Error>
+  recorded_at: Fri, 30 May 2025 16:34:14 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 30 May 2025 16:34:14 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>DYNC712D0QD2ZAR3</RequestId><HostId>L5PF/kdjyORSKEZsZTnxfXq50vyy4KVv/g/VnhmyAQWFIMmQMbmJn3AFU1ZUGdV85sCEfvaecYs=</HostId></Error>
+  recorded_at: Fri, 30 May 2025 16:34:14 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:15 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+  recorded_at: Fri, 30 May 2025 16:34:14 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/bad-name.txt
+    body:
+      encoding: ASCII-8BIT
+      string: data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - jXd/OF09/siBXSD3SWAm3A==
+      Content-Length:
+      - '4'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:16 GMT
+      X-Amz-Version-Id:
+      - jIAfjgTIoFXjg_bJj7aW0oKidz17n3fC
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"8d777f385d3dfec8815d20f7496026dc"'
+      X-Amz-Checksum-Crc64nvme:
+      - 7a5hQ478J4A=
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 30 May 2025 16:34:15 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"bad-name.txt","category":"text","size":4,"versionId":"jIAfjgTIoFXjg_bJj7aW0oKidz17n3fC","timestamp":"2025-05-30T09:34:15.397-07:00"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - YQgtsb3SG+Wg2tyzJY9wMw==
+      Content-Length:
+      - '147'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:16 GMT
+      X-Amz-Version-Id:
+      - qllGcAXT8sA2BkTXVNJASYAb30g7g7Ue
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"61082db1bdd21be5a0dadcb3258f7033"'
+      X-Amz-Checksum-Crc64nvme:
+      - t6LCl9dqoDY=
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 30 May 2025 16:34:15 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:17 GMT
+      Last-Modified:
+      - Fri, 30 May 2025 16:34:16 GMT
+      Etag:
+      - '"61082db1bdd21be5a0dadcb3258f7033"'
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - qllGcAXT8sA2BkTXVNJASYAb30g7g7Ue
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '147'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"bad-name.txt","category":"text","size":4,"versionId":"jIAfjgTIoFXjg_bJj7aW0oKidz17n3fC","timestamp":"2025-05-30T09:34:15.397-07:00"}]'
+  recorded_at: Fri, 30 May 2025 16:34:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/bad-name.txt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:17 GMT
+      Last-Modified:
+      - Fri, 30 May 2025 16:34:16 GMT
+      Etag:
+      - '"8d777f385d3dfec8815d20f7496026dc"'
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - jIAfjgTIoFXjg_bJj7aW0oKidz17n3fC
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '4'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: data
+  recorded_at: Fri, 30 May 2025 16:34:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:17 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>qllGcAXT8sA2BkTXVNJASYAb30g7g7Ue</VersionId><IsLatest>true</IsLatest><LastModified>2025-05-30T16:34:16.000Z</LastModified><ETag>&quot;61082db1bdd21be5a0dadcb3258f7033&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>147</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+  recorded_at: Fri, 30 May 2025 16:34:16 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Object><Key>files_test/1/1/manifest.json</Key><VersionId>qllGcAXT8sA2BkTXVNJASYAb30g7g7Ue</VersionId></Object><Quiet>true</Quiet></Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 1iyiQZpXMzCtUTjqgdhw5A==
+      Content-Length:
+      - '195'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:18 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+  recorded_at: Fri, 30 May 2025 16:34:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 30 May 2025 16:34:16 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>PDCX3G7K5VHS7QGM</RequestId><HostId>J2BDzQs716M2V5WZMqaWpDgV8eVrEZF4GK3+pkhcTkGzYEFxxK2oQOAFWGYsrMDOiPvPZDbTwDk=</HostId></Error>
+  recorded_at: Fri, 30 May 2025 16:34:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:18 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/bad-name.txt</Key><LastModified>2025-05-30T16:34:16.000Z</LastModified><ETag>&quot;8d777f385d3dfec8815d20f7496026dc&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>4</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Fri, 30 May 2025 16:34:17 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/bad-name.txt
+    body:
+      encoding: ASCII-8BIT
+      string: data
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - jXd/OF09/siBXSD3SWAm3A==
+      Content-Length:
+      - '4'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:19 GMT
+      X-Amz-Version-Id:
+      - DHI1EA7xUja_rb3QZctbLPV5Xol3m117
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"8d777f385d3dfec8815d20f7496026dc"'
+      X-Amz-Checksum-Crc64nvme:
+      - 7a5hQ478J4A=
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 30 May 2025 16:34:18 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"bad-name.txt","category":"text","size":4,"versionId":"DHI1EA7xUja_rb3QZctbLPV5Xol3m117","timestamp":"2025-05-30T09:34:18.196-07:00"}]'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - LAQMcb9cKjANxdKnj+NrmA==
+      Content-Length:
+      - '147'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:19 GMT
+      X-Amz-Version-Id:
+      - AfnV.WCKsgHgNaq8JgnFH.D1y8LphoIS
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"2c040c71bf5c2a300dc5d2a78fe36b98"'
+      X-Amz-Checksum-Crc64nvme:
+      - bGawz4pPQ74=
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 30 May 2025 16:34:18 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:19 GMT
+      Last-Modified:
+      - Fri, 30 May 2025 16:34:19 GMT
+      Etag:
+      - '"2c040c71bf5c2a300dc5d2a78fe36b98"'
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - AfnV.WCKsgHgNaq8JgnFH.D1y8LphoIS
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '147'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"bad-name.txt","category":"text","size":4,"versionId":"DHI1EA7xUja_rb3QZctbLPV5Xol3m117","timestamp":"2025-05-30T09:34:18.196-07:00"}]'
+  recorded_at: Fri, 30 May 2025 16:34:18 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/bad-name.txt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:20 GMT
+      Last-Modified:
+      - Fri, 30 May 2025 16:34:19 GMT
+      Etag:
+      - '"8d777f385d3dfec8815d20f7496026dc"'
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - DHI1EA7xUja_rb3QZctbLPV5Xol3m117
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '4'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: data
+  recorded_at: Fri, 30 May 2025 16:34:19 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:20 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>AfnV.WCKsgHgNaq8JgnFH.D1y8LphoIS</VersionId><IsLatest>true</IsLatest><LastModified>2025-05-30T16:34:19.000Z</LastModified><ETag>&quot;2c040c71bf5c2a300dc5d2a78fe36b98&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>147</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+  recorded_at: Fri, 30 May 2025 16:34:19 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Object><Key>files_test/1/1/manifest.json</Key><VersionId>AfnV.WCKsgHgNaq8JgnFH.D1y8LphoIS</VersionId></Object><Quiet>true</Quiet></Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - b+1rsX6lCK6lEToCyShPHA==
+      Content-Length:
+      - '195'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 May 2025 16:34:20 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+  recorded_at: Fri, 30 May 2025 16:34:19 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 30 May 2025 16:34:19 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>9EN4HWH91WDM40W7</RequestId><HostId>CJgL3KoabEccVClEBq0etsDvpOcYVBmVCFPtdCH71h51q4YTswUZEwUrPR/X+r+cSI7/uaca3Nq5xdUW0QvMlA==</HostId></Error>
+  recorded_at: Fri, 30 May 2025 16:34:20 GMT
+recorded_with: VCR 6.2.0

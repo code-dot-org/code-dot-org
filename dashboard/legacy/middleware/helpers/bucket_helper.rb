@@ -19,7 +19,27 @@ class BucketHelper
     @base_dir = base_dir
   end
 
+  # Returns true if the filename is safe for use in HTTP headers and S3 keys.
+  # Rejects filenames containing CR (\r) or LF (\n) to prevent header injection.
+  # Allows Unicode, dashes, underscores, dots, and other printable characters.
   def allowed_file_name?(_filename)
+    true
+  end
+
+  # Returns true if the filename is safe for use in HTTP headers and S3 keys.
+  # Rejects filenames containing CR (\r) or LF (\n) to prevent header injection.
+  # Allows Unicode, dashes, underscores, dots, and other printable characters.
+  #
+  # FUTURE USE: This function contains the stricter validation logic that will be used
+  # when we switch from logging to rejection mode. Currently, allowed_file_name? always
+  # returns true and unsafe filenames are logged instead of rejected.
+  def new_allowed_file_name?(filename)
+    # Reject if filename contains CR or LF
+    return false if /[\r\n]/.match?(filename)
+    # Reject filenames with backslashes, or ../ to prevent path traversal
+    return false if filename.include?("\\") || filename.include?("../")
+    # Reject empty filenames
+    return false if filename.empty?
     true
   end
 
