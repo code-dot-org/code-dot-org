@@ -1,9 +1,15 @@
 import {render, screen} from '@testing-library/react';
+import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import manageStudents, {
   setSectionInfo,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
@@ -25,12 +31,32 @@ describe('PageHeader', () => {
     participant_type: 'student',
   };
 
+  beforeEach(() => {
+    // PageHeader's useEffect dispatches loadSectionStudentData, which calls
+    // $.ajax. Stub it so the test doesn't depend on a real network layer or
+    // jQuery deferred semantics.
+    jest.spyOn($, 'ajax').mockReturnValue({
+      done() {
+        return this;
+      },
+      fail() {
+        return this;
+      },
+    });
+  });
+
+  afterEach(() => {
+    restoreRedux();
+    jest.restoreAllMocks();
+  });
+
   const renderDefault = ({isLoadingSectionData = false} = {}) => {
-    const store = getStore();
+    stubRedux();
     registerReducers({
       teacherSections,
       manageStudents,
     });
+    const store = getStore();
 
     store.dispatch(setSections([demoSection], true, [11]));
     store.dispatch(selectSection(11));
