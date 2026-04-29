@@ -8,6 +8,7 @@ $preview-image-size: 32px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .row {
@@ -15,6 +16,7 @@ $preview-image-size: 32px;
   flex-wrap: wrap;
   gap: 0.75rem;
   padding-top: 0.125rem;
+  min-width: 0;
 }
 
 %preview {
@@ -62,6 +64,7 @@ $preview-image-size: 32px;
   text-align: left;
   align-items: center;
   min-width: 0;
+  max-width: 100%;
 
   .fileIcon {
     display: flex;
