@@ -1,11 +1,19 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
-import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ImageNodeToolbar from '../elementToolbars/ImageNodeToolbar';
+import {DEFAULT_ROTATION} from '../elementToolbars/RotationGroup';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -21,6 +29,11 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
 
   const {src, altText} = data;
   const showHandles = data.showHandles !== false;
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
 
   useEffect(() => {
     if (isEditingAlt) {
@@ -73,7 +86,14 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
 
       <ImageNodeToolbar nodeId={id} />
 
-      <img src={src} alt={altText} className={styles.image} draggable={false} />
+      <div className={styles.rotatable} style={rotatableStyle}>
+        <img
+          src={src}
+          alt={altText}
+          className={styles.image}
+          draggable={false}
+        />
+      </div>
 
       {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
       {isEditingAlt ? (

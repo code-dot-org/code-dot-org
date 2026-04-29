@@ -4,6 +4,7 @@ import {ImageNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
+import RotationGroup, {DEFAULT_ROTATION} from './RotationGroup';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -21,6 +22,10 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
       anchorNodeId={nodeId}
       ariaLabel="Image options"
     >
+      <RotationGroup
+        value={data.rotation ?? DEFAULT_ROTATION}
+        onChange={degrees => patchNodeData({rotation: degrees})}
+      />
       <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
         visible={handlesVisible}

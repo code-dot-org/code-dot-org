@@ -14,6 +14,8 @@ export type ReactFlowSketchLabSources = ProjectSources & {
 };
 
 // Typed runtime data shapes for each custom node.
+// `rotation` is in degrees, integer, normalized 0-359. Optional so existing
+// saved sources without the field load as 0.
 export type ShapeNodeData = {
   shapeType: ShapeType;
   label: string;
@@ -22,6 +24,7 @@ export type ShapeNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  rotation?: number;
 };
 
 export type TextNodeData = {
@@ -29,12 +32,14 @@ export type TextNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  rotation?: number;
 };
 
 export type ImageNodeData = {
   src: string;
   altText: string;
   showHandles?: boolean;
+  rotation?: number;
 };
 
 export type LineAnchorNodeData = {

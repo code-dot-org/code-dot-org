@@ -180,3 +180,34 @@
   background-color: var(--background-neutral-secondary);
   border-color: var(--text-neutral-primary);
 }
+
+.rotationRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotationSlider {
+  flex: 1;
+  // Keep the slider from blowing up the toolbar width; the toolbar is
+  // anchored to the left of the node so we want a predictable size.
+  min-width: 100px;
+  color: var(--text-neutral-primary);
+}
+
+.rotationInput {
+  width: 56px;
+  flex: 0 0 auto;
+
+  // The DSCO TextField wrapper has its own min-width; override here so the
+  // numeric input fits in the toolbar column.
+  label {
+    min-width: unset;
+    width: 56px;
+
+    input {
+      width: 56px;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import {TextNodeType} from '../types';
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
+import RotationGroup, {DEFAULT_ROTATION} from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
@@ -40,6 +41,10 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
         swatches={STROKE_FONT_PALETTE}
         selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
         onSelect={value => patchNodeData({fontColor: value})}
+      />
+      <RotationGroup
+        value={data.rotation ?? DEFAULT_ROTATION}
+        onChange={degrees => patchNodeData({rotation: degrees})}
       />
       <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
